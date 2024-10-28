@@ -1,0 +1,24 @@
+<script language="JavaScript">
+var httpsport='443';
+
+var default_target="/cgi-bin/login.cgi?action=log&fro=self";
+
+function get_target()
+{
+	//var str = window.location.search;
+	//var pos = str.indexOf("go=");
+	//if (pos > 0) 
+	//	return str.substring(pos+3, str.length);
+	//else
+		return default_target;
+}
+
+if (window.location.protocol.toLowerCase() == "http:") {
+	var url = "https://"+window.location.hostname+":"+httpsport+ get_target();
+	top.location.href = url;
+}
+else {
+	top.location.href = get_target();
+}
+</script>
+

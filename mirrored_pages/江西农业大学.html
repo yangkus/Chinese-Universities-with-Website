@@ -1,0 +1,1677 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<title>江西农业大学</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="江西农业大学">
+<META Name="keywords" Content="江西农业大学" />
+
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no,email=no,adress=no,date=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<meta name="description" content="" />
+<link rel="icon" sizes="72*72" href="images/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="images/favicon.png">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/jq.js"></script>
+<!--[if lte IE 9]>
+<script type="text/javascript" src="js/jquery.js"></script>
+<![endif]-->
+<script src="js/script.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307775475252575742000400004252 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,2043148059)</script>
+</head>
+<body class="ibg">
+<div id="loading"></div>
+
+<div id="app">
+    <header class="header header1">
+        <div class="wp flexjs">
+            <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="江西农业大学"><img src="images/logo.png" alt=""></a></div>
+
+            <div class="topr flexjs flexc">
+                <div class="toplink flex">
+                    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="flex">
+<LI><a class="a" href="http://webvpn.jxau.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2043148059, 100306)">VPN</a></li>
+<LI><a class="a" href="https://english.jxau.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2043148059, 100307)">EN</a></li>
+<LI><a class="a" href="http://jxauold.jxau.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2043148059, 100421)">旧站入口</a></li>
+<LI><a class="a" href="http://mail.jxau.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2043148059, 100712)">电子邮箱</a></li>
+<LI><a class="a" href="https://xiaoban.jxau.edu.cn/xxgk/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2043148059, 103181)">信息公开</a></li>
+</UL>
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError" class="miso_form1">
+        <div class="input-group pore">
+            <input type="text" class="inp" placeholder="请输入关键词" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <button class="sub" type="submit" value="" v-on:click="onSubmit()"></button>
+        </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "2043148059";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                </div>
+                <div class="topnav"><ul class="flex">
+<li><a href="index.htm" title="首页">首页</a>
+</li>
+<li><a href="xqzl/xxjj.htm" title="校情总览">校情总览</a>
+<i class="plus swiper-icons swi-downb"></i>
+<div class="sub-nav">
+<div class="sub-nav-h">
+<a href="xqzl/xxjj.htm" title="学校简介">学校简介</a>
+<a href="xqzl/xrld.htm" title="现任领导">现任领导</a>
+<a href="xqzl/xxbs.htm" title="学校标识">学校标识</a>
+<a href="xqzl/xyfg.htm" title="校园风光">校园风光</a>
+</div>
+</div>
+</li>
+<li><a href="zzjg/gljg.htm" title="组织机构">组织机构</a>
+<i class="plus swiper-icons swi-downb"></i>
+<div class="sub-nav">
+<div class="sub-nav-h">
+<a href="zzjg/gljg.htm" title="管理机构">管理机构</a>
+<a href="zzjg/yxsz.htm" title="院系设置">院系设置</a>
+<a href="zzjg/ywbm.htm" title="业务部门">业务部门</a>
+<a href="zzjg/fsdw.htm" title="附属单位">附属单位</a>
+</div>
+</div>
+</li>
+<li><a title="教育教学">教育教学</a>
+<i class="plus swiper-icons swi-downb"></i>
+<div class="sub-nav">
+<div class="sub-nav-h">
+<a href="http://jwc.jxau.edu.cn/" target="_blank" title="本科教育">本科教育</a>
+<a href="https://cjy.jxau.edu.cn/" target="_blank" title="继续教育">继续教育</a>
+<a href="https://yanjiusheng.jxau.edu.cn/" target="_blank" title="研究生教育">研究生教育</a>
+<a href="https://mpa.jxau.edu.cn/" target="_blank" title="MPA教育">MPA教育</a>
+<a href="http://jxau.fanya.chaoxing.com/portal" target="_blank" title="网络教学平台">网络教学平台</a>
+</div>
+</div>
+</li>
+<li><a href="kxyj.htm" title="科学研究">科学研究</a>
+</li>
+<li><a title="招生就业">招生就业</a>
+<i class="plus swiper-icons swi-downb"></i>
+<div class="sub-nav">
+<div class="sub-nav-h">
+<a href="https://zs.jxau.edu.cn/" target="_blank" title="本科生招生">本科生招生</a>
+<a href="http://jxndjy.jxau.edu.cn/" target="_blank" title="本科生就业">本科生就业</a>
+<a href="https://zqxt.jxau.edu.cn/_s181/main.psp" target="_blank" title="学生资助">学生资助</a>
+</div>
+</div>
+</li>
+<li><a title="图书档案">图书档案</a>
+<i class="plus swiper-icons swi-downb"></i>
+<div class="sub-nav">
+<div class="sub-nav-h">
+<a href="https://library.jxau.edu.cn/portal/home" target="_blank" title="图书馆">图书馆</a>
+<a href="https://dangan.jxau.edu.cn/" target="_blank" title="档案馆">档案馆</a>
+</div>
+</div>
+</li>
+<li><a href="https://gjjl.jxau.edu.cn/" target="_blank" title="国际交流">国际交流</a>
+</li>
+<li><a href="http://i.jxau.edu.cn" target="_blank" title="信息门户">信息门户</a>
+</li>
+<li><a href="kstd/zbcg.htm" title="快速通道">快速通道</a>
+<i class="plus swiper-icons swi-downb"></i>
+<div class="sub-nav">
+<div class="sub-nav-h">
+<a href="https://pinggu.jxau.edu.cn/" target="_blank" title="审核评估">审核评估</a>
+<a href="https://zbcg.jxau.edu.cn/" target="_blank" title="招标采购">招标采购</a>
+<a href="http://xiaoyou.jxau.edu.cn/" target="_blank" title="校 友 网">校 友 网</a>
+<a href="http://tyzfpt.jxau.edu.cn/" target="_blank" title="网上缴费">网上缴费</a>
+<a href="https://jwc.jxau.edu.cn/" target="_blank" title="教务管理">教务管理</a>
+</div>
+</div>
+</li>
+</ul></div>
+            </div>
+
+            <div class="navBtnm flex">
+                <a href="javascript:;" class="navbtn">
+                    <button class="menu-btn">
+                        <span class="line-1"></span>
+                        <span class="line-2"></span>
+                        <span class="line-3"></span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div id="wrapper">
+        <div id="content">
+            <div class="banner_box">
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="banner swiper-container swiper">
+<ul class="swiper-wrapper">
+<li class="swiper-slide">
+<a class="a" href="info/1741/184961.htm">
+<div class="imgBox">
+<div class="img" style="background: #000;">
+<video muted playsinline="true" x5-playsinline="" webkit-playsinline="" x-webkit-airplay="allow" x5-video-player-type="h5" poster="">
+<source src="/__local/1/BD/38/913FAA2D07EFA0AE6D1B4BA83C6_5511EB52_1F113B.mp4?e=.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a class="a" href="https://pinggu.jxau.edu.cn/">
+<div class="imgBox">
+<div class="img"><img src="/__local/1/CC/82/93BD638BE391BF1B0B0672476D4_91556A4C_3F7D5.jpg" alt=""></div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a class="a" href="info/1741/13821.htm">
+<div class="imgBox">
+<div class="img"><img src="/__local/F/21/DB/6450059CA121C2103B4907B5362_9D41528A_8D4CB.jpg" alt=""></div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a class="a">
+<div class="imgBox">
+<div class="img"><img src="/__local/D/FD/35/E8262F0456796D7D268629044F4_09744130_2688C.jpg" alt=""></div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a class="a">
+<div class="imgBox">
+<div class="img"><img src="/__local/5/34/DE/73774B6F6EBB6321A0C10E149FD_226BA9A2_42F78.jpg" alt=""></div>
+</div>
+</a>
+</li>
+</ul>
+<div class="bottom">
+<div class="wp flex">
+<div class="dots"></div>
+</div>
+</div>
+</div><script>_showDynClickBatch(['dynclicks_u4_184961','dynclicks_u4_21651','dynclicks_u4_13821','dynclicks_u4_184471','dynclicks_u4_184441'],[184961,21651,13821,184471,184441],"wbnews", 2043148059)</script>
+</div>
+            
+            <div class="home1-2-3 pad1">
+                <div class="home1 pad1">
+                    <div class="wp">
+                        <div class="miso_tab miso_tab1">
+                            <div class="bg1" data-aos="fade-right" data-aos-delay="1000"></div>
+                            <div class="hd tit1" data-aos="fade-up">
+                                <ul class="flex">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="images/tit1_2.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="images/tit1_1.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="bd">
+                            
+                            <div class="bd_li">
+                                    <div class="content flex">
+                                        <div class="left">
+                                            
+
+<div class="list1Box swiper-container">
+<ul class="list1 swiper-wrapper">
+<li class="swiper-slide">
+<a href="info/1039/136161.htm" class="a" target="_blank">
+<div class="imgBox trans">
+<div class="img"><img src="/__local/6/33/CD/16766B25D1D2EC446D346554E97_276361BD_7970B.jpg" alt=""></div>
+</div>
+<div class="txt flexjs">
+<h4 class="l1 h4s1">我校举行国庆升国旗仪式</h4>
+<h6 class="h6s1">2024.10.01</h6>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1039/17221.htm" class="a" target="_blank">
+<div class="imgBox trans">
+<div class="img"><img src="/__local/2/A1/65/8972DCC148F9C55FEFA4E3243FB_DBAC8B67_7198D.png" alt=""></div>
+</div>
+<div class="txt flexjs">
+<h4 class="l1 h4s1">江西省高校“诵读红色家书 讲述英烈故事”巡演在我校隆重举行</h4>
+<h6 class="h6s1">2024.09.30</h6>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1039/28821.htm" class="a" target="_blank">
+<div class="imgBox trans">
+<div class="img"><img src="/__local/4/99/12/EFE20F67BCEEDFB7F88F9996EE4_DED2F430_81F47.jpg" alt=""></div>
+</div>
+<div class="txt flexjs">
+<h4 class="l1 h4s1">学校隆重举行2024级新生开学典礼</h4>
+<h6 class="h6s1">2024.09.27</h6>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1039/7021.htm" class="a" target="_blank">
+<div class="imgBox trans">
+<div class="img"><img src="/__local/F/6B/54/B7923933A73FC9811318E9EC87E_1600190F_256C1.jpg?e=.jpg" alt=""></div>
+</div>
+<div class="txt flexjs">
+<h4 class="l1 h4s1">我校学子在第七届中国高校智能机器人创意大赛中喜获佳绩</h4>
+<h6 class="h6s1">2024.08.24</h6>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1039/7001.htm" class="a" target="_blank">
+<div class="imgBox trans">
+<div class="img"><img src="/__local/8/87/34/E74E870272717B64FB25004EEF1_276AC6D8_16F52.jpg?e=.jpg" alt=""></div>
+</div>
+<div class="txt flexjs">
+<h4 class="l1 h4s1">校领导带队访企拓岗并看望校友</h4>
+<h6 class="h6s1">2024.08.22</h6>
+</div>
+</a>
+</li>
+</ul>
+<div class="dots dots1"></div>
+</div><script>_showDynClickBatch(['dynclicks_u5_136161','dynclicks_u5_17221','dynclicks_u5_28821','dynclicks_u5_7021','dynclicks_u5_7001'],[136161,17221,28821,7021,7001],"wbnews", 2043148059)</script>
+
+
+                                        </div>
+
+                                        <div class="right">
+                                            
+
+<ul class="list2">
+<li>
+<a href="info/1039/24001.htm" class="a" target="_blank">
+<h4 class="l1 h4s1">校长魏辅文院士荣获马世骏生态科学成就奖</h4>
+<p class="l2 ps2">10月26日，第二十三届中国生态学大会在沈阳召开。会议期间颁发了马世骏生态科学成就奖、中国生态学学会青年科技奖，我校校长魏辅文院士荣获第三届马世骏生态科学成就奖。马世骏生态科学成就奖设立于2006年，是中国生态学学会设立的最高学术奖励，以奖励对生态学理论和应用做出过巨大贡献的我国生态学科技工作者。魏辅文院士长期从事濒危动物演化与保护生物学研究，是国际上濒危动物保护基因组学和宏基因组学研究的主要开拓者,率先提出保护演化生物学和保护宏基因组学新分支学科，重要代表性研究成果分别发表在...</p>
+<h6 class="h6s1">2024.10.26</h6>
+</a>
+</li>
+<li>
+<a href="info/1039/24191.htm" class="a" target="_blank">
+<h4 class="l1 h4s1">学校召开2024年第四次人才引进工作会</h4>
+</a>
+</li>
+<li>
+<a href="info/1039/23981.htm" class="a" target="_blank">
+<h4 class="l1 h4s1">我校举办高等学校新农村发展研究院第六届乡村振兴论坛</h4>
+</a>
+</li>
+<li>
+<a href="info/1039/23581.htm" class="a" target="_blank">
+<h4 class="l1 h4s1">省科协主席徐景坤来校看望黄路生院士、魏辅文院士</h4>
+</a>
+</li>
+<li>
+<a href="info/1039/23391.htm" class="a" target="_blank">
+<h4 class="l1 h4s1">我校图书馆入选中国一般本科院校图书馆影响力排行榜</h4>
+</a>
+</li>
+<li>
+<a href="info/1039/22631.htm" class="a" target="_blank">
+<h4 class="l1 h4s1">我校主办的2024农产品贮藏加工科技交流大会召开</h4>
+</a>
+</li>
+<li>
+<a href="info/1039/22651.htm" class="a" target="_blank">
+<h4 class="l1 h4s1">我校三大期刊影响因子再创新高</h4>
+</a>
+</li>
+<li>
+<a href="info/1039/57961.htm" class="a" target="_blank">
+<h4 class="l1 h4s1">校领导出席“中国—中东欧国家现代农业科教创新联盟”成立大会启动仪式</h4>
+</a>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u6_24001','dynclicks_u6_24191','dynclicks_u6_23981','dynclicks_u6_23581','dynclicks_u6_23391','dynclicks_u6_22631','dynclicks_u6_22651','dynclicks_u6_57961','dynclicks_u6_84321','dynclicks_u6_21381','dynclicks_u6_21921','dynclicks_u6_21301','dynclicks_u6_20811','dynclicks_u6_65701','dynclicks_u6_131161','dynclicks_u6_128121','dynclicks_u6_28801','dynclicks_u6_28851','dynclicks_u6_33511','dynclicks_u6_136161'],[24001,24191,23981,23581,23391,22631,22651,57961,84321,21381,21921,21301,20811,65701,131161,128121,28801,28851,33511,136161],"wbnews", 2043148059)</script>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="more1">
+                                    <a href="ndxw.htm" class="a1">查看更多</a>
+                                        
+                                    </div>
+                                </div>
+                            
+                                <div class="bd_li">
+                                    <div class="content flex">
+                                        <div class="left" data-aos="fade-up">
+
+<div class="list1Box swiper-container">
+<ul class="list1 swiper-wrapper">
+<li class="swiper-slide">
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=15860132016570002691&item_id=15860132016570002691" class="a" target="_blank">
+<div class="imgBox trans">
+<div class="img"><img src="/__local/4/5C/F1/3DEC7E61068139A31BCCA459176_3CF4CAA5_BAB0.jpg" alt=""></div>
+</div>
+<div class="txt flexjs">
+<h4 class="l1 h4s1">习近平：关于《中共中央关于进一步全面深化改革、推进 中国式现代化的决定》的说明</h4>
+<h6 class="h6s1">2024.08.15</h6>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=6260488653626732620&item_id=6260488653626732620" class="a" target="_blank">
+<div class="imgBox trans">
+<div class="img"><img src="/__local/9/97/53/DA99488E2A37F812404349D8A53_A5019EF2_22AE1.jpg" alt=""></div>
+</div>
+<div class="txt flexjs">
+<h4 class="l1 h4s1">中国共产党第二十届中央委员会第三次全体会议公报</h4>
+<h6 class="h6s1">2024.07.18</h6>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=11291998873046831213&item_id=11291998873046831213" class="a" target="_blank">
+<div class="imgBox trans">
+<div class="img"><img src="/__local/D/30/E5/7552A311D707DD23C0D61975F2D_80C21800_1B158.jpg" alt=""></div>
+</div>
+<div class="txt flexjs">
+<h4 class="l1 h4s1">习近平：必须坚持自信自立</h4>
+<h6 class="h6s1">2024.07.17</h6>
+</div>
+</a>
+</li>
+</ul>
+<div class="dots dots1"></div>
+</div><script>_showDynClickBatch(['dynclicks_u7_1171','dynclicks_u7_1141','dynclicks_u7_1131'],[1171,1141,1131],"wbnews", 2043148059)</script>
+</div>
+
+                                        <div class="right" data-aos="fade-up">
+
+<ul class="list2">
+<li>
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=4454372725417581791&item_id=4454372725417581791" class="a" target="_blank">
+<h4 class="l1 h4s1">习近平在安徽考察时强调 发挥多重国家发展战略叠加优势 奋力谱写中国式现代化安徽篇章</h4>
+<p class="l2 ps2"></p>
+<h6 class="h6s1">2024.10.21</h6>
+</a>
+</li>
+<li>
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=6288970691573197796&item_id=6288970691573197796" class="a">
+<h4 class="l1 h4s1">习近平给中国国际大学生创新大赛参赛学生代表的 回信（全文）</h4>
+</a>
+</li>
+<li>
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=5061510059464037688&item_id=5061510059464037688" class="a">
+<h4 class="l1 h4s1">习近平在福建考察时强调 扭住目标不放松 一张蓝图绘到底 在中国式现代化建设中奋勇争先</h4>
+</a>
+</li>
+<li>
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=12893199434473363176&item_id=12893199434473363176" class="a">
+<h4 class="l1 h4s1">习近平：在文艺工作座谈会上的讲话</h4>
+</a>
+</li>
+<li>
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=11878648812311444042&item_id=11878648812311444042" class="a">
+<h4 class="l1 h4s1">习近平：在国家勋章和国家荣誉称号颁授仪式上的讲话</h4>
+</a>
+</li>
+<li>
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=10565831379096182215&item_id=10565831379096182215" class="a">
+<h4 class="l1 h4s1">习近平：在全国民族团结进步表彰大会上的讲话</h4>
+</a>
+</li>
+<li>
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=9824554980992989781&item_id=9824554980992989781" class="a">
+<h4 class="l1 h4s1">习近平主持召开全面推动黄河流域生态保护和高质量发展 座谈会强调 以进一步全面深化改革为动力 开创黄河流域 生态保护和高质量发展新局面</h4>
+</a>
+</li>
+<li>
+<a href="https://www.xuexi.cn/lgpage/detail/index.html?id=6157835622039412995&item_id=6157835622039412995" class="a">
+<h4 class="l1 h4s1">习近平：培养德智体美劳全面发展的社会主义建设者和 接班人</h4>
+</a>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u8_77621','dynclicks_u8_23701','dynclicks_u8_182181','dynclicks_u8_126701','dynclicks_u8_7691','dynclicks_u8_92051','dynclicks_u8_33651','dynclicks_u8_184291','dynclicks_u8_184281','dynclicks_u8_180551','dynclicks_u8_184271','dynclicks_u8_1181','dynclicks_u8_1191','dynclicks_u8_1171','dynclicks_u8_1151','dynclicks_u8_1161','dynclicks_u8_1141','dynclicks_u8_1131','dynclicks_u8_1121','dynclicks_u8_1111'],[77621,23701,182181,126701,7691,92051,33651,184291,184281,180551,184271,1181,1191,1171,1151,1161,1141,1131,1121,1111],"wbnews", 2043148059)</script>
+</div>
+                                    </div>
+
+                                    <div class="more1">
+                                        <a href="szyw.htm" class="a1">查看更多</a>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home2 pad1">
+                    <div class="wp">
+                      <div class="miso_tab miso_tab1">
+                            <div class="hd tit1" data-aos="fade-up">
+                                <ul class="flex">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="images/tit1_3.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="images/tit1_4.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bd">
+                                <div class="bd_li">
+
+<div class="list3Box" data-aos="fade-up">
+<ul class="list3 ">
+<li>
+<dl class="list3s flex">
+<dd>
+<a href="info/1040/24181.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>28</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">我校承办的2024年江西省高素质农民培育创业女农民培训班开班</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1040/24221.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>28</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">我校主办江西省生态经济学会2024年学术年会暨新质生产力理论与实践学术研讨会</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1040/129831.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>28</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">附属中学举办第49届田径运动会</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1040/23741.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>25</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">我校代表队荣获第九届全国“雄鹰杯”小动物医师技能大赛一等奖</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1040/24521.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>25</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">我校学子参加全国高校大学生水产类创新实践能力大赛获佳绩</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1040/23641.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>25</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">保育院举办“享农耕 庆丰收”第十八届 亲子趣味运动会</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1040/23471.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>24</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">我校举办2025年寒假港澳名校访学实践/ 香港名企实习交流项目宣讲会</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1040/23411.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>24</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">我校参加2024年全国大中城市巡回招聘义乌站暨“商贸人才交流专场活动”</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1040/22811.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>23</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">我校开展2024年实验室安全应急演练活动</h4></div>
+</a>
+</dd>
+</dl>
+</li>
+</ul>
+
+</div>
+<div class="more1"><a href="gzdt.htm" class="a1">查看更多</a></div><script>_showDynClickBatch(['dynclicks_u9_24181','dynclicks_u9_24221','dynclicks_u9_129831','dynclicks_u9_23741','dynclicks_u9_24521','dynclicks_u9_23641','dynclicks_u9_23471','dynclicks_u9_23411','dynclicks_u9_22811'],[24181,24221,129831,23741,24521,23641,23471,23411,22811],"wbnews", 2043148059)</script>
+</div>
+
+<div class="bd_li">
+           
+
+<div class="list3Box " data-aos="fade-up">
+<ul class="list3 ">
+<li>
+<dl class="list3s flex">
+<dd>
+<a href="info/1041/41891.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>15</h3>
+<h6>2024.04</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">江西农业大学2024年高层次人才招聘公告</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1041/23991.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>26</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">计算机与信息工程学院临时用工招聘公告</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1041/32201.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>23</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">林学院/园林与艺术学院临时用工招聘公告</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1041/21091.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>16</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">食品学院临时用工招聘公告</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1041/128521.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>14</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">校工会临时用工招聘公告</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1041/79211.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>11</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">江西农业大学教学质量监督与评估中心临时用工招聘公告</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1041/184101.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>04</h3>
+<h6>2024.09</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">江西农业大学继续教育学院临时用工招聘公告</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1041/41871.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>30</h3>
+<h6>2024.07</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">江西农业大学外国语学院临时用工招聘公告</h4></div>
+</a>
+</dd>
+<dd>
+<a href="info/1041/41861.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>29</h3>
+<h6>2024.07</h6>
+</div>
+<div class="txt"><h4 class="l2 h4s2">关于2024年度本科专业设置申报材料的公示</h4></div>
+</a>
+</dd>
+</dl>
+</li>
+</ul>
+
+</div>
+<div class="more1"><a href="tzgg.htm" class="a1">查看更多</a></div><script>_showDynClickBatch(['dynclicks_u10_41891','dynclicks_u10_23991','dynclicks_u10_32201','dynclicks_u10_21091','dynclicks_u10_128521','dynclicks_u10_79211','dynclicks_u10_184101','dynclicks_u10_41871','dynclicks_u10_41861'],[41891,23991,32201,21091,128521,79211,184101,41871,41861],"wbnews", 2043148059)</script>
+         
+                    
+                                        </div>
+
+
+                </div>
+                    
+                    </div>
+                    </div>
+                </div>
+
+                <div class="home3 pad1">
+                    <div class="wp flex" data-aos="fade-up">
+                        <div class="left">
+                            <div class="cir0"><div class="cir1"></div></div>
+                            <div class="cir0"><div class="cir2"></div></div>
+                            <div class="tzgg">
+                                <div class="hz"></div>
+                                <div class="more2">
+                                    <a href="mtnd.htm" class="a1">查看更多</a>
+                                </div>
+                                <div class="box flex">
+
+<div class="tit2 flex"><img src="images/tit1_5.png" alt=""></div>
+<div class="list4Box swiper-container">
+<ul class="list4 swiper-wrapper">    
+<div class="swiper-slide">
+<li>
+<a href="https://jx.ifeng.com/c/8dxtg9bdtpC" class="a" target="_blank">
+<h4 class="l1 h4s1">【凤凰网】徐景坤在江西农业大学走访看望院士并开展调研</h4>
+<h6 class="h6s1">2024.10.28</h6>
+</a>
+</li>
+<li>
+<a href="https://edu.jxnews.com.cn/system/2024/10/25/020677349.shtml" class="a" target="_blank">
+<h4 class="l1 h4s1">【大江网】江西省科协主席徐景坤到江西农业大学看望黄路生院士、魏辅文院士</h4>
+<h6 class="h6s1">2024.10.28</h6>
+</a>
+</li>
+<li>
+<a href="https://www.peopleapp.com/column/30047104852-500005861122" class="a" target="_blank">
+<h4 class="l1 h4s1">【人民日报】让科技小院释放大能量（现场评论）</h4>
+<h6 class="h6s1">2024.10.28</h6>
+</a>
+</li>
+<li>
+<a href="https://www.jxxw.com.cn/content_html/html/55/p/pc/2024/10/132767756.html" class="a" target="_blank">
+<h4 class="l1 h4s1">【江西新闻】榜上有名！江西一高校图书馆登全国影响力排行榜</h4>
+<h6 class="h6s1">2024.10.25</h6>
+</a>
+</li>
+<li>
+<a href="http://www.jx.xinhuanet.com/20241024/fc4500c1baa44796a585fc248aa0f79f/c.html" class="a" target="_blank">
+<h4 class="l1 h4s1">【 新华网】第三届南酸枣产业发展大会在江西余干召开</h4>
+<h6 class="h6s1">2024.10.24</h6>
+</a>
+</li>
+</div>
+<div class="swiper-slide">
+<li>
+<a href="https://tt.jxnews.com.cn/news/2577345?app=jxttn&uid=868022&jxttn=" class="a" target="_blank">
+<h4 class="l1 h4s1">【大江网】“南昌国际湿地城市农大志愿者冬候鸟巡护活动”启动仪式在江西农业大学举行</h4>
+<h6 class="h6s1">2024.10.23</h6>
+</a>
+</li>
+<li>
+<a href="info/1042/22341.htm" class="a" target="_blank">
+<h4 class="l1 h4s1">【亚洲时报】建国中学28师生江西8天学习探索活动</h4>
+<h6 class="h6s1">2024.10.22</h6>
+</a>
+</li>
+<li>
+<a href="http://www.jx.chinanews.com.cn/news/2024/1020/104748.html" class="a" target="_blank">
+<h4 class="l1 h4s1">【中国新闻网】江西农业大学：“头雁”学员展风采，校运盛会添活力</h4>
+<h6 class="h6s1">2024.10.22</h6>
+</a>
+</li>
+<li>
+<a href="https://www.jxxw.com.cn/content_html/html/55/p/pc/2024/10/132731289.html" class="a" target="_blank">
+<h4 class="l1 h4s1">【江西新闻】江西农业大学：破译猪肉质好排骨多的“密码”</h4>
+<h6 class="h6s1">2024.10.22</h6>
+</a>
+</li>
+<li>
+<a href="http://ly.jiangxi.gov.cn/art/2024/10/21/art_68738_5038183.html" class="a" target="_blank">
+<h4 class="l1 h4s1">【江西省林业局】第三届南酸枣产业发展大会在余干召开</h4>
+<h6 class="h6s1">2024.10.21</h6>
+</a>
+</li>
+</div>
+<div class="swiper-slide">
+<li>
+<a href="https://ce.jxcn.cn/system/2024/10/21/020671599.shtml" class="a" target="_blank">
+<h4 class="l1 h4s1">【大江网】江西农大团队赴吉安开展调研 探寻农事服务高质量发展之路</h4>
+<h6 class="h6s1">2024.10.21</h6>
+</a>
+</li>
+<li>
+<a href="https://tt.jxnews.com.cn/news/2575469?app=jxttn&jxttn=" class="a" target="_blank">
+<h4 class="l1 h4s1">【大江网】第三届南酸枣产业发展大会在江西余干召开</h4>
+<h6 class="h6s1">2024.10.21</h6>
+</a>
+</li>
+<li>
+<a href="https://edu.jxnews.com.cn/system/2024/10/17/020668279.shtml" class="a" target="_blank">
+<h4 class="l1 h4s1">【大江网】江西农业大学第50届田径运动会开幕</h4>
+<h6 class="h6s1">2024.10.18</h6>
+</a>
+</li>
+<li>
+<a href="https://mp.weixin.qq.com/s/itvXoIn3n36Tt08BnuG3rA" class="a" target="_blank">
+<h4 class="l1 h4s1">【江西教育厅】最美高校辅导员｜吴焱军：倾力培养勇挑“金扁担”的时代新人</h4>
+<h6 class="h6s1">2024.10.17</h6>
+</a>
+</li>
+<li>
+<a href="https://edu.jxnews.com.cn/system/2024/10/17/020667636.shtml" class="a" target="_blank">
+<h4 class="l1 h4s1">【大江网】江西农业大学党委书记黄路生院士到离退休工作处调研</h4>
+<h6 class="h6s1">2024.10.17</h6>
+</a>
+</li>
+</div>
+</ul>
+<div class="dots dots1"></div>
+</div><script>_showDynClickBatch(['dynclicks_u11_32871','dynclicks_u11_32741','dynclicks_u11_26851','dynclicks_u11_23771','dynclicks_u11_24171','dynclicks_u11_22831','dynclicks_u11_22341','dynclicks_u11_23481','dynclicks_u11_32191','dynclicks_u11_129411','dynclicks_u11_127881','dynclicks_u11_135581','dynclicks_u11_21631','dynclicks_u11_21411','dynclicks_u11_22151'],[32871,32741,26851,23771,24171,22831,22341,23481,32191,129411,127881,135581,21631,21411,22151],"wbnews", 2043148059)</script>
+</div>
+                            </div>
+                        </div>
+
+                        <div class="right">
+                            <div class="mtnd">
+
+<div class="hz"></div>
+<div class="box flex">
+<div class="list5Box swiper-container">
+<ul class="list5 swiper-wrapper">
+<li class="swiper-slide">
+<a href="https://edu.jxnews.com.cn/system/2024/10/15/020664887.shtml" class="a" target="_blank">
+<span class="span"></span>
+<h4 class="l2 h4s2">【大江网】江西农业大学召开2024年老同志集体祝寿暨情况通报会</h4>
+<h6 class="h6s1">2024.10.16</h6>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="https://app.kjrb.com.cn/app/template/displayTemplate/news/newsDetail/138804.html?isDigital=true&isShare=true" class="a" target="_blank">
+<span class="span"></span>
+<h4 class="l2 h4s2">【科技日报】江西农业大学：自主创制生猪育种基因芯片</h4>
+<h6 class="h6s1">2024.10.16</h6>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="https://jx.ifeng.com/c/8dVXfgY6ilH" class="a" target="_blank">
+<span class="span"></span>
+<h4 class="l2 h4s2">【凤凰网】江西省高校“诵读红色家书 讲述英烈故事”巡演在江西农业大学举行</h4>
+<h6 class="h6s1">2024.10.14</h6>
+</a>
+</li>
+</ul>
+<div class="dots dots1"></div>
+</div>
+</div><script>_showDynClickBatch(['dynclicks_u12_32871','dynclicks_u12_32741','dynclicks_u12_26851','dynclicks_u12_23771','dynclicks_u12_24171','dynclicks_u12_22831','dynclicks_u12_22341','dynclicks_u12_23481','dynclicks_u12_32191','dynclicks_u12_129411','dynclicks_u12_127881','dynclicks_u12_135581','dynclicks_u12_21631','dynclicks_u12_21411','dynclicks_u12_22151','dynclicks_u12_21671','dynclicks_u12_54631','dynclicks_u12_71191'],[32871,32741,26851,23771,24171,22831,22341,23481,32191,129411,127881,135581,21631,21411,22151,21671,54631,71191],"wbnews", 2043148059)</script>
+</div>
+
+                            <div class="mtnd1">
+                                <div class="hz"></div>
+                                <div class="box flex">
+
+<ul class="list5">
+<li>
+<a href="https://mp.weixin.qq.com/s/vW3H9LjtLk02q7ZFv9D7jw" class="a alin_w" target="_blank">
+<span class="span"></span>
+<h4 class="l2 h4s2"><span class="aline_w">【江西教育电视台】江西农业大学举办“理解英雄”主题报告会</span></h4>
+<h6 class="h6s1">2024.10.12</h6>
+</a>
+</li>
+</ul>
+<script>_showDynClickBatch(['dynclicks_u13_32871','dynclicks_u13_32741','dynclicks_u13_26851','dynclicks_u13_23771','dynclicks_u13_24171','dynclicks_u13_22831','dynclicks_u13_22341','dynclicks_u13_23481','dynclicks_u13_32191','dynclicks_u13_129411','dynclicks_u13_127881','dynclicks_u13_135581','dynclicks_u13_21631','dynclicks_u13_21411','dynclicks_u13_22151','dynclicks_u13_21671','dynclicks_u13_54631','dynclicks_u13_71191','dynclicks_u13_20621','dynclicks_u13_32021'],[32871,32741,26851,23771,24171,22831,22341,23481,32191,129411,127881,135581,21631,21411,22151,21671,54631,71191,20621,32021],"wbnews", 2043148059)</script>
+</div>
+                            </div>
+
+                            <div class="mtnd2">
+                                <div class="hz"></div>
+                                <div class="box flex">
+
+<ul class="list5">
+<li>
+<a href="https://article.xuexi.cn/articles/index.html?art_id=9780027015013454649&t=1728531579164&showmenu=false&cdn=https%3A%2F%2Fregion-jiangxi-resource&study_style_id=feeds_opaque&source=share&share_to=wx_single&item_id=9780027015013454649&ref_read_id=80de4a38-6" class="a alin_w" target="_blank">
+<span class="span"></span>
+<h4 class="l2 h4s2"><span class="aline_w">【学习强国】江西农业大学：十年攻坚 养好“科技猪”</span></h4>
+<h6 class="h6s1">2024.10.10</h6>
+</a>
+</li>
+</ul>
+<script>_showDynClickBatch(['dynclicks_u14_32871','dynclicks_u14_32741','dynclicks_u14_26851','dynclicks_u14_23771','dynclicks_u14_24171','dynclicks_u14_22831','dynclicks_u14_22341','dynclicks_u14_23481','dynclicks_u14_32191','dynclicks_u14_129411','dynclicks_u14_127881','dynclicks_u14_135581','dynclicks_u14_21631','dynclicks_u14_21411','dynclicks_u14_22151','dynclicks_u14_21671','dynclicks_u14_54631','dynclicks_u14_71191','dynclicks_u14_20621','dynclicks_u14_32021','dynclicks_u14_19901'],[32871,32741,26851,23771,24171,22831,22341,23481,32191,129411,127881,135581,21631,21411,22151,21671,54631,71191,20621,32021,19901],"wbnews", 2043148059)</script>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home4 pad1">
+                <div class="wp">
+                    <div class="tit2 flex" data-aos="fade-up">
+                        <img src="images/tit1_6.png" alt="">
+
+                        <div class="more1">
+                            <a href="xsdt.htm" class="a1">查看更多</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wp flexjs">
+                    <div class="left flex" data-aos="fade-up">
+
+<div class="list6Box swiper-container">
+<ul class="list6 swiper-wrapper">
+<li class="swiper-slide">
+<a href="info/1043/1091.htm" class="a flex" target="_blank">
+<div class="imgBox trans">
+<div class="img light"><img src="/__local/A/70/54/E86A919057C9500C77F03A04EAD_03ADD7AC_105CC8.jpg?e=.jpg" alt=""></div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1043/1031.htm" class="a flex" target="_blank">
+<div class="imgBox trans">
+<div class="img light"><img src="/__local/4/AE/BC/E677F67113185EA036CAEBB1BB1_193E4672_1070A3.jpg?e=.jpg" alt=""></div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1043/1021.htm" class="a flex" target="_blank">
+<div class="imgBox trans">
+<div class="img light"><img src="/__local/B/41/27/DF5DD8AAD465F547193656842E8_C9624667_41203D.jpg?e=.jpg" alt=""></div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<ul class="list6 list6s">
+<li class="on">
+<a href="info/1043/1091.htm" class="a flex">
+<div class="txt">
+<h4 class="l2 h4s2">先骕大讲坛（第14期)</h4>
+<div class="p">
+<p class="p1">主讲人：桂建芳院士</p>
+<p class="p2">时间：2024年8月20日上午9:30</p>
+<p class="p3">地点：校办二楼圆形会议室</p>
+</div>
+<div class="dots dots1"></div>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1043/1031.htm" class="a flex">
+<div class="txt">
+<h4 class="l2 h4s2">先骕大讲坛（第13期)</h4>
+<div class="p">
+<p class="p1">主讲人：徐明岗院士</p>
+<p class="p2">时间：2024年7月5日  9:00</p>
+<p class="p3">地点：逸夫图书馆一楼报告厅（南区）</p>
+</div>
+<div class="dots dots1"></div>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1043/1021.htm" class="a flex">
+<div class="txt">
+<h4 class="l2 h4s2">先骕大讲坛（第12期)</h4>
+<div class="p">
+<p class="p1">主讲人：陈卫院士</p>
+<p class="p2">时间：2024年7月4日  15:00</p>
+<p class="p3">地点：逸夫图书馆一楼报告厅（南区）</p>
+</div>
+<div class="dots dots1"></div>
+</div>
+</a>
+</li>
+</ul>
+<script>_showDynClickBatch(['dynclicks_u15_1091','dynclicks_u15_1031','dynclicks_u15_1021'],[1091,1031,1021],"wbnews", 2043148059)</script>
+</div>
+
+                    <div class="right" data-aos="fade-up">
+
+<ul class="list7">
+<li>
+<a href="info/1043/32651.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>28</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt">
+<h4 class="l1 h4s1">我校主办江西省生态经济学会2024年学术年会暨新质生产力理论与实践学术研讨会</h4>
+<div class="p">
+<p class="p1">主讲人：</p>
+<p class="p3">地点：</p>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1043/24641.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>26</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt">
+<h4 class="l1 h4s1">我校举办高等学校新农村发展研究院第六届乡村振兴论坛</h4>
+<div class="p">
+<p class="p1">主讲人：</p>
+<p class="p3">地点：</p>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1043/136181.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>23</h3>
+<h6>2024.10</h6>
+</div>
+<div class="txt">
+<h4 class="l1 h4s1">我校主办的2024农产品贮藏加工科技交流大会召开</h4>
+<div class="p">
+<p class="p1">主讲人：</p>
+<p class="p3">地点：</p>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1043/184301.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>30</h3>
+<h6>2024.08</h6>
+</div>
+<div class="txt">
+<h4 class="l1 h4s1">中国科学院院士桂建芳来我校开展交流合作</h4>
+<div class="p">
+<p class="p1">主讲人：</p>
+<p class="p3">地点：</p>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1043/1081.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>07</h3>
+<h6>2024.08</h6>
+</div>
+<div class="txt">
+<h4 class="l1 h4s1">美国密西根大学宋杰教授来我校合作研究与学术交流</h4>
+<div class="p">
+<p class="p1">主讲人：宋杰</p>
+<p class="p3">地点：</p>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1043/1061.htm" class="a flex" target="_blank">
+<div class="time">
+<h3>05</h3>
+<h6>2024.08</h6>
+</div>
+<div class="txt">
+<h4 class="l1 h4s1">我校举办第三届“木香杯”青年学术论坛暨第五届樟树论坛</h4>
+<div class="p">
+<p class="p1">主讲人：</p>
+<p class="p3">地点：</p>
+</div>
+</div>
+</a>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u16_32651','dynclicks_u16_24641','dynclicks_u16_136181','dynclicks_u16_184301','dynclicks_u16_1091','dynclicks_u16_1081','dynclicks_u16_1061','dynclicks_u16_1071','dynclicks_u16_1051','dynclicks_u16_1041','dynclicks_u16_1031','dynclicks_u16_1021','dynclicks_u16_1011','dynclicks_u16_1001','dynclicks_u16_2411','dynclicks_u16_2401','dynclicks_u16_2391','dynclicks_u16_2381','dynclicks_u16_2551','dynclicks_u16_2541'],[32651,24641,136181,184301,1091,1081,1061,1071,1051,1041,1031,1021,1011,1001,2411,2401,2391,2381,2551,2541],"wbnews", 2043148059)</script>
+</div>
+                </div>
+            </div>
+
+            <div class="home5 pad1">
+                <div class="wp">
+
+<div class="tit2 flex" data-aos="fade-up">
+<img src="images/tit1_7.png" alt="">
+<div class="more1"><a href="jsfc.htm" class="a1">查看更多</a></div>
+</div>
+<div class="list8Box swiper-container" data-aos="fade-up">
+<ul class="list8 swiper-wrapper">
+<li class="swiper-slide">
+<a href="info/1044/183971.htm" class="a" target="_blank">
+<div class="box box2">
+<div class="imgW">
+<div class="imgBox trans">
+<div class="img light" style=" background: url(/__local/1/B1/DE/EB00E2EE2AD356421A85001F189_5F418B12_3088.jpg?e=.jpg);">
+<img src="/__local/1/B1/DE/EB00E2EE2AD356421A85001F189_5F418B12_3088.jpg?e=.jpg" alt="" class="none">
+</div>
+</div>
+</div>
+<div class="txt">
+<h3>陈裕鹏</h3>
+<h4>2024年度新时代赣鄱先锋</h4>
+<div class="p"><p class="l2 ps2">陈裕鹏，男，汉族，江西宁都人，2005年5月加入中国共产党，历任江西农业大学保卫处干部、副科长、科长，现为保卫处副处长，多次获得校先进工作者等荣誉称号。陈裕鹏同志自参加工作以来，一直从事高校保卫工作，始终牢记一名共产党员为人民服务的宗旨，...</p></div>
+</div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1044/183961.htm" class="a" target="_blank">
+<div class="box box2">
+<div class="imgW">
+<div class="imgBox trans">
+<div class="img light" style=" background: url(/__local/3/CE/29/C0B93C0D0C646867C4B0D6ED78D_B47EAA60_E51E.jpg?e=.jpg);">
+<img src="/__local/3/CE/29/C0B93C0D0C646867C4B0D6ED78D_B47EAA60_E51E.jpg?e=.jpg" alt="" class="none">
+</div>
+</div>
+</div>
+<div class="txt">
+<h3>吴焱军</h3>
+<h4>2024年度“最美辅导员”</h4>
+<div class="p"><p class="l2 ps2">吴焱军，男，汉族，中共党员，江西浮梁人，1988年12月出生，研究生学历，法学博士，国家二级心理咨询师。2013年7月开始从事辅导员工作，担任江西农业大学工学院21级年级辅导员，信工2202、信工2302班主任。现任江西农业大学团委挂职副书记，...</p></div>
+</div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1044/183951.htm" class="a" target="_blank">
+<div class="box box2">
+<div class="imgW">
+<div class="imgBox trans">
+<div class="img light" style=" background: url(/__local/3/12/8E/0BF7C0F02DC47F284ACD6DAA8F1_9EDE72DA_2CD6.jpg?e=.jpg);">
+<img src="/__local/3/12/8E/0BF7C0F02DC47F284ACD6DAA8F1_9EDE72DA_2CD6.jpg?e=.jpg" alt="" class="none">
+</div>
+</div>
+</div>
+<div class="txt">
+<h3>张令</h3>
+<h4>2024年度新时代赣鄱先锋</h4>
+<div class="p"><p class="l2 ps2">张令，男，1984年10月出生，山东泰安人，博士，研究员，博士研究生导师，现任江西农业大学林学院教工第一党支部书记，亚热带森林资源培育江西省重点实验室副主任。近年来，主持国家自然科学基金等课题15项，发表论文90余篇，...</p></div>
+</div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1044/183941.htm" class="a" target="_blank">
+<div class="box box2">
+<div class="imgW">
+<div class="imgBox trans">
+<div class="img light" style=" background: url(/__local/E/20/C2/57EEB6EFC31E5B95065BB47AA94_8C96AA02_1BB3E.jpg?e=.jpg);">
+<img src="/__local/E/20/C2/57EEB6EFC31E5B95065BB47AA94_8C96AA02_1BB3E.jpg?e=.jpg" alt="" class="none">
+</div>
+</div>
+</div>
+<div class="txt">
+<h3>向妙莲</h3>
+<h4>2024年度新时代赣鄱先锋</h4>
+<div class="p"><p class="l2 ps2">向妙莲，女，苗族，1977年10月生，中国共产党党员，博士，教授，博士研究生导师，江西农业大学农学院植物保护系教师，美国康奈尔大学访学问学者，主要从事农作物病害绿色防控教学和科研工作。她坚守立德树人、强农兴农初心使命，...</p></div>
+</div>
+</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="info/1044/108551.htm" class="a" target="_blank">
+<div class="box box2">
+<div class="imgW">
+<div class="imgBox trans">
+<div class="img light" style=" background: url(/__local/0/44/45/32B189F52A7B06D30F0FC6448E4_505E42CA_8FE0.png?e=.png);">
+<img src="/__local/0/44/45/32B189F52A7B06D30F0FC6448E4_505E42CA_8FE0.png?e=.png" alt="" class="none">
+</div>
+</div>
+</div>
+<div class="txt">
+<h3>吴南生</h3>
+<h4>2023年度全省最美林业科技推广员</h4>
+<div class="p"><p class="l2 ps2">吴南生，中共党员，农学博士，教授。长期从事经济林（油茶、南酸枣）和园林植物与观赏园艺的教学与科研及生态产业、循环经济、科技推广、扶贫开发、乡村振兴的研究与服务。主持（参与）国家自然科学基金项目、国家科技支撑项目、...</p></div>
+</div>
+</div>
+</a>
+</li>
+</ul>
+<div class="dots dots1"></div>
+</div><script>_showDynClickBatch(['dynclicks_u17_183971','dynclicks_u17_183961','dynclicks_u17_183951','dynclicks_u17_183941','dynclicks_u17_108551'],[183971,183961,183951,183941,108551],"wbnews", 2043148059)</script>
+</div>
+            </div>
+
+            <div class="home6 pad1">
+                <div class="wp">
+                    <div class="tit2 flex" data-aos="fade-up">
+                        <img src="images/tit1_8.png" alt="">
+                    </div>
+
+                    <div class="videoBox list_box_tc" data-aos="fade-up">
+                        <a href="javascript:;" data-video="/images/2.mp4" class="a">
+                            <div class="ico">
+                                <img src="images/video_v.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content" data-aos="fade-up">
+                    <img src="images/home6_c.png" alt="" class="w100">
+
+                    <div class="list10Box swiper-container">
+
+<ul class="list10 swiper-wrapper">
+<li class="swiper-slide">
+<div class="box0 box1">
+<a class="a">
+<div class="imgBox trans">
+<div class="img"><img src="images/list10_i1.png"></div>
+</div>
+<div class="txt">
+<h3>1905<small></small></h3>
+<h6>学校创立时间</h6>
+</div>
+</a>
+</div>
+<div class="box0 box2">
+<a class="a">
+<div class="imgBox trans">
+<div class="img"><img src="images/list10_i2.png"></div>
+</div>
+<div class="txt">
+<h3>1800<small></small></h3>
+<h6>在职教职工1800余人</h6>
+</div>
+</a>
+</div>
+<div class="box0 box3">
+<a class="a">
+<div class="imgBox trans">
+<div class="img"><img src="images/list10_i3.png"></div>
+</div>
+<div class="txt">
+<h3>2.6<small>w</small></h3>
+<h6>全日制在校学生2.6万人</h6>
+</div>
+</a>
+</div>
+<div class="box0 box4">
+<a class="a">
+<div class="imgBox trans">
+<div class="img"><img src="images/list10_i4.png"></div>
+</div>
+<div class="txt">
+<h3>108<small></small></h3>
+<h6>国家级人才108人</h6>
+</div>
+</a>
+</div>
+<div class="box0 box5">
+<a class="a">
+<div class="imgBox trans">
+<div class="img"><img src="images/list10_i5.png"></div>
+</div>
+<div class="txt">
+<h3>80<small></small></h3>
+<h6>获各级各类科研奖励80余项</h6>
+</div>
+</a>
+</div>
+</li>
+</ul>
+<div class="bottom flexjs">
+<div class="dots dots1"></div>
+<div class="arrow1 flex">
+<div class="arrow prev swi-arrbal"></div>
+<div class="arrow next swi-arrbar"></div>
+</div>
+</div><script>_showDynClickBatch(['dynclicks_u18_183531','dynclicks_u18_183521','dynclicks_u18_183511','dynclicks_u18_183501','dynclicks_u18_183491'],[183531,183521,183511,183501,183491],"wbnews", 2043148059)</script>
+</div>
+                </div>
+            </div>
+
+            <div class="home7 pad1">
+                <div class="bg1"><img src="images/home7_s.svg" alt="" class="w100"></div>
+                <div class="wp">
+                    <div class="tit2 flex" data-aos="fade-up">
+                        <img src="images/tit1_9.png" alt="">
+
+                        <div class="more1">
+                            <a href="xysh.htm" class="a1">查看更多</a>
+                        </div>
+                    </div>
+
+                    <div class="flexjs">
+                        <div class="left" data-aos="fade-up">
+                            <h3><img src="images/tit3.png"></h3>
+    
+                            <div class="list11Box swiper-container">    <ul class="list11 swiper-wrapper">
+<li class="swiper-slide">
+<a class="a tc_btn" name="tc_ico1" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012120)">
+<img src="images/list11_i1.png" alt="">
+</a>
+</li>
+<li class="swiper-slide">
+<a class="a tc_btn" name="tc_ico2" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012117)">
+<img src="images/list11_i2.png" alt="">
+</a>
+</li>
+<li class="swiper-slide">
+<a class="a tc_btn" name="tc_ico3" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012118)">
+<img src="images/list11_i3.png" alt="">
+</a>
+</li>
+<li class="swiper-slide">
+<a class="a tc_btn" name="tc_ico4" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012119)">
+<img src="images/list11_i4.png" alt="">
+</a>
+</li>
+</ul>
+<div class="dots"></div></div>
+
+                                <ul class="list12">
+<li><a title="" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012121)" target="_blank" class="a">
+<div class="imgBox trans">
+<div class="img"><img src="images/mttp1.jpg"></div>
+</div>
+</a></li> 
+<li><a title="" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012122)" target="_blank" class="a">
+<div class="imgBox trans">
+<div class="img"><img src="images/mttp2.jpg"></div>
+</div>
+</a></li> 
+</ul>
+                        </div>
+
+                        <div class="right">
+                            
+
+<ul class="list13" data-aos="fade-up">
+<li>
+<a href="https://api.weibo.com/2/statuses/go?uid=2466779064&id=5093310139990841" class="a flexjs" target="_blank">
+<h4 class="l1 h4s1">省科协主席徐景坤来校看望黄路生院士、魏辅文院士
+10月23日上午，省科协主席徐景坤来校看望校党委书记黄路生院士、校长魏辅文院士，省院士专家服务中心负责同志陪同。
+
+徐景坤充分肯定了黄路生院士、魏辅文院士为我省和全国生猪育种及生物多样性保护取得的突出成绩，介绍了省科协近年来的特色亮点工作 ​​​</h4>
+<h6 class="h6s1">2024.10.25</h6>
+</a>
+</li>
+<li>
+<a href="https://api.weibo.com/2/statuses/go?uid=2466779064&id=5092192337528063" class="a flexjs" target="_blank">
+<h4 class="l1 h4s1">#南酸枣# 
+第三届南酸枣产业发展大会在江西余干召开
+10月19日，第三届南酸枣产业发展大会在江西省上饶市余干县召开。江西省林业局党组成员副局长刘宾，我校副校长游金明、江西省林学会副理事长（省林业局科学技术和对外合作处处长）谢利玉、余干县委书记胡斌应邀出席大会并分别致辞，国家林业和草原局 ​​​</h4>
+<h6 class="h6s1">2024.10.22</h6>
+</a>
+</li>
+<li>
+<a href="https://api.weibo.com/2/statuses/go?uid=2466779064&id=5090747671907431" class="a flexjs" target="_blank">
+<h4 class="l1 h4s1">#党外知识分子联谊会# 
+学校召开党外知识分子联谊会第三届理事会换届大会
+10月16日下午，学校召开党外知识分子联谊会（简称知联会）第三届理事会换届大会，校党委委员、副校长樊后保出席会议并讲话。校党委委员、党委统战部部长，江西省政协委员、学校民革委员会主委及学校知联会会员代表参加会议。
+
+ ​​​</h4>
+<h6 class="h6s1">2024.10.18</h6>
+</a>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u21_23831','dynclicks_u21_65621','dynclicks_u21_21581'],[23831,65621,21581],"wbnews", 2043148059)</script>
+
+                            <ul class="list14 flex" data-aos="fade-up">
+
+<li><a href="https://v.douyin.com/iS8MbjQP/" target="_blank" title="江西农业大学：破译猪肉质好排骨多的“密码”" class="a">
+<h3 style="color:#111;"><img src="images/list11_i1.png"># 抖音 #</h3>
+<div class="imgBox trans">
+<div class="img light"><img src="/__local/8/60/C6/DF1AFF1FE38B7CA1FEFB268846D_CE6F7C44_4FC28.jpg"></div>
+</div>
+<h4 class="l2 h4s2">江西农业大学：破译猪肉质好排骨多的“密码”</h4>
+</a></li>
+<script>_showDynClickBatch(['dynclicks_u22_130881'],[130881],"wbnews", 2043148059)</script>
+
+
+
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg3NzE3NTU1NA==&mid=2247610991&idx=1&sn=c46d74d03689651fd5077719a3d64d90&chksm=cea2eeb651d28b27199623855221430f92c02f7a62ceb380e9ec121051e74ea416512a2f2271#rd" target="_blank" title="江农红！深情告白！" class="a">
+<h3 style="color:#28c445;"><img src="images/list11_i2.png"># 微信 #</h3>
+<div class="imgBox trans">
+<div class="img light"><img src="/__local/1/6B/ED/A13AD933DE441510856419BAE5C_C63CD235_193CA.jpg"></div>
+</div>
+<h4 class="l2 h4s2">江农红！深情告白！</h4>
+</a></li>
+<script>_showDynClickBatch(['dynclicks_u23_18511'],[18511],"wbnews", 2043148059)</script>
+
+
+
+<li><a href="https://weibo.com/2466779064/OATDsnndJ" target="_blank" title="我校学子完成赴美工作旅行项目" class="a">
+<h3 style="color:#f56467;"><img src="images/list11_i4.png"># 微博 #</h3>
+<div class="imgBox trans">
+<div class="img light"><img src="/__local/F/02/5F/87B8C9136E2707418BD67013741_849E9120_16A53.jpg"></div>
+</div>
+<h4 class="l2 h4s2">我校学子完成赴美工作旅行项目</h4>
+</a></li>
+<script>_showDynClickBatch(['dynclicks_u24_33521'],[33521],"wbnews", 2043148059)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home8 pad1">
+                <div class="wp">
+                    <div class="tit2 flex" data-aos="fade-up">
+                        <img src="images/tit1_10.png" alt="">
+
+                        
+                    </div>
+                    
+                    <svg width="0" height="0" fill="none" viewbox="0 0 419 368">
+                        <clippath id="svgPath" clippathunits="objectBoundingBox" transform="scale(0.00239,0.00271)">
+                        <path class="cls-1" d="M10,38S99,0,206,0C316,0,409,38,409,38a10,10,0,0,1,10,10V358a10,10,0,0,1-10,10H10A10,10,0,0,1,0,358V48A10,10,0,0,1,10,38Z" />
+                        </clippath>
+                    </svg>
+
+                    <div class="list15W" data-aos="fade-up">    <div class="list15Box swiper-container">
+<ul class="list15 swiper-wrapper">
+<li class="swiper-slide">
+<a href="ztzl/xxgcddesdjs/xxdt.htm" class="a" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012125)" target="_blank">
+<h4 class="l1 h4s1">学习贯彻党的二十大精神</h4>
+<div class="imgBox"><div class="img light"><img src="images/list15_i2.jpg" alt=""></div></div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="https://pinggu.jxau.edu.cn/" class="a" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012156)" target="_blank">
+<h4 class="l1 h4s1">审核评估</h4>
+<div class="imgBox"><div class="img light"><img src="images/ztttp.jpg" alt=""></div></div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="ztzl/xydscddh/fzxl.htm" class="a" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012123)" target="_blank">
+<h4 class="l1 h4s1">喜迎第四次党代大会</h4>
+<div class="imgBox"><div class="img light"><img src="images/list15_i4.jpg" alt=""></div></div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="ztzl/hsxs/xsgs.htm" class="a" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012126)" target="_blank">
+<h4 class="l1 h4s1">红色校史</h4>
+<div class="imgBox"><div class="img light"><img src="images/zttp1.jpg" alt=""></div></div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="https://jwc.jxau.edu.cn/MenuId?page=1&Category=302" class="a" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012124)" target="_blank">
+<h4 class="l1 h4s1">劳动教育</h4>
+<div class="imgBox"><div class="img light"><img src="images/list15_i3.jpg" alt=""></div></div>
+</a>
+</li>
+</ul>
+</div>
+<div class="arrow2Box flex">
+<div class="swiper-scrollbar"></div>
+<div class="arrow1 flex">
+<div class="arrow prev swi-arrbal"></div>
+<div class="arrow next swi-arrbar"></div>
+</div>
+</div></div>
+                </div>
+            </div>
+
+            <div class="footerW">
+                <div id="gotop">
+                    <svg id="Layer_1" class="w-10 h-10 text-white z-30 fill-current absolute top-40 left-3 -mt-px ml-px transform -translate-x-full | xl:left-4 dark:text-grayDark-600" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 100 100" xml:space="preserve"><path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z" /></svg>
+                    <svg id="Layer_2" class="w-10 h-10 text-white z-30 fill-current absolute top-40 left-3 -mt-px ml-px transform -translate-x-full | xl:left-4 dark:text-grayDark-600" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 100 100" xml:space="preserve"><path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path></svg>
+                    <img src="images/top_b.png" alt="">
+                </div>
+                <footer>
+                    <div class="fl1">
+                        <div class="wp flexjs">
+                            <div class="left flex">
+                                    <img src="images/f_logo.png" alt="">
+
+                                <div class="p"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p>地址：江西省南昌经济技术开发区　　邮编：330045</p>
+<p><span><span>电话：0791－83813214　　E-mail：jxnydxzsb@163.com</span></span></p></div>
+                            </div>
+    
+                            <div class="right">
+                            <div class="bg1"><img src="images/footer_b.png" alt="" class="w100"></div>
+                                <ul class="list11 flex">
+<li>
+<a class="a tc_btn" name="tc_ico1" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012120)">
+<img src="images/list11_i1.png" alt="">
+</a>
+</li>
+<li>
+<a class="a tc_btn" name="tc_ico2" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012117)">
+<img src="images/list11_i2.png" alt="">
+</a>
+</li>
+<li>
+<a class="a tc_btn" name="tc_ico3" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012118)">
+<img src="images/list11_i3.png" alt="">
+</a>
+</li>
+<li>
+<a class="a tc_btn" name="tc_ico4" onclick="_addDynClicks(&#34;wbimage&#34;, 2043148059, 1012119)">
+<img src="images/list11_i4.png" alt="">
+</a>
+</li>
+</ul></div>
+                        </div>
+                    </div>
+    
+                    <div class="fl2">
+                        <div class="wp"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>©2002-2024 江西农业大学　　<a target="_blank" href="https://beian.miit.gov.cn/" style="color:#fff;">赣ICP备17001034号-3</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36010602000030" target="_blank" style="color:#fff;"><img src="/__local/6/4C/12/25B2FEC42C839B084E14FA31ED7_9E1753C8_524.png?e=.png" />&nbsp;赣公网安备 36010602000030</a> &nbsp;&nbsp; &nbsp; &nbsp;<a href="https://bszs.conac.cn/sitename?method=show&id=40E95456CD40305BE053022819AC71FD" target="_blank"><img src="/__local/1/94/DF/8EE586A4C47BE51DB86598B18CD_07B15DF6_11B8.png?e=.png" /></a></p></div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="vwrap">
+    <div class="videobtg"></div>
+    <div class="videobox">
+        <div id="videobox" class="img_zd">
+            <div class="img_hezi"></div>
+            <video width="100%" height="100%" controls autoplay src=""></video>
+        </div>
+        <div class="close">
+            <i>
+                <svg t="1623297466363" class="icon" viewbox="0 0 1024 1024" p-id="3150" width="18" height="18">
+                    <path d="M881.152 776.192c-0.512-1.024-1.024-1.536-2.048-2.56L616.96 511.488l262.144-262.144c0.512-1.024 1.536-1.536 2.048-2.56l1.024-1.024c28.672-28.672 28.16-74.24 0-102.912-1.024-1.024-2.048-1.536-3.072-2.56-1.536-1.536-2.56-3.072-4.096-4.096l-0.512 0.512c-28.672-21.504-69.12-19.456-95.232 6.144L514.048 408.064 251.904 146.432c-1.024-0.512-1.536-1.536-2.56-2.048l-1.024-1.024c-28.16-28.16-74.24-28.16-102.912 0-1.024 1.024-1.536 2.048-2.56 3.072-1.536 1.536-3.072 2.56-4.096 4.096l0.512 0.512c-21.504 28.672-19.456 69.12 6.144 95.232l265.216 265.216-265.216 265.216c-26.112 26.112-27.648 66.56-6.144 95.232l-0.512 0.512c1.024 1.536 2.56 2.56 4.096 4.096 1.024 1.024 1.536 2.048 2.56 3.072 28.672 28.16 74.24 28.16 102.912 0l1.024-1.024c1.024-0.512 1.536-1.024 2.56-2.048L514.048 614.4l265.216 265.216c26.112 26.112 66.56 27.648 95.232 6.144l0.512 0.512c1.536-1.024 2.56-2.56 4.096-4.096 1.024-1.024 2.048-1.536 3.072-2.56 28.16-28.672 28.16-74.24 0-102.912l-1.024-0.512z" p-id="3151" fill="#ffffff">
+                    </path>
+                </svg>
+            </i>
+        </div>
+    </div>
+</div>
+
+
+<script>
+$(document).on("click", ".list_box_tc a",
+function(e) {
+    let video_s = $(this).attr("data-video");
+    $('#videobox video').attr("src", video_s);
+    $(".vwrap").fadeIn();
+});
+
+$(".vwrap .close").click(function() {
+    $(".vwrap").hide();
+    $('#videobox video').attr("src", '');
+});
+</script>
+<style>
+.vwrap {display: none;z-index: 1040000;width: 100%;position: fixed;} 
+.vwrap
+.videobtg { z-index: 900; position: fixed; width: 100%; height: 100%; left:
+0; top: 0; background: #000; opacity: 0.8; filter: alpha(opacity=80); overflow:
+hidden;} 
+.vwrap .videobox {z-index: 1200;width: 900px;position: fixed;left:
+50%;top: 50%;margin-left: -450px;object-fit: cover; transform:translateY(-50%);}
+.vwrap .videobox #videobox { width: 100%; display: inline-block; background:#000;} 
+.vwrap .videobox #videobox .img_hezi{ padding-bottom:60% !important;}
+.vwrap .videobox #videobox video{ position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;object-fit: cover;} 
+#videobox_wrapper { height: 100%!important;} 
+.vwrap .close {z-index: 999;width: 31px;height: 31px;cursor: pointer;position: absolute;top: 0px;right: -42px;text-align: center;} 
+.vwrap .close i { display: block; width: 31px;
+height: 31px; -webkit-transition: 400ms; transition: 400ms;} 
+.vwrap .close i svg{ transition:.6s;} 
+.vwrap .close:hover i svg{ -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg);} 
+@media(max-width: 992px){ 
+    .vwrap .videobox{width:94%;left: 3%;margin-left: 0;} 
+    .vwrap .close{right:0;top: -35px;}
+}
+</style>
+
+    <aside class="tc1">
+    <div class="tc" name="tc_ico1">
+        <div class="tc-box lightSpeedIn">
+            <h3>
+              <img src="images/ewm1.jpg" alt="">
+            </h3>
+            <h5>抖音</h5>
+        </div>
+        <div class="tc_bg"></div>
+    </div>
+</aside>
+<aside class="tc1">
+    <div class="tc" name="tc_ico2">
+        <div class="tc-box lightSpeedIn">
+            <h3>
+              <img src="images/ewm2.jpg" alt="">
+            </h3>
+            <h5>微信公众号</h5>
+        </div>
+        <div class="tc_bg"></div>
+    </div>
+</aside>
+<aside class="tc1">
+    <div class="tc" name="tc_ico3">
+        <div class="tc-box lightSpeedIn">
+            <h3>
+              <img src="images/ewm3.jpg" alt="">
+            </h3>
+            <h5>视频号</h5>
+        </div>
+        <div class="tc_bg"></div>
+    </div>
+</aside>
+<aside class="tc1">
+    <div class="tc" name="tc_ico4">
+        <div class="tc-box lightSpeedIn">
+            <h3>
+              <img src="images/ewm4.jpg" alt="">
+            </h3>
+            <h5>微博</h5>
+        </div>
+        <div class="tc_bg"></div>
+    </div>
+</aside>
+
+
+<!--============================底部 结束=============================-->
+
+
+<!--============================动画 开始=============================-->
+
+
+<script src="js/slide.js"></script>
+<script src="js/dhj.js"></script>
+<script src="js/style.js"></script>
+<script src="js/index.js"></script>
+<script>
+$('.miso_tab').slide({ trigger: 'click' });
+</script>
+
+<!--============================动画 结束=============================-->
+
+</body>
+</html>

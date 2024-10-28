@@ -1,0 +1,1375 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>南昌理工学院在线教育平台___慕课平台___自研网校</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="/Content/user/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/user/css/swiper.min.css" />
+    <link rel="stylesheet" href="/Content/user/css/css.css" />
+    <script type="text/javascript" src="/Content/user/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="/Content/user/js/swiper.min.js"></script>
+    <script src="/Content/js/jquery.md5.js"></script>
+    <style>
+        .user_info {
+            margin-left: 80px;
+            width: 52px;
+            height: 52px;
+        }
+
+        .navbar_tops {
+            position: absolute;
+            z-index: 3;
+            min-height: 0px;
+        }
+
+        .point {
+            position: absolute;
+            z-index: 101000;
+            left: 50%;
+            top: 500px;
+        }
+
+        .land_row {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: -250px;
+            top: -250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mask hide" style="width:100%; height:100%;position:fixed; z-index:3;top :0px;background-color:#000;opacity:0.3;text-align:center"></div>
+            <div id="ad"><a href="http://online.edu.senlanit.com/course_details/course_details?cid=2a3fd2ac-d38d-4f5d-bb1d-812167db60f8"><img src="/UploadImg/bea6976b-a768-4964-8012-f29dcc4ac5d1.png" style="height:50px;width:100%;" /></a><span style="cursor:pointer;"><img src="/Content/user/img/c001.png" style="position:absolute;z-index:101001;right:0px;margin-top:18px;" class="imageBox" /></span></div>
+
+    <div class="point hide">
+        <div class="land_row">
+            
+            <div class="top_t">
+                <ul>
+                    <li class="active">登录</li>
+                    
+                </ul>
+                <img src="/Content/user/img/lands_03.png" class="gb" />
+            </div>
+            <div class="show_box">
+                <div class="show_fadin">
+                    <div class="showti">
+                        <div>
+                            <div class="lablesa">
+                                <input type="text" placeholder="请输入手机号" name="account" id="account" value="" />
+                            </div>
+                            <div class="lablesa">
+                                <input type="password" placeholder="6-16位密码，不能用空格" name="pwd" id="pwd" value="" />
+                            </div>
+                            <div class="lablesa">
+                                <input type="text" placeholder="请输入验证码" name="yzCode" id="yzCode" class="codeClass" value="" style="width:307px !important" />
+                                <img onclick="codeImg()" id="loginCode" class="codes" src="/user_login/CreateCode" alt="看不清？点击更换" style="height:46px;width:100px;" />
+                            </div>
+                            <div class="riew">
+                                <input type="checkbox" name="recording" id="recording" value="" />
+                                <p>7天内自动登录</p>
+                                <a href="/user_login/login">忘记密码</a>
+                            </div>
+                            <input type="submit" name="subsa" id="subsa" value="登录" onclick="login()" />
+                        </div>
+                    </div>
+                    <div class="codds hide">
+                        <img src="/Content/user/img/lands_07.jpg" class="kog" />
+                        <p>扫描二维码登录航天科教</p>
+                        <span>请使用<em>  航天科教手机APP </em>扫码完成登录</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="hidden" id="hdAccount" value="" />
+                    <input type="hidden" id="hdPwd" value="" />
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <a href="/Home/preferred"><h1><img src="/Content/user/img/index_03.png" /></h1></a>
+        <ul class="list">
+            <li>
+                <a href="/home/preferred">首页</a>
+            </li>
+                    <li>
+                        <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12">师资提升</a>
+                    </li>
+
+            <li>
+                <a href="/home/vcategory">更多</a>
+            </li>
+        </ul>
+        <div class="reacher">
+            <input type="text" name="sectionname" id="sectionname" value="" style="padding:10px 20px 10px 20px;text-align:left" maxlength="20" />
+            
+            <img src="/Content/user/img/index_09.png" />
+        </div>
+        <ul class="list1">
+            <li>
+                <a href="#">下载APP</a>
+            </li>
+            <li>
+                <a href="/course_center/course">我的课程</a>
+            </li>
+        </ul>
+        <div class="cars">
+            <a href="/shoppingcart/cart">
+                <img src="/Content/user/img/index_06.png" />
+                <p>购物车</p>
+            </a>
+        </div>
+        <img src="/Content/user/img/class_07.png" class="user_info hide" style="border-radius:26px;" />
+        <ul class="list2 hide">
+            <li>
+                <a href="#" class="logBtn">登录</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bgsss"></div>
+                <div class="swiper-slide bgs"></div>
+                <div class="swiper-slide bgss"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="banners">
+            <div class="baner_mid">
+                <div class="navbar">
+                            <div class="tit" style="margin-top: 0;"><p>师资提升</p><img src="/Content/user/img/index_15.png"></div>
+                            <ul class="tit_f">
+                                            <li>
+                                                <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=93505f48-0982-43f6-9783-5a10d9549cdc">以学生为中心的“金课”建设工作坊</a>
+                                            </li>
+                                            <li>
+                                                <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=02a60d5a-d9cb-4d73-b5f7-4f114a2c5b35">备战2021一流本科课程申报与建设实战工作坊</a>
+                                            </li>
+                                            <li>
+                                                <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=2d76fc2f-1cd0-4ab0-8cfa-99c21d4c2f89">一流本科课程（金课）建设要领及评审标准解读线上工作坊</a>
+                                            </li>
+                                            <li>
+                                                <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=b2cd2f1d-6f18-4d47-8026-9d77cfd7536a">高等院校课程思政教学设计与专业课融合思政案例分享线上线下系列研修班</a>
+                                            </li>
+
+                            </ul>
+                            <div class="tit" style="margin-top: 0;"><p>教师原创精品</p><img src="/Content/user/img/index_15.png"></div>
+                            <ul class="tit_f">
+                                            <li>
+                                                <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=ef7e34d9-ed78-4695-be46-9e5d23accf25">计算机科学与技术</a>
+                                            </li>
+                                            <li>
+                                                <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=0f316799-a61d-4f24-8127-d34979be4b3a">电子信息工程</a>
+                                            </li>
+                                            <li>
+                                                <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=2aa959ba-b01f-4787-bdf3-0ba831adbf4d">工商管理</a>
+                                            </li>
+                                            <li>
+                                                <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=45c50b0a-bcd5-486a-ab05-7bb344308224">建筑学</a>
+                                            </li>
+
+                            </ul>
+
+                    <div class="fade_tit">
+                                <div class="fade_item">
+                                    <div class="mores">
+                                        <p>全部</p>
+                                        <div>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=93505f48-0982-43f6-9783-5a10d9549cdc">以学生为中心的“金课”建设工作坊</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=02a60d5a-d9cb-4d73-b5f7-4f114a2c5b35">备战2021一流本科课程申报与建设实战工作坊</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=2d76fc2f-1cd0-4ab0-8cfa-99c21d4c2f89">一流本科课程（金课）建设要领及评审标准解读线上工作坊</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=b2cd2f1d-6f18-4d47-8026-9d77cfd7536a">高等院校课程思政教学设计与专业课融合思政案例分享线上线下系列研修班</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=8bcd2556-f728-4e34-97c3-d04652d0dcb3">全国高校课程思政教学设计与课程思政建设研修班</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=36c77407-06c2-40aa-82b2-0242b1b0fb75">进入高质量发展阶段的课程思政设计与示范课建设研修班</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=f41e3cac-8b43-41bd-a13f-90cb75a91ffb">高校青年教师教学基本功提升线上工作坊</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=85948dbf-c8d7-4578-a701-da17201fb0b1">高校教师教学基本功四项核心能力提升工作坊</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=6bbb2737-623d-4e03-bbd8-1ea3ec3c3076">教学方法与教学技能提升线上工作坊</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=771f2083-d878-4c49-a2fa-6fab6c3e5ca7">2022年国家级教学成果奖培育、凝练及申报研修班</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=9a33deb0-7dbb-4212-afc6-072b401b3da1">2022年国家级教学成果奖培育、凝练及申报指导研修班</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=918d8e1b-0f63-4772-973e-692916d6c4e9">高校教师科研能力夯实——项目申报与论文写作研修班</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=92a0ec28-3363-4706-bef5-183c51e4a0b2">高校教师科研能力卓越进阶系列线上工作坊</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=34fa966e-b105-4cb1-8684-3fe1dae80a97">以虚拟现实配合金质线上课程制作实操体感工作坊</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=90d85f0b-e440-415a-bac7-c498bc82cd69">线上+混合式教学设计与实践工作坊</a>
+                                                    <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12&tid=90d85f0b-e440-415a-bac7-c498bc82cd6a">聚焦高校特色的课程思政贯穿人才培养全过程规划与设计线上研修班</a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="bot_list">
+                                        <ul>
+                                                        <li data-id="fdc660d6-aab7-4fb7-bf66-047d113369ea">
+                                                            <img src="/UploadImg/a2981057-9e3b-44f0-bcef-6ac1685f0830.jpg" class="fl" />
+                                                            <div class="fr">
+                                                                <p>赖国雄-利用虚拟现实技术打造金课</p>
+                                                                <div>
+                                                                    <span>讲师：李大川</span>
+                                                                    <img src="/Content/user/img/index_56.png" />
+                                                                    <span>1524 人</span>
+                                                                </div>
+                                                                    <em><img src="/Content/user/img/mf.png" style="width:40px;" /></em>
+
+                                                            </div>
+                                                        </li>
+                                                        <li data-id="d67c1efc-d18e-4db0-8a6b-e264203268bb">
+                                                            <img src="/UploadImg/b11eb5a1-44da-4ffa-808c-c35bfa5dce86.jpg" class="fl" />
+                                                            <div class="fr">
+                                                                <p>余建波金课</p>
+                                                                <div>
+                                                                    <span>讲师：李大川</span>
+                                                                    <img src="/Content/user/img/index_56.png" />
+                                                                    <span>1375 人</span>
+                                                                </div>
+                                                                    <em><img src="/Content/user/img/mf.png" style="width:40px;" /></em>
+
+                                                            </div>
+                                                        </li>
+                                                        <li data-id="c27c6cd5-fa2b-4349-b4cd-faeac00a80c8">
+                                                            <img src="/UploadImg/9068c679-99db-4392-84a8-05969cc65911.jpg" class="fl" />
+                                                            <div class="fr">
+                                                                <p>李坤崇-教学设计与精细化教学</p>
+                                                                <div>
+                                                                    <span>讲师：李大川</span>
+                                                                    <img src="/Content/user/img/index_56.png" />
+                                                                    <span>1349 人</span>
+                                                                </div>
+                                                                    <em><img src="/Content/user/img/mf.png" style="width:40px;" /></em>
+
+                                                            </div>
+                                                        </li>
+                                                        <li data-id="7926c372-ceb8-48cc-98f3-f1b5fe3c98de">
+                                                            <img src="/UploadImg/d8f68216-21db-415c-b2d7-265a4810160d.jpg" class="fl" />
+                                                            <div class="fr">
+                                                                <p>蒋爱民-一流课程建设与混合+翻转教学</p>
+                                                                <div>
+                                                                    <span>讲师：李大川</span>
+                                                                    <img src="/Content/user/img/index_56.png" />
+                                                                    <span>1207 人</span>
+                                                                </div>
+                                                                    <em><img src="/Content/user/img/mf.png" style="width:40px;" /></em>
+
+                                                            </div>
+                                                        </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="fade_item">
+                                    <div class="mores">
+                                        <p>全部</p>
+                                        <div>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=ef7e34d9-ed78-4695-be46-9e5d23accf25">计算机科学与技术</a>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=0f316799-a61d-4f24-8127-d34979be4b3a">电子信息工程</a>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=2aa959ba-b01f-4787-bdf3-0ba831adbf4d">工商管理</a>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=45c50b0a-bcd5-486a-ab05-7bb344308224">建筑学</a>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=0398a0c3-1d6a-45b3-848d-f81eb6cf9503">音乐学</a>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=a687da8e-1617-47ad-9c41-664b62f95816">体育教育</a>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=d43102b4-8787-4967-b3e7-1242cd833d04">心理学</a>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=db27d157-1a92-45f6-bf49-697e3652e9d0">产品设计</a>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=dbc61300-5e4c-45ab-af1a-409dbb045da9">空中乘务</a>
+                                                    <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1&tid=40cd457c-5ccf-40a1-a7b9-43b10dcb0350">英语</a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="bot_list">
+                                        <ul>
+                                                        <li data-id="a0844796-d979-4dd9-9f63-a44f505793df">
+                                                            <img src="/UploadImg/4bdc0dd6-4f6f-47e1-b854-5a5af2b86d3e.jpg" class="fl" />
+                                                            <div class="fr">
+                                                                <p>斯坦福机器狗的设计与实现</p>
+                                                                <div>
+                                                                    <span>讲师：黄迅</span>
+                                                                    <img src="/Content/user/img/index_56.png" />
+                                                                    <span>6258 人</span>
+                                                                </div>
+                                                                    <em><img src="/Content/user/img/mf.png" style="width:40px;" /></em>
+
+                                                            </div>
+                                                        </li>
+                                                        <li data-id="a5b392f3-7b44-4d87-8448-54386dba3f25">
+                                                            <img src="/UploadImg/736fbcfa-d9b2-46de-af55-c2fb81a32db3.png" class="fl" />
+                                                            <div class="fr">
+                                                                <p>会计学（上）</p>
+                                                                <div>
+                                                                    <span>讲师：严春容</span>
+                                                                    <img src="/Content/user/img/index_56.png" />
+                                                                    <span>5037 人</span>
+                                                                </div>
+                                                                    <em><img src="/Content/user/img/mf.png" style="width:40px;" /></em>
+
+                                                            </div>
+                                                        </li>
+                                                        <li data-id="1fa8f037-fcfa-486a-8860-16d7039f59aa">
+                                                            <img src="/UploadImg/1eaf9c20-d5c3-4405-b745-4eaca963a847.jpg" class="fl" />
+                                                            <div class="fr">
+                                                                <p>航空航天人文英语</p>
+                                                                <div>
+                                                                    <span>讲师：龚玲芬</span>
+                                                                    <img src="/Content/user/img/index_56.png" />
+                                                                    <span>4138 人</span>
+                                                                </div>
+                                                                    <em><img src="/Content/user/img/mf.png" style="width:40px;" /></em>
+
+                                                            </div>
+                                                        </li>
+                                                        <li data-id="cc76a80e-9000-4538-8c43-a18983fd2054">
+                                                            <img src="/UploadImg/cb4e714d-42fe-4f6b-9269-c381c9346d54.png" class="fl" />
+                                                            <div class="fr">
+                                                                <p>飞行英语</p>
+                                                                <div>
+                                                                    <span>讲师：龚玲芬</span>
+                                                                    <img src="/Content/user/img/index_56.png" />
+                                                                    <span>3527 人</span>
+                                                                </div>
+                                                                    <em><img src="/Content/user/img/mf.png" style="width:40px;" /></em>
+
+                                                            </div>
+                                                        </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                    </div>
+                </div>
+                <div class="infos hide">
+                    <div class="topg">
+                        <img src="/Content/user/img/class_07.png" class="log" style="width:52px;height:52px;" />
+                        <div>
+                            <p>初晴夜雨</p>
+                            <span><img src="/Content/user/img/slide_log_15.jpg" />学习币0枚</span>
+                        </div>
+                        <a href="#" class="quit">退出</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/course_center/course">
+                                <img src="/Content/user/img/kc.png" />
+                                <p>我的课程</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/shoppingcart/orderlist">
+                                <img src="/Content/user/img/icons_05.jpg" />
+                                <p>我的订单</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_center/credit">
+                                <img src="/Content/user/img/icons_09.jpg" />
+                                <p>学习币充值</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/personal_center/personal">
+                                <img src="/Content/user/img/icons_11.jpg" />
+                                <p>个人资料</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hot_t1">
+        <div class="hot_tits">
+            <p>最  /  新  /  推  /  荐</p>
+        </div>
+        <div class="list_items">
+            <ul>
+                        <li>
+                            <a href="/course_details/course_details?cid=40a9f0fc-7849-4fef-a336-75cb6be30a34">
+                                <img src="/UploadImg/6e025e83-e5f0-41b3-80c6-36b7723071ea.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>戴文俊-打造文科类课...</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>865</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=1fa8f037-fcfa-486a-8860-16d7039f59aa">
+                                <img src="/UploadImg/1eaf9c20-d5c3-4405-b745-4eaca963a847.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>航空航天人文英语</h4>
+                                <div class="box_font">
+                                    <p>讲师：龚玲芬</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>4138</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=7926c372-ceb8-48cc-98f3-f1b5fe3c98de">
+                                <img src="/UploadImg/d8f68216-21db-415c-b2d7-265a4810160d.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>蒋爱民-一流课程建设...</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>1207</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=eb562d1c-f2cb-4cdb-89a5-fc2809d5d5f2">
+                                <img src="/UploadImg/48b8dcaf-d822-45cb-a44d-ee0167559c1d.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>夏永林-课程思政凝练...</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>1107</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=0f0c5845-b3b0-4d5e-ab42-55ce26f8db86">
+                                <img src="/UploadImg/2438cbc2-bd06-4ef8-8f87-6858fe0c4a1e.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>方娇莉-计算机类课程...</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>680</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=7beedc37-461c-44c7-b332-ec4c71ed553f">
+                                <img src="/UploadImg/8f4b962b-c7e0-49ad-888f-0415ed27b9fd.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>朱桂萍-以赛促教，教...</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>891</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=3f51b435-e076-4b38-afeb-923f6443d5f3">
+                                <img src="/UploadImg/1baf8e84-d636-49c7-9610-ff234a332983.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>朱永法-国家自然科学...</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>1114</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=122556ee-842b-4bcb-bcdb-918e419825d7">
+                                <img src="/UploadImg/304c7aa4-576b-4669-9b99-cf91236d47ba.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>寇小希-打造理工类课...</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>834</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=fa2dbbdf-ae99-4cb5-8355-eef41c3ff61d">
+                                <img src="/UploadImg/8e57921f-0790-4ac2-b7aa-055a97322d49.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>于歆杰-专业课程融入...</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>1118</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=b24bdd09-6566-4b66-b62d-a6ce30e5e84c">
+                                <img src="/UploadImg/578dae8d-f238-41d6-9715-f7fd3e5e9ed4.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>黄明东-精准选题</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>981</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="hot_t">
+        <div class="hot_tits">
+            <p>教 师 原 创 天 地</p>
+        </div>
+        <div class="list_items">
+            <ul>
+                        <li>
+                            <a href="/course_details/course_details?cid=a0844796-d979-4dd9-9f63-a44f505793df">
+                                <img src="/UploadImg/4bdc0dd6-4f6f-47e1-b854-5a5af2b86d3e.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>斯坦福机器狗的设计与...</h4>
+                                <div class="box_font">
+                                    <p>讲师：黄迅</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>6258</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_53.png" />
+                                                    <img src="/Content/user/img/index_53.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=a5b392f3-7b44-4d87-8448-54386dba3f25">
+                                <img src="/UploadImg/736fbcfa-d9b2-46de-af55-c2fb81a32db3.png" class="ban_top" style="border-radius:8px" />
+                                <h4>会计学（上）</h4>
+                                <div class="box_font">
+                                    <p>讲师：严春容</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>5037</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=1fa8f037-fcfa-486a-8860-16d7039f59aa">
+                                <img src="/UploadImg/1eaf9c20-d5c3-4405-b745-4eaca963a847.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>航空航天人文英语</h4>
+                                <div class="box_font">
+                                    <p>讲师：龚玲芬</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>4138</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=cc76a80e-9000-4538-8c43-a18983fd2054">
+                                <img src="/UploadImg/cb4e714d-42fe-4f6b-9269-c381c9346d54.png" class="ban_top" style="border-radius:8px" />
+                                <h4>飞行英语</h4>
+                                <div class="box_font">
+                                    <p>讲师：龚玲芬</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>3527</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=902bbce2-1500-46d8-8e42-0c5f2e14ea6b">
+                                <img src="/UploadImg/523a869b-3939-48d0-a650-5aa5d806192d.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>平面构成</h4>
+                                <div class="box_font">
+                                    <p>讲师：张萍萍</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>2479</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=2a3fd2ac-d38d-4f5d-bb1d-812167db60f8">
+                                <img src="/UploadImg/8a6bb84f-95ef-4bec-ac56-fc8ed2368695.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>包装设计</h4>
+                                <div class="box_font">
+                                    <p>讲师：张萍萍</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>1629</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=fdc660d6-aab7-4fb7-bf66-047d113369ea">
+                                <img src="/UploadImg/a2981057-9e3b-44f0-bcef-6ac1685f0830.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>赖国雄-利用虚拟现实...</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>1524</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_53.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=de07a763-3815-49a7-8886-772803b309b5">
+                                <img src="/UploadImg/344a0f47-f0df-4f45-ae2a-4008b70f24b7.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>绘本设计</h4>
+                                <div class="box_font">
+                                    <p>讲师：卢颖洁</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>1441</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=d67c1efc-d18e-4db0-8a6b-e264203268bb">
+                                <img src="/UploadImg/b11eb5a1-44da-4ffa-808c-c35bfa5dce86.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>余建波金课</h4>
+                                <div class="box_font">
+                                    <p>讲师：李大川</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>1375</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/course_details/course_details?cid=9ed3f0b9-3183-475c-aafc-9ff6983a674b">
+                                <img src="/UploadImg/710a7d5d-6c9e-455d-81d0-2e36cfb5ff1e.jpg" class="ban_top" style="border-radius:8px" />
+                                <h4>短片创作</h4>
+                                <div class="box_font">
+                                    <p>讲师：卢颖洁</p>
+                                    <div class="firbox">
+                                        <img src="/Content/user/img/index_56.png" />
+                                        <span>1359</span>
+                                    </div>
+                                    <div class="nthbox">
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+                                                    <img src="/Content/user/img/index_50.png" />
+
+                                    </div>
+                                </div>
+                                    <em><img src="/Content/user/img/mf.png" /></em>
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+
+                <div class="hot_t">
+                        <div class="hot_tits1">
+                            <p>师资提升</p>
+                            <a href="/home/vcategory?cid=b68590b1-4f2d-48a9-97ec-7804bb5e4d12">更多<img src="/Content/user/img/index_65.jpg"></a>
+                        </div>
+                        <div class="list_items">
+                            <ul>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=fdc660d6-aab7-4fb7-bf66-047d113369ea">
+                                                <img src="/UploadImg/a2981057-9e3b-44f0-bcef-6ac1685f0830.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>赖国雄-利用虚拟现实技术打造金课</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1524</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_53.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=d67c1efc-d18e-4db0-8a6b-e264203268bb">
+                                                <img src="/UploadImg/b11eb5a1-44da-4ffa-808c-c35bfa5dce86.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>余建波金课</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1375</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=c27c6cd5-fa2b-4349-b4cd-faeac00a80c8">
+                                                <img src="/UploadImg/9068c679-99db-4392-84a8-05969cc65911.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>李坤崇-教学设计与精细化教学</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1349</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_53.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=7926c372-ceb8-48cc-98f3-f1b5fe3c98de">
+                                                <img src="/UploadImg/d8f68216-21db-415c-b2d7-265a4810160d.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>蒋爱民-一流课程建设与混合+翻转教学</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1207</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=1b3ed34d-93e6-4791-b8fc-5fd2d154a4c8">
+                                                <img src="/UploadImg/a6b2e0f7-78d7-4669-92fb-08bd8b293fc3.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>王森-教学设计</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1161</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_53.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=58568c2a-fdaf-4f90-a2b5-c233e91677b2">
+                                                <img src="/UploadImg/6a8ce90f-5d56-4458-9d46-bc5b884452ec.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>张俊斌-课堂教学改革</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1135</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=fa2dbbdf-ae99-4cb5-8355-eef41c3ff61d">
+                                                <img src="/UploadImg/8e57921f-0790-4ac2-b7aa-055a97322d49.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>于歆杰-专业课程融入思政工作的理念与方法</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1118</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=3f51b435-e076-4b38-afeb-923f6443d5f3">
+                                                <img src="/UploadImg/1baf8e84-d636-49c7-9610-ff234a332983.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>朱永法-国家自然科学基金选题与申报</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1114</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=eb562d1c-f2cb-4cdb-89a5-fc2809d5d5f2">
+                                                <img src="/UploadImg/48b8dcaf-d822-45cb-a44d-ee0167559c1d.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>夏永林-课程思政凝练教学成果</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1107</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=8d288c4b-8898-413f-9272-d7d92fd309b8">
+                                                <img src="/UploadImg/8c80a4cf-4f77-4aec-9588-b5ec85eaecb9.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>马昱春-课程思政教学方案设计</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：李大川</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1093</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+
+                            </ul>
+                        </div>
+                </div>
+                <div class="hot_t1">
+                        <div class="hot_tits">
+                            <p>教师原创精品</p>
+                            <a href="/home/vcategory?cid=f1576f84-c964-4016-acf0-e3b7a37e9fc1">更多<img src="/Content/user/img/index_65.jpg"></a>
+                        </div>
+                        <div class="list_items">
+                            <ul>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=a0844796-d979-4dd9-9f63-a44f505793df">
+                                                <img src="/UploadImg/4bdc0dd6-4f6f-47e1-b854-5a5af2b86d3e.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>斯坦福机器狗的设计与实现</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：黄迅</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>6258</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_53.png" />
+                                                                    <img src="/Content/user/img/index_53.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=a5b392f3-7b44-4d87-8448-54386dba3f25">
+                                                <img src="/UploadImg/736fbcfa-d9b2-46de-af55-c2fb81a32db3.png" class="ban_top" style="border-radius:8px" />
+                                                <h4>会计学（上）</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：严春容</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>5037</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=1fa8f037-fcfa-486a-8860-16d7039f59aa">
+                                                <img src="/UploadImg/1eaf9c20-d5c3-4405-b745-4eaca963a847.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>航空航天人文英语</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：龚玲芬</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>4138</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=cc76a80e-9000-4538-8c43-a18983fd2054">
+                                                <img src="/UploadImg/cb4e714d-42fe-4f6b-9269-c381c9346d54.png" class="ban_top" style="border-radius:8px" />
+                                                <h4>飞行英语</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：龚玲芬</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>3527</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=902bbce2-1500-46d8-8e42-0c5f2e14ea6b">
+                                                <img src="/UploadImg/523a869b-3939-48d0-a650-5aa5d806192d.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>平面构成</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：张萍萍</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>2479</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=2a3fd2ac-d38d-4f5d-bb1d-812167db60f8">
+                                                <img src="/UploadImg/8a6bb84f-95ef-4bec-ac56-fc8ed2368695.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>包装设计</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：张萍萍</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1629</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=de07a763-3815-49a7-8886-772803b309b5">
+                                                <img src="/UploadImg/344a0f47-f0df-4f45-ae2a-4008b70f24b7.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>绘本设计</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：卢颖洁</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1441</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=9ed3f0b9-3183-475c-aafc-9ff6983a674b">
+                                                <img src="/UploadImg/710a7d5d-6c9e-455d-81d0-2e36cfb5ff1e.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>短片创作</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：卢颖洁</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1359</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=1d060914-e530-4bbe-a39c-ea0e2afa8d23">
+                                                <img src="/UploadImg/2b7c6bcc-d888-4c0c-bc35-1baf9807a2d5.png" class="ban_top" style="border-radius:8px" />
+                                                <h4>会计学（中）</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：严春容</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>1040</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/course_details/course_details?cid=199313b1-5ef0-4b52-ba17-9fc808b97cc4">
+                                                <img src="/UploadImg/4897e404-ee83-479a-a567-97eae3cfb9c9.jpg" class="ban_top" style="border-radius:8px" />
+                                                <h4>英语话军魂</h4>
+                                                <div class="box_font">
+                                                    <p>讲师：黎老师</p>
+                                                    <div class="firbox">
+                                                        <img src="/Content/user/img/index_56.png" />
+                                                        <span>886</span>
+                                                    </div>
+                                                    <div class="nthbox">
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+                                                                    <img src="/Content/user/img/index_50.png" />
+
+                                                    </div>
+                                                </div>
+                                                    <em><img src="/Content/user/img/mf.png" /></em>
+                                            </a>
+                                        </li>
+
+                            </ul>
+                        </div>
+                </div>
+
+    <div class="footer2" style="height:180px">
+        <ul style="margin-left:15%;letter-spacing:2px;">
+            <div><img src="/Content/user/img/index003.png" style="margin-right:210px;" class="uimg" /></div>
+            <li class="li2">航天科教是南昌理工与浙江航大科技开发有限公司与各专家<br />学者、学校合作开发的专注师资能力提升的在线教育平台。</li>
+        </ul>
+        <ul style="margin-left:10%;letter-spacing:2px;" class="ull">
+            <li style="color:#fff;font-size:14px;" class="about">关于我们</li>
+            <li>
+                <a href="/Home/aboutus?aboutType=1">关于我们</a><a style="        margin-left: 20px;
+" href="/Home/aboutus?aboutType=2">联系我们</a>
+            </li>
+            <li><a href="/Home/aboutus?aboutType=3">意见反馈</a><a style="margin-left:20px;" href="/Home/aboutus?aboutType=4">常见问题</a></li>
+            <li class="li1"><a href="/Home/aboutus?aboutType=5">法律条款</a></li>
+        </ul>
+        <ul style="margin-left:10%;">
+            <div class="rwm"><img src="/Content/user/img/rigP_fex_07.jpg" /></div>
+            <li class="gzwm" style="color:#fff;font-size:14px;">关注我们</li>
+            <li style="cursor:pointer;"><img src="/Content/user/img/wx.png" style="margin-right:76px;" id="gz" /></li>
+        </ul>
+        <ul class="ul2">
+            <li style="color:#fff;font-size:14px;">友情链接</li>
+            <li><a href="http://www.nut.edu.cn/" target="_Blank">南昌理工学院官网</a></li>
+            <li><a href="http://www.zheke.com.cn" target="_Blank">浙江航大科技开发有限公司</a></li>
+            <li><a href="http://senlanit.com/" target="_Blank">江西森岚科技有限公司</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="/Content/user/js/js.js"></script>
+    <script src="/Content/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="/Content/user/js/preferred.js?v=1.12"></script>
+    <script type="text/javascript" src="/Content/user/js/logins.js?v=2.1"></script>
+    <script src="/Content/user/js/ad.js" type="text/javascript"></script>
+    <script>
+        $('.header .reacher input').focus(function () {
+            $(this).parent().children('ul').hide();
+        })
+        $('.header .reacher input').blur(function () {
+            if ($(this).val() == '') {
+                $(this).parent().children('ul').show();
+            }
+        })
+        $('.user_info').mouseover(function () {
+            $('.infos').show();
+        })
+        $('#gz').mouseover(function () {
+            $('.rwm').show();
+        })
+        $('#gz').mouseleave(function () {
+            $('.rwm').hide();
+        })
+        $('.infos').mouseleave(function () {
+            $('.infos').hide();
+        })
+        $('.banner .baner_mid .navbar .tit').hover(function () {
+            var n = $(this).index() / 2;
+            $('.banner .baner_mid .navbar .fade_tit').show()
+            $('.fade_tit .fade_item').eq(n).show().siblings().hide();
+        })
+        $('.fade_tit').mouseleave(function () {
+            $('.fade_tit').hide();
+        })
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: true
+        });
+    </script>
+</body>
+</html>

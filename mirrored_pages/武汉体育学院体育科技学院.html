@@ -1,0 +1,1233 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>武汉体育学院体育科技学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="武汉体育学院体育科技学院">
+<META Name="keywords" Content="武汉体育学院体育科技学院" />
+
+        <link href="css/donhua.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="css/public.css" />
+      
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475050555742000200004555 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,2011691289)</script>
+</head>
+    <body>
+        <!--pc头部-->
+        <div class="pc">
+            <div class="top">
+                <div class="px1300 clearfix">
+                    <div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="体育科技学院2024"><img src="img/logo.png" /></a></div>
+                    <div class="top-r fr">
+                        <div class="top-r-t clearfix">
+
+                            <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1"></div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="button"  name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "2011691289";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://218.197.66.206:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                        </div>
+                        <!--pc导航-->
+                        <div class="nav"><ul>
+
+
+                            
+
+                                <li><a href="xxgk/xyjj.htm">学校概况</a>
+                                    <div>
+                                        <ul>
+
+                                            <li><a href="xxgk/xyjj.htm">学院简介</a></li>
+                                            <li><a href="xxgk/xrld.htm">现任领导</a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+
+                            
+
+                                <li><a href="jgsz/jgbc.htm">机构设置</a>
+                                    <div>
+                                        <ul>
+
+                                            <li><a href="jgsz/jgbc.htm">机关部处</a></li>
+                                            <li><a href="jgsz/jxxlkydw.htm">教学训练科研单位</a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+
+                            
+
+                                <li><a href="rcpy/bksjy.htm">人才培养</a>
+                                    <div>
+                                        <ul>
+
+                                            <li><a href="rcpy/bksjy.htm">本科生教育</a></li>
+                                            <li><a href="rcpy/zksjy.htm">专科生教育</a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+
+                            
+
+                                <li><a href="zsjy.htm">招生就业</a>
+                                    <div>
+                                        <ul>
+
+                                            <li><a href="zsjy.htm">招生信息网</a></li>
+                                            <li><a href="https://whwtkjxy.91wllm.com/">就业信息网</a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+
+                            
+
+                                <li><a href="https://kyjwc.whsu.edu.cn">教学科研</a>
+                                </li>
+
+
+
+                            
+
+                                <li><a href="xljs.htm">训练竞赛</a>
+                                </li>
+
+
+
+                            
+
+                                <li><a href="https://xxgk.kjxy.whsu.edu.cn/">信息公开</a>
+                                </li>
+
+
+
+                            
+
+                                <li><a href="hzjl.htm">合作交流</a>
+                                </li>
+
+
+
+                            
+
+                                <li><a href="https://ecard.whsu.edu.cn/">校园服务</a>
+                                    <div>
+                                        <ul>
+
+                                            <li><a href="https://lib.whsu.edu.cn/">图书馆</a></li>
+                                            <li><a href="http://10.10.118.4/user/login">资产管理</a></li>
+                                            <li><a href="xyfw/xzzq.htm">下载专区</a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+
+                            
+
+                                <li><a href="https://www.whsu.edu.cn/">武体主页</a>
+                                </li>
+                                <div class="clear"></div>
+                            </ul>
+                        
+
+</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 移动端导航 -->
+        <div class="m-top">
+            <div class="wap wap-menu">
+                <img src="images/menu.png" class="menu" alt="">
+                <img src="images/close.png" class="close-menu" alt="">
+            </div>
+        </div>
+        <div class="wap m-head">
+            <div class="m-logo">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<a href="" title="" target="_blank"><img src="js/logo1.png" alt=""></a>
+
+</div>
+            <div class="m-nav">
+
+                <div class="m-search">
+
+
+<style>
+    #appu4 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu4 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu4"></div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+            <input type="text"  placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="button" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "2011691289";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://218.197.66.206:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                <ul>
+
+                  
+                    <li><a href="xxgk/xyjj.htm">学校概况</a><span></span>
+                        <ul>
+
+                            <li><a href="xxgk/xyjj.htm">学院简介</a></li>
+                            <li><a href="xxgk/xrld.htm">现任领导</a></li>
+                           
+                        </ul>
+                    </li>
+                   
+
+
+                  
+                    <li><a href="jgsz/jgbc.htm">机构设置</a><span></span>
+                        <ul>
+
+                            <li><a href="jgsz/jgbc.htm">机关部处</a></li>
+                            <li><a href="jgsz/jxxlkydw.htm">教学训练科研单位</a></li>
+                           
+                        </ul>
+                    </li>
+                   
+
+
+                  
+                    <li><a href="rcpy/bksjy.htm">人才培养</a><span></span>
+                        <ul>
+
+                            <li><a href="rcpy/bksjy.htm">本科生教育</a></li>
+                            <li><a href="rcpy/zksjy.htm">专科生教育</a></li>
+                           
+                        </ul>
+                    </li>
+                   
+
+
+                  
+                    <li><a href="zsjy.htm">招生就业</a><span></span>
+                        <ul>
+
+                            <li><a href="zsjy.htm">招生信息网</a></li>
+                            <li><a href="https://whwtkjxy.91wllm.com/">就业信息网</a></li>
+                           
+                        </ul>
+                    </li>
+                   
+
+
+                  
+                    <li><a href="https://kyjwc.whsu.edu.cn">教学科研</a>                    </li>
+                   
+
+
+                  
+                    <li><a href="xljs.htm">训练竞赛</a>                    </li>
+                   
+
+
+                  
+                    <li><a href="https://xxgk.kjxy.whsu.edu.cn/">信息公开</a>                    </li>
+                   
+
+
+                  
+                    <li><a href="hzjl.htm">合作交流</a>                    </li>
+                   
+
+
+                  
+                    <li><a href="https://ecard.whsu.edu.cn/">校园服务</a><span></span>
+                        <ul>
+
+                            <li><a href="https://lib.whsu.edu.cn/">图书馆</a></li>
+                            <li><a href="http://10.10.118.4/user/login">资产管理</a></li>
+                            <li><a href="xyfw/xzzq.htm">下载专区</a></li>
+                           
+                        </ul>
+                    </li>
+                   
+
+
+                  
+                    <li><a href="https://www.whsu.edu.cn/">武体主页</a>                    </li>
+                   
+                    <div class="clear"></div>
+                
+
+</ul>
+            </div>
+        </div>
+
+
+        <div class="banner">    <ul>
+
+
+                
+<li><a href="" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 1010728)"><img src="images/20240930.jpg"></a></li>
+                
+<li><a href="" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 1010369)"><img src="images/2024080504.jpg"></a></li>
+                
+<li><a href="" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79055)"><img src="css/55.png"></a></li>
+                
+<li><a href="" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79053)"><img src="css/33.png"></a></li>
+                
+<li><a href="" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79027)"><img src="img/banner.png"></a></li>
+                
+<li><a href="" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79026)"><img src="css/22.png"></a></li>
+                
+<li style="display:none"><a><video src="images/syxywsp.mp4" id="myVideo" class="spp1" muted="" autoplay="" poster="" style="z-index:10000000;"></video></a></li>
+            </ul>
+
+
+
+            <div class="btn">
+                <div class="dots"></div>
+            </div></div>
+
+
+
+
+
+
+
+        <div class="section1">
+            <div class="px1300 clearfix">
+                <div class="kyxw fl">
+                    <div class="tit clearfix wow fadeInUp">
+                        <h3><img src="img/kjxwtb.png" />科院新闻</h3>
+                        <div class="more"><a href="index/kyxw.htm" target="_blank">更多+</a></div>
+                    </div>
+                    <div class="s1-l fl wow fadeInUp"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+                            
+<li>
+                                <a href="info/1020/27091.htm" target="_blank" title="学院开展党委理论学习中心组2024年第12次集中学习">
+                                    <div class="pic">
+                                        <img src="/__local/B/96/70/A115AA6F662EF999A63FE84F312_E296BA64_4B339.jpg">
+                                    </div>
+                                    <div class="s1-linfo">
+
+                                        <span>2024/10/16</span>
+                                        <p>学院开展党委理论学习中心组2024年第12次集中学习</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1020/26611.htm" target="_blank" title="学院党委理论学习中心组学习贯彻党的二十届三中全会精神专题读书班圆满结业">
+                                    <div class="pic">
+                                        <img src="/__local/A/A2/D2/3CE8F74B6AADD2DCA121F5D47E5_19667B19_4CA90.jpg">
+                                    </div>
+                                    <div class="s1-linfo">
+
+                                        <span>2024/09/14</span>
+                                        <p>学院党委理论学习中心组学习贯彻党的二十届三中全会</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDY1MDcwMQ==&mid=2652894095&idx=1&sn=e43b7dfc8cc97b7272eeb9be3490ab91&chksm=bd6fdcad8a1855bbb8362f54bf49a93417cec8b7c9adec8007fb1c9cb39ad604410847613790&token=1256813618&lang=zh_CN#rd" target="_blank" title="我院举行2024级新生开学典礼暨军训动员大会与开学第一课">
+                                    <div class="pic">
+                                        <img src="/__local/F/0A/C9/29A85D4326924F561C7B928923C_ADBF2A69_6CA88.jpg">
+                                    </div>
+                                    <div class="s1-linfo">
+
+                                        <span>2024/09/14</span>
+                                        <p>我院举行2024级新生开学典礼暨军训动员大会与开学第</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+</ul><script>_showDynClickBatch(['dynclicks_u7_27091','dynclicks_u7_26611','dynclicks_u7_26621'],[27091,26611,26621],"wbnews", 2011691289)</script>
+</div>
+                    <div class="s1-r wow fadeInUp">
+                        <ul><li><a href="info/1020/27201.htm" target="_blank">学院召开第五次学生工作会暨作风建设月动员会</a>
+                                <div class="img-news-date">2024-10-22</div>
+                            </li>
+                            
+<li><a href="info/1020/27091.htm" target="_blank">学院开展党委理论学习中心组2024年第12次集中学习</a>
+                                <div class="img-news-date">2024-10-16</div>
+                            </li>
+                            
+<li><a href="info/1020/26611.htm" target="_blank">学院党委理论学习中心组学习贯彻党的二十届三中全会精神</a>
+                                <div class="img-news-date">2024-09-14</div>
+                            </li>
+                            
+<li><a href="info/1020/26601.htm" target="_blank">武汉体育学院体育科技学院学习贯彻党的二十届三中全会精</a>
+                                <div class="img-news-date">2024-09-14</div>
+                            </li>
+                            
+<li><a href="info/1020/27191.htm" target="_blank">我院与阿里巴巴（钉钉）共绘智慧学工新蓝图</a>
+                                <div class="img-news-date">2024-10-23</div>
+                            </li>
+                            
+<script>_showDynClickBatch(['dynclicks_u8_27201','dynclicks_u8_27091','dynclicks_u8_26611','dynclicks_u8_26601','dynclicks_u8_27191'],[27201,27091,26611,26601,27191],"wbnews", 2011691289)</script>
+</ul>
+                    </div>
+                </div>
+
+
+                <div class="xntz fl" style="margin-right:0px;">
+                    <div class="slideTxtBox">
+                        <div class="hd">
+
+                            <div class="tit clearfix wow fadeInUp">
+                                <h3>
+                                    <img src="img/xntztb.png" />
+                                    <ul>
+                                        <li><a>校内通知</a></li>
+                                        <li><a>科院公告</a></li>
+
+                                    </ul>
+                                </h3>
+                                <div class="more"><a href="index/xntz.htm">更多+</a></div>
+                            </div>
+                        </div>
+
+                        <div class="bd wow fadeInUp">
+                            <div class="list-notice">
+                                <ul class="clearfix"><li class="animated">
+                                        <a href="info/1021/27211.htm" target="_blank">
+                                            <div class="date">
+                                                <em class="day">23</em>
+                                                <em class="year">2024-10</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>关于举办第二届辅导员育人故事分享会的通知</h4>
+                                                <p>各院系：为深入学习贯彻习近平新时代中国特色社会主...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li class="animated">
+                                        <a href="info/1021/27181.htm" target="_blank">
+                                            <div class="date">
+                                                <em class="day">18</em>
+                                                <em class="year">2024-10</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>学校开展“礼敬国旗 同唱国歌”升国旗仪式...</h4>
+                                                <p>各院系：在祖国七十五周岁生日之际，为进一步加强大...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li class="animated">
+                                        <a href="info/1021/27121.htm" target="_blank">
+                                            <div class="date">
+                                                <em class="day">17</em>
+                                                <em class="year">2024-10</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>2023-2024学年国家奖学金初评名单公示</h4>
+                                                <p>根据《教育部财政部关于印发〈本专科生国家奖学金评...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li class="animated">
+                                        <a href="info/1021/27051.htm" target="_blank">
+                                            <div class="date">
+                                                <em class="day">15</em>
+                                                <em class="year">2024-10</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>关于开展2024年7月新进人员转正定级工作的...</h4>
+                                                <p>院内各单位：根据工作安排，开展2024年7月新进人员转...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li class="animated">
+                                        <a href="info/1021/27081.htm" target="_blank">
+                                            <div class="date">
+                                                <em class="day">12</em>
+                                                <em class="year">2024-10</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>关于开展2024年国家励志奖学金、国家助学...</h4>
+                                                <p>各院系：湖北省学生资助管理中心现已将2024年国家励...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<script>_showDynClickBatch(['dynclicks_u9_27211','dynclicks_u9_27181','dynclicks_u9_27121','dynclicks_u9_27051','dynclicks_u9_27081'],[27211,27181,27121,27051,27081],"wbnews", 2011691289)</script>
+</ul>
+                            </div>
+                            <div class="list-notice">
+                                <ul class="clearfix"><li class="animated">
+                                        <a href="info/1022/27221.htm" target="_blank">
+                                            <div class="date">
+                                                 <em class="day">24</em>
+                                                <em class="year">2024-10</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>武汉体育学院体育科技学院人工湖清理项目...</h4>
+                                                <p>一、项目基本情况（一）项目名称：武汉体育学院体育...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li class="animated">
+                                        <a href="info/1022/27151.htm" target="_blank">
+                                            <div class="date">
+                                                 <em class="day">18</em>
+                                                <em class="year">2024-10</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>关于我校2024级新生放弃入学资格名单的公...</h4>
+                                                <p>根据中华人民共和国教育部令第41号《普通高等学校学...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li class="animated">
+                                        <a href="info/1022/26851.htm" target="_blank">
+                                            <div class="date">
+                                                 <em class="day">27</em>
+                                                <em class="year">2024-09</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>武汉体育学院体育科技学院二次泵房变频器...</h4>
+                                                <p>武汉体育学院体育科技学院二次泵房变频器和离心泵（...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li class="animated">
+                                        <a href="info/1022/26751.htm" target="_blank">
+                                            <div class="date">
+                                                 <em class="day">25</em>
+                                                <em class="year">2024-09</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>武汉体育学院体育科技学院正门景观提升项...</h4>
+                                                <p>武汉体育学院体育科技学院正门景观提升项目的评审工...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li class="animated">
+                                        <a href="info/1022/26831.htm" target="_blank">
+                                            <div class="date">
+                                                 <em class="day">23</em>
+                                                <em class="year">2024-09</em>
+                                            </div>
+                                            <div class="text">
+                                                <h4>武汉体育学院体育科技学院2024年二次泵房...</h4>
+                                                <p>一、项目基本情况项目名称：武汉体育学院体育科技学...</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<script>_showDynClickBatch(['dynclicks_u10_27221','dynclicks_u10_27151','dynclicks_u10_26851','dynclicks_u10_26751','dynclicks_u10_26831'],[27221,27151,26851,26751,26831],"wbnews", 2011691289)</script>
+</ul>
+                            </div>
+
+                        </div>
+                    </div>
+                  
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+            <div>
+                <div class="bsdt">
+                    <div class="px1300 clearfix">
+                        <div class="list">
+                            <ul class=" wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">    <li class="circle">
+                                    <a href="" target="_blank" title="公文系统" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79036)"><img src="img/21.png" alt="">
+                                        <p>公文系统</p>
+                                    </a>
+                                </li>
+
+                                
+<li class="circle">
+                                    <a href="" target="_blank" title="党建在线" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79037)"><img src="img/22.png" alt="">
+                                        <p>党建在线</p>
+                                    </a>
+                                </li>
+
+                                
+<li class="circle">
+                                    <a href="" target="_blank" title="学工在线" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79038)"><img src="img/23.png" alt="">
+                                        <p>学工在线</p>
+                                    </a>
+                                </li>
+
+                                
+<li class="circle">
+                                    <a href="https://kyjwc.whsu.edu.cn/" target="_blank" title="教务在线" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79039)"><img src="img/24.png" alt="">
+                                        <p>教务在线</p>
+                                    </a>
+                                </li>
+
+                                
+<li class="circle">
+                                    <a href="https://lib.whsu.edu.cn/" target="_blank" title="图书馆" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79040)"><img src="img/25.png" alt="">
+                                        <p>图书馆</p>
+                                    </a>
+                                </li>
+
+                                
+<li class="circle">
+                                    <a href="xyfw/xzzq.htm" target="_blank" title="下载专区" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79041)"><img src="img/26.png" alt="">
+                                        <p>下载专区</p>
+                                    </a>
+                                </li>
+
+                                
+<li class="circle">
+                                    <a href="index/zgzap.htm" target="_blank" title="周工作安排" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79042)"><img src="img/27.png" alt="">
+                                        <p>周工作安排</p>
+                                    </a>
+                                </li>
+
+                                
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="px1300 clearfix">
+                <div class="wtyx fl"><div class="tit clearfix wow fadeInUp">
+                        <h3><img src="img/ssfctb.png">师生风采</h3>
+                        <div class="more"><a href="index/ssfc.htm">更多 </a></div>
+                    </div>
+
+
+
+
+                    <div class="s2-l fl wow fadeInUp">
+
+                        <ul>
+                            
+
+<li><a href="info/1023/25921.htm" class="bg-mask ">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/7/A6/21/40C21F0676C43CC17038F26C176_9EEF1850_6A796.jpg);"><img src="/__local/7/A6/21/40C21F0676C43CC17038F26C176_9EEF1850_6A796.jpg" alt="" class="none"></span></div>
+
+
+                                    <div class="txt flex-v-center">
+                                        <h4 class="l21"><span class="aline_w">喜报：我院拳击代表队荣登2024全国大学生拳击锦标赛奖牌榜榜首</span></h4>
+
+                                        <time class="din">2024-06-28</time>
+
+
+                                    </div>
+
+                                </a></li>
+                           
+                            
+
+<li><a href="info/1023/25071.htm" class="bg-mask ">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/8/07/11/796E1126906E5760865CDC0F194_87649B06_6398A.jpg);"><img src="/__local/8/07/11/796E1126906E5760865CDC0F194_87649B06_6398A.jpg" alt="" class="none"></span></div>
+
+
+                                    <div class="txt flex-v-center">
+                                        <h4 class="l21"><span class="aline_w">学院成功举办“奋进新征程 运动促健康”教职工羽毛球比赛</span></h4>
+
+                                        <time class="din">2024-06-07</time>
+
+
+                                    </div>
+
+                                </a></li>
+                           
+                            
+
+<li><a href="info/1023/25091.htm" class="bg-mask ">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/B/B8/33/4FA308E552C96092F7651F37F9D_280F1767_379D2.jpg);"><img src="/__local/B/B8/33/4FA308E552C96092F7651F37F9D_280F1767_379D2.jpg" alt="" class="none"></span></div>
+
+
+                                    <div class="txt flex-v-center">
+                                        <h4 class="l21"><span class="aline_w">我院健儿在湖北省高等学校体操锦标赛斩获佳绩</span></h4>
+
+                                        <time class="din">2024-06-05</time>
+
+
+                                    </div>
+
+                                </a></li>
+                           
+                            
+
+<li><a href="info/1023/25101.htm" class="bg-mask ">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/F/76/A2/1393688F4AADF8F0E1E67AB7917_B7D320B2_53A24.jpg);"><img src="/__local/F/76/A2/1393688F4AADF8F0E1E67AB7917_B7D320B2_53A24.jpg" alt="" class="none"></span></div>
+
+
+                                    <div class="txt flex-v-center">
+                                        <h4 class="l21"><span class="aline_w">艺术与传媒系学子在中国国际动漫节声优大赛中荣获佳绩</span></h4>
+
+                                        <time class="din">2024-06-04</time>
+
+
+                                    </div>
+
+                                </a></li>
+                           
+                            
+ </ul>
+                    </div><script>_showDynClickBatch(['dynclicks_u12_25921','dynclicks_u12_25071','dynclicks_u12_25091','dynclicks_u12_25101'],[25921,25071,25091,25101],"wbnews", 2011691289)</script>
+</div>
+
+
+
+
+
+                <div class="cldjt fl">
+                   <div class="tit clearfix wow fadeInUp">
+                        <h3><img src="img/cldjt.png">藏龙大讲堂</h3>
+                        <div class="more"><a href="index/zldjt.htm">更多 </a></div>
+                    </div>
+
+
+
+
+                    <div class="s2-l fl wow fadeInUp">
+
+                        <ul>
+                            
+
+<li><a href="info/1024/25181.htm" class="bg-mask ">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/C/20/61/AF2A9E763F4F2A23CB1296261BB_A168232D_41CCB.jpg);"><img src="/__local/C/20/61/AF2A9E763F4F2A23CB1296261BB_A168232D_41CCB.jpg" alt="" class="none"></span></div>
+
+
+                                    <div class="txt flex-v-center">
+                                        <h4 class="l21"><span class="aline_w">【党史学习教育】学院举办党史学习教育专题讲座</span></h4>
+
+                                        <time class="din">2024-05-17</time>
+
+
+                                    </div>
+
+                                </a></li>
+                           
+                            
+
+<li><a href="info/1024/25171.htm" class="bg-mask ">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/D/45/B2/F9EED0D6F51955EE36596E8B030_E0015997_4B84E.jpg);"><img src="/__local/D/45/B2/F9EED0D6F51955EE36596E8B030_E0015997_4B84E.jpg" alt="" class="none"></span></div>
+
+
+                                    <div class="txt flex-v-center">
+                                        <h4 class="l21"><span class="aline_w">【党纪学习教育】学院举办党纪学习教育读书班</span></h4>
+
+                                        <time class="din">2024-04-28</time>
+
+
+                                    </div>
+
+                                </a></li>
+                           
+                            
+
+<li><a href="info/1024/25201.htm" class="bg-mask ">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/E/06/64/A86285A741F19C7DB6D64A26521_055EEA7A_36D40.jpg);"><img src="/__local/E/06/64/A86285A741F19C7DB6D64A26521_055EEA7A_36D40.jpg" alt="" class="none"></span></div>
+
+
+                                    <div class="txt flex-v-center">
+                                        <h4 class="l21"><span class="aline_w">教育部长江学者、华中师范大学教授王健来我院讲学</span></h4>
+
+                                        <time class="din">2023-11-23</time>
+
+
+                                    </div>
+
+                                </a></li>
+                           
+                            
+
+<li><a href="info/1024/25261.htm" class="bg-mask ">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/2/0D/68/D07C0A4D65A727BC61087895ED4_8F7BCA04_43E5B.jpg);"><img src="/__local/2/0D/68/D07C0A4D65A727BC61087895ED4_8F7BCA04_43E5B.jpg" alt="" class="none"></span></div>
+
+
+                                    <div class="txt flex-v-center">
+                                        <h4 class="l21"><span class="aline_w">湖北省委宣讲团来校宣讲党的二十大精神</span></h4>
+
+                                        <time class="din">2022-11-24</time>
+
+
+                                    </div>
+
+                                </a></li>
+                           
+                            
+ </ul>
+                    </div><script>_showDynClickBatch(['dynclicks_u13_25181','dynclicks_u13_25171','dynclicks_u13_25201','dynclicks_u13_25261'],[25181,25171,25201,25261],"wbnews", 2011691289)</script>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="section4">
+            <div class="sysjmt px1300 clearfix">
+
+                <div class="sjmt fl">
+
+                    <div class="tit clearfix wow fadeInUp">
+                        <h3><img src="img/sjmttb.png" />社交媒体</h3>
+                        <div class="sjpttb">
+                            <ul class="flex">    </ul>
+                        </div>
+                    </div>
+
+                    <div class="sjmtx">
+                        <ul class="ul1 flex uani fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+
+
+                            <li>
+ <a href="https://www.douyin.com/user/MS4wLjABAAAAwgioiql3nDgc1QRWW6OdvIddVR2CZXtkkw6oCptvqG_RceoD3S-usN4WnbsdFh7a" class="bg-mask" title="抖音" target="_blank">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/C/EF/CF/D67B3D142B6EFA4B83887E6D263_7C8368B5_4EAFE.png);"><img src="/__local/C/EF/CF/D67B3D142B6EFA4B83887E6D263_7C8368B5_4EAFE.png" alt=""></span></div>
+                                    <div class="txt">
+
+                                        <div class="slog flex-left">
+                                            <div class="type video"><i class="swiper-icons swi-video"></i></div>
+                                        </div>
+                                        <div class="tit l2">抖音</div>
+                                    </div>
+                                </a>
+                            
+
+<script>_showDynClickBatch(['dynclicks_u15_2021'],[2021],"wbnews", 2011691289)</script>
+</li>
+
+
+
+
+
+                            <li>
+ <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDY1MDcwMQ==&mid=2652887720&idx=1&sn=9002d18a5c66959e6d78597f9e1d12e4&chksm=bd6ff58a8a187c9c95831bce8904eea196111eac282487599b894129c07ed46bfc8cf65d1f72&token=1366091072&lang=zh_CN#rd" class="bg-mask">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/2/2C/70/92A0DC9EAED0433F5CE6E9BA509_BF6B9A92_29D8F.png);"><img src="/__local/2/2C/70/92A0DC9EAED0433F5CE6E9BA509_BF6B9A92_29D8F.png" alt=""></span></div>
+                                    <div class="txt">
+
+                                        <div class="slog flex-left">
+                                            <div class="type video"><i class="swiper-icons swi-video" style="background-image: url(img/wxxtb.png) "></i></div>
+                                        </div>
+                                        <div class="tit l2">微信</div>
+                                    </div>
+                                </a>
+                            
+
+<script>_showDynClickBatch(['dynclicks_u16_2031'],[2031],"wbnews", 2011691289)</script>
+</li>
+
+
+
+
+
+
+
+                        </ul>
+                        <ul class="ul2 flex uani fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+
+
+                            <li>
+ <a href="#" class="bg-mask">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/B/FD/AE/43132C9A3A2A9B15520C3BB8834_008B903E_F03C.png);"><img src="/__local/B/FD/AE/43132C9A3A2A9B15520C3BB8834_008B903E_F03C.png" alt=""></span></div>
+                                    <div class="txt">
+
+                                        <div class="slog flex-left">
+                                            <div class="type video"><i class="swiper-icons swi-video" style="background-image: url(img/qqxtb.png) "></i></div>
+                                        </div>
+                                        <div class="tit l2">视频号</div>
+                                    </div>
+                                </a>
+                            
+
+<script>_showDynClickBatch(['dynclicks_u17_2041'],[2041],"wbnews", 2011691289)</script>
+</li>
+
+
+
+
+
+                            <li>
+ <a href="https://weibo.com/u/6056325901" class="bg-mask">
+                                    <div class="pic1"><span class="a" style="background-image: url(/__local/A/0D/4C/6DC924468994D795FCD38F5E607_92FD9986_12178.png);"><img src="/__local/A/0D/4C/6DC924468994D795FCD38F5E607_92FD9986_12178.png" alt=""></span></div>
+                                    <div class="txt">
+
+                                        <div class="slog flex-left">
+                                            <div class="type video"><i class="swiper-icons swi-video" style="background-image: url(img/wbxtb.png)"></i></div>
+                                        </div>
+                                        <div class="tit l2">微博</div>
+                                    </div>
+                                </a>
+                            
+
+<script>_showDynClickBatch(['dynclicks_u18_2051'],[2051],"wbnews", 2011691289)</script>
+</li>
+
+
+
+
+
+
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="ztzl fl">
+                    <div class="tit clearfix wow fadeInUp">
+                        <h3><img src="img/ztzltb.png" />专题专栏</h3>
+                        <div class="more"><a href="">更多+</a></div>
+                    </div>
+
+                    <ul>    <li><a href="https://kjxy.whsu.edu.cn/ztzl/srxxgcddesjszqhjs.htm" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 1010723)"><img src="images/2024092501.png"></a></li>
+						
+<li><a href="ztzl/dsxxjy.htm" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79029)"><img src="css/b.png"></a></li>
+						
+<li><a href="ztzl/djxxjy.htm" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 2011691289, 79030)"><img src="css/c.png"></a></li>
+						
+</ul>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="footerbj">
+            <div class="footer clearfix">
+                <div>
+                    <div class="foot-left">
+                            
+<img src="img/dlogo.png">
+
+
+                        <span><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有：© 武汉体育学院体育科技学院 <img src="images/gaba.png" />鄂公网安备 42011102000845号</p></span>
+                    </div>
+
+                    <div class="foot-zj"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<h2>联系我们：</h2>
+<p>地址：湖北省武汉市江夏区藏龙岛科技园区环岛路1号 邮编：430200</p>
+<p>E-mai:Webmaster@wipe.edu.cn &nbsp; 接访电话：027-81300029</p></div>
+
+                    <div class="foot-right">
+                        <h3>友情链接</h3>
+                        <div class="yqlj"><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://www.moe.gov.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2011691289, 91140)">教育部</a>
+<a href="http://jyt.hubei.gov.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2011691289, 91141)">湖北省教育厅</a>
+</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/slick.js"></script>
+        <script type="text/javascript" src="js/public.js"></script>
+        <script type="text/javascript" src="js/jquery.superslide.2.1.js"></script>
+
+       
+
+
+        <script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/dhtx.js"></script>
+  <script type="text/javascript">
+                        /*
+            SuperSlide组合注意：
+            1、内外层mainCell、targetCell、prevCell、nextCell等对象不能相同，除非特殊应用；
+            2、注意书写顺序，通常先写内层js调用，再写外层js调用
+            */
+
+
+                        /* 外层tab切换 */
+                        jQuery(".slideTxtBox").slide({
+                            titCell: ".hd li",
+                            mainCell: ".bd",
+                            effect: "fold",
+                            delayTime: 800
+                        });
+                    </script>
+    </body>
+</html>

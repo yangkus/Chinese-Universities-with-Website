@@ -1,0 +1,928 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="汉口学院" />
+<meta name="description" content="汉口学院欢迎您！" />
+<title>汉口学院官方网站</title>
+<link href="/skin/sites/common/css/bootstrap.min.css" type="text/css"  rel="stylesheet" >
+<link href="/skin/sites/common/css/global.css" type="text/css"  rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="/skin/school523/cms/../core/header/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/school523/cms/../core/header/header.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/label.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/theme/theme.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/slick.css">
+<link rel="stylesheet" type="text/css" href="/skin/label/owl.carousel.css">
+<!--[if lt IE 9]>
+<script src="/html5shiv.min.js"></script>
+<script src="/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/skin/sites/common/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/skin/sites/common/js/guowei.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/breakpoints.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/js/jquery.iosslider.js"></script>
+<script type="text/javascript" src="/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script type="text/javascript" src="/js/owl.carousel2.min.js"></script>
+<script type="text/javascript" src="/js/lang/core/zh-cn.js"></script>
+<script type="text/javascript" src="/js/lang/cms/zh-cn.js"></script>
+<script type="text/javascript">
+P8CONFIG.RESOURCE = '';
+var SYSTEM = 'cms',
+MODULE = '',
+ACTION = 'main',
+LABEL_URL = '/index.php/cms-main?',
+STATIC_URL = 'http://manager.hkxy.edu.cn',
+$this_router = P8CONFIG.URI[SYSTEM][MODULE].controller,
+$this_url = $this_router +'-'+ ACTION,
+SKIN = '/skin/school523/cms/',
+TEMPLATE = 'school523';
+mobile_status= '0',
+mobile_auto_jump='0',
+mobile_url = '';
+if(mobile_status=='1' && SYSTEM!='sites'){
+if(browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+if(mobile_auto_jump=='1' && mobile_url!=P8CONFIG.RESOURCE){
+var this_url = location.href,_pul=P8CONFIG.RESOURCE;
+if(this_url.indexOf(mobile_url)==-1 && this_url.indexOf('s.php')==-1 && this_url.indexOf('u.php')==-1 && this_url.indexOf('admin.php')==-1 && SYSTEM!='sites'){
+if(this_url.indexOf(P8CONFIG.RESOURCE+'/html')!=-1)_pul+='/html';
+if(P8CONFIG.RESOURCE==''){
+this_url = mobile_url.indexOf('http')==-1 ? this_url.mobile_url : mobile_url;
+}else{
+this_url = this_url.replace(_pul, mobile_url);
+}
+location.href = this_url;
+}
+}
+}
+};document.domain = 'hkxy.edu.cn';;document.base_domain = 'hkxy.edu.cn';$(document).ready(function () {checkIfUserIsInLAN(STATIC_URL+'/images/arrow.gif');CheckUrlIsInLAN('body');});
+</script>
+</head>
+<body>
+<div class="header-body">
+<div class="headbar wow fadeInDown animated" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1" >
+<div class="top hidden-xs">
+<div class="container">
+<div class="topnav pull-left clearfix">
+<ul class="clearfix">
+<li class="li1"><a href="http://www.hkxy.edu.cn/html/913/">学生</a></li>
+<li class="li2"><a href="http://neiwang.hkxy.edu.cn:9090/s.php/jsyhzx1" target="_blank">教职工</a></li>
+<li id="header_t"></li>
+</ul>
+</div>
+<div class="topnav pull-right clearfix">
+<ul class="clearfix">
+<li class="li4"><a href="http://neiwang.hkxy.edu.cn:9090/s.php/pgztw/"   target="_blank" style="color:red;"><b>学校内部网站</b></a></li>
+<!--<li class="li5"><a href="#">官方微信</a></li>-->
+<!--<li class="li6"><a href="#">官方微博</a></li>-->
+<li class="li7"><a href="http://tsg.hkxy.edu.cn" target="_blank">图书馆</a></li>
+<li class="li8"><a href="http://xxgk.hkxy.edu.cn/" target="_blank">信息公开</a></li>
+<li class="li9"><a href="https://mail.hkxy.edu.cn/" target="_blank">邮件系统</a></li>
+<li class="li10"><a href="http://hr.hkxy.edu.cn/25784/" target="_blank">人才招聘</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="navbar main-nav">
+<div class="header-main">
+<div class="container">
+<div class="header clearfix">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/" class="navbar-brand navbar-logo"><img src="/skin/school523/cms/../core/header/images/logo.png"/></a>
+</div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+<ul class="nav navbar-nav navbar-right navlist navbar-link hidden-xs">
+<li class="dropdown">
+<a class="dropdown-toggle link on1" data-toggle="dropdown" data-hover="dropdown" href="http://www.hkxy.edu.cn/html/1023/"  aria-expanded="false" role="button" target="">学校概况</a>
+<div class="dropdown-menu2 dropdown-ul1" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-frame"><img src="/attachment/core/2021_02/02_14/23d22549979246bc.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-summary"><p><span>敢为人先&nbsp 实事求是</span><br><span class="s2">志存高远&nbsp 追求卓越</span></p></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul>
+<li><a href="http://www.hkxy.edu.cn/html/1023/" target="">学校简介</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/944/" target="">学校董事长</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/945/" target="">现任领导</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/1040/" target="">学校董事会</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/946/" target="">名誉校长</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/947/" target=""> 学校顾问</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/948/" target="">校徽校训</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/949/" target="">学校荣誉</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/951/" target="">校园风景</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="http://www.hkxy.edu.cn/html/820/"  aria-expanded="false" role="button" target="">机构设置</a>
+<div class="dropdown-menu2 dropdown-ul2" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-frame"><img src="/attachment/core/2021_02/02_14/72a342c4d6d9a41f.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-summary"><p><span>敢为人先&nbsp 实事求是</span><br><span class="s2">志存高远&nbsp 追求卓越</span></p></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul>
+<li><a href="http://www.hkxy.edu.cn/html/828/" target="">院系设置</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/830/" target="">管理机构</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="http://www.hkxy.edu.cn/html/953/"  aria-expanded="false" role="button" target="">师资队伍</a>
+<div class="dropdown-menu2 dropdown-ul3" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-frame"><img src="/attachment/core/2021_02/02_14/cbe6ca48e440588a.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-summary"><p><span>敢为人先&nbsp 实事求是</span><br><span class="s2">志存高远&nbsp 追求卓越</span></p></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul>
+<li><a href="http://www.hkxy.edu.cn/html/953/" target="">院士及特聘教授</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/954/" target="">学者名师</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/955/" target="">骨干教师</a></li>
+<li><a href="http://www.hkxy.edu.cn/html/956/" target="">育人标兵</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="http://jwc.hkxy.edu.cn/"  aria-expanded="false" role="button" target="">教学科研</a>
+<div class="dropdown-menu2 dropdown-ul4" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-frame"><img src="/attachment/core/2021_02/02_14/a36673db6eeaac2a.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-summary"><p><span>敢为人先&nbsp 实事求是</span><br><span class="s2">志存高远&nbsp 追求卓越</span></p></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul>
+<li><a href="http://jwc.hkxy.edu.cn/" target="_blank">教育教学</a></li>
+<li><a href="http://kyc.hkxy.edu.cn/" target="_blank">科学研究</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="http://zzb.hkxy.edu.cn/"  aria-expanded="false" role="button" target="">党团建设</a>
+<div class="dropdown-menu2 dropdown-ul5" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-frame"><img src="/attachment/core/2021_02/02_14/d5c51c5cf66fe755.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-summary"><p><span>敢为人先&nbsp 实事求是</span><br><span class="s2">志存高远&nbsp 追求卓越</span></p></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul>
+<li><a href="http://zzb.hkxy.edu.cn/" target="_blank">党建阵地</a></li>
+<li><a href="http://tw.hkxy.edu.cn/" target="_blank">团学天地</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on6" data-toggle="dropdown" data-hover="dropdown" href="http://zs.hkxy.edu.cn/"  aria-expanded="false" role="button" target="">招生就业</a>
+<div class="dropdown-menu2 dropdown-ul6" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-frame"><img src="/attachment/core/2021_02/02_14/4e0faa201eb8bf49.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-6">
+<div class="dropdown-summary"><p><span>敢为人先&nbsp 实事求是</span><br><span class="s2">志存高远&nbsp 追求卓越</span></p></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul>
+<li><a href="http://zs.hkxy.edu.cn/" target="_blank">招生网</a></li>
+<li><a href="https://hkxy.91wllm.com/" target="_blank">就业网</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on7" data-hover="dropdown" href="http://hkxy.edu.cn/html/992/2024-03-22/content-32182.html"  aria-expanded="false" role="button" target="_blank">领导关怀</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on8" data-hover="dropdown" href="http://pinggu.hkxy.edu.cn/"  aria-expanded="false" role="button" target="">评估工作</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on9" data-hover="dropdown" href="http://gjcn.hkxy.edu.cn"  aria-expanded="false" role="button" target="_blank">合作交流</a>		
+</li>
+<li class="dropdown dropdown-search"><a href="https://www.hkxy.edu.cn/search/index.html"></a></li>
+</ul>
+<ul class="nav navbar-nav navlist navbar-link2 visible-xs">
+<li class="dropdown">
+<a class="dropdown-toggle link on1" data-toggle="dropdown" data-hover="dropdown" href="http://www.hkxy.edu.cn/html/1023/"  aria-expanded="false" role="button" target="">学校概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://www.hkxy.edu.cn/html/1023/" target="">学校简介</a></li>
+<li class="menu2"><a href="http://www.hkxy.edu.cn/html/944/" target="">学校董事长</a></li>
+<li class="menu3"><a href="http://www.hkxy.edu.cn/html/945/" target="">现任领导</a></li>
+<li class="menu4"><a href="http://www.hkxy.edu.cn/html/1040/" target="">学校董事会</a></li>
+<li class="menu5"><a href="http://www.hkxy.edu.cn/html/946/" target="">名誉校长</a></li>
+<li class="menu6"><a href="http://www.hkxy.edu.cn/html/947/" target=""> 学校顾问</a></li>
+<li class="menu7"><a href="http://www.hkxy.edu.cn/html/948/" target="">校徽校训</a></li>
+<li class="menu8"><a href="http://www.hkxy.edu.cn/html/949/" target="">学校荣誉</a></li>
+<li class="menu9"><a href="http://www.hkxy.edu.cn/html/951/" target="">校园风景</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="http://www.hkxy.edu.cn/html/820/"  aria-expanded="false" role="button" target="">机构设置</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://www.hkxy.edu.cn/html/828/" target="">院系设置</a></li>
+<li class="menu2"><a href="http://www.hkxy.edu.cn/html/830/" target="">管理机构</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="http://www.hkxy.edu.cn/html/953/"  aria-expanded="false" role="button" target="">师资队伍</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://www.hkxy.edu.cn/html/953/" target="">院士及特聘教授</a></li>
+<li class="menu2"><a href="http://www.hkxy.edu.cn/html/954/" target="">学者名师</a></li>
+<li class="menu3"><a href="http://www.hkxy.edu.cn/html/955/" target="">骨干教师</a></li>
+<li class="menu4"><a href="http://www.hkxy.edu.cn/html/956/" target="">育人标兵</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="http://jwc.hkxy.edu.cn/"  aria-expanded="false" role="button" target="">教学科研</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://jwc.hkxy.edu.cn/" target="_blank">教育教学</a></li>
+<li class="menu2"><a href="http://kyc.hkxy.edu.cn/" target="_blank">科学研究</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="http://zzb.hkxy.edu.cn/"  aria-expanded="false" role="button" target="">党团建设</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://zzb.hkxy.edu.cn/" target="_blank">党建阵地</a></li>
+<li class="menu2"><a href="http://tw.hkxy.edu.cn/" target="_blank">团学天地</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on6" data-toggle="dropdown" data-hover="dropdown" href="http://zs.hkxy.edu.cn/"  aria-expanded="false" role="button" target="">招生就业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://zs.hkxy.edu.cn/" target="_blank">招生网</a></li>
+<li class="menu2"><a href="https://hkxy.91wllm.com/" target="_blank">就业网</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on7" data-hover="dropdown" href="http://hkxy.edu.cn/html/992/2024-03-22/content-32182.html"  aria-expanded="false" role="button" target="_blank">领导关怀</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on8" data-hover="dropdown" href="http://pinggu.hkxy.edu.cn/"  aria-expanded="false" role="button" target="">评估工作</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on9" data-hover="dropdown" href="http://gjcn.hkxy.edu.cn"  aria-expanded="false" role="button" target="_blank">合作交流</a>		
+</li>
+</ul>
+<div class="top visible-xs-block">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-12 col-xs-12">
+<div class="topnav clearfix">
+<ul class="clearfix">
+<li class="li1"><a href="http://www.hkxy.edu.cn/html/913/">学生</a></li>
+<li class="li2"><a href="http://neiwang.hkxy.edu.cn:9090/s.php/jsyhzx1" target="_blank">教职工</a></li>
+<li id="header_t"></li>
+</ul>
+</div>
+</div>
+<div class="col-md-8 col-sm-12 col-xs-12">
+<div class="topnav clearfix">
+<ul class="clearfix">
+<li class="li4"><a href="http://neiwang.hkxy.edu.cn:9090/s.php/pgztw/"   target="_blank" style="color:red;"><b>学校内部网站</b></a></li>
+<!--<li class="li5"><a href="#">官方微信</a></li>-->
+<!--<li class="li6"><a href="#">官方微博</a></li>-->
+<li class="li7"><a href="http://tsg.hkxy.edu.cn" target="_blank">图书馆</a></li>
+<li class="li8"><a href="http://xxgk.hkxy.edu.cn/" target="_blank">信息公开</a></li>
+<li class="li9"><a href="https://mail.hkxy.edu.cn/" target="_blank">邮件系统</a></li>
+<li class="li10"><a href="http://hr.hkxy.edu.cn/25784/" target="_blank">人才招聘</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="banner">
+<style type="text/css">
+.sliderbox42737,.sliderbox42737 .slider{width:100%;position:relative;height:100%;overflow:hidden;}
+.sliderbox42737 .slick-list{width:100%;height:100%;}
+.sliderbox42737 .slick-track{width:100%;height:100%;}
+.sliderbox42737 .slick-slide,.sliderbox42737 .slick-slide>div{height:100%;overflow:hidden;}
+.sliderbox42737 .slick-slide .image{width:100%;height:100%;position:relative;background-size:cover;background-position:center center;overflow:hidden;transition:5s;-o-transition:5s;-moz-transition:5s;transition:5s;-webkit-transform:scale(1.3);-moz-transform:scale(1.3);-ms-transform:scale(1.3);-o-transform:scale(1.3);transform:scale(1.3)}
+.sliderbox42737 .slick-slide .txt{position: absolute;top: 39.5%;left: 0;width: 100%;opacity: 0;text-align:center;}
+.sliderbox42737 .slick-slide .txt img{max-width:100%;height:auto;display:inline-block;}
+.sliderbox42737 .slick-slide .item,.sliderbox42737 .slick-slide .item img{width:100%;height:100%;display:block;}
+.sliderbox42737 .slick-slide video{width: 100%;height: 100%;position:relative;z-index:1;-o-object-fit: cover;object-fit: cover;font-family: "object-fit: cover;";}
+.sliderbox42737 .slick-slide .image{width:100%;height:100%;position:relative;background-size:cover;background-position:center center;overflow:hidden;transition:5s;-o-transition:5s;-moz-transition:5s;transition:5s;-webkit-transform:scale(1.3);-moz-transform:scale(1.3);-ms-transform:scale(1.3);-o-transform:scale(1.3);transform:scale(1.3)}
+.sliderbox42737 .slick-slide .txt{position: absolute;top: 39.5%;left: 0;width: 100%;opacity: 0;text-align:center;}
+.sliderbox42737 .slick-slide .txt img{max-width:100%;height:auto;display:inline-block;}
+.sliderbox42737 .slick-slide .item,.slider13-8351 .slick-slide .item img{width:100%;height:100%;display:block;}
+.sliderbox42737 .slick-slide video{width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;font-family: "object-fit: cover;";}
+.sliderbox42737 .slick-active .txt{opacity:1}
+.sliderbox42737 .active .image{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);transform:scale(1)}
+.sliderbox42737 .number{position: absolute;right:100px;bottom:50px;color: #fff;text-align: center;line-height:1;}
+.sliderbox42737 .number li{width:auto;height:auto;margin:0 10px;cursor: pointer;vertical-align: middle;display:inline-block;}
+.sliderbox42737 .number li.slick-active{font-size:26px;}
+.sliderbox42737 .number li:after{content:"";border-top:1px solid #fff;display: inline-block;vertical-align: middle;width:0px;margin-left:5px;transition:all 0.5s ease-out 0s;}
+.sliderbox42737 .number li.slick-active:after{width:60px;}
+.sliderbox42737 .slick-arrow{width: 46px;height: 83px;background-repeat:no-repeat;background-position: center center;margin-top: -18px;position: absolute;top: 50%;z-index:100;cursor: pointer;font-size:0;border:0;background-color:transparent;transition: all 500ms ease;-webkit-transition: all 500ms ease;opacity: 0;visibility: hidden;}
+.sliderbox42737 .slick-prev{background-image: url(/skin/label/left.png);left: 60px;}
+.sliderbox42737 .slick-next{background-image: url(/skin/label/right.png);right: 60px;}
+.sliderbox42737:hover .slick-arrow{opacity:1;visibility:visible;}
+@media (max-width: 767px){
+.sliderbox42737,.sliderbox42737 .frame,.slick-slide .item img{width:100%;height:51vw;}
+.sliderbox42737 .number{display:none;}
+}
+</style>
+<div class="sliderbox42737">
+<div class="slider">
+<div class="slide">
+<video autoplay="autoplay" muted="muted" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow" airplay="allow" x5-video-orientation="h5" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" data-object-fit="fill">
+<source src="/attachment/core/label/2024_10/21_17/0fe1105b98127f97.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+<div class="slide">
+<div class="image" style="background-image: url(/attachment/core/label/2022_06/27_16/c7cf2cd73f07da39.png);">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="slide">
+<div class="image" style="background-image: url(/attachment/core/label/2024_10/25_10/ad4b79ee3dc26749.jpg);">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="slide">
+<div class="image" style="background-image: url(/attachment/core/label/2024_07/31_15/a5c78c7a4e0b9238.jpg);">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="slide">
+<div class="image" style="background-image: url(/attachment/core/label/2024_06/06_11/ef1475cede4950ee.jpg);">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="slide">
+<div class="image" style="background-image: url(/attachment/core/label/2024_03/29_16/01a20089828f3459.jpg);">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="slide">
+<div class="image" style="background-image: url(/attachment/core/label/2023_03/21_11/9586599bb148c3bc.png);">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+</div>
+<div class="number"></div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+$('.sliderbox42737 .slider').on('init', function () {
+$('.sliderbox42737 .slick-active').addClass('active')
+})
+var slider = $('.sliderbox42737 .slider').slick({
+autoplay: true,
+autoplaySpeed: 5000, // 默认5秒切换
+pauseOnHover: false,
+arrows: true,
+dots: true,
+infinite: true,
+mobileFirst: true,
+waitForAnimate: false,
+appendDots:".sliderbox42737 .number",
+customPaging: function(slider, i) {  
+return i + 1;
+},
+responsive: [{
+breakpoint: 1199,
+settings: {
+dots: true,
+arrows: false,
+}
+}],
+useCSS: true,
+swipe: true,
+edgeFriction: 0.35
+}).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+$('.sliderbox42737 .slick-slide').removeClass('active')
+}).on('afterChange', function (event, slick, currentSlide) {
+$('.sliderbox42737 .slick-active').addClass('active')
+});
+// 重置视频播放状态的函数
+function resetVideoPlayback() {
+$('.slide video').each(function() {
+this.pause();
+this.currentTime = 0;
+});
+}
+
+// 当滑块切换时，检查是否有视频需要重置或播放
+slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+var currentVideo = $('.slick-slide[data-slick-index="' + currentSlide + '"]').find('video');
+var nextVideo = $('.slick-slide[data-slick-index="' + nextSlide + '"]').find('video');
+
+// 暂停当前滑块的视频
+if (currentVideo.length) {
+currentVideo[0].pause();
+}
+
+// 如果下一个滑块包含视频，则重置视频播放状态
+if (nextVideo.length) {
+nextVideo[0].currentTime = 0;
+nextVideo[0].play();
+}
+});
+
+// 初始化时为每个滑块中的视频添加监听事件
+$('.slide video').each(function(){
+var video = this;
+var slide = $(video).closest('.slide');
+// 当视频播放时，暂停滑块切换
+video.addEventListener('play', function(){
+slider.slick('slickPause');
+})
+// 当视频播放结束时，恢复滑块切换
+video.addEventListener('ended', function(){
+slider.slick('slickPlay');
+}, { once: false  });
+});
+});
+</script></div>
+</div>
+<script type="text/javascript">
+var USERNAME = get_username();
+$(document).ready(function(){
+//**show_edit**//
+init_labelshows('header_t');
+})
+$(function() {
+if($(window).width()>768){
+$(window).scroll(function(){
+if ($(window).scrollTop()>5) {
+$(".headbar").addClass("showfixed");
+}else{
+$(".headbar").removeClass("showfixed")
+}
+})
+}
+});
+</script>
+<div id="content-full" class="content-full"><link rel="stylesheet" type="text/css" href="/skin/school523/cms/index/index.css" />
+<link rel="stylesheet" type="text/css" href="/skin/school523/cms/index/animate.css" />
+<script type="text/javascript" src="/js/wow.min.js"></script>
+<div class="section">
+<div class="news">
+<div class="container">
+<div class="commom-head wow fadeInDown animated clearfix" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="title pull-left">汉院 · 要闻</div>
+<div class="more">
+<a href="/html/992/" target="_blank">更多>></a></div>
+</div>
+<div class="row wow fadeInUp animated" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<ul class="label_theme_pic_com_ul7">
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="pic"><a href="/html/992/2024-09-22/content-32540.html" target="_blank" title="我校举办2024级新生军训总结表彰大会"><img width="450" height="280" class="coverImg" alt="我校举办2024级新生军训总结表彰大会" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_09/25_15/e7fdfc6249ee17de.png" /></a></div>
+<div class="text">
+<h3><a href="/html/992/2024-09-22/content-32540.html" target="_blank" title="我校举办2024级新生军训总结表彰大会">我校举办2024级新生军训总结表彰大会</a></h3>
+<p class="summary">步履铿锵，挥洒蓬勃朝气青春熠熠，绽放少年风华2024级的汉院新生们不惧骄阳酷暑用青春挥洒汗水诠释了热血拼搏的故事迷彩装点梦想，汗水铸就辉煌，骄阳见证成长。为进一步增强学生的国防意识，锻炼新生强健的体魄，磨练学生坚韧的意志，同时检验军训成果，...</p>
+<p class="see-more"><a href="/html/992/2024-09-22/content-32540.html" target="_blank">查看更多</a></p>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="pic"><a href="/html/992/2024-09-11/content-32531.html" target="_blank" title="汉口学院庆祝第40个教师节暨表彰大会顺利举行"><img width="450" height="280" class="coverImg" alt="汉口学院庆祝第40个教师节暨表彰大会顺利举行" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_09/11_14/23a40ba64e3715df.png" /></a></div>
+<div class="text">
+<h3><a href="/html/992/2024-09-11/content-32531.html" target="_blank" title="汉口学院庆祝第40个教师节暨表彰大会顺利举行">汉口学院庆祝第40个教师节暨表彰大会顺利举行</a></h3>
+<p class="summary">汉院资讯（党委宣传部 报道）为大力弘扬教育家精神，展现广大教师立德树人、自信自强的精神风貌，营造尊师重教的浓厚氛围，团结凝聚全校教职工以更加奋发有为的精神状态投身于教育强国建设，9月10日上午，学校举行汉口学院庆祝第40个教师节暨表彰大会。...</p>
+<p class="see-more"><a href="/html/992/2024-09-11/content-32531.html" target="_blank">查看更多</a></p>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="pic"><a href="/html/992/2024-09-05/content-32520.html" target="_blank" title="我校隆重举办2024级新生开学典礼暨军训动员大会"><img width="450" height="280" class="coverImg" alt="我校隆重举办2024级新生开学典礼暨军训动员大会" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_09/05_17/73fe089559d0b14b.png" /></a></div>
+<div class="text">
+<h3><a href="/html/992/2024-09-05/content-32520.html" target="_blank" title="我校隆重举办2024级新生开学典礼暨军训动员大会">我校隆重举办2024级新生开学典礼暨军训动员大会</a></h3>
+<p class="summary">汉院资讯（党委宣传部 报道）秋光为序，启航新程在这个充满希望和挑战的新起点4100余名新生怀揣满腔热忱，齐聚汉院共同开启大学生活的新篇章9月5日上午，汉口学院2024级新生开学典礼暨军训动员大会在电影场隆重举行。学校董事长、校长罗爱平教授，...</p>
+<p class="see-more"><a href="/html/992/2024-09-05/content-32520.html" target="_blank">查看更多</a></p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="row wow fadeInUp animated" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="commom-head wow fadeInDown animated clearfix" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="title pull-left">综合 · 新闻</div>
+<div class="more">
+<a href="/html/992/" target="_blank">查看更多>></a></div>
+</div>
+<div class="commom-main"><ul class="label-news44 label-news44b line-56 nowrap" style="font-size:16px;">
+<li class="mb10">
+<span class="datatime pull-right">2024-10-28</span><a href="/html/992/2024-10-28/content-32591.html" target="_blank" title="原教育部领导到我校调研指导">原教育部领导到我校调研指导</a>
+</li>
+<li class="mb10">
+<span class="datatime pull-right">2024-10-18</span><a href="/html/992/2024-10-18/content-32560.html" target="_blank" title="韩国大真大学代表一行访问我校">韩国大真大学代表一行访问我校</a>
+</li>
+<li class="mb10">
+<span class="datatime pull-right">2024-10-14</span><a href="/html/992/2024-10-14/content-32569.html" target="_blank" title="【榜样在身边】师之典范 德之标兵——汉口学院2024年度“师德标兵”风采展播①">【榜样在身边】师之典范 德之标兵——汉口学院2024年度“师德标兵”风采展播①</a>
+</li>
+<li class="mb10">
+<span class="datatime pull-right">2024-10-12</span><a href="/html/992/2024-10-12/content-32551.html" target="_blank" title="学校举行学习贯彻党的二十届三中全会精神宣讲报告会">学校举行学习贯彻党的二十届三中全会精神宣讲报告会</a>
+</li>
+<li class="mb10">
+<span class="datatime pull-right">2024-10-08</span><a href="/html/992/2024-10-08/content-32557.html" target="_blank" title="我校在第十一届创青春全国大学生创业大赛荣获金奖">我校在第十一届创青春全国大学生创业大赛荣获金奖</a>
+</li>
+</ul></div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="commom-head wow fadeInDown animated clearfix" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="title pull-left">媒体 · 汉院</div>
+<div class="more">
+<a href="/html/988/" target="_blank">更多>></a></div>
+</div>
+<div class="commom-main"><ul class="themelist13" style="font-size:14px;">
+<li>
+<div class="item">
+<a href="/html/988/2024-06-06/content-32278.html" target="_blank" title="《光明日报》发表董事长、校长罗爱平教授署名文章——汉口学院：“三平台四融合”助力应用型人才培养 为实现乡村振兴助力赋能">
+<div class="source"><span>光明日报</span></div>
+<div class="title"><h3><font color="#ff0000">《光明日报》发表董事长、校长罗爱平教授署名文章——汉口学院：“三平台四融合”助力应用型人才培养 为实现乡村振兴助力赋能</font></h3></div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="/html/988/2023-04-25/content-31802.html" target="_blank" title="【中国教育报】落实立德树人 打造“大思政课”育人体系——汉口学院培养应用型人才探索实践">
+<div class="source"><span>中国教育报</span></div>
+<div class="title"><h3>【中国教育报】落实立德树人 打造“大思政课”育人体系——汉口学院培养应用型人才探索实践</h3></div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="/html/988/2024-09-11/content-32533.html" target="_blank" title="【学习强国】汉口学院校长罗爱平： 弘扬教育家精神 争做新时代好老师——在汉口学院庆祝第40个教师节暨表彰大会上的讲话">
+<div class="source"><span>学习强国</span></div>
+<div class="title"><h3>【学习强国】汉口学院校长罗爱平： 弘扬教育家精神 争做新时代好老师——在汉口学院庆祝第40个教师节暨表彰大会上的讲话</h3></div>
+</a>
+</div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="notice">
+<div class="container">
+<div class="notice-slider"><img width="500" height="300" border="none" alt="" src="/attachment/core/label/2021_02/01_14/cdd53d30839c8636.jpg" /></div>
+<div class="row wow fadeInUp animated" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="col-md-5 col-sm-5 col-xs-12 wow fadeInUp animated" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="notice-title text-center">
+<h3>通知公告</h3><a href="http://www.hkxy.edu.cn/html/990/" class="more">查看更多</a>
+</div>
+</div>
+<div class="col-md-7 col-sm-7 col-xs-12 wow fadeInUp animated" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="notice-list">
+<ul class="themelist14" style="font-size:14px;">
+<li>
+<span class="datatime">2024-10-16</span><a href="/html/990/2024-10-16/content-32559.html" target="_blank" title="汉口学院2#教学楼家政开荒招标公告">汉口学院2#教学楼家政开荒招标公告</a>
+</li>
+<li>
+<span class="datatime">2024-10-16</span><a href="/html/990/2024-10-16/content-32558.html" target="_blank" title="汉口学院2#教学楼教室实验室窗帘招标公告">汉口学院2#教学楼教室实验室窗帘招标公告</a>
+</li>
+<li>
+<span class="datatime">2024-10-14</span><a href="/html/990/2024-10-14/content-32554.html" target="_blank" title="汉口学院2#教学楼铝方板和石膏板吊顶招标公告">汉口学院2#教学楼铝方板和石膏板吊顶招标公告</a>
+</li>
+<li>
+<span class="datatime">2024-10-14</span><a href="/html/990/2024-10-14/content-32553.html" target="_blank" title="汉口学院2#教学楼厕所蹲位隔断及小便池隔断招标公告">汉口学院2#教学楼厕所蹲位隔断及小便池隔断招标公告</a>
+</li>
+<li>
+<span class="datatime">2024-10-14</span><a href="/html/990/2024-10-14/content-32552.html" target="_blank" title="汉口学院2#教学楼实验室地胶招标公告">汉口学院2#教学楼实验室地胶招标公告</a>
+</li>
+<li>
+<span class="datatime">2024-10-08</span><a href="/html/990/2024-10-08/content-32544.html" target="_blank" title="汉口学院2#教学楼室内配电箱招标公告">汉口学院2#教学楼室内配电箱招标公告</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="service">
+<div class="container">
+<div class="row service-item">
+<div class="col-md-5 col-sm-5 col-xs-12 pd0 service-left">
+<div class="row mg0">
+<div class="col-md-6 col-sm-6 col-xs-6 pd0">
+<div class="service-box service-box1 wow fadeInLeft" data-wow-delay="0.1s">
+<a href="http://dx.hkxy.edu.cn/" class="item"><img src="/skin/school523/cms/index/ico01.png"><span>电子信息工程学院</span></a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 pd0">
+<div class="service-box  service-box2 wow fadeInLeft" data-wow-delay="0.2s">
+<a href="http://art.hkxy.edu.cn/" class="item"><img src="/skin/school523/cms/index/ico02.png"><span>艺术设计学院</span></a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 pd0">
+<div class="service-box service-box3 wow fadeInLeft" data-wow-delay="0.3s">
+<a href="http://mks.hkxy.edu.cn/" class="item"><img src="/skin/school523/cms/index/ico02.png"><span>马克思主义学院</span></a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 pd0">
+<div class="service-box service-box4 wow fadeInLeft" data-wow-delay="0.3s">
+<a href="http://jjyjrxy.hkxy.edu.cn/" class="item"><img src="/skin/school523/cms/index/ico04.png"><span>经济与金融学院</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-7 col-sm-7 col-xs-12 pd0 service-right">
+<div class="service-box5 wow fadeInUp">
+<div class="text"><a href="http://tsg.hkxy.edu.cn/"><span><h3>欢迎访问我们的图书馆！</h3></span></a>
+
+
+<p>馆舍面积2.6万平方米！</p>
+
+<p>馆藏纸质图书140余万册！</p>
+
+<p>拥有考研座位1012个！</p>
+
+<p>周开放时间达112小时！</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="row service-item">
+<div class="col-md-5 col-sm-5 col-xs-12 pd0 service-left2">
+<div class="service-box6">
+<div class="text"><a class="item" href="/html/951/"><span class="title"><img src="/skin/school523/cms/index/ico06.png" />校园风景</span><span class="more">点击查看更多>></span></a></div>
+</div>
+</div>
+<div class="col-md-5 col-sm-5 col-xs-12 pd0 service-righ2">
+<div class="row mg0">
+<div class="col-md-6 col-sm-6 col-xs-6 pd0">
+<div class="service-box service-box7 wow fadeInLeft" data-wow-delay="0.1s">
+<a class="item" href="http://cmxy.hkxy.edu.cn/"><img src="/skin/school523/cms/index/ico07.png" /><span>传媒学院</span></a>
+
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 pd0">
+<div class="service-box service-box8 wow fadeInLeft" data-wow-delay="0.2s">
+<a class="item" href="http://gl.hkxy.edu.cn/"><img src="/skin/school523/cms/index/ico08.png" /><span>管理学院</span></a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 pd0">
+<div class="service-box service-box9 wow fadeInLeft" data-wow-delay="0.3s">
+<a class="item" href="http://znzz.hkxy.edu.cn"><img src="/skin/school523/cms/index/ico09.png" /><span>航空与智能制造学院</span></a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 pd0">
+<div class="service-box service-box10 wow fadeInLeft" data-wow-delay="0.3s">
+<a class="item" href="http://msie.hkxy.edu.cn/"><img src="/skin/school523/cms/index/ico10.png" /><span>音乐学院</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-12 pd0"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+<div class="common-box">
+<div class="row wow fadeInUp animated" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="commom-head wow fadeInDown animated clearfix" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="title pull-left">走进 · 汉院</div>
+<div class="more"><a href="https://dev.720yuntu.com/tour/c6bd5c68795c01e5" target="_blank">更多&gt;&gt;</a></div>
+</div>
+<div class="commom-main">
+<div class="campus-box">
+<div class="pic"><img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2024_10/17_10/3e0c8c0fe1667949.png" /></div>
+<div class="text"><a href="https://dev.720yuntu.com/tour/c6bd5c68795c01e5" target="_blank"><span><img src="/attachment/core/label/2024_10/16_15/7c83d4ae065b516d.png" /></span><p>云游汉院</p></a></div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="commom-head wow fadeInDown animated clearfix" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="title pull-left">汉院 · 映像</div>
+<div class="more">
+<a href="/html/951/" target="_blank">更多>></a></div>
+</div>
+<div class="commom-main">
+<div class="video-box">
+<a href="http://xcb.hkxy.edu.cn/2024_05/21_14/content-58840.html" target="_blank" title="" style="text-decoration:none;"><img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2024_05/22_18/09fc2ce15c7faaf3.jpg" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="special">
+<div class="commom-head wow fadeInDown animated clearfix" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="title pull-left">专题 · 专栏</div>
+<div class="more">
+<a href="/html/1032/" target="_blank">更多>></a></div>
+</div>
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInDown animated" data-wow-duration="1.5s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+<div class="special-pic mb20">
+<a href="/html/1036/" target="_blank" title="" style="text-decoration:none;"><img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2024_08/02_14/a923843ff7b09f8a.png" /></a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInDown animated" data-wow-duration="1.5s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+<div class="special-pic mb20">
+<a href="/html/1034/" target="_blank" title="" style="text-decoration:none;"><img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2024_08/02_14/e8faf3ad0eef4b53.png" /></a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInDown animated" data-wow-duration="1.5s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+<div class="special-pic mb20">
+<a href="/html/1033/" target="_blank" title="" style="text-decoration:none;"><img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2024_08/02_14/f2912e251d21205d.png" /></a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInDown animated" data-wow-duration="1.5s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+<div class="special-pic mb20">
+<a href="/html/1035/" target="_blank" title="" style="text-decoration:none;"><img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2024_08/02_14/82be7a79eda3bddd.png" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section section-layer">
+<div class="quick">
+<div class="container">
+<div class="commom-head clearfix wow fadeInUp animated" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+<div class="title pull-left">快捷 · 链接</div>
+<div class="more pull-right">
+<a href="http://manager.hkxy.edu.cn/index.php/cms/item-list-category-1009.shtml" target="_blank">更多>></a></div>
+</div>
+<div class="row wow fadeInUp animated" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1" >
+<ul class="quick-nav clearfix">
+<li><a href="http://zs.hkxy.edu.cn/"><span><i><img src="/skin/school523/cms/index/qico01.png"></i></span>招生就业</a></li>
+<li><a href="http://mks.hkxy.edu.cn/"><span><i><img src="/skin/school523/cms/index/qico02.png"></i></span>党建思政</a></li>
+<li><a href="#"><span><i><img src="/skin/school523/cms/index/qico03.png"></i></span>成绩查询</a></li>
+<li><a href="http://hr.hkxy.edu.cn/"><span><i><img src="/skin/school523/cms/index/qico04.png"></i></span>人才招聘</a></li>
+<li><a href="http://gj.hkxy.edu.cn/"><span><i><img src="/skin/school523/cms/index/qico05.png"></i></span>出国留学</a></li>
+<li><a href="http://xxgk.hkxy.edu.cn/"><span><i><img src="/skin/school523/cms/index/qico06.png"></i></span>信息公开</a></li>
+<li><a href="http://pinggu.hkxy.edu.cn/"><span><i><img src="/skin/school523/cms/index/qico07.png"></i></span>评估专题</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8.")
+{
+// console.log(1);
+}
+else{
+new WOW().init();
+}
+</script></div>
+<div id="footer">
+<div class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="footer-info">
+<p>学校地址：湖北省武汉市江夏区文化大道299号</p>
+
+<p>邮政编码：430212</p>
+
+<p>校办（传真电话）： 027-59410203</p>
+
+<p>招办（考生咨询）： 027-59410037 027-59410038</p>
+
+<p>                               027-59410087 027-59410228</p>
+<p>信访： 027-59410101 jwjcc@hkxy.edu.cn</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-6 col-xs-12">
+<div class="footer-logo text-center">
+<img width="324" height="300" border="none" alt="" src="/attachment/core/label/2021_02/01_09/c23c7f5a861028ec.png" />
+</div>
+</div>
+<div class="col-md-5 col-sm-12 col-xs-12">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4">
+<div class="footer-icons">
+<div class="title wx">
+官方微信
+</div>
+<div class="code">
+<img width="500" height="300" border="none" alt="" src="/ewebeditor/uploadfile/20210222181745787001.jpg" />
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-4">
+<div class="footer-icons">
+<div class="title wb">
+官方微博
+</div>
+<div class="code">
+<img width="500" height="300" border="none" alt="" src="/ewebeditor/uploadfile/20210222181655814001.jpg" />
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-4">
+<div class="footer-icons">
+<div class="title dy">
+官方抖音
+</div>
+<div class="code">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright text-center">
+<div class="container">
+<p>Copyright © 2019 www.hkxy.edu.cn All rights reserved. 制作维护：党委宣传部 <a href="https://beian.miit.gov.cn/" style="color:white">鄂ICP备12011456号-3 </a>  <a style="color:white">鄂公网安备42011502001236号 </a>  </p>
+</div>
+</div>
+</div>
+<div> </div>
+</body>
+</html>

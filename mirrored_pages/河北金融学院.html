@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html lang="zh-CN">
+<head>
+    <base href="https://www.hbfu.edu.cn"/>
+    <title>河北金融学院 - Hebei Finance University </title>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="keywords" content="河北金融学院官网,金融学院,河北金融,保定金融,河北金融学院,保定金融专科学校，保定金专,www.hbfu.edu.cn"/>
+    <meta http-equiv="description" content="欢迎访问河北金融学院官网"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" href="plugins/websites/web/resources/images/favicon1.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="plugins/websites/web/resources/images/favicon.ico"/>
+    <link href="plugins/websites/web/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        .bootsSlideImg .deadline-div {
+            width: 318px;
+            height: 72px;
+            position: absolute;
+            bottom: 38px;
+            left: 50%;
+            margin-left: -159px;
+            z-index: 2;
+            background: url("plugins/websites/web/resources/images/xq_bg.png") no-repeat center center;
+            background-size: cover;
+        }
+
+        .bootsSlideImg .deadline-div .deadline-num {
+            color: #f9ddb5;
+            width: 46px;
+            height: 72px;
+            line-height: 72px;
+            font-size: 23px;
+            font-weight: 600;
+            text-align: center;
+            display: block;
+            position: absolute;
+            right: 66px;
+            top: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .bootsSlideImg .deadline-div {
+                width: 160px;
+                height: 36px;
+                margin-left: -80px;
+                bottom: 20px;
+            }
+
+            .bootsSlideImg .deadline-div .deadline-num {
+                width: 24px;
+                height: 36px;
+                line-height: 36px;
+                font-size: 12px;
+                right: 34px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="plugins/websites/web/resources/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="resources/js/Date.js"></script>
+    <!-- 让bootstrap兼容ie8 -->
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="plugins/websites/web/resources/js/respond.min.js"></script>
+    <script type="text/javascript" src="plugins/websites/web/resources/js/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            windowSize();
+            $(".fullSlide").hover(function () {
+                    $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.2)
+                },
+                function () {
+                    $(this).find(".prev,.next").fadeOut()
+                });
+            $(".fullSlide").slide({
+                titCell: ".hd ul",
+                mainCell: ".bd ul",
+                effect: "fold",
+                autoPlay: true,
+                autoPage: true,
+                trigger: "click",
+                startFun: function (i) {
+                    var curLi = jQuery(".fullSlide .bd li").eq(i);
+                    if (!!curLi.attr("_src")) {
+                        curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+                    }
+                }
+            });
+
+
+            $("#kfleft").click(function () {
+                var i = $("#haiiskefu").css("right");
+                if (i == '0px') {
+                    $("#kfleft").removeClass("kfleftoff");
+                    $("#kfleft").addClass("kflefton");
+                    $('#haiiskefu').animate({right: -80}, 200);
+                } else {
+                    $("#kfleft").removeClass("kflefton");
+                    $("#kfleft").addClass("kfleftoff");
+                    $('#haiiskefu').animate({right: 0}, 200);
+                }
+            });
+
+            getDistanceSpecifiedTime(new Date('2022/09/28 00:00:00'));
+        });
+
+        //屏幕尺寸变化显示相对应的内容
+        function windowSize() {
+            var getWindow_width = $(window).width();
+            if (getWindow_width > 992) {
+                $("#boots_indexImgSize2").css("display", "none");
+                $("#boots_indexImgSize1").css("display", "block");
+            } else {
+                $("#boots_indexImgSize1").css("display", "none");
+                $("#boots_indexImgSize2").css("display", "block");
+            }
+        }
+
+        window.onresize = function () {
+            windowSize();
+            devicePone();
+        }
+
+        // 校庆倒计时
+        function getDistanceSpecifiedTime(dateTime) {
+            var EndTime = new Date(dateTime);
+            var NowTime = new Date();
+            var t = EndTime.getTime() - NowTime.getTime();
+            var d = Math.floor(t / 1000 / 60 / 60 / 24);
+            var d = d + 1;
+            if (d > 0) {
+                $(".deadline-div").show();
+                $(".deadline-num").text(d);
+            } else {
+                $(".deadline-div").hide();
+                $(".deadline-num").text('0');
+            }
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+<div id="content" class="container-fluid">
+    <nav class="navbar boots_navBg" role="navigation">
+        
+  <div id="top" class="container">
+      <!--logo信息-->
+      <div class="navbar-header boots_navbarHeader" style="margin-top:6px; margin-right:0;">
+          <!-- 头部响应式下拉菜单图标 -->
+          <button type="button" class="navbar-toggle collapsed boots_topIcon" data-toggle="collapse" data-target="#bdcf-top"  >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="glyphicon glyphicon-align-justify"></span>
+          </button>
+          <!-- logo(始终显示的内容) -->
+         <a href="#" class="navbar-brand" style="padding:0 0 0 15px; margin:0;"><img class="boots_logo"  src="plugins/websites/web/resources/images/logo2.png" /></a>
+      </div>
+      
+	  <!--右侧信息-->
+      <div class="collapse navbar-collapse boots_navbarMenu" id="bdcf-top" style="padding-right:0; margin-right:0; overflow:hidden;" >
+             <!-- 头部响应式内容 -->
+             <div class="navbar-right text-right boots_topRight">
+                 <ul class="nav navbar-nav navbar-right" style="margin-bottom:8px; margin-top:-5px">
+                     <li><a href="map" target="_self">网站地图</a></li><li><a href="https://oa.hbfu.edu.cn/"  target="_blank">办公系统</a></li>
+                     <li><!-- <a href="javascript:void(0);" class="pull-left" style="margin-right:5px;">中文</a> --><a class="pull-left" href="http://news1.hbfu.edu.cn/en/"  target="_blank">English</a></li>
+                 </ul>
+	             <form class="navbar-form boots_form" method="post" action="searchList" role="search">
+	               <div class="form-group">
+	               <input name="title" type="text" class="form-control input1" style="padding:5px;" />
+	               <input  type="submit"  class="buttom1" value=""/>
+	               </div>
+	             </form>
+	         </div> 
+	         <!-- 菜单 -->
+	        <ul class="nav navbar-nav container boots_menu" id="boots_menu" style="margin-top:3px; padding-left:40px;">
+	        	<li><a href="https://www.hbfu.edu.cn/" target="_self">首页</a></li>
+	            <li><a href="cgTransition" class="dropdown-toggle" data-toggle="dropdown" target="_self">学校概况</a>
+	                <ul class="dropdown-menu boots_dropDownMenu">
+	                    <li><a href="info/xyjj?id=1" target="_self">学校简介</a></li>
+	                    <li><a href="info/xyjj?id=31" target="_self">学校章程</a></li>
+	                    <li><a href="info/xyjj?id=3" target="_self">历史沿革</a></li>
+	                    <li><a href="info/list?id=2" target="_self">现任领导</a></li>
+	                    <li><a href="info/list2?id=4" target="_self">历任领导</a></li>
+	                    <li><a href="info/xyjj?id=21" target="_self">统计概览</a></li>
+	                    <li><a href="info/xyjj?id=15" target="_self">校徽校训校歌</a></li>
+	                    <li><a href="info/baidumap?id=5" target="_self">访问金院</a></li>
+	                    <li><a href="http://www.hbfu.edu.cn/landscape">校园景观</a></li>
+				<li><a href="http://bs.hbfu.edu.cn">领导信箱</a></li>
+	                </ul>
+	            </li>
+	            <li><a href="institutions" target="_self">机构设置</a></li>
+	            <li><a href="info/teach?id=6" class="dropdown-toggle" data-toggle="dropdown" target="_self">学科专业</a>
+	                <ul class="dropdown-menu boots_dropDownMenu">
+	                    <li><a href="info/teach?id=6" target="_self">本科专业</a></li>
+	                    <li><a href="info/teach?id=7" target="_self">专科专业</a></li>
+	                    <li><a href="info/teach?id=8" target="_self">硕士专业</a></li>
+	                    <li><a href="info/xkzy?id=22" target="_self">继续教育</a></li>
+	                </ul>
+	            </li>
+	            <li><a href="teacherTeam?id=18" class="dropdown-toggle" data-toggle="dropdown" target="_self">师资队伍</a>
+	                <ul class="dropdown-menu boots_dropDownMenu">
+	                    <li><a href="teacherTeam?id=18" target="_self">师资队伍概况</a></li>
+	                    <li><a href="teacherTeam?id=27" target="_self">创新团队</a></li>
+	                    <li><a href="teacherTeam?id=28" target="_self">杰出人才</a></li>
+	                    <li><a href="teacherTeam?id=29" target="_self">导师信息</a></li>
+	                    <li><a href="http://news.hbfu.edu.cn/yjs/ListPage?parentId=601&parentName=%E5%AF%BC%E5%B8%88%E9%A3%8E%E9%87%87&childId=603&flag=0" target="_blank">外聘专家</a></li>
+	                </ul>
+	            </li>
+	            <li><a href="info?id=16" target="_self">科学研究</a></li>
+	            <li><a href="info?id=19" target="_self">招生就业</a>
+	              <ul class="dropdown-menu boots_dropDownMenu">
+	                    <li><a href="info?id=23" target="_self">本专科招生</a></li>
+	                    <li><a href="info?id=25" target="_self">研究生招生</a></li>
+	                    <li><a href="info?id=26" target="_self">继续教育招生</a></li>
+	                     <li><a href="info?id=19" target="_self">就业服务</a></li>
+	                </ul>
+	            </li>
+	            <li><a href="info?id=20" target="_self">国际交流</a></li>
+	            <li id="phone_map" style="display:none"><a href="map" target="_self">网站地图</a></li>
+	            <li id="phone_oa" style="display:none"><a href="https://oa.hbfu.edu.cn/" target="_blank">OA办公平台</a></li>
+				<li id="phone_English" style="display:none"><a href="https://news1.hbfu.edu.cn/en" target="_self">English</a></li>
+	        </ul>
+      
+      </div>
+   </div>
+   <script type="text/javascript">
+      $(document).ready(function(){
+    	   
+          /* var headGet_windowWidth=$(window).width(); */
+          /* if(headGet_windowWidth>991){
+             $(".boots_menu").children("li").css("width","12%");
+             $(".boots_menu li a").css("word-break","keep-all");
+          } */ /* else{$(".boots_menu").children("li").css("width","100%");} */
+          //鼠标经过，显示下拉菜单；
+	       $("#boots_menu").children("li").mouseover(function(){
+	  	        $("#boots_menu li").removeClass("open");
+	  	        $(this).addClass("open");
+	  	        	    
+		    });
+		   $("#boots_menu").children("li").mouseout(function(){
+		       $("#boots_menu li").removeClass("open");
+		   });
+           
+		   
+          
+     });
+  </script>
+
+    </nav>
+    <div style="clear:both; margin:0; padding:0; height:0;"></div>
+    <!-- 轮播图 -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!--下面显示的点 -->
+        <ol class="carousel-indicators boots_SlideOl" style="bottom:0;">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        </ol>
+        <!---轮播的内容--->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <!-- <img src="plugins/websites/web/resources/images/yl.jpg" alt="2022spring.jpg..."> -->
+                <div class="bootsSlideImg"
+                     style="background:url('plugins/websites/web/resources/images/szqh.jpg') no-repeat center center">
+                    <div class="deadline-div">
+                        <span class="deadline-num"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- <img src="plugins/websites/web/resources/images/img2.jpg" alt="..."> -->
+                <div class="bootsSlideImg"
+                     style="background:url('plugins/websites/web/resources/images/q-2.jpg') no-repeat center center"></div>
+            </div>
+            <div class="item">
+                <!-- <img src="plugins/websites/web/resources/images/img3.jpg" alt="..."> -->
+                <div class="bootsSlideImg"
+                     style="background:url('plugins/websites/web/resources/images/q-3.jpg') no-repeat center center"></div>
+            </div>
+            <div class="item">
+                <!-- <img src="plugins/websites/web/resources/images/img4.jpg" alt="..."> -->
+                <div class="bootsSlideImg"
+                     style="background:url('plugins/websites/web/resources/images/q-4.jpg') no-repeat center center"></div>
+            </div>
+            <div class="item">
+                <!-- <img src="plugins/websites/web/resources/images/img5.jpg" alt="..."> -->
+                <div class="bootsSlideImg"
+                     style="background:url('plugins/websites/web/resources/images/q-5.jpg') no-repeat center center"></div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div id="line"></div>
+    <div id="main" class="container" style="margin-top:30px;">
+        <!-- 学校新闻 -->
+        <div id="h_xynews" class="col-xs-12 col-sm-12 col-md-6" style="padding:0 30px 0 15px;">
+            <h2>学校新闻<span><a href="newsList?type=1" target="_blank">more</a></span></h2>
+            <ul id="xyxwList">
+
+                
+<li ><a href="newsContent?id=9363&type=1" title="我校团委、信息工程与计算机学院联合河北金融学院附属学校、莲池区第一实验小学开展“成长‘金’字塔计划”科技指导活动" target="_blank">我校团委、信息工程与计算机学院联合河北金融学院...</a><span class="text-right">2024-10-28</span></li> 
+<li ><a href="newsContent?id=9362&type=1" title="党委常委、副校长秦菊香为我校研究生作“加快完善中央银行制度”专题讲座" target="_blank">党委常委、副校长秦菊香为我校研究生作“加快完善...</a><span class="text-right">2024-10-27</span></li> 
+<li ><a href="newsContent?id=9361&type=1" title="京东物流科技副总裁范广辉一行来校交流座谈" target="_blank">京东物流科技副总裁范广辉一行来校交流座谈</a><span class="text-right">2024-10-27</span></li> 
+<li ><a href="newsContent?id=9360&type=1" title="我校召开中层干部大会" target="_blank">我校召开中层干部大会</a><span class="text-right">2024-10-26</span></li> 
+<li ><a href="newsContent?id=9358&type=1" title="我校联合保定市中心血站开展无偿献血进校园活动" target="_blank">我校联合保定市中心血站开展无偿献血进校园活动</a><span class="text-right">2024-10-25</span></li> 
+<li ><a href="newsContent?id=9357&type=1" title="我校管理学院、会计学院、研究生部联合开展主题党建活动" target="_blank">我校管理学院、会计学院、研究生部联合开展主题党...</a><span class="text-right">2024-10-25</span></li> 
+<li ><a href="newsContent?id=9356&type=1" title="我校金融与投资学院举办“点亮未来”金融家模拟面试" target="_blank">我校金融与投资学院举办“点亮未来”金融家模拟面试</a><span class="text-right">2024-10-25</span></li> 
+<li ><a href="newsContent?id=9355&type=1" title="我校与保定市财政局举行战略合作签约仪式" target="_blank">我校与保定市财政局举行战略合作签约仪式</a><span class="text-right">2024-10-25</span></li> 
+
+            </ul>
+        </div>
+        <!-- 媒体金院 -->
+        <div id="h_xynews" class="col-xs-12 col-sm-12 col-md-6">
+            <h2 style="text-align:right;">媒体河金<span><a href="/newsList?type=4" target="_blank">more</a></span></h2>
+            <ul id="xywlList">
+                
+<li ><a href="newsContent?id=9359&type=1" title="保定新闻频道、保定广播电视台《直播民生》报道我校开展无偿献血进校园活动" target="_blank">保定新闻频道、保定广播电视台《直播民生》报道我...</a><span class="text-right">2024-10-26</span></li> 
+<li ><a href="newsContent?id=9352&type=1" title="长城网、长城新媒体冀云客户端报道我校开展“思政课大中小一体化”实践教学活动" target="_blank">长城网、长城新媒体冀云客户端报道我校开展“思政...</a><span class="text-right">2024-10-23</span></li> 
+<li ><a href="newsContent?id=9351&type=1" title="长城网报道我校成功举办2024年餐饮文化节" target="_blank">长城网报道我校成功举办2024年餐饮文化节</a><span class="text-right">2024-10-23</span></li> 
+<li ><a href="newsContent?id=9348&type=1" title="冀网育报道我校学子共唱《我和我的祖国》" target="_blank">冀网育报道我校学子共唱《我和我的祖国》</a><span class="text-right">2024-10-22</span></li> 
+<li ><a href="newsContent?id=9346&type=1" title="保定广播电视台《直播民生》、保定新闻传媒中心新闻客户端报道我校联合保定银行开展主题党日活动" target="_blank">保定广播电视台《直播民生》、保定新闻传媒中心新...</a><span class="text-right">2024-10-22</span></li> 
+<li ><a href="newsContent?id=9338&type=1" title="人民网、河北广播电视台冀时客户端报道我校马克思主义学院副教授赵雪赴雄安新区进行“凝聚改革共识 增强改革主动”主题宣讲" target="_blank">人民网、河北广播电视台冀时客户端报道我校马克思...</a><span class="text-right">2024-10-18</span></li> 
+<li ><a href="newsContent?id=9323&type=1" title="保定日报、保定广播电视台《直播民生》、保定新闻频道、保定新闻传媒中心新闻客户端、长城新媒体冀云客户端报道我校举办2024年田径运动会" target="_blank">保定日报、保定广播电视台《直播民生》、保定新闻...</a><span class="text-right">2024-10-12</span></li> 
+<li ><a href="newsContent?id=9321&type=1" title="河北日报客户端、学习强国保定学习平台、长城新媒体冀云客户端报道我校积极开展语言文字社会实践活动" target="_blank">河北日报客户端、学习强国保定学习平台、长城新媒...</a><span class="text-right">2024-10-11</span></li> 
+
+            </ul>
+        </div>
+
+        <div class="clear" style="height:6px;"></div>
+	<div class="container"><a href="https://web.hbfu.edu.cn/bkpgztw" target="_blank"><img src="plugins/websites/web/resources/images/pgztw.jpg"></a></div>
+	<div class="clear" style="height:16px;"></div>
+        <!-- 学校公告 -->
+        <div id="h_zt" class="col-xs-12 col-sm-12 col-md-6">
+            <h2>信息公开<span><a href="newsList?type=2" target="_blank">more</a></span></h2>
+            <div class="contaienr-fluid"><img style="width:100%" src="plugins/websites/web/resources/images/1_20.jpg"/>
+            </div>
+            <ul id="noticList">
+                
+    <li class="col-xs-12 col-md-12 col-sm-6"><a href="newsContent?id=9318&type=2" target="_blank" title="【招聘会邀请函】河北省分学科系列招聘活动财经类专场招聘会暨河北金融学院2025届毕业生秋季校园招聘会">【招聘会邀请函】河北省分学科系列招聘活动财经类专场招聘会暨河北金融学院2025届毕业生秋季校园招聘会</a></li>
+    <li class="col-xs-12 col-md-12 col-sm-6"><a href="newsContent?id=9264&type=2" target="_blank" title="河北金融学院2024年公开招聘少数民族专职辅导员进入面试人员名单及面试安排">河北金融学院2024年公开招聘少数民族专职辅导员进入面试人员名单及面试安排</a></li>
+    <li class="col-xs-12 col-md-12 col-sm-6"><a href="newsContent?id=9253&type=2" target="_blank" title="河北金融学院2024年公开招聘少数民族专职辅导员资格复审及笔试安排">河北金融学院2024年公开招聘少数民族专职辅导员资格复审及笔试安排</a></li>
+    <li class="col-xs-12 col-md-12 col-sm-6"><a href="newsContent?id=9249&type=2" target="_blank" title="河北金融学院2023-2024学年（春季）部分国有资产报废处置项目中标公告">河北金融学院2023-2024学年（春季）部分国有资产报废处置项目中标公告</a></li>
+    <li class="col-xs-12 col-md-12 col-sm-6"><a href="newsContent?id=9242&type=2" target="_blank" title="河北金融学院2023-2024学年（春季）部分国有资产报废处置招标公告">河北金融学院2023-2024学年（春季）部分国有资产报废处置招标公告</a></li>
+    <li class="col-xs-12 col-md-12 col-sm-6"><a href="newsContent?id=9241&type=2" target="_blank" title="河北金融学院房屋公开招租项目公告">河北金融学院房屋公开招租项目公告</a></li>
+
+
+            </ul>
+        </div>
+
+        <!-- 学术活动 -->
+        <div id="h_notic" class="col-xs-12 col-sm-12 col-md-6">
+            <h2>学术活动<span><a href="activity" target="_blank">more</a></span></h2>
+            
+  <div>
+<h4>10月<span>17</span></h4>
+<p><a href="activityContent?id=242" title="关于举办"周末专家河北行"活动暨“河金学术Seminar”第七十二期“新发展格局下的货币财政协调机制”的通知" target="_blank" >关于举办"周末专家河北行"活动暨“河金学术Seminar”第七十二期...</a>
+<span class="time">时间：15:00</span><span class="leixing">类型：
+讲座
+
+
+</span><br /><span class="didian">地点：融汇楼204</span></p></div>
+ <div>
+<h4>10月<span>17</span></h4>
+<p><a href="activityContent?id=241" title="关于开展“从高等教育到就业市场的学习迁移能力培养” 专题讲座的通知" target="_blank" >关于开展“从高等教育到就业市场的学习迁移能力培养” 专题讲座...</a>
+<span class="time">时间：下午2:30-4:00</span><span class="leixing">类型：
+讲座
+
+
+</span><br /><span class="didian">地点：笃学楼邯郸银行厅</span></p></div>
+ <div>
+<h4>10月<span>19</span></h4>
+<p><a href="activityContent?id=240" title="关于举办“周末专家河北行”系列活动之“驾驭数字浪潮：构建有效的营销战略”讲座的通知" target="_blank" >关于举办“周末专家河北行”系列活动之“驾驭数字浪潮：构建有...</a>
+<span class="time">时间：8:30-11:40</span><span class="leixing">类型：
+讲座
+
+
+</span><br /><span class="didian">地点：笃学楼A104</span></p></div>
+ <div>
+<h4>10月<span>21</span></h4>
+<p><a href="activityContent?id=239" title="关于举办“AI赋能的外语教育研究：话题与操作”讲座的通知" target="_blank" >关于举办“AI赋能的外语教育研究：话题与操作”讲座的通知</a>
+<span class="time">时间：14:00-16:00</span><span class="leixing">类型：
+讲座
+
+
+</span><br /><span class="didian">地点：腾讯会议（155-891-130）</span></p></div>
+
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="h_link">
+        <div class="container" id="h_link0">
+            <div id="h_link1" class="col-xs-12 col-sm-12 col-md-5">
+                <a href="resourceList"><h2>常用连接</h2></a>
+                <ul class="container-fluid">
+                    <li class="col-xs-4 col-sm-2 col-md-4"><a href="resourceList#one">指导中心</a></li>
+                    <li class="col-xs-4 col-sm-2 col-md-4"><a href="resourceList#four">信息资源</a></li>
+                    <li class="col-xs-4 col-sm-2 col-md-4"><a href="resourceList#two">电子资源</a></li>
+                    <li class="col-xs-4 col-sm-2 col-md-4"><a href="resourceList#five" target="_blank">教务系统</a></li>
+                    <li class="col-xs-4 col-sm-2 col-md-4"><a href="#" target="_blank">共享课程</a></li>
+                    <li class="col-xs-4 col-sm-2 col-md-4"><a href="resourceList#three">专题网站</a></li>
+                </ul>
+            </div>
+            <div id="h_link2" class="col-xs-12 col-sm-12 col-md-7 pull-right">
+                <div id="boots_indexImgSize1">
+                    <div class="col-md-2 col-sm-2 col-xs-2 boots_bootmImg pull-right">
+                        <a href="http://bs.hbfu.edu.cn/" target="_blank"><img style="width:100%"
+                                                                              src="plugins/websites/web/resources/images/1_40.jpg"/></a>
+                        <a href="https://zpjob.acabridge.cn/school/3479" target="_blank"><img style="width:100%"
+                                                                                              src="plugins/websites/web/resources/images/1_43.jpg"/></a>
+                        <a href="https://news.hbfu.edu.cn/xyh" target="_blank"><img style="width:100%"
+                                                                                   src="plugins/websites/web/resources/images/xyzc.jpg"/></a>
+                    </div>
+                    <a class="col-md-3 col-sm-3 col-xs-3 boots_bootmImg pull-right" href="https://www.720yun.com/vr/7a5jzO4yvy4" target="_blank" style="width:131px;"><img style="widht:131px;height:110px;" src="plugins/websites/web/resources/images/lzjy.jpg"/></a>
+                    <a class="col-md-5 col-sm-5 col-xs-5 boots_bootmImg pull-right" href="https://web.hbfu.edu.cn/sszz" target="_blank" sytle="width:131px;float:right;"><img style="width:131px;height:110px;float:right;" src="plugins/websites/web/resources/images/hjsz_x.jpg"/></a>
+                </div>
+
+                <div id="boots_indexImgSize2">
+                    <a class="col-md-5 col-sm-5 col-xs-5 boots_bootmImg" href="https://web.hbfu.edu.cn/sszz" target="_blank" style="width:110px;"><img style="width:100%" src="plugins/websites/web/resources/images/hjsz_p.jpg"/></a>
+                    <a class="col-md-3 col-sm-3 col-xs-3 boots_bootmImg" href="https://www.720yun.com/vr/7a5jzO4yvy4" target="_blank" style="width:101px;"><img style="width:100%" src="plugins/websites/web/resources/images/lzjy.jpg"/></a>
+                    <div class="col-md-2 col-sm-2 col-xs-2 boots_bootmImg">
+                        <a href="http://bs.hbfu.edu.cn/" target="_blank"><img style="width:100%"
+                                                                              src="plugins/websites/web/resources/images/1_40.jpg"/></a>
+                        <a href="https://zpjob.acabridge.cn/school/3479" target="_blank"><img style="width:100%"
+                                                                                              src="plugins/websites/web/resources/images/1_43.jpg"/></a>
+                        <a href="https://news.hbfu.edu.cn/xyh" target="_blank"><img style="width:100%"
+                                                                                   src="plugins/websites/web/resources/images/xyzc.jpg"/></a>
+                    </div>
+	  </div> 
+	 </div>
+	 <div class="clear"></div>
+   </div>
+ </div>
+ 
+<div id="h_nav"><div id="h_nav1"  class="container" >
+   <dl>
+    <dt><a href="cgTransition">学校概况</a></dt>
+	 <dd><a href="info/xyjj?id=1">学校简介</a></dd>
+	  <dd><a href="info/xyjj?id=3">历史沿革</a></dd>
+			<dd >  <a href="info/list?id=2">现任领导</a></dd>
+			<dd >  <a href="info/list2?id=4">历任领导</a>
+		     <dd ><a href="info/list?id=21" >统计概览</a></dd>
+		       <dd >  <a href="info/xyjj?id=15">学校标识</a></dd>
+		        <dd><a href="info/baidumap?id=5">访问金院</a></dd>
+		       <dd ><a href="https://www.hbfu.edu.cn/landscape" target="_blank">校园景观</a></dd>
+			<dd ><a href="http://bs.hbfu.edu.cn" target="_blank">领导信箱</a></dd>
+	 </dl>
+	  <dl>
+    <dt><a href="news">新闻公告</a></dt>
+    
+	 <dd><a href="imgNews">图片新闻</a></dd>
+	 <dd><a href="newsList?type=1">学校新闻</a></dd>
+	 <dd><a href="activity">学术活动</a></dd>
+	 <dd><a href="newsList?type=2">信息公开</a></dd>
+	 <dd><a href="newsList?type=4">媒体金院</a></dd>
+	 <!-- <dd><a href="video.html">金院视频</a></dd> --></dl>
+	 <dl>
+	<!--  <dt><a href="org">组织机构</a></dt>
+	 <dd><a href="org#one">党群机构</a></dd>
+	 <dd><a href="org#tow">行政机构</a></dd>
+	 <dd><a href="org#three">教研机构</a></dd></dl>
+	 <dl>-->
+	  <dt><a href="institutions">机构设置</a></dt>
+	 <dd><a href="institutions#ins_goverIns">党政管理机构</a></dd>
+	 <dd><a href="institutions#ins_teachingInsti">教学机构</a></dd>
+	 <dd><a href="institutions#ins_scienIns">科研机构</a></dd>
+	 	 <dd><a href="institutions#ins_teachIns">教辅机构</a></dd>
+	 </dl>
+	 <dl>
+    <dt><a href="info/xkzy?id=6">学科专业</a></dt>
+    	 <dd><a href="info/xkzy?id=6">本科专业</a></dd>
+			 <dd><a href="info/xkzy?id=7">专科专业</a></dd>
+			 <dd><a href="info/xkzy?id=8">硕士专业</a></dd>
+			 <dd><a href="info/xkzy?id=22">继续教育</a></dd>
+    </dl>
+	 	
+	   <dl>
+	 <dt><a href="teacherTeam?id=18">师资队伍</a></dt>
+	 <dd><a href="teacherTeam?id=27">创新团队</a></dd>
+	 <dd><a href="teacherTeam?id=28">杰出人才</a></dd>
+	 <dd><a href="teacherTeam?id=29">导师信息</a></dd>
+	 <dd><a href="teacherTeam?id=30">外聘专家</a></dd>
+	</dl>
+	 
+	 <dl>
+    <dt><a href="info?id=16">科学研究</a></dt>
+    </dl>
+	 <dl>
+		<dt><a href="info?id=19">招生就业</a></dt>
+		
+		<dd><a href="info?id=23">本专科招生</a></dd>
+		<dd><a href="info?id=25">研究生招生</a></dd>
+		<dd><a href="info?id=26">继续教育招生</a></dd>
+		<dd><a href="info?id=19">就业服务</a></dd>
+  	 </dl>
+       <dl>
+	<dt><a href="info?id=20">国际交流</a></dt>
+   </dl>
+         <dl>
+	<dt><a href="http://www.hbfu.edu.cn/v/index.htm" target="_blank">虚拟校园</a></dt>
+   </dl>
+	<!--  <dt><a href="dept">专业院系</a></dt>
+	 <dd><a href="javascript:void(0);">学校设置</a></dd>
+	 <dd><a href="javascript:void(0);">院部设置</a></dd></dl>
+	  <dl>
+	 <dt><a href="info/teach?id=6">人才培养</a></dt>
+	 <dd><a href="info/teach?id=6">本科教育</a></dd></dl>
+	 <dl>
+	<dt><a href="javascript:void(0);">教与学</a></dt>
+	 <!-- <dd><a href="#">入读金院</a></dd>
+	 <dd><a href="#">任职职员</a></dd> 
+	 <dd><a href="http://websites.hbcf.edu.cn/courses/zy" target="_blank">金院公开课</a></dd>
+	 <dd><a href="http://xb2.hbcf.edu.cn/wsb/" target="_blank">国际交流</a></dd>
+	 <dd><a href="http://websites.hbcf.edu.cn/tushuguan" target="_blank">图书馆</a></dd></dl>-->
+	
+
+ </div>
+ </div>
+ <div id="h_foot"><div id="h_foot1" class="container">
+     <div class="ins_copyRight">
+            <span class="boots_footSpan3"><a href="http://beian.miit.gov.cn" target="_blank">冀ICP备11022456号-10</a></span>
+            <span class="boots_footSpan4">保公备130603100075</span>
+            <span class="boots_footSpan6">地址：河北省保定市恒祥北大街3188号</span>
+            <span class="boots_footSpan2">邮编：071051</span>
+
+            <span class="boots_footSpan5">Copyright &copy; 2014 河北金融学院 版权所有         
+             <!--<script src="http://s95.cnzz.com/stat.php?id=1255596845&web_id=1255596845" language="JavaScript"></script>-->
+            </span>
+            <div class="ins_clear"></div>
+        </div>
+ </div></div>
+
+</div>
+</body>
+</html>

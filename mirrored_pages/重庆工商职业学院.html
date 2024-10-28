@@ -1,0 +1,2092 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>重庆工商职业学院</title><META Name="keywords" Content="重庆工商职业学院" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <style>
+
+        /**全局样式**/
+        html, body, div {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;}
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-size: 14px;}
+
+        body {
+            min-width: 83.33vw; /*1600*/
+            min-height: 600px;
+            overflow-x: hidden;}
+
+        a {
+            text-decoration: none;}
+
+        /**顶部导航栏样式**/
+        .menu-wrapper {
+            width: 100vw;
+            height: 20.83vh; /*225px*/
+            background-image: linear-gradient(rgba(20, 77, 152, 1), rgba(20, 77, 152, 0));
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            color: white;
+            transition: background-color 1.5s !important; /**全屏banner和内容切换时，样式变化**/
+            z-index: 100;}
+
+        .logo-wrapper img {
+            height: 51px;}
+
+        .menu-item-wrapper {
+            margin-left: 0.6vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;}
+
+        .menu-item-wrapper > div {
+            position: relative;
+            margin-left: 0.6vw;}
+
+        .menu-item-wrapper > div > a {
+            font-size: 1.5rem;
+            padding: 0.6vw;
+            padding-bottom: 25px;
+            text-decoration: none;
+            color: rgba(255, 255, 255);
+            box-sizing: border-box;}
+
+        .menu-item-wrapper > div > a:hover {
+            color: #fff;}
+        .menu-item-wrapper > div:hover {
+            padding-bottom: 5px;
+            border-bottom: 2px solid #F7F9FC;}
+        .menu-list {
+            position: absolute;
+            right: 10px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #e9eff7;}
+        .menu-second-lik {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            display: none;
+            position: absolute;
+            width: 26.56vw;
+            height: 7.29vw;
+            box-sizing: border-box;
+            padding: 1vw 10.41vw 1.04vw 1vw;
+            background-image: url(images/ms1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 50px;}
+        .menu-list > a, .menu-second-lik > a {
+            font-size: 1.5rem;
+            padding: 0.7vw;
+            text-decoration: none;
+            color: #929394;
+            box-sizing: border-box;
+            background-color: #fff;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            white-space: nowrap;}
+        .menu-second-lik > a {
+            width: 6.77vw;
+            padding: 0.5vw;
+            color: #556973;
+            background-color: transparent;
+            display: block;}
+
+        .menu-list > a {
+            color: #929394;}
+        .menu-list > a:hover {
+            color:#fff;
+            background-color:#008cd6;}
+
+        .menu-second-lik > a:hover {
+            /*color: #144d98;*/
+            color: #008cd6;}
+
+
+        /**窗口小于1400时，调整弹性间隔**/
+        @media screen and (max-width: 1410px) {
+            .menu-second-lik {
+                padding: 0 10.41vw 1.04vw 0;
+                gap: 0 0.52vw;}
+            .menu-item-wrapper {
+                margin-left: 0.2vw;}
+
+            .menu-item-wrapper > div {
+                margin-left: 0.2vw;}
+
+            .menu-item-wrapper > div > a {
+                padding: 16px 0.2vw;}
+
+            .menu-second-lik {
+                top: 40px;}
+        }
+
+        /**窗口小于1200时隐藏菜单，显示menu-btn，调整弹性间隔**/
+        @media screen and (max-width: 1265px) {
+            .logo-wrapper img {
+                height: 4.72vh;}
+            .menu-list > a, .menu-second-lik > a {            
+                border-bottom: 1px dashed hsla(0, 0%, 80%, .8);}
+            .menu-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;}
+
+            #menu-item-wrapper {
+                display: none;}
+
+            #menu-btn-wrapper {
+                display: inline-block;}
+        }
+        .menu-btn-wrapper {
+            position: relative;
+            /*width: 120px;*/
+            display: none;}
+        .menu-btn-wrapper > img {
+            width: 48px;
+            opacity: 0.4;
+            cursor: pointer;}
+
+        .menu-btn-wrapper > img:hover {
+            opacity: 0.7;}
+
+        .search-btn {
+            border-radius: 5px;
+            margin-left: 0.6vw;
+            border: 1px solid hsla(0, 0%, 100%, .5);}
+
+        .search-btn form {
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;}
+
+        .search-btn input[type=text] {
+            outline: none;
+            background-color: transparent;
+            color: white;
+            border: none;
+            width: 140px;
+            height: 18px;
+            padding: 5px;}
+
+        .search-btn input::placeholder {
+            color: hsla(0, 0%, 100%, .5);}
+
+        .search-btn input::-webkit-input-placeholder {
+            color: hsla(0, 0%, 100%, .5);}
+
+        .search-btn input::-moz-placeholder {
+            color: hsla(0, 0%, 100%, .5);}
+
+        .search-btn input::-ms-input-placeholder {
+            color: hsla(0, 0%, 100%, .5);}
+
+        .search-btn input[type=button] {
+            border: none;
+            padding: 0;
+            opacity: 0.5;
+            width: 35px;
+            height: 35px;
+            background-size: cover;
+            background-color: transparent;
+            background-image: url(images/search.png);}
+
+        .search-btn input[type=button]:hover {
+            cursor: pointer;
+            opacity: 0.8;}
+
+        /**全屏banner样式**/
+        .full-banner-wrapper {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            /*min-width: 1200px;*/
+            /*min-height: 600px;*/
+            overflow: hidden;}
+
+        .full-banner {
+            width: 100vw;
+            height: 100vh;
+            /*min-width: 83.33vw; !*1600*!*/
+            /*min-height: 600px;*/
+            overflow: hidden;
+            position: absolute;}
+
+        .full-banner img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: fill;}
+
+        /**利用组件自动生成的id，覆盖组件默认样式**/
+
+        /**beginEditable**/
+
+        .full-banner table div {
+            width: 100vw !important;
+            height: 100vh !important;}
+        .full-banner table div ul {
+            right: 150px !important;
+            bottom: 50px !important;
+            font: 16px Tahoma !important;}
+
+        .full-banner table div ul li {
+            width: auto !important;
+            height: auto !important;
+            line-height: 12px !important;
+            margin-right: 15px !important;
+            background-color: rgba(0, 0, 0, 0.3) !important;
+            color: hsla(0, 0%, 100%, .5);
+            padding: 5px 15px;
+            border-radius: 2px;}
+
+        .full-banner table div ul li.hover {
+            background-color: rgba(255, 255, 255, 0.7) !important;
+            color: #93210e !important;
+            border: none !important;}
+        /**endEditable**/
+
+        /**主要内容区样式**/
+        .content-wrapper {
+            position: fixed;
+            width: 100vw;
+            /*min-width: 83.33vw; !*1600*!*/
+            top: 100vh;
+            box-sizing: border-box;
+            background-color: #e9eff7;
+            padding-top: 20.37vh; /*220px*/
+            transition: top .7s cubic-bezier(0.5, 0, 0.2, 1);}
+
+        #content-wrapper {
+            top: 0;
+            position: relative;}
+
+        /*单模块标题*/
+        .model-title {
+            font-size: 1.875rem;
+            color: #144d98;
+            height: 51px;}
+
+        /*更多*/
+        .title-more-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+            height: 51px;}
+
+        .title-more-wrapper .more {
+            font-size: 1rem;
+            color: #333;}
+
+        .title-more-wrapper .more img {
+            vertical-align: middle;}
+        .news-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding-left: 7.8vw; /*150*/
+            box-sizing: border-box;
+            margin: 0 auto;
+            /*border: 1px solid red;*/
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            z-index: 9;}
+
+        /*背景logo*/
+        .logo-bg-news {
+            position: absolute;
+            right: 2.92vw;
+            top: -29.37vh;
+            width: 37vw;
+            height: 31vw;}
+
+        .news-banner-wrapper {
+            width: 50.26VW; /*965*/
+            /* border: 1px solid green;*/
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;}
+
+        .news-banner-img-wrapper {
+            width: 100%;
+            /*border: 1px solid green;*/
+            height: 33.59vw;}
+
+        .news-banner-img-wrapper table,
+        .news-banner-img-wrapper tbody,
+        .news-banner-img-wrapper tr,
+        .news-banner-img-wrapper td,
+        .news-banner-img-wrapper td > div,
+        .news-banner-img-wrapper td > div div,
+        .news-banner-img-wrapper a,
+        .news-banner-img-wrapper img {
+            width: 100% !important;
+            height: 33.59vw !important;}
+
+        .news-list-wrapper {
+            position: relative;
+            z-index: 1;
+            width: calc(83.33vw - 50.26vw);
+            box-sizing: border-box;}
+
+        .news-more {
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            /*padding-left: 50px;*/
+            /* padding-right: 40px;*/
+            color: #333;
+            font-size: 1rem;
+            height: 51px;
+            text-align: right;}
+
+        .news-more img {
+            vertical-align: middle;}
+
+        .news-list {
+            width: 100%;
+            box-sizing: border-box;
+            /*  padding-left: 50px;*/
+            padding-left: 1.82vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            background-color: #fff;}
+
+        .news {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            /*border: 1px solid red;*/
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 6.72vw; /*129px;*/
+            box-sizing: border-box;
+            border-top: 2px solid #eee;}
+
+        .news-list .news:first-of-type {
+            border-top: none !important;}
+
+        .news a {
+            text-decoration: none !important;}
+
+        .new-title-date {
+            padding-right: 1.82vw;
+            width: calc(100% - 8.85vw);
+            color: #929394;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            gap: 0 1.56vw;}
+
+        .news-title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;}
+
+        .news-date {
+            /*font-size: 1rem;*/
+            color: #c66756;}
+
+        .news img {
+            width: 9.69vw;/*186px;*/
+            height: 6.72vw;}
+
+        .news:after {
+            position: absolute;
+            top: 0;
+            left: -4.17vw;
+            width: calc(calc(100vw - 83.33vw) / 2 + calc(83.33vw - 50.26vw) + 1.82vw);/*1.82vw -- 35px*/
+            content: '';
+            display: none;
+            background-color: #008cd6;
+            height: 100%;}
+
+        .news:hover:after {
+            display: block;}
+
+        .news:hover .news-date, .news:hover .news-title {
+            position: relative;
+            color: #fff;
+            z-index: 999;}
+
+        .news:hover img {
+            position: relative;
+            z-index: 999;}
+
+        .news-banner-more {
+            display: none;}
+
+        /**窗口小于1200时隐藏菜单，显示menu-btn，调整弹性间隔**/
+        @media screen and (max-width: 1217px) {
+            .news-banner-wrapper {
+                width: 100%;
+                padding-right: 7.8vw;}
+
+            .news-banner-img-wrapper {
+                width: 100%;
+                height: auto;}
+
+            .news-list-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;}
+
+            .news-banner-more {
+                display: block;}
+
+            .news-list-wrapper {
+                display: none;}
+        }
+
+        /*通知公共与媒体聚焦*/
+        .notice-media-wrapper {
+            position: relative;
+            margin-top: 15.74vh;
+            padding-left: 7.8vw;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            box-sizing: border-box;}
+
+        .notice-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 26.56vw; /*510px*/
+            /*border: 1px solid green;*/
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;}
+
+        .notice-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 1.04vw 2.08vw 0;
+            width: 100%;
+            /*height: calc(60.18vh - 4.62vh);*/
+            box-sizing: border-box;
+            background-color: #fff;
+            border-bottom: 0.52vw solid #008AD6;}
+
+        .notice-list .notice:first-of-type {
+            border: none;}
+
+        .notice {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 10.6vh;/*115*/
+            box-sizing: border-box;
+            border-top: 2px solid #eee;
+            font-size: 1.5rem;
+            gap: 0 1.56vw;}
+
+        .notice-title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            color: #666666;}
+
+        .notice-date {
+            color: #c98376;}
+
+        .notice:hover .notice-title {
+            color: #144d98;}
+
+        .media-wrapper {
+            padding-left: 4.69vw;
+            width: calc(83.33vw - 26.56vw);
+            height: 100%;
+            box-sizing: border-box;
+            z-index: 1;}
+
+        .media-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            /*height: calc(60.18vh - 4.62vh);*/
+            box-sizing: border-box;}
+
+        .media {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0 3.125vw;
+            width: 100%;
+            height: 13.8vh;/*150*/
+            box-sizing: border-box;
+            border-top: 2px solid #eee;}
+
+        .media img {
+            width: 10.94vw;
+            object-fit: cover;
+            height: 90%;}
+
+        .media-title-date {
+            color: #989494;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 10.94vw - 3.125vw);/*60px--3.125vw*/
+            font-size: 1.5rem;
+            gap: 0 1.56vw;}
+
+        .media-title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;}
+
+        .media-date {
+            color: #c98376;}
+
+        .media:after {
+            position: absolute;
+            top: 0;
+            left: -3.125vw;
+            width: calc(calc(100vw - 83.33vw) / 2 + calc(83.33vw - 26.56vw) - 1.56vw);
+            content: '';
+            display: none;
+            background-color: #008cd6;
+            height: 100%;}
+
+        .media:hover:after {
+            display: block;}
+
+        .media:hover .media-title-date,
+        .media:hover .media-date {
+            position: relative;
+            color: #fff;
+            z-index: 999;}
+
+        .media:hover img {
+            position: relative;
+            z-index: 999;}
+
+        .logo-bg-notice {
+            position: absolute;
+            left: 0.73vw;
+            top: -30vh;
+            /*width: 993px;*/
+            /*height: 713px;*/
+            width: 52vw;
+            height: 37vw;}
+
+        @media screen and (max-width: 1217px) {
+            .notice-media-wrapper {
+                margin-top: 0;
+                padding: 7.8vh 7.8vw 0;
+                flex-direction: column;
+                gap: 7.8vh 0;}
+
+            .notice-wrapper {
+                width: 100%;}
+
+            .media-wrapper {
+                padding-left: 0;
+                width: 100%;}
+
+            .media:after {
+                width: calc(100% + 3.125vw + 7.8vw);}
+                
+            .media img {
+                height: auto;}
+
+        }
+
+        /*校园生活*/
+        .campus-life-bg {
+            position: relative;
+            margin-top: 26.98vh;
+            width: 100%;
+            height: 26vw;
+            background-color: #008cd6;
+            z-index: 1;}
+
+        .campus-life-wrapper {
+            position: absolute;
+            top: -12.87vh;
+            padding: 0 7.8vw;
+            width: 100%;}
+
+        .campus-life-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0 1.5625vw;}
+
+        .campus-img-left,
+        .campus-img-right {
+            position: relative;
+            width: 18.75vw;/*360*/
+            height: 24.06vw;
+            overflow: hidden;
+            background-color: #fff;}
+
+        .campus-img-middle {
+            width: 41.146vw;/*789px;*/
+            height: 100%;}
+
+        .campus-life-content img {
+            width: 100%;
+            height: 10.68vw;/*205px;*/
+            vertical-align: middle;}
+
+        .campus-img-middle table,
+        .campus-img-middle tbody,
+        .campus-img-middle tr,
+        .campus-img-middle td,
+        .campus-img-middle td > div,
+        .campus-img-middle td > div div,
+        .campus-img-middle a,
+        .campus-img-middle img {
+            width: 100% !important;
+            height: 24.06vw !important;}/*462px*/
+
+        .campus-img-left .campus-title-text {
+            padding: 2vw;
+            width: 100%;
+            background-color: #fff;}
+
+        .campus-img-right .campus-title-text {
+            padding:2vw;
+            width: 100%;
+            background-color: #fff;}
+        .campus-img-right  img {
+            position: absolute;
+            left: 0;
+            bottom: 0;}
+
+        .campus-life-content .campus-title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            font-size: 1.25rem;
+            color: #144d98;}
+
+        .campus-life-content .campus-text {
+            margin-top: 1.56vh;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            font-size: 1.125rem;
+            text-indent: 2em;
+            line-height: 2.5rem;
+            color: #727578;}
+            
+         @media screen and (max-width: 1860px) {
+         .campus-life-content .campus-text {
+                  -webkit-line-clamp: 3;}
+            
+         }
+         
+        .logo-bg-campus-top {
+            position: absolute;
+            right: 3.125vw;
+            top: -25.28vh;
+            width: 17.4vw;/*334px;*/
+            height: 25.28vh;}
+
+        .logo-bg-campus-bottom {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 38.6vw;/*741px;*/
+            height: 21.94vh;}
+
+        @media screen and (max-width: 1217px) {
+            .campus-life-bg {
+                margin-top: calc(7.8vh + 85px);}
+
+            .campus-img-middle {
+                width: 100%;}
+            .campus-img-middle img {
+                height: 100% !important;}
+
+            .campus-img-left, .campus-img-right {
+                display: none;}
+
+            
+        }
+
+        /*专题推荐*/
+        .site-wrapper {
+            position: relative;
+            margin-top: 20.09vh;/*217*/
+            padding: 0 7.8vw 12.69vh;}
+
+        .site-list {
+            margin-left: 2.08vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0 3.44vw;
+            height: 14.59vw;/*280px;*/
+            width: calc(100vw - 7.8vw);
+            background-color: #fff;
+            z-index: 1;}
+
+        .site-list > table:first-of-type {
+            margin-left: -40px;}
+
+        .site-list > a {
+            width: 19.79vw;/*380px;*/
+            height: 7.08vw;}
+
+        .site-list img {
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .3);}
+
+        .site-list > a > img {
+            width: 100%;
+            height: 100%;}
+
+        .site-list>table>tbody>tr>td>div{
+            width: calc(100vw - 7.8vw) !important;}
+        .site-list>table>tbody>tr>td>div>table>tbody>tr>td>table {
+            width: 100vw;}
+        .site-list>table>tbody>tr>td>div>table>tbody>tr>td>table>tbody>tr>td {
+            padding: 0 !important;
+            width:20.64vw;/*300*/
+            height:9.42vw;}
+        .site-list>table>tbody>tr>td>div>table>tbody tbody>tr>td div {
+            width:9.64vw !important;}
+        .site-list>table>tbody>tr>td>div>table>tbody tbody>tr>td div td {
+            width:20.64vw;/*300*/
+            height:9.42vw;}
+        .site-list>table>tbody>tr>td>div img {
+            width:20.64vw;/*300 15.64 10.42*/
+            height:9.42vw;/*200*/
+            cursor: pointer;}
+        .logo-bg-site-top {
+            position: absolute;
+            left: 14px;
+            top: -30vh;
+            width: 51.72vw;/*993px;*/
+            height: 37.14vw;}
+
+        .logo-bg-site-bottom {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 29.06vw;/*558px;*/
+            height: 12.29vw;}
+
+        @media screen and (max-width: 1217px) {
+            .site-wrapper {
+                margin-top: 7.8vh;
+                padding-bottom: 7.8vh;}
+
+            .logo-bg-site-top {
+                left: 0px;
+                top: -63px;
+                width: 26.04vw;/*500px;*/
+                height: 15.64vw;}
+
+        }
+         @media screen and (max-width: 768px) {
+             .site-list {
+                height: 15vh;}
+             .site-list > table:first-of-type {
+                margin-left: -25px;}
+             .site-list > a {
+                width: 110px;
+                height: 80px;}
+             .site-list>table>tbody>tr>td>div>table>tbody>tr>td>table>tbody>tr>td {
+                width: 110px;
+                height: 80px;}
+            .site-list>table>tbody>tr>td>div>table>tbody tbody>tr>td div {
+                margin: 0 20px;
+                width: 110px !important;}
+            .site-list>table>tbody>tr>td>div>table>tbody tbody>tr>td div td {
+                width: 110px;
+                height: 80px;}
+            .site-list>table>tbody>tr>td>div img {
+                width: 110px;
+                height: 80px;}
+
+        }
+
+        /*快速链接*/
+        .quick-link-wrapper {
+            position: relative;
+            padding: 7.87vh 7.8vw 0;
+            background: #008cd6;}
+
+        .quick-link-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5.37vh 0 8.8vh;}
+
+        .link-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.08vw 0;
+            padding: 3.02vw 0 4.95vw;
+            width: 13.85vw;}
+
+        .img-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 6.5vw; /**5.2vw**/
+            height: 6.5vw;
+            background: #fff;
+            border-radius: 50%;}
+
+        .img-link img {
+            width: 3.9vw;
+            height: 3.9vw;}
+
+        .link-wrapper .text-link {
+            color: #fdfdfd;
+            font-size: 1.25rem;}
+
+        @media screen and (max-width: 1217px) {
+            .quick-link-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;}
+                
+             .img-link {
+                width: 10.2vw;
+                height: 10.2vw;}
+    
+            .img-link img {
+                width: 5.9vw;
+                height: 5.9vw;}
+
+            .link-wrapper {
+                padding: 0 0 4.17vh;
+                width: 21.375vw;}
+        }
+
+        /*友情链接*/
+        .friendly-link-wrapper {
+            position: relative;
+            margin-top: 7.8vh;
+            padding: 0 7.8vw;}
+
+        .friendly-link-content {
+            padding: 60px 0 120px 70px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 28px 0;
+            width: 637px;}
+
+        .friendly-link-content a {
+            border-bottom: 2px solid #c0c6eb;
+            padding-bottom: 10px;
+            width: 265px;
+            color: #3b4c63;
+            font-size: 1.25rem;}
+
+        .logo-bg-friendly-link {
+            position: absolute;
+            right: 7.8vw;
+            bottom: 0px;
+            width: 558px;
+            height: 177px;}
+
+        @media screen and (max-width: 1217px) {
+            .friendly-link-content {
+                /*margin: 5vh 0 5vh 5vw;*/
+                align-items: flex-start;
+                width: auto;}
+
+            .logo-bg-friendly-link {
+                right: 0;
+                bottom: 0px;
+                 width: 60vw;
+                height: 22.5vw;}
+        }
+
+        /*footer*/
+        .footer-wrapper {
+            padding: 82px 7.8vw 130px 0;
+            height: 341px;
+            background: #144d98;}
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;}
+
+        .footer .logo-address-wrapper {
+            width: 785px;
+            margin-left: 7.8vw;
+            padding: 0 85px 0 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;}
+
+        .footer .logo-wrapper img {
+            height: 51px;
+            object-fit: contain;}
+
+        .address-wrapper {
+            color: #fefdfd;
+            font-size: 0.9rem;}
+
+        .schoole-line {
+            margin-left: 7vw;}
+
+        .school-info {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 7.8vw;
+            padding: 10px 85px 0 48px;
+            color: #fefdfd;
+            font-size: 0.9rem;}
+
+        .qrcode-img-wrapper img {
+            width: 113px;
+            height: 113px;}
+
+        .qrcode-img-wrapper img:last-child {
+            margin-left: 1vw;}
+
+        @media screen and (max-width: 1217px) {
+            .footer-wrapper {
+                padding: 7.8vh 7.8vw 50px 0;
+                height: auto;
+                background: #144d98;}
+
+            .footer .logo-address-wrapper {
+                width: auto;
+                padding: 0;}
+
+            .footer .logo-wrapper img {
+                width: auto;
+                height: 4.72vh;
+                object-fit: contain;}
+                
+            
+            .qrcode-img-wrapper img {
+                width: 80px;
+                height: 80px;}
+
+            .schoole-line img {
+                width: 100%;}
+
+            .school-info {
+                padding: 10px 0 0;
+                flex-wrap: wrap;
+                gap: 10px 0;
+                /*flex-direction: column;*/
+                margin-left: 14.8vw;}
+
+            .qrcode-img-wrapper {
+                margin: 20px auto 0;}
+        }
+        /**门脸页**/
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background: url(images/menlian-1000X2000gai.jpg) no-repeat center center / cover;
+            margin: 0;
+            overflow: hidden;
+            box-sizing: border-box;}
+
+        .main a {
+            text-decoration: none;
+            color: #fff;}
+
+        .main .left,
+        .main .right {
+            position: absolute;
+            top: 22.5%;}
+
+        .main  .left {
+            left: 13%;}
+
+        .main .right {
+            left: 56%;}
+
+        .main .link-wrapper1 {
+            display: flex;
+            align-items: center;
+            gap: 0 20px;}
+
+        .main .link-wrapper1 .logo {
+            width: 520px;
+            height: 119px;}
+
+        .main  .link-wrapper1 .move {
+            width: 50px;
+            height: 42px;}
+
+        @media (max-width: 1600px) {
+            .main  .left {
+                left: 8%;}
+
+            .main  .right {
+                left: 55%;}
+
+            .main  .link-wrapper1 .logo {
+                width: 417.5px;
+                height: 100px;}
+        }
+
+        @media (max-width: 1300px) {
+            .main  .left {
+                left: 2%;}
+
+            .main  .right {
+                left: 51%;}
+        }
+
+        @media (max-width: 1024px) {
+            .main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px 0;
+                background-image: url(images/yidongduanyemiankaidabeijing.jpg);}
+
+
+            .main .left,
+            .main .right {
+                position: static;}
+        }
+
+        @media (max-width: 768px) {
+
+            .main  .link-wrapper1 .logo {
+                width: 278.3px;
+                height: 66.66px;}
+
+            .main  .link-wrapper1 .move {
+                width: 40px;
+                height: 32px;}
+        }
+
+        .content {
+            display: none;}
+    </style>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b7a475c53535742000000034354 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1482,'/index.jsp',-1,2049437510)</script>
+</head>
+<!--整个body最小min-width:1280px-->
+<body>
+<div class="main">
+    <div class="left gongshang">
+        <a class="link-wrapper1" href="#">
+            <img class="logo" src="images/gongshang.png" alt="重庆工商职业学院">
+            <img class="move" src="images/dongtaitubiao1lazhang.gif" alt="动态图片">
+        </a>
+    </div>
+    <div class="right kaida">
+        <a class="link-wrapper1" href="https://www.cqou.edu.cn?s=cqou">
+            <img class="logo" src="images/kaida.png" alt="重庆开放大学">
+            <img class="move" src="images/dongtaitubiao1lazhang.gif" alt="动态图片">
+        </a>
+    </div>
+</div>
+<!--菜单：绝对定位，两种样式变换，包含框长度100%（body）,弹性上下左右居中，每个菜单项固定间隔-->
+<div class="content">
+    <div class="menu-wrapper">
+    <div class="logo-wrapper"><a href="https://www.cqtbi.edu.cn/" target="_self"><img src="images/logo.png" /></a></div>
+    <div class="menu-item-wrapper" id="menu-item-wrapper">                <div data-linkname="id1528">
+                    <a href="xxgk.htm" target="_self">学校概况</a>
+                     <div class="menu-second-lik" id="id1528">
+                                <a href="xxgk/xxjj.htm" target="_self">学校简介</a>
+                                <a href="xxgk/xxld.htm" target="_self">学校领导</a>
+                                <a href="xxgk/lshm.htm" target="_self">历史回眸</a>
+                                <a href="https://www.720yun.com/vr/ae9jOzyOzv4" target="_self">校园风光</a>
+                    </div>
+                </div>
+                <div data-linkname="id1521">
+                    <a href="jgsz.htm" target="_self">机构设置</a>
+                     <div class="menu-second-lik" id="id1521">
+                                <a href="jgsz/jxkynsjg.htm" target="_self">教学科研内设机构</a>
+                                <a href="jgsz/dzglnsjg.htm" target="_self">党政管理内设机构</a>
+                                <a href="jgsz/qtzz.htm" target="_self">群团组织</a>
+                    </div>
+                </div>
+                <div data-linkname="id1515">
+                    <a href="rcpy.htm" target="_self">人才培养</a>
+                     <div class="menu-second-lik" id="id1515">
+                                <a href="rcpy/szdw.htm" target="_self">师资队伍</a>
+                                <a href="rcpy/jxgl.htm" target="_self">教学管理</a>
+                                <a href="rcpy/xsgz.htm" target="_self">学生工作</a>
+                                <a href="rcpy/cxcy.htm" target="_self">创新创业</a>
+                    </div>
+                </div>
+                <div data-linkname="id1458">
+                    <a href="zsjy/zysz.htm" target="_self">招生就业</a>
+                     <div class="menu-second-lik" id="id1458">
+                                <a href="zsjy/zysz.htm" target="_self">专业设置</a>
+                                <a href="zsjy/zsxx.htm" target="_self">招生信息</a>
+                                <a href="https://jiuye.cqtbi.edu.cn/" target="_self">就业信息</a>
+                    </div>
+                </div>
+                <div data-linkname="id1463">
+                    <a href="kxyj/shkx.htm" target="_self">科学研究</a>
+                     <div class="menu-second-lik" id="id1463">
+                                <a href="kxyj/shkx.htm" target="_self">社会科学</a>
+                                <a href="kxyj/kjcx.htm" target="_self">科技创新</a>
+                                <a href="https://xbbjb.cqtbi.edu.cn/xbm/journal/index.html" target="_self">学术刊物</a>
+                    </div>
+                </div>
+                <div data-linkname="id1471">
+                    <a href="xywh/xg.htm" target="_self">校园文化</a>
+                     <div class="menu-second-lik" id="id1471">
+                                <a href="xywh/xg.htm" target="_self">校歌</a>
+                                <a href="xywh/xxbs.htm" target="_self">学校标识</a>
+                                <a href="xywh/xx1.htm" target="_self">校训</a>
+                                <a href="xywh/ppwh.htm" target="_self">品牌文化</a>
+                    </div>
+                </div>
+                <div data-linkname="id1473">
+                    <a href="https://hzfz.cqtbi.edu.cn/" target="_self">产教融合</a>
+                     <div class="menu-second-lik" id="id1473">
+                                <a href="https://hzfz.cqtbi.edu.cn/" target="_self">校企合作</a>
+                                <a href="https://gjc.cqtbi.edu.cn/" target="_self">职教出海</a>
+                                <a href="https://gjc.cqtbi.edu.cn/lxgs.htm" target="_self">留学工商</a>
+                    </div>
+                </div>
+                <div data-linkname="id1537">
+                    <a href="xxgkx.htm" target="_self">信息公开</a>
+                     <div class="menu-second-lik" id="id1537">
+                                <a href="xxgkx/xxzc.htm" target="_self">学校章程</a>
+                                <a href="http://cqtbics.cqtbi.edu.cn/xxgk.htm" target="_self">信息公开</a>
+                    </div>
+                </div>
+</div>
+    <div class="search-btn"><div>
+<form action="cqtbi/a_search_result.jsp?wbtreeid=1482" method="post" name="_l_s_c_form" id="_l_s_c_form" onsubmit="return _submit_search_comprehensive();" style="display: inline;">
+<input type="text" name="kw_temp" id="kw_temp" value="" placeholder="请输入关键字搜索">
+<input type="hidden" name="kw" id="kw" value="">
+<input type="hidden" name="ot" id="ot" value="1">
+<input type="hidden" name="rg" id="rg" value="4">
+<input type="hidden" name="tg" id="tg" value="5">
+<input type="hidden" name="clid" id="clid" value="0">
+<input type="hidden" name="_lucenen_search_comprehensive" id="_lucenen_search_comprehensive" value="">
+<input type="button" onclick="return _submit_search_comprehensive();">
+</form>
+</div>
+<script type="text/javascript">
+function _submit_search_comprehensive()
+{
+    if(document.getElementById("_lucenen_search_comprehensive"))
+    {
+        if(document.getElementById("kw_temp"))
+        {
+            var kw = document.getElementById("kw_temp").value;
+            if(kw==null||kw=="")
+            {
+                alert("请输入检索内容");
+                return false;
+            }
+            if(window.toFF==1)
+            {
+                document.getElementById("kw_temp").value = Simplized(kw);
+            }else
+            {
+                document.getElementById("kw_temp").value = kw;            
+            }
+            var  base64 = new Base64();
+            document.getElementById("kw").value = base64.encode(document.getElementById("kw_temp").value);
+            new VsbFormFunc().disableAutoEnable(document.getElementById("kw_temp"));
+            document.getElementById("_l_s_c_form").submit();
+        }
+    }
+}
+</script><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script></div>
+    <!--宽度小于1217时显示菜单隐藏图标-->
+    <div class="menu-btn-wrapper" id="menu-btn-wrapper">
+        <img src="images/menu-btn.png" id="menu-btn" />
+        <div class="menu-list" id="menu-list">
+<a href="xxgk.htm">学校概况</a>
+
+
+<a href="jgsz.htm">机构设置</a>
+
+
+<a href="rcpy.htm">人才培养</a>
+
+
+<a href="zsjy/zysz.htm">招生就业</a>
+
+
+<a href="kxyj/shkx.htm">科学研究</a>
+
+
+<a href="xywh/xg.htm">校园文化</a>
+
+
+<a href="https://hzfz.cqtbi.edu.cn/">产教融合</a>
+
+
+<a href="xxgkx.htm">信息公开</a>
+
+</div>
+    </div>
+</div>
+<!--全屏banner：2000*1000-->
+<div class="full-banner-wrapper" id="full-banner-wrapper">
+    <!--由站群组件动态获取-->
+    <div class="full-banner"><style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u4_{
+    width:1000px;
+    height:200px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u4_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u4_ ul{
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u4_ ul li{
+    display:block;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u4_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,4000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,4000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,4000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tr><td><div id="flashBoxu_u4_"><img src="images/banner4.jpg" border="0" width="1000" height="200" /><img src="images/xibao.jpg" border="0" width="1000" height="200" /><img src="images/shuangxuanhui111.jpg" border="0" width="1000" height="200" /><img src="images/banner5.jpg" border="0" width="1000" height="200" /><img src="images/banner7.jpg" border="0" width="1000" height="200" /></div></td></tr></table><SCRIPT language="JavaScript">new flashBoxCtrl("flashBoxu_u4_");</SCRIPT></div>
+    <!--轮播图左右切换按钮-->
+    <!--利用自带组件，取消-->
+</div>
+<!--主要内容区-->
+<div class="content-wrapper">
+    <!--第一个模块：校园新闻-->
+    <div class="news-wrapper">
+        <div class="news-banner-wrapper">
+            <div class="title-more-wrapper">
+                <a class="model-title" href="index/xyxw.htm" target="">校园新闻</a>
+                <a class="more news-banner-more" href="index/xyxw.htm" target="">
+                    查看更多
+                    <img src="images/more-icon.png">
+                </a>
+            </div>
+            <!--新闻banner，动态组件-->
+            <div class="news-banner-img-wrapper">
+                
+<LINK href="/system/resource/style/component/news/list/imagechangenews.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="/system/resource/js/news/imagechangenews.js"></script><script language="JavaScript">
+var u_u5_icn = new ImageChangeNews("u_u5_", 1000, 671, 4, 2.0, false, false, false, true, false,"#u_u5_centerCutImg");
+
+//初始化图片, 并启动定时
+function u_u5_init_img()
+{
+
+    u_u5_icn.addimg("\/__local\/C\/C5\/4C\/08E676B7B5BF4EF943A994342AF_DF501FE6_C40C.jpg", "info\/1497\/23828.htm", "", "","学校召开人事制度改革工作专题推进会");
+
+    u_u5_icn.addimg("\/__local\/8\/EB\/9F\/AFE0D75C334F6D775D130936306_A32E01B6_147D2.jpg", "info\/1497\/23825.htm", "", "","我校举办2025届毕业生综合类双选会");
+
+    u_u5_icn.addimg("\/__local\/7\/E4\/EF\/F59025EC8B6E70EB199AAC71FFD_EC5B5159_BD64.jpg", "info\/1497\/23819.htm", "", "","郑州信息科技职业学院校长吴建伟一行来我校调研");
+
+    u_u5_icn.addimg("\/__local\/3\/05\/45\/AAD573E56416C0BE154CD32F34D_0A3489B5_9105.jpg", "info\/1497\/23818.htm", "", "","喜报！我校学子荣获2024年世界职业院校技能大赛高职组环境艺术设计赛项金奖（重庆首金）");
+
+    u_u5_icn.addimg("\/__local\/C\/E0\/67\/BBDEEE75854E12D6D9BB4A4A0BD_5607DECE_C7E0.jpg", "info\/1497\/23815.htm", "", "","学校召开2024年秋季学期反诈工作联席会");
+
+    u_u5_icn.changeimg(0);
+}
+</script><table cellspacing="0" cellpadding="0" border="0" style="padding:0px margin:0px; border:0px">
+    <tr><td>
+        <div id="u_u5_centerCutImg" style="OVERFLOW: hidden;height:671px;width:1000px">
+            <div id="u_u5_div" align="center" style="padding:0px;margin:0px;border:0px solid black;background-color:#000000;FILTER: progid:DXImageTransform.Microsoft.RevealTrans (duration=2.0,transition=23);height:671px;width:1000px">
+                <div id="u_u5_imgdiv" style="padding:0px;border:0px;"><a id="u_u5_url" target="_blank"><img id="u_u5_pic" border="0" src="/system/resource/images/space.gif"></a></div>
+            </div>
+            <div style="filter:alpha(style=1,opacity=10,finishOpacity=80);width:1000px;height:19px;text-align:right;top:-19px;position:relative;padding:0px;margin:0px;border:0px;">
+<a href="javascript:u_u5_icn.changeimg(0)" ; id="u_u5_selectNode0" class="imagechangenews_pnode" target="_self">1</a><a href="javascript:u_u5_icn.changeimg(1)" ; id="u_u5_selectNode1" class="imagechangenews_pnode" target="_self">2</a><a href="javascript:u_u5_icn.changeimg(2)" ; id="u_u5_selectNode2" class="imagechangenews_pnode" target="_self">3</a><a href="javascript:u_u5_icn.changeimg(3)" ; id="u_u5_selectNode3" class="imagechangenews_pnode" target="_self">4</a><a href="javascript:u_u5_icn.changeimg(4)" ; id="u_u5_selectNode4" class="imagechangenews_pnode" target="_self">5</a>
+            </div></div></td></tr>
+<div align="center" display="none" style="overflow:hidden;text-overflow:ellipsis;height:0px;width:1000px;"><a target="_blank" class="titlestyle1061837" id="u_u5_newstitle"></a></div><div align="left" display="none" style="overflow:hidden;text-overflow:ellipsis;height:0px;width:1000px;padding-left:2px;padding-right:2px"><a target="_blank" class="summarystyle1061837" id="u_u5_newssummary"></a></div>   
+</table><SCRIPT language="JavaScript">u_u5_init_img();</SCRIPT>
+            </div>
+        </div>
+        <div class="news-list-wrapper">
+            <!--新闻列表，动态组件，5条-->
+            <a class="news-more" href="index/xyxw.htm" target="">
+                查看更多
+                <img src="images/more-icon.png">
+            </a>
+            <div class="news-list">
+                <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script>        <a class="news" href="info/1497/23828.htm" target="_blank"><span class="new-title-date"><span class="news-title">学校召开人事制度改革工作专题推进会</span><span class="news-date">10/28</span></span><img src="/__local/D/8B/84/870C8656AFD90D70DAB282EA478_6DBDA704_1F35A.jpg"></a>
+        <a class="news" href="info/1497/23825.htm" target="_blank"><span class="new-title-date"><span class="news-title">我校举办2025届毕业生综合类双选会</span><span class="news-date">10/28</span></span><img src="/__local/A/0F/5C/B2A49E403293971559A6BA4D065_818024B6_4136D.jpg"></a>
+        <a class="news" href="info/1497/23819.htm" target="_blank"><span class="new-title-date"><span class="news-title">郑州信息科技职业学院校长吴建伟一行来我校调研</span><span class="news-date">10/24</span></span><img src="/__local/1/8C/7E/CF277C6C9A2E6E9124DDD9B3B0B_FC296C85_E4393.jpg"></a>
+        <a class="news" href="info/1497/23818.htm" target="_blank"><span class="new-title-date"><span class="news-title">喜报！我校学子荣获2024年世界职业院校技能大赛高职组环境艺术设计赛项金奖（重庆首金）</span><span class="news-date">10/23</span></span><img src="/__local/F/BC/6C/882FF353FADE1B777462B3DDB53_DCA174F4_82A5F.jpg"></a>
+        <a class="news" href="info/1497/23815.htm" target="_blank"><span class="new-title-date"><span class="news-title">学校召开2024年秋季学期反诈工作联席会</span><span class="news-date">10/22</span></span><img src="/__local/9/A0/C4/31579C34C1A412235A9B7E65032_79005FBC_23A39.jpg"></a>
+<script>_showDynClickBatch(['dynclicks_u6_23828','dynclicks_u6_23825','dynclicks_u6_23819','dynclicks_u6_23818','dynclicks_u6_23815'],[23828,23825,23819,23818,23815],"wbnews", 2049437510)</script>
+
+            </div>
+        </div>
+        <img class="logo-bg-news" src="images/logoyouwen.png" />
+    </div>
+    <!--第二个模块：通知公共与媒体聚焦-->
+    <div class="notice-media-wrapper">
+        <img class="logo-bg-notice" src="images/logozuowen.png" />
+        <div class="notice-wrapper">
+             <div class="title-more-wrapper"> <!--5条-->
+                <a class="model-title" href="index/tzgg.htm" target="">通知公告</a>
+                <a class="more" href="index/tzgg.htm" target="">
+                    查看更多
+                    <img src="images/more-icon.png">
+                </a>
+             </div>
+            <!--通知列表,共用news-title-list样式，站群组件-->
+            <div class="notice-list"><script language="javascript" src="/system/resource/js/ajax.js"></script><a class="notice" href="info/1498/23824.htm">
+ <span class="notice-title">Z2024088重庆开放大学重庆工商职业学院图书馆2024年数字资源采购项目（CQS24C00920）澄清文件一号</span>
+ <span class="notice-date">10/25
+</a>
+<a class="notice" href="info/1498/23823.htm">
+ <span class="notice-title">Z2024109重庆开放大学重庆工商职业学院2024年网络新闻与传播专业虚拟仿真项目资源建设-中标（成交）结果公告</span>
+ <span class="notice-date">10/25
+</a>
+<a class="notice" href="info/1498/23822.htm">
+ <span class="notice-title">Z2024121重庆开放大学 重庆工商职业学院虚拟人主播（软件）及数字教师定制服务采购项目—竞争性磋商</span>
+ <span class="notice-date">10/25
+</a>
+<a class="notice" href="info/1498/23817.htm">
+ <span class="notice-title">Z2024128重庆开放大学重庆工商职业学院电工电子虚拟仿真实训资源建设与应用采购项目-竞争性磋商文件</span>
+ <span class="notice-date">10/22
+</a>
+<a class="notice" href="info/1498/23807.htm">
+ <span class="notice-title">Z2024129重庆开放大学重庆工商职业学院《工业机器人基础》《工业机器人操作与运维》《工业机器人工作站系统集成》专业课课程资源建设项目-竞争性磋商文件</span>
+ <span class="notice-date">10/21
+</a>
+<script>_showDynClickBatch(['dynclicks_u7_23824','dynclicks_u7_23823','dynclicks_u7_23822','dynclicks_u7_23817','dynclicks_u7_23807'],[23824,23823,23822,23817,23807],"wbnews", 2049437510)</script>
+</div>
+        </div>
+        <!--媒体关注，图片列表和标题列表分开-->
+        <div class="media-wrapper">
+            <div class="title-more-wrapper">
+                <a class="model-title" href="index/mtjj.htm" target="">媒体聚焦</a>
+                <a class="more" href="index/mtjj.htm" target="">
+                    查看更多
+                    <img src="images/more-icon.png">
+                </a>
+            </div>
+            <!--图片标题列表，动态组件，3条-->
+            <div class="media-list">       <a href="https://zhijiao.eol.cn/detail/2024/09/18/1726636391_23741.html" class="media">
+            <img src="/__local/B/02/A1/53AF2A2AFDBCD0CAA09FD1F32F2_A76FD78C_DA64.jpg" />
+            <span class="media-title-date">
+                <span class="media-title">【中国教育在线】励志！从搭上末班车到逆袭斩获世界冠军 这位准“00后”有颗大心脏</span>
+                <span class="media-date">09/18</span>
+            </span>
+        </a>
+       <a href="https://www.cqnews.net/1/detail/1287098203576410112/web/content_1287098203576410112.html" class="media">
+            <img src="/__local/B/C6/03/F6EC19FE80002420A945707F2BC_6BF038EA_3702A.jpg" />
+            <span class="media-title-date">
+                <span class="media-title">【华龙网】四项殊荣加冕！重庆工商职业学院在这项数据科学比赛国内决赛中载誉而归</span>
+                <span class="media-date">09/22</span>
+            </span>
+        </a>
+       <a href="https://www.cqnews.net/1/detail/1286710120058687488/web/content_1286710120058687488.html" class="media">
+            <img src="/__local/8/F9/AF/8DAABCF3B6BF2AA847679D2E41F_AEE03F87_2243D.png" />
+            <span class="media-title-date">
+                <span class="media-title">【华龙网】重庆工商职业学院团队在泰国教育部第九届国际高职学生创新项目中斩获佳绩</span>
+                <span class="media-date">09/20</span>
+            </span>
+        </a>
+       <a href="https://mp.weixin.qq.com/s/CpgDqfhwjDJSEuF-isBJuA" class="media">
+            <img src="/__local/F/0E/F5/1DF47208F5DC179322D3E70A845_844BE88E_15834.jpg" />
+            <span class="media-title-date">
+                <span class="media-title">【国开之声】喜报！重庆开放大学在第47届世界技能大赛中斩获2枚金牌</span>
+                <span class="media-date">09/20</span>
+            </span>
+        </a>
+<script>_showDynClickBatch(['dynclicks_u8_23687','dynclicks_u8_23698','dynclicks_u8_23707','dynclicks_u8_23716'],[23687,23698,23707,23716],"wbnews", 2049437510)</script>
+</div>
+        </div>
+    </div>
+    <!--第三个模块：校园生活-->
+    <div class="campus-life-bg">
+        <img class="logo-bg-campus-top" src="images/ziyuan7.png" />
+        <img class="logo-bg-campus-bottom" src="images/tuceng48kaobei.png" />
+        <div class="campus-life-wrapper">
+            <div class="title-more-wrapper">
+                <a class="model-title" href="index/xysh.htm" target="">校园生活</a>
+                <a class="more" href="index/xysh.htm" target="">
+                    查看更多
+                    <img src="images/more-icon.png">
+                </a>
+            </div>
+            <div class="campus-life-content">
+                <div class="campus-img-left">            <div><a href="info/1500/23800.htm" target="_blank"><img src="/__local/6/1D/3A/CC5BCF3334985D998FD457B1BD9_BDDFAE4F_3211E.jpg"></a></div>
+            <div class="campus-title-text">
+                <a class="campus-title" href="info/1500/23800.htm" target="_blank" title="【学习宣传贯彻党的二十届三中全会精神】我校师生以多种方式宣讲党的二十届三中全会精神">【学习宣传贯彻党的二十届三中全会精神】我校师生以多种方式宣讲党的二十届三中全会精神</a>
+                <a class="campus-text" href="info/1500/23800.htm" target="_blank" title="【学习宣传贯彻党的二十届三中全会精神】我校师生以多种方式宣讲党的二十届三中全会精神">【供稿/党委宣传部】“竹板这么一打，欸，精神传万家；三中全会喜讯传，中华复兴展宏图展......”管理学院智慧供应链学工党支部的党员们正面向同学们生动宣讲。10月18日中午，我校乾坤湖畔“黄桷树下党史故事会”实践教育基地内，我校师生以多种方式宣讲党的二十届三中全会精神。此次活动由党委宣传部与管理学院共同策划组织。活动现场，管理学院智慧供应链学工党支部的党员们带来了节奏紧凑、铿锵有力的快板宣讲——“我为教育...</a>
+            </div>
+<script>_showDynClickBatch(['dynclicks_u9_23800'],[23800],"wbnews", 2049437510)</script>
+</div>
+                <div class="campus-img-middle"><style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u10_{
+    width:100px;
+    height:200px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u10_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u10_ ul{
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u10_ ul li{
+    display:block;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u10_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,4000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,4000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,4000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tr><td><div id="flashBoxu_u10_"><img src="images/68E29CE419196276B6E1EF0DF35C3636.png" border="0" width="100" height="200" /><img src="images/gushihui.jpg" border="0" width="100" height="200" /><img src="images/zuqiu.jpg" border="0" width="100" height="200" /><img src="images/duwu.jpg" border="0" width="100" height="200" /></div></td></tr></table><SCRIPT language="JavaScript">new flashBoxCtrl("flashBoxu_u10_");</SCRIPT></div>
+                <div class="campus-img-right">            <div class="campus-title-text">
+                <a class="campus-title" href="info/1482/23775.htm" target="_blank" title="我和祖国共成长|工商青年以青春告白祖国75岁生日快乐">我和祖国共成长|工商青年以青春告白祖国75岁生日快乐</a>
+                <a class="campus-text" href="info/1482/23775.htm" target="_blank" title="我和祖国共成长|工商青年以青春告白祖国75岁生日快乐">生在国旗下，长在春风里。师生们纷纷在“我爱你中国”校园打卡点前拍照，以实际行动诠释“强国复兴有我 青春挺膺担当”的铮铮誓言。</a>
+            </div>
+            <div class="img-wrapper"><a href="info/1482/23775.htm" target="_blank"><img src="/__local/3/5E/75/F4BF9F49875B78D04A29D464A21_D86E649D_48EF8.jpg"></a></div>
+<script>_showDynClickBatch(['dynclicks_u11_23775'],[23775],"wbnews", 2049437510)</script>
+</div>
+            </div>
+        </div>
+    </div>
+    <!--第四个模块：专题网站-->
+    <div class="site-wrapper">
+        <img class="logo-bg-site-top" src="images/logozuowen.png" />
+        <img class="logo-bg-site-bottom" src="images/ziyuan6.png" />
+        <div class="title-more-wrapper">
+            <a class="model-title" href="index/zttj.htm" target="">专题推荐</a>
+        </div>
+        <div class="site-list"><script language="javascript" src="/system/resource/js/vsbpreloadimg.js"></script>
+<TABLE width="1000" cellSpacing="0" cellPadding="0" align="center" border="0"> 
+    <TR><TD>
+        <DIV id="u_u12_demo" style="OVERFLOW:hidden;WIDTH:1000px;COLOR:#ffffff"><TABLE cellSpacing="0" cellPadding="0" border="0">
+                <TR><TD id="u_u12_demo1" vAlign="top" width="1000"><table border="0" cellpadding="0" cellspacing="0" width="1000">
+                        <tr>
+
+                            <td valign="top" align="center" style="padding-left:32px;padding-right:33px"><div style="padding-right: 4px;padding-bottom:4px; filter: Shadow(Color=#cccccc, Direction=135); width:360px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="360" height="200" valign="middle" align="center"><a href="https://www.xuexi.cn/" onclick="_addDynClicks('wbimage',2049437510,58414)"><img name="u_u12_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td>
+                            <td valign="top" align="center" style="padding-left:32px;padding-right:33px"><div style="padding-right: 4px;padding-bottom:4px; filter: Shadow(Color=#cccccc, Direction=135); width:360px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="360" height="200" valign="middle" align="center"><a href="https://kcsz.cqtbi.edu.cn/" onclick="_addDynClicks('wbimage',2049437510,58413)"><img name="u_u12_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td>
+                            <td valign="top" align="center" style="padding-left:32px;padding-right:33px"><div style="padding-right: 4px;padding-bottom:4px; filter: Shadow(Color=#cccccc, Direction=135); width:360px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="360" height="200" valign="middle" align="center"><a href="https://sgjs.cqtbi.edu.cn/" onclick="_addDynClicks('wbimage',2049437510,58412)"><img name="u_u12_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td>
+                            <td valign="top" align="center" style="padding-left:32px;padding-right:33px"><div style="padding-right: 4px;padding-bottom:4px; filter: Shadow(Color=#cccccc, Direction=135); width:360px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="360" height="200" valign="middle" align="center"><a href="https://djxxjy.cqtbi.edu.cn/" onclick="_addDynClicks('wbimage',2049437510,58411)"><img name="u_u12_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td></tr>
+           </table></TD> 
+          <TD id="u_u12_demo2" vAlign="top" width="1000"></TD> 
+        </TR> 
+      </TABLE> 
+      </DIV> 
+    </TD> 
+  </TR> 
+</TABLE> 
+<SCRIPT language="javascript">
+    var u_u12_imgs = new VsbPreloadImgArray();
+    
+    //初始化图片
+    function u_u12_init_img()
+    {
+
+            u_u12_imgs.addImg("images\/_thumb\/zhuantituijian444.png", "0", u_u12_onimgload);
+
+            u_u12_imgs.addImg("images\/_thumb\/zhuantituijian33.png", "1", u_u12_onimgload);
+
+            u_u12_imgs.addImg("images\/_thumb\/zhuantituijian222.png", "2", u_u12_onimgload);
+
+            u_u12_imgs.addImg("images\/_thumb\/zhuantituijian11.png", "3", u_u12_onimgload);
+
+    }
+    function u_u12_onimgload(img, imgid)
+    {
+        var imgobjs = document.getElementsByName("u_u12_img");
+        var imgindex = new Number(imgid);
+        
+        img.showImg(imgobjs[imgindex], 360, 200, true, true);
+        img.showImg(imgobjs[imgindex+ 4], 360, 200, true, true);
+    }
+
+
+    var u_u12_MyMar;
+    var u_u12_speed3;
+    var u_u12_move = true;
+    var u_u12_movenum = 0;
+    var u_u12_pos = null; //td位置组
+    
+    function u_u12_initpos()
+    {
+        u_u12_pos = new Array();
+        
+        var tds1 = document.getElementById("u_u12_demo1").childNodes[0].rows[0].cells;
+        
+        for(i = 0 ;i < tds1.length; i++)
+        {
+            u_u12_pos[u_u12_pos.length] = tds1[i].offsetLeft;
+        }
+        
+        var tds2 = document.getElementById("u_u12_demo2").childNodes[0].rows[0].cells;
+        var tds2offset = document.getElementById("u_u12_demo2").offsetLeft;
+        for(i = 0 ;i < tds2.length; i++)
+        {
+            u_u12_pos[u_u12_pos.length] = tds2[i].offsetLeft + tds2offset;
+        }
+    }
+    
+    function u_u12_getpos(scrollpos)
+    {
+        for(i = 0; i < u_u12_pos.length; i++)
+        {
+            if(scrollpos < u_u12_pos[i])
+                return i-1;
+        }
+    }
+
+
+    function u_u12_Marquee() 
+    { 
+        try 
+        { 
+            if(!u_u12_move)
+                return;
+            
+            var demoobj = document.getElementById("u_u12_demo");
+            var demo1obj = document.getElementById("u_u12_demo1");
+
+            //滚动步长
+            var scrollstep = 1
+            
+            //当前位置
+            var oldscrollLeft = demoobj.scrollLeft;
+            
+            //更新后的位置, 已考虑过回滚
+            var newscrollLeft = (oldscrollLeft + scrollstep)%demo1obj.scrollWidth;
+
+            
+            demoobj.scrollLeft = newscrollLeft; 
+            
+        } 
+        catch(e) 
+        { 
+        } 
+    } 
+
+    function u_u12_clearInterval()
+    {
+        clearInterval(u_u12_MyMar);
+    }
+    
+    function u_u12_setInterval()
+    {
+        u_u12_MyMar = setInterval(u_u12_Marquee,u_u12_speed3);
+    }
+    
+    function u_u12_stopmove()
+    {
+        u_u12_move = false;
+    }
+
+    function u_u12_startmove()
+    {
+        u_u12_move = true;
+    }
+    
+    function u_u12_init()
+    {
+        u_u12_speed3 = 50;
+        if(u_u12_speed3 < 1)
+        {
+            u_u12_speed3 = 1;
+        }
+        
+        document.getElementById("u_u12_demo").onmouseover = u_u12_stopmove;
+        document.getElementById("u_u12_demo").onmouseout = u_u12_startmove;
+
+        document.getElementById("u_u12_demo2").innerHTML = document.getElementById("u_u12_demo1").innerHTML;
+        
+        u_u12_init_img();
+
+        u_u12_setInterval();
+
+    }
+    
+    u_u12_init();
+</SCRIPT></div>
+    </div>
+    <!--第五个模块：快速链接新的内容-->
+    <div class="quick-link-wrapper">
+        <a class="model-title" href="" target="" style="color: #fdfdfd;">快速链接</a>
+        <div class="quick-link-content">    
+    <div class="link-wrapper">
+        <a class="img-link" href="http://szxy.cqtbi.edu.cn"><img src="images/1.png" /></a>
+        <a class="text-link" href="http://szxy.cqtbi.edu.cn">智慧工商</a>
+    </div>
+
+
+    <div class="link-wrapper">
+        <a class="img-link" href="https://2class.cqtbi.edu.cn/"><img src="images/2.png" /></a>
+        <a class="text-link" href="https://2class.cqtbi.edu.cn/">第二课堂</a>
+    </div>
+
+
+    <div class="link-wrapper">
+        <a class="img-link" href="https://jwgl.cqtbi.edu.cn/Logon.do?method=toCqgszy"><img src="images/3.png" /></a>
+        <a class="text-link" href="https://jwgl.cqtbi.edu.cn/Logon.do?method=toCqgszy">教务系统</a>
+    </div>
+
+
+    <div class="link-wrapper">
+        <a class="img-link" href="http://szxy.cqtbi.edu.cn/"><img src="images/4.png" /></a>
+        <a class="text-link" href="http://szxy.cqtbi.edu.cn/">校园邮箱</a>
+    </div>
+
+
+    <div class="link-wrapper">
+        <a class="img-link" href="https://findcqtbi.libsp.cn/#/Home"><img src="images/5.png" /></a>
+        <a class="text-link" href="https://findcqtbi.libsp.cn/#/Home">数字图书馆</a>
+    </div>
+
+
+    <div class="link-wrapper">
+        <a class="img-link" href="https://www.cqxfyh.cn/web/guest/home"><img src="images/6.png" /></a>
+        <a class="text-link" href="https://www.cqxfyh.cn/web/guest/home">学分银行</a>
+    </div>
+
+</div>
+    </div>
+    <!--第六个模块：友情链接-->
+    <div class="friendly-link-wrapper">
+        <a class="model-title" href="" target="">友情链接</a>
+        <div class="friendly-link-content"><script language="javascript" src="/system/resource/js/openlink.js"></script>
+<a href="http://www.moe.gov.cn/">中国人民共和国教育部</a>
+
+
+<a href="http://jw.cq.gov.cn/">重庆市教育委员会</a>
+
+
+<a href="https://www.xuexi.cn/">学习强国</a>
+
+
+<a href="https://www.smartedu.cn/">国家智慧教育服务平台</a>
+
+
+<a href="https://www.tech.net.cn/">现代高等职业技术教育网</a>
+
+
+<a href="https://dxs.moe.gov.cn/zx/">中国大学生在线</a>
+
+</div>
+        <img class="logo-bg-friendly-link" src="images/ziyuan4.png" />
+    </div>
+    <!--第七个模块：底部-->
+    <div class="footer-wrapper">
+        <div class="footer">
+            <div class="school-info-wrapper">
+                <div class="logo-address-wrapper">
+                    <div class="logo-wrapper"><a href="https://www.cqtbi.edu.cn/" target="_self"><img src="images/logo.png" /></a></div>
+                    <div class="address-wrapper">
+                        <div>华岩校区：重庆市九龙坡区华龙大道1号</div>
+                        <div>合川校区：重庆市合川区思源路15号</div>
+                    </div>
+                </div>
+                <div class="schoole-line">
+                    <img src="images/footerline.png" />
+                </div>
+                <div class="school-info">
+                    <span>版权：重庆工商职业学院</span>
+                    <span>邮编：400052</span>
+                    <span> <a href="https://beian.miit.gov.cn" style="color:#fff;">渝ICP备05003321号-11  </a></span>
+                    <span><a href="https://beian.mps.gov.cn/#/query/webSearch?code=50010702501568" style="color:#fff;">渝公网安备 50010702501568号</a></span>
+                </div>
+            </div>
+            <div class="qrcode-img-wrapper">
+                <img src="images/qr0.jpg" />
+                <img src="images/qr1.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    const query = new URLSearchParams(window.location.search);
+    if (query.get('s')) {
+        const mainDom = document.querySelector('.main')
+        const contentDom = document.querySelector('.content')
+        mainDom.style.display = 'none'
+        contentDom.style.display = 'block'
+        const cleanUrl = window.location.href.split('?')[0]; // 去掉查询字符串部分
+        history.replaceState(null, '', cleanUrl);
+    }
+</script>
+
+<script>
+    const schoolDom = document.querySelector('.gongshang')
+    const mainDom = document.querySelector('.main')
+    const contentDom = document.querySelector('.content')
+    schoolDom.addEventListener('click', () => {
+        mainDom.style.display = 'none'
+        contentDom.style.display = 'block'
+    })
+</script>
+<script>
+    // 导航菜单和按钮切换
+    const menuBtn = document.getElementById('menu-btn')
+    const menuList = document.getElementById('menu-list')
+    menuBtn.onclick = () => {
+        menuList.style.display = 'flex'
+    }
+    menuList.onmouseleave = () => {
+        menuList.style.display = 'none'
+    }
+   
+    // 二级菜单显示控制
+    [...document.querySelectorAll('.menu-item-wrapper>div')].forEach((item, index) => {
+        item.addEventListener('mouseover', function (e){
+            if(index === 1){
+                return;
+            }
+            if (index === 2 || index === 3 || index === 4 || index === 6) {
+                document.querySelector(`#${e.currentTarget.dataset.linkname}`) ? document.querySelector(`#${e.currentTarget.dataset.linkname}`).style.paddingRight='60px' : '';
+            }
+            document.querySelector(`#${e.currentTarget.dataset.linkname}`) ? document.querySelector(`#${e.currentTarget.dataset.linkname}`).style.display='flex' : '';
+            document.querySelector(`#${e.currentTarget.dataset.linkname}`) ? document.querySelector(`#${e.currentTarget.dataset.linkname}`).style.backgroundImage='url(images/ms' + (index+1) + '.png)' : '';
+        })
+        item.addEventListener('mouseleave', function (e){
+            document.querySelector(`#${e.currentTarget.dataset.linkname}`) ? document.querySelector(`#${e.currentTarget.dataset.linkname}`).style.display='none' : ''
+        })
+    })
+    // 对全屏banner监听wheel
+    function hiddenBanner(e) {
+        if (e.deltaY > 50) { // 向下滚动
+            e.preventDefault() // 取消滚动本身默认带来的页面滚动效果
+            document.querySelector('.content-wrapper').setAttribute('id', 'content-wrapper')
+        }
+    }
+    document.querySelector('.full-banner-wrapper').onwheel = hiddenBanner
+    //
+    function showBanner(e) {
+        const scrollTop = document.documentElement.scrollTop
+        if (scrollTop === 0 && e.deltaY < 0) {
+            document.querySelector('.content-wrapper').setAttribute('id', '')
+        }
+    }
+    document.querySelector('.content-wrapper').onwheel = showBanner
+
+
+    // 监听教学与服务模块，鼠标移上去之后切换成动态图
+    function showTeachingIconDy () {
+        [...document.querySelectorAll('.quick-link-content .img-link img')].forEach((item, index) => {
+            item.addEventListener('mouseover', function () {
+                item.setAttribute('src', `./images/${index + 1}.gif`)
+            })
+            item.addEventListener('mouseout', function () {
+                setTimeout(function () {
+                    item.setAttribute('src', `./images/${index + 1}.png`)
+                }, 2000)
+            })
+        })
+    }
+    showTeachingIconDy()
+    // 监听专题网站模块，鼠标移动至该模块时，底部标题过渡显示
+    function showSiteTitle () {
+        [...document.querySelectorAll('.site-item')].forEach((item, index) => {
+            item.addEventListener('mouseover',() => {
+                [...document.querySelectorAll('.site-item span')][index].style.bottom = '0px'
+            })
+            item.addEventListener('mouseout', () => {
+                [...document.querySelectorAll('.site-item span')][index].style.bottom = '-40px'
+            })
+        })
+    }
+    showSiteTitle()
+
+
+    // 设置所有超链接的跳转方式
+    Array.from(document.getElementsByTagName('a')).forEach((item) => {
+        if (item.getAttribute('target') !== '_blank') {
+            item.setAttribute('target', '_self')
+        }
+    })
+    
+    // 窗口缩放更新根节点字体大小
+    window.onresize = () => {
+        updateHtmlFontSize()
+    }
+    
+    function updateHtmlFontSize() {
+        const width = window.innerWidth
+        let fontSize = 14; // 默认字体大小  
+        if (width <= 768) {  
+          fontSize = 11
+        } else if (width <= 1396) {  
+          fontSize = 12; // 中等大小窗口保持默认  
+        } else if (width <= 1536) {
+          fontSize = 12.8; // 窗口较小时减小字体  
+        }
+        // 设置html元素的字体大小  
+        document.documentElement.style.fontSize = `${fontSize}px`;  
+    }
+    updateHtmlFontSize()
+</script>
+
+</html>

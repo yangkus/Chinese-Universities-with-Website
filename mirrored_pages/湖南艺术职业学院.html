@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="湖南艺术职业学院欢迎您！" />
+<meta name="description" content="湖南艺术职业学院" />
+<title>湖南艺术职业学院官方门户网站</title>
+<link href="/skin/sites/common/css/bootstrap.min.css" type="text/css"  rel="stylesheet" >
+<link href="/skin/sites/common/css/global.css" type="text/css"  rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="/skin/hnys/cms/../core/header/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/hnys/cms/../core/header/header.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/slick.css">
+<link rel="stylesheet" type="text/css" href="/skin/label/label.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/theme/theme.css" />
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/guowei.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/breakpoints.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/skin/hnys/cms/../js/common.js"></script>
+<script type="text/javascript" src="/js/lang/core/zh-cn.js"></script>
+<script type="text/javascript" src="/js/lang/cms/zh-cn.js"></script>
+<script type="text/javascript">
+P8CONFIG.RESOURCE = '';
+var SYSTEM = 'cms',
+MODULE = '',
+ACTION = 'main',
+LABEL_URL = '/index.php/cms-main?',
+STATIC_URL = '',
+$this_router = P8CONFIG.URI[SYSTEM][MODULE].U_controller,
+$this_url = $this_router +'-'+ ACTION,
+SKIN = '/skin/hnys/cms/',
+TEMPLATE = 'hnys';
+mobile_status= '0',
+mobile_auto_jump='0',
+mobile_url = 'http://hnysxy.php168.net/m';
+if(mobile_status=='1' && SYSTEM!='sites'){
+if(browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+if(mobile_auto_jump=='1' && mobile_url!=P8CONFIG.RESOURCE){
+var this_url = location.href,_pul=P8CONFIG.RESOURCE;
+if(this_url.indexOf(mobile_url)==-1 && this_url.indexOf('s.php')==-1 && this_url.indexOf('u.php')==-1 && this_url.indexOf('admin.php')==-1 && SYSTEM!='sites'){
+if(this_url.indexOf(P8CONFIG.RESOURCE+'/html')!=-1)_pul+='/html';
+if(P8CONFIG.RESOURCE==''){
+this_url = mobile_url.indexOf('http')==-1 ? this_url.mobile_url : mobile_url;
+}else{
+this_url = this_url.replace(_pul, mobile_url);
+}
+location.href = this_url;
+}
+}
+}
+}
+
+</script>
+</head>
+<body>
+<div class="navbar main-nav">
+<div class="container">
+<div class="header clearfix">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/" class="navbar-brand navbar-logo"><img src="/skin/hnys/cms/../core/header/images/logo.png" class="logo1"/>
+</a>
+</div>
+<div class="topnav hidden-sm hidden-xs">
+<ul class="topnav-list clearfix" id="header_t">
+<li class="li1"><a href="https://www.arthn.com/" >首页 </a></li>
+
+<li class="li3"><a class="search" href="/search/index.html">搜索</a></li>
+</ul>
+
+</div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+<ul class="nav navbar-nav navlist navbar-right navbar-link2">
+<li class="dropdown">
+<a class="dropdown-toggle link on1" data-toggle="dropdown" data-hover="dropdown" href="/html/1013/"  aria-expanded="false" role="button" target="">学校概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/1013/" target="">学校介绍</a></li>
+<li class="menu2"><a href="/html/1014/" target="">学校领导</a></li>
+<li class="menu3"><a href="https://rsc.arthn.com/29528/" target="">教师风采</a></li>
+<li class="menu4"><a href="/html/1015/" target="">校园向导</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">机构设置</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/828/" target="">党政管理机构</a></li>
+<li class="menu2"><a href="/html/830/" target="">教学机构</a></li>
+<li class="menu3"><a href="/html/829/" target="">教辅机构</a></li>
+<li class="menu4"><a href="/html/1059/" target="">校属企业</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on3" data-hover="dropdown" href="https://jwc.arthn.com/"  aria-expanded="false" role="button" target="_blank">教育教学</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/1025/"  aria-expanded="false" role="button" target="">招生就业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/1025/" target="">专业设置</a></li>
+<li class="menu2"><a href="/html/1026/" target="">招生信息</a></li>
+<li class="menu3"><a href="/html/1027/" target="">奖学金制度</a></li>
+<li class="menu4"><a href="https://pxb.arthn.com/" target="_blank">继续教育</a></li>
+<li class="menu5"><a href="https://pxb.arthn.com/" target="_blank">艺术培训</a></li>
+<li class="menu6"><a href="https://arthn.bysjy.com.cn/index" target="_blank">就业信息网</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on5" data-hover="dropdown" href="https://xy.arthn.com/29737/"  aria-expanded="false" role="button" target="_blank">校友之家</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on6" data-toggle="dropdown" data-hover="dropdown" href="/html/1010/"  aria-expanded="false" role="button" target="_blank">公共服务</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://zwc.arthn.com/" target="_blank">后勤服务</a></li>
+<li class="menu2"><a href="https://tsg.arthn.com/" target="_blank">图书服务</a></li>
+<li class="menu3"><a href="https://dag.arthn.com/" target="_blank">档案服务</a></li>
+<li class="menu4"><a href="http://bwg.arthn.com/" target="_blank">博物馆服务</a></li>
+<li class="menu5"><a href="https://ic.arthn.com/" target="_blank">信息化服务</a></li>
+<li class="menu6"><a href="/html/1035/" target="">办事流程</a></li>
+<li class="menu7"><a href="/html/1034/" target="">电话查询</a></li>
+<li class="menu8"><a href="https://arthn.bysjy.com.cn/" target="_blank">就业服务</a></li>
+<li class="menu9"><a href="https://portal.arthn.com/portal/" target="_blank">网上办事（试运行）</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="/html/1037/"  aria-expanded="false" role="button" target="">信息公开</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/1037/" target="">基本信息</a></li>
+<li class="menu2"><a href="/html/1038/" target="">招生考试</a></li>
+<li class="menu3"><a href="/html/1039/" target="">财资信息</a></li>
+<li class="menu4"><a href="/html/1040/" target="">人事师资</a></li>
+<li class="menu5"><a href="/html/1041/" target="">教学质量</a></li>
+<li class="menu6"><a href="/html/1042/" target="">学生管理</a></li>
+<li class="menu7"><a href="/html/1043/" target="">学风建设</a></li>
+<li class="menu8"><a href="/html/1044/" target="">合作交流</a></li>
+<li class="menu9"><a href="/html/1045/" target="">其他信息</a></li>
+<li class="menu10"><a href="/html/1046/" target="">依申请公开</a></li>
+</ul>		
+</li>
+</ul>
+<div class="topnav visible-sm visible-xs">
+<ul class="topnav-list clearfix" id="header_t">
+<li class="li1"><a href="https://www.arthn.com/" >首页 </a></li>
+
+<li class="li3"><a class="search" href="/search/index.html">搜索</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="index-banner">
+
+<style type="text/css">
+.slider13-8080{width:100%;position:relative;height:100%;overflow:hidden;}
+.slider13-8080 .slick-list{height:100%;}
+.slider13-8080 .slick-track{height:100%;}
+.slider13-8080 .slick-slide,.slider13-8080 .slick-slide>div{height:100%;}
+.slider13-8080 .frame{height:100%;}
+.slider13-8080 .child{height:100%;position:relative;background-size:cover;background-position:center center;height:100%;position:relative;overflow:hidden;}
+.slider13-8080 .child img{position: absolute;left: 50%;top: 50%;min-height: 100%;min-width: 100%;max-width: 1000%;transform: translate(-50%, -50%);width: auto;height: 100%;}
+.slider13-8080 .slick-slide .image{width:100%;height:100%;position:relative;overflow:hidden;}
+.slider13-8080 .slick-slide .item,.slider13-8080 .slick-slide .item img{width:100%;height:100%;display:block;}
+.slider13-8080 .slick-slide video{width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;font-family: "object-fit: cover;";}
+.slider13-8080 .number{width:100%;position: absolute;left:0;bottom:60px;color: #fff;text-align: center;line-height:1;}
+.slider13-8080 .number li{width:45px;height:5px;margin:0 10px;background:#fff;border-radius:0;font-size:0;cursor:pointer;vertical-align: middle;display:inline-block;}
+.slider13-8080 .number li.slick-active{background:#225ca6;}
+.slider13-8080 .slick-arrow{width: 46px;height: 83px;background-repeat:no-repeat;background-position: center center;margin-top: -18px;position: absolute;top: 50%;z-index:100;cursor: pointer;font-size:0;border:0;background-color: rgba(0,0,0,.4);;transition: all 500ms ease;-webkit-transition: all 500ms ease;opacity: 0;visibility: hidden;}
+.slider13-8080 .slick-prev{background-image: url(/skin/label/left.png);left: 60px;}
+.slider13-8080 .slick-next{background-image: url(/skin/label/right.png);right: 60px;}
+.slider13-8080:hover .slick-arrow{opacity:1;visibility:visible;}
+@media (max-width: 991px){
+.slider13-8080,.slider13-8080 .frame,.slider13-8080 .slick-slide .item img{width:100%;height:46vw;}
+.slider13-8080 .number{bottom:60px;}
+.slider13-8080 .number li{width:20px;margin:0 5px;}
+}
+</style>
+<div class="slider13-8080">
+<div class="slider frame">
+<div class="child" style="background-image: url(/attachment/core/label/2024_05/15_09/6cc50046c17cbcea.png); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="/html/1017/2024-03-28/content-11437.html" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_05/06_16/b90121f22e04305f.png); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_06/04_17/1ee15de48151a2f0.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="https://xy.arthn.com/29737/" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_05/29_09/c43f974dc35a69a2.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="https://xijuxi.arthn.com/" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_05/29_09/7f34b69c52eef78d.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="https://yyx.arthn.com/" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_05/29_10/d9fcae78fea20898.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="https://wdx.arthn.com/" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_06/04_17/07415e4506452c3a.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="https://finearts.arthn.com/" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_06/04_17/432563cc693ebf09.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="https://yingshixi.arthn.com/" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_05/29_09/b460fb0d5c3de843.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="https://swx.arthn.com/" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_06/04_16/c7ff0bfa1d973e66.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="https://pxb.arthn.com/29595/" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_05/06_15/d73409cf17f6e071.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="http://hnysxy.php168.net/html/1017/2024-03-21/content-1917.html" target="_blank" title=""></a>
+</div>
+</div>
+</div>
+<div class="number"></div>
+</div>
+<script type="text/javascript">
+$(".slider13-8080 .frame").slick({
+fade:true,
+autoplay:true,
+autoplaySpeed:6000,
+pauseOnDotsHover:true,
+pauseOnFocus:false,
+speed:1000,
+arrows:true,
+dots:false,
+appendDots:".slider13-8080 .number",
+pauseOnHover:false,
+customPaging: function(slider, i) {  
+return i + 1;
+},
+});
+</script>
+<a href="javascript:;" class="glide-btn"></a>
+</div>
+<script type="text/javascript">
+var USERNAME = get_username();
+$(document).ready(function(){
+//**show_edit**//
+init_labelshows('header_t');
+$(".glide-btn").click(function(){  
+$(".index-main").addClass("fixed");
+$(".glide-btn").hide();
+})
+$(window).scroll(function () {
+var windowTop = $(window).scrollTop();
+if (windowTop > 40) {
+if (!$(".index-main").hasClass("fixed")) {
+$(".index-main").addClass("fixed");
+$(".glide-btn").hide();
+}
+
+} else {
+if (!$(".index-main").hasClass("fixed")) {
+$(".index-main").removeClass("fixed");
+$(".glide-btn").show();
+}
+}
+});
+})
+</script>
+<div class="index-main"><link rel="stylesheet" type="text/css" href="/skin/hnys/cms/index/index.css" />
+<div class="section-page1">
+<div class="section-news">
+<div class="container">
+<div class="row row-15">
+<div class="col-md-9 col-sm-12 col-xs-12 col-pd-15">
+<div class="row row-15">
+<div class="col-md-6 col-sm-12 col-xs-12 col-pd-15">
+<div class="news-tabs tabs1">
+<div class="hd">
+<ul class="tabs-nav clearfix">
+<li>湖艺要闻<span>|</span></li>
+<li>工作动态</li>
+</ul>
+</div>
+<div class="bd">
+<div class="tabs-item">
+<div class="news-list"><ul class="label-news31 nowrap" style="font-size:16px;color:#444e6d;">
+<li>
+<span class="datatime pull-right">2024-10-27</span><a href="/html/1017/2024-10-27/content-12733.html" target="_blank" title="百年湖艺再出发 | 文化旅游学院校友返校共忆青春">百年湖艺再出发 | 文化旅游学院校友返校共忆青春</a>
+</li>
+<li>
+<span class="datatime pull-right">2024-10-27</span><a href="/html/1017/2024-10-27/content-12732.html" target="_blank" title="百年湖艺再出发 | 省教育厅等单位领导参观湖艺杰出校友美术作品联展">百年湖艺再出发 | 省教育厅等单位领导参观湖艺杰出校友美术作品</a>
+</li>
+<li>
+<span class="datatime pull-right">2024-10-25</span><a href="/html/1017/2024-10-25/content-12731.html" target="_blank" title="学校2024学年“天鹅大树计划”拔尖人才选拔活动正式启动">学校2024学年“天鹅大树计划”拔尖人才选拔活动正式启动</a>
+</li>
+<li>
+<span class="datatime pull-right">2024-10-24</span><a href="/html/1017/2024-10-24/content-12726.html" target="_blank" title="中国戏剧家协会调研组来校开展专题调研 共探戏剧艺术传承与创新之路">中国戏剧家协会调研组来校开展专题调研 共探戏剧艺术传承与创新</a>
+</li>
+</ul></div>
+<div class="more">
+<a href="/html/1017/" target="_blank">更多>></a></div>
+</div>
+<div class="tabs-item">
+<div class="news-list"><ul class="label-news31 nowrap" style="font-size:16px;color:#444e6d;">
+<li>
+<span class="datatime pull-right">2024-10-25</span><a href="https://mp.weixin.qq.com/s/wmFKXfb5OKqr-t2Q7KmjmQ" target="_blank" title="学校组织离退休教师开展重阳活动">学校组织离退休教师开展重阳活动</a>
+</li>
+<li>
+<span class="datatime pull-right">2024-10-24</span><a href="/html/1018/2024-10-24/content-12724.html" target="_blank" title="学校召开2024年第九次学生工作例会">学校召开2024年第九次学生工作例会</a>
+</li>
+<li>
+<span class="datatime pull-right">2024-10-23</span><a href="/html/1018/2024-10-23/content-12717.html" target="_blank" title="百年湖艺再出发 | 数字产业学院2003级校友温暖回校">百年湖艺再出发 | 数字产业学院2003级校友温暖回校</a>
+</li>
+<li>
+<span class="datatime pull-right">2024-10-22</span><a href="/html/1018/2024-10-22/content-12698.html" target="_blank" title="学校持续推进文化人才服务支持艰苦边远地区和基层一线专项实施工作">学校持续推进文化人才服务支持艰苦边远地区和基层一线专项实施工</a>
+</li>
+</ul></div>
+<div class="more">
+<a href="/html/1018/" target="_blank">更多>></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-12 col-xs-12 col-pd-15">
+<div class="news-tabs tabs1">
+<div class="hd">
+<ul class="tabs-nav clearfix">
+<li>通知公告<span>|</span></li>
+<li>媒体聚焦</li>
+</ul>
+</div>
+<div class="bd">
+<div class="tabs-item">
+<div class="news-list"><ul class="label-news31 nowrap" style="font-size:16px;color:#444e6d;">
+<li>
+<span class="datatime pull-right">2024-10-10</span><a href="/html/1019/2024-10-10/content-12675.html" target="_blank" title="关于2023-2024学年国家奖学金名单的公示">关于2023-2024学年国家奖学金名单的公示</a>
+</li>
+<li>
+<span class="datatime pull-right">2024-10-04</span><a href="https://mp.weixin.qq.com/s/JUTpDOeqc5UAWw6-NdO6Dw" target="_blank" title="小手大手，牵出春风万缕 ——“百年湖艺再出发·校友回湘点亮校园”助力行动倡议书">小手大手，牵出春风万缕 ——“百年湖艺再出发·校友回湘点亮校</a>
+</li>
+<li>
+<span class="datatime pull-right">2024-09-19</span><a href="/html/1019/2024-09-19/content-12644.html" target="_blank" title="2025届毕业生一次性求职补贴  学院初审通过名单公示">2025届毕业生一次性求职补贴  学院初审通过名单公示</a>
+</li>
+<li>
+<span class="datatime pull-right">2024-09-03</span><a href="/html/1019/2024-09-03/content-12628.html" target="_blank" title="湖南艺术职业学院2024年秋季学期校历表">湖南艺术职业学院2024年秋季学期校历表</a>
+</li>
+</ul></div>
+<div class="more">
+<a href="/html/1019/" target="_blank">更多>></a></div>
+</div>
+<div class="tabs-item">
+<div class="news-list"><style type="text/css">
+.label-news31 a{color:#fff;}
+</style>
+<ul class="label-news31 label-icon32 line-38 label-pd15 nowrap" style="font-size:16px;color:#444e6d;">
+<li>
+<a href="/html/1022/2024-10-22/content-12708.html" target="_blank" title="凝聚校友力量 ​“百年湖艺再出发·杰出校友美术作品联展”在长沙举行(湖南教育)">凝聚校友力量 ​“百年湖艺再出发·杰出校友美术作品联展”在长</a>
+</li>
+<li>
+<a href="/html/1022/2024-10-22/content-12699.html" target="_blank" title="百年传承！校友回湘，先来感受一场视觉盛宴（三湘都市报）">百年传承！校友回湘，先来感受一场视觉盛宴（三湘都市报）</a>
+</li>
+<li>
+<a href="/html/1022/2024-10-21/content-12712.html" target="_blank" title="百年更期新！湖艺杰出校友美术作品联展举办（长沙晚报）">百年更期新！湖艺杰出校友美术作品联展举办（长沙晚报）</a>
+</li>
+<li>
+<a href="/html/1022/2024-10-20/content-12711.html" target="_blank" title="“湖湘新韵——湖南民乐民歌音乐会” 公益惠民演出走进株洲企业（星辰在线）">“湖湘新韵——湖南民乐民歌音乐会” 公益惠民演出走进株洲企业</a>
+</li>
+</ul></div>
+<div class="more">
+<a href="/html/1022/" target="_blank">更多>></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12 col-pd-15">
+<div class="quick-box"><ul class="quick-list">
+<li class="li1"><a href="/html/1023/"  target="_blank">时政热点</a></li>
+<li class="li2"><a href="https://jwc.arthn.com/29767/"  target="_blank">人培专栏</a></li>
+<li class="li3"><a href="/html/1048/"  target="_blank">毕业设计</a></li>
+<li class="li4"><a href="/html/1021/"  target="_blank">招标采购</a></li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">jQuery(".tabs1").slide({});</script>
+<script type="text/javascript">jQuery(".tabs2").slide({});</script></div>
+<div class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-sm-9 col-xs-12">
+<div class="copyright">
+湖南艺术职业学院（湖南省艺术学校）长沙经济开发区（星沙街道）特立东路719号</br>
+邮编：410100 <a href="/html/1034/" target="_self">电话查询</a><span>&nbsp; <a title="湘ICP备13011829号" href="http://beian.miit.gov.cn" target="_blank">湘ICP备13011829号-1 </a>湘教QS3-200505-000138 </span>
+<p></p>
+</div>
+</div>
+<div class="col-md-2 col-sm-3 col-xs-12">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-6">
+<div class="footer-icons">
+<div class="tit wb"><img src="/skin/hnys/core/header/images/wx.png">公众订阅号 </div>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="/attachment/store/logo/f81053a61ca88a34.jpg" />
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6">
+<div class="footer-icons">
+<div class="tit wb"><img src="/skin/hnys/core/header/images/wx.png">公众服务号</div>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="/attachment/store/logo/035e759b98f491e9.jpg" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

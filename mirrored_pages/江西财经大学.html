@@ -1,0 +1,771 @@
+<!DOCTYPE html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+    <title>江西财经大学</title>
+    <link href="/statics/jxufe/ceshi/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="/statics/jxufe/ceshi/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/statics/jxufe/ceshi/js/jquery.SuperSlide.2.1.3.js"></script>
+	<script src="/statics/jxufe/js/index.js"></script>
+    <script type="text/javascript" src="/statics/jxufe/js/jquery.cookie.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href="/statics/jxufe/images/favicon.ico" rel="shortcut icon">
+    <script type="application/javascript">
+        var MobileUA = (function() {
+            var ua = navigator.userAgent.toLowerCase();
+            var mua = {
+                IOS: /ipod|iphone|ipad/.test(ua), //iOS
+                IPHONE: /iphone/.test(ua), //iPhone
+                IPAD: /ipad/.test(ua), //iPad
+                ANDROID: /android/.test(ua), //Android Device
+                WINDOWS: /windows/.test(ua), //Windows Device
+                TOUCH_DEVICE: ('ontouchstart' in window) || /touch/.test(ua), //Touch Device
+                MOBILE: /mobile/.test(ua), //Mobile Device (iPad)
+                ANDROID_TABLET: false, //Android Tablet
+                WINDOWS_TABLET: false, //Windows Tablet
+                TABLET: false, //Tablet (iPad, Android, Windows)
+                SMART_PHONE: false //Smart Phone (iPhone, Android)
+            };
+            mua.ANDROID_TABLET = mua.ANDROID && !mua.MOBILE;
+            mua.WINDOWS_TABLET = mua.WINDOWS && /tablet/.test(ua);
+            mua.TABLET = mua.IPAD || mua.ANDROID_TABLET || mua.WINDOWS_TABLET;
+            mua.SMART_PHONE = mua.MOBILE && !mua.TABLET;
+            return mua;
+        }());
+        if (MobileUA.SMART_PHONE && !$.cookie('vcms_my_test_code')) {
+          var url = window.location.href;
+          // 127.0.0.1 老域名  test.yuming.com 新域名
+            document.location.href = url.replace('www.jxufe.edu.cn','m.jxufe.edu.cn');
+        }
+    </script>
+</head>
+
+<body>
+    
+    <div class="head">
+        <div class="container">
+            <div class="logo fl">
+                <img src="/statics/jxufe/ceshi/images/logoliu.png">
+            </div>
+            <div class="head_right fr" style="position: relative;">
+                <ul style="position: absolute;top: 35px;right: 329px;">
+                    <li class="fl"><a style="font-size: 16px;color: #fff;margin-right: 8px;" href="/news-show-18.html" target="_blank">考生&nbsp;&nbsp;|</a></li>
+                    <li class="fl"><a style="font-size: 16px;color: #fff;margin-right: 8px;" href="/news-show-19.html" target="_blank">在校生&nbsp;&nbsp;|</a></li>
+                    <li class="fl"><a style="font-size: 16px;color: #fff;margin-right: 8px;" href="/news-show-20.html" target="_blank">教职工&nbsp;&nbsp;|</a></li>
+                    <li class="fl"><a style="font-size: 16px;color: #fff;margin-right: 8px;" href="/news-show-21.html" target="_blank">社会人士&nbsp;&nbsp;|</a></li>
+                    <li class="fl"><a style="font-size: 16px;color: #fff;margin-right: 8px;" href="http://xiaoyouban.jxufe.edu.cn/" target="_blank">校友</a></li>                    
+                </ul>
+				<div style="position: absolute;top: 35px;right: 235px;"><a style="font-size: 16px;color: #fff;" href="http://english.jxufe.edu.cn/" target="_blank">ENGLISH</a></div>
+                <div class="search fr">
+                   	<p style="width:17px;height:18px;float:left;margin-top:9px;margin-left:13px;"><img src="/statics/jxufe/ceshi/images/graph.png"></p>
+                    <input type="text" name="keyword" id="keyword" class="input1"></td>
+                    <input type="submit"  name="button2" id="button2" value="搜索" class="search_btn" style="cursor: pointer;border-right: 1px solid #fff;">
+                    <a href="http://www.jxufe.cn/fullsearchs/keyword.html" target="_blank" style="line-height: 34px;font-size: 14px;color: #fff;text-decoration: none;float: right;margin-right: 8px;">全站检索</a>
+                </div>
+ 
+<script>
+$(function () {
+  // 你的搜索按钮点击事件
+  $('.search_btn').click(function () {
+    var search = $('#keyword').val();
+    let obj = {
+                field: "title",
+                inputorder: "1",
+                keyword: search,
+                messagetype: "",
+                siteid: "",
+                size: "20",
+                time: "all"
+            }
+            sessionStorage.setItem("lastname",JSON.stringify(obj))
+$.cookie("lastname",JSON.stringify(obj));
+               window.location.href = "/fullsearchs/list.html"; 
+  });
+});
+</script>
+
+                <div class="empty"></div>
+                <div class="nav">
+                    <ul>
+						<li></li>
+                        <li class="fl showMenuOne">
+							<a  target="_blank">校情总揽</a>
+							<ul class="menuOne">
+								<li class="liOne">
+									<a href="http://www.jxufe.edu.cn/news-show-42.html" title="学校简介">学校简介</a>
+								</li>
+                                                                <li class="liOne">
+									<a href="news-list-tjjc.html" title="图解江财">图解江财</a>
+								</li>
+								<li class="liOne">
+									<a href="http://www.jxufe.edu.cn/news-show-41.html" title="历史沿革">历史沿革</a>
+								</li>
+								<li class="liOne">
+									<a href="news-list-xianrenlingdao.html" title="现任领导">现任领导</a>
+								</li>
+								<li class="liOne">
+									<a href="news-list-lirenlingdao.html" title="历任领导">历任领导</a>
+								</li>
+								<li class="liOne">
+									<a href="http://www.jxufe.edu.cn/news-show-39.html" title="学校导图">学校导图</a>
+								</li>
+								<li class="liOne">
+									<a href="http://www.jxufe.edu.cn/news-show-40.html" title="文化标识">文化标识</a>
+								</li>
+								<li class="liOne">
+									<a href="http://news.jxufe.edu.cn/news-list-guangyingcaida.html" title="校园风光">校园风光</a>
+								</li>
+								<li class="showMenuTwo liOne">
+									<a href="news-list-shujujiangcai.html" title="数据江财" class="showMenuTwoA">数据江财></a>				
+									<ul class="menuTwo">
+																				<li>
+											<a href="http://www.jxufe.edu.cn/news-show-49.html" title="学科一览">学科一览</a>
+										</li>
+																				<li>
+											<a href="http://www.jxufe.edu.cn/news-show-48.html" title="博士点一览">博士点一览</a>
+										</li>
+																				<li>
+											<a href="http://www.jxufe.edu.cn/news-show-47.html" title="硕士点一览">硕士点一览</a>
+										</li>
+																				<li>
+											<a href="http://www.jxufe.edu.cn/news-show-46.html" title="专业学位点一览">专业学位点一览</a>
+										</li>
+																				<li>
+											<a href="http://www.jxufe.edu.cn/news-show-45.html" title="专业一览">专业一览</a>
+										</li>
+																				<li>
+											<a href="http://www.jxufe.edu.cn/news-show-44.html" title="师资队伍">师资队伍</a>
+										</li>
+																				<li>
+											<a href="http://cta.jxufe.edu.cn/teachers" title="教师个人主页">教师个人主页</a>
+										</li>
+																			</ul>
+								</li>
+							</ul>
+						</li>
+                        <li class="fl showMenuOne">
+							<a  target="_blank">机构设置</a>
+							<ul class="menuOne">
+																<li>
+									<a href="https://www.jxufe.edu.cn/news-list-xysz.html" title="学院设置">学院设置</a>
+								</li>
+																<li>
+									<a href="http://www.jxufe.edu.cn/news-show-82506.html" title="管理机构">管理机构</a>
+								</li>
+																<li>
+									<a href="http://www.jxufe.edu.cn/news-show-52.html" title="科研机构">科研机构</a>
+								</li>
+															</ul>
+						</li>
+                        <li class="fl showMenuOne">
+							<a  target="_blank">教学科研</a>
+							<ul class="menuOne" style="display: none;">
+								<li class="liOne"><a href="http://kyc.jxufe.edu.cn/" title="科研管理" target="_blank">科研管理</a></li>
+								<li class="liOne"><a href="http://cfe.jxufe.edu.cn/" title="当代财经" target="_blank">当代财经</a></li>
+								<li class="liOne"><a href="http://bogb.jxufe.edu.cn/" title="博士后流动站" target="_blank">博士后流动站</a></li>
+								<li class="liOne"><a href="http://jwc.jxufe.edu.cn/" title="教务信息网" target="_blank">教务信息网</a></li>
+								<li class="liOne"><a href="http://jxpg.jxufe.edu.cn/" title="本科审核评估" target="_blank">本科教学评估</a></li>
+							
+							</ul> 
+						</li>
+						<li class="showMenuOne">
+							<ul class="menuOne"></ul>
+						</li>
+                        <li class="fl showMenuOne">
+							<a  target="_blank">国际交流</a>
+							<ul class="menuOne" style="display: none;">
+								<li class="liOne"><a href="http://oec.jxufe.edu.cn/" title="对外合作交流" target="_blank">对外合作交流</a></li>
+								<li class="liOne"><a href="http://oec.jxufe.edu.cn/news-list-zs.html  " title="国际文化交流中心" target="_blank">国际文化交流中心</a></li>
+								<li class="liOne"><a href="http://oecmis.jxufe.edu.cn" title="国际化信息系统" target="_blank">国际化信息系统</a></li>
+								<li class="liOne"><a href="http://oesenglish.jxufe.edu.cn/" title="留学江财" target="_blank">留学江财</a></li>									
+							</ul>
+						</li>
+                        <li class="fl showMenuOne">
+							<a  target="_blank">招生就业</a>
+							<ul class="menuOne" style="display: none;">
+								<li class="liOne"><a href="http://bogb.jxufe.edu.cn/" title="博士后招收" target="_blank">博士后招收</a></li>
+								<li class="liOne"><a href="http://grs.jxufe.edu.cn" title="博士研究生" target="_blank">博士研究生</a></li>
+								<li class="liOne"><a href="http://grs.jxufe.edu.cn/" title="硕士研究生" target="_blank">硕士研究生</a></li>
+								<li class="liOne"><a href="http://zsjy.jxufe.edu.cn/web/index.html" title="本科招生" target="_blank">本科招生</a></li>		
+								<li class="liOne"><a href="http://oec.jxufe.edu.cn/news-list-zs.html  " title="国际本科招生" target="_blank">国际本科招生</a></li>									
+								<li class="liOne"><a href="http://cjxy.jxufe.edu.cn/" title="继续教育" target="_blank">继续教育</a></li>									
+								<li class="liOne"><a href="http://career.jxufe.edu.cn/" title="就业工作" target="_blank">就业工作</a></li>									
+								<li class="liOne"><a href="http://oesenglish.jxufe.edu.cn/" title="来华留学招生" target="_blank">来华留学招生</a></li>
+							</ul> 
+						</li>
+                        <li class="fl showMenuOne">
+							<a href="http://ehall.jxufe.edu.cn/new/index.html"  target="_blank">智慧江财</a>
+						</li>
+                        <li class="fl">
+							<a href="http://lib.jxufe.cn/" target="_blank">图书资源</a>
+						</li>
+                        <li class="fl">
+							<a href="https://jxcdhr.jxufe.edu.cn/zp.html#/" target="_blank">人才招聘</a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+          
+     <style>
+		.middle{ width:100%; height:660px !important; overflow:hidden;position: relative;}
+		.middle .bd{ position:relative; height:100%; z-index:0;}
+		.middle .bd li{ zoom:1; vertical-align:middle; }
+		.middle .bd img{ width:100%; height:660px; display:block;}
+		@media screen and (max-width: 1440px) {
+			.middle{ width:100%; height:500px !important;overflow:hidden;position: relative;}
+			.middle .bd img{ width:100%; height:500px; display:block;}
+		}
+    </style>
+    <div class="middle">
+      	<div class="bd">
+          	<ul style="margin:0px auto;">
+								<li>
+					<div class="pic"><a href="http://www.jxufe.edu.cn/news-show-87254.html" target="_blank">
+						<img src="/uploadfile/69/Attachment/4d5e21af89.png " >
+						<p>开启三次创业 抢抓三化机遇 加快三个变革 推进三大转型</p>
+					</a></div>
+				</li>
+								<li>
+					<div class="pic"><a href="http://www.jxufe.edu.cn/news-show-88229.html" target="_blank">
+						<img src="/uploadfile/69/202410/ddfcaa0b55.png " >
+						<p>三化机遇：数字化、绿色化、国际化</p>
+					</a></div>
+				</li>
+								<li>
+					<div class="pic"><a href="http://www.jxufe.edu.cn/news-show-88230.html" target="_blank">
+						<img src="/uploadfile/69/202410/11dbc35dcb.png " >
+						<p>三个变革：质量变革、动力变革、效率变革</p>
+					</a></div>
+				</li>
+								<li>
+					<div class="pic"><a href="http://www.jxufe.edu.cn/news-show-88231.html" target="_blank">
+						<img src="/uploadfile/69/202410/22a71161ad.png " >
+						<p>三大转型：转型建设高水平研究型大学 转型建设一流数字财经大学..</p>
+					</a></div>
+				</li>
+				          	</ul>
+      	</div>
+        <a class="prevv" href="javascript:void(0)"></a>
+        <a class="nextt" href="javascript:void(0)"></a>
+    </div>
+    <script type="text/javascript">
+        jQuery(".middle").slide({
+           	mainCell: ".bd ul", 
+			autoPlay: true, 
+			effect: "fold",  
+			prevCell:".prevv",
+			nextCell:".nextt",
+			pnLoop:true,
+        });
+    </script>
+
+    <div class="mid_later">
+
+        <div class="container">
+            <div class="whole" style="height: 680px;">
+                <div class="front">
+					<ul class="ul1">
+						<li id="cai" data-tab="1" class="active"><a style="color: #fff;" href="http://news.jxufe.edu.cn/news-list-jiangcaiyaowen.html">江财新闻</a></li>
+						<li id="ji" data-tab="2"><a style="color: #fff;" href="http://news.jxufe.edu.cn/news-list-xueyuanfengcai.html">基层风采</a></li>
+						<li id="tong" data-tab="3"><a style="color: #fff;" href="http://news.jxufe.edu.cn/news-list-xinxigonggao.html">通知公告</a></li>
+						<a class="more_left active" data-tab="1" href="http://news.jxufe.edu.cn/news-list-jiangcaiyaowen.html" target="_blank">MORE+</a>
+						<a class="more_left" data-tab="2" href="http://news.jxufe.edu.cn/news-list-xueyuanfengcai.html" target="_blank">MORE+</a>
+						<a class="more_left" data-tab="3" href="http://news.jxufe.edu.cn/news-list-xinxigonggao.html" target="_blank">MORE+</a>
+					</ul>
+					                                         
+					<div style="font-weight: bold;width:740px;font-size: 25px;text-align: left;height: 60px;vertical-align: middle;margin: 10px 0;overflow: hidden;"> 
+						<a href="http://news.jxufe.edu.cn/news-show-128701.html" target="_blank" title="全力推进有组织的学科建设——学校召开转型改革专题推进会（二）" style="color: #ff0000;display: block;width: 100%;line-height: 60px;top: -10px;font-size: 23px;">全力推进有组织的学科建设——学校召开转型改革专题推进会（二）</a>
+					</div>
+					                    <ul class="ul2">
+                        <li id="cai" data-tab="1" class="active lili">
+                            <ul class="equally inx_ui">
+                                                                <li><a href="http://news.jxufe.edu.cn/news-show-128694.html" target="_blank">
+                                        <p>【转型改革大家谈】产教融合推动学院改革发展</p><span>2024-10-27</span>
+                                    </a>
+                                </li>
+                                                                  <li><a href="http://news.jxufe.edu.cn/news-show-128704.html" target="_blank">
+                                        <p>省教育工会领导来校调研</p><span>2024-10-27</span>
+                                    </a>
+                                </li>
+                                                                  <li><a href="http://news.jxufe.edu.cn/news-show-128700.html" target="_blank">
+                                        <p>“税法知识沐校园 春雨润苗促成长”税收志愿者税法宣传活动在我..</p><span>2024-10-27</span>
+                                    </a>
+                                </li>
+                                                                  <li><a href="http://news.jxufe.edu.cn/news-show-128705.html" target="_blank">
+                                        <p>我校获批2024年江西省中外人文交流基地</p><span>2024-10-27</span>
+                                    </a>
+                                </li>
+                                                                  <li><a href="http://news.jxufe.edu.cn/news-show-128699.html" target="_blank">
+                                        <p>工商管理学院获QS Stars 商学院五星评级认证</p><span>2024-10-27</span>
+                                    </a>
+                                </li>
+                                                                  <li><a href="http://news.jxufe.edu.cn/news-show-128698.html" target="_blank">
+                                        <p>我校教职工在江西省教职工气排球比赛中取得佳绩</p><span>2024-10-27</span>
+                                    </a>
+                                </li>
+                                                                  <li><a href="http://news.jxufe.edu.cn/news-show-128675.html" target="_blank">
+                                        <p>【转型改革大家谈】教学与科研双轮驱动 提升智能化创新能力建设</p><span>2024-10-26</span>
+                                    </a>
+                                </li>
+                                                                  <li><a href="http://news.jxufe.edu.cn/news-show-128662.html" target="_blank">
+                                        <p>【转型改革大家谈】人工智能驱动的教育数字化转型思考 </p><span>2024-10-26</span>
+                                    </a>
+                                </li>
+                                                                  <li><a href="http://news.jxufe.edu.cn/news-show-128671.html" target="_blank">
+                                        <p>学校赴上海高校调研国际教育工作</p><span>2024-10-25</span>
+                                    </a>
+                                </li>
+                                                              </ul>
+                        </li>
+                        <li id="ji" data-tab="2" class="lili">
+                            <iframe frameborder="0" scrolling="no" allowtransparency="" src="http://news.jxufe.edu.cn/news-list-xdjqcofxcczxzo.html" width="754" height="488"></iframe>
+                        </li>
+                        <li id="tong" data-tab="3" class="lili">
+                            <iframe frameborder="0" scrolling="no" allowtransparency="" src="http://news.jxufe.edu.cn/news-list-xetjzxgsgfzyzw.html" width="754" height="488"></iframe>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="back" id="picNews" style="position: relative;">
+                       
+                    <div class="upper">
+                        <ul>
+							<li><a href="http://news.jxufe.edu.cn/news-list-shipinjiangcai.html" target="_blank">视频江财</a></li>
+							<a class="more_right" href="http://news.jxufe.edu.cn/news-list-shipinjiangcai.html" target="_blank">MORE+</a>
+                        </ul>
+                    </div>
+
+                	<div class="bd" style="overflow:hidden;position:relative;width:422px;">
+                       <iframe frameborder="0" scrolling="no" allowtransparency="" src="http://news.jxufe.edu.cn/news-list-shipinjiangcaizhongzhuan.html" width="420" height="200"></iframe>
+                 	</div>
+                   <div class="upper" style="margin-top: 20px;">
+                        <ul>
+							<li><a href="http://news.jxufe.edu.cn/news-list-shenshenxuezi.html" target="_blank">师生风采</a></li>
+							<a class="more_right" href="http://news.jxufe.edu.cn/news-list-shenshenxuezi.html" target="_blank">MORE+</a>
+                        </ul>
+                    </div>
+                    <div  style="overflow:hidden;position:relative;width:422px;">
+                       <iframe frameborder="0" scrolling="no" allowtransparency="" src="http://news.jxufe.edu.cn/news-list-shishengfengcaizhongzhuan.html" width="420" height="300"></iframe>
+                 	</div>
+                </div>
+            </div>
+
+         
+
+            <div style="margin-top: 30px;" class="trolley">
+                <div class="up">
+                    <span style="float: left;margin-top: 75px;margin-right: 10px;" class="subject">专题专栏</span>
+                    <div style="float: left;" class="print">
+                        <style type="text/css">
+                            .picMarquee-left {
+                                width: 100%;
+                                overflow: hidden;
+                                position: relative;
+                                margin: auto;
+                                width: 1035px;
+    
+                            }
+    
+                            .picMarquee-left .bd {
+                                padding: 10px 0px;
+                            }
+    
+                            .picMarquee-left .bd ul {
+                                overflow: hidden;
+                                zoom: 1;
+                            }
+    
+                            .picMarquee-left .bd ul li {
+                                margin: 0 9px;
+                                float: left;
+                                _display: inline;
+                                overflow: hidden;
+                                text-align: center;
+                            }
+    
+                            .picMarquee-left .bd ul li .pic {
+                                text-align: center;
+                            }
+    
+                            .picMarquee-left .bd ul li .pic img {
+                                display: block;
+                                padding: 2px;
+                            }
+    
+                            .picMarquee-left .bd ul li .pic a:hover img {
+                                border-color: #999;
+                            }
+    
+                            .picMarquee-left .bd ul li .title {
+                                line-height: 24px;
+                            }
+                        </style>
+                        <div class="picMarquee-left">
+                            <div class="bd">
+                              <ul class="picList" style="left: -250px !important;">
+                                                                    <li >
+                                      <div class="pic"><a href="https://news.jxufe.edu.cn/news-list-jxcjdxdjxxjyztwz.html" target="_blank"><img src="/uploadfile/69/202405/6bfa11f888.jpg " style="width:155px;height:120px;"></a>
+                                      </div>
+                                  </li>
+                                                                    <li >
+                                      <div class="pic"><a href="http://news.jxufe.edu.cn/news-list-ylxkzmj.html" target="_blank"><img src="/uploadfile/69/202305/2d34eb59d6.png " style="width:155px;height:120px;"></a>
+                                      </div>
+                                  </li>
+                                                                    <li >
+                                      <div class="pic"><a href="http://news.jxufe.edu.cn/news-list-xsyjxdxzmb.html" target="_blank"><img src="/uploadfile/69/Attachment/5a3f69d7e7.png " style="width:155px;height:120px;"></a>
+                                      </div>
+                                  </li>
+                                                                    <li >
+                                      <div class="pic"><a href="http://news.jxufe.edu.cn/news-list-ylszcjdxzmj.html" target="_blank"><img src="/uploadfile/69/202302/7aa6d85520.png " style="width:155px;height:120px;"></a>
+                                      </div>
+                                  </li>
+                                                                    <li >
+                                      <div class="pic"><a href="http://news.jxufe.edu.cn/news-list-gbcxzmg.html" target="_blank"><img src="/uploadfile/69/202302/04285b1e77.png " style="width:155px;height:120px;"></a>
+                                      </div>
+                                  </li>
+                                                                    <li >
+                                      <div class="pic"><a href="http://jxpg.jxufe.edu.cn/" target="_blank"><img src="/uploadfile/69/202305/70344182a5.png " style="width:155px;height:120px;"></a>
+                                      </div>
+                                  </li>
+                                                                </ul>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            jQuery(".picMarquee-left").slide({
+                              mainCell: ".bd ul", 
+                              autoPlay: false, 
+                              effect: "leftMarquee", 
+                              vis: 6, 
+                              interTime: 20 
+                            });
+                        </script>
+                    </div>
+                    <a style="margin-top: 65px;" class="morethree" href="http://news.jxufe.edu.cn/news-list-zhuantibaodao.html" target="_blank">MORE+</a>
+                </div>
+                
+            </div>
+            <div class="full">
+                <div class="medio">
+                    <div class="throw">
+                        <span class="sspecial">学术江财</span>
+                        <a class="morefour" href="http://news.jxufe.edu.cn/news-list-keyanjianshe.html" target="_blank">MORE+</a>
+                    </div>
+                    <div class="substance">
+                      <iframe frameborder="0" scrolling="no" allowtransparency="" src="http://news.jxufe.edu.cn/news-list-xnskjlct.html" width="583" height="367"></iframe>
+                    </div>
+                </div>
+                <div class="chair">
+                    <div class="report">
+                        <span class="mass">媒体江财</span>
+                        <a class="morefive" href="http://news.jxufe.edu.cn/news-list-meitijiangcai.html" target="_blank">MORE+</a>
+                    </div>
+                    <div class="indicative">
+                        <iframe frameborder="0" scrolling="no" allowtransparency="" src="http://news.jxufe.edu.cn/news-list-xfmrtujictz.html" width="583" height="367"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="below">
+                <style>
+                    .pag {
+                        width: 1200px;
+                        overflow: hidden;
+                        position: relative;
+                        float: left;
+                    }
+                    .pag .prev {
+                        display: block;
+                        width: 40px;
+                        height: 46px;
+                        float: left;
+                        margin-top: 34px;
+                        overflow: hidden;
+                        cursor: pointer;
+                        background: url(/statics/jxufe/ceshi/images/leftellipse.png) no-repeat;
+                    }
+                    .pag .next {
+                        display: block;
+                        width: 40px;
+                        height: 46px;
+                        float: right;
+                        margin-top: 34px;
+                        overflow: hidden;
+                        cursor: pointer;
+                        background: url(/statics/jxufe/ceshi/images/rightellipse.png) no-repeat;
+                    }
+                    .pag .hd .prevStop {
+                      background-position: -60px 0;
+                    }
+                    .pag .hd .nextStop {
+                      background-position: -60px -50px;
+                    }
+                    .pag .bd {
+                      padding: 10px;
+                    }
+                    .pag .bd ul {
+                        overflow: hidden;
+                        zoom: 1;
+                    }
+                </style>
+                <div class="pag">
+                    <div class="next"></div>
+                    <div class="prev"></div>
+                    <div class="bd">
+                        <ul style="width: 2584px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -272px;">
+                            <li style="float: left; width: 96px;"><a href="http://news.jxufe.edu.cn/news-list-xinxigongkaizhuanlan.html" target="_blank">
+                                    <div class="lis1"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>信息公开</span>
+                                </a></li>
+                             <li style="float: left; width: 96px;"><a href="http://smartoa.jxufe.edu.cn/" target="_blank">
+                                    <div class="lis3"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>新OA系统</span>
+                                </a>
+                            </li>
+                            <li style="float: left; width: 96px;"><a href="http://ysh.jxup.com/" target="_blank">
+                                    <div class="lis2"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>映山红网</span>
+                                </a></li>
+                              <li style="float: left; width: 96px;"><a href="http://news.jxufe.edu.cn/news-show-102119.html" target="_blank">
+                                    <div class="lis6"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>网络投稿</span>
+                                </a></li>
+                                  <li style="float: left; width: 96px;"><a href="http://repair.jxufe.cn/management/index.htm" target="_blank">
+                                    <div class="lis10"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>后勤网上报修</span>
+                                </a></li>
+                                 
+                            <li style="float: left; width: 96px;"><a href="http://news.jxufe.edu.cn/news-show-10864.html" target="_blank">
+                                    <div class="lis4"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>纪委网络举报</span>
+                                </a></li>
+                            <li style="float: left; width: 96px;"><a href="http://www.jxgbwlxy.gov.cn" target="_blank">
+                                    <div class="lis5"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>干部在线学习</span>
+                                </a></li>
+                           
+                            <li style="float: left; width: 96px;"><a href="http://news.jxufe.edu.cn/news-show-97027.html" target="_blank">
+                                    <div class="lis7"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>师德师风举报</span>
+                                </a>
+                            </li>
+                            <li style="float: left; width: 96px;"><a href="http://news.jxufe.edu.cn/news-list-sanxiaxiangzhuanti.html" target="_blank">
+                                    <div class="lis9"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>"三下乡"专题</span>
+                                </a></li>
+                           <li style="float: left; width: 96px;"><a href="/news-show-82006.html" target="_blank">
+                                    <div class="lis12"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>校领导邮箱</span>
+                                </a></li>
+                           <li style="float: left; width: 96px;"><a href="http://jxufe.mooc.chaoxing.com/portal" target="_blank">
+                                    <div class="lis15"><i class="i_one"></i>
+                                        <i class="i_tow"></i>
+                                    </div><span>网络教学平台</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <script>
+                  jQuery(".pag").slide({
+                    mainCell: ".bd ul", 
+                    autoPage: true,
+                    effect: "leftLoop", 
+                    autoPlay: true, 
+                    vis: 9, 
+                  });
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="end">
+        <div class="container">
+            <div class="wh">
+                <div class="logoup">
+
+                    <div class="emptyer"></div>
+                    <div class="logoer">
+                        <img src="/statics/jxufe/ceshi/images/logoliu.png">
+                    </div>
+                </div>
+                <div class="upr">
+                    <img src="/statics/jxufe/ceshi/images/uprighter.png">
+                </div>
+            </div>
+
+            <div class="logolow">
+                <div class="who">
+                    <div class="emptythree"></div>
+                    <div class="words">
+                        <p>蛟桥园校区：江西省南昌市昌北国家经济技术开发区双港东大街169号 邮编：330013<br> 青山园校区：南昌市青山南路596号 邮编：330077</p>
+                        <p>麦庐园校区：江西省南昌市昌北国家经济技术开发区玉屏大道 邮编：330032<br> 枫林园校区：江西省南昌市昌北国家经济技术开发区枫林大道632号 邮编：330013</p>
+                    </div>
+                </div>
+                <a class="mecha" href="//bszs.conac.cn/sitename?method=show&id=143473653BC847A5E053012819AC3914" target="_blank">
+                    <img src="/statics/jxufe/ceshi/images/mechanismer.png">
+                </a>
+                <img style="width: 90px;float: left;margin-top: 40px;margin-right: 30px;" src="/statics/jxufe/images/erweim1.png">
+                <img style="width: 90px;padding-top: 40px;" src="/statics/jxufe/images/erweim2.png">
+            </div>
+
+        </div>
+	</div>
+	
+	<script src="/statics/jxufe/js/piaofu.js"></script>
+
+
+<!--<div id="gg1" style="z-index: 12000; position: absolute;visibility: visible;">
+        <p style="text-align:right; height:18px;">
+            <a href="javascript:closead();"  title="关闭">
+                <img src="/statics/jxufe/images/close.gif">
+            </a>
+        </p>
+            
+        <a href="http://zsjy.jxufe.edu.cn/web/index.html" target="_blank">
+            <img src="https://www.jxufe.edu.cn/uploadfile/69/202406/125ab8d2ee.png" width="300">
+        </a>
+    </div> 
+
+
+         <script type="text/javascript">
+                var ad1=new AdMove("gg1");
+                ad1.Run();
+        </script> -->
+
+
+    
+</body>
+<script type="text/javascript">
+   $(function() {
+        $('.ul1 li').mousemove(function() {
+            $('.ul1 li').removeClass('active');
+            $(this).addClass('active');
+
+            let tab = $(this).data('tab');
+            $('.ul1 .more_left').each(function() {
+                if($(this).data('tab') == tab) {
+                  $('.ul1 .more_left').removeClass('active');
+                  $(this).addClass('active');
+                }
+            })
+
+            $('.ul2 li').each(function() {
+                if($(this).data('tab') == tab) {
+                  $('.ul2 li').removeClass('active');
+                  $(this).addClass('active');
+                }
+            })
+		})
+		
+		$('.lis1').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+		$('.lis2').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		});
+		$('.lis3').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+		$('.lis4').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+		$('.lis5').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+		$('.lis6').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+		$('.lis7').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+		$('.lis8').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+		$('.lis9').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+		$('.lis10').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+		$('.lis11').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+        $('.lis12').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+        $('.lis15').hover(function () {
+			$(this).find('i.i_one').hide();
+			$(this).find('i.i_tow').css('display', 'block');
+		}, function () {
+			$(this).find('i.i_tow').hide();
+			$(this).find('i.i_one').css('display', 'block');
+		})
+    })
+</script>
+<script type="text/javascript" src="/statics/js/tj.js"></script>
+</html>

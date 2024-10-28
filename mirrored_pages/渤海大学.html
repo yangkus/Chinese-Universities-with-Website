@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" th:content="智慧门户-渤海大学"/>
+    <meta name="description" th:content="智慧门户-渤海大学"/>
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>渤海大学</title>
+
+            <link rel="stylesheet" href="/assets/lib/jqcloud/jqcloud.css">
+            <link rel="stylesheet" href="/assets/lib/select2/select2.min.css">
+            <link rel="stylesheet" href="/assets/lib/swiper2/idangerous.swiper.css">
+            <link rel="stylesheet" href="/assets/lib/swiper2/idangerous.swiper.3dflow.css">
+            <link rel="stylesheet" href="/assets/lib/mCustomScrollBar/jquery.mCustomScrollbar.css">
+            <link rel="stylesheet" href="/assets/lib/liMarquee/liMarquee.css?v=20201106">
+
+</head>
+<body class="grid-bottom-spacer">
+<p style="font-size:1px !important;height: 0px;overflow: hidden">智慧门户平台提供在线自助建站服务。平台易用，用户使用拖拽方式、所见即所得，搭建过程轻松、零代码；具有丰富的模板体现不同行业的特征与风格；布局模块搭配样式模板，满足用户的各类样式需求；添加内容多方式，可本地添加和外接数据；持续统计分析数据，用户随时掌握网站概况。
+</p>
+<div id="htContainer" style="height:100%" >
+</div>
+
+<script src="/assets/lib/jquery.min.js"></script>
+<script src="/assets/lib/jquery.lazyload.js"></script>
+<script src="/assets/lib/layui/layui.js"></script>
+<script src="/assets/lib/vue.js"></script>
+<script src="/assets/lib/gridstack/gridstack.js"></script>
+<script src="/assets/js/common.js"></script>
+
+        <script src="/assets/lib/jqcloud/jqcloud-1.0.4.js"></script>
+        <script src="/assets/lib/select2/select2.min.js"></script>
+        <script src="/assets/lib/swiper2/idangerous.swiper.min.js"></script>
+        <script src="/assets/lib/swiper2/idangerous.swiper.3dflow.js"></script>
+        <script src="/assets/lib/jqthumb.min.js"></script>
+        <script src="/assets/lib/mCustomScrollBar/jquery.mCustomScrollbar.min.js"></script>
+        <script src="/assets/lib/jquery.md5.js"></script>
+        <script src="/assets/lib/subscribe/externalSub.js"></script>
+        <script src="/assets/lib/xlPaging.js"></script>
+        <script src="/assets/lib/schedule.js?v=20201106"></script>
+        <script src="/assets/lib/liMarquee/jquery.liMarquee.js"></script>
+        <script src="/assets/lib/tagcloud-common.js"></script>
+        <script src="/assets/lib/DataNumber.js"></script>
+        <script src="/assets/lib/jqueryCountup/count.js"></script>
+
+<script type="text/javascript">
+    var pageId = 55965;
+    var websiteId = 43901;
+    var jsonId = 57670;
+    var leftNavId = '';
+    var fromViewIndex = true;
+    var p_wfwfid = 138779;
+    var p_tipsData = '';
+    var isLogin = false;
+    var isBeginnerGuide = 0;
+    var sfid = '';
+    $(function(){
+        if (isLogin === false &&  isBeginnerGuide == 1){
+            updateLocalStorage();
+        }
+    })
+    function updateLocalStorage() {
+        var count = window.localStorage.getItem("visitCount");
+        if (count === null) {
+            window.localStorage.setItem("visitCount", "1");
+        }else{
+            var number = Number(count) + 1;
+            window.localStorage.setItem("visitCount", number.toString());
+        }
+    }
+    $("#htContainer").load('/page/ck/peking_library')
+</script>
+
+    <div><script type="text/javascript" src="/upload/portal/bhu.js?v=20231220"></script></div>
+    <div><script type="text/javascript" src="/upload/portal/ztjyzt.js?v=20230727"></script></div>
+</body>
+</html>

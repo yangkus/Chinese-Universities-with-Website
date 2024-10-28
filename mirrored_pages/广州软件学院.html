@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="renderer" content="webkit|ie-comp|ie-stand"><!--强制360优先使用极速模式-->
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes"><!--强制不显示工具栏和菜单栏-->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>广州软件学院</title>
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/favicon.ico" rel="apple-touch-icon" type="image/x-icon">
+<link href="/Public/css/base.css"  rel="stylesheet" type="text/css">
+<script src="/Public/js/jquery-1.7.2.min.js" type="text/javascript" ></script>
+
+<!--[if lt IE 9]>
+<script src="/Public/js/html5.min.js" type="text/javascript"></script>
+<link href="/Public/css/forie6.css" rel="stylesheet" type="text/css"> 
+<![endif]-->
+<!--[if lt IE 8]>
+<link href="/Public/css/forie.css" rel="stylesheet" type="text/css"> 
+<![endif]-->
+<!--浮动图表-->
+<!--<script type="text/javascript" language="javascript">  
+
+        //公共脚本文件 main.js  
+        function addEvent(obj, evtType, func, cap) {
+            cap = cap || false;
+            if (obj.addEventListener) {
+                obj.addEventListener(evtType, func, cap);
+                return true;
+            } else if (obj.attachEvent) {
+                if (cap) {
+                    obj.setCapture();
+                    return true;
+                } else {
+                    return obj.attachEvent("on" + evtType, func);
+                }
+            } else {
+                return false;
+            }
+        }
+        function getPageScroll() {
+            var xScroll, yScroll;
+            if (self.pageXOffset) {
+                xScroll = self.pageXOffset;
+            } else if (document.documentElement && document.documentElement.scrollLeft) {
+                xScroll = document.documentElement.scrollLeft;
+            } else if (document.body) {
+                xScroll = document.body.scrollLeft;
+            }
+            if (self.pageYOffset) {
+                yScroll = self.pageYOffset;
+            } else if (document.documentElement && document.documentElement.scrollTop) {
+                yScroll = document.documentElement.scrollTop;
+            } else if (document.body) {
+                yScroll = document.body.scrollTop;
+            }
+            arrayPageScroll = new Array(xScroll, yScroll);
+            return arrayPageScroll;
+        }
+        function GetPageSize() {
+            var xScroll, yScroll;
+            if (window.innerHeight && window.scrollMaxY) {
+                xScroll = document.body.scrollWidth;
+                yScroll = window.innerHeight + window.scrollMaxY;
+            } else if (document.body.scrollHeight > document.body.offsetHeight) {
+                xScroll = document.body.scrollWidth;
+                yScroll = document.body.scrollHeight;
+            } else {
+                xScroll = document.body.offsetWidth;
+                yScroll = document.body.offsetHeight;
+            }
+            var windowWidth, windowHeight;
+            if (self.innerHeight) {
+                windowWidth = self.innerWidth;
+                windowHeight = self.innerHeight;
+            } else if (document.documentElement && document.documentElement.clientHeight) {
+                windowWidth = document.documentElement.clientWidth;
+                windowHeight = document.documentElement.clientHeight;
+            } else if (document.body) {
+                windowWidth = document.body.clientWidth;
+                windowHeight = document.body.clientHeight;
+            }
+            if (yScroll < windowHeight) {
+                pageHeight = windowHeight;
+            } else {
+                pageHeight = yScroll;
+            }
+            if (xScroll < windowWidth) {
+                pageWidth = windowWidth;
+            } else {
+                pageWidth = xScroll;
+            }
+            arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+            return arrayPageSize;
+        }
+        /*
+        <div id="Div2">
+        ***** content ******
+        </div>
+        var ad=new AdMove("Div2");
+        ad.Run();
+        */
+        ////////////////////////////////////////////////////////  
+        var AdMoveConfig = new Object();
+        AdMoveConfig.IsInitialized = false;
+        AdMoveConfig.ScrollX = 0;
+        AdMoveConfig.ScrollY = 0;
+        AdMoveConfig.MoveWidth = 0;
+        AdMoveConfig.MoveHeight = 0;
+        AdMoveConfig.Resize = function() {
+            var winsize = GetPageSize();
+            AdMoveConfig.MoveWidth = winsize[2];
+            AdMoveConfig.MoveHeight = winsize[3];
+            AdMoveConfig.Scroll();
+        }
+        AdMoveConfig.Scroll = function() {
+            var winscroll = getPageScroll();
+            AdMoveConfig.ScrollX = winscroll[0];
+            AdMoveConfig.ScrollY = winscroll[1];
+        }
+        addEvent(window, "resize", AdMoveConfig.Resize);
+        addEvent(window, "scroll", AdMoveConfig.Scroll);
+        function AdMove(id) {
+            if (!AdMoveConfig.IsInitialized) {
+                AdMoveConfig.Resize();
+                AdMoveConfig.IsInitialized = true;
+            }
+            var obj = document.getElementById(id);
+            obj.style.position = "absolute";
+            var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+            var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+            var x = W * Math.random(), y = H * Math.random();
+            var rad = (Math.random() + 1) * Math.PI / 6;
+            var kx = Math.sin(rad), ky = Math.cos(rad);
+            var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
+            var step = 1;
+            var interval;
+            this.SetLocation = function(vx, vy) { x = vx; y = vy; }
+            this.SetDirection = function(vx, vy) { dirx = vx; diry = vy; }
+            obj.CustomMethod = function() {
+                obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+                obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+                rad = (Math.random() + 1) * Math.PI / 6;
+                W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+                H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+                x = x + step * kx * dirx;
+                if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+                if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
+                y = y + step * ky * diry;
+                if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+                if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
+            }
+            this.Run = function() {
+                var delay = 25; //移动速度  
+                interval = setInterval(obj.CustomMethod, delay);
+                obj.onmouseover = function() { clearInterval(interval); }
+                obj.onmouseout = function() { interval = setInterval(obj.CustomMethod, delay); }
+            }
+        }  
+ 
+    </script>
+
+
+    <span id="ad1" style="position:absolute;z-index:1001">
+        <a href="https://mp.weixin.qq.com/s/NsdKrppmRVcnN-n8ET5Kvg" target="_blank">
+            <img src="/Public/images/20201118.jpg" alt="" width="309" height="106" border="0" />
+        </a>
+    </span>
+    <script type="text/javascript" language="javascript">  
+       var ad1 = new AdMove("ad1");
+       ad1.Run();
+    </script>//--> 
+
+
+</head>
+<body>
+
+<div class="clearfix">
+</div>
+
+
+<header class="header">
+    <section>
+    <section class="clearfix">
+        <section class="mobile-Nav">
+            <div class="mlogo left"><a href=""><img src="/Public/images/logo-x.png"></a></div>
+            <div class="mNav right"><img id="subNavlogo" src="/Public/images/mobilenav.png" style="width:22px;height:17px;padding-bottom:6px;"></div>
+        </section>
+        <section id="mobileMenu" class="mobileshow clearfix">
+            <div class="mobileSub">
+                <ul>
+                    <li><a href="/sise/about.html">学校简介</a></li>
+                    <li><a href="http://zs.seig.edu.cn/recruit/detail/news?article_id=457&menu_id=183&sidebar_index=2">招生咨询</a></li>
+                    <li><a href="http://zs.seig.edu.cn/">本科招生</a></li>
+                    <li><a href="http://dwc.seig.edu.cn/">国际教育</a></li>
+                    <li><a href="/sise/leads.html">学校领导</a></li>
+                    <li><a href="http://job.seig.edu.cn/">就业指导</a></li>
+                    <!--<li><a href="/sise/search/index.html">录取查询</a></li>-->
+                    <li><a href="/sise/zhici.html">校长寄语</a></li>
+                    <li><a href="/sise/deparment.html">管理机构</a></li>
+                    <li><a href="/sise/map.html">校园地图</a></li>
+                    <li><a href="/sise/index/11">广软视频</a></li>
+                    <li><a href="http://cp.seig.edu.cn/">党的建设</a></li>
+                    <!--<li><a href="#">优秀学子</a></li>
+                    <li><a href="#">教学科研</a></li>-->
+                    <li><a href="http://lib.seig.edu.cn/">图书馆</a></li>
+                    <li><a href="/sise/tese.html">办学特色</a></li>
+                    <!--<li><a href="#">服务外包</a></li>
+                    <li><a href="#">学生工作</a></li>
+                    <li><a href="#">合作办学</a></li>
+                    <li><a href="#">学科竞赛</a></li>
+                    <li><a href="#">学生作品</a></li>
+                    <li><a href="#">共青团</a></li>-->
+                    <li><a href="/sise/fengmian/fmgs_59/fmgs.html">图片广软</a></li>
+                    <!--<li><a href="#">学子作品</a></li>-->
+                    <li><a href="/sise/alumni/list_1.html">校友回味坊</a></li>
+                    <!--<li><a href="#">学生社团</a></li>-->
+                    <li><a href="/sise/index/12">人才招聘</a></li>
+                    <li><a href="/sise/index/13">名师风采</a></li>
+                    <li><a href="/sise/teacher.html">师资力量</a></li>
+                    <!--<li><a href="#">教师系统</a></li>
+                    <li><a href="#">学生系统</a></li>
+                    <li><a href="#">邮件系统</a></li>-->
+                    <li><a href="http://cie.seig.edu.cn/">创新学院</a></li>
+                    <li><a href="http://bid.seig.edu.cn/">采购信息</a></li>
+                    <li><a href="http://xxgk.seig.edu.cn/">信息公开</a></li>
+                    <!--<li><a href="/sise/law.html">依法治校</a></li>-->
+                </ul>
+            </div>
+        </section>
+        <div class="wrapNav">
+            <div class="submain subNav">
+                <ul class="subnavBg right">
+                    <li><a href="http://mail.seig.edu.cn" target="_black">邮箱登陆</a></li>
+                    <li><a href="http://my.seig.edu.cn" target="_black">教师系统</a></li>
+                    <li><a href="http://stu.seig.edu.cn" target="_black">学生系统</a></li>
+                    <li><a href="http://home.seig.edu.cn" target="_black">广软导航</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+        <div class="bgpic">
+            <div class="subtop">
+                <div class="submain">
+                    <a class="logo1" href="" title="广州软件学院"><img src="/Public/images/logonews.png"></a>
+                        <div class="main-menu">
+                            <ul id="cssmenu" class="topmenu">
+                                <li class="topmenu"><a href="/sise/about.html" target="_self">学校概况</a>
+                                   <div class="submenu" style="width:218px;">
+                                     <div class="column" style="width:50%">
+                                       <ul>
+                                        <li><a href="/sise/about.html"  target="_self">学校简介</a></li>
+                                        <li><a href="/sise/leads.html"  target="_self">学校领导</a></li>
+                                        <li><a href="/sise/map.html"  target="_self">校园地图</a></li>
+                                      </ul>
+                                     </div>
+                                     <div class="column" style="width:50%">
+                                       <ul>
+                                        <li><a href="/sise/zhici.html"  target="_self">校长寄语</a></li>
+                                        <li><a href="/sise/deparment.html"  target="_self">组织机构</a></li>
+                                        <li><a href="/sise/index/11"  target="_self">广软视频</a></li>
+                                       </ul> 
+                                     </div>
+                                   </div>
+                                </li>
+                                <li class="topmenu"><a href="http://cp.seig.edu.cn/" target="_self">党的建设</a>
+                                </li>
+                                <li class="topmenu"><a href="http://zs.seig.edu.cn/" target="_self">招生就业</a>
+                                   <div class="submenu" style="width:218px;">
+                                     <div class="column" style="width:50%">
+                                       <ul>
+                                        <li><a href="http://zs.seig.edu.cn/" class="arrow" target="_blank">本科招生</a></li>
+                                        <li><a href="http://zs.seig.edu.cn/recruit/detail/news?article_id=457&menu_id=183&sidebar_index=2" class="arrow" target="_blank">招生咨询</a></li>
+                                         <li><a href="http://jxjy.seig.edu.cn/zs/" class="arrow" target="_blank">继续教育学院</a></li>
+                                        
+                                      </ul>
+                                     </div>
+                                     <div class="column" style="width:50%">
+                                       <ul>
+                                        <li><a href="http://dwc.seig.edu.cn/" class="arrow" target="_blank">国际教育</a></li>
+                                        <li><a href="http://job.seig.edu.cn/" class="arrow" target="_blank">就业指导</a></li>
+                                        <li><a href="http://crjy.seig.edu.cn/" class="arrow" target="_blank">成人专升本</a></li>
+                                       </ul> 
+                                     </div>
+                                   </div>
+                                </li>
+                                <li class="topmenu"><a href="/sise/index/3" target="_self">人才培养</a>
+                                   <div class="submenu" style="width:218px;">
+                                     <div class="column" style="width:50%">
+                                       <ul>
+                                        <li><a href="http://teach.seig.edu.cn/" class="arrow" target="_blank">教学科研</a></li>
+                                        <li><a href="/sise/index/3" class="arrow" target="_self">学科竞赛</a></li>
+                                        <li><a href="/sise/index/15" class="arrow" target="_self">优秀学子</a></li>
+                                      </ul>
+                                     </div>
+                                     <div class="column" style="width:50%">
+                                       <ul>
+                                        <li><a href="http://xsc.seig.edu.cn/" class="arrow" target="_blank">学生工作</a></li>
+                                        <li><a href="/sise/index/14" class="arrow" target="_self">学生作品</a></li>
+                                       </ul> 
+                                     </div>
+                                   </div>
+                                </li>
+                                <li class="topmenu"><a href="#" target="_self">校园文化</a>
+                                   <div class="submenu" style="width:218px;">
+                                     <div class="column" style="width:50%">
+                                       <ul>
+                                        <li><a href="http://tuanwei.seig.edu.cn/" class="arrow" target="_blank">共青团</a></li>
+                                        <li><a href="/sise/fengmian/fmgs_59/fmgs.html" class="arrow" target="_blank">图片广软</a></li>
+                                      </ul>
+                                     </div>
+                                     <div class="column" style="width:50%">
+                                       <ul>
+                                        <li><a href="http://www.seig.edu.cn/sise/fengmian/fmgs_61/fmgs.html" class="arrow" target="_blank">学生社团</a></li>
+                                        <li><a href="/sise/alumni/list_1.html" class="arrow" target="_blank">校友回味坊</a></li>
+                                       </ul> 
+                                     </div>
+                                   </div>
+                                </li>
+                                <li class="topmenu"><a href="/sise/teacher.html" target="_self">队伍建设</a>
+                                   <div class="submenu" style="width:109px;">
+                                       <ul>
+                                        <li><a href="/sise/index/12" class="arrow" target="_self">人才招聘</a></li>
+                                        <li><a href="/sise/index/13" class="arrow" target="_self">名师风采</a></li>
+                                        <li><a href="/sise/teacher.html" class="arrow" target="_self">师资力量</a></li>
+                                       </ul> 
+                                   </div>
+                                </li>
+                                <li class="topmenu"><a href="http://cie.seig.edu.cn/" target="_blank">双创学院</a></li>
+                                <li class="topmenu"><a href="http://lib.seig.edu.cn/" target="_blank">图书馆</a></li>
+                                <li class="topmenu"><a href="/sise/law.html" target="_self">信息公开</a>
+                                   <div class="submenu" style="width:109px;">
+                                       <ul>
+                                        <li><a href="http://bid.seig.edu.cn/" class="arrow" target="_blank">采购信息</a></li>
+                                        <li><a href="http://xxgk.seig.edu.cn/" class="arrow" target="_blank">信息公开</a></li>
+                                        <li><a href="/sise/index/16" class="arrow" target="_self">校园公示</a></li>
+                                        <li><a href="/sise/law.html" class="arrow" target="_self">依法治校</a></li>
+                                        </ul>
+                                   </div>
+                                </li>
+                                <li class="topmenu"><a href="http://xiaoqing.seig.edu.cn/" target="_blank"><font color="red">校庆专题网</font></a></li>
+                            </ul>
+                    </div>
+                    <!--mune end-->
+                </div>
+            </div>
+            <section class="iosSliderDemo" style="padding-bottom: 583px;">
+                    <div class="fluidHeight" style="height: 583px;">
+                        <div class="sliderContainer" style="max-height: 583px;">
+                            <div class="iosSlider" style="">
+                                <div class="slider" style="">
+                                    <div class="item item1" style="">
+                                        <div class="inner">
+                                            <a href="#" target="_blank"><img src="/Uploads/2024-09-29/66f8ce87b7de7.jpg" alt="中秋节" style="text-align:center;vertical-align:middle;"></a>
+                                            <div class="selectorShadow"></div>
+                                            <!--<div class="text1" style=""><a href="" target="_blank"><span>中秋节</span></a></div>-->
+                                        </div>
+                                     </div><div class="item item1" style="">
+                                        <div class="inner">
+                                            <a href="#" target="_blank"><img src="/Uploads/2024-09-09/66debd6f0b8f0.jpg" alt="网络安全周" style="text-align:center;vertical-align:middle;"></a>
+                                            <div class="selectorShadow"></div>
+                                            <!--<div class="text1" style=""><a href="" target="_blank"><span>网络安全周</span></a></div>-->
+                                        </div>
+                                     </div><div class="item item1" style="">
+                                        <div class="inner">
+                                            <a href="#" target="_blank"><img src="/Uploads/2024-09-06/66dac22767d19.jpg" alt="9.6" style="text-align:center;vertical-align:middle;"></a>
+                                            <div class="selectorShadow"></div>
+                                            <!--<div class="text1" style=""><a href="" target="_blank"><span>9.6</span></a></div>-->
+                                        </div>
+                                     </div><div class="item item1" style="">
+                                        <div class="inner">
+                                            <a href="#" target="_blank"><img src="/Uploads/2024-04-22/662605fb80454.jpg" alt="3.7" style="text-align:center;vertical-align:middle;"></a>
+                                            <div class="selectorShadow"></div>
+                                            <!--<div class="text1" style=""><a href="#" target="_blank"><span>3.7</span></a></div>-->
+                                        </div>
+                                     </div>                           
+                                </div>
+                            </div>
+                            <!--<div class="slideSelectors">#                                <div class="prev" style="cursor: pointer;"></div>
+                                <div class="item" style="cursor: pointer;"></div>
+                                <div class="item" style="cursor: pointer;"></div>
+                                <div class="item selected" style="cursor: pointer;"></div>
+                                <div class="item" style="cursor: pointer;"></div>
+                                <div class="item" style="cursor: pointer;"></div>
+                                <div class="item" style="cursor: pointer;"></div>
+                                <div class="next" style="cursor: pointer;"></div>
+                            </div>-->
+                            <div class="scrollbarContainer"></div>
+                        </div>
+                </div>
+            </section>  
+        </div>
+    </section>
+</header>
+<!--end header-->
+
+<article class="content">
+    <section class="container">
+    <div class="dbg">
+    <section class="submain">   
+        <div class="hr_sise">
+            <h2><a href="#">广软要闻/News</a></h2>
+            <div class="hr_news">
+                <span><a href="https://news.seig.edu.cn/cms/news/3.html"><font color="#9d1d15">视频</font></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://news.seig.edu.cn/cms/picslider/lists"><font color="#9d1d15">图片</font></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="aleft" href="https://news.seig.edu.cn">进入新闻网</a></span>
+                <div class="hr_sise_left left">
+                <a href=" https://news.seig.edu.cn/cms/8379.html" target="_blank"><img src="/Uploads/2024-10-23/6718c4a086cc2.JPG" alt="健康生活、快乐工作，学校工会举办2024年教职工登山活动（图文）"></a>
+                    <a href=" https://news.seig.edu.cn/cms/8379.html" target="_blank">
+                    <h3>健康生活、快乐工作，学校工会举办2024年教职工登山活动（图文）</h3></a>
+                    <p>本网讯  10月22日下午，广州软件学院工会举办以“快乐工作、健康生活”为主题的2024年教职工登山活动。 [2024-10-23]</p>                </div>
+                <div class="hr_sise_right right">
+                    <li><a href="https://news.seig.edu.cn/cms/8381.html" target="_blank">我校2025届毕业生就业工作全面启动（图文）</a></li><li><a href="https://news.seig.edu.cn/cms/8375.html" target="_blank">喜报！全国总决赛银奖，广软再+1！（图文）</a></li><li><a href="https://news.seig.edu.cn/cms/8371.html" target="_blank">本科教学工作合格评估 | 评建办召开2024年第7次工作会议（图文</a></li><li><a href="https://news.seig.edu.cn/cms/8373.html" target="_blank">我校举行教学成果奖申报工作专题培训会（图文）</a></li>                </div>
+            </div>
+        </div>
+        <div class="hr_left left">
+            <div class="hr_kx">
+                <div style="position:relative">
+                    <h2 class="left"><a href="https://news.seig.edu.cn/cms/news/2.html">校园快讯</a></h2>
+                    <a href="https://news.seig.edu.cn/cms/news/2.html" class="more right" target="_blank">更多</a>
+                </div>
+                <div class="kx_position">
+                    <div class="img-box">
+                            <span class="moth">十月</span>
+                            <span class="days">25</span>
+                        </div>
+                        <p title="校地联合开展“学习宪法精神 争做守法公民”主题实践活动（图文）"><a href="https://news.seig.edu.cn/cms/8382.html" target="_blank">校地联合开展“学习宪法精神 争做守法公民”主题实践活动（图文）</a></p>
+                        <span class="text"></span>                </div>
+                <ul>
+                    <li><a href="https://news.seig.edu.cn/cms/8378.html" target="_blank" title="我校开展青年教师教学大赛打磨培训会（图文）">我校开展青年教师教学大赛打磨培训会（图文）</a><span class="time">2024-10-24</span></li><li><a href="https://news.seig.edu.cn/cms/8376.html" target="_blank" title="数码媒体系赴上茗轩茶叶有限责任公司开展校企合作交流(图文)">数码媒体系赴上茗轩茶叶有限责任公司开展校企合作交流(图文)</a><span class="time">2024-10-23</span></li><li><a href="https://news.seig.edu.cn/cms/8377.html" target="_blank" title="广州软件学院、北京中软国际举办第二届物联网工程（鸿蒙实验班）启航仪式">广州软件学院、北京中软国际举办第二届物联网工程（鸿蒙实验班）启航仪式</a><span class="time">2024-10-23</span></li>                </ul>
+            </div>
+            <!--[if lt IE 8]>
+            <div style="height:1px;line-height:1px"></div>
+            <![endif]-->
+            <div class="hr_mt">
+                <div style="position:relative">
+                    <h2 class="left"><a href="https://news.seig.edu.cn/cms/news/5.html">媒体广软</a></h2>
+                    <a href="https://news.seig.edu.cn/cms/news/5.html" class="more right" target="_blank">更多</a>
+                </div>
+                <div class="kx_position">
+                    <div class="img-box">
+                            <span class="moth">九月</span>
+                            <span class="days">13</span>
+                        </div>
+                        <p title="【《广府人》杂志】梁冠军：跨越重洋赤子心"><a href="https://news.seig.edu.cn/cms/8353.html" target="_blank">【《广府人》杂志】梁冠军：跨越重洋赤子心</a></p>
+                        <span class="text">在浩瀚的太平洋另一端，有这样一位风风火火的“行动派”，他以非凡的勇气和智慧，在异国他乡书写着自己的传奇篇章。</span>                </div>
+                <ul>
+                    <li><a href="https://news.seig.edu.cn/cms/8344.html" target="_blank" title="【南方都市报】深观察｜传统优势学科专业还热门吗？文科商科专业遇冷了吗？（节选）">【南方都市报】深观察｜传统优势学科专业还热门吗？文科商科专业遇冷了吗？（节选）</a><span class="time">2024-09-10</span></li><li><a href="https://news.seig.edu.cn/cms/8342.html" target="_blank" title="【羊城晚报】高分段考生数量较往年明显增加！广软2024年广东省生源质量稳步提升">【羊城晚报】高分段考生数量较往年明显增加！广软2024年广东省生源质量稳步提</a><span class="time">2024-09-10</span></li><li><a href="https://news.seig.edu.cn/cms/8343.html" target="_blank" title="【广州日报】高分段考生数量较往年明显增加！广东这家高校生源质量稳步提升">【广州日报】高分段考生数量较往年明显增加！广东这家高校生源质量稳步提升</a><span class="time">2024-09-10</span></li>                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="hr_right right">
+            <div class="hr_pw">
+                <dl class="three">
+                    <dt><a href="https://news.seig.edu.cn/cms/news/6.html"><img src="/Public/images/c.png"><span>学科竞赛</span></a></dt>
+                    <dd class="linebottom">
+                    <!---->
+                    <a href="https://news.seig.edu.cn/cms/news/6.html"><img src="/Public/images/xsjs.jpg" width="305" height="105"></a>
+                <!---->
+                    </dd>
+                    <dd class="js">
+                        <ul>
+                         <li><a href="https://news.seig.edu.cn/cms/8380.html" target="_blank">我校学子摘得第七届全国高校大学日语演讲比</a><span class="time">2024-10-24</span></li><li><a href="https://news.seig.edu.cn/cms/8368.html" target="_blank">2个三等奖！我校在2024年广东省高校美育改革</a><span class="time">2024-10-15</span></li><li><a href=" https://news.seig.edu.cn/cms/8337.html" target="_blank">银奖+4！洽谈签约+1！广软学子在中国国际大学生</a><span class="time">2024-08-26</span></li>                        </ul>
+                    </dd>
+                </dl>
+                <dl class="three">
+                    <dt><a href="/sise/index/lists/cid/4"><img src="/Public/images/d.png"><span>讲座预告</span></a></dt>
+                    <dd class="linebottom">
+                    <a href="/sise/article/2915.html" target="_blank"><img src="/Uploads/2023-09-14/6502ca5c8f8a6.jpg" alt="引航计划人工智能项目专场宣讲会暨智能大模型技术主题讲座" width="305" height="105" ></a>                    </dd>
+                    <dd class="js">
+                        <ul>
+                         <li><a href="/sise/article/3077.html" target="_blank">创意IP如何转化为商品</a><span class="time">2024-06-25</span></li><li><a href="/sise/article/3076.html" target="_blank">大模型和软件开发新型实践主题报告</a><span class="time">2024-06-24</span></li><li><a href="/sise/article/3070.html" target="_blank">AI人工智能与数字设计</a><span class="time">2024-06-06</span></li>                        </ul>
+                    </dd>
+                </dl>
+                <dl class="one">
+                    <dt><a href="https://news.seig.edu.cn/cms/news/8.html"><img src="/Public/images/a.png"><span>专 题</span></a></dt>
+                    <dd><style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(255,255,255,.6);
+    text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
+    background: #5b4d3d;
+    box-shadow: 0 1px 2px rgba(0,0,0,.25);
+}
+.banner ul,
+.banner ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.banner ul li {
+    display: block;
+    float: left;
+    width: 33%;
+    min-height: 1px;
+    -o-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    box-shadow: inset 0 -3px 6px rgba(0,0,0,.1);
+}
+.banner .inner {
+    padding: 160px 0 110px;
+}
+.banner h1, .banner h2 {
+    font-size: 40px;
+    line-height: 52px;
+    color: #fff;
+}
+.banner .btn {
+    display: inline-block;
+    margin: 25px 0 0;
+    padding: 9px 22px 7px;
+    clear: both;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,.4);
+    border-radius: 5px;
+}
+.banner .btn:hover {
+    background: rgba(255,255,255,.05);
+}
+.banner .btn:active {
+    -webkit-filter: drop-shadow(0 -1px 2px rgba(0,0,0,.5));
+    -moz-filter: drop-shadow(0 -1px 2px rgba(0,0,0,.5));
+    -ms-filter: drop-shadow(0 -1px 2px rgba(0,0,0,.5));
+    -o-filter: drop-shadow(0 -1px 2px rgba(0,0,0,.5));
+    filter: drop-shadow(0 -1px 2px rgba(0,0,0,.5));
+}
+.banner .btn, .banner .dot {
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+    -moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+    -ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+    -o-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+}
+.banner .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    width: 100%;
+}
+.banner .dots li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    margin: 0 4px;
+    text-indent: -999em;
+    *text-indent: 0;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: .4;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+}
+.banner .dots li.active {
+    background: #fff;
+    opacity: 1;
+}
+</style>
+<script type="text/javascript" src="/Addons/ImageSlider/Unslider/unslider.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('.banner').unslider({
+        speed: 500,               //  The speed to animate each slide (in milliseconds)
+        delay: 8000,              //  The delay between slide animations (in milliseconds), false for no autoplay
+        complete: function() {},  //  A function that gets called after every slide animation
+        keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+        dots: true,               //  Display dot navigation
+        fluid: false              //  Support responsive design. May break non-responsive designs
+    });
+});
+</script>
+<div class="banner clearfix">
+    <ul>
+        <!-- 插件配置幻灯片-->
+      <li><a href="https://www.seig.edu.cn/sise/fengmian/junxun/" target="_blank"><img src="/Uploads/2023-07-19/64b7597522755.jpg" style="width:305px;height:179px;"/></a></li><li><a href="https://www.seig.edu.cn/sise/fengmian/dangshi/" target="_blank"><img src="/Uploads/2021-04-20/607e9f3fb01f4.jpg" style="width:305px;height:179px;"/></a></li><li><a href="https://www.seig.edu.cn/sise/fengmian/kangyi/" target="_blank"><img src="/Uploads/2020-11-02/5f9f5efc83832.jpg" style="width:305px;height:179px;"/></a></li><li><a href="https://www.seig.edu.cn/sise/fengmian/dupinyufang/" target="_blank"><img src="/Uploads/2020-02-18/5e4b9cc6d5243.jpg" style="width:305px;height:179px;"/></a></li>      <!-- 内容推荐幻灯片
+      <article:position name="postion" pos="$config['position']" limit="5" category="$config['category']">
+            <li>
+                <a href="/sise/article/detail.html" target="_blank">
+                    <img src="" style="width:305px;height:179px;"/>
+                </a>
+                <div class="inner"><h1></h1><p></p><a class="btn" href="#"></a></div>
+            </li>
+      </article:position>-->
+    </ul>
+</div></dd>
+                </dl>
+
+            </div>
+        </div>
+
+
+<!--平台-->
+<div class="hr_weixin left">
+    <div class="hr_wp">
+        <div style="position:relative">
+            <h2 class="left"><a href="#">媒体平台</a></h2>
+                <!--<a href="https://news.seig.edu.cn/cms/news/5.html" class="more right" target="_blank">更多</a>-->
+        </div>
+        <div class="kx_position">
+        <div class="figure">
+                <div class="thumbImg">
+                    <a href="https://mp.weixin.qq.com/s/xpMHKN-huOHWghRHvIFxfg" target="_blank"><img class="lazyLoad" src="/Uploads/2024-03-19/65f9082bf1b36.png" alt="高质量发展，2024广软这样干！" oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onpaste="return false" oncopy="return false" oncut="return false"></a>
+                </div>
+                <div class="figcaption">
+                    <a href="https://mp.weixin.qq.com/s/xpMHKN-huOHWghRHvIFxfg" title="高质量发展，2024广软这样干！" target="_blank">高质量发展，2024广软这样干！</a>
+                    <span class="time">2024-03-19</span>
+                </div>
+            </div><div class="figure">
+                <div class="thumbImg">
+                    <a href="https://mp.weixin.qq.com/s/dvzKhJWFe7T0X6uzIVEtRw" target="_blank"><img class="lazyLoad" src="/Uploads/2024-03-19/65f9079f817b8.png" alt="你要的广软版课本封面来了！" oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onpaste="return false" oncopy="return false" oncut="return false"></a>
+                </div>
+                <div class="figcaption">
+                    <a href="https://mp.weixin.qq.com/s/dvzKhJWFe7T0X6uzIVEtRw" title="你要的广软版课本封面来了！" target="_blank">你要的广软版课本封面来了！</a>
+                    <span class="time">2024-03-19</span>
+                </div>
+            </div><div class="figure">
+                <div class="thumbImg">
+                    <a href="https://mp.weixin.qq.com/s/Prn5kTz6kK8Wo9iwChSDQA" target="_blank"><img class="lazyLoad" src="/Uploads/2024-03-19/65f90436c9059.jpg" alt="100+人、全国第33，广软跑族打卡清马！" oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onpaste="return false" oncopy="return false" oncut="return false"></a>
+                </div>
+                <div class="figcaption">
+                    <a href="https://mp.weixin.qq.com/s/Prn5kTz6kK8Wo9iwChSDQA" title="100+人、全国第33，广软跑族打卡清马！" target="_blank">100+人、全国第33，广软跑族打卡清马！</a>
+                    <span class="time">2024-03-19</span>
+                </div>
+            </div>            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="hr_720 right">
+    <div class="hr_720_ps">
+        <div class="hr_720_text"><font></font></div>
+        <div class="thumbImg720" onclick="window.open('/720hr/')" >
+            <img class="" src="/Public/images/720map.jpg">
+        </div>
+    </div>
+</div>
+
+<div class="hr_pc left">
+<script type="text/javascript" src="/Public/js/Lunbo.js" ></script>
+        <div class="piccontent">    
+            <div class="Box_con clearfix">
+                <span class="btnl btn" id="btnl"></span>
+                <span class="btnr btn" id="btnr"></span>
+                
+                <div class="conbox" id="BoxUl">
+                    <ul>
+                        <li class="cur">
+                            <a class="item" href="/sise/article/175.html" target="_blank">
+                                <b></b>
+                                <img src="/Public/images/img/6.jpg">
+                                <span>学校宣传片</span>
+                            </a>
+                        </li>
+                        <li class="cur">
+                            <a class="item" href="/sise/article/1416.html" target="_blank">
+                                <b></b>
+                                <img src="/Public/images/img/7.jpg">
+                                <span>廿载启新程 广软再出发</span>
+                            </a>
+                        </li>
+                        <li class="cur">
+                            <a class="item" href="/sise/article/174.html" target="_blank">
+                                <b></b>
+                                <img src="/Public/images/img/8.jpg">
+                                <span>广州软件学院校园风光片</span>
+                            </a>
+                        </li>
+                        <li class="cur">
+                            <a class="item" href="/sise/article/705.html" target="_blank">
+                                <b></b>
+                                <img src="/Public/images/img/9.jpg">
+                                <span>丝木棉绽放</span>
+                            </a>
+                        </li>
+                        <li class="cur">
+                            <a class="item" href="/sise/article/903.html" target="_blank">
+                                <b></b>
+                                <img src="/Public/images/img/5.jpg">
+                                <span>寻找广软人的故事</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    <script type="text/javascript">
+        //滚动元素id，左切换按钮，右切换按钮，切换元素个数id,滚动方式，切换方向，是否自动滚动，滚动距离，滚动时间，滚动间隔，显示个数
+        LbMove('BoxUl','btnl','btnr','BoxSwitch',true,'left',true,260,1000,5000,4);
+    </script>
+</div>
+<div class="hr_720 right">
+    <div class="hr_720_ps">
+        <div class="hr_720_text"><font></font></div>
+        <div class="thumbImg720" onclick="window.open('/laboratory/')" >
+            <img class="" src="/Public/images/720sy.png" height="197">
+        </div>
+    </div>
+</div>
+
+
+    </section>
+    </div>
+    </section>
+</article>
+
+
+<footer class="footer dbg1">  
+    <div class="fwarp submain">
+        <div class="fl left"></div>
+        <div class="fc left">
+            <section class="fdot">
+                <a href="http://bid.seig.edu.cn/" target="_blank"><img src="/Public/images/cg.png"></a>
+                <a href="http://www.seig.edu.cn/sise/index/11"><img src="/Public/images/video.png"></a>
+                <a href="http://home.seig.edu.cn/" target="_blank"><img src="/Public/images/fw.png"></a>
+                <a href="http://xyw.seig.edu.cn/" target="_blank"><img src="/Public/images/xy.png"></a>
+                <a href="http://weibo.com/hrsise?is_all=1" target="_blank"><img src="/Public/images/wb.png"></a>
+                <a href="#" id="weixin"><div class="box-wxwb wximg" style="display: none;"></div></a>
+            </section>
+        </div>
+        <div class="fr right">
+            <ul>
+                <li><a href="http://www.jyb.cn/" target="_blank">中国教育新闻网</a></li>
+                <li><a href="http://edu.gd.gov.cn/" target="_blank">广东省教育厅</a></li>
+                <li><a href="http://www.people.com.cn/" target="_blank">&nbsp;&nbsp;人民网</a></li>
+                <li><a href="http://www.cyol.net/" target="_blank">中青在线</a></li>
+                <li><a href="http://www.gzedu.gov.cn/" target="_blank">广州市教育局</a></li>
+                <li><a href="http://www.southcn.com/" target="_blank">&nbsp;&nbsp;南方网</a></li>
+                <li><a href="http://www.chsi.com.cn/" target="_blank">中国学信网</a></li>
+                <li><a href="http://job.gd.gov.cn/" target="_blank">广东省就业指导</a></li>
+                <li><a href="http://www.xinhuanet.com/" target="_blank">&nbsp;&nbsp;新华网</a></li>
+                <li><a href="http://www.univs.cn/" target="_blank">中国大学生在线</a></li>
+                <li><a href="http://www.gzhu.edu.cn/" target="_blank">广州大学</a></li>
+                <li><a href="http://www.moe.gov.cn/" target="_blank">&nbsp;&nbsp;教育部</a></li>
+                <li><a href="http://credit.gd.gov.cn" target="_blank">信用广东网</a></li>
+                <li><a href="http://www.gz.gov.cn/" target="_blank">广州市人民政府</a></li>
+            </ul>     
+        </div>
+    </div>
+    <div class="copy"><div class="forpc">地址：广东省广州市从化区经济开发区高技术产业园广从南路548号 |  电话：020－87818918 传真：87818020 邮编：510990 | 网站公安备案编号：4401840100050 <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备：05085382号 </a><span><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1529705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1529705' type='text/javascript'%3E%3C/script%3E"));</script>
+</span></div><div class="cformo">地址：广东省广州市从化区经济开发区高技术产业园广从南路548号</div></div>
+</footer>
+<!--end footer-->
+    
+    <!--<div class="wrapper-down">
+        <div class="user">
+            <li class="">
+                <a class="color-pic" style="margin-left: -80px;" href="/sise/fengmian/fmgs_59/fmgs.html" target="_blank">
+                    &nbsp;
+                    <span class="fa fa-globe">图片广软</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="color-video" style="margin-left: -80px;" href="/sise/index/11" target="_blank">
+                    &nbsp;
+                    <span class="fa fa-users">视频广软</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="color-jisai" style="margin-left: -80px;"  href="http://news.seig.edu.cn/cms/news/6.html" target="_blank">
+                    &nbsp;
+                    <span class="fa fa-book">竞赛广软</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="color-cxcy" style="margin-left: -80px;" href="/cxcy.html" target="_blank">
+                    &nbsp;
+                    <span class="fa fa-mortar-board">就业创业</span>
+                </a>
+            </li>
+        </div>
+    </div>-->
+<!--end wrap-->
+<div class="clearfix">
+</div>
+
+<script src="/Public/js/slider.js" type="text/javascript"></script>
+<script src="/Public/js/all.js" type="text/javascript"></script>
+<!--<script src="/Public/js/drop.js" type="text/javascript"></script>-->
+<script type="text/javascript">
+$(function(){
+    $(".mobile-Nav").toggle(function(){
+        $("#mobileMenu").slideDown(300);
+    },function(){
+        $("#mobileMenu").slideUp(300);
+    });
+    $("#weixin").hover(function() {
+        $(this).find(".box-wxwb").slideDown(200)
+    },
+    function() {
+        $(this).find(".box-wxwb").slideUp(200)
+    }); 
+});
+</script>
+</body>
+</html>

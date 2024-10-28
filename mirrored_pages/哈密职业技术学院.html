@@ -1,0 +1,1243 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈密职业技术学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="哈密职业技术学院">
+<META Name="keywords" Content="哈密职业技术学院" />
+
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/animate.min.css">
+   
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307876475650555742000300014f50 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1302,'/index.jsp',-1,1924514182)</script>
+</head>
+
+<body>
+    <div class="wave">
+        <div class="layer"></div>
+        <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        <input type="text" placeholder="请输入关键字"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+        <input type="image" src="images/ss.png"  v-on:click="onSubmit()">
+        
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1924514182";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://172.16.96.8:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    </div>
+    <div class="header">
+        <div class="m1">
+            <div class="link-top px1677"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+            
+<script language="javascript">
+function dosuba1086763a()
+{
+    try{
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf("msie 8")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE8
+        }else if(ua.toLowerCase().indexOf("rv:")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE11+
+        }else{
+            if (document.all) 
+            {
+                window.external.addFavorite(document.location.href, document.title);
+            }else if(window.sidebar)
+            {
+                window.sidebar.addPanel( document.title, document.location.href, "");//firefox
+            }
+            else
+            {
+                alert(hotKeysa1086763a());
+            }
+        }
+
+    }
+    catch (e){alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");}
+}
+function hotKeysa1086763a() 
+{
+    var ua = navigator.userAgent.toLowerCase(); 
+    var str = "";    
+    var isWebkit = (ua.indexOf('webkit') != - 1); 
+    var isMac = (ua.indexOf('mac') != - 1);     
+    if (ua.indexOf('konqueror') != - 1) 
+    {  
+        str = 'CTRL + B'; // Konqueror   
+    } 
+    else if (window.home || isWebkit || isMac) 
+    {        
+        str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac   
+    }
+    return ((str) ? '无法自动添加到收藏夹，请使用' + str + '手动添加' : str);
+}
+function setHomepagea1086763a()
+{
+    var url = document.location.href;
+    if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+        document.body.setHomePage(url);
+    }
+    else if (window.sidebar)
+    {
+        if(window.netscape)
+        {
+             try{
+                  netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch (e){
+                   alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+             }
+        }
+    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage',url);
+    }
+    else
+    {
+        alert("浏览器不支持自动设为首页，请手动设置");
+    }
+}
+</script>
+ <a href="javascript:setHomepagea1086763a()" style="TEXT-DECORATION: none;">设为首页</a><i>|</i>
+                <a onclick="javascript:dosuba1086763a();" href="#" style="TEXT-DECORATION: none;">加入收藏</a><i>|</i>
+            
+            
+
+               
+ <a href="mailto:239397411@126.com" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92091)">联系我们</a><i>|</i>
+
+
+             <span><img src="images/ss.png" alt=""></span>
+            </div>
+        </div>
+        <div class="m2">
+            <div class="head px1677">
+                <div class="head-l">
+<a href="index.htm"><img src="images/logo.png" alt=""></a></div>
+                <div class="head-r">
+                    <div class="nav">
+                        <ul>
+                            <li><a href="xygk/xyjj.htm">学院概况</a>
+                                <ul>
+                                <li><a href="xygk/xyjj.htm">学院简介</a></li>
+                                <li><a href="xygk/xrld.htm">现任领导</a></li>
+                                <li><a href="xygk/xh.htm">校徽</a></li>
+                                <li><a href="xygk/xfxx.htm">校风校训</a></li>
+                                <li><a href="xygk/xl.htm">校历</a></li>
+                                </ul>
+                                
+                            </li>
+
+                            <li><a href="xbsz.htm">系部设置</a>
+                                
+                            </li>
+
+                            <li><a href="zzjg/gljg.htm">组织机构</a>
+                                <ul>
+                                <li><a href="zzjg/gljg.htm">管理机构</a></li>
+                                <li><a href="zzjg/qtjg.htm">群团机构</a></li>
+                                <li><a href="zzjg/jfjg.htm">教辅机构</a></li>
+                                <li><a href="zzjg/fsjg.htm">附属机构</a></li>
+                                </ul>
+                                
+                            </li>
+
+                            <li><a href="zsjy/gzzs.htm">招生就业</a>
+                                <ul>
+                                <li><a href="zsjy/gzzs.htm">高职招生</a></li>
+                                <li><a href="zsjy/jxjy.htm">继续教育</a></li>
+                                <li><a href="zsjy/jyxx.htm">就业信息</a></li>
+                                <li><a href="zsjy/zsjybgs/bmdt.htm">招生就业办公室</a></li>
+                                </ul>
+                                
+                            </li>
+
+                            <li><a href="jnpx/jxjyzxgzjj.htm">技能培训</a>
+                                <ul>
+                                <li><a href="jnpx/jxjyzxgzjj.htm">继续教育中心工作简介</a></li>
+                                <li><a href="jnpx/ycpxgzylb.htm">一产培训工种一览表</a></li>
+                                <li><a href="jnpx/e_scpxgzylb.htm">二、三产培训工种一览表</a></li>
+                                <li><a href="jnpx/crhsjyzy.htm">成人函授教育专业</a></li>
+                                <li><a href="jnpx/sfbz.htm">收费标准</a></li>
+                                </ul>
+                                
+                            </li>
+
+                            <li><a href="zyjd/zyjnjds_z_jj.htm">职业鉴定</a>
+                                <ul>
+                                <li><a href="zyjd/zyjnjds_z_jj.htm">职业技能鉴定所（站）简介</a></li>
+                                <li><a href="zyjd/jdzjdgzylb.htm">鉴定站鉴定工种一览表</a></li>
+                                <li><a href="zyjd/jdsjdgzylb.htm">鉴定所鉴定工种一栏表</a></li>
+                                <li><a href="zyjd/sfbz1.htm">收费标准</a></li>
+                                </ul>
+                                
+                            </li>
+
+                            <li><a href="sxjd1/yhxsxs.htm">实训基地</a>
+                                <ul>
+                                <li><a href="sxjd1/yhxsxs.htm">医护系实训室</a></li>
+                                <li><a href="sxjd1/jgxsxs.htm">经管系实训室</a></li>
+                                <li><a href="sxjd1/jtysxsxs.htm">交通运输系实训室</a></li>
+                                <li><a href="sxjd1/jdxsxs.htm">机电系实训室</a></li>
+                                <li><a href="sxjd1/hgxsxs.htm">化工系实训室</a></li>
+                                </ul>
+                                
+                            </li>
+
+                            <li><a href="zjxy/xqdt.htm">走进校园</a>
+                                <ul>
+                                <li><a href="zjxy/xqdt.htm">校区地图</a></li>
+                                <li><a href="zjxy/shfw.htm">生活服务</a></li>
+                                <li><a href="zjxy/xyfg.htm">校园风光</a></li>
+                                <li><a href="zjxy/xywh.htm">校园文化</a></li>
+                                </ul>
+                                
+                            </li>
+
+                            <li><a href="https://library.hmzyedu.cn/">图书馆</a>
+                                
+                            </li>
+
+                            <li><a href="https://smart.hmzyedu.cn/ynedut">数字化校园</a>
+                                
+                            </li>
+ <div class="clear"></div></ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">
+<a href="index.htm"><img src="images/logo.png" alt=""></a></div>
+        <div class="m-nav">
+            <div class="m-tlink"><a href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92078)">进入旧版</a>
+<a href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92076)">教职员工</a>
+<a href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92079)">在校学生</a>
+<a href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92080)">毕业校友</a>
+<a href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92077)">图书馆</a>
+</div>
+            <div class="m-search">
+
+
+<style>
+    #appu8 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu8 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu8"></div>
+<script type="text/html" id="htmlu8">
+    <div id="appu8">
+        <div v-if="!isError">
+            <input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+             <input type="image" src="images/ss.png" v-on:click="onSubmit()">
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu8").html($("#htmlu8").text());
+</script>
+<script>
+    var appOwner = "1924514182";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu8",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://172.16.96.8:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="">                
+<li>
+                    <a href="index.htm">首页</a>
+                    <span></span>
+                     <ul>
+                         <li><a href="index/tzgg.htm">通知公告</a></li>
+                         
+                         <li><a href="index/xydt.htm">学院动态</a></li>
+                         
+                         <li><a href="index/ztxx.htm">专题学习</a></li>
+                         
+                         <li><a href="index/xjrw.htm">先进人物</a></li>
+                         
+                         <li><a href="index/cylj/sdtrzbsjgzs.htm">常用链接</a></li>
+                         
+                     </ul>
+                  
+                </li>
+                
+<li>
+                    <a href="xygk/xyjj.htm">学院概况</a>
+                    <span></span>
+                     <ul>
+                         <li><a href="xygk/xyjj.htm">学院简介</a></li>
+                         
+                         <li><a href="xygk/xrld.htm">现任领导</a></li>
+                         
+                         <li><a href="xygk/xh.htm">校徽</a></li>
+                         
+                         <li><a href="xygk/xfxx.htm">校风校训</a></li>
+                         
+                         <li><a href="xygk/xl.htm">校历</a></li>
+                         
+                     </ul>
+                  
+                </li>
+                
+<li>
+                    <a href="xbsz.htm">系部设置</a>
+                  
+                </li>
+                
+<li>
+                    <a href="zzjg/gljg.htm">组织机构</a>
+                    <span></span>
+                     <ul>
+                         <li><a href="zzjg/gljg.htm">管理机构</a></li>
+                         
+                         <li><a href="zzjg/qtjg.htm">群团机构</a></li>
+                         
+                         <li><a href="zzjg/jfjg.htm">教辅机构</a></li>
+                         
+                         <li><a href="zzjg/fsjg.htm">附属机构</a></li>
+                         
+                     </ul>
+                  
+                </li>
+                
+<li>
+                    <a href="zsjy/gzzs.htm">招生就业</a>
+                    <span></span>
+                     <ul>
+                         <li><a href="zsjy/gzzs.htm">高职招生</a></li>
+                         
+                         <li><a href="zsjy/jxjy.htm">继续教育</a></li>
+                         
+                         <li><a href="zsjy/jyxx.htm">就业信息</a></li>
+                         
+                         <li><a href="zsjy/zsjybgs/bmdt.htm">招生就业办公室</a></li>
+                         
+                     </ul>
+                  
+                </li>
+                
+<li>
+                    <a href="jnpx/jxjyzxgzjj.htm">技能培训</a>
+                    <span></span>
+                     <ul>
+                         <li><a href="jnpx/jxjyzxgzjj.htm">继续教育中心工作简介</a></li>
+                         
+                         <li><a href="jnpx/ycpxgzylb.htm">一产培训工种一览表</a></li>
+                         
+                         <li><a href="jnpx/e_scpxgzylb.htm">二、三产培训工种一览表</a></li>
+                         
+                         <li><a href="jnpx/crhsjyzy.htm">成人函授教育专业</a></li>
+                         
+                         <li><a href="jnpx/sfbz.htm">收费标准</a></li>
+                         
+                     </ul>
+                  
+                </li>
+                
+<li>
+                    <a href="zyjd/zyjnjds_z_jj.htm">职业鉴定</a>
+                    <span></span>
+                     <ul>
+                         <li><a href="zyjd/zyjnjds_z_jj.htm">职业技能鉴定所（站）简介</a></li>
+                         
+                         <li><a href="zyjd/jdzjdgzylb.htm">鉴定站鉴定工种一览表</a></li>
+                         
+                         <li><a href="zyjd/jdsjdgzylb.htm">鉴定所鉴定工种一栏表</a></li>
+                         
+                         <li><a href="zyjd/sfbz1.htm">收费标准</a></li>
+                         
+                     </ul>
+                  
+                </li>
+                
+<li>
+                    <a href="sxjd1/yhxsxs.htm">实训基地</a>
+                    <span></span>
+                     <ul>
+                         <li><a href="sxjd1/yhxsxs.htm">医护系实训室</a></li>
+                         
+                         <li><a href="sxjd1/jgxsxs.htm">经管系实训室</a></li>
+                         
+                         <li><a href="sxjd1/jtysxsxs.htm">交通运输系实训室</a></li>
+                         
+                         <li><a href="sxjd1/jdxsxs.htm">机电系实训室</a></li>
+                         
+                         <li><a href="sxjd1/hgxsxs.htm">化工系实训室</a></li>
+                         
+                     </ul>
+                  
+                </li>
+                
+<li>
+                    <a href="zjxy/xqdt.htm">走进校园</a>
+                    <span></span>
+                     <ul>
+                         <li><a href="zjxy/xqdt.htm">校区地图</a></li>
+                         
+                         <li><a href="zjxy/shfw.htm">生活服务</a></li>
+                         
+                         <li><a href="zjxy/xyfg.htm">校园风光</a></li>
+                         
+                         <li><a href="zjxy/xywh.htm">校园文化</a></li>
+                         
+                     </ul>
+                  
+                </li>
+                
+<li>
+                    <a href="https://library.hmzyedu.cn/">图书馆</a>
+                  
+                </li>
+                
+<li>
+                    <a href="https://smart.hmzyedu.cn/ynedut">数字化校园</a>
+                  
+                </li>
+                
+<div class="clear"></div></ul>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="slick">    <div>
+                <a onclick="_addDynClicks(&#34;wbimage&#34;, 1924514182, 77666)"><img src="js/guoqingjie03-960.jpg" alt=""></a>
+            </div>
+            
+<div>
+                <a onclick="_addDynClicks(&#34;wbimage&#34;, 1924514182, 77656)"><img src="js/guoqingjie-01-960.jpg" alt=""></a>
+            </div>
+            
+<div>
+                <a onclick="_addDynClicks(&#34;wbimage&#34;, 1924514182, 77646)"><img src="js/guoqingjie02-960.jpg" alt=""></a>
+            </div>
+            
+<div>
+                <a onclick="_addDynClicks(&#34;wbimage&#34;, 1924514182, 77533)"><img src="images/weixintupian_20230425100506.jpg" alt=""></a>
+            </div>
+            
+</div>
+        <div class="bb"><img src="images/xll.png" alt=""><span class="circle1"></span><span class="circle2"></span></div>
+    </div>
+    <div class="index">
+        <div class="section1">
+            <div class="sect1 px1677">
+                <div class="title">
+                    <div class="btt">
+                        <h2><span>学院</span><i></i><span>动态</span></h2>
+                        <p><span>质量立校</span><span>特色发展</span></p>
+                    </div>
+
+                </div>
+                <div class="dt-top"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+                        
+<li>
+                            <a href="info/1341/15987.htm">
+                                <div class="pic"><img src="/__local/9/A5/A2/D84D2FA82A233D715E7FED61EAF_A8967D43_13B7E.png" alt=""></div>
+                                <div class="text">
+                                    <p>郑州大学机械与动力工程学院王定标教授一行莅临哈密职业技术学院调研交流</p>
+                                </div>
+                                <div class="date">
+                                    <p>18</p><span>09月</span></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1341/5850.htm">
+                                <div class="pic"><img src="/__local/E/F6/B0/829E1BC421014D1CEA4BCAAF318_1379F9EF_AF62.jpeg?e=.jpeg" alt=""></div>
+                                <div class="text">
+                                    <p>自治区教育系统贯彻全国教育大会精神宣讲报告会在哈密职业技术学院召开</p>
+                                </div>
+                                <div class="date">
+                                    <p>21</p><span>11月</span></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1341/5849.htm">
+                                <div class="pic"><img src="/__local/3/EA/18/CC00AE14DE224E790BD98450905_7CCF1105_901D.jpeg?e=.jpeg" alt=""></div>
+                                <div class="text">
+                                    <p>我院举办《习近平新时代中国特色社会主义思想三十讲》宣讲报告会</p>
+                                </div>
+                                <div class="date">
+                                    <p>10</p><span>10月</span></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1341/5848.htm">
+                                <div class="pic"><img src="/__local/A/7B/B2/28CB5DCA1A332E791640FD84B22_BD4F6217_97CE.jpeg?e=.jpeg" alt=""></div>
+                                <div class="text">
+                                    <p>国庆长假活动丰富  留校学生倍感温馨</p>
+                                </div>
+                                <div class="date">
+                                    <p>09</p><span>10月</span></div>
+                            </a>
+                        </li>
+                        
+</ul><script>_showDynClickBatch(['dynclicks_u11_15987','dynclicks_u11_5850','dynclicks_u11_5849','dynclicks_u11_5848'],[15987,5850,5849,5848],"wbnews", 1924514182)</script>
+</div>
+                <div class="dt-down"><ul class="">
+                        
+<li>
+                            <a href="info/1341/17307.htm">
+                                <h2>学院领导班子成员赴医护系党支部调研督查党风廉政建设工作  </h2>
+                                <p>10月23日下午，学院党委委员、纪委书记田萍同志到所包联的医护系党支部开展调研督...</p>
+                                <div class="info">
+                                    <div class="date">2024-10-25</div><span></span></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1341/17297.htm">
+                                <h2>研历史文化，铸中华之魂 ——思想政治工作部2024年秋季学期“...  </h2>
+                                <p>为深入贯彻党的二十届三中全会及习近平总书记系列讲话精神，落实立德树人根本任务...</p>
+                                <div class="info">
+                                    <div class="date">2024-10-25</div><span></span></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1341/17287.htm">
+                                <h2>“聚”集体智慧 “备”精彩课堂 ——哈密市大中小学思政课一...  </h2>
+                                <p>为深入贯彻落实党的二十届三中全会精神和习近平总书记关于学校思政课建设的重要指...</p>
+                                <div class="info">
+                                    <div class="date">2024-10-25</div><span></span></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1341/17267.htm">
+                                <h2>哈密职业技术学院 构建产教融合新生态 服务产业发展新动能  </h2>
+                                <p>为加快构建职普融通、产教融合的职业教育体系，哈密市市域产教联合体成立大会暨第...</p>
+                                <div class="info">
+                                    <div class="date">2024-10-24</div><span></span></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1341/17257.htm">
+                                <h2>2024年哈密市大学生“爱我国防”主题演讲比赛决赛在哈密职业...  </h2>
+                                <p>为热烈庆祝中华人民共和国成立75周年，大力弘扬爱国主义精神，进一步提升我市大学...</p>
+                                <div class="info">
+                                    <div class="date">2024-10-18</div><span></span></div>
+                            </a>
+                        </li>
+                        
+</ul><script>_showDynClickBatch(['dynclicks_u12_17307','dynclicks_u12_17297','dynclicks_u12_17287','dynclicks_u12_17267','dynclicks_u12_17257'],[17307,17297,17287,17267,17257],"wbnews", 1924514182)</script>
+</div>
+                <div class="more"><a href="index/xydt.htm">查看更多学院动态<span><img src="images/more.png" alt=""></span></a></div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="sect2 px1677">
+                <div class="title wow fadeInUp">
+                    <div class="btt">
+                        <h2><span>通知</span><i></i><span>公告</span></h2>
+                        <p><span>重德立身</span><span>好学立业</span></p>
+                    </div>
+
+                </div>
+                <div class="notice wow fadeInUp"><ul>
+                        
+<li>
+                            <a href="info/1340/15997.htm">
+                                <div class="date">
+                                    <p>19</p><span>01月</span></div>
+                                <div class="text">
+                                    <h2>哈密职业技术学院2023质量年度报告</h2>
+                                </div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1340/5845.htm">
+                                <div class="date">
+                                    <p>21</p><span>03月</span></div>
+                                <div class="text">
+                                    <h2>哈密职业技术学院章程</h2>
+                                </div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1340/6306.htm">
+                                <div class="date">
+                                    <p>20</p><span>01月</span></div>
+                                <div class="text">
+                                    <h2>哈密职业技术学院章程(修订核准稿)</h2>
+                                </div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1340/5844.htm">
+                                <div class="date">
+                                    <p>03</p><span>12月</span></div>
+                                <div class="text">
+                                    <h2>哈密职业技术学院2022年信息公开年度报告</h2>
+                                </div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1340/5843.htm">
+                                <div class="date">
+                                    <p>03</p><span>12月</span></div>
+                                <div class="text">
+                                    <h2>哈密职业技术学院2022年信息公开年度报告</h2>
+                                </div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="info/1340/6174.htm">
+                                <div class="date">
+                                    <p>30</p><span>10月</span></div>
+                                <div class="text">
+                                    <h2>哈密职业技术学院2021年信息公开年度报告</h2>
+                                </div>
+                            </a>
+                        </li>
+                        
+<div class="clear"></div>
+                    </ul><script>_showDynClickBatch(['dynclicks_u13_15997','dynclicks_u13_5845','dynclicks_u13_6306','dynclicks_u13_5844','dynclicks_u13_5843','dynclicks_u13_6174'],[15997,5845,6306,5844,5843,6174],"wbnews", 1924514182)</script>
+</div>
+                <div class="more"><a href="index/tzgg.htm">查看更多通知公告<span><img src="images/more-other.png" alt=""></span></a></div>
+            </div>
+        </div>
+        <div class="s4-sect2">
+                    <div class="title wow fadeInUp">
+                        <div class="btt">
+                            <h2><span>专题</span><i></i><span>专栏</span></h2>
+                            <p><span>自信、自立</span><span>自尊、自强</span></p>
+                        </div>
+
+                    </div>
+                    <div class="zt wow fadeInUp"><ul>
+                            
+</ul>
+</div>
+                    <div class="more"><a href="index/ztxx.htm">查看更多专题学习<span><img src="images/more-other.png" alt=""></span></a></div>
+                </div>
+        <div class="section3">
+            <div class="sect3 px1677">
+                <div class="title wow fadeInUp">
+                    <div class="btt">
+                        <h2><span>先进</span><i></i><span>人物</span></h2>
+                        <p><span>求实创新</span><span>和谐奉献</span></p>
+                    </div>
+
+                </div>
+                <div class="excellent">
+                    <div class="excell">
+                        <div class="exc-l wow fadeInLeft">
+<div>
+                                <a href="info/1933/15907.htm">
+                                    <div class="pic"><img src="/__local/9/17/36/3C4F74439104DD6BEEEA80B8E4E_36CF40D5_5EC4.jpg" alt=""></div>
+                                    <p>王永丽事迹</p>
+                                </a>
+                            </div>
+                            
+<div>
+                                <a href="info/1933/15897.htm">
+                                    <div class="pic"><img src="/__local/A/31/CB/B3507540402B2CF63355D2429D0_ACF3894C_5AE2.jpg" alt=""></div>
+                                    <p>敬业奉献模范姚梦婕事迹材料</p>
+                                </a>
+                            </div>
+                            
+</div><script>_showDynClickBatch(['dynclicks_u15_15907','dynclicks_u15_15897'],[15907,15897],"wbnews", 1924514182)</script>
+
+                        <div class="exc-r wow fadeInRight">
+                            <div class="wz-qh">
+<div>
+
+                                    <div class="text">
+                                        <ul>
+                                                                                    <li>
+                                                <a href="info/1933/15907.htm">
+                                                    <h2>王永丽事迹</h2>
+                                                    <p>王永丽，女，汉族，1974年8月出生，中共党员，现在哈密职业技术学院招生就业办干事。我国是一个统一的多民族国家。民族团结关系到国家的安危和各族人民的根本利益。没有...</p>
+                                                    <div class="date">2022-04-23</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="info/1933/15897.htm">
+                                                    <h2>敬业奉献模范姚梦婕事迹材料</h2>
+                                                    <p>姚梦婕，女，汉族，1992年7月出生，中共党员，现为哈密职业技术学院思政部教师。一、做有理想信念的好老师作为一名思政课教师，她深知自己肩上担负的重任。她常说:我的...</p>
+                                                    <div class="date">2022-03-11</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                     
+
+                                </div>
+                                
+                                <div>
+
+                                    <div class="text">
+                                        <ul>
+                                            <li>
+                                                <a href="info/1933/15907.htm">
+                                                    <h2>王永丽事迹</h2>
+                                                    <p>王永丽，女，汉族，1974年8月出生，中共党员，现在哈密职业技术学院招生就业办干事。我国是一个统一的多民族国家。民族团结关系到国家的安危和各族人民的根本利益。没有...</p>
+                                                    <div class="date">2022-04-23</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="info/1933/15897.htm">
+                                                    <h2>敬业奉献模范姚梦婕事迹材料</h2>
+                                                    <p>姚梦婕，女，汉族，1992年7月出生，中共党员，现为哈密职业技术学院思政部教师。一、做有理想信念的好老师作为一名思政课教师，她深知自己肩上担负的重任。她常说:我的...</p>
+                                                    <div class="date">2022-03-11</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                     
+
+                                </div>
+                                
+                                <div>
+
+                                    <div class="text">
+                                        <ul>
+                                            <li>
+                                                <a href="info/1933/15907.htm">
+                                                    <h2>王永丽事迹</h2>
+                                                    <p>王永丽，女，汉族，1974年8月出生，中共党员，现在哈密职业技术学院招生就业办干事。我国是一个统一的多民族国家。民族团结关系到国家的安危和各族人民的根本利益。没有...</p>
+                                                    <div class="date">2022-04-23</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="info/1933/15897.htm">
+                                                    <h2>敬业奉献模范姚梦婕事迹材料</h2>
+                                                    <p>姚梦婕，女，汉族，1992年7月出生，中共党员，现为哈密职业技术学院思政部教师。一、做有理想信念的好老师作为一名思政课教师，她深知自己肩上担负的重任。她常说:我的...</p>
+                                                    <div class="date">2022-03-11</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                     
+
+                                </div>
+                                
+                                <div>
+
+                                    <div class="text">
+                                        <ul>
+                                            <li>
+                                                <a href="info/1933/15907.htm">
+                                                    <h2>王永丽事迹</h2>
+                                                    <p>王永丽，女，汉族，1974年8月出生，中共党员，现在哈密职业技术学院招生就业办干事。我国是一个统一的多民族国家。民族团结关系到国家的安危和各族人民的根本利益。没有...</p>
+                                                    <div class="date">2022-04-23</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="info/1933/15897.htm">
+                                                    <h2>敬业奉献模范姚梦婕事迹材料</h2>
+                                                    <p>姚梦婕，女，汉族，1992年7月出生，中共党员，现为哈密职业技术学院思政部教师。一、做有理想信念的好老师作为一名思政课教师，她深知自己肩上担负的重任。她常说:我的...</p>
+                                                    <div class="date">2022-03-11</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                     
+
+                                </div>
+                                
+                                <div>
+
+                                    <div class="text">
+                                        <ul>
+                                            <li>
+                                                <a href="info/1933/15907.htm">
+                                                    <h2>王永丽事迹</h2>
+                                                    <p>王永丽，女，汉族，1974年8月出生，中共党员，现在哈密职业技术学院招生就业办干事。我国是一个统一的多民族国家。民族团结关系到国家的安危和各族人民的根本利益。没有...</p>
+                                                    <div class="date">2022-04-23</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="info/1933/15897.htm">
+                                                    <h2>敬业奉献模范姚梦婕事迹材料</h2>
+                                                    <p>姚梦婕，女，汉族，1992年7月出生，中共党员，现为哈密职业技术学院思政部教师。一、做有理想信念的好老师作为一名思政课教师，她深知自己肩上担负的重任。她常说:我的...</p>
+                                                    <div class="date">2022-03-11</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                     
+
+                                </div>
+                          
+
+
+</div>
+
+                                
+
+
+                                
+
+<script>_showDynClickBatch(['dynclicks_u16_15907','dynclicks_u16_15897'],[15907,15897],"wbnews", 1924514182)</script>
+
+                            <div class="btt">
+                                <div class="bt-l"></div>
+                                <div class="bt-r"></div>
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+
+                </div>
+                <div class="more"><a href="index/xjrw.htm">查看更多先进人物<span><img src="images/more-other.png" alt=""></span></a></div>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="sect4 px1677">
+                <div class="s4-sect1">
+                    <div class="title wow fadeInUp">
+                        <div class="btt">
+                            <h2><span>校园</span><i></i><span>风光</span></h2>
+                            <p><span>立德、立言、立行、立业</span></p>
+                        </div>
+
+                    </div>
+                    <div class="style">             <div class="text">               
+<div class="style-l">
+                            <ul>
+                                                            <li class="st1 wow fadeInUp">
+                                    <a href="info/1338/6142.htm">
+                                        <div class="pic"><img src="/__local/A/E4/F5/4E7F5853CBCF93B7AC3B5C0EC1F_B5639F93_1BD40.jpg" alt=""></div>
+                                    </a>
+                                </li>
+                                <li class="st2 wow fadeInUp">
+                                    <a href="info/1338/6148.htm">
+                                        <div class="pic"><img src="/__local/2/B4/7A/F92649B4BE27A19A178E3DA9142_AFD8E6AA_1E2E7.jpg" alt=""></div>
+                                    </a>
+                                </li>
+
+
+                         
+                            </ul>
+                        </div>
+                        
+                        <div class="style-r">
+                            <div class="st-r-top wow fadeInUp">
+                                <ul>
+                                    <li class="str-l">
+                                        <a href="info/1338/6147.htm">
+                                            <div class="pic"><img src="/__local/5/70/AB/62FC57817CF2AB64DC9B42C816D_6C17460A_2A006.jpg" alt=""></div>
+                                            
+                                        </a>
+                                    </li>
+                                     
+                                    <li class="str-r">
+                                        <a href="info/1338/6146.htm">
+                                            <div class="pic"><img src="/__local/A/F3/D7/791DE5277A175A85E8F0BC77184_E3C7A654_1F6B6.jpg" alt=""></div>
+                                        </a>
+                                    </li>
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
+                            <div class="st-r-down wow fadeInUp">
+                                <ul>
+                                    <li>
+                                        <a href="info/1338/6145.htm">
+                                            <div class="pic"><img src="/__local/1/9C/9D/8E64C4C6800FD2203413E48B024_753E9A1F_16952.jpg" alt=""></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="info/1338/6144.htm">
+                                            <div class="pic"><img src="/__local/3/4C/84/9E0F7DB4096231F9C8B5E5BFA00_6945A223_1A26C.jpg" alt=""></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="info/1338/6143.htm">
+                                            <div class="pic"><img src="/__local/4/0C/90/F0CE486A03A43D5518AFDFF81AE_E005E375_13094.jpg" alt=""></div>
+                                        </a>
+                                    </li>
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+
+
+<script>_showDynClickBatch(['dynclicks_u17_6142','dynclicks_u17_6148','dynclicks_u17_6147','dynclicks_u17_6146','dynclicks_u17_6145','dynclicks_u17_6144','dynclicks_u17_6143'],[6142,6148,6147,6146,6145,6144,6143],"wbnews", 1924514182)</script>
+</div>
+                    <div class="more"><a href="zjxy/xyfg.htm">查看更多校园风光<span><img src="images/more-other.png" alt=""></span></a></div>
+                </div>
+                
+                <div class="s4-sect3">
+                    <div class="title wow fadeInUp">
+                        <div class="btt">
+                            <h2><span>校园</span><i></i><span>服务</span></h2>
+                            <p><span>求是创新</span><span>和谐奉献</span></p>
+                        </div>
+
+                    </div>
+                    <div class="service wow fadeInUp"><ul>
+                            
+
+ <li>
+                                <a href="http://172.16.75.20/ynedut/login.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92057)">
+                                    <div class="icon"><span><img src="images/fw-pic1.png" alt=""></span></div>
+                                    <p>一站式服务</p>
+                                </a>
+                            </li>
+                           
+                           
+                           
+                            
+
+ <li>
+                                <a href="http://172.16.76.100/" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92058)">
+                                    <div class="icon"><span><img src="images/fw-pic2.png" alt=""></span></div>
+                                    <p>视频云平台</p>
+                                </a>
+                            </li>
+                           
+                           
+                           
+                            
+
+ <li>
+                                <a href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92065)">
+                                    <div class="icon"><span><img src="images/fw-pic3.png" alt=""></span></div>
+                                    <p>绩效考核专栏</p>
+                                </a>
+                            </li>
+                           
+                           
+                           
+                            
+
+ <li>
+                                <a href="http://www.sslibrary.com/page/239443/show" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92066)">
+                                    <div class="icon"><span><img src="images/fw-pic4.png" alt=""></span></div>
+                                    <p>电子图书馆</p>
+                                </a>
+                            </li>
+                           
+                           
+                           
+                            
+
+ <li>
+                                <a href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92067)">
+                                    <div class="icon"><span><img src="images/fw-pic5.png" alt=""></span></div>
+                                    <p>网络课程</p>
+                                </a>
+                            </li>
+                           
+                           
+                           
+                            
+</ul></div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="foot px1677">
+                <div class="links"><span>友情链接：</span>
+                    
+
+<a href="index/cylj/sdtrzbsjgzs.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92059)">双带头人支部书记工作室</a>
+                    
+ <i>|</i>
+<a href="http://172.16.76.66/psy/login.aspx" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92060)">学院心理健康测评系统</a>
+                    
+ <i>|</i>
+<a href="http://210.26.230.11:8080/xjcs/" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92072)">新疆校园安全管理系统</a>
+                    
+ <i>|</i>
+<a href="http://wlaqz.cac.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92073)">网络安全宣传周</a>
+                    
+ <i>|</i>
+<a href="http://www.cvae.com.cn/zgzcw/" onclick="_addDynClicks(&#34;wburl&#34;, 1924514182, 92074)">中国职业教育与成人教育网</a>
+                    
+</div>
+                <div class="foot-down">
+                    <div class="foot-m"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p><span><img src="/__local/C/95/55/647F8D9C354E3D9F9D4BDC75399_8A4D128B_169.png?e=.png" vsbhref="vurl" vurl="/_vsl/C9555647F8D9C354E3D9F9D4BDC75399/8A4D128B/169?e=.png" vheight="16" vwidth="16" width="16" height="16" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/C/95/55/647F8D9C354E3D9F9D4BDC75399_8A4D128B_169.png" class="img_vsb_content">地址：哈密市伊州区丽园街道八一南路29号 </span><span><img src="/__local/D/11/C6/5ACF0862828A8DC972EF591F028_7DE4554F_174.png?e=.png" vsbhref="vurl" vurl="/_vsl/D11C65ACF0862828A8DC972EF591F028/7DE4554F/174?e=.png" vheight="16" vwidth="16" width="16" height="16" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/D/11/C6/5ACF0862828A8DC972EF591F028_7DE4554F_174.png" class="img_vsb_content" style="white-space: normal;"> &nbsp;邮编：839001 &nbsp;</span><span><img src="/__local/3/6F/12/BABDA1E93D19F61D78ED080177A_E99772EA_14E.png?e=.png" vsbhref="vurl" vurl="/_vsl/36F12BABDA1E93D19F61D78ED080177A/E99772EA/14E?e=.png" vheight="16" vwidth="16" width="16" height="16" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/3/6F/12/BABDA1E93D19F61D78ED080177A_E99772EA_14E.png" class="img_vsb_content">招生电话：0902-2314443</span> </p>
+                        <p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span>© 版权所有 哈密职业技术学院</span><span>新ICP备:10000065-2号</span><span> &nbsp; </span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=65220102000019" target="_self" class="bah"><span><img src="images/ft-icon4.png" alt="" />新公网安备 65220102000019号</span></a></p></p></div>
+                    <div class="fr">
+                        <div class="foot-c">
+                            <ul>    <li>
+                                    <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1924514182, 77529)"><img src="images/ft-pic2.jpg" alt=""></a>
+                                </li>
+                                
+<li>
+                                    <a href="https://xjwljb.com/indexcn/index" onclick="_addDynClicks(&#34;wbimage&#34;, 1924514182, 77597)"><img src="images/ft-pic1.jpg" alt=""></a>
+                                </li>
+                                
+<li>
+                                    <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1924514182, 77528)"><img src="images/ft-pic3.png" alt=""></a>
+                                </li>
+                                
+</ul>
+                        </div>
+                        <div class="foot-r">
+                            <ul>    <li>
+                                    <img src="                                    images/weixin.png                                                                        " alt="">
+                                    <p>微信公众号</p>
+                                    <div><img src="images/qrcode_for_gh_536a48eb7df6_258.jpg" alt=""></div>
+                                </li>
+                                
+<div class="clear"></div></ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+ <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/wow.min.js"></script>
+
+</body>
+
+</html>

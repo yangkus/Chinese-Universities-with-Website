@@ -1,0 +1,1500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <title>四川幼儿师范高等专科学校</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="四川幼儿师范高等专科学校">
+<META Name="keywords" Content="四川幼儿师范高等专科学校" />
+<meta name="pageType" content="1">
+    <meta name="pageTitle" content="四川幼儿师范高等专科学校官网">
+    <meta name="sitename" content="四川幼儿师范高等专科学校官网" />
+    <meta name="sitedomain" content="www.scyesz.com" />
+    
+
+    <link rel="stylesheet" href="style/swiper.min.css">
+    <link rel="stylesheet" href="style/a_animate.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    
+    <script src="js/set.js"></script>
+    <script src="js/public.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307476465550565742000300024754 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1391,'/index.jsp',-1,1984497611)</script>
+</head>
+<body>
+<!--search-->
+<section class="search-dialog-box">
+    <div class="search-bg"></div>
+    <div class="search-dialog">
+        <div class="search-inner">
+            <div class="wrap-inner">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError" class="search f-cb">
+          <h3>请输入您搜索的信息！</h3>
+                            <div class="search-input f-cb clearfix">
+                        <input type="text" name="key" placeholder="" autocomplete="off" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                        <input type="submit" value="" v-on:click="onSubmit()"/>
+                        <a href="javascript:;" class="clear-btn"></a>
+
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1984497611";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+    </div>
+    <a href="javascript:;" class="pub-close">
+        <span class="bg"></span>
+        <i></i>
+    </a>
+</section>
+<!--search-->
+<!--wap-->
+<div class="wap-head ar_wap">
+    <div class="logo flex-v-center">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+
+<a href="index.htm" title="四川幼儿师范高等专科学校"><img src="images/logo.png" alt=""></a></div>
+    <a href="javascript:;" class="navbtnm">
+        <i></i>
+    </a>
+</div>
+<div class="big-nav">
+    <div class="list_box0 ">
+        <div class="li"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script></div>
+    </div>
+    <div class="wap_search">
+        <form name="search" class="header-search">
+
+
+<style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+        <input type="text" class="input" placeholder="请输入搜索关键词" name="keyword" autocomplete="off" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <button type="submit" class="btn_blue" value="" v-on:click="onSubmit()"/></button>
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1984497611";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></form>
+    </div>
+    <ul class="list_box_nav_mobile"> <li class="on">
+            <div class="con">
+                <a class="a" href="index.htm" title="首页">首页</a>
+            </div>
+        </li>
+ <li>
+            <div class="con">
+                <a class="a" href="xxgk/xxjj.htm" title="学校概况">学校概况</a>
+            </div>
+            <i></i>
+            <div class="list">
+                <a href="xxgk/xxjj.htm" title="学校简介">学校简介</a>
+                <a href="xxgk/xrld.htm" title="现任领导">现任领导</a>
+                <a href="xxgk/xx1.htm" title="校训">校训</a>
+                <a href="xxgk/xb.htm" title="校标">校标</a>
+                <a href="xxgk/xxzc.htm" title="学校章程">学校章程</a>
+               
+            </div>
+        </li>
+ <li>
+            <div class="con">
+                <a class="a" href="zzjg.htm" title="组织机构">组织机构</a>
+            </div>
+        </li>
+ <li>
+            <div class="con">
+                <a class="a" href="zsjy2.htm" title="招生就业">招生就业</a>
+            </div>
+        </li>
+ <li>
+            <div class="con">
+                <a class="a" href="http://125.65.115.248:60003/cas/login?service=http%3A%2F%2F125.65.115.248%3A60005%2F" title="智慧校园">智慧校园</a>
+            </div>
+        </li>
+</ul>
+
+</div>
+<!--wap-->
+<header class="header ar_web">
+   <div class="wp">
+        <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+
+<a href="index.htm" title="四川幼儿师范高等专科学校"><img src="images/logo.png" alt=""></a></div>
+       <div class="header_right">
+           <nav id="nav"> <ul class="flex">
+ <li>
+                       <h2>
+                            <a href="index.htm" title="首页">首页</a>
+                       </h2>
+                   </li>
+                  
+  
+ <li>
+                       <h2>
+                            <a href="xxgk/xxjj.htm" title="学校概况">学校概况</a>
+                       </h2>
+                       <div class="sub">
+                           <div class="box">
+                              <a href="xxgk/xxjj.htm" title="学校简介">学校简介</a>
+                              <a href="xxgk/xrld.htm" title="现任领导">现任领导</a>
+                              <a href="xxgk/xx1.htm" title="校训">校训</a>
+                              <a href="xxgk/xb.htm" title="校标">校标</a>
+                              <a href="xxgk/xxzc.htm" title="学校章程">学校章程</a>
+                              
+                           </div>
+                       </div>
+                   </li>
+                  
+  
+ <li>
+                       <h2>
+                            <a href="zzjg.htm" title="组织机构">组织机构</a>
+                       </h2>
+                   </li>
+                  
+  
+ <li>
+                       <h2>
+                            <a href="zsjy2.htm" title="招生就业">招生就业</a>
+                       </h2>
+                   </li>
+                  
+  
+ <li>
+                       <h2>
+                            <a href="http://125.65.115.248:60003/cas/login?service=http%3A%2F%2F125.65.115.248%3A60005%2F" title="智慧校园">智慧校园</a>
+                       </h2>
+                   </li>
+                  
+  
+  
+  
+  
+  <li><div class="search_box">
+        <a href="javascript:;" class="search_btn">
+          <img src="images/search_white.png" alt="">
+        </a>
+      </div></li>
+</nav>
+           
+   </div>
+</header>
+<section class="banner swiper-container">
+    <div class="swiper-wrapper">     
+ 
+          
+        <div class="swiper-slide">
+            <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 1011327)" target="_blank">
+                <img src="images/huanqingguoqing.png " alt="">
+            </a>
+        </div>
+                  
+          
+        <div class="swiper-slide">
+            <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 1011325)" target="_blank">
+                <img src="images/relieqingzhudi40gejiaoshijie3.png " alt="">
+            </a>
+        </div>
+                  
+
+
+ 
+          
+        <div class="swiper-slide">
+            <a href="https://www.scyesz.edu.cn/shuangxh/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 1011330)" target="_blank">
+                <img src="images/shouye-xiaoyuanzhaopin2024.png " alt="">
+            </a>
+        </div>
+                  
+
+</div>
+    <div class="page swiper-pagination"></div>
+</section>
+<section id="content">
+    <section class="container01">
+        <div class="wp">
+            <div class="homea">
+               <div class="title001">
+                   <h2>新闻动态</h2>
+                   <a href="xwdt.htm" class="more">
+                       查看更多
+                   </a>
+               </div>
+               <div class="content flex">
+                   <div class="left">
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="list1w swiper-container">
+                           <div class="swiper-wrapper">
+   <div class="swiper-slide">
+                                   <a href="info/1291/68901.htm" target="_blank" title="学校召开“凝聚校友智慧 共谋学校发展”校友座谈会" class="bg-mask">
+                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/6/F6/3B/1FEABBBE4AF405F37359B09CBBA_1EABF7E5_6504B.jpg)"></span>
+                                   </div>
+                                       <h2 class="eclip">学校召开“凝聚校友智慧 共谋学校发展”校友座谈会</h2>
+                                       <time>
+                                           <span>26</span>
+                                           <em>2024.10</em>
+                                       </time>
+                                   </a>
+                               </div>
+  
+   <div class="swiper-slide">
+                                   <a href="info/1291/68891.htm" target="_blank" title="学校举行2024级新生军事训练汇报表演" class="bg-mask">
+                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/7/13/DD/473B12C38358ABF97C29F9CB696_5FD942EF_71A25.jpg)"></span>
+                                   </div>
+                                       <h2 class="eclip">学校举行2024级新生军事训练汇报表演</h2>
+                                       <time>
+                                           <span>25</span>
+                                           <em>2024.10</em>
+                                       </time>
+                                   </a>
+                               </div>
+  
+   <div class="swiper-slide">
+                                   <a href="info/1291/68881.htm" target="_blank" title="“无毒青春 向光而行” ——学校开展“青听”大讲堂第五期" class="bg-mask">
+                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/4/23/16/3FB950362B5B73DCB410474FAF6_906A92D6_4EB8E.jpg)"></span>
+                                   </div>
+                                       <h2 class="eclip">“无毒青春 向光而行” ——学校开展“青听”大讲堂第五期</h2>
+                                       <time>
+                                           <span>25</span>
+                                           <em>2024.10</em>
+                                       </time>
+                                   </a>
+                               </div>
+  
+   <div class="swiper-slide">
+                                   <a href="info/1291/68861.htm" target="_blank" title="学生工作处赴成都、德阳调研学习“一站式”学生社区建设" class="bg-mask">
+                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/3/58/F2/6561C4E4DC46C0B7B58A453ABDA_A6918A45_14605E.png)"></span>
+                                   </div>
+                                       <h2 class="eclip">学生工作处赴成都、德阳调研学习“一站式”学生社区建设</h2>
+                                       <time>
+                                           <span>24</span>
+                                           <em>2024.10</em>
+                                       </time>
+                                   </a>
+                               </div>
+  
+   <div class="swiper-slide">
+                                   <a href="info/1291/68851.htm" target="_blank" title="“青春滚烫，当‘燃’不让”—— 学校举办2024年第二届草坪音乐会" class="bg-mask">
+                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/F/4C/46/07A295ABE8B52A81A13BE30074D_DE0C231C_3A81E.jpg)"></span>
+                                   </div>
+                                       <h2 class="eclip">“青春滚烫，当‘燃’不让”—— 学校举办2024年第二届草坪音乐会</h2>
+                                       <time>
+                                           <span>24</span>
+                                           <em>2024.10</em>
+                                       </time>
+                                   </a>
+                               </div>
+  
+
+ </div>
+ <div class="page swiper-pagination"></div>
+                       </div>
+<script>_showDynClickBatch(['dynclicks_u8_68901','dynclicks_u8_68891','dynclicks_u8_68881','dynclicks_u8_68861','dynclicks_u8_68851'],[68901,68891,68881,68861,68851],"wbnews", 1984497611)</script>
+</div>
+                   <div class="right">
+
+<div class="list_box1">
+
+<div class="li" style="display:none">
+   <a href="info/1291/68901.htm" target="_blank" title="学校召开“凝聚校友智慧 共谋学校发展”校友座谈会" class="bg-mask alin_r">
+        
+       <div class="pic">
+           <span class="a" style="background-image: url(/__local/6/F6/3B/1FEABBBE4AF405F37359B09CBBA_1EABF7E5_6504B.jpg)"></span>
+       </div>
+       <div class="txt">
+           <time>
+               <span>26</span>
+               <em>2024.10</em>
+           </time>
+           <h3 class="l2">
+               <span class="aline_r">
+                  学校召开“凝聚校友智慧 共谋学校发展”校友座谈会
+               </span>
+           </h3>
+           <p class="l2">
+            10月26日，学校“凝聚校友智慧 共谋学校发展”校友座谈会在绵阳校区隆重召开。来自11个地市州...
+           </p>
+       </div>
+   </a>
+</div>
+
+<div class="li" style="display:none">
+   <a href="info/1291/68891.htm" target="_blank" title="学校举行2024级新生军事训练汇报表演" class="bg-mask alin_r">
+        
+       <div class="pic">
+           <span class="a" style="background-image: url(/__local/7/13/DD/473B12C38358ABF97C29F9CB696_5FD942EF_71A25.jpg)"></span>
+       </div>
+       <div class="txt">
+           <time>
+               <span>25</span>
+               <em>2024.10</em>
+           </time>
+           <h3 class="l2">
+               <span class="aline_r">
+                  学校举行2024级新生军事训练汇报表演
+               </span>
+           </h3>
+           <p class="l2">
+            10月25日上午，学校在绵阳、江油两地分校区举行了2024级新生军事训练汇报表演。全体校领导，...
+           </p>
+       </div>
+   </a>
+</div>
+
+<div class="li" style="display:none">
+   <a href="info/1291/68881.htm" target="_blank" title="“无毒青春 向光而行” ——学校开展“青听”大讲堂第五期" class="bg-mask alin_r">
+        
+       <div class="pic">
+           <span class="a" style="background-image: url(/__local/4/23/16/3FB950362B5B73DCB410474FAF6_906A92D6_4EB8E.jpg)"></span>
+       </div>
+       <div class="txt">
+           <time>
+               <span>25</span>
+               <em>2024.10</em>
+           </time>
+           <h3 class="l2">
+               <span class="aline_r">
+                  “无毒青春 向光而行” ——学校开展“青听”大讲堂第五期
+               </span>
+           </h3>
+           <p class="l2">
+            为充分发挥校园禁毒教育主阵地作用，提高学生识毒、防毒、拒毒意识和能力，10月23日，校团委...
+           </p>
+       </div>
+   </a>
+</div>
+
+<div class="li" style="display:none">
+   <a href="info/1291/68861.htm" target="_blank" title="学生工作处赴成都、德阳调研学习“一站式”学生社区建设" class="bg-mask alin_r">
+        
+       <div class="pic">
+           <span class="a" style="background-image: url(/__local/3/58/F2/6561C4E4DC46C0B7B58A453ABDA_A6918A45_14605E.png)"></span>
+       </div>
+       <div class="txt">
+           <time>
+               <span>24</span>
+               <em>2024.10</em>
+           </time>
+           <h3 class="l2">
+               <span class="aline_r">
+                  学生工作处赴成都、德阳调研学习“一站式”学生社区建设
+               </span>
+           </h3>
+           <p class="l2">
+            10月18日，我校学生工作处处长焦芙蓉一行赴西南石油大学和四川工程职业技术大学调研学习“一...
+           </p>
+       </div>
+   </a>
+</div>
+
+<div class="li" style="display:none">
+   <a href="info/1291/68851.htm" target="_blank" title="“青春滚烫，当‘燃’不让”—— 学校举办2024年第二届草坪音乐会" class="bg-mask alin_r">
+        
+       <div class="pic">
+           <span class="a" style="background-image: url(/__local/F/4C/46/07A295ABE8B52A81A13BE30074D_DE0C231C_3A81E.jpg)"></span>
+       </div>
+       <div class="txt">
+           <time>
+               <span>24</span>
+               <em>2024.10</em>
+           </time>
+           <h3 class="l2">
+               <span class="aline_r">
+                  “青春滚烫，当‘燃’不让”—— 学校举办2024年第二届草坪音乐会
+               </span>
+           </h3>
+           <p class="l2">
+            10月22日，我校第二届“青春滚烫，当‘燃’不让”草坪音乐会在绵阳校区操场举行，吸引了2000...
+           </p>
+       </div>
+   </a>
+</div>
+
+<div class="li">
+   <a href="info/1291/68821.htm" target="_blank" title="学校赴重庆市潼南区、铜梁区、合川区考察职业教育" class="bg-mask alin_r">
+        
+       <div class="pic">
+           <span class="a" style="background-image: url(/__local/0/A3/E9/A0F5A2A0F16144CA6E787A2F18D_C949CFF5_4BFCB.jpg)"></span>
+       </div>
+       <div class="txt">
+           <time>
+               <span>18</span>
+               <em>2024.10</em>
+           </time>
+           <h3 class="l2">
+               <span class="aline_r">
+                  学校赴重庆市潼南区、铜梁区、合川区考察职业教育
+               </span>
+           </h3>
+           <p class="l2">
+            为进一步推动川渝两地职业教育深度融合，共同组建“涪江流域职业教育协同发展联盟”，10月14...
+           </p>
+       </div>
+   </a>
+</div>
+
+<div class="li">
+   <a href="info/1291/68811.htm" target="_blank" title="“旧物新生，让爱传承” ——学校开展第二届校园二手物品交易市场活动" class="bg-mask alin_r">
+        
+       <div class="pic">
+           <span class="a" style="background-image: url(/__local/A/E7/8C/3EFF95403AC3749D18AE883A95F_191F816D_C73EC.jpg)"></span>
+       </div>
+       <div class="txt">
+           <time>
+               <span>18</span>
+               <em>2024.10</em>
+           </time>
+           <h3 class="l2">
+               <span class="aline_r">
+                  “旧物新生，让爱传承” ——学校开展第二届校园二手物品交易市场活动
+               </span>
+           </h3>
+           <p class="l2">
+            为提升学生绿色环保和资源再利用意识，10月17日，校团委、学生工作处联合举办“旧物新生，让...
+           </p>
+       </div>
+   </a>
+</div>
+</div><script>_showDynClickBatch(['dynclicks_u9_68901','dynclicks_u9_68891','dynclicks_u9_68881','dynclicks_u9_68861','dynclicks_u9_68851','dynclicks_u9_68821','dynclicks_u9_68811'],[68901,68891,68881,68861,68851,68821,68811],"wbnews", 1984497611)</script>
+</div>
+               </div>
+           </div>
+            <div class="homeb">
+                <div class="title001" style="display:none">
+                    <h2>综合新闻</h2>
+                    <a href="xwdt.htm" class="more">
+                        查看更多
+                    </a>
+                </div>
+                <div class="list_box2">
+
+<ul class="flex">
+<li>
+    <a href="info/1291/68901.htm" target="_blank" title="学校召开“凝聚校友智慧 共谋学校发展”校友座谈会" class="bg-mask">
+     <h3 class="l2">学校召开“凝聚校友智慧 共谋学校发展”校友座谈会</h3>
+     <time>2024-10-26<time>
+    </a>
+</li>
+<li>
+    <a href="info/1291/68891.htm" target="_blank" title="学校举行2024级新生军事训练汇报表演" class="bg-mask">
+     <h3 class="l2">学校举行2024级新生军事训练汇报表演</h3>
+     <time>2024-10-25<time>
+    </a>
+</li>
+<li>
+    <a href="info/1291/68881.htm" target="_blank" title="“无毒青春 向光而行” ——学校开展“青听”大讲堂第五期" class="bg-mask">
+     <h3 class="l2">“无毒青春 向光而行” ——学校开展“青听”大讲堂第五期</h3>
+     <time>2024-10-25<time>
+    </a>
+</li>
+<li>
+    <a href="info/1291/68861.htm" target="_blank" title="学生工作处赴成都、德阳调研学习“一站式”学生社区建设" class="bg-mask">
+     <h3 class="l2">学生工作处赴成都、德阳调研学习“一站式”学生社区建设</h3>
+     <time>2024-10-24<time>
+    </a>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u10_68901','dynclicks_u10_68891','dynclicks_u10_68881','dynclicks_u10_68861'],[68901,68891,68881,68861],"wbnews", 1984497611)</script>
+</div>
+            </div>
+        </div>
+    </section>
+   <section class="container08">
+        <div class="wp">
+           <div class="tab_box">
+               <ul class="tabs">
+                    <div class="title001 active">
+                        <h2>通知公告</h2>
+                    </div>
+                    <div class="title001 title010">
+                        <h2>招标采购</h2>
+                    </div>
+                </ul>
+                <div class="list_box4">
+                     <ul class="flex-left">
+
+<a href="tzgg.htm" class="mores">
+    查看更多
+</a>
+ <li>
+                        <a href="info/1321/68231.htm" target="_blank" title="四川幼儿师范高等专科学校2025届毕业生双选会邀请函" class="alin_r">
+                            <time>
+                                <span>20</span>
+                                <em>2024.09</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       四川幼儿师范高等专科学校2025届毕业生双选会邀请函
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1321/68361.htm" target="_blank" title="四川幼儿师范高等专科学校2024年8月招聘编制外工作人员拟聘公示" class="alin_r">
+                            <time>
+                                <span>25</span>
+                                <em>2024.09</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       四川幼儿师范高等专科学校2024年8月招聘编制外工作人员拟聘公示
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1321/68171.htm" target="_blank" title="四川幼儿师范高等专科学校2024年8月招聘编制外工作人员拟聘公示" class="alin_r">
+                            <time>
+                                <span>14</span>
+                                <em>2024.09</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       四川幼儿师范高等专科学校2024年8月招聘编制外工作人员拟聘公示
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1321/68181.htm" target="_blank" title="四川幼儿师范高等专科学校关于2024年9月招聘公寓管理员的公告" class="alin_r">
+                            <time>
+                                <span>11</span>
+                                <em>2024.09</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       四川幼儿师范高等专科学校关于2024年9月招聘公寓管理员的公告
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1321/68041.htm" target="_blank" title="四川幼儿师范高等专科学校关于2024年8月招聘编制外工作人员综合面试成绩和体检、心理测试有关事项的公告" class="alin_r">
+                            <time>
+                                <span>07</span>
+                                <em>2024.09</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       四川幼儿师范高等专科学校关于2024年8月招聘编制外工作人员综合面试成绩和体检、心理测试有关事项的公告
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1321/67871.htm" target="_blank" title="四川幼儿师范高等专科学校关于2024年8月招聘编制外工作人员的公告" class="alin_r">
+                            <time>
+                                <span>28</span>
+                                <em>2024.08</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       四川幼儿师范高等专科学校关于2024年8月招聘编制外工作人员的公告
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+<script>_showDynClickBatch(['dynclicks_u11_68231','dynclicks_u11_68361','dynclicks_u11_68171','dynclicks_u11_68181','dynclicks_u11_68041','dynclicks_u11_67871'],[68231,68361,68171,68181,68041,67871],"wbnews", 1984497611)</script>
+</ul>
+                     <ul class="flex-left" style="display: none;">
+
+<a href="zbcg.htm" class="mores">
+    查看更多
+</a>
+ <li>
+                        <a href="info/1331/68871.htm" target="_blank" title="2024年秋季保洁用品用具采购项目流标公告" class="alin_r">
+                            <time>
+                                <span>25</span>
+                                <em>2024.10</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       2024年秋季保洁用品用具采购项目流标公告
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1331/68841.htm" target="_blank" title="东西校区直饮水服务项目比选公告" class="alin_r">
+                            <time>
+                                <span>22</span>
+                                <em>2024.10</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       东西校区直饮水服务项目比选公告
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1331/68831.htm" target="_blank" title="2024年秋季保洁用品用具采购项目询价公告" class="alin_r">
+                            <time>
+                                <span>21</span>
+                                <em>2024.10</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       2024年秋季保洁用品用具采购项目询价公告
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1331/68701.htm" target="_blank" title="关于援外培训服务项目采购询价的结果公告" class="alin_r">
+                            <time>
+                                <span>16</span>
+                                <em>2024.10</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       关于援外培训服务项目采购询价的结果公告
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1331/68631.htm" target="_blank" title="东校区教室灯光改造项目询价结果公告" class="alin_r">
+                            <time>
+                                <span>15</span>
+                                <em>2024.10</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       东校区教室灯光改造项目询价结果公告
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+ <li>
+                        <a href="info/1331/68511.htm" target="_blank" title="四川幼儿师范高等专科学校援外培训服务项目采购的询价公告" class="alin_r">
+                            <time>
+                                <span>09</span>
+                                <em>2024.10</em>
+                            </time>
+                            <div class="txt">
+                                <p class="l2">
+                                    <span class="aline_r">
+                                       四川幼儿师范高等专科学校援外培训服务项目采购的询价公告
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+   
+<script>_showDynClickBatch(['dynclicks_u12_68871','dynclicks_u12_68841','dynclicks_u12_68831','dynclicks_u12_68701','dynclicks_u12_68631','dynclicks_u12_68511'],[68871,68841,68831,68701,68631,68511],"wbnews", 1984497611)</script>
+</ul>
+                </div>
+          </div>
+        </div>
+    </section>
+    <section class="container03">
+        <div class="wp">
+            <div class="title001">
+                <h2>教学科研</h2>
+                <a href="index/jxky.htm" class="more">
+                    查看更多
+                </a>
+            </div>
+            
+
+<div class="list5w swiper-container">
+    <div class="swiper-wrapper">
+<div class="swiper-slide">
+            <a href="info/1401/68581.htm" target="_blank" title="我校师生在全省美术教育专业师生基本功展示大赛中获奖27项" class="bg-mask">
+                <div class="pic">
+                    <span class="a" style="background-image: url('/__local/0/79/1A/F3D92C1824B4D6AE03919123CEF_0E126115_2EA4C.jpg')"></span>
+                </div>
+                <div class="txt">
+                    <h4 class="l2 h4s2">我校师生在全省美术教育专业师生基本功展示大赛中获奖27项</h4>
+                    <h6> <img src="images/time.png" alt="">2024.10.11</h6>
+                </div>
+            </a>
+        </div>
+  
+<div class="swiper-slide">
+            <a href="info/1401/68561.htm" target="_blank" title="我校师生在全省音乐教育专业大学生和教师基本功大赛中斩获18个奖项" class="bg-mask">
+                <div class="pic">
+                    <span class="a" style="background-image: url('/__local/7/04/74/766C6F7397B1A454B14BE8DC098_66776DAD_274B7.jpg')"></span>
+                </div>
+                <div class="txt">
+                    <h4 class="l2 h4s2">我校师生在全省音乐教育专业大学生和教师基本功大赛中斩获18个奖项</h4>
+                    <h6> <img src="images/time.png" alt="">2024.10.11</h6>
+                </div>
+            </a>
+        </div>
+  
+<div class="swiper-slide">
+            <a href="info/1401/68431.htm" target="_blank" title="我校学子荣获第二届高校大学生语言文化素养与普通话大赛三等奖" class="bg-mask">
+                <div class="pic">
+                    <span class="a" style="background-image: url('/__local/4/1D/DA/B81EDECDB200FA4918AF6CD22EE_D850CDCB_69191.jpg')"></span>
+                </div>
+                <div class="txt">
+                    <h4 class="l2 h4s2">我校学子荣获第二届高校大学生语言文化素养与普通话大赛三等奖</h4>
+                    <h6> <img src="images/time.png" alt="">2024.09.27</h6>
+                </div>
+            </a>
+        </div>
+  
+<div class="swiper-slide">
+            <a href="info/1401/68401.htm" target="_blank" title="我校教师作品入选2024年四川省“智慧助老”优质工作案例" class="bg-mask">
+                <div class="pic">
+                    <span class="a" style="background-image: url('/__local/9/E0/6C/36C1255AB860816AD3762E12D18_23BC184F_1D489.png')"></span>
+                </div>
+                <div class="txt">
+                    <h4 class="l2 h4s2">我校教师作品入选2024年四川省“智慧助老”优质工作案例</h4>
+                    <h6> <img src="images/time.png" alt="">2024.09.27</h6>
+                </div>
+            </a>
+        </div>
+  
+<div class="swiper-slide">
+            <a href="info/1401/68201.htm" target="_blank" title="艺术学院学生作品荣获四川高校学生校园心理情景剧比赛二等奖" class="bg-mask">
+                <div class="pic">
+                    <span class="a" style="background-image: url('/__local/8/84/67/6614338DC7EC0C48491034DF599_751CFD43_11E99.jpg')"></span>
+                </div>
+                <div class="txt">
+                    <h4 class="l2 h4s2">艺术学院学生作品荣获四川高校学生校园心理情景剧比赛二等奖</h4>
+                    <h6> <img src="images/time.png" alt="">2024.09.14</h6>
+                </div>
+            </a>
+        </div>
+  
+ </div>
+ <div class="btn prev swiper-button-prev"></div>
+                <div class="btn next swiper-button-next"></div>
+ 
+</div><script>_showDynClickBatch(['dynclicks_u13_68581','dynclicks_u13_68561','dynclicks_u13_68431','dynclicks_u13_68401','dynclicks_u13_68201'],[68581,68561,68431,68401,68201],"wbnews", 1984497611)</script>
+
+        </div>
+    </section>
+     <section class="container02">
+
+<div class="title001">
+            <h2>历史沿革</h2>
+        </div>
+        <div class="content">
+            <div class="list2w_hd swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:;" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(/__local/D/CD/54/1971F8614C7EA6F22B346762F84_764D0234_B0F26.jpg)"></span>
+                            </div>
+                        </a>
+                    </div>
+  
+                    <div class="swiper-slide">
+                        <a href="javascript:;" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(/__local/6/36/D7/8CA15134F7F4A43B83D5F72EFD0_FD3649C9_C899E.jpg)"></span>
+                            </div>
+                        </a>
+                    </div>
+  
+                    <div class="swiper-slide">
+                        <a href="javascript:;" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(/__local/F/85/A9/35A7B5AD56DC1A01DEB3680B5B7_7CDEF261_684BB.jpg)"></span>
+                            </div>
+                        </a>
+                    </div>
+  
+                    <div class="swiper-slide">
+                        <a href="javascript:;" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(/__local/4/2B/85/FD2FC41AA37580F0026EDEA6319_052576C2_70DBE.jpg)"></span>
+                            </div>
+                        </a>
+                    </div>
+  
+                    <div class="swiper-slide">
+                        <a href="javascript:;" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(/__local/5/89/3C/D5BB875ABDBA0AB8B4EC21C1B25_C3800F46_5BCBE.jpg)"></span>
+                            </div>
+                        </a>
+                    </div>
+  
+                    <div class="swiper-slide">
+                        <a href="javascript:;" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(/__local/3/1B/E2/318283D88F230B8369FEC10D2E9_CE70C43D_5C5A8.jpg)"></span>
+                            </div>
+                        </a>
+                    </div>
+  
+                    <div class="swiper-slide">
+                        <a href="javascript:;" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(/__local/A/96/D6/C2B4050B96718DFA02DAF8C7C1C_42C53D99_401B4.jpg)"></span>
+                            </div>
+                        </a>
+                    </div>
+  
+                </div>
+            </div>
+            <div class="list2w_bdBox">
+                <div class="list2w_bd">
+                    <div class=" swiper-container">
+                        <div class="swiper-wrapper">
+ <div class="swiper-slide">
+                                <a href="info/1031/23881.htm" target="_blank" title="四川省江油师范学校">
+                                    <time>1917</time>
+                                    <div class="txt">
+                                        <p class="">
+                                          四川省江油师范学校
+                                        </p>
+                                        <p>
+                                           1917年，学校的前身龙绵联合县立师范学校成立历经龙绵师范、小学教师寒暑假讲习会、江油简师，江油县立师范，至1953年正式更名为四川省江油师范学校。
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+  
+ <div class="swiper-slide">
+                                <a href="info/1031/23891.htm" target="_blank" title="江油幼儿师范学校">
+                                    <time>1960</time>
+                                    <div class="txt">
+                                        <p class="">
+                                          江油幼儿师范学校
+                                        </p>
+                                        <p>
+                                           1960年，四川省江油幼儿师范学校开办。
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+  
+ <div class="swiper-slide">
+                                <a href="info/1031/23901.htm" target="_blank" title="四川江油工业学校">
+                                    <time>1978</time>
+                                    <div class="txt">
+                                        <p class="">
+                                          四川江油工业学校
+                                        </p>
+                                        <p>
+                                           1978年，建材部江油水泥工业技工学校建立。历经国家建材局江油工业技工学校、四川省江油工业技工学校、四川省江油高级技工学校。1988年成立国家建材局江油水泥职工中专学校，与技校实行一校两牌办学，更名为四川江油工业学校。
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+  
+ <div class="swiper-slide">
+                                <a href="info/1031/23911.htm" target="_blank" title="四川省江油师范学校">
+                                    <time>1998</time>
+                                    <div class="txt">
+                                        <p class="">
+                                          四川省江油师范学校
+                                        </p>
+                                        <p>
+                                           1998年，四川省江油师范学校和四川省江油幼儿师范学校合并组建成新的四川省江油师范学校。
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+  
+ <div class="swiper-slide">
+                                <a href="info/1031/66461.htm" target="_blank" title="四川幼儿师范高等专科学校">
+                                    <time>2009</time>
+                                    <div class="txt">
+                                        <p class="">
+                                          四川幼儿师范高等专科学校
+                                        </p>
+                                        <p>
+                                           2009年，四川幼儿师范高等专科学校正式成立。
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+  
+ <div class="swiper-slide">
+                                <a href="info/1031/23931.htm" target="_blank" title="绵阳工业技师学院">
+                                    <time>2012</time>
+                                    <div class="txt">
+                                        <p class="">
+                                          绵阳工业技师学院
+                                        </p>
+                                        <p>
+                                           2012年，绵阳工业技师学院成立。
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+  
+ <div class="swiper-slide">
+                                <a href="info/1031/23951.htm" target="_blank" title="四川幼儿师范高等专科学校">
+                                    <time>2015</time>
+                                    <div class="txt">
+                                        <p class="">
+                                          四川幼儿师范高等专科学校
+                                        </p>
+                                        <p>
+                                           2015年，四川幼儿师范高等专科学校与绵阳工业技师学院优化整合，实行一校两牌办学。
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+  
+                        </div>
+                        <div class="btn prev swiper-button-prev"></div>
+                        <div class="btn next swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div><script>_showDynClickBatch(['dynclicks_u14_23881','dynclicks_u14_23891','dynclicks_u14_23901','dynclicks_u14_23911','dynclicks_u14_66461','dynclicks_u14_23931','dynclicks_u14_23951'],[23881,23891,23901,23911,66461,23931,23951],"wbnews", 1984497611)</script>
+</section>
+    <section class="container04">
+        <div class="titbox"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<h2>校园区位</h2> 
+<p>四川幼儿师范高等专科学校是2009年3月经教育部批准，在原四川省江油师范学校基础上建立的，</p> 
+<p> 西南地区第一所以培养幼儿、小学教育师资为主的公办全日制普通高等专科学校， </p> 
+<p> 坐落在人杰地灵的中国科技城绵阳市。在绵阳、江油设有三个校区，占地970余亩，建筑面积26.27万平方米，在校学生11000余人。 </p></div>
+        <div class="list3w swiper-container">
+            <div class="swiper-wrapper">    
+            
+            <div class="swiper-slide">
+                    <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 65199)" target="_blank">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(images/s4-img01.jpg)"></span>
+                        </div>
+                    </a>
+                </div>
+                    
+     
+</div>
+            <div class="btn prev swiper-button-prev"></div>
+            <div class="btn next swiper-button-next"></div>
+            <div class="page swiper-pagination"></div>
+        </div>
+        <div class="mapBox">
+                
+          
+               <img src="images/s4-img02.jpg" alt="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 65200)">
+                   
+
+
+        </div>
+    </section>
+   <section class="container05">
+    <div class="wp">
+        <div class="list4w swiper-container">
+            <div class="swiper-wrapper">        
+      
+              <div class="swiper-slide">
+                    <a href="https://www.sc.gov.cn/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 79915)" target="_blank" class="bg-mask">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(images/s5-img01.jpg)"></span>
+                        </div>
+                    </a>
+                </div>
+                  
+             
+              <div class="swiper-slide">
+                    <a href="https://www.sc.gov.cn/10462/c110462/list_ft.shtml" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 79913)" target="_blank" class="bg-mask">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(images/s5-img02.jpg)"></span>
+                        </div>
+                    </a>
+                </div>
+                  
+             
+       
+
+      
+              <div class="swiper-slide">
+                    <a href="https://gxlz.scedu.net/webuser/index.html#/Home" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 79916)" target="_blank" class="bg-mask">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(images/s5-img03.jpg)"></span>
+                        </div>
+                    </a>
+                </div>
+                  
+             
+              <div class="swiper-slide">
+                    <a href="https://www.scyesz.edu.cn/shuangxh/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 1011331)" target="_blank" class="bg-mask">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(images/shouye-xiaoyuanzhaopinxiao2024.png)"></span>
+                        </div>
+                    </a>
+                </div>
+                  
+             
+       
+</div>
+            
+            <div class="btn prev swiper-button-prev"></div>
+                <div class="btn next swiper-button-next"></div>
+        </div>
+    </div>
+</section>
+    <section class="container06"><div class="wp">
+   <div class="content">    
+           
+               <div class="li">
+             <a href="xywh/xyfg.htm" title="校园风光" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 80185)" target="_blank">
+                        <div class="icon">
+                            <img src="images/s6-ico01.png" alt="">
+                        </div>
+                        <h2>校园风光</h2>
+                        <img src="images/s6-ico04.png" alt="" class="jt">
+                    </a>
+             
+         
+     </div>
+                   
+                
+       
+       
+               <div class="li">
+             <a href="xysh.htm" title="校园生活" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 80186)" target="_blank">
+                        <div class="icon">
+                            <img src="images/s6-ico03.png" alt="">
+                        </div>
+                        <h2>校园生活</h2>
+                        <img src="images/s6-ico04.png" alt="" class="jt">
+                    </a>
+             
+         
+     </div>
+                   
+                
+       
+       
+               <div class="li">
+             <a href="xywh/sszp.htm" title="师生作品" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 80187)" target="_blank">
+                        <div class="icon">
+                            <img src="images/s6-ico01.png" alt="">
+                        </div>
+                        <h2>师生作品</h2>
+                        <img src="images/s6-ico04.png" alt="" class="jt">
+                    </a>
+             
+         
+     </div>
+                   
+                
+       
+</div>
+</div></section>
+    <section class="container07">
+        <div class="wp">
+            <div class="title002">
+                <div class="ll">
+                    <h2>FOLLOW US @SOCIAL MEDIA</h2>
+                    <h3>关注媒体上的我们</h3>
+                </div>
+                <div class="rr">
+                    <div class="media_list">        
+ 
+            <div class="li">
+                <div class="ewm">
+                    <img src="images/wx1.jpg" alt="">
+                </div>
+                <a href="" title="微信" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 79882)" target="_blank">
+                    <img src="images/s7-ico05.png" alt="">
+                    
+                </a>
+            </div>
+     
+
+ 
+            <div class="li">
+                <div class="ewm">
+                    <img src="images/wb1.png" alt="">
+                </div>
+                <a href="" title="微博" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 65203)" target="_blank">
+                    <img src="images/s7-ico03.png" alt="">
+                </a>
+            </div>
+     
+
+ 
+            <div class="li">
+                <div class="ewm">
+                    <img src="images/dy1.jpg" alt="">
+                </div>
+                <a href="" title="抖音" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 65202)" target="_blank">
+                    <img src="images/s7-ico02.png" alt="">
+                </a>
+            </div>
+     
+</div>
+                </div>
+            </div>
+            <div class="content">
+
+
+<div class="left">
+ <div class="li">
+                        <a href="info/1341/68721.htm" target="_blank" title="2024年川幼专升本人物特辑" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(/__local/2/D9/83/1D27625285028744620C3D4033E_61003276_9C14.jpg)"></span>
+                            </div>
+                            <div class="txt">
+                                <time>2024.10.16</time>
+                                <h3 class="eclip">2024年川幼专升本人物特辑</h3>
+                               
+                                <i class="col1"></i>
+                            </div>
+                        </a>
+                    </div>
+
+ <div class="li">
+                        <a href="info/1341/68711.htm" target="_blank" title="2024年川幼考研人物特辑" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(/__local/D/D9/E0/A95584036D8211C9A1191DB18D9_41E3BFA7_C63E.jpg)"></span>
+                            </div>
+                            <div class="txt">
+                                <time>2024.10.16</time>
+                                <h3 class="eclip">2024年川幼考研人物特辑</h3>
+                               
+                                <i class="col2"></i>
+                            </div>
+                        </a>
+                    </div>
+                      </div>
+
+     <div class="right">
+                    <a href="info/1341/68731.htm" class="bg-mask">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/1/DE/7F/1F87E26FC5824975C68C1070CFC_CC0011B9_25AB8.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <time>2024.10.16</time>
+                            <h3 class="eclip">川幼原创绘本专题</h3>
+                          
+                            <i class="col3"></i>
+                        </div>
+                    </a>
+                </div>
+<script>_showDynClickBatch(['dynclicks_u21_68721','dynclicks_u21_68711','dynclicks_u21_68731'],[68721,68711,68731],"wbnews", 1984497611)</script>
+</div>
+        </div>
+    </section>
+    <footer class="foot">
+        <div class="wp">
+            <div class="ftlogo">
+                    
+            
+          <img src="images/ftlogo.png" alt="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 79885)">
+                   
+                
+       
+
+            </div>
+            <div class="ft1">
+                <div class="ftleft">
+<h5><img src="/__local/8/40/C5/7C1FCABC7A4E468DD53E0946BEB_DE1CDA1D_10B.png?e=.png" vsbhref="vurl" vurl="/_vsl/840C57C1FCABC7A4E468DD53E0946BEB/DE1CDA1D/10B?e=.png" vheight="" vwidth="" orisrc="/__local/8/40/C5/7C1FCABC7A4E468DD53E0946BEB_DE1CDA1D_10B.png" class="img_vsb_content"><p>绵阳校区地址：四川省绵阳市涪城区教育园区教育西路16号</p><p>东校区地址：四川省江油市东山路北段100号 </p><p>西校区地址：四川省江油市诗城路西段125号</p></h5>
+<h5><img src="/__local/5/B5/C5/BB90A455304C5ED9ABC7EA3C787_605852F3_106.png?e=.png" vsbhref="vurl" vurl="/_vsl/5B5C5BB90A455304C5ED9ABC7EA3C787/605852F3/106?e=.png" vheight="" vwidth="" orisrc="/__local/5/B5/C5/BB90A455304C5ED9ABC7EA3C787_605852F3_106.png" class="img_vsb_content" style="font-size: 16px;"><p>网上违法和不良信息举报电话：0816-3690814<span>0816-3691186</span></p><p>办学突出问题举报投诉电话：0816-3662845</p><p>就业签约、统计造假举报电话：0816-3690811<span> 0816-3599629</span></p><p>实验室安全隐患举报电话：0816-3690820</p><p>电子信箱：54672748@qq.com</p></h5></div>
+                <div class="ftright">    
+           
+                <div>
+                        <img src="images/wb1.png" alt="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 79884)">
+                        <p>官方微博</p>
+                    </div>
+                   
+              
+                <div>
+                        <img src="images/wx1.jpg" alt="" onclick="_addDynClicks(&#34;wbimage&#34;, 1984497611, 79883)">
+                        <p>官方微信</p>
+                    </div>
+                   
+              
+       
+</div>
+            </div>
+
+        </div>
+        <div class="bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p style="text-align:center;">
+    ©2009-
+<script>var date=new Date();
+document.write(date.getFullYear());</script>
+
+    四川幼儿师范高等专科学校 版权所有 &nbsp; <a href="https://beian.miit.gov.cn/#/Integrated/index">蜀ICP备17029827号-2&nbsp;</a>&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51078102110136"> 川公网安备51078102110136号</a>
+</p>
+<p></p>
+<p>
+    <br />
+</p></div>
+    </footer>
+</section>
+</body>
+<script src="js/index.js"></script>
+<script>
+    $(window).scroll(function () {
+        if($(window).scrollTop() > 50){
+            $('.header').stop().addClass('scroll')
+        }else{
+            $('.header').stop().removeClass('scroll')
+        }
+    })
+    
+    $(".tab_box .tabs div").hover(function()
+    {
+        $(this).addClass("active").siblings().removeClass("active")
+        var index = $(this).index()
+        $(".list_box4 ul").eq(index).show().siblings().hide()
+    });
+</script>
+</html>

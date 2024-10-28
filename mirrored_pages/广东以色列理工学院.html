@@ -1,0 +1,1105 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="UTF-8" /><title>
+	广东以色列理工学院
+</title><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="css/style.css?v=3355" /><link rel="stylesheet" type="text/css" href="css/mobilefix.css?v=3663" /><link rel="stylesheet" href="css/swiper.min.css" />
+
+    <!-- Modernizr -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/layer.js"></script>
+
+    <script src="js/slide.js"></script>
+    <!-- Resource jQuery -->
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/mobilenav.js"></script>
+    <script type="text/javascript">
+        function viewDetail(cNo) {
+            var twidth = "60%";
+            var theight = "80%";
+            if ($(window).width() < 768) {
+                twidth = "90%";
+                theight = "80%";
+            }
+
+            $.ajax({
+                type: "get",
+                cache: false,
+                url: "en/ajax.ashx?action=calendarDetail",
+                dataType: "html",
+                data: "cNo=" + cNo,
+                success: function (result) {
+                    layer.open({
+                        title: false,
+                        type: 1,
+                        btn: ['CLOSE'],
+                        skin: 'layui-layer-rim', //加上边框
+                        area: [twidth, theight], //宽高
+                        content: result
+                    });
+                }
+            });
+        };
+    </script>
+
+<meta name="keywords" content="广东以色列理工学院，以色列大学，中外合作大学，化学工程与工艺，生物技术，材料科学与工程，诺贝尔奖校长" /><meta name="description" content="广东以色列理工学院（英文缩写GTIIT）是由享誉全球的知名高等学府以色列理工学院（英文缩写Technion）与汕头大学（英文缩写STU）合作办学的一所具有独立法人资格的中外合作大学，坐落于广东省汕头市。" /></head>
+<body>
+
+
+    
+
+<div class="headCon clearfix">
+    <div class="headRbg"></div>
+    <div class="head clearfix">
+        <div id="logo">
+            <a href="index.aspx"></a>
+        </div>
+        <div class="cnen">
+            <div class="cnenCon">
+                <b>我是</b>
+                <a href="for-students.aspx" class="resfor">学生</a>
+                <a href="for-faculty.aspx" class="resfor">教职</a>
+                <a href="for-staff.aspx" class="resfor">员工</a>
+                <a href="for-visitor.aspx" class="resfor">访客</a>
+                <a href="https://sites.gtiit.edu.cn/events/" target="_blank" class="resfor">活动</a>
+                <a id="header_lan" class="language" href="/en/index.aspx">En</a>
+            </div>
+        </div>
+
+        <div class="search">
+            <div class="searchCon">
+                <input class="searchInput" id="keyword" onkeydown="KeyDown();" value="" placeholder="搜索" />
+                <button type="button" class="searchSubmit" onclick="searchNews();"><i class="iconfont">&#xe62b;</i></button>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function searchNews() {
+                if ($("#keyword").val() == "") {
+                    alert("请输入关键字!");
+                    $("#keyword")[0].focus();
+                    return;
+                } else {
+                    window.open("/siteSearchList.aspx?keyword=" + encodeURI($("#keyword").val()));
+                }
+            }
+            function KeyDown() {
+                if (event.keyCode == 13) {
+                    searchNews();
+                }
+            }
+        </script>
+
+        <div class="nav">
+
+            <ul style="width: 830px;">
+
+                <li class="b">
+                    <a href="news-events.aspx" id="header_newsline" class="a">新闻资讯<p class="nline"></p>
+                    </a>
+
+                </li>
+
+                <li class="b">
+                    <a href="welcome.aspx" id="header_aboutline" class="a">认识广以<p class="nline"></p>
+                    </a>
+                    <div class="xmzs0">
+
+                        <div class="subsections clearfix">
+
+                            <div class="subsections_l">
+                                <p><a href="welcome.aspx">冀望与期许</a></p>
+                                <p><a href="about-us.aspx">学校概况</a></p>
+                                <p><a href="mission.aspx">愿景与使命</a></p>
+                                <p><a href="milestones.aspx">大事记</a></p>
+                                <p><a href="leadership.aspx">领导架构</a></p>
+                                <p><a href="information.aspx">信息公开</a></p>
+                                <p><a href="purchase.aspx">招标采购</a></p>
+                                <p><a href="https://www.720yun.com/vr/154jz7kuuO3" target="_blank">云游校园</a></p>
+                                <p><a href="city.aspx">美丽汕头</a></p>
+                                <p><a href="contact-us.aspx">联系我们</a></p>
+                            </div>
+
+                            <div class="subsections_r">
+                                <h4>快速了解</h4>
+                                <p><a href="colleges.aspx">学校特色</a></p>
+                                <p><a href="einstein.aspx">爱因斯坦故事</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/foundation/" target="_blank">教育发展基金会</a></p>
+                                <p><a href="innovation.aspx">创客天地</a></p>
+                                <p><a href="recruit_faculty.aspx">工作机会</a></p>
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+                <li class="b">
+                    <a href="staff.aspx" id="header_staffline" class="a">师资队伍<p class="nline"></p>
+                    </a>
+                    <div class="xmzs0">
+
+
+                        <div class="subsections clearfix">
+
+                            <div class="subsections_l" style="height: 220px;">
+                                <p><a href="staff.aspx">学科带头人</a></p>
+                                <p><a href="academic-staff.aspx">专业师资</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/research/researchers/ " target="_blank">教师学术全景</a></p>
+                            </div>
+
+                            <div class="subsections_r">
+                                <h4>快速了解</h4>
+                                <p><a href="https://sites.gtiit.edu.cn/admissions/" target="_blank">本科招生</a></p>
+                                <p><a href="programs-of-study.aspx">本科教育</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/research/graduate-studies/" target="_blank">研究生教育</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/research/event/" target="_blank">学术活动</a></p>
+                                <p><a href="recruit_faculty.aspx">工作机会</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </li>
+                <li class="b">
+                    <a href="programs-of-study.aspx" id="header_academicline" class="a">教学科研<p class="nline"></p>
+                    </a>
+                    <div class="xmzs0">
+
+
+                        <div class="subsections clearfix">
+
+                            <div class="subsections_l" style="height: 340px;">
+                                <p><a href="programs-of-study.aspx">本科教育</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/research/graduate-studies/" target="_blank">研究生教育</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/research/" target="_blank">科研概况</a></p>
+                                <p style="padding-left: 18px;"><a href="https://sites.gtiit.edu.cn/research/centers" target="_blank">- 研究中心</a></p>
+
+                                <div style="padding-left: 18px; position:relative;" class="nav_research">
+                                    <a href="javascript:void(0);" class="nav_research_link">- 科研平台及实验室 <i class="iconfont nav_research_link_icon">&#xe628;</i></a>
+                                    <div class="nav_research_con">
+                                        <p><a href="https://sites.gtiit.edu.cn/matec/" target="_blank">广东省能量转换材料和技术重点实验室</a></p>
+                                        <p><a href="https://sites.gtiit.edu.cn/emc/" target="_blank">电镜中心</a></p>
+                                        <p><a href="https://sites.gtiit.edu.cn/xrd/zh/" target="_blank">X射线实验室</a></p>
+                                        <p><a href="https://sites.gtiit.edu.cn/checentrallab/zh/" target="_blank">化工与环境中心实验室</a></p>
+                                    </div>
+                                </div>
+                                
+                                <p style="padding-left: 18px;"><a href="https://sites.gtiit.edu.cn/research/researchers/" target="_blank">- 科研人员</a></p>
+                                <p style="padding-left: 18px;"><a href="https://sites.gtiit.edu.cn/research/research-fellowship/" target="_blank">- 博士后研究员</a></p>
+                                <p style="padding-left: 18px;"><a href="https://sites.gtiit.edu.cn/gtec/zh" target="_blank">- 科创中心</a></p>
+                                <p><a href="recruit_research_support.aspx" target="_blank">招聘信息</a></p>
+                            </div>
+
+                            <div class="subsections_r">
+                                <h4>快速了解</h4>
+                                <p><a href="https://sites.gtiit.edu.cn/ehs" target="_blank">校园环境健康安全</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/events/" target="_blank">活动</a></p>
+                                <p><a href="recruit_faculty.aspx">工作机会</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/research/welcome-packet/" target="_blank">欢迎入职</a></p>
+                                <p><a href="https://www.outlook.com/gtiit.edu.cn" target="_blank">邮箱</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="b">
+                    <a href="campus-design.aspx" id="header_campusline" class="a">校园生活<p class="nline"></p>
+                    </a>
+                    <div class="xmzs0" style="left: -240px;">
+
+                        <div class="subsections clearfix">
+
+                            <div class="subsections_l" style="height: 300px;">
+                                <p><a href="campus-design.aspx">校区简介</a></p>
+                                <p><a href="students-house.aspx">住宿生活</a></p>
+                                <p><a href="students-action.aspx">学生活动</a></p>
+                                <p><a href="students-health.aspx">医疗服务与心理健康</a></p>
+                                <p><a href="students-sports.aspx">体育休闲</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/ehs" target="_blank">校园环境健康安全</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/it" target="_blank">信息技术服务</a></p>
+                            </div>
+
+                            <div class="subsections_r">
+                                <h4>快速了解</h4>
+                                <p><a href="news-events.aspx">新闻</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/events/" target="_blank">活动</a></p>
+                                <p><a href="students-support.aspx">学生资助</a></p>
+                                <p><a href="students-behavior.aspx">学生行为</a></p>
+                                <p><a href="https://www.720yun.com/vr/154jz7kuuO3" target="_blank">云游校园</a></p>
+                                <p><a href="visit-us.aspx">校园参观</a></p>
+                                <p><a href="recruit_faculty.aspx">工作机会</a></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="b">
+                    <a href="https://sites.gtiit.edu.cn/admissions/" id="header_enrollline" class="a" target="_blank">招生信息<p class="nline"></p>
+                    </a>
+                    <div class="xmzs0" style="left: -240px;">
+
+
+                        <div class="subsections clearfix">
+
+                            <div class="subsections_l" style="height: 200px;">
+                                <p><a href="https://sites.gtiit.edu.cn/admissions/" target="_blank">本科招生</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/research/graduate-studies/" target="_blank">研究生招生</a></p>
+                                <p><a href="visit-us.aspx">校园参观</a></p>
+                            </div>
+
+                            <div class="subsections_r">
+                                <h4>快速了解</h4>
+                                <p><a href="news-events.aspx">新闻</a></p>
+                                <p><a href="https://sites.gtiit.edu.cn/admissions/gtiit-admissions-activity/" target="_blank">活动</a></p>
+                                <p><a href="https://www.720yun.com/vr/154jz7kuuO3" target="_blank">云游校园</a></p>
+                                <p><a href="contact-us.aspx">联系我们</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+
+            <div id="floatNav">
+                <div class="navOne">
+                    <div class="navOneCon">
+                        <a href="#" class="navOneIcon"><i class="iconfont">&#xe606;</i></a>
+                        <ul class="navOneUl">
+                            <li><a href="index.aspx"><i class="iconfont icon1">&#xe600;</i>首页</a></li>
+                            <li><a href="about-us.aspx"><i class="iconfont icon3">&#xe602;</i> 认识广以</a></li>
+                            <li><a href="campus-design.aspx"><i class="iconfont icon3">&#xe613;</i> 校园生活</a></li>
+                            <li><a href="programs-of-study.aspx"><i class="iconfont icon1">&#xe605;</i> 教学科研</a></li>
+                            <li><a href="https://sites.gtiit.edu.cn/admissions/"><i class="iconfont icon1">&#xe61a;</i> 招生信息</a></li>
+                            <li><a href="recruit.aspx"><i class="iconfont icon3">&#xe604;</i> 招聘信息</a></li>
+                            <li><a href="news-events.aspx"><i class="iconfont icon3">&#xe601;</i> 新闻资讯</a></li>
+                            <li><a href="video.aspx"><i class="iconfont icon3">&#xe603;</i> 精彩瞬间</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <a id="header_rlan" class="rlan Axiforma-Bold" href="/en/index.aspx">En</a>
+            <div class="navBackHome"><a href="index.aspx"><i class="iconfont icon1">&#xe600;</i></a></div>
+
+            <script>
+                $(".navOneCon").hover(function () {
+                    $(".navOneIcon").css("background", "#59abda");
+                    $(".navOneUl").css("display", "block");
+                }, function () {
+                    $(".navOneUl").css("display", "none");
+                    $(".navOneIcon").css("background", "#59abda");
+                });
+                $(function () {
+                    //获取导航距离页面顶部的距离  
+                    var toTopHeight = 200;
+                    $("#floatNav").hide();
+                    $(".navBackHome").hide();
+
+                    //监听页面滚动  
+                    $(window).scroll(function () {
+                        //判断页面滚动超过导航时执行的代码  
+                        if ($(document).scrollTop() > toTopHeight) {
+                            //检测是否为IE6。jQuery1.9中去掉了msie的方法，所以只好这样写  
+                            if ('undefined' == typeof (document.body.style.maxHeight)) {
+                                //页面滚动的距离  
+                                var scrollTop = $(document).scrollTop();
+                                //IE6下，用absolute定位，并设置Top值为距离页面顶部的距离  
+                                $("#floatNav").css({ 'position': 'absolute', 'top': scrollTop + 'px' });
+                                $("#floatNav").show();
+                                $(".rlan").show();
+                                $(".navBackHome").show();
+                            } else {
+                                //IE6以上浏览器采用fixed定位  
+                                $("#floatNav").addClass("nav_fixed");
+                                $("#floatNav").show();
+                                $(".rlan").show();
+                                $(".navBackHome").show();
+                            }
+                        } else {//判断页面滚动没有超过导航时执行的代码  
+                            if ('undefined' == typeof (document.body.style.maxHeight)) {
+                                //设置Top值为导航距页面顶部的初始值。（IE6为了防止浏览器一下滚动过多，所以不能采用直接去掉定位的方法）  
+                                $("#floatNav").css({ 'position': 'absolute', 'top': toTopHeight + 'px' });
+                                $("#floatNav").show();
+                                $(".rlan").show();
+                                $(".navBackHome").show();
+                            } else {
+                                //IE6以上浏览器移除fixed定位，采用默认流布局  
+                                $("#floatNav").removeClass("nav_fixed");
+                                $("#floatNav").hide();
+                                $(".rlan").hide();
+                                $(".navBackHome").hide();
+                            }
+                        }
+                    });
+                });
+            </script>
+
+        </div>
+
+        <div class="headbg"></div>
+
+    </div>
+</div>
+
+<!-- 手机端导航--开始 -->
+<div class="m_img">
+    <div class="cnenCon">
+        <span>我是</span>
+        <a href="for-students.aspx" class="resfor Axiforma-Bold">学生</a>
+        <a href="for-faculty.aspx" class="resfor Axiforma-Bold">教职</a>
+        <a href="for-staff.aspx" class="resfor Axiforma-Bold">员工</a>
+        <a href="for-visitor.aspx" class="resfor Axiforma-Bold">访客</a>
+        <a href="https://sites.gtiit.edu.cn/events/" target="_blank" class="resfor">活动</a>
+        <a id="header_mlan" class="mlan Axiforma-Bold" href="/en/index.aspx">ENGLISH</a>
+    </div>
+    <div class="m_img_com clearfix">
+        <div class="headlf">
+            <a href="index.aspx" class="m_logo">
+                <img src="images/logo.png" /></a>
+        </div>
+        <div class="headrg">
+
+            <a href="javascript:;" class="toggle" id="sidenav-toggle">
+                <i class="iconfont">&#xe606;</i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- panel control -->
+<nav class="sidenav" data-sidenav-toggle="#sidenav-toggle">
+    <div class="sidenav-header">
+        <img src="images/aboutlogo.png" />
+        <h3>广东以色列理工学院</h3>
+    </div>
+    <ul id="accordion" class="accordion_mnav">
+        <li class="first-list">
+            <a href="index.aspx" id="header_indexli" class="linkon">
+                <div class="link"><i class="iconfont">&#xe600;</i> 首页 <i class="iconfont fa-chevron-down">&#xe628;</i></div>
+            </a>
+        </li>
+
+        <li id="header_newsli">
+            <div class="link"><i class="iconfont">&#xe601;</i> 新闻资讯 <i class="iconfont fa-chevron-down">&#xe628;</i></div>
+            <ul id="header_newsSub" class="submenu">
+                <li><a href="news-events.aspx" id="header_news">最新消息</a></li>
+                <li><a href="video.aspx" id="header_video">光影校园</a></li>
+                <li><a href="press-releases.aspx" id="header_press">媒体视角</a></li>
+            </ul>
+        </li>
+
+        <li id="header_aboutli">
+            <div class="link"><i class="iconfont">&#xe602;</i> 认识广以 <i class="iconfont fa-chevron-down">&#xe628;</i></div>
+            <ul id="header_aboutSub" class="submenu">
+                <li><a href="welcome.aspx" id="header_welcome">冀望与期许</a></li>
+                <li><a href="about-us.aspx" id="header_aboutus">学校概况</a></li>
+                <li><a href="mission.aspx" id="header_mission">愿景与使命</a></li>
+                <li><a href="milestones.aspx" id="header_milestones">大事记</a></li>
+                <li><a href="leadership.aspx" id="header_leadership">领导架构</a></li>
+                <li><a href="information.aspx" id="header_information">信息公开</a></li>
+                <li><a href="purchase.aspx" id="header_purchase">招标采购</a></li>
+                <li><a href="https://www.720yun.com/vr/154jz7kuuO3" target="_blank">云游校园</a></li>
+                <li><a href="city.aspx" id="header_cityInfo">美丽汕头</a></li>
+                <li><a href="contact-us.aspx" id="header_contactus">联系我们</a></li>
+                <li class="sub_quick">快速了解</li>
+                <li class="sub_quick_li"><a href="colleges.aspx" id="header_colleges">学校特色</a></li>
+                <li class="sub_quick_li"><a href="einstein.aspx" id="header_einstein">爱因斯坦故事</a></li>
+                <li class="sub_quick_li"><a href="https://sites.gtiit.edu.cn/foundation/" target="_blank">教育发展基金会</a></li>
+                <li class="sub_quick_li"><a href="innovation.aspx" id="header_innovation">创客天地</a></li>
+            </ul>
+        </li>
+        <li id="header_staffli">
+            <div class="link"><i class="iconfont">&#xe605;</i> 师资队伍 <i class="iconfont fa-chevron-down">&#xe628;</i></div>
+            <ul id="header_staffSub" class="submenu">
+                <li><a href="staff.aspx" id="header_staff">学科带头人</a></li>
+                <li><a href="academic-staff.aspx" id="header_acd_staff">专业师资</a></li>
+                <li><a href="https://sites.gtiit.edu.cn/research/researchers/" target="_blank">教师学术全景</a></li>
+
+                <li class="sub_quick">快速了解</li>
+                <li class="sub_quick_li"><a href="https://sites.gtiit.edu.cn/admissions/" target="_blank">本科招生</a></li>
+                <li class="sub_quick_li"><a href="programs-of-study.aspx">本科教育</a></li>
+                <li class="sub_quick_li"><a href="https://sites.gtiit.edu.cn/research/graduate-studies/" target="_blank">研究生教育</a></li>
+                <li class="sub_quick_li"><a href="https://sites.gtiit.edu.cn/research/eventcalendar/" target="_blank">学术活动</a></li>
+                <li class="sub_quick_li"><a href="recruit_faculty.aspx">工作机会</a></li>
+
+            </ul>
+        </li>
+        <li id="header_academicli">
+            <div class="link"><i class="iconfont">&#xe605;</i> 教学科研 <i class="iconfont fa-chevron-down">&#xe628;</i></div>
+            <ul id="header_academicSub" class="submenu">
+                <li><a href="programs-of-study.aspx">本科教育</a></li>
+                <li class="sec"><a href="programs-of-study.aspx" id="header_programs_of_study">- 专业设置</a></li>
+                <li class="sec"><a href="colleges-set.aspx" id="header_colleges_set">- 本科学习要求</a></li>
+                <li class="sec"><a href="https://sites.gtiit.edu.cn/ug" id="header_timetable" target="_blank">- 本科教学网</a></li>
+                <li><a href="https://sites.gtiit.edu.cn/research/graduate-studies/" target="_blank">研究生教育</a></li>
+                <li><a href="https://sites.gtiit.edu.cn/research/" target="_blank">科研概况</a></li>
+                <li class="sec"><a href="https://sites.gtiit.edu.cn/research/centers" target="_blank">- 研究中心</a></li>
+                <li class="sec"><a href="javascript:void(0);">- 科研平台及实验室</a></li>
+                <li class="sec"><a href="https://sites.gtiit.edu.cn/matec/" target="_blank">   广东省能量转换材料和技术重点实验室</a></li>
+                <li class="sec"><a href="https://sites.gtiit.edu.cn/emc/" target="_blank">   电镜中心</a></li>
+                <li class="sec"><a href="https://sites.gtiit.edu.cn/xrd/zh/" target="_blank">   X射线实验室</a></li>
+                <li class="sec"><a href="https://sites.gtiit.edu.cn/checentrallab/zh/" target="_blank"> 化工与环境中心实验室</a></li>
+                <li class="sec"><a href="https://sites.gtiit.edu.cn/research/researchers/" target="_blank">- 科研人员</a></li>
+                <li class="sec"><a href="https://sites.gtiit.edu.cn/research/research-fellowship/" target="_blank">- 博士后研究员</a></li>
+                <li class="sec"><a href="https://sites.gtiit.edu.cn/gtec/zh" target="_blank">- 科创中心</a></li>
+
+                <li><a href="recruit_research_support.aspx" target="_blank">招聘信息</a></li>
+
+                <li class="sub_quick">快速了解</li>
+                <li class="sub_quick_li"><a href="https://sites.gtiit.edu.cn/ehs" target="_blank">校园环境健康安全</a></li>
+                <li class="sub_quick_li"><a href="https://sites.gtiit.edu.cn/events/" id="header_calendar" target="_blank">活动</a></li>
+                <li class="sub_quick_li"><a href="https://sites.gtiit.edu.cn/research/welcome-packet/" target="_blank">欢迎入职</a></li>
+                <li class="sub_quick_li"><a href="https://www.outlook.com/gtiit.edu.cn" target="_blank">邮箱</a></li>
+            </ul>
+        </li>
+        <li id="header_campusli">
+            <div class="link"><i class="iconfont">&#xe613;</i> 校园生活 <i class="iconfont fa-chevron-down">&#xe628;</i></div>
+            <ul id="header_campusSub" class="submenu">
+                <li><a href="campus-design.aspx" id="header_campus_design">校区简介</a></li>
+                <li class="sec"><a href="north.aspx" id="header_north">- 北校区</a></li>
+                <li><a href="south.aspx" id="header_south">- 南校区</a></li>
+                <li><a href="students-house.aspx" id="header_students_house">住宿生活</a></li>
+                <li><a href="students-action.aspx" id="header_students_action">学生活动</a></li>
+                <li><a href="students-health.aspx" id="header_students_health">医疗服务与心理健康</a></li>
+                <li><a href="students-sports.aspx" id="header_students_sports">体育休闲</a></li>
+                <li><a href="https://sites.gtiit.edu.cn/ehs" target="_blank">校园环境健康安全</a></li>
+                <li><a href="https://sites.gtiit.edu.cn/it" target="_blank">信息技术服务</a></li>
+                <li class="sub_quick">快速了解</li>
+                <li class="sub_quick_li"><a href="news-events.aspx">新闻</a></li>
+                <li class="sub_quick_li"><a href="https://sites.gtiit.edu.cn/events/" target="_blank">活动</a></li>
+                <li class="sub_quick_li"><a href="students-support.aspx" id="header_students_support">学生资助</a></li>
+                <li class="sub_quick_li"><a href="students-behavior.aspx" id="header_students_behavior">学生行为</a></li>
+                <li class="sub_quick_li"><a href="https://www.720yun.com/vr/154jz7kuuO3" target="_blank">云游校园</a></li>
+                <li class="sub_quick_li"><a href="visit-us.aspx">校园参观</a></li>
+
+            </ul>
+        </li>
+
+        <li id="header_enrollli">
+            <div class="link"><i class="iconfont">&#xe61a;</i> 招生信息 <i class="iconfont fa-chevron-down">&#xe628;</i></div>
+            <ul id="header_enrollSub" class="submenu">
+                <li style="border-bottom:none;"><a href="https://sites.gtiit.edu.cn/admissions/" target="_blank">本科教育</a></li>
+                <li class="sec" style="display:none;"><a href="admissions.aspx" id="header_tuition_and_fees">招生动态</a></li>
+                <li class="sec" style="display:none;"><a href="scholarships.aspx" id="header_scholarships">费用及奖学金</a></li>
+                <li class="sec" style="display:none;"><a href="javascript:void(0);">内地（中国大陆）学生</a></li>
+                <li class="third" style="display:none;"><a href="intake.aspx" id="header_intake">- 招生计划</a></li>
+                <li class="third" style="display:none;"><a href="policy.aspx" id="header_policy">- 招生章程</a></li>
+                <li class="third" style="display:none;"><a href="admission-query.aspx" id="header_admission_query">- 录取查询</a></li>
+                <li class="sec" style="display:none;"><a href="student-china.aspx" id="header_student_china">港澳台学生</a></li>
+                <li class="sec" style="display:none;"><a href="student-international.aspx" id="header_student_international">国际学生</a></li>
+                <li class="sec" style="display:none;"><a href="admissions-contact.aspx" id="header_admissions_contact">咨询服务</a></li>
+                <li style="border-top: 1px solid #ccc;"><a href="https://sites.gtiit.edu.cn/research/graduate-studies/" target="_blank">研究生教育</a></li>
+                <li><a href="visit-us.aspx" id="header_visit_us">校园参观</a></li>
+                <li class="sec"><a href="reservation.aspx" id="header_reservation">预约校园参观</a></li>
+                <li class="sec"><a href="reservation-activity.aspx" id="header_reservation_activity">参加校园活动</a></li>
+                <li class="sub_quick">快速了解</li>
+                <li class="sub_quick_li"><a href="news-events.aspx">新闻</a></li>
+                <li class="sub_quick_li"><a href="https://sites.gtiit.edu.cn/admissions/gtiit-admissions-activity/" target="_blank">活动</a></li>
+                <li class="sub_quick_li"><a href="https://www.720yun.com/vr/154jz7kuuO3" target="_blank">云游校园</a></li>
+                <li class="sub_quick_li"><a href="contact-us.aspx">联系我们</a></li>
+            </ul>
+        </li>
+        <li id="header_recruitli">
+            <div class="link"><i class="iconfont">&#xe604;</i> 招聘信息 <i class="iconfont fa-chevron-down">&#xe628;</i></div>
+            <ul id="header_recruitSub" class="submenu">
+                <li><a href="recruit_faculty.aspx" id="header_recruit_faculty">教学科研老师</a></li>
+                <li><a href="recruit_research_support.aspx" id="header_recruit_research_support">科研支持人员</a></li>
+                <li><a href="recruit1.aspx" id="header_recruit1">通识教育老师</a></li>
+                <li><a href="https://sites.gtiit.edu.cn/research/research-fellowship/research-fellow-positions/">博士后研究员招聘</a></li>
+                <li><a href="https://sites.gtiit.edu.cn/research/graduate-studies/positions/">硕博研究生招聘</a></li>
+                <li><a href="recruit.aspx" id="header_recruit">行政人员招聘</a></li>
+                <li><a href="recruit_affiliated_international_school.aspx" id="header_recruit_school">附属国际学校</a></li>
+                <li><a href="recruit_qa.aspx" id="header_recruit_qa">Q&A</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="links.aspx" id="header_linkli">
+                <div class="link"><i class="iconfont">&#xe636;</i> 友情链接<i class="iconfont fa-chevron-down">&#xe628;</i></div>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- end panel control -->
+<script>$('.sidenav').sidenav();</script>
+
+
+
+    <div class="banner clearfix">
+
+        <!-- Swiper -->
+        <div class="swiper-container clearfix">
+            <div class="swiper-wrapper clearfix">
+                
+                        <div class="swiper-slide clearfix">
+                            <div class="bannerList">
+                                <a href="https://www.gtiit.edu.cn/videoView.aspx?vNo=2136" target="_blank">
+                                    <img src="/upload/banner/696116a5-9202-4a4a-9786-a10c280bffc8.png" style="display: block; width: 100%;" />
+                                    <h3 class="banner_title">开启未来之门！广以2024宣传片《门》重磅发布！</h3>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    
+                        <div class="swiper-slide clearfix">
+                            <div class="bannerList">
+                                <a href="https://www.gtiit.edu.cn/viewNews_5013.aspx" target="_blank">
+                                    <img src="/upload/banner/d0c98fa2-a50c-465c-8e36-afed4970b4ab.jpg" style="display: block; width: 100%;" />
+                                    <h3 class="banner_title">广以18名教授入选“全球前2%顶尖科学家榜单”</h3>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    
+                        <div class="swiper-slide clearfix">
+                            <div class="bannerList">
+                                <a href="https://www.gtiit.edu.cn/viewNews.aspx?flowNo=4901" target="_blank">
+                                    <img src="/upload/banner/33a953df-4388-42fd-8a34-c01738e8c513.png" style="display: block; width: 100%;" />
+                                    <h3 class="banner_title">快报！2024届广以学子首批offer出炉！</h3>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    
+                        <div class="swiper-slide clearfix">
+                            <div class="bannerList">
+                                <a href="https://www.gtiit.edu.cn/viewNews_4731.aspx" target="_blank">
+                                    <img src="/upload/banner/77a978af-8f16-4c69-a35b-69a215e0e5be.jpg" style="display: block; width: 100%;" />
+                                    <h3 class="banner_title">重磅 | 广东以色列理工学院2023届本科毕业生就业质量报告</h3>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    
+                        <div class="swiper-slide clearfix">
+                            <div class="bannerList">
+                                <a href="https://www.gtiit.edu.cn/viewNews.aspx?flowNo=4700" target="_blank">
+                                    <img src="/upload/banner/4bbe74b1-eea1-4ef9-bf9a-0554ba078d7e.jpg" style="display: block; width: 100%;" />
+                                    <h3 class="banner_title">广东以色列理工学院发布2024年硕士/博士研究生招生简章</h3>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    
+                        <div class="swiper-slide clearfix">
+                            <div class="bannerList">
+                                <a href="https://www.gtiit.edu.cn/videoView.aspx?vNo=1068" target="_blank">
+                                    <img src="/upload/banner/4a46dae8-5157-45f8-8ce1-7ca6fd7ed489.jpg" style="display: block; width: 100%;" />
+                                    <h3 class="banner_title">用数据说话——广东以色列理工学院宣传片重磅发布！</h3>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-m"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"><i class="iconfont">&#xe628;</i></div>
+            <div class="swiper-button-prev"><i class="iconfont">&#xe637;</i></div>
+        </div>
+
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                autoplay: false,
+                delay: 5000,
+                speed: 1000,
+                autoHeight: true,
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                on: {
+                    init: function (swiper) {
+                        slide = this.slides.eq(0);
+                        slide.addClass('ani-slide');
+                    },
+                    transitionStart: function () {
+                        for (i = 0; i < this.slides.length; i++) {
+                            slide = this.slides.eq(i);
+                            slide.removeClass('ani-slide');
+                        }
+                    },
+                    transitionEnd: function () {
+                        slide = this.slides.eq(this.activeIndex);
+                        slide.addClass('ani-slide');
+
+                    },
+                }
+            });
+        </script>
+
+
+
+    </div>
+
+    <div class="channel_i clearfix">
+
+
+        <div class="clearfix sconewsCon">
+
+            <ul class="indexNews clearfix">
+
+                
+                        <li>
+                            <a href="viewNews.aspx?flowNo=5032" target="_blank" class="clearfix">
+
+                                <div class="indexNews_img">
+                                    <img src="/upload/1acc69d8-4fdd-4c5f-8b9e-409bc58e5827.jpg" />
+                                </div>
+                                <div class="indexNews_r">
+                                    <h3 class="indexNews_Title">师生“潮”玩汕头，本土非遗实力“圈粉”</h3>
+                                    <div class="indexNews_desc">
+                                        金秋10月，踏着明媚日光，来自12个国家的近120 位“广以人”相约而聚，走进汕头工业博物馆、汕头市文化馆，探寻工业记忆、体验非遗传统，在美妙的互动中领略鮀城魅力。此次活动由汕头公共外交协会、市教育局、广东以色列理工学院联合举办，以“感知...
+                                    </div>
+                                </div>
+                                <p class="indexNews_time clearfix"><i class="iconfont">&#xe60b;</i>2024-10-23</p>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="viewNews.aspx?flowNo=5030" target="_blank" class="clearfix">
+
+                                <div class="indexNews_img">
+                                    <img src="/upload/9538a7aa-b257-4999-a6e5-d14da88cf2c5.jpg" />
+                                </div>
+                                <div class="indexNews_r">
+                                    <h3 class="indexNews_Title">广以教师专访 | Nikita Kalinin：数学之美，曲径通幽</h3>
+                                    <div class="indexNews_desc">
+                                        三尺讲台春风化雨，门下自是桃李成辉。广东以色列理工学院拥有世界一流的教师团队，老师们全情投入，潜心钻研，成为学生们科学思维的开启者、科学道路的引路人，也因此收获学生们敬重和爱戴。我们推出的教师系列专访，将分享广以的师长大家们在治学修身、教...
+                                    </div>
+                                </div>
+                                <p class="indexNews_time clearfix"><i class="iconfont">&#xe60b;</i>2024-10-21</p>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="viewNews.aspx?flowNo=5026" target="_blank" class="clearfix">
+
+                                <div class="indexNews_img">
+                                    <img src="/upload/00e0eea0-c53a-42f6-a953-ec2b90ecd893.jpg" />
+                                </div>
+                                <div class="indexNews_r">
+                                    <h3 class="indexNews_Title">实干圆梦，安全先行</h3>
+                                    <div class="indexNews_desc">
+                                        2024级新生入学后，广东以色列理工学院校园环境健康安全办公室以“校园安全”为主题，为学子们开讲“安全教育第一课”。讲座阐明了安全对于理工科大学的重要性，教授学生如何识别和预防风险，以及在紧急情况下的自救和逃生技能。其中特别指出校园内的紧...
+                                    </div>
+                                </div>
+                                <p class="indexNews_time clearfix"><i class="iconfont">&#xe60b;</i>2024-10-16</p>
+                            </a>
+                        </li>
+                    
+
+            </ul>
+
+
+        </div>
+
+        <div class="clearfix" style="position: relative;">
+            <p class="indexNews_more_line"></p>
+            <a href="news-events.aspx" class="indexNews_more">更多广东以色列理工新闻</a>
+        </div>
+
+
+
+
+        <div class="clearfix" style="padding: 30px 20px; border-bottom: 1px solid #eee;">
+
+            <div class="welcome_l">
+
+
+                <!-- Swiper -->
+                <div class="swiper swiper-manage">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+
+                            <div class="il1">
+                                <a href="welcome.aspx">
+                                    <div class="ill_img">
+                                        <img src="images/gxgindex.jpg" />
+                                    </div>
+                                    <div class="ill_img_r">
+                                        <h4 class="ilTitle" style="margin-top: 20px;">广东以色列理工学院校领导</h4>
+                                        <h4 class="ilTitle1">校长</h4>
+                                        <h4 class="ilTitle1">龚新高</h4>
+                                        <p class="il1_line"></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="il1">
+                                <a href="welcome.aspx">
+                                    <div class="ill_img">
+                                        <img src="images/il1.jpg" />
+                                    </div>
+                                    <div class="ill_img_r">
+                                        <h4 class="ilTitle" style="margin-top: 20px;">以色列理工学院校长派驻广东以色列理工学院特使</h4>
+                                        <h4 class="ilTitle1">诺贝尔奖得主</h4>
+                                        <h4 class="ilTitle1">阿龙·切哈诺沃</h4>
+                                        <p class="il1_line"></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"><i class="iconfont">&#xe628;</i></div>
+                <div class="swiper-button-prev"><i class="iconfont">&#xe637;</i></div>
+
+                </div>
+
+                <script>
+                    var myswiper = new Swiper('.swiper-manage', {
+                        autoplay: true,
+                        delay: 5000,
+                        speed: 1000,
+                        autoHeight: true,
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    });
+                </script>
+
+
+
+            </div>
+
+            <div class="welcome_c">
+
+
+                <div class="einstein clearfix">
+                    <a href="einstein.aspx">
+                        <div class="einstein_img">
+                            <img src="images/einstein.jpg" />
+                        </div>
+                        <div class="einstein_txt">
+                            <h3 class="ilTitle" style="margin-top: 40px; font-size: 22px;">了解以色列理工学院</h3>
+                            <h3 class="ilTitle1" style="margin: 20px 0; margin-top: 40px; font-size: 16px; font-weight: 700;">及其建校创始人</h3>
+                            <h3 class="ilTitle1" style="font-size: 16px; font-weight: 700;">爱因斯坦的精神</h3>
+                            <p class="il2_line"></p>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="welcome_r">
+
+
+                <div class="il1">
+
+                    <div class="txtScroll-top">
+                        <div class="hd">
+                            <h3 class="ilTitle clearfix">校历</h3>
+                        </div>
+                        <div class="bd">
+                            <ul class="infoList">
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <a href="https://sites.gtiit.edu.cn/events/" target="_blank" class="calendarMore">MORE</a>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="clearfix" style="padding: 20px; background: #f7f7f7;">
+
+
+            <h2 class="index_title">教学科研</h2>
+            <p class="index_line"></p>
+            <h4 class="index_title_desc">作为一所研究型大学，我们欢迎世界各地有志于科研的学生，鼓励形成多元文化汇聚的学习社区。</h4>
+
+
+            <div class="index_academic clearfix">
+
+                <div class="index_academic_img">
+                    <img id="index_academic" src="/upload/37868611-148a-4ff4-b1e2-a2eb324eba05.jpg" style="border-width:0px;" />
+                </div>
+
+                <ul class="index_academic_ul">
+                    <li><a href="staff.aspx">学术团队 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="https://sites.gtiit.edu.cn/research/centers" target="_blank">研究中心 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="https://sites.gtiit.edu.cn/research/" target="_blank">科研 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="https://sites.gtiit.edu.cn/research/research-fellowship/" target="_blank">博士后研究员 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="https://sites.gtiit.edu.cn/research/graduate-studies/" target="_blank">研究生教育 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="programs-of-study.aspx">本科教育 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="recruit_research_support.aspx" target="_blank">招聘信息 <i class="iconfont">&#xe628;</i></a></li>
+                </ul>
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <div class="clearfix" style="padding: 20px; border-bottom: 1px solid #eee;">
+
+
+            <h2 class="index_title">校园生活</h2>
+            <p class="index_line"></p>
+            <h4 class="index_title_desc">开放、包容、和谐、有凝聚力</h4>
+            <h4 class="index_title_desc">广东以色列理工学院致力于打造一个有利于居住、学习的国际化社区，支持学生的发展和成长。</h4>
+
+
+            <div class="index_academic clearfix">
+
+
+                <div class="index_school_img">
+                    <img id="index_school" src="/upload/85756f1d-17c5-4d28-a01c-087de391376e.jpg" style="border-width:0px;" />
+                </div>
+
+                <ul class="index_school_ul">
+                    <li><a href="campus-design.aspx">校区简介 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="students-house.aspx">住宿生活 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="students-action.aspx">学生活动 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="students-health.aspx">医疗服务与心理健康 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="students-support.aspx">学生资助 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="students-sports.aspx">体育休闲 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="students-behavior.aspx">学生行为 <i class="iconfont">&#xe628;</i></a></li>
+                    <li><a href="https://helpdesk.gtiit.edu.cn" target="_blank">校园服务系统 <i class="iconfont">&#xe628;</i></a></li>
+                    <li style="border-bottom: none;"><a href="city.aspx">美丽汕头 <i class="iconfont">&#xe628;</i></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="clearfix index_campus360_con">
+
+
+
+            <div class="index_campus360">
+                <a href="https://www.720yun.com/vr/154jz7kuuO3" target="_blank">
+                    <h2 class="index_campus360_title">云游校园</h2>
+                    <img src="images/360campus.jpg" />
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="clearfix index_visit_con">
+
+            <div class="index_visit">
+
+                <h2 class="index_admission_title">招生信息</h2>
+
+                <ul class="index_visit_ul">
+                    <li>
+
+                        <a href="https://sites.gtiit.edu.cn/admissions" target="_blank" class="index_visit_more">本科招生</a>
+                        <img src="images/index_zs1.jpg" />
+
+                    </li>
+
+                    <li>
+
+                        <a href="https://sites.gtiit.edu.cn/research/graduate-studies/" target="_blank" class="index_visit_more">研究生教育</a>
+                        <img src="images/index_zs2.jpg" />
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    
+
+<div id="footerIn">
+    <div class="footerInCon clearfix">
+
+        <div class="foooter_rlink clearfix">
+            <a href="images/gtiitmap.jpg" target="_blank"><i class="iconfont">&#xe621;</i> 广以地图 </a>
+            <a href="visit-us.aspx" style="display:none"><i class="iconfont">&#xe603;</i> 参观预约</a>
+            <a href="https://www.720yun.com/vr/154jz7kuuO3" target="_blank"><i class="iconfont">&#xe630;</i> 云游校园</a>
+            <a href="mailto:news@gtiit.edu.cn"><i class="iconfont">&#xe65e;</i> 新闻中心</a>
+
+            <a href="https://sites.gtiit.edu.cn/ehs/safety-info/introduce-ehs-working-responsibility-scope/emergency-response-training/" target="_blank" class="footer_rlink_ehs"><i class="iconfont">&#xe61e;</i> 校园环境健康安全办公室</a>
+        </div>
+        
+        <div class="footerIn_tel">
+            <dl class="foooter_tel clearfix">
+                <dt><i class="iconfont">&#xe611;</i></dt>
+                <dd style="font-size: 18px;">CONTACT US</dd>
+                <dd style="line-height: 25px;">联系我们</dd>
+            </dl>
+            <p>本科招生： 86-0754-88077088、88077060</p>
+            <ul class="footer_maillist clearfix">
+                <li><p>本科招生：<a href="javascript:void(0);" class="footerEmail" footMail="admissions"><i class="iconfont"  style="font-size:14px;">&#xe65e;</i></a></p></li>
+                <li><p>研究生招生：<a href="javascript:void(0);" class="footerEmail" footMail="rigs"><i class="iconfont" style="font-size:14px;">&#xe65e;</i></a></p></li>
+                <li><p>本科教学：<a href="javascript:void(0);" class="footerEmail" footMail="ugstudies"><i class="iconfont" style="font-size:14px;">&#xe65e;</i></a></p></li>
+                <li><p>应聘信箱：<a href="javascript:void(0);" class="footerEmail" footMail="hr"><i class="iconfont" style="font-size:14px;">&#xe65e;</i></a></p></li>
+                <li><p>投稿邮箱：<a href="javascript:void(0);" class="footerEmail" footMail="news"><i class="iconfont" style="font-size:14px;">&#xe65e;</i></a></p></li>
+                <li><p>产学研合作：<a href="javascript:void(0);" class="footerEmail" footMail="gtec"><i class="iconfont" style="font-size:14px;">&#xe65e;</i></a></p></li>
+
+            </ul>
+            
+            <p>地址：广东省汕头市大学路241号</p>
+            <p>邮编 ：515063</p>
+
+
+
+        </div>
+    </div>
+    <div class="copy clearfix">
+         <p>&copy;  广东以色列理工学院 版权所有 | <a href="https://beian.miit.gov.cn" style="color: #fff;">粤ICP备17036470号</a></p>
+        <p style="display: none;">
+            Design by <a href="http://www.shangce.biz" target="_blank">SHANGCE</a>
+            <script>
+                var _hmt = _hmt || [];
+                (function () {
+                    var hm = document.createElement("script");
+                    hm.src = "https://hm.baidu.com/hm.js?114b0e2bc6ac3d74a427c28fdf7a0a5c";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(hm, s);
+                })();
+</script>
+            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1261747899'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261747899%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        </p>
+    </div>
+</div>
+<script src="js/layer.js"></script>
+    <script>
+
+        $(".card-close").on("click", function () {
+            $(".login").fadeOut();
+            $(".logincbg").fadeOut();
+        });
+
+        var layerw = "400px";
+        var layerh = "500px";
+        if ($(window).width() < 768) {
+            layerw = "90%";
+            layerh = "auto";
+        }
+
+        $(".footerEmail").on("click", function () {
+            layer.open({
+                title: "CONTACT US",
+                content: "<div class='staffcard-body clearfix'><div class='staff_feed_desc'>Please fill this form in a decent manner</div><div class='staff_feed_form'><p>Your Full Name <span class='red'>*</span></p><p><input id='fullname' name='fullname' class='staff_feed_input' /></p></div><div class='staff_feed_form'><p>Your E-mail<span class='red'>*</span></p><p><input id='email' name='email'  class='staff_feed_input'/></p></div><div class='staff_feed_form'><p>Your Message <span class='red'>*</span></p><p><textarea id='message' name='messgae' class='staff_feed_message'></textarea></p></div><div class='staff_feed_form'><span>Verify Code<span class='red'>*</span></span><span><input id='vCode' name='vCode'  class='staff_feed_code'/><img src='/imgcode.aspx?spam=" + new Date() + "' class='staff_feed_codeimg' /></span></div><input type='hidden' id='footMail' value='" + $(this).attr("footMail") + "' /><input type='button' id='sendbtn' class='staffbtn btn-lg' value='SUBMIT' /></div>",
+                area: [layerw, layerh],
+                btn: false,
+                success: function (layero, index) {
+                    $("#sendbtn").on("click", function () {
+                        var mail = /^\s*([A-Za-z0-9_-]+(\.\w+)*@(\w+\.)+\w{2,3})\s*$/;
+                        if ($("#fullname").val() == "") {
+                            alert("Full Name is required.");
+                            $("#fullname").focus();
+                        } else if ($("#email").val() == "") {
+                            alert("E-mail is required.");
+                            $("#email").focus();
+                        } else if (!$.trim($("#email").val()).match(mail)) {
+                            alert("Error E-mail.");
+                            $("#email").focus();
+
+                        }
+
+                        else if ($("#message").val() == "") {
+                            alert("Message is required.");
+                            $("#message").focus();
+                        }
+                        else if ($("#vCode").val() == "") {
+                            alert("Verify Code is required.");
+                            $("#vCode").focus();
+                        }
+                        else {
+                            $("#sendbtn").val("SEND...");
+                            $("#sendbtn").attr("disabled", "disabled");
+                            $.ajax({
+                                type: "get",
+                                cache: false,
+                                url: "ajax.ashx?action=footerSend",
+                                dataType: "json",
+                                data: { fullname: $("#fullname").val(), email: $("#email").val(), message: $("#message").val(), footMail: $("#footMail").val(), vCode: $("#vCode").val() },
+                                success: function (json) {
+                                    if (json.error == "1") {
+                                        alert(json.msg);
+                                    } else {
+                                        if (json.msg == "邮件发送成功") {
+                                            alert("Email sent successfully");
+                                            layer.closeAll();
+                                        } else {
+                                            alert(json.msg);
+                                            layer.closeAll();
+                                        }
+                                    }
+                                    $("#sendbtn").val("SUBMIT");
+                                    $("#sendbtn").removeAttr("disabled");
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+
+        });
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
+

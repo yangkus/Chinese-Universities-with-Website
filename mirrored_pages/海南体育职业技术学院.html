@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" /><!--页面编码的设置-->
+<title>海南体育职业技术学院</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="png_favicon.png" type="image/png">
+<link rel="stylesheet" href="./images/style_gjty.css">
+<!--调用默认样式 style.css-->
+<link rel="stylesheet" href="./images/fresco.css">
+<!--追踪访问链接-->
+<script src="./images/jquery.1.11.1.js"></script>
+<script src="./images/jqmigrate.js"></script>
+<script src="./images/jquery-1.7.1.min.js"></script>
+<script src="./images/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+<script src="./images/jquery.vticker.js" type="text/javascript"></script>
+<script type="text/javascript" src="./images/raphael-min.js"></script>
+<script type="text/javascript" src="./images/jquery.easing.js"></script>
+<script type="text/javascript" src="./images/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="./images/script_gjty.js"></script>
+<script type="text/javascript" src="./images/fresco.js"></script>
+<script src="./images/iview.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+
+$(window).scroll(function(){
+
+var top=$(window).scrollTop();
+
+if(top>600){
+
+$("#scrolltop").fadeIn();
+
+}else{
+
+$("#scrolltop").fadeOut();
+
+}
+
+});
+
+//点击返回头部效果
+
+$("#scrolltop").click(function(){
+
+$("html,body").animate({scrollTop:0});
+
+});
+
+});
+
+</script>
+<!--[if lte IE 6]>
+<script type="text/javascript" src="./images/iepng.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('div,img,span,.scroll-photo-head h2,#carousel .next,#carousel .prev,.menu ul li.top_nav,ul li.top_nav_lg,.friend-link h2');
+</script>
+<![endif]-->		
+
+<script type="text/javascript">
+$(function() {
+	$('#scroller').vTicker({
+	speed: 500,		//滚动速度，单位毫秒。
+	pause: 3000,		//暂停时间，就是滚动一条之后停留的时间，单位毫秒。
+	showItems: 3,
+	height:188,
+	animation: 'fade',	//动画效果，默认是fade，淡出。
+	mousePause: true,	//鼠标移动到内容上是否暂停滚动，默认为true。
+	direction: 'up'		//滚动的方向，默认为up向上，down则为向下滚动。
+	});
+});
+</script>
+
+<script type="text/javascript">
+			$(function() {
+				$('#carousel ul').carouFredSel({
+					prev: '#prev',
+					next: '#next',
+					pagination: "#pager",
+					scroll: 1000
+				});
+	
+			});
+		</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".menu-main_nav-container > ul > li:eq(3)").addClass("children-first");
+	$(".menu-main_nav-container > ul > li:last").addClass("children-last");
+
+});
+</script>
+
+<script type="text/javascript" src="ydjs1.js"></script>
+
+<script type="text/javascript" src="ydjs2.js"></script>
+
+<script type="text/javascript" src="./images/ydjs3.js"></script>
+
+<script type="text/javascript" src="./images/ydjs4.js"></script>
+<script language="javascript">
+
+function addEvent(obj,evtType,func,cap){
+
+cap=cap||false;
+
+if(obj.addEventListener){
+
+obj.addEventListener(evtType,func,cap);
+
+return true;
+
+}else if(obj.attachEvent){
+
+if(cap){
+
+obj.setCapture();
+
+return true;
+
+}else{
+
+return obj.attachEvent("on" + evtType,func);
+
+}
+
+}else{
+
+return false;
+
+}
+
+}
+
+function removeEvent(obj,evtType,func,cap){
+
+cap=cap||false;
+
+if(obj.removeEventListener){
+
+obj.removeEventListener(evtType,func,cap);
+
+return true;
+
+}else if(obj.detachEvent){
+
+if(cap){
+
+obj.releaseCapture();
+
+return true;
+
+}else{
+
+return obj.detachEvent("on" + evtType,func);
+
+}
+
+}else{
+
+return false;
+
+}
+
+}
+
+function getPageScroll(){
+
+var xScroll,yScroll;
+
+if (self.pageXOffset) {
+
+xScroll = self.pageXOffset;
+
+} else if (document.documentElement && document.documentElement.scrollLeft){
+
+xScroll = document.documentElement.scrollLeft;
+
+} else if (document.body) {
+
+xScroll = document.body.scrollLeft;
+
+}
+
+if (self.pageYOffset) {
+
+yScroll = self.pageYOffset;
+
+} else if (document.documentElement && document.documentElement.scrollTop){
+
+yScroll = document.documentElement.scrollTop;
+
+} else if (document.body) {
+
+yScroll = document.body.scrollTop;
+
+}
+
+arrayPageScroll = new Array(xScroll,yScroll);
+
+return arrayPageScroll;
+
+}
+
+function GetPageSize(){
+
+var xScroll, yScroll;
+
+if (window.innerHeight && window.scrollMaxY) { 
+
+xScroll = document.body.scrollWidth;
+
+yScroll = window.innerHeight + window.scrollMaxY;
+
+} else if (document.body.scrollHeight > document.body.offsetHeight){
+
+xScroll = document.body.scrollWidth;
+
+yScroll = document.body.scrollHeight;
+
+} else {
+
+xScroll = document.body.offsetWidth;
+
+yScroll = document.body.offsetHeight;
+
+}
+
+var windowWidth, windowHeight;
+
+if (self.innerHeight) {
+
+windowWidth = self.innerWidth;
+
+windowHeight = self.innerHeight;
+
+} else if (document.documentElement && document.documentElement.clientHeight) {
+
+windowWidth = document.documentElement.clientWidth;
+
+windowHeight = document.documentElement.clientHeight;
+
+} else if (document.body) {
+
+windowWidth = document.body.clientWidth;
+
+windowHeight = document.body.clientHeight;
+
+} 
+
+if(yScroll < windowHeight){
+
+pageHeight = windowHeight;
+
+} else { 
+
+pageHeight = yScroll;
+
+}
+
+if(xScroll < windowWidth){ 
+
+pageWidth = windowWidth;
+
+} else {
+
+pageWidth = xScroll;
+
+}
+
+arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight) 
+
+return arrayPageSize;
+
+}
+
+
+var AdMoveConfig=new Object();
+
+AdMoveConfig.IsInitialized=false;
+
+AdMoveConfig.AdCount=0;
+
+AdMoveConfig.ScrollX=0;
+
+AdMoveConfig.ScrollY=0;
+
+AdMoveConfig.MoveWidth=0;
+
+AdMoveConfig.MoveHeight=0;
+
+AdMoveConfig.Resize=function(){
+
+var winsize=GetPageSize();
+
+AdMoveConfig.MoveWidth=winsize[2];
+
+AdMoveConfig.MoveHeight=winsize[3];
+
+AdMoveConfig.Scroll();
+
+}
+
+AdMoveConfig.Scroll=function(){
+
+var winscroll=getPageScroll();
+
+AdMoveConfig.ScrollX=winscroll[0];
+
+AdMoveConfig.ScrollY=winscroll[1];
+
+}
+
+addEvent(window,"resize",AdMoveConfig.Resize);
+
+addEvent(window,"scroll",AdMoveConfig.Scroll);
+
+function AdMove(id,addCloseButton){
+
+if(!AdMoveConfig.IsInitialized){
+
+AdMoveConfig.Resize();
+
+AdMoveConfig.IsInitialized=true;
+
+}
+
+AdMoveConfig.AdCount++;
+
+var obj=document.getElementById(id);
+
+obj.style.position="absolute";
+
+var W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+
+var H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+
+var x = W*Math.random(),y = H*Math.random();
+
+var rad=(Math.random()+1)*Math.PI/6;
+
+var kx=Math.sin(rad),ky=Math.cos(rad);
+
+var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1);
+
+var step = 1;
+
+var interval;
+
+if(addCloseButton){
+
+var closebtn=document.createElement("div");
+
+obj.appendChild(closebtn);
+
+closebtn.style.position="absolute";
+
+closebtn.style.top="1px";
+
+closebtn.style.left=(obj.offsetWidth-25) + "px";
+
+closebtn.style.fontSize="10px";
+
+closebtn.style.color="#000";
+
+closebtn.style.cursor="pointer";
+
+closebtn.innerHTML="关闭";
+
+closebtn.onclick=function(){
+
+obj.style.display="none";
+
+clearInterval(interval);
+
+closebtn.onclick=null;
+
+obj.onmouseover=null;
+
+obj.onmouseout=null;
+
+obj.MoveHandler=null;
+
+AdMoveConfig.AdCount--;
+
+if(AdMoveConfig.AdCount<=0){
+
+removeEvent(window,"resize",AdMoveConfig.Resize);
+
+removeEvent(window,"scroll",AdMoveConfig.Scroll);
+
+AdMoveConfig.Resize=null;
+
+AdMoveConfig.Scroll=null;
+
+AdMoveConfig=null;
+
+}
+
+}
+
+}
+
+obj.MoveHandler=function(){
+
+obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+
+obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+
+rad=(Math.random()+1)*Math.PI/6;
+
+W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+
+H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+
+x = x + step*kx*dirx;
+
+if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+
+if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);}
+
+y = y + step*ky*diry;
+
+if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+
+if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);}
+
+}
+
+this.SetLocation=function(vx,vy){x=vx;y=vy;}
+
+this.SetDirection=function(vx,vy){dirx=vx;diry=vy;}
+
+this.Run=function(){
+
+var delay = 10;
+
+interval=setInterval(obj.MoveHandler,delay);
+
+obj.onmouseover=function(){clearInterval(interval);}
+
+obj.onmouseout=function(){interval=setInterval(obj.MoveHandler, delay);}
+
+}
+
+}
+document.write("");
+
+//document.write("");
+
+    var ad1=new AdMove("gg1",true);
+	//var ad2=new AdMove("gg2",true);
+    ad1.Run();
+	//ad2.Run();
+</script>
+</head>
+
+<body class="home blog">
+
+<!---------------网站头部--------------->
+
+<div class="container">
+
+<!-- 头部嵌套-->
+<div class="header">
+		<div class="banner">
+	<div style="width:100; height:172px; margin:0 auto; overflow:hidden">
+	 
+	<img src="https://www.hnstx.com/ymys/header_footer/202301/W020230109528502611778.png" />
+	
+	</div>
+			
+	</div>
+		<div class="menu-main_nav-container"><ul id="menu-main_nav" class="menu"><li id="menu-item-1021" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1021"><a href="https://www.hnstx.com/">首页</a></li>
+<li id="menu-item-1040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1040"><a href="https://www.hnstx.com/xxgk_87363/">学院概况</a>
+<ul class="sub-menu">
+	<li id="menu-item-1041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1041"><a href="https://www.hnstx.com/xxgk_87363/xxjj/">学院简介</a></li>
+	<li id="menu-item-1042" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1042"><a href="https://www.hnstx.com/xxgk_87363/ldbz/">领导班子</a></li>
+	<li id="menu-item-1043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1043"><a href="https://www.hnstx.com/xxgk_87363/szdw/">师资队伍</a></li>
+	<li id="menu-item-1044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1044"><a href="https://www.hnstx.com/xxgk_87363/xljxss/">训练教学设施</a></li>
+	<li id="menu-item-1045" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1045"><a href="https://www.hnstx.com/xxgk_87363/xyfc/">校园风采</a></li>
+	<li id="menu-item-1046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1046"><a href="https://www.hnstx.com/xxgk_87363/ldgh/">领导关怀</a></li>
+<li id="menu-item-1046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1046"><a href="https://www.hnstx.com/xxgk_87363/xyzc/">学院章程</a></li>
+</ul>
+</li>
+<li id="menu-item-1022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1022"><a href="https://www.hnstx.com/jgsz_87370/">机构设置</a></li>
+<li id="menu-item-1023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1023"><a href="https://www.hnstx.com/ssdt_1/">训练竞赛</a>
+<ul class="sub-menu">
+<li id="menu-item-1024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1024"><a href="https://www.hnstx.com/ssdt_1/">训练竞赛</a></li>
+<li id="menu-item-1024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1024"><a href="https://www.hnstx.com/bzqyh/">备战全运会</a></li>
+	<li id="menu-item-1024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1024"><a href="https://www.hnstx.com/yxydd/syxyddjj/">省优秀运动队简介</a></li>
+	
+	<li id="menu-item-1026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1026"><a href="https://www.hnstx.com/yxydd/syxydyzs/">省优秀运动员招收</a></li>
+<li id="menu-item-1026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1026"><a href="https://www.hnstx.com/yxydd/zjcj/">最佳成绩</a></li>
+
+	
+</ul>
+</li>
+<li id="menu-item-1030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1030"><a href="http://www.hnstx.com/zsxxw/">招生信息</a></li>
+<li id="menu-item-1030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1030"><a href="http://www.hnstx.com/jyxxw/">就业信息</a></li>
+<li id="menu-item-1030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1030"><a href="https://www.hnstx.com/tyky/">体育科研</a></li>
+
+<li id="menu-item-1031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1031"><a href="https://www.hnstx.com/lzwh/gxdjdt/">党政动态</a>
+<ul class="sub-menu">
+<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1033"><a href="https://www.hnstx.com/lzwh/szqh/">二十届三中全会</a></li>
+	<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1033"><a href="https://www.hnstx.com/lzwh/djxxjy/">党纪学习教育</a></li>
+	<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1033"><a href="https://www.hnstx.com/lzwh/gxdjdt/">党建动态</a></li>
+        <li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1033"><a href="https://www.hnstx.com/lzwh/ztjy/">主题教育</a></li>
+<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1033"><a href="https://www.hnstx.com/lzwh/dsxxjy/">党史学习教育</a></li>
+</ul>
+</li>
+<li id="menu-item-1031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1031"><a href="https://www.hnstx.com/xbdt/">系部动态</a>
+<ul class="sub-menu">
+<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1033"><a href="javascript:void(0)">社会体育系</a></li>
+	<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1033"><a href="javascript:void(0)">团建专栏</a></li>
+	
+</ul>
+</li>
+
+<li id="menu-item-1031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1031"><a href="javascript:void(0)">教育教学</a>
+<ul class="sub-menu">
+	
+	<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1033"><a href="https://www.hnstx.com/yywz/">语言文字专栏</a></li>
+       
+</ul>
+</li>
+
+
+</ul></div> 
+        <div class="baoming"><a href="https://www.hnstx.com/wordpress/wp-login.php?action=register"><img src="https://www.hnstx.com/images/baoming2_gjty.jpg" /></a></div>
+	</div>
+<!-- 头部嵌套-->
+
+<!---------------网站主体部分--------------->
+
+<!--<div id="wrapper">-->
+<!--<div id="scrolltop">返回首页</div>-->
+
+<iframe width="1000" height="404" src="https://www.hnstx.com/sytplh.html" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" scrolling="no"></iframe>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
+
+<div class="left-box new-scroll">
+	<div class="box-title">
+	 		<h2><a target="_blank" href="./xxgg/">信息公告</a></h2>
+		<span class="write-icon"></span></div>
+	<div class="content-box">
+		<div id="scroller">
+			<ul>
+			
+			<li>
+					<div><a title="海南体育职业技术学院 五人制足球场草坪改造项目比选公告" href="./xxgg/202410/t20241025_3460337.html" target="_blank">海南体育职业技术学院 五人制...</a></div>
+				</li>
+								
+			
+			<li>
+					<div><a title="海南体育职业技术学院 关于公布陈翠丽等2位教师取得 教师专业技术资格的通知" href="./xxgg/202410/t20241024_3460314.html" target="_blank">海南体育职业技术学院 关于公...</a></div>
+				</li>
+								
+			
+			<li>
+					<div><a title="关于招标代理机构遴选的公告" href="./xxgg/202410/t20241022_3460137.html" target="_blank">关于招标代理机构遴选的公告</a></div>
+				</li>
+								
+			
+			<li>
+					<div><a title="公告" href="./xxgg/202410/t20241022_3460136.html" target="_blank">公告</a></div>
+				</li>
+								
+			
+			<li>
+					<div><a title="我院高尔夫球队购买专业体能训练服务合作比选" href="./xxgg/202410/t20241016_3459909.html" target="_blank">我院高尔夫球队购买专业体能...</a></div>
+				</li>
+								
+			
+			<li>
+					<div><a title="关于比选购买2024年海南省常态化国民体质监测工作 第三方服务项目结果的公示" href="./xxgg/202410/t20241014_3459800.html" target="_blank">关于比选购买2024年海南省常...</a></div>
+				</li>
+								
+						
+			</ul>
+
+
+		</div>
+		<div class="scroll-more">
+	
+<a target="_blank" href="./xxgg/">&gt;&gt;更多</a>        
+</div>
+	</div>
+</div>
+<div class="mid-box mid-content">
+	<div class="mid-content-head">
+		<h2>最新动态/news </h2>
+		<span class="line-bg"></span></div>
+	<ul class="new-list">
+			        
+				<li><a title="我院与北京大学运动科技与健康大数据 实验室代表座谈交流" href="./zxdt_87419/202410/t20241028_3460405.html" target="_blank">我院与北京大学运动科技与健康大数据 实验室代表座谈交流</a><span>2024/10/28</span></li>
+				    
+				<li><a title="警惕室内烟草烟雾的健康危害" href="./zxdt_87419/202410/t20241025_3460374.html" target="_blank">警惕室内烟草烟雾的健康危害</a><span>2024/10/25</span></li>
+				    
+				<li><a title="我院召开学术委员会 专题审议2025年拟招生专业及人才培养方案" href="./zxdt_87419/202410/t20241024_3460313.html" target="_blank">我院召开学术委员会 专题审议2025年拟招生专业及人才培养方案</a><span>2024/10/24</span></li>
+				    
+				<li><a title="我院前往白沙、三亚调研指导第十二届少数民族传统体育运动会各运动队备战训练情况" href="./zxdt_87419/202410/t20241016_3459925.html" target="_blank">我院前往白沙、三亚调研指导第十二届少数民族传统体育运动会...</a><span>2024/10/16</span></li>
+				    
+				<li><a title="学院领导赴冲浪队检查备战全运会训练工作" href="./zxdt_87419/202410/t20241016_3459924.html" target="_blank">学院领导赴冲浪队检查备战全运会训练工作</a><span>2024/10/15</span></li>
+				    
+				<li><a title="学院党委赴冲浪队调研" href="./zxdt_87419/202410/t20241016_3459923.html" target="_blank">学院党委赴冲浪队调研</a><span>2024/10/15</span></li>
+				
+					</ul>
+<div class="bottom-more">
+	
+<a target="_blank" href="./zxdt_87419/">&gt;&gt;更多</a>
+</div>
+</div>
+<div class="right-box photo-gallery">
+	<div class="box-title">
+		<h2 class="fc-title">校园风采</h2>
+	</div>
+<div class="content-box">
+		<div id="slideshow">
+
+	       
+			<div>
+			<a href="./xxgk_87363/xyfc/202402/t20240205_3446837.html" target="_blank"><img src="./xxgk_87363/xyfc/202402/W020240205406704182534.jpg" width="216" height="144" /></a>
+			<h3><a title="我院召开2024年新春慰问座谈会" href="./xxgk_87363/xyfc/202402/t20240205_3446837.html" target="_blank">我院召开2024年新春慰问座谈会</a></h3>
+			</div>
+           
+			<div>
+			<a href="./xxgk_87363/xyfc/202402/t20240202_3446724.html" target="_blank"><img src="./xxgk_87363/xyfc/202402/W020240202471336388131.png" width="216" height="144" /></a>
+			<h3><a title="海南体育职业技术学院 被授予“全国运动健康产教融合共同体” 常务理事单位" href="./xxgk_87363/xyfc/202402/t20240202_3446724.html" target="_blank">海南体育职业技术学院 被授予“全国运动...</a></h3>
+			</div>
+           
+			<div>
+			<a href="./xxgk_87363/xyfc/202402/t20240202_3446725.html" target="_blank"><img src="./xxgk_87363/xyfc/202402/W020240202473839229252.png" width="216" height="144" /></a>
+			<h3><a title="学生社团文化夜 青春你我同行 社团竞绽风采" href="./xxgk_87363/xyfc/202402/t20240202_3446725.html" target="_blank">学生社团文化夜 青春你我同行 社团竞绽风采</a></h3>
+			</div>
+           
+			<div>
+			<a href="./xxgk_87363/xyfc/202008/t20200824_3414270.html" target="_blank"><img src="./xxgk_87363/xyfc/202008/W020230202545698326612.jpg" width="216" height="144" /></a>
+			<h3><a title="我院组织开展“我健康、我快乐”健步走活动" href="./xxgk_87363/xyfc/202008/t20200824_3414270.html" target="_blank">我院组织开展“我健康、我快乐”健步走活动</a></h3>
+			</div>
+           
+			<div>
+			<a href="./xxgk_87363/xyfc/202004/t20200417_3414276.html" target="_blank"><img src="./xxgk_87363/xyfc/202004/W020230202545339371639.png" width="216" height="144" /></a>
+			<h3><a title="第二届校园十大歌手比赛" href="./xxgk_87363/xyfc/202004/t20200417_3414276.html" target="_blank">第二届校园十大歌手比赛</a></h3>
+			</div>
+           
+			<div>
+			<a href="./xxgk_87363/xyfc/202004/t20200415_3414273.html" target="_blank"><img src="./xxgk_87363/xyfc/202004/W020230202543078052258.jpg" width="216" height="144" /></a>
+			<h3><a title="我院2019年秋季开学典礼 暨新生军训汇报大会圆满落幕" href="./xxgk_87363/xyfc/202004/t20200415_3414273.html" target="_blank">我院2019年秋季开学典礼 暨新生军训汇报...</a></h3>
+			</div>
+           
+        	
+
+        
+			
+		</div>
+<div class="controls-center">
+			<div id="slider_controls">
+				<ul id="slider_nav">
+				    
+					<li><a href="#"></a></li>
+					
+					<li><a href="#"></a></li>
+					
+					<li><a href="#"></a></li>
+					
+					<li><a href="#"></a></li>
+					
+					<li><a href="#"></a></li>
+					
+					<li><a href="#"></a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="left-box jigou">
+	<div class="box-title">
+		<h2>机构设置</h2>
+		<span class="jg-icon"></span></div>
+	<div class="content-box">
+	     <ul class="info-list-left">
+		
+			<li style="padding-left:20px;"><a title='党政管理机构' href="./jgsz_87370/dzgl/" target="_blank">党政管理机构</a></li>
+		
+			<li style="padding-left:20px;"><a title='训练竞赛机构' href="./jgsz_87370/xljs/" target="_blank">训练竞赛机构</a></li>
+		
+			<li style="padding-left:20px;"><a title='体育科研机构' href="./jgsz_87370/tyky/" target="_blank">体育科研机构</a></li>
+		
+			<li style="padding-left:20px;"><a title='教学、教辅机构' href="./jgsz_87370/jxjf/" target="_blank">教学、教辅机构</a></li>
+		
+		</ul>
+	</div>
+</div>
+<div class="mid-box mid-content">
+	<div class="mid-content-head">
+		<h2>学院概况/About </h2>
+		<span class="line-bg"></span></div>
+		
+	<div class="introduce"> <img width="179" height="180" src="./xxgk_87363/xxjj/201604/W020230206584798067223.png" />
+
+		<p>海南体育职业技术学院是整合海南省高级体育运动技术学校及相关体育资源而设立的专科层次、全日制公办普通高等体育职业院校，于2016年初获得海南省人民政府批准成立，是一所集体育职业教育、省级运动训练、体育科研三位一体的全日制高等体育职业院校。</p>
+		<div class="bottom-more1"><a target="_blank" class="more" href="./xxgk_87363/xxjj/201604/t20160427_3414226.html">&gt;&gt;更多</a></div>
+	</div>
+	
+</div>
+<div class="right-box">
+	<div class="box-title">
+		<h2>体育科研</h2>
+		 		<a class="more" target="_blank" href="./tyky/">&gt;&gt;更多</a></div>
+	<div class="content-box">
+		<ul class="info-list">
+									
+						<li><a title="省冲浪队开展体能测试及反兴奋剂教育讲座" href="./tyky/202408/t20240812_3456981.html" target="_blank">省冲浪队开展体能测试及...</a></li>
+									
+						<li><a title="海南省红十字会举办 2024年海南体育职业技术学院师资培训班" href="./tyky/202407/t20240727_3456450.html" target="_blank">海南省红十字会举办 202...</a></li>
+									
+						<li><a title="我院承办“海南省2024年（首届）常态化国民体质监测技术培训班”圆满结束" href="./tyky/202407/t20240717_3455715.html" target="_blank">我院承办“海南省2024年...</a></li>
+									
+						<li><a title="夏训保健常识" href="./tyky/201603/t20160314_3414670.html" target="_blank">夏训保健常识</a></li>
+									
+						<li><a title="国家体育总局反兴奋剂中心来琼调研" href="./tyky/202404/t20240428_3452010.html" target="_blank">国家体育总局反兴奋剂中...</a></li>
+									
+						<li><a title="反兴奋剂工作注意事项" href="./tyky/202102/t20210203_3414676.html" target="_blank">反兴奋剂工作注意事项</a></li>
+						
+								</ul>
+	</div>
+</div>
+<!--<img class="wenming" src="./images/wenming.jpg" />-->
+
+<div class="info-container">
+<div class="info-box">
+	<h2 class="info-title"><span class="bike-icon"></span>省优秀运动队</h2>
+	<a href=""><img src="./yxydd/images/P020230109566711136768.jpg" width="175" /></a>
+	<ul>
+	    
+		<li><a target="_blank" href="./yxydd/syxyddjj/">省优秀运动队简介</a></li>
+		
+		<li><a target="_blank" href="./yxydd/syxydyzs/">省优秀运动员招收</a></li>
+		
+		<li><a target="_blank" href="./yxydd/zjcj/">最佳成绩</a></li>
+		
+		
+	</ul>
+</div>
+<div class="info-box ">
+	<h2 class="info-title"><span class="zs-icon"></span>体育职业教育</h2>
+	<a target="_blank" href="https://hntyxg.v.chaoxing.com"><img src="./zsjy/images/P020230109567072906760.jpg" width="175" /></a>
+	<ul>
+		
+		<li><a target="_blank" href="https://hntyxg.v.chaoxing.com">学生管理</a></li>
+		
+		<li><a target="_blank" href="http://www.hnstx.com/zsxxw/zszsjx/zszc/">招生简章</a></li>
+		
+		<li><a target="_blank" href="http://www.hnstx.com/zsxxw/">招生信息</a></li>
+		
+	</ul>
+</div>
+<div class="info-box info-box-last">
+	<h2 class="info-title"><span class="sun-icon"></span>全民健身中心</h2>
+	<a href="#"><img src="./qmjszx/images/P020230109567375434028.jpg" width="175" /></a>
+	<ul>
+		
+		<li><a target="_blank" href="./qmjszx/qmjszxjj/">全民健身中心简介</a></li>
+		
+		<li><a target="_blank" href="./qmjszx/jscsyff/">健身常识与方法</a></li>
+		
+	</ul>
+</div></div>
+<!--
+
+<div class="clear"></div>
+<div class="scroll-photo">
+	<div class="scroll-photo-head"><span class="tree-icon"></span>
+		<h2>椰岛精英</h2>
+		<a class="more" target="_blank" href="./yxydd/ydjy/">&gt;&gt;更多</a></div>
+	<div class="scroll-photo-content">
+		<div id="carousel">
+		<ul>
+		     	
+			</ul>
+			<div class="clearfix"></div>
+			<a id="prev" class="prev" href="#">&lt;</a> <a id="next" class="next" href="#">&gt;</a> </div>
+	</div>
+</div>
+
+ -->
+
+<div class="clear"></div>
+<!-- 底部嵌套-->
+<div class="friend-link">
+		<h2>友情连接</h2>
+		<div class="fr-content">
+			<ul>
+			    
+				<li><a title="全国中等职业学校管理信息系统（海南）" href="http://zzxx.hainan.edu.cn/msc/#/login" target="_blank">全国中等职业学校管理信息系统（海南）</a></li>
+				
+				<li><a title="高教社产品信息检索系统" href="http://xuanshu.hep.com.cn" target="_blank">高教社产品信息检索系统</a></li>
+				
+				<li><a title="全国党员干部现代远程教育" href="http://dygbjy.12371.cn/" target="_blank">全国党员干部现代远程教育</a></li>
+				
+				<li><a title="海南省干部在线学习中心" href="https://www.hngbzx.gov.cn/" target="_blank">海南省干部在线学习中心</a></li>
+				
+				<li><a title="海南省考试局" href="http://ea.hainan.gov.cn" target="_blank">海南省考试局</a></li>
+				
+				<li><a title="海南省人民政府" href="http://www.hainan.gov.cn/" target="_blank">海南省人民政府</a></li>
+				
+				<li><a title="海南省教育厅" href="http://edu.hainan.gov.cn/" target="_blank">海南省教育厅</a></li>
+				
+				<li><a title="国家体育总局" href="http://www.sport.gov.cn/" target="_blank">国家体育总局</a></li>
+						
+			</ul>
+		</div>
+		
+	</div>
+	<div class="footer" style="margin-bottom:20px;">
+		<p>海南体育职业技术学院版权所有</p>
+		<p>地址：海口市国兴大道68号   邮编：570203　 <a href="https://beian.miit.gov.cn/" target="_blank" style=" color:#ffffff;">琼ICP备10200766号-1</a> </p>
+		<div style="padding:20px 0; margin-top:-39px;margin-left:20px;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=46000002000004" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="https://www.hnstx.com/images/ghs.png" style="float:left;" /><p style="float:left;height:20px;line-height:20px;margin: -20px 0px 0px 5px; color:#ffffff;">琼公网安备 46000002000004号</p></a>
+		 </div>
+		<div class="hnwj"><a target="_blank" href="http://www.haikou.cyberpolice.cn/"><img src="https://www.hnstx.com/images/hnwj_gjty.png" /></a></div>
+                
+                <div class="zwgy"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/22/000/0000/40992490/CA220000000409924900001.js' type='text/javascript'%3E%3C/script%3E"));</script></div>
+
+	</div>
+<!-- 底部嵌套-->
+</div>
+
+<!--如果删除 admin_bar将消失-->
+
+
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
+<div style="display:none;">
+<img src="./images/zs-icon_gjty.jpg" />
+<img src="./images/sun-icon_gjty.jpg" />
+<img src="./images/bike-icon_gjty.jpg" />
+<img src="./images/page-nav-icon_gjty.png" />
+
+<img src="./images/page-nav-icon-hover_gjty.png" />
+<img src="./images/right-dir-icon_gjty.jpg" />
+<img src="./images/page-nav-icon_gjty.png" />
+<img src="./images/fr-bg_gjty.png" />
+<img src="./images/carousel_control_gjty.png" />
+
+<img src="./images/carousel_polaroid_gjty.png" />
+<img src="./images/arrow-down_gjty.png" />
+<img src="./images/list-dote_gjty.jpg" />
+<img src="./images/set-icon_gjty.png" />
+<img src="./images/write-icon_gjty.png" />
+<img src="./images/tree-icon_gjty.png" />
+<img src="./images/r_list_gjty.jpg" />
+
+</div>
+<!--右侧顶部图片 -->
+
+<div id="ldpiao3" style="width:180px; position:fixed; top: 80px; right:10px; z-index:9999;">
+    <a onclick='funax3()' style="font-size:11px; float:right;">关闭</a>
+
+
+
+
+
+    
+    <img width="180" alt="信访举报热线电话" src="./ysjtp/202404/W020240604539345031823.jpg" /><br />
+   
+    <img width="180" alt="海南体育职业技术学院师德师风专项整治投诉曝光电话" src="./ysjtp/202306/W020230621345930075119.jpg" /><br />
+   
+
+  </div>
+  <script>
+			setTimeout(funax3,60000);
+        
+   function funax3() {
+    $('#ldpiao3').hide();
+   }
+
+        </script>
+
+
+
+
+
+<!--右侧顶部图片 -->
+<!--左侧底部图片 -->
+
+<!--左侧底部图片 -->
+</body>
+
+</html>

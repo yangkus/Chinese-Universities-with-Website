@@ -1,0 +1,80 @@
+<!DOCTYPE html><html data-scale="true"><head><link rel="stylesheet" href="./assets/css/umi.5ae1054a.css"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="yes" name="apple-touch-fullscreen"><meta content="telephone=no,email=no" name="format-detection"><meta name="format-detection" content="telephone=no,email=no"><meta name="renderer" content="webkit|ie-comp|ie-stand"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>安全中心</title><!-- <link rel="icon" href="/favicon.png" type="image/x-icon"> --><script src="assets/js/fastclick.js"></script><script src="assets/js/casUrl.js"></script><!-- <script src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script> --><script>// var vConsole = new VConsole();
+        //单点退出路径
+        window.casLogoutUrl = 'https://{LogoutUrl}/lyuapServer/logout?service=http://{LogoutUrl}:4107/'
+        //是否显示回退按钮 0 关闭 1开启 
+        //启动的环境变量加入 IsBlackBtn: '0'
+        //run.sh 加入IsBlackBtn的赋值
+        window.isBlackBtn = '_isBlackBtn'
+        var win = window;
+        window.vl = function (baseFontSize, psdWidth, maxWidth) {
+            var _baseFontSize = baseFontSize || 100;
+            var _psdWidth = psdWidth || 750;
+            var _maxWidth = maxWidth || 640;
+
+            var doc = win.document;
+            var ua = navigator.userAgent;
+            console.log(ua,ua.indexOf('lyydxy'))
+            var matches = ua.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i);
+            var UCversion = ua.match(/U3\/((\d+|\.){5,})/i);
+            var isUCHd =
+                UCversion && parseInt(UCversion[1].split(".").join(""), 10) >= 80;
+            var docEl = doc.documentElement;
+            var rate = 1;
+            if ((matches && matches[1] > 534) || isUCHd) {
+                // 有些兼容环境下, fontSize为100px的时候, 结果1rem=86px; 需要纠正viewport;
+                docEl.style.fontSize = `${_baseFontSize}px`;
+                var div = doc.createElement("div");
+                div.setAttribute("style", "width: 1rem;display:none");
+                docEl.appendChild(div);
+                var trueWidth = win.getComputedStyle(div).width;
+                docEl.removeChild(div);
+                // 如果1rem的真实px跟html.fontSize不符. 那么就要加一个rate缩放了;
+                if (trueWidth !== docEl.style.fontSize) {
+                    var trueWidthVal = parseInt(trueWidth, 10);
+                    rate = _baseFontSize / trueWidthVal;
+                }
+            }
+
+            var metaEl = doc.querySelector('meta[name="viewport"]');
+            if (!metaEl) {
+                metaEl = doc.createElement("meta");
+                metaEl.setAttribute("name", "viewport");
+                doc.head.appendChild(metaEl);
+            }
+            metaEl.setAttribute(
+                "content",
+                "width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"
+            );
+
+            // width/750*100, 为了统一rem为0.01rem = 1px
+            var setFontSize = function () {
+                var clientWidth = docEl.clientWidth;
+                clientWidth = clientWidth > _maxWidth ? _maxWidth : clientWidth;
+                docEl.style.fontSize = `${(_baseFontSize / _psdWidth) *
+                    clientWidth *
+                    rate}px`;
+            };
+            setFontSize();
+            var resizeEvt =
+                "orientationchange" in window ? "orientationchange" : "resize";
+            win.addEventListener(resizeEvt, setFontSize, false);
+            doc.addEventListener("DOMContentLoaded", setFontSize, false);
+        };
+        vl(100, 750);</script><script>if ("addEventListener" in document) {
+            document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    FastClick.attach(document.body);
+                },
+                false
+            );
+        }
+        if (!window.Promise) {
+            document.writeln(
+                '<script src="/assets/js/es6-promise.min.js"' +
+                ">" +
+                "<" +
+                "/" +
+                "script>"
+            );
+        }</script><script>window.routerBase = "/";</script></head><body><noscript>Sorry, we need js to run correctly!</noscript><div id="root"></div><script src="./assets/js/umi.5ae1054a.js"></script></body></html>

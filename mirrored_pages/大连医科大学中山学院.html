@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>����ҽ�ƴ�ѧ��ɽѧԺ</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/slider_pic.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript">
+var intval='';
+$(document).ready(function(){
+		$('#tablist .movement_nav li').hover(function(){$('#tablist .movement_organ1').hide();$('#tablist div').eq($(this).index()+1).show();$('#tablist .movement_nav li a').removeClass('on');$(this).children().addClass('on');},function(){});
+
+$('#qservice .inner ul.nav li').click(function(){$('#qservice .inner div').hide();$('#qservice .inner div').eq($(this).index()).show(); });
+$('#mainbody .movement ul.movement_nav li').click(function(){$('#mainbody .movement div').hide();$('#mainbody .movement div').eq($(this).index()).show(); });
+
+start_Int(); 
+$("div.visual ul li A").each(function(i) {    
+$(this).click(function(){
+	mainImg(i+1);
+});	
+});
+});
+
+
+function showmenu(){
+if($('#qservice .inner').is(':hidden')){$('#qservice h2').css('background-position','-25px 0');}else{$('#qservice h2').css('background-position','');}
+	$('#qservice .inner').toggle();
+}
+</script>
+<style type="text/css">
+<!--
+#Layer1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:11;
+}
+.STYLE1 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+
+
+<div id="container"> 
+<!--header-->
+
+<div id="header">
+  <div class="logo"><a href=""></a></div>
+  <div id="top">
+ <div class="top_nav">
+  <div align="right"><a href="https://www.dmu.edu.cn" target="blank">��ҽ��ҳ</a>��<a href="https://www.dmuzs.edu.cn">ѧԺ��ҳ</a>��<a href="https://recruit.dmuzs.edu.cn" target="blank">¼ȡ��ѯ</a>��<a href="https://www.dmuzs.edu.cn/xygk/201405193897.html" target="blank">Ժ������</a></div>
+</div>
+    <div class="search">
+
+<form action="/plus/search.php" name="formsearch"> 
+
+    <input  type="hidden" name="kwtype" value="1" />
+    <input class="search_text"  name="keyword" id="keyword" type="text"> 
+	<select name="searchtype" id="searchtype">
+	<option value="titlekeyword" selected>ģ������</option> 
+	<option value="title">��������</option> 
+ </select> 
+    <input class="search_button" type="submit"  value=" " /></li>
+ </form>
+	</div>
+  </div>
+</div>
+<!--header end-->
+<!--nav-->
+
+<div id="menu">
+<ul>
+<li><a href="https://www.dmuzs.edu.cn/xygk/200903318.html" >ѧԺ�ſ�</a>
+<ul>
+<li><a href="https://www.dmuzs.edu.cn/xygk/200903318.html" target="blank">ѧԺ���</a></li>
+<li><a href="https://www.dmuzs.edu.cn/xygk/2009033110.html" target="_blank">��ʷ�ظ�</a></li>
+<li><a href="https://www.dmuzs.edu.cn/xygk/201206062126.html" target="_blank">ѧԺ�쵼</a></li>
+<li><a href="https://www.dmuzs.edu.cn/xygk/201206042115.html" target="blank">У��</a></li>
+<li><a href="https://www.dmuzs.edu.cn/xygk/201206042116.html" target="_blank">һѵ����</a></li>
+<li><a href="https://www.dmuzs.edu.cn/xygk/2009033113.html" target="_blank">У԰ӳ��</a></li>
+</ul>
+</li>
+<li><a href="https://www.dmuzs.edu.cn/xygk/2009033111.html" target="blank">��������</a></li>
+
+<li><a href="https://www.dmuzs.edu.cn/news" target="_blank" >���Ŷ�̬</a>
+</li>
+<li><a href="https://www.dmuzs.edu.cn/xygk/2023030815114.html" target="_blank" >ʦ�ʶ���</a></li>
+<li><a href="https://www.dmuzs.edu.cn" target="blank">�˲�����</a>
+<ul>
+
+<li><a href="https://www.dmuzs.edu.cn" target="_blank">ѧ������</a></li>
+<li><a href="https://www.dmuzs.edu.cn">��ѧ����</a></li>
+</ul>
+</li>
+<li><a href="https://www.dmuzs.edu.cn" target="_blank">ѧ����չ</a>
+<ul>
+<li><a href="https://www.dmuzs.edu.cn">ѧ�ӷ��</a></li>
+<li><a href="https://www.dmuzs.edu.cn" target="_blank">��������</a></li>
+<li><a href="https://www.dmuzs.edu.cn" target="_blank">�ͷ�����</a></li>
+<li><a href="https://www.dmuzs.edu.cn" target="_blank">��������</a></li>
+</ul>
+</li>
+<li><a href="https://recruit.dmuzs.edu.cn" target="_blank">������ҵ</a>
+<ul>
+<li><a href="https://recruit.dmuzs.edu.cn" target="_blank">������Ϣ��</a></li>
+<li><a href="http://career.dmuzs.edu.cn" target="_blank">��ҵ��Ϣ��</a></li>
+</ul>
+</li>
+<li><a href="#" target="_blank">��������</a>
+<ul>
+
+<li><a href="http://cxcy.dmuzs.edu.cn" target="_blank">У�����</a></li>
+<li><a href="#" target="_blank">���ʺ���</a></li>
+</ul>
+</li>
+<li><a href="index.html">У԰����</a>
+<ul>
+<li><a href="https://www.dmuzs.edu.cn/xygk/201207102181.html" target="_blank">��ѧУ��</a></li>
+<li><a href="https://www.dmuzs.edu.cn/xygk/2009033114.html" target="_blank">ѧԺ�绰</a></li>
+<li><a href="http://118.202.255.5:8080/selfservice" target="_blank">������������</a></li>
+<li><a href="http://118.202.255.56:8080/asset/main/login.shtml#" target="_blank">�ʲ�����ƽ̨</a></li>
+<li><a href="https://www.dmuzs.edu.cn" target="_blank">�γ̱�</a></li>
+<li><a href="http://111.117.74.253/Default.aspx" target="_blank">ˮ��Ѳ�ѯϵͳ</a></li>
+</ul>
+</li>
+<li><a href="index.html">������Դ</a>
+<ul>
+<li><a href="https://www.dmuzs.edu.cn/xygk/2009040954.html" target="_blank">�ļ�����</a></li>
+<li><a href="http://118.202.255.249:8080/opac/search.php" target="_blank">����ͼ���</a></li>
+<li><a href="https://www.dmuzs.edu.cn/xygk/20090423158.html" target="_blank">�����ѧ��Դ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<!--nav end--> 
+
+<!--banner-->
+<div id="main">
+<div class="news"> <ul>
+<li><strong><a href="https://www.dmuzs.edu.cn/news/" target="_blank"><img src="image/more.jpg" width="38" height="13" alt=""></a></strong></li>
+<li>
+<h2><A title="<font color='#FF0000'>��Уѧ���ڵ������ʡһ����ҽҩ֪ʶ��ʵս���ܴ����л�</font>" 
+href="/news/2024102315365.html" 
+target=_blank><font color='#FF0000'>��Уѧ���ڵ������ʡһ����ҽҩ֪ʶ��ʵս���ܴ����л�</font></A></h2>
+</li>
+<li><span>      <a href='/news/2024102315365.html'><img src='/uploads/241024/1_0GI2O2.jpg' border='0' width='204' height='67' alt='��Уѧ���ڵ������ʡһ����ҽҩ֪ʶ��ʵս���ܴ����л�'></a> </span></li>
+<li>
+<p><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10��18��19��������ʡ���������졢�й�ҽ�ƴ�ѧ�а�ĵ������ʡһ���ߵ�ԺУ��ҽҩ֪ʶ��ʵս����...</font>
+<label><a href="/news/2024102315365.html" target="_blank"><img src="image/go.jpg" height="11" width="27" alt=""></a></label>
+</p>
+</li>
+</ul>
+</div>
+<div class="pic">
+
+<div class="visual">
+<ul>
+<li><a class="visual-num1 on" href="#">1</a></li>
+<li><a class="visual-num2" href="#">2</a></li>
+<li><a class="visual-num3" href="#">3</a></li>
+<li><a class="visual-num4" href="#">4</a></li>
+<li><a class="visual-num5" href="#">5</a></li>
+<li><a class="visual-num6" href="#">6</a></li>
+</ul>
+<div class="visual-img">
+<div class="visual-img1 show"><img alt="��ӭ���ʴ���ҽ�ƴ�ѧ��ɽѧԺ��ҳ" src="image/@visual_main10.jpg" border="0"></div>
+<div class="visual-img2"><img alt="��ӭ���ʴ���ҽ�ƴ�ѧ��ɽѧԺ��ҳ" src="image/@visual_main11.jpg" border="0"></div>
+<div class="visual-img3"><img src="image/@visual_main910.jpg" alt="��ӭ���ʴ���ҽ�ƴ�ѧ��ɽѧԺ��ҳ" border="0" ></div>
+<div class="visual-img4"><img alt="��ӭ���ʴ���ҽ�ƴ�ѧ��ɽѧԺ��ҳ" src="image/@visual_main1.jpg"></div>
+<div class="visual-img5"><img alt="��ӭ���ʴ���ҽ�ƴ�ѧ��ɽѧԺ��ҳ" src="image/@visual_main2.jpg"></div>
+<div class="visual-img6"><img alt="��ӭ���ʴ���ҽ�ƴ�ѧ��ɽѧԺ��ҳ" src="image/@visual_main3.jpg"></div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<!--banner end--> 
+
+<!--mainbody--> 
+<div id="mainbody">
+    <div class="leftbody">
+        <div class="ann">
+            <dl>
+                <dt><a href="https://www.dmuzs.edu.cn/notice/" target="_blank"><img src="image/more.jpg" width="38" height="13" border="0" /></a></dt>
+                <dd id="demo"style="overflow:hidden;width:210px;height:254px;">
+                    <ul id="demo1">  <li>&nbsp;<a href="/notice/2024091915348.html" target="_blank">����2024���°���ҽѧӢ��ˮƽ���Ա���������֪ͨ</a>&nbsp;<span class="STYLE1">[09-19]</span> </li>
+<li>&nbsp;<a href="/notice/2024091415346.html" target="_blank">���ڴ���ҽ�ƴ�ѧ��ɽѧԺ2023��ѧϰ�ɼ�����ѧ��תרҵ��ʾ</a>&nbsp;<span class="STYLE1">[09-14]</span> </li>
+<li>&nbsp;<a href="/notice/2024091415345.html" target="_blank">����2024���������˫�������������</a>&nbsp;<span class="STYLE1">[09-14]</span> </li>
+<li>&nbsp;<a href="/notice/2024091315341.html" target="_blank">����2024���°���ȫ����ѧӢ���ġ��������Ա���������֪ͨ</a>&nbsp;<span class="STYLE1">[09-12]</span> </li>
+<li>&nbsp;<a href="/notice/2024091015339.html" target="_blank">���ڴ���ҽ�ƴ�ѧ��ɽѧԺ2023��ѧ��תרҵ���Խ����ʾ</a>&nbsp;<span class="STYLE1">[09-10]</span> </li>
+<li>&nbsp;<a href="/notice/2024090715336.html" target="_blank">������֯��չ2024�����簲ȫ�����ܻ��֪ͨ</a>&nbsp;<span class="STYLE1">[09-07]</span> </li>
+<li>&nbsp;<a href="/notice/2024073115325.html" target="_blank">���ڶ�����ѧѧ�����ڸ�ѧ��֪ͨ</a>&nbsp;<span class="STYLE1">[07-30]</span> </li>
+ 
+                    </ul>
+                    <ul id="demo2"></ul>
+                   <!-- <script type="text/javascript">
+					var speed=50 
+					demo2.innerHTML=demo1.innerHTML 
+					function Marquee(){ 
+					if(demo2.offsetTop-demo.scrollTop<=0) 
+					demo.scrollTop-=demo1.offsetHeight 
+					else{ 
+					demo.scrollTop++ 
+					} 
+					} 
+					var MyMar=setInterval(Marquee,speed) 
+					demo.onmouseover=function() {clearInterval(MyMar)} 
+					demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+					</script>--> 
+                </dd>
+            </dl>
+        </div>
+        <div class="body_login"><a href="https://www.dmuzs.edu.cn/inner/" target="blank">&nbsp;��¼&nbsp;&nbsp;ѧԺУ��֪ͨ&nbsp;&gt;&gt;</a></div>
+    </div>
+    <div class="movement" id="tablist">
+        <div class="movement_nav">
+          <ul>
+            <li><a id="movement_nav_3" href="https://www.dmuzs.edu.cn/news/" class="on" target="_blank">ѧԺ����</a></li>
+            <li><a id="movement_nav_2" href="#" target="_blank">Ժϵ��̬</a></li>
+          </ul>
+        </div>
+        <div class="movement_organ1" style="display:block">
+            <ul>
+                <li><A title="<font color='#FF0000'>��Уѧ���ڵ������ʡһ����ҽҩ֪ʶ��ʵս���ܴ����л�</font>"  href="/news/2024102315365.html" target=_blank><font color='#FF0000'>��Уѧ���ڵ������ʡһ����ҽҩ֪ʶ��ʵս���ܴ����л�</font></A><span>[24-10-23]</span></li>
+<li><A title="�ഺ��ʢ�� ־Ը�ҵ���"  href="/news/2024102315366.html" target=_blank>�ഺ��ʢ�� ־Ը�ҵ���</A><span>[24-10-22]</span></li>
+<li><A title="��Уʦ�������μӡ��й�����ʵ�����������ʽ�ߵ�һ����"  href="/news/2024101715364.html" target=_blank>��Уʦ�������μӡ��й�����ʵ�����������ʽ�ߵ�һ����</A><span>[24-10-17]</span></li>
+<li><A title="��У��ʦ�ڵڶ�ʮ�˽�����ʡ������ѧ��Ϣ��������л�"  href="/news/2024101615362.html" target=_blank>��У��ʦ�ڵڶ�ʮ�˽�����ʡ������ѧ��Ϣ��������л�</A><span>[24-10-16]</span></li>
+<li><A title="��У�������ѧԺϲ�񶫱��Ƿ�װ��У�����ѧ�ɹ���"  href="/news/2024101615361.html" target=_blank>��У�������ѧԺϲ�񶫱��Ƿ�װ��У�����ѧ�ɹ���</A><span>[24-10-16]</span></li>
+<li><A title="��У�ɹ�����MUETǩԼ������ʽ"  href="/news/2024101615360.html" target=_blank>��У�ɹ�����MUETǩԼ������ʽ</A><span>[24-10-15]</span></li>
+<li><A title="��У�ٿ���ǿ���� ץ���� ����������ѧ�����������ֻ�"  href="/news/2024101415357.html" target=_blank>��У�ٿ���ǿ���� ץ���� ����������ѧ�����������ֻ�</A><span>[24-10-14]</span></li>
+<li><A title="��У��Ϊҽ��������ҽ�ƽ�����չ���˳������µ�λ"  href="/news/2024101415356.html" target=_blank>��У��Ϊҽ��������ҽ�ƽ�����չ���˳������µ�λ</A><span>[24-10-14]</span></li>
+<li><A title="��У��������ʡ��ʡ�����´�ҵ����ʵ��ƽ̨��"  href="/news/2024093015355.html" target=_blank>��У��������ʡ��ʡ�����´�ҵ����ʵ��ƽ̨��</A><span>[24-09-30]</span></li>
+<li><A title="��У�ɹ��ٰ�2024���＾�����˶���"  href="/news/2024093015354.html" target=_blank>��У�ɹ��ٰ�2024���＾�����˶���</A><span>[24-09-30]</span></li>
+<li><A title="��У�����������׽���ҽҩ�Ļ�ҹ������ҽҽԺ�෽��"  href="/news/2024092915353.html" target=_blank>��У�����������׽���ҽҩ�Ļ�ҹ������ҽҽԺ�෽��</A><span>[24-09-29]</span></li>
+ 
+            </ul>
+        </div>
+        <div class="movement_organ1">
+            <ul>
+                <li><A title="�������ʼǣ�����ѷ��"  href="/jsjx/2023051515155.html" target=_blank>�������ʼǣ�����ѷ��</A><span>[23-05-15]</span></li>
+ 
+            </ul>
+        </div>
+<div class="buttom1">
+          <form id="form1" name="form1" method="post" action="">
+            <label>
+            <select onChange=javascript:window.open(this.options[this.selectedIndex].value) name="select" style="width:118px;">
+              <option selected="selected">������������</option>
+              <option value="https://www.dmuzs.edu.cn">�����칫��</option>
+			  <option value="https://www.dmuzs.edu.cn">��֯��</option>
+              <option value="https://www.dmuzs.edu.cn">����ͳս��</option>
+              <option value="https://www.dmuzs.edu.cn">�ͼ칤����</option>
+              <option value="https://www.dmuzs.edu.cn">����</option>
+              <option value="https://www.dmuzs.edu.cn">��ѧ����������</option>
+              <option value="https://www.dmuzs.edu.cn">��ʦ��ѧ��չ����</option>
+			  <option value="https://www.dmuzs.edu.cn">ѧ��������</option>
+              <option value="https://recruit.dmuzs.edu.cn">������ҵ��</option>
+			  <option value="https://www.dmuzs.edu.cn">������Դ��</option>
+              <option value="https://www.dmuzs.edu.cn">��ʦ������</option>              
+              <option value="https://www.dmuzs.edu.cn">���в�</option>             
+              <option value="https://www.dmuzs.edu.cn">����</option>
+              <option value="https://www.dmuzs.edu.cn">�ʲ���ʵ���ҹ�����</option>  
+			  <option value="https://www.dmuzs.edu.cn">���ڲ�</option>
+              <option value="https://www.dmuzs.edu.cn">Ԥ��������</option> 
+              <option value="https://www.dmuzs.edu.cn">������</option>
+            </select>
+            </label>
+            
+            <label>
+            <select onChange=javascript:window.open(this.options[this.selectedIndex].value) name="select2" style="width:118px">
+              <option  selected="selected">��ѧ�̸�����</option>
+              <option value="https://www.dmuzs.edu.cn">���ʻ���ѧԺ</option>
+              <option value="https://www.dmuzs.edu.cn">��������ѧԺ</option>
+              <option value="https://www.dmuzs.edu.cn">Ӧ�ü���ѧԺ</option>
+              <option value="https://www.dmuzs.edu.cn">��ǻҽѧԺ</option>   
+              <option value="https://www.dmuzs.edu.cn">�ٴ�ҽѧԺ</option>
+			  <option value="https://www.dmuzs.edu.cn">ҩѧԺ</option>
+              <option value="https://www.dmuzs.edu.cn">����ѧԺ</option>
+              <option value="https://www.dmuzs.edu.cn">���������ѧԺ</option>
+			  <option value="https://www.dmuzs.edu.cn">������Ϣ����ѧԺ</option>
+              <option value="https://www.dmuzs.edu.cn">�������ѧԺ</option>     
+			  <option value="https://www.dmuzs.edu.cn">У�������봴�´�ҵѧԺ</option>
+ 			  <option value="https://www.dmuzs.edu.cn">���ʽ���ѧԺ</option>             			                
+              <option value="https://www.dmuzs.edu.cn">����˼����ѧԺ</option>  
+              <option value="https://www.dmuzs.edu.cn">����ҽѧ��ѧ��</option>
+              <option value="https://www.dmuzs.edu.cn">������в�</option>
+              <option value="https://www.dmuzs.edu.cn">�������в�</option>
+             
+			  <option value="https://www.dmuzs.edu.cn">ͼ���</option>
+			  <option value="https://www.dmuzs.edu.cn">�ִ�������������</option>
+			  <option value="https://www.dmuzs.edu.cn">��ѧ��������չ�뽡����������</option>
+              <option value="https://www.dmuzs.edu.cn">��ѧ�����´�ҵ��ְҵ������ѵ����</option>
+            </select>
+            </label>
+            <label>
+            <select onChange=javascript:window.open(this.options[this.selectedIndex].value) name="select3" style="width:118px">
+              <option selected="selected">����Ӧ��ƽ̨</option>
+              <option value="http://111.117.74.253/Default.aspx">ˮ��Ѳ�ѯϵͳ</option>
+              <option value="http://118.202.255.5:8080/selfservice">������������ϵͳ</option>
+              <option value="http://118.202.255.249:8080/opac/search.php/">����ͼ���</option>
+			  <option value="#">�ʲ�����ƽ̨</option>
+            </select>
+            </label>
+            <label>
+            <select onChange=javascript:window.open(this.options[this.selectedIndex].value) name="select4" style="width:118px">
+              <option selected="selected">����������Դ</option>
+			  
+              <option value="https://www.dmuzs.edu.cn/xygk/2009040954.html">�����ļ�����</option>
+              <option value="https://www.dmuzs.edu.cn/xygk/20090423158.html/">�����ѧ��Դ</option>
+            </select>
+            </label>
+          </form>
+      </div>
+    </div>
+    <div class="rightbody">
+        <div class="quick">
+            <dl>
+                <dt><img src="image/quick_title.jpg" width="76" height="29" /></dt>
+                <dd>
+                    <ul>
+                        <li><a href="https://www.dmuzs.edu.cn/xygk/2023030915115.html" target="_blank">��Ϣ����</a></li><li><a href="http://jw.dmuzs.edu.cn" target="_blank">�������ϵͳ</a></li>
+                        <li><a href="https://www.dmuzs.edu.cn/djgz/" target="_blank">���񹫿�</a></li>
+                        <li><a href="https://www.dmuzs.edu.cn/xygk/20090423158.html" target="_blank">������Դ����</a></li>
+
+						<li class="quick_last">
+						<table width="187" border="0">
+  <tr>
+    <td><a href="https://www.dmuzs.edu.cn/sfzx2" target="_blank"><img src="image/sfzx.gif" width="90" height="41" border="0" /></a></td>
+    <td >&nbsp;</td>
+    <td><a href="xygk/20090423158.html" target="_blank"><img src="image/zygxk.gif" width="90" height="41" border="0" /></a></td>
+  </tr>
+</table>
+						</li>
+						   <li class="quick_last" style="padding-left:3px"><a href="https://www.dmuzs.edu.cn/dwgzb/jcdt.html" target="_blank"><img src="image/xds.jpg" width="190" height="41" border="0" /></a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <div class="hot">
+       <dl>
+                 <dt><img src="image/hot_title.jpg" width="218" height="45" /></dt>
+                 <dd> 
+                     <ul>
+					     <li><a href="https://recruit.dmuzs.edu.cn" target="_blank">������Ϣ��</a></li>
+					     <li><a href="http://career.dmuzs.edu.cn/" target="_blank">��ҵ��Ϣ��</a></li>
+						 <li><a href="xygk/2023111415246.html" target="_blank">���²��ҹ�ϵ</a></li>
+                         <li><a href="http://118.202.255.249:8080/opac/search.php" target="_blank">����ͼ���</a></li>
+                          <li><a href="https://www.dmuzs.edu.cn/download/xsmd/bkzlbg.pdf" target="_blank">������������</a></li>
+                           <li><a href="http://www.gfbzb.gov.cn" target="_blank">ȫ��������</a></li>
+                     </ul>
+                 </dd>
+          </dl>
+        </div>
+    </div>
+</div>
+<!--mainbody end--> 
+
+<!--footer--> 
+<div id="footer">
+    <p>�й��������������и��������ͽ�28��&nbsp;�ʱ�:116085<br />
+      �����칫��:0411-86805393&nbsp;&nbsp;������:0411-88859799&nbsp;&nbsp;����:0411-84791840 <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">��ICP��12003742��-1 </a></p>
+    <p style="float:right;"><img src="image/icp.gif" width="25" height="29" /></p>
+    <p style="float:right; text-align:right;"><a href="https://www.dmuzs.edu.cn/xygk/201206072129.html" target="_blank">��У����λ��</a> |<a href="https://www.dmuzs.edu.cn/xygk/201206062127.html" target="blank"> ��ε��ﱾУ</a> |
+	<script language="javascript" type="text/javascript" src="http://js.users.51.la/1125074.js"></script>
+<noscript><a href="http://www.51.la/?1125074" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/1125074.asp" style="border:none" /></a></noscript><br />
+    @ 1999-2012 ��Ȩ���С�<br><span class="STYLE1">��վ���ʺţ���-GX-2014-02-0005</span> </p>
+  </div>
+<!--footer end--> 
+</div>
+</body>
+</html>

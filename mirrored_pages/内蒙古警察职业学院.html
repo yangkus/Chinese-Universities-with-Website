@@ -1,0 +1,1137 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内蒙古警察职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="内蒙古警察职业学院">
+<META Name="keywords" Content="内蒙古警察职业学院" />
+
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:776562626572323079784750525a5742000300004556 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1934671847)</script>
+</head>
+<style>
+img#imgConac {
+    height: 30px;
+    width:25px;}
+</style>
+<body>
+
+    <!-- pc 顶部 导航 -->
+    <div class="b-top">
+        <div class="t-search-zzc"></div>
+        <div class="t-search">
+            <div>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <div class="search-btn">
+                <input type="image" src="images/search2.png" v-on:click="onSubmit()">
+            </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1934671847";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.110.92:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+    </div>
+    <div class="head pc">
+        <div class="head-top">
+            <div class="logo">
+                
+<a href="index.htm">
+    <img class="logo1" src="images/nmgjclogo.png" alt="">
+    <img class="logo2" src="images/nmgjclogo.png" alt="">
+</a>
+            </div>
+            <div class="h-right">
+                <div class="search-switch"></div>
+                <div class="nav"><ul>
+        <li>
+        <a href="xygk/xyjj.htm">学院概况</a>
+        <div>
+            <ul>
+                <li><a href="xygk/xyjj.htm">学院简介</a></li>
+                <li><a href="xygk/lrld.htm">历任领导</a></li>
+                <li><a href="xygk/xrld.htm">现任领导</a></li>
+                <li><a href="xygk/xybs/xh.htm">学院标识</a></li>
+                <li><a href="xygk/xxgk.htm">信息公开</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="jgsz/glbm/zzb.htm">机构设置</a>
+        <div>
+            <ul>
+                <li><a href="jgsz/glbm/zzb.htm">管理部门</a></li>
+                <li><a href="jgsz/jxbm/zcx.htm">教学部门</a></li>
+                <li><a href="jgsz/jfbm/tsg.htm">教辅部门</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="xljy/jxgl.htm">学历教育</a>
+        <div>
+            <ul>
+                <li><a href="xljy/jsfz.htm">教师发展</a></li>
+                <li><a href="xljy/jxgl.htm">教学管理</a></li>
+                <li><a href="xljy/jcgl1.htm">教材管理</a></li>
+                <li><a href="xljy/sysgl.htm">实验室管理</a></li>
+                <li><a href="xljy/jxzljk.htm">教学质量监控</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="kxyj/kycg.htm">科学研究</a>
+        <div>
+            <ul>
+                <li><a href="kxyj/kycg.htm">科研成果</a></li>
+                <li><a href="kxyj/xsjl.htm">学术交流</a></li>
+                <li><a href="kxyj/yjjg/xjpfzsxyjzx.htm">研究机构</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="zsjy.htm">招生就业</a>
+        <div>
+            <ul>
+                <li><a href="zsjy/zsgz.htm">招生工作</a></li>
+                <li><a href="zsjy/jyxx.htm">就业信息</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="crjy/mjpx.htm">成人教育</a>
+        <div>
+            <ul>
+                <li><a href="crjy/mjpx.htm">民警培训</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="hzjl/gjhz.htm">合作交流</a>
+        <div>
+            <ul>
+                <li><a href="hzjl/gjhz.htm">国际合作</a></li>
+                <li><a href="hzjl/xjxqhz.htm">校局校企合作</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="xywh/zlfc.htm">校园文化</a>
+        <div>
+            <ul>
+                <li><a href="xywh/zlfc.htm">藏蓝风采</a></li>
+                <li><a href="xywh/shsj.htm">社会实践</a></li>
+                <li><a href="xywh/njwc.htm">內警文创</a></li>
+                <li><a href="xywh/xl.htm">校历</a></li>
+                <li><a href="xywh/xydt.htm">校园地图</a></li>
+                <li><a href="xywh/xyhj.htm">校园环境</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="">推广基地</a>
+        <div>
+            <ul>
+                <li><a href="tgjd/xwdt.htm">新闻动态</a></li>
+                <li><a href="tgjd/yyfw.htm">语言服务</a></li>
+                <li><a href="tgjd/yyzy.htm">语言资源</a></li>
+                <li><a href="tgjd/jdsd.htm">经典诵读</a></li>
+                <li><a href="tgjd/xxyd.htm">学习园地</a></li>
+                <li><a href="tgjd/gywm.htm">关于我们</a></li>
+            </ul>
+        </div>
+    </li>
+    <div class="clear"></div>
+</ul></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">
+            
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm"><img src="images/nmgjclogo.png" alt=""></a>
+        </div>
+        <div class="m-nav">
+            <div class="m-search">
+                
+
+
+<div id="divu4"></div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+            <input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input type="image" src="images/search2.png" v-on:click="onSubmit()">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1934671847";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.110.92:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            </div>
+            <ul>
+        <li>
+        <a href="xygk/xyjj.htm">学院概况</a>
+        <span></span>
+        <ul>
+            <li><a href="xygk/xyjj.htm">学院简介</a></li>
+            <li><a href="xygk/lrld.htm">历任领导</a></li>
+            <li><a href="xygk/xrld.htm">现任领导</a></li>
+            <li><a href="xygk/xybs/xh.htm">学院标识</a></li>
+            <li><a href="xygk/xxgk.htm">信息公开</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="jgsz/glbm/zzb.htm">机构设置</a>
+        <span></span>
+        <ul>
+            <li><a href="jgsz/glbm/zzb.htm">管理部门</a></li>
+            <li><a href="jgsz/jxbm/zcx.htm">教学部门</a></li>
+            <li><a href="jgsz/jfbm/tsg.htm">教辅部门</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="xljy/jxgl.htm">学历教育</a>
+        <span></span>
+        <ul>
+            <li><a href="xljy/jsfz.htm">教师发展</a></li>
+            <li><a href="xljy/jxgl.htm">教学管理</a></li>
+            <li><a href="xljy/jcgl1.htm">教材管理</a></li>
+            <li><a href="xljy/sysgl.htm">实验室管理</a></li>
+            <li><a href="xljy/jxzljk.htm">教学质量监控</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="kxyj/kycg.htm">科学研究</a>
+        <span></span>
+        <ul>
+            <li><a href="kxyj/kycg.htm">科研成果</a></li>
+            <li><a href="kxyj/xsjl.htm">学术交流</a></li>
+            <li><a href="kxyj/yjjg/xjpfzsxyjzx.htm">研究机构</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="zsjy.htm">招生就业</a>
+        <span></span>
+        <ul>
+            <li><a href="zsjy/zsgz.htm">招生工作</a></li>
+            <li><a href="zsjy/jyxx.htm">就业信息</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="crjy/mjpx.htm">成人教育</a>
+        <span></span>
+        <ul>
+            <li><a href="crjy/mjpx.htm">民警培训</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="hzjl/gjhz.htm">合作交流</a>
+        <span></span>
+        <ul>
+            <li><a href="hzjl/gjhz.htm">国际合作</a></li>
+            <li><a href="hzjl/xjxqhz.htm">校局校企合作</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="xywh/zlfc.htm">校园文化</a>
+        <span></span>
+        <ul>
+            <li><a href="xywh/zlfc.htm">藏蓝风采</a></li>
+            <li><a href="xywh/shsj.htm">社会实践</a></li>
+            <li><a href="xywh/njwc.htm">內警文创</a></li>
+            <li><a href="xywh/xl.htm">校历</a></li>
+            <li><a href="xywh/xydt.htm">校园地图</a></li>
+            <li><a href="xywh/xyhj.htm">校园环境</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="">推广基地</a>
+        <span></span>
+        <ul>
+            <li><a href="tgjd/xwdt.htm">新闻动态</a></li>
+            <li><a href="tgjd/yyfw.htm">语言服务</a></li>
+            <li><a href="tgjd/yyzy.htm">语言资源</a></li>
+            <li><a href="tgjd/jdsd.htm">经典诵读</a></li>
+            <li><a href="tgjd/xxyd.htm">学习园地</a></li>
+            <li><a href="tgjd/gywm.htm">关于我们</a></li>
+        </ul>
+    </li>
+    <div class="clear"></div>
+</ul>
+        </div>
+    </div>
+
+
+        <script language="javascript" src="/system/resource/js/dynclicks.js"></script><div class="banner">
+    <div class="slick">
+        <div>
+        <a title="">
+                <img src="images/20231008.jpg">
+        </a>
+    </div>
+    <div>
+        <a title="">
+                <img src="images/bannertp.jpg">
+        </a>
+    </div>
+    <div>
+        <a title="">
+                <img src="images/banner001.jpg">
+        </a>
+    </div>
+    <div>
+        <a title="">
+                <img src="images/banner-003.jpg">
+        </a>
+    </div>
+    <div>
+        <a title="">
+                <img src="images/banner_001.jpg">
+        </a>
+    </div>
+    </div>
+</div>
+
+    <div class="index">
+        <div class="s1">
+            <div class="px1400">
+                <div class="tit">
+                    <h3>学院要闻</h3>
+                    <a href="index/xyyw.htm">查看更多</a>
+                </div>
+                <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="s1-banner">
+    <ul>
+                <li>
+            <a href="info/1038/29481.htm" target="_blank">
+                <div class="pic">
+                    <img src="/__local/B/A6/DB/6C623649E71D7C81041C63D9740_24F9DFE9_DC45F.png?e=.png" alt="">
+                    <div class="s1-time">
+                        <b>26</b><i>/</i><span>2024-10</span>
+                    </div>
+                </div>
+                <div class="s1-info">
+                    <h3 class="titline"><i>俄罗斯联邦内务部鄂木斯克学院、东西伯利亚学院代表团一行来内蒙古警察职业学院访问交流</i></h3>
+                    <p>10月24日—26日，俄罗斯联邦内务部鄂木斯克学院、东西伯利亚学院代表团一行6人来我院访问交流。学院党委班子成员亲切会见了来访嘉宾一行，党委书记苏和生致欢迎辞，党委副书记、院长李永林主持见面会，相关部门负责人及部分教师代表参加见面会。期间，代表团一行还分别与学院教师代表和学生代表举行座谈，双方就各自关心的问题进行了深入交流。见面会上，苏和生对俄罗斯两所院校的来访表示热烈欢迎，并向代表团介绍了内蒙古警察职业学院近年来的建设发展情况。...</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="info/1038/29421.htm" target="_blank">
+                <div class="pic">
+                    <img src="/__local/E/2B/1C/007266C27D967511FEDA22089FE_2668270C_B8F15.png?e=.png" alt="">
+                    <div class="s1-time">
+                        <b>18</b><i>/</i><span>2024-10</span>
+                    </div>
+                </div>
+                <div class="s1-info">
+                    <h3 class="titline"><i>自治区公安厅党委委员、政治部主任王斌一行莅临学院开展调研座谈</i></h3>
+                    <p>10月17日下午，自治区公安厅党委委员、政治部主任王斌，综合处处长张磊，人事训练处副处长王宾祖一行莅临学院开展调研座谈。学院党委书记苏和生主持会议并作专题汇报，党委副书记、院长李永林，党委委员、副院长郭志忠出席会议，学院各部门负责同志参加会议。会上，苏和生围绕拟申报本科专业建设情况、和林格尔校区运转情况、秋季学期教学情况等五个方面的重点工作进行汇报，提出目前亟待解决的问题和下一阶段的工作计划。李永林重点针对专业申报和北疆安全稳定屏障建设研究基地事宜进行补充汇报，...</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="info/1038/29401.htm" target="_blank">
+                <div class="pic">
+                    <img src="/__local/9/45/0A/D6183FC4C27C12C63B41016638A_05DDB217_32D5D.png" alt="">
+                    <div class="s1-time">
+                        <b>16</b><i>/</i><span>2024-10</span>
+                    </div>
+                </div>
+                <div class="s1-info">
+                    <h3 class="titline"><i>刘宏常务副厅长考察调研和林格尔校区建设及运行情况</i></h3>
+                    <p>10月16日上午，公安厅党委副书记、常务副厅长刘宏深入学院和林格尔校区考察调研校园建设及运行情况。公安厅警务保障总队总队长么钧，反恐怖总队政委任巍，学院党委书记苏和生，党委委员、副院长哈布日，公安厅基建专班，学院相关部门及建设方、监管方、代建中心负责同志陪同调研。刘宏一行先后来到教学楼、学生宿舍、超市、食堂等重点教学生活场所，通过实地察看、听取汇报的方式，详细了解校区运转情况，与学院领导及项目建设方、监管方、...</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u7_29481','dynclicks_u7_29421','dynclicks_u7_29401'],[29481,29421,29401],"wbnews", 1934671847)</script>
+
+                <div class="s1-list">
+    <ul>
+                <li>
+            <a href="info/1038/29481.htm" target="_blank">
+                <div class="s1-date">
+                    <b>26</b><span>2024-10</span>
+                </div>
+                <div class="s1-tx">
+                    <h3 class="titline"><i>俄罗斯联邦内务部鄂木斯克学院、东西伯利亚学院代表团一行来内蒙古警察职业学院访问交流</i></h3>
+                    <p>10月24日—26日，俄罗斯联邦内务部鄂木斯克学院、东西伯利亚学院代表团一行6人来我院访问交流。学院党委班子成员亲切会见了来访嘉宾一行，党委书记苏和生致欢迎辞，党委副书记、院长李永林主持见面会，相关部门负责人及部分教师代表参加见面会。期间，代表团一行还分别与学院教师代表和学生代表举行座谈，双方就各自关心的问题进行了深入交流。见面会上，苏和生对俄罗斯两所院校的来访表示热烈欢迎，并向代表团介绍了内蒙古警察职业学院近年来的建设发展情况。...</p>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+        <li>
+            <a href="info/1038/29471.htm" target="_blank">
+                <div class="s1-date">
+                    <b>24</b><span>2024-10</span>
+                </div>
+                <div class="s1-tx">
+                    <h3 class="titline"><i>全区高校思想政治理论课“大听课、大调研”活动调研组莅临我院指导调研</i></h3>
+                    <p>为贯彻落实习近平总书记在学校思想政治理论课教师座谈会上的重要讲话精神，深入实施思政课教师能力提升攻坚计划，全面推动思想政治理论课改革创新，根据自治区教育厅开展全区高校思想政治理论课“大听课、大调研”活动部署安排，10月23日，由内蒙古财经大学马克思主义学院院长孙丽教授带队，呼和浩特职业学院姜淑兰教授、内蒙古医科大学刘荣臻教授、内蒙古商贸职业学院孙巧霞教授一行，莅临我院开展调研指导工作。专家组通过现场听思政课、...</p>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+        <li>
+            <a href="info/1038/29461.htm" target="_blank">
+                <div class="s1-date">
+                    <b>22</b><span>2024-10</span>
+                </div>
+                <div class="s1-tx">
+                    <h3 class="titline"><i>国家语言文字推广基地（内蒙古警察职业学院）举办2024年科右前旗青壮年劳动力和基层干部普通话示范培训班</i></h3>
+                    <p>为全面贯彻党中央关于“铸牢中华民族共同体意识 推进新时代党的民族工作高质量发展”的战略部署，推动形成大语言文字工作格局，着力增强青壮年劳动力和基层干部普通话应用能力，受教育部委托，由自治区教育厅主办，国家语言文字推广基地（内蒙古警察职业学院）承办的2024年科右前旗青壮年劳动力和基层干部普通话示范培训班，10月21日上午在科右前旗开班。科右前旗教育局党组成员、副局长张静媛，内蒙古警察职业学院公安管理系党总支书记邢宏博，...</p>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+        <li>
+            <a href="info/1038/29451.htm" target="_blank">
+                <div class="s1-date">
+                    <b>21</b><span>2024-10</span>
+                </div>
+                <div class="s1-tx">
+                    <h3 class="titline"><i>国家语言文字推广基地（内蒙古警察职业学院）呼伦贝尔市公安局工作站正式成立</i></h3>
+                    <p>为深入学习贯彻习近平新时代中国特色社会主义思想和党的二十届三中全会精神，铸牢中华民族共同体意识，推动形成大语言文字工作格局，充分发挥自治区公安厅“1+12+N”“教学研练战”一体化实训基地建设优势，持续推进基地五年建设规划落实工作，布局工作网络，10月17日至10月18日，学院党委委员、副院长哈布日带队一行4人赴呼伦贝尔市公安局为国家语言文字推广基地（内蒙古警察职业学院）呼伦贝尔市公安局工作站揭牌，并对呼伦贝尔市民辅警语言文字使用状况开展调研工作。...</p>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+        <li>
+            <a href="info/1038/29441.htm" target="_blank">
+                <div class="s1-date">
+                    <b>21</b><span>2024-10</span>
+                </div>
+                <div class="s1-tx">
+                    <h3 class="titline"><i>内蒙古警察职业学院圆满完成2022级学生红十字应急救护培训工作</i></h3>
+                    <p>为深化应急救护技能普及，促进学院学生树立安全意识，提高急救能力，练就过硬本领，按照内蒙古警察职业学院、内蒙古自治区红十字会签署的战略合作协议，学院制定《内蒙古警察职业学院学生红十字应急救护培训方案》，面向2022级全体学生共1041人，于5月在新城校区、10月在和林格尔校区分两批次举办红十字救护员（初级）培训班。参训人员通过考核后即可获得红十字救护员（初级）证书。本次培训采用理论讲授与实践操作相结合的方式，由自治区红十字会22名教师及学院12名教师讲授应急救护的核心知识和技巧。...</p>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+        <div class="clear"></div>
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u8_29481','dynclicks_u8_29471','dynclicks_u8_29461','dynclicks_u8_29451','dynclicks_u8_29441'],[29481,29471,29461,29451,29441],"wbnews", 1934671847)</script>
+
+            </div>
+        </div>
+        <div class="s2">
+            <div class="px1400">
+                <div class="s2-tit">
+                    <b class="on" href="index/tzgg.htm" style="margin:0!important;">通知公告</b><b href="xljy/jxgl.htm" style="display:none;">部门动态</b>
+                    <a href="index/tzgg.htm">查看更多</a>
+                </div>
+                <div class="s2-list">
+                    <div class="s2-c on">
+        <div>
+        <ul>
+            <li>
+                <a href="info/1039/29171.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>23</b><span>2024-09</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>关于对内蒙古警察职业学院拟引进高层次人才进行公示的公告</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1039/26971.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>20</b><span>2024-05</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>监督平台</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1039/26041.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>27</b><span>2024-03</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>内蒙古警察职业学院2024年度事业编制教师竞争性比选调动公告</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1039/25911.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>13</b><span>2024-03</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>内蒙古警察职业学院2024年专升本考试报名资格审核合格名单公示</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1039/25891.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>13</b><span>2024-03</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>图书馆关于开通《有章阅读平台》试用的通知</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <a href="info/1039/25881.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>13</b><span>2024-03</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>关于开展2023年度个人所得税综合所得汇算清缴事项的通知</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1039/25261.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>23</b><span>2024-02</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>内蒙古警察职业学院2024年部门预算公开报告</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1039/23871.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>02</b><span>2024-01</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>关于启用教师办公云桌面的通知</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1039/22191.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>30</b><span>2023-10</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>关于加强内蒙古警察职业学院信息化建设项目管理的通知</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1039/21511.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>18</b><span>2023-10</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>关于开展2023—2024学年第一学期教评教专项教学检查工作安排的通知</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><script>_showDynClickBatch(['dynclicks_u9_29171','dynclicks_u9_26971','dynclicks_u9_26041','dynclicks_u9_25911','dynclicks_u9_25891','dynclicks_u9_25881','dynclicks_u9_25261','dynclicks_u9_23871','dynclicks_u9_22191','dynclicks_u9_21511'],[29171,26971,26041,25911,25891,25881,25261,23871,22191,21511],"wbnews", 1934671847)</script>
+ 
+                    <div class="s2-c" style="display:none;">
+        <div>
+        <ul>
+            <li>
+                <a href="info/1040/28471.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>14</b><span>2024-07</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>内蒙古警察职业学院开展红十字救护员培训</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1040/28451.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>26</b><span>2024-06</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>学院召开2024届优秀实习生优秀实习指导教官优秀实习指导教师座谈会</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1040/26101.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>27</b><span>2024-03</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>内蒙古警察职业学院开展2024年度春季学期开学季系列教育活动</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1040/25821.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>07</b><span>2024-03</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>内蒙古警察职业学院举行“开学第一课”公安英模进校园宣讲活动</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1040/25511.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>02</b><span>2024-03</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>内蒙古警察职业学院召开春季学期第一次教学工作会议</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <a href="info/1040/25081.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>31</b><span>2024-01</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>【身边的榜样】实习学警捷报频传</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1040/25091.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>27</b><span>2024-01</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>【身边的榜样】他们收到了人生第一面锦旗</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1040/25101.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>24</b><span>2024-01</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>这些实习学警又被表扬了！</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1040/25111.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>19</b><span>2024-01</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>逐梦起航 乘风破浪 呼和浩特市赛罕区岗位实习学生实习感悟</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+            <li>
+                <a href="info/1040/25121.htm" target="_blank">
+                    <div class="s2-date">
+                        <b>18</b><span>2024-01</span>
+                    </div>
+                    <div class="s2-tx">
+                        <p class="titline"><i>学警见习记丨好样的！两位实习学警收到表扬工单</i></p>
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><script>_showDynClickBatch(['dynclicks_u10_28471','dynclicks_u10_28451','dynclicks_u10_26101','dynclicks_u10_25821','dynclicks_u10_25511','dynclicks_u10_25081','dynclicks_u10_25091','dynclicks_u10_25101','dynclicks_u10_25111','dynclicks_u10_25121'],[28471,28451,26101,25821,25511,25081,25091,25101,25111,25121],"wbnews", 1934671847)</script>
+ 
+                </div>
+            </div>
+        </div>
+        <div class="s3">
+            <div class="px1400">
+                <div class="s3-l">
+                    <div class="tit">
+    <h3>学历教育</h3>
+    <a href="xljy/jxgl.htm">查看更多</a>
+</div>
+<div class="s3-pt">
+    <a href="info/1020/23931.htm" target="_blank">
+        <div class="pic">
+            <img src="/__local/4/5F/51/727BE8B66F36362D0C6051A4027_677D0C39_46C65.png" alt="">
+        </div>
+        <div class="s3-tx">
+            <div class="s3-date">
+                <b>26</b><span>2023-11</span>
+            </div>
+            <h3 class="titline"><i>喜报|我院教师在第四轮素质强警五校教师课堂教学比赛中斩获佳绩</i></h3>
+            <p>
+                <span>       2023年11月17日下午，第四轮素质强警五校教师课堂教学比赛在中国人民公安大学木樨地校区举行。来自中国人民公安大学、北京警察学院、新疆警察学院、甘肃警察职业学院和内蒙古警察职业学院五所公安院校教师同台竞技，我院法律系教师白音珠娜、公安管理系教师张智鹏代表学院参赛。凭借精湛的专业素养、出色的教学水平，白音珠娜荣获二等奖，张智鹏荣获三等奖。      白音珠娜在《法理学》课程讲授中，综合运用案例式、研讨...</span>
+            </p>
+        </div>
+        <div class="clear"></div>
+    </a>
+    <a href="info/1020/23981.htm" target="_blank">
+        <div class="pic">
+            <img src="/__local/6/B7/9D/19E360DFE56D84F95B0767BFC0E_87CE0861_1D482.jpg?e=.jpeg" alt="">
+        </div>
+        <div class="s3-tx">
+            <div class="s3-date">
+                <b>17</b><span>2023-07</span>
+            </div>
+            <h3 class="titline"><i>主题教育进行时｜内蒙古警察职业学院2023年教师教官教学能力提升培训班开班仪式在复旦大学举行</i></h3>
+            <p>
+                <span>      为深入开展学习贯彻习近平新时代中国特色社会主义思想主题教育，进一步提升学院教师教官素质能力，建设适应新时代内蒙古公安工作需要的教师教官队伍，根据自治区公安厅统一安排，7月17日上午，内蒙古警察职业学院百名教师教官能力提升培训班（第一期）在复旦大学邯郸校区正式开班。         复旦大学新闻学院教授、继续教育学院终身教育课程创新中心顾问周笑出席仪式并致欢迎辞，内蒙古警察职业学院党委委员、副院长郭志...</span>
+            </p>
+        </div>
+        <div class="clear"></div>
+    </a>
+</div><script>_showDynClickBatch(['dynclicks_u11_23931','dynclicks_u11_23981'],[23931,23981],"wbnews", 1934671847)</script>
+
+                </div>
+                <div class="s3-r"><div class="tit">
+    <h3>招生就业</h3>
+    <a href="zsjy.htm">查看更多</a>
+</div>
+<div class="s3-banner">
+        <a href="info/1030/27451.htm" target="_blank">
+        <div class="pic">
+            <img src="/__local/2/4D/51/2737D3CDDFC907A9ED1D296C798_FB6C9522_6D203.jpg" alt="">
+        </div>
+        <p>内蒙古警察职业学院2024年招生简章</p>
+        </a>
+</div>
+<div class="s3-list">
+    <ul>
+        <li>
+            <a href="info/1031/28291.htm" target="_blank">
+                <span>2024-08-07</span>
+                <p class="titline"><i>内蒙古警察职业学院就业服务攻坚行动工作方案</i></p>
+            </a>
+        </li>
+        <li>
+            <a href="info/1030/27461.htm" target="_blank">
+                <span>2024-06-22</span>
+                <p class="titline"><i>2024年报考内蒙古警察职业学院考生关注问题解答</i></p>
+            </a>
+        </li>
+        <li>
+            <a href="info/1031/24321.htm" target="_blank">
+                <span>2024-01-10</span>
+                <p class="titline"><i>我院圆满完成公安部保卫处招聘工作</i></p>
+            </a>
+        </li>
+        <li>
+            <a href="info/1031/22971.htm" target="_blank">
+                <span>2023-12-06</span>
+                <p class="titline"><i>教育部、人社部：多措并举促进2024届高校毕业生更加充分更高质量就业</i></p>
+            </a>
+        </li>
+        <li>
+            <a href="info/1031/22961.htm" target="_blank">
+                <span>2023-11-02</span>
+                <p class="titline"><i>内蒙古自治区2023年高校大学生职业生涯规划课程教师授课能力提升培训班结束</i></p>
+            </a>
+        </li>
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u12_27451','dynclicks_u12_28291','dynclicks_u12_27461','dynclicks_u12_24321','dynclicks_u12_22971','dynclicks_u12_22961'],[27451,28291,27461,24321,22971,22961],"wbnews", 1934671847)</script>
+</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="s4">
+            <div class="px1400"><div class="tit">
+    <h3>校园文化</h3>
+    <a href="xywh/zlfc.htm">查看更多</a>
+</div>
+<div class="s4-c">
+    <ul>
+        <li>
+            <div class="s4-l">
+                <a href="info/1032/29001.htm" target="_blank">
+                    <div class="pic">
+                        <img src="/__local/3/8A/E4/9EB09FBBDF34C37C1BF2D62B197_1238D64D_345AA.jpeg" alt="">
+                    </div>
+                    <p>砥砺奋进，共赴秋实之约</p>
+                </a>
+            </div>
+            <div class="s4-r">
+                <a href="info/1032/28981.htm" target="_blank">
+                    <div class="pic">
+                        <img src="/__local/1/9D/E9/D416597D9FD14089EDCEB405411_DCB0061C_12D46.jpeg" alt="">
+                    </div>
+                    <div class="s3-tx">
+                        <div class="s3-date">
+                            <b>03</b><span>2024-09</span>
+                        </div>
+                        <h3 class="titline"><i>新校区，我们来啦！</i></h3>
+                        <p>
+                            <span>新校区，我们来啦！“启程，出发！”8月30日至8月31日在学院的统筹安排下2022级师生顺利入住和林格尔新校区搬迁之前学生处制定了周密的搬迁计划在学院各部门的紧密配合下 有秩序、有效率、分批次地完成了搬迁一件件打包好的物品一张张洋溢着喜悦的笑脸一辆辆满载的货车是师生们对新校区的期待与向往从兴安北路11号到和林格尔云港大道带走的是沉甸甸的行李带不走的是满满的回忆。新校区  新学期  新未来一间间空荡荡的宿舍因为同...</span>
+                        </p>
+                    </div>
+                    <div class="s4-sj"></div>
+                    <div class="clear"></div>
+                </a>
+            </div>
+            <div class="clear"></div>
+        </li>
+        <li>
+            <div class="s4-l">
+                <a href="info/1032/28941.htm" target="_blank">
+                    <div class="pic">
+                        <img src="/__local/4/36/38/F5DCFFB742AA96F1BCB7D7AF5E5_2AA1AD1C_1A379.jpeg" alt="">
+                    </div>
+                    <p>感恩同行路，铭记教官情</p>
+                </a>
+            </div>
+            <div class="s4-r">
+                <a href="info/1033/28921.htm" target="_blank">
+                    <div class="pic">
+                        <img src="/__local/6/66/BD/B0D8289770F7873FB274BCD3691_AC47DB02_1D5A0.jpeg" alt="">
+                    </div>
+                    <div class="s3-tx">
+                        <div class="s3-date">
+                            <b>20</b><span>2024-08</span>
+                        </div>
+                        <h3 class="titline"><i>暑期“三下乡” | 我院习近平新时代中国特色社会主义思想宣传团开展大学生志愿者暑期“三下乡”实践活动</i></h3>
+                        <p>
+                            <span>暑期“三下乡” | 我院习近平新时代中国特色社会主义思想宣传团开展大学生志愿者暑期“三下乡”实践活动为深入学习贯彻习近平新时代中国特色社会主义思想和党的二十大精神，学习宣传贯彻习近平文化思想、习近平总书记关于青年工作的重要思想、习近平总书记考察内蒙古重要讲话精神，引领广大青年学生在实践中提高思想政治素质，帮助青年学生在社会课堂中受教育、长才干、作贡献，争做有理想、敢担当、能吃苦、肯奋斗的新时代好青...</span>
+                        </p>
+                    </div>
+                    <div class="s4-sj"></div>
+                    <div class="clear"></div>
+                </a>
+            </div>
+            <div class="clear"></div>
+        </li>
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u13_29001','dynclicks_u13_28981','dynclicks_u13_28941','dynclicks_u13_28921'],[29001,28981,28941,28921],"wbnews", 1934671847)</script>
+</div>
+        </div>
+        <div class="s5" style="display:none;">
+            <div class="px1400">
+                <div class="tit">
+                    <h3>专题专栏</h3>
+                    <a href="#" style="display: none;">查看更多</a>
+                </div>
+                    <div class="s5-banner">
+    <ul>
+                <li>
+            <a>
+                <div class="pic">
+                    <img src="images/s5-pic1.jpg" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="pic">
+                    <img src="images/s5-pic2.jpg" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="pic">
+                    <img src="images/s5-pic3.jpg" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="pic">
+                    <img src="images/s5-pic4.jpg" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="pic">
+                    <img src="images/s5-pic1.jpg" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="pic">
+                    <img src="images/s5-pic2.jpg" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="pic">
+                    <img src="images/s5-pic3.jpg" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="pic">
+                    <img src="images/s5-pic4.jpg" alt="">
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+        </div>
+        
+         <div class="s6">
+            <div class="px1400">
+                <div class="s6-list">
+                        <ul>
+  </ul> 
+                </div>
+            </div>
+        </div>
+        
+        <!-- foot -->
+    <div class="foot">
+        <div class="px1400">
+            <div class="f-logo">
+                
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm"><img src="images/nmgjclogo.png" alt=""></a>
+            </div>
+                <script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<div class="f-lx">
+    <b>联系我们</b>
+    <p>地址：呼和浩特市新城区兴安北路11号 邮编：010051</p>
+<p>招生电话：0471-5278003</p>
+<p>信息中心：0471-3683662</p>
+<p>邮件：nmjyxxzx@163.com<br></p>
+</div>
+                <div class="foot-link">
+                  <h3>快速链接</h3>
+                    <ul><script language="javascript" src="/system/resource/js/openlink.js"></script>  <li><a href="http://jwc.imppc.cn:9000/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1934671847, 1001)">教学管理信息服务平台（外网）</a></li>
+  <li><a href="http://192.168.110.32" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1934671847, 1002)">教学管理信息服务平台（内网）</a></li>
+  <li><a href="tszysy.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1934671847, 1003)">图书资源索引</a></li>
+</ul>
+                </div>
+            <div class="foot-r">
+                    <div class="f-link" style="visibility:hidden;display:none;">
+        <a href="index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1934671847, 77210)" target="_blank"><img src="images/icon-oa.png" alt="">OA系统</a>
+    <a href="xygk/xxgk.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1934671847, 77211)" target="_blank"><img src="images/icon-info.png" alt="">信息公开</a>
+</div>
+                    <div class="ewm">
+            <img src="images/erweima.jpg">
+</div>
+            
+            </div>
+        </div>
+                
+        <div class="copyright" style="    display: flex;    flex-wrap: wrap;    justify-content: center;    align-items: center;">
+        <div class="sydw"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/07/000/0000/60070566/CA070000000600705660001.js' type='text/javascript'%3E%3C/script%3E"));</script></div>
+        <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有：内蒙古警察职业学院　蒙ICP备2022001508号-1</p>
+       
+        </div>
+    </div>
+
+
+<a href="jzlm/ldgh.htm" style="display:none;"></a>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

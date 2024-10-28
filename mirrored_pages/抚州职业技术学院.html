@@ -1,0 +1,881 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <title>抚州职业技术学院</title>
+    <link rel="stylesheet" href="/statics/fzzy/css/base.css">
+    <link rel="stylesheet" href="/statics/fzzy/css/common.css">
+    <link rel="stylesheet" href="/statics/fzzy/css/index.css">
+    <script src="/statics/fzzy/js/jquery-1.11.1.min.js"></script>
+    <script src="/statics/fzzy/js/jquery.SuperSlide.2.1.3.js"></script>
+
+</head>
+<body>
+        <!-- 头部 -->
+    <div class="header">
+        <!-- 给导航下标位置定位 -->
+        <div id="weiz" style="display: none;">
+            <a href="">首页</a>            
+        </div>
+        <div class="header-sb">
+            <div class="header-sb-bd">
+                
+                <div class="fl logo">
+                    <a href="/"> <img src="/statics/fzzy/images/logo.png" alt="" style="height:100px;"></a>
+                  
+                </div>
+                
+                <style>
+                .youx{
+                     position: relative;
+                     border: 1px solid #fff;
+                     height:30px;
+                     border-radius:15px ;
+                     color:#Fff;
+                     line-height: 30px;
+                        padding: 0 5px;
+                }
+				.youx a{
+					color:#fff;
+					padding: 0 10px;
+					display: inline-block;
+					
+				}
+                    .xxxq,.xxxq1{
+                        position: absolute;
+                        top: 40px;
+                        left: 0;
+                        z-index: 100;
+                        color:#000;
+                        line-height:30px;
+                        padding: 10px 0;
+                        background: #fff;
+                        width:200px;
+                        height:50px;
+                        border: 1px solid #000;
+                        text-align: center;
+                        box-sizing: border-box;
+                        
+                        
+                    }
+					.sjyx,.yzyx{
+                        cursor: pointer;
+                    }
+                    .sjyx:hover{
+                        color:red;
+                    }
+                    .yzyx:hover{
+                        color:red;
+                    }
+                </style>
+                
+                <div class="fr ssk">
+                    <!--<ul>-->
+                    <!--    <li><a style="margin-right:5px;" href="javascript:;">注册</a>|<a style="margin-left:5px;" href="javascript:;">登录</a></li>-->
+                    <!--    <li><a href="javascript:;">收藏本站</a></li>-->
+                    <!--    <li><a href="javascript:;">设为首页</a></li>-->
+                    <!--</ul>-->
+                    <div class="youx fr">
+                       <img src="/statics/fzzy/images/yj.png">
+                       <a class="sjyx">书记信箱</a>|<a class="yzyx">院长信箱</a>
+                       <div class="xxxq" style="display: none;">
+                           <p>xyt6011@163.com</p>
+                       </div>
+                       <div class="xxxq1" style="display: none;">
+                           <p>LS0830@126.com</p>
+                       </div>
+                      
+                       
+                    </div>
+                    <form class="search search-form" method="get" target="_blank" action="/index.php" style="margin-top:50px;">
+                        <input name="c" type="hidden" value="so">
+                        <input name="module" type="hidden" value="MOD_DIR">
+                        <input type="text" class="keyword" name="keyword" id="keyword" placeholder="请输入...">
+                        <button class="search_sub sou" type="submit"><img src="/statics/fzzy/images/fdj.png" alt=""></button>
+                    </form>
+                </div>
+                <div  class="head-bg fr"></div>
+            </div>
+        </div>
+
+  <script>
+      $(function(){
+          $('.sjyx').mouseover(function(){
+            $('.xxxq').css("display","block");
+          })
+          $('.sjyx').mouseout(function(){
+            $('.xxxq').css("display","none");
+          })
+          $('.yzyx').mouseover(function(){
+            $('.xxxq1').css("display","block");
+          })
+          $('.yzyx').mouseout(function(){
+            $('.xxxq1').css("display","none");
+          })
+      })
+  </script>
+  
+       
+        <div class="nav_w">
+            <ul id="nav" class="nav clearfix">
+                <li class="nLi on">
+                    <h3><a href="/">首页</a></h3><i></i>
+                </li>
+                <li class="nLi">
+                    <h3><a href="https://www.fzjsxy.cn/news-show-4847.html"target="_blank">学院概况</a></h3><i></i>
+                    <ul class="sub" style="display: none;">
+                                                <li><a href="https://www.fzjsxy.cn/news-show-4847.html" target="_blank">学院简介</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-xueyuanlingdao.html" target="_blank">学院领导</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-zuzhijigou.html" target="_blank">组织机构</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-banzifengong.html" target="_blank">班子分工</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-10.html" target="_blank">历史沿革</a></li>
+                                                
+                    </ul>
+                </li>
+                <li class="nLi">
+                    <h3><a href="https://www.fzjsxy.cn/news-list-zuzhijigou.html"target="_blank">院校设置</a></h3><i></i>
+                    <ul class="sub" style="display: none;">
+                                                <li><a href="https://xqjy.fzjsxy.cn/" target="_blank">教育科学学院</a></li>
+                                                <li><a href="https://jdxy.fzjsxy.cn/" target="_blank">机电工程学院</a></li>
+                                                <li><a href="https://jgxy.fzjsxy.cn/" target="_blank">经济管理学院</a></li>
+                                                <li><a href="https://lvxy.fzjsxy.cn/" target="_blank">航空与旅游学院</a></li>
+                                                <li><a href="https://ysxy.fzjsxy.cn/" target="_blank">艺术与设计学院</a></li>
+                                                <li><a href="https://xgxy.fzjsxy.cn/" target="_blank">信息工程学院</a></li>
+                                                <li><a href="https://qcxy.fzjsxy.cn/" target="_blank">汽车工程学院</a></li>
+                                                <li><a href="https://jxjy.fzjsxy.cn/" target="_blank">继续教育学院</a></li>
+                                                <li><a href="https://mkszy.fzjsxy.cn/" target="_blank">马克思主义学院</a></li>
+                                            </ul>
+                </li>
+                <li class="nLi">
+                    <h3><a href="https://www.fzjsxy.cn/news-list-jiaoyujiaoxue.html" target="_blank">教学科研</a></h3><i></i>
+                   
+                </li>
+                <li class="nLi">
+                    <h3><a href="https://www.fzjsxy.cn/news-list-zhaojiuchu.html" target="_blank">招生就业</a></h3><i></i>
+                    <ul class="sub" style="display: none;">
+                                                <li><a href="https://zsc.fzjsxy.cn/" target="_blank">招生信息网</a></li>
+                                                <li><a href="http://jxdxsjy.jx.edu.cn/fzjsxy/" target="_blank">就业信息网</a></li>
+                                            </ul>
+                </li>
+                <li class="nLi">
+                  <h3><a href="https://tw.fzjsxy.cn/" target="_blank">团学在线</a></h3><i></i>
+                 <!-- <ul class="sub" style="display: none;">
+                                        </ul>-->
+                </li>
+                <li class="nLi">
+                  <h3><a href="https://www.fzjsxy.cn/news-list-zhuantizhuanlan.html" target="_blank" >专题专栏</a></h3><i></i>
+                  <ul class="sub" style="display: none;">
+                                        <li><a href="https://www.fzjsxy.cn/news-list-dangjiansizheng.html" target="_blank">党建思政</a></li>
+                                        <li><a href="https://www.fzjsxy.cn/news-list-dangshixuexijiaoyu.html" target="_blank">党史学习教育</a></li>
+                                        <li><a href="https://hqc.fzjsxy.cn/news-list-yqfk.html" target="_blank">疫情防控</a></li>
+                                        <li><a href="https://www.gjwlaqxcz.cn" target="_blank">网络安全</a></li>
+                                        <li><a href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" target="_blank">中国共产党第二十次全国代表大会</a></li>
+                                        <li><a href="https://www.12371.cn/cxsm/" target="_blank">不忘初心、牢记使命</a></li>
+                                        <li><a href="https://www.xuexi.cn/" target="_blank">学习强国专题</a></li>
+                                        <li><a href="https://www.fzjsxy.cn/news-list-bybzshzfjshd.html" target="_blank">“八扬八治”专栏</a></li>
+                                        <li><a href="https://www.fzjsxy.cn/news-list-ldjy.html" target="_blank">劳动教育</a></li>
+                                        <li><a href="https://www.fzjsxy.cn/news-list-xiaoyuanpufa.html" target="_blank">校园普法</a></li>
+                                        <li><a href="https://bwc.fzjsxy.cn/news-list-xyaqtszl.html" target="_blank">校园安全提示专栏</a></li>
+                                        <li><a href="https://www.fzjsxy.cn/news-list-djxxjyzl.html" target="_blank">党纪学习教育专栏</a></li>
+                                    </ul>
+                </li>
+                <li class="nLi">
+                    <h3><a href="https://www.fzjsxy.cn/news-list-xinxigongkai.html" target="_blank">信息公开</a></h3><i></i>
+                    <ul class="sub" style="display: none;">
+                                                <li><a href="https://www.fzjsxy.cn/news-list-xueyuanzhidu.html" target="_blank">学院制度</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-renshixinxi.html" target="_blank">人事信息</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-xueshengguanli.html" target="_blank">学生管理</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-caiwuxinxi.html" target="_blank">财务信息</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-zhaoshengjiuye98.html" target="_blank">招生就业</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-keyanguanli.html" target="_blank">科研管理</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-jiaowuguanli.html" target="_blank">教务管理</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-duiwaihezuo.html" target="_blank">对外合作</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-houqinguanli.html" target="_blank">后勤管理</a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-zlglde.html" target="_blank">质量管理</a></li>
+                                            </ul>
+                </li>
+                
+                
+            </ul>
+        </div>
+        <script type="text/javascript">
+            //给导航下标位置定位
+            if($('#weiz a').length>1){
+            var wz = $('#weiz a:eq(1)').text();
+                $(".nLi h3 a:contains('"+wz+"')").parent().parent().addClass("on").siblings().removeClass("on");  
+            }
+            //导航切换
+            jQuery("#nav").slide({ 
+                    type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+                    titCell:".nLi", //鼠标触发对象
+                    targetCell:".sub", //titCell里面包含的要显示/消失的对象123132234
+                    effect:"slideDown", //targetCell下拉效果
+                    delayTime:300 , //效果时间
+                    triggerTime:0, //鼠标延迟触发时间（默认150）
+                    returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+                })
+        </script>
+    </div>
+    <div class="clear"></div>
+  
+    <!-- 轮播 -->
+    <div id="slideBox" class="slideBox">
+        <div class="hd">
+            <ul>
+                <li class="on"></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+        <div class="prev"></div>
+        <div class="next"></div>
+        <div class="bd">
+            <ul>
+                                <li style="display: none;"><a  title="最美校园" target="_self" ><img src="/uploadfile/20/Attachment/f026cdb213.jpg"></a><p><i>最美校园</i></p></li>
+                                <li style="display: none;"><a  title="最美校园" target="_self" ><img src="/uploadfile/20/Attachment/65fdbf2a45.jpg"></a><p><i>最美校园</i></p></li>
+                                <li style="display: none;"><a  title="最美校园" target="_self" ><img src="/uploadfile/42/Attachment/87179893f7.jpg"></a><p><i>最美校园</i></p></li>
+                                <li style="display: none;"><a  title="最美校园" target="_self" ><img src="/uploadfile/20/Attachment/d0ac165db5.png"></a><p><i>最美校园</i></p></li>
+                                <li style="display: none;"><a  title="最美校园" target="_self" ><img src="/uploadfile/20/Attachment/06a427a2ae.jpg"></a><p><i>最美校园</i></p></li>
+                                <li style="display: none;"><a  title="最美校园" target="_self" ><img src="/uploadfile/20/202202/02a201af83.jpg"></a><p><i>最美校园</i></p></li>
+                                <li style="display: none;"><a  title="二十大" target="_self" ><img src="/uploadfile/20/Attachment/e759dbc36f.jpg"></a><p><i>二十大</i></p></li>
+                                              
+                
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <script>
+         jQuery(".slideBox").slide({mainCell:".bd ul",prevCell:" .prev",nextCell:" .next",autoPlay:true,delayTime:0});
+    </script>
+    <!-- 主体 -->
+    <div class="main" style="min-height:600px;" >
+        <!-- 第一行 -->
+        <div class="r1">
+            <!-- 图片新闻 -->
+            <div class="tpxw fl">
+                <style type="text/css" media="all">
+	.hasMoreTab .hd{ position:relative; height: 35px; line-height: 35px; margin-bottom: 30px}
+	.hasMoreTab .hd .more{ float:right; }
+	.hasMoreTab .hd ul{ z-index:5; position:absolute; height:35px;  overflow:hidden; zoom:1; }
+	.hasMoreTab .hd li{ float:left;  padding:0 10px; cursor:pointer; margin-left:-1px;  }
+	.hasMoreTab .hd li.on{  }
+	.hasMoreTab .bd{  clear:both; position:relative;  }
+	.video .poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: url('../images/0061.png') center no-repeat;
+    background-size: cover;
+    z-index: 99;
+}
+.video .poster img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px -50px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all 0.2s ease-out 0s;
+}
+.video  .poster img:hover {
+    transform: rotateZ(90deg);
+}
+                </style>
+                <div class="hasMoreTab">
+		<div class="hd">
+			<span class="more">
+				<a href="https://www.fzjsxy.cn/news-list-yuanbudongtai.html" target="_blank" style="color: #0091DC;">
+				    <i><img src="/statics/fzzy/images/zxd.png" style="margin-right:5px;" alt=""></i>更多
+				    <i><img src="/statics/fzzy/images/yxd.png" style="margin-left:5px;" alt=""></i>
+				</a>
+				<a href="https://www.fzjsxy.cn/news-list-yuanbudongtai.html" target="_blank" style="color: #0091DC;">
+				    <i><img src="/statics/fzzy/images/zxd.png" style="margin-right:5px;" alt=""></i>更多
+				    <i><img src="/statics/fzzy/images/yxd.png" style="margin-left:5px;" alt=""></i>
+				</a>
+			</span>
+			<ul>
+				<li>
+				    <div class="tit">
+                        <img class="tb" src="/statics/fzzy/images/tpxw.png" style="margin-right:10px;" alt="">图&nbsp;片&nbsp;新&nbsp;闻
+                    </div>
+				</li>
+				<li>
+				    <div class="tit">
+                        <img class="tb" src="/statics/fzzy/images/tpxw.png" style="margin-right:10px;" alt="">视&nbsp;频&nbsp;宣&nbsp;传
+                    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="bd">
+
+			<div class="conWrap">
+
+						<div class="con">
+							<div class="focusBox" style="margin:0 auto">
+                        <ul class="pic">
+                                                         <li><a href="https://www.fzjsxy.cn/news-show-5490.html" target="_blank"><img src="/uploadfile/20/202410/db62ba668a.jpg"/></a></li>
+                                                         <li><a href="https://www.fzjsxy.cn/news-show-5462.html" target="_blank"><img src="/uploadfile/20/202410/590fed6874.jpg"/></a></li>
+                                                         <li><a href="https://www.fzjsxy.cn/news-show-5459.html" target="_blank"><img src="/uploadfile/20/202410/12bcdfaf76.JPEG"/></a></li>
+                                                         <li><a href="https://www.fzjsxy.cn/news-show-5455.html" target="_blank"><img src="/uploadfile/20/202409/198af3886f.jpg"/></a></li>
+                                                         <li><a href="https://www.fzjsxy.cn/news-show-5452.html" target="_blank"><img src="/uploadfile/20/Attachment/d448d1917d.jpg"/></a></li>
+                                                         <li><a href="https://www.fzjsxy.cn/news-show-5444.html" target="_blank"><img src="/uploadfile/20/202409/652fc01c9f.png"/></a></li>
+                                                           
+                        </ul>
+                        <div class="txt-bg"></div>
+                        <div class="txt">
+                            <ul>
+                                                                <li><a href="https://www.fzjsxy.cn/news-show-5490.html" target="_blank">石榴果硕心齐聚 民族和睦一家亲 ——学院..</a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-show-5462.html" target="_blank">汇聚企业家智慧 共谋母校新发展——企业家..</a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-show-5459.html" target="_blank">高雅艺术进校园 师生共享音乐盛宴——抚州..</a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-show-5455.html" target="_blank">抚州职院2024级新生军训圆满落幕</a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-show-5452.html" target="_blank">深化合作 再谱新篇——学院与中电科普天和..</a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-show-5444.html" target="_blank">【访企拓岗促就业】  学院党委副书记、院..</a></li>
+                                                               
+                            </ul>
+                        </div>
+
+                        <ul class="num">
+                            <li><a></a><span></span></li>
+                            <li><a></a><span></span></li>
+                            <li><a></a><span></span></li>
+                            <li><a></a><span></span></li>
+                            <li><a></a><span></span></li>
+                            <li><a></a><span></span></li>
+                        </ul>
+                </div>
+                <script type="text/javascript">
+                    jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",
+                    startFun:function(i){jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-60});}});
+                </script>
+						</div>
+						<div class="con">
+							<div class="fl left video" style="position: relative">
+                <video id="example_video" width="585" height="400" style="object-fit: cover;" src="/uploadfile/20/video/1695614486.mp4" controls>
+                    <source src="/uploadfile/20/video/1695614486.mp4" type="video/mp4">
+                  您的浏览器不支持 video 标签。
+              </video>
+              <div class="poster">
+                <img src="/statics/fzzy/images/0062.png" alt="">
+              </div>
+            </div>
+						</div>
+
+			</div>
+
+		</div>
+	</div>
+                <!--<div class="tit">-->
+                <!--    <img class="tb" src="/statics/fzzy/images/tpxw.png" style="margin-right:10px;" alt="">图&nbsp;片&nbsp;新&nbsp;闻-->
+                <!--    <span class="fr"><a href="https://www.fzjsxy.cn/news-list-yuanbudongtai.html" target="_blank">-->
+                <!--        <i><img src="/statics/fzzy/images/zxd.png" style="margin-right:5px;" alt=""></i>更多-->
+                <!--        <i><img src="/statics/fzzy/images/yxd.png" style="margin-left:5px;" alt=""></i>-->
+                <!--    </a></span>-->
+                <!--</div>-->
+                <!--<div class="focusBox" style="margin:0 auto">-->
+                <!--        <ul class="pic">-->
+                <!--            -->
+                <!--             <li><a href="https://www.fzjsxy.cn/news-show-5490.html" target="_blank"><img src="/uploadfile/20/202410/db62ba668a.jpg"/></a></li>-->
+                <!--            -->
+                <!--             <li><a href="https://www.fzjsxy.cn/news-show-5462.html" target="_blank"><img src="/uploadfile/20/202410/590fed6874.jpg"/></a></li>-->
+                <!--            -->
+                <!--             <li><a href="https://www.fzjsxy.cn/news-show-5459.html" target="_blank"><img src="/uploadfile/20/202410/12bcdfaf76.JPEG"/></a></li>-->
+                <!--            -->
+                <!--             <li><a href="https://www.fzjsxy.cn/news-show-5455.html" target="_blank"><img src="/uploadfile/20/202409/198af3886f.jpg"/></a></li>-->
+                <!--            -->
+                <!--             <li><a href="https://www.fzjsxy.cn/news-show-5452.html" target="_blank"><img src="/uploadfile/20/Attachment/d448d1917d.jpg"/></a></li>-->
+                <!--            -->
+                <!--             <li><a href="https://www.fzjsxy.cn/news-show-5444.html" target="_blank"><img src="/uploadfile/20/202409/652fc01c9f.png"/></a></li>-->
+                <!--            -->
+                               
+                <!--        </ul>-->
+                <!--        <div class="txt-bg"></div>-->
+                <!--        <div class="txt">-->
+                <!--            <ul>-->
+                <!--                -->
+                <!--                <li><a href="https://www.fzjsxy.cn/news-show-5490.html" target="_blank">石榴果硕心齐聚 民族和睦一家亲 ——学院..</a></li>-->
+                <!--                -->
+                <!--                <li><a href="https://www.fzjsxy.cn/news-show-5462.html" target="_blank">汇聚企业家智慧 共谋母校新发展——企业家..</a></li>-->
+                <!--                -->
+                <!--                <li><a href="https://www.fzjsxy.cn/news-show-5459.html" target="_blank">高雅艺术进校园 师生共享音乐盛宴——抚州..</a></li>-->
+                <!--                -->
+                <!--                <li><a href="https://www.fzjsxy.cn/news-show-5455.html" target="_blank">抚州职院2024级新生军训圆满落幕</a></li>-->
+                <!--                -->
+                <!--                <li><a href="https://www.fzjsxy.cn/news-show-5452.html" target="_blank">深化合作 再谱新篇——学院与中电科普天和..</a></li>-->
+                <!--                -->
+                <!--                <li><a href="https://www.fzjsxy.cn/news-show-5444.html" target="_blank">【访企拓岗促就业】  学院党委副书记、院..</a></li>-->
+                <!--                -->
+                               
+                <!--            </ul>-->
+                <!--        </div>-->
+
+                <!--        <ul class="num">-->
+                <!--            <li><a></a><span></span></li>-->
+                <!--            <li><a></a><span></span></li>-->
+                <!--            <li><a></a><span></span></li>-->
+                <!--            <li><a></a><span></span></li>-->
+                <!--            <li><a></a><span></span></li>-->
+                <!--            <li><a></a><span></span></li>-->
+                <!--        </ul>-->
+                <!--</div>-->
+                <!--<script type="text/javascript">-->
+                <!--    jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",-->
+                <!--    startFun:function(i){jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-60});}});-->
+                <!--</script>-->
+            </div>
+            <script type="text/javascript" charset="utf-8">
+                jQuery(".hasMoreTab").slide({ mainCell:".conWrap", targetCell:".more a", effect:"fold"});
+                $('.video .poster img').click(function() {
+        $('.video .poster').hide();
+        $('#example_video')[0].play();
+    })
+            </script>
+            <!-- 抚职新闻 -->
+            <div class="fzxw fr">
+                <div class="tit">
+                    <img class="tb" src="/statics/fzzy/images/fzxw.png" style="margin-right:10px;" alt="">抚&nbsp;职&nbsp;新&nbsp;闻
+                    <span class="fr"><a href="https://www.fzjsxy.cn/news-list-yuanbudongtai.html" target="_blank">
+                        <i><img src="/statics/fzzy/images/zxd.png" style="margin-right:5px;" alt=""></i>更多
+                        <i><img src="/statics/fzzy/images/yxd.png" style="margin-left:5px;" alt=""></i>
+                    </a></span>
+                </div>
+                <div class="fzxw-bd">
+                    <ul>
+                                                <div class="tt">
+                            <h2> 石榴果硕心齐聚 民族和睦一家亲 ——学院召开202..</h2>
+                            <p class="time">2024.10.26</p>
+                            <p class="nr">
+                            	　　【宣传部王煜报道】为进一步加强与少数民族学生的沟通和交流，促进民族团结进步，营造铸牢中华民族共同体意识的良好氛围，10月24日下午，学院在行政楼五楼会议室召开少数民族学生代表座谈会。学院党委副书记..<a href="https://www.fzjsxy.cn/news-show-5490.html" target="_blank">【查看更多】</a>
+                            </p>
+                            
+                        </div>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5476.html" target="_blank">
+                            <img src="/statics/fzzy/images/doc.png" style="margin-right:10px;" alt="">
+                            <span>
+                                学院党委理论学习中心组举行习近平法治思想专题学习研..                            </span>
+                            <span class="fr">2024.10.23</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5475.html" target="_blank">
+                            <img src="/statics/fzzy/images/doc.png" style="margin-right:10px;" alt="">
+                            <span>
+                                抚州考区2024年国家统一法律职业资格主观题考试在..                            </span>
+                            <span class="fr">2024.10.21</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5479.html" target="_blank">
+                            <img src="/statics/fzzy/images/doc.png" style="margin-right:10px;" alt="">
+                            <span>
+                                学院召开“高水平专业群建设”专家诊断会议                            </span>
+                            <span class="fr">2024.10.21</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5470.html" target="_blank">
+                            <img src="/statics/fzzy/images/doc.png" style="margin-right:10px;" alt="">
+                            <span>
+                                “奔甬而来·职达北仑”——学院成功举办宁波市北仑区..                            </span>
+                            <span class="fr">2024.10.16</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5464.html" target="_blank">
+                            <img src="/statics/fzzy/images/doc.png" style="margin-right:10px;" alt="">
+                            <span>
+                                寻长征起源 庆祖国华诞——抚州职院艺术与设计学院党..                            </span>
+                            <span class="fr">2024.10.10</span>
+                        </a></li>
+                                                
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- 第二行 -->
+        <div class="r2">
+          <div class="r2-1" style="width:1200px;margin:auto;">
+            <!-- 通知公告 -->
+            <div class="tzgg fl">
+                <div class="tit">
+                    <img class="tb" src="/statics/fzzy/images/tzgg.png" style="margin-right:10px;" alt="">通&nbsp;知&nbsp;公&nbsp;告
+                    <span class="fr"><a href="https://www.fzjsxy.cn/news-list-tongzhigonggao.html" target="_blank">
+                        <i><img src="/statics/fzzy/images/zxd.png" style="margin-right:5px;" alt=""></i>更多
+                        <i><img src="/statics/fzzy/images/yxd.png" style="margin-left:5px;" alt=""></i>
+                    </a></span>
+                </div>
+               
+                <div class="tzgg-bd">
+                                            <li><a href="https://www.fzjsxy.cn/news-show-5488.html" target="_blank">
+                            <div class="sj">
+                                <p class="rq">25</p>
+                                <p class="ny">2024-10</p>
+                            </div>
+                            <div class="nr fr">
+                                <span>
+                                    关于2024年秋季校园招聘会服务项目竞争性磋商公告                                </span>
+                            </div>
+                           <div class="clear"></div>
+                        </a></li>
+                                                <li><a href="https://mp.weixin.qq.com/s?__biz=MzkyODQ0MTQwNA==&mid=2247534383&idx=1&sn=f45f0ae107369ea9c1ce82e1e3daef0f&chksm=c21ab27cf56d3b6abd9e1ea3edda477e571d0727e6f1070a7d52b371bb9cd542dd943d355080&token=1599035650&lang=zh_CN#rd" target="_blank">
+                            <div class="sj">
+                                <p class="rq">18</p>
+                                <p class="ny">2024-10</p>
+                            </div>
+                            <div class="nr fr">
+                                <span>
+                                    2024年中国音乐学院“名师光影计划”项目——【琳琅芳华】演..                                </span>
+                            </div>
+                           <div class="clear"></div>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5471.html" target="_blank">
+                            <div class="sj">
+                                <p class="rq">14</p>
+                                <p class="ny">2024-10</p>
+                            </div>
+                            <div class="nr fr">
+                                <span>
+                                    2024年下半年抚州职业技术学院申请教师资格证拟认定人员名单..                                </span>
+                            </div>
+                           <div class="clear"></div>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5469.html" target="_blank">
+                            <div class="sj">
+                                <p class="rq">12</p>
+                                <p class="ny">2024-10</p>
+                            </div>
+                            <div class="nr fr">
+                                <span>
+                                    关于处置金旅牌大客车报废资产公告                                </span>
+                            </div>
+                           <div class="clear"></div>
+                        </a></li>
+                                        </div>
+            </div>
+            <!-- 院部动态 -->
+            <div class="ybdt fl" style="margin-left:30px;">
+                <div class="tit">
+                    <img class="tb" src="/statics/fzzy/images/ybdt.png" style="margin-right:10px;" alt="">院&nbsp;部&nbsp;动&nbsp;态
+                    <span class="fr"><a href="https://www.fzjsxy.cn/news-list-yuanxiaoshezhi.html" target="_blank">
+                        <i><img src="/statics/fzzy/images/zxd.png" style="margin-right:5px;" alt=""></i>更多
+                        <i><img src="/statics/fzzy/images/yxd.png" style="margin-left:5px;" alt=""></i>
+                    </a></span>
+                </div>
+                <div class="ybdt-bd">
+                    <ul>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5492.html">
+                            <img src="/statics/fzzy/images/lbd.png" style="margin-right:10px;" alt="">
+                            <span>
+                                3D打印科普活动：走进社区，普及科..                            </span>
+                            <span class="fr">10.28</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5478.html">
+                            <img src="/statics/fzzy/images/lbd.png" style="margin-right:10px;" alt="">
+                            <span>
+                                携手成长 共筑心灵防线 —— 新生..                            </span>
+                            <span class="fr">10.25</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5497.html">
+                            <img src="/statics/fzzy/images/lbd.png" style="margin-right:10px;" alt="">
+                            <span>
+                                聚焦机电一体化专业群发展——绩效考..                            </span>
+                            <span class="fr">10.18</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5461.html">
+                            <img src="/statics/fzzy/images/lbd.png" style="margin-right:10px;" alt="">
+                            <span>
+                                乐章回荡，沐美而行 ——抚州职业技..                            </span>
+                            <span class="fr">10.02</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5457.html">
+                            <img src="/statics/fzzy/images/lbd.png" style="margin-right:10px;" alt="">
+                            <span>
+                                产业部组织召开商业街安全生产宣传教..                            </span>
+                            <span class="fr">09.30</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5456.html">
+                            <img src="/statics/fzzy/images/lbd.png" style="margin-right:10px;" alt="">
+                            <span>
+                                产业部组织召开商业街“一规定两办法..                            </span>
+                            <span class="fr">09.30</span>
+                        </a></li>
+                                            </ul>
+                </div>
+            </div>
+            <!-- 教学科研 -->
+            <div class="jxky fr" style="margin-left:25px;">
+                <div class="tit">
+                    <img class="tb" src="/statics/fzzy/images/jxky.png" style="margin-right:10px;" alt="">学&nbsp;习&nbsp;园&nbsp;地
+                    <span class="fr"><a href="https://www.fzjsxy.cn/news-list-jiaoyujiaoxue.html" target="_blank">
+                        <i><img src="/statics/fzzy/images/zxd.png" style="margin-right:5px;" alt=""></i>更多
+                        <i><img src="/statics/fzzy/images/yxd.png" style="margin-left:5px;" alt=""></i>
+                    </a></span>
+                </div>
+                <div class="jxky-bd">
+                                      <div class="jxky-tt" >
+                      <div class="jxky-ttt fl"><a href="http://cpc.people.com.cn/n1/2024/0722/c64387-40282390.html" target="_blank"><img src="/uploadfile/20/Attachment/d1f323cd6a.jpg" style="width:100%;height:100%;" alt=""></a></div>
+                      <div class="jxky-ttnr fr" >
+                        <p style="text-indent: 2em;">中共中央关于进一步全面深化改革 推进中国式现代化的决定</p>
+                        <span>2024-07-22</span>
+                      </div>
+                    </div>
+                                        <ul>
+                                                <li><a href="https://mp.weixin.qq.com/s?__biz=MzkyODQ0MTQwNA==&mid=2247533331&idx=1&sn=0509ce6ec3d65332f7b729977e85a3f6&chksm=c21ab640f56d3f56d2136faa567cf00b0057a38940c601637da2e59260b119cdbe9d47641538&token=1599035650&lang=zh_CN#rd" target="_blank">
+                            
+                            <span>
+                                习近平在全国民族团结进步表彰大会上发表重..                            </span>
+                            <span class="fr">09.28</span>
+                        </a></li>
+                                                <li><a href="http://jyt.jiangxi.gov.cn/art/2024/10/17/art_81911_5036138.html" target="_blank">
+                            
+                            <span>
+                                马森述在省委教育工委调研时强调：扛牢职责..                            </span>
+                            <span class="fr">10.17</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5449.html" target="_blank">
+                            
+                            <span>
+                                2024年9月师生政治理论学习安排                            </span>
+                            <span class="fr">09.16</span>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-show-5477.html" target="_blank">
+                            
+                            <span>
+                                【师德师风】习近平总书记关于师德师风的重..                            </span>
+                            <span class="fr">09.09</span>
+                        </a></li>
+                                            </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <!-- 第三行 -->
+        <div class="r3">
+            <!-- 专题专栏 -->
+            <div class="ztzl">
+                <div class="tit">
+                    <img class="tb" src="/statics/fzzy/images/ztzl.png" style="margin-right:10px;" alt="">专&nbsp;题&nbsp;专&nbsp;栏
+                    <span class="fr"><a href="https://www.fzjsxy.cn/news-list-zhuantizhuanlan.html">
+                        <i><img src="/statics/fzzy/images/zxd.png" style="margin-right:5px;" alt=""></i>更多
+                        <i><img src="/statics/fzzy/images/yxd.png" style="margin-left:5px;" alt=""></i>
+                    </a></span>
+                </div>
+                <div class="ztzl-bd">
+                   
+                     <div class="picMarquee-left">
+                        <div class="bd">
+                            <ul class="picList">
+                                                                <li><a href="https://www.fzjsxy.cn/news-list-dangjiansizheng.html" target="_blank"><img src="/uploadfile/20/202112/284cf760b4.jpg" alt=""></a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-list-dangshixuexijiaoyu.html" target="_blank"><img src="/uploadfile/20/202112/5227885106.png" alt=""></a></li>
+                                                                <li><a href="https://hqc.fzjsxy.cn/news-list-yqfk.html" target="_blank"><img src="/uploadfile/20/202112/aeb800e83b.jpg" alt=""></a></li>
+                                                                <li><a href="https://www.gjwlaqxcz.cn" target="_blank"><img src="/uploadfile/20/202112/871905f7af.jpg" alt=""></a></li>
+                                                                <li><a href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" target="_blank"><img src="/uploadfile/20/202303/a78ecbde85.jpg" alt=""></a></li>
+                                                                <li><a href="https://www.12371.cn/cxsm/" target="_blank"><img src="/uploadfile/20/202112/fa63b42158.jpg" alt=""></a></li>
+                                                                <li><a href="https://www.xuexi.cn/" target="_blank"><img src="/uploadfile/20/202112/11771bdef2.jpg" alt=""></a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-list-bybzshzfjshd.html" target="_blank"><img src="/uploadfile/20/202201/c17106196f.jpg" alt=""></a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-list-ldjy.html" target="_blank"><img src="/uploadfile/20/202204/aeab65892b.png" alt=""></a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-list-xiaoyuanpufa.html" target="_blank"><img src="/uploadfile/20/202204/314b756282.jpg" alt=""></a></li>
+                                                                <li><a href="https://bwc.fzjsxy.cn/news-list-xyaqtszl.html" target="_blank"><img src="/uploadfile/20/202309/b00135c109.png" alt=""></a></li>
+                                                                <li><a href="https://www.fzjsxy.cn/news-list-djxxjyzl.html" target="_blank"><img src="/uploadfile/20/202405/8a98f13a9b.png" alt=""></a></li>
+                                                            </ul>
+                        </div>
+                     </div>
+                     <script type="text/javascript">
+                        jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:30});
+                        </script>
+                
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- 第四行 -->
+        <div class="r4">
+            <!-- 智慧校园 -->
+            <div class="zhxy">
+                <div class="fl baot">
+                    <img src="/statics/fzzy/images/zhxy.png" alt="">
+                </div>
+                <div class="zhxy-bd fr">
+                    <ul>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-zaixianbaoming.html" target="_blank">
+                            <img src="/uploadfile/20/202112/d7459af60c.png" alt="">
+                            <p>在线报名</p>
+                        </a></li>
+                                                <li><a href="https://www.fzjsxy.cn/news-list-zhaoshengluqu.html" target="_blank">
+                            <img src="/uploadfile/20/202112/a99b32612c.png" alt="">
+                            <p>招生录取</p>
+                        </a></li>
+                                                <li><a href="https://nav.jxfzjsxy.cn" target="_blank">
+                            <img src="/uploadfile/20/202112/dc796153d2.png" alt="">
+                            <p>网址导航</p>
+                        </a></li>
+                                                <li><a href="https://jxfzjsxy.cn " target="_blank">
+                            <img src="/uploadfile/20/202112/13b3ba6bc1.png" alt="">
+                            <p>教务管理</p>
+                        </a></li>
+                                                <li><a href="https://www.jxfzjsxy.cn/" target="_blank">
+                            <img src="/uploadfile/20/202112/360ce5e0f0.png" alt="">
+                            <p>统一门户</p>
+                        </a></li>
+                                                <li><a href="http://fzjsxy.fanya.chaoxing.com" target="_blank">
+                            <img src="/uploadfile/20/202112/c55ce4d494.png" alt="">
+                            <p>网络教学平台</p>
+                        </a></li>
+                                                <li><a href="http://192.168.0.41:88/login.jsp?up=1" target="_blank">
+                            <img src="/uploadfile/20/202112/7be6ec0b4c.png" alt="">
+                            <p>财务管理</p>
+                        </a></li>
+                                                <li><a href="http://192.168.0.133/#/login?redirect=/" target="_blank">
+                            <img src="/uploadfile/20/202112/9eb649826f.png" alt="">
+                            <p>数据采集</p>
+                        </a></li>
+                                                
+                         
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- 第五行 -->
+        
+        
+
+
+
+    </div>
+                         
+                         
+                         
+	<script src="/statics/fzzy/js/piaofu.js"></script>
+
+
+<div id="gg1" style="z-index: 12000; position: absolute;visibility: visible;">
+        <p style="text-align:right; height:18px;">
+            <a href="javascript:closead();"  title="关闭">
+                <img src="/statics/fzzy/images/close.gif">
+            </a>
+        </p>
+            
+        <a href="https://jxdxsjy.jx.edu.cn/fzjsxy/news/view/aid/34203/tag/tzgg" target="_blank">
+            <img src="https://www.fzjsxy.cn/uploadfile/20/202407/2d10d5b8ef.jpg" width="300">
+        </a>
+    </div> 
+
+
+         <script type="text/javascript">
+                var ad1=new AdMove("gg1");
+                ad1.Run();
+        </script>                 
+                         
+    <div class="r5">
+        <!-- 友情链接 -->
+        <style>
+            .yqlj{
+                width:100%;background:#0075C1;height:75px;float: left;border-bottom: 1px solid #008BD5;margin-bottom: -20px;
+            }
+            .yqlj-bd{
+                margin:auto;width:1200px;line-height: 75px;
+            }
+        </style>
+        <div class="yqlj" >
+            <div class="yqlj-bd" >
+                <div class="fl ss">
+                    <select class="dropdown" name="list"  onchange="javascript:window.open(this.options[this.selectedIndex].value)">
+                        <option value="javascript:;" selected=selected>----- 院系网站 -----</option>
+                                                <option value="https://jxjy.fzjsxy.cn/">继续教育学院</option>
+                                                <option value="https://qcxy.fzjsxy.cn/">汽车工程学院</option>
+                                                <option value="https://xgxy.fzjsxy.cn/">信息工程学院</option>
+                                                <option value="https://ysxy.fzjsxy.cn/">艺术与设计学院</option>
+                                                <option value="https://lvxy.fzjsxy.cn/">航空与旅游学院</option>
+                                                <option value="https://jgxy.fzjsxy.cn/">经济管理学院</option>
+                                                <option value="https://xqjy.fzjsxy.cn/">学前教育学院</option>
+                                                <option value="https://jdxy.fzjsxy.cn/">机电学院</option>
+                                                <option value="https://mkszy.fzjsxy.cn/">马克思主义学院</option>
+                                                
+                    </select>
+                </div>
+                <div class="fl ss">
+                    <select class="dropdown" name="list"  onchange="javascript:window.open(this.options[this.selectedIndex].value)">
+                        <option value="javascript:;" selected=selected>----- 部门网站 -----</option>
+                                                <option value="https://jw.fzjsxy.cn/">纪委</option>
+                                                <option value="https://jlzx.fzjsxy.cn/">对外合作交流中心</option>
+                                                <option value="https://zpzx.fzjsxy.cn/">质评中心</option>
+                                                <option value="https://tsg.fzjsxy.cn/">图书馆</option>
+                                                <option value="https://bwc.fzjsxy.cn/">保卫处</option>
+                                                <option value="https://kyc.fzjsxy.cn/">科研处</option>
+                                                <option value="https://xxzx.fzjsxy.cn/">信息中心</option>
+                                                <option value="https://jtb.fzjsxy.cn/">军事体育教学部</option>
+                                                <option value="https://jcc.fzjsxy.cn/">计财处</option>
+                                                <option value="https://hqc.fzjsxy.cn/">后勤处</option>
+                                                <option value="https://tw.fzjsxy.cn/">团委</option>
+                                                <option value="https://cyb.fzjsxy.cn/">产业部</option>
+                                                <option value="https://jwc.fzjsxy.cn/">教务处</option>
+                                                <option value="/news-list-zhaojiuchu.html">招就处</option>
+                                            </select>
+                </div>
+                <div class="fl ss">
+                    <select class="dropdown" name="list" onchange="javascript:window.open(this.options[this.selectedIndex].value)">
+                        <option value="javascript:;" selected=selected>----- 外部链接 -----</option>
+                                                <option value=" http://web.wh-rfid.com/#/?oaid=810&opid=2212">军事资源库</option>
+                                                <option value="http://xq.edu.wanfangdata.com.cn">万方学前教育知识库</option>
+                                                <option value="http://www.blyun.com/">Medalink</option>
+                                                <option value="https://www.sslibrary.com/">汇雅电子图书</option>
+                                                <option value="http://cved.cnki.net/">职业教育特色资源总库</option>
+                                                <option value="http://www.duxiu.com/">读秀</option>
+                                                <option value="https://qikan.chaoxing.com/">超星期刊</option>
+                                                <option value="https://www.cnki.net/">中国知网</option>
+                                                <option value="https://suyang.zxhnzq.com">高校信息素养教育数据库</option>
+                                                <option value="https://fzzjyy.dps.qikan.cn/pc">人文电子阅览室</option>
+                                                <option value=" https://zyk.bjadks.com">职业全能培训库</option>
+                                                <option value="https://www.qdexam.com">起点考试网 </option>
+                                                <option value="http://www.hep.com.cn/service/selectbook1">信息检索</option>
+                                            </select>
+                </div>
+            </div>
+        </div>
+    </div>
+                
+         <script>
+  $(function(){
+    function imgonload() {
+      var as = document.querySelectorAll('a');
+      for (var a of as) a.href = a.href.replace('http://192.168.0.133/#/login?redirect=/', 'http://192.168.0.133/#/login?redirect=%2F')
+          }
+    imgonload();
+  })
+</script>
+    <!-- 公用尾部123565467 -->
+    <script type="text/javascript" src="/statics/js/tj.js"></script><!-- 公用尾部 -->
+<div class="clear"></div>
+<div class="footer">
+    <div class="footer-bd">
+        <div class="fl dblogo"><img src="/statics/fzzy/images/wblogo.png" alt="" width="250px"></div>
+        <style>
+          .footer .dbxq p a{
+            color:#fff;
+          }
+          .footer .dbxq p a:hover{
+              color:red;
+          }
+        </style>
+        <div class="fl dbxq">
+            <p>版权所有 © 抚州职业技术学院</p>
+            <p>地址：江西省抚州市东临路276号</p>
+            <p>电话：0794-7058188（院办）0794-7058123（招就处） </p>
+            <p>信息中心：0794-7058000</p>
+            <p>
+              <a  href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">赣ICP备13007280号-2</a>&nbsp;&nbsp;
+              <a  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36100202000269"  target="_blank"><img src="/statics/fzzy/images/gaba.png" alt="">赣公网安备 36100202000269号</a>
+            </p>
+        </div>
+        <div class="fr dbgzh">
+          
+            <div class="fl"  style="margin-right:50px;"><a href="http://bszs.conac.cn/sitename?method=show&id=2890BF0436AB69EBE053022819ACA123" target="_blank"><img src="/statics/fzzy/images/sydw.png" alt=""></a></div>
+            <div class="fl" style="margin-right:50px;"><img src="/statics/fzzy/images/gfgzh.jpg" alt=""><p>官方公众号</p></div>
+           <!-- <div class="fl"><img src="/statics/fzzy/images/zsgzh.png" alt=""><p>招生公众号</p></div>-->
+        </div>
+    </div>
+</div></body>
+</html>

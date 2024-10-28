@@ -1,0 +1,593 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="0">
+<meta name="keywords" content="��̶ְҵ����ѧԺ��ְԺ������ְԺ,������̶,��̶ԺУ">
+<meta name="description" content="�쵼�ĸ߶�����" />
+<meta name="author" content="��̶ҽ��ְԺ����ѧԺ" />
+<meta name="Copyright" content="��̶ҽ��ְԺ����ѧԺ��Ȩ����" />
+<title>��̶ҽ��ְҵ����ѧԺ</title>
+<link rel="stylesheet" type="text/css" href="images2017/css/main.css"/>
+<script type="text/javascript" src="images2017/jquery-1.10.2.min.js"></script>
+</head>
+<!--*��վ��Ҵ���*
+<link rel="stylesheet" href="css/grayscale.css">/-->
+<!--��ʾ��
+<link rel="stylesheet" href="css/tishikuang.css">
+  <script src="js/tishikuang.js"></script>
+   <div class="tishiBox" style="width:225px;height:279px;display:block;">
+    <span style="display:none" class="clearX">X</span>  
+    <div class="content_text">
+      <p align=center><img src="images/2022kz.png" width="200px"></p>
+	  <p align=center style="color:#000;font-size:17px">�й���������΢�Ź��ں�</p>
+    </div>
+  </div>
+
+��ʾ��-->
+
+<script language="javascript">
+/*tab ����*/
+	function chks(obj){
+	for(i=1;i<=2;i++){
+		document.getElementById('r'+i).className="tab_nosel";
+		document.getElementById('s'+i).style.display="none";
+		document.getElementById('m'+i).style.display="none";
+		if(obj==i){
+		document.getElementById('r'+i).className="tab_sel";
+		document.getElementById('s'+i).style.display="block";
+		document.getElementById('m'+i).style.display="block";
+		}
+		}
+}
+
+function checkform(){
+	if(document.search.query.value==""){
+		 alert("����������ؼ���!");
+		 document.search.query.focus();
+		 return false
+		
+	}
+	 return true
+	
+}
+
+/*tab �л�����*/
+function Display(divName,count,prex,divTD,disClass,noneClass) {
+	//alert('��ȡ�ַ�����' + divTD.substring(0,divTD.length-1));
+	var obj = document.getElementById(divName);
+	var objTD = document.getElementById(divTD);
+	var divMenu = new Array;
+	var tdDiv = new Array;
+	for(var i=0;i<count;i++) {
+		var oDivName = prex + i;
+		divMenu[i] = document.getElementById(oDivName);
+	    tdDiv[i] = document.getElementById(divTD.substring(0,divTD.length-1) + i);		
+	}
+	for(i=0;i<count;i++) {
+		if(divMenu[i] != obj) { divMenu[i].style.display="none"; tdDiv[i].className=noneClass;}
+		else 
+		{ divMenu[i].style.display="block"; tdDiv[i].className=disClass;}
+	}
+	
+}
+
+</script>
+<body>
+<!--����������-->	
+<DIV  onmouseover=clearInterval(interval) 
+onmouseout="interval = setInterval('changePos()', delay)" id=img class=spanex 
+style="display:none;POSITION: absolute; Z-INDEX:300; VISIBILITY: hidden" align=right><a href="http://www.xtzy.com/publicInfo/public_show_more.jsp?kindid=121582" target="_blank">
+<IMG src="images/studyds.jpg" border=0 width="450"></a>
+<DIV style="display:none"><SPAN 
+onclick="clearInterval(interval);img.style.visibility = 'hidden'" 
+style="CURSOR: pointer; FONT-SIZE: 13px; HEIGHT: 22px; FONT-WEIGHT: bold; COLOR: red; LINE-HEIGHT: 22px">
+�ر�</SPAN></DIV>
+</DIV>
+<script type="text/javascript" src="images/floatPic.js"></script>
+<!--����������-->
+<table width="1400" border="0"  class="toptab" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td height="32" align="center"><table width="1050"><tr><td id="topdiv" align="left"><form action="/search_results.jsp" method="post" name="search"  target="_blank"  onsubmit="return checkform();" id="search"> <a href="mailto:1417892179@qq.com"  style=" color: #FFF">Ͷ��ͨ��</a> &nbsp;&nbsp;|&nbsp;&nbsp; վ�ڼ��� <input value=""  class="inpt" name="query" onFocus="this.select();"><select name="searchPlace" style="display:none">
+        <option value="title:contents" selected="selected">ȫ��</option>
+        <option value="title">������</option>
+        <option value="contents">��ժҪ</option>
+      </select><input   type="submit" name="btns" class="btn" value="ȷ��"/></form></td>
+      <td>  </td></tr></table>
+       </td>
+  </tr>
+</table>
+
+<table width="1051" border="0"  cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td align="center"><img src="images2017/banner.png" width="996"/></td>
+  </tr>
+</table>
+<table width="1051" border="0"  cellpadding="0" cellspacing="0" align="center">
+ <tr>
+    <td  class="menubg" colspan="2" align="center"  valign="bottom" height="42px">
+<span class="menuh" onMouseOver="Display('xmenu0',11, 'xmenu', 'sp0', 'menuh','menu')" id="sp0"><a href="/" target="_top">��ҳ</a></span>
+<span class="menu"  onMouseOver="Display('xmenu1',11, 'xmenu', 'sp1', 'menuh','menu')" id="sp1">ѧУ�ſ�</span>
+<span class="menu"  onMouseOver="Display('xmenu2',11, 'xmenu', 'sp2', 'menuh','menu')" id="sp2"><a href="#" target="_top">��������</a></span>
+<span class="menu"  onMouseOver="Display('xmenu3',11, 'xmenu', 'sp3', 'menuh','menu')" id="sp3">��ѧԺ��</span>
+<span class="menu"  onMouseOver="Display('xmenu4',11, 'xmenu', 'sp4', 'menuh','menu')" id="sp4">ʦ�ʶ���</span>
+<span class="menu"  onMouseOver="Display('xmenu5',11, 'xmenu', 'sp5', 'menuh','menu')" id="sp5">רҵ����</span>
+<span class="menu"  onMouseOver="Display('xmenu6',11, 'xmenu', 'sp6', 'menuh','menu')" id="sp6">��ѧ����</span>
+<span class="menu"  onMouseOver="Display('xmenu7',11, 'xmenu', 'sp7', 'menuh','menu')" id="sp7">ר��ר��</span>
+<span class="menu"  onMouseOver="Display('xmenu8',11, 'xmenu', 'sp8', 'menuh','menu')" id="sp8"><a href="http://xtywzyzs.bibibi.net" target="_blank">��������</a></span>
+<span class="menu"  onMouseOver="Display('xmenu9',11, 'xmenu', 'sp9', 'menuh','menu')" id="sp9"><a href="kxyj/sgjs/index.jsp" target="_blank">˫�߽���</a></span>
+<span class="menu"  onMouseOver="Display('xmenu10',11,'xmenu', 'sp10','menuh','menu')" id="sp10"><a href="vr/index.htm" target="_blank">VRչ��</a></span>
+</td>
+  </tr>
+<tr>
+    <td  colspan="2" align="left" height="42px"   bgcolor="#f9f9f9">
+<div class="dropmenu" id="xmenu0"  style="display:block">
+<table width="96%" border="0" cellpadding="0" cellspacing="0" height="41">
+  <tr>
+    <td width="310">��ӭ������̶ҽ��ְҵ����ѧԺ��վ! </td>
+    <td width="300"><script type="text/javascript">
+						var enabled = 0; today = new Date();
+						var day; var date;
+						if(today.getDay()==0) day = "������"
+						if(today.getDay()==1) day = "����һ"
+						if(today.getDay()==2) day = "���ڶ�"
+						if(today.getDay()==3) day = "������"
+						if(today.getDay()==4) day = "������"
+						if(today.getDay()==5) day = "������"
+						if(today.getDay()==6) day = "������"
+						document.foreColor = "ffffff";
+						var h = today.getHours();
+						var mm = today.getMinutes(); 
+					date=(today.getFullYear())+"��"+(today.getMonth() + 1 )+"��"+today.getDate()+"��&nbsp;&nbsp;"+day+"&nbsp;";						document.write(date);
+            		</script></td>
+    <td width="300" align="left"><iframe src="http://m.weather.com.cn/m/pn3/weather.htm?id=101250201T" width="200" height="20" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowtransparency="true"></iframe></td>
+  </tr>
+</table>
+</div>
+
+<div class="dropmenu" id="xmenu1" style="display: none;">
+		  <span style="text-align:left"><a href="html/22330.html" target="_blank">ѧУ���</a></span>
+          <span style="text-align:left"><a href="html/93774.html" target="_blank">�ϼ��ػ�</a></span>
+          <span style="text-align:left"><a href="html/150529.html" target="_blank">��ί����</a></span>
+          <span style="text-align:left"><a href="html/48874.html" target="_blank">УѵУ��</a></span>
+          <span style="text-align:left"><a href="html/120121.html" target="_blank">������Ƶ</a></span>
+          <span style="text-align:left; display:none"><a href="html/41370.html" target="_blank">��ѧ�ɹ�</a></span>
+          <span style="text-align:left"><a href="/html/155910.html" target="_blank">�칫�绰</a></span>
+</div>
+        
+<div class="dropmenu" id="xmenu2" style="display:none; background-image:none; background-color:#f9f9f9;position: absolute; width:1066px;height:130px; z-index:1;">
+ <span style="text-align:left; width:1020px;color: #03539d">��Ⱥ���� <img border="0" src="images2010/arrow_red.gif" />&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a id="link"  style="font-size:15px"  href="dzbgs/index.jsp" target="_blank">�����칫��</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a  id="link" style="font-size:15px" href="zzxcb_zz/index.jsp" target="_blank">��֯��</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a  id="link" style="font-size:15px" href="zzxcb_xc/index.jsp" target="_blank">����ͳս��</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a id="link"  style="font-size:15px"  href="jw/index.jsp" target="_blank">�ͼ�����</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a id="link" style="font-size:15px"   href="ghwz/ghwz_ghjj.jsp" target="_blank">����</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a id="link"  style="font-size:15px"  href="youth/index.jsp" target="_blank">��ί</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a id="link"  style="font-size:15px"  href="xsgzc.jsp" target="_blank">ѧ��������</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a id="link"  style="font-size:15px"  href="wzb/index.jsp" target="_blank">������(��װ��)</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a id="link"  style="font-size:15px"  href="ltxbgs/index.jsp" target="_blank">��������Ա�����칫��</a>
+        </span>
+        
+        <span style="text-align:left; width:1020px;color: #03539d">�������� <img border="0" src="images2010/arrow_red.gif" />&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link"  style="font-size:15px" href="zgb/index.jsp" target="_blank">������Ч�ܿ��˹����칫��</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link"  style="font-size:15px"  href="jxjy/xtzy_jyjx_main.jsp" target="_blank">����</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a  id="link" style="font-size:15px" href="rsc/index.jsp" target="_blank">���´�</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a  id="link" style="font-size:15px" href="kxyj/index.jsp" target="_blank">���д�</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+        <a id="link"  style="font-size:15px" href="https://xtywzyzs.bysjy.com.cn" target="_blank">����</a>&nbsp;<a id="link"  style="font-size:15px" href="https://xtywzy.bysjy.com.cn" target="_blank">��ҵָ����</a>&nbsp;&nbsp;&nbsp;&nbsp;         
+        <a id="link" style="font-size:15px"   href="cwc/cwc_index.jsp" target="_blank">�ƻ�����</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link"  style="font-size:15px"  href="gzc/index.jsp" target="_blank">�����ʲ�������</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link" style="font-size:15px"   href="hqfw/hqfw_hqdt.jsp" target="_blank">�������ڴ�</a>
+        </span>
+        
+        <span style="text-align:left; display:none; width:1020px;color: #03539d">��ѧԺ�� <img border="0" src="images2010/arrow_red.gif" />&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link" style="font-size:15px"  href="/yuanxi/yxy/index.jsp" target="_blank">�ٴ�ѧԺ</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+        <a id="link" style="font-size:15px"  href="/yuanxi/hulixi/index1.jsp" target="_blank">����ѧԺ</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+        <a id="link" style="font-size:15px" href="/yjx/index.jsp" target="_blank">ҽѧ����ѧԺ</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+        <a id="link" style="font-size:15px" href="/yuanxi/gongxueyuan/index.jsp" target="_blank">ҽ���豸�����ѧԺ</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+        <a id="link" style="font-size:15px" href="/yuanxi/szkb/index.jsp" target="_blank">����˼����ѧԺ</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+        <a id="link" style="font-size:15px" href="/yuanxi/yxkb/index.jsp" target="_blank">ҽѧ�����빫���β�</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link" style="font-size:15px" href="/yuanxi/chengjiaobu_new/index.jsp" target="_blank">��������ѧԺ</a>
+        </span>
+        
+        <span style="text-align:left; width:1020px;color: #03539d">�̸����� <img border="0" src="images2010/arrow_red.gif" />&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link"  style="font-size:15px"  href="https://xtzylib.mh.chaoxing.com" target="_blank">ͼ���</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link"  style="font-size:15px"  href="wlzx" target="_self">��������</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+        <a id="link"  style="font-size:15px"  href="yuanxi/cxcy" target="_blank">���´�ҵ����</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link"  style="font-size:15px"  href="sxzx" target="_blank">ʵѵ����</a>
+		</span>
+        
+        <span style="text-align:left; width:1020px;color: #03539d">ֱ��ҽԺ <img border="0" src="images2010/arrow_red.gif" />&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a id="link"  style="font-size:15px"  href="http://www.xt3yy.com" target="_blank">��̶ҽ��ְҵ����ѧԺ����ҽԺ����̶�е�������ҽԺ��</a>
+        </span>
+</div>
+
+<div class="dropmenu" id="xmenu3" style="display:none;">
+   			 <span style="text-align:left"><a href="/yuanxi/yxy/index.jsp" target="_blank">�ٴ�ѧԺ</a></span>
+             <span style="text-align:left"><a href="/yuanxi/hulixi/index1.jsp" target="_blank">����ѧԺ</a></span>
+             <span style="text-align:left"><a href="/yjx/index.jsp" target="_blank">ҽѧ����ѧԺ </a></span>
+             <span style="text-align:left"><a href="/yuanxi/gongxueyuan/index.jsp" target="_blank">ҽ���豸�����ѧԺ</a></span>
+			 <span style="text-align:left"><a href="/yuanxi/szkb/index.jsp" target="_blank">����˼����ѧԺ</a></span>
+             <span style="text-align:left"><a href="/yuanxi/yxkb/index.jsp" target="_blank">ҽѧ�����빫���β�</a></span>  
+			 <span style="text-align:left"><a href="/yuanxi/chengjiaobu_new/index.jsp" target="_blank">��������ѧԺ</a></span>
+</div>
+        
+<div class="dropmenu" id="xmenu4" style="display: none;">
+			<span style="display:inline-block; width:6px"></span>
+        		 <span style="text-align:left"><a href="publicInfo/public_pic_show_more.jsp?kindid=19662" target="_blank">���ڷ��</a></span>
+           		 <span style="text-align:left"><a href="publicInfo/public_show_more.jsp?kindid=93319" target="_blank">�˲�����</a></span>
+             	 <span style="text-align:left"><a href="publicInfo/public_show_more.jsp?kindid=93320" target="_blank">ְ������</a></span>            
+</div>
+
+
+<div class="dropmenu" id="xmenu5" style="display: none;">
+  				 <span style="text-align:left"><a href="publicInfo/public_show_more.jsp?kindid=93315" target="_blank">רҵ����</a></span>
+                  <span style="text-align:left;"><a href="jxjy/jwc_more_tszy.jsp?kindid=136135&chnlid=136137&inimenu=menu0" target="_blank">ʾ������ɫרҵȺ��Ч����</a></span>
+				  <span style="text-align:left;"><a href="/yjx/list_content.jsp?kindid=128676&chnlid=128678" target="_blank">�ִ�ѧͽ���Ե���Ŀ����</a></span>
+                  <span style="text-align:left;"><a href="jxjy/jwc_more_sjjxzyk.jsp?kindid=154511&chnlid=154515&inimenu=menu0" target="_blank">ʡ����ѧ��Դ�⣨�걨������</a></span>
+                 
+</div>
+
+<div class="dropmenu" id="xmenu6" style="display: none;">
+				<span style="display:inline-block; width:494px"></span>
+  				 <span style="text-align:left"><a href="jxjy/jwc_index.jsp" target="_blank">��ѧ����</a></span>
+           		 <span style="text-align:left"><a href="kxyj/index.jsp" target="_blank">���й���</a></span>             
+</div>
+
+<div class="dropmenu" id="xmenu7" style="display: none;">
+                 <span style="text-align:left"><a href="/zhuanti/ztjy/" title="ѧϰ�᳹ϰ��ƽ��ʱ���й���ɫ�������˼���������" target="_blank">�������</a></span>
+ 				 <span style="text-align:left"><a href="zgb/zc" target="_blank">�³�ʵʩר����</a></span>
+  				 <span style="text-align:left"><a href="kxyj/pyou/index.jsp" target="_blank">��������ר����</a></span>
+                  <span style="text-align:left"><a href="zhuanti/xxgk/index.jsp?chnlid=99453" target="_blank">��Ϣ����</a></span>
+				  <span style="text-align:left"><a href="publicInfo/public_show_more.jsp?kindid=123448" target="_blank">�����ڼ乤�������б�</a></span>
+                   <span style="text-align:left"><a href="jxjy/jwc_more_2022.jsp?kindid=151213&chnlid=151214&inimenu=menu0" target="_blank">רҵ���ܳ�鿼�˱�׼�����</a></span>
+                   <span style="text-align:left"><a href="jxjy/jwc_more_bysj.jsp?kindid=139457&chnlid=139460&inimenu=menu0" target="_blank">��ҵ���ר��</a></span>
+                  
+</div>
+
+<div class="dropmenu" id="xmenu8"  style="display:none">
+<table width="96%" border="0" cellpadding="0" cellspacing="0" height="41">
+  <tr>
+    <td width="310">��ӭ������̶ҽ��ְҵ����ѧԺ��վ! </td>
+    <td width="300"><script type="text/javascript">
+						var enabled = 0; today = new Date();
+						var day; var date;
+						if(today.getDay()==0) day = "������"
+						if(today.getDay()==1) day = "����һ"
+						if(today.getDay()==2) day = "���ڶ�"
+						if(today.getDay()==3) day = "������"
+						if(today.getDay()==4) day = "������"
+						if(today.getDay()==5) day = "������"
+						if(today.getDay()==6) day = "������"
+						document.foreColor = "ffffff";
+						var h = today.getHours();
+						var mm = today.getMinutes(); 
+					date=(today.getFullYear())+"��"+(today.getMonth() + 1 )+"��"+today.getDate()+"��&nbsp;&nbsp;"+day+"&nbsp;";						document.write(date);
+            		</script></td>
+    <td width="300" align="left"><iframe src="http://m.weather.com.cn/m/pn3/weather.htm?id=101250201T" width="200" height="20" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowtransparency="true"></iframe></td>
+  </tr>
+</table>	
+</div>
+
+<div class="dropmenu" id="xmenu9"  style="display:none">
+<table width="96%" border="0" cellpadding="0" cellspacing="0" height="41">
+  <tr>
+    <td width="310">��ӭ������̶ҽ��ְҵ����ѧԺ��վ! </td>
+    <td width="300"><script type="text/javascript">
+						var enabled = 0; today = new Date();
+						var day; var date;
+						if(today.getDay()==0) day = "������"
+						if(today.getDay()==1) day = "����һ"
+						if(today.getDay()==2) day = "���ڶ�"
+						if(today.getDay()==3) day = "������"
+						if(today.getDay()==4) day = "������"
+						if(today.getDay()==5) day = "������"
+						if(today.getDay()==6) day = "������"
+						document.foreColor = "ffffff";
+						var h = today.getHours();
+						var mm = today.getMinutes(); 
+					date=(today.getFullYear())+"��"+(today.getMonth() + 1 )+"��"+today.getDate()+"��&nbsp;&nbsp;"+day+"&nbsp;";						document.write(date);
+            		</script></td>
+    <td width="300" align="left" ><iframe src="http://m.weather.com.cn/m/pn3/weather.htm?id=101250201T" width="200" height="20" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowtransparency="true"></iframe></td>
+  </tr>
+</table>	
+</div>
+
+<div class="dropmenu" id="xmenu10"  style="display:none">
+<table width="96%" border="0" cellpadding="0" cellspacing="0" height="41">
+  <tr>
+    <td width="310">---��ӭ������̶ҽ��ְҵ����ѧԺ��վ! </td>
+    <td width="300"><script type="text/javascript">
+						var enabled = 0; today = new Date();
+						var day; var date;
+						if(today.getDay()==0) day = "������"
+						if(today.getDay()==1) day = "����һ"
+						if(today.getDay()==2) day = "���ڶ�"
+						if(today.getDay()==3) day = "������"
+						if(today.getDay()==4) day = "������"
+						if(today.getDay()==5) day = "������"
+						if(today.getDay()==6) day = "������"
+						document.foreColor = "ffffff";
+						var h = today.getHours();
+						var mm = today.getMinutes(); 
+					date=(today.getFullYear())+"��"+(today.getMonth() + 1 )+"��"+today.getDate()+"��&nbsp;&nbsp;"+day+"&nbsp;";document.write(date);
+            		</script></td>
+    <td width="300" align="left"><iframe src="http://m.weather.com.cn/m/pn3/weather.htm?id=101250201T" width="200" height="20" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowtransparency="true"></iframe></td>
+  </tr>
+</table>
+</div>
+
+</td>
+  </tr>
+   <tr>
+    <td width="633"   height="348" id="up" valign="top"  bgcolor="#FFFFFF" ><div  style="padding-left:20px; padding-top:25px"><iframe frameborder="0" scrolling="no" src="images2017/pic.jsp" width="633" height="362"></iframe></div></td>
+    <td width="400" align="center" valign="top"   bgcolor="#FFFFFF"  style="margin-bottom:10px"><div class="widthd">
+    <span class="tab_sel" style="color:#2f6b98; font-size:18px" id="r1" onmouseover="chks(1)" onclick="window.open('/publicInfo/public_show_more.jsp?kindid=243','_blank');"  >ѧԺ����</span>
+    <span  class="tab_nosel" id="r2" onmouseover="chks(2)"  style="color:#2f6b98; font-size:18px" >ý���ӽ�</span>
+    <span  class="tab_more" id="m1" onclick="window.open('/publicInfo/public_show_more.jsp?kindid=243','_blank');"></span>
+    <span  class="tab_more" id="m2"  style="display:none" onclick="window.open('/publicInfo/public_show_more.jsp?kindid=48314','_blank');"></span>
+    </div>
+    <!--tab-->
+    <div  class="lb1_xyxw" id="s1"  style="margin-bottom:10px">
+    <table width="380" cellpadding="0" cellspacing="2" style="padding-left:10px; padding-top:10px">
+    
+    
+       
+	  
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px" align="left"><a style="line-height:22px" href="/html/159884.html" target="_blank"  title='�����ڹ��ʻ���Ұ�Ļ�ʿְҵ��չ��ר�⽲������У�ɹ��ٰ�'>�����ڹ��ʻ���Ұ�Ļ�ʿְҵ��չ��ר�⽲������У�ɹ��ٰ�</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-28</font></td>
+    </tr>
+     
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px" align="left"><a style="line-height:22px" href="/html/159880.html" target="_blank"  title='��У�ڵ�ʮһ��ȫ��ְҵԺУ���鼼�ܾ�����Ѽ�'>��У�ڵ�ʮһ��ȫ��ְҵԺУ���鼼�ܾ�����Ѽ�</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-28</font></td>
+    </tr>
+     
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px" align="left"><a style="line-height:22px" href="/html/159879.html" target="_blank"  title='У�쵼���ӲμӺ���ʡҽʦЭ��ҽѧģ������ֻ�2024��ѧ�����'>У�쵼���ӲμӺ���ʡҽʦЭ��ҽѧģ������ֻ�2024��ѧ�����</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-28</font></td>
+    </tr>
+     
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px" align="left"><a style="line-height:22px" href="/html/159872.html" target="_blank"  title='ѧУ����У�ѻ�ڶ��λ�Ա�����ߡ�У�ѻ��桱���'>ѧУ����У�ѻ�ڶ��λ�Ա�����ߡ�У�ѻ��桱���</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-27</font></td>
+    </tr>
+     
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px" align="left"><a style="line-height:22px" href="/html/159859.html" target="_blank"  title='����ҽҩѧԺ����У��չ�����������ƻ��ࡱ��ѧ��������'>����ҽҩѧԺ����У��չ�����������ƻ��ࡱ��ѧ��������</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-25</font></td>
+    </tr>
+     
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px" align="left"><a style="line-height:22px" href="/html/159854.html" target="_blank"  title='ѧУ�ٿ�2024��ȸߵ�ְҵ����������ȱ�����ƹ��������'>ѧУ�ٿ�2024��ȸߵ�ְҵ����������ȱ�����ƹ��������</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-24</font></td>
+    </tr>
+     
+     
+    
+		
+    </table>
+	</div>
+    
+    <div  class="lb1_xyxw" id="s2" style="display:none; margin-bottom:10px">
+   <table width="380" cellpadding="0" cellspacing="2" style="padding-left:10px;padding-top:10px">
+    
+       
+      
+		
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px"  align="left"><a style="line-height:22px" href="/html/159844.html" target="_blank"  title='����������̶ҽ��ְҵ����ѧԺ��Сǿ��ǰ�в�ꡣ�ֻΪһ���������Ρ�'>����������̶ҽ��ְҵ����ѧԺ��Сǿ��ǰ�в�ꡣ�ֻΪһ���������Ρ�</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-22</font></td>
+    </tr>
+    
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px"  align="left"><a style="line-height:22px" href="/html/159843.html" target="_blank"  title='���������۽�����ҽ��װ������רҵ��ѧ ��һ��������̶ҽ��ְԺ�ٿ�'>���������۽�����ҽ��װ������רҵ��ѧ ��һ��������̶ҽ��ְԺ�ٿ�</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-22</font></td>
+    </tr>
+    
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px"  align="left"><a style="line-height:22px" href="/html/159842.html" target="_blank"  title='���������ߡ��Խ������� �԰���Ӣ�š�����̶ҽ��ְԺ��ʦ������'>���������ߡ��Խ������� �԰���Ӣ�š�����̶ҽ��ְԺ��ʦ������</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-22</font></td>
+    </tr>
+    
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px"  align="left"><a style="line-height:22px" href="/html/159841.html" target="_blank"  title='����΢ְ�̡�����ح���������Խ������Σ��԰���Ӣ��'>����΢ְ�̡�����ح���������Խ������Σ��԰���Ӣ��</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-22</font></td>
+    </tr>
+    
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px"  align="left"><a style="line-height:22px" href="/html/159840.html" target="_blank"  title='���������ߡ���Сǿ��ǰ�в�� ֻΪһ���������Ρ�'>���������ߡ���Сǿ��ǰ�в�� ֻΪһ���������Ρ�</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-22</font></td>
+    </tr>
+    
+     <tr><td colspan="2" height="1" bgcolor="#f2f2f2"></td></tr>
+     
+     
+    
+    <tr style="margin-bottom:10px; height:49px">
+    <td width="325" style="padding-right:8px"  align="left"><a style="line-height:22px" href="/html/159828.html" target="_blank"  title='�������ձ����¾�����Ѫ������������'>�������ձ����¾�����Ѫ������������</a></td>
+    <td align="center" width="55" valign="middle" bgcolor="#fafafa" style="color:#999; font-size:14px;border-radius:10px">10-21</font></td>
+    </tr>
+    
+     
+    
+		
+    </table>
+	</div>
+    <!--tab-->
+  </tr>
+  
+   <tr>
+    <td  colspan="2"><table width="98%" border="0" align="center" style="margin-top:20px; background-color:#fff">
+  <tr>
+    <td width="506" valign="top" >
+    <div class="widthd">
+    <span class="tab_sel" onclick="window.open('/publicInfo/public_show_more.jsp?kindid=244','_blank');"  style="color:#2f6b98; font-size:18px" >֪ͨ����</span><span  class="tab_more" onclick="window.open('/publicInfo/public_show_more.jsp?kindid=244','_blank');"></span>
+    </div>
+   
+         <!--tabdowl-->
+        <div  class="lb2">
+        <ul>
+         
+     
+              
+      <li><span style="color:#999">10-23</span><a href="/html/159848.html" target="_blank"  title=' ��̶ҽ��ְҵ����ѧԺ2024-2026���ӡˢ���۶���ɹ���Ŀ��Χ�б��˹�ʾ'> ��̶ҽ��ְҵ����ѧԺ2024-2026���ӡˢ���۶���ɹ���Ŀ��Χ�б��˹�ʾ</a></li>
+        
+      <li><span style="color:#999">10-23</span><a href="/html/159847.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺ2024-2026��ȹ���ﶨ�۶���ɹ���Ŀ��Χ�б��˹�ʾ'>��̶ҽ��ְҵ����ѧԺ2024-2026��ȹ���ﶨ�۶���ɹ���Ŀ��Χ�б��˹�ʾ</a></li>
+        
+      <li><span style="color:#999">10-23</span><a href="/html/159845.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺ����У���ǻۺڰ��豸�ɹ���Ŀ�����Դ������빫��'>��̶ҽ��ְҵ����ѧԺ����У���ǻۺڰ��豸�ɹ���Ŀ�����Դ������빫��</a></li>
+        
+      <li><span style="color:#999">10-18</span><a href="/html/159778.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺҽѧ¥��¥���������������ɹ�����Ŀ�б��ѡ�˹�ʾ   '>��̶ҽ��ְҵ����ѧԺҽѧ¥��¥���������������ɹ�����Ŀ�б��ѡ�˹�ʾ   </a></li>
+        
+      <li><span style="color:#999">10-18</span><a href="/html/159776.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺ2024���°��깫����Ƹ���Գɼ������ԵĹ���'>��̶ҽ��ְҵ����ѧԺ2024���°��깫����Ƹ���Գɼ������ԵĹ���</a></li>
+        
+      <li><span style="color:#999">10-16</span><a href="/html/159747.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺ2024��ʵѵ�豸�ɹ���Ŀ�б깫��'>��̶ҽ��ְҵ����ѧԺ2024��ʵѵ�豸�ɹ���Ŀ�б깫��</a></li>
+        
+      <li><span style="color:#999">10-16</span><a href="/html/159746.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺ2024��ʵѵ�豸�ɹ���Ŀ�����壩��ֹ����'>��̶ҽ��ְҵ����ѧԺ2024��ʵѵ�豸�ɹ���Ŀ�����壩��ֹ����</a></li>
+        
+        
+        </ul>
+        </div>
+       
+    <!--tabdowl--></td>
+    <td  width="506" valign="top"><div class="widthd">
+    <span class="tab_sel"><a href="https://xtywzyzs.bysjy.com.cn" target="_blank" style="color:#2f6b98; font-size:18px">��������</a></span><span  class="tab_nosel">&nbsp;&nbsp;<a href="https://xtywzy.bysjy.com.cn" target="_blank">ʵϰ��ҵ</a></span><span  class="tab_nosel">&nbsp;&nbsp;<a href="https://h5.sosho.cn/community/detail.html?id=21406" target="_blank">У��֮��</a></span><span style="padding-top:10px;padding-left:65px;position:absolute;display:none"><a href="http://www.xtzy.com/zs2021" style="color:red;font-weight:bold"  target="_blank">>>2021�굥������ϵͳ</a></span>
+    </div>
+      <!--tabdowl-->
+    <div  class="lb2">
+    <ul>
+     
+ 
+		  
+  <li style=" padding-bottom:8px"><span style="color:#999">08-12</span><a href="/html/158830.html" target="_blank"  title=' ����������У2024�����ʡ ��ְר����Ԥ¼ȡ����ȷ�Ϲ�����֪ͨ'> ����������У2024�����ʡ ��ְר����Ԥ¼ȡ����ȷ�Ϲ�����֪ͨ</a></li>
+    
+  <li style=" padding-bottom:8px"><span style="color:#999">05-28</span><a href="/html/158302.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺ2024���ҵ���ڶ���У԰������Ƹ����У��ר����Ƹ�����뺯'>��̶ҽ��ְҵ����ѧԺ2024���ҵ���ڶ���У԰������Ƹ����У��ר����Ƹ..</a></li>
+    
+  <li style=" padding-bottom:8px"><span style="color:#999">04-08</span><a href="/html/157748.html" target="_blank"  title='��̶��2024���У��ҵ���������������ں�ר����Ƹ�����뺯'>��̶��2024���У��ҵ���������������ں�ר����Ƹ�����뺯</a></li>
+    
+  <li style=" padding-bottom:8px"><span style="color:#999">03-08</span><a href="/html/157221.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺ2024�굥���������Էѽ��ɺ�׼��֤��ӡ��֪'>��̶ҽ��ְҵ����ѧԺ2024�굥���������Էѽ��ɺ�׼��֤��ӡ��֪</a></li>
+    
+  <li style=" padding-bottom:8px"><span style="color:#999">09-08</span><a href="/html/155383.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺ2023��ӭ��������������ָ��(����)'>��̶ҽ��ְҵ����ѧԺ2023��ӭ��������������ָ��(����)</a></li>
+    
+  <li style=" padding-bottom:8px"><span style="color:#999">03-08</span><a href="/html/152270.html" target="_blank"  title='��̶ҽ��ְҵ����ѧԺ2023�굥�п���׼��֤��ӡ����'>��̶ҽ��ְҵ����ѧԺ2023�굥�п���׼��֤��ӡ����</a></li>
+    
+	
+    </ul>
+	</div>
+    <!--tabdowl--></td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr><td colspan="2" height="20"></td></tr>
+   <tr>
+    <td  colspan="2" bgcolor="#08365f"><table width="1060" border="0" align="center">
+      <tr>
+        <td width="80%" style="padding-left:10px"><img src="images2017/kstd.jpg" width="70" height="24" /></td>
+        <td width="17%" align="left" style="padding-left:34px"><img src="images2017/yqlj.jpg" width="70" height="24" /></td>
+      </tr>
+      <tr>
+        <td align="left" style="padding-left:14px">
+        <!--��ҳ�ײ����-->
+         
+ 
+		  
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="http://pt.xtzy.com/log/eight/login.html" target="_blank"  title='AICϵͳ��ʦ��'><img width="98" src="/publicInfo/attachment/68cd085a-b3cb-447c-b6c8-da4e364aa2e9.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="http://pt.xtzy.com/xsgl/xs/login.aspx" target="_blank"  title='AICϵͳѧ����'><img width="98" src="/publicInfo/attachment/efe35912-c0d9-4c37-bdad-64b5024ce97e.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="/cwc/cwc_index.jsp" target="_blank"  title='�������'><img width="98" src="/publicInfo/attachment/920d7bd0-0185-45b4-878a-fdb445c62299.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="https://xtzylib.mh.chaoxing.com/" target="_blank"  title='����ͼ��'><img width="98" src="/publicInfo/attachment/fb58a95c-a112-45c7-b086-2bb81ac2d315.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="/zgb/zg/index.jsp" target="_blank"  title='�������'><img width="98" src="/publicInfo/attachment/5e4f25a7-d32d-4770-83b8-7bd9bf450b98.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="/xsgzc.jsp" target="_blank"  title='ѧ������'><img width="98" src="/publicInfo/attachment/a1a29c81-575b-4d4d-a936-221043209f0a.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="http://192.168.0.170:8081/zcgl/" target="_blank"  title='�ʲ�����'><img width="98" src="/publicInfo/attachment/29b988f4-f4bb-41b5-acdc-5baee592658b.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="http://192.168.0.130/" target="_blank"  title='���й���'><img width="98" src="/publicInfo/attachment/5a80bff5-477d-4bab-bc21-57a4f64dc0f7.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="https://211.138.232.6/QualityCtrl/ExamDefault.aspx" target="_blank"  title='���϶Ȳ���'><img width="98" src="/publicInfo/attachment/6bc7d49a-4812-4b36-b59e-3fe175a6a835.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="https://www.xtywzyxx.com" target="_blank"  title='��������'><img width="98" src="/publicInfo/attachment/8d54831d-b7f3-4b86-a0da-381f07406620.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="/email/index.jsp" target="_blank"  title='���У������'><img width="98" src="/publicInfo/attachment/b373a092-b1a9-4099-b70a-a734fd92c233.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="http://xtzy.fanya.chaoxing.com/portal" target="_blank"  title='���߽�ѧ'><img width="98" src="/publicInfo/attachment/d6ec4668-976b-42a2-908f-0ec240b9ac23.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="/jxjy/jwc_more_2020.jsp?kindid=125912&chnlid=125913&inimenu=menu0" target="_blank"  title='רҵ�˲���������ר��'><img width="98" src="/publicInfo/attachment/723cfdb7-3914-488c-8669-341aafe902b6.jpg"/></a></span>
+    
+  <span style="padding-right:14px;height:114px; display:inline-block "><a href="http://192.168.0.28/QualityCtrl/Default.aspx" target="_blank"  title='Ԥ������'><img width="98" src="/publicInfo/attachment/ec5f208b-9b7e-461a-88af-f85c8ae5fc45.jpg"/></a></span>
+    
+	
+     <!--��ҳ�ײ����-->
+        </td>
+        <td align="left" nowrap="nowrap" class="links" style="padding-right:26px;"><ul>
+          <li><a href="http://www.hnedu.cn" target="_blank">�����ǻ۽���ƽ̨</a></li>
+          <li><a href="http://wjw.hunan.gov.cn" target="_blank">����ʡ��������ίԱ��</a></li>
+          <li><a href="http://jyt.hunan.gov.cn" target="_blank">����ʡ������</a></li>
+          <li><a href="https://my.chsi.com.cn/archive/index.jsp" target="_blank">ѧ�ŵ���</a></li>
+          <li><a href="http://zwfw-new.hunan.gov.cn" target="_blank">�������������</a></li></ul></td>
+      </tr>
+     </table></td>
+  </tr>
+  <tr><td colspan="2" height="20"></td></tr>
+   <tr>
+    <td  height="120"  colspan="2" align="center" bgcolor="#ffffff" valign="top"><table width="96%" border="0"  bgcolor="#ffffff">
+      <tr>
+        <td width="10%" align="center"><a href="https://bszs.conac.cn/sitename?method=show&id=2CA52EDEF30740C0E053022819AC6B26" target="_blank"><img  src="images2017/blue.jpg"/></a></td>
+        <td width="13%" align="center"><a href="http://192.168.0.217/web/index.jsp" target="_blank"><img src="images2010/ygfw.jpg" border="0" /></a></td>
+        <td width="55%" align="left"><div class="foot_ul"><ul>
+          <li style="color:#333333">���죺��̶ҽ��ְҵ����ѧԺ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;��ַ������ʡ��̶��˫ӵ��·&nbsp;&nbsp; &nbsp;&nbsp;�ʱࣺ411104 </li>
+          <li style="color:#333333">�����ţ�<a href="https://beian.miit.gov.cn" target="_blank" style="color: #333333">��ICP��05007507��</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://beian.hnedu.cn" target="_blank" style="color:#333333">���QS3-200505-000091</a></li>
+			 <li style="color:#333333">���������ţ� 43030402000121</li>
+        </ul></div></td>
+        <td width="22%" align="center"><img src="images2010/ewm.jpg" width="113" height="104" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

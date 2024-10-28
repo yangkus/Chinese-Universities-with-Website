@@ -1,0 +1,883 @@
+﻿<!DOCTYPE html>
+<HTML><HEAD><TITLE>辽宁大学</TITLE>
+
+
+
+
+<META charset="utf-8">
+<META name="renderer" content="webkit">
+<META content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<META name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><LINK rel="shortcut icon" href="favicon.ico"><LINK rel="stylesheet" type="text/css" href="css/style.css?v=1025"><LINK rel="stylesheet" href="css/animate.min.css"><script src="js/jquery.min.js"></script><script type="text/javascript" src="js/jquery.SuperSlide.2.1.3.js"></script><script src="js/wow.min.js"></script><script type="text/javascript">
+    $(function(){
+        var _this1=null;
+        $('.nav>ul>li').hover(function(){
+            _this1=$(this);
+            _this1.find('.second-nav').delay(100).slideDown();
+            var _this2=null;
+            _this1.find('.second-nav').find('li').hover(function(){
+                _this2=$(this);
+                _this2.find('.third-nav').show(100);
+                _this2.find('.third-nav').hover(function(){
+                    $(this).show();
+                },function(){
+                    $(this).hide();
+                });
+            },function(){
+                _this2.find('.third-nav').hide(100);
+            });
+        },function(){
+            
+            _this1.find('.second-nav').stop(true, true).slideUp();
+        });
+    });
+</script><script>
+
+fontSize();$(window).resize(function(){fontSize();});function fontSize(){var size;var winW=window.innerWidth;if(winW<=1600&&winW>800){size=Math.round(winW/16);}else if(winW<=800){size=Math.round(winW/7.5);if(size>65){size=65;}}else{size=100;}
+$('html').css({'font-size':size+'px'})}
+</script><script type="text/javascript">
+
+var t = n =0, count;
+
+$(document).ready(function(){ 
+
+count=$("#banner_list a").length;
+
+$("#banner_list a:not(:first-child)").hide();
+
+$("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
+
+$("#banner_info").click(function(){window.open($("#banner_list a:first-child").attr('href'), "_blank")});
+
+$("#banner li").click(function() {
+
+var i = $(this).text() -1;//获取Li元素内的值，即1，2，3，4
+
+n = i;
+
+if (i >= count) return;
+
+$("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
+
+$("#banner_info").unbind().click(function(){window.open($("#banner_list a").eq(i).attr('href'), "_blank")})
+
+$("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+
+document.getElementById("banner").style.background="";
+
+$(this).toggleClass("on");
+
+$(this).siblings().removeAttr("class");
+
+});
+
+t = setInterval("showAuto()", 4000);
+
+$("#banner").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 4000);});
+
+})
+
+
+
+function showAuto()
+
+{
+
+n = n >=(count -1) ?0 : ++n;
+
+$("#banner li").eq(n).trigger('click');
+
+}
+
+</script><script>
+$(document).ready(function(){
+  $(".phone_menu h2").click(function(){
+    $(".nav").addClass("phone_nav");
+    $(this).hide();
+    $(".phone_menu").find('h3').show();
+  });
+  $(".phone_menu h3").click(function(){
+    $(".nav").removeClass("phone_nav");
+    $(this).hide();
+    $(".phone_menu").find('h2').show();
+  });
+  $(".phone_search").click(function(){
+      $(".t_link form").toggleClass("phone_ss");
+  });
+});
+</script>
+<STYLE>
+@media (max-width:1000px){
+.box1{background:none;}
+}
+.ldms ul li img{    height: 2.89rem;}
+.news ul li{height: 3rem;}
+.syl1 .ul_img a img{    max-height: 4.2rem;}
+.syl .ul_img a img{max-height: 5rem;}
+
+.syl .fullSlide .bd li a{background:none;}
+.syl .fullSlide .bd li a,.syl .fullSlide .bd li {height: 5rem;}
+.syl .fullSlide .bd li img{ width:674px;}
+@media (min-width:601px) and (max-width:780px){
+.syl .fullSlide .bd li a,.syl .fullSlide .bd li {
+    height: 410px;}
+.syl .fullSlide .bd li img{
+    width:100%
+;}
+.fullSlide .bd ul{
+    height: 410px!important;}
+}
+@media (max-width:600px){
+.syl .fullSlide .bd li a,.syl .fullSlide .bd li {
+    height: 271px;}
+.syl .fullSlide .bd li img{
+    width:100%
+;}
+.fullSlide .bd ul{
+    height: 271px!important;}
+}
+.syl .fullSlide .hd{bottom:0;}
+.syl .fullSlide .hd ul { position: absolute; list-style-type: none; filter: Alpha(Opacity=80); opacity: 0.8; z-index: 1002; margin: 0; padding: 0; bottom: 3px; right: 5px;}
+
+.syl .fullSlide .hd ul li { padding: 0px 8px; float: left; display: block; color: #165aad; background: #fff; cursor: pointer; border: 1px solid #fff;margin: 0 2px;width:auto;height:auto;line-height:21px ;}
+
+.syl .fullSlide .hd ul li.on { background-color: #165aad; color: #fff; border: 1px solid #165aad;}
+.syl .ul_list ul li a {
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;}
+.ty1 ul li a {
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;}
+    @media (max-width:600px){
+   .ldms .js h1{float: left;}
+    }
+</STYLE>
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230797347565251554003060000 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<META Name="keywords" Content="辽宁大学是一所具备文、史、哲、经、法、理、工、管、艺等学科门类的省属综合性大学。学校现有三个校区，即沈阳崇山校区、沈阳蒲河校区和辽阳武圣校区。学校占地面积2190亩，校舍建筑面积65.4万平方米，是国家“211工程”重点建设院校和世界一流学科建设高校。" />
+</HEAD>
+<BODY>
+<DIV class="top">
+<DIV class="w1400">
+<DIV class="t_link">
+<UL><!--#begineditable clone="0" namechanged="0" order="1" ispublic="0" tagname="顶部链接列表" viewid="1067168" contentviewid="" contype="" stylesysid="" layout="" action="" name="顶部链接列表"--><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="ksrk/xs.htm" target="_blank">学生</a>|
+
+<a href="ksrk/jg.htm" target="_blank">教工</a>|
+
+<a href="http://xy.lnu.edu.cn/" target="_blank">校友</a>|
+
+<a href="ksrk/fk.htm" target="_blank">访客</a>
+
+<a href="http://enweb.lnu.edu.cn/" target="_blank" class="en">English</a>
+
+<!--#endeditable--></UL>
+<DIV class="phone_search"></DIV>
+<DIV class="phone_menu">
+<H2><I></I><I></I><I></I></H2>
+<H3>X</H3></DIV></DIV></DIV></DIV>
+<DIV class="fullSlide">
+<DIV class="w1400">
+<DIV class="logo"><A href="index.htm"><IMG src="images/logo.png"></A></DIV>
+<DIV class="nav">
+<UL><!--#begineditable clone="0" namechanged="0" order="2" ispublic="0" tagname="网站导航" viewid="1067155" contentviewid="" contype="" stylesysid="" layout="" action="" name="网站导航"-->
+<li><a href="index.htm" target="_blank">首页</a>
+</li>
+
+<li><a href="xxgk.htm" target="_blank">学校概况</a>
+<ul class="second-nav">
+<li><a href="xxgk/xxjj.htm" target="_blank">学校简介</a>
+</li>
+<li><a href="xxgk/xhxx.htm" target="_blank">校徽校训</a>
+</li>
+<li><a href="xxgk/xrld.htm" target="_blank">现任领导</a>
+</li>
+<li><a href="xxgk/lsyg.htm" target="_blank">历史沿革</a>
+</li>
+</ul>
+</li>
+
+<li><a href="jgsz.htm" target="_blank">机构设置</a>
+<ul class="second-nav">
+<li><a href="jgsz/jxjg.htm" target="_blank">教学机构</a>
+</li>
+<li><a href="jgsz/dqxzdw.htm" target="_blank">党群行政单位</a>
+</li>
+<li><a href="jgsz/zsdw.htm" target="_blank">直属单位</a>
+</li>
+<li><a href="jgsz/yjjg.htm" target="_blank">研究机构</a>
+</li>
+<li><a href="jgsz/syjxzx.htm" target="_blank">实验教学中心</a>
+</li>
+</ul>
+</li>
+
+<li><a href="rcpy.htm" target="_blank">人才培养</a>
+<ul class="second-nav">
+<li><a href="http://zs.lnu.edu.cn" target="_blank">本科生招生</a>
+</li>
+<li><a href="http://grs.lnu.edu.cn/zsgz.htm" target="_blank">研究生招生</a>
+</li>
+<li><a href="http://jwc.lnu.edu.cn/" target="_blank">教学</a>
+</li>
+<li><a href="http://job.lnu.edu.cn" target="_blank">就业</a>
+</li>
+</ul>
+</li>
+
+<li><a href="kxyj.htm" target="_blank">科学研究</a>
+<ul class="second-nav">
+<li><a href="http://skc.lnu.edu.cn/" target="_blank">社会科学研究</a>
+</li>
+<li><a href="http://kjc.lnu.edu.cn/" target="_blank">科学技术研究</a>
+</li>
+</ul>
+</li>
+
+<li><a href="hzjl.htm" target="_blank">合作交流</a>
+<ul class="second-nav">
+<li><a href="http://gjjlc.lnu.edu.cn" target="_blank">国际交流</a>
+</li>
+<li><a href="http://lnushfwb.lnu.edu.cn/" target="_blank">国内合作</a>
+</li>
+<li><a href="" target="_blank">合作交流</a>
+<ul class="third-nav">
+<li><a href="http://www.aabclnu.com/" target="_blank">亚澳商学院</a></li>
+<li><a href="http://swibs.lnu.edu.cn/" target="_blank">新华国际商学院</a></li>
+<li><a href="http://iec.lnu.edu.cn/" target="_blank">国际教育中心</a></li>
+</ul>
+</li>
+<li><a href="http://ie.lnu.edu.cn/" target="_blank">留学辽大</a>
+</li>
+</ul>
+</li>
+
+<li><a href="xyfw.htm" target="_blank">校园服务</a>
+<ul class="second-nav">
+<li><a href="http://hqfzjt.lnu.edu.cn/" target="_blank">后勤服务</a>
+</li>
+<li><a href="http://library.lnu.edu.cn/" target="_blank">图书馆</a>
+</li>
+<li><a href="http://xxgk.lnu.edu.cn/" target="_blank">信息公开</a>
+</li>
+<li><a href="xyfw/ldhy.htm" target="_blank">辽大黄页</a>
+</li>
+<li><a href="http://mail.lnu.edu.cn/" target="_blank">邮箱</a>
+</li>
+<li><a href="xyfw/xl.htm" target="_blank">校历</a>
+</li>
+</ul>
+</li>
+
+
+
+
+
+
+
+
+
+
+<!--#endeditable--></UL></DIV></DIV>
+<DIV class="bd">
+<UL><!--#begineditable clone="0" namechanged="0" order="3" ispublic="0" tagname="banner图片列表" viewid="1067169" contentviewid="" contype="" stylesysid="" layout="" action="" name="banner图片列表"-->     
+<li _src="url(new/images/101727756113_.pic.jpg)"><a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 78016)"></a></li>
+     
+ 
+<li _src="url(new/images/20241016094305.jpg)"><a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 78035)"></a></li>
+     
+ 
+<li _src="url(new/images/20241016093706.jpg)"><a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 78032)"></a></li>
+     
+ 
+<li _src="url(new/images/20241016094008.jpg)"><a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 78033)"></a></li>
+     
+ 
+<li _src="url(new/images/20241016094148.jpg)"><a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 78034)"></a></li>
+     
+<!--#endeditable--></UL></DIV>
+<DIV class="hd">
+<UL></UL></DIV><SPAN class="prev"></SPAN><SPAN class="next"></SPAN></DIV><script type="text/javascript">             
+$(".fullSlide").slide({titCell:".hd ul",mainCell:".bd ul",effect:"fold",autoPlay:true,autoPage:true,trigger:"click",startFun:function(i){var curLi=jQuery(".fullSlide .bd li").eq(i);if(!!curLi.attr("_src")){curLi.css("background-image",curLi.attr("_src")).removeAttr("_src")}}});
+</script>
+<DIV class="news wow fadeInUp">
+<DIV class="w1400">
+<DIV class="ty_tit">
+<H1>辽大要闻</H1><A href="ldyw/ldyw.htm" target="_blank">查看更多</A></DIV>
+<DIV class="img"><!--#begineditable clone="0" namechanged="0" order="4" ispublic="0" tagname="辽大新闻左侧图片列表" viewid="1067157" contentviewid="" contype="" stylesysid="" layout="" action="" name="辽大新闻左侧图片列表"-->    
+<a href="xxgcddesjszqhjs.htm" target="_blank"><img src="images/xw20240811.jpg"></a>
+
+<!--#endeditable--></DIV>
+<UL>
+<LI><!--#begineditable clone="0" namechanged="0" order="5" ispublic="0" tagname="辽大新闻标题列表" viewid="1067156" contentviewid="" contype="" stylesysid="" layout="" action="" name="辽大新闻标题列表"--><style>.news ul li p{-webkit-line-clamp: 6;}</style>
+
+
+<a href="info/15223/82215.htm" target="_blank" style="    font-weight: bold;">历史性突破，亚洲经济学家首次荣任！<span style="clear: both;    display: block;    padding-top: 9px;    font-weight: block;">余淼杰受邀担任Economic Journal副主编</span></a>
+
+<a href="info/15223/82215.htm" target="_blank" style="text-align: left;"><p>​近日，英国皇家经济学会邀请辽宁大学校长余淼杰教授担任经济学全球顶级刊物之一的《经济学期刊》（Economic Journal）副主编。这是该刊首次邀请在亚洲地区工作的经济学家担任此重要职务，标志着中国经济学研究水平获得国际学术界的高度认可，也是中国经济学家在国际舞台上的又一重大突破！Economic Journal（简称EJ）创刊于1891年，是全球经济学领域历史最悠久...</p> </a>
+
+
+<script>_showDynClickBatch(['dynclicks_u4_82215'],[82215],"wbnews", 693691522)</script>
+<!--#endeditable--></LI></UL></DIV></DIV>
+<DIV class="w1400">
+<DIV class="syl1">
+<DIV class="ul_list wow fadeInLeft">
+<DIV class="ty_tit"><A href="ldyw/ldyw.htm" target="_blank" style="top: 17%">查看更多</A></DIV>
+<UL><!--#begineditable clone="0" namechanged="0" order="6" ispublic="0" tagname="双一流建设标题列表" viewid="1067158" contentviewid="" contype="" stylesysid="" layout="" action="" name="双一流建设标题列表"--><li><a href="info/15008/82269.htm" target="_blank">辽宁大学2024年新入职教师培训开班仪式顺利举行
+</a>
+
+</li>
+<li><a href="info/15008/82268.htm" target="_blank">辽大党委理论学习中心组召开学习会议
+</a>
+
+</li>
+<li><a href="info/15008/82248.htm" target="_blank">余淼杰参加马克思主义学院“习近平新时代中国特色社会主义思想概论”课集体备课会
+</a>
+
+</li>
+<li><a href="info/15008/82243.htm" target="_blank">余淼杰为全国人大举办的中亚国家议员研讨班授课
+</a>
+
+</li>
+<li><a href="info/15008/82242.htm" target="_blank">辽宁大学成功承办第十三届辽宁省高校思想政治理论课教学大赛决赛
+</a>
+
+</li>
+<li><a href="https://mp.weixin.qq.com/s/Od0sOzCtfJmSl8aBkQBheQ" target="_blank">辽宁大学第二届全球校友会会长论坛暨校友会年会和辽宁大学全球校友企业家论坛成功举办
+</a>
+
+</li>
+<li><a href="info/15008/82239.htm" target="_blank">辽宁大学举办城市研究院“真实问题”发布会本溪专场
+</a>
+
+</li>
+<li><a href="info/15008/82234.htm" target="_blank">辽宁大学第十二届“杏坛乐府”银杏节开幕
+</a>
+
+</li>
+<script>_showDynClickBatch(['dynclicks_u5_82269','dynclicks_u5_82268','dynclicks_u5_82248','dynclicks_u5_82243','dynclicks_u5_82242','dynclicks_u5_82240','dynclicks_u5_82239','dynclicks_u5_82234'],[82269,82268,82248,82243,82242,82240,82239,82234],"wbnews", 693691522)</script>
+<!--#endeditable--></UL></DIV>
+<DIV class="ul_img  wow fadeInRight">
+<DIV class="ty_tit">
+<H1>“双一流”建设</H1><A href="syljs.htm" target="_blank">查看更多</A></DIV>
+<DIV class="syl_lb"><!--#begineditable clone="0" namechanged="0" order="7" ispublic="0" tagname="双一流标题列表" viewid="1067178" contentviewid="" contype="" stylesysid="" layout="" action="" name="双一流标题列表"-->   <div id="banner">
+
+  <div id="banner_bg"></div>
+
+ 
+
+  <div id="banner_info"></div>
+ 
+
+  <ul>
+
+    <li class="on">1 </li>
+
+
+    <li>2 </li>
+
+
+    <li>3 </li>
+
+
+    <li>4 </li>
+
+
+    <li>5 </li>
+
+
+    <li>6 </li>
+
+
+  </ul>
+
+  <div id="banner_list"> 
+
+    <a href="info/15105/82103.htm" target="_blank"><img src="/__local/F/AF/B0/D17676D946DA92A6F0E1C552DEF_AC5823A7_FC199.png" /></a> 
+
+
+    <a href="info/15008/82104.htm" target="_blank"><img src="/__local/C/E2/4D/4D7974E3D714CC9260F4FFEE36A_1C651B81_CA8DE.jpg" /></a> 
+
+
+    <a href="info/15105/82105.htm" target="_blank"><img src="/__local/2/A7/6B/3308EE02BC401EF9303B1542B8E_B10A303C_565F2.jpg" /></a> 
+
+
+    <a href="info/15105/81849.htm" target="_blank"><img src="/__local/3/04/2A/F9E283C1834D5FA9327E3E68D50_3EBCAE7C_209C7E.jpg" /></a> 
+
+
+    <a href="info/15008/81677.htm" target="_blank"><img src="/__local/8/61/F4/28C560A2C2B1550AD20106A526B_3E662F0B_C810E.png" /></a> 
+
+
+    <a href="info/15008/81669.htm" target="_blank"><img src="/__local/B/C1/D4/576B421947A73B8A44929B0CFF8_D7F293DF_1D001.jpg" /></a> 
+
+
+ </div>
+
+</div>
+
+<script src="http://www.jq22.com/js/jq.js"></script><script>_showDynClickBatch(['dynclicks_u6_82103','dynclicks_u6_82104','dynclicks_u6_82105','dynclicks_u6_81849','dynclicks_u6_81677','dynclicks_u6_81669'],[82103,82104,82105,81849,81677,81669],"wbnews", 693691522)</script>
+<!--#endeditable--></DIV></DIV></DIV></DIV>
+<DIV class="w1400">
+<DIV class="syl">
+<DIV class="ul_img fl  wow fadeInLeft"><!--#begineditable clone="0" namechanged="0" order="8" ispublic="0" tagname="辽大学术标题轮播列表" viewid="1077268" contentviewid="" contype="" stylesysid="" layout="" action="" name="辽大学术标题轮播列表"--><div class="fullSlide">
+        <div class="bd">
+            <ul>
+                
+<li><a href="info/15114/82114.htm"><img src="/__local/9/FC/AC/29269FDD4FEED1E93860526324E_27902E07_26646.jpg"></a></li>
+     
+ 
+
+<li><a href="info/15114/82110.htm"><img src="/__local/5/BF/7F/BFA40C30B51AEA64C69CC6981FF_B66D1988_175FE.jpg"></a></li>
+     
+ 
+
+<li><a href="info/15114/81568.htm"><img src="/__local/E/9B/A6/6939B82795A85C8E03F241339C3_C2BFCEF0_22582.jpg"></a></li>
+     
+ 
+
+<li><a href="info/15114/80751.htm"><img src="/__local/3/2A/1B/F90AC96210641C6AE5B888BE08C_B10B44A5_C657.png"></a></li>
+     
+ 
+
+<li><a href="info/15114/80640.htm"><img src="/__local/E/AB/C5/46D7A43BF378DEC0626F7F56930_2E007B93_147A0.png"></a></li>
+     
+ 
+
+<li><a href="info/15114/80622.htm"><img src="/__local/6/7E/79/F197B005F14E31AFBE90285A50A_55D892C9_A8561.png"></a></li>
+     
+ 
+
+</ul>
+        </div>
+        <div class="hd">
+            <ul></ul>
+        </div>
+        <span class="prev"></span>
+        <span class="next"></span>
+    </div>
+    <script type="text/javascript">
+        $(".fullSlide").slide({
+            titCell: ".hd ul",
+            mainCell: ".bd ul",
+            effect: "fold",
+            autoPlay: true,
+            autoPage: true,
+            trigger: "click",
+            startFun: function(i) {
+                var curLi = jQuery(".fullSlide .bd li").eq(i);
+                if ( !! curLi.attr("_src")) {
+                    curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+                }
+            }
+        });
+    </script><script>_showDynClickBatch(['dynclicks_u7_82114','dynclicks_u7_82110','dynclicks_u7_81568','dynclicks_u7_80751','dynclicks_u7_80640','dynclicks_u7_80622'],[82114,82110,81568,80751,80640,80622],"wbnews", 693691522)</script>
+<!--#endeditable--></DIV>
+<DIV class="ul_list fr wow fadeInRight">
+<DIV class="ty_tit">
+<H1>辽大学术</H1><A href="ldxs.htm" target="_blank">查看更多</A></DIV>
+<UL><!--#begineditable clone="0" namechanged="0" order="9" ispublic="0" tagname="辽大学生标题列表" viewid="1067160" contentviewid="" contype="" stylesysid="" layout="" action="" name="辽大学生标题列表"--><li><span>2023-11-22</span><a href="info/15114/81116.htm" target="_blank">辽宁大学潘一山教授当选中国工程院院士</a></li>
+
+<li><span>2024-02-02</span><a href="info/15114/80945.htm" target="_blank">“双一流”重大成果：余淼杰教授获评国际经济学会会士</a></li>
+
+<li><span>2024-05-08</span><a href="info/15114/81472.htm" target="_blank">“双一流”重大成果：辽大全职引进外籍世界顶级经济学家拉塞尔・库珀教授</a></li>
+
+<li><span>2024-10-18</span><a href="info/15114/82216.htm" target="_blank">“双一流”重大成果：余淼杰受邀担任Economic Journal副主编</a></li>
+
+<li><span>2024-08-10</span><a href="info/15114/81958.htm" target="_blank">“双一流”重大成果：辽大全职引进全球著名华人经济学家胡永泰教授</a></li>
+
+<li><span>2024-08-04</span><a href="info/15114/81899.htm" target="_blank">“双一流”标志性成果： 辽宁大学参与主办英文SSCI经济类期刊《亚洲经济...</a></li>
+
+<li><span>2024-08-13</span><a href="info/15114/81942.htm" target="_blank">“双一流”建设新标志性成果：余淼杰合作论文被发展经济学国际顶级期刊J...</a></li>
+
+<li><span>2024-09-23</span><a href="info/15114/82097.htm" target="_blank">“双一流”建设新标志性成果：周宇合作论文在劳动经济学国际顶刊JHR正式...</a></li>
+
+<li><span>2024-08-15</span><a href="info/15114/81945.htm" target="_blank">“双一流”建设新标志性成果：何超合作论文被理论经济学顶级期刊JET接受...</a></li>
+
+<li><span>2024-10-25</span><a href="info/15114/82258.htm" target="_blank">谢地教授在《当代经济研究》发表封面文章</a></li>
+
+<script>_showDynClickBatch(['dynclicks_u8_81116','dynclicks_u8_80945','dynclicks_u8_81472','dynclicks_u8_82216','dynclicks_u8_81958','dynclicks_u8_81899','dynclicks_u8_81942','dynclicks_u8_82097','dynclicks_u8_81945','dynclicks_u8_82258'],[81116,80945,81472,82216,81958,81899,81942,82097,81945,82258],"wbnews", 693691522)</script>
+<!--#endeditable--></UL></DIV></DIV></DIV>
+<DIV class="clrfix"></DIV>
+<DIV class="box1  wow fadeInUp">
+<DIV class="w1400">
+<DIV class="ty1 fl">
+<DIV class="ty_tit">
+<H1>通知公告</H1><A href="tzgg/tzgg.htm" target="_blank">查看更多</A></DIV>
+<UL><!--#begineditable clone="0" namechanged="0" order="10" ispublic="0" tagname="通知公告标题列表" viewid="1067162" contentviewid="" contype="" stylesysid="" layout="" action="" name="通知公告标题列表"--><li><span>2024-10-24</span><a href="https://mp.weixin.qq.com/s/7Bx5XaVWtAS6xN58TOjf_w" target="_blank">虹桥论坛预告丨“全球化与青年发展：共享美好未来”</a></li>
+
+<li><span>2024-10-23</span><a href="info/15026/82245.htm" target="_blank">经济学前沿高端讲座|北京大学光华管理学院仇心诚:Intra-Household...</a></li>
+
+<li><span>2024-10-21</span><a href="info/15026/82238.htm" target="_blank">预告｜辽博学坛（第八期）即将开讲</a></li>
+
+<li><span>2024-10-20</span><a href="https://mp.weixin.qq.com/s/6cOp328ISlkyVzj2Z-pn_w" target="_blank">“真实问题”发布会预告 | 辽宁大学（本溪）城市研究院专场</a></li>
+
+<li><span>2024-10-19</span><a href="https://www.bilibili.com/video/BV1hHCXYDEfd/?buvid=XUCBF3BC073310C0CB38A011195F72E4BC6B5&from_spmid=default-value&is_story_h5=false&mid=yjFcEUQM%2FijyxXbFdAPr8H8FTQ%2FSZMtL1rElX6M3iMo%3D&p=1&plat_id=116&share_from=ugc&share_medium=android&share_plat=andro" target="_blank">CCTC《对话》栏目访余淼杰预告｜如何释放中国经济新活力</a></li>
+
+<li><span>2024-10-19</span><a href="https://mp.weixin.qq.com/s/b-uR5864vfP5Jc5e3B5LTg" target="_blank">预告｜辽宁大学第二届全球校友会会长论坛暨校友会年会和辽宁大学...</a></li>
+
+<li><span>2024-10-17</span><a href="info/15026/82212.htm" target="_blank">经济学部学术午餐会｜Having a Second Child, the Hidden Role of...</a></li>
+
+<li><span>2024-10-16</span><a href="info/15026/82207.htm" target="_blank">经济学前沿高端讲座｜广东金融学院魏东霞：中国的多样性城市</a></li>
+
+<script>_showDynClickBatch(['dynclicks_u9_82247','dynclicks_u9_82245','dynclicks_u9_82238','dynclicks_u9_82235','dynclicks_u9_82224','dynclicks_u9_82219','dynclicks_u9_82212','dynclicks_u9_82207'],[82247,82245,82238,82235,82224,82219,82212,82207],"wbnews", 693691522)</script>
+<!--#endeditable--></UL></DIV>
+<DIV class="ty1 fr">
+<DIV class="ty_tit">
+<H1>媒体辽大</H1><A href="mtld.htm" target="_blank">查看更多</A></DIV>
+<UL><!--#begineditable clone="0" namechanged="0" order="11" ispublic="0" tagname="媒体辽大标题列表" viewid="1067163" contentviewid="" contype="" stylesysid="" layout="" action="" name="媒体辽大标题列表"--><li><span>2024-10-24</span><a href="info/15110/82246.htm" target="_blank">中宏网｜杨志安：加大财政逆周期调节力度，牢牢把握五大着力点</a></li>
+
+<li><span>2024-10-21</span><a href="info/15110/82236.htm" target="_blank">光明日报客户端｜余淼杰受邀担任Economic Journal副主编 系亚洲经...</a></li>
+
+<li><span>2024-10-20</span><a href="info/15110/82232.htm" target="_blank">财经杂志｜CCTV《对话》栏目访余淼杰：政策“组合拳”之后，中国...</a></li>
+
+<li><span>2024-10-19</span><a href="https://www.bilibili.com/video/BV16PCXYAEt5?buvid=XUCBF3BC073310C0CB38A011195F72E4BC6B5&from_spmid=default-value&is_story_h5=false&mid=yjFcEUQM%2FijyxXbFdAPr8H8FTQ%2FSZMtL1rElX6M3iMo%3D&plat_id=116&share_from=ugc&share_medium=android&share_plat=android&sh" target="_blank">CCTV《对话》栏目访余淼杰｜年轻人学什么更有出路</a></li>
+
+<li><span>2024-10-16</span><a href="info/15110/82204.htm" target="_blank">辽望·辽宁日报｜2024辽宁大学国家发展论坛开幕</a></li>
+
+<li><span>2024-10-13</span><a href="https://mp.weixin.qq.com/s/WrrsF0Ff-7x8OqbHGuhjtw" target="_blank">央视频、北斗融媒｜2024辽宁大学国家发展论坛开幕</a></li>
+
+<li><span>2024-10-12</span><a href="info/15110/82180.htm" target="_blank">新华网、中国网、东北新闻网、北斗融媒等媒体 | 总裁读书会“美好...</a></li>
+
+<li><span>2024-10-11</span><a href="info/15110/82177.htm" target="_blank">中国工业报访余淼杰|创新水平持续提升，民营经济成经济增长新引擎</a></li>
+
+<script>_showDynClickBatch(['dynclicks_u10_82246','dynclicks_u10_82236','dynclicks_u10_82232','dynclicks_u10_82223','dynclicks_u10_82204','dynclicks_u10_82189','dynclicks_u10_82180','dynclicks_u10_82177'],[82246,82236,82232,82223,82204,82189,82180,82177],"wbnews", 693691522)</script>
+<!--#endeditable--></UL></DIV></DIV></DIV>
+<DIV class="w1400">
+<DIV class="ldms wow fadeInUp">
+<DIV class="ty_tit">
+<H1>辽大名师</H1><A href="ldms/ldms.htm" target="_blank">查看更多</A></DIV>
+<UL><!--#begineditable clone="0" namechanged="0" order="12" ispublic="0" tagname="辽大名师标题列表" viewid="1067164" contentviewid="" contype="" stylesysid="" layout="" action="" name="辽大名师标题列表"--><li>
+<a href="info/15103/77928.htm" target="_blank"><img src="/__local/9/DF/94/B2A9DC2A4BEE57949A865527204_723FDBF9_B2ECD.png"></a>
+<h1><a href="info/15103/77928.htm">潘一山院士</a></h1>
+<p>潘一山，男，汉族，1964年5月生，教授，博士生导师，中国工程院院士，著名力学专家，清华大学博士，中国地震局地质研究所博士后，美国密歇根大学高级访问学者，国家级人才项目领军人才入选者，“新世纪百千万人才...</p>
+</li>
+
+<li>
+<a href="info/15103/77932.htm" target="_blank"><img src="/__local/C/50/98/E1F87BD2F607E1F9D04FC24F045_EB04FB0D_E98C.jpg"></a>
+<h1><a href="info/15103/77932.htm">余淼杰教授</a></h1>
+<p>余淼杰，1976年生，联合国国际经济学会会士、长江学者特聘教授、国家杰青基金获得者。任第十四届全国人大代表、辽宁省人大常委会委员、国家监委特约监察员、辽宁省纪检监察协会副会长、辽宁大学党委副书记、校长...</p>
+</li>
+
+<li>
+<a href="info/15103/78658.htm" target="_blank"><img src="/__local/4/B5/9E/61F4545FCCE8C67A25547AC7E02_E6899084_943B.jpg"></a>
+<h1><a href="info/15103/78658.htm">白钦先教授</a></h1>
+<p>白钦先，教授、博士生导师，著名金融学家，国务院学位委员会第四届、第五届应用经济学学科评议组成员，辽宁大学金融学国家重点学科首席学术带头人，首届“中国金融研究杰出贡献奖”和2017年度“中国金融学科终身...</p>
+</li>
+
+<li>
+<a href="info/15103/77390.htm" target="_blank"><img src="/__local/A/AE/D6/058F63AD7EA28EDEEF8444C7F8F_2DA312D7_12387.jpg"></a>
+<h1><a href="info/15103/77390.htm">林木西教授</a></h1>
+<p>林木西，辽宁大学资深教授、博士生导师。国家级人才项目特聘教授，国家级人才项目领军人才，首届国家级教学名师，国家级人才项目第一批教学名师，全国模范教师，首批全国高校黄大年式教师团队负责人，首届全国教...</p>
+</li>
+
+<li>
+<a href="info/15103/81014.htm" target="_blank"><img src="/__local/E/C5/17/46371B5B6D24FB05828A2B8D6D0_889FFDF3_B983B.jpg"></a>
+<h1><a href="info/15103/81014.htm">李宇鹏教授</a></h1>
+<p>李宇鹏，女，汉族，1977年5月生，二级教授、博士生导师，美国Washington University in St. Louis结构工程博士，国家级海外高层次人才项目入选者、国家级特聘专家、享受国务院特殊津贴、沈阳高层次杰出人才、美国...</p>
+</li>
+
+<li>
+<a href="info/15103/81608.htm" target="_blank"><img src="/__local/6/37/35/42B8CFB960D5AF5625AF780F19D_4E5D08E8_13535A4.jpg"></a>
+<h1><a href="info/15103/81608.htm">仇焕广教授</a></h1>
+<p>仇焕广，1976年5月生，教育部长江学者特聘教授，国务院政府特殊津贴专家。现任辽宁大学党委常委、副校长，国家农业产业技术体系经济岗位科学家，北京农业经济学会会长，中国农业经济学会、中国农业技术经济学会、...</p>
+</li>
+
+<li>
+<a href="info/15103/81921.htm" target="_blank"><img src="/__local/1/C9/13/2E14252C4218D123E3860B8A8E1_6DD221CC_9C317.png"></a>
+<h1><a href="info/15103/81921.htm">胡永泰教授</a></h1>
+<p>胡永泰（Wing Thye Woo），哈佛大学博士，美国加州大学戴维斯分校经济系教授，兼任布鲁金斯学会资深研究员、哥伦比亚大学东亚项目主任。  主要研究领域为宏观经济、国际金融与汇率经济、经济增长与发展，以及全球...</p>
+</li>
+
+<li>
+<a href="info/15103/77931.htm" target="_blank"><img src="/__local/B/D3/2E/B2F859E56AF66491B83FAE7F52D_0D20D5FC_B2ECD.png"></a>
+<h1><a href="info/15103/77931.htm">姚树洁教授</a></h1>
+<p>姚树洁，经济学博士，教授，国家级人才项目特聘教授。现任辽宁大学李安民经济研究院院长。1989年获英国曼彻斯特大学经济学博士学位，在牛津大学做博士后研究，2014年回国前担任英国诺丁汉大学当代中国学学院和孔...</p>
+</li>
+
+<li>
+<a href="info/15103/81922.htm" target="_blank"><img src="/__local/3/B2/89/F106B4CAA742BE80CB75505AE20_BAF52BCC_51BCA.png"></a>
+<h1><a href="info/15103/81922.htm">拉塞尔·韦德·库珀教授</a></h1>
+<p>拉塞尔・韦德・库珀，欧洲大学学院（European University Institute, EUI）教授，美国国家经济研究局（NBER）研究员，国际计量经济学会（The Econometric Society）会士。他于1982年从美国宾夕法尼亚大学获得经济...</p>
+</li>
+
+<script>_showDynClickBatch(['dynclicks_u11_77928','dynclicks_u11_77932','dynclicks_u11_78658','dynclicks_u11_77390','dynclicks_u11_81014','dynclicks_u11_81608','dynclicks_u11_81921','dynclicks_u11_77931','dynclicks_u11_81922'],[77928,77932,78658,77390,81014,81608,81921,77931,81922],"wbnews", 693691522)</script>
+<!--#endeditable--></UL></DIV></DIV>
+<DIV class="w1400"><!--#begineditable clone="0" namechanged="0" order="13" ispublic="0" tagname="辽大终身名誉教授" viewid="1088287" contentviewid="" contype="" stylesysid="" layout="" action="" name="辽大终身名誉教授"--><div class="ldms wow fadeInUp">
+<div class="ty_tit js"><h1>辽大终身名誉教授</h1><a href="ldzsmyjs.htm" target="_blank">查看更多</a></div>
+<ul>
+<li>
+<a href="info/15225/80559.htm" target="_blank"><img src="/__local/F/FD/39/B4D47BC0DE165C8AF105B1C0881_D7E86F7D_C3666.png"></a>
+
+<h1><a href="info/15225/80559.htm">林毅夫教授</a></h1>
+<p>林毅夫，全国政协常委、经济委员会副主任，国务院参事，前世界银行高级副行长兼首席经济学家、北京大学南南合作与发展学院院长、北京大学国家发展研究院名誉院长、北京大学新结构经济学研究院院长。在国内外多个...</p>
+</li>
+
+<li>
+<a href="info/15225/81492.htm" target="_blank"><img src="/__local/4/4C/CA/4A5154DE1E7935FA562015362F6_596ED232_8F257.png"></a>
+
+<h1><a href="info/15225/81492.htm">王缉思教授</a></h1>
+<p>王缉思，北京大学国际战略研究院创始院长、北京大学博雅荣休讲席教授、北京大学国际关系学院教授、中华美国学会荣誉会长。曾任中国社会科学院美国研究所所长、中共中央党校国际战略研究所所长、中国外交部外交政...</p>
+</li>
+
+<li>
+<a href="info/15225/80560.htm" target="_blank"><img src="/__local/2/E0/E0/CE2775B74FD004AD56E2DFAB2A6_511EA674_B7EB.jpg"></a>
+
+<h1><a href="info/15225/80560.htm">张宇燕教授</a></h1>
+<p>张宇燕，中国社会科学院学部委员，世界经济与政治研究所所长，国家全球战略智库理事长、首席专家，中国世界经济学会会长，中国社会科学大学国际政治经济学院院长。主要从事国际政治经济学、制度经济学、经济史研...</p>
+</li>
+
+<li>
+<a href="info/15225/81438.htm" target="_blank"><img src="/__local/D/91/65/AE804FF4FBB1560EB4292E6A949_4D7BB92D_DBE4D.png"></a>
+
+<h1><a href="info/15225/81438.htm">钱乘旦教授</a></h1>
+<p>钱乘旦，北京大学区域与国别研究院创始院长、北京大学博雅讲席教授、博士生导师。历史学博士，英国考文垂大学名誉文学博士，英国皇家历史学会通讯会士；国家社科基金专家评审组成员，国家教材委员会专家委员会委...</p>
+</li>
+
+<li>
+<a href="info/15225/80596.htm" target="_blank"><img src="/__local/B/A1/12/7EE246478964C9E5150025A0A19_12804E2E_65663.png"></a>
+
+<h1><a href="info/15225/80596.htm">俞可平教授</a></h1>
+<p>俞可平，著名政治学家，北京大学讲席教授、北京大学中国政治学研究中心主任兼城市治理研究院院长、深圳大学政府管理学院院长，哲学政治学双学科博士生导师，德国杜伊斯堡&amp;shy;埃森大学名誉博士。入选首批“新世纪...</p>
+</li>
+
+<li>
+<a href="info/15225/81630.htm" target="_blank"><img src="/__local/3/31/A7/8F363E48BAEE697BBADD581352D_CDB2F059_98BE7.jpg"></a>
+
+<h1><a href="info/15225/81630.htm">​文一教授</a></h1>
+<p>文一，男，1958年8月生人，上海交通大学安泰经济与管理学院特聘教授。华西医科大学学士（1982），美国圣母大学（Notre Dame）科学史与科学哲学硕士（1991），美国爱荷华（Iowa）大学经济学博士（1996）。曾先后执...</p>
+</li>
+
+<li>
+<a href="info/15225/80575.htm" target="_blank"><img src="/__local/9/0B/45/7CAC84B950910DE5352136D6F00_7F34B8AF_3637F.png"></a>
+
+<h1><a href="info/15225/80575.htm">雎国余教授</a></h1>
+<p>睢国余，著名经济学家。北京大学经济学院教授、博士生导师，北京大学十佳教师。瑞士维多利亚大学、新加坡工商管理学院、中国人民解放军军事经济学院等多所国内外高校兼职教授。多个地方政府、政府综合机构高级顾...</p>
+</li>
+
+<li>
+<a href="info/15225/81676.htm" target="_blank"><img src="/__local/A/A7/6D/A9B4C363D4A9FEEE0027941F307_D104A3D8_8DCC7.png"></a>
+
+<h1><a href="info/15225/81676.htm">魏尚进教授</a></h1>
+<p>魏尚进，国际著名经济学家，现任美国哥伦比亚大学中国商业与经济N.T. Wang教授、美国国民经济研究局（NBER）中国经济研究组主任、欧洲经济政策研究中心研究员、香港金融管理局顾问、美国布鲁金斯学会研究员、复旦...</p>
+</li>
+
+<li>
+<a href="info/15225/81384.htm" target="_blank"><img src="/__local/D/F5/F6/B737EDB863DC9383665F746EE2A_764278CE_74380.png"></a>
+
+<h1><a href="info/15225/81384.htm">李根教授</a></h1>
+<p>​李根（Keun Lee，韩国），男，经济学领域杰出学者、美国加州大学伯克利分校经济学博士、韩国国立首尔大学经济系资深教授、世界经济论坛理事会委员。担任创新研究的顶级期刊Research Policy杂志主编、熊彼特经济...</p>
+</li>
+
+<li>
+<a href="info/15225/80563.htm" target="_blank"><img src="/__local/B/E9/ED/1098EDA9F9809CB849D90F0ABFD_1DD58266_5236.jpg"></a>
+
+<h1><a href="info/15225/80563.htm">彼得•德莱斯戴尔教授</a></h1>
+<p>彼得•德莱斯戴尔（Peter Drysdale）教授是澳大利亚国立大学克劳福德公共政策学院经济学荣誉教授，东亚经济研究中心主任，东亚论坛主编。他被誉为亚太经合组织 (APEC) 的设计师和核心顾问，并在APEC成立后作为组...</p>
+</li>
+
+<li>
+<a href="info/15225/80564.htm" target="_blank"><img src="/__local/5/0E/04/02C3CA527DB0C7C3918DC4D8407_A3275FE4_C3666.png"></a>
+
+<h1><a href="info/15225/80564.htm">彼得•林德特教授</a></h1>
+<p>彼得•林德特（Peter Lindert），美国著名经济历史学家、加州大学戴维斯分校杰出经济学教授。威斯康星大学、英国剑桥大学经济学教授；哈佛大学、英国科斯切尔特埃塞克斯大学客座教授；美国国家经济研究局(NBER)研...</p>
+</li>
+
+<li>
+<a href="info/15225/80565.htm" target="_blank"><img src="/__local/3/1C/00/9C05680015F2BE4EA63D40F02EF_8E739D12_69C1.jpg"></a>
+
+<h1><a href="info/15225/80565.htm">丹尼尔•崔夫勒教授</a></h1>
+<p>丹尼尔•崔夫勒（Daniel Trefler），多伦多大学罗特曼管理学院教授，曾任哈佛大学访问教授、芝加哥大学访问教授。加拿大竞争力与繁荣研究主席，加拿大高等研究院资深研究员，C.D. Howe研究所研究员，竞争力与繁荣...</p>
+</li>
+
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u12_80559','dynclicks_u12_81492','dynclicks_u12_80560','dynclicks_u12_81438','dynclicks_u12_80596','dynclicks_u12_81630','dynclicks_u12_80575','dynclicks_u12_81676','dynclicks_u12_81384','dynclicks_u12_80563','dynclicks_u12_80564','dynclicks_u12_80565'],[80559,81492,80560,81438,80596,81630,80575,81676,81384,80563,80564,80565],"wbnews", 693691522)</script>
+<!--#endeditable--></DIV>
+<DIV class="box2">
+<DIV class="zhuanlan">
+<DIV class="ty_tit">
+<H1>专栏导航</H1></DIV>
+<UL><!--#begineditable clone="0" namechanged="0" order="14" ispublic="0" tagname="专栏导航图片列表" viewid="1067165" contentviewid="" contype="" stylesysid="" layout="" action="" name="专栏导航图片列表"-->    <style>
+.box2{overflow: hidden;padding-bottom: 160px;  height: auto;background-size: cover;}
+.zhuanlan{width: 14rem;}
+.zhuanlan ul li{width: 1.8rem;margin-left:.2rem;max-height: 5rem;}
+.zhuanlan ul li h1{ width: 90%; margin: 0 5%;}
+.zhuanlan ul li img{height:5rem;}
+
+.zlts{height:4.97rem;background-size: 100%!important;padding:0 .1rem;overflow: hidden;-webkit-transition: all 0.4s ease;transition: all 0.4s ease;}
+.zlts a{color:#fff;line-height:.45rem;font-size:.18rem;}.zlts a:hover{text-decoration: underline;}
+.zlts h1{font-size: .22rem!important;}
+.zlts:hover{    background-size: 110%!important;}
+.aa1{margin-top:1.5rem;}
+
+@media (max-width: 1000px){
+.zhuanlan{width: 98%;}
+.zhuanlan ul li{width: 12.1%;margin-left:2%;}
+.zhuanlan ul li h1{font-size:20px;line-height:0;}
+.zhuanlan ul li h1 a{background:none;padding:0;font-size:16px;}
+.aa1{margin-top:.5rem!important;}
+.zlts{height:3.8rem!important;}
+.zlts a{line-height:.3rem;font-size:.15rem;}
+.zlts h1{    font-size: .16rem!important;}
+.zhuanlan ul li img{height:auto;}
+.box2{}
+}
+@media (max-width: 840px){
+.zhuanlan ul li h1{
+    font-size: .18rem;
+    line-height: .1rem;}
+    .zhuanlan ul li h1 a{font-size:.15rem;}
+}
+@media (max-width: 780px){
+.zhuanlan ul li h1{
+    line-height: .8rem;}
+.box2{/*height: 4.5rem;*/padding-bottom: 50px;}
+}
+@media (max-width: 600px){
+.zhuanlan ul li{width:96%;}
+.aa1{margin-top:.05rem!important;}
+.zlts h1{line-height: .3rem!important;
+    margin: 0 3%!important;}
+    .zhuanlan ul li img{margin-top: -321px;}
+.box2{}
+}
+
+</style>
+<li class="wow fadeInDown"><a href="ldzk.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 77659)"><img src="ldzk/ldzkimg.jpg"></a><h1>智库建设<a href="ldzk.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 77659)">查看详情</a></h1></li>
+<li class="wow fadeInUp"><a href="lhjj/lhjj.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72336)"><img src="images/zt4.png"></a><h1>两会聚焦<a href="lhjj/lhjj.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72336)">查看详情</a></h1></li>
+<li class="wow fadeInDown"><a href="jjjjc.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 75620)"><img src="images/zt55.jpg"></a><h1>学科建设<a href="jjjjc.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 75620)">查看详情</a></h1></li>
+<li class="wow fadeInUp"><a href="http://tw.lnu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72334)"><img src="new/images/zt1.png"></a><h1>青春辽大<a href="http://tw.lnu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72334)">查看详情</a></h1></li>
+<li class="wow fadeInDown"><a href="http://jwc.lnu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72335)"><img src="new/images/zt2.png"></a><h1>教学活动<a href="http://jwc.lnu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72335)">查看详情</a></h1></li>
+<li class="wow fadeInUp"><a href="dwjl.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 77955)"><img src="new/images/zt4.png"></a><h1>对外交流<a href="dwjl.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 77955)">查看详情</a></h1></li>
+<li class="wow fadeInDown"><a href="http://lnushfwb.lnu.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 77960)"><img src="new/images/zt3.png"></a><h1>对内合作<a href="http://lnushfwb.lnu.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 77960)">查看详情</a></h1></li>
+<!--#endeditable-->
+<!--#begineditable name="图片列表-专题横幅" action="webber.wbst.com.image.ColumnImage" layout="/system/_component/columnimage/tplimagelist.jsp" tpltype="1" contype="image" clone="" viewid="1088898" contentviewid="" tagname="图片列表-专题横幅"-->    <style>
+.zhuanlan ul .heng{width: 13.8rem;height: 2rem;margin-top: .2rem;}
+.zhuanlan ul .heng>a{   height: 100%;background-size: auto 100%!important;}
+@media (max-width: 1000px){.zhuanlan ul .heng{width: 96%;height: 1rem;}.zhuanlan ul .heng h1 a{display:block;background: url(images/more_t.png) no-repeat left center;padding-left: .68rem;}}
+@media (max-width: 600px){
+.zhuanlan ul .heng{width: 96%;margin-top: 15px;height: 160px;}
+
+.zhuanlan ul .heng>a{ background-size: 100% auto!important;}
+}
+</style>
+<li class="wow fadeInDown heng"><a href="ldxcp.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 75600)" style="background: url(new/images/zl1.jpg) bottom;"></a><h1>辽大宣传片<a href="ldxcp.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 75600)">查看详情</a></h1></li>
+<!--#endeditable-->
+</UL></DIV></DIV>
+<DIV class="gdfw wow fadeInUp">
+<DIV class="ty_tit">
+<H1>更多服务</H1></DIV>
+<UL><!--#begineditable clone="0" namechanged="0" order="15" ispublic="0" tagname="更多服务图片列表" viewid="1067166" contentviewid="" contype="" stylesysid="" layout="" action="" name="更多服务图片列表"-->    <li><a href="xyfj/xyfj.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72337)" target="_blank"><img src="new/images/f1.png">校园风景</a></li>
+
+<li><a href="http://cgzx.lnu.edu.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72338)" target="_blank"><img src="new/images/f2.png">体育设施</a></li>
+
+<li><a href="http://library.lnu.edu.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72339)" target="_blank"><img src="new/images/f3.png">图书资源</a></li>
+
+<li><a href="http://hospital.lnu.edu.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72340)" target="_blank"><img src="new/images/f4.png">健康卫生</a></li>
+
+<li><a href="http://hybg.lnu.edu.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 693691522, 72341)" target="_blank"><img src="new/images/f5.png">宿舍宾馆</a></li>
+
+<!--#endeditable--></UL></DIV>
+<DIV class="clrfix"></DIV>
+<DIV class="copy_dh clrfix wow fadeInUp">
+<DIV class="w1007"><!--#begineditable clone="0" namechanged="0" order="16" ispublic="0" tagname="版权网站导航" viewid="1067167" contentviewid="" contype="" stylesysid="" layout="" action="" name="版权网站导航"--><div class="link">
+<h1><img src="newpage/images/bottom_01.jpg">学校概况</h1>
+<ul>
+<li><a href="xxgk/xxjj.htm" target="_blank">学校简介</a></li>
+<li><a href="xxgk/xhxx.htm" target="_blank">校徽校训</a></li>
+<li><a href="xxgk/xrld.htm" target="_blank">现任领导</a></li>
+<li><a href="xxgk/lsyg.htm" target="_blank">历史沿革</a></li>
+</ul>
+</div>
+<div class="link">
+<h1><img src="newpage/images/bottom_02.jpg">机构设置</h1>
+<ul>
+<li><a href="jgsz/jxjg.htm" target="_blank">教学机构</a></li>
+<li><a href="jgsz/dqxzdw.htm" target="_blank">党群行政单位</a></li>
+<li><a href="jgsz/zsdw.htm" target="_blank">直属单位</a></li>
+<li><a href="jgsz/yjjg.htm" target="_blank">研究机构</a></li>
+<li><a href="jgsz/syjxzx.htm" target="_blank">实验教学中心</a></li>
+</ul>
+</div>
+<div class="link">
+<h1><img src="newpage/images/bottom_03.jpg">人才培养</h1>
+<ul>
+<li><a href="http://zs.lnu.edu.cn" target="_blank">本科生招生</a></li>
+<li><a href="http://grs.lnu.edu.cn/zsgz.htm" target="_blank">研究生招生</a></li>
+<li><a href="http://jwc.lnu.edu.cn/" target="_blank">教学</a></li>
+<li><a href="http://job.lnu.edu.cn" target="_blank">就业</a></li>
+</ul>
+</div>
+<div class="link">
+<h1><img src="newpage/images/bottom_04.jpg">科学研究</h1>
+<ul>
+<li><a href="http://skc.lnu.edu.cn/" target="_blank">社会科学研究</a></li>
+<li><a href="http://kjc.lnu.edu.cn/" target="_blank">科学技术研究</a></li>
+</ul>
+</div>
+<div class="link">
+<h1><img src="newpage/images/bottom_05.jpg">合作交流</h1>
+<ul>
+<li><a href="http://gjjlc.lnu.edu.cn" target="_blank">国际交流</a></li>
+<li><a href="http://lnushfwb.lnu.edu.cn/" target="_blank">国内合作</a></li>
+<li><a href="" target="_blank">合作交流</a></li>
+<li><a href="http://ie.lnu.edu.cn/" target="_blank">留学辽大</a></li>
+</ul>
+</div>
+<div class="link">
+<h1><img src="newpage/images/bottom_06.jpg">校园服务</h1>
+<ul>
+<li><a href="http://hqfzjt.lnu.edu.cn/" target="_blank">后勤服务</a></li>
+<li><a href="http://library.lnu.edu.cn/" target="_blank">图书馆</a></li>
+<li><a href="http://xxgk.lnu.edu.cn/" target="_blank">信息公开</a></li>
+<li><a href="xyfw/ldhy.htm" target="_blank">辽大黄页</a></li>
+<li><a href="http://mail.lnu.edu.cn/" target="_blank">邮箱</a></li>
+<li><a href="xyfw/xl.htm" target="_blank">校历</a></li>
+</ul>
+</div>
+<!--#endeditable--></DIV></DIV>
+<DIV class="footer">
+<DIV class="w1400">
+<DIV class="f_logo"><!--#begineditable clone="0" namechanged="0" order="17" ispublic="0" tagname="底部logo" viewid="1067211" contentviewid="" contype="" stylesysid="" layout="" action="" name="底部logo"-->    
+<img src="images/logo.png">
+
+<!--#endeditable--></DIV>
+<DIV class="f_txt"><!--#begineditable clone="0" namechanged="0" order="18" ispublic="0" tagname="版权" viewid="1067212" contentviewid="" contype="" stylesysid="" layout="" action="" name="版权"--><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>崇山校区：沈阳市皇姑区崇山中路66号 &nbsp; 邮编：110036</p><p>蒲河校区：沈阳市沈北新区道义南大街58号 &nbsp; 邮编：110136</p><p>武圣校区：辽阳市白塔区青年大街38号&nbsp; 邮编：111000</p><p>联系方式：024-62202013</p><p>中国沈阳 辽宁 大学 Copyright by 辽宁大学 2016 <a href="https://beian.miit.gov.cn" style="color:#fff;text-decoration: none;">辽ICP备05001361号</a></p><!--#endeditable--></DIV>
+<DIV class="f_txt_phone"><!--#begineditable clone="0" namechanged="0" order="19" ispublic="0" tagname="手机版权" viewid="1067200" contentviewid="" contype="" stylesysid="" layout="" action="" name="手机版权"--><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p>崇山校区：沈阳市皇姑区崇山中路66号</p> 
+<p>邮编：110036</p> 
+<p>蒲河校区：沈阳市沈北新区道义南大街58号</p> 
+<p>邮编：110136</p> 
+<p>武圣校区：辽阳市白塔区青年大街38号</p> 
+<p>邮编：111000</p> 
+<p>联系方式：024-62202013</p> 
+<p>中国沈阳 辽宁大学 <a href="https://beian.miit.gov.cn" target="_self" style="color:#fff;text-decoration: none;">辽ICP备05001361号</a></p><!--#endeditable--></DIV>
+<DIV class="ewm"><!--#begineditable clone="0" namechanged="0" order="20" ispublic="0" tagname="底部二维码" viewid="1067213" contentviewid="" contype="" stylesysid="" layout="" action="" name="底部二维码"-->    <a href="mtzh/wx.htm"><img src="images/22/08/25/74y7twp42j/3w_wx.jpg"></a>
+<a href="mtzh/wb.htm"><img src="images/weibo.jpg"></a>
+<a href="mtzh/ldgz.htm"><img src="images/ldgz2.jpg"></a>
+<a href="mtzh/xhs.htm"><img src="images/xhs.jpg"></a>
+<a href="mtzh/Bz.htm"><img src="images/blbl.jpg"></a>
+<a href="mtzh/dy.htm"><img src="images/dy.jpg"></a>
+<!--#endeditable--></DIV></DIV></DIV><script>
+ if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+            var wow = new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            });
+            wow.init();
+        };
+    </script>
+
+</BODY></HTML>

@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="大连东软信息学院 - Dalian Neusoft University of Information" />
+<meta name="description" content="" />
+<title>大连东软信息学院 - Dalian Neusoft University of Information</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link href="/skin/sites/common/css/bootstrap.min.css" type="text/css"  rel="stylesheet" >
+<link href="/skin/sites/common/css/global.css" type="text/css"  rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="/skin/school/cms/../core/header/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/school/cms/../core/header/header.css" />
+<link rel="stylesheet" type="text/css" href="/skin/school/cms/../iconfont/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/label.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/theme/theme.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/swiper.min.css">
+<!--[if lt IE 9]>
+<script src="/html5shiv.min.js"></script>
+<script src="/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/guowei.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/breakpoints.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/js/jquery.iosslider.js"></script>
+<script type="text/javascript" src="/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="/js/swiper.min.js"></script>
+<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/js/lang/core/zh-cn.js"></script>
+<script type="text/javascript" src="/js/lang/cms/zh-cn.js"></script>
+<script type="text/javascript">
+P8CONFIG.RESOURCE = '';
+var SYSTEM = 'cms',
+MODULE = '',
+ACTION = 'main',
+LABEL_URL = '/index.php/cms-main?',
+STATIC_URL = 'https://scmanager.neusoft.edu.cn',
+$this_router = P8CONFIG.URI[SYSTEM][MODULE].U_controller,
+$this_url = $this_router +'-'+ ACTION,
+SKIN = '/skin/school/cms/',
+TEMPLATE = 'school';
+mobile_status= '0',
+mobile_auto_jump='0',
+mobile_url = '/m';
+if(mobile_status=='1' && SYSTEM!='sites'){
+if(browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+if(mobile_auto_jump=='1' && mobile_url!=P8CONFIG.RESOURCE){
+var this_url = location.href,_pul=P8CONFIG.RESOURCE;
+if(this_url.indexOf(mobile_url)==-1 && this_url.indexOf('s.php')==-1 && this_url.indexOf('u.php')==-1 && this_url.indexOf('admin.php')==-1 && SYSTEM!='sites'){
+if(this_url.indexOf(P8CONFIG.RESOURCE+'/html')!=-1)_pul+='/html';
+if(P8CONFIG.RESOURCE==''){
+this_url = mobile_url.indexOf('http')==-1 ? this_url.mobile_url : mobile_url;
+}else{
+this_url = this_url.replace(_pul, mobile_url);
+}
+location.href = this_url;
+}
+}
+}
+}
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?c1a4f215832ec268233a5066ffd65454";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<div class="navbar main-nav">
+<div class="container">
+<a href="https://www.neusoft.edu.cn/" class="navbar-brand navbar-logo"><img src="/skin/school/cms/../core/header/images/logo.png"/></a>
+<div class="navbar-label hidden-xs" id="header_t"></div>
+<div class="navbar-search">
+<button id="toggle-search" class="header-button"><i class="iconfont icon-search"></i><i class="iconfont icon-close"></i><span class="navbar-toggler-txt">搜索</span></button>
+<form action="/search" target="_blank" method="get" name="form1" id="form1" class="search-form">
+<fieldset>
+<input type="search" class="keyword" id="keyword" name="word" placeholder="请输入搜索内容" />
+</fieldset>
+<button type="submit" id="button" name="button"/><i class="iconfont icon-search"></i></button>
+</form>
+</div>
+<div class="navbar-events">
+<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#globalNavbar" aria-expanded="false" aria-controls="globalNavbar">
+<i class="iconfont icon-meun"></i>
+<span class="navbar-toggler-txt">菜单</span>
+</button>
+<div class="navbar-collapse2 collapse" id="globalNavbar">
+<ul class="navbar-nav navlist">
+<li class="dropdown">
+<a href="https://www.neusoft.edu.cn/" class="nav-link" target=""> 首页</a>		
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle link on2" id="navbarDropdown" data-toggle="dropdown" data-hover="dropdown" href="/html/1008/"  aria-expanded="false" role="button" target="">概况<i class="iconfont icon-down"></i></a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="/html/1008/" target="">学校简介</a>
+<a class="dropdown-item" href="/html/1009/" target="">领导寄语</a>
+<a class="dropdown-item" href="/html/1010/" target="">学校章程</a>
+<a class="dropdown-item" href="/html/950/" target="">领导关怀</a>
+<a class="dropdown-item" href="/html/1011/" target="">理念特色</a>
+<a class="dropdown-item" href="/html/949/" target="">大学精神</a>
+<a class="dropdown-item" href="/html/951/" target="">发展历程</a>
+<a class="dropdown-item" href="/html/952/" target="">大事记</a>
+<a class="dropdown-item" href="/html/1014/" target="">学校形象片</a>
+<a class="dropdown-item" href="/html/839/" target="">校园风光</a>
+</div>		
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle link on3" id="navbarDropdown" data-toggle="dropdown" data-hover="dropdown" href="https://news.neusoft.edu.cn/"  aria-expanded="false" role="button" target="_blank">新闻<i class="iconfont icon-down"></i></a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="/html/975/" target="">头条新闻</a>
+<a class="dropdown-item" href="/html/976/" target="">交流合作</a>
+<a class="dropdown-item" href="/html/977/" target="">校园时讯</a>
+<a class="dropdown-item" href="/html/978/" target="">媒体聚焦</a>
+<a class="dropdown-item" href="/html/984/" target="">通知公告</a>
+<a class="dropdown-item" href="/html/985/" target="">活动讲座</a>
+<a class="dropdown-item" href="/html/840/" target="">DNUI人物</a>
+<a class="dropdown-item" href="/html/839/" target="">图片视界</a>
+<a class="dropdown-item" href="/html/886/" target="">视频探索</a>
+<a class="dropdown-item" href="/html/1060/" target="">媒体矩阵</a>
+</div>		
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle link on4" id="navbarDropdown" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">院系<i class="iconfont icon-down"></i></a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="http://cs.neusoft.edu.cn/" target="">计算机与软件学院</a>
+<a class="dropdown-item" href="http://ibm.neusoft.edu.cn/" target="">信息与商务管理学院</a>
+<a class="dropdown-item" href="http://ee.neusoft.edu.cn/" target="">智能与电子工程学院</a>
+<a class="dropdown-item" href="http://art.neusoft.edu.cn/" target="">数字艺术与设计学院</a>
+<a class="dropdown-item" href="http://sfl.neusoft.edu.cn/" target="">外国语学院</a>
+<a class="dropdown-item" href="http://jk.neusoft.edu.cn/" target="">健康医疗科技学院</a>
+<a class="dropdown-item" href="http://gz.neusoft.edu.cn/" target="">高等职业技术学院</a>
+<a class="dropdown-item" href="http://sovo.neusoft.edu.cn/" target="">创新创业学院</a>
+<a class="dropdown-item" href="http://base.neusoft.edu.cn/" target="">基础教学学院</a>
+<a class="dropdown-item" href="http://marx.neusoft.edu.cn/" target="">马克思主义学院</a>
+<a class="dropdown-item" href="http://sie.neusoft.edu.cn/" target="">国际教育学院</a>
+<a class="dropdown-item" href="https://jxjy.neusoft.edu.cn/" target="">继续教育学院</a>
+</div>		
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle link on5" id="navbarDropdown" data-toggle="dropdown" data-hover="dropdown" href="/html/955/"  aria-expanded="false" role="button" target="">部门<i class="iconfont icon-down"></i></a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-20/content-4558.html" target="">党委办公室/校长办公室</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-19/content-4556.html" target="">党委纪检监察部/党委教师工作部/人力资源部</a>
+<a class="dropdown-item" href="https://djsz.neusoft.edu.cn/" target="">党委党群工作部</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-17/content-4545.html" target="">党委宣传部/品牌发展部</a>
+<a class="dropdown-item" href="https://jw.neusoft.edu.cn/" target="">教务部</a>
+<a class="dropdown-item" href="https://kyb.neusoft.edu.cn/" target="">科研部</a>
+<a class="dropdown-item" href="https://xgb.neusoft.edu.cn/" target="">党委学生工作部/学生发展与服务部</a>
+<a class="dropdown-item" href="https://xtw.neusoft.edu.cn/" target="">校团委</a>
+<a class="dropdown-item" href="https://qa.neusoft.edu.cn/" target="">教学质量管理与保障部/评建工作办公室</a>
+<a class="dropdown-item" href="https://jf.neusoft.edu.cn/" target="">教师教学发展中心</a>
+<a class="dropdown-item" href="https://zs.neusoft.edu.cn/" target="">招生就业工作部（招生）</a>
+<a class="dropdown-item" href="https://career.neusoft.edu.cn/" target="">招生就业工作部（就业）</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-12/content-4543.html" target="">校友会</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-11/content-4541.html" target="">国际交流与合作部</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-10/content-4537.html" target="">财务资产部</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-09/content-4539.html" target="">后勤管理部</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-08/content-4535.html" target="">武装工作部/保卫部</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-07/content-4533.html" target="">校工会</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-06/content-4529.html" target="">网络与信息中心</a>
+<a class="dropdown-item" href="https://labform.neusoft.edu.cn/" target="">实验实训中心</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-04/content-4527.html" target="">图书馆</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/955/2023-04-15/content-5987.html" target="">研究院</a>
+</div>		
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle link on6" id="navbarDropdown" data-toggle="dropdown" data-hover="dropdown" href="/html/46/"  aria-expanded="false" role="button" target="">人才培养<i class="iconfont icon-down"></i></a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="/html/820/" target="">本专科教育</a>
+<a class="dropdown-item" href="http://sie.neusoft.edu.cn/" target="">国际教育</a>
+<a class="dropdown-item" href="/html/1012/" target="">人才培养模式</a>
+<a class="dropdown-item" href="/html/1013/" target="">实践教学</a>
+<a class="dropdown-item" href="/html/961/" target="">课程与教学</a>
+<a class="dropdown-item" href="/html/962/" target="">专业建设</a>
+</div>		
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle link on7" id="navbarDropdown" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target="">招生就业<i class="iconfont icon-down"></i></a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="http://zs.neusoft.edu.cn/" target="_blank">本专科招生</a>
+<a class="dropdown-item" href="http://sie.neusoft.edu.cn/" target="_blank">留学生招生</a>
+<a class="dropdown-item" href="https://jxjy.neusoft.edu.cn/" target="_blank">应用本科招生</a>
+<a class="dropdown-item" href="https://career.neusoft.edu.cn/" target="_blank">就业概况</a>
+<a class="dropdown-item" href="https://career.neusoft.edu.cn/" target="_blank">就业信息网</a>
+<a class="dropdown-item" href="http://archive.neusoft.edu.cn/" target="_blank">毕业生档案服务</a>
+</div>		
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle link on8" id="navbarDropdown" data-toggle="dropdown" data-hover="dropdown" href="/html/963/"  aria-expanded="false" role="button" target="">校园生活<i class="iconfont icon-down"></i></a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="http://mp.weixin.qq.com/mp/homepage?__biz=MzA4MDA1MTExMQ==&hid=7&sn=7510e67a3902ddb885876ada4f72246f&scene=18#wechat_redirect" target="">校园活动</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/1038/" target="">社团介绍</a>
+<a class="dropdown-item" href="https://www.neusoft.edu.cn/html/985/" target="">讲座·论坛</a>
+<a class="dropdown-item" href="https://720yun.com/t/1dvks7db7i7?scene_id=50427512" target="_blank">校园地图</a>
+<a class="dropdown-item" href="http://mp.weixin.qq.com/mp/homepage?__biz=MzA4MDA1MTExMQ==&hid=7&sn=7510e67a3902ddb885876ada4f72246f&scene=18#wechat_redirect" target="">最美大东软</a>
+</div>		
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="banner-section">
+<div class="banner-container">
+<div class="banner">
+<style type="text/css">
+.swiper-banner45417{position: relative;height:100%;overflow: hidden;}
+.swiper-banner45417 .swiper{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.swiper-banner45417 .swiper-slide video{position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit: cover;object-fit: cover;font-family: "object-fit: cover;";}
+.swiper-banner45417 .slide-inner{background-size:cover;background-position: center center;height: 100%;position: relative;overflow: hidden;}
+.swiper-banner45417 .slide-video{width:100%;height:100%;position:absolute;top:0;left:0;z-index:100;overflow: hidden;}
+.swiper-banner45417 .slide-video .swiper-item{width: 100%;height: 100%;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;}
+.swiper-banner45417 .slide-inner .swiper-item{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.swiper-banner45417 .slide-text .swiper-item{display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;}
+.swiper-banner45417 .slide-text h3,.swiper-banner45417 .slide-video h3{color:#edf1f2;font-size:24px;line-height:50px;margin-bottom:30px;font-weight:700;}
+.swiper-banner45417 .slide-text .swiper-item span,.swiper-banner45417 .slide-video .swiper-item span{color:#fff;font-size:18px;padding:10px 15px;background-color: rgba(0, 0, 0, 0.2);opacity:0;}
+.swiper-banner45417 .swiper-slide .text{color:#fff;position: absolute;display:block;bottom:-100%;right: 10%;top: auto;left: auto;overflow: hidden;transition: all 1s ease-out 0s;}
+.swiper-banner45417 .swiper-slide .text h4 {font-size: 18px;line-height:30px;margin: 0;float:left;}
+.swiper-banner45417 .swiper-slide .text p {font-size: 14px;height: 30px;line-height: 30px;float:left;}
+.swiper-banner45417 .swiper-slide .text span{display: inline-block;padding:0 10px;height: 30px;border-radius:5px;background: rgba(31,141,214,.55);line-height: 30px;text-align: center;color: #fff;margin-left: 20px;}
+.swiper-banner45417 .swiper-slide .text a {color: #fff;}
+.swiper-banner45417 .swiper-slide-active span{opacity:1;}
+.swiper-banner45417 .swiper-slide-active .text{display:block;bottom:15%;}
+.swiper-banner45417 .swiper-pagination{bottom:30%;text-align:left;}
+.swiper-banner45417 .swiper-pagination-bullet{width:10px;height:5px;margin:0 5px;background:#fff;border-radius:4px;opacity:1;}
+.swiper-banner45417 .swiper-pagination-bullet-active{width:50px;background:#fff;}
+.swiper-banner45417 .swiper-button-white{opacity: 0;visibility: hidden;}
+.swiper-banner45417 .swiper-button-prev{left:30px;}
+.swiper-banner45417 .swiper-button-next{right:30px;}
+.swiper-banner45417:hover .swiper-button-white{opacity:1;visibility:visible;}
+@media (max-width: 991px){
+.swiper-banner45417 .slide-text h3{font-size:20px;}
+.swiper-banner45417 .slide-text span{font-size:14px;}
+}
+@media (max-width: 767px){
+.container{width:100%;}
+.swiper-banner45417 .swiper-pagination{bottom:10%;}
+.swiper-banner45417 .swiper-slide .text{bottom:10%;}
+.swiper-banner45417 .swiper-slide .text h4{display:none;}
+}
+</style>
+<div class="swiper-banner45417">
+<div class="swiper-container swiper swiper-container-fade swiper-container-initialized swiper-container-horizontal"> 
+<div class="swiper-wrapper" style="transition-duration: 0ms;">
+<div class="swiper-slide">
+<div class="slide-inner slide-text" style="background-image: url(/attachment/cms/item/2024_10/21_10/09d912c03c4b0698.jpg);">
+<a href="https://mp.weixin.qq.com/s/YJn7dHZgejZC-kgKM05KIw" target="_blank" title="首届校友返校日校友大会隆重举行" swiper-animate-effect="fadeInUp" swiper-animate-duration="2.5s" swiper-animate-delay="1.5s"  class="swiper-item"></a>
+<div class="text">
+<h4>首届校友返校日校友大会隆重举行</h4>
+<p><span><a href="/html/1070/">往期回顾>></a></span></p>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="slide-inner slide-text" style="background-image: url(/attachment/cms/item/2024_10/09_10/298c9ac00dca3ea2.jpg);">
+<a href="https://www.neusoft.edu.cn/html/975/2024-09-30/content-6477.html" target="_blank" title="学校召开重点工作部署会议" swiper-animate-effect="fadeInUp" swiper-animate-duration="2.5s" swiper-animate-delay="1.5s"  class="swiper-item"></a>
+<div class="text">
+<h4>学校召开重点工作部署会议</h4>
+<p><span><a href="/html/1070/">往期回顾>></a></span></p>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="slide-inner slide-text" style="background-image: url(/attachment/cms/item/2024_10/01_21/4189566d63592260.jpg);">
+<a href="https://www.neusoft.edu.cn/" target="_blank" title="喜迎国庆" swiper-animate-effect="fadeInUp" swiper-animate-duration="2.5s" swiper-animate-delay="1.5s"  class="swiper-item"></a>
+<div class="text">
+<h4>喜迎国庆</h4>
+<p><span><a href="/html/1070/">往期回顾>></a></span></p>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="slide-inner slide-text" style="background-image: url(/attachment/cms/item/2024_09/20_14/d581a176984f1a51.jpg);">
+<a href="https://mp.weixin.qq.com/s/Rydw0wSjte1jljoFAXEzhA" target="_blank" title="邀请函 | 首届校友返校日 欢迎全球校友回家" swiper-animate-effect="fadeInUp" swiper-animate-duration="2.5s" swiper-animate-delay="1.5s"  class="swiper-item"></a>
+<div class="text">
+<h4>邀请函 | 首届校友返校日 欢迎全球校友回家</h4>
+<p><span><a href="/html/1070/">往期回顾>></a></span></p>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="slide-inner slide-text" style="background-image: url(/attachment/cms/item/2024_09/12_09/def8bdec34683207.jpg);">
+<a href="https://mp.weixin.qq.com/s/L9QDwEHHwTSbvLYAhUPaWA" target="_blank" title="我校名誉校长温涛教授受到习近平总书记亲切接见" swiper-animate-effect="fadeInUp" swiper-animate-duration="2.5s" swiper-animate-delay="1.5s"  class="swiper-item"></a>
+<div class="text">
+<h4>我校名誉校长温涛教授受到习近平总书记亲切接见</h4>
+<p><span><a href="/html/1070/">往期回顾>></a></span></p>
+</div>
+</div>
+</div>
+</div> 
+<div class="swiper-button-white swiper-button-next"></div>
+<div class="swiper-button-white swiper-button-prev"></div>
+</div>
+</div>
+<script type="text/javascript">
+var swiper = new Swiper('.swiper-banner45417 .swiper-container', {
+effect : 'fade',
+slidesPerView: 1,
+parallax : true,
+paginationClickable: true,
+loop:true,
+autoplay: {
+delay: 7000,
+},
+navigation: {
+nextEl: '.swiper-button-next',
+prevEl: '.swiper-button-prev',
+},
+autoplayDisableOnInteraction: true,
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+},
+});
+</script></div>
+<div class="navigation">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8 hidden-sm hidden-xs static">
+<div class="nav-box clearfix">
+<div class="item">
+<a href="https://www.neusoft.edu.cn/" target=""> 首页</a>
+</div>
+<div class="item">
+<a href="/html/1008/" target="">概况</a>
+<div class="dropdown">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<div class="dropdown-frame"><img src="/attachment/core/2022_05/12_10/28eede2d46991872.jpg"/></div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="dropdown-summary"><p>大连东软信息学院是经国家教育部批准设立，由东软出资举办的一所以工学为主，工学、管理学、艺术学、文学、医学等学科相互支撑、协调发展的民办普通高等院校...</p></div>
+</div>
+<div class="col-lg-5 col-md-5">
+<ul class="dropdown-links dropdown-links2">
+<li><a href="/html/1008/" target="">学校简介</a></li>
+<li><a href="/html/1009/" target="">领导寄语</a></li>
+<li><a href="/html/1010/" target="">学校章程</a></li>
+<li><a href="/html/950/" target="">领导关怀</a></li>
+<li><a href="/html/1011/" target="">理念特色</a></li>
+<li><a href="/html/949/" target="">大学精神</a></li>
+<li><a href="/html/951/" target="">发展历程</a></li>
+<li><a href="/html/952/" target="">大事记</a></li>
+<li><a href="/html/1014/" target="">学校形象片</a></li>
+<li><a href="/html/839/" target="">校园风光</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<a href="https://news.neusoft.edu.cn/" target="_blank">新闻</a>
+<div class="dropdown">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<div class="dropdown-frame"><img src="/attachment/core/2024_03/25_09/088cb6511ba49465.jpg"/></div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="dropdown-summary"><p></p></div>
+</div>
+<div class="col-lg-5 col-md-5">
+<ul class="dropdown-links dropdown-links3">
+<li><a href="/html/975/" target="">头条新闻</a></li>
+<li><a href="/html/976/" target="">交流合作</a></li>
+<li><a href="/html/977/" target="">校园时讯</a></li>
+<li><a href="/html/978/" target="">媒体聚焦</a></li>
+<li><a href="/html/984/" target="">通知公告</a></li>
+<li><a href="/html/985/" target="">活动讲座</a></li>
+<li><a href="/html/840/" target="">DNUI人物</a></li>
+<li><a href="/html/839/" target="">图片视界</a></li>
+<li><a href="/html/886/" target="">视频探索</a></li>
+<li><a href="/html/1060/" target="">媒体矩阵</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<a href="/html/820/" target="">院系</a>
+<div class="dropdown">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<div class="dropdown-frame"><img src="https://scfile.neusoft.edu.cn/uploadfile/image/20230310181001365001.jpg"/></div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="dropdown-summary"><p>学校基于中国IT产业的持续快速发展，紧密把握市场机遇、瞄准产业发展前沿，聚焦“IT+数媒+健康医疗科技”领域，构建了计算机与软件类、智能与电子类、数字媒体与设计类、信息与商务管理类、健康医疗科技类五大优势专业集群……</p></div>
+</div>
+<div class="col-lg-5 col-md-5">
+<ul class="dropdown-links dropdown-links4">
+<li><a href="http://cs.neusoft.edu.cn/" target="">计算机与软件学院</a></li>
+<li><a href="http://ibm.neusoft.edu.cn/" target="">信息与商务管理学院</a></li>
+<li><a href="http://ee.neusoft.edu.cn/" target="">智能与电子工程学院</a></li>
+<li><a href="http://art.neusoft.edu.cn/" target="">数字艺术与设计学院</a></li>
+<li><a href="http://sfl.neusoft.edu.cn/" target="">外国语学院</a></li>
+<li><a href="http://jk.neusoft.edu.cn/" target="">健康医疗科技学院</a></li>
+<li><a href="http://gz.neusoft.edu.cn/" target="">高等职业技术学院</a></li>
+<li><a href="http://sovo.neusoft.edu.cn/" target="">创新创业学院</a></li>
+<li><a href="http://base.neusoft.edu.cn/" target="">基础教学学院</a></li>
+<li><a href="http://marx.neusoft.edu.cn/" target="">马克思主义学院</a></li>
+<li><a href="http://sie.neusoft.edu.cn/" target="">国际教育学院</a></li>
+<li><a href="https://jxjy.neusoft.edu.cn/" target="">继续教育学院</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<a href="/html/955/" target="">部门</a>
+<div class="dropdown">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<div class="dropdown-frame"><img src="/attachment/core/2024_03/27_08/edfc73336645fe5f.jpg"/></div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="dropdown-summary"><p>面向未来，学校将始终紧密围绕立德树人根本任务，主动融入产业转型升级和创新驱动发展，以更加开放的视野整合社会资源，以持续的改革创新提升办学能力，提高人才培养质量，早日建设成为有特色高水平创业型应用技术大学，为大连及东北转型发展做出更大的贡献。</p></div>
+</div>
+<div class="col-lg-5 col-md-5">
+<ul class="dropdown-links dropdown-links5">
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-20/content-4558.html" target="">党委办公室/校长办公室</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-19/content-4556.html" target="">党委纪检监察部/党委教师工作部/人力资源部</a></li>
+<li><a href="https://djsz.neusoft.edu.cn/" target="">党委党群工作部</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-17/content-4545.html" target="">党委宣传部/品牌发展部</a></li>
+<li><a href="https://jw.neusoft.edu.cn/" target="">教务部</a></li>
+<li><a href="https://kyb.neusoft.edu.cn/" target="">科研部</a></li>
+<li><a href="https://xgb.neusoft.edu.cn/" target="">党委学生工作部/学生发展与服务部</a></li>
+<li><a href="https://xtw.neusoft.edu.cn/" target="">校团委</a></li>
+<li><a href="https://qa.neusoft.edu.cn/" target="">教学质量管理与保障部/评建工作办公室</a></li>
+<li><a href="https://jf.neusoft.edu.cn/" target="">教师教学发展中心</a></li>
+<li><a href="https://zs.neusoft.edu.cn/" target="">招生就业工作部（招生）</a></li>
+<li><a href="https://career.neusoft.edu.cn/" target="">招生就业工作部（就业）</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-12/content-4543.html" target="">校友会</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-11/content-4541.html" target="">国际交流与合作部</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-10/content-4537.html" target="">财务资产部</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-09/content-4539.html" target="">后勤管理部</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-08/content-4535.html" target="">武装工作部/保卫部</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-07/content-4533.html" target="">校工会</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-06/content-4529.html" target="">网络与信息中心</a></li>
+<li><a href="https://labform.neusoft.edu.cn/" target="">实验实训中心</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-04/content-4527.html" target="">图书馆</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/955/2023-04-15/content-5987.html" target="">研究院</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<a href="/html/46/" target="">人才培养</a>
+<div class="dropdown">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<div class="dropdown-frame"><img src="http://scfile.neusoft.edu.cn/uploadfile/image/20230313144518944001.jpg"/></div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="dropdown-summary"><p>学校以“教育创造学生价值”为理念，紧密依托东软的IT服务优势和大连高新区的产业优势，构建了产教融合、面向应用的办学体制，形成了校企合作、协同共赢的运行机制，创造性地提出并在全校范围实施了TOPCARES一体化人才培养模式...</p></div>
+</div>
+<div class="col-lg-5 col-md-5">
+<ul class="dropdown-links dropdown-links6">
+<li><a href="/html/820/" target="">本专科教育</a></li>
+<li><a href="http://sie.neusoft.edu.cn/" target="">国际教育</a></li>
+<li><a href="/html/1012/" target="">人才培养模式</a></li>
+<li><a href="/html/1013/" target="">实践教学</a></li>
+<li><a href="/html/961/" target="">课程与教学</a></li>
+<li><a href="/html/962/" target="">专业建设</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<a href="/html/45/" target="">招生就业</a>
+<div class="dropdown">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<div class="dropdown-frame"><img src="https://scfile.neusoft.edu.cn/uploadfile/image/20230310181257626001.jpg"/></div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="dropdown-summary"><p>设置了计算机与软件学院、信息与商务管理学院、智能与电子工程学院、数字艺术与设计学院、外国语学院、健康医疗科技学院、高等职业技术学院、国际教育学院、继续教育学院等14个教学机构，36个本科专业，7个专科专业...</p></div>
+</div>
+<div class="col-lg-5 col-md-5">
+<ul class="dropdown-links dropdown-links7">
+<li><a href="http://zs.neusoft.edu.cn/" target="_blank">本专科招生</a></li>
+<li><a href="http://sie.neusoft.edu.cn/" target="_blank">留学生招生</a></li>
+<li><a href="https://jxjy.neusoft.edu.cn/" target="_blank">应用本科招生</a></li>
+<li><a href="https://career.neusoft.edu.cn/" target="_blank">就业概况</a></li>
+<li><a href="https://career.neusoft.edu.cn/" target="_blank">就业信息网</a></li>
+<li><a href="http://archive.neusoft.edu.cn/" target="_blank">毕业生档案服务</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<a href="/html/963/" target="">校园生活</a>
+<div class="dropdown">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<div class="dropdown-frame"><img src="https://scfile.neusoft.edu.cn/uploadfile/image/20230310181151871001.jpg"/></div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="dropdown-summary"><p>我校目前分为人文政治类、体育竞技类、文化艺术类、服务实践类、学术科技类五大类别，为广大学生提供了丰富多彩的展示舞台。</p></div>
+</div>
+<div class="col-lg-5 col-md-5">
+<ul class="dropdown-links dropdown-links8">
+<li><a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzA4MDA1MTExMQ==&hid=7&sn=7510e67a3902ddb885876ada4f72246f&scene=18#wechat_redirect" target="">校园活动</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/1038/" target="">社团介绍</a></li>
+<li><a href="https://www.neusoft.edu.cn/html/985/" target="">讲座·论坛</a></li>
+<li><a href="https://720yun.com/t/1dvks7db7i7?scene_id=50427512" target="_blank">校园地图</a></li>
+<li><a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzA4MDA1MTExMQ==&hid=7&sn=7510e67a3902ddb885876ada4f72246f&scene=18#wechat_redirect" target="">最美大东软</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-xs-12">
+<div class="follow clearfix">
+<div class="follow-box">
+<a href="http://weixin.qq.com/r/cUwFHU-EhBL7rQt_9xlj" class="wx"><i class="iconfont icon-wechat"></i></a>
+<div class="code">
+<img width="100" height="100" border="none" alt="" src="/attachment/core/label/2021_05/26_20/8d2402f5539bfc44.png" />
+</div>
+</div>
+<div class="follow-box">
+<a href="https://weibo.com/neusoftii" class="wb"><i class="iconfont icon-weibo"></i></a>
+<div class="code">
+<img width="100" height="100" border="none" alt="" src="/attachment/core/label/2022_05/17_11/dda9fd0eb2731d42.png" />
+</div>
+</div>
+<div class="follow-box">
+<a href="https://www.douyin.com/user/MS4wLjABAAAAlfLYpv-NV2-p9G3SpSeJU8ZqaEuAFMXceYAhj27prog" class="dy"><i class="iconfont icon-douyin"></i></a>
+<div class="code">
+<a href="https://www.douyin.com/user/MS4wLjABAAAAlfLYpv-NV2-p9G3SpSeJU8ZqaEuAFMXceYAhj27prog" target="_blank" title="" style="text-decoration:none;"><img width="100" height="100" border="none" alt="" src="/attachment/core/label/2022_05/17_11/16e696790ee1432c.png" /></a>
+</div>
+</div>
+<div class="follow-box">
+<a href="https://www.toutiao.com/c/user/token/MS4wLjABAAAA58DcD0URkcNqsnCONgIeiNcjgEEGEgDfTi8rkSIxTXE/?source=m_redirect&wid=1661151546875" class="toutiao"><i class="iconfont icon-toutiao"></i></a>
+<div class="code">
+<a href="https://www.toutiao.com/c/user/token/MS4wLjABAAAA58DcD0URkcNqsnCONgIeiNcjgEEGEgDfTi8rkSIxTXE/?source=m_redirect&wid=1661151546875" target="_blank" title="" style="text-decoration:none;"><img width="100" height="100" border="none" alt="" src="/attachment/core/label/2022_05/17_11/bbb433c0f47685f0.png" /></a>
+</div>
+</div>
+</div>
+<div class="toplink">
+<a href="https://www.neusoft.edu.cn/html/1060/" target="_blank">融媒矩阵</a>
+<a href="http://zs.neusoft.edu.cn/" target="_blank">招生信息网</a>
+<a href="https://english.neusoft.edu.cn/" target="_blank">English Version</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed-mask"></div>
+<script type="text/javascript">
+var USERNAME = get_username();
+$(document).ready(function(){
+//**show_edit**//
+init_labelshows('header_t');
+})
+</script>
+<script type="text/javascript">
+(function($) {
+$('#toggle-search').click(function() {
+$('.search-form, #toggle-search').toggleClass('open');
+$('.navbar-events .navbar-collapse2').removeClass('in')
+return false;
+});
+$('#search-form input[type=submit]').click(function() {
+$('.search-form, #toggle-search').toggleClass('open');
+return true;
+});
+$(document).click(function(event) {
+var target = $(event.target);
+if (!target.is('#toggle-search') && !target.closest('.search-form').size()) {
+$('.search-form, #toggle-search').removeClass('open');
+}
+});
+})(jQuery);
+</script>
+<script type="text/javascript">
+$(window).bind('mousewheel', function(event, delta, deltaX, deltaY) {
+var scrollTop = $(window).scrollTop();
+if (scrollTop == 0 && $('.fixed-mask').hasClass('fixed') && deltaY >= 0) {
+$('.fixed-mask').removeClass('fixed');
+$('body').removeClass('fixedok');
+setTimeout(function() {
+$(window).scrollTop(0);
+$('body').removeClass('fixed');
+}, 300);
+}
+if (!$('.fixed-mask').hasClass('fixed') && deltaY < 0) {
+$('.fixed-mask').addClass('fixed');
+$('body').addClass('fixed');
+setTimeout(function() {
+$(window).scrollTop(5);
+$('body').removeClass('fixed');
+$(window).scrollTop(0);
+}, 300);            
+setTimeout(function() { 
+$('body').addClass('fixedok');
+}, 600);
+}
+});
+</script>
+<div id="content-full" class="content-full">
+<link rel="stylesheet" type="text/css" href="/skin/school/cms/index/index.css" />
+<link rel="stylesheet" type="text/css" href="/skin/school/cms/index/animate.css" />
+<script type="text/javascript" src="/js/wow.min.js"></script>
+<script src="/js/swiper.animate.min.js"></script>
+<div class="section news">
+<div class="container">
+<div class="news-head clearfix wow fadeInDown animated clearfix">
+<h1>新闻<span class="subtitle">News</span></h1>
+<div class="more">
+<a href="/html/831/" target="_blank">更多>></a></div>
+</div>
+<div class="news-list clearfix wow fadeInDown animated clearfix">
+<style type="text/css">
+.swiper-control,.swiper-control .row,#swiper-left-container43016 .row{margin:0;}
+#swiper-left-container43016,#swiper-right-container43016{margin:0;}
+#swiper-left-container43016 .col{padding:0;}
+.swiper-control .swiper-slide .inner{position:relative;padding-bottom:70%;overflow:hidden;}
+.swiper-control .swiper-slide .pic{position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+.swiper-control .swiper-slide .img{position:absolute;left:0;top:0;width:100%;height:100%;background-position:center center;background-repeat:no-repeat;background-size:cover;transition:all 0.3s ease-out 0s;}
+.swiper-control .swiper-slide .pic .mask{width:100%;height:100%;position:absolute;top:0;left:0;background-color: rgba(0,0,0,0.5);}
+.swiper-control .swiper-slide .text{padding:0 15% 0 8%;}
+.swiper-control .swiper-slide .text h3{font-size:20px;height:58px;line-height:28px;transition: all .3s;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;text-overflow: ellipsis;}
+.swiper-control .swiper-slide .text .date{color:#101010;font-size:16px;line-height:24px;margin:5px 0;letter-spacing:2px;}
+.swiper-control .swiper-slide .text p{color:#101010;height:100px;line-height:25px;margin-bottom:50px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;overflow: hidden;text-overflow: ellipsis;}
+.swiper-control .swiper-slide .text span{display:block;color:#101010;font-size:16px;padding-left:38px;line-height:28px;background: url(/skin/label/theme/arr03.png) left center no-repeat;}
+.swiper-control .swiper-slide .inner h3{width:100%;color:#fff;text-align:center;width:100%;line-height:60px;padding:0 8px;position:absolute;bottom:0;left:0;background: linear-gradient(to top,rgba(0,0,0,0.9),rgba(0,0,0,0));white-space:nowrap;overflow: hidden;text-overflow:ellipsis;}
+.swiper-control .swiper-button-prev,.swiper-control .swiper-button-next{width:54px;height:54px;background-color: rgba(255,255,255,0.65);border-radius:50%;background-size: 40px 40px;opacity:0;}
+#swiper-left-container43016 .swiper-button-prev{background-image: url(/skin/label/theme/prev2.png);left:20px;}
+#swiper-left-container43016 .swiper-button-next,#swiper-right-container43016 .swiper-button-next{background-image: url(/skin/label/theme/next2.png);right:120px;}
+#swiper-left-container43016 .swiper-button-next{display:none;}
+#swiper-left-container43016:hover .swiper-button-prev,#swiper-right-container43016:hover .swiper-button-next{opacity:1;}
+@media (max-width: 991px){
+.swiper-control .swiper-slide .text{padding:0;}
+.swiper-control .swiper-slide .text h3{font-size:18px;margin-top:15px;}
+.swiper-control .swiper-slide .text span{font-size:14px;float:right;padding-left:0;padding-right:38px;background-position:right center;}
+#swiper-left-container43016:hover .swiper-button-prev{top:20%;}
+#swiper-left-container43016:hover .swiper-button-next{opacity:1;display:block;right:20px;top:20%;}
+}
+</style>
+<div class="swiper-control row">
+<div class="swiper-container col-lg-8 col-md-8 col-sm-12" id="swiper-left-container43016">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/25_09/5145d096fd5dfd86.jpg.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-10-25/content-6526.html" target="_blank" title="我校2024本升硕国际班开班">
+<h3>我校2024本升硕国际班开班</h3>
+<div class="date">2024-10-25</div>
+<p>近日，我校2024国际班开班仪式在博川校区图书馆509会议室举行。副校长张婉出席仪式。国际教育学院院长荣旖丹主持仪式。</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/23_10/1d8c100ea080e478.png.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-10-23/content-6521.html" target="_blank" title="我校斩获2024一带一路暨金砖国家技能发展与技术创新大赛之集成电路制造工程赛国家级二等奖">
+<h3>我校斩获2024一带一路暨金砖国家技能发展与技术创新大赛之集成电路制造工程</h3>
+<div class="date">2024-10-23</div>
+<p>10月12日，由金砖国家工商理事会中方理事会（BRICS BC）、“一带一路”暨金砖国家技能发展国际联盟（IASDB）、教育部中外人文交流中心等单位联合主办的2024一带一路暨金砖国家技能发展与技术创</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/23_09/cdbcafc608e30002.jpeg.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-10-23/content-6520.html" target="_blank" title="学校组织开展审核评估校级督查工作">
+<h3>学校组织开展审核评估校级督查工作</h3>
+<div class="date">2024-10-23</div>
+<p>为全面、准确掌握学校整体自评自建情况和审核评估准备情况，查找目前工作中存在的问题，进一步促进我校本科教育教学工作的规范化、内涵化建设，近日，学校对教学单位组织开展了本科教育教学审核</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/21_08/dcd968d08cc07a8f.jpg.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-10-21/content-6498.html" target="_blank" title="时光印记･共创未来 | 首届校友返校日校友大会隆重举行">
+<h3>时光印记･共创未来 | 首届校友返校日校友大会隆重举行</h3>
+<div class="date">2024-10-21</div>
+<p>金秋十月，秋色正浓。大连东软信息学院与世界各地的校友一道期待着一场久别重逢。校友们从五湖四海奔赴而来，心怀对母校的真挚情感，重返这个承载青春与梦想的校园。大东软精心筹备，以饱满的热</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/23_09/512431463bd8dc46.jpg.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-10-17/content-6519.html" target="_blank" title="我校在第二十八届辽宁省教育教学信息化交流活动中获奖11项">
+<h3>我校在第二十八届辽宁省教育教学信息化交流活动中获奖11项</h3>
+<div class="date">2024-10-17</div>
+<p>10月11日，辽宁省教育厅公布了第二十八届辽宁省教育教学信息化交流活动结果，我校推荐参赛的11件作品全部获奖，其中省级一等奖6项、二等奖5项。</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/12_09/fdb63ff2d09869ff.png.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-10-12/content-6493.html" target="_blank" title="云南省中高职院校口腔医学专业教师企业实践项目在我校顺利开班">
+<h3>云南省中高职院校口腔医学专业教师企业实践项目在我校顺利开班</h3>
+<div class="date">2024-10-12</div>
+<p>10月9日上午，云南省中高职院校口腔医学专业教师企业实践项目在我校B8-301报告厅拉开帷幕。云南大学教育学院副院长王雯、我校副校长张婉出席仪式。我校继续教育学院院长毕晓明、云南大学教育学</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/23_09/9ff7f0c439390a38.jpg.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-10-11/content-6509.html" target="_blank" title="我校“东软集成电路创新创业教育实践平台”获批辽宁省2024省级创新创业教育实践平台">
+<h3>我校“东软集成电路创新创业教育实践平台”获批辽宁省2024省级创新创业教育</h3>
+<div class="date">2024-10-11</div>
+<p>近日，辽宁省教育厅公布了2024省级创新创业教育实践平台名单，我校“东软集成电路创新创业教育实践平台”成功获批。</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/10_09/e235f654b1080626.jpg.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-10-10/content-6488.html" target="_blank" title="我校“未来机器人产业学院”成功获批省级现代产业学院">
+<h3>我校“未来机器人产业学院”成功获批省级现代产业学院</h3>
+<div class="date">2024-10-10</div>
+<p>近日，辽宁省教育厅下发了《关于公布2024年省级现代产业学院名单的通知》（辽教通〔2024〕393号），我校“未来机器人产业学院”成功获批2024年省级现代产业学院。</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/08_10/6dfdf7f996e3bd14.jpeg.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-10-08/content-6481.html" target="_blank" title="我校师生在第十二届全国高校数字艺术设计大赛中斩获国奖11项！">
+<h3>我校师生在第十二届全国高校数字艺术设计大赛中斩获国奖11项！</h3>
+<div class="date">2024-10-08</div>
+<p>近日，第十二届未来设计师·全国高校数字艺术设计大赛获奖名单公布，我校数字艺术与设计学院师生斩获国家级一等奖2项、二等奖3项、三等奖6项（学生组5项，教师组1项），荣获省级一等奖5项（学生</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12 col-lg-6">
+<div class="inner">
+<div class="pic"><div class="img" style="background-image: url(/attachment/cms/item/2024_10/01_08/95256f13b7617497.png.thumb.jpg);"></div></div>
+</div>
+</div>
+<div class="col col-12 col-lg-6">
+<div class="text">
+<a href="/html/975/2024-09-30/content-6477.html" target="_blank" title="我校召开全体基层以上干部大会">
+<h3>我校召开全体基层以上干部大会</h3>
+<div class="date">2024-09-30</div>
+<p>9月29日下午，学校召开全体基层以上干部大会。会上，校长郭权带领全体干部，认真学习东软学历教育2024年度工作会议精神，并对学校重点工作进行安排部署。会议由学校副校长申华主持，全体校领导</p>
+<span class="chak">查看详细新闻</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+<div class="swiper-container col-lg-4 col-md-4 hidden-sm hidden-xs" id="swiper-right-container43016">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/23_10/1d8c100ea080e478.png.thumb.jpg);"></div>
+<h3>我校斩获2024一带一路暨金砖国家技能发展与技术创新大赛之集成电路制造工程</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/23_09/cdbcafc608e30002.jpeg.thumb.jpg);"></div>
+<h3>学校组织开展审核评估校级督查工作</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/21_08/dcd968d08cc07a8f.jpg.thumb.jpg);"></div>
+<h3>时光印记･共创未来 | 首届校友返校日校友大会隆重举行</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/23_09/512431463bd8dc46.jpg.thumb.jpg);"></div>
+<h3>我校在第二十八届辽宁省教育教学信息化交流活动中获奖11项</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/12_09/fdb63ff2d09869ff.png.thumb.jpg);"></div>
+<h3>云南省中高职院校口腔医学专业教师企业实践项目在我校顺利开班</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/23_09/9ff7f0c439390a38.jpg.thumb.jpg);"></div>
+<h3>我校“东软集成电路创新创业教育实践平台”获批辽宁省2024省级创新创业教育</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/10_09/e235f654b1080626.jpg.thumb.jpg);"></div>
+<h3>我校“未来机器人产业学院”成功获批省级现代产业学院</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/08_10/6dfdf7f996e3bd14.jpeg.thumb.jpg);"></div>
+<h3>我校师生在第十二届全国高校数字艺术设计大赛中斩获国奖11项！</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/01_08/95256f13b7617497.png.thumb.jpg);"></div>
+<h3>我校召开全体基层以上干部大会</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="row">
+<div class="col col-12">
+<div class="inner">
+<div class="pic">
+<div class="img" style="background-image: url(/attachment/cms/item/2024_10/25_09/5145d096fd5dfd86.jpg.thumb.jpg);"></div>
+<h3>我校2024本升硕国际班开班</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-button-next"></div>
+</div>
+</div>
+<script type="text/javascript"> 
+var Swiper1 = new Swiper('#swiper-left-container43016',{
+navigation: {
+nextEl: '.swiper-button-next',
+prevEl: '.swiper-button-prev',
+hideOnClick: true,
+hiddenClass: 'my-button-hidden',
+}
+})
+var Swiper2 = new Swiper('#swiper-right-container43016',{
+controller: {
+control: Swiper1,
+},
+navigation: {
+nextEl: '.swiper-button-next',
+hideOnClick: true,
+hiddenClass: 'my-button-hidden',
+}
+})
+Swiper1.controller.control = Swiper2;
+</script>
+</div>
+</div>
+</div>
+<div class="section notice">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeInUp">
+<div class="media-focus mb20">
+<style type="text/css">
+.swiper5-title45216{position:relative;}
+.swiper5-title45216 .category-name{color:#fff;font-size:20px;padding:8px 30px;background-color:#00c7ff;font-weight:bold;position:absolute;top:12px;left:-8px;z-index:10;}
+.swiper5-title45216 .item{display:block;height:230px;position:relative;background-color:#ffffff;background-size:cover;background-position:center center;background-repeat:no-repeat;}
+.swiper5-title45216 .item a{width:100%;height:100%;position:relative;display:block;overflow:hidden;}
+.swiper5-title45216 .item .text{width:100%;padding:10px;position:absolute;bottom:0;left:0;background: linear-gradient(to top,rgba(0,0,0,0.9),rgba(0,0,0,0));}
+.swiper5-title45216 .item h4{color:#fff;line-height:30px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;text-overflow: ellipsis;}
+@media (max-width: 768px){
+
+}
+@media (max-width: 480px){
+
+}
+</style>
+<div class="swiper5-title45216">
+<div class="category-name">媒体聚焦</div>
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="item" style="background-image: url(/attachment/core/label/2024_09/02_15/a6a77e3b5912523c.jpg);vertical-align: middle;">
+<a href="https://wap.lnrbxmt.com/news_details.html?from=androidapp&id=416689" target="_blank" title="">
+<div class="text"><h4>大连东软信息学院：以教育家精神涵养民办高校的鲜亮底色</h4></div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var mySwiper = new Swiper ('.swiper5-title45216 .swiper-container',{
+autoplay:true,
+slidesPerView: 1,
+spaceBetween: 40,
+})  
+</script>
+</div>
+</div>
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 wow fadeInUp">
+<style type="text/css">
+.swiper2-title45212{position:relative;}
+.swiper2-title45212 .item{display:block;padding:20px 0;height:100%;position:relative;background-color:#ffffff;}
+.swiper2-title45212 .item .date{width:73px;height:74px;float:left;text-align:center;border-left:3px solid #00c7ff;position: relative;}
+.swiper2-title45212 .item .date span{color:#00c7ff;display:block;}
+.swiper2-title45212 .item .date  .d{font-size:24px;line-height:41px;}
+.swiper2-title45212 .item .date  .y{font-size:14px;line-height:20px;}
+.swiper2-title45212 .item .text{margin-left:73px;padding:0 10px;}
+.swiper2-title45212 .item .text img{width:70px;height:36px;border:1px solid #c1c1c1;}
+.swiper2-title45212 .item h3{font-size:18px;margin-top:15px;height:54px;line-height:27px;margin-bottom:10px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;text-overflow: ellipsis;}
+.swiper2-title45212 .item p{color:#101010;height:75px;line-height:25px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;overflow: hidden;text-overflow: ellipsis;}
+.swiper2-title45212 .item .mask{width:100%;height:100%;display:none;position:absolute;top:0;left:0;background-size:cover;background-position:center center;background-repeat:no-repeat;}
+.swiper2-title45212 .item .mask a{width:100%;height:100%;position:relative;display:block;overflow:hidden;}
+.swiper2-title45212 .item h4{width:100%;color:#fff;text-align:center;width:100%;position:absolute;bottom:20px;left:0;white-space:nowrap;overflow: hidden;text-overflow:ellipsis;}
+.swiper2-title45212 .swiper-slide-active .item .mask,.swiper2-title45212 .swiper-slide:hover .item .mask{display:block;}
+@media (max-width: 768px){
+
+}
+@media (max-width: 480px){
+
+}
+</style>
+<div class="swiper2-title45212">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="item item1">
+<div class="date">
+<span class="d">22</span>
+<span class="y">2024.10</span>
+</div>
+<div class="text">
+<img src="/attachment/cms/item/2024_10/22_16/86edd975be4adff5.png">
+<a href="/html/978/2024-10-22/content-6508.html" target="_blank" title="【大连天健网】风雨无阻，温暖无限！ 大连东软信息学院举办首届校友返校日">
+<h3>【大连天健网】风雨无阻，温暖无限！ 大连东软信息学院举办首届</h3>
+<p>一声真情呼唤，跨越山海重逢。香港、云南、广东、广西、四川、黑龙江、内蒙古、甘肃、上海、北京……全国各地的大东软校友回到母</p>
+</a>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="item item2">
+<div class="date">
+<span class="d">22</span>
+<span class="y">2024.10</span>
+</div>
+<div class="text">
+<img src="/attachment/cms/item/2024_10/22_16/802cfdce3e60d60b.png">
+<a href="/html/978/2024-10-22/content-6507.html" target="_blank" title="【网易】风雨无阻，温暖无限！大连东软信息学院举办首届校友返校日">
+<h3>【网易】风雨无阻，温暖无限！大连东软信息学院举办首届校友返校</h3>
+<p>一声真情呼唤，跨越山海重逢。香港、云南、广东、广西、四川、黑龙江、内蒙古、甘肃、上海、北京……全国各地的大东软校友，风雨</p>
+</a>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="item item3">
+<div class="date">
+<span class="d">11</span>
+<span class="y">2024.10</span>
+</div>
+<div class="text">
+<img src="/attachment/cms/item/2024_10/11_17/2ebe142361ae6077.png">
+<a href="/html/978/2024-10-11/content-6489.html" target="_blank" title="【央广网】大连东软信息学院“未来机器人产业学院”获批省级现代产业学院">
+<h3>【央广网】大连东软信息学院“未来机器人产业学院”获批省级现代</h3>
+<p>近日，辽宁省教育厅下发了《关于公布2024年省级现代产业学院名单的通知》（辽教通〔2024〕393号），大连东软信息学院“未来机器</p>
+</a>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="item item4">
+<div class="date">
+<span class="d">08</span>
+<span class="y">2024.10</span>
+</div>
+<div class="text">
+<img src="/attachment/cms/item/2024_10/08_10/012abf5141ab6fe6.png">
+<a href="/html/978/2024-10-08/content-6482.html" target="_blank" title="【大连天健网】为孩子们打开人工智能新世界大门">
+<h3>【大连天健网】为孩子们打开人工智能新世界大门</h3>
+<p>​本报讯（大连新闻传媒集团记者谢小芳）近日，大连市中山区桃源小学科技辅导员汤梅带领30多名小学生，走进大连东软信息学院的新</p>
+</a>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="item item5">
+<div class="date">
+<span class="d">05</span>
+<span class="y">2024.10</span>
+</div>
+<div class="text">
+<img src="/attachment/cms/item/2024_10/08_09/a0dafaa07da3df0d.png">
+<a href="/html/978/2024-10-05/content-6478.html" target="_blank" title="【大连日报】为孩子们打开人工智能新世界大门">
+<h3>【大连日报】为孩子们打开人工智能新世界大门</h3>
+<p>本报讯（大连新闻传媒集团记者谢小芳）近日，大连市中山区桃源小学科技辅导员汤梅带领30多名小学生，走进大连东软信息学院的新媒</p>
+</a>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="item item6">
+<div class="date">
+<span class="d">23</span>
+<span class="y">2024.09</span>
+</div>
+<div class="text">
+<img src="/attachment/cms/item/2024_09/23_15/5b885ebbca3ec331.png.thumb.jpg">
+<a href="/html/978/2024-09-23/content-6444.html" target="_blank" title="【学习强国】大连东软信息学院：非遗面塑进校园">
+<h3>【学习强国】大连东软信息学院：非遗面塑进校园</h3>
+<p>“老师，是不是做完蒸一下就可以吃了？”“柔软的面是如何塑造出骏马一跃蹄下生风的姿态呢，这样的作品不会塌下来吗？”“面塑不</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var mySwiper = new Swiper ('.swiper2-title45212 .swiper-container',{
+autoplay:true,
+slidesPerView: 2,
+spaceBetween: 20,
+loop : true,
+breakpoints: { 
+480: {
+slidesPerView: 1,
+spaceBetween: 10
+},
+768: { 
+slidesPerView: 2,
+spaceBetween: 20
+}
+}
+})  
+</script>
+</div>
+</div>
+<div class="notice-more text-center wow fadeInUp animated clearfix">
+
+<a href="/html/978/" target="_blank">更多媒体聚焦</a>
+</div>
+</div>
+</div>
+<div class="section focus">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeInUp">
+<ul class="label_theme_pic_com_ul3">
+<li>
+<div class="item">
+<div class="pic">
+<img width="500" height="300" border="none" alt="" src="/attachment/core/label/2024_10/25_09/d98002513946471f.jpg" />
+</div>
+<div class="text">
+<div class="category clearfix"><h1>新媒体</h1><a href="https://mp.weixin.qq.com/s/PxRxK1Q2Es_96j5XyoUwaQ" class="more" target="_blank"><span>· · ·</span></a></div>
+<a href="https://mp.weixin.qq.com/s/PxRxK1Q2Es_96j5XyoUwaQ" target="_blank" title=“爱上代码，从大东软的“橙”序员节开始！”>
+<h3>爱上代码，从大东软的“橙”序员节开始！</h3>
+<p class="summary">
+1024是2的十次方是二进制计数的基本计量单位之一计算数据大小通常以1024个字节（即1024Byte）为单位1G=1024M 1M=1024KB.........</p>
+</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
+<ul class="label_theme_pic_com_ul3">
+<li>
+<div class="item">
+<div class="pic"><a href="/html/840/2024-09-30/content-6473.html" target="_blank" title="我校教师陈丽媛荣获辽宁省辅导员年度人物提名奖"><img width="400" height="200" class="coverImg" alt="我校教师陈丽媛荣获辽宁省辅导员年度人物提名奖" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_09/30_12/5d850f1e4c8646f8.jpeg.thumb.jpg" /></a></div>
+<div class="text">
+<div class="category clearfix"><h1>人物</h1><a href="/html/840/" class="more" target="_blank"><span>· · ·</span></a></div>
+<a href="/html/840/2024-09-30/content-6473.html" target="_blank" title="我校教师陈丽媛荣获辽宁省辅导员年度人物提名奖">
+<h3>我校教师陈丽媛荣获辽宁省辅导员年度人物提名奖</h3>
+<p class="summary">近日，由辽宁省教育厅主办的“辽宁省高校辅导员年度影响力人物、...</p>
+</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-delay="0.4s">
+<div class="notice-box">
+<div class="notice-category clearfix"><h1>通知公告</h1><a href="/html/984/" class="more" target="_blank"><span>· · ·</span></a></div>
+<div class="notice-list"><ul class="themelist18" style="font-size:18px;">
+<li>
+<a href="/html/985/2024-10-21/content-6502.html" target="_blank" title="关于举办基于人工智能的药物虚拟筛选主题学术讲座的通知">
+<h3>关于举办基于人工智能的药物虚拟筛选主题学术讲座的通知</h3>
+<p class="d1"><span>2024-10-21</span></p>
+</a>
+</li>
+<li>
+<a href="/html/984/2024-10-17/content-6497.html" target="_blank" title="关于将给予学生朱庆松退学处理的通知">
+<h3>关于将给予学生朱庆松退学处理的通知</h3>
+<p class="d1"><span>2024-10-17</span></p>
+</a>
+</li>
+<li>
+<a href="/html/984/2024-09-26/content-6450.html" target="_blank" title="关于召开2024级新生开学典礼暨2023-2024学年表彰大会的通知">
+<h3>关于召开2024级新生开学典礼暨2023-2024学年表彰大会的通知</h3>
+<p class="d1"><span>2024-09-26</span></p>
+</a>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section video wow fadeInDown animated">
+
+<style type="text/css">
+.swiper-video43032 .swiper-slide{background-size:cover;background-position: center center;height: 100%;position: relative;overflow: hidden;}
+.swiper-video43032 .swiper-slide:before{content: "";display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index:1;background-color: rgba(0,0,0,.5);}
+.swiper-video43032 .swiper-slide video{position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit: cover;object-fit: cover;font-family: "object-fit: cover;";}
+.swiper-video43032 .swiper-content{position: relative;z-index: 30;height:700px;width: 100%;text-align: center;color: #fff;line-height: 5em;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;}
+.swiper-video43032 .swiper-content h3 {font-weight:400;font-size:30px;letter-spacing: .4em;margin: 0;}
+.swiper-video43032 .swiper-content p {letter-spacing: .2em;margin: 0;}
+.swiper-video43032 .swiper-content .action{margin-top:50px;}
+.swiper-video43032 .swiper-content .action a {display: inline-block;height: 34px;line-height: 34px;color:#fff;padding: 0 20px;opacity: .8;background-color: #00c7ff;border-radius: 17px;vertical-align: middle;}
+.swiper-video43032 .swiper-content .action a i{margin-right:10px;}
+.swiper-video43032 .swiper-content .action a:hover{opacity:1;color:#fff;}
+.swiper-video43032 .video-pagination .swiper-pagination-bullet {border-radius: 2px;width: 30px;height: 4px;margin: 0 8px;}
+.swiper-video43032 .video-pagination .swiper-pagination-bullet-active {background: #007dd7;}
+@media (max-width:991px){
+.swiper-video43032 .swiper-content{height:45vh;}
+.swiper-video43032 .swiper-content h3{font-size:20px;}
+.swiper-video43032 .swiper-content .action{margin-top:20px;}
+.swiper-video43032 .video-pagination .swiper-pagination-bullet{width:25px;margin:0 4px;}
+}
+</style>
+<div class="swiper-video43032">
+<div class="swiper-banner swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<video id="video" src="/attachment/core/label/2023_04/18_09/e9de478c3c361cc4.mp4" loop="loop" autoplay="autoplay" muted="muted" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow" airplay="allow" x5-video-orientation="h5" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" data-object-fit="fill"></video>
+<div class="swiper-content">
+<div class="container">
+<h3 data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">360°全景VR 带你体验博川校区</h3>
+<p data-swiper-parallax="-400" data-swiper-parallax-opactiy="0.4"></p>
+<div class="action" data-swiper-parallax="-600" data-swiper-parallax-opacity="0.2">
+<a href="https://vr.neusoft.edu.cn"><i class="iconfont icon-play"></i>点击进入</a>
+</div>
+</div>
+</div>	
+</div>
+<div class="swiper-slide" style="background-image: url(/attachment/core/label/2023_06/05_15/f0546cea0f311a03.png);">
+<div class="swiper-content">
+<div class="container">
+<h3 data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">360°全景VR 带你体验软件园校区</h3>
+<p data-swiper-parallax="-400" data-swiper-parallax-opactiy="0.4"></p>
+<div class="action" data-swiper-parallax="-600" data-swiper-parallax-opacity="0.2">
+<a href="https://vr.neusoft.edu.cn"><i class="iconfont icon-play"></i>点击进入</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-pagination video-pagination"></div>
+</div>
+</div>
+<script type="text/javascript">
+var swiper = new Swiper('.swiper-video43032 .swiper-container', {
+effect : 'fade',
+slidesPerView: 1,
+parallax : true,
+paginationClickable: true,
+loop:true,
+autoplay: {
+delay: 10000,
+},
+autoplayDisableOnInteraction: true,
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+},
+});
+</script>
+</div>
+<div class="section counter">
+<style type="text/css">
+.swiper-counter43022 .counter-box{margin:30px 0;}
+.swiper-counter43022 .counter-box h3{color:#00c7ff;font-size:30px;margin-bottom:20px;}
+.swiper-counter43022 .counter-box p{color:#101010;font-size:18px;min-height:60px;}
+.swiper-counter43022 .swiper-container-horizontal>.swiper-pagination-bullets{width:20%;left:40%;height:5px;border-radius: 10px;position: relative;-ms-touch-action: none;background: rgba(0,0,0,.1);}
+.swiper-counter43022 .swiper-pagination-bullet{height:5px;width:33.33333333%;float:left;border-radius:10px;margin:0;background:transparent;}
+.swiper2-counter43022 .swiper-pagination-bullet{width: 14.28571428%;}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0;}
+.swiper-counter43022 .swiper-pagination-bullet-active{background:#00c7ff;}
+@media (max-width: 991px){
+.swiper-counter43022 .counter-box{margin:15px 0;text-align:center;}
+.swiper-counter43022 .counter-box h3{font-size:28px;}
+.swiper-counter43022 .counter-box p{font-size:16px;}
+}
+@media (max-width: 767px){
+.swiper-counter43022 .counter-box h3{font-size:24px;}
+}
+</style>
+<div class="swiper1-counter43022 swiper-counter43022 hidden-xs">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">20000余人</span></h3>
+<p>全日制在校生人数</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">83.3万</span></h3>
+<p>占地面积83.3万平方米</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">2个校区</span></h3>
+<p>软件园校区和博川校区</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">13个</span></h3>
+<p>教学机构，36个本科专业，7个专科专业</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">55%</span></h3>
+<p>55%的教师具有行业实践经验，40%为双师双能型教师</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">第1</span></h3>
+<p>第一所获得国家级教学成果一等奖的民办高校</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">7个</span></h3>
+<p>国家级一流本科专业建设点</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">8个</span></h3>
+<p>省级一流本科专业建设点</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">中国首批</span></h3>
+<p>99所创新教育改革示范高校</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">110余所</span></h3>
+<p>国外合作院校开启学生国际视野</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">72项</span></h3>
+<p>省级以上教学成果奖</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">116门</span></h3>
+<p>省一流本科课程</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">7900余项</span></h3>
+<p>SOVO大学生创新创业中心，累计孵化各类创新创业项目</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">首批</span></h3>
+<p>首批50所全国创新创业典型经验高校之一</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">第1</span></h3>
+<p>辽宁省第一所拥有省级大学科技园的民办高校</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">150余个</span></h3>
+<p>专业教学实验室，与国际著名IT企业共同建立十余个联合实验室</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">179余万册</span></h3>
+<p>拥有图书179余万册，电子图书近81万种，电子期刊36余万册</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">TOPCARES</span></h3>
+<p>构建了具有东软特色的TOPCARES八大能力指标体系</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+
+<div class="swiper2-counter43022 swiper-counter43022 visible-xs">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">20000余人</span></h3>
+<p>全日制在校生人数</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">83.3万</span></h3>
+<p>占地面积83.3万平方米</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">2个校区</span></h3>
+<p>软件园校区和博川校区</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">13个</span></h3>
+<p>教学机构，36个本科专业，7个专科专业</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">55%</span></h3>
+<p>55%的教师具有行业实践经验，40%为双师双能型教师</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">第1</span></h3>
+<p>第一所获得国家级教学成果一等奖的民办高校</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">7个</span></h3>
+<p>国家级一流本科专业建设点</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">8个</span></h3>
+<p>省级一流本科专业建设点</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">第1</span></h3>
+<p>第一所获得国家级教学成果一等奖的民办高校</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">7个</span></h3>
+<p>国家级一流本科专业建设点</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">8个</span></h3>
+<p>省级一流本科专业建设点</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">中国首批</span></h3>
+<p>99所创新教育改革示范高校</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">72项</span></h3>
+<p>省级以上教学成果奖</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">100余所</span></h3>
+<p>国外合作院校开启学生国际视野</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">7个专业</span></h3>
+<p>在辽宁省普通高等学校本科专业综合评价中排名前三</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">7900余项</span></h3>
+<p>SOVO大学生创新创业中心，累计孵化各类创新创业项目</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">首批</span></h3>
+<p>首批50所全国创新创业典型经验高校之一</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">第1</span></h3>
+<p>辽宁省第一所拥有省级大学科技园的民办高校</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+<div class="counter-box">
+<h3><span class="number">150余个</span></h3>
+<p>专业教学实验室，与国际著名IT企业共同建立十余个联合实验室</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+<div class="counter-box">
+<h3><span class="number">179余万册</span></h3>
+<p>拥有图书179余万册，电子图书近81万种，电子期刊36余万册</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+<div class="counter-box">
+<h3><span class="number">TOPCARES</span></h3>
+<p>构建了具有东软特色的TOPCARES八大能力指标体系</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+<script type="text/javascript">
+var mySwiper = new Swiper ('.swiper1-counter43022 .swiper-container',{
+autoplay: {
+delay: 5000,
+},
+on:{
+init: function(){
+swiperAnimateCache(this); //隐藏动画元素 
+this.emit('slideChangeTransitionEnd');//在初始化时触发一次slideChangeTransitionEnd事件
+}, 
+slideChangeTransitionEnd: function(){ 
+swiperAnimate(this); //每个slide切换结束时运行当前slide动画
+} 
+},
+pagination: {
+el: '.swiper1-counter43022 .swiper-pagination',
+clickable: true,
+},
+})  
+</script>
+<script type="text/javascript">
+var mySwiper = new Swiper ('.swiper2-counter43022 .swiper-container',{
+autoplay: {
+delay: 5000,
+},
+on:{
+init: function(){
+swiperAnimateCache(this); //隐藏动画元素 
+this.emit('slideChangeTransitionEnd');//在初始化时触发一次slideChangeTransitionEnd事件
+}, 
+slideChangeTransitionEnd: function(){ 
+swiperAnimate(this); //每个slide切换结束时运行当前slide动画
+} 
+},
+pagination: {
+el: '.swiper2-counter43022 .swiper-pagination',
+clickable: true,
+},
+})  
+</script>
+</div>
+<div class="section explore">
+<div class="container">
+<div class="chtitle text-center wow fadeInDown animated">
+<h1>探索东软<span class="subtitle">Explore</span></h1>
+</div>
+<div class="explore-key wow fadeInDown animated">
+<a href="http://zs.neusoft.edu.cn/" class="btn btn-square fade-blue hot-blue">招生信息网</a>
+
+<a href="https://vr.neusoft.edu.cn" class="btn btn-square fade-blue hot-red">大连东软信息学院全景VR</a>
+<a href="https://www.neusoft.edu.cn/html/1014/" class="btn btn-square fade-blue hot-blue">学校形象片</a>
+<a href="https://zs.neusoft.edu.cn/new/score.html" class="btn btn-square fade-blue ">往年录取分数线查询</a>
+
+<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA4MDA1MTExMQ==&action=getalbum&album_id=3587966796445319172&scene=126&sessionid=-984279698#wechat_redirect" class="btn btn-square fade-blue hot-blue">#2024新生指南</a>
+
+<a href="https://mp.weixin.qq.com/s/J5a8yEKmtTx90f93E6idGw" class="btn btn-square fade-blue hot-red">大连东软信息学院宣传册</a>
+
+<a href="https://www.neusoft.edu.cn/html/1060/" class="btn btn-square fade-blue hot-blue">融媒矩阵</a>
+<a href="https://qa.neusoft.edu.cn/" class="btn btn-square fade-blue hot-red">本科教育教学审核评估评建网</a>
+
+<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA4MDA1MTExMQ==&action=getalbum&album_id=2888942444653117443&scene=173&from_msgid=2656944848&from_itemidx=1&count=3&nolastread=1#wechat_redirect" class="btn btn-square fade-blue hot-blue">#学习二十大 奋进新征程</a>			
+
+<a href="https://www.yuque.com/fengleiwuhen-r3fw4/lgnpcu" class="btn btn-square fade-blue hot-blue">DNUI知识库</a>
+
+<a href="https://vpn.neuedu.com" class="btn btn-square fade-blue hot-blue">VPN服务</a>
+
+<a href="https://ditu.amap.com/search?query=%E5%A4%A7%E8%BF%9E%E4%B8%9C%E8%BD%AF%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2&city=210200" class="btn btn-square fade-blue ">如何到达学校</a>
+<a class="btn btn-square blue more" href="https://www.neusoft.edu.cn/html/903/"><span>· · ·</span></a>
+</div>
+<div class="explore-column wow fadeInDown animated">
+<style type="text/css">
+.swiper-pic43033 .item{display:block;max-width:100%;height:100%;margin-bottom:30px;position:relative;}
+.swiper-pic43033 .item .text:after{content: "";position: absolute;left:0;bottom: 0;display: block;width: 0;height: 2px;background: #00c7ff;transition: all .3s;}
+.swiper-pic43033 .item .pic{position:relative;padding-bottom:80.25%;overflow:hidden;}
+.swiper-pic43033 .item .pic img{width:100%;height:100%;object-fit: cover;position:absolute;top:0;left:0;transition: transform 0.5s;}
+.swiper-pic43033 .item .text{padding:30px 30px;margin-top:20px;background-color: rgb(238, 238, 238);transition: all .3s;}
+.swiper-pic43033 .item .text h3{font-size: 20px;color:#101010;margin-top:0;margin-bottom: 20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.swiper-pic43033 .item .text p{font-size: 15px;color:#101010;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.swiper-pic43033 .item:hover .pic img{transform: scale(1.1);}
+.swiper-pic43033 .item:hover .text{transform:translateY(-2px);}
+.swiper-pic43033 .item:hover .text:after{width:100%;}
+.swiper-pic43033 .swiper-button-prev,.swiper-pic43033 .swiper-button-next{width:54px;height:54px;top:30%;background-color: rgba(255,255,255,0.65);border-radius:50%;background-size: 40px 40px;opacity:0;}
+.swiper-pic43033 .swiper-button-prev{background-image: url(/skin/label/theme/prev2.png);left:20px;}
+.swiper-pic43033 .swiper-button-next{background-image: url(/skin/label/theme/next2.png);right:20px;}
+.swiper-pic43033:hover .swiper-button-prev,.swiper-pic43033:hover .swiper-button-next{opacity:1;}
+</style>
+<div class="swiper-pic43033">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a class="item" href="https://www.bilibili.com/video/BV1HR23YZEQZ/?spm_id_from=333.337.search-card.all.click&vd_source=e47b9e3655680502ebfb2f7fee5fa306" target="_blank" title="">
+<div class="pic"><img width="280" height="307" alt="" onError="this.src='/images/nopic.jpg'" src="/attachment/core/label/2024_10/21_13/5e663b47a2f189ad.png" /></div>
+<div class="text">
+<h3>大东软手势舞</h3>
+<p>视频策划：东软新闻社</p>
+</div>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="item" href="https://www.neusoft.edu.cn/html/886/2024-06-30/content-6281.html" target="_blank" title="">
+<div class="pic"><img width="280" height="307" alt="" onError="this.src='/images/nopic.jpg'" src="/attachment/core/label/2024_06/30_22/51d4211e236ed595.jpg" /></div>
+<div class="text">
+<h3>《梦想在路上》大连东软信息学院校歌全新MV</h3>
+<p>策划：品牌发展部</p>
+</div>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="item" href="https://mp.weixin.qq.com/s/vecR7okg-oq7Ub0daFbJhw" target="_blank" title="">
+<div class="pic"><img width="280" height="307" alt="" onError="this.src='/images/nopic.jpg'" src="/attachment/core/label/2024_10/08_09/9710f071599d2dc4.jpg" /></div>
+<div class="text">
+<h3>璀璨青春，梦想之夜！</h3>
+<p>来源：品牌发展部 东软新闻社</p>
+</div>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="item" href="https://mp.weixin.qq.com/s/4kPjC_KtaenGRxULIbh5Ig" target="_blank" title="">
+<div class="pic"><img width="280" height="307" alt="" onError="this.src='/images/nopic.jpg'" src="/attachment/core/label/2024_10/25_09/120f829f5f4b57e8.png" /></div>
+<div class="text">
+<h3>风雨无阻，温暖无限！校友回家了！</h3>
+<p>来源：品牌发展部</p>
+</div>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="item" href="https://www.neusoft.edu.cn/html/886/2024-10-21/content-6501.html" target="_blank" title="">
+<div class="pic"><img width="280" height="307" alt="" onError="this.src='/images/nopic.jpg'" src="/attachment/core/label/2024_10/21_15/37cfc3651e1d75fc.jpg" /></div>
+<div class="text">
+<h3>从这里出发</h3>
+<p>来源：招生就业工作部</p>
+</div>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="item" href="https://www.bilibili.com/video/BV1cJ4Me7ENj/?spm_id_from=333.337.search-card.all.click&vd_source=e47b9e3655680502ebfb2f7fee5fa306" target="_blank" title="">
+<div class="pic"><img width="280" height="307" alt="" onError="this.src='/images/nopic.jpg'" src="/attachment/core/label/2024_10/08_09/10ba0449034b2631.png" /></div>
+<div class="text">
+<h3>浪潮风涌至，扬帆正当时！校长郭权寄语新生</h3>
+<p>视频：东软新闻社</p>
+</div>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="item" href="https://mp.weixin.qq.com/s/RsUhm7HoZ3xPFovESXxCHQ" target="_blank" title="">
+<div class="pic"><img width="280" height="307" alt="" onError="this.src='/images/nopic.jpg'" src="/attachment/core/label/2024_10/22_09/afa298aa5e909989.jpg" /></div>
+<div class="text">
+<h3>“衣”见如故！母校情深都在这件校友文化衫</h3>
+<p>策划：品牌发展部</p>
+</div>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="item" href="https://www.bilibili.com/video/BV17BxMe3EcY/?spm_id_from=333.337.search-card.all.click&vd_source=e47b9e3655680502ebfb2f7fee5fa306" target="_blank" title="">
+<div class="pic"><img width="280" height="307" alt="" onError="this.src='/images/nopic.jpg'" src="/attachment/core/label/2024_10/08_09/c0963192b45da846.png" /></div>
+<div class="text">
+<h3>不负时光、快乐起航——大连东软信息学院开学典礼</h3>
+<p>视频：东软新闻社</p>
+</div>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="item" href="https://mp.weixin.qq.com/s/gUjdDyBq4MnS2Jwcgvs0VA" target="_blank" title="">
+<div class="pic"><img width="280" height="307" alt="" onError="this.src='/images/nopic.jpg'" src="/attachment/core/label/2024_06/18_13/ba99982d61c022f0.jpg" /></div>
+<div class="text">
+<h3>美成壁纸和PPT的大东软，怎能不爱？</h3>
+<p>来源：品牌发展部</p>
+</div>
+</a>
+</div>
+</div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+</div>
+<script type="text/javascript">
+var mySwiper = new Swiper ('.swiper-pic43033 .swiper-container',{
+autoplay:true,
+slidesPerView: 3,
+spaceBetween: 30,
+loop : true,
+navigation: {
+nextEl: '.swiper-button-next',
+prevEl: '.swiper-button-prev',
+hideOnClick: true,
+hiddenClass: 'my-button-hidden',
+},
+breakpoints: { 
+480: {
+slidesPerView: 1,
+spaceBetween: 10
+},
+768: { 
+slidesPerView: 2,
+spaceBetween: 20
+}
+}
+
+})  
+</script>
+</div>
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 wow fadeInLeft">
+<div class="adpic">
+<a href="http://www.news.cn/zt/xxgcddesjszqhjs/index.html" target="_blank" title="" style="text-decoration:none;"><img width="500" height="300" border="none" alt="" src="/attachment/core/label/2024_09/05_14/dc97823af8617cda.jpg" /></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeInLeft">
+<div class="adpic">
+<a href="https://www.neusoft.edu.cn/" target="_blank" title="" style="text-decoration:none;"><img width="500" height="300" border="none" alt="" src="/attachment/core/label/2023_04/04_16/c32439f6f7fa0b18.png" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section links">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 line wow fadeInLeft">
+<div class="quick">
+<h3>系部网站</h3>
+<div class="quick-list">
+<a href="http://cs.neusoft.edu.cn/">计算机与软件学院</a>
+<a href="http://ibm.neusoft.edu.cn">信息与商务管理学院</a>
+<a href="http://ee.neusoft.edu.cn">智能与电子工程学院</a>
+<a href="http://art.neusoft.edu.cn">数字艺术与设计学院</a>
+<a href="http://sfl.neusoft.edu.cn">外国语学院</a>
+<a href="http://jk.neusoft.edu.cn/">健康医疗科技学院</a>
+<a href="http://gz.neusoft.edu.cn">高等职业技术学院</a>
+<a href="http://sovo.neusoft.edu.cn/">创新创业学院</a>
+<a href="http://base.neusoft.edu.cn">基础教学学院</a>
+<a href="http://marx.neusoft.edu.cn/">马克思主义学院</a>
+<a href="http://sie.neusoft.edu.cn/">国际教育学院</a>
+<a href="http://jxjy.neusoft.edu.cn/">继续教育学院</a>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 line wow fadeInRight">
+<div class="quick">
+<h3>公共服务</h3>
+<div class="quick-list">
+<a href="mailto:president@neusoft.edu.cn">校长邮箱</a>
+
+<a href="https://vr.neusoft.edu.cn">大东软全景VR</a>
+<a href="https://www.neusoft.edu.cn/html/1060/">融媒矩阵</a>
+<a href="https://mp.weixin.qq.com/s/9FGea-y2BO1lASH6rwj-Bg">图书馆数字资源</a>
+<a href="https://mp.weixin.qq.com/s/h8XGQd7BUtJ1no0w702WVg">就业咨询与指导</a>
+<a href="http://archive.neusoft.edu.cn/">毕业生档案服务</a>
+<a href="https://one.neuedu.com/">大东软一网通</a>
+<a href="https://xgb.neusoft.edu.cn/">奖、助学金申请</a>
+<a href="https://vpn.neuedu.com">VPN服务</a>
+
+<a href="https://mp.weixin.qq.com/s/K5erevCQ26mma4INj84VGQ">学生意见和建议反馈</a>
+<a href="https://www.neusoft.edu.cn/sites/html/xxgk/">信息公开</a>
+<a href="https://www.neusoft.edu.cn/html/1046/2024-08-30/content-6394.html">教师招聘启事</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section cut">
+<div class="background">
+<video airplay="allow" autoplay="autoplay" data-object-fit="fill" id="video" loop="loop" muted="muted" playsinline="true" preload="auto" src="/attachment/core/label/2023_06/15_17/227974812ed9bde0.mp4" webkit-playsinline="true" x-webkit-airplay="allow" x5-video-orientation="h5" x5-video-player-fullscreen="true" x5-video-player-type="h5"></video>
+</div>
+<div class="content">
+<div class="container">
+<h3>成为有特色、高水平、创业型应用技术大学</h3>
+
+<p>We aim to become a leading university of applied sciences with distinctive characteristics, high standard and entrepreneurial spirit.</p>
+</div>
+<div class="action">
+<a href="https://www.neusoft.edu.cn/html/1014/"><i class="iconfont icon-play"></i>观看视频</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8.")
+{
+// console.log(1);
+}
+else{
+new WOW().init();
+}
+</script></div>
+<footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<p>地址：辽宁省大连市甘井子区软件园路8号（软件园校区）</p>
+<p>          辽宁省大连市高新园区博川路8号（博川校区）</p>
+<p>电话：+86-411-84835000</p>
+
+<p>传真：+86-411-84769999</p>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<p>网站策划：品牌发展部</p>
+
+<p>网站技术反馈：<a href="mailto:laiwanyun@neusoft.edu.cn" id="mailto">laiwanyun@neusoft.edu.cn</a></p>
+<div class="footer-copyright visible-xs-block">
+<div class="footnav">
+<p><span>友情链接：</span> <a href="http://www.neuedu.com" rel="nofollow" target="_blank">东软教育科技集团</a> <a href="https://www.nsu.edu.cn/" rel="nofollow" target="_blank">成都东软学院</a> <a href="https://www.nuit.edu.cn/" rel="nofollow" target="_blank">广东东软学院</a> <a href="http://www.neubooks.com/" rel="nofollow" target="_blank">东软电子出版社</a></p>
+</div>
+<div class="copyright mb20">
+<p>Copyright © 2002-2024 大连东软信息学院 All Rights Reserved</p>
+<p><a href="https://beian.miit.gov.cn" target="_blank" rel="nofollow">辽ICP备15002835号-1</a> | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21021102000079" target="_blank" rel="nofollow">辽公网安备 21021102000079号</a></p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="footer-logo"><img src="/skin/school/core/header/images/flogo.png"/></div>
+</div>
+
+</div>
+<div class="row">
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 hidden-xs">
+<div class="footnav">
+<p><span>友情链接：</span> <a href="http://www.neuedu.com" rel="nofollow" target="_blank">东软教育科技集团</a> <a href="https://www.nsu.edu.cn/" rel="nofollow" target="_blank">成都东软学院</a> <a href="https://www.nuit.edu.cn/" rel="nofollow" target="_blank">广东东软学院</a> <a href="http://www.neubooks.com/" rel="nofollow" target="_blank">东软电子出版社</a></p>
+</div>
+<div class="copyright">
+<p>Copyright © 2002-2024 大连东软信息学院 All Rights Reserved</p>
+<p><a href="https://beian.miit.gov.cn" target="_blank" rel="nofollow">辽ICP备15002835号-1</a> | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21021102000079" target="_blank" rel="nofollow">辽公网安备 21021102000079号</a></p>
+</div>
+</div>
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+<div class="follow mt15 clearfix">
+
+<div class="follow-box">
+
+<a href="http://weixin.qq.com/r/cUwFHU-EhBL7rQt_9xlj" class="wx"><i class="iconfont icon-wechat"></i></a>
+
+<div class="code">
+
+<img width="100" height="100" border="none" alt="" src="/attachment/core/label/2021_05/26_20/8d2402f5539bfc44.png" />
+
+</div>
+
+</div>
+
+<div class="follow-box">
+
+<a href="https://weibo.com/neusoftii" class="wb"><i class="iconfont icon-weibo"></i></a>
+
+<div class="code">
+
+<img width="100" height="100" border="none" alt="" src="/attachment/core/label/2022_05/17_11/dda9fd0eb2731d42.png" />
+
+</div>
+
+</div>
+
+<div class="follow-box">
+
+<a href="https://www.douyin.com/user/MS4wLjABAAAAlfLYpv-NV2-p9G3SpSeJU8ZqaEuAFMXceYAhj27prog" class="dy"><i class="iconfont icon-douyin"></i></a>
+
+<div class="code">
+
+<a href="https://www.douyin.com/user/MS4wLjABAAAAlfLYpv-NV2-p9G3SpSeJU8ZqaEuAFMXceYAhj27prog" target="_blank" title="" style="text-decoration:none;"><img width="100" height="100" border="none" alt="" src="/attachment/core/label/2022_05/17_11/16e696790ee1432c.png" /></a>
+
+</div>
+
+</div>
+
+<div class="follow-box">
+
+<a href="https://www.toutiao.com/c/user/token/MS4wLjABAAAA58DcD0URkcNqsnCONgIeiNcjgEEGEgDfTi8rkSIxTXE/?source=m_redirect&wid=1661151546875" class="toutiao"><i class="iconfont icon-toutiao"></i></a>
+
+<div class="code">
+
+<a href="https://www.toutiao.com/c/user/token/MS4wLjABAAAA58DcD0URkcNqsnCONgIeiNcjgEEGEgDfTi8rkSIxTXE/?source=m_redirect&wid=1661151546875" target="_blank" title="" style="text-decoration:none;"><img width="100" height="100" border="none" alt="" src="/attachment/core/label/2022_05/17_11/bbb433c0f47685f0.png" /></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="toplink">
+
+<a href="https://www.neusoft.edu.cn/html/1060/" target="_blank">融媒矩阵</a>
+<a href="http://zs.neusoft.edu.cn/" target="_blank">招生信息网</a>
+<a href="https://english.neusoft.edu.cn/" target="_blank">English Version</a>
+
+</div>
+
+</div>
+</div>
+</div>
+</footer>
+<div> </div>
+</body>
+</html>

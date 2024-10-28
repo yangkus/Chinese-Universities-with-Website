@@ -1,0 +1,1194 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>安徽审计职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="安徽审计职业学院">
+<META Name="keywords" Content="安徽审计职业学院" />
+
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/animate.min.css">
+   
+    <link href="favicon.ico" rel="SHORTCUT ICON">
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+    <link rel="shortcut icon" href="#" />
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307678475253525742000300004f5d -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1950780876)</script>
+</head>
+
+<body>
+
+  <div><script language="javascript" src="/system/resource/js/dynclicks.js"></script>   
+</SCRIPT></div>
+  <div>   
+</SCRIPT></div>
+
+  <div></div>
+
+
+
+    <!-- 头部 -->
+    <div class="head pc">
+        <div class="h-top">
+            <div class="px1400">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="安徽审计职业学院"><img src="images/logo.png" width="360" height="72" border="0" alt="安徽审计职业学院" title="安徽审计职业学院"></a></div>
+                
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div class="ser">
+<style>
+    #appu4 .qwss{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 20px;
+        padding-right: 50px;
+        border-radius: 24px;
+        color: #fff;}
+    #appu4 .tj{
+        width: 22px;
+        height: 22px;
+        background: url(images/ser.png) no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        background-size: cover;}
+</style>
+<div id="divu4"></div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError"class="ser">
+            <input type="text"   placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"  class="ipt-tx">
+            <input   name="submit_button" type="button"  v-on:click="onSubmit()" class="ipt-btn"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1950780876";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+</div>
+                <div class="clear"></div>
+            </div>
+            <div class="motto">
+                <img src="images/motto.png" alt="">
+            </div>
+        </div>
+        <div class="nav-box">
+            <div class="px1400">
+                <div class="nav"><ul>
+            <li class="">
+            <a href="index.htm">网站首页</a>
+        </li>
+
+        <li class="">
+            <a href="xxgk1.htm">学校概况</a>
+            <div>
+                <ul>
+                    <li><a href="xxgk1/xxjj.htm">学校简介</a></li>
+                    <li><a href="xxgk1/xxld.htm">学校领导</a></li>
+                    <li><a href="xxgk1/xxsb.htm">形象识别</a></li>
+                    <li><a href="xxgk1/xygh.htm">校园规划</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="">
+            <a href="jgsz.htm">机构设置</a>
+            <div>
+                <ul>
+                    <li><a href="jgsz/dzgljg.htm">党政管理机构</a></li>
+                    <li><a href="jgsz/jxjg.htm">教学机构</a></li>
+                    <li><a href="jgsz/jfjg.htm">教辅机构</a></li>
+                    <li><a href="jgsz/qtzz.htm">群团组织</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="">
+            <a href="rcpy.htm">人才培养</a>
+            <div>
+                <ul>
+                    <li><a href="rcpy/szdw.htm">师资队伍</a></li>
+                    <li><a href="rcpy/zyjs.htm">专业建设</a></li>
+                    <li><a href="rcpy/kcjs.htm">课程建设</a></li>
+                    <li><a href="rcpy/sxsx.htm">实习实训</a></li>
+                    <li><a href="rcpy/jnds.htm">技能大赛</a></li>
+                    <li><a href="http://xsc.ahsjxy.edu.cn">学生发展</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="">
+            <a href="kxyj.htm">科学研究</a>
+            <div>
+                <ul>
+                    <li><a href="kxyj/kydt.htm">科研动态</a></li>
+                    <li><a href="http://jwc.ahsjxy.edu.cn/jyky/zlgc.htm">科研成果</a></li>
+                    <li><a href="kxyj/xbzl.htm">学报资料</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="">
+            <a href="zsjy1.htm">招生就业</a>
+            <div>
+                <ul>
+                    <li><a href="http://zsxxw.ahsjxy.edu.cn">招生信息</a></li>
+                    <li><a href="https://ahsjxy.jysd.com/">就业指导</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="">
+            <a href="kfbx.htm">开放办学</a>
+            <div>
+                <ul>
+                    <li><a href="kfbx/xxhz.htm">校校合作</a></li>
+                    <li><a href="kfbx/xqhz.htm">校企合作</a></li>
+                    <li><a href="kfbx/zwhz.htm">中外合作</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="">
+            <a href="http://xxgkw.ahsjxy.edu.cn">信息公开</a>
+        </li>
+
+    <div class="clear"></div>
+</ul></div>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">    <ul class="slick">
+            
+  <li><a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s7865/s8417/" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68448)"><img src="images/bannnew3.jpg" alt=""></a></li>
+
+  <li><a href="https://www.ahsjxy.edu.cn/ztzl/xxgcddesjszqhjs.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 70041)"><img src="images/xuexi.jpg" alt=""></a></li>
+
+  <li><a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68608)"><img src="images/shouye-lianzhengjianshe.jpg" alt=""></a></li>
+
+  <li><a href="https://article.xuexi.cn/articles/index.html?art_id=15757297278042308139&t=1690271215155&showmenu=false&cdn=https%3A%2F%2Fregion-anhui-resource&study_style_id=feeds_opaque&source=share&share_to=copylink&item_id=15757297278042308139&ref_read_id=5e78fee5-e2" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68610)"><img src="images/2023.jpg" alt=""></a></li>
+
+
+  <li><a href="https://www.ahsjxy.edu.cn/info/1271/91122.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68617)"><img src="images/20230918110033.jpg" alt=""></a></li>
+
+  <li><a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68523)"><img src="images/001fuben1920-DD.jpg" alt=""></a></li>
+
+  <li><a href="images/xuesheng.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 70047)"><img src="images/xuesheng.jpg" alt=""></a></li>
+
+
+</ul>
+</div>
+
+    <!-- 移动端导航 -->
+    <div class="m-index">
+        <div class="top">
+            <div class="wap wap-menu">
+                <img src="images/menu.png" class="menu" alt="">
+                <img src="images/close.png" class="close-menu" alt="">
+            </div>
+        </div>
+        <div class="wap m-head">
+            <div class="m-logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="安徽审计职业学院"><img src="images/logo.png" width="200" height="40" border="0" alt="安徽审计职业学院" title="安徽审计职业学院"></a></div>
+            <div class="m-nav">
+                <div class="m-search">
+
+
+<style>
+    #appu8 .qwss{
+        display: block;
+        width: 100%;
+        line-height: 25px;
+        background: none;
+        color: #fff;}
+    #appu8 .tj{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 15px;}
+</style>
+<div id="divu8"></div>
+<script type="text/html" id="htmlu8">
+    <div id="appu8">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="image" src="images/m-search.png" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu8").html($("#htmlu8").text());
+</script>
+<script>
+    var appOwner = "1950780876";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu8",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                <ul class="">
+    <li>
+        <a href="index.htm">网站首页</a><span></span>
+    </li>                  
+    <div class="clear"></div>
+    <li>
+        <a href="xxgk1.htm">学校概况</a><span></span>
+        <ul>
+            <li><a href="xxgk1/xxjj.htm">学校简介</a></li>
+            <li><a href="xxgk1/xxld.htm">学校领导</a></li>
+            <li><a href="xxgk1/xxsb.htm">形象识别</a></li>
+            <li><a href="xxgk1/xygh.htm">校园规划</a></li>
+        </ul>
+    </li>                  
+    <div class="clear"></div>
+    <li>
+        <a href="jgsz.htm">机构设置</a><span></span>
+        <ul>
+            <li><a href="jgsz/dzgljg.htm">党政管理机构</a></li>
+            <li><a href="jgsz/jxjg.htm">教学机构</a></li>
+            <li><a href="jgsz/jfjg.htm">教辅机构</a></li>
+            <li><a href="jgsz/qtzz.htm">群团组织</a></li>
+        </ul>
+    </li>                  
+    <div class="clear"></div>
+    <li>
+        <a href="rcpy.htm">人才培养</a><span></span>
+        <ul>
+            <li><a href="rcpy/szdw.htm">师资队伍</a></li>
+            <li><a href="rcpy/zyjs.htm">专业建设</a></li>
+            <li><a href="rcpy/kcjs.htm">课程建设</a></li>
+            <li><a href="rcpy/sxsx.htm">实习实训</a></li>
+            <li><a href="rcpy/jnds.htm">技能大赛</a></li>
+            <li><a href="http://xsc.ahsjxy.edu.cn">学生发展</a></li>
+        </ul>
+    </li>                  
+    <div class="clear"></div>
+    <li>
+        <a href="kxyj.htm">科学研究</a><span></span>
+        <ul>
+            <li><a href="kxyj/kydt.htm">科研动态</a></li>
+            <li><a href="http://jwc.ahsjxy.edu.cn/jyky/zlgc.htm">科研成果</a></li>
+            <li><a href="kxyj/xbzl.htm">学报资料</a></li>
+        </ul>
+    </li>                  
+    <div class="clear"></div>
+    <li>
+        <a href="zsjy1.htm">招生就业</a><span></span>
+        <ul>
+            <li><a href="http://zsxxw.ahsjxy.edu.cn">招生信息</a></li>
+            <li><a href="https://ahsjxy.jysd.com/">就业指导</a></li>
+        </ul>
+    </li>                  
+    <div class="clear"></div>
+    <li>
+        <a href="kfbx.htm">开放办学</a><span></span>
+        <ul>
+            <li><a href="kfbx/xxhz.htm">校校合作</a></li>
+            <li><a href="kfbx/xqhz.htm">校企合作</a></li>
+            <li><a href="kfbx/zwhz.htm">中外合作</a></li>
+        </ul>
+    </li>                  
+    <div class="clear"></div>
+    <li>
+        <a href="http://xxgkw.ahsjxy.edu.cn">信息公开</a><span></span>
+    </li>                  
+    <div class="clear"></div>
+
+</ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 主体部分 -->
+    <div class="index">
+        <div class="px1300">    <div class="top-link wow fadeInUp">
+                <ul>
+                    
+<li>
+                        <a href="http://ehall.ahsjxy.cn/new/index.html" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68452)" target="_blank">
+                            <div class="icon">
+                                <img src="images/top1.png" alt="">
+                            </div>
+                            <p>服务大厅</p>
+                        </a>
+</li>
+                    
+<li>
+                        <a href="http://zfpt.ahsjxy.cn/gxsf/" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68453)" target="_blank">
+                            <div class="icon">
+                                <img src="images/top2.png" alt="">
+                            </div>
+                            <p>缴费系统</p>
+                        </a>
+</li>
+                    
+<li>
+                        <a href="info/2672/124352.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68454)" target="_blank">
+                            <div class="icon">
+                                <img src="images/top3.png" alt="">
+                            </div>
+                            <p>书记校长信箱</p>
+                        </a>
+</li>
+                    
+<li>
+                        <a href="xxfw.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68455)" target="_blank">
+                            <div class="icon">
+                                <img src="images/top4.png" alt="">
+                            </div>
+                            <p>信息服务</p>
+                        </a>
+</li>
+                    
+<li>
+                        <a href="http://lib.ahsjxy.edu.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68618)" target="_blank">
+                            <div class="icon">
+                                <img src="images/top5.png" alt="">
+                            </div>
+                            <p>数字图书</p>
+                        </a>
+</li>
+                    
+</ul>
+</div></div>
+        <div class="s1">
+            <div class="px1400">
+                <div class="s1-l wow fadeInLeft">
+                    <div class="tit">
+                        <h3>
+                            <b>安审</b><span>要闻</span>
+                        </h3>
+                        <a href="xwzx/asyw.htm" target="_blank">更多</a>
+                    </div>
+                    <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="s1-banner">
+<ul>
+                            
+<li>
+                                <a href="info/2802/221472.htm" target="_blank" title="安徽审计职业学院与美国凯泽大学首届大数据与财务管理中外合作专业开班仪式圆满举行">
+                                    <div class="pic">
+                                        <img src="/__local/5/26/8E/AFC68B4EEB1AF1644F3F66A363C_4F4C647A_5FC89.png" alt="">
+                                    </div>
+                                    <div class="s1-info">
+                                        <div class="s1-time">
+                                            <b>26</b><span>10月</span>
+                                        </div>
+                                        <p>安徽审计职业学院与美国凯泽大学首...</p>
+                                        <div class="clear"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/2802/216512.htm" target="_blank" title="学校举行2024级新生军训汇报表演暨总结表彰大会">
+                                    <div class="pic">
+                                        <img src="/__local/B/B6/8D/FFE4E8E40106215BCA4415CDED7_26D77DF9_9353D.jpg" alt="">
+                                    </div>
+                                    <div class="s1-info">
+                                        <div class="s1-time">
+                                            <b>29</b><span>9月</span>
+                                        </div>
+                                        <p>学校举行2024级新生军训汇报表演暨...</p>
+                                        <div class="clear"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/2802/216232.htm" target="_blank" title="我校学生在2024一带一路暨金砖国家技能发展与技术创新大赛首届建筑工程智能建造施工技术应用赛项中荣获二等奖">
+                                    <div class="pic">
+                                        <img src="/__local/8/4F/07/A9356D10DF6BF99B1994F9E6B91_CE301EDC_C9F52.png" alt="">
+                                    </div>
+                                    <div class="s1-info">
+                                        <div class="s1-time">
+                                            <b>28</b><span>9月</span>
+                                        </div>
+                                        <p>我校学生在2024一带一路暨金砖国家...</p>
+                                        <div class="clear"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/2802/216242.htm" target="_blank" title="2024一带一路暨金砖国家技能发展与技术创新大赛第三届业财税融合大数据应用赛项决赛在我校圆满落幕">
+                                    <div class="pic">
+                                        <img src="/__local/E/07/02/D326AE7A174CE076A507A4A7476_32BC92E6_74D7E.jpg" alt="">
+                                    </div>
+                                    <div class="s1-info">
+                                        <div class="s1-time">
+                                            <b>24</b><span>9月</span>
+                                        </div>
+                                        <p>2024一带一路暨金砖国家技能发展与...</p>
+                                        <div class="clear"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/2802/213342.htm" target="_blank" title="学校召开教师节表彰大会">
+                                    <div class="pic">
+                                        <img src="/__local/9/C9/F8/52544BF36242FF0E42334044796_9AA5066B_4E8EA.jpg" alt="">
+                                    </div>
+                                    <div class="s1-info">
+                                        <div class="s1-time">
+                                            <b>12</b><span>9月</span>
+                                        </div>
+                                        <p>学校召开教师节表彰大会</p>
+                                        <div class="clear"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u11_221472','dynclicks_u11_216512','dynclicks_u11_216232','dynclicks_u11_216242','dynclicks_u11_213342'],[221472,216512,216232,216242,213342],"wbnews", 1950780876)</script>
+
+                    <div class="s1-list"><ul>
+                            
+<li>
+                                <a href="info/1271/221252.htm" target="_blank" title="安徽审计职业学院与美国凯泽大学首届大数据与财务管理中外合作专业开班仪式圆满举行">
+                                    <span>10-26</span>
+                                    <p>安徽审计职业学院与美国凯泽大学首届大数据与财务...</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1271/221222.htm" target="_blank" title="我校学生荣获2024一带一路暨金砖国家技能发展与技术创新大赛首届乡村振兴创新创业模拟竞赛中部大区选拔赛一等奖">
+                                    <span>10-25</span>
+                                    <p>我校学生荣获2024一带一路暨金砖国家技能发展与技...</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1271/220522.htm" target="_blank" title="学校召开第四届学术委员会换届选举大会及第一次全体委员会议">
+                                    <span>10-21</span>
+                                    <p>学校召开第四届学术委员会换届选举大会及第一次全...</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1271/219672.htm" target="_blank" title="我校召开高职专业学院部门工作协调会">
+                                    <span>10-16</span>
+                                    <p>我校召开高职专业学院部门工作协调会</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1271/219632.htm" target="_blank" title="我校与濉溪职业技术学校开展高职专业学院合作交流">
+                                    <span>10-16</span>
+                                    <p>我校与濉溪职业技术学校开展高职专业学院合作交流</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1271/219232.htm" target="_blank" title="学校与加拿大约克大学开展合作交流">
+                                    <span>10-15</span>
+                                    <p>学校与加拿大约克大学开展合作交流</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1271/219122.htm" target="_blank" title="我校成功获批设立2所高职专业学院和3所高职中专分校">
+                                    <span>10-15</span>
+                                    <p>我校成功获批设立2所高职专业学院和3所高职中专分校</p>
+                                </a>
+                            </li>
+                            
+</ul><script>_showDynClickBatch(['dynclicks_u12_221252','dynclicks_u12_221222','dynclicks_u12_220522','dynclicks_u12_219672','dynclicks_u12_219632','dynclicks_u12_219232','dynclicks_u12_219122'],[221252,221222,220522,219672,219632,219232,219122],"wbnews", 1950780876)</script>
+</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="s1-r wow fadeInRight">
+                    <div class="tit">
+                        <h3 class="on">
+                            <b>通知</b><span>公告</span>
+                        </h3>
+                        <h3>
+                            <b>招标</b><span>公告</span>
+                        </h3>
+                        <div class="s2-more">
+                            <a href="xwzx/tzgg.htm" target="_blank">更多</a>
+                            <a href="xwzx/zbgg.htm" target="_blank" style="display: none;">更多</a>
+                        </div>
+                    </div>
+                    <div class="s1-item"><ul class=""><li>
+                                <a href="info/1281/220302.htm" target="_blank" title="省委第二巡视组巡视公告">
+                                    <div class="s1-date">
+                                        <b>18</b>
+                                        <span>10月</span>
+                                    </div>
+                                    <div class="s1-tx">
+                                        <p class="titline"><i>省委第二巡视组巡视公告</i></p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1281/212812.htm" target="_blank" title="安徽审计职业学院2024年度公开招聘非在编人员拟聘人员公示">
+                                    <div class="s1-date">
+                                        <b>10</b>
+                                        <span>9月</span>
+                                    </div>
+                                    <div class="s1-tx">
+                                        <p class="titline"><i>安徽审计职业学院2024年度公开招聘...</i></p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1281/210712.htm" target="_blank" title="安徽审计职业学院2024年高等学历继续教育招生简章">
+                                    <div class="s1-date">
+                                        <b>02</b>
+                                        <span>8月</span>
+                                    </div>
+                                    <div class="s1-tx">
+                                        <p class="titline"><i>安徽审计职业学院2024年高等学历继...</i></p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1281/210472.htm" target="_blank" title="安徽审计职业学院2023年下半年公开招聘拟聘人员公示">
+                                    <div class="s1-date">
+                                        <b>22</b>
+                                        <span>7月</span>
+                                    </div>
+                                    <div class="s1-tx">
+                                        <p class="titline"><i>安徽审计职业学院2023年下半年公开...</i></p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a>
+                            </li>
+                            
+<script>_showDynClickBatch(['dynclicks_u13_220302','dynclicks_u13_212812','dynclicks_u13_210712','dynclicks_u13_210472'],[220302,212812,210712,210472],"wbnews", 1950780876)</script>
+</ul>
+                        <ul class=""><li>
+                                <a href="https://ggzy.hefei.gov.cn/jyxx/002001/002001007/20241018/5268a2ab-accf-4bf2-9c8c-ba3b9777041c.html" target="_blank" title="安徽审计职业学院方兴校区2#实训楼及6#学生公寓工程总承包项目招标计划">
+                                    <div class="s1-date">
+                                        <b>18</b>
+                                        <span>10</span>
+                                    </div>
+                                    <div class="s1-tx">
+                                        <p class="titline"><i>安徽审计职业学院方兴校区2#实训楼...</i></p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="https://www.ccgp-anhui.gov.cn/site/detail?parentId=oJCosldFbaJFzmyFhz1c6Q==&articleId=S2hiBKwKACloCI9H9ooZ3Q==&utm=app-announcement-front.25d4055a.0.0.bf235e808d2411ef8d7c9dfdc560411a" target="_blank" title="安徽审计职业学院2024年11月政府采购意向-安徽审计职业学院方兴校区2#实训楼及6#学生公寓工程总承包项目">
+                                    <div class="s1-date">
+                                        <b>18</b>
+                                        <span>10</span>
+                                    </div>
+                                    <div class="s1-tx">
+                                        <p class="titline"><i>安徽审计职业学院2024年11月政府采...</i></p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="https://ggzy.hefei.gov.cn/jyxx/002002/002002001/20240926/ec46f4b5-5164-499b-a776-ca5d32f207f3.html" target="_blank" title="安徽审计职业学院工程造价示范性虚拟仿真实训基地建设项目（一期）中标（成交）结果公告">
+                                    <div class="s1-date">
+                                        <b>17</b>
+                                        <span>10</span>
+                                    </div>
+                                    <div class="s1-tx">
+                                        <p class="titline"><i>安徽审计职业学院工程造价示范性虚...</i></p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/2432/218342.htm" target="_blank" title="安徽审计职业学院2#实训楼及6#学生公寓建设工程施工图审查项目中标（成交）候选人公告">
+                                    <div class="s1-date">
+                                        <b>11</b>
+                                        <span>10</span>
+                                    </div>
+                                    <div class="s1-tx">
+                                        <p class="titline"><i>安徽审计职业学院2#实训楼及6#学生...</i></p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a>
+                            </li>
+                            
+<script>_showDynClickBatch(['dynclicks_u14_220282','dynclicks_u14_220272','dynclicks_u14_219912','dynclicks_u14_218342'],[220282,220272,219912,218342],"wbnews", 1950780876)</script>
+</ul></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="s2">
+            <div class="px1400">
+                <div class="s2-l wow fadeInLeft">
+                
+                 <div class="tit">
+                        <h3 class="on">
+                            <b>媒体</b><span>安审</span>
+                        </h3>
+                        <h3>
+                            <b>视觉</b><span>安审</span>
+                        </h3>
+                        <div class="s2-l-more">
+                            <a href="xwzx/mtas.htm">更多</a>
+                            <a href="xwzx/sjas.htm" style="display: none;">更多</a>
+                        </div>
+                    </div>
+
+                    <div class="s2-lbox">
+                   <div class="mtas">
+                    
+                    <ul>
+                        
+<li>
+                            <a href="http://jyt.ah.gov.cn/xwzx/gdjy/40724432.html" target="_blank" title="安徽审计职业学院成功获批设立2所高职专业学院和3所高职中专分校">
+                                <div class="s2-date">
+                                    <b>安徽教育网</b>
+                                    <span>2024-10-28 </span>
+                                </div>
+                                <div class="s2-tx">
+                                    <p class="titline"><i>安徽审计职业学院成功获批设立2所高职专业学院和3所高职中专...</i></p>
+                                </div>
+                                <div class="clear"></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="https://sjt.ah.gov.cn/xwzx/sjdt/jgdt/40723909.html" target="_blank" title="安徽审计职业学院荣获2024年“全省教育工作先进集体”荣誉称号">
+                                <div class="s2-date">
+                                    <b>省审计厅网</b>
+                                    <span>2024-10-16 </span>
+                                </div>
+                                <div class="s2-tx">
+                                    <p class="titline"><i>安徽审计职业学院荣获2024年“全省教育工作先进集体”荣誉称...</i></p>
+                                </div>
+                                <div class="clear"></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="https://sjt.ah.gov.cn/xwzx/sjdt/jgdt/40722590.html" target="_blank" title="安徽审计职业学院举行联合培养专升本2024级新生开学典礼">
+                                <div class="s2-date">
+                                    <b>省审计厅网</b>
+                                    <span>2024-09-30 </span>
+                                </div>
+                                <div class="s2-tx">
+                                    <p class="titline"><i>安徽审计职业学院举行联合培养专升本2024级新生开学典礼</i></p>
+                                </div>
+                                <div class="clear"></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="https://sjt.ah.gov.cn/xwzx/sjdt/jgdt/40722001.html" target="_blank" title="2024一带一路暨金砖国家技能发展与技术创新大赛第三届业财税融合大数据应用赛项决赛在安徽审计职业学院圆满落幕">
+                                <div class="s2-date">
+                                    <b>省审计厅网</b>
+                                    <span>2024-09-26 </span>
+                                </div>
+                                <div class="s2-tx">
+                                    <p class="titline"><i>2024一带一路暨金砖国家技能发展与技术创新大赛第三届业财税...</i></p>
+                                </div>
+                                <div class="clear"></div>
+                            </a>
+                        </li>
+                        
+</ul><script>_showDynClickBatch(['dynclicks_u15_221462','dynclicks_u15_219572','dynclicks_u15_219592','dynclicks_u15_215422'],[221462,219572,219592,215422],"wbnews", 1950780876)</script>
+
+                   </div>
+                     <div class="sjas" style="display: none;">
+                                    
+                                        <div class="s2-video">
+                        <a href="info/2402/87752.htm" class="pic" target="_blank" title="院党委书记高纪军接受安徽广播电视台首档职教类融媒体节目《技能安徽》专访">
+                            <img src="/__local/D/88/0B/1DA385B453DE1A1DCE5EBBB0F5E_33F99FDD_3832E.jpg" alt="">
+                            <div class="s2-play"></div>
+                        </a>
+                    </div>
+                    
+                    
+                    
+                    <ul>
+                        
+<li>
+    <a href="info/2402/109822.htm" target="_blank" title="《安审之路》"><span>08-31</span>《安审之路》</a>
+</li>
+<li>
+    <a href="https://mp.weixin.qq.com/s?__biz=Mzg5NzIwMTgwOQ==&mid=2247518718&idx=1&sn=edbeae710722c9a397b146ddf4a06787&chksm=c1b131a859270e76e8865b4ec246b5c24f3343100db77965bbf299c903ffdd59e16f382c79b1&mpshare=1&scene=23&srcid=1014dfBze8U3MbAvHAhgOv8Q&sharer_shareinf" target="_blank" title="国庆特辑 | 青春献礼 祝福祖国"><span>10-14</span>国庆特辑 | 青春献礼 祝福祖国</a>
+</li>
+<li>
+    <a href="https://mp.weixin.qq.com/s?__biz=Mzg5NzIwMTgwOQ==&mid=2247518529&idx=1&sn=7e87a32d7fea348e4d44f92ca0065506&chksm=c1c811b51853ae2ffc9c3685dd0ba32d93fe4798ac2b884ce625d66505cf031ae5b065313448&mpshare=1&scene=23&srcid=1014mwgZO5PtrLLddC1s79K7&sharer_shareinf" target="_blank" title="磨砺青春志 军训结华章"><span>10-14</span>磨砺青春志 军训结华章</a>
+</li>
+</ul>
+<script>_showDynClickBatch(['dynclicks_u16_87752','dynclicks_u16_109822','dynclicks_u16_218662','dynclicks_u16_218652'],[87752,109822,218662,218652],"wbnews", 1950780876)</script>
+
+                  </div>
+                 </div>
+                </div>
+                
+                
+                  <div class="s2-m wow fadeInUp">  <div class="tit">
+                        <h3>
+                            <b>清风</b><span>安审</span>
+                        </h3>
+                        <a href="xwzx/qfas11/gzdt1.htm">更多</a>
+                    </div>
+
+                    <!-- 清风安审结构 -->
+                    <div class="qfas">
+<ul>
+                            
+
+ <li>
+                                <a href="info/3122/218642.htm"><span>10-01</span>学纪明纪知纪守纪 争当廉洁从教表率</a>
+                            </li>
+ 
+                            
+
+ <li>
+                                <a href="https://www.ahsjxy.edu.cn/info/1271/213352.htm"><span>09-14</span>学校召开基建项目跟踪审计发现问题整改情况汇报会</a>
+                            </li>
+ 
+                            
+
+ <li>
+                                <a href="info/3122/212172.htm"><span>09-02</span>纪委办公室党支部召开8月份政治理论学习会</a>
+                            </li>
+ 
+                            
+
+ <li>
+                                <a href="https://www.ccdi.gov.cn/specialn/esjzyscqh/gbesjzyscqh/202407/t20240722_363078.html"><span>08-02</span>中共中央关于进一步全面深化改革 推进中国式现代化...</a>
+                            </li>
+ 
+                            
+
+ <li>
+                                <a href="https://www.ahsjxy.edu.cn/info/1271/209862.htm"><span>07-15</span>学校组织党员干部赴安徽省党风廉政教育馆开展警示教育</a>
+                            </li>
+ 
+                            
+
+ <li>
+                                <a href="https://www.ahsjxy.edu.cn/info/1271/209562.htm"><span>07-12</span>学校召开党纪学习教育警示教育会</a>
+                            </li>
+ 
+                            
+
+ <li>
+                                <a href="info/3122/209312.htm"><span>07-09</span>安徽体育运动职业技术学院党委委员、纪委书记 王如...</a>
+                            </li>
+ 
+                            
+</ul>
+  </div><script>_showDynClickBatch(['dynclicks_u17_218642','dynclicks_u17_214092','dynclicks_u17_212172','dynclicks_u17_219302','dynclicks_u17_210112','dynclicks_u17_210122','dynclicks_u17_209312'],[218642,214092,212172,219302,210112,210122,209312],"wbnews", 1950780876)</script>
+</div>
+                <div class="s2-r wow fadeInRight"><div class="tit">
+                        <h3>
+                            <b>部门</b><span>动态</span>
+                        </h3>
+                        <a href="xwzx/bmdt.htm" target="_blank">更多</a>
+                    </div>
+                    <ul>
+                        
+<li>
+                            <a href="info/2422/221452.htm" target="_blank" title="图书馆党支部召开10月份政治理论学习会暨主题党日活动">
+                                <div class="s2-info">
+                                    <p>图书馆党支部召开10月份政治理论学习会暨主题党日活动</p>
+                                    <span>10-25</span>
+                                </div>
+                            </a>
+</li>
+                        
+<li>
+                            <a href="info/2422/221442.htm" target="_blank" title="图书馆开展学习宣传贯彻党的二十届三中全会精神专题党课">
+                                <div class="s2-info">
+                                    <p>图书馆开展学习宣传贯彻党的二十届三中全会精神专题党课</p>
+                                    <span>10-25</span>
+                                </div>
+                            </a>
+</li>
+                        
+<li>
+                            <a href="info/2422/221212.htm" target="_blank" title="携手共创安全和谐环境-工程学院开展学生宿舍安全卫生大检查活动">
+                                <div class="s2-info">
+                                    <p>携手共创安全和谐环境-工程学院开展学生宿舍安全卫生大检查活动</p>
+                                    <span>10-25</span>
+                                </div>
+                            </a>
+</li>
+                        
+</ul><script>_showDynClickBatch(['dynclicks_u18_221452','dynclicks_u18_221442','dynclicks_u18_221212'],[221452,221442,221212],"wbnews", 1950780876)</script>
+</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="s3 wow fadeInUp">
+            <div class="px1424">
+
+<div class="tit">
+                    <h3>
+                        <b>专题</b><span>专栏</span>
+                    </h3>
+                    <a href="ztzl.htm">更多</a>
+                </div>
+
+                    <div class="s3-list">                        
+
+
+                            <ul>
+                              
+       <li>
+           <a href="ztzl/xxgcddesjszqhjs.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 70045)" target="_blank">
+              <img src="images/esd20240830.jpg" alt="">
+           </a>
+       </li>                         
+                                
+                              
+       <li>
+           <a href="ztzl/xxgcxjpxsdzgtsshzysxztjy/zyjs.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68681)" target="_blank">
+              <img src="images/zhutijiaoyu.jpg" alt="">
+           </a>
+       </li>                         
+                                
+                              
+       <li>
+           <a href="ztzl/xxgcddesdjs.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68657)" target="_blank">
+              <img src="images/s3-pic1.jpg" alt="">
+           </a>
+       </li>                         
+                                
+                              
+       <li>
+           <a href="ztzl/xxjnxgspdxh_sgjh_js/sjjs.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68679)" target="_blank">
+              <img src="images/zhaunti-pic.png" alt="">
+           </a>
+       </li>                         
+                                
+                              
+       <li>
+           <a href="ztzl/xxdwllxxzxzxx.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68654)" target="_blank">
+              <img src="images/zhuanti-2.png" alt="">
+           </a>
+       </li>                         
+                                
+                              
+       <li>
+           <a href="ztzl/xxgcddesjszqhjs.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 70040)" target="_blank">
+              <img src="images/esd20240830.jpg" alt="">
+           </a>
+       </li>                         
+                                
+                              
+       <li>
+           <a href="ztzl/xxgcxjpxsdzgtsshzysxztjy/zyjs.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68682)" target="_blank">
+              <img src="images/zhutijiaoyu.jpg" alt="">
+           </a>
+       </li>                         
+                                
+                              
+       <li>
+           <a href="ztzl/xxgcddesdjs.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68594)" target="_blank">
+              <img src="images/s3-pic1.jpg" alt="">
+           </a>
+       </li>                         
+                                
+                              
+       <li>
+           <a href="ztzl/xxjnxgspdxh_sgjh_js/sjjs.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68680)" target="_blank">
+              <img src="images/zhaunti-pic.png" alt="">
+           </a>
+       </li>                         
+                                
+                              
+       <li>
+           <a href="ztzl/xxdwllxxzxzxx.htm" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1950780876, 68587)" target="_blank">
+              <img src="images/zhuanti-2.png" alt="">
+           </a>
+       </li>                         
+                                
+</ul>
+                        
+
+</div>
+            </div>
+        </div>
+        <div class="link wow">
+            <div class="px1400">
+                <b><img src="images/link.png" alt="">相关链接</b>
+                <ul>
+                    <li>
+                        <a href="javascript:;">政务服务</a>
+                        <ul><script language="javascript" src="/system/resource/js/openlink.js"></script><li><a href="http://www.moe.gov.cn/" target="_blank">教育部</a></li>
+                            
+<li><a href="https://www.audit.gov.cn/" target="_blank">审计署</a></li>
+                            
+<li><a href="http://jyt.ah.gov.cn/" target="_blank">安徽省教育厅</a></li>
+                            
+<li><a href="https://sjt.ah.gov.cn/" target="_blank">安徽省审计厅</a></li>
+                            
+<li><a href="https://www.ahzsks.cn/index.htm" target="_blank">安徽省教育招生考试院</a></li>
+                            
+<li><a href="http://www.apta.gov.cn/" target="_blank">安徽省人事考试网</a></li>
+                            
+</ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">管理机构</a>
+                        <ul>         <li><a href="http://bgs.ahsjxy.edu.cn" title="">办公室（财务室）</a></li>
+         <li><a href="http://zzrsc.ahsjxy.edu.cn" title="">组织人事处</a></li>
+         <li><a href="http://jwc.ahsjxy.edu.cn" title="">教务处</a></li>
+         <li><a href="http://xsc.ahsjxy.edu.cn" title="">学生处</a></li>
+         <li><a href="http://zwc.ahsjxy.edu.cn" title="">总务处</a></li>
+         <li><a href="http://jwbgs.ahsjxy.edu.cn" title="">纪委办公室</a></li>
+         <li><a href="http://zsxxw.ahsjxy.edu.cn" title="">招生信息网</a></li>
+         <li><a href="https://ahsjxy.jysd.com/" title="">就业信息网</a></li>
+         <li><a href="http://zwc.ahsjxy.edu.cn" title="">安全保卫部</a></li>
+<li style="line-height: 40px; font-size: 15px; padding-left: 20px;color: #fff;">招投标管理办公室</li>
+         <li><a href="http://gqt.ahsjxy.edu.cn" title="">学生处（团委）</a></li>
+</ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">二级学院</a>
+                        <ul><li><a href="http://sjx.ahsjxy.edu.cn" target="_blank">审计学院</a></li>
+                            
+<li><a href="http://kjx.ahsjxy.edu.cn" target="_blank">会计学院（国际教育学院）</a></li>
+                            
+<li><a href="http://gcglx.ahsjxy.edu.cn" target="_blank">工程学院（智能装备学院）</a></li>
+                            
+<li><a href="http://sxx.ahsjxy.edu.cn" target="_blank">商学院</a></li>
+                            
+<li><a href="http://mkszyxy.ahsjxy.edu.cn" target="_blank">马克思主义学院</a></li>
+                            
+<li><a href="http://zhjyxy.ahsjxy.edu.cn" target="_blank">综合教育学院（电子信息学院）</a></li>
+                            
+</ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">教辅机构</a>
+                        <ul><li><a href="http://lib.ahsjxy.edu.cn" target="_blank">图书馆</a></li>
+                            
+<li><a href="http://metc.ahsjxy.edu.cn" target="_blank">现代教育技术中心</a></li>
+                            
+</ul>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="px1400">
+            <div class="foot-l">
+                <h3><b>关于我们</b></h3>
+                <div class="f-dz"><p>地址：方兴校区（合肥市经济技术开发区方兴大道509号）</p>
+<p>包河校区（合肥市包河区东流路9号）</p>
+</div>
+                <div class="f-lx"><p>邮编：230601&emsp;电话：0551-63617016&emsp;传真：0551-63617026</p>
+<p>邮编：230051&emsp;电话：0551-62795162</p>
+<p>招生信息服务&emsp;&nbsp;&nbsp;电话：0551-63617105  63617100  63617103</p></div>
+            </div>
+            <div class="foot-r">
+                <div class="f-code">    
+
+                    <img src="images/f-code.jpg" alt="">
+                    <p>学院微信公众号</p>
+                
+
+</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="copyright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><a href="https://beian.miit.gov.cn/" target="_blank"><p><span style="color: rgb(255, 255, 255); font-family: 微软雅黑; font-size: 12px; text-align: center; text-wrap: wrap;">版权所有　安徽审计职业学院　建议使用IE10.0以上浏览器、分辨率1024*768浏览 皖ICP备06014220号</span></p></a></p></div>
+    </div>
+
+
+</body>
+
+<script src="js/wow.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true,
+    });
+    wow.init();
+</script>
+
+</html>
+  

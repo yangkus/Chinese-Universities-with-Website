@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=1100"/>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>福建农林大学(新版)</title>
+<meta name="description" content="福建农林大学是福建省重点建设的3所高水平大学之一，是农业部、国家林业局与福建省政府共建大学，
+全国首批硕士学位授予单位和第二批博士学位授予单位，教育部本科教学工作水平评估优秀高校，福建省本科一批招生高校。 ">
+
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/1/style/7/7.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/00/02/2/style/6/6.css" rel="stylesheet"/>
+       <LINK href="/_css/tpl2/system.css" type="text/css" rel="stylesheet"> 
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet" />
+<link type="text/css" href="/_js/_portletPlugs/datepicker/css/datepicker.css" rel="stylesheet" />
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet" />
+       <LINK href="/_css/tpl2/default/default.css" type="text/css" rel="stylesheet"> 
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteId="2"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/jquery.datepicker.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/datepicker_lang_HK.js"></script>
+<link href="/_upload/tpl/00/16/22/template22/css/base.css" rel="stylesheet"> 
+<link href="/_upload/tpl/00/16/22/template22/css/index.css" rel="stylesheet"> 
+<script src="/_upload/tpl/00/16/22/template22/js/jquery.easing-1.3.js" type="text/javascript"></script>
+<script src="/_upload/tpl/00/16/22/template22/js/jquery.iosslider.js"></script> 
+<script src="/_upload/tpl/00/16/22/template22/js/slider.js" type="text/javascript"></script>
+<script type="text/javascript" src="/_upload/tpl/00/16/22/template22/extends/extends.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".sudy-tab").sudyTab({
+				handle:".tab-menu li",		// 控制器元素，默认为.tab-menu li
+				content:".tab-list > li",		// 内容体，可以有多个并以英文逗号隔开
+				trigger:"mouseenter",		// 触发事件，默认为"mouseenter"鼠标经过
+				start:1,					// 开始项，默认为第一个
+				autoPlay:{
+					active:false,			// 是否激活自动切换
+					interval:5000,		// 自动切换时间间隔
+					pauseHover:true		// 是否鼠标放上面时停止自动
+				}
+		});
+		$("#focus2").sudyfocus({
+			p:86, // 窗口号或频道号 
+			title: {
+				active: true, // 是否显示标题
+				isAutoWidth: false, // 标题背景自动宽度
+				href: false // 标题是否加文章链接
+			}, 
+			href: true, // 图片是否加链接
+			zWidth: 345, // 窗口宽度
+			zHeight: 230, // 窗口高度
+			response: true, // 是否自适应缩放
+			navigation: true, // 是否显示按钮，上一张、下一张
+			isNavHover: false, // 导航按钮是否默认隐藏，鼠标经过时再显示
+			pagination: false, // 是否显示按钮，1、2、3、4...
+			thumbnail: false, // 是否显示缩略图
+			effect: 'slide', // slide(滑动),fade(淡入),show(即显)
+			speed: 400, // 切换速度
+			crossfade: true, // 是否交叉淡入淡出
+			start: 1, // 默认从第一个开始切换
+			autoPlay: true, // 是否自动播放
+			interval: 5000 // 自动播放时间间隔
+		});
+		// $(".scroll").sudyScroll({
+		// 	width: 373,		// 单元格宽度
+		// 	height: 345,		// 单元格高度
+		// 	display: 3,		// 显示几个单元
+		// 	step: 1,		// 每次交替增加几个单元，值不能大于display
+		// 	dir:"x",		// 交替方向，纵向为"y"，水平为"x"，默认为"y"纵向交替
+		// 	auto:true,		// 是否自动交替,默认为自动
+		// 	speed:500,		// 交替速度
+		// 	hoverPause:5000,	// 交替暂留时间
+		// 	navigation:true,	// 是否显示导航按钮
+		// 	navTrigger:"click", 	// 导航按钮事件
+		// 	pagination:false,	// 是否显示索引按钮
+		// 	pagTrigger:"mouseenter"  //索引按钮事件
+		// });
+	});
+	$(document).ready(function () {
+			var box0 = $(".list_img_con"), v0 = 0.6; //这里添加滚动的对象和其速率 
+			Rin(box0, v0);
+			function Rin($Box, v) {//$Box移动的对象，v对象移动的速率
+				var $Box_ul = $Box.find("ul"),
+					$Box_li = $Box_ul.find("li"), 
+					left = 0,
+					s = 0,
+					timer;//定时器
+
+				$Box_li.each(function (index) { 
+					s += $(this).outerWidth(true); //即要滚动的长度
+				})
+
+				window.requestAnimationFrame = window.requestAnimationFrame || function (Tmove) { return setTimeout(Tmove, 1000 / 60) };
+				window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
+
+				if (s >= $Box.width()) {//如果滚动长度超出Box长度即开始滚动，没有的话就不执行滚动
+					$Box_li.clone(true).appendTo($Box_ul);
+					Tmove();
+					function Tmove() {
+						//运动是移动left  从0到-s;（个人习惯往左滚）
+						left -= v;
+						if (left <= -s) { left = 0; $Box_ul.css("left", left) } else { $Box_ul.css("left", left) }
+						timer = requestAnimationFrame(Tmove);
+					}
+					$Box_ul.hover(function () { cancelAnimationFrame(timer) }, function () { Tmove() })
+				}
+
+			}
+		})
+	</script>
+<!--[if lt IE 9]>
+	<script src="/_upload/tpl/00/16/22/template22/extends/libs/html5.js"></script>
+	<link href="/_upload/tpl/00/16/22/template22/css/ie.css" rel="stylesheet">
+<![endif]-->
+
+<!--[if lt IE 7]>
+	<script src="/_upload/tpl/00/16/22/template22/extends/libs/pngfix.js"></script>
+	<script type="text/javascript">
+		DD_belatedPNG.fix('.site-logo,.search-submit')
+	</script>
+<![endif]-->
+</head>
+<body class="wp-main-page">
+<!--头部开始-->
+    <div class="wp-wrapper site_head">
+		<div class="wp-inner clearfix">
+			<div class="top-nav fl" frag="窗口30">
+             
+              <ul> 
+				  <li>
+					 
+					   <a href="/wlxs/list.htm" target="_blank">未来学生</a> /
+					 
+					   <a href="http://auth.fafu.edu.cn/authserver/login?service=http%3A%2F%2Fehall.fafu.edu.cn%2Flogin" target="_self">在校学生</a> /
+					 
+					   <a href="http://auth.fafu.edu.cn/authserver/login?service=http%3A%2F%2Fehall.fafu.edu.cn%2Flogin" target="_self">教职员工</a> /
+					 
+					   <a href="https://xxzx.fafu.edu.cn/2018/0718/c703a69082/page.htm" target="_blank">校外入口</a> /
+					 
+				  </li> 
+			  </ul>
+             
+			</div>
+			<!--<a href="http://210.34.84.118:9994/" target="_blank">智能办公系统</a> /--> 
+			<!--<a href="http://210.34.84.118:9995/" target="_blank">VPN(建设中)</a> /--> 
+			<div class="top-nav fr" frag="窗口66">
+				
+					<ul> 
+						<li>
+						   
+							 <a href="http://english.fafu.edu.cn/" target="_blank">English</a> /
+						   
+							 <a href="/lxwm/list.htm" target="_blank">联系我们</a> /
+						   
+						</li> 
+					</ul>
+				
+			</div>
+		</div>
+	</div>
+ 
+    <header class="wp-wrapper wp-header">
+    	<div class="wp-inner clearfix"> 
+    		<!--logo开始-->
+    		<div class="wp-panel logo-panel panel-1" frag="面板1">
+    			<a class="navi-aside-toggle"></a>
+	    		<div class="wp-window logo-window window-1" frag="窗口1" portletmode="simpleSiteAttri">
+	    			<a class="site-url" href="/main.htm"><img class="site-logo" src="/_upload/tpl/00/16/22/template22/images/logo.png"></a>
+	    		</div>
+    		</div>
+    		<!--//logo结束-->
+			 
+			<!--搜索开始-->
+			<div class="wp-panel search-panel panel-3" frag="面板3">
+				<div class="searchbtn" style="display: block;"></div>
+				<div class="wp-window search-window window-3" frag="窗口3" portletmode="search" style="width: 45px;"><div class="wp-search clearfix">
+						<form method="post" action="/_web/_search/api/search/new.rst?locale=zh_CN&request_locale=zh_CN&_p=YXM9MiZ0PTIyJmQ9ODUmcD0xJm09U04m" target="_blank">
+							<div class="search-input"><input class="search-title" name="keyword" type="text" placeholder="Search..."></div>
+							<div class="search-btn"><input class="search-submit" name="submit" type="submit" value=""></div>
+						</form>
+				    </div>
+				</div>
+			</div>
+			<!--//搜索结束--> 
+    	</div>
+    </header>
+<!--//头部结束-->
+
+<!--导航开始-->
+    <nav class="wp-wrapper wp-navi">
+    	<div class="wp-inner clearfix">
+    		<div class="wp-panel main-nav-panel panel-5" frag="面板5">
+    			<div class="wp-window main-nav-window window-5" frag="窗口5">
+    				
+    				<div class="navi-slide-head">
+		    			<h3 class="navi-slide-title">导航</h3>
+		    			<a class="navi-slide-arrow"></a>
+		    		</div>
+    				
+		            <ul class="wp-menu clearfix" data-nav-aside='{"title":"导航","index":0}'>
+		            	
+		              	<li class="menu-item i1"><a class="menu-link" href="http://www.fafu.edu.cn/" target="_self">主页</a>
+		              		
+		                </li>
+		                
+		              	<li class="menu-item i2"><a class="menu-link" href="/5243/list.htm" target="_blank">学校概况</a>
+		              		
+		              		<i class="menu-switch-arrow"></i>
+		                  	<ul class="sub-menu clearfix">
+		                  		
+		                        <li class="sub-item i2-1"><a class="sub-link" href="/5244/list.htm" target="_self">学校简介</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-2"><a class="sub-link" href="/xxzc/list.htm" target="_self">学校章程</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-3"><a class="sub-link" href="/5245/list.htm" target="_self">历史沿革</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-4"><a class="sub-link" href="/5246/list.htm" target="_self">现任领导</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-5"><a class="sub-link" href="/5247/list.htm" target="_self">历任领导</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-6"><a class="sub-link" href="http://map.fafu.edu.cn/" target="_blank">校园导航</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-7"><a class="sub-link" href="/5250/list.htm" target="_self">校  徽</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-8"><a class="sub-link" href="/5251/list.htm" target="_self">校  训</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-9"><a class="sub-link" href="/xg/list.htm" target="_self">校歌</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-10"><a class="sub-link" href="/5253/list.htm" target="_self">校园地图</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i2-11"><a class="sub-link" href="/5254/list.htm" target="_self">VI识别系统</a>
+		                        	
+		                        </li>
+		                        
+		                  	</ul>
+		                  	
+		                </li>
+		                
+		              	<li class="menu-item i3"><a class="menu-link" href="https://www.fafu.edu.cn/wlxs/list.htm" target="_blank">招生信息</a>
+		              		
+		                </li>
+		                
+		              	<li class="menu-item i4"><a class="menu-link" href="/5263/list.htm" target="_blank">人才培养</a>
+		              		
+		                </li>
+		                
+		              	<li class="menu-item i5"><a class="menu-link" href="/5255/list.htm" target="_blank">院处设置</a>
+		              		
+		                </li>
+		                
+		              	<li class="menu-item i6"><a class="menu-link" href="/5276/list.htm" target="_blank">农大要闻</a>
+		              		
+		                </li>
+		                
+		              	<li class="menu-item i7"><a class="menu-link" href="/5268/list.htm" target="_blank">媒体农大</a>
+		              		
+		                </li>
+		                
+		              	<li class="menu-item i8"><a class="menu-link" href="/xkjs/list.htm" target="_self">学科建设</a>
+		              		
+		              		<i class="menu-switch-arrow"></i>
+		                  	<ul class="sub-menu clearfix">
+		                  		
+		                        <li class="sub-item i8-1"><a class="sub-link" href="/297/list.htm" target="_self">学科概况</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i8-2"><a class="sub-link" href="/298/list.htm" target="_self">国家、部级重点学科</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i8-3"><a class="sub-link" href="/ESIxk/list.htm" target="_self">ESI学科</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i8-4"><a class="sub-link" href="/299/list.htm" target="_self">福建省高峰、高原学科</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i8-5"><a class="sub-link" href="/300/list.htm" target="_self">博士学位授权一级学科点</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i8-6"><a class="sub-link" href="/bszyxwsqd/list.htm" target="_self">博士专业学位授权点</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i8-7"><a class="sub-link" href="/301/list.htm" target="_self">硕士学位授权一级学科点</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i8-8"><a class="sub-link" href="/302/list.htm" target="_self">硕士专业学位授权点</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i8-9"><a class="sub-link" href="/303/list.htm" target="_self">普通本科专业</a>
+		                        	
+		                        </li>
+		                        
+		                  	</ul>
+		                  	
+		                </li>
+		                
+		              	<li class="menu-item i9"><a class="menu-link" href="/5258/list.htm" target="_blank">科研机构</a>
+		              		
+		              		<i class="menu-switch-arrow"></i>
+		                  	<ul class="sub-menu clearfix">
+		                  		
+		                        <li class="sub-item i9-1"><a class="sub-link" href="/305/list.htm" target="_self">自然科学类科研机构</a>
+		                        	
+		                        </li>
+		                        
+		                        <li class="sub-item i9-2"><a class="sub-link" href="/306/list.htm" target="_self">社会科学类科研机构</a>
+		                        	
+		                        </li>
+		                        
+		                  	</ul>
+		                  	
+		                </li>
+		                
+		              	<li class="menu-item i10"><a class="menu-link" href="/xsqk/list.htm" target="_self">学术期刊</a>
+		              		
+		                </li>
+		                
+		              	<li class="menu-item i11"><a class="menu-link" href="/kfbx/list.htm" target="_self">开放办学</a>
+		              		
+		                </li>
+		                
+		              	<li class="menu-item i12"><a class="menu-link" href="https://lib.fafu.edu.cn" target="_self">文献检索</a>
+		              		
+		                </li>
+		                
+		            </ul>
+		            
+	          		
+	          	</div>
+	        </div>
+    	</div>
+    </nav>
+
+    <!--aside导航-->
+    <div class="wp-navi-aside" id="wp-navi-aside">
+    	<div class="aside-inner">
+    		<div class="navi-aside-wrap"></div>
+    	</div>
+    	<div class="navi-aside-mask"></div>
+    </div>
+<!--//导航结束-->
+
+<!--大图开始-->
+    <div class="wp-wrapper wp-focus">
+    	<div class="wp-inner" frag="窗口6"><div id="wp_news_w6"> 
+
+			<section class="iosSliderDemo">
+				<div class="fluidHeight">
+					<div class="sliderContainer">
+						<div class="iosSlider">
+							<div class="slider">
+							
+							<div class="item item1">
+								<div class="inner">
+									<a href="/2024/0830/c162a84208/page.htm" target="_blank"><img src="/_upload/article/images/27/9a/905ef2eb477c8d053476ec896245/31bfa8eb-ea8d-4684-af0f-16ecaf3d57f1.jpg" title=""></a>
+									<div class="selectorShadow"></div>
+									<div class="text1-bg"></div>
+									<div class="text1"><span>深入学习贯彻党的二十届三中全会精神</span></div> 
+								</div>
+							</div>
+							
+							<div class="item item1">
+								<div class="inner">
+									<a href="https://xcb.fafu.edu.cn/ztw/" target="_blank"><img src="/_upload/article/images/09/8c/1141af7c48c8b30740eb698fea42/3b9809a2-86b0-43fc-8bd6-8e7eecc430b4.jpg" title=""></a>
+									<div class="selectorShadow"></div>
+									<div class="text1-bg"></div>
+									<div class="text1"><span>深入开展学习贯彻习近平新时代中国特色社会主义思想主题教育</span></div> 
+								</div>
+							</div>
+							
+							<div class="item item1">
+								<div class="inner">
+									<a href="https://www.fafu.edu.cn/esd/" target="_blank"><img src="/_upload/article/images/8f/18/d0fe44194cfba39a502c6eb62efe/b76ca707-28b9-4aa1-af8e-02473543b2a3.jpg" title=""></a>
+									<div class="selectorShadow"></div>
+									<div class="text1-bg"></div>
+									<div class="text1"><span>聚焦二十大</span></div> 
+								</div>
+							</div>
+							 
+						</div>
+						</div>
+						<div class="slideSelectors" style="width:100%">
+							<div class="prev"><</div> 
+							<div class="next">></div>
+						</div>
+						<div class="scrollbarContainer"></div>
+					</div>
+				</div>
+			</section> 
+    	</div> 
+</div>
+    </div>
+<!--//大图结束-->
+
+<!--主体开始-->
+    <div class="wp-wrapper wp-container">
+    	<div class="wp-inner clearfix">
+		  <div class="content-box clearfix">
+    		<div class="content clearfix">
+					<div class="sudy-tab">
+							<ul class="tab-menu">
+							  <li class=""><a href="http://www.fafu.edu.cn/5266/list.htm" target="_self">时政要闻</a></li>
+							  <li><a href="http://www.fafu.edu.cn/5299/list.htm" target="_self">上级政策</a></li> 
+							</ul>
+							<ul class="tab-list">
+							  <li frag="窗口75">
+								 <div id="wp_news_w75"> 
+
+									<div class="focus" data-focus>
+										
+										<img src="/_upload/article/images/53/a8/e73083c84fd983b6f1a8401dd8eb/2138f154-6c2d-4e7a-bb65-61ddb763011c.jpg" data-focus-title="<a href='http://www.news.cn/politics/leaders/20240910/3b13b44c6c2a4d17bdc0fd29335cb92d/c.html' target='_blank' title='习近平在全国教育大会上强调 紧紧围绕立德树人根本任务 朝着建成教育强国战略目标扎实迈进'>习近平在全国教育大会上强调 紧...</a>" data-focus-url="http://www.news.cn/politics/leaders/20240910/3b13b44c6c2a4d17bdc0fd29335cb92d/c.html">
+										
+										<img src="/_upload/article/images/fd/fe/f17ab62b4df0bef09bc5de1a9b60/63620515-e326-47a7-9a9e-a32768ed3210.jpg" data-focus-title="<a href='http://paper.people.com.cn/rmrb/html/2024-07/19/nw.D110000renmrb_20240719_1-01.htm' target='_blank' title='中共二十届三中全会在京举行'>中共二十届三中全会在京举行</a>" data-focus-url="http://paper.people.com.cn/rmrb/html/2024-07/19/nw.D110000renmrb_20240719_1-01.htm">
+										
+										<img src="/_upload/article/images/5b/24/c1ca30f240068530a376cd083882/5c4dadb4-c881-4774-b92c-d58f4afd69ce.jpeg" data-focus-title="<a href='http://www.news.cn/politics/leaders/20240624/a0acce89007644988602b5dcaa4fb752/c.html' target='_blank' title='全国科技大会 国家科学技术奖励大会 两院院士大会在京召开 习近平为国家最高科学技术奖获得者等颁奖并发表重要讲话'>全国科技大会 国家科学技术奖励...</a>" data-focus-url="http://www.news.cn/politics/leaders/20240624/a0acce89007644988602b5dcaa4fb752/c.html">
+										
+									</div>
+					
+								 </div> 
+
+							  </li>
+							  <li frag="窗口176"><div id="wp_news_w176"> 
+      
+									<ul class="post-news"> 
+										
+											<li class="news-item item-1 clearfix"><span class="item-meta meta-title"><a href='http://paper.people.com.cn/rmrbwap/html/2023-12/28/nw.D110000renmrb_20231228_1-05.htm' target='_blank' title='中国共产党纪律处分条例'>中国共产党纪律处分条例</a></span></li>
+										
+											<li class="news-item item-2 clearfix"><span class="item-meta meta-title"><a href='http://paper.people.com.cn/rmrb/html/2024-02/04/nw.D110000renmrb_20240204_4-01.htm' target='_blank' title='中共中央国务院关于学习运用“千村示范、万村整治”工程经验有力有效推进乡村全面振兴的意见'>中共中央国务院关于学习运用“千村示范、万村...</a></span></li>
+										
+											<li class="news-item item-3 clearfix"><span class="item-meta meta-title"><a href='http://news.cn/politics/zywj/2023-03/19/c_1129444703.htm' target='_blank' title='中共中央办公厅印发《关于在全党大兴调查研究的工作方案》'>中共中央办公厅印发《关于在全党大兴调查研究...</a></span></li>
+										
+											<li class="news-item item-4 clearfix"><span class="item-meta meta-title"><a href='http://www.news.cn/politics/2023-02/13/c_1129362160.htm' target='_blank' title='中共中央　国务院关于做好2023年全面推进乡村振兴重点工作的意见'>中共中央　国务院关于做好2023年全面推进乡村...</a></span></li>
+										
+											<li class="news-item item-5 clearfix"><span class="item-meta meta-title"><a href='http://www.news.cn/politics/2022-12/14/c_1129206017.htm' target='_blank' title='中共中央办公厅 国务院办公厅印发《乡村振兴责任制实施办法》'>中共中央办公厅 国务院办公厅印发《乡村振兴...</a></span></li>
+										
+											<li class="news-item item-6 clearfix"><span class="item-meta meta-title"><a href='http://www.moe.gov.cn/srcsite/A08/moe_740/s3863/202212/t20221207_1023667.html' target='_blank' title='教育部办公厅等四部门关于加快新农科建设 推进高等农林教育创新发展的意见'>教育部办公厅等四部门关于加快新农科建设 推...</a></span></li>
+										
+											<li class="news-item item-7 clearfix"><span class="item-meta meta-title"><a href='http://www.news.cn/politics/cpc20/2022-10/30/c_1129088415.htm' target='_blank' title='中共中央关于认真学习宣传贯彻党的二十大精神的决定'>中共中央关于认真学习宣传贯彻党的二十大精神...</a></span></li>
+										
+											<li class="news-item item-8 clearfix"><span class="item-meta meta-title"><a href='http://www.moe.gov.cn/srcsite/A13/moe_772/202208/t20220818_653672.html' target='_blank' title='教育部等十部门关于印发《全面推进 “大思政课”建设的工作方案》的通知'>教育部等十部门关于印发《全面推进 “大思政...</a></span></li>
+										
+											<li class="news-item item-9 clearfix"><span class="item-meta meta-title"><a href='http://www.moe.gov.cn/srcsite/A08/moe_740/s3863/202209/t20220919_662666.html' target='_blank' title='教育部办公厅关于印发《新农科人才培养 引导性专业指南》的通知'>教育部办公厅关于印发《新农科人才培养 引导...</a></span></li>
+										
+									</ul>
+							  </div> 
+</li>
+							</ul>
+						  </div>   
+    		</div>
+ 
+    		<div class="sidebar"> 
+				<div class="sbox" frag="面板888">
+    				 
+				</div>
+				<div class="sbox" frag="面板119">
+    				<div class="wp-post post-9" frag="窗口119">
+    					<div class="post-head">
+    						<div class="head-bar">
+	    						<h3 class="post-title" frag="标题"><span>农大要闻</span></h3>
+	    						<div class="post-more" frag="按钮" type="更多"><a href="/5276/list.htm" class="w119_more"><span frag="按钮内容">更多>></span></a></div>
+    						</div>
+    					</div>
+    					<div class="post-body">
+    						<div id="wp_news_w119"> 
+    							
+					<ul class="post-news">
+				
+					<li class="news-r">
+				<h1><a href='/2024/0410/c132a82322/page.htm' target='_blank' title='省委书记周祖翼在福建农林大学调研'>省委书记周祖翼在福建农林大学调研</a></h1>
+						<p><a href='/2024/0410/c132a82322/page.htm' target='_blank' title='省委书记周祖翼在福建农林大学调研'>4月9日，省委书记周祖翼深入福建农林大学调研，看望慰问师生代表并深入交流。周祖翼强调，要深入贯彻落实习近平总书记...</a></p>
+						</li> 
+					
+				
+				<li class="news-item item-1 clearfix">
+		 <span class="item-meta meta-title"><a href='/2023/1215/c132a81118/page.htm' target='_blank' title='周祖翼赵龙与南非德班理工大学孔子学院师生会见交流'>周祖翼赵龙与南非德班理工大学孔子学院师生会见交流</a></span>
+		<span class="item-meta meta-time news-date-hide">2023-12-15</span>
+								</li>
+							
+				<li class="news-item item-2 clearfix">
+		 <span class="item-meta meta-title"><a href='/2023/0602/c132a78198/page.htm' target='_blank' title='省委书记周祖翼到我校讲授思政课'>省委书记周祖翼到我校讲授思政课</a></span>
+		<span class="item-meta meta-time news-date-hide">2023-06-03</span>
+								</li>
+							
+				<li class="news-item item-3 clearfix">
+		 <span class="item-meta meta-title"><a href='/2024/1025/c132a85046/page.htm' target='_blank' title='闽侯县委书记吴永忠一行来校调研'>闽侯县委书记吴永忠一行来校调研</a></span>
+		<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+								</li>
+							
+				<li class="news-item item-4 clearfix">
+		 <span class="item-meta meta-title"><a href='/2024/1025/c132a85045/page.htm' target='_blank' title='校党委巡察工作会议暨第四轮巡察动员部署会召开'>校党委巡察工作会议暨第四轮巡察动员部署会召开</a></span>
+		<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+								</li>
+							
+				<li class="news-item item-5 clearfix">
+		 <span class="item-meta meta-title"><a href='/2024/1025/c132a85043/page.htm' target='_blank' title='我校在福建省大学生游泳联赛中荣获3金3银2铜佳绩'>我校在福建省大学生游泳联赛中荣获3金3银2铜佳绩</a></span>
+		<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+								</li>
+							
+				<li class="news-item item-6 clearfix">
+		 <span class="item-meta meta-title"><a href='/2024/1025/c132a85042/page.htm' target='_blank' title='我校吴双教授团队揭示番茄感受虫害建立早期防御体系的机制'>我校吴双教授团队揭示番茄感受虫害建立早期防御体系的机制</a></span>
+		<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+								</li>
+							
+						</ul>
+							</div> 
+
+    					</div>
+					</div> 
+    			</div> 
+			</div>
+		  </div> 
+		  <div class="sbox" frag="面板9" style="margin-top: 12px;">
+			<div class="wp-post post-9 post-imgbox" frag="窗口9">
+				<div id="wp_news_w9"> 
+							
+					
+						<a href="https://zsb.fafu.edu.cn/" class="i1" target="_blank">
+							<img src="/_upload/article/images/92/ea/f7c6aa44466ea87935a124f0a29e/41036da4-0257-4486-8376-3b612bc9e351.jpg" alt="" /> 
+						</a>
+					
+				</div> 
+
+			</div>
+			
+		</div>
+		<div class="clear"></div> 
+		
+		<div class="clear"></div> 
+		<div class="clearfix">
+				<div class="tab-box fl">
+						<div class="sudy-tab">
+								<ul class="tab-menu"> 
+ <li class="tab-li1"><a href="http://www.fafu.edu.cn/5262/list.htm" target="_self">讲座报告</a></li> 
+								  <li ><a href="http://www.fafu.edu.cn/5280/list.htm" target="_self">公示公告</a></li>
+								 
+								</ul>
+								<ul class="tab-list">
+								  <li frag="窗口35"><div id="wp_news_w35"> 
+
+                                    <ul>
+                                      
+										<li>
+											<span class="tab-time">09-20</span>
+											<span class="tab-tlt"><a href='/2024/0920/c118a84537/page.htm' target='_blank' title='教师教学发展活动（307期）——读书沙龙：《刻意练习： 如何从新手到大师》'>教师教学发展活动（307期）——读书沙龙：《刻意练习： 如何从新手到大师》</a></span>
+										</li>
+                                      
+										<li>
+											<span class="tab-time">09-14</span>
+											<span class="tab-tlt"><a href='/2024/0914/c118a84414/page.htm' target='_blank' title='教师教学发展活动（第306期）—— AI助教及AI赋能智慧教学'>教师教学发展活动（第306期）—— AI助教及AI赋能智慧教学</a></span>
+										</li>
+                                      
+										<li>
+											<span class="tab-time">09-09</span>
+											<span class="tab-tlt"><a href='/2024/0909/c118a84342/page.htm' target='_blank' title='金山讲坛第一百四十七讲'>金山讲坛第一百四十七讲</a></span>
+										</li>
+                                      
+										<li>
+											<span class="tab-time">06-07</span>
+											<span class="tab-tlt"><a href='/2024/0607/c118a83381/page.htm' target='_blank' title='教师教学发展活动（304期） ——教学评价与反馈系列沙龙活动'>教师教学发展活动（304期） ——教学评价与反馈系列沙龙活动</a></span>
+										</li>
+                                      
+									</ul>
+								  </div> 
+</li>
+								  <li frag="窗口36"><div id="wp_news_w36"> 
+
+										<ul>
+										  
+											<li>
+												<span class="tab-time">10-18</span>
+												<span class="tab-tlt"><a href='http://rst.fujian.gov.cn/zw/ztzl/zxzt/sydwrczp/gccrczpfa/202410/t20241018_6549728.htm' target='null' title='福建农林大学教学科研人员招聘方案'>福建农林大学教学科研人员招聘方案</a></span>
+											</li>
+										  
+											<li>
+												<span class="tab-time">10-23</span>
+												<span class="tab-tlt"><a href='/2024/1023/c136a85004/page.htm' target='_blank' title='“一种防治II型糖尿病的莲子心总黄酮的制备及其应用”与“一种辅助降血糖海藻胶软胶囊及其制备方法”专利转让公示'>“一种防治II型糖尿病的莲子心总黄酮的制备及其应用”与“一种辅助降血糖海藻胶软胶囊及其制备方法”专利转...</a></span>
+											</li>
+										  
+											<li>
+												<span class="tab-time">10-22</span>
+												<span class="tab-tlt"><a href='/2024/1022/c136a84953/page.htm' target='_blank' title='&quot;经遗传修饰的大豆植物”专利申请权转让现金奖励信息公示'>&quot;经遗传修饰的大豆植物”专利申请权转让现金奖励信息公示</a></span>
+											</li>
+										  
+											<li>
+												<span class="tab-time">10-22</span>
+												<span class="tab-tlt"><a href='/2024/1022/c136a84952/page.htm' target='_blank' title='停水通告(2024年10月22日)'>停水通告(2024年10月22日)</a></span>
+											</li>
+										  
+										</ul>
+									  </div> 
+</li>
+								</ul>
+							  </div>
+				</div>
+				<div class="wp-post post-19 fl">
+					<div class="sbox" frag="面板69">
+						 
+					</div>
+					<div frag="窗口19">
+						<div class="post-head">
+							<div class="head-bar">
+								<h3 class="post-title" frag="标题"><span>媒体农大</span></h3>
+								<div class="post-more" frag="按钮" type="更多"><a href="/5268/list.htm" class="w19_more"><span frag="按钮内容">更多>></span></a></div>
+							</div>
+						</div>
+						<div class="post-body">
+							<div id="wp_news_w19"> 
+								<ul class="post-news">
+									
+									<li class="news-item item-1 clearfix">
+										<span class="item-meta meta-title"><a href='http://paper.people.com.cn/rmrb/html/2024-09/05/nw.D110000renmrb_20240905_3-13.htm' target='_blank' title='人民日报（2024-09-09）：[理论文章]为加快建设教育强国提供动力 把握深化教育综合改革的内在要求（有的放矢）'>人民日报（2024-09-09）：[理论文章]为加快建设...</a></span> 
+									</li>
+								 
+									<li class="news-item item-2 clearfix">
+										<span class="item-meta meta-title"><a href='https://www.peopleapp.com/column/30047060262-500005851618' target='_blank' title='人民日报福建频道（2024-10-22）：福建农林大学召开科技成果发布会，主动对接产业一线'>人民日报福建频道（2024-10-22）：福建农林大学...</a></span> 
+									</li>
+								 
+									<li class="news-item item-3 clearfix">
+										<span class="item-meta meta-title"><a href='https://article.xuexi.cn/articles/index.html?art_id=9537747027098779923&item_id=9537747027098779923&cdn=https%3A%2F%2Fregion-fujian-resource&study_style_id=video_default' target='_blank' title='学习强国福建平台（2024-10-22）：多彩校园 | 福建农林大学：88载春秋，校歌悠扬'>学习强国福建平台（2024-10-22）：多彩校园 | ...</a></span> 
+									</li>
+								 
+									<li class="news-item item-4 clearfix">
+										<span class="item-meta meta-title"><a href='http://www.jyb.cn/rmtzcg/xwy/wzxw/202410/t20241022_2111259777.html' target='_blank' title='中国教育新闻网（2024-10-22）：福建农林大学举办科技成果转化签约发布会'>中国教育新闻网（2024-10-22）：福建农林大学举...</a></span> 
+									</li>
+								 
+									<li class="news-item item-5 clearfix">
+										<span class="item-meta meta-title"><a href='https://mag.fznews.com.cn/fzwb/2024/20241022/20241022_A03/20241022_A03_2.htm' target='_blank' title='福州晚报（2024-10-22）：福建农林大学集中展示科研成果 近30个项目签约，合同总金额约1.73亿元'>福州晚报（2024-10-22）：福建农林大学集中展示...</a></span> 
+									</li>
+								 
+									<li class="news-item item-6 clearfix">
+										<span class="item-meta meta-title"><a href='https://fjrb.fjdaily.com/pc/con/202410/22/content_405128.html' target='_blank' title='福建日报（2024-10-22）：当好科技服务“店小二”'>福建日报（2024-10-22）：当好科技服务“店小二...</a></span> 
+									</li>
+								 
+									<li class="news-item item-7 clearfix">
+										<span class="item-meta meta-title"><a href='http://news.fznews.com.cn/fzxw/20241022/V5xlUTs842.shtml' target='_blank' title='福州新闻网（2024-10-22）：福建农林大学集中展示科研成果 近30个项目签约'>福州新闻网（2024-10-22）：福建农林大学集中展...</a></span> 
+									</li>
+								 
+								</ul>
+							</div> 
+
+						</div>
+					</div>
+				</div>
+				<div class="wp-post media_fr fr" frag="窗口86">
+					<div class="post-head">
+						<div class="head-bar">
+							<h3 class="post-title" frag="标题"><span>影像农大</span></h3>
+							<div class="post-more" frag="按钮" type="更多"><a href="/yxnld_618/list.htm" class="w86_more"><span frag="按钮内容">更多>></span></a></div>
+						</div>
+					</div>
+					<div>
+						<div id="focus2"></div>
+						                <!-- JSON列表 -->
+<script language="JavaScript" class="" >
+    var w86imgJsons = [
+    
+        
+            {
+            "src": "/_upload/article/images/d4/08/67ca2da545b4a6ab88bf1fa32ff8/37284cf0-5974-4727-b8e2-c6441c48e3e5.jpg",
+            "original": "/_upload/article/images/d4/08/67ca2da545b4a6ab88bf1fa32ff8/37284cf0-5974-4727-b8e2-c6441c48e3e5.jpg",
+            "title": "【福“见”农林大】美出圈！农林...",
+            "url": "/2024/0714/c618a84007/page.htm"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/50/4d/fc9c3f5043759cf09339508977b9/20645df4-996d-4c44-8605-bc480ac57416.jpg",
+            "original": "/_upload/article/images/50/4d/fc9c3f5043759cf09339508977b9/20645df4-996d-4c44-8605-bc480ac57416.jpg",
+            "title": "87载薪火相传！福建农林大学校...",
+            "url": "/2024/0423/c618a82551/page.htm"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/43/ad/8c869a2242e1b79a89fc504ad993/b7b6c8bb-2732-4fc9-803c-b3824a1c5aa1.jpg",
+            "original": "/_upload/article/images/43/ad/8c869a2242e1b79a89fc504ad993/b7b6c8bb-2732-4fc9-803c-b3824a1c5aa1.jpg",
+            "title": "【福“见”农林大】繁花拍了拍你...",
+            "url": "/2024/0423/c618a82545/page.htm"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/64/71/caed70534378b48d67a0fee00d4a/7ab1f176-485e-4395-9018-059fdfb1f72f.jpg",
+            "original": "/_upload/article/images/64/71/caed70534378b48d67a0fee00d4a/7ab1f176-485e-4395-9018-059fdfb1f72f.jpg",
+            "title": "【农林全视角】来吧，展示！这届...",
+            "url": "/2023/0306/c618a76043/page.htm"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/27/93/a39d30984e1cb9add3622bdf1a7b/9719b9c5-d0e9-4380-94f9-0fecef538fb3.jpg",
+            "original": "/_upload/article/images/27/93/a39d30984e1cb9add3622bdf1a7b/9719b9c5-d0e9-4380-94f9-0fecef538fb3.jpg",
+            "title": "【恰是好光景】二十四节气之芒种",
+            "url": "/2022/0605/c618a71207/page.htm"
+            },
+        
+    
+        
+            {
+            "src": "/_upload/article/images/fb/a3/17fe31ba4a039faf63376522b16c/db8ce415-e788-4411-a54a-a5fdc8945140.jpg",
+            "original": "/_upload/article/images/fb/a3/17fe31ba4a039faf63376522b16c/db8ce415-e788-4411-a54a-a5fdc8945140.jpg",
+            "title": "【恰是好光景】二十四节气之小满",
+            "url": "/2022/0520/c618a70891/page.htm"
+            }
+        
+    
+    ];
+</script>
+
+            
+					</div> 
+				</div>
+			</div>
+    	</div>
+    </div>
+<!--//主体结束-->
+    <div class="wp-container2">
+			<div class="roll">
+				<div class="roll-box" frag="窗口88">
+					<div class="list_img_tt">
+						<h3 class="post-title" frag="标题"><span>农大 · 人物</span></h3>
+						<div class="post-more" frag="按钮" type="更多"><a href="/ndwrw/list.htm" class="w88_more"><span frag="按钮内容">更多>></span></a></div>
+					</div>
+					<div id="wp_news_w88"> 
+
+						<div class="list_img_con">
+							<ul class="scroll clearfix">
+								
+									<li class="i1">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0425/c587a62615/page.htm" target="_blank"><img src="/_upload/article/images/59/ca/c62b70cd4985a0fdbdbfddfebf38/cbaee5a3-c5ad-4ab5-8b86-4307be0d4a59.png" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0425/c587a62615/page.htm' target='_blank' title='廖红：发掘根对土壤的情谊'>廖红：发掘根对土壤的情谊</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i2">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0427/c587a62616/page.htm" target="_blank"><img src="/_upload/article/images/89/ac/457a4f8f4610b918dbed54059400/6ec97962-4704-4cb7-927a-d7954181fe8c.png" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0427/c587a62616/page.htm' target='_blank' title='魏太云：聚焦强农兴农需求，传承培育学科人才'>魏太云：聚焦强农兴农需求，传承...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i3">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0426/c587a62617/page.htm" target="_blank"><img src="/_upload/article/images/e8/a4/a2f3573a4ecebccb58d313e31783/ab43158c-7d86-4d46-9879-da2c344809cf.png" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0426/c587a62617/page.htm' target='_blank' title='周顺桂：扎根“泥土”绽芳华'>周顺桂：扎根“泥土”绽芳华</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i4">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0506/c587a62618/page.htm" target="_blank"><img src="/_upload/article/images/a7/23/e7bdce534d35839d6e9cbe024735/5266cb8b-563f-4fcc-a6f5-263d11656924.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0506/c587a62618/page.htm' target='_blank' title='陈新华：浩海治学造福于民，俯身躬耕育人之业'>陈新华：浩海治学造福于民，俯身...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i5">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0507/c587a62619/page.htm" target="_blank"><img src="/_upload/article/images/de/5e/1a9741794e498a25bdede8cbb2f0/726a7e30-9a2c-4446-a6c0-ae2f14003ffa.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0507/c587a62619/page.htm' target='_blank' title='徐通达：青年植物科学家的科技兴农梦'>徐通达：青年植物科学家的科技兴...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i6">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0510/c587a62620/page.htm" target="_blank"><img src="/_upload/article/images/a1/53/eb02e0634911a509595066a7f178/807ffdec-b9a5-431b-87f0-8d11a2ec732e.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0510/c587a62620/page.htm' target='_blank' title='熊延：做植物科学领域的“守望者”'>熊延：做植物科学领域的“守望者...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i7">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0512/c587a62621/page.htm" target="_blank"><img src="/_upload/article/images/b3/99/7e7293624fbd9c75e7e6701c70cf/28e8da17-1d08-44c6-83ac-189916c855d0.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0512/c587a62621/page.htm' target='_blank' title='秦源：探索生命世界的乐趣'>秦源：探索生命世界的乐趣</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i8">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0517/c587a62622/page.htm" target="_blank"><img src="/_upload/article/images/37/20/088e490741da8fe379f7c25ce6ea/7f48d8cf-ffc8-4df4-aafb-7d6a231c8cdb.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0517/c587a62622/page.htm' target='_blank' title='吴建国：为水稻抗病毒育种的植物医生'>吴建国：为水稻抗病毒育种的植物...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i9">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0519/c587a62623/page.htm" target="_blank"><img src="/_upload/article/images/4a/e1/9fc13af64b64b8c3a1afd4bd39a5/469a4ff0-f63d-42eb-8323-02ae53f11400.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0519/c587a62623/page.htm' target='_blank' title='余雁：专注木竹产业科技创新的“绿色使者”'>余雁：专注木竹产业科技创新的“...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i10">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0524/c587a62624/page.htm" target="_blank"><img src="/_upload/article/images/67/f9/f2f138ce444da45fecec9c0e2931/170d4406-bda5-41af-8aaa-58b19916f4d4.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0524/c587a62624/page.htm' target='_blank' title='唐定中：为植物提高免疫力'>唐定中：为植物提高免疫力</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i11">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0525/c587a62625/page.htm" target="_blank"><img src="/_upload/article/images/5e/a8/ffa4dc38436d817640014c1854d1/39b6132b-2311-4065-a277-05fafed12576.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0525/c587a62625/page.htm' target='_blank' title='张怡：食者产学萃新火，师者立德薪火传'>张怡：食者产学萃新火，师者立德...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i12">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0531/c587a62626/page.htm" target="_blank"><img src="/_upload/article/images/6a/99/d17d74ef40d5a28e95758cae372e/0773f3a0-a7c0-4726-a242-46390d743b70.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0531/c587a62626/page.htm' target='_blank' title='陈栩：将细胞生物学带入“大豆振兴”'>陈栩：将细胞生物学带入“大豆振...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i13">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0602/c587a62627/page.htm" target="_blank"><img src="/_upload/article/images/97/0d/7662d88f428f94076cbb35ae4610/e9488a81-4dbf-4f16-955f-fc1eb647f7b5.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0602/c587a62627/page.htm' target='_blank' title='陈志长：探索植物营养的奥秘'>陈志长：探索植物营养的奥秘</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i14">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0607/c587a62628/page.htm" target="_blank"><img src="/_upload/article/images/43/39/e158b2524022b9278ee342e0548b/42add4ea-9c04-4461-b98d-c6bd2c4ec98a.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0607/c587a62628/page.htm' target='_blank' title='林德书：探索植物细胞生长的奥秘'>林德书：探索植物细胞生长的奥秘</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i15">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0609/c587a62629/page.htm" target="_blank"><img src="/_upload/article/images/84/e5/529d8e4740fba9d44735752bfe7c/c7071509-ed87-4199-948e-9fbab9f36a33.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0609/c587a62629/page.htm' target='_blank' title='赵艳琳：拓荒海洋微生物世界的认知'>赵艳琳：拓荒海洋微生物世界的认...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i16">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0616/c587a62630/page.htm" target="_blank"><img src="/_upload/article/images/6e/78/cf67c5a340dca7cdfb920ea5bf21/51346ad8-9abd-4b33-8aa3-5d78ae3135b1.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0616/c587a62630/page.htm' target='_blank' title='吴双：追本溯源科研精思，传道授德教学求索'>吴双：追本溯源科研精思，传道授...</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i17">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0629/c587a62631/page.htm" target="_blank"><img src="/_upload/article/images/94/97/6d49ae8a45e6aee55a149c7c1e7a/7ec6daba-cca7-4d6e-8bc7-0adb0f8b68aa.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0629/c587a62631/page.htm' target='_blank' title='帅李：生物质利用的追梦人'>帅李：生物质利用的追梦人</a></h1>
+									  </div>
+									</li>  
+								
+									<li class="i18">
+									  <div class="img_box">	
+										<div class="img_bg">
+											<a href="/2021/0702/c587a62632/page.htm" target="_blank"><img src="/_upload/article/images/d4/2f/0288f56b4f5cb0b2b6ec54416b0a/bd0689cf-3a65-414b-838f-83454c745e48.jpg" alt="" /></a>
+										</div>
+										<h1><a href='/2021/0702/c587a62632/page.htm' target='_blank' title='黄晓磊：筑梦科研，远征生物多样性之路'>黄晓磊：筑梦科研，远征生物多样...</a></h1>
+									  </div>
+									</li>  
+								
+							</ul>
+						</div>
+					</div> 
+ 
+				</div>   
+			</div> 
+			<div class="news2-box clearfix">
+					<div class="n2-l fl">
+						 <div class="wp-post post-17" frag="窗口17">
+								 <div class="post-head">
+									 <div class="head-bar">
+										 <h3 class="post-title" frag="标题"><span>学院动态</span></h3>
+										 <div class="post-more" frag="按钮" type="更多"><a href="/5271/list.htm" class="w17_more"><span frag="按钮内容">更多>></span></a></div>
+									 </div>
+								 </div>
+								 <div class="post-body">
+									 <div id="wp_news_w17"> 
+										 <ul class="post-news"> 
+											 
+												<li class="news-item item-1 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1028/c127a85049/page.htm' target='_blank' title='戴尔豪西大学联合学院（国际学院）开展2024级来华留学生新生入学教育'>戴尔豪西大学联合学院（国际学院）开展2024级来华留...</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-28</span>
+												</li>
+											 
+												<li class="news-item item-2 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1025/c127a85040/page.htm' target='_blank' title='公共管理与法学院学子荣获第三届“寻是杯”全国大学生公共管理决策模拟大赛（总决赛）二等奖'>公共管理与法学院学子荣获第三届“寻是杯”全国大学...</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+												</li>
+											 
+												<li class="news-item item-3 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1025/c127a85036/page.htm' target='_blank' title='金山学院党委传达学习贯彻习近平总书记在福建考察时的重要讲话精神'>金山学院党委传达学习贯彻习近平总书记在福建考察时...</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+												</li>
+											 
+												<li class="news-item item-4 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1025/c127a85035/page.htm' target='_blank' title='闽江学院舒继武校长来计算机与信息学院开展学术讲座'>闽江学院舒继武校长来计算机与信息学院开展学术讲座</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+												</li>
+											 
+												<li class="news-item item-5 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1025/c127a85032/page.htm' target='_blank' title='生命科学学院召开党纪学习教育工作总结会暨党支部书记工作例会'>生命科学学院召开党纪学习教育工作总结会暨党支部书...</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+												</li>
+											 
+										 </ul>
+									 </div> 
+
+								 </div>
+							 </div>  
+					</div>
+					<div class="n2-l fl">
+						 <div class="wp-post post-27" frag="窗口27">
+								 <div class="post-head">
+									 <div class="head-bar">
+										 <h3 class="post-title" frag="标题"><span>部处动态</span></h3>
+										 <div class="post-more" frag="按钮" type="更多"><a href="/5272/list.htm" class="w27_more"><span frag="按钮内容">更多>></span></a></div>
+									 </div>
+								 </div>
+								 <div class="post-body">
+									 <div id="wp_news_w27"> 
+										 <ul class="post-news"> 
+											 
+												<li class="news-item item-1 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1028/c128a85050/page.htm' target='_blank' title='我校两处地质灾害点治理项目通过竣工验收'>我校两处地质灾害点治理项目通过竣工验收</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-28</span>
+												</li>
+											 
+												<li class="news-item item-2 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1028/c128a85048/page.htm' target='_blank' title='图书馆教职工学习习近平总书记在福建考察时的重要讲话精神'>图书馆教职工学习习近平总书记在福建考察时的重要讲...</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-28</span>
+												</li>
+											 
+												<li class="news-item item-3 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1028/c128a85047/page.htm' target='_blank' title='福建中医大学、福建体育职业技术学院专题调研我校财务数字化'>福建中医大学、福建体育职业技术学院专题调研我校财...</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-28</span>
+												</li>
+											 
+												<li class="news-item item-4 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1025/c128a85033/page.htm' target='_blank' title='计划财务处召开新修改《会计法》学习培训会'>计划财务处召开新修改《会计法》学习培训会</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+												</li>
+											 
+												<li class="news-item item-5 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1025/c128a85038/page.htm' target='_blank' title='图书馆关心慰问退休教职工'>图书馆关心慰问退休教职工</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+												</li>
+											 
+										 </ul>
+									 </div> 
+
+								 </div>
+							 </div>  
+					</div>
+					<div class="n2-r fr">
+						 <div class="wp-post post-17" frag="窗口37">
+								 <div class="post-head">
+									 <div class="head-bar">
+										 <h3 class="post-title" frag="标题"><span>校园文化</span></h3>
+										 <div class="post-more" frag="按钮" type="更多"><a href="/5275/list.htm" class="w37_more"><span frag="按钮内容">更多>></span></a></div>
+									 </div>
+								 </div>
+								 <div class="post-body">
+									 <div id="wp_news_w37"> 
+										 <ul class="post-news"> 
+											 
+												<li class="news-item item-1 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1025/c131a85039/page.htm' target='_blank' title='集美大学教学名师王人恩教授应邀做客我校金山讲坛'>集美大学教学名师王人恩教授应邀做客我校金山讲坛</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-25</span>
+												</li>
+											 
+												<li class="news-item item-2 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1024/c131a85020/page.htm' target='_blank' title='资源与环境学院举办2024级新生辩论赛决赛'>资源与环境学院举办2024级新生辩论赛决赛</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-24</span>
+												</li>
+											 
+												<li class="news-item item-3 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1024/c131a85016/page.htm' target='_blank' title='未来技术学院举办“求真书院讲坛”专题讲座 （第一期）|| 本科出国读博之我见'>未来技术学院举办“求真书院讲坛”专题讲座 （第一...</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-24</span>
+												</li>
+											 
+												<li class="news-item item-4 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1023/c131a85005/page.htm' target='_blank' title='食品科学学院开展实验室安全知识宣传与消防灭火虚拟演练活动'>食品科学学院开展实验室安全知识宣传与消防灭火虚拟...</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-23</span>
+												</li>
+											 
+												<li class="news-item item-5 clearfix">
+													<span class="item-meta meta-title"><a href='/2024/1022/c131a84960/page.htm' target='_blank' title='计算机与信息学院举办第二十届大学生田径运动会'>计算机与信息学院举办第二十届大学生田径运动会</a></span>
+													<span class="item-meta meta-time news-date-hide">2024-10-22</span>
+												</li>
+											 
+										 </ul>
+									 </div> 
+
+								 </div>
+							 </div>  
+					</div>
+				 </div>
+		<div class="zt-box">
+		<div class="zt-tlt">专题网站</div>
+		<div class="zt-con" frag="窗口90">
+			
+			<ul class="zt-ul clearfix">
+				
+				<li class="fl"><a href="https://www.fafu.edu.cn/dsjy/" target="_blank">党史学习教育专题网</a></li>
+				
+				<li class="fl"><a href="https://smartedu.fafu.edu.cn/" target="_blank">智慧教育平台</a></li>
+				
+				<li class="fl"><a href="https://yfzx.fafu.edu.cn/main.htm" target="_blank">依法治校专题网</a></li>
+				
+				<li class="fl"><a href="http://xxgk.fafu.edu.cn/" target="_blank">信息公开网</a></li>
+				
+				<li class="fl"><a href="http://bsdt.fafu.edu.cn/page/index.jsp" target="_blank">师生意见与建议大厅</a></li>
+				
+				<li class="fl"><a href="https://rsc.fafu.edu.cn/" target="_blank">人才招聘网</a></li>
+				
+				<li class="fl"><a href="http://teacher.fafu.edu.cn" target="_blank">教师主页</a></li>
+				
+				<li class="fl"><a href="http://jycy.fafu.edu.cn" target="_blank">就业信息网</a></li>
+				
+				<li class="fl"><a href="http://210.34.84.50/index.php" target="_blank">仪器共享平台</a></li>
+				
+				<li class="fl"><a href="http://www.fafu.edu.cn/2019/1009/c423a47402/page.htm" target="_blank">干部在线培训</a></li>
+				
+				<li class="fl"><a href="https://yiban.fafu.edu.cn/" target="_blank">我们的“易班”</a></li>
+				
+				<li class="fl"><a href="http://net.fafu.edu.cn/pcs" target="_blank">淮安公安专题</a></li>
+				
+				<li class="fl"><a href="http://www.fafu.edu.cn/2019/0930/c436a47234/page.htm" target="_blank">教学资源</a></li>
+				
+				<li class="fl"><a href="http://mail.fafu.edu.cn/" target="_blank">校园邮箱</a></li>
+				
+				<li class="fl"><a href="https://m.fafu.edu.cn" target="_blank">数字FAFU</a></li>
+				
+				<li class="fl"><a href="http://ehall.fafu.edu.cn" target="_blank">融门户（一网通办）</a></li>
+				
+				<li class="fl"><a href="https://hqc.fafu.edu.cn/main.htm" target="_blank">后勤服务大厅</a></li>
+				
+				<li class="fl"><a href="https://cgzb.fafu.edu.cn/sfw_cms/e?page=cms.index" target="_blank">招标投标</a></li>
+				
+				<li class="fl"><a href="http://lib.fafu.edu.cn/" target="_blank">文献检索</a></li>
+				
+				<li class="fl"><a href="http://jw.fafu.edu.cn" target="_blank">我要举报</a></li>
+				
+				<li class="fl"><a href="http://www.fafu.edu.cn/cylj/list.htm" target="_blank">常用链接</a></li>
+				
+			</ul>
+			
+		</div>
+		</div>
+	</div>
+    <!--底部开始-->
+    <footer class="wp-wrapper wp-footer">
+    	<div class="wp-inner clearfix">
+    		<div class="footer">
+				<div class="foot-top clearfix">
+                  <div class="foot-logo">
+					  <img src="/_upload/tpl/00/16/22/template22/./images/foot-logo.png" alt="" />
+				  </div>
+				  <div class="shear-box" frag="窗口83"><div id="wp_news_w83"> 
+				    <ul class="shares clearfix">
+					  		 
+						 <li class="share n1">
+						  <a>	 
+						   <img src="/_upload/article/images/c3/a3/256fe08a4eb19301d646a12a30b2/118b52e3-31d4-4d58-b177-67d28a38135a.jpg" alt="" />
+                                                   
+						   <p>福建农林大学官方微信</p>
+
+						  </a>
+						 </li>
+                      		 
+						 <li class="share n2">
+						  <a>	 
+						   <img src="/_upload/article/images/17/d6/5b1041a54f329ecf15aa327c1bbd/52b30fe8-abe9-4e2b-894b-b6a5323006f5.jpg" alt="" />
+                                                   
+						   <p>福建农林大学官方微博</p>
+
+						  </a>
+						 </li>
+                      		 
+						 <li class="share n3">
+						  <a>	 
+						   <img src="/_upload/article/images/d4/36/2cf007174a8c85728d69bd38f361/f3566d11-0f84-4b19-8892-c1e91a10386b.png" alt="" />
+                                                   
+						   <p>福建农林大学数字FAFU APP</p>
+
+						  </a>
+						 </li>
+                      
+				    </ul>
+				  </div> 
+</div>
+				  <div class="foot-cp" frag="窗口80" portletmode="simpleSiteAttri">中文域名：福建农林大学.公益<br />地址：福建省福州市仓山区上下店路15号<br />
+					  邮编：350002
+				  </div>
+				</div>
+				
+				<div class="foot-bt">
+				 <p><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/14/000/0000/41066841/CA140000000410668410001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+						<span frag="窗口81" portletmode="simpleSiteAttri">
+						<a href="http://bszs.conac.cn/sitename?method=show&id=07A3CCE297D677A6E053012819AC0371
+"><img src="/_upload/tpl/00/16/22/template22/images/blue.png"></a>
+							<a href="https://beian.miit.gov.cn/" target="_blank">闽ICP备10012082号</a><img src="/_upload/tpl/00/16/22/template22/./images/WABA.png" alt="" />闽公网安备35010402350912号，网络安全等级保护备案编号35011943059-00001
+				  <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35010402350912" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"></a> 版权所有 © 福建农林大学 
+						</span>					  </span>  </p>
+                </div>
+    		</div>
+    	</div>
+    </footer>
+<!--//底部结束--> 
+</body>
+<script src="/_upload/tpl/00/16/22/template22/js/comcus.js"></script>
+<script type="text/javascript" src="/_upload/tpl/00/16/22/template22/js/app.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 初始化SDAPP
+		new SDAPP({
+			'focus':{
+				zWidth:345,
+				zHeight:278,
+				navigation: true,
+				autoPlay: false,
+				isNavHover: false
+			},
+			"menu":{
+				type:"aside,slide"
+			}
+		});
+		$(".zt-ul li:nth-child(7n)").addClass("none-r");
+		$(".shares .n3").find("a").attr("target","_blank");
+	});
+</script> 
+
+
+
+</html>
+ <img src="/_visitcount?siteId=2&type=1&columnId=2" style="display:none" width="0" height="0"/>

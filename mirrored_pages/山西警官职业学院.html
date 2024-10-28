@@ -1,0 +1,1412 @@
+﻿<!DOCTYPE html><html lang="zh-CN"><head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>山西警官职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="山西警官职业学院">
+<META Name="keywords" Content="山西警官职业学院" />
+<meta name="pageType" content="1">
+<meta name="pageTitle" content="山西警官职业学院">
+<meta name="pageType" content="1">
+<meta name="pageTitle" content="山西警官职业学校">
+
+    <link href="style/animate.min.css" rel="stylesheet">
+    <link href="style/slick.css" rel="stylesheet">
+    <link href="style/slick-theme.css" rel="stylesheet">
+    <link href="style/reset.css" rel="stylesheet">
+    <link href="style/public.css" rel="stylesheet">
+    <link href="style/index.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b75465450535742000300024350 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1983934725)</script>
+</head>
+
+<body>
+
+      <!-- pc 顶部 导航 -->
+    <div class="b-top">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+   
+            
+        <div class="t-search-zzc"></div>
+        <div class="t-search">
+            <div>
+               <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <div class="search-btn">
+             <input name="submit_button" type="image" src="images/search.png" value="" v-on:click="onSubmit()"/>
+                </div>
+            </div>
+        </div>     
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1983934725";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://223.15.248.117:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    <div class="head pc">
+        <div class="head-top">
+
+            <div>
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+
+
+     <a href="index.htm" title="山西警官职业学院"><img src="images/logo.png" alt=""><img src="images/logo2.png" alt=""></a></div>
+                <div class="nav">
+                    <div class="nav-a"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+
+
+<ul>
+                            
+<li><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 1002)"><span>OA办公</span></a></li>
+                            
+</ul>
+                    
+                    
+                    
+                 </div>
+
+                    <ul class="">
+<li class="active"><a href="index.htm">首页<span></span></a>
+</li>
+<li><a href="xygk/xyjj.htm">学院概况<span></span></a>
+   <div><ul>
+<li><a href="xygk/xyjj.htm">学院简介</a>
+</li>
+<li><a href="xygk/xrld.htm">现任领导</a>
+</li>
+<li><a href="xygk/xyfc.htm">校园风采</a>
+</li>
+</ul>    </div>
+</li>
+<li><a href="zzjg.htm">组织机构<span></span></a>
+   <div><ul>
+<li><a href="zzjg/dzgljg.htm">党政管理机构</a>
+</li>
+<li><a href="zzjg/jxjg.htm">教学机构</a>
+</li>
+<li><a href="zzjg/jfjg.htm">教辅机构</a>
+</li>
+<li><a href="zzjg/qtzz.htm">群团组织</a>
+</li>
+</ul>    </div>
+</li>
+<li><a href="http://www.sxpolice.org/rcgzb/">人才工作</a>
+</li>
+<li><a href="http://jwky.sxpolice.org">教学科研</a>
+</li>
+<li><a href="zyjs/xszx.htm">专业建设<span></span></a>
+   <div><ul>
+<li><a href="zyjs/xszx.htm">刑事执行</a>
+</li>
+<li><a href="zyjs/xzzx.htm">行政执行</a>
+</li>
+<li><a href="zyjs/sfjw.htm">司法警务</a>
+</li>
+<li><a href="zyjs/flsw.htm">法律事务</a>
+</li>
+<li><a href="zyjs/jsjyyjszy.htm">计算机应用技术专业</a>
+</li>
+<li><a href="zyjs/xxaqjsyy.htm">信息安全技术应用</a>
+</li>
+<li><a href="zyjs/aqffjs.htm">安全防范技术</a>
+</li>
+<li><a href="zyjs/ggswgl.htm">公共事务管理</a>
+</li>
+</ul>    </div>
+</li>
+<li><a href="http://zsjy.sxpolice.org">招生就业</a>
+</li>
+<li><a href="shfw.htm">社会服务</a>
+</li>
+<li><a href="xxg/jbxx.htm">信息公开<span></span></a>
+   <div><ul>
+<li><a href="xxg/jbxx.htm">基本信息</a>
+</li>
+<li><a href="xxg/zsksxx.htm">招生考试信息</a>
+</li>
+<li><a href="xxg/cw_zcjsfxx.htm">财务、资产及收费信息</a>
+</li>
+<li><a href="xxg/rsszxx.htm">人事师资信息</a>
+</li>
+<li><a href="xxg/jxzlxx.htm">教学质量信息</a>
+</li>
+<li><a href="xxg/xsglfwxx.htm">学生管理服务信息</a>
+</li>
+<li><a href="xxg/xfjsxx.htm">学风建设信息</a>
+</li>
+</ul>    </div>
+</li>
+</ul>
+
+
+                </div>
+                <div class="nav-use">
+                  <div><a class="search-switch" href="javascript:;"><img alt="" src="images/head-icon2.png"><img alt="" src="images/head-icon22.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img class="menu" alt="" src="images/menu.png">
+            <img class="close-menu" alt="" src="images/close.png">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">    
+
+
+
+
+                        <a href="index.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 1008)" target="_blank">
+                            <img src="images/logo.png" border="0">
+                        </a>  
+
+</div>
+        <div class="m-nav">
+            <div class="m-tlink"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 1002)">OA办公</a>
+                
+</div>
+            <div class="m-search">
+
+
+<style>
+    #appu6 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu6 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu6"></div>
+<script type="text/html" id="htmlu6">
+    <div id="appu6">
+        <div v-if="!isError">
+            <input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+          
+              
+                <input type="image" src="images/search.png" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu6").html($("#htmlu6").text());
+</script>
+<script>
+    var appOwner = "1983934725";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu6",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://223.15.248.117:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+          <ul class="">
+<li><a href="index.htm">首页</a><span></span>
+<ul>
+<li><a href="index/djgz.htm">党建工作</a>
+</li>
+<li><a href="index/tzgg.htm">通知公告</a>
+</li>
+<li><a href="index/jxky.htm">教学科研</a>
+</li>
+<li><a href="index/xywh.htm">校园文化</a>
+</li>
+<li><a href="index/yywz.htm">语言文字</a>
+</li>
+</ul>
+</li>
+<li><a href="xygk/xyjj.htm">学院概况</a><span></span>
+<ul>
+<li><a href="xygk/xyjj.htm">学院简介</a>
+</li>
+<li><a href="xygk/xrld.htm">现任领导</a>
+</li>
+<li><a href="xygk/xyfc.htm">校园风采</a>
+</li>
+</ul>
+</li>
+<li><a href="zzjg.htm">组织机构</a><span></span>
+<ul>
+<li><a href="zzjg/dzgljg.htm">党政管理机构</a>
+</li>
+<li><a href="zzjg/jxjg.htm">教学机构</a>
+</li>
+<li><a href="zzjg/jfjg.htm">教辅机构</a>
+</li>
+<li><a href="zzjg/qtzz.htm">群团组织</a>
+</li>
+</ul>
+</li>
+<li><a href="http://www.sxpolice.org/rcgzb/">人才工作</a>
+</li>
+<li><a href="http://jwky.sxpolice.org">教学科研</a>
+</li>
+<li><a href="zyjs/xszx.htm">专业建设</a><span></span>
+<ul>
+<li><a href="zyjs/xszx.htm">刑事执行</a>
+</li>
+<li><a href="zyjs/xzzx.htm">行政执行</a>
+</li>
+<li><a href="zyjs/sfjw.htm">司法警务</a>
+</li>
+<li><a href="zyjs/flsw.htm">法律事务</a>
+</li>
+<li><a href="zyjs/jsjyyjszy.htm">计算机应用技术专业</a>
+</li>
+<li><a href="zyjs/xxaqjsyy.htm">信息安全技术应用</a>
+</li>
+<li><a href="zyjs/aqffjs.htm">安全防范技术</a>
+</li>
+<li><a href="zyjs/ggswgl.htm">公共事务管理</a>
+</li>
+</ul>
+</li>
+<li><a href="http://zsjy.sxpolice.org">招生就业</a>
+</li>
+<li><a href="shfw.htm">社会服务</a>
+</li>
+<li><a href="xxg/jbxx.htm">信息公开</a><span></span>
+<ul>
+<li><a href="xxg/jbxx.htm">基本信息</a>
+</li>
+<li><a href="xxg/zsksxx.htm">招生考试信息</a>
+</li>
+<li><a href="xxg/cw_zcjsfxx.htm">财务、资产及收费信息</a>
+</li>
+<li><a href="xxg/rsszxx.htm">人事师资信息</a>
+</li>
+<li><a href="xxg/jxzlxx.htm">教学质量信息</a>
+</li>
+<li><a href="xxg/xsglfwxx.htm">学生管理服务信息</a>
+</li>
+<li><a href="xxg/xfjsxx.htm">学风建设信息</a>
+</li>
+</ul>
+</li>
+    <div class="clear"></div>
+</ul>
+
+
+
+        </div>
+    </div>
+    <div class="banner">    
+
+
+ <div class="slick">
+                 <div>
+                <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 1002)" target="_blank">
+                    <img src="images/banner1.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 59075)" target="_blank">
+                    <img src="images/banner22.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 59076)" target="_blank">
+                    <img src="images/banner5.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 59077)" target="_blank">
+                    <img src="images/banner23.jpg" alt="">
+                </a>
+            </div>
+        </div>
+
+
+
+
+</div>
+
+    <div class="index">
+        <div class="section1">
+            <div class="w16">
+                <div class="title wow fadeInUp">
+                    <h2><img alt="" src="images/tit-icon1.png">新闻动态<span>news</span></h2>
+                    <a href="xwzx.htm">更多+</a>
+                </div>
+                <div class="s1-c">
+                    <div class="s1-l  wow fadeInLeft"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+                            
+<li>
+                                <a href="info/1201/29521.htm" target="_blank" title="学院组织教师教学能力提升培训会">
+                                    <div class="pic">
+                                        <img alt="" src="/__local/D/25/E7/4D2030A8C2C1490B8A107DD8D90_53D25420_83705.jpg">
+                                    </div>
+                                    <p>学院组织教师教学能力提升培训会</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1201/29511.htm" target="_blank" title="我院举行2024年新生开学典礼暨军事课教育教学动员大会">
+                                    <div class="pic">
+                                        <img alt="" src="/__local/3/50/2C/E727A6430403368292790ACF79A_FC522F16_32232.jpg">
+                                    </div>
+                                    <p>我院举行2024年新生开学典礼暨军事课教育教学动员大会</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1201/29451.htm" target="_blank" title="我院举行庆祝新中国成立75周年升旗仪式暨“忠诚铸警魂”国庆节主题活动">
+                                    <div class="pic">
+                                        <img alt="" src="/__local/7/55/D0/32EC48AE3246094178A1652DF90_4AEA108B_114209.png">
+                                    </div>
+                                    <p>我院举行庆祝新中国成立75周年升旗仪式暨“忠诚铸警魂”国庆节主题活动</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1201/29431.htm" target="_blank" title="省局安全检查组对我院进行节前安全检查">
+                                    <div class="pic">
+                                        <img alt="" src="/__local/5/FE/F6/A0A5ABE572516D6F034AAF0C327_62C41617_4E675.jpg">
+                                    </div>
+                                    <p>省局安全检查组对我院进行节前安全检查</p>
+                                </a>
+                            </li>
+                            
+</ul><script>_showDynClickBatch(['dynclicks_u9_29521','dynclicks_u9_29511','dynclicks_u9_29451','dynclicks_u9_29431'],[29521,29511,29451,29431],"wbnews", 1983934725)</script>
+</div>
+                    <div class="s1-r  wow fadeInRight"><ul>
+                            
+<li>
+                                <a class="pubinfo" href="info/1201/29521.htm" target="_blank" title="学院组织教师教学能力提升培训会">
+                                    <h3 class="titline"><i>学院组织教师教学能力提升培训会</i></h3>
+                                    <p>10月15日下午，学院在多功能会议厅组织了职业教育教师教学能力提升培训。山西旅游职业学院副教授张健老师做了题为“以职业教育国家教学标准为引领，特色化进行教学设计”的专题讲座。张教授以职业教育国家教学标准体系为切入点，详细讲述了教学设计的规范标准、底层逻辑架构、核心构成要件及内涵，并通过典型实例展示教学设计中如何体现“以学生为中心教学方法”、“以能力为本位的培养模式”和“以行业需求为导向”等职业教育特色。...
+                                    </p>
+                                    <b>2024-10-16</b>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a class="pubinfo" href="info/1201/29511.htm" target="_blank" title="我院举行2024年新生开学典礼暨军事课教育教学动员大会">
+                                    <h3 class="titline"><i>我院举行2024年新生开学典礼暨军事课教育教学动员大会</i></h3>
+                                    <p>沙场秋点兵，青春正飞扬。10月11日上午，我院举行2024级新生开学典礼暨军事课教育教学动员大会。院党委书记、政委李志钢，党委委员、纪委书记霍玉玲出席大会。党委副书记张永前主持。各部门、各系部负责人、各大队学管干部及军事训练教官和2024级新生参加大会。在庄严的国歌声中，五星红旗冉冉升起。全体师生肃然而立，大会正式拉开帷幕。李志钢代表学校向2024级新同学的到来表示热烈欢迎和祝贺，并提出三点希望：一是坚定理想信念“...
+                                    </p>
+                                    <b>2024-10-12</b>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a class="pubinfo" href="info/1201/29451.htm" target="_blank" title="我院举行庆祝新中国成立75周年升旗仪式暨“忠诚铸警魂”国庆节主题活动">
+                                    <h3 class="titline"><i>我院举行庆祝新中国成立75周年升旗仪式暨“忠诚铸警魂”国庆节主题活动</i></h3>
+                                    <p>9月29 日，我院隆重举行庆祝中华人民共和国成立75周年升国旗仪式。全体师生参加，表达对伟大祖国的诚挚祝福和崇高敬意。升国旗，奏国歌     上午十时，伴随着雄壮嘹亮的国歌声，五星红旗徐徐升起，全体师生庄严肃立，共同致敬祖国。国旗下的歌声  随后，学生们以青春洋溢的接力快闪形式，唱响了《我爱你中国》，歌声中饱含深情与自豪，镜头下定格了他们对祖国的真挚告白。让我们携手并进共同为祖国的繁荣富强而努力奋斗！祝愿伟大的祖国繁荣昌盛！...
+                                    </p>
+                                    <b>2024-09-30</b>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a class="pubinfo" href="info/1201/29431.htm" target="_blank" title="省局安全检查组对我院进行节前安全检查">
+                                    <h3 class="titline"><i>省局安全检查组对我院进行节前安全检查</i></h3>
+                                    <p>9月27日，省局安全检查组一行到我院开展三季度安全生产交叉检查暨节前安全检查，院领导及相关职能部门负责人参加。检查组一行先后深入图书馆、食堂、配电室、锅炉房、教学楼、实训室、学生宿舍等重点场所，对消防设施、电线电路、仪器设备等进行全面细致的检查，详细了解了安全责任落实、安全隐患整治整改、安全生产制度等情况。  检查组对检查出的问题进行了反馈，提出意见建议。检查组强调，要进一步增强安全意识，确保各项工作扎实到位；...
+                                    </p>
+                                    <b>2024-09-27</b>
+                                </a>
+                            </li>
+                            
+</ul><script>_showDynClickBatch(['dynclicks_u10_29521','dynclicks_u10_29511','dynclicks_u10_29451','dynclicks_u10_29431'],[29521,29511,29451,29431],"wbnews", 1983934725)</script>
+</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="iblock">
+            <div class="section2">
+                <div class="w16">
+                    <div class="s2-c">
+                        <div class="s2-l">
+                            <div class="title title-w  wow fadeInUp">
+                                <h2><img alt="" src="images/tit-icon2.png">党建工作<span>Party &amp; league</span></h2>
+                                <a href="index/djgz.htm">更多+</a>
+                            </div>
+                            <ul class=" wow fadeInUp"><li>
+                                    <a href="info/1211/28731.htm" target="_blank" title="学院组织中层以上干部赴省党纪学习教育专题展接受警示教育">
+                                        <div class="pic">
+                                        
+                                                   <img src="/__local/C/23/FB/6FBB4387381D96B0B359A290593_60D69143_672BC.jpg" />
+                 
+                                        </div>
+                                    </a>
+                                    <a class="info" href="info/1211/28731.htm" target="_blank" title="学院组织中层以上干部赴省党纪学习教育专题展接受警示教育">
+                                        <h3>学院组织中层以上干部赴省党纪学习教育专题展接受警示教育</h3>
+                                        <b>2024-07-11</b>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1211/28501.htm" target="_blank" title="我院召开庆祝中国共产党成立103周年暨“七一”表彰大会">
+                                        <div class="pic">
+                                        
+                                                   <img src="/__local/8/CD/3C/B77B6149CC448CF366C1BA93ECA_F90BE6BC_2B0A0.jpg" />
+                 
+                                        </div>
+                                    </a>
+                                    <a class="info" href="info/1211/28501.htm" target="_blank" title="我院召开庆祝中国共产党成立103周年暨“七一”表彰大会">
+                                        <h3>我院召开庆祝中国共产党成立103周年暨“七一”表彰大会</h3>
+                                        <b>2024-07-02</b>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u11_28731','dynclicks_u11_28501'],[28731,28501],"wbnews", 1983934725)</script>
+</ul>
+                        </div>
+                        <div class="s2-r">
+                            <div class="title title-w  wow fadeInUp">
+                                <h2><img alt="" src="images/tit-icon3.png">通知公告<span>notices</span></h2>
+                                <a href="index/tzgg.htm">更多+</a>
+                            </div>
+                            <ul class=" wow fadeInUp"><li>
+                                    <a href="info/1221/29541.htm" target="_blank" title="山西警官职业学院新生校阅大会短视频制作询价公告">
+                                        <span>2024-10-24</span>
+                                        <div>
+                                            <h3>山西警官职业学院新生校阅大会短视频制作询价公告</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1221/28851.htm" target="_blank" title="山西警官职业学院运维服务项目结果公示" style="font-weight:bold;">
+                                        <span>2024-08-21</span>
+                                        <div>
+                                            <h3>山西警官职业学院运维服务项目结果公示</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1221/28831.htm" target="_blank" title="山西警官职业学院2024年山西省职业院校“职教金课”申报拟推荐课程公示">
+                                        <span>2024-08-15</span>
+                                        <div>
+                                            <h3>山西警官职业学院2024年山西省职业院校“职教金课”申报拟推荐课程公示</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1221/28811.htm" target="_blank" title="山西警官职业学院校园网络及信息系统运维服务磋商公告" style="font-weight:bold;">
+                                        <span>2024-08-13</span>
+                                        <div>
+                                            <h3>山西警官职业学院校园网络及信息系统运维服务磋商公告</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1221/28801.htm" target="_blank" title="山西警官职业学院电教设备及计算机实训室运维服务磋商公告" style="font-weight:bold;">
+                                        <span>2024-08-13</span>
+                                        <div>
+                                            <h3>山西警官职业学院电教设备及计算机实训室运维服务磋商公告</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u12_29541','dynclicks_u12_28851','dynclicks_u12_28831','dynclicks_u12_28811','dynclicks_u12_28801'],[29541,28851,28831,28811,28801],"wbnews", 1983934725)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="section3">
+        <div class="w16">
+            <div class="s3-ll">
+                <div class="title title-w  wow fadeInUp">
+                    <h2><img alt="" src="images/tit-icon4.png">教学科研<span>Teaching &amp; research</span></h2>
+                    <a href="index/jxky.htm">更多+</a>
+                </div>
+                <div class="s3-c">
+                    <div class="s3-l  wow fadeInLeft">
+                        <div class="s3-list">
+                            <ul>
+                                    
+<li>
+                                        <a href="info/1231/27851.htm" target="_blank" title="学院开展“职业教育活动周”系列活动（六）">
+                                            <h3>学院开展“职业教育活动周”系列活动（六）</h3>
+                                            <div>
+                                                <b>2024-05-20</b>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1231/27831.htm" target="_blank" title="学院开展“职业教育活动周”系列活动（五）">
+                                            <h3>学院开展“职业教育活动周”系列活动（五）</h3>
+                                            <div>
+                                                <b>2024-05-19</b>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1231/27811.htm" target="_blank" title="学院开展“职业教育活动周”系列活动（四）">
+                                            <h3>学院开展“职业教育活动周”系列活动（四）</h3>
+                                            <div>
+                                                <b>2024-05-18</b>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+</ul><script>_showDynClickBatch(['dynclicks_u13_27851','dynclicks_u13_27831','dynclicks_u13_27811'],[27851,27831,27811],"wbnews", 1983934725)</script>
+
+                        </div>
+                    </div>
+                    <div class="s3-m  wow fadeInUp">
+                        <ul>
+                                
+<li>
+                                    <a href="info/1231/27811.htm" target="_blank" title="学院开展“职业教育活动周”系列活动（四）">
+                                        <div class="pic"><img alt="" src="/__local/9/A9/4D/015344B1B854D099C5DBC01C233_53F12BA9_9304A.jpg"></div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1231/27791.htm" target="_blank" title="学院开展“职业教育活动周”系列活动（三）">
+                                        <div class="pic"><img alt="" src="/__local/B/7B/4C/586414BC756CD9A333BF67B2384_DF83E3AF_32A91.jpg"></div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="https://mp.weixin.qq.com/s/STBmvuSW0uGjrTUa9389JA" target="_blank" title="我院信息工程系代表队在省职业院校技能大赛中荣获佳绩">
+                                        <div class="pic"><img alt="" src="/__local/5/AE/66/3A108239FC2AFDD10FA61CBC237_1096F9DB_14AB6.jpg"></div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="https://mp.weixin.qq.com/s/CIm04uCdSn4E-4rd6Rw2YA" target="_blank" title="我院应用法律系赴实习单位走访看望实习生">
+                                        <div class="pic"><img alt="" src="/__local/8/4B/94/21D2FC951EEC1B86B3C88A0C0D3_FD2834E3_157F0.jpg"></div>
+                                    </a>
+                                </li>
+                                
+</ul><script>_showDynClickBatch(['dynclicks_u14_27811','dynclicks_u14_27791','dynclicks_u14_9621','dynclicks_u14_9641'],[27811,27791,9621,9641],"wbnews", 1983934725)</script>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="s3-rr">
+                <div class="title title-w  wow fadeInUp">
+                    <h2><img alt="" src="images/tit-icon4.png">语言文字<span>news</span></h2>
+                    <a href="index/yywz.htm">更多+</a>
+                </div>
+                <div class="s3-r  wow fadeInRight">
+                    <div class="s3-list">
+                                <ul>
+                                    
+<li>
+                                        <a href="info/1231/27791.htm" target="_blank" title="学院开展“职业教育活动周”系列活动（三）">
+                                            <h3>学院开展“职业教育活动周”系列活动（三）</h3>
+                                            <div>
+                                                <b>2024-05-17</b>
+                                            </div>
+                                        </a>
+                                    </li>
+<li>
+                                        <a href="info/1231/27721.htm" target="_blank" title="学院开展“职业教育活动周”系列活动（二）">
+                                            <h3>学院开展“职业教育活动周”系列活动（二）</h3>
+                                            <div>
+                                                <b>2024-05-17</b>
+                                            </div>
+                                        </a>
+                                    </li>
+<li>
+                                        <a href="info/1231/27661.htm" target="_blank" title="学院开展“职业教育活动周”系列活动（一）">
+                                            <h3>学院开展“职业教育活动周”系列活动（一）</h3>
+                                            <div>
+                                                <b>2024-05-15</b>
+                                            </div>
+                                        </a>
+                                    </li>
+</ul>
+                            </div><script>_showDynClickBatch(['dynclicks_u15_27851','dynclicks_u15_27831','dynclicks_u15_27811','dynclicks_u15_27791','dynclicks_u15_27721','dynclicks_u15_27661'],[27851,27831,27811,27791,27721,27661],"wbnews", 1983934725)</script>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+        </div>
+
+        <div class="section4">
+            <div class="w16">
+                <div class="title  wow fadeInUp">
+                    <h2><img alt="" src="images/tit-icon5.png">校园文化<span>Campus culture</span></h2>
+                    <a href="index/xywh.htm">更多+</a>
+                    <div class="s4-meida">
+                    
+                          
+
+
+
+        <ul>
+                                      <li>
+                                <a>
+                                    <div><img alt="" src="images/icon-weixin.png"></div>
+                                    <div class="foot-ewm"><img alt="" src="images/ewm.jpg"></div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a>
+                                    <div><img alt="" src="images/icon-weibo.png"></div>
+                                    <div class="foot-ewm"><img alt="" src="images/ewm.jpg"></div>
+                                </a>
+                            </li>
+  
+                            <li>
+                                <a>
+                                    <div><img alt="" src="images/icon-douyin.png"></div>
+                                    <div class="foot-ewm"><img alt="" src="images/ewm.jpg"></div>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="index/xywh.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 59006)" target="_blank">
+                                    <div><img alt="" src="images/icon-gengduo.png"></div>
+                                </a>
+                            </li>
+                                
+                        </ul>
+                    
+                
+                    </div>
+                </div>
+                <div class="s4-c">
+
+                    <div class="s4-l"><div class="s4-lt  wow fadeInDown">
+                            <ul>
+                                
+
+<li>
+                                    <a class="s4-item" href="info/1301/28461.htm" target="_blank" title="学院棋牌比赛圆满落幕">
+                                        <div class="pic">
+                                            <img alt="" src="/__local/A/D0/BB/69B062EABE2DE94733903B6F5C1_0A628AC9_305D2.jpg">
+                                        </div>
+                                        <p><img alt="" src="images/icon-weixin-w.png"><span>学院棋牌比赛圆满落幕</span></p>
+                                    </a>
+                                </li>
+
+
+
+
+
+<li>
+                                    <a class="s4-item" href="info/1301/28021.htm" target="_blank" title="实战大练兵｜以趣促练 趣味盎然">
+                                        <div class="pic">
+                                            <img alt="" src="/__local/B/C7/03/7E178659EB54AD1AB3D6DC7C42E_0C5A3FF4_3F456.jpg">
+                                        </div>
+                                        <p><img alt="" src="images/icon-weixin-w.png"><span>实战大练兵｜以趣促练 趣味盎然</span></p>
+                                    </a>
+                                </li>
+
+
+</ul>
+                        </div>
+                        <div class="s4-lb  wow fadeInUp">
+
+
+
+                            <div class="s4-lbl">
+                                <a class="s4-item" href="https://mp.weixin.qq.com/s/QEfiKhXPLwuquYtzMfW2Ww" target="_blank" title="我院举行书法讲座">
+                                    <div class="pic">
+                                        <img alt="" src="/__local/A/96/5D/4C93C4323EE3350B4932B763BC4_2231091F_4A868.jpg">
+                                    </div>
+                                    <p><span>我院举行书法讲座</span></p>
+                                </a>
+                            </div>
+                            
+
+
+
+
+
+
+                            <div class="s4-lbr">
+                                <a class="s4-item" href="info/1301/27731.htm" target="_blank" title="前程朤朤 龙启新章｜我院举行2024年春节联欢晚会">
+                                    <div class="pic">
+                                        <img alt="" src="/__local/5/08/C1/BAD75909D0F6E7FE3C538630243_F554072E_33B4A.jpg">
+                                    </div>
+                                    <p><span>前程朤朤 龙启新章｜我院举行2024年春节联欢晚会</span></p>
+                                </a>
+                            </div>
+                            
+                        </div><script>_showDynClickBatch(['dynclicks_u17_28461','dynclicks_u17_28021','dynclicks_u17_6131','dynclicks_u17_27731'],[28461,28021,6131,27731],"wbnews", 1983934725)</script>
+</div>
+                    <div class="s4-r">                        
+
+                               
+
+
+                               
+
+
+                               
+
+
+                               
+
+
+
+<div class="s4-rt  wow fadeInUp">
+                            <a class="s4-item" href="javascript:;" title="欢迎报考山西警官职业学院">
+                                <div class="pic">
+                                    <img alt="" src="/__local/F/F9/07/A6F4BB34B891E7932BD0683B2ED_EC126852_6B6D5.jpg">
+                                </div>
+                                <p><span></span></p>
+                            </a>
+                        </div>                                
+
+
+                               
+
+
+                               
+                        <div class="s4-rb wow fadeInDown">
+                            <ul>
+                                
+
+
+
+
+
+
+<li>
+                                    <a class="s4-item" href="https://mp.weixin.qq.com/s/RngTBirMx6dyUmZYdA9Rsg" target="_blank" title="我院举行2024年全民健身活动启动仪式">
+                                        <div class="pic">
+                                            <img alt="" src="/__local/1/55/F7/9F2B8D6C5EB141CF6A098E95764_87197D2D_53DE4.jpg">
+                                        </div>
+                                        <p><span></span></p>
+                                    </a>
+                                </li>
+
+
+
+
+
+
+
+
+<li>
+                                    <a class="s4-item" href="info/1301/6091.htm" target="_blank" title="我院举办纪念“一二·九”运动88周年合唱比赛">
+                                        <div class="pic">
+                                            <img alt="" src="/__local/4/5B/7F/5A01C7DBADB2D09165713470FBD_FFC5482B_5EAC6.jpg">
+                                        </div>
+                                        <p><span></span></p>
+                                    </a>
+                                </li>
+</ul>
+                        </div><script>_showDynClickBatch(['dynclicks_u18_28461','dynclicks_u18_28021','dynclicks_u18_6131','dynclicks_u18_27731','dynclicks_u18_28161','dynclicks_u18_6071','dynclicks_u18_6091'],[28461,28021,6131,27731,28161,6071,6091],"wbnews", 1983934725)</script>
+</div>
+                </div>
+            </div>
+        </div>
+                    <div class="sp">
+                        <div class="spbf px1500"><span>×</span><video id="video" src="https://sxpolice.org/__local/E/F0/3D/138170292BDACB72B4C5E36AE43_2CA0BE77_780A79F.mp4?e=.mp4" controls="controls"></video></div>
+                    </div>
+        <div class="section5">
+            <div class="w16">
+                <div class="title title-w  wow fadeInUp">
+                    <h2><img alt="" src="images/tit-icon6.png">数字警院<span>Digital campus</span></h2>
+                </div>
+                <div class="s5-c  wow fadeInUp"><ul>
+                        
+ <li>
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>304000</p>
+                                        <p>册</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>图书总数</h3>
+                                </a>
+                            </div>
+                    
+                  
+     
+
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>6397.96</p>
+                                        <p>元/生</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>生均教学科研仪器设备值</h3>
+                                </a>
+                            </div>
+                    
+                  
+     
+
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>16270000</p>
+                                        <p>元</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>教学科研仪器设备资产总值</h3>
+                                </a>
+                            </div>
+                    
+                  
+     
+
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>1964</p>
+                                        <p>年</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>创办时间</h3>
+                                </a>
+                            </div>
+                    
+                  
+     
+
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>9</p>
+                                        <p>个</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>教学系部</h3>
+                                </a>
+                            </div>
+                    
+                  
+     
+
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>2543</p>
+                                        <p>名</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>全日制学生</h3>
+                                </a>
+                            </div>
+                    
+                  
+            </li>
+ <li>
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>128</p>
+                                        <p>名</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>专职教师</h3>
+                                </a>
+                            </div>
+                    
+                  
+     
+
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>157</p>
+                                        <p>名</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>行业导师</h3>
+                                </a>
+                            </div>
+                    
+                  
+     
+
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>21799.22</p>
+                                        <p>平方米</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>教学科研及教辅用房面积</h3>
+                                </a>
+                            </div>
+                    
+                  
+     
+
+
+                            <div>
+                                <a>
+                                    <div>
+                                        <p>3342.61</p>
+                                        <p>平方米</p>
+                                    </div>
+                                    <b></b>
+                                    <h3>行政用房面积</h3>
+                                </a>
+                            </div>
+                    
+                  
+            </li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u19_8271','dynclicks_u19_8261','dynclicks_u19_8251','dynclicks_u19_4721','dynclicks_u19_4711','dynclicks_u19_4701','dynclicks_u19_4691','dynclicks_u19_4681','dynclicks_u19_4671','dynclicks_u19_4661'],[8271,8261,8251,4721,4711,4701,4691,4681,4671,4661],"wbnews", 1983934725)</script>
+</div>
+            </div>
+        </div>
+
+        <div class="section6">
+            <div class="w16">
+                <div class="title title-w  wow fadeInUp">
+                    <h2><img alt="" src="images/tit-icon4.png">专题专栏<span>Feature column</span></h2>
+                    <a href="" style="display: none;">更多+</a>
+                </div>
+                <div class="s6-c  wow fadeInUp">    <ul>
+                        
+<li>
+                            <a href="ztzl/xxxcgcddesdjs/gzdt.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 1006)" target="_blank">
+                                <div class="pic"><img alt="" src="images/s6-pic3.png"></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="ztzl/xxgcxjp/gzdt.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 1007)" target="_blank">
+                                <div class="pic"><img alt="" src="images/zt4.png"></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="sxz/lljy.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 59081)" target="_blank">
+                                <div class="pic"><img alt="" src="images/s6-pic4.png"></div>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="ztzl/qlxx/xwdt.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1983934725, 59080)" target="_blank">
+                                <div class="pic"><img alt="" src="images/zt.png"></div>
+                            </a>
+                        </li>
+                        
+</ul></div>
+            </div>
+        </div>
+
+        <div class="section7">
+            <div class="w16">
+                <div class="title title-w  wow fadeInUp">
+                    <h2><img alt="" src="images/tit-icon6.png">快速导航<span>Fast navigation</span></h2>
+                </div>
+                <div class="s7-c  wow fadeInUp"><ul>
+                        
+<li>
+                            <a href="http://lib.sxpolice.org" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 1003)">
+                                <div class="icon">
+                                    <img alt="" src="images/s7-icon1.png">
+                                    <img alt="" src="images/s7-icon1-w.png">
+                                </div>
+                                <p>图书馆</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 1004)">
+                                <div class="icon">
+                                    <img alt="" src="images/s7-icon2.png">
+                                    <img alt="" src="images/s7-icon2-w.png">
+                                </div>
+                                <p>工资查询系统</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="http://192.168.63.120/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 1005)">
+                                <div class="icon">
+                                    <img alt="" src="images/s7-icon3.png">
+                                    <img alt="" src="images/s7-icon3-w.png">
+                                </div>
+                                <p>教务管理</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="http://sxpolice.fanya.chaoxing.com/portal" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 1006)">
+                                <div class="icon">
+                                    <img alt="" src="images/s7-icon4.png">
+                                    <img alt="" src="images/s7-icon4-w.png">
+                                </div>
+                                <p>精品课程</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="http://192.168.63.118/#/login" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 1007)">
+                                <div class="icon">
+                                    <img alt="" src="images/s7-icon5.png">
+                                    <img alt="" src="images/s7-icon5-w.png">
+                                </div>
+                                <p>人才培养状态数据采集平台</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="http://192.168.63.239/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 1008)">
+                                <div class="icon">
+                                    <img alt="" src="images/s7-icon6.png">
+                                    <img alt="" src="images/s7-icon6-w.png">
+                                </div>
+                                <p>校内微课</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 1009)">
+                                <div class="icon">
+                                    <img alt="" src="images/s7-icon7.png">
+                                    <img alt="" src="images/s7-icon7-w.png">
+                                </div>
+                                <p>校园地图</p>
+                            </a>
+                        </li>
+                        
+</ul></div>
+            </div>
+        </div>
+
+        <div class="fixed-r pc">
+            <ul>
+                <li>
+                    <a href="index/xl.htm">
+                        <div class="icons"><img alt="" src="images/fixed-right-icon1.png"></div>
+                        <p>学校校历</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icons"><img alt="" src="images/fixed-right-icon2.png">
+                            
+                        </div>
+                        <p>OA系统</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icons"><img alt="" src="images/fixed-right-icon3.png">
+                        
+                           <div><img alt="" src="images/ewm.jpg"></div>
+                        
+                        
+                        </div>
+                     
+                        <p>公众号</p>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icons"><img alt="" src="images/fixed-right-icon4.png"></div>
+                        <p>返回顶部</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    <div class="footer">
+        <div class="w16 foot-c">
+            <div class="foot-l">
+                <ul>
+                    <li>
+                        <img alt="" src="images/foot-icon1.png">
+                        <div><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p>地址：太原市迎泽区双塔南路34号</p>
+<p>邮编：030006</p></div>
+                    </li>
+                    <li>
+                        <img alt="" src="images/foot-icon2.png">
+                        <div>
+<p>招生电话: 0351-2873880</p>
+<p>民警培训中心电话: 0351- 2873831</p>
+<p>院办电话: 0351-2873886</p></div>
+                    </li>
+                    <li>
+                        <img alt="" src="images/foot-icon3.png">
+                        <div>
+
+                            <p><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 68113)">领导信箱</a></p>
+                        
+
+</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="foot-r"><div>
+                    <p>友情链接</p>
+                    <div>
+                        
+<a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 68112)">中华人民共和国教育部</a>
+                        
+<a href="http://jyt.shanxi.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 68154)">山西省教育厅</a>
+                        
+<a href="http://sft.shanxi.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 68155)">山西省司法厅</a>
+                        
+<a href="http://jyj.shanxi.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1983934725, 68156)">山西省监狱管理局</a>
+                        
+</div>
+                </div></div>
+        </div>
+        <div class="bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span>版权所有：山西警官职业学院<a href="https://beian.miit.gov.cn/" style="color: rgb(255, 255, 255);">晋ICP备15002982号</a></span><img alt="" src="images/bq.png" /></p></div>
+    </div>
+      
+</SCRIPT>
+
+
+
+
+</div>
+
+
+      <script src="js/index.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+     <script>
+     $(".s4-rt  .s4-item").click(function() {
+        $(".sp").addClass("on");
+    })
+    $(" .sp span").click(function() {
+        $(".sp").removeClass("on");
+    })</script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/wow.min.js"></script>
+
+
+
+</body></html>

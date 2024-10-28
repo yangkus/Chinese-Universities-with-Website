@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="娄底潇湘职业学院" />
+<meta name="description" content="娄底潇湘职业学院是经湖南省人民政府批准、国家教育部备案、列入国家统招计划的全日制普通高等院校。学校创建于1992年5月，系省属优秀院校和精神文明单位，是一所独具特色、培养高技能专门人才的高等职业院校。" />
+<title>娄底潇湘职业学院</title>
+<link href="/skin/sites/common/css/bootstrap.min.css" type="text/css"  rel="stylesheet" >
+<link href="/skin/sites/common/css/global.css" type="text/css"  rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="/skin/hnxx/cms/../core/header/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/hnxx/cms/../core/header/header.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/slick.css">
+<link rel="stylesheet" type="text/css" href="/skin/label/label.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/theme/theme.css" />
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/guowei.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/breakpoints.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/skin/hnxx/cms/../js/common.js"></script>
+<script type="text/javascript" src="/js/lang/core/zh-cn.js"></script>
+<script type="text/javascript" src="/js/lang/cms/zh-cn.js"></script>
+<script type="text/javascript">
+P8CONFIG.RESOURCE = '';
+var SYSTEM = 'cms',
+MODULE = '',
+ACTION = 'main',
+LABEL_URL = '/index.php/cms-main?department=1',
+STATIC_URL = '',
+$this_router = P8CONFIG.URI[SYSTEM][MODULE].U_controller,
+$this_url = $this_router +'-'+ ACTION,
+SKIN = '/skin/hnxx/cms/',
+TEMPLATE = 'hnxx';
+mobile_status= '0',
+mobile_auto_jump='0',
+mobile_url = '/m';
+if(mobile_status=='1' && SYSTEM!='sites'){
+if(browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+if(mobile_auto_jump=='1' && mobile_url!=P8CONFIG.RESOURCE){
+var this_url = location.href,_pul=P8CONFIG.RESOURCE;
+if(this_url.indexOf(mobile_url)==-1 && this_url.indexOf('s.php')==-1 && this_url.indexOf('u.php')==-1 && this_url.indexOf('admin.php')==-1 && SYSTEM!='sites'){
+if(this_url.indexOf(P8CONFIG.RESOURCE+'/html')!=-1)_pul+='/html';
+if(P8CONFIG.RESOURCE==''){
+this_url = mobile_url.indexOf('http')==-1 ? this_url.mobile_url : mobile_url;
+}else{
+this_url = this_url.replace(_pul, mobile_url);
+}
+location.href = this_url;
+}
+}
+}
+}
+
+</script>
+</head>
+<body>
+<div class="indexTop showdiv option">
+<div class="topbox">
+<div class="top">
+<div class="navbar main-nav">
+<div class="container">
+<div class="header-main clearfix">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="https://www.hnxxc.com/" class="navbar-brand navbar-logo"><img src="/skin/hnxx/cms/../core/header/images/logo.png" class="logo1"/>
+</a>
+</div>
+<div class="show-label hidden-sm hidden-xs" id="header_t"><ul class="topnav-list pull-left clearfix">
+<li class="li1"><a href="https://www.hnxxc.com/" target="_blank">返回首页</a></li>
+<li class="li1"><a href="/index.php/letter-list" target="_blank">阳光服务</a></li>
+<li class="li2"><a href="/search/index.html" target="_blank">搜索</a></li>
+</ul></div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+<ul class="nav navbar-nav navbar-right navbar-link">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="https://www.hnxxc.com/"  aria-expanded="false" role="button" target="">首  页</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/895/"  aria-expanded="false" role="button" target="">学院概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/895/" target="">学院简介</a></li>
+<li class="menu2"><a href="/html/1014/" target="">现任领导</a></li>
+<li class="menu3"><a href="/html/1003/" target="">校园风光</a></li>
+<li class="menu4"><a href="/html/898/" target="">联系我们</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">组织机构</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/828/" target="">院系设置</a></li>
+<li class="menu2"><a href="/html/830/" target="">行政机构</a></li>
+<li class="menu3"><a href="/html/829/" target="">党群组织</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/993/"  aria-expanded="false" role="button" target="">新闻资讯</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/994/" target="">综合新闻</a></li>
+<li class="menu2"><a href="/html/1002/" target="">部门快讯</a></li>
+<li class="menu3"><a href="/html/995/" target="">领导活动</a></li>
+<li class="menu4"><a href="/html/999/" target="">视频专题</a></li>
+<li class="menu5"><a href="/html/1000/" target="">通知公告</a></li>
+<li class="menu6"><a href="/html/996/" target="">校园文化</a></li>
+<li class="menu7"><a href="/html/998/" target="">潇湘文苑</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="https://www.hnxxc.com/zgb/"  aria-expanded="false" role="button" target="_blank">行政人资</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://www.hnxxc.com/zgb/28785/" target="">行政管理</a></li>
+<li class="menu2"><a href="https://www.hnxxc.com/zgb/28571/" target="">通知公告</a></li>
+<li class="menu3"><a href="https://www.hnxxc.com/zgb/28786/" target="">人事工作</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on6" data-hover="dropdown" href="https://www.hnxxc.com/jiaowu/"  aria-expanded="false" role="button" target="_blank">教务科研</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target="">招生就业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://www.hnxxc.com/zhaosheng" target="_blank">招生信息网</a></li>
+<li class="menu2"><a href="https://www.hnxxc.com/jiuye/" target="_blank">就业信息网</a></li>
+<li class="menu3"><a href="https://hnxxc.bysjy.com.cn/" target="_blank">就业云平台</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on8" data-hover="dropdown" href="https://www.hnxxc.com/dw"  aria-expanded="false" role="button" target="_blank">党建工作</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on9" data-toggle="dropdown" data-hover="dropdown" href="/html/943/"  aria-expanded="false" role="button" target="">校园生活</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/1007/" target="">学校校历</a></li>
+<li class="menu2"><a href="/html/1008/" target="">办公电话</a></li>
+<li class="menu3"><a href="/html/1009/" target="">网络服务</a></li>
+<li class="menu4"><a href="/html/1010/" target="">信息公开</a></li>
+<li class="menu5"><a href="/html/1011/" target="">图书资源</a></li>
+<li class="menu6"><a href="/html/1012/" target="">校园地图</a></li>
+<li class="menu7"><a href="/html/1013/" target="">学校设施</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on10" data-toggle="dropdown" data-hover="dropdown" href="/"  aria-expanded="false" role="button" target="">专题专栏</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/1021/" target="">校友回湘、名师育娄</a></li>
+<li class="menu2"><a href="https://www.hnxxc.com/bysj/" target="">毕业设计抽查</a></li>
+<li class="menu3"><a href="https://www.hnxxc.com/dsxx/" target="">党史学习</a></li>
+<li class="menu4"><a href="http://learn.dhgjcloud.com/detail/66/1/19" target="">工匠精神</a></li>
+<li class="menu5"><a href="http://learn.dhgjcloud.com/detail/66/2/371" target="">不可逾越的红线</a></li>
+<li class="menu6"><a href="/html/1006/" target="">师德师风大家谈</a></li>
+</ul>		
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a href="javascript:;" class="navbtn"></a>
+</div>
+</div>
+</div>
+<div class="big-nav">
+<img src="/skin/hnxx/cms/../core/header/images/navbg.jpg"/>
+<div class="scroll">
+<ul class="flex "> 
+<li>
+<h2 class="h2"><a href="https://www.hnxxc.com/" target="" class="n1">首  页</a></h2>  
+</li>
+<li>
+<h2 class="h2"><a href="/html/895/" target="" class="n2">学院概况</a></h2>
+<div class="list">
+<h3><a href="/html/895/" target="">学院简介</a></h3>
+<h3><a href="/html/1014/" target="">现任领导</a></h3>
+<h3><a href="/html/1003/" target="">校园风光</a></h3>
+<h3><a href="/html/898/" target="">联系我们</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="/html/820/" target="" class="n3">组织机构</a></h2>
+<div class="list">
+<h3><a href="/html/828/" target="">院系设置</a></h3>
+<h3><a href="/html/830/" target="">行政机构</a></h3>
+<h3><a href="/html/829/" target="">党群组织</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="/html/993/" target="" class="n4">新闻资讯</a></h2>
+<div class="list">
+<h3><a href="/html/994/" target="">综合新闻</a></h3>
+<h3><a href="/html/1002/" target="">部门快讯</a></h3>
+<h3><a href="/html/995/" target="">领导活动</a></h3>
+<h3><a href="/html/999/" target="">视频专题</a></h3>
+<h3><a href="/html/1000/" target="">通知公告</a></h3>
+<h3><a href="/html/996/" target="">校园文化</a></h3>
+<h3><a href="/html/998/" target="">潇湘文苑</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="https://www.hnxxc.com/zgb/" target="_blank" class="n5">行政人资</a></h2>
+<div class="list">
+<h3><a href="https://www.hnxxc.com/zgb/28785/" target="">行政管理</a></h3>
+<h3><a href="https://www.hnxxc.com/zgb/28571/" target="">通知公告</a></h3>
+<h3><a href="https://www.hnxxc.com/zgb/28786/" target="">人事工作</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="https://www.hnxxc.com/jiaowu/" target="_blank" class="n6">教务科研</a></h2>  
+</li>
+<li>
+<h2 class="h2"><a href="/html/45/" target="" class="n7">招生就业</a></h2>
+<div class="list">
+<h3><a href="https://www.hnxxc.com/zhaosheng" target="_blank">招生信息网</a></h3>
+<h3><a href="https://www.hnxxc.com/jiuye/" target="_blank">就业信息网</a></h3>
+<h3><a href="https://hnxxc.bysjy.com.cn/" target="_blank">就业云平台</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="https://www.hnxxc.com/dw" target="_blank" class="n8">党建工作</a></h2>  
+</li>
+<li>
+<h2 class="h2"><a href="/html/943/" target="" class="n9">校园生活</a></h2>
+<div class="list">
+<h3><a href="/html/1007/" target="">学校校历</a></h3>
+<h3><a href="/html/1008/" target="">办公电话</a></h3>
+<h3><a href="/html/1009/" target="">网络服务</a></h3>
+<h3><a href="/html/1010/" target="">信息公开</a></h3>
+<h3><a href="/html/1011/" target="">图书资源</a></h3>
+<h3><a href="/html/1012/" target="">校园地图</a></h3>
+<h3><a href="/html/1013/" target="">学校设施</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="/" target="" class="n10">专题专栏</a></h2>
+<div class="list">
+<h3><a href="/html/1021/" target="">校友回湘、名师育娄</a></h3>
+<h3><a href="https://www.hnxxc.com/bysj/" target="">毕业设计抽查</a></h3>
+<h3><a href="https://www.hnxxc.com/dsxx/" target="">党史学习</a></h3>
+<h3><a href="http://learn.dhgjcloud.com/detail/66/1/19" target="">工匠精神</a></h3>
+<h3><a href="http://learn.dhgjcloud.com/detail/66/2/371" target="">不可逾越的红线</a></h3>
+<h3><a href="/html/1006/" target="">师德师风大家谈</a></h3>
+</div>   
+</li>
+</ul>
+</div>
+</div>
+<div class="index-banner">
+
+<style type="text/css">
+.slider6-7291{width:100%;position:relative;height:100%;background: url(/skin/label/slide15/loading.gif) 50% no-repeat;overflow:hidden;}
+.slider6-7291 .slick-list{height:100%;}
+.slider6-7291 .slick-track{height:100%;}
+.slider6-7291 .slick-slide,.slider6-7291 .slick-slide>div{height:100%;}
+.slider6-7291 .frame{height:100%;}
+.slider6-7291 .child{height:100%;position:relative;overflow:hidden;}
+.slider6-7291 .slick-slide .image{width:100%;height:100%;position:relative;overflow:hidden;}
+.slider6-7291 .slick-slide .item,.slider6-7291 .slick-slide .item img{width:100%;height:100%;display:block;}
+.slider6-7291 .slick-slide video{width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;font-family: "object-fit: cover;";}
+.slider6-7291 .number{position: absolute;right:100px;bottom:50px;color: #fff;text-align: center;line-height:1;}
+.slider6-7291 .number li{width:10px;height:10px;margin:0 10px;background:#fff;border-radius:50%;font-size:0;cursor:pointer;vertical-align: middle;display:inline-block;}
+.slider6-7291 .number li.slick-active{background:#1b5996;}
+.slider6-7291 .slick-arrow{width: 46px;height: 83px;background-repeat:no-repeat;background-position: center center;margin-top: -18px;position: absolute;top:45%;z-index:100;cursor: pointer;font-size:0;border:0;background-color: rgba(0,0,0,.4);;transition: all 500ms ease;-webkit-transition: all 500ms ease;opacity: 0;visibility: hidden;}
+.slider6-7291 .slick-prev{background-image: url(/skin/label/left.png);right: 60px;}
+.slider6-7291 .slick-next{background-image: url(/skin/label/right.png);right: 60px;top:58%;}
+.slider6-7291:hover .slick-arrow{opacity:1;visibility:visible;}
+@media (max-width: 767px){
+.slider6-7291,.slider6-7291 .frame,.slider6-7291 .slick-slide .item img{width:100%;height:30vh;}
+.slider6-7291 .slick-slide .item .title{padding-left:20px;font-size:16px;line-height:24px;bottom:10px;}
+}
+</style>
+<div class="slider6-7291">
+<div class="slider frame">
+<div class="child">
+<div class="image">
+<a class="item" href="" target="_blank" title="">
+<img src="/attachment/core/label/2024_09/14_20/92ee203a6afcbcd2.png" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="" target="_blank" title="">
+<img src="/attachment/core/label/2024_05/18_00/c1f537153b15ce84.png" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="" target="_blank" title="">
+<img src="/attachment/core/label/2023_10/07_15/0d11fe3f7c54e4b8.jpg" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="" target="_blank" title="">
+<img src="/attachment/core/label/2023_10/09_11/101482fb990acfc6.jpg" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="" target="_blank" title="">
+<img src="/attachment/core/label/2023_10/09_11/9ca411771ff21198.jpg" alt="" >
+</a>
+</div>
+</div>
+</div>
+<div class="number"></div>
+</div>
+<script type="text/javascript">
+$(".slider6-7291 .frame").slick({
+fade:true,
+autoplay:true,
+autoplaySpeed:6000,
+pauseOnDotsHover:true,
+pauseOnFocus:false,
+speed:1000,
+arrows:true,
+dots:true,
+appendDots:".slider6-7291 .number",
+pauseOnHover:false,
+customPaging: function(slider, i) {  
+return i + 1;
+},
+});
+</script>
+</div>
+</div>
+<div class="indexBot">
+<div class="topbox">
+<div class="top">
+<div class="navbar main-nav">
+<div class="container">
+<div class="header-main clearfix">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/" class="navbar-brand navbar-logo"><img src="/skin/hnxx/cms/../core/header/images/logo.png" class="logo1"/>
+</a>
+</div>
+<div class="show-label hidden-sm hidden-xs"><ul class="topnav-list pull-left clearfix">
+<li class="li1"><a href="https://www.hnxxc.com/" target="_blank">返回首页</a></li>
+<li class="li1"><a href="/index.php/letter-list" target="_blank">阳光服务</a></li>
+<li class="li2"><a href="/search/index.html" target="_blank">搜索</a></li>
+</ul></div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+<ul class="nav navbar-nav navbar-right navbar-link">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="https://www.hnxxc.com/"  aria-expanded="false" role="button" target="">首  页</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/895/"  aria-expanded="false" role="button" target="">学院概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/895/" target="">学院简介</a></li>
+<li class="menu2"><a href="/html/1014/" target="">现任领导</a></li>
+<li class="menu3"><a href="/html/1003/" target="">校园风光</a></li>
+<li class="menu4"><a href="/html/898/" target="">联系我们</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">组织机构</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/828/" target="">院系设置</a></li>
+<li class="menu2"><a href="/html/830/" target="">行政机构</a></li>
+<li class="menu3"><a href="/html/829/" target="">党群组织</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/993/"  aria-expanded="false" role="button" target="">新闻资讯</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/994/" target="">综合新闻</a></li>
+<li class="menu2"><a href="/html/1002/" target="">部门快讯</a></li>
+<li class="menu3"><a href="/html/995/" target="">领导活动</a></li>
+<li class="menu4"><a href="/html/999/" target="">视频专题</a></li>
+<li class="menu5"><a href="/html/1000/" target="">通知公告</a></li>
+<li class="menu6"><a href="/html/996/" target="">校园文化</a></li>
+<li class="menu7"><a href="/html/998/" target="">潇湘文苑</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="https://www.hnxxc.com/zgb/"  aria-expanded="false" role="button" target="_blank">行政人资</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://www.hnxxc.com/zgb/28785/" target="">行政管理</a></li>
+<li class="menu2"><a href="https://www.hnxxc.com/zgb/28571/" target="">通知公告</a></li>
+<li class="menu3"><a href="https://www.hnxxc.com/zgb/28786/" target="">人事工作</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on6" data-hover="dropdown" href="https://www.hnxxc.com/jiaowu/"  aria-expanded="false" role="button" target="_blank">教务科研</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target="">招生就业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://www.hnxxc.com/zhaosheng" target="_blank">招生信息网</a></li>
+<li class="menu2"><a href="https://www.hnxxc.com/jiuye/" target="_blank">就业信息网</a></li>
+<li class="menu3"><a href="https://hnxxc.bysjy.com.cn/" target="_blank">就业云平台</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on8" data-hover="dropdown" href="https://www.hnxxc.com/dw"  aria-expanded="false" role="button" target="_blank">党建工作</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on9" data-toggle="dropdown" data-hover="dropdown" href="/html/943/"  aria-expanded="false" role="button" target="">校园生活</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/1007/" target="">学校校历</a></li>
+<li class="menu2"><a href="/html/1008/" target="">办公电话</a></li>
+<li class="menu3"><a href="/html/1009/" target="">网络服务</a></li>
+<li class="menu4"><a href="/html/1010/" target="">信息公开</a></li>
+<li class="menu5"><a href="/html/1011/" target="">图书资源</a></li>
+<li class="menu6"><a href="/html/1012/" target="">校园地图</a></li>
+<li class="menu7"><a href="/html/1013/" target="">学校设施</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on10" data-toggle="dropdown" data-hover="dropdown" href="/"  aria-expanded="false" role="button" target="">专题专栏</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/1021/" target="">校友回湘、名师育娄</a></li>
+<li class="menu2"><a href="https://www.hnxxc.com/bysj/" target="">毕业设计抽查</a></li>
+<li class="menu3"><a href="https://www.hnxxc.com/dsxx/" target="">党史学习</a></li>
+<li class="menu4"><a href="http://learn.dhgjcloud.com/detail/66/1/19" target="">工匠精神</a></li>
+<li class="menu5"><a href="http://learn.dhgjcloud.com/detail/66/2/371" target="">不可逾越的红线</a></li>
+<li class="menu6"><a href="/html/1006/" target="">师德师风大家谈</a></li>
+</ul>		
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var USERNAME = get_username();
+$(document).ready(function(){
+//**show_edit**//
+init_labelshows('header_t');
+})
+</script>
+<script type="text/javascript">
+$(function(){
+$(".indexTop").mousewheel(function(event, delta, deltaX, deltaY){
+if(deltaY < 0){
+$(this).removeClass('showdiv option')
+$(".indexBot").addClass('showdiv');
+setTimeout(function(){
+$(".indexBot").addClass('option');
+},500);
+$(".topbox").addClass('showdiv');
+};
+});
+$(".indexBot").mousewheel(function(event, delta, deltaX, deltaY){
+if(delta>0 && $(".indexBot").scrollTop()==0){
+$(".indexBot").removeClass('showdiv option');
+$(".indexTop").addClass('showdiv');
+setTimeout(function(){
+$(".indexTop").addClass('option');
+},500);
+$(".topbox").removeClass('showdiv');
+};
+});
+$('.navbtn').click(function () {
+if ($('body').hasClass('navShow')) {
+$('body').removeClass('navShow')
+} else {
+$('body').addClass('navShow')
+}
+});
+})
+</script><link rel="stylesheet" type="text/css" href="/skin/hnxx/cms/index/index.css" />
+<script type="text/javascript" src="/skin/hnxx/cms/index/script.js"></script>
+<div class="section-page1">
+<div class="container">
+<div class="common-box">
+<div class="common-head common-head1 clearfix">
+<div class="title fz28">学校要闻</div>
+<div class="more pull-right">
+<a href="/html/994/" target="_blank">更多>></a></div>
+</div>
+<div class="common-main">
+<style type="text/css">
+.label_theme_pic7302 li .item{margin-bottom:25px;}
+.label_theme_pic7302 li .item .pic{height:200px;}
+.label_theme_pic7302 li .item .text h3{margin:0;}
+@media (max-width: 1024px){
+.label_theme_pic7302 li .item .pic{height: 15vw;}
+}
+@media (max-width: 767px){
+.label_theme_pic7302 li .item .pic{height: 25vw;}
+}
+</style>
+<ul class="label_theme_pic_ul20 label_theme_pic7302 row">
+<li class="col-md-3 col-sm-3 col-xs-6">
+<div class="item">
+<a href="/html/994/2024-10-16/content-7237.html" target="_blank" title="我校赴湖南人文科技学院进行学习考察">
+<div class="pic">
+<img alt="我校赴湖南人文科技学院进行学习考察" onError="this.src='/images/nopic.jpg'" src="/attachment/sites/item/2024_10/17_09/84dc8e7e65e5ff80.png.cthumb.jpg" />
+</div>
+<div class="text">
+<h3>我校赴湖南人文科技学院进行学习考察</h3>
+</div>
+</a>
+</div>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<div class="item">
+<a href="/html/994/2024-09-30/content-7234.html" target="_blank" title="我校党委召开理论学习中心组（扩大）学习会专题学习全国教育大会精神">
+<div class="pic">
+<img alt="我校党委召开理论学习中心组（扩大）学习会专题学习全国教育大会精神" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_09/30_17/5bf5b67fd5b033cd.jpeg.cthumb.jpg" />
+</div>
+<div class="text">
+<h3>我校党委召开理论学习中心组（扩大）学习会专题学习全国教育大会</h3>
+</div>
+</a>
+</div>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<div class="item">
+<a href="/html/994/2024-09-30/content-7235.html" target="_blank" title="市政协领导来我校调研">
+<div class="pic">
+<img alt="市政协领导来我校调研" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/02_11/d6693fff6b3fae4d.jpeg.cthumb.jpg" />
+</div>
+<div class="text">
+<h3>市政协领导来我校调研</h3>
+</div>
+</a>
+</div>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<div class="item">
+<a href="/html/994/2024-09-29/content-7230.html" target="_blank" title="我校直属机关第一党支部开展“警示教育扬正气  守纪护廉树清风”主题党日活动">
+<div class="pic">
+<img alt="我校直属机关第一党支部开展“警示教育扬正气  守纪护廉树清风”主题党日活动" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_09/29_10/8080940b1c54f444.jpeg.cthumb.jpg" />
+</div>
+<div class="text">
+<h3>我校直属机关第一党支部开展“警示教育扬正气  守纪护廉树清风”</h3>
+</div>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page2">
+<div class="container">
+<div class="common-box">
+<div class="common-head common-head2 clearfix">
+<div class="title fz28">通知公告</div>
+<div class="more pull-right">
+<a href="/html/1000/" target="_blank">更多>></a></div>
+</div>
+<div class="common-main">
+<ul class="theme_double_ul3" style="font-size:16px;">
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">09</span><span class="y">2024-10</span></div><a href="/html/1000/2024-10-09/content-7236.html" target="_blank" title="娄底潇湘职业学院2023-2024学年高职国家奖学金拟定人选公示">娄底潇湘职业学院2023-2024学年高职国家奖学金拟定人选公示</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">30</span><span class="y">2024-09</span></div><a href="/html/1000/2024-09-30/content-7232.html" target="_blank" title="娄底潇湘职业学院2024年国庆节致家长和学生的一封信">娄底潇湘职业学院2024年国庆节致家长和学生的一封信</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">26</span><span class="y">2024-09</span></div><a href="/html/1000/2024-09-26/content-7222.html" target="_blank" title="关于学生在校期间兼职和反诈防骗教育提醒">关于学生在校期间兼职和反诈防骗教育提醒</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">14</span><span class="y">2024-09</span></div><a href="/html/1000/2024-09-14/content-7214.html" target="_blank" title="2024年中秋节致家长和学生的一封信">2024年中秋节致家长和学生的一封信</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">10</span><span class="y">2024-09</span></div><a href="/html/1000/2024-09-10/content-7204.html" target="_blank" title="潇湘职业学院生源地信用助学贷款管理办法">潇湘职业学院生源地信用助学贷款管理办法</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">10</span><span class="y">2024-09</span></div><a href="/html/1000/2024-09-10/content-7203.html" target="_blank" title="潇湘职业学院中职学生奖学金、助学金、免学费评审办法">潇湘职业学院中职学生奖学金、助学金、免学费评审办法</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">10</span><span class="y">2024-09</span></div><a href="/html/1000/2024-09-10/content-7202.html" target="_blank" title="潇湘职业学院中职学生国家奖学金实施细则">潇湘职业学院中职学生国家奖学金实施细则</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">10</span><span class="y">2024-09</span></div><a href="/html/1000/2024-09-10/content-7201.html" target="_blank" title="潇湘职业学院国家奖助学金实施细则">潇湘职业学院国家奖助学金实施细则</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">10</span><span class="y">2024-09</span></div><a href="/html/1000/2024-09-10/content-7206.html" target="_blank" title="在第40个教师节致全体教职员工的慰问信">在第40个教师节致全体教职员工的慰问信</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 sm-xs-12">
+<div class="item">
+<div class="date pull-left"><span class="d">05</span><span class="y">2024-07</span></div><a href="/html/1000/2024-07-05/content-7185.html" target="_blank" title="2024年暑假致学生和家长的一封信">2024年暑假致学生和家长的一封信</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page3">
+<div class="container">
+<div class="video-box">
+<div class="video-head clearfix">
+<div class="title fz28">潇湘视频</div>
+<div class="more pull-right">
+<a href="/html/999/" target="_blank">更多>></a></div>
+</div>
+<div class="video-main">
+<div class="row">
+<div class="col-md-7 col-sm-7 col-xs-12 col-left">
+<div class="video-item mb20">
+<video poster="/attachment/core/label/2023_10/08_10/9f6bd230ec02169e.jpg" src="https://www.hnxxc.com/upload/video/202204/20220624172839.mp4"> </video>
+<a class="play"><span></span></a>
+</div>
+</div>
+<div class="col-md-5 col-sm-5 col-xs-12 col-right">
+<div class="video-list">
+<ul class="label_theme_pic_ul23">
+<li>
+<div class="item">
+<div class="pic"><a href="/html/999/2024-09-10/content-7207.html" target="_blank" title="阔步迈向网络强国"><img alt="阔步迈向网络强国" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_09/10_18/5c8f9badf6da99be.jpg.thumb.jpg" /></a></div>
+<div class="text">
+<h3><a href="/html/999/2024-09-10/content-7207.html" target="_blank" title="阔步迈向网络强国">阔步迈向网络强国</a></h3>
+<p class="date clearfix">2024-09-10</p>
+</div>
+</div>
+</li>
+<li>
+<div class="item">
+<div class="pic"><a href="/html/999/2022-10-16/content-3570.html" target="_blank" title="青春献礼二十大，强国有我新征程"><img alt="青春献礼二十大，强国有我新征程" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2023_10/11_14/7205bc6ba39915a5.jpg.thumb.jpg" /></a></div>
+<div class="text">
+<h3><a href="/html/999/2022-10-16/content-3570.html" target="_blank" title="青春献礼二十大，强国有我新征程">青春献礼二十大，强国有我新征程</a></h3>
+<p class="date clearfix">2022-10-16</p>
+</div>
+</div>
+</li>
+<li>
+<div class="item">
+<div class="pic"><a href="/html/999/2022-06-24/content-3571.html" target="_blank" title="三百六十行，行行出状元"><img alt="三百六十行，行行出状元" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2023_10/11_14/4bda50886f1aec78.jpg.thumb.jpg" /></a></div>
+<div class="text">
+<h3><a href="/html/999/2022-06-24/content-3571.html" target="_blank" title="三百六十行，行行出状元">三百六十行，行行出状元</a></h3>
+<p class="date clearfix">2022-06-24</p>
+</div>
+</div>
+</li>
+<li>
+<div class="item">
+<div class="pic"><a href="/html/999/2022-03-08/content-3572.html" target="_blank" title="娄底潇湘职业学院2022年宣传片"><img alt="娄底潇湘职业学院2022年宣传片" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2023_10/11_14/e3df7400d9e8dab8.jpg.thumb.jpg" /></a></div>
+<div class="text">
+<h3><a href="/html/999/2022-03-08/content-3572.html" target="_blank" title="娄底潇湘职业学院2022年宣传片">娄底潇湘职业学院2022年宣传片</a></h3>
+<p class="date clearfix">2022-03-08</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page4">
+<div class="container">
+<div class="common-box">
+<div class="common-head common-head3 clearfix">
+<div class="title fz28">部门快讯</div>
+<div class="more pull-right">
+<a href="/html/1002/" target="_blank">更多>></a></div>
+</div>
+<div class="common-main">
+<ul class="themelist9e row" style="font-size:16px;">
+<li class="col-md-3 col-sm-3 col-xs-6">
+<div class="item">
+<div class="datatime">2024-09-30</div>
+<a href="/html/1002/2024-09-30/content-7233.html" target="_blank" title="警校联动，共筑寝室安全防线">警校联动，共筑寝室安全防线</a>
+</div>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<div class="item">
+<div class="datatime">2024-09-28</div>
+<a href="/html/1002/2024-09-28/content-7229.html" target="_blank" title="我校成功举办“爱我国防”主题演讲比赛">我校成功举办“爱我国防”主题演讲比赛</a>
+</div>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<div class="item">
+<div class="datatime">2024-09-26</div>
+<a href="/html/1002/2024-09-26/content-7225.html" target="_blank" title="我校成功举办男生健康知识讲座">我校成功举办男生健康知识讲座</a>
+</div>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<div class="item">
+<div class="datatime">2024-09-25</div>
+<a href="/html/1002/2024-09-25/content-7224.html" target="_blank" title="我校成功举办辅导员心理技能培训">我校成功举办辅导员心理技能培训</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="scroll-box mb20">
+<div class="row">
+<div class="col-md-2 col-sm-2 col-xs-12">
+<div class="scroll-title text-center">
+<span class="icon"><img src="/skin/hnxx/cms/index/fi1.png"></span><h3>专题专栏</h3>
+</div>
+</div>
+<div class="col-md-10 col-sm-10 col-xs-12">
+<div class="scroll-list">
+<style type="text/css">
+.pic6b-responsive7301{margin:0 -10px;}
+.pic6b-responsive7301 .slider-item .item{display:block;padding:0 10px;height:100%;position:relative;overflow:hidden;}
+.pic6b-responsive7301 .slider-item .item .inner{position:relative;overflow:hidden;}
+.pic6b-responsive7301 .slider-item .item .inner .pic{position: relative;overflow: hidden;}
+.pic6b-responsive7301 .slider-item .item .inner .pic img{width:100%;height:auto; transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;}
+.pic6b-responsive7301 .slider-item .item .inner .text{width:100%;padding:10px;position:absolute;left:0;bottom:0;background: rgba(0,0,0,.59);}
+.pic6b-responsive7301 .slider-item .item .inner .text h3{font-size:14px;color:#fff;margin:0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.pic6b-responsive7301  .slick-arrow{width:28px;height:46px;background-color:transparent;background-repeat:no-repeat;background-position: center;position: absolute;top:35%;z-index:100;cursor: pointer;font-size:0;border:0;outline: none}
+.pic6b-responsive7301  .slick-prev {background-image: url(/skin/label/theme/prev5.png);left:10px;}
+.pic6b-responsive7301  .slick-next {background-image: url(/skin/label/theme/next5.png);right:8px;}
+.pic6b-responsive7301 .slider-item .item:hover img {transform: scale(1.1);}
+@media (max-width: 767px){
+.pic6b-responsive7301 .slider-item .item .inner .text h3{font-size:14px;margin:10px 0;}
+}
+</style>
+<div class="sliderbox-responsive7301">
+<div class="slider pic6b-responsive7301">
+<div class="slider-item">
+<div class="item">
+<div class="inner">
+<a href="https://www.hnxxc.com/dsxx/" target="_blank">
+<div class="pic"><img src="/attachment/core/label/2023_10/07_18/98a42f5865e4843a.png" alt="" ></div>
+</a>
+</div>
+</div>
+</div>
+<div class="slider-item">
+<div class="item">
+<div class="inner">
+<a href="https://www.hnxxc.com/html/1021/" target="_blank">
+<div class="pic"><img src="/attachment/core/label/2024_05/09_15/6a2c170bf985fb04.png" alt="" ></div>
+</a>
+</div>
+</div>
+</div>
+<div class="slider-item">
+<div class="item">
+<div class="inner">
+<a href="http://learn.dhgjcloud.com/detail/66/2/371" target="_blank">
+<div class="pic"><img src="/attachment/core/label/2023_10/07_18/34760db35161eb80.png" alt="" ></div>
+</a>
+</div>
+</div>
+</div>
+<div class="slider-item">
+<div class="item">
+<div class="inner">
+<a href="http://learn.dhgjcloud.com/detail/66/1/19" target="_blank">
+<div class="pic"><img src="/attachment/core/label/2023_10/07_18/0b852dec8c07d6ea.png" alt="" ></div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(".pic6b-responsive7301").slick({
+dots: false,
+infinite: true,
+speed: 300,
+slidesToShow: 3,
+slidesToScroll: 3,
+autoplay: true,
+autoplaySpeed: 3000, 
+responsive: [
+{
+breakpoint: 1024,
+settings: {
+slidesToShow: 3,
+slidesToScroll: 3,
+infinite: true,
+}
+},
+{
+breakpoint: 600,
+settings: {
+slidesToShow: 2,
+slidesToScroll: 2
+}
+},
+{
+breakpoint: 480,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+}
+]
+});
+</script></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page5">
+<div class="container">
+<div class="common-box">
+<div class="common-head common-head4 clearfix">
+<div class="title fz28">快捷链接</div>
+<div class="more pull-right"></div>
+</div>
+<div class="common-main">
+<ul class="quick-list row">
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li1"><a href="http://218.77.103.235:8088/(S(35ocvvmbvpixt4553wbe4oea))/default2.aspx" target="_blank"><img src="/skin/hnxx/cms/index/ico1.png" /><span>教务系统</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li2"><a href="http://pc.dhgjcloud.com/schoolAdmin/login.html" target="_blank"><img src="/skin/hnxx/cms/index/ico2.png" /><span>智慧校园平台</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li3"><a href="http://hnxxc.bysjy.com.cn/" target="_blank"><img src="/skin/hnxx/cms/index/ico3.png" /><span>云就业平台</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li4"><a href="http://learn.dhgjcloud.com/" target="_blank"><img src="/skin/hnxx/cms/index/ico4.png" /><span>精品课程</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li5"><a href="http://192.168.100.249:8081/" target="_blank"><img src="/skin/hnxx/cms/index/ico5.png" /><span>数据采集</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li6"><a href="https://www.hnxxc.com" target="_blank"><img src="/skin/hnxx/cms/index/ico6.png" /><span>电子图书</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li7"><a href="https://view.blwvr.com/#/panoview/50479"><img src="/skin/hnxx/cms/index/ico7.png" /><span>3D校园</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li8"><a href="#"><img src="/skin/hnxx/cms/index/ico8.png" /><span>OA办公系统</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li9"><a href="#"><img src="/skin/hnxx/cms/index/ico9.png" /><span>统助学金申请</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li10"><a href="#"><img src="/skin/hnxx/cms/index/ico10.png" /><span>心理咨询</span></a></li>
+</ul>                                                                                
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$('.video-item .play').click(function() {
+$(this).siblings("video")[0].play();
+$(this).siblings("video").attr({
+'controls': true
+});
+$(this).fadeOut();
+var self = this;
+$(this).siblings("video")[0].addEventListener('pause', function() {
+$(self).fadeIn();
+$(self).siblings("video").attr({
+'controls': false
+});
+});
+});
+</script><div class="footer">
+<div class="footer-links-box">
+<div class="container">
+<div class="media">
+<div class="pull-left">
+<div class="footer-links-title">友情链接：</div>
+</div>
+<div class="media-body">
+<div class="footer-links-text">
+<ul class="footer-links-list">
+<li>
+<a href="http://www.hnedu.cn" title="湖南省教育网" target="_blank">湖南省教育网</a>
+<a href="http://news.hnjy.com.cn" title="湖南教育新闻网" target="_blank">湖南教育新闻网</a>
+</li>
+<li>
+<a href="http://www.hunbys.com/index.html" title="湖南省毕业生就业网" target="_blank">湖南省毕业生就业网</a>
+<a href="http://10827.hunbys.com/index.jsp" title="毕业生实名制综合服务系统" target="_blank">毕业生实名制综合服务系统</a>
+</li>
+<li>
+<a href="http://zcc.hnedu.cn" title="湖南职业教育与成人教育网" target="_blank">湖南职业教育与成人教育网</a>
+<a href="http://csmzxy.51langtu.com/improperBrowser.htm" title="大学生职业规划测评系统" target="_blank">大学生职业规划测评系统</a>
+</li>
+<li>
+<a href="http://www.hnedutv.com" title="湖南教育电视台" target="_blank">湖南教育电视台</a>
+<a href="https://account.chsi.com.cn/passport/login?service=http://jy.ncss.org.cn/caslogin.html" title="全国高校毕业生就业管理系统" target="_blank">全国高校毕业生就业管理系统</a>
+</li>
+<li>
+<a href="http://admin.ncss.org.cn/login" title="全国大学生就业信息服务一体化系统" target="_blank">全国大学生就业信息服务一体化系统</a>
+<a href="http://www.ncss.org.cn/" title="全国高等学校学生信息咨询与就业指导中心" target="_blank">全国高等学校学生信息咨询与就业指导中心</a>
+</li>
+<li>
+<a href="http://fuwu.hnedu.cn/web/index.jsp" title="湖南省教育阳光服务大厅" target="_blank">湖南省教育阳光服务大厅</a>
+</li>   
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="copyright mb20">
+招生热线：0738-8610888 8610999  </br>
+办公电话：0738-8656829 传真： 0738-8656829 </br>
+学院地址：湖南省娄底市经济开发区 </br>
+娄底潇湘职业学院 版权所有©1992-2021</br>
+<a href="https://beian.miit.gov.cn/" target="_blank">湘ICP备 05010860号-1</a> 
+<p></p>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-3">
+<div class="footer-icons">
+<img src="/skin/hnxx/core/header/images/ga.png">
+</div>
+</div>
+<div class="col-md-2 col-sm-2 col-xs-9">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-6">
+<div class="footer-icons">
+<div class="tit wb"><img src="/skin/hnxx/core/header/images/wx.png">微信</div>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2023_10/09_09/49e390d9089423ea.png" />
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6">
+<div class="footer-icons">
+<div class="tit wx"><img src="/skin/hnxx/core/header/images/wb.png">微博</div>
+<div class="code">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ <script type="text/javascript" src="/js/0/7.js?ver=1730089408"></script>
+</body>
+</html>

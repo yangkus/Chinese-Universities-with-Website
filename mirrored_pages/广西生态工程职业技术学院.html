@@ -1,0 +1,799 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广西生态工程职业技术学院</title><META Name="keywords" Content="广西生态工程职业技术学院" />
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="bookmark" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/buttonLite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bshareC0.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="js/sharecode.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c754754505b5742000100014256 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1720334806)</script>
+</head>
+<body>
+    <div class="body" id="top">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><div class="link_f">
+    </div>
+        <!-- 头部 -->
+        <div class="title">
+            <div class="web clearfix">
+                <!-- 分享 -->
+                <div class="fr">
+                   
+                      <!-- 20220119新增分享 分享微信二维码 -->
+   <div class="qrid_zz">
+    <div id="qrid"></div>
+</div>
+<!-- 20220119新增分享 分享微信二维码 -->
+<div class="share">
+  <div class="sharehide">
+      <a href="javascript:;" onclick="shareTo('sina')"><img src="images/wb.png" alt=""></a>
+  <a href="javascript:;" onclick="shareTo('wechat')"><img src="images/weixin.jpg" alt=""></a>
+  </div>
+</div>
+
+  <style>
+    /*20220119新增分享*/
+   .qrid_zz {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;}
+
+   .qrid_zz #qrid {
+      padding: 8px;
+      background: #fff;
+      border-radius: 5px;}
+   /*分享*/
+   .share img{display:inline-block;margin-top:10px;margin-right:6px;}
+</style>
+
+       <!--20220119新增分享 分享js  s -->
+       <script>
+        console.log(document.location.href);//本页面地址，如localhost/html/index.html
+        function shareTo(stype) {
+            var ftit = '';
+            var flink = '';
+            var lk = '';
+            //获取文章标题
+            ftit = $('.detailtitle h3').text();//此处的class名应该根据自己本身页面的class来取
+            //获取网页中内容的第一张图片
+            flink = 'https://' + window.location.host + $('.detailcon p img').eq(0).attr('src');
+            if (typeof flink == 'undefined') {
+                flink = '';
+            }
+            //当内容中没有图片时，设置分享图片为网站logo
+            if (flink == '') {
+                /**
+                 * 此处根据自己页面的样式以及布局进行改变处理
+                 *
+                 */
+                lk = 'https://' + window.location.host + 'images/logo.png';
+            }
+            //如果是上传的图片则进行绝对路径拼接
+            if (flink.indexOf('/uploads/') != -1) {
+                lk = 'http://' + window.location.host + flink;
+            }
+            //百度编辑器自带图片获取
+            if (flink.indexOf('ueditor') != -1) {
+                lk = flink;
+            }
+          
+            //qq空间接口的传参
+            if (stype == 'qzone') {
+                window.open('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content'));
+            }
+            //新浪微博接口的传参
+            if (stype == 'sina') {
+                window.open('http://service.weibo.com/share/share.php?url=' + document.location.href + '?sharesource=weibo&title=' + ftit + '&pic=' + lk + '&appkey=2706825840');
+            }
+            //qq好友接口的传参
+            if (stype == 'qq') {
+                //获取meta标签的值，然后分享
+                window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content') + '&desc= 清华经管会计系');
+            }
+            //生成二维码给微信扫描分享
+            if (stype == 'wechat') {
+    
+              
+                var qrstr = document.location.href;
+                if ($('#qrid')[0].innerHTML == "") {
+                    $('#qrid').qrcode(qrstr);
+                }
+                $('.qrid_zz')[0].style.display = "flex";
+    
+            }
+        }
+        $(function () {
+            var result = window.matchMedia('(max-width: 817px)');
+    
+            if (result.matches) {
+                var fx_kg = 0
+                $('.nry_con_out .ushare li.share').click(function () {
+                    if (fx_kg == 0) {
+                        $('.nry_big .subchannel')[0].style.bottom = '70px';
+                        fx_kg = 1;
+                    } else {
+                        $('.nry_big .subchannel')[0].style.bottom = '0px';
+                        fx_kg = 0;
+                    }
+    
+                })
+            } else {
+                $('.nry_con_out .ushare li.share').mouseenter(function () {
+                    $('.my-share-d')[0].style.display = "block";
+                })
+                $('.my-share-d').mouseleave(function () {
+                    $('.my-share-d')[0].style.display = "none";
+                })
+            }
+    
+    
+        })
+    
+        $('.qrid_zz').click(function () {
+            $('.qrid_zz')[0].style.display = "none";
+        })
+    </script>
+    <!-- 20220119新增分享 分享js  e -->
+ 
+
+                   
+                </div>
+                <div class="link_top fl">
+                    <ul class="clearfix">
+                        <script language="javascript" src="/system/resource/js/openlink.js"></script><li class="first"><a href="http://cw.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63636)">网上缴费</a></li>
+<li><a href="https://bsdt.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63641)">办事大厅</a></li>
+<li><a href="http://my.gxstzy.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63642)">统一信息门户</a></li>
+<li><a href="info/1019/10993.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 67218)">校园服务热线</a></li>
+
+                        <li class="last">
+    <a>快速入口</a>
+    <ul class="ul1" id="ul1">
+                <li><a href="http://lyxy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63643)">林学院</a></li>
+        <li><a href="http://jmxy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63644)">经贸学院</a></li>
+        <li><a href="http://ylxy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63645)">园林学院</a></li>
+        <li><a href="http://jgxy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63646)">建工学院</a></li>
+        <li><a href="http://qxxy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63647)">汽信学院</a></li>
+        <li><a href="http://sjxy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63648)">设计学院</a></li>
+        <li><a href="http://hbxy.gxstzy.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63649)">环保学院</a></li>
+        <li><a href="http://lyjtxy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63650)">旅游学院</a></li>
+        <li><a href="http://mksxy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63651)">马克思主义学院</a></li>
+        <li><a href="http://tsxy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63652)">通识学院</a></li>
+        <li><a href="http://jxjy.gxstzy.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63653)">继续教育学院</a></li>
+        <li><a href="gxstkpy/kpyjj.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 67257)">广西生态科普苑</a></li>
+    </ul>
+</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- logo -->
+        <div class="logo">
+            <div class="web clearfix">
+                <div class="fr searchbox">               
+                    <script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode1012740').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkey1012740").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkey1012740").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkey1012740").value = base64.encode(document.getElementById("lucenenewssearchkey1012740").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode1012740"));
+        return true;
+    } 
+</script>
+<form action="search.jsp?wbtreeid=1001" method="post" id="au3a" name="au3a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkey1012740" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype1012740" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope1012740" name="searchScope" value="1">
+ <div>
+ <input type="hidden" name="aj_csrf_token" id="aj_csrf_token">
+
+ <input name="showkeycode" id="showkeycode1012740" type="text" name="" placeholder="请输入关键字" class="text">
+ <input type="submit" name="" class="submit" value="" align="absmiddle" style="cursor: hand">
+ </div>
+</form>
+<script type="text/javascript">
+    $.ajax( {
+        url:'/system/resource/code/createToken.jsp',
+        type:'get',
+        dataType:'text',
+        cache:false,
+        timeout:5000,
+        success:function(params) {
+            try{
+                if(params){
+                    $("#aj_csrf_token").val(params);
+                }
+            }catch(e){}
+        },
+        error : function(data) {
+
+        }
+    });
+
+</script>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+
+                </div>
+                <div class="fl">
+                    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="广西生态工程职业技术学院新" class="logo"><img src="img/logo.png" width="864" height="74" border="0" alt="广西生态工程职业技术学院新" title="广西生态工程职业技术学院新"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 导航 -->
+        <div class="navbar">
+            <div class="web">
+                <ul class="clearfix">
+        <li class="hover">
+        <a href="index.htm" title="首页">首页</a>
+    </li>
+    <li>
+        <a href="zjst.htm" title="走进生态">走进生态</a>
+        <ul class="ul2">
+            <div class="bJing2"></div>
+            <li><a href="zjst/xxjj.htm" title="学校简介">学校简介</a></li>
+            <li><a href="zjst/lsyg.htm" title="历史沿革">历史沿革</a></li>
+            <li><a href="zjst/xxzc.htm" title="学校章程">学校章程</a></li>
+            <li><a href="zjst/xrld.htm" title="现任领导">现任领导</a></li>
+            <li><a href="zjst/jgsz.htm" title="机构设置">机构设置</a></li>
+            <li><a href="zjst/whbs.htm" title="文化标识">文化标识</a></li>
+            <li><a href="zjst/bxcg.htm" title="办学成果">办学成果</a></li>
+            <li><a href="zjst/xyfg.htm" title="校园风光">校园风光</a></li>
+            <li><a href="zjst/lxfs.htm" title="联系方式">联系方式</a></li>
+            <li><a href="zjst/xydt.htm" title="校园地图">校园地图</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="rcpy.htm" title="人才培养">人才培养</a>
+        <ul class="ul2">
+            <div class="bJing2"></div>
+            <li><a href="http://xgb.gxstzy.cn" title="学生工作">学生工作</a></li>
+            <li><a href="https://jwgl.gxstzy.cn/admin/caslogin" target="_blank" title="教学管理">教学管理</a></li>
+            <li><a href="http://gxstzy.zhiye.chaoxing.com/" target="_blank" title="超星慕课">超星慕课</a></li>
+            <li><a href="rcpy/pyfa.htm" title="培养方案">培养方案</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="info/1230/15346.htm" title="招生就业">招生就业</a>
+        <ul class="ul2">
+            <div class="bJing2"></div>
+            <li><a href="http://zs.gxstzy.cn" target="_blank" title="招生信息网">招生信息网</a></li>
+            <li><a href="http://jy.gxstzy.cn" target="_blank" title="就业信息网">就业信息网</a></li>
+            <li><a href="http://jxjy.gxstzy.cn" target="_blank" title="继续教育培训">继续教育培训</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="ejxy.htm" title="二级学院">二级学院</a>
+        <ul class="ul2" style="width:150px;">
+            <div class="bJing2"></div>
+            <li><a href="http://lyxy.gxstzy.cn/" target="_blank" title="林业工程学院">林业工程学院</a></li>
+            <li><a href="http://jmxy.gxstzy.cn/" target="_blank" title="经济贸易学院">经济贸易学院</a></li>
+            <li><a href="http://ylxy.gxstzy.cn/" target="_blank" title="园林与城乡规划学院">园林与城乡规划学院</a></li>
+            <li><a href="http://sjxy.gxstzy.cn/" target="_blank" title="工业与艺术设计学院">工业与艺术设计学院</a></li>
+            <li><a href="http://lyjtxy.gxstzy.cn/" target="_blank" title="旅游与交通管理学院">旅游与交通管理学院</a></li>
+            <li><a href="http://qxxy.gxstzy.cn/" target="_blank" title="汽车与信息工程学院">汽车与信息工程学院</a></li>
+            <li><a href="http://jgxy.gxstzy.cn/" target="_blank" title="建筑与道桥工程学院">建筑与道桥工程学院</a></li>
+            <li><a href="http://hbxy.gxstzy.cn" target="_blank" title="生态环境保护学院">生态环境保护学院</a></li>
+            <li><a href="http://mksxy.gxstzy.cn/" target="_blank" title="马克思主义学院">马克思主义学院</a></li>
+            <li><a href="http://tsxy.gxstzy.cn/" target="_blank" title="通识教育学院">通识教育学院</a></li>
+            <li><a href="http://jxjy.gxstzy.cn/" target="_blank" title="继续教育与培训学院">继续教育与培训学院</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="szdw.htm" title="师资队伍">师资队伍</a>
+        <ul class="ul2">
+            <div class="bJing2"></div>
+            <li><a href="szdw/jxtd.htm" title="教学团队">教学团队</a></li>
+            <li><a href="szdw/jxms.htm" title="教学名师">教学名师</a></li>
+            <li><a href="szdw/kctd.htm" title="科创团队">科创团队</a></li>
+            <li><a href="szdw/jsfc.htm" title="教师风采">教师风采</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="cjrh.htm" title="产教融合">产教融合</a>
+        <ul class="ul2">
+            <div class="bJing2"></div>
+            <li><a href="cjrh/sylc.htm" title="实验林场">实验林场</a></li>
+            <li><a href="cjrh/xqhz.htm" title="校企合作">校企合作</a></li>
+            <li><a href="cjrh/kxyj.htm" title="科学研究">科学研究</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="gjjl.htm" title="国际交流">国际交流</a>
+        <ul class="ul2">
+            <div class="bJing2"></div>
+            <li><a href="gjjl/xsjl.htm" title="学术交流">学术交流</a></li>
+            <li><a href="gjjl/cgsz.htm" title="出国深造">出国深造</a></li>
+            <li><a href="gjjl/jwkc.htm" title="境外考察">境外考察</a></li>
+            <li><a href="gjjl/wblf.htm" title="外宾来访">外宾来访</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="xywh.htm" title="校园文化">校园文化</a>
+        <ul class="ul2">
+            <div class="bJing2"></div>
+            <li><a href="xywh/xzfc.htm" title="学子风采">学子风采</a></li>
+            <li><a href="xywh/stfc.htm" title="社团风采">社团风采</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="rczp.htm" title="人才招聘">人才招聘</a>
+    </li>
+    <li>
+        <a href="https://zjjt.gxstzy.cn/" title="职教集团">职教集团</a>
+    </li>
+</ul>
+            </div>
+        </div>
+        <!-- banner -->
+            <div>
+    <div class="banner">
+                <div>
+            <div class="news_images">
+                <a>
+                    <img src="images/dangdaihui.jpg" height="600">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="news_images">
+                <a>
+                    <img src="images/jiaoyudahui.jpg" height="600">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="news_images">
+                <a href="images/1122.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 58045)" target="_blank">
+                    <img src="images/sanzhongquanhui.jpg" height="600">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="news_images">
+                <a>
+                    <img src="images/guanwangshouyedatu2.jpg" height="600">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="news_images">
+                <a>
+                    <img src="images/niaokantu.jpg" height="600">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="news_images">
+                <a>
+                    <img src="images/1tushuguangaoqing.jpg" height="600">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="news_images">
+                <a>
+                    <img src="images/xinxiaomen.jpg" height="600">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="news_images">
+                <a>
+                    <img src="images/junwuhu2023shengtairi.jpg" height="600">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="news_images">
+                <a>
+                    <img src="images/lvshuiqingshan.jpg" height="600">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="stop play"></div>
+</div>
+        <!-- 内容区 -->
+        <div class="con clearfix">
+            <div class="web clearfix">
+                <!-- 图片新闻 -->
+                <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="new_banner fl">
+        <div>
+        <div class="news_images">
+            <a href="info/1017/16704.htm" target="_blank" title="中国共产党广西生态工程职业技术学院第四次党员代表大会胜利召开">
+                <img src="/__local/2/CF/E4/D8D67338CF226EEBAC1C98D363A_27AAC9A9_1A998.jpg" height="388">
+                <p>中国共产党广西生态工程职业技术学院第四次党员代表大会胜利召开</p>
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="news_images">
+            <a href="info/1017/16680.htm" target="_blank" title="“民族团结如钢铁 石榴花开巾帼红”柳州市铸牢中华民族共同体意识“桂姐姐”巡回大宣讲活动广西生态职院专场成功举办">
+                <img src="/__local/0/F2/78/FDC5855A1407533B6C5A69B1270_DA7B5FA8_D77D4.png" height="388">
+                <p>“民族团结如钢铁 石榴花开巾帼红”柳州市铸牢中华民族共同体...</p>
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="news_images">
+            <a href="info/1017/16673.htm" target="_blank" title="柳州市市长张壮到我校检查松材线虫病防治情况">
+                <img src="/__local/D/53/68/310BCB031EC6ADB6EDFB8821DD9_944D9FAE_26F7B.jpg" height="388">
+                <p>柳州市市长张壮到我校检查松材线虫病防治情况</p>
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="news_images">
+            <a href="info/1017/16642.htm" target="_blank" title="2024年柳州市职工职业技能大赛化学检验员赛项及水处理技术（工业废水处理工）赛项在我校成功举办">
+                <img src="/__local/A/A5/18/3B95FF823A76D4D3C1E4EB27316_A214CD0D_14409.jpg" height="388">
+                <p>2024年柳州市职工职业技能大赛化学检验员赛项及水处理技术（...</p>
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="news_images">
+            <a href="info/1017/16630.htm" target="_blank" title="2024年广西自然保护地保护管理培训班在我校顺利举行">
+                <img src="/__local/4/2C/84/77542BE48C19A270414198D5E88_B696640E_24E01.jpg" height="388">
+                <p>2024年广西自然保护地保护管理培训班在我校顺利举行</p>
+            </a>
+        </div>
+    </div>
+</div><script>_showDynClickBatch(['dynclicks_u7_16704','dynclicks_u7_16680','dynclicks_u7_16673','dynclicks_u7_16642','dynclicks_u7_16630'],[16704,16680,16673,16642,16630],"wbnews", 1720334806)</script>
+
+                <!-- tab栏 -->
+                <div class="tab_bar fr">
+                    <div class="parHd">
+                        <ul class="clearfix">
+                            <li class="on"><p class="tit">学校要闻</p><a href="tzxw/xxyw.htm">更多</a></li>
+                            <li><p class="tit">校园动态</p><a href="tzxw/xydt.htm">更多</a></li>
+                            <li><p class="tit">媒体聚焦</p><a href="tzxw/mtjj.htm">更多</a></li>                            
+                            <li class="last"><p class="tit">校园视频</p><a href="xysp.htm">更多</a></li>
+                            <li class="last"><p class="tit">学子风采</p><a href="xywh/xzfc.htm">更多</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="parBd">
+                        <div class="slideBox">
+                            <ul class="clearfix">
+        <li class="first">
+        <a href="info/1017/16704.htm" target="_blank" title="中国共产党广西生态工程职业技术学院第四次党员代表大会胜利召开">
+            <p class="txt">中国共产党广西生态工程职业技术学院第四次党员代表大会...</p>
+            <p class="con">10月25日，中国共产党广西生态工程职业技术学院第四次党员代表大会在图书馆知行报告厅胜利召开。这是学校在全国上下进一步全面深化改革、推进中国式现代化关...</p>
+        </a>
+    </li>
+    <li><a href="info/1021/16694.htm" target="_blank" title="喜讯：我校代表队在2024一带一路暨金砖大赛之第二届商务数据分析大赛（高职组）全国总决赛中荣获一等奖"><span class="fr">10-23</span>喜讯：我校代表队在2024一带一路暨金砖大赛之第二届商务...</a></li>
+    <li><a href="info/1017/16690.htm" target="_blank" title="柳州市2024年森林火灾扑救应急演练在我校举行"><span class="fr">10-23</span>柳州市2024年森林火灾扑救应急演练在我校举行</a></li>
+    <li><a href="info/1021/16684.htm" target="_blank" title="喜讯|我校在2024年全区“青春筑梦新时代 资助伴我向未来”资助主题征文比赛中荣获佳绩"><span class="fr">10-22</span>喜讯|我校在2024年全区“青春筑梦新时代 资助伴我向未来...</a></li>
+    <li><a href="info/1017/16680.htm" target="_blank" title="“民族团结如钢铁 石榴花开巾帼红”柳州市铸牢中华民族共同体意识“桂姐姐”巡回大宣讲活动广西生态职院专场成功举办"><span class="fr">10-21</span>“民族团结如钢铁 石榴花开巾帼红”柳州市铸牢中华民族共...</a></li>
+    <li><a href="info/1017/16673.htm" target="_blank" title="柳州市市长张壮到我校检查松材线虫病防治情况"><span class="fr">10-21</span>柳州市市长张壮到我校检查松材线虫病防治情况</a></li>
+    <li><a href="info/1017/16672.htm" target="_blank" title="广西科技师范学院心理健康教育与研究中心团队到我校心理中心开展互助共建调研工作"><span class="fr">10-18</span>广西科技师范学院心理健康教育与研究中心团队到我校心理...</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u8_16704','dynclicks_u8_16694','dynclicks_u8_16690','dynclicks_u8_16684','dynclicks_u8_16680','dynclicks_u8_16673','dynclicks_u8_16672'],[16704,16694,16690,16684,16680,16673,16672],"wbnews", 1720334806)</script>
+
+                        </div>
+                        <div class="slideBox">
+                            <ul class="clearfix">
+        <li class="first">
+        <a href="info/1018/16697.htm" target="_blank" title="广西科技师范学院到我校交流学生管理与团学工作">
+            <p class="txt">广西科技师范学院到我校交流学生管理与团学工作</p>
+            <p class="con">2024年10月23日上午，广西科技师范学院学生工作处、校团委一行九人到我校开展学生管理与团学工作交流活动。交流会由我校学生工作处处长冯光澍主持，学工处、...</p>
+        </a>
+    </li>
+    <li><a href="info/1018/16688.htm" target="_blank" title="园林与城乡规划学院参与柳州市三角花花事活动"><span class="fr">10-22</span>园林与城乡规划学院参与柳州市三角花花事活动</a></li>
+    <li><a href="info/1018/16685.htm" target="_blank" title="我校教师受邀参加第三届南方花卉苗木交易会"><span class="fr">10-22</span>我校教师受邀参加第三届南方花卉苗木交易会</a></li>
+    <li><a href="info/1018/16691.htm" target="_blank" title="我校开展“推广普及国家通用语言文字，铸牢中华民族共同体意识”社会实践服务活动"><span class="fr">10-22</span>我校开展“推广普及国家通用语言文字，铸牢中华民族共同...</a></li>
+    <li><a href="info/1018/16670.htm" target="_blank" title="以考促学，以证促用：我院1+X测绘地理数据获取与处理职业技能等级证书考核圆满结束"><span class="fr">10-18</span>以考促学，以证促用：我院1+X测绘地理数据获取与处理职业...</a></li>
+    <li><a href="info/1018/16666.htm" target="_blank" title="学校召开第五十六届田径运动会工作协调会"><span class="fr">10-18</span>学校召开第五十六届田径运动会工作协调会</a></li>
+    <li><a href="info/1018/16667.htm" target="_blank" title="“知危险，会避险”  ——我校邀请交警入校开展新生交通安全主题宣讲"><span class="fr">10-17</span>“知危险，会避险”  ——我校邀请交警入校开展新生交通...</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u9_16697','dynclicks_u9_16688','dynclicks_u9_16685','dynclicks_u9_16691','dynclicks_u9_16670','dynclicks_u9_16666','dynclicks_u9_16667'],[16697,16688,16685,16691,16670,16666,16667],"wbnews", 1720334806)</script>
+
+                        </div>
+                        <div class="slideBox">
+                            <ul class="clearfix">
+        <li class="first">
+        <a href="http://www.gx.chinanews.com.cn/news/2024-10-12/detail-ihehwccy6199207.shtml" target="_blank" title="【中国新闻网】柳州一高职院校举办环保时装秀">
+            <p class="txt">【中国新闻网】柳州一高职院校举办环保时装秀</p>
+            <p class="con"></p>
+        </a>
+    </li>
+    <li><a href="https://ssw.gxrb.com.cn/news/article.html?docid=632247&branch=5" target="_blank" title="【南国今报】这场T台秀好“惊艳”！柳州大学生巧手变废为宝，绿色创意秀震撼全场→"><span class="fr">10-17</span>【南国今报】这场T台秀好“惊艳”！柳州大学生巧手变废为...</a></li>
+    <li><a href="https://www.ep12.com/a/xinwen/gzdt/2024/1012/105530.html" target="_blank" title="【八桂职教网】广西生态职院时装秀：大学生用创意和环保材料打造时尚新潮流"><span class="fr">10-17</span>【八桂职教网】广西生态职院时装秀：大学生用创意和环保...</a></li>
+    <li><a href="https://www.ep12.com/a/xinwen/gzdt/2024/0930/105355.html" target="_blank" title="【八桂职教网】第17届全国三维数字化创新设计大赛（广西赛区）专项赛在广西生态职院举办"><span class="fr">10-17</span>【八桂职教网】第17届全国三维数字化创新设计大赛（广西...</a></li>
+    <li><a href="https://www.ep12.com/a/xinwen/gzdt/2024/0929/105319.html" target="_blank" title="【八桂职教网】广西生态职院社团四社联合举办“欢度国庆”游馆会"><span class="fr">10-17</span>【八桂职教网】广西生态职院社团四社联合举办“欢度国庆...</a></li>
+    <li><a href="https://www.ep12.com/a/xinwen/gzdt/2024/0923/105197.html" target="_blank" title="【八桂职教网】反诈+摇滚，广西生态职院这个音乐节有点特别"><span class="fr">10-17</span>【八桂职教网】反诈+摇滚，广西生态职院这个音乐节有点特别</a></li>
+    <li><a href="https://www.ep12.com/a/xinwen/gzdt/2024/0914/105095.html" target="_blank" title="【八桂职教网】广西生态职院举行新生开学典礼暨军训动员大会"><span class="fr">10-17</span>【八桂职教网】广西生态职院举行新生开学典礼暨军训动员大会</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u10_16657','dynclicks_u10_16656','dynclicks_u10_16655','dynclicks_u10_16654','dynclicks_u10_16653','dynclicks_u10_16652','dynclicks_u10_16651'],[16657,16656,16655,16654,16653,16652,16651],"wbnews", 1720334806)</script>
+
+                        </div>
+                        <div class="slideBox">
+                            <ul class="clearfix">
+        <li class="first">
+        <a href="info/1061/15770.htm" target="_blank" title="广西生态工程职业技术学院2024年形象宣传片">
+            <p class="txt">广西生态工程职业技术学院2024年形象宣传片</p>
+            <p class="con"></p>
+        </a>
+    </li>
+    <li><a href="info/1061/15443.htm" target="_blank" title="广西生态工程职业技术学院2024年招生宣传片"><span class="fr">03-25</span>广西生态工程职业技术学院2024年招生宣传片</a></li>
+    <li><a href="info/1061/14403.htm" target="_blank" title="2023年全国林业和草原科普讲解大赛我校参赛视频（4）"><span class="fr">09-05</span>2023年全国林业和草原科普讲解大赛我校参赛视频（4）</a></li>
+    <li><a href="info/1061/14401.htm" target="_blank" title="2023年全国林业和草原科普讲解大赛我校参赛视频（3）"><span class="fr">09-05</span>2023年全国林业和草原科普讲解大赛我校参赛视频（3）</a></li>
+    <li><a href="info/1061/14400.htm" target="_blank" title="2023年全国林业和草原科普讲解大赛我校参赛视频（2）"><span class="fr">09-05</span>2023年全国林业和草原科普讲解大赛我校参赛视频（2）</a></li>
+    <li><a href="info/1061/14399.htm" target="_blank" title="2023年全国林业和草原科普讲解大赛我校参赛视频（1）"><span class="fr">09-05</span>2023年全国林业和草原科普讲解大赛我校参赛视频（1）</a></li>
+    <li><a href="info/1061/13286.htm" target="_blank" title="2022年全国林草科普讲解大赛三等奖获奖视频-《北海金海湾红树林生态知识科普》"><span class="fr">03-16</span>2022年全国林草科普讲解大赛三等奖获奖视频-《北海金海湾...</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u11_15770','dynclicks_u11_15443','dynclicks_u11_14403','dynclicks_u11_14401','dynclicks_u11_14400','dynclicks_u11_14399','dynclicks_u11_13286'],[15770,15443,14403,14401,14400,14399,13286],"wbnews", 1720334806)</script>
+
+                        </div>
+                         <div class="slideBox"><ul class="clearfix">
+        <li class="first">
+        <a href="https://mp.weixin.qq.com/s?__biz=MzAwMDIxMzY0Mg==&mid=2652192066&idx=1&sn=f9ac0987a57ae9290f1f84dd2b7e56ff&chksm=810dcaa7b67a43b1efc6494c78c6f49737cbc4806122a24b1c7083de499d8c71a571ce4bbbb9&token=171405873&lang=zh_CN#rd" target="_blank" title="生态榜样 | 2023年“生态美”年度人物获得者——鲁桂燕">
+            <p class="txt">生态榜样 | 2023年“生态美”年度人物获得者——鲁桂燕</p>
+            <p class="con"></p>
+        </a>
+    </li>
+    <li><a href="https://mp.weixin.qq.com/s?__biz=MzAwMDIxMzY0Mg==&mid=2652192064&idx=1&sn=b208e31bfd7f34207619b4d10528dfee&chksm=810dcaa5b67a43b3cad63669dca125db491622ffeb58d2dcf1aac834699e56e241534cec9256&token=171405873&lang=zh_CN#rd" target="_blank" title="生态榜样 | 2023年“生态美”年度人物获得者——黄远义"><span class="fr">02-26</span>生态榜样 | 2023年“生态美”年度人物获得者——黄远义</a></li>
+    <li><a href="https://mp.weixin.qq.com/s?__biz=MzAwMDIxMzY0Mg==&mid=2652191959&idx=1&sn=95f4f620cc5fa0d03a1821021c5f08c2&chksm=810dcb32b67a422472bc2b4b3480b1998700e4a8b7b20c4dab4dbc23ec2591c2f889f198c717&token=171405873&lang=zh_CN#rd" target="_blank" title="生态榜样 | 2023年“生态美”年度人物获得者——龙狮队"><span class="fr">02-26</span>生态榜样 | 2023年“生态美”年度人物获得者——龙狮队</a></li>
+    <li><a href="https://mp.weixin.qq.com/s?__biz=MzAwMDIxMzY0Mg==&mid=2652192058&idx=1&sn=a965104fbb29c0dd34f818a8a021e643&chksm=810dcadfb67a43c952ec3fa6f7a41daec96b9fd9bda5675cf805dc515d9aac25b1ab92be9e29&token=171405873&lang=zh_CN#rd" target="_blank" title="生态榜样 | 2023年“生态美”年度人物获得者——朱诗贻"><span class="fr">02-26</span>生态榜样 | 2023年“生态美”年度人物获得者——朱诗贻</a></li>
+    <li><a href="https://mp.weixin.qq.com/s?__biz=MzAwMDIxMzY0Mg==&mid=2652179095&idx=1&sn=e2d74ac5e3426e35323f0cf8b5acf75e&chksm=810dfd72b67a7464a90f4ce09702f9999904a3dbfbc3251ff17289fb57b1b3297e59224d6968&token=874878133&lang=zh_CN#rd" target="_blank" title="榜样同行·国奖风采 | 薪火相传，青春榜样（第4期）"><span class="fr">04-06</span>榜样同行·国奖风采 | 薪火相传，青春榜样（第4期）</a></li>
+    <li><a href="https://mp.weixin.qq.com/s?__biz=MzAwMDIxMzY0Mg==&mid=2652177603&idx=1&sn=e8f6f4bfe5dcc17b411d2ed9545327df&chksm=810df326b67a7a30d1c0588904f0bdd9a108336f11b0f7216f4daca0f253b928fd30434de98d&token=874878133&lang=zh_CN#rd" target="_blank" title="榜样同行·国奖风采丨知且行之，实践不止（第3期）"><span class="fr">04-06</span>榜样同行·国奖风采丨知且行之，实践不止（第3期）</a></li>
+    <li><a href="https://mp.weixin.qq.com/s?__biz=MzAwMDIxMzY0Mg==&mid=2652177413&idx=1&sn=be7f1b8257d5d3b4974ebb104ade6c6b&chksm=810df3e0b67a7af6fcc0efc574af5c179d89dc395bd098c1db8ce2f4d6a3deae36cebcbb2aef&token=874878133&lang=zh_CN#rd" target="_blank" title="榜样同行·国奖风采丨以梦为马，不负韶华（第2期）"><span class="fr">04-06</span>榜样同行·国奖风采丨以梦为马，不负韶华（第2期）</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u12_15280','dynclicks_u12_15279','dynclicks_u12_15278','dynclicks_u12_15277','dynclicks_u12_13490','dynclicks_u12_13489','dynclicks_u12_13488'],[15280,15279,15278,15277,13490,13489,13488],"wbnews", 1720334806)</script>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tz_zs">
+            <div class="web clearfix">
+                <!-- 通知公告 -->
+                <div class="notice fl">
+    <h2><a href="tzxw/tzgg.htm" class="fr">+ 更多</a>通知公告</h2>
+    <ul>
+        <li><a href="info/1019/16702.htm" target="_blank" title="关于软件技术专业SGAVE项目（GXZC2024-C3-005608-YZLZ）成交结果公告"><span class="fr">10-25</span>关于软件技术专业SGAVE项目（GXZC2024-C3-005608-YZLZ）成交...</a></li>
+        <li><a href="info/1019/16701.htm" target="_blank" title="广西生态工程职业技术学院扩建工程（二期）-23#、24#、25#、26#、27#学生宿舍楼施工图审查流标公告"><span class="fr">10-25</span>广西生态工程职业技术学院扩建工程（二期）-23#、24#、25#、2...</a></li>
+        <li><a href="info/1019/16700.htm" target="_blank" title="广西生态工程职业技术学院扩建工程（二期）-科技综合楼施工图审查项目流标公告"><span class="fr">10-25</span>广西生态工程职业技术学院扩建工程（二期）-科技综合楼施工图...</a></li>
+        <li><a href="info/1019/16699.htm" target="_blank" title="创新创业楼实训室智慧黑板（GXZC2024-J1-005704-RNZB）成交结果公告"><span class="fr">10-25</span>创新创业楼实训室智慧黑板（GXZC2024-J1-005704-RNZB）成交结...</a></li>
+        <li><a href="info/1019/16693.htm" target="_blank" title="广西生态工程职业技术学院34号门面公开招租公告"><span class="fr">10-23</span>广西生态工程职业技术学院34号门面公开招租公告</a></li>
+        <li><a href="info/1019/16682.htm" target="_blank" title="广西生态工程职业技术学院扩建工程（二期）-科技综合楼施工图审查项目询价公告"><span class="fr">10-21</span>广西生态工程职业技术学院扩建工程（二期）-科技综合楼施工图...</a></li>
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u13_16702','dynclicks_u13_16701','dynclicks_u13_16700','dynclicks_u13_16699','dynclicks_u13_16693','dynclicks_u13_16682'],[16702,16701,16700,16699,16693,16682],"wbnews", 1720334806)</script>
+
+                <!-- 招生就业 -->
+                <div class="zsjy fl">
+    <h2><a href="zsjy1/zslq.htm" class="fr">+ 更多</a>招生就业</h2>
+    <ul>
+       <li><a href="info/1064/16123.htm" target="_blank" title="2024年新生入学指南"><span class="fr">07-08</span>2024年新生入学指南</a></li>
+       <li><a href="info/1064/16019.htm" target="_blank" title="广西生态工程职业技术学院2024年普高招生计划一览表"><span class="fr">06-20</span>广西生态工程职业技术学院2024年普高招生计划一览表</a></li>
+       <li><a href="info/1064/16016.htm" target="_blank" title="广西生态工程职业技术学院2024年外省普高招生计划一览表"><span class="fr">06-19</span>广西生态工程职业技术学院2024年外省普高招生计划一览表</a></li>
+       <li><a href="info/1064/15608.htm" target="_blank" title="广西生态工程职业技术学院2024年高职对口招生录取名单公示"><span class="fr">04-22</span>广西生态工程职业技术学院2024年高职对口招生录取名单公示</a></li>
+       <li><a href="info/1064/15607.htm" target="_blank" title="广西生态工程职业技术学院2024年高职单独招生录取名单公示"><span class="fr">04-22</span>广西生态工程职业技术学院2024年高职单独招生录取名单公示</a></li>
+       <li><a href="info/1064/15515.htm" target="_blank" title="关于划定我校2024 年单独/对口招生录取最低控制线的通知"><span class="fr">04-03</span>关于划定我校2024 年单独/对口招生录取最低控制线的通知</a></li>
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u14_16123','dynclicks_u14_16019','dynclicks_u14_16016','dynclicks_u14_15608','dynclicks_u14_15607','dynclicks_u14_15515'],[16123,16019,16016,15608,15607,15515],"wbnews", 1720334806)</script>
+
+            </div>
+        </div>
+        <!-- 系统导航 -->
+        <div class="ksdh">
+            <div class="web clearfix">
+                    <ul class="clearfix">
+        <li>
+        <a href="http://my.gxstzy.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57044)" target="_blank">
+            <div class="img"><p><img src="img/icon_1.png" alt=""></p></div>
+            <p class="txt">统一信息门户</p>
+        </a>
+    </li>
+    <li>
+        <a href="https://bsdt.gxstzy.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57049)" target="_blank">
+            <div class="img"><p><img src="img/icon_2.png" alt=""></p></div>
+            <p class="txt">办事大厅</p>
+        </a>
+    </li>
+    <li>
+        <a href="http://cw.gxstzy.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57051)" target="_blank">
+            <div class="img"><p><img src="img/icon_4.png" alt=""></p></div>
+            <p class="txt">缴费系统</p>
+        </a>
+    </li>
+    <li>
+        <a href="https://vpn.gxstzy.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57052)" target="_blank">
+            <div class="img"><p><img src="img/icon_5.png" alt=""></p></div>
+            <p class="txt">VPN</p>
+        </a>
+    </li>
+    <li>
+        <a href="http://lib.gxstzy.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57053)" target="_blank">
+            <div class="img"><p><img src="img/icon_3.png" alt=""></p></div>
+            <p class="txt">图书馆</p>
+        </a>
+    </li>
+    <li>
+        <a href="ztzl/gkzl.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57050)" target="_blank">
+            <div class="img"><p><img src="img/icon_6.png" alt=""></p></div>
+            <p class="txt">公开专栏</p>
+        </a>
+    </li>
+</ul>
+            </div>
+        </div>
+        <!-- 图片链接 -->
+        <div class="img_link">
+            <div class="web">
+                    <ul class="clearfix">
+        <li><a href="gxstkpy/kpyjj.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57061)" target="_blank"><img src="images/gxstkpy_link8.png" alt=""></a></li>
+    <li><a href="http://sgjs.gxstzy.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57057)" target="_blank"><img src="img/img_link4.png" alt=""></a></li>
+    <li><a href="http://dj.gxstzy.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57056)" target="_blank"><img src="img/img_link3.png" alt=""></a></li>
+    <li><a href="http://xjzx.gxstzy.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57060)" target="_blank"><img src="img/img_link7.png" alt=""></a></li>
+    <li><a href="http://zs.gxstzy.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57058)" target="_blank"><img src="img/img_link5.png" alt=""></a></li>
+    <li><a href="tzxw/ztjy.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57054)" target="_blank"><img src="img/1111111.png" alt=""></a></li>
+    <li><a href="ztzl/qlxyjs.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57055)" target="_blank"><img src="images/qlxyzt.png" alt=""></a></li>
+    <li><a href="http://jjjc.gxstzy.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57059)" target="_blank"><img src="images/img_link7.png" alt=""></a></li>
+</ul>
+            </div>
+        </div>
+        <!-- 底部友情链接 -->
+        <div class="link">
+            <div class="web clearfix">
+                <span>相关链接&nbsp;&nbsp;:</span>
+<ul class="clearfix">
+    <li><a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63855)">教育部</a></li>
+    <li><a href="http://www.forestry.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63856)">国家林业和草原局</a></li>
+    <li><a href="http://jyt.gxzf.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63669)">广西壮族自治区教育厅</a></li>
+    <li><a href="http://lyj.gxzf.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1720334806, 63668)">广西壮族自治区林业局</a></li>
+</ul>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="foot">
+            <div class="web clearfix">
+                    <div class="foot_right fr">
+    <a>
+        <img src="img/wx_code.png" alt="">
+        <p>学校微信公众号</p>
+    </a>
+</div>
+                <div class="foot_left fl">
+                        <a href="index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1720334806, 57063)" target="_blank" class="foot_logo"><img src="img/foot_logo.png" alt=""></a>
+
+                    <ul><li style="margin-top: 17px;"><a id="_xinchacharenzheng_cert_vip_kexinweb" target="_blank" href="https://xyt.xinchacha.com/getpcInfo?sn=1503905976397266944&language=CN&certType=8&url=*.gxstzy.cn" style="text-decoration:none;">
+<img src="https://xyt.xinchacha.com/img/icon/icon8.png" style="height:50px;width:164px;">
+</a></li>
+                        <li><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/21/000/0000/60597075/CA210000000605970750002.js' type='text/javascript'%3E%3C/script%3E"));</script></li>
+                        <li>
+                            <script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p>前置审核编号：桂JS201205-013&nbsp;&nbsp;桂ICP备12004478号</p> 
+<p>招生就业处电话：0772-2725133、2727510、2726367</p> 
+<p>传真：0772-2725117</p>
+                        </li>
+                        <li>
+                            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45020502000033" target="_blank" class="jingBei">桂公网安备 45020502000033号</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 版权 -->
+        <div class="bq">
+            <div class="web clearfix">
+                <script language="javascript" src="_dwr/engine.js"></script><script language="javascript" src="_dwr/util.js"></script><script language="javascript" src="_dwr/interface/PageCounterDWR.js"></script><p class="fr">网站总访问量：<span id="a1012658" name="a1012658"></span>次</p>
+
+<script>
+function getvisittimea1012658()
+{       
+    PageCounterDWR.getVisittime('1720334806','1001','TOTAL_COUNTER','0','10',callbackdataa1012658)
+}
+function callbackdataa1012658(data)
+{
+    document.getElementById("a1012658").innerHTML = data; 
+}
+getvisittimea1012658();
+</script>
+                <p class="fl"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span style="font-size: 14px;">版权所有© 广西生态工程职业技术学院</span></p></p>
+                      
+            </div>
+           
+        </div>
+    </div>
+  
+  
+  
+  
+  
+<SCRIPT language="JavaScript">  
+self.onError=null;  
+lastScrollXu23=0;
+lastScrollYu23=0;
+NS=(document.layeru23)?1:0;
+IE=(document.all)?1:0;  
+function moveu23()  
+{  
+    try
+    {
+        diffYu23=(document.documentElement && document.documentElement.scrollTop)?document.documentElement.scrollTop:document.body.scrollTop;
+        diffXu23=(document.documentElement&&document.documentElement.scrollLeft)?document.documentElement.scrollLeft:document.body.scrollLeft;
+     
+        if(diffYu23!=lastScrollYu23)
+        {
+            percent =.1*(diffYu23-lastScrollYu23);  
+            if(percent>0)
+                percent=Math.ceil(percent);
+            else 
+                percent=Math.floor(percent);  
+            document.getElementById("layeru23").style.top=parseInt(document.getElementById("layeru23").style.top)+percent+"px";
+                
+            lastScrollYu23=lastScrollYu23+percent;
+        }  
+        
+        
+        if(diffXu23!=lastScrollXu23)
+        {
+            percent=.1*(diffXu23-lastScrollXu23);  
+            if(percent>0)
+                percent=Math.ceil(percent);else percent = Math.floor(percent);  
+           
+                    document.getElementById("layeru23").style.Left+=percent;
+             
+             lastScrollXu23=lastScrollXu23+percent;
+         }
+    }
+    catch(e)
+    {
+    
+    }
+}  
+        action =window.setInterval('moveu23()',1);  
+    </SCRIPT>  
+  
+<SCRIPT language="JavaScript">  
+    
+    function imageCloseu23(id)  
+    {  
+        document.getElementById(id).style.display = 'none';  
+    }  
+</SCRIPT>  
+
+<DIV id="layeru23" style="Z-INDEX:2;left:5px;POSITION:absolute; TOP:300px">  
+    <table border="0" cellpadding="0" cellspacing="0">  
+        </table>  
+</div>  <div>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</html>

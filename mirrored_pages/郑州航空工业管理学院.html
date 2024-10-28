@@ -1,0 +1,895 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML><HEAD><TITLE>郑州航空工业管理学院-Zhengzhou University of Aeronautics-ZUA</TITLE><META Name="keywords" Content="郑州航空工业管理学院,郑州航院,航院,航空学院,Zhengzhou University of Aeronautics,ZUA" />
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><META content="text/html; charset=UTF-8" http-equiv="Content-Type"><LINK rel="stylesheet" type="text/css" href="dfiles/9832/common/css/htmlcss/style.css"><LINK rel="stylesheet" type="text/css" href="dfiles/9832/common/css/htmlcss/css.css">
+<META name="google-site-verification" content="76z9I1Pemmd3rEzuYTvpgRX1G4Fjb_yUFyGHFp17KFI"><LINK rel="stylesheet" type="text/css" href="dfiles/9832/common/css/htmlcss/css1.css"><script src="dfiles/9832/common/js/htmljs/bdtxk.js"></script><script src="dfiles/9832/common/js/htmljs/jquery.slider.js"></script><!-- <script src="common/js/htmljs/slider.js" ></script>
+ --><script src="dfiles/9832/common/js/htmljs/responsiveslides.min.js"></script>
+<STYLE type="text/css">
+.STYLE8 {
+    color: #FFFFFF;
+    font-weight: bold;} 
+.diyimage
+{
+border: 0;}
+#imgConac {
+width:66px;
+height:66px;} 
+</STYLE>
+<script type="text/javascript">
+
+/*---------------------------------- slider.js --------------------------*/
+
+/**
+ * slider插件可悬停控制
+ */
+ //play
+ var arr = []; //轮播标题在这里设置
+ 
+var html="";
+var htmlarr=[];
+
+ $(function ($, window, document, undefined) {
+        
+    Slider = function (container, options) {
+        
+        /*options = {
+            auto: true,
+            time: 3000,
+            event: 'hover' | 'click',
+            mode: 'slide | fade',
+            controller: $(),
+            activeControllerCls: 'className',
+            exchangeEnd: $.noop
+        }*/
+        
+
+        "use strict"; //stirct mode not support by IE9-
+
+        if (!container) return;
+
+        var options = options || {},
+            currentIndex = 0,
+            cls = options.activeControllerCls,
+            delay = options.delay,
+            isAuto = options.auto,
+            controller = options.controller,
+            event = options.event,
+            interval,
+            slidesWrapper = container.children().first(),
+            slides = slidesWrapper.children(),
+            length = slides.length,
+            childWidth = container.width(),
+            totalWidth = childWidth * slides.length;
+
+        function init() {
+            var controlItem = controller.children();
+
+            mode();
+
+            event == 'hover' ? controlItem.mouseover(function () {
+                stop();
+                var index = $(this).index();
+
+                play(index, options.mode);
+            }).mouseout(function () {
+                isAuto && autoPlay();
+            }) : controlItem.click(function () {
+                stop();
+                var index = $(this).index();
+
+                play(index, options.mode);
+                isAuto && autoPlay();
+            });
+
+            isAuto && autoPlay();
+        }
+
+        //animate mode
+        function mode() {
+            var wrapper = container.children().first();
+
+            options.mode == 'slide' ? wrapper.width(totalWidth) : wrapper.children().css({
+                'position': 'absolute',
+                'left': 0,
+                'top': 0
+            })
+                .first().siblings().hide();
+        }
+
+        //auto play
+        function autoPlay() {
+            interval = setInterval(function () {
+                triggerPlay(currentIndex);
+            }, options.time);
+        }
+
+        //trigger play
+        function triggerPlay(cIndex) {
+            var index;
+
+            (cIndex == length - 1) ? index = 0 : index = cIndex + 1;
+            play(index, options.mode);
+        }
+
+       
+        function play(index, mode) {
+            
+
+            
+            
+            document.getElementById('fontwz').innerHTML=arr[index];
+           slidesWrapper.stop(true, true);
+           slides.stop(true, true);
+
+           mode == 'slide' ? (function () {
+               if (index > currentIndex) {
+                   slidesWrapper.animate({
+                       left: '-=' + Math.abs(index - currentIndex) * childWidth + 'px'
+                   }, delay);
+               } else if (index < currentIndex) {
+                   slidesWrapper.animate({
+                       left: '+=' + Math.abs(index - currentIndex) * childWidth + 'px'
+                   }, delay);
+               } else {
+                   return;
+               }
+           })() : (function () {
+               if (slidesWrapper.children(':visible').index() == index) return;
+               slidesWrapper.children().fadeOut(delay).eq(index).fadeIn(delay);
+           })();
+
+           try {
+               controller.children('.' + cls).removeClass(cls);
+               controller.children().eq(index).addClass(cls);
+           } catch (e) { }
+
+           currentIndex = index;
+
+           options.exchangeEnd && typeof options.exchangeEnd == 'function' && options.exchangeEnd.call(this, currentIndex);
+        }
+
+
+        //stop
+        function stop() {
+            clearInterval(interval);
+        }
+
+        //prev frame
+        function prev() {
+            stop();
+
+            currentIndex == 0 ? triggerPlay(length - 2) : triggerPlay(currentIndex - 2);
+
+            isAuto && autoPlay();
+        }
+
+        //next frame
+        function next() {
+            stop();
+
+            currentIndex == length - 1 ? triggerPlay(-1) : triggerPlay(currentIndex);
+
+            isAuto && autoPlay();
+        }
+
+        //init
+        init();
+
+        //expose the Slider API
+        return {
+            prev: function () {
+                prev();
+            },
+            next: function () {
+                next();
+            }
+        }
+    };
+
+}(jQuery, window, document));
+
+
+
+/*---------------------------------- slider.js --------------------------*/
+
+
+
+
+function tpwz()
+{
+    var t,tt;
+    var obj = document.getElementById('bannerCtrl');
+    var obj1 = document.getElementById('bannerCtrl1');
+    var _div = document.getElementById('banner_tabs');
+    obj.style.bottom="5px";
+    obj1.style.bottom="-35px";
+    var change=function(){
+        var obj_h=parseInt(obj.style.bottom);
+        var obj_h1=parseInt(obj1.style.bottom);
+        if(obj_h1<0){
+            obj.style.bottom=(obj_h+Math.floor((35-obj_h)*0.1))+"px";
+            obj1.style.bottom=(obj_h1+Math.floor((0-obj_h1)*0.1))+"px";
+        }else{
+            clearInterval(t);
+        }
+    }
+    var back=function(){
+        var obj_hh=parseInt(obj.style.bottom);
+        var obj_hh1=parseInt(obj1.style.bottom);
+        if(obj_hh1>-35){
+            obj.style.bottom=(obj_hh+Math.floor((obj_hh-27)*0.1))+"px";
+            obj1.style.bottom=(obj_hh1+Math.floor((-35-obj_hh1)*0.1))+"px";
+        }else{
+            clearInterval(tt);
+        }
+    }
+    _div.onmouseover=function(){clearInterval(tt);t=setInterval(change,20);}
+    _div.onmouseout=function(){clearInterval(t);tt=setInterval(back,20)}
+}
+$(function() {
+    var bannerSlider = new Slider($('#banner_tabs'), {
+        time: 5000,
+        delay: 400,
+        event: 'hover',
+        auto: true,
+        mode: 'fade',
+        controller: $('#bannerCtrl'),
+        activeControllerCls: 'active'
+    });
+    $('#banner_tabs .flex-prev').click(function() {
+        bannerSlider.prev()
+
+    });
+    $('#banner_tabs .flex-next').click(function() {
+        bannerSlider.next()
+        
+    });
+    tpwz();
+    var ht = document.documentElement.clientHeight*0.5;
+    
+    document.getElementById('banner_tabs').style.height=ht*0.95+'px';
+
+    var ht1 = document.documentElement.clientHeight*0.5-190;
+    document.getElementById('xwdiv').style.height=ht1+15+'px';
+    setnews();
+    
+    setzttp();
+ })
+window.onresize=function(){
+    var ht = document.documentElement.clientHeight*0.5;
+    document.getElementById('banner_tabs').style.height=ht*0.95+'px';
+    var ht1 = document.documentElement.clientHeight*0.5-190;
+    document.getElementById('xwdiv').style.height=ht1+15+'px';
+} 
+
+
+function getRootPath(){
+    //获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp
+    var curWwwPath=window.document.location.href;
+    //获取主机地址之后的目录，如： uimcardprj/share/meun.jsp
+    var pathName=window.document.location.pathname;
+    var pos=curWwwPath.indexOf(pathName);
+    //获取主机地址，如： http://localhost:8083
+    var localhostPaht=curWwwPath.substring(0,pos);
+    //获取带"/"的项目名，如：/uimcardprj
+    var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+    return(localhostPaht+projectName);
+}
+
+function gethtml(data)
+{
+    
+
+    
+    var html="   <table align='left' style='text-align:left;width:95%;height:196px;line-height:20px;table-layout: fixed'>";
+    for(obj in data)
+        {
+        
+        html=html+" <tr> <td width='80%' style='white-space: nowrap;overflow: hidden;text-overflow: ellipsis;'>";
+        //新闻链接是否为指定目标地址（另有其他站外地址）  0代表是站外地址    1代表是站内地址
+        if(data[obj].isLocalhost=="1")
+            {
+            html=html+"<a class='news' href='' onclick='readhtml("+data[obj].id+")' title='"+data[obj].title+"'>";
+            }
+        else
+            {
+            html=html+"<a class='news' target='_blank' href='"+data[obj].sourceUrl+"'  title='"+data[obj].title+"'>";
+
+            }
+        
+        html=html+"<img class=\"diyimage\" src='common/images/htmlImage/1.gif' width='11' height='11' />&nbsp;&nbsp;"+data[obj].title+"</a></td>"
+        +"<td width='2%'></td> <td class='news_time' width='70px'>"+data[obj].publishDate+"</td></tr>";
+        }
+    html=html+'<tr style="line-height:10px"><td></td><td width="2%"></td><td class="news_time" style="text-align:left;"><a href="newsList.html?newsType='+data[obj].type+'" target="_blank" style="margin-left:32px;text-decoration: none">more</a></td></tr></table> ';
+
+    return html;
+}
+function readhtml(newsid)
+{
+    window.open("newsList.html?id="+newsid);
+    
+}
+//动态添加新闻
+function setnews()
+{
+
+}
+function setsytp()
+{
+    $("#fontwz").append(arr[0]);
+
+for(x in htmlarr)
+    {
+    var code=Number(x)+1;
+    
+    $("#li"+code).append(htmlarr[x]);
+    
+    }
+
+}
+
+ function setzttp()
+{
+
+    
+}
+
+
+
+function text1(id)
+{
+    document.getElementById(id).style.backgroundImage="url(common/images/htmlImage/menubg2.png)"; 
+}
+
+function text2(id)
+{
+    if(id=="mu9")
+    {
+    document.getElementById(id).style.backgroundImage="url(common/images/htmlImage/fenge2.png)"; 
+    }else
+    {
+    document.getElementById(id).style.backgroundImage="url(common/images/htmlImage/fenge.png)"; 
+    }
+    
+}
+function show()
+{
+    document.getElementById('weixin').style.display="";
+    document.getElementById('weibo').style.display="";
+    document.getElementById('xxqg').style.display="";
+}
+
+function hiddenshow()
+{
+    document.getElementById('weixin').style.display="none";
+    document.getElementById('weibo').style.display="none";
+    document.getElementById('xxqg').style.display="none";
+}
+
+function showweixin()
+{
+    //show();
+    document.getElementById('weixinerweima').style.display="";
+}
+
+function hiddenshowweixin()
+{
+    //hiddenshow();
+    document.getElementById('weixinerweima').style.display="none";
+}
+
+function showweibo()
+{
+    //show();
+    document.getElementById('weiboerweima').style.display="";
+} 
+
+function hiddenshowweibo()
+{
+    //hiddenshow();
+    document.getElementById('weiboerweima').style.display="none";
+}
+function showxxqg()
+{
+    //show();
+    document.getElementById('xxqgerweima').style.display="";
+} 
+
+function hiddenshowxxqg()
+{
+    //hiddenshow();
+    document.getElementById('xxqgerweima').style.display="none";
+}
+function newsChange(value)
+{
+    if(value == 'xnxw'){
+        //document.getElementById('tdxnxw').setAttribute("style","border-top: solid 3px #a0c6e5;");
+        //document.getElementById('tdmtjj').setAttribute("style","background-color:#D9D9D9;");
+        document.getElementById('tdxnxw').style.borderTop = "3px solid #a0c6e5"; 
+        document.getElementById('tdxnxw').style.backgroundColor = "#ffffff"; 
+        document.getElementById('tdmtjj').style.borderTop="";
+        document.getElementById('tdmtjj').style.backgroundColor="#D9D9D9";
+        
+        document.getElementById('xnxw').style.display="";
+        document.getElementById('mtjj').style.display="none";
+    }else if(value == 'mtjj'){
+        //document.getElementById('tdxnxw').setAttribute("style","background-color:#D9D9D9;");
+        //document.getElementById('tdmtjj').setAttribute("style","border-top: solid 3px #a0c6e5;");
+        document.getElementById('tdxnxw').style.borderTop = ""; 
+        document.getElementById('tdxnxw').style.backgroundColor = "#D9D9D9"; 
+        document.getElementById('tdmtjj').style.borderTop="3px solid #a0c6e5";
+        document.getElementById('tdmtjj').style.backgroundColor="#ffffff";
+        
+        document.getElementById('xnxw').style.display="none";
+        document.getElementById('mtjj').style.display="";
+    }else if(value == 'tzgg'){
+        //document.getElementById('tdtzgg').setAttribute("style","border-top: solid 3px #a0c6e5;");
+        //document.getElementById('tdxshd').setAttribute("style","background-color:#D9D9D9;");
+        document.getElementById('tdtzgg').style.borderTop = "3px solid #a0c6e5"; 
+        document.getElementById('tdtzgg').style.backgroundColor = "#ffffff"; 
+        document.getElementById('tdxshd').style.borderTop="";
+        document.getElementById('tdxshd').style.backgroundColor="#D9D9D9";
+        
+        document.getElementById('tzgg').style.display="";
+        document.getElementById('xshd').style.display="none";
+    }else if(value == 'xshd'){
+        //document.getElementById('tdtzgg').setAttribute("style","background-color:#D9D9D9;");
+        //document.getElementById('tdxshd').setAttribute("style","border-top: solid 3px #a0c6e5;");
+        document.getElementById('tdtzgg').style.borderTop = ""; 
+        document.getElementById('tdtzgg').style.backgroundColor = "#D9D9D9"; 
+        document.getElementById('tdxshd').style.borderTop="3px solid #a0c6e5";
+        document.getElementById('tdxshd').style.backgroundColor="#ffffff";
+        
+        document.getElementById('tzgg').style.display="none";
+        document.getElementById('xshd').style.display="";
+    }
+}
+function showgqt()
+{
+   document.getElementById("gtqul").style.display="";
+}
+function hiddengqt()
+{
+   document.getElementById("gtqul").style.display="none";
+}
+function clickPic(url)
+{
+   window.open(url);
+}
+</script></LINK>
+
+</LINK>
+<STYLE></STYLE>
+
+<STYLE></STYLE>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7a47565250554403080002 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1409821085)</script>
+</HEAD>
+<BODY onload="" style="width: 100%; background-repeat: no-repeat; min-width: 1200px; zoom: 1; margin: 0px; background-color: #ffffff; background-size: 100% 100%">
+<DIV style="height: 80px; background-color: #0e559f">
+<TABLE width="100%">
+<TBODY>
+<TR>
+<TD width="50%">
+<P align="right" style="padding-top: 10px">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="" title="网站首页"><img src="dfiles/9832/common/images/htmlimage/logo.png" width="420" height="60" border="0" alt="网站首页" title="网站首页"></a></P></TD>
+<TD width="20%"></TD>
+<TD width="15%">
+<DIV class="STYLE5" style="width: 360px; position: relative; color: #ffffff; text-align: right; margin-left: 180px; margin-right: 30px"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><!-- <span><a href="roleMain.html?role=1">·在校生</a></span>
+    <span style="margin-left:16px;"><a href="roleMain.html?role=2">·教职工</a></span>
+    <span style="margin-left:16px;"><a href="roleMain.html?role=3">·校友</a></span>
+    <span style="margin-left:16px;"><a href="roleMain.html?role=4">·未来学生及访客</a></span> -->
+<SPAN><A href="wzdt/xnjg.htm" target="_blank" style="margin:0 8px;">网站地图</A></SPAN> 
+<SPAN><A href="http://xzxx.zua.edu.cn/" target="_blank" style="margin:0 8px;">校长信箱</A></SPAN> 
+</DIV></TD>
+<TD width="15%"><!-- <div class="STYLE5" style="color:#FFFFFF;">
+    <table>
+        <tr><td><span><a href="http://www.zua.edu.cn" target="_blank" >旧版主页</a></span></td></tr>
+        <tr><td><span>English</span></td></tr>
+    </table>
+</div> --></TD></TR></TBODY></TABLE></DIV>
+<DIV>
+<DIV style="height: 40px; width: 100%; background-image: url(dfiles/9832/common/images/htmlimage/menubg.png); min-width: 1200px; position: relative; text-align: center; z-index: 100; background-size: 100% 100%">
+<DIV align="center" style="min-width: 1200px"><ul class="menu">
+        <li id="mu1" style="background-image:url(images/fenge.png);"><a href="http://www.zua.edu.cn/" style="font-weight:bold">首页</a></li>
+        <li #48abe2;"" id="mu2" style="background-image:url(images/fenge.png)"><a href="xxgk/xxjj.htm" style="font-weight:bold">学校概况</a>
+          <ul class="submenu">
+         <li style="border-top: 1px solid; border-color:#CCCCCC;"><a href="xxgk/xxjj.htm" target="_blank">学校简介</a></li>
+        <li><a href="xxgk/ldfg.htm" target="_blank">学校领导</a></li>
+        <li><a href="xxgk/jgszx.htm" target="_blank">机构设置</a></li>
+        <li><a href="xxgk/xxbs.htm" target="_blank">学校标识</a></li>
+         <li><a href="xxgk/xyfg.htm" target="_blank">校园风光</a></li>
+          </ul>
+      </li>
+         <li id="mu3" style="background-image:url(images/fenge.png);"><a href="xxgk/xxjj.htm" style="font-weight:bold">学院设置</a>
+         <ul class="submenu1">
+                <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+                 <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://sxy.zua.edu.cn/" target="_blank">商学院</a></td>
+                 <td width="50%"><a href="http://glgcxy.zua.edu.cn/" target="_blank">管理工程学院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+                <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+                   <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://jmxy.zua.edu.cn/" target="_blank">经济学院</a></td>
+                         <td width="50%"><a href="http://sim.zua.edu.cn/" target="_blank">信息管理学院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+                <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+                 <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://ae.zua.edu.cn/" target="_blank">航空发动机学院</a></td>
+                         <td width="50%"><a href="http://hkxy.zua.edu.cn/" target="_blank">航空宇航学院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+        <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+                    <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://jxxy.zua.edu.cn/" target="_blank">机械工程学院</a></td>
+                         <td width="50%"><a href="http://jsjxy.zua.edu.cn/" target="_blank">计算机学院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+        <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+                    <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://dzxxxy.zua.edu.cn/" target="_blank">电子信息学院</a></td>
+                         <td width="50%"><a href="http://zdhxy.zua.edu.cn/index.htm" target="_blank">自动化学院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+                <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+                    <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://mhxy.zua.edu.cn/" target="_blank">民航学院</a></td>
+                         <td width="50%"><a href="http://mse.zua.edu.cn/" target="_blank">材料学院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+                <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+                    <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://tmjzgcxy.zua.edu.cn/" target="_blank">土木与环境学院</a></td>
+                         <td width="50%"><a href="http://yssjx.zua.edu.cn/" target="_blank">艺术与设计学院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+                <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+            <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://wfxy.zua.edu.cn/" target="_blank">文法学院</a></td>
+                         <td width="50%"><a href="http://wyx.zua.edu.cn/" target="_blank">外国语学院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+                <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+                   <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://sxxy.zua.edu.cn/" target="_blank">数学学院</a></td>
+                         <td width="50%"><a href="http://marxism.zua.edu.cn/" target="_blank">马克思主义学院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+                <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+            <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://tyjxb.zua.edu.cn/" target="_blank">体育部</a></td>
+                        <td width="50%"><a href="http://ltsy.zua.edu.cn/" target="_blank">蓝天书院</a></td>
+                       </tr>
+                    </tbody></table>
+                </li>
+                <li style="width:240px">
+                    <table style="width:100%;text-align:center">
+                       <tbody><tr>
+                <td width="50%" style="border-right: solid 1px #ffffff"><a href="http://nwlexy.zua.edu.cn/" target="_blank">南乌拉尔学院</a></td>
+                         <td width="50%"><a href="http://jxjyxy.zua.edu.cn/" target="_blank">继续教育学院</a></td>
+                        </tr>
+                    </tbody></table>
+                </li>                     
+          </ul>
+      </li>
+        <li class="active" id="mu4" style="background-image:url(images/fenge.png);"><a href="#" style="font-weight:bold">教育教学</a>
+            <ul class="submenu">
+                <li style="border-top: 1px solid; border-color:#CCCCCC;"><a href="http://jwc.zua.edu.cn/" target="_blank">本科生教育</a></li>
+                <li><a href="http://yjsc.zua.edu.cn/" target="_blank">研究生教育</a></li>
+                <li><a href="http://jxjyxy.zua.edu.cn/" target="_blank">继续教育</a></li>
+                <li><a href="#" target="_blank">国际教育</a></li>
+                <li><a href="http://zlglzx.zua.edu.cn/  " target="_blank">教学评估</a></li>
+            </ul>
+      </li>
+<li class="active" id="mu4" style="background-image:url(images/fenge.png);"><a href="http://shpgw.zua.edu.cn/" style="font-weight:bold">审核评估</a>
+      </li>
+        <li id="mu5" style="background-image:url(images/fenge.png);"><a href="#" style="font-weight:bold">科学研究</a>
+            <ul class="submenu">
+                <li style="border-top: 1px solid; border-color:#CCCCCC;"><a href="http://kjc.zua.edu.cn/" target="_blank">自科研究</a></li>
+                <li><a href="http://shekechu.zua.edu.cn/" target="_blank">社科研究</a></li>
+                <li><a href="http://yjsc.zua.edu.cn/" target="_blank">学科建设</a></li>
+                <li><a href="http://fzsyzx.zua.edu.cn/" target="_blank">实验室建设</a></li>
+                <li><a href="http://xbbjb.zua.edu.cn/" target="_blank">学报</a></li>
+                <li><a href="http://hkjj.zua.edu.cn/" target="_blank">协同中心</a></li>
+            </ul>
+      </li>
+        <li id="mu6" style="background-image:url(images/fenge.png);"><a href="#" style="font-weight:bold">招生就业</a>
+            <ul class="submenu">
+                <li style="border-top: 1px solid; border-color:#CCCCCC;"><a href="http://zsxxw.zua.edu.cn/" target="_blank">本科生招生</a></li>
+                <li><a href="http://yjsc.zua.edu.cn/" target="_blank">研究生招生</a></li>
+                <li><a href="http://jxjyxy.zua.edu.cn/" target="_blank">继续教育</a></li>
+                <li><a href="http://gjxy.zua.edu.cn/" target="_blank">国际合作办学</a></li>
+                <li><a href="http://gjxy.zua.edu.cn/" target="_blank">留学生</a></li>
+                <li><a href="http://zhjyb.zua.edu.cn/" target="_blank">就业服务</a></li>
+            </ul>   
+      </li>
+<li id="mu6" style="background-image:url(images/fenge.png);"><a href="http://rsc.zua.edu.cn/" style="font-weight:bold">人才招聘</a>
+        <li id="mu7" style="background-image:url(images/fenge.png);"><a href="#" style="font-weight:bold">学生工作</a>
+           <ul class="submenu">
+                <li style="border-top: 1px solid; border-color:#CCCCCC;"><a href="http://xgxt.zua.edu.cn/web/" target="_blank">本科生</a></li>
+                <li><a href="http://yjsc.zua.edu.cn/" target="_blank">研究生</a></li>
+                <li><a href="http://tuanwei.zua.edu.cn/" target="_blank" onmouseover="showgqt();" onmouseout="hiddengqt();">共青团</a></li>
+            </ul>
+            <ul class="submenu" id="gtqul" onmouseout="hiddengqt();" onmouseover="showgqt();" style="margin-left:92px;margin-top:72px;display:none">
+                
+            </ul>   
+      </li>
+      <li id="mu8" style="background-image:url(images/fenge.png);"><a href="http://dwhzjlc.zua.edu.cn/" target="_blank" style="font-weight:bold">国际交流</a></li>
+      <li id="mu9" style="background-image:url(images/fenge.png);"><a href="#" style="font-weight:bold">校园服务</a>
+            <ul class="submenu">
+        <li style="border-top:1px solid;border-color:#CCCCCC;"><a href="http://lib.zua.edu.cn/" target="_blank">图书资源</a></li>
+        <li><a href="http://zzia.fanya.chaoxing.com/portal" target="_blank">课程资源</a></li>
+        <li><a href="http://xxglzx.zua.edu.cn/" target="_blank">网络服务</a></li>
+        <li><a href="http://hqfwzgs.zua.edu.cn/" target="_blank">生活服务</a></li>
+        <li><a href="http://xxgk.zua.edu.cn/" target="_blank">信息公开</a></li>
+        <li><a href="http://zzhyb.ihwrm.com/" target="_blank">校&nbsp;报</a></li>
+            </ul>   
+      </li>
+
+<li id="mu10" style="background-image:url(images/fenge.png);display: none;"><a href="http://xq20th.zua.edu.cn/" target="_blank" style="font-weight:bold;color:#ce0000;">主题教育</a>
+</li>
+
+    </ul></DIV></DIV>
+<DIV id="banner_tabs" class="flexslider">    <UL id="sytp" class="slides">
+<LI id="li1"><a href="https://zua.edu.cn/"><img src="images/04.jpg"></a> </LI>
+<LI id="li2"><a href="https://zua.edu.cn/"><img src="images/003.jpg"></a> </LI>
+<LI id="li3"><a href="http://news.zua.edu.cn/info/1107/8700.htm"><img src="images/07.jpg"></a> </LI>
+<LI id="li4"><a href="http://news.zua.edu.cn/info/1107/8688.htm"><img src="images/05.jpg"></a> </LI>
+<LI id="li5"><a href="http://zua.edu.cn/"><img src="images/02.jpg"></a> </LI>
+<LI id="li6"><a href="https://baike.baidu.com/item/%E9%9C%9C%E9%99%8D/9380?fr=ge_ala"><img src="images/06.jpg"></a> </LI>
+</UL>
+<UL class="flex-direction-nav">
+<LI><A class="flex-prev" href="javascript:;">Previous</A> 
+<LI><A class="flex-next" href="javascript:;">Next</A> </LI></UL>
+<OL id="bannerCtrl" class="flex-control-nav flex-control-paging" style="margin-bottom: 1px">
+<LI><A>1</A> </LI>
+<LI><A>2</A> </LI>
+<LI><A>3</A> </LI>
+<LI><A>4</A> </LI>
+<LI><A>5</A> </LI>
+<LI><A>6</A> </LI>
+</OL>
+<OL id="bannerCtrl1" class="flex-control-nav flex-control-paging1" style="bottom: 0px">
+<LI style="margin-top: 5px"><FONT id="fontwz" color="#ffff00" size="3">庆祝郑航建校75周年！</FONT></LI>
+</OL>   
+
+<script> 
+      arr.push("庆祝郑航建校75周年！");
+      arr.push("“郑航精神”：空天报国  砺新图强");
+      arr.push("校党委理论学习中心组专题学习全国、全省教育大会精神");
+      arr.push("一金三银！我校在中国国际大学生创新大赛上实现金奖“零”的突破");
+      arr.push("深入学习贯彻党的二十届三中全会精神");
+      arr.push("泊舟淮水次  霜降夕流清  夜久潮侵岸  天寒月近城");
+</script>     </DIV></DIV><!--<div style="background-color:#000000;z-index:9999999;margin-top:-100px;">123</div>-->
+<DIV style="width: 100%; background: url(images/xwbgtp1.png) repeat-x; min-height: 255px">
+<DIV id="xwdiv" style="width: 1200px; min-height: 255px; margin: 0px auto">
+<DIV align="center" style="height: 200px; margin-top: 10px">
+<TABLE cellspacing="0" cellpadding="0" width="1200" border="0">
+<TBODY>
+<TR>
+<TD valign="top" width="360">
+<TABLE cellspacing="0" cellpadding="0" width="100%" border="0">
+<TBODY>
+<TR>
+<TD width="180" align="left">
+<TABLE height="40" width="180">
+<TBODY>
+<TR align="center" style="font-size: 14px">
+<TD id="tdxnxw" style="border-top: #a0c6e5 3px solid"><A id="axnxw" href="" onmouseover="newsChange('xnxw');" style="text-decoration: none; color: #000000"><B>校内新闻</B></A></TD>
+<TD id="tdmtjj" style="background-color: #d9d9d9"><A id="amtjj" href="" onmouseover="newsChange('mtjj');" style="text-decoration: none; color: #000000"><B>媒体聚焦</B></A></TD></TR></TBODY></TABLE></TD>
+<TD width="194" align="right"><A href="https://news.zua.edu.cn/" target="_blank" style="font-size: 13px; color: #104687">进入新闻网&gt;&gt;</A></TD></TR>
+<TR>
+<TD colspan="2">
+<DIV id="xnxw" style="height: 100%">
+<script language="javascript" src="/system/resource/js/ajax.js"></script> 
+<script language="javascript" src="/system/resource/js/rss/rssinfo.js"></script> 
+<table cellpadding="1" cellspacing="0" class="winstyle189415">
+    
+        <tr><td id="form4title" align="center"></td></tr>
+        <tr><td id="form4image"></td></tr>
+        <tr><td><table cellpadding="0" cellspacing="0" border="0" id="form4message"></table></td></tr>
+    
+    
+        <tr>
+            <td colspan="2" align="right">
+                <a href="https://news.zua.edu.cn/index.htm" target="_blank"> <span class="morestyle189415">更多>></span></a>
+            </td>
+        </tr>
+    
+</table>
+
+<script language="javascript">
+    var form4rss = new rssGetInfo();
+    form4rss._initrss("form4","该RSS来源有错误，请选择其它RSS来源","请等待...","",
+    "false","false","true","target=_blank","6",
+    " class='newstitlestyle189415' "," class='contentstyle189415' "," class='timestyle189415' ",
+    " class='leaderfont189415' ","<img src='images/1.gif' align='absmiddle' border=0>","",
+    "22","5","true","12","newstitlestyle189415",
+    "年","月","日","时","分","秒",
+    "","left","","",
+    "","left","","")
+    form4rss._getRss("/system/resource/code/proxy.jsp?value="+escape('4B79539C7B565963AFF961FB59847013')+"&url=" + escape('http://news.zua.edu.cn/system/resource/code/rss/rssfeed.jsp?type=list&treeid=1076&viewid=189412&mode=10&dbname=vsb&owner=1409762029&ownername=xww&contentid=163413&number=9&httproot='));
+</script>
+
+</DIV>
+<DIV id="mtjj" style="height: 100%; display: none"><table align="left" style="text-align:left;height:196px;line-height:20px;table-layout: fixed"> <tbody> 
+<tr> <td width="280px" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+<a class="news" href="info/1064/8341.htm" target="_blank" title="顶端新闻报道我校举办的作家讲学活动">
+<img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;顶端新闻报道我校举办的作家讲学活动</a></td>
+<td width="2%"></td> <td class="news_time" width="70px">2024-10-28</td></tr>
+<tr> <td width="280px" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+<a class="news" href="info/1064/8334.htm" target="_blank" title="学习强国河南学习平台、河南日报客户端报道我…">
+<img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;学习强国河南学习平台、河南日报客户端报道我…</a></td>
+<td width="2%"></td> <td class="news_time" width="70px">2024-10-24</td></tr>
+<tr> <td width="280px" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+<a class="news" href="info/1064/8317.htm" target="_blank" title="央视新闻联播、上观新闻及地区政务新媒体报道…">
+<img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;央视新闻联播、上观新闻及地区政务新媒体报道…</a></td>
+<td width="2%"></td> <td class="news_time" width="70px">2024-10-19</td></tr>
+<tr> <td width="280px" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+<a class="news" href="info/1064/8302.htm" target="_blank" title="河南日报、大河网、正观新闻、河南教育宣传网…">
+<img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;河南日报、大河网、正观新闻、河南教育宣传网…</a></td>
+<td width="2%"></td> <td class="news_time" width="70px">2024-10-16</td></tr>
+<tr> <td width="280px" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+<a class="news" href="info/1064/8291.htm" target="_blank" title="正观新闻、网易新闻、搜狐新闻、今日头条等媒…">
+<img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;正观新闻、网易新闻、搜狐新闻、今日头条等媒…</a></td>
+<td width="2%"></td> <td class="news_time" width="70px">2024-10-12</td></tr>
+<tr> <td width="280px" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+<a class="news" href="info/1064/8290.htm" target="_blank" title="大象新闻客户端、学习强国转载我校喜迎国庆创…">
+<img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;大象新闻客户端、学习强国转载我校喜迎国庆创…</a></td>
+<td width="2%"></td> <td class="news_time" width="70px">2024-10-10</td></tr>
+<tr style="line-height:10px"><td></td><td width="2%"></td><td class="news_time" style="text-align:left;"><a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1064" target="_blank" style="margin-left:28px;text-decoration: none;font-size:12px;color:#104687;">更多&gt;&gt;</a></td></tr></tbody></table>
+<script>_showDynClickBatch(['dynclicks_u5_8341','dynclicks_u5_8334','dynclicks_u5_8317','dynclicks_u5_8302','dynclicks_u5_8291','dynclicks_u5_8290'],[8341,8334,8317,8302,8291,8290],"wbnews", 1409821085)</script>
+</DIV></TD></TR></TBODY></TABLE></TD>
+<TD height="250" width="15">&nbsp;</TD>
+<TD valign="top" width="360">
+<TABLE cellspacing="0" cellpadding="0" width="100%" border="0">
+<TBODY>
+<TR>
+<TD align="left">
+<TABLE height="40" width="180">
+<TBODY>
+<TR align="center" style="font-size: 14px">
+<TD id="tdtzgg" style="border-top: #a0c6e5 3px solid"><A id="atzgg" href="" onmouseover="newsChange('tzgg');" style="text-decoration: none; color: #000000"><B>通知公告</B></A></TD>
+<TD id="tdxshd" style="background-color: #d9d9d9"><A id="axshd" href="" onmouseover="newsChange('xshd');" style="text-decoration: none; color: #000000"><B>学术活动</B></A></TD></TR></TBODY></TABLE></TD>
+<TD>&nbsp;</TD></TR>
+<TR>
+<TD colspan="2">
+<DIV id="tzgg" style="height: 100%"><table align="left" style="text-align:left;height:196px;line-height:20px;table-layout: fixed"> <tbody> 
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1065/8309.htm" target="_blank" title="第六轮巡察公告"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;第六轮巡察公告</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-10-18</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1065/8270.htm" target="_blank" title="关于开展“庆祝中华人民共和国成立75周年”主…"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;关于开展“庆祝中华人民共和国成立75周年”主…</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-09-27</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1065/8264.htm" target="_blank" title="关于2024年国庆节放假安排的通知"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;关于2024年国庆节放假安排的通知</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-09-25</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1065/8255.htm" target="_blank" title="关于召开落实校园安全政治责任专项巡察集中反…"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;关于召开落实校园安全政治责任专项巡察集中反…</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-09-18</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1065/8254.htm" target="_blank" title="关于做好强台风“贝碧嘉”防范应对工作的紧急…"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;关于做好强台风“贝碧嘉”防范应对工作的紧急…</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-09-17</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1065/8246.htm" target="_blank" title="关于组织收看2024年河南省教书育人楷模、河南…"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;关于组织收看2024年河南省教书育人楷模、河南…</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-09-13</td></tr>
+<tr style="line-height:10px"><td></td><td width="2%"></td><td class="news_time" style="text-align:left;"><a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1065" target="_blank" style="margin-left:28px;text-decoration: none;font-size:12px;color:#104687;">更多>></a></td></tr></tbody></table>
+<script>_showDynClickBatch(['dynclicks_u6_8309','dynclicks_u6_8270','dynclicks_u6_8264','dynclicks_u6_8255','dynclicks_u6_8254','dynclicks_u6_8246'],[8309,8270,8264,8255,8254,8246],"wbnews", 1409821085)</script>
+</DIV>
+<DIV id="xshd" style="height: 100%; display: none"><table align="left" style="text-align:left;height:196px;line-height:20px;table-layout: fixed"> <tbody> 
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1066/8336.htm" target="_blank" title="学术预告：加快发展新质生产力 推动经济高质…"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;学术预告：加快发展新质生产力 推动经济高质…</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-10-25</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1066/8331.htm" target="_blank" title="学术预告：加筋土结构性能提升关键技术研究及…"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;学术预告：加筋土结构性能提升关键技术研究及…</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-10-24</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1066/8329.htm" target="_blank" title="学术预告：中国会计学会审计专业委员会2024年…"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;学术预告：中国会计学会审计专业委员会2024年…</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-10-24</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1066/8327.htm" target="_blank" title="学术预告：健全新质生产力新体制，发展低空经…"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;学术预告：健全新质生产力新体制，发展低空经…</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-10-24</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1066/8326.htm" target="_blank" title="学术预告：航空发动机学院航动论坛（24）"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;学术预告：航空发动机学院航动论坛（24）</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-10-23</td></tr>
+<tr> <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a class="news" href="info/1066/8319.htm" target="_blank" title="学术预告：真人图书馆之中国文化的根性与中国…"><img class="diyimage" src="images/1.gif" width="11" height="11">&nbsp;&nbsp;学术预告：真人图书馆之中国文化的根性与中国…</a></td><td width="2%"></td> <td class="news_time" width="70px">2024-10-22</td></tr>
+<tr style="line-height:10px"><td></td><td width="2%"></td><td class="news_time" style="text-align:left;"><a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1066" target="_blank" style="margin-left:28px;text-decoration: none;font-size:12px;color:#104687;">更多>></a></td></tr></tbody></table>
+<script>_showDynClickBatch(['dynclicks_u7_8336','dynclicks_u7_8331','dynclicks_u7_8329','dynclicks_u7_8327','dynclicks_u7_8326','dynclicks_u7_8319'],[8336,8331,8329,8327,8326,8319],"wbnews", 1409821085)</script>
+</DIV></TD></TR></TBODY></TABLE></TD>
+<TD width="10">&nbsp;</TD>
+<TD valign="top" width="200">
+<TABLE cellspacing="0" cellpadding="0" width="100%" border="0">
+<TBODY>
+<TR>
+<TD height="40" colspan="2" style="font-size: 15px; font-weight: bold; padding-left: 10px">快捷通道</TD></TR>
+<TR>
+<TD width="50%"><table align="left" style="line-height:40px;width:100px;text-align:center">
+<tbody>
+<tr>
+<td class="bgcolor1" style="border-radius:5px"><a class="kjtd" href="http://oa.zua.edu.cn/" target="_blank">办公系统</a> </td>
+</tr>
+<tr>
+<td class="bgcolor2" style="border-radius:5px"><a class="kjtd" href="https://mail.zua.edu.cn/" target="_blank">学校邮箱</a> </td>
+</tr>
+<tr>
+<td class="bgcolor3" style="border-radius:5px"><a class="kjtd" href="https://webvpn.zua.edu.cn/" target="_blank">VPN系统</a> </td>
+</tr>
+<tr>
+<td class="bgcolor4" style="border-radius:5px"><a class="kjtd" href="http://yx.zua.edu.cn" target="_blank">迎新系统</a> </td>
+</tr>
+</tbody></table></TD>
+<TD width="50%"><table align="right" style="line-height:40px;width:100px;text-align:center">
+<tbody>
+<tr>
+<td class="bgcolor1" style="border-radius:5px"><a class="kjtd" href="http://zhmh.zua.edu.cn/" target="_blank">智慧门户</a> </td>
+</tr>
+<tr>
+<td class="bgcolor2" style="border-radius:5px"><a class="kjtd" href="http://zcglc.zua.edu.cn/zbxx.htm" target="_blank">招标公告</a> </td>
+</tr>
+<tr>
+<td class="bgcolor3" style="border-radius:5px"><a class="kjtd" href="https://map.zua.edu.cn" target="_blank">实景地图</a> </td>
+</tr>
+<tr>
+<td class="bgcolor4" style="border-radius:5px"><a class="kjtd" href="http://xy.zua.edu.cn/" target="_blank">校友网</a> </td>
+</tr>
+</tbody></table></TD></TR></TBODY></TABLE></TD>
+<TD width="10">&nbsp;</TD>
+<TD valign="top" width="220">
+<TABLE cellspacing="0" cellpadding="0" width="100%" border="0">
+<TBODY>
+<TR>
+<TD height="40" style="font-size: 15px; font-weight: bold; padding-left: 10px">专题活动</TD></TR>
+<TR>
+<TD>    <div class="flash4" style="margin-top:5px;">
+	<ul>
+    	<li class="first" style="width:120px;">
+        <div class="imgTop"><a href="http://xcb.zua.edu.cn/ztlan_mu/djxxjy.htm"><img src="images/20240416.jpg" width="120" height="155" alt="" class="tm"></a></div>
+        </li>
+    	<li style="width:40px;">
+        <div class="imgTop"><a href="http://xxgk.zua.edu.cn/info/1071/1801.htm"><img src="images/2018.04.26.01.jpg" width="120" height="155" alt="" class="tm"></a></div>
+        </li>
+    	<li style="width:40px;">
+        <div class="imgTop"><a href="https://news.zua.edu.cn/info/1011/7381.htm"><img src="images/z2.jpg" width="120" height="155" alt="" class="tm"></a></div>
+        </li>
+    </ul>	
+</div>
+
+		
+<script type="text/javascript">	
+	//手风琴动画效果
+var _index7=0;
+$(".flash4 ul li").mouseover(function(){
+	_index7=$(this).index();
+	$(this).stop().stop().animate({width:120},500).siblings("li").stop().animate({width:40},500);
+	$(".imgCen").eq(_index7).css("display","block").siblings(".imgCen").css("display","none");
+	$("p.bt_2").eq(_index7).css("display","block").siblings("p.bt_2").css("display","none");
+	$(".imgTop img").eq(_index7).addClass("tm").siblings(".imgTop img").removeClass("tm");
+});
+$(".flash4 ul li").mouseout(function(){
+	$(".imgCen").css("display","none");
+	$("p.bt_2").css("display","none");
+});
+</script></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+<DIV class="footstyle" style="height: 70px; width: 100%; text-align: center; background-color: #0e559f; align: center"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<table style="margin: auto"><tbody><tr class="firstRow"><td style="word-break: break-all"><span style="font-size: 12px">大学路校区地址：河南省郑州市大学中路2号 邮政编码：450015| 龙子湖校区地址：河南郑州郑东新区文苑西路15号 邮政编码：450046<br />郑州航空工业管理学院1999-2019 版权所有&nbsp; |&nbsp;内容管理：党委宣传部、校长办公室、科技处、社科处&nbsp; |&nbsp;技术支持：信息管理中心&nbsp;&nbsp;建议浏览器使用IE7以上版本</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td><a href="http://bszs.conac.cn/sitename?method=showundefinedamp;id=5405212CF518633FE053012819AC3495" target="_blank"><img src="/__local/5/4B/5F/FC847247D2950B1470DD97923AF_49DF2FD5_903.png?e=.png" width="79" height="80" style="height: 68px; width: 63px" /></a></td><td><br /><a href="https://beian.miit.gov.cn/" target="_blank"><span style="font-size:12px;color:#FFFFFF">豫ICP备05002444号-1</span></a>&nbsp;</td></tr></tbody></table></DIV>
+<DIV id="nav" style="z-index: 20"><!--<div id="logoAction"  onmousemove="show();" onmouseout="hiddenshow();"><img src="common/images/htmlImage/logob.png"/></div>-->
+<DIV id="weixin" onmousemove="showweixin();" onmouseout="hiddenshowweixin();"><IMG src="dfiles/9832/common/images/htmlimage/weixin.png"></DIV>
+<DIV id="weibo" onmousemove="showweibo();" onmouseout="hiddenshowweibo();"><IMG src="dfiles/9832/common/images/htmlimage/weibo.png"></DIV>
+<DIV id="xxqg" onmousemove="showxxqg();" onmouseout="hiddenshowxxqg();"><IMG src="dfiles/9832/common/images/htmlimage/xxqg.png"></DIV>
+</DIV>
+<DIV id="erweima" style="z-index: 20">
+<DIV id="weixinerweima" style="display: none"><IMG src="dfiles/9832/common/images/htmlimage/weixin.jpg"></DIV>
+<DIV id="weiboerweima" style="display: none"><IMG src="dfiles/9832/common/images/htmlimage/weibo.jpg"></DIV>
+<DIV id="xxqgerweima" style="display: none"><IMG src="dfiles/9832/common/images/htmlimage/xxqg.jpg"></DIV>
+</DIV>
+
+</BODY></HTML>

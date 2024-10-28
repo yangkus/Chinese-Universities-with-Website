@@ -1,0 +1,774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>大理护理职业学院</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <link href="/templates/huYuan/style/style202211.css" rel="stylesheet" type="text/css" />
+    <link href="/templates/huYuan/style/jquery.jslides.css" rel="stylesheet" type="text/css" />
+    <script src="/templates/huYuan/js/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="/templates/huYuan/js/jquery.jslides.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8" src="/scripts/jquery/jquery-1.11.2.min.js"></script>
+    <script src="/templates/huYuan/js/floatBox.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8" src="/templates/huYuan/js/common.js"></script>
+    <script src="/templates/huYuan/js/jquery.easing.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+            var kv_num = 0;
+            function nextKv() {
+                $(".control").attr("style", "pointer-events:none");
+                kv_num++;
+                if (kv_num == 5) { kv_num = 0; }
+                $(".kv_pic").animate({ left: -1000 * kv_num }, {
+                    easing: 'easeInOutQuad', duration: 500, complete: function () {
+                        $(".control").attr("style", "pointer-events:auto");
+                    }
+                });
+                $(".kv_word>ul").stop().animate({ left: -340 * kv_num }, { easing: 'easeInOutQuad', duration: 800, complete: function () { } });
+                $(".kv_dot ul li").removeClass("action").eq(kv_num).addClass("action");
+            }
+            function prevKv() {
+                $(".control").attr("style", "pointer-events:none");
+                kv_num--;
+                if (kv_num == -1) { kv_num = 3; }
+                $(".kv_pic").animate({ left: -1000 * kv_num }, {
+                    easing: 'easeInOutQuad', duration: 500, complete: function () {
+
+                        $(".control").attr("style", "pointer-events:auto");
+                    }
+                });
+                $(".kv_word>ul").stop().animate({ left: -340 * kv_num }, { easing: 'easeInOutQuad', duration: 800, complete: function () { } });
+            }
+            $(".control .next").on("click", nextKv);
+            $(".control .prev").on("click", prevKv);
+            // 自动轮播
+            setInterval(nextKv, 3500);
+
+            var top = $(".Foot").offset().top;
+            if ((top + 80) <= $(window).height()) {
+                $(".Foot").attr("style", "position:fixed; bottom:0;");
+            }
+        });
+    </script>
+</head>
+<body>
+<!--Header-->
+<div class="HeadTop clearfix">
+    <a href="/index.aspx"><img src="/templates/huYuan/images/logo.png" /></a>
+	<div class="fr">
+		<p class="shewei mt34"><!--<a class="shewei" href="">设为首页</a>  |  <a class="shewei" href="">加入收藏</a>--></p>
+		<div class=" clearfix mt14">
+		 <input id="keywords" name="keywords" class="sosuo fl" type="text" onkeydown="if(event.keyCode==13){SiteSearch('/search.aspx', '#keywords');return false};" placeholder="请输入关键词"/>
+		 <input class="tupian_anniu fl" type="image" onclick="SiteSearch('/search.aspx', '#keywords');" src="/templates/huYuan/images/img_1_07.jpg" />
+		</div>
+	 </div>
+</div>
+
+<div class="MuenNav" >
+    <ul class="Nav" id="menu">
+        <li><a href="/index.aspx">网站首页</a></li>
+        <li>
+		  <a href="/about.aspx?page=about">学院概况</a>
+		  <ul>		 
+                <li><a title="学院简介" href="/about.aspx?page=about">学院简介</a></li>
+                <li><a title="现任领导" href="/about.aspx?page=contact">现任领导</a></li>
+                <li><a title="组织机构" href="/about.aspx?page=dept">组织机构</a></li>
+		  </ul>
+		</li>
+        <li>
+            <a href="/publish.aspx?category_id=189">信息公开</a>  
+        </li>
+        <li>
+	    <a href="/deptlist.aspx?category_id=0">机构设置</a>
+            <ul>
+                
+					<li><a href="/deptlist.aspx?category_id=123">党政管理机构</a>
+						 <ul>
+							  
+								<li> <a href="/deptlist.aspx?category_id=125">办公室(党委巡察办)</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=127">党委纪检监察科</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=126">党委组织部</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=128">党委宣传部</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=174">党委统战部</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=130">学生科(学生工作部、武装部)</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=129">教务科</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=131">财务科</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=175">人事科</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=176">审计科</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=134">保卫科</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=136">后勤科</a></li>
+							   
+						  </ul>
+					</li>
+				
+					<li><a href="/deptlist.aspx?category_id=138">教学教辅机构</a>
+						 <ul>
+							  
+								<li> <a href="/deptlist.aspx?category_id=139">护理系</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=140">康复技术系</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=141">医学技术系</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=142">基础医学部</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=177">公共基础部</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=143">马克思主义学院</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=178">继续教育部</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=179">科研(对外交流)部</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=144">信息中心（图书馆）</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=180">实作实训部</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=181">门诊部</a></li>
+							   
+						  </ul>
+					</li>
+				
+					<li><a href="/deptlist.aspx?category_id=145">群团组织</a>
+						 <ul>
+							  
+								<li> <a href="/deptlist.aspx?category_id=146">学校团委</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=147">学校工会</a></li>
+							   
+								<li> <a href="/deptlist.aspx?category_id=182">学校妇联</a></li>
+							   
+						  </ul>
+					</li>
+				
+            </ul>
+        </li>
+        
+		<li>
+		    <a href="/dang.aspx?category_id=0">党群工作</a>
+		    <ul>
+			  
+				<li> <a href="/dang.aspx?category_id=54">党建园地</a></li>
+			   
+				<li> <a href="/dang.aspx?category_id=55">纪检监察</a></li>
+			   
+				<li> <a href="/dang.aspx?category_id=56">共青团工作</a></li>
+			   
+				<li> <a href="/dang.aspx?category_id=111">工会工作</a></li>
+			   
+				<li> <a href="/dang.aspx?category_id=58">老干工作</a></li>
+			   
+		  </ul>
+		</li>
+					
+		<li>
+		   <a href="/news.aspx?category_id=0">新闻中心</a>
+		    <ul>
+			
+				<li> <a href="/news.aspx?category_id=3">学校要闻</a></li>
+			   
+				<li> <a href="/news.aspx?category_id=4">通知公告</a></li>
+			   
+				<li> <a href="/news.aspx?category_id=157">疫情防控</a></li>
+			   
+				<li> <a href="/news.aspx?category_id=156">爱国卫生运动</a></li>
+			   
+				<li> <a href="/news.aspx?category_id=52">高教信息</a></li>
+			   
+				<li> <a href="/news.aspx?category_id=59">视频新闻</a></li>
+			   
+				<li> <a href="/news.aspx?category_id=5">学生活动</a></li>
+			   
+		  </ul>
+		</li>
+<li style="width:100px">
+                    <a href="/ershida.aspx?category_id=190">党的二十大</a>  
+                </li>
+                <li>
+                    <a href="/dangshixuexi.aspx?category_id=172">思政专栏</a>  
+                </li>
+		
+		<li>
+		     <a href="/jiaoyu.aspx?category_id=0">教育教学</a>
+		    <ul>
+			   
+				 <li><a href="/jiaoyu.aspx?category_id=110">继续教育</a></li>
+			   
+				 <li><a href="/jiaoyu.aspx?category_id=60">教学管理</a></li>
+			   
+				 <li><a href="/jiaoyu.aspx?category_id=61">教学科研</a></li>
+			   
+				 <li><a href="/jiaoyu.aspx?category_id=62">精品课程</a></li>
+			   
+				 <li><a href="/jiaoyu.aspx?category_id=63">人才培养(专科、中专)</a></li>
+			   
+				 <li><a href="/jiaoyu.aspx?category_id=64">实验实训</a></li>
+			   
+		  </ul>
+		</li>
+		
+		<li>
+		    <a href="/zhaosheng.aspx?category_id=0">招生就业</a>
+		    <ul>
+                         <li><a href="http://portal.dlhlzyxy.com/zswz">招生</a></li>
+			  
+				<li><a href="/zhaosheng.aspx?category_id=71">就业</a></li>
+			   
+				<li><a href="/zhaosheng.aspx?category_id=75">职业鉴定</a></li>
+			   
+		   </ul>
+		</li>
+      
+        <li>
+        	<a href="/xueshenggongzuo.aspx?category_id=0">学生工作</a>
+		     <ul>
+			   
+				<li><a href="/xueshenggongzuo.aspx?category_id=101">学生管理</a></li>
+			   
+				<li><a href="/xueshenggongzuo.aspx?category_id=185">武装工作</a></li>
+			   
+				<li><a href="/xueshenggongzuo.aspx?category_id=102">勤工助学</a></li>
+			   
+				<li><a href="/xueshenggongzuo.aspx?category_id=103">心理健康教育</a></li>
+			   
+		   </ul>
+		</li>
+		
+        <li style="width:100px">
+            <a href="/jixujiaoyu.aspx?category_id=80">教育信息化</a>  
+        </li>
+        
+        <li >
+		    <a href="/hezuojiaoliu.aspx?category_id=0">合作交流</a>
+		    <ul>
+			   
+				<li> <a href="/hezuojiaoliu.aspx?category_id=87">国际交流</a></li>
+			   
+				<li> <a href="/hezuojiaoliu.aspx?category_id=88">校企合作</a></li>
+			   
+				<li> <a href="/hezuojiaoliu.aspx?category_id=89">院校交流</a></li>
+			   
+		   </ul>
+		</li>
+		
+        <li>
+		    <a href="/shehuifuwu.aspx?category_id=0">社会服务</a>
+		    <ul>
+			 
+				<li><a href="/shehuifuwu.aspx?category_id=187">社会服务</a></li>
+			  	
+		   </ul>
+		</li>	
+
+		<li>
+		    <a href="/assessment.aspx?category_id=0">双高建设</a>
+		    <ul>
+			 
+				<li><a href="/assessment.aspx?category_id=186">双高建设</a></li>
+			  	
+		   </ul>
+		</li>	
+		<li><a href="http://portal.dlhlzyxy.com">智慧校园</a></li>
+     
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var urlstr = location.href;
+    var urlstatus = false;
+    $("#menu li").each(function () {
+		if ((urlstr + '/').indexOf("index") > -1 ) return false;
+		//var bi=($(this).children("a").attr('href')).indexOf("?"); 
+		var url = ($(this).children("a").attr('href'));//.substring(0,bi);
+        if ((urlstr + '/').indexOf(url) > -1 && $(this).attr('href') != '') {
+            $(this).addClass('TT1'); urlstatus = true;
+        } else {
+            $(this).removeClass('TT1');
+        }
+    });
+    //if (!urlstatus) { $("#menu li").eq(0).addClass('TT1'); }
+</script>
+<!--/Header-->
+<div class="Banner">
+    <!-- 代码 开始 -->
+    <div id="full-screen-slider">
+        <ul id="slides">
+                <li style="background: url(/templates/huYuan/images/banner20240705_1.jpg) center top no-repeat; z-index: 900; "></li>
+                <li style="background: url(/templates/huYuan/images/banner20240705_2.jpg) center top no-repeat; z-index: 900; display: none;"></li>
+            <li style="background: url('/upload/201703/29/201703291531036454.jpg') no-repeat center top"><a href="view.aspx?id=141" target="_blank">0</a></li><li style="background: url('/upload/201703/24/201703241235207435.jpg') no-repeat center top"><a href="view.aspx?id=112" target="_blank">1</a></li>
+		</ul>
+    </div>
+    <!-- 代码 结束 -->
+</div>
+<script id="eda_bar_script" src="https://answer.eol.cn/school/pc/school7970.js"></script>
+
+  <!--------飘窗----------->
+   <!-- <div class="floatWinYzym" id="automv_1" style="position: absolute; cursor: auto; height: 210px; width: 255px;z-index:999;">   
+         <a style="float: right;" href="javascript:" onclick="$('#automv_1').remove();return false;">
+         <img  class="cls" src="/templates/huYuan/images/cls.png"></a>
+         <a href="dang.aspx?category_id=173" onclick="hrefUrl('#);return false;"><img src="/templates/huYuan/images/notice.jpg"></a>
+   </div>
+    <script type="text/javascript">
+	     $(function() {
+		// 初始化飘窗
+		$('#automv_1').autoMove({
+			startL : 0,
+			startT : 0,
+			angle : Math.PI / 4,
+			speed : 120
+		 });
+	     });
+
+	   function hrefUrl(url) {
+		window.open(url);       
+	   }
+    </script>  -->
+
+<div class="InTopNew">
+ <div class="Lefts">
+  <div class="ToTitle">
+	学校要闻<a href="/news.aspx?category_id=3">查看更多</a>
+  </div>
+  <ul class="XNews">
+      
+          <li>
+              <p class="PP1"><span>23</span><label>2024-10</label></p>
+              <p class="PP2">
+                  <a href="/view.aspx?id=3242">
+                      大理护理职业学院科研部等相关科室召开学习贯彻党的二十届三中全会精神宣讲报告会
+                  </a>
+              </p>
+          </li>
+      
+          <li>
+              <p class="PP1"><span>17</span><label>2024-10</label></p>
+              <p class="PP2">
+                  <a href="/view.aspx?id=3232">
+                      推进卫生健康工作重心下移 在发展中保障和改善民生——大理州2024年基层卫生人员服务能力提升培训班开班
+                  </a>
+              </p>
+          </li>
+      
+          <li>
+              <p class="PP1"><span>20</span><label>2024-09</label></p>
+              <p class="PP2">
+                  <a href="/view.aspx?id=3186">
+                      大理护理职业学院开展第27届全国推广普通话宣传周系列活动
+                  </a>
+              </p>
+          </li>
+      
+  </ul>
+ </div>
+ <div class="Abouts">
+	
+	<div class="kv">
+            <ul class="kv_pic">
+			    
+                   <li><a href="/view.aspx?id=3185"><img src="/upload/202409/20/thumb_202409201755368711.jpg" alt="" /></a></li>
+				
+                   <li><a href="/view.aspx?id=3183"><img src="/upload/202409/18/thumb_202409181625366686.jpg" alt="" /></a></li>
+				
+                   <li><a href="/view.aspx?id=3179"><img src="/upload/202409/14/thumb_202409141756038144.jpg" alt="" /></a></li>
+				
+                   <li><a href="/view.aspx?id=3177"><img src="/upload/202409/12/thumb_202409121640540589.jpg" alt="" /></a></li>
+				
+                   <li><a href="/view.aspx?id=3173"><img src="/upload/202409/12/thumb_202409121606259696.jpg" alt="" /></a></li>
+				
+            </ul>
+            <div class="kv_word">
+                <ul>
+				    
+						<li>
+							<h3 class="tit1"><a href="/view.aspx?id=3185">热烈庆祝中华人民共和国成立75周年！</a></h3>
+							<p></p>
+						</li>
+					
+						<li>
+							<h3 class="tit1"><a href="/view.aspx?id=3183">祝福全校师生中秋佳节快乐！</a></h3>
+							<p></p>
+						</li>
+					
+						<li>
+							<h3 class="tit1"><a href="/view.aspx?id=3179">加大推普力度，筑牢强国语言基石——大理护理职业学院第27届推广普通话宣传周倡议书</a></h3>
+							<p>亲爱的老师们、同学们：           落叶之秋，微风徐来，所有的美好不期而遇，在这金风送爽的九月，我们迎来了全国第27届推广普通...</p>
+						</li>
+					
+						<li>
+							<h3 class="tit1"><a href="/view.aspx?id=3177">2024年国家网络安全宣传周网络安全知识宣传手册</a></h3>
+							<p>主题：网络安全为人民，网络安全靠人民。      2024年国家网络安全宣传周于9月9日至15日在全国范围举行，其中9月10日为校园日活动...</p>
+						</li>
+					
+						<li>
+							<h3 class="tit1"><a href="/view.aspx?id=3173">习近平在全国教育大会上强调 紧紧围绕立德树人根本任务 朝着建成教育强国战略目标扎实迈进</a></h3>
+							<p>习近平在全国教育大会上强调紧紧围绕立德树人根本任务朝着建成教育强国战略目标扎实迈进习近平代表党中央向全国广大教师和教育工作...</p>
+						</li>
+					
+                </ul>
+            </div>
+            <div class="control">
+                <div class="prev"><img src="/templates/huYuan/images/icons_move_left.jpg" alt="" /></div>
+                <div class="next"><img src="/templates/huYuan/images/icons_move_right.jpg" alt="" /></div>
+            </div>
+            <div class="kv_dot">
+                <ul>
+				    
+						<li></li>
+					
+						<li></li>
+					
+						<li></li>
+					
+						<li></li>
+					
+						<li></li>
+					
+                </ul>
+            </div>
+    </div>
+ </div>
+ <div class="Rights">
+  <ul class="ToTitle2">
+   <li class="TT1">党群工作</li>
+   <li class="TT2"><a href="/dang.aspx?category_id=0">查看更多</a></li>
+  </ul>
+  <ul class="List">
+                          
+	   <li>
+		<div class="Limg"><a href="/dangview.aspx?id=3226"><img src="/upload/202410/14/thumb_202410141741421335.jpg" /></a></div>
+		<div class="RText">
+		 <p class="PP1"><a href="/dangview.aspx?id=3226">礼敬韶华 赓续荣光 大理护理职业学院举办2024年荣休教师座谈会</a></p>
+		 <p class="PP2">
+			“潜心耕耘秉初心，桃李不言绽芬芳”。10月10日下午，大理护理职业学院在学校东院老协会议室召开退休教师座谈会。大力弘扬教育家精...&nbsp;&nbsp;<span>[2024-10-13]</span>
+		 </p>
+		</div>
+	   </li>
+                          
+	   <li>
+		<div class="Limg"><a href="/dangview.aspx?id=3221"><img src="/upload/202410/10/thumb_202410101611383310.jpg" /></a></div>
+		<div class="RText">
+		 <p class="PP1"><a href="/dangview.aspx?id=3221">有一种生活叫大理——大理护理职业学院国庆期间开展青年文旅志愿服务</a></p>
+		 <p class="PP2">
+			10月1日-10月7日，国庆佳节之际，大理护理职业学院组织青年学生前往大理高铁站投身文旅志愿服务活动。以实际行动诠释志愿者精神的...&nbsp;&nbsp;<span>[2024-10-09]</span>
+		 </p>
+		</div>
+	   </li>
+     
+  </ul>
+ </div>
+</div>
+
+<div class="InWorkNew">
+ <ul class="GongList">
+  <li class="TT1">通知公告</li>
+      
+          <li class="TT2">
+			<p class="PP1"><span>27</span><label>2024-10</label></p>
+			<p class="PP2"><a href="/view.aspx?id=3244">大理护理职业学院关于2025年“校园招聘”综合成绩的公告</a></p>
+		  </li>
+      
+          <li class="TT2">
+			<p class="PP1"><span>26</span><label>2024-10</label></p>
+			<p class="PP2"><a href="/view.aspx?id=3243">大理护理职业学院2025年“校园招聘”笔试成绩公告</a></p>
+		  </li>
+      
+          <li class="TT2">
+			<p class="PP1"><span>18</span><label>2024-10</label></p>
+			<p class="PP2"><a href="/view.aspx?id=3234">大理护理职业学院关于2025年“校园招聘”笔试、面试通知</a></p>
+		  </li>
+      
+          <li class="TT2">
+			<p class="PP1"><span>10</span><label>2024-10</label></p>
+			<p class="PP2"><a href="/view.aspx?id=3223">【国庆节12】热烈庆祝中华人民共和国成立75周年！</a></p>
+		  </li>
+      
+  <li class="TT3"><a href="/news.aspx?category_id=4">查看全部</a></li>
+ </ul>
+ <div class="Worker">
+  <ul class="ToTitle2">
+   <li class="TT1">学生工作</li>
+   <li class="TT2"><a href="/xueshenggongzuo.aspx?category_id=0">查看更多</a></li>
+  </ul>
+  <ul class="List">
+    
+          <li>
+			<p class="PP1">09.26</p>
+			<p class="PP2"><a href="/xueshenggongzuoview.aspx?id=3202">喜讯：大理护理职业学院在云南省第一届大学生国旗护卫队展示赛决赛中喜获佳绩</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">09.24</p>
+			<p class="PP2"><a href="/xueshenggongzuoview.aspx?id=3194">大理护理职业学院举行2024年新生开学典礼军训结训仪式暨“开学第一课”</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">09.24</p>
+			<p class="PP2"><a href="/xueshenggongzuoview.aspx?id=3193">大理护理职业学院组织2024年新生开展军训行军拉练</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">09.23</p>
+			<p class="PP2"><a href="/xueshenggongzuoview.aspx?id=3191">共赏明月情 欢聚中秋夜 大理护理职业学院师生欢度中秋佳节</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">09.19</p>
+			<p class="PP2"><a href="/xueshenggongzuoview.aspx?id=3184">秉书执剑步入戎行 许国献身无悔青春 ‖大理护理职业学院4名优秀学子光荣入伍</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">09.14</p>
+			<p class="PP2"><a href="/xueshenggongzuoview.aspx?id=3181">大理护理职业学院召开学生宿舍安全工作会议</a></p>
+		  </li>
+      
+  </ul>
+ </div>
+ <div class="Rights">
+  <ul class="ToTitle2">
+   <li class="TT1">教育教学</li>
+   <li class="TT2"><a href="/jiaoyu.aspx?category_id=0">查看更多</a></li>
+  </ul>
+  <ul class="List">
+                        
+	   <li>
+		<div class="Limg"><a href="/jixujiaoyuview.aspx?id=3195"><img src="/upload/202409/25/thumb_202409251932483990.jpg" /></a></div>
+		<div class="RText">
+		 <p class="PP1"><a href="/jixujiaoyuview.aspx?id=3195">【喜报】大理护理职业学院思政课教师在2024年云南省学校铸牢中华民族共同体意识教育说课比赛中喜获一等奖</a></p>
+		 <p class="PP2">
+			9月21日，大理护理职业学院思政教师李婷参加“2024年云南省学校铸牢中华民族共同体意识教育说课比赛”取得了优异成绩。经过激烈角...&nbsp;&nbsp;<span>[2024-09-24]</span>
+		 </p>
+		</div>
+	   </li>
+                          
+	   <li>
+		<div class="Limg"><a href="/jixujiaoyuview.aspx?id=3190"><img src="/upload/202409/24/thumb_202409241625519707.jpg" /></a></div>
+		<div class="RText">
+		 <p class="PP1"><a href="/jixujiaoyuview.aspx?id=3190">【喜报】门诊部罗雅玲医师在大理州首届基层全科医师病例汇报比赛中荣获二等奖！</a></p>
+		 <p class="PP2">
+			9 月 12 日，大理护理职业学院门诊部罗雅玲医师，在大理州医学会全科医学专业委员会举办的“大理州首届基层全科医师病例汇报比赛”...&nbsp;&nbsp;<span>[2024-09-23]</span>
+		 </p>
+		</div>
+	   </li>
+                          
+	   <li>
+		<div class="Limg"><a href="/jixujiaoyuview.aspx?id=3188"><img src="/upload/202409/24/thumb_202409241611245480.jpg" /></a></div>
+		<div class="RText">
+		 <p class="PP1"><a href="/jixujiaoyuview.aspx?id=3188">【喜报】大理护理职业学院在大理州第二届职业院校技能大赛“贝腾杯”营销实战技能竞赛中喜获佳绩</a></p>
+		 <p class="PP2">
+			9月19日至20日，由大理州教育体育局、大理州人力资源和社会保障局及大理州总工会联合主办的大理州第二届职业院校技能大赛“贝腾杯...&nbsp;&nbsp;<span>[2024-09-23]</span>
+		 </p>
+		</div>
+	   </li>
+     
+  </ul>
+ </div>
+</div>
+
+<div class="InLinkNew">
+ <ul class="GongList">
+  <li class="TT1">相关链接</li>
+  <li class="TT2" style="font-size:16px">招生热线:0872-3064548/3064549</li>
+  <li class="TT4">
+	   <p><a href="http://www.nhc.gov.cn"><img src="/templates/huYuan/images/LICO2.png" />国家卫健委</a></p>
+	   <p><a href="http://www.moe.gov.cn"><img src="/templates/huYuan/images/LICO4.png" />教育部</a></p>
+	   <p><a href="http://www.dangjian.com"><img src="/templates/huYuan/images/LICO5.png" />党建网</a></p>
+           <p><a href="http://www.dali.gov.cn"><img src="/templates/huYuan/images/LICO6.png" />大理州政府</a></p>
+	   <p style="width:272px;font-size: 12px;"><a href="http://gj.ncss.cn"><img src="/templates/huYuan/images/LICO3.png" />高校毕业生到国际组织实习任职信息服务平台</a></p>
+	     <p style="width:272px;"  title="全国高校思想政治工作网"><a href="http://www.sizhengwang.cn"><img src="/templates/huYuan/images/LICO7.png" />全国高校思想政治工作网</a></p>
+            <p><a href="/manage/login.aspx"><img src="/templates/huYuan/images/LICO1.png" />授权用户</a></p>
+       
+   </li>
+ </ul>
+ <div class="Worker">
+  <ul class="ToTitle2">
+   <li class="TT1">招生就业</li>
+   <li class="TT2"><a href="/zhaosheng.aspx?category_id=0">查看更多</a></li>
+  </ul>
+  <ul class="List">
+      
+          <li>
+			<p class="PP1">08.30</p>
+			<p class="PP2"><a href="/zhaoshengview.aspx?id=3151">大理护理职业学院2024届毕业生第七次网络招聘会邀请函</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">07.11</p>
+			<p class="PP2"><a href="/zhaoshengview.aspx?id=3124">大理护理职业学院成功举办2024届毕业生第二场校园招聘会</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">06.27</p>
+			<p class="PP2"><a href="/zhaoshengview.aspx?id=3100">喜讯！大理护理职业学院在第十一届“挑战杯”云南省大学生创业计划竞赛中喜获佳绩</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">06.26</p>
+			<p class="PP2"><a href="/zhaoshengview.aspx?id=3101">新突破！大理护理职业学院在第十一届“学创杯”全国大学生创业综合模拟大赛云南省选拔赛中取得优异成绩</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">06.20</p>
+			<p class="PP2"><a href="/zhaoshengview.aspx?id=3079">大理护理职业学院2024届毕业生第二场校园招聘会暨第六次网络招聘会邀请函</a></p>
+		  </li>
+      
+          <li>
+			<p class="PP1">06.19</p>
+			<p class="PP2"><a href="/zhaoshengview.aspx?id=3082">大理护理职业学院2024年“宏志助航计划”就业能力培训圆满结束</a></p>
+		  </li>
+      
+  </ul>
+ </div>
+ <div class="Rights">
+  <ul class="ToTitle2">
+   <li class="TT1">机构导航 </li>
+  <!-- <li class="TT2"><a href="/shehuifuwu.aspx?category_id=0">查看更多</a></li>-->
+  </ul>
+    <!-- <ul class="List">
+     
+          <li class="TT2">
+			<p class="PP1">01.17</p>
+			<p class="PP2"><a href="/shehuifuwuview.aspx?id=2848">中国教育报刊社到大理护理职业学院调研指导工作</a></p>
+		  </li>	 
+	   
+          <li class="TT2">
+			<p class="PP1">07.01</p>
+			<p class="PP2"><a href="/shehuifuwuview.aspx?id=1980">大理护理职业学院深入开展洱海保护“三清洁”活动 助力美丽乡村建设</a></p>
+		  </li>	 
+	   
+          <li class="TT2">
+			<p class="PP1">05.30</p>
+			<p class="PP2"><a href="/shehuifuwuview.aspx?id=1981">大理护理职业学院开展三清洁活动</a></p>
+		  </li>	 
+	 
+  </ul>-->
+  
+  <ul class="List">
+	
+	
+	
+		<li>
+		    <div class="DD"><span>党政管理机构</span></div>
+			<ul>
+				
+				<div class="XBDH"> 
+				
+					<a href="/deptlist.aspx?category_id=125">办公室(党委巡察办)</a>
+				
+					<a href="/deptlist.aspx?category_id=127">党委纪检监察科</a>
+				
+					<a href="/deptlist.aspx?category_id=126">党委组织部</a>
+				
+					<a href="/deptlist.aspx?category_id=128">党委宣传部</a>
+				
+					<a href="/deptlist.aspx?category_id=174">党委统战部</a>
+				
+					<a href="/deptlist.aspx?category_id=130">学生科(学生工作部、武装部)</a>
+				
+					<a href="/deptlist.aspx?category_id=129">教务科</a>
+				
+					<a href="/deptlist.aspx?category_id=131">财务科</a>
+				
+					<a href="/deptlist.aspx?category_id=175">人事科</a>
+				
+					<a href="/deptlist.aspx?category_id=176">审计科</a>
+				
+					<a href="/deptlist.aspx?category_id=134">保卫科</a>
+				
+					<a href="/deptlist.aspx?category_id=136">后勤科</a>
+				
+				</div>
+			</ul>
+		</li>
+	
+		<li>
+		    <div class="DD"><span>教学教辅机构</span></div>
+			<ul>
+				
+				<div class="XBDH"> 
+				
+					<a href="/deptlist.aspx?category_id=139">护理系</a>
+				
+					<a href="/deptlist.aspx?category_id=140">康复技术系</a>
+				
+					<a href="/deptlist.aspx?category_id=141">医学技术系</a>
+				
+					<a href="/deptlist.aspx?category_id=142">基础医学部</a>
+				
+					<a href="/deptlist.aspx?category_id=177">公共基础部</a>
+				
+					<a href="/deptlist.aspx?category_id=143">马克思主义学院</a>
+				
+					<a href="/deptlist.aspx?category_id=178">继续教育部</a>
+				
+					<a href="/deptlist.aspx?category_id=179">科研(对外交流)部</a>
+				
+					<a href="/deptlist.aspx?category_id=144">信息中心（图书馆）</a>
+				
+					<a href="/deptlist.aspx?category_id=180">实作实训部</a>
+				
+					<a href="/deptlist.aspx?category_id=181">门诊部</a>
+				
+				</div>
+			</ul>
+		</li>
+	
+		<li>
+		    <div class="DD"><span>群团组织</span></div>
+			<ul>
+				
+				<div class="XBDH"> 
+				
+					<a href="/deptlist.aspx?category_id=146">学校团委</a>
+				
+					<a href="/deptlist.aspx?category_id=147">学校工会</a>
+				
+					<a href="/deptlist.aspx?category_id=182">学校妇联</a>
+				
+				</div>
+			</ul>
+		</li>
+	
+	
+  </ul>
+  
+ </div>
+</div>
+
+<!--Footer-->
+    <div class="Foot">
+    <div class="Cons">
+    
+        <div >
+        	<img class="rwm" src="/templates/huYuan/images/rwm.jpg" width="80" height="80" />
+        	<a  class="Logo" href="/index.aspx"><img src="/templates/huYuan/images/logo2.png" /></a>
+        </div>
+        <!-------二维码-------->
+		
+        <div class="text">
+            地址：大理市海东新城蔚文街3号&nbsp;&nbsp;联系电话：0872-3064563<br />
+            滇ICP备16009274号&nbsp;&nbsp;您是第&nbsp;<script type="text/javascript" src="/tools/submit_ajax.ashx?action=view_article_click&id=149&click=1"></script> 位访问者<br />
+            邮编：671006&nbsp;&nbsp;
+            <br />
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53290102000454" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+		 		    <img src="/templates/huYuan/images/gaba.png" style="float:left;">
+		 		    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">滇公网安备 53290102000454号</p>
+		</a>
+		</div>
+    </div>
+    <div class="FText">2017 大理护理职业学院保留网站所有权利 未经允许不得复制、镜像</div>
+</div>
+
+<!--/Footer-->
+ </body>
+</html>

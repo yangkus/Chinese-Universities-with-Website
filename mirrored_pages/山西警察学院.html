@@ -1,0 +1,1055 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>山西警察学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="山西警察学院">
+<META Name="keywords" Content="山西警察学院" />
+
+        <link href="style/swiper.min.css" rel="stylesheet">
+        <link href="style/animate.min.css" rel="stylesheet">
+        <link href="style/common.css" rel="stylesheet" />
+        <link href="style/index.css" rel="stylesheet" />
+        <link href="style/media.css" rel="stylesheet" />
+        <!--[if lte IE 9]>
+        <script src="js/ie.js"></script>
+        <![endif]-->
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b754751535a5742000300004751 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1922520350)</script>
+</head>
+    <body>
+        <script type="text/javascript" src="js/jq.js"></script>
+        <script type="text/javascript" src="js/public.js"></script>
+        <script type="text/javascript" src="js/jm.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <div class="header">
+            <div class="header-top">
+                <div class="w90">
+                    <div class="h1 flex flex-c-center">
+                        <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="山西警察学院"><img src="images/logo.png" /></a></div>
+                        <div class="dec flexbox flex-c-center"><img src="images/dec22.png" /><img src="images/dec33.png" /><img src="images/dec44.png" /><img src="images/dec55.png" /></div>
+                        <div class="h1-right flexbox flex-c-center">
+                            <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu1"></div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="searchbox" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="searchbutton" name="submit_button" type="submit" value="" v-on:click="onSubmit()"/>
+            <div class="button"></div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1922520350";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.10.28:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                            <div class="search_m btn"></div>
+                            <div class="nav-menu selectBut">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2 nav"><ul class="flex">
+                            <li>
+                                <h3><a href="index.htm" target="_blank">首页</a></h3>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="xygk.htm" target="_blank">学院概况</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="xygk/xygk.htm" target="_blank">学院概况</a></li>
+                                        <li><a href="xygk/xrld.htm" target="_blank">现任领导</a></li>
+                                        <li><a href="xygk/lsyg.htm" target="_blank">历史沿革</a></li>
+                                        <li><a href="xygk/xyzc.htm" target="_blank">学院章程</a></li>
+                                        <li><a href="xygk/xybs.htm" target="_blank">学院标识</a></li>
+                                        <li><a href="xygk/xydl.htm" target="_blank">校园导览</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="zzjg.htm" target="_blank">组织机构</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="zzjg.htm#box1" target="_blank">党政管理机构</a></li>
+                                        <li><a href="zzjg.htm#box2" target="_blank">群团机构</a></li>
+                                        <li><a href="zzjg.htm#box3" target="_blank">教学机构</a></li>
+                                        <li><a href="zzjg.htm#box4" target="_blank">教辅机构</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="szdw/szgk.htm" target="_blank">师资队伍</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="szdw/szgk.htm" target="_blank">师资概况</a></li>
+                                        <li><a href="szdw/js.htm" target="_blank">教授</a></li>
+                                        <li><a href="szdw/jxms.htm" target="_blank">教学名师</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://jwb.sxpc.edu.cn" target="_blank">教育教学</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="http://jwb.sxpc.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1281" target="_blank">教学动态</a></li>
+                                        <li><a href="http://jwb.sxpc.edu.cn/jjy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1010" target="_blank">专业建设</a></li>
+                                        <li><a href="http://jwb.sxpc.edu.cn/jjy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1009" target="_blank">课程建设</a></li>
+                                        <li><a href="jyjx/xjgl.htm" target="_blank">学籍管理</a></li>
+                                        <li><a href="jyjx/zljk.htm" target="_blank">质量监控</a></li>
+                                        <li><a href="http://172.16.18.4/jwglxt/xtgl/login_slogin.html" target="_blank">教务管理平台</a></li>
+                                        <li><a href="https://sxpc.mh.chaoxing.com/page/88508/show" target="_blank">网络教学平台</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://kjb.sxpc.edu.cn" target="_blank">学科专业</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="xkzy1/xk_xsdtr.htm" target="_blank">学科、学术带头人</a></li>
+                                        <li><a href="xkzy1/zdxk.htm" target="_blank">重点学科</a></li>
+                                        <li><a href="xkzy1/zyxm.htm" target="_blank">在研项目</a></li>
+                                        <li><a href="xkzy1/kycg.htm" target="_blank">科研成果</a></li>
+                                        <li><a href="xkzy1/xktd.htm" target="_blank">学科团队</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://sgb.sxpc.edu.cn" target="_blank">学生工作</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="http://sgb.sxpc.edu.cn/sxjy.htm" target="_blank">思政教育</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/jwhgl.htm" target="_blank">学生管理</a></li>
+                                        <li><a href="xsgz/xlzx.htm" target="_blank">心理咨询</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/jwhgl.htm" target="_blank">学生资助</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/xfjs.htm" target="_blank">学风建设</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/yzs_xssq.htm" target="_blank">“一站式”学生社区</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/gzzd.htm" target="_blank">规章制度 </a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://zjb.sxpc.edu.cn" target="_blank">招生就业</a></h3>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://sxjd.sxpc.edu.cn" target="_blank">在职培训</a></h3>
+                            </li>
+                            
+
+                            
+</ul></div>
+                </div>
+            </div>
+            <div class="banner">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        
+<div class="swiper-slide">
+<img src="images/banner_01.jpg">
+</div>
+                        
+<div class="swiper-slide">
+<img src="images/banner_02.jpg">
+</div>
+                        
+<div class="swiper-slide">
+
+<a href="http://bkpg.sxpc.edu.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76631)" target="_blank"><img src="images/BK4I9170.jpg"></a>
+</div>
+                        
+<div class="swiper-slide">
+<img src="images/450099570411148594.jpg">
+</div>
+                        
+</div>
+                    <div class="swiper-pagination"></div>
+                </div></div>
+        </div>
+        <div class="header-top2">
+            <div class="w90">
+                <div class="h2 nav"><ul class="flex">
+                            <li>
+                                <h3><a href="index.htm" target="_blank">首页</a></h3>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="xygk.htm" target="_blank">学院概况</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="xygk/xygk.htm" target="_blank">学院概况</a></li>
+                                        <li><a href="xygk/xrld.htm" target="_blank">现任领导</a></li>
+                                        <li><a href="xygk/lsyg.htm" target="_blank">历史沿革</a></li>
+                                        <li><a href="xygk/xyzc.htm" target="_blank">学院章程</a></li>
+                                        <li><a href="xygk/xybs.htm" target="_blank">学院标识</a></li>
+                                        <li><a href="xygk/xydl.htm" target="_blank">校园导览</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="zzjg.htm" target="_blank">组织机构</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="zzjg.htm#box1" target="_blank">党政管理机构</a></li>
+                                        <li><a href="zzjg.htm#box2" target="_blank">群团机构</a></li>
+                                        <li><a href="zzjg.htm#box3" target="_blank">教学机构</a></li>
+                                        <li><a href="zzjg.htm#box4" target="_blank">教辅机构</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="szdw/szgk.htm" target="_blank">师资队伍</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="szdw/szgk.htm" target="_blank">师资概况</a></li>
+                                        <li><a href="szdw/js.htm" target="_blank">教授</a></li>
+                                        <li><a href="szdw/jxms.htm" target="_blank">教学名师</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://jwb.sxpc.edu.cn" target="_blank">教育教学</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="http://jwb.sxpc.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1281" target="_blank">教学动态</a></li>
+                                        <li><a href="http://jwb.sxpc.edu.cn/jjy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1010" target="_blank">专业建设</a></li>
+                                        <li><a href="http://jwb.sxpc.edu.cn/jjy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1009" target="_blank">课程建设</a></li>
+                                        <li><a href="jyjx/xjgl.htm" target="_blank">学籍管理</a></li>
+                                        <li><a href="jyjx/zljk.htm" target="_blank">质量监控</a></li>
+                                        <li><a href="http://172.16.18.4/jwglxt/xtgl/login_slogin.html" target="_blank">教务管理平台</a></li>
+                                        <li><a href="https://sxpc.mh.chaoxing.com/page/88508/show" target="_blank">网络教学平台</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://kjb.sxpc.edu.cn" target="_blank">学科专业</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="xkzy1/xk_xsdtr.htm" target="_blank">学科、学术带头人</a></li>
+                                        <li><a href="xkzy1/zdxk.htm" target="_blank">重点学科</a></li>
+                                        <li><a href="xkzy1/zyxm.htm" target="_blank">在研项目</a></li>
+                                        <li><a href="xkzy1/kycg.htm" target="_blank">科研成果</a></li>
+                                        <li><a href="xkzy1/xktd.htm" target="_blank">学科团队</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://sgb.sxpc.edu.cn" target="_blank">学生工作</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+                                        <li><a href="http://sgb.sxpc.edu.cn/sxjy.htm" target="_blank">思政教育</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/jwhgl.htm" target="_blank">学生管理</a></li>
+                                        <li><a href="xsgz/xlzx.htm" target="_blank">心理咨询</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/jwhgl.htm" target="_blank">学生资助</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/xfjs.htm" target="_blank">学风建设</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/yzs_xssq.htm" target="_blank">“一站式”学生社区</a></li>
+                                        <li><a href="http://sgb.sxpc.edu.cn/gzzd.htm" target="_blank">规章制度 </a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://zjb.sxpc.edu.cn" target="_blank">招生就业</a></h3>
+                            </li>
+                            
+
+                            
+                            <li>
+                                <h3><a href="http://sxjd.sxpc.edu.cn" target="_blank">在职培训</a></h3>
+                            </li>
+                            
+
+                            
+</ul></div>
+            </div>
+        </div>
+        <div class="navm-box">
+            <ul class="nav-wrap"><li>
+                    <a href="index.htm">首页</a>
+                </li>
+                
+
+                
+<li>
+                    <a href="xygk.htm">学院概况</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+                        <dt class="close"><a href="xygk/xygk.htm">学院概况</a></dt>
+                        <dt class="close"><a href="xygk/xrld.htm">现任领导</a></dt>
+                        <dt class="close"><a href="xygk/lsyg.htm">历史沿革</a></dt>
+                        <dt class="close"><a href="xygk/xyzc.htm">学院章程</a></dt>
+                        <dt class="close"><a href="xygk/xybs.htm">学院标识</a></dt>
+                        <dt class="close"><a href="xygk/xydl.htm">校园导览</a></dt>
+                        
+                    </dl>
+                </li>
+                
+
+                
+<li>
+                    <a href="zzjg.htm">组织机构</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+                        <dt class="close"><a href="zzjg.htm#box1">党政管理机构</a></dt>
+                        <dt class="close"><a href="zzjg.htm#box2">群团机构</a></dt>
+                        <dt class="close"><a href="zzjg.htm#box3">教学机构</a></dt>
+                        <dt class="close"><a href="zzjg.htm#box4">教辅机构</a></dt>
+                        
+                    </dl>
+                </li>
+                
+
+                
+<li>
+                    <a href="szdw/szgk.htm">师资队伍</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+                        <dt class="close"><a href="szdw/szgk.htm">师资概况</a></dt>
+                        <dt class="close"><a href="szdw/js.htm">教授</a></dt>
+                        <dt class="close"><a href="szdw/jxms.htm">教学名师</a></dt>
+                        
+                    </dl>
+                </li>
+                
+
+                
+<li>
+                    <a href="http://jwb.sxpc.edu.cn">教育教学</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+                        <dt class="close"><a href="http://jwb.sxpc.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1281">教学动态</a></dt>
+                        <dt class="close"><a href="http://jwb.sxpc.edu.cn/jjy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1010">专业建设</a></dt>
+                        <dt class="close"><a href="http://jwb.sxpc.edu.cn/jjy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1009">课程建设</a></dt>
+                        <dt class="close"><a href="jyjx/xjgl.htm">学籍管理</a></dt>
+                        <dt class="close"><a href="jyjx/zljk.htm">质量监控</a></dt>
+                        <dt class="close"><a href="http://172.16.18.4/jwglxt/xtgl/login_slogin.html">教务管理平台</a></dt>
+                        <dt class="close"><a href="https://sxpc.mh.chaoxing.com/page/88508/show">网络教学平台</a></dt>
+                        
+                    </dl>
+                </li>
+                
+
+                
+<li>
+                    <a href="http://kjb.sxpc.edu.cn">学科专业</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+                        <dt class="close"><a href="xkzy1/xk_xsdtr.htm">学科、学术带头人</a></dt>
+                        <dt class="close"><a href="xkzy1/zdxk.htm">重点学科</a></dt>
+                        <dt class="close"><a href="xkzy1/zyxm.htm">在研项目</a></dt>
+                        <dt class="close"><a href="xkzy1/kycg.htm">科研成果</a></dt>
+                        <dt class="close"><a href="xkzy1/xktd.htm">学科团队</a></dt>
+                        
+                    </dl>
+                </li>
+                
+
+                
+<li>
+                    <a href="http://sgb.sxpc.edu.cn">学生工作</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+                        <dt class="close"><a href="http://sgb.sxpc.edu.cn/sxjy.htm">思政教育</a></dt>
+                        <dt class="close"><a href="http://sgb.sxpc.edu.cn/jwhgl.htm">学生管理</a></dt>
+                        <dt class="close"><a href="xsgz/xlzx.htm">心理咨询</a></dt>
+                        <dt class="close"><a href="http://sgb.sxpc.edu.cn/jwhgl.htm">学生资助</a></dt>
+                        <dt class="close"><a href="http://sgb.sxpc.edu.cn/xfjs.htm">学风建设</a></dt>
+                        <dt class="close"><a href="http://sgb.sxpc.edu.cn/yzs_xssq.htm">“一站式”学生社区</a></dt>
+                        <dt class="close"><a href="http://sgb.sxpc.edu.cn/gzzd.htm">规章制度 </a></dt>
+                        
+                    </dl>
+                </li>
+                
+
+                
+<li>
+                    <a href="http://zjb.sxpc.edu.cn">招生就业</a>
+                </li>
+                
+
+                
+<li>
+                    <a href="http://sxjd.sxpc.edu.cn">在职培训</a>
+                </li>
+                
+
+                
+</ul>
+        </div>
+        <div class="search-dialog-box">
+            <div class="search-bg"></div>
+            <div class="search-dialog">
+                <div class="search-inner">
+                    <div class="wrap-inner">
+                        <div class="searchbox f-cb">
+
+
+
+<div id="divu6"></div>
+<script type="text/html" id="htmlu6">
+    <div id="appu6">
+        <div v-if="!isError" class="search-input f-cb flex">
+            <input type="text" placeholder="请输入您想查找的信息！" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input name="submit_button" type="submit" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu6").html($("#htmlu6").text());
+</script>
+<script>
+    var appOwner = "1922520350";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu6",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.10.28:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-close">
+                <span class="bg"></span>
+                <i></i>
+            </div>
+        </div>
+        <div class="parta">
+            <div class="w90">
+                <div class="title flex flex-c-center wow fadeInDown">
+                    <div class="tit-left flexbox">
+                        <i></i>
+                        <h3>学院要闻<span>SCHOOL NEWS</span></h3>
+                    </div>
+                    <a href="xyyw.htm"><span>更多+</span></a>
+                </div>
+                <div class="pabox flex">
+                    <div class="pal wow fadeInUp"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                
+<div class="swiper-slide"><a href="info/1039/30044.htm" target="_blank">
+                                    <div class="image"><img src="/__local/6/27/9B/CD4F3ACF8DD55C4D7B39A69C007_0FCF4ACE_16175.jpg"></div>
+                                    <div class="news-txt">
+                                        <h3 class="line1">山西公安英模“进高校”宣讲暨“同上一堂课”主题活动（山西警察学院专场）举行</h3>
+                                        <p class="line1">为深入学习贯彻党的二十届三中全会精神，深入学习贯彻习近平总书记给中国人民公安大学在读英烈子女的重要回信精神和关于学校思政课建设的重要指示精神，大力弘扬公安英模精神，在全社会营造“学习英模、崇尚英模、争当英模”的良好风尚，在第11个烈士纪念日即将到来之际，9月26日下午，由省公安厅、省教育厅联合举办的山西公安英模“进高校”宣讲暨“同上一堂课”主题活动山西警察学院专场在学院警体馆举行。英模是最好的教科书...</p>
+                                    </div>
+                                </a></div>
+                                
+<div class="swiper-slide"><a href="info/1039/29854.htm" target="_blank">
+                                    <div class="image"><img src="/__local/2/60/C3/01EFDA1F05FDF9386E2453BA52E_8EEA0142_1E852.jpg"></div>
+                                    <div class="news-txt">
+                                        <h3 class="line1">山西警察学院召开庆祝第40个教师节暨表彰大会</h3>
+                                        <p class="line1">9月10日，山西警察学院隆重召开庆祝第40个教师节暨表彰大会，对39名优秀教师、28名优秀教育工作者进行表彰奖励。省公安厅党委委员、政治部主任张云鹏出席表彰大会并讲话。院党委书记周建代表学院党委讲话，院党委副书记、院长张惠选主持会议。张云鹏同志代表省公安厅党委向全院教职工致以节日祝贺和诚挚问候，并向学院赠送慰问金和警务实战训练装备器材。他指出，省委、省政府和省公安厅党委高度重视学院的建设发展。9月6日，省...</p>
+                                    </div>
+                                </a></div>
+                                
+<div class="swiper-slide"><a href="info/1039/29784.htm" target="_blank">
+                                    <div class="image"><img src="/__local/A/87/97/C43E0D1CB36053675DE3620BC8F_58EA62CE_2A2BB.jpg"></div>
+                                    <div class="news-txt">
+                                        <h3 class="line1">山西警察学院举行2024级新生开学典礼暨军训动员大会</h3>
+                                        <p class="line1">9月2日上午，我院2024级新生开学典礼暨军训动员大会在警体馆隆重举行。学院党委书记周建，党委副书记、院长张惠选及院党委班子成员出席，院党委副书记张宏林主持会议。张惠选院长在致辞中，向2024级新生表示热烈的欢迎和祝贺，鼓励同学们尽快融入大学环境，学会自信、自主、自学、自律、自强，努力在大学学有所成，实现人生新的发展。一是要坚持政治建警，铸牢忠诚警魂，淬炼对党绝对忠诚的政治品格。二是要坚定理想信念，立志...</p>
+                                    </div>
+                                </a></div>
+                                
+<div class="swiper-slide"><a href="info/1039/29534.htm" target="_blank">
+                                    <div class="image"><img src="/__local/1/AC/22/9E7E63851452F9969EECF28DED0_C6301FEF_1C850.jpg"></div>
+                                    <div class="news-txt">
+                                        <h3 class="line1">山西警察学院隆重举行2024届本科生毕业典礼暨学位授予仪式</h3>
+                                        <p class="line1">6月22日，学院举行2024届本科毕业生毕业典礼暨学位授予仪式。院党委书记周建代表学院党委讲话并向毕业生赠送毕业纪念品。院党委副书记、院长、院学位委员会主任张惠选教授为毕业生拨穗并颁发学位证书。院党委委员、副院长、学位委员会副主任王文剑宣读了《山西警察学院学位评定委员会关于授予丁于杰等1508名毕业生学士学位的决定》和《关于表彰山西警察学院2024届优秀毕业论文（设计）作者的决定》，党委委员、副院长刘永泉宣读...</p>
+                                    </div>
+                                </a></div>
+                                
+<div class="swiper-slide"><a href="info/1039/29034.htm" target="_blank">
+                                    <div class="image"><img src="/__local/6/FF/83/081CA8BC40433F5CC02800E1B1C_657B66F6_1BF89.jpg"></div>
+                                    <div class="news-txt">
+                                        <h3 class="line1">山西公安英模事迹巡回报告团在山西警察学院举办专场报告会暨专题思政课</h3>
+                                        <p class="line1">为深入学习贯彻习近平总书记关于公安队伍建设的系列重要指示精神、给中国人民公安大学在读英烈子女重要回信精神和近日关于学校思政课建设的重要指示精神，着力打造“晋善警美”思政品牌，切实做好“5.19”“5.25”节点主题宣传，在全院营造学习英模、崇尚英模、争当英模的良好风尚，铸牢忠诚警魂，激发全院师生奋进新征程、建功新时代的强大力量，5月21日下午，山西公安英模事迹巡回报告团在学院公安民警实战训练基地报告厅开展...</p>
+                                    </div>
+                                </a></div>
+                                
+</div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div><script>_showDynClickBatch(['dynclicks_u7_30044','dynclicks_u7_29854','dynclicks_u7_29784','dynclicks_u7_29534','dynclicks_u7_29034'],[30044,29854,29784,29534,29034],"wbnews", 1922520350)</script>
+</div>
+                    <div class="par"><ul>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.1s"><a href="info/1039/30194.htm" target="_blank">
+                                <p><span>2024-10-21</span></p>
+                                <h3 class="line1">学院召开2024年度保密工作会议</h3>
+                            </a></li>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.2s"><a href="info/1039/30184.htm" target="_blank">
+                                <p><span>2024-10-21</span></p>
+                                <h3 class="line1">周建同志深入学生社区宿舍走访</h3>
+                            </a></li>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.3s"><a href="info/1039/30174.htm" target="_blank">
+                                <p><span>2024-10-18</span></p>
+                                <h3 class="line1">我院代表队在中国大学生摔跤锦标赛中取得好成绩</h3>
+                            </a></li>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.4s"><a href="info/1039/30164.htm" target="_blank">
+                                <p><span>2024-10-18</span></p>
+                                <h3 class="line1">学院第六届“忠诚杯”校园足球赛圆满结束</h3>
+                            </a></li>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.5s"><a href="info/1039/30154.htm" target="_blank">
+                                <p><span>2024-10-15</span></p>
+                                <h3 class="line1">山西警察学院党委召开领导班子巡视整改专题民主生活会</h3>
+                            </a></li>
+                            
+</ul><script>_showDynClickBatch(['dynclicks_u8_30194','dynclicks_u8_30184','dynclicks_u8_30174','dynclicks_u8_30164','dynclicks_u8_30154'],[30194,30184,30174,30164,30154],"wbnews", 1922520350)</script>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="part">
+            <div class="partb">
+                <div class="w90 flex">
+                    <div class="pbl">
+                        <div class="title flex flex-c-center wow fadeInDown">
+                            <div class="tit-left flexbox">
+                                <i></i>
+                                <h3>党建工作<span>PARTY BUILDING WORK</span></h3>
+                            </div>
+                            <a href="djgz.htm"><span>更多+</span></a>
+                        </div>
+                        <div class="pblist wow fadeInUp"><ul>
+                                <div class="headline flex">
+                                                                    <div class="headbox">
+                                        <div class="headimg"><a href="info/1041/28324.htm" class="image" target="_blank"><img src="images/defautdjkx.png"></a></div>
+                                        <a href="info/1041/28324.htm" class="line1" target="_blank">山西警察学院第二届教职工代表大会暨工会会员代表大会召开</a>
+                                    </div>
+                                    <div class="headbox">
+                                        <div class="headimg"><a href="info/1041/28124.htm" class="image" target="_blank"><img src="images/defautdjkx.png"></a></div>
+                                        <a href="info/1041/28124.htm" class="line1" target="_blank">王晓强同志指导交通管理系学生党员发展工作</a>
+                                    </div>
+                                </div>
+                                
+<li class="flex"><a href="info/1041/27964.htm" class="line1">学院召开党委（扩大）会议传达学习全国公安厅局长座谈会精神</a><span>12-05</span></li>
+<li class="flex"><a href="info/1041/27544.htm" class="line1">山西公安英烈事迹巡回宣讲活动在山西警察学院举行专场宣讲</a><span>10-31</span></li>
+<li class="flex"><a href="info/1041/27263.htm" class="line1">学院召开党委（扩大）会议，传达学习习近平总书记重要回信精神安排部署学院贯彻落实工作</a><span>10-07</span></li>
+<li class="flex"><a href="info/1041/27233.htm" class="line1">山西警察学院党委书记周建同志到朔州市看望慰问在学院就读的公安英烈子女</a><span>10-01</span></li>
+<li class="flex"><a href="info/1041/27243.htm" class="line1">周建同志参加思政部直属党支部专题组织生活会</a><span>09-08</span></li>
+</ul><script>_showDynClickBatch(['dynclicks_u9_28324','dynclicks_u9_28124','dynclicks_u9_27964','dynclicks_u9_27544','dynclicks_u9_27263','dynclicks_u9_27233','dynclicks_u9_27243'],[28324,28124,27964,27544,27263,27233,27243],"wbnews", 1922520350)</script>
+</div>
+                    </div>
+                    <div class="pbr">
+                        <div class="title flex flex-c-center wow fadeInDown">
+                            <div class="tit-left flexbox">
+                                <i></i>
+                                <h3>通知公告<span>NOTICE AND ANNOUNCEMENT</span></h3>
+                            </div>
+                            <a href="tzgg.htm"><span>更多+</span></a>
+                        </div>
+                        <div class="pbrist"><ul>
+                                
+<li class="wow fadeInUp" data-wow-delay="0.1s"><a href="info/1040/30204.htm" class="flexbox flex-c-center" target="_blank">
+                                    <div class="time"><h2>25</h2><span class="flex-center flex-c-center"><i>10</i></span></div>
+                                    <p class="line2">山西警察学院关于公布2025年招生专业选考科目的通知</p>
+                                </a></li>
+                                
+<li class="wow fadeInUp" data-wow-delay="0.2s"><a href="info/1040/29974.htm" class="flexbox flex-c-center" target="_blank">
+                                    <div class="time"><h2>25</h2><span class="flex-center flex-c-center"><i>09</i></span></div>
+                                    <p class="line2">关于2024年第三批应聘学院教师岗位 高层次人才（博士研究生） 考核成绩公告（三）</p>
+                                </a></li>
+                                
+<li class="wow fadeInUp" data-wow-delay="0.3s"><a href="info/1040/29954.htm" class="flexbox flex-c-center" target="_blank">
+                                    <div class="time"><h2>23</h2><span class="flex-center flex-c-center"><i>09</i></span></div>
+                                    <p class="line2">关于2024年第三批应聘学院教师岗位 高层次人才（博士研究生） 考核成绩公告（二）</p>
+                                </a></li>
+                                
+<li class="wow fadeInUp" data-wow-delay="0.4s"><a href="info/1040/29994.htm" class="flexbox flex-c-center" target="_blank">
+                                    <div class="time"><h2>23</h2><span class="flex-center flex-c-center"><i>09</i></span></div>
+                                    <p class="line2">山西警察学院增加垃圾站建设工程  成交结果公告</p>
+                                </a></li>
+                                
+<li class="wow fadeInUp" data-wow-delay="0.5s"><a href="info/1040/29984.htm" class="flexbox flex-c-center" target="_blank">
+                                    <div class="time"><h2>23</h2><span class="flex-center flex-c-center"><i>09</i></span></div>
+                                    <p class="line2">山西警察学院图书馆、警体馆消防改造建设工程  成交结果公告</p>
+                                </a></li>
+                                
+</ul><script>_showDynClickBatch(['dynclicks_u10_30204','dynclicks_u10_29974','dynclicks_u10_29954','dynclicks_u10_29994','dynclicks_u10_29984'],[30204,29974,29954,29994,29984],"wbnews", 1922520350)</script>
+</div>
+                    </div>
+                </div>
+                <div class="pb-dec w90">
+                    <div class="item wow fadeInUp" style="background-image:url(images/item.png);"></div>
+                </div>
+            </div>
+            <div class="partc">
+                <div class="w90 flex">
+                    <div class="pcl">
+                        <div class="title flex flex-c-center wow fadeInDown">
+                            <div class="tit-left flexbox">
+                                <i></i>
+                                <h3>警院映像<span>PICTURE</span></h3>
+                            </div>
+                            <a href="list-pic.jsp?urltype=tree.TreeTempUrl&wbtreeid=1044"><span>更多+</span></a>
+                        </div>
+                        <div class="pcbox1">
+                            <div class="pc1 wow fadeInUp">
+<a href="info/1044/29564.htm" target="_blank">
+                                <div class="image">
+                                    <img src="/__local/A/33/3E/26F3B472B3BAACFF5140FD6D2C6_1D10D697_52227.jpg" />
+                                </div>
+                                <div class="txt"><p class="line1">山西警察学院2024年招生宣传片</p></div>
+                            </a>
+
+<script>_showDynClickBatch(['dynclicks_u11_29564'],[29564],"wbnews", 1922520350)</script>
+</div>
+                            <div class="pc1 wow fadeInUp" data-wow-delay="0.3s">    
+<a href="list-pic.jsp?urltype=tree.TreeTempUrl&wbtreeid=1044">
+                                <div class="image"><img src="images/yx2.jpg"></div>
+                                <div class="txt">
+                                <p class="line1">警院映像</p>
+                                <div class="line"></div>
+                                </div>
+                            </a>
+
+</div>
+                        </div>
+                    </div>
+                    <div class="pcr"><ul class="flex flex-wrap">
+                            
+<li class="pc1 wow fadeInUp" data-wow-delay="0.2s"><a href="info/1045/30134.htm" target="_blank">
+                                <div class="image"><img src="/__local/F/A6/83/553A8D5E9B0483CFFA86B0BBF63_BAD8735A_545DD.jpg"></div>
+                                <div class="txt"><p class="line1">西门</p></div>
+                            </a></li>
+                            
+<li class="pc1 wow fadeInUp" data-wow-delay="0.4s"><a href="info/1045/3186.htm" target="_blank">
+                                <div class="image"><img src="/__local/3/58/02/D1A6943C04FF6E9F36A6670FA2A_5D475802_349CC.jpg?e=.jpg"></div>
+                                <div class="txt"><p class="line1">学生宿舍</p></div>
+                            </a></li>
+                            
+<li class="pc1 wow fadeInUp" data-wow-delay="0.6s"><a href="info/1045/3185.htm" target="_blank">
+                                <div class="image"><img src="/__local/6/AC/38/72639C09CB8F166258956EBBE86_025D95E5_2ACC7.jpg?e=.jpg"></div>
+                                <div class="txt"><p class="line1">生活服务区</p></div>
+                            </a></li>
+                            
+</ul><script>_showDynClickBatch(['dynclicks_u13_30134','dynclicks_u13_3186','dynclicks_u13_3185'],[30134,3186,3185],"wbnews", 1922520350)</script>
+</div>
+                </div>
+            </div>
+            <div class="partd">
+                <div class="w90">
+                    <div class="title flex flex-c-center wow fadeInDown">
+                        <div class="tit-left flexbox">
+                            <i></i>
+                            <h3>专题专栏<span>SPECIAL COLUMN</span></h3>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="pdlist wow zoomIn">    <div class="swiper-container">
+                            <ul class="swiper-wrapper">
+                                
+<li class="swiper-slide"><a href="ztzl/xxgcxjpxsdzgtsshzysxztjy.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76633)"><div class="image"><img src="images/zt2.jpg"></div></a></li>
+                                
+<li class="swiper-slide"><a href="ztzl/srxxxcgcddesdjs.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76632)"><div class="image"><img src="images/zt_esd_03.jpg"></div></a></li>
+                                
+</ul>
+                        </div></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="ftlink w90">    <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                        
+<li class="swiper-slide"><a href="xyfw.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76636)" target="_blank">
+                            <div class="icon1" style="background-image: url(images/icon1.png);"></div>
+                            <p>校园服务</p>
+                        </a></li>
+                        
+<li class="swiper-slide"><a href="http://tsg.sxpc.edu.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76637)" target="_blank">
+                            <div class="icon2" style="background-image: url(images/icon2.png);"></div>
+                            <p>图书馆</p>
+                        </a></li>
+                        
+<li class="swiper-slide"><a href="http://10.255.254.247:81/" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76638)" target="_blank">
+                            <div class="icon3" style="background-image: url(images/icon3.png);"></div>
+                            <p>OA办公</p>
+                        </a></li>
+                        
+<li class="swiper-slide"><a href="http://192.168.10.27:8080/system/login.jsp" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76639)" target="_blank">
+                            <div class="icon4" style="background-image: url(images/icon4.png);"></div>
+                            <p>站群管理</p>
+                        </a></li>
+                        
+<li class="swiper-slide"><a href="https://gzb.sxpc.edu.cn/zcgl1.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 77903)" target="_blank">
+                            <div class="icon5" style="background-image: url(images/icon_zb1.png);"></div>
+                            <p>招标采购</p>
+                        </a></li>
+                        
+<li class="swiper-slide"><a href="http://xxgk.sxpc.edu.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76640)" target="_blank">
+                            <div class="icon6" style="background-image: url(images/icon5.png);"></div>
+                            <p>信息公开</p>
+                        </a></li>
+                        
+<li class="swiper-slide"><a href="http://172.16.18.4/jwglxt/xtgl/login_slogin.html" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76641)" target="_blank">
+                            <div class="icon7" style="background-image: url(images/icon8.png);"></div>
+                            <p>教务管理系统</p>
+                        </a></li>
+                        
+<li class="swiper-slide"><a href="https://sxpc.mh.chaoxing.com/page/88508/show" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76642)" target="_blank">
+                            <div class="icon8" style="background-image: url(images/icon9.png);"></div>
+                            <p>网络教学平台</p>
+                        </a></li>
+                        
+</ul>
+                </div></div>
+            <div class="w90 flex flex-c-center">
+                <div class="ftl"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有 © 山西警察学院</p>
+					<p>地址：山西省太原市清徐县清东路西北坊段799号</p>
+					<p>邮编：030401　<a href="https://beian.miit.gov.cn/" target="_blank">晋ICP备17003455号</a></p></div>
+                <div class="ftc flex-center flex-c-center">
+                <div class="email">    <ul class="flexbox">
+                        
+<li><a href="sjxx.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 77887)">
+                            <img src="images/email1.png">
+                        </a></li>
+                        
+<li><a href="yzxx.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 77888)">
+                            <img src="images/email2.png">
+                        </a></li>
+                        
+</ul></div>
+                <div class="ft-logo" style="display:none;">    
+
+                    <img src="images/logo.png">
+                
+
+</div></div>
+                <div class="ftr flexbox flex-column">
+                     <div class="plink plink1 flex"><script language="javascript" src="/system/resource/js/openlink.js"></script><p>各部门、各系部</p>
+                        <i class="iconfont icon-down"></i>
+                        <ul class="linklist">
+                            
+<li><a href="http://bgs.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92697)">办公室</a></li>
+                            
+<li><a href="http://zzb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92698)">组织部（党校）</a></li>
+                            
+<li><a href="http://xcb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92699)">宣传部（统战部）</a></li>
+                            
+<li><a href="http://txglb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92700)">离退休人员管理部</a></li>
+                            
+<li><a href="http://rcgzb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92701)">人才工作部</a></li>
+                            
+<li><a href="http://jw.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92702)">纪委（监察专员办公室）</a></li>
+                            
+<li><a href="http://jwb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92703)">教务部(教师发展中心、教学评估办公室)</a></li>
+                            
+<li><a href="http://kjb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92704)">科技工作部（学报编辑部）</a></li>
+                            
+<li><a href="http://rsb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92705)">人事部（教师发展中心）</a></li>
+                            
+<li><a href="http://sgb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92706)">学生工作部</a></li>
+                            
+<li><a href="http://zjb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92707)">招生就业部</a></li>
+                            
+<li><a href="http://sjb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92708)">审计部</a></li>
+                            
+<li><a href="http://cwb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92709)">计划财务部</a></li>
+                            
+<li><a href="http://gzb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92710)">国有资产管理部</a></li>
+                            
+<li><a href="http://hqb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92711)">后勤保障部</a></li>
+                            
+<li><a href="http://bwb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92712)">保卫工作部（武装部）</a></li>
+                            
+<li><a href="http://tw.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92713)">团委</a></li>
+                            
+<li><a href="http://gh.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92714)">工会</a></li>
+                            
+<li><a href="http://zcx.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92715)">侦查系</a></li>
+                            
+<li><a href="http://zax.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92716)">治安系</a></li>
+                            
+<li><a href="http://ggx.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92717)">公安管理系</a></li>
+                            
+<li><a href="http://jgx.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92718)">交通管理系</a></li>
+                            
+<li><a href="http://xjx.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92719)">刑事科学技术系</a></li>
+                            
+<li><a href="http://fxx.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92720)">法学系</a></li>
+                            
+<li><a href="http://wax.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92721)">网络安全保卫系</a></li>
+                            
+<li><a href="http://jzx.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92722)">警务指挥与战术系（警体部）</a></li>
+                            
+<li><a href="http://szb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92723)">思想政治理论教学研究部</a></li>
+                            
+<li><a href="http://jcb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92724)">基础部</a></li>
+                            
+<li><a href="http://crjyb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92725)">成人教学部</a></li>
+                            
+<li><a href="http://pxb.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92726)">培训部</a></li>
+                            
+<li><a href="http://tsg.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92727)">图书馆（档案馆）</a></li>
+                            
+<li><a href="http://net.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92728)">信息中心</a></li>
+                            
+<li><a href="http://sxzx.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92729)">警务技能实验实训中心</a></li>
+                            
+<li><a href="http://rcjd.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92730)">国家文物局文博人才培训示范基地</a></li>
+                            
+<li><a href="http://sxjd.sxpc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92731)">山西公安民警实战训练基地</a></li>
+                            
+</ul></div>
+                    <div class="plink plink2 flex"><p>相关链接</p>
+                        <i class="iconfont icon-down"></i>
+                        <ul class="linklist">
+                            
+<li><a href="https://www.mps.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92686)">公安部</a></li>
+                            
+<li><a href="http://www.moe.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92687)">教育部</a></li>
+                            
+<li><a href="http://gat.shanxi.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92580)">山西省公安厅</a></li>
+                            
+<li><a href="http://jyt.shanxi.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92581)">山西省教育厅</a></li>
+                            
+<li><a href="http://rst.shanxi.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92591)">山西省人事厅</a></li>
+                            
+<li><a href="https://rst.shanxi.gov.cn/rsks/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92592)">山西省人事考试网</a></li>
+                            
+<li><a href="http://www.sxkszx.cn/index.html" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1922520350, 92593)">山西省招生考试网</a></li>
+                            
+</ul></div>
+                 </div>
+            </div>
+        </div>
+        <div class="rlink">    <ul>
+                
+<li><a href="javascript:;" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 76643)"></a><span><img src="images/ewm1.jpg"></span></li>
+                
+<li><a href="javascript:;" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 77577)"></a><span><img src="images/ewm3.jpg"></span></li>
+                
+<li><a href="javascript:;" onclick="_addDynClicks(&#34;wbimage&#34;, 1922520350, 77578)"></a><span><img src="images/ewm2.jpg"></span></li>
+                
+<li class="to-top"><a href="javascript:;"></a></li>
+            </ul></div>
+        <div class="floatimg">   
+</SCRIPT></div>
+        <div class="floatimg">   
+</SCRIPT></div>
+      
+      
+        <script type="text/javascript" src="js/totop.js"></script>
+        <script type="text/javascript" src="js/wow.min2.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

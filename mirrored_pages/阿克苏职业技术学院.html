@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="阿克苏职业技术学院官方网站" />
+<meta name="description" content="阿克苏职业技术学院官方网站" />
+<title>阿克苏职业技术学院官方网站</title>
+<link href="/skin/sites/common/css/bootstrap.min.css" type="text/css"  rel="stylesheet" >
+<link href="/skin/sites/common/css/global.css" type="text/css"  rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="/skin/akszy/cms/../core/header/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/akszy/cms/../core/header/header.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/slick.css">
+<link rel="stylesheet" type="text/css" href="/skin/label/label.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/theme/theme.css" />
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/guowei.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/breakpoints.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/skin/akszy/cms/../js/common.js"></script>
+<script type="text/javascript" src="/js/lang/core/zh-cn.js"></script>
+<script type="text/javascript" src="/js/lang/cms/zh-cn.js"></script>
+<script type="text/javascript">
+P8CONFIG.RESOURCE = '';
+var SYSTEM = 'cms',
+MODULE = '',
+ACTION = 'main',
+LABEL_URL = '/index.php/cms-main?',
+STATIC_URL = 'http://172.16.3.40',
+$this_router = P8CONFIG.URI[SYSTEM][MODULE].U_controller,
+$this_url = $this_router +'-'+ ACTION,
+SKIN = '/skin/akszy/cms/',
+TEMPLATE = 'akszy';
+mobile_status= '0',
+mobile_auto_jump='0',
+mobile_url = '/m';
+if(mobile_status=='1' && SYSTEM!='sites'){
+if(browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+if(mobile_auto_jump=='1' && mobile_url!=P8CONFIG.RESOURCE){
+var this_url = location.href,_pul=P8CONFIG.RESOURCE;
+if(this_url.indexOf(mobile_url)==-1 && this_url.indexOf('s.php')==-1 && this_url.indexOf('u.php')==-1 && this_url.indexOf('admin.php')==-1 && SYSTEM!='sites'){
+if(this_url.indexOf(P8CONFIG.RESOURCE+'/html')!=-1)_pul+='/html';
+if(P8CONFIG.RESOURCE==''){
+this_url = mobile_url.indexOf('http')==-1 ? this_url.mobile_url : mobile_url;
+}else{
+this_url = this_url.replace(_pul, mobile_url);
+}
+location.href = this_url;
+}
+}
+}
+}
+
+</script>
+</head>
+<body class="home">
+<div class="indexTop showdiv option">
+<div class="topbox">
+<div class="top">
+<div class="navbar main-nav">
+<div class="container-fluid">
+<div class="header-main clearfix">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="http://www.akszy.edu.cn/" class="navbar-brand navbar-logo"><img src="/skin/akszy/cms/../core/header/images/logo.png" class="logo1"/>
+</a>
+</div>
+<div class="top-inner hidden-sm hidden-xs clearfix">
+<div class="search-form pull-right">
+<form action="/search/index.html" target="_blank" method="get" name="form1" id="form1">
+<div class="input-group">
+<input type="text" class="form-control keyword" id="keyword" placeholder="请输入关键字" name="word">
+<span class="input-group-btn">
+<button class="btn btn-default" type="submit" id="button"></button>
+</span>
+</div>
+</form>
+</div>
+<div class="topnav pull-right clearfix" id="header_t"><ul class="topnav-list pull-left clearfix">
+<li><a href="/index.php/forms-post?mid=209" target="_blank">院领导接待</a></li>
+<li>
+<a >领导信箱</a>
+<ul class="sub-menu">
+<li><a href="/index.php/letter-post?department=1" target="_blank">书记信箱</a></li>
+<li><a href="/index.php/letter-post?department=2" target="_blank">院长信箱</a></li>
+</ul>
+</li>
+<li><a href="http://sso.akszy.com/cas/login" target="_blank">办事大厅</a></li>
+<li><a href="http://172.16.3.96/" target="_blank">旧版入口</a></li>
+</ul></div>
+</div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+<ul class="nav navbar-nav navlist navbar-link navbar-right hidden-xs">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="http://www.akszy.edu.cn"  aria-expanded="false" role="button" target="">首  页</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/895/"  aria-expanded="false" role="button" target="">学校概况</a>
+<div class="dropdown-menu2 dropdown-ul2" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/13_10/e3fd243696dc563e.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary">阿克苏职业技术学院于2002年由原阿克苏地区农业学校、卫生学校、农业机械学校、财贸学校、文化艺术学校、体育运动学校6所中专</div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/895/" target="">学校简介</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/915/" target="">学院章程</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/1043/" target="">现任领导</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/824/" target="">办学特色</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/897/" target="">学校校历</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/993/" target="">校园风光</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/994/" target="">校园视频</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/898/" target="">联系我们</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">院系机构</a>
+<div class="dropdown-menu2 dropdown-ul3" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/13_10/b8081fd9e5052de4.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary">阿克苏职业技术学院于2002年由原阿克苏地区农业学校、卫生学校、农业机械学校、财贸学校、文化艺术学校、体育运动学校6所中专</div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/828/" target="">教学单位</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/830/" target="">党政部门</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target="">招生就业</a>
+<div class="dropdown-menu2 dropdown-ul4" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/13_10/b8081fd9e5052de4.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://zsb.akszy.com/" target="_blank">招生信息网</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://jyxxw.akszy.com/" target="_blank">就业信息网</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="/html/988/"  aria-expanded="false" role="button" target="">师资队伍</a>
+<div class="dropdown-menu2 dropdown-ul5" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/13_10/b8081fd9e5052de4.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/988/" target="">师资概况</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/989/" target="">杰出学者</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/990/" target="">应用专业教授</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/991/" target="">教学名师</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/992/" target="">人才招聘</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on6" data-toggle="dropdown" data-hover="dropdown" href="/#"  aria-expanded="false" role="button" target="">教学科研</a>
+<div class="dropdown-menu2 dropdown-ul6" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/25_15/63bcab93aa8bc059.png"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://jwc.akszy.edu.cn/" target="">教务处</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://www.akszy.edu.cn/keyan/" target="">科研处</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="http://www.akszy.edu.cn/cxhz/"  aria-expanded="false" role="button" target="">校企合作</a>
+<div class="dropdown-menu2 dropdown-ul7" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/25_15/b11c841a794fe0f0.png"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://www.akszy.edu.cn/cxhz/" target="">产学合作处</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on8" data-toggle="dropdown" data-hover="dropdown" href="/html/1065/"  aria-expanded="false" role="button" target="">校园服务</a>
+<div class="dropdown-menu2 dropdown-ul8" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/25_15/5c435386125a23dd.png"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/835/" target="">校园地图</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/833/" target="">学校校历</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/834/" target="">办公电话</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/837/" target="">网络服务</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/838/" target="">学校设施</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/836/" target="">图书资源</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+</ul>
+<ul class="nav navbar-nav navlist navbar-link2 visible-xs">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="http://www.akszy.edu.cn"  aria-expanded="false" role="button" target="">首  页</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/895/"  aria-expanded="false" role="button" target="">学校概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/895/" target="">学校简介</a></li>
+<li class="menu2"><a href="/html/915/" target="">学院章程</a></li>
+<li class="menu3"><a href="/html/1043/" target="">现任领导</a></li>
+<li class="menu4"><a href="/html/824/" target="">办学特色</a></li>
+<li class="menu5"><a href="/html/897/" target="">学校校历</a></li>
+<li class="menu6"><a href="/html/993/" target="">校园风光</a></li>
+<li class="menu7"><a href="/html/994/" target="">校园视频</a></li>
+<li class="menu8"><a href="/html/898/" target="">联系我们</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">院系机构</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/828/" target="">教学单位</a></li>
+<li class="menu2"><a href="/html/830/" target="">党政部门</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target="">招生就业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://zsb.akszy.com/" target="_blank">招生信息网</a></li>
+<li class="menu2"><a href="http://jyxxw.akszy.com/" target="_blank">就业信息网</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="/html/988/"  aria-expanded="false" role="button" target="">师资队伍</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/988/" target="">师资概况</a></li>
+<li class="menu2"><a href="/html/989/" target="">杰出学者</a></li>
+<li class="menu3"><a href="/html/990/" target="">应用专业教授</a></li>
+<li class="menu4"><a href="/html/991/" target="">教学名师</a></li>
+<li class="menu5"><a href="/html/992/" target="">人才招聘</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on6" data-toggle="dropdown" data-hover="dropdown" href="/#"  aria-expanded="false" role="button" target="">教学科研</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://jwc.akszy.edu.cn/" target="">教务处</a></li>
+<li class="menu2"><a href="http://www.akszy.edu.cn/keyan/" target="">科研处</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="http://www.akszy.edu.cn/cxhz/"  aria-expanded="false" role="button" target="">校企合作</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://www.akszy.edu.cn/cxhz/" target="">产学合作处</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on8" data-toggle="dropdown" data-hover="dropdown" href="/html/1065/"  aria-expanded="false" role="button" target="">校园服务</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/835/" target="">校园地图</a></li>
+<li class="menu2"><a href="/html/833/" target="">学校校历</a></li>
+<li class="menu3"><a href="/html/834/" target="">办公电话</a></li>
+<li class="menu4"><a href="/html/837/" target="">网络服务</a></li>
+<li class="menu5"><a href="/html/838/" target="">学校设施</a></li>
+<li class="menu6"><a href="/html/836/" target="">图书资源</a></li>
+</ul>		
+</li>
+</ul>
+<div class="top-inner visible-sm-block visible-xs-block">
+<div class="search-form">
+<form action="/search/index.html" target="_blank" method="get" name="form1" id="form1">
+<div class="input-group">
+<input type="text" class="form-control keyword" id="keyword" placeholder="请输入关键字" name="word">
+<span class="input-group-btn">
+<button class="btn btn-default" type="submit" id="button"></button>
+</span>
+</div>
+</form>
+</div>
+<div class="topnav clearfix" id="header_t"><ul class="topnav-list pull-left clearfix">
+<li><a href="/index.php/forms-post?mid=209" target="_blank">院领导接待</a></li>
+<li>
+<a >领导信箱</a>
+<ul class="sub-menu">
+<li><a href="/index.php/letter-post?department=1" target="_blank">书记信箱</a></li>
+<li><a href="/index.php/letter-post?department=2" target="_blank">院长信箱</a></li>
+</ul>
+</li>
+<li><a href="http://sso.akszy.com/cas/login" target="_blank">办事大厅</a></li>
+<li><a href="http://172.16.3.96/" target="_blank">旧版入口</a></li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<a href="javascript:;" class="navbtn"></a>
+</div>
+</div>
+</div>
+<div class="big-nav">
+<div class="scroll">
+<ul class="flex "> 
+<li>
+<h2 class="h2"><a href="http://www.akszy.edu.cn" target="" class="n1">首  页</a></h2>  
+</li>
+<li>
+<h2 class="h2"><a href="/html/895/" target="" class="n2">学校概况</a></h2>
+<div class="list">
+<h3><a href="/html/895/" target="">学校简介</a></h3>
+<h3><a href="/html/915/" target="">学院章程</a></h3>
+<h3><a href="/html/1043/" target="">现任领导</a></h3>
+<h3><a href="/html/824/" target="">办学特色</a></h3>
+<h3><a href="/html/897/" target="">学校校历</a></h3>
+<h3><a href="/html/993/" target="">校园风光</a></h3>
+<h3><a href="/html/994/" target="">校园视频</a></h3>
+<h3><a href="/html/898/" target="">联系我们</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="/html/820/" target="" class="n3">院系机构</a></h2>
+<div class="list">
+<h3><a href="/html/828/" target="">教学单位</a></h3>
+<h3><a href="/html/830/" target="">党政部门</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="/html/45/" target="" class="n4">招生就业</a></h2>
+<div class="list">
+<h3><a href="http://zsb.akszy.com/" target="_blank">招生信息网</a></h3>
+<h3><a href="http://jyxxw.akszy.com/" target="_blank">就业信息网</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="/html/988/" target="" class="n5">师资队伍</a></h2>
+<div class="list">
+<h3><a href="/html/988/" target="">师资概况</a></h3>
+<h3><a href="/html/989/" target="">杰出学者</a></h3>
+<h3><a href="/html/990/" target="">应用专业教授</a></h3>
+<h3><a href="/html/991/" target="">教学名师</a></h3>
+<h3><a href="/html/992/" target="">人才招聘</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="/#" target="" class="n6">教学科研</a></h2>
+<div class="list">
+<h3><a href="http://jwc.akszy.edu.cn/" target="">教务处</a></h3>
+<h3><a href="http://www.akszy.edu.cn/keyan/" target="">科研处</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="http://www.akszy.edu.cn/cxhz/" target="" class="n7">校企合作</a></h2>
+<div class="list">
+<h3><a href="http://www.akszy.edu.cn/cxhz/" target="">产学合作处</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="/html/1065/" target="" class="n8">校园服务</a></h2>
+<div class="list">
+<h3><a href="/html/835/" target="">校园地图</a></h3>
+<h3><a href="/html/833/" target="">学校校历</a></h3>
+<h3><a href="/html/834/" target="">办公电话</a></h3>
+<h3><a href="/html/837/" target="">网络服务</a></h3>
+<h3><a href="/html/838/" target="">学校设施</a></h3>
+<h3><a href="/html/836/" target="">图书资源</a></h3>
+</div>   
+</li>
+</ul>
+</div>
+</div>
+<div class="index-banner">
+
+<style type="text/css">
+.slider13-5732{width:100%;position:relative;height:100%;overflow:hidden;}
+.slider13-5732 .slick-list{height:100%;}
+.slider13-5732 .slick-track{height:100%;}
+.slider13-5732 .slick-slide,.slider13-5732 .slick-slide>div{height:100%;}
+.slider13-5732 .frame,.slider13-5732 .child{height:100%;}
+.slider13-5732 .child .image a,.slider13-5732 .child .video a{display:block;width:100%;height:100%;}
+.slider13-5732 .child .image{height:100%;position:relative;background-size:cover;background-position:center center;height:100%;position:relative;overflow:hidden;}
+.slider13-5732 .child img{position: absolute;left: 50%;top: 50%;min-height: 100%;min-width: 100%;max-width: 1000%;transform: translate(-50%, -50%);width: auto;height: 100%;}
+.slider13-5732 .slick-active .child .image{animation:scaleBig 5s linear 0s 1 both;transform-style:preserve-3d;}
+.slider13-5732 .slick-slide .image,.slider13-5732 .slick-slide .video{width:100%;height:100%;position:relative;overflow:hidden;}
+.slider13-5732 .slick-slide .item,.slider13-5732 .slick-slide .item img{width:100%;height:100%;display:block;}
+.slider13-5732 .slick-slide video{width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;font-family: "object-fit: cover;";}
+.slider13-5732 .number{width:100%;position: absolute;left:0;bottom:60px;color: #fff;text-align: center;line-height:1;}
+.slider13-5732 .number li{width:45px;height:5px;margin:0 10px;background:#fff;border-radius:0;font-size:0;cursor:pointer;vertical-align: middle;display:inline-block;}
+.slider13-5732 .number li.slick-active{background:#225ca6;}
+.slider13-5732 .slick-arrow{width: 46px;height: 83px;background-repeat:no-repeat;background-position: center center;margin-top: -18px;position: absolute;top: 50%;z-index:100;cursor: pointer;font-size:0;border:0;background-color: rgba(0,0,0,.4);;transition: all 500ms ease;-webkit-transition: all 500ms ease;opacity: 0;visibility: hidden;}
+.slider13-5732 .slick-prev{background-image: url(/skin/label/left.png);left: 60px;}
+.slider13-5732 .slick-next{background-image: url(/skin/label/right.png);right: 60px;}
+.slider13-5732:hover .slick-arrow{opacity:1;visibility:visible;}
+@-webkit-keyframes scaleBig {0% {transform:scale(1);}
+100% {transform:scale(1.05);}
+}
+@keyframes scaleBig {0% {transform:scale(1);}
+100% {transform:scale(1.05);}
+}
+@media (max-width: 767px){
+.slider13-5732,.slider13-5732 .frame,.slider13-5732 .slick-slide .item img{width:100%;height:46vw;}
+.slider13-5732 .number{bottom:60px;}
+.slider13-5732 .number li{width:20px;margin:0 5px;}
+}
+</style>
+<div class="slider13-5732">
+<div class="slider frame">
+<div class="child">
+<div class="video">
+<a href="" target="_blank" title=""><video id="video" src="/attachment/core/label/2023_12/01_10/83364015810d5f1f.mp4" loop="loop" autoplay="autoplay" muted="muted" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow" airplay="allow" x5-video-orientation="h5" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" data-object-fit="fill"></video></a>	
+</div>
+</div>
+<div class="child">
+<div class="image" style="background-image: url(/attachment/core/label/2024_10/16_13/5290daa09ba34e64.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child">
+<div class="image" style="background-image: url(/attachment/core/label/2023_07/12_11/ae06cf3700187c54.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child">
+<div class="image" style="background-image: url(/attachment/core/label/2023_07/13_14/751097d9b1db10f0.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child">
+<div class="image" style="background-image: url(/attachment/core/label/2023_07/13_14/64589bdcc361e091.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+</div>
+<div class="number"></div>
+</div>
+<script type="text/javascript">
+$(".slider13-5732 .frame").slick({
+fade:true,
+autoplay:true,
+autoplaySpeed:6000,
+pauseOnDotsHover:false,
+pauseOnFocus:false,
+speed:1000,
+arrows:true,
+dots:true,
+appendDots:".slider13-5732 .number",
+pauseOnHover:false,
+customPaging: function(slider, i) {  
+return i + 1;
+},
+});
+</script>
+</div>
+</div>
+<div class="indexBot">
+<div class="topbox">
+<div class="top">
+<div class="navbar main-nav">
+<div class="container-fluid">
+<div class="top-inner hidden-sm hidden-xs clearfix">
+<div class="search-form pull-right">
+<form action="/search/index.html" target="_blank" method="get" name="form1" id="form1">
+<div class="input-group">
+<input type="text" class="form-control keyword" id="keyword" placeholder="请输入关键字" name="word">
+<span class="input-group-btn">
+<button class="btn btn-default" type="submit" id="button"></button>
+</span>
+</div>
+</form>
+</div>
+<div class="topnav pull-right clearfix"><ul class="topnav-list pull-left clearfix">
+<li><a href="/index.php/forms-post?mid=209" target="_blank">院领导接待</a></li>
+<li>
+<a >领导信箱</a>
+<ul class="sub-menu">
+<li><a href="/index.php/letter-post?department=1" target="_blank">书记信箱</a></li>
+<li><a href="/index.php/letter-post?department=2" target="_blank">院长信箱</a></li>
+</ul>
+</li>
+<li><a href="http://sso.akszy.com/cas/login" target="_blank">办事大厅</a></li>
+<li><a href="http://172.16.3.96/" target="_blank">旧版入口</a></li>
+</ul></div>
+</div>
+<div class="header-main clearfix">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="http://www.akszy.edu.cn/" class="navbar-brand navbar-logo"><img src="/skin/akszy/cms/../core/header/images/logo.png" class="logo1"/>
+</a>
+</div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-2" aria-expanded="false" style="height: 1px;">
+<ul class="nav navbar-nav navlist navbar-link navbar-right hidden-xs">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="http://www.akszy.edu.cn"  aria-expanded="false" role="button" target="">首  页</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/895/"  aria-expanded="false" role="button" target="">学校概况</a>
+<div class="dropdown-menu2 dropdown-ul2" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/13_10/e3fd243696dc563e.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary">阿克苏职业技术学院于2002年由原阿克苏地区农业学校、卫生学校、农业机械学校、财贸学校、文化艺术学校、体育运动学校6所中专</div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/895/" target="">学校简介</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/915/" target="">学院章程</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/1043/" target="">现任领导</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/824/" target="">办学特色</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/897/" target="">学校校历</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/993/" target="">校园风光</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/994/" target="">校园视频</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/898/" target="">联系我们</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">院系机构</a>
+<div class="dropdown-menu2 dropdown-ul3" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/13_10/b8081fd9e5052de4.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary">阿克苏职业技术学院于2002年由原阿克苏地区农业学校、卫生学校、农业机械学校、财贸学校、文化艺术学校、体育运动学校6所中专</div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/828/" target="">教学单位</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/830/" target="">党政部门</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target="">招生就业</a>
+<div class="dropdown-menu2 dropdown-ul4" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/13_10/b8081fd9e5052de4.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://zsb.akszy.com/" target="_blank">招生信息网</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://jyxxw.akszy.com/" target="_blank">就业信息网</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="/html/988/"  aria-expanded="false" role="button" target="">师资队伍</a>
+<div class="dropdown-menu2 dropdown-ul5" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/13_10/b8081fd9e5052de4.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/988/" target="">师资概况</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/989/" target="">杰出学者</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/990/" target="">应用专业教授</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/991/" target="">教学名师</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/992/" target="">人才招聘</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on6" data-toggle="dropdown" data-hover="dropdown" href="/#"  aria-expanded="false" role="button" target="">教学科研</a>
+<div class="dropdown-menu2 dropdown-ul6" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/25_15/63bcab93aa8bc059.png"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://jwc.akszy.edu.cn/" target="">教务处</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://www.akszy.edu.cn/keyan/" target="">科研处</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="http://www.akszy.edu.cn/cxhz/"  aria-expanded="false" role="button" target="">校企合作</a>
+<div class="dropdown-menu2 dropdown-ul7" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/25_15/b11c841a794fe0f0.png"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="http://www.akszy.edu.cn/cxhz/" target="">产学合作处</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on8" data-toggle="dropdown" data-hover="dropdown" href="/html/1065/"  aria-expanded="false" role="button" target="">校园服务</a>
+<div class="dropdown-menu2 dropdown-ul8" role="menu">
+<div class="dropdown-item">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2023_07/25_15/5c435386125a23dd.png"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="dropdown-subcolumn">
+<ul class="row">
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/835/" target="">校园地图</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/833/" target="">学校校历</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/834/" target="">办公电话</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/837/" target="">网络服务</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/838/" target="">学校设施</a></li>
+<li class="col-md-4 col-sm-4 col-xs-12"><a href="/html/836/" target="">图书资源</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+</ul>
+<ul class="nav navbar-nav navlist navbar-link2 visible-xs">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="http://www.akszy.edu.cn"  aria-expanded="false" role="button" target="">首  页</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/895/"  aria-expanded="false" role="button" target="">学校概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/895/" target="">学校简介</a></li>
+<li class="menu2"><a href="/html/915/" target="">学院章程</a></li>
+<li class="menu3"><a href="/html/1043/" target="">现任领导</a></li>
+<li class="menu4"><a href="/html/824/" target="">办学特色</a></li>
+<li class="menu5"><a href="/html/897/" target="">学校校历</a></li>
+<li class="menu6"><a href="/html/993/" target="">校园风光</a></li>
+<li class="menu7"><a href="/html/994/" target="">校园视频</a></li>
+<li class="menu8"><a href="/html/898/" target="">联系我们</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">院系机构</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/828/" target="">教学单位</a></li>
+<li class="menu2"><a href="/html/830/" target="">党政部门</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target="">招生就业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://zsb.akszy.com/" target="_blank">招生信息网</a></li>
+<li class="menu2"><a href="http://jyxxw.akszy.com/" target="_blank">就业信息网</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="/html/988/"  aria-expanded="false" role="button" target="">师资队伍</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/988/" target="">师资概况</a></li>
+<li class="menu2"><a href="/html/989/" target="">杰出学者</a></li>
+<li class="menu3"><a href="/html/990/" target="">应用专业教授</a></li>
+<li class="menu4"><a href="/html/991/" target="">教学名师</a></li>
+<li class="menu5"><a href="/html/992/" target="">人才招聘</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on6" data-toggle="dropdown" data-hover="dropdown" href="/#"  aria-expanded="false" role="button" target="">教学科研</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://jwc.akszy.edu.cn/" target="">教务处</a></li>
+<li class="menu2"><a href="http://www.akszy.edu.cn/keyan/" target="">科研处</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="http://www.akszy.edu.cn/cxhz/"  aria-expanded="false" role="button" target="">校企合作</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://www.akszy.edu.cn/cxhz/" target="">产学合作处</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on8" data-toggle="dropdown" data-hover="dropdown" href="/html/1065/"  aria-expanded="false" role="button" target="">校园服务</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/835/" target="">校园地图</a></li>
+<li class="menu2"><a href="/html/833/" target="">学校校历</a></li>
+<li class="menu3"><a href="/html/834/" target="">办公电话</a></li>
+<li class="menu4"><a href="/html/837/" target="">网络服务</a></li>
+<li class="menu5"><a href="/html/838/" target="">学校设施</a></li>
+<li class="menu6"><a href="/html/836/" target="">图书资源</a></li>
+</ul>		
+</li>
+</ul>
+<div class="top-inner visible-sm-block visible-xs-block">
+<div class="search-form">
+<form action="/search/index.html" target="_blank" method="get" name="form1" id="form1">
+<div class="input-group">
+<input type="text" class="form-control keyword" id="keyword" placeholder="请输入关键字" name="word">
+<span class="input-group-btn">
+<button class="btn btn-default" type="submit" id="button"></button>
+</span>
+</div>
+</form>
+</div>
+<div class="topnav clearfix" id="header_t"><ul class="topnav-list pull-left clearfix">
+<li><a href="/index.php/forms-post?mid=209" target="_blank">院领导接待</a></li>
+<li>
+<a >领导信箱</a>
+<ul class="sub-menu">
+<li><a href="/index.php/letter-post?department=1" target="_blank">书记信箱</a></li>
+<li><a href="/index.php/letter-post?department=2" target="_blank">院长信箱</a></li>
+</ul>
+</li>
+<li><a href="http://sso.akszy.com/cas/login" target="_blank">办事大厅</a></li>
+<li><a href="http://172.16.3.96/" target="_blank">旧版入口</a></li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var USERNAME = get_username();
+$(document).ready(function(){
+//**show_edit**//
+init_labelshows('header_t');
+})
+</script>
+<script type="text/javascript">
+$(function(){
+$(".indexTop").mousewheel(function(event, delta, deltaX, deltaY){
+if(deltaY < 0){
+$(this).removeClass('showdiv option')
+$(".indexBot").addClass('showdiv');
+setTimeout(function(){
+$(".indexBot").addClass('option');
+},500);
+$(".topbox").addClass('showdiv');
+};
+});
+$(".indexBot").mousewheel(function(event, delta, deltaX, deltaY){
+if(delta>0 && $(".indexBot").scrollTop()==0){
+$(".indexBot").removeClass('showdiv option');
+$(".indexTop").addClass('showdiv');
+setTimeout(function(){
+$(".indexTop").addClass('option');
+},500);
+$(".topbox").removeClass('showdiv');
+};
+});
+$('.navbtn').click(function () {
+if ($('body').hasClass('navShow')) {
+$('body').removeClass('navShow')
+} else {
+$('body').addClass('navShow')
+}
+});
+})
+</script>
+<link rel="stylesheet" type="text/css" href="/skin/akszy/cms/index/index.css" />
+<script type="text/javascript" src="/skin/akszy/cms/index/script.js"></script>
+<div class="section-page1">
+<div class="container">
+<div class="common-box news">
+<div class="common-head clearfix">
+<div class="title fz28">学院新闻</div>
+<div class="news-more pull-right">
+<a href="/html/909/" target="_blank">进入新闻网</a></div>
+</div>
+<div class="row">
+<div class="col-md-6 col-sm-12 col-xs-12">
+<div class="news-slider mb20">
+<style type="text/css">
+.slide14-5735{position: relative;height:100%;}
+.slide14-5735 .slider-item{position:relative;}
+.slide14-5735 .child a{width: 100%;height:100%;display:block;position:relative;}
+.slide14-5735 .child a:after { content: ""; position: absolute; background: linear-gradient(transparent 70%, #0e0d0d); top: 0; left: 0; right: 0; bottom: 0; opacity: .7; z-index: 1; transition: .3s; }
+.slide14-5735 .child a:hover:after { opacity: .9; }
+.slide14-5735 .slider-item .frame .child .pic img{width:100%;height:455px;object-fit: cover;}
+.slide14-5735 .slider-item .frame .child .text{position: absolute;margin: 0;left: 0px;right: 0px;z-index: 5;height:50px;bottom: 0;}
+.slide14-5735 .slider-item .frame .child .text h3 {font-size:20px;color:#fff;max-width:80%;float:left;line-height:50px;padding-left:15px;padding-right: 15px;margin:0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.slide14-5735 .slider-item .number{position:absolute;z-index:100;right:10px;bottom:25px;}
+.slide14-5735 .slider-item .number .slick-dots{text-align:center;}
+.slide14-5735 .slider-item .number li{width:6px;height:6px;font-size:0;display:inline-block;margin:0 5px;background:#a09e9e;cursor:pointer;border-radius:50%;}
+.slide14-5735 .slider-item .number li.slick-active{background: #fff;}
+.slide14-5735 .slick-dots li button:hover:before,#slick-focus5735 .slick-dots li button:before{content:"";}
+.slide14-5735 .slick-arrow{font-size:0;border:0;outline: none;}
+.slide14-5735 .slick-prev { left: 0;}
+.slide14-5735 .slick-next { right: 0; background-position: -60px 0; }
+.slide14-5735 .slick-next:hover, #first-focus5735 .slick-prev:hover { opacity: 1; }
+.slide14-5735 .slick-prev { cursor: pointer; position: absolute; z-index: 100; top: 40%; background: url(/skin/label/prevnext.png) no-repeat; height: 60px; width: 35px; transition: left .3s; border-radius: 0; left: -80px; transition: left .3s; }
+.slide14-5735 .slick-next { cursor: pointer; position: absolute; z-index: 100; top: 40%; background: url(/skin/label/prevnext.png) no-repeat; height: 60px; width: 35px; transition: left .3s; border-radius: 0; right: -80px; transition: right .3s; background-position: -49px 0; }
+.slide14-5735 {overflow: hidden;}
+.slide14-5735:hover .slick-prev { left: 0px; }
+.slide14-5735:hover .slick-next { right: 0px; }
+.slide14-5735 .slick-next:hover { background-position: -143px 0; }
+.slide14-5735 .slick-prev:hover { background-position: -99px 0; }
+@media (max-width: 767px){
+.slide14-5735 .slider-item .frame .child .pic img{width:100%;height:51vw;}
+}
+</style>
+<div class="slide14-5735">
+<div class="slider-item">
+<div class="frame">
+<div class="child">
+<a href="/html/903/2024-10-26/content-13796.html" target="_blank" title="以体育智、以体育心— 学院举行第十六届大学生田径运动会开幕式">
+<div class="pic"><img src="/attachment/cms/item/2024_10/26_12/f37bc44a77c0f6e9.jpg.thumb.jpg" alt="以体育智、以体育心— 学院举行第十六届大学生田径运动会开幕式"></div>
+<div class="text">
+<h3>以体育智、以体育心— 学院举行第十六届大学生田径运动会开幕式</h3>
+</div>
+</a>
+</div>
+<div class="child">
+<a href="/html/903/2024-10-25/content-13795.html" target="_blank" title="学院《星际见证:爷爷的沙海绿梦》绘本作品荣获第二届(2024)新疆动漫节优秀作品奖">
+<div class="pic"><img src="/attachment/cms/item/2024_10/25_18/ee6fe3b42b917ac8.jpg.thumb.jpg" alt="学院《星际见证:爷爷的沙海绿梦》绘本作品荣获第二届(2024)新疆动漫节优秀作品奖"></div>
+<div class="text">
+<h3>学院《星际见证:爷爷的沙海绿梦》绘本作品荣获第二届(2024)新疆动漫节优秀作品奖</h3>
+</div>
+</a>
+</div>
+<div class="child">
+<a href="/html/903/2024-10-19/content-13776.html" target="_blank" title="学院召开资产管理工作现场培训会">
+<div class="pic"><img src="/attachment/cms/item/2024_10/23_12/f9a2d24bd20d28cd.jpg.thumb.jpg" alt="学院召开资产管理工作现场培训会"></div>
+<div class="text">
+<h3>学院召开资产管理工作现场培训会</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="number"></div>
+</div>
+</div>
+<script type="text/javascript">
+$('.slide14-5735 .frame').slick({
+infinite: true,
+slidesToShow: 1,
+slidesToScroll: 1,
+autoplay: true,
+centerMode: false,
+arrows:true,
+dots:true,
+appendDots:".slide14-5735 .number",
+customPaging: function(slider, i) {  
+return i + 1;
+},
+autoplaySpeed:4000,
+});
+</script>	</div>
+</div>
+<div class="col-md-6 col-sm-12 col-xs-12"><ul class="themelist9g row" style="font-size:16px;">
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="datatime">2024-10-26</div>
+<a href="/html/903/2024-10-26/content-13796.html" target="_blank" title="以体育智、以体育心— 学院举行第十六届大学生田径运动会开幕式">以体育智、以体育心— 学院举行第十六届大学生田径运动会开幕式</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="datatime">2024-10-25</div>
+<a href="/html/903/2024-10-25/content-13795.html" target="_blank" title="学院《星际见证:爷爷的沙海绿梦》绘本作品荣获第二届(2024)新疆动漫节优秀作品奖">学院《星际见证:爷爷的沙海绿梦》绘本作品荣获第二届(2024)新疆动漫节优秀作品奖</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="datatime">2024-10-19</div>
+<a href="/html/903/2024-10-19/content-13776.html" target="_blank" title="学院召开资产管理工作现场培训会">学院召开资产管理工作现场培训会</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="datatime">2024-10-12</div>
+<a href="/html/903/2024-10-12/content-13763.html" target="_blank" title="产教融合新变革，编织未来新篇章—中国纺织出版社总编辑孔会云探访学院">产教融合新变革，编织未来新篇章—中国纺织出版社总编辑孔会云探访学院</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="datatime">2024-10-11</div>
+<a href="/html/903/2024-10-11/content-13750.html" target="_blank" title="深情敬桑榆，共度重阳节——学院离退休教职工返校欢度佳节">深情敬桑榆，共度重阳节——学院离退休教职工返校欢度佳节</a>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="datatime">2024-10-10</div>
+<a href="/html/903/2024-10-10/content-13762.html" target="_blank" title="校企合作 聚力共赢—学院召开校企合作洽谈会">校企合作 聚力共赢—学院召开校企合作洽谈会</a>
+</div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page2">
+<div class="container">
+<div class="common-tabs">
+<div class="hd">
+<ul class="tabs-nav clearfix">
+<li>通知公告</li>
+<li>媒体关注</li>
+</ul>
+</div>
+<div class="bd">
+<div class="tabs-item">
+<div class="news-list"><style type="text/css">
+.list_theme_date18 .item{margin-bottom:24px;padding:25px 15px;border-top:4px solid #b13e3e;background:#fff;overflow:hidden;box-shadow: 0 0 10px rgba(0,0,0,0.1);transition: transform linear 0.3s;}
+.list_theme_date18 .item .date{width:65px;height:60px;float:left;text-align:center;background: #f6f6f6;}
+.list_theme_date18 .item .date span{color:#7b4a45;display:block;text-align:center;}
+.list_theme_date18 .item .date .d{font-size:20px;padding-top:8px;font-weight:bold;}
+.list_theme_date18 .item .text{margin-left:88px;}
+.list_theme_date18 .item .text h4{width:100%;height:60px;line-height:30px;color:#464c51;text-overflow:-o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;line-clamp: 2;-webkit-box-orient: vertical;}
+.list_theme_date18 .item .text h4 a{font-size:16px;color:#464c51;position:relative;}
+.list_theme_date18 .item:hover .text h4 a{color: #b13e3e;}
+</style>
+<ul class="list_theme_date18 row">
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">25</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4><a href="http://172.16.3.40/index.php/cms/item-view-id-13791.html" target="_blank">关于公布学院首届无人机操控技术应用大赛成绩的通知</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">25</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4><a href="http://172.16.3.40/index.php/cms/item-view-id-13789.html" target="_blank">关于举办2024年10月普通话水平测试考前培训讲座的通知</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">25</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4><a href="http://172.16.3.40/index.php/cms/item-view-id-13788.html" target="_blank">关于举办2024年第三期发展对象（入党积极分子）培训班的通知</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">24</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4><a href="http://172.16.3.40/index.php/cms/item-view-id-13787.html" target="_blank">关于任命学院学生会主席团成员及各二级学院学生会主席团成员的通知</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">24</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4><a href="http://172.16.3.40/index.php/cms/item-view-id-13786.html" target="_blank">关于任命学院团委兼职副书记及各二级学院分团委学生兼职副书记的通知</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">24</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4><a href="http://172.16.3.40/index.php/cms/item-view-id-13783.html" target="_blank">关于开展2024-2025学年秋季学期《形势与政策》教育教学专题辅导的通知</a></h4>
+</div>
+</div>
+</li>
+</ul></div>
+<div class="more">
+<a href="http://172.16.3.40/index.php/cms/item-list-category-840" target="_blank">更多>></a></div>
+</div>
+<div class="tabs-item">
+<div class="news-list"><style type="text/css">
+.list_theme_date18 .item{margin-bottom:24px;padding:25px 15px;border-top:4px solid #b13e3e;background:#fff;overflow:hidden;box-shadow: 0 0 10px rgba(0,0,0,0.1);transition: transform linear 0.3s;}
+.list_theme_date18 .item .date{width:65px;height:60px;float:left;text-align:center;background: #f6f6f6;}
+.list_theme_date18 .item .date span{color:#7b4a45;display:block;text-align:center;}
+.list_theme_date18 .item .date .d{font-size:20px;padding-top:8px;font-weight:bold;}
+.list_theme_date18 .item .text{margin-left:88px;}
+.list_theme_date18 .item .text h4{width:100%;height:60px;line-height:30px;color:#464c51;text-overflow:-o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;line-clamp: 2;-webkit-box-orient: vertical;}
+.list_theme_date18 .item .text h4 a{font-size:16px;color:#464c51;position:relative;}
+.list_theme_date18 .item:hover .text h4 a{color: #b13e3e;}
+</style>
+<ul class="list_theme_date18 row">
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">21</span>
+<span class="y">2024-06</span>
+</div>
+<div class="text">
+<h4><a href="https://mp.weixin.qq.com/s/ENT0ORMXiIC3pJbWngYSLg" target="_blank">高校职场精英 | 古力米拉·艾日西丁：我就我，敢于追梦，勇于拼搏</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">09</span>
+<span class="y">2024-06</span>
+</div>
+<div class="text">
+<h4><a href="https://tnews.xjmty.com/app/slyapp/dz1/202406/t20240609_21849745.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=21849745&aid=1&sid=10001&action=like&digg=2" target="_blank">漆扇、舞龙、变脸……阿克苏大中小学生文化传承庆端午</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">25</span>
+<span class="y">2024-04</span>
+</div>
+<div class="text">
+<h4><a href="https://tnews.xjmty.com/app/pghlapp/pgxw/202404/t20240423_20557269.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=20557269&aid=1&sid=10126&action=like&digg=0" target="_blank">祝贺！阿克苏这个团队全国职业院校技能大赛上获奖</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">12</span>
+<span class="y">2024-01</span>
+</div>
+<div class="text">
+<h4><a href="https://tnews.xjmty.com/app/slyapp/sh/202401/t20240111_18513306.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=18513306&aid=1&sid=10001&action=like&digg=34" target="_blank">5年引才210人 这些青年人才为啥钟情南疆这所职业院校？</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">08</span>
+<span class="y">2024-01</span>
+</div>
+<div class="text">
+<h4><a href="https://tnews.xjmty.com/app/slyapp/sh/202401/t20240108_18426477.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=18426477&aid=1&sid=10001&action=like&digg=0" target="_blank">第二届自治区黄炎培职业教育创新创业大赛收官</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="item">
+<div class="date">
+<span class="d">05</span>
+<span class="y">2023-11</span>
+</div>
+<div class="text">
+<h4><a href="https://boxer.baidu.com/scheme?source=1024474c&channel=1024474n" target="_blank">[媒体关注]【文化润疆在阿克苏】国家级校园文化品牌！全疆唯一入选</a></h4>
+</div>
+</div>
+</li>
+</ul></div>
+<div class="more">
+<a href="/html/839/" target="_blank">更多>></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page3">
+<div class="container">
+<div class="research">
+<div class="common-head clearfix visible-xs-block">
+<div class="title fz28">科研动态</div>
+<div class="more pull-right">
+<a href="/html/998/" target="_blank">更多>></a></div>
+</div>
+<div class="research-news">
+<style type="text/css">
+.title5-responsive5758 .slider-item .item{display:block;max-width:100%;height:100%;}
+.title5-responsive5758 .slider-item .item .text{padding:30px 40px;background:#8a1818;}
+.title5-responsive5758 .slider-item .item h3{font-size:18px;color:#ffffff;margin-top:10px;margin-bottom:20px;line-height:33px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.title5-responsive5758 .slider-item .item p{color:#ffffff;line-height:30px;height:90px;margin-bottom:30px;}
+.title5-responsive5758 .slider-item .item .see-more{color:#fff;display:inline-block;padding:7px 15px;border:1px solid #ffffff;border-radius:15px;}
+.title5-responsive5758 .slider-item .item:hover .text{background:#ae1313;}
+.title5-responsive5758 .slider-item .item:hover .see-more{color:#8a1818;background:#ffffff;}
+</style>
+<div class="sliderbox-responsive">
+<div class="slider title5-responsive5758">
+<div class="slider-item">
+<a class="item" href="/html/998/2023-09-14/content-9271.html" target="_blank" title="关于组织申报2024年度院级教科研课题的通知">
+<div class="text">
+<h3>关于组织申报2024年度院级教科研课题的通知</h3>
+<p class="l3">关于组织申报2024年度院级教科研课题的通知各二级学院、处（室）：为了充分发挥科研对党建、专业建设、人才培养、社会服务等各方面的支撑作用，助力学院优质校、提质培优、双高校等高质量建设项目发展，积极推进有组织的科研，提升我院教师尤其是青年教师的科研创新能力</p>
+<span class="see-more">查看更多>></span>
+</div>
+</a>
+</div>
+<div class="slider-item">
+<a class="item" href="/html/1000/2023-06-15/content-6633.html" target="_blank" title="新疆维吾尔自治区重点实验室管理办法">
+<div class="text">
+<h3>新疆维吾尔自治区重点实验室管理办法</h3>
+<p class="l3">新疆维吾尔自治区重点实验室管理办法 第一章  总 则第一条  为深入落实《新疆维吾尔自治区关于全面加强基础科学研究的实施意见》(新政发〔2018〕80号)，进一步规范和加强自治区重点实验室（以下简称“重点实验室”）建设、运行与管理，提升科技自立自强的支撑能力</p>
+<span class="see-more">查看更多>></span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(".title5-responsive5758").slick({
+dots: false,
+infinite: true,
+arrows:false,
+speed: 300,
+slidesToShow: 1,
+slidesToScroll: 1,
+});
+</script>
+</div>
+<div class="research-pic">
+<img width="500" height="300" border="none" alt="" src="/attachment/core/label/2023_07/13_08/8a78699ec463bd7f.jpg" />
+</div>
+<div class="research-title hidden-xs">
+<div class="title fz28">科研动态</div>
+<div class="more">
+<a href="/html/998/" target="_blank">更多>></a></div>
+</div>
+</div>
+<div class="quick-box">
+<ul class="quick-list row">
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li1"><a class="tit" href="https://jwgl.akszy.com/jsxsd/" target="_blank" title="教务系统"><img src="/skin/akszy/cms/index/fi1.png"><span>教务系统</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li2"><a class="tit" href="http://akszj.ylxue.net/" target="_blank" title="继续教育平台"><img src="/skin/akszy/cms/index/fi2.png"><span>继续教育平台</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li3"><a class="tit" href="https://oa.akszy.com" target="_blank" title="办公自动化"><img src="/skin/akszy/cms/index/fi3.png"><span>办公自动化</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li4"><a class="tit" href="/html/1041/" title="网络教学平台"><img src="/skin/akszy/cms/index/fi4.png"><span>网络教学平台</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li5"><a class="tit" href="http://zcgl.akszy.com/cas/login" target="_blank" title="资产管理系统"><img src="/skin/akszy/cms/index/fi5.png"><span>资产管理系统</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li6"><a class="tit" href="http://jck.akszy.edu.cn/cwgk" target="_blank" title="财务查询"><img src="/skin/akszy/cms/index/fi6.png"><span>财务查询</span></a></li>
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li7"><a class="tit" href="https://zhxg.akszy.com/zhxg" target="_blank" title="学生管理系统"><img src="/skin/akszy/cms/index/fi7.png"><span>学生管理系统</span></a></li>     
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li7"><a class="tit" href="https://hr.akszy.com" target="_blank" title="人力资源系统"><img src="/skin/akszy/cms/index/fi7.png"><span>人力资源系统</span></a></li>     
+
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li1"><a class="tit" href="http://akszysz.fanya.chaoxing.com/portal" target="_blank" title="马克思主义学院"><img src="/skin/akszy/cms/index/fi1.png"><span>马克思主义学院</span></a></li>   
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li2"><a class="tit" href="/html/1036/" title="课程思政"><img src="/skin/akszy/cms/index/fi2.png"><span>课程思政</span></a></li>   
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li3"><a class="tit" href="http://172.16.3.159/examxx/login" target="_blank" title="在线考试平台"><img src="/skin/akszy/cms/index/fi3.png"><span>在线考试平台</span></a></li>   
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li6"><a class="tit" href="http://172.16.3.141:380/#/" target="_blank" title="诊断与改进"><img src="/skin/akszy/cms/index/fi6.png"><span>诊断与改进</span></a></li>   
+
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li5"><a class="tit" href="https://aksdqzyjy.mh.chaoxing.com/" target="_blank" title="地区职业教育在线教学平台"><img src="/skin/akszy/cms/index/fi5.png"><span>地区职业教育在线教学平台</span></a></li>  
+<li class="col-md-2dot4 col-sm-2dot4 col-xs-6 li4"><a class="tit" href="http://sso.akszy.com/cas/login" target="_blank" title="一站式服务大厅"><img src="/skin/akszy/cms/index/fi4.png"><span>一站式服务大厅</span></a></li>   
+
+
+</ul>
+</div>
+<div class="row row-15">
+<div class="col-md-4 col-sm-4 col-xs-12 col-pd-15">
+<div class="news-box mb20">
+<div class="news-head clearfix">
+<div class="title fz28 pull-left">校企合作</div>
+<div class="more pull-right">
+<a href="/html/1007/" target="_blank">更多>></a></div>
+</div>
+<div class="news-item">
+<ul class="themelist30" style="font-size:16px;">
+<li>
+<div class="item">
+<a href="/html/1009/2022-10-10/content-6462.html" target="_blank" title="阿克苏职业技术学院第二批公开实习单位名单">阿克苏职业技术学院第二批公开实习单位名单</a>
+<p class="datatime">2022-10-10</p>
+</div>
+<span class="line"></span>
+</li>
+<li>
+<div class="item">
+<a href="/html/1009/2022-08-28/content-6463.html" target="_blank" title="阿克苏职业技术学院首批公开实习单位名单">阿克苏职业技术学院首批公开实习单位名单</a>
+<p class="datatime">2022-08-28</p>
+</div>
+<span class="line"></span>
+</li>
+<li>
+<div class="item">
+<a href="/html/1007/2022-03-01/content-6401.html" target="_blank" title="职业学校学生实习管理规定">职业学校学生实习管理规定</a>
+<p class="datatime">2022-03-01</p>
+</div>
+<span class="line"></span>
+</li>
+<li>
+<div class="item">
+<a href="/html/1007/2020-12-18/content-6403.html" target="_blank" title="《关于深入推进产教融合工作的实施意见》">《关于深入推进产教融合工作的实施意见》</a>
+<p class="datatime">2020-12-18</p>
+</div>
+<span class="line"></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 col-pd-15">
+<div class="news-box mb20">
+<div class="news-head clearfix">
+<div class="title fz28 pull-left">信息公开</div>
+<div class="more pull-right"><a href="http://117.190.141.163:8989/s.php/xxgk" target="_blank">更多>></a></div>
+</div>
+<div class="news-item">
+<ul class="themelist30" style="font-size:16px;">
+<li>
+<div class="item">
+<a href="/html/1014/2023-10-12/content-9273.html" target="_blank" title="对李双娣等25名同志转为中共正式党员的审批意见">对李双娣等25名同志转为中共正式党员的审批意见</a>
+<p class="datatime">2023-10-12</p>
+</div>
+<span class="line"></span>
+</li>
+<li>
+<div class="item">
+<a href="/html/1016/2023-07-14/content-9276.html" target="_blank" title="2022年部门决算公开">2022年部门决算公开</a>
+<p class="datatime">2023-07-14</p>
+</div>
+<span class="line"></span>
+</li>
+<li>
+<div class="item">
+<a href="/html/1017/2023-06-14/content-6538.html" target="_blank" title="国通语相关法律法规">国通语相关法律法规</a>
+<p class="datatime">2023-06-14</p>
+</div>
+<span class="line"></span>
+</li>
+<li>
+<div class="item">
+<a href="/html/1016/2023-04-28/content-6528.html" target="_blank" title="新疆维吾尔自治区阿克苏职业技术学院2023年预算公开">新疆维吾尔自治区阿克苏职业技术学院2023年预算公开</a>
+<p class="datatime">2023-04-28</p>
+</div>
+<span class="line"></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 col-pd-15">
+<div class="news-box mb20">
+<div class="news-head clearfix">
+<div class="title fz28 pull-left">招标政策</div>
+<div class="more pull-right">
+<a href="/html/1005/" target="_blank">更多>></a></div>
+</div>
+<div class="news-main">
+<style type="text/css">
+.list_theme_date19 .item{margin-bottom:20px;padding:18px 10px;background:#fff;overflow:hidden;box-shadow: 0 0 10px rgb(0 0 0 / 10%);transition: transform linear 0.3s;}
+.list_theme_date19 .item .date{width:86px;height:69px;float:left;text-align:center;background: #a20606;}
+.list_theme_date19 .item .date span{color:#ffffff;font-size:16px;display:block;text-align:center;}
+.list_theme_date19 .item .date .d{font-size:24px;padding-top:8px;font-weight:bold;}
+.list_theme_date19 .item .text{margin-left:100px;}
+.list_theme_date19 .item .text h4{width:100%;line-height:33px;color:#464c51;text-overflow:-o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;line-clamp: 2;-webkit-box-orient: vertical;}
+.list_theme_date19 .item .text h4 a{font-size:16px;color:#464c51;position:relative;}
+.list_theme_date19 .item:hover .text h4 a{color: #b13e3e;}
+</style>
+<ul class="list_theme_date19">
+<li>
+<div class="item">
+<div class="date">
+<span class="d">06</span>
+<span class="y">2023-05</span>
+</div>
+<div class="text">
+<h4><a href="/html/1005/2023-05-06/content-6375.html" target="_blank">政府采购货物和服务招标投标管理办法</a></h4>
+</div>
+</div>
+</li>
+<li>
+<div class="item">
+<div class="date">
+<span class="d">06</span>
+<span class="y">2023-05</span>
+</div>
+<div class="text">
+<h4><a href="/html/1005/2023-05-06/content-6376.html" target="_blank">中华人民共和国政府采购法实施条例</a></h4>
+</div>
+</div>
+</li>
+<li>
+<div class="item">
+<div class="date">
+<span class="d">06</span>
+<span class="y">2023-05</span>
+</div>
+<div class="text">
+<h4><a href="/html/1005/2023-05-06/content-6381.html" target="_blank">中华人民共和国政府采购法实施条例</a></h4>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page4">
+<div class="container">
+<div class="common-box">
+<div class="common-head clearfix">
+<div class="title fz28">校园生活</div>
+<div class="more pull-right">
+<a href="/html/1004/" target="_blank">更多>></a></div>
+</div>
+<div class="common-main">
+
+<style type="text/css">
+.slider9-5744 .fold_wrap{width:100%;height:514px;margin:40px auto 0 auto;overflow:hidden;}
+.slider9-5744 .fold_wrap li{float:left;width:100px;height:514px;position:relative;overflow:hidden;cursor:pointer;background:#fff;}
+.slider9-5744 .fold_wrap li .item{width:100%;height:100%;overflow:hidden;position:relative;}
+.slider9-5744 .fold_wrap li .showt{display:table;width:100%;height:100%;line-height:100%;position: absolute;top:0;left:0;background-color: rgba(0,0,0,.38);writing-mode:tb-lr;writing-mode:vertical-lr;}
+.slider9-5744 .fold_wrap li .showt a{display:table-cell;vertical-align: middle;width:22px;font-size:22px;color:#ffffff;line-height:28px;word-wrap: break-word;word-break: break-all;text-align: center;}
+
+.slider9-5744 .fold_wrap li .showt a span{width:30px;color:#fff;font-size:20px;padding-top:38px;position:absolute;bottom:5%;left:10%;background: url(/skin/label/theme/arr11.png) center top no-repeat;letter-spacing:2px;}
+
+.slider9-5744 .fold_wrap li .adv_intro{width:100%;height:100%;position:absolute;left:0;top:0;background:rgba(35,80,155,.8); color:#FFF;z-index: 10;opacity: 0;visibility: hidden;}
+.slider9-5744 .fold_wrap li .adv_intro a{width:100%;height:100%;display:block;position:relative;overflow:hidden;}
+.slider9-5744 .fold_wrap li .adv_intro a span{color:#fff;font-size:22px;padding:30px 25px;margin:0;position:absolute;bottom:0;left:0;font-weight:bold;background: url(/skin/label/theme/arr12.png) right center no-repeat;letter-spacing:2px;}
+.slider9-5744 .fold_wrap li .pic_auto{width:100%;height:100%;background-position: center center;background-repeat: no-repeat;background-size: cover;}
+.slider9-5744 .fold_wrap li.active .showt{opacity: 0;visibility: hidden;}
+.slider9-5744 .fold_wrap li.active .adv_intro{opacity: 1;visibility: inherit;}
+.slider9-5744 .fold_wrap2 li{width:100%;position:relative;margin-bottom:12px;overflow:hidden;}
+.slider9-5744 .fold_wrap2 li .item{padding:8%;background-position: center center;background-repeat: no-repeat;background-size: cover;}
+.slider9-5744 .fold_wrap2 li .item .intro{position: absolute;left: 0;top:0;right: 0;bottom: 0;z-index: 10;color: #fff;}
+.slider9-5744 .fold_wrap2 li .item .intro a{width:100%;height:100%;display:block;position:relative;}
+.slider9-5744 .fold_wrap2 li .item .intro a span{width:100%;color:#fff;font-size:16px;padding:10px 10px;margin:0;position:absolute;bottom:0;left:0;font-weight:bold;background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9));letter-spacing:2px;}
+</style>
+<div class="slider9-5744">
+<ul class="fold_wrap hidden-sm hidden-xs" id="sm">
+<li>
+<div class="item item1">
+<div class="showt"><a href="/html/993/" target="_blank"><span>校园风光</span></a></div>
+<div class="pic_auto pic_auto1" style="background-image: url(/attachment/core/label/2023_11/30_09/0df4ed154d6c8bd8.jpg);"></div>
+<div class="adv_intro" style="background: none transparent scroll repeat 0% 0%">
+<a href="/html/993/" target="_blank"><span>校园风光</span></a>
+</div>
+</div>
+</li>
+<li>
+<div class="item item2">
+<div class="showt"><a href="/html/1004/" target="_blank"><span>校园文化</span></a></div>
+<div class="pic_auto pic_auto1" style="background-image: url(/attachment/core/label/2023_11/30_09/934b85925e34e0ce.jpg);"></div>
+<div class="adv_intro" style="background: none transparent scroll repeat 0% 0%">
+<a href="/html/1004/" target="_blank"><span>校园文化</span></a>
+</div>
+</div>
+</li>
+<li>
+<div class="item item3">
+<div class="showt"><a href="/html/1066/" target="_blank"><span>学生活动</span></a></div>
+<div class="pic_auto pic_auto1" style="background-image: url(/attachment/core/label/2023_11/30_09/b12d71e9d8cdcd47.png);"></div>
+<div class="adv_intro" style="background: none transparent scroll repeat 0% 0%">
+<a href="/html/1066/" target="_blank"><span>学生活动</span></a>
+</div>
+</div>
+</li>
+<li>
+<div class="item item4">
+<div class="showt"><a href="/html/988/" target="_blank"><span>师资队伍</span></a></div>
+<div class="pic_auto pic_auto1" style="background-image: url(/attachment/core/label/2023_11/30_09/5818328a2b6f05d9.png);"></div>
+<div class="adv_intro" style="background: none transparent scroll repeat 0% 0%">
+<a href="/html/988/" target="_blank"><span>师资队伍</span></a>
+</div>
+</div>
+</li>
+<li>
+<div class="item item5">
+<div class="showt"><a href="/html/947/" target="_blank"><span>全景校园</span></a></div>
+<div class="pic_auto pic_auto1" style="background-image: url(/attachment/core/label/2023_11/30_09/a34843c17c5db048.png);"></div>
+<div class="adv_intro" style="background: none transparent scroll repeat 0% 0%">
+<a href="/html/947/" target="_blank"><span>全景校园</span></a>
+</div>
+</div>
+</li>
+</ul>
+<ul class="fold_wrap2 visible-sm-block visible-xs-block">
+<li>
+<div class="item item1" style="background-image: url(/attachment/core/label/2023_11/30_09/0df4ed154d6c8bd8.jpg);">
+<div class="intro">
+<a href="/html/993/" target="_blank"><span>校园风光</span></a>
+</div>
+</div>
+</li>
+<li>
+<div class="item item2" style="background-image: url(/attachment/core/label/2023_11/30_09/934b85925e34e0ce.jpg);">
+<div class="intro">
+<a href="/html/1004/" target="_blank"><span>校园文化</span></a>
+</div>
+</div>
+</li>
+<li>
+<div class="item item3" style="background-image: url(/attachment/core/label/2023_11/30_09/b12d71e9d8cdcd47.png);">
+<div class="intro">
+<a href="/html/1066/" target="_blank"><span>学生活动</span></a>
+</div>
+</div>
+</li>
+<li>
+<div class="item item4" style="background-image: url(/attachment/core/label/2023_11/30_09/5818328a2b6f05d9.png);">
+<div class="intro">
+<a href="/html/988/" target="_blank"><span>师资队伍</span></a>
+</div>
+</div>
+</li>
+<li>
+<div class="item item5" style="background-image: url(/attachment/core/label/2023_11/30_09/a34843c17c5db048.png);">
+<div class="intro">
+<a href="/html/947/" target="_blank"><span>全景校园</span></a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<script type="text/javascript">
+(function(){
+$(".fold_wrap li:first").addClass('active');
+var slideMenu=function(){
+var sp,st,t,m,sa,l,w,gw,ot;
+return{
+destruct:function(){
+if(m){
+clearInterval(m.htimer);
+clearInterval(m.timer);
+}
+},
+build:function(sm,sw,mt,s,sl,h){
+sp=s;
+st=sw;
+t=mt;
+m=document.getElementById(sm);
+sa=m.getElementsByTagName('li');
+l=sa.length;
+w=m.offsetWidth;
+gw=w/l;
+ot=Math.floor((w-st)/(l-1));
+var i=0;
+for(i;i<l;i++){
+s=sa[i];
+s.style.width=gw+'px';
+this.timer(s)
+}
+if(sl!=null){
+m.timer=setInterval(function(){
+slideMenu.slide(sa[sl-1])
+},t)}
+},
+timer:function(s){
+s.onmouseover=function(){
+clearInterval(m.htimer);
+clearInterval(m.timer);
+m.timer = setInterval(function(){
+slideMenu.slide(s)
+},t);
+$(this).addClass('active');
+$(this).siblings().removeClass('active');
+}
+s.onmouseout=function(){
+
+}
+},
+slide:function(s,c){
+var cw=parseInt(s.style.width);
+if((cw<st && !c) || (cw>gw && c)){
+var owt=0; var i=0;
+for(i;i<l;i++){
+if(sa[i]!=s){
+var o,ow; var oi=0; o=sa[i]; ow=parseInt(o.style.width);
+if(ow<gw && c){
+oi=Math.floor((gw-ow)/sp);
+oi=(oi>0)?oi:1;
+o.style.width=(ow+oi)+'px';
+//console.log(o);
+//console.log(o.style.width);
+}else if(ow>ot && !c){
+oi=Math.floor((ow-ot)/sp);
+oi=(oi>0)?oi:1;
+o.style.width=(ow-oi)+'px';
+//console.log(o);
+//console.log(o.style.width);
+}
+if(c){
+owt=owt+(ow+oi)
+}else{
+owt=owt+(ow-oi)
+}
+}
+}
+s.style.width=(w-owt)+'px';
+}else{
+if(m.htimer)
+clearInterval(m.htimer)
+if(m.timer)
+clearInterval(m.timer);
+}
+}
+};
+}();
+if($(window).width()>991){
+slideMenu.build('sm',595,10,10,1);
+}
+})();
+</script>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page5">
+<div class="container">
+<div class="common-box">
+<div class="common-head clearfix">
+<div class="title fz28">专题专栏</div>
+<div class="more pull-right">
+<a href="/html/889/" target="_blank">更多>></a></div>
+</div>
+<div class="common-main">
+
+<style type="text/css">
+.pic16-responsive5746{margin:0 -5px;}
+.pic16-responsive5746 .slider-item .item{display:block;padding:0 5px;height:100%;position:relative;overflow:hidden;}
+.pic16-responsive5746 .slider-item .item .inner .pic{position: relative;overflow: hidden;}
+.pic16-responsive5746 .slider-item .item .inner .pic img{width:100%;transition: all 0.5s ease-out 0s;}
+.pic16-responsive5746 .slider-item .item .inner:hover .pic img{transform:scale(1.05);}
+.pic16-responsive5746 .slider-item .item .text{width:100%;padding:25px 30px;position:relative;background: -webkit-gradient(linear, left bottom, left top, from(#f28e27), to(#f3892b));background: linear-gradient(to left, rgba(242,142,39,.85), #f3892b 100%)}
+.pic16-responsive5746  .slick-slide:nth-child(2n) .slider-item .item .text{background: -webkit-gradient(linear, left bottom, left top, from(#f06e28), to(#f97242));background: linear-gradient(to left, rgba(250,113,66,.85), #f97242 100%)}
+.pic16-responsive5746  .slick-slide:nth-child(3n) .slider-item .item .text{background: -webkit-gradient(linear, left bottom, left top, from(#f06e28), to(#fd644f));background: linear-gradient(to left, rgba(253,100,79,.85), #fd644f 100%)}
+.pic16-responsive5746 .slider-item .item .text h3{color:#fff;font-size:18px;line-height:35px;margin-bottom:15px;position:relative;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.pic16-responsive5746 .slider-item .item .text .learn-more a{color:#fff;padding:8px;display:inline-block;border:1px dashed #ffffff;position:relative;border-radius:4px;transition: all 0.2s ease-out 0s;}
+.pic16-responsive5746 .slider-item .item .text .learn-more a:hover{color:#e60420;background:#ffffff;}
+.pic16-responsive5746  .slick-arrow{width:53px;height:53px;background-color:transparent;background-repeat:no-repeat;background-position: center;position: absolute;top:-130px;z-index:100;cursor: pointer;font-size:0;border:0;outline: none}
+.pic16-responsive5746 .slider-item .item .text .bg-hover{position: absolute;bottom: 0;width: 100%;display: block;height: 0;transition: height 0.3s ease-in-out 0.3s;-webkit-transition: height 0.3s ease-in-out 0.3s;    background: linear-gradient(transparent, #e84e2c);left: 0;right: 0;}
+.pic16-responsive5746 .slider-item .item .inner:hover .bg-hover{height: 100%;}
+.pic16-responsive5746  .slick-prev {background-image: url(/skin/label/theme/prev2.png);right:25%;}
+.pic16-responsive5746  .slick-next {background-image: url(/skin/label/theme/next2.png);right:20%;}
+@media (max-width: 767px){
+.pic16-responsive5746 .slider-item .item{padding:0 10px;}
+.pic16-responsive5746 .slider-item .item .inner .text h3{font-size:14px;margin:10px 0;}
+.pic16-responsive5746 .slider-item .item .inner .text p{padding-left:30px;background-position:10px center !important;}
+}
+</style>
+<div class="sliderbox-responsive5746">
+<div class="slider pic16-responsive5746">
+<div class="slider-item">
+<div class="item">
+<div class="inner">
+<div class="pic"><a href="http://www.akszy.edu.cn/ztjy/" target="_blank" title=""><img src="/attachment/core/label/2023_07/12_16/e29fd2ef2f4be9b5.jpg" alt="" ></a></div>
+<div class="text">
+<div class="bg-hover"></div>
+<h3>学习贯彻习近平新时代中国特色社会主义思想..</h3>
+<p class="learn-more text-right"><a href="http://www.akszy.edu.cn/ztjy/" target="_blank" title="">> ></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="slider-item">
+<div class="item">
+<div class="inner">
+<div class="pic"><a href="http://www.akszy.edu.cn/yzxjs/" target="_blank" title=""><img src="/attachment/core/label/2023_11/30_09/acf86764b38afde4.png" alt="" ></a></div>
+<div class="text">
+<div class="bg-hover"></div>
+<h3>优质校建设专题网</h3>
+<p class="learn-more text-right"><a href="http://www.akszy.edu.cn/yzxjs/" target="_blank" title="">> ></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="slider-item">
+<div class="item">
+<div class="inner">
+<div class="pic"><a href="https://akszysszg.mh.chaoxing.com/" target="_blank" title=""><img src="/attachment/core/label/2023_11/30_09/3b3e095f0f0fc20f.jpg" alt="" ></a></div>
+<div class="text">
+<div class="bg-hover"></div>
+<h3>新时代“四史”教育展馆</h3>
+<p class="learn-more text-right"><a href="https://akszysszg.mh.chaoxing.com/" target="_blank" title="">> ></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="slider-item">
+<div class="item">
+<div class="inner">
+<div class="pic"><a href="/html/1053/" target="_blank" title=""><img src="/attachment/core/label/2024_07/06_14/7d39f4aef876feca.png" alt="" ></a></div>
+<div class="text">
+<div class="bg-hover"></div>
+<h3>质量工程建设专题</h3>
+<p class="learn-more text-right"><a href="/html/1053/" target="_blank" title="">> ></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(".pic16-responsive5746").slick({
+dots: false,
+arrows:false,
+slidesToShow: 4,
+slidesToScroll: 1,
+autoplay: true,
+responsive: [
+{
+breakpoint: 1200,
+settings: {
+slidesToShow: 3
+}
+},
+{
+breakpoint: 768,
+settings: {
+slidesToShow: 2
+}
+},
+{
+breakpoint: 480,
+settings: {
+slidesToShow: 1
+}
+}
+]
+});
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">jQuery(".common-tabs").slide({});</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".tab1").tab2({ ev: 'mouseover', more: false, auto: false });
+})
+</script><div class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="copyright">
+版权所有：阿克苏职业技术学院&nbsp;&nbsp;&nbsp;&nbsp;邮编：843000   </br>Copyright 阿克苏职业技术学院&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" title="新ICP备14001082号">新ICP备14001082号</a></br>
+地址：中国新疆阿克苏市温宿县温宿镇学府路41号  </br> 网址：www.akszy.edu.cn</br>
+涉未成年举报热线：（0997）6889197</br>
+中央网信办违法和不良信息举报中心    https://www.12377.cn/</br>
+新疆互联网违法和不良信息举报平台     https://www.xjwljb.com/</br>
+阿克苏地区举报电话：2187787
+<p></p>
+</div>
+</div>
+<div class="col-md-5 col-sm-5 col-xs-12">
+<div class="footer-logo">
+<img width="466" height="300" border="none" alt="" src="/attachment/core/label/2023_07/12_10/0ef352cf9d9b23e5.png" />
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-12">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4">
+<div class="footer-icons">
+<div class="tit wx"><img src="/skin/akszy/core/header/images/wx.png"></div>
+<h4>官方微信公众号</h4>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2023_11/16_22/630fd53e48587be4.png" />
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-4">
+<div class="footer-icons">
+<div class="tit wx"><img src="/skin/akszy/core/header/images/wx.png"></div>
+<h4>招生公众号</h4>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2023_11/16_18/01fd7865554bc7fd.png" />
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-4">
+<div class="footer-icons">
+<div class="tit wx"><img src="/skin/akszy/core/header/images/wx.png"></div>
+<h4>手机版</h4>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="/attachment/core/label/2023_11/30_12/ee5b60542c22586c.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+/*
+@ parm 系统动态域名下资源文件：/images/arrow.gif
+*/
+checkIfUserIsInLAN('http://172.16.3.40/images/arrow.gif');/*
+@ parm 要监控的class或id，示例.abv_box或#tab_con
+*/
+CheckUrlIsInLAN('.container');
+});
+</script>
+
+</body>
+</html>

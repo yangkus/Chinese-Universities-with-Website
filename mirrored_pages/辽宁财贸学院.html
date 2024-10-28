@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<title>辽宁财贸学院</title>
+<link rel="stylesheet" href="https://www.lncmxy.edu.cn/gongyong/lncm/new/css/base.css" />
+<link rel="stylesheet" href="https://www.lncmxy.edu.cn/gongyong/lncm/new/css/style.css" />
+<link rel="stylesheet" href="https://www.lncmxy.edu.cn/gongyong/lncm/new/css/swiper.min.css" />
+<script src="https://www.lncmxy.edu.cn/gongyong/lncm/new/js/jquery3x.js"></script>
+<script src="https://www.lncmxy.edu.cn/gongyong/lncm/new/js/rem.js"></script>
+<script src="https://www.lncmxy.edu.cn/gongyong/lncm/new/js/swiper.min.js"></script>		<!-- Demo styles -->
+		<style>
+          .playeribanner img{
+            height:8.45rem;
+          }
+		</style>
+
+	</head>
+	<body>
+<!--		<div class="banner_box">
+			<div class="img_box">
+				<img src="img/banner1.jpg" />
+				<img src="img/banner1.jpg" style="display: none;" />
+			</div>
+			<ul>
+				<li class="on"></li>
+				<li></li>
+			</ul>
+			<div class="btn left_btn">
+				<img src="img/banner_btb_left.png" alt="" />
+			</div>
+			<div class="btn right_btn">
+				<img src="img/banner_btb_right.png" alt="" />
+			</div>
+		</div>-->
+      <div class="banner_box">
+            <script type="text/javascript">
+; (function ($) {
+	$.fn.extend({
+		"nav": function (con, listSize) {
+			var counts = listSize;
+			var $this = $(this), $nav = $this.find('.switch-tab'), t = (con && con.t) || counts000, a = (con && con.a) || counts00, i = 0, autoChange = function () {
+				$nav.find('a:eq(' + (i + 1 === counts ? 0 : i + 1) + ')').addClass('current').siblings().removeClass('current');
+				$this.find('.banner:eq(' + i + ')').css('display', 'none').end().find('.banner:eq(' + (i + 1 === counts ? 0 : i + 1) + ')').css({
+					display: 'block',
+					opacity: 0.5
+				}).animate({
+					opacity: 1
+				}, a, function () {
+					i = i + 1 === counts ? 0 : i + 1;
+				}).siblings('.banner').css({
+					display: 'none',
+					opacity: 0.5
+				});
+			}, st = setInterval(autoChange, t);
+			$this.hover(function () {
+				clearInterval(st);
+				return false;
+			}, function () {
+				st = setInterval(autoChange, t);
+				return false;
+			}).find('.switch-tab>a').bind('click', function () {
+				i = $(this).index() - 1;
+				autoChange();
+				return false;
+			});
+			return $this;	
+		}
+	});
+}(jQuery));
+</script>
+<style>
+.playeribanner{
+	position:relative;
+}
+.playeribanner .banner {
+    width: 100%;
+}
+.playeribanner .switch-tab{
+	position: absolute;
+	left: 0;
+	bottom: 30px;
+	width: 100%;
+	text-align: center;
+	font-size: 0;
+}
+.playeribanner .switch-tab a{
+	display: inline-block;
+	width: 40px;
+	height: 3px;
+	background-color: #d0cbcd;
+	margin: 0 4px;
+	border-radius: 0;
+	cursor: pointer;
+}
+.playeribanner .switch-tab a.current{
+	background-color: #de3a3a;
+}
+</style>
+<div class="playeribanner">
+		<img src="https://www.lncmxy.edu.cn/upload/resources/image/20240717/1721201567240.jpg" class="banner" alt="校园夜景" />
+		<img src="https://www.lncmxy.edu.cn/upload/resources/image/20240717/1721201532200.jpg" class="banner" alt="学校正门" style="display:none;"/>
+		<img src="https://www.lncmxy.edu.cn/upload/resources/image/20240717/1721201490956.jpg" class="banner" alt="校园鸟瞰图" style="display:none;"/>
+	<div class="switch-tab">
+		<a href="javascript:void(0);" onclick="return false;" class="current">0</a>
+		<a href="javascript:void(0);" onclick="return false;" >1</a>
+		<a href="javascript:void(0);" onclick="return false;" >2</a>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		$('.playeribanner').nav({
+			t:5500,	//轮播时间
+			a:1000  //过渡时间
+		},3);
+	});
+</script>
+ 
+      </div>
+		<div class="herder">
+			<div class="nav_sc">
+				<div class="logo"></div>
+				<div class="nav">
+ <!--                 <a href="https://www.lncmxy.edu.cn/index.html" class="on">首页</a>-->
+                  <a href="javascript:;" class="on">首页</a>
+					<a href="javascript:;">
+						辽财概况
+						<ul>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcgk/xyjj/list.html')">学院简介</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcgk/zysz/list.html')">专业设置</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcgk/sxsjj/list.html')">实训室简介</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcgk/jg/list.html')">机构设置</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcgk/xxxh/list.html')">校训校徽</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcgk/xxgk/list.html')">信息公开</li>
+						</ul>
+					</a>
+					<a href="javascript:;">辽财新闻
+                  		<ul>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcxw/mtlc/list.html')">媒体辽财</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/list.html')">辽财公告</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcxw/lczx/list.html')">辽财资讯</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcsp/list.html')">辽财视频</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcyw/list.html')">辽财要闻</li>
+						</ul>
+                  </a>
+					<a href="javascript:;">招生就业
+                        <ul>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/zsjy/zszl/list.html')">招生专栏</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/zsjy/jypy/list.html')">就业培养</li>
+						</ul>
+                  </a>
+					<a href="javascript:;">文化生活
+                  		<ul>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/whsh/xysh/list.html')">校园生活</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/whsh/stsh/list.html')">社团生活</li>
+						</ul>
+                  </a>
+                  <a href="javascript:;">校园风光
+                  		<ul>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/xyfg_1/zjlc/list.html')">走近辽财</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/xyfg_1/dmlc/list.html')">大美辽财</li>
+						</ul>
+                  </a>
+					<a href="javascript:;">智慧校园
+                  		<ul>
+                              <li onclick="toJump('https://www.720yun.com/vr/bd7jzgkuzu3')">校园导览</li>
+                              <li onclick="toJump('http://www.duxiu.com/')">数字图书馆</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/zhxy/zhxyjj/list.html')">智慧校园</li>
+						</ul>
+                  </a>
+					<a href="https://www.lncmxy.edu.cn/lncmxy/student/list.html">录取结果</a>
+					<a href="javascript:;">审核评估
+                  		<ul>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/shpg/zzjg/list.html')">组织架构</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/shpg/shpg/list.html')">政策文件</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/shpg/pjtz/list.html')">评建通知</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/shpg/pjdt/list.html')">评建动态</li>
+                              <li onclick="toJump('https://www.lncmxy.edu.cn/lncmxy/shpg/zlbg/list.html')">质量报告</li>
+						</ul>
+                  </a>
+				</div>
+			</div>
+          	<div class="sc_box">
+				<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/sc_icon.png" alt="" onclick="search()"/>
+              <input type="text" name="keyword" id="keyword" value="" placeholder="新生入校/请假申请/考试..." autocomplete="off" onclick="stopBubble(event);">
+			</div>
+		</div>
+
+		<div class="in_xinwen_box">
+			<div class="w">
+				<div class="xinwen_box">
+					<div class="tit_box">
+						<div class="tit">
+							<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon1.png" alt="" />
+							<h2>辽财公告</h2>
+							<h3>Campus bulletin</h3>
+						</div>
+						<a href="https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/list.html">
+							查看更多 <img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/jiantou_icon.png" alt="" />
+						</a>
+					</div>
+					<ul>
+<!--TCMS_Catalog_List_HasNextPage-->                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/1105.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">新教师上岗资格考核暨教学基本功比武考核通知</a>
+							</div>
+							<span>2024-09-26</span>
+						</li>
+                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/1098.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">关于2024年9月第74次全国计算机等级考试社会考生入校相关事宜的通知</a>
+							</div>
+							<span>2024-09-19</span>
+						</li>
+                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/1106.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">教学简报（第五期）</a>
+							</div>
+							<span>2024-09-11</span>
+						</li>
+                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/463.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">2021-2023届毕业生及用人单位调查通知</a>
+							</div>
+							<span>2024-05-30</span>
+						</li>
+                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/461.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">2024级专升本新生档案、党团关系转接地址</a>
+							</div>
+							<span>2024-05-29</span>
+						</li>
+                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/459.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">教学简报（第四期）</a>
+							</div>
+							<span>2024-05-21</span>
+						</li>
+                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/456.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">教学简报（第三期）</a>
+							</div>
+							<span>2024-05-07</span>
+						</li>
+                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/455.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">教学简报（第二期）</a>
+							</div>
+							<span>2024-05-06</span>
+						</li>
+                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/454.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">教学简报（第一期）</a>
+							</div>
+							<span>2024-04-27</span>
+						</li>
+                      	<li onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcgg/2024/10/18/446.html')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">关于辽宁省教育厅2021年度科研项目结题评审结果的公示</a>
+							</div>
+							<span>2024-01-06</span>
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="xinwen_box">
+					<div class="tit_box">
+						<div class="tit">
+							<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon1.png" alt="" />
+							<h2>媒体辽财</h2>
+							<h3>Media Campus</h3>
+						</div>
+						<a href="https://www.lncmxy.edu.cn/lncmxy/lcxw/mtlc/list.html">
+							查看更多 <img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/jiantou_icon.png" alt="" />
+						</a>
+					</div>
+					<ul>
+<!--TCMS_Catalog_List_HasNextPage-->                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/_SuRjoZ9rOxRnn2CKccCvg')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">放歌魅力辽财 唱响红色情怀丨2024级新生合唱比赛精彩来袭</a>
+							</div>
+							<span>2024-10-17</span>
+						</li>
+                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/nGQ2BFCwO1s2kqLiPMF_pg')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">学习全会精神 凝聚奋进力量</a>
+							</div>
+							<span>2024-10-16</span>
+						</li>
+                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/_uqPIKbGJKzj-clk75UryA')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">一起走过深秋的辽财</a>
+							</div>
+							<span>2024-10-15</span>
+						</li>
+                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/lPIK0wvOjdWDG-UKLzr-pw')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">学校组织开展校园食品安全专项培训会</a>
+							</div>
+							<span>2024-10-12</span>
+						</li>
+                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/FJFF1SE7WHVNF8SVvzpBPA')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">在秋风秋韵里品味“登高望远”</a>
+							</div>
+							<span>2024-10-11</span>
+						</li>
+                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/jT1vQ5Sk2Zt9jiNdFB5hyg')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">超星电子书·寒露专辑丨霜白凝秋意 好书伴夜长</a>
+							</div>
+							<span>2024-10-08</span>
+						</li>
+                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/PClG90_kHLqrAIwgpAUenQ')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">秋日里，来和辽财续个火花！</a>
+							</div>
+							<span>2024-10-07</span>
+						</li>
+                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/qJde5dUB-sMnZVRwz9s-9A')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">我爱你，中国！</a>
+							</div>
+							<span>2024-10-01</span>
+						</li>
+                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/pZIM_j3kjityovHMgJtdtg')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">礼赞盛世中国 放飞青春梦想 ——辽财新生思政第一课“燃爆全场”</a>
+							</div>
+							<span>2024-09-27</span>
+						</li>
+                      	<li onclick="openBlank('https://mp.weixin.qq.com/s/faequVo9JM2HJ7ZYKL-0Cg')">
+							<div>
+								<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+								<a href="javascript:;">辽宁财贸学院隆重举行2024级学生军事训练考核暨开学典礼</a>
+							</div>
+							<span>2024-09-25</span>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+		<div class="yingshiliaocai_box">
+			<div class="w">
+				<div class="tit_box">
+					<div class="tit">
+						<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon2.png" alt="" />
+						<h2>影像辽财</h2>
+						<h3>Campus imaging</h3>
+					</div>
+					<a href="https://www.lncmxy.edu.cn/lncmxy/lcxw/lcsp/list.html">
+						查看更多 <img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/jiantou_icon2.png" alt="" />
+					</a>
+				</div>
+
+				<div class="yingshi_box">
+					<div class="swiper mySwiper">
+						<div class="swiper-wrapper">
+                          
+							<div style="cursor: pointer;" class="swiper-slide" onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcsp/2024/10/18/550.html')">
+								<img src="https://www.lncmxy.edu.cn//lncm/preview/cms/upload/resources/image/20240713/1720839242862.png" alt="" />
+								<div class="text">
+									<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/vd_icon.png" alt="" />
+									<h2>毕业季视频vlog</h2>
+								</div>
+							</div>
+							<div style="cursor: pointer;" class="swiper-slide" onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcsp/2024/10/18/551.html')">
+								<img src="https://www.lncmxy.edu.cn//lncm/preview/cms/upload/resources/image/20240713/1720839371707.png" alt="" />
+								<div class="text">
+									<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/vd_icon.png" alt="" />
+									<h2>我在辽财等你vlog</h2>
+								</div>
+							</div>
+							<div style="cursor: pointer;" class="swiper-slide" onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcsp/2024/10/18/549.html')">
+								<img src="https://www.lncmxy.edu.cn//lncm/preview/cms/upload/resources/image/20240713/1720836843022.jpg" alt="" />
+								<div class="text">
+									<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/vd_icon.png" alt="" />
+									<h2>宣传片vlog</h2>
+								</div>
+							</div>
+							<div style="cursor: pointer;" class="swiper-slide" onclick="openBlank('https://www.lncmxy.edu.cn/lncmxy/lcxw/lcsp/2024/10/18/548.html')">
+								<img src="https://www.lncmxy.edu.cn//lncm/preview/cms/upload/resources/image/20240713/1720836729776.jpg" alt="" />
+								<div class="text">
+									<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/vd_icon.png" alt="" />
+									<h2>转专业vlog</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+
+
+			</div>
+		</div>
+		
+		
+		<div class="gengduofuwu_box">
+			<div class="w">
+				<div class="tit_box">
+					<div class="tit">
+						<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/tit_icon1.png" alt="" />
+						<h2>更多服务</h2>
+						<h3>More services</h3>
+					</div>
+				</div>
+				<div class="fuwu_list">
+					<a href="https://oa.lncmxy.com" target="_blank">
+						<h2>数字校园</h2>
+						<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/fw_type1.png" alt="" />
+					</a>
+					<a href="https://oa.lncmxy.com/party" target="_blank">
+						<h2>智慧党建</h2>
+						<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/fw_type2.png" alt="" />
+					</a>
+					<a href="https://iam.lncmxy.com" target="_blank">
+						<h2>统一认证平台</h2>
+						<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/fw_type3.png" alt="" />
+					</a>
+					<a href="https://mooc.lncmxy.com" target="_blank">
+						<h2>慕课视频</h2>
+						<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/fw_type4.png" alt="" />
+					</a>
+				</div>
+			</div>
+		</div>
+		
+<div class="xuexiaoxinxi_box">
+			<div class="w">
+				<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/logo_footer.png" class="logo" alt="" />
+				<ul>
+					<li>
+						<div>地址：</div>
+						<div>辽宁省兴城市兴海北街167号</div>
+					</li>
+					<li>
+						<div>邮箱：</div>
+						<div>info@lncmxy.edu.cn</div>
+					</li>
+					<li>
+						<div>邮编：</div>
+						<div>125105</div>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<div>联系电话（传真）:</div>
+						<div>0429-5418111</div>
+					</li>
+					<li>
+						<div>招生电话：</div>
+						<div>
+							<p>0429-5418555</p>
+							<p>0429-5418666</p>
+						</div>
+					</li>
+				</ul>
+				
+				<div class="erwm">
+					<img src="https://www.lncmxy.edu.cn/gongyong/lncm/new/img/erwm.jpg" alt="" />
+					<p>微信公众号</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="foorer">
+			Copyright © 辽宁财贸学院2009-2022  备案许可证号:辽ICP备09D05548-1号 辽ICP备09D05548-2号 辽ICP备09D05548-3号
+		</div>
+
+
+<script>
+	  function openBlank(url){
+      window.open(url)
+      }
+  
+    function toJump(url) {
+    window.location.href = url;
+  }
+    
+  function stopBubble(e) {
+    // 如果提供了事件对象，则这是一个非IE浏览器
+    if ( e && e.stopPropagation ) {
+      // 因此它支持W3C的stopPropagation()方法 
+      e.stopPropagation();
+    } else { 
+      // 否则，我们需要使用IE的方式来取消事件冒泡
+      window.event.cancelBubble = true;
+    }
+  }
+  
+  function search(keyword){
+    var searchUrl = 'https://www.lncmxy.edu.cn/lncmxy/ssjg/list.html';
+    if(keyword){
+        location.href = searchUrl+'?keyword='+keyword;
+    }else{
+        location.href = searchUrl+'?keyword='+$('[name="keyword"]').val();
+    }
+  }
+
+// 获取输入框元素
+    var input = document.getElementById('keyword');
+
+    // 添加键盘按下事件监听
+    input.addEventListener('keydown', function (event) {
+      // 检查按下的键是否为回车键（键码 13）
+      if (event.keyCode === 13) {
+        search()
+      }
+    });
+</script>
+	</body>
+</html>
+<script>
+	$(function() {
+		var iNow = 0;
+		var timer = null;
+		var aLi = $('.banner_box .img_box img');
+		var aNum = $('.banner_box ul li');
+		aLi.eq(0).show();
+		aNum.eq(0).addClass('on');
+
+		//手动控制轮播特效	
+		aNum.mouseover(function() {
+			iNow = $(this).index();
+			aLi.eq(iNow).fadeIn(500).siblings().fadeOut(500);
+			aNum.eq(iNow).addClass('on').siblings().removeClass('on');
+		});
+
+		function tab() {
+			aLi.eq(iNow).stop().fadeIn(500).siblings().fadeOut(500);
+			aNum.eq(iNow).addClass('on').siblings().removeClass('on');
+		};
+		$('.banner_box .btn.right_btn').click(function() {
+			next();
+		});
+
+		function next() {
+			iNow++;
+			if (iNow == aLi.length) {
+				iNow = 0;
+			}
+			tab();
+		}
+
+		$('.banner_box .btn.left_btn').click(function() {
+			iNow--;
+			if (iNow == -1) {
+				iNow = aLi.length - 1;
+			}
+			tab();
+		});
+
+		timer = setInterval(next, 3500);
+		$('.banner_box').hover(function() {
+			clearInterval(timer);
+		}, function() {
+			timer = setInterval(next, 3500);
+		});
+
+	});
+
+	$(function() {
+		$(window).on('scroll', function() {
+			if ($(window).scrollTop() >= $('.banner_box').outerHeight(true)) {
+				$('.herder').addClass('blank');
+			} else {
+				$('.herder').removeClass('blank');
+			}
+		});
+	});
+
+
+
+	window.onload = function() {
+		var swiper = new Swiper('.mySwiper', {
+		  slidesPerView: 3,
+		  spaceBetween: 24,
+		  loop:true,
+		  navigation: {
+		    nextEl: '.swiper-button-next',
+		    prevEl: '.swiper-button-prev',
+		  },
+		});
+	};
+</script>

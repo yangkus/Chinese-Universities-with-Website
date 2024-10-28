@@ -1,0 +1,3729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 启用极速模式(webkit) 911-->
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="keywords" content="首页">
+<meta name="description" content="北京中医药大学东方学院（国标码：13899以下简称东方学院）系北京中医药大学（教育部直属重点大学、国家中医药“211”工程建设高校）申办，2005年国家教育部批准的全日制本科普通高校。">
+<title>北京中医药大学东方学院</title>
+<link rel="shortcut icon" type="image/x-icon" href="img/upimages/favicon.ico" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name='apple-touch-fullscreen' content='yes' />
+<meta name="full-screen" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" id="headScreen" />
+<!-- SEO友好提示1 -->
+<meta name="applicable-device" content="pc,mobile">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/js/comm/html5shiv.js"></script>
+<script type="text/javascript" src="/js/comm/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/comm/jquery.min.js"></script>
+<script type="text/javascript" src="js/comm/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/comm/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="js/comm/ubox.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/comm/wow.js" charset="utf-8"></script>
+    <script>
+        var js_comm_alert_okButton = '确认';
+        var js_comm_alert_cancelButton = '取消';
+        var js_comm_alert_login = '登录';
+        var js_comm_alert_goreturn = '返回';
+    </script>
+<script type="text/javascript" src="js/comm/alert.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/01642339.js?1720520702" charset="utf-8"></script>
+<script type="text/javascript" src="js/comm/comm.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="css/comm/font/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/comm/animate.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/comm/box.css"/>
+<link rel="stylesheet" type="text/css" href="css/comm/alert.css"/>
+<link rel="stylesheet" type="text/css" href="css/comm/comm.css?1720520702"/>
+<link rel="stylesheet" type="text/css" href="css/01642339.css?1720520702"/>
+<link rel="stylesheet" type="text/css" href="css/comm/iconfont.css?1"/>
+<script>
+	var batchArr = [];
+	var checkLoad = 0;//判断是否是回调完成的
+</script>
+<script>
+    var isOpenMobie = 2;
+    var isOpenPad = 1;
+    if(isOpenMobie == 1){
+        if(isOpenPad == 1){
+            $("body").css("width","auto");
+        }else{
+            //是否手机端判断
+            var ua = navigator.userAgent;
+            var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+                isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+                isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+                isMobile = isIphone || isAndroid;
+            if(isMobile){
+                $("body").css("width","1280px");
+            }else{
+                $("body").css("width","auto");
+            }
+        }
+    }else{
+        $("body").css("width","auto");
+        $("head").append("<meta id='headScreen' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />");
+    }
+    //手机屏幕尺寸兼容 purewinter 2019-03-26
+    $(window).on('load',function(){
+        bodyScale();
+    });
+    function bodyScale(){
+        var windowWidth = $(window).width();
+        $("#bodyScale").remove();
+        if(windowWidth < 680){
+            var scale = windowWidth / 375;
+            $("#headScreen").remove();
+            $("head").append("<meta id='headScreen' content='width=375, initial-scale="+scale+", maximum-scale="+scale+", user-scalable=no' name='viewport' />");
+        }else if(windowWidth < 960){
+            var scale = windowWidth / 960;
+            $("#headScreen").remove();
+            $("head").append("<meta id='headScreen' content='width=960, initial-scale="+scale+", maximum-scale="+scale+", user-scalable=no' name='viewport' />");
+        }
+    }
+</script>
+<script>
+String.prototype.replaceAll= function(s1,s2){
+    return this.replace(new RegExp(s1,"gm"),s2);
+}
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+}
+var FIDUser = getQueryVariable('FIDUser');
+var param = "idweb=44949&langid=0&UPermission=all&FIDUser=" + FIDUser;
+document.getElementsByTagName('head')[0].appendChild(document. createElement('script')).src="https://admin.ppspain.com/exusers/login_html_v9_diy.php?" + param;
+// 字体大小限制不跟随系统
+$(document).ready(function(){
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        handleFontSize();
+    } else {
+        document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+    }
+    function handleFontSize() {
+        // 设置网页字体为默认大小
+        WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+        // 重写设置网页字体大小的事件
+        WeixinJSBridge.on('menu:setfont', function() {
+            WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+        });
+    }
+})
+const screenZoom = 1;
+//制作屏幕缩放导致错乱的，不过还有问题，暂时屏蔽5个文件	20230625
+// const screenZoom = 100 / Number(detectZoom());
+// document.body.style.zoom = screenZoom;
+// function detectZoom(){	//获取屏幕放大比例
+// 	//是否手机端判断
+// 	var ua = navigator.userAgent;
+// 	var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+// 	    isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+// 	    isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+// 	    isMobile = isIphone || isAndroid;
+// 	if(ipad || isMobile){ return 100; }		//如果是ipad或手机真机/模拟机，不用调整
+// 	let ratio = 0;
+// 	if (window.devicePixelRatio !== undefined) {
+// 		ratio = window.devicePixelRatio;
+// 		console.log('ratio::'+ratio);
+// 	}
+// 	if (ratio) {
+// 		ratio = Math.round(ratio * 100);
+// 	}
+// 	return ratio;	//返回电脑系统的放大比例
+// }
+$(window).on('load',function(){
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        setTimeout(function(){
+            new WOW().init()
+        },150)
+    };
+});
+var DIY_WEBSITE_ID = "44949";
+var DIY_JS_SERVER = "admin.ppspain.com";
+var DIY_SCHEME = "https:";
+</script>
+            <script src="https://admin.ppspain.com/exusers/login_html_v9_diy.php?idweb=44949&langid=0&UPermission=all"></script>
+    </head>
+<body>
+<!--这里专门处理百度分享文章显示缩略图不正确的问题，因为百度分享读取的是第一张图片，缩略图尽量在400x400,但是至好宽高都要大于400，前提是具有微信分享功能，图片地址通过jq传入 $(".baiduImg").attr("src",shareImg);-->
+<div class="baiduImgSet" style="display: none;">
+    <img class="baiduImg" src="">
+</div>
+<script type="text/javascript">var Default_isFT = 0;</script>
+            <div id="comm_layout_header" class="layout   scrollView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="div_blank_new01_1561182930352" class="view blank_new01 div  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="blank_new01">
+<div class="roundcs modSet" ></div>
+</div>
+                </div>
+            </div>
+                        <div id="image_style_01_1561182998660" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/ZS_SY/20190622135400326.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="image_style_01_1561183105567" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+		<a href='index.php?pageid=1642339' target="_self" style="border-radius: inherit;">
+			<img class="link-type-" src="img/upimages/ZS_SY/423-78.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+		</a>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="image_style_01_1561274584133" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/4/44949/jpg/1700108152100371f238e0bc3a721838ff63630b48fd0.jpg?version=0" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="dh_style_30_1560935698890" class="view style_28 dh  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="dh" class="view_contents" >
+<div id="menu" class="menu menuStyle_28">
+	<div class="menuLayout">
+		<ul class="miniMenu columnSet showmobile">
+			<li class="leftBox">
+				<div class="nav"></div>
+				<div class="sidebar icoMenuSet"><i class="fa fa-navicon" onclick="setDhListen('style_01',this)"></i></div>
+				<div class="menuScroll">
+					<ul class="menuUlCopy">
+							<li class="rflex" pageid="1643451" showmobile=""><a class="mainMenuSet" href="XWZX_xyzw.php">
+								新闻中心</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1643565" showmobile="">
+											<a class="subMenuSet" href="XWZX_xyzw.php">学院新闻</a>
+										</li>
+										<li pageid="1643567" showmobile="">
+											<a class="subMenuSet" href="XWZX_mtbd.php">媒体报道</a>
+										</li>
+										<li pageid="1643569" showmobile="">
+											<a class="subMenuSet" href="XWZX_tzgg.php">通知公告</a>
+										</li>
+										<li pageid="1643571" showmobile="">
+											<a class="subMenuSet" href="XWZX_zxns.php">招贤纳士</a>
+										</li>
+										<li pageid="1643573" showmobile="">
+											<a class="subMenuSet" href="XWZX_sdsf.php">师德师风</a>
+												<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+												<ul class="menuUlCopy">
+														<li class="thrMenuSet">
+														<a href="XWZX_sdsf_wjjs.php">文件精神</a></li>
+														<li class="thrMenuSet">
+														<a href="XWZX_sdsf_xjsj.php">先进事迹</a></li>
+														<li class="thrMenuSet">
+														<a href="XWZX_sdsf_sdbb.php">师德标兵</a></li>
+														<li class="thrMenuSet">
+														<a href="XWZX_sdsf_ldjh.php">领导讲话</a></li>
+												</ul>
+										</li>
+										<li pageid="1643575" showmobile="">
+											<a class="subMenuSet" href="XWZX_wsgz.php">卫生工作</a>
+										</li>
+										<li pageid="1643577" showmobile="">
+											<a class="subMenuSet" href="XWZX_xwzl.php">新闻专栏</a>
+												<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+												<ul class="menuUlCopy">
+														<li class="thrMenuSet">
+														<a href="XWZX_xwzl_tyy.php">屠呦呦专栏</a></li>
+														<li class="thrMenuSet">
+														<a href="XWZX_xwzl_lxyz.php">两学一做学习专栏</a></li>
+														<li class="thrMenuSet">
+														<a href="XWZX_xwzl_aqjyzl.php">安全教育专栏</a></li>
+														<li class="thrMenuSet">
+														<a href="XWZX_xwzl_mfdxx.php">民法典学习专栏</a></li>
+												</ul>
+										</li>
+								</ul>
+							</li>
+							<li class="rflex" pageid="1643453" showmobile=""><a class="mainMenuSet" href="XYGK_dfxyjj.php">
+								学院概况</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1643579" showmobile="">
+											<a class="subMenuSet" href="XYGK_zyydxjj.php">北京中医药大学简介</a>
+										</li>
+										<li pageid="1643599" showmobile="">
+											<a class="subMenuSet" href="XYGK_dfxyjj.php">东方学院简介</a>
+										</li>
+										<li pageid="1643601" showmobile="">
+											<a class="subMenuSet" href="XYGK_ldjg.php">领导机构</a>
+												<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+												<ul class="menuUlCopy">
+														<li class="thrMenuSet">
+														<a href="XYGK_ldjg_tyc.php">学院创始人</a></li>
+														<li class="thrMenuSet">
+														<a href="XYGK_ldjg_xrjj.php">现任领导简介</a></li>
+												</ul>
+										</li>
+										<li pageid="1643603" showmobile="">
+											<a class="subMenuSet" href="XYGK_xydt.php">学院地图</a>
+										</li>
+								</ul>
+							</li>
+							<li class="rflex" pageid="1643489" showmobile=""><a class="mainMenuSet" href="XYSZ.php">
+								学院设置</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1643605" showmobile="">
+											<a class="subMenuSet" href="XYSZ_zyxy.php">中医学院</a>
+										</li>
+										<li pageid="1643613" showmobile="">
+											<a class="subMenuSet" href="XYSZ_zxylcxy.php">中西医临床学院</a>
+										</li>
+										<li pageid="1643615" showmobile="">
+											<a class="subMenuSet" href="XYSZ_zjtnxy.php">针灸推拿学院</a>
+										</li>
+										<li pageid="1643621" showmobile="">
+											<a class="subMenuSet" href="XYSZ_zyxy1.php">药学院</a>
+										</li>
+										<li pageid="1643623" showmobile="">
+											<a class="subMenuSet" href="XYSZ_hlxy.php">护理学院</a>
+										</li>
+										<li pageid="1643625" showmobile="">
+											<a class="subMenuSet" href="XYSZ_yxjyxy.php">医学技术学院</a>
+										</li>
+										<li pageid="1643627" showmobile="">
+											<a class="subMenuSet" href="XYSZ_glxy.php">管理学院</a>
+										</li>
+										<li pageid="1643629" showmobile="">
+											<a class="subMenuSet" href="XYSZ_sxc.php">实训管理中心</a>
+												<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+												<ul class="menuUlCopy">
+														<li class="thrMenuSet">
+														<a href="XWZX_sxc_sxxw.php">实训新闻</a></li>
+														<li class="thrMenuSet">
+														<a href="XWZX_sxc_zdgd.php">制度规定</a></li>
+														<li class="thrMenuSet">
+														<a href="XWZX_sxc_lcjd.php">临床教育基地</a></li>
+														<li class="thrMenuSet">
+														<a href="XWZX_sxc_sxjd.php">实习基地</a></li>
+												</ul>
+										</li>
+										<li pageid="1643631" showmobile="">
+											<a class="subMenuSet" href="XYSZ_syzx.php">实验中心</a>
+												<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+												<ul class="menuUlCopy">
+														<li class="thrMenuSet">
+														<a href="XYSZ_syzx_jj.php">实验中心简介</a></li>
+														<li class="thrMenuSet">
+														<a href="XYSE_syzx_jgsz.php">机构设置</a></li>
+														<li class="thrMenuSet">
+														<a href="XYSE_syzx_gzzd.php">规章制度</a></li>
+												</ul>
+										</li>
+										<li pageid="1643635" showmobile="">
+											<a class="subMenuSet" href="XYSZ_djzx.php">电教中心</a>
+										</li>
+								</ul>
+							</li>
+							<li class="rflex" pageid="1643455" showmobile=""><a class="mainMenuSet" href="DJZC_dwjj.php">
+								党建之窗</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1643639" showmobile="">
+											<a class="subMenuSet" href="DJZC_dwjj.php">党委简介</a>
+										</li>
+										<li pageid="1643641" showmobile="">
+											<a class="subMenuSet" href="DJZC_zcwj.php">政策文件</a>
+										</li>
+										<li pageid="1643643" showmobile="">
+											<a class="subMenuSet" href="DJZC_szyw.php">时政要闻</a>
+										</li>
+										<li pageid="1643647" showmobile="">
+											<a class="subMenuSet" href="DJZC_djdt.php">党建动态</a>
+										</li>
+										<li pageid="1647573" showmobile="">
+											<a class="subMenuSet" href="XWZX_xwzl_19d.php">二十大专题</a>
+										</li>
+										<li pageid="1643649" showmobile="">
+											<a class="subMenuSet" href="DJZC_xxyd.php">学习园地</a>
+										</li>
+										<li pageid="1647095" showmobile="">
+											<a class="subMenuSet" href="DJZC_dsjy.php">党史教育</a>
+										</li>
+								</ul>
+							</li>
+							<li class="rflex" pageid="1643457" showmobile=""><a class="mainMenuSet" href="JYJX.php">
+								教育教学</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1643651" showmobile="">
+											<a class="subMenuSet" href="JYJX_jxdt.php">教学动态</a>
+										</li>
+										<li pageid="1643837" showmobile="">
+											<a class="subMenuSet" href="JYJX_zysz.php">专业设置</a>
+										</li>
+										<li pageid="1643839" showmobile="">
+											<a class="subMenuSet" href="JYJX_szdw.php">师资队伍</a>
+										</li>
+										<li pageid="1646327" showmobile="">
+											<a class="subMenuSet" href="JYJX_jxyj.php">教学研究</a>
+										</li>
+										<li pageid="1643841" showmobile="">
+											<a class="subMenuSet" href="JYJX_gzzd.php">规章制度</a>
+										</li>
+										<li pageid="1643843" showmobile="">
+											<a class="subMenuSet" href="JYJX_wjxz.php">文件下载</a>
+										</li>
+										<li pageid="1643845" showmobile="">
+											<a class="subMenuSet" href="JYJX_zlkz.php">质量控制</a>
+										</li>
+										<li pageid="1643847" showmobile="">
+											<a class="subMenuSet" href="JYJX_jsfc.php">教师风采</a>
+										</li>
+										<li pageid="1643849" showmobile="">
+											<a class="subMenuSet" href="JYJX_xl.php">校历</a>
+										</li>
+										<li pageid="1646329" showmobile="">
+											<a class="subMenuSet" href="http://search.bucmdf.edu.cn/page235">成绩查询系统</a>
+										</li>
+										<li pageid="1646331" showmobile="">
+											<a class="subMenuSet" href="http://search.bucmdf.edu.cn/page236">课程查询系统</a>
+										</li>
+								</ul>
+							</li>
+							<li class="rflex" pageid="1643475" showmobile=""><a class="mainMenuSet" href="1643475-1643475.php">
+								学工在线</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1643851" showmobile="">
+											<a class="subMenuSet" href="XGZX_xgdt.php">学工动态</a>
+										</li>
+										<li pageid="1643853" showmobile="">
+											<a class="subMenuSet" href="XGZX_gzzd.php">规章制度</a>
+										</li>
+										<li pageid="1643855" showmobile="">
+											<a class="subMenuSet" href="XGZX_twfc.php">团委风采</a>
+										</li>
+										<li pageid="1643857" showmobile="">
+											<a class="subMenuSet" href="XGZX_gfjy.php">国防教育</a>
+												<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+												<ul class="menuUlCopy">
+														<li class="thrMenuSet">
+														<a href="XGDT_gfjy_gfzs.php">国防知识</a></li>
+														<li class="thrMenuSet">
+														<a href="XGDT_gfjy_zbrw.php">征兵入伍</a></li>
+														<li class="thrMenuSet">
+														<a href="XGDT_gfjy_zbpt.php">征兵平台</a></li>
+														<li class="thrMenuSet">
+														<a href="XGDT_gfjy_jxxw.php">军训新闻</a></li>
+														<li class="thrMenuSet">
+														<a href="XGDT_gfjy_jxxg.php">军训相关</a></li>
+														<li class="thrMenuSet">
+														<a href="XGDT_gfjy_zcfg.php">政策法规</a></li>
+												</ul>
+										</li>
+										<li pageid="1643859" showmobile="">
+											<a class="subMenuSet" href="XGZX_jgsz.php">机构设置</a>
+										</li>
+										<li pageid="1643861" showmobile="">
+											<a class="subMenuSet" href="XGZX_xszz.php">学生资助</a>
+												<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+												<ul class="menuUlCopy">
+														<li class="thrMenuSet">
+														<a href="XGZX_xszz_zzyr.php">资助育人</a></li>
+														<li class="thrMenuSet">
+														<a href="XGZX_xszz_tzgs.php">通知公示</a></li>
+														<li class="thrMenuSet">
+														<a href="XGZX_xszz_zzzc.php">资助政策</a></li>
+												</ul>
+										</li>
+								</ul>
+							</li>
+							<li class="rflex" pageid="1642481" showmobile=""><a class="mainMenuSet" href="ZSXX.php">
+								招生信息</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1643817" showmobile="">
+											<a class="subMenuSet" href="ZSXX_zsdt.php">招生动态</a>
+										</li>
+										<li pageid="1643821" showmobile="">
+											<a class="subMenuSet" href="ZSXX_tzgg.php">通知公告</a>
+										</li>
+										<li pageid="1643825" showmobile="">
+											<a class="subMenuSet" href="ZSXX_zszc.php">招生章程</a>
+										</li>
+										<li pageid="1643823" showmobile="">
+											<a class="subMenuSet" href="ZSXX_zsjz.php">招生简章</a>
+										</li>
+										<li pageid="1643815" showmobile="">
+											<a class="subMenuSet" href="ZSXX_zsjh.php">招生计划</a>
+										</li>
+										<li pageid="1643819" showmobile="">
+											<a class="subMenuSet" href="ZSXX_zszy.php">招生专业</a>
+										</li>
+										<li pageid="1643829" showmobile="">
+											<a class="subMenuSet" href="ZSXX_rxxz.php">入学须知</a>
+										</li>
+										<li pageid="1643835" showmobile="">
+											<a class="subMenuSet" href="ZSXX_lxfs.php">联系方式</a>
+										</li>
+										<li pageid="1643833" showmobile="">
+											<a class="subMenuSet" href="ZSXX_wnfsx.php">往年分数线</a>
+										</li>
+										<li pageid="1643827" showmobile="">
+											<a class="subMenuSet" href="http://search.bucmdf.edu.cn/page195">录取信息查询</a>
+										</li>
+								</ul>
+							</li>
+							<li class="rflex" pageid="1643479" showmobile=""><a class="mainMenuSet" href="JCFW.php">
+								就创服务</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1643863" showmobile="">
+											<a class="subMenuSet" href="JCFW_jyxw.php">就业新闻</a>
+										</li>
+										<li pageid="1643865" showmobile="">
+											<a class="subMenuSet" href="JCFW_tzgg.php">通知公告</a>
+										</li>
+										<li pageid="1643867" showmobile="">
+											<a class="subMenuSet" href="JCFW_jyzn.php">就业指南</a>
+										</li>
+										<li pageid="1643869" showmobile="">
+											<a class="subMenuSet" href="JCFW_cyzn.php">创业指南</a>
+										</li>
+										<li pageid="1643871" showmobile="">
+											<a class="subMenuSet" href="JCFW_bslc.php">办事流程</a>
+										</li>
+										<li pageid="1643873" showmobile="">
+											<a class="subMenuSet" href="JCFW_zpxx.php">招聘信息</a>
+										</li>
+										<li pageid="1643875" showmobile="">
+											<a class="subMenuSet" href="JCFW_qyfw.php">企业服务</a>
+										</li>
+										<li pageid="1643877" showmobile="">
+											<a class="subMenuSet" href="JCFW_yqlj.php">友情链接</a>
+										</li>
+										<li pageid="1882135" showmobile="">
+											<a class="subMenuSet" href="JCFW_yxzpt.php">云校招平台</a>
+										</li>
+										<li pageid="1888915" showmobile="">
+											<a class="subMenuSet" href="JCFW_gxbyszpzq.php">高校毕业生招聘专区</a>
+										</li>
+								</ul>
+							</li>
+							<li class="rflex" pageid="1643481" showmobile=""><a class="mainMenuSet" href="DFWH_tycyljj.php">
+								东方文化</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1643879" showmobile="">
+											<a class="subMenuSet" href="DFWH_tycyljj.php">田宜春同志言论集锦</a>
+										</li>
+										<li pageid="1643881" showmobile="">
+											<a class="subMenuSet" href="DFWH_xywh.php">学院文化</a>
+										</li>
+										<li pageid="1643891" showmobile="">
+											<a class="subMenuSet" href="DFWH_lnaxfwzx.php">老年爱心服务中心</a>
+										</li>
+										<li pageid="1643893" showmobile="">
+											<a class="subMenuSet" href="DFWH_xygh.php">学院工会</a>
+										</li>
+										<li pageid="1643895" showmobile="">
+											<a class="subMenuSet" href="DFWH_wmxy.php">文明校园</a>
+												<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+												<ul class="menuUlCopy">
+														<li class="thrMenuSet">
+														<a href="DFWH_wmxy_shzy.php">社会主义核心价值观</a></li>
+														<li class="thrMenuSet">
+														<a href="DFWH_wmxy_xssz.php">学生守则</a></li>
+														<li class="thrMenuSet">
+														<a href="DFWH_wmxy_yxxz.php">优秀学子</a></li>
+														<li class="thrMenuSet">
+														<a href="DFWH_wmxy_jwm.php">讲文明树新风</a></li>
+														<li class="thrMenuSet">
+														<a href="DFWH_wmxy_xyjs.php">文明校园建设</a></li>
+														<li class="thrMenuSet">
+														<a href="DFWH_wmxy_agzy.php">爱国主义教育</a></li>
+												</ul>
+										</li>
+								</ul>
+							</li>
+							<li class="rflex" pageid="1643487" showmobile=""><a class="mainMenuSet" href="MZB.php">
+								门诊部</a>
+								<i class="fa fa-angle-down" onclick="navSwtich(this)"></i>
+								<ul class="menuUlCopy">
+										<li pageid="1646903" showmobile="">
+											<a class="subMenuSet" href="MZB_mzyy.php">门诊预约</a>
+										</li>
+										<li pageid="1646905" showmobile="">
+											<a class="subMenuSet" href="MZB_mzjj.php">门诊简介</a>
+										</li>
+										<li pageid="1646907" showmobile="">
+											<a class="subMenuSet" href="MZB_ksjj.php">科室简介</a>
+										</li>
+										<li pageid="1646909" showmobile="">
+											<a class="subMenuSet" href="MZB_mzdt.php">门诊动态</a>
+										</li>
+								</ul>
+							</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="menuUl_box columnSet dhAreaSet showpc">
+			<ul class="menuUl dflex maxWidth ">
+					<li class="rflex isLi" pageid="1643451" showpc="">
+						<a class="mainMenuSet Onsub" href="XWZX_xyzw.php">
+								新闻中心
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1643565" showpc="">
+										<a href="XWZX_xyzw.php">
+											学院新闻
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643567" showpc="">
+										<a href="XWZX_mtbd.php">
+											媒体报道
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643569" showpc="">
+										<a href="XWZX_tzgg.php">
+											通知公告
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643571" showpc="">
+										<a href="XWZX_zxns.php">
+											招贤纳士
+										</a>
+									</li>
+									<li class="subMenu02 arrow subMenuSet" pageid="1643573" showpc="">
+										<a href="XWZX_sdsf.php">
+											师德师风
+											<i class="fa fa-angle-right"></i>
+										</a>
+										<ul class="menuUl03 thrminSet">
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_sdsf_wjjs.php">文件精神</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_sdsf_xjsj.php">先进事迹</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_sdsf_sdbb.php">师德标兵</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_sdsf_ldjh.php">领导讲话</a></li>
+										</ul>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643575" showpc="">
+										<a href="XWZX_wsgz.php">
+											卫生工作
+										</a>
+									</li>
+									<li class="subMenu02 arrow subMenuSet" pageid="1643577" showpc="">
+										<a href="XWZX_xwzl.php">
+											新闻专栏
+											<i class="fa fa-angle-right"></i>
+										</a>
+										<ul class="menuUl03 thrminSet">
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_xwzl_tyy.php">屠呦呦专栏</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_xwzl_lxyz.php">两学一做学习专栏</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_xwzl_aqjyzl.php">安全教育专栏</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_xwzl_mfdxx.php">民法典学习专栏</a></li>
+										</ul>
+									</li>
+							</ul>
+					</li>
+					<li class="rflex isLi" pageid="1643453" showpc="">
+						<a class="mainMenuSet Onsub" href="XYGK_dfxyjj.php">
+								学院概况
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1643579" showpc="">
+										<a href="XYGK_zyydxjj.php">
+											北京中医药大学简介
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643599" showpc="">
+										<a href="XYGK_dfxyjj.php">
+											东方学院简介
+										</a>
+									</li>
+									<li class="subMenu02 arrow subMenuSet" pageid="1643601" showpc="">
+										<a href="XYGK_ldjg.php">
+											领导机构
+											<i class="fa fa-angle-right"></i>
+										</a>
+										<ul class="menuUl03 thrminSet">
+												<li class="subMenu03"><a class="thrMenuSet" href="XYGK_ldjg_tyc.php">学院创始人</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XYGK_ldjg_xrjj.php">现任领导简介</a></li>
+										</ul>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643603" showpc="">
+										<a href="XYGK_xydt.php">
+											学院地图
+										</a>
+									</li>
+							</ul>
+					</li>
+					<li class="rflex isLi" pageid="1643489" showpc="">
+						<a class="mainMenuSet Onsub" href="XYSZ.php">
+								学院设置
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1643605" showpc="">
+										<a href="XYSZ_zyxy.php">
+											中医学院
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643613" showpc="">
+										<a href="XYSZ_zxylcxy.php">
+											中西医临床学院
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643615" showpc="">
+										<a href="XYSZ_zjtnxy.php">
+											针灸推拿学院
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643621" showpc="">
+										<a href="XYSZ_zyxy1.php">
+											药学院
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643623" showpc="">
+										<a href="XYSZ_hlxy.php">
+											护理学院
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643625" showpc="">
+										<a href="XYSZ_yxjyxy.php">
+											医学技术学院
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643627" showpc="">
+										<a href="XYSZ_glxy.php">
+											管理学院
+										</a>
+									</li>
+									<li class="subMenu02 arrow subMenuSet" pageid="1643629" showpc="">
+										<a href="XYSZ_sxc.php">
+											实训管理中心
+											<i class="fa fa-angle-right"></i>
+										</a>
+										<ul class="menuUl03 thrminSet">
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_sxc_sxxw.php">实训新闻</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_sxc_zdgd.php">制度规定</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_sxc_lcjd.php">临床教育基地</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XWZX_sxc_sxjd.php">实习基地</a></li>
+										</ul>
+									</li>
+									<li class="subMenu02 arrow subMenuSet" pageid="1643631" showpc="">
+										<a href="XYSZ_syzx.php">
+											实验中心
+											<i class="fa fa-angle-right"></i>
+										</a>
+										<ul class="menuUl03 thrminSet">
+												<li class="subMenu03"><a class="thrMenuSet" href="XYSZ_syzx_jj.php">实验中心简介</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XYSE_syzx_jgsz.php">机构设置</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XYSE_syzx_gzzd.php">规章制度</a></li>
+										</ul>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643635" showpc="">
+										<a href="XYSZ_djzx.php">
+											电教中心
+										</a>
+									</li>
+							</ul>
+					</li>
+					<li class="rflex isLi" pageid="1643455" showpc="">
+						<a class="mainMenuSet Onsub" href="DJZC_dwjj.php">
+								党建之窗
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1643639" showpc="">
+										<a href="DJZC_dwjj.php">
+											党委简介
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643641" showpc="">
+										<a href="DJZC_zcwj.php">
+											政策文件
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643643" showpc="">
+										<a href="DJZC_szyw.php">
+											时政要闻
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643647" showpc="">
+										<a href="DJZC_djdt.php">
+											党建动态
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1647573" showpc="">
+										<a href="XWZX_xwzl_19d.php">
+											二十大专题
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643649" showpc="">
+										<a href="DJZC_xxyd.php">
+											学习园地
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1647095" showpc="">
+										<a href="DJZC_dsjy.php">
+											党史教育
+										</a>
+									</li>
+							</ul>
+					</li>
+					<li class="rflex isLi" pageid="1643457" showpc="">
+						<a class="mainMenuSet Onsub" href="JYJX.php">
+								教育教学
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1643651" showpc="">
+										<a href="JYJX_jxdt.php">
+											教学动态
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643837" showpc="">
+										<a href="JYJX_zysz.php">
+											专业设置
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643839" showpc="">
+										<a href="JYJX_szdw.php">
+											师资队伍
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1646327" showpc="">
+										<a href="JYJX_jxyj.php">
+											教学研究
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643841" showpc="">
+										<a href="JYJX_gzzd.php">
+											规章制度
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643843" showpc="">
+										<a href="JYJX_wjxz.php">
+											文件下载
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643845" showpc="">
+										<a href="JYJX_zlkz.php">
+											质量控制
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643847" showpc="">
+										<a href="JYJX_jsfc.php">
+											教师风采
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643849" showpc="">
+										<a href="JYJX_xl.php">
+											校历
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1646329" showpc="">
+										<a href="http://search.bucmdf.edu.cn/page235">
+											成绩查询系统
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1646331" showpc="">
+										<a href="http://search.bucmdf.edu.cn/page236">
+											课程查询系统
+										</a>
+									</li>
+							</ul>
+					</li>
+					<li class="rflex isLi" pageid="1643475" showpc="">
+						<a class="mainMenuSet Onsub" href="1643475-1643475.php">
+								学工在线
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1643851" showpc="">
+										<a href="XGZX_xgdt.php">
+											学工动态
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643853" showpc="">
+										<a href="XGZX_gzzd.php">
+											规章制度
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643855" showpc="">
+										<a href="XGZX_twfc.php">
+											团委风采
+										</a>
+									</li>
+									<li class="subMenu02 arrow subMenuSet" pageid="1643857" showpc="">
+										<a href="XGZX_gfjy.php">
+											国防教育
+											<i class="fa fa-angle-right"></i>
+										</a>
+										<ul class="menuUl03 thrminSet">
+												<li class="subMenu03"><a class="thrMenuSet" href="XGDT_gfjy_gfzs.php">国防知识</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XGDT_gfjy_zbrw.php">征兵入伍</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XGDT_gfjy_zbpt.php">征兵平台</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XGDT_gfjy_jxxw.php">军训新闻</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XGDT_gfjy_jxxg.php">军训相关</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XGDT_gfjy_zcfg.php">政策法规</a></li>
+										</ul>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643859" showpc="">
+										<a href="XGZX_jgsz.php">
+											机构设置
+										</a>
+									</li>
+									<li class="subMenu02 arrow subMenuSet" pageid="1643861" showpc="">
+										<a href="XGZX_xszz.php">
+											学生资助
+											<i class="fa fa-angle-right"></i>
+										</a>
+										<ul class="menuUl03 thrminSet">
+												<li class="subMenu03"><a class="thrMenuSet" href="XGZX_xszz_zzyr.php">资助育人</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XGZX_xszz_tzgs.php">通知公示</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="XGZX_xszz_zzzc.php">资助政策</a></li>
+										</ul>
+									</li>
+							</ul>
+					</li>
+					<li class="rflex isLi" pageid="1642481" showpc="">
+						<a class="mainMenuSet Onsub" href="ZSXX.php">
+								招生信息
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1643817" showpc="">
+										<a href="ZSXX_zsdt.php">
+											招生动态
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643821" showpc="">
+										<a href="ZSXX_tzgg.php">
+											通知公告
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643825" showpc="">
+										<a href="ZSXX_zszc.php">
+											招生章程
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643823" showpc="">
+										<a href="ZSXX_zsjz.php">
+											招生简章
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643815" showpc="">
+										<a href="ZSXX_zsjh.php">
+											招生计划
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643819" showpc="">
+										<a href="ZSXX_zszy.php">
+											招生专业
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643829" showpc="">
+										<a href="ZSXX_rxxz.php">
+											入学须知
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643835" showpc="">
+										<a href="ZSXX_lxfs.php">
+											联系方式
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643833" showpc="">
+										<a href="ZSXX_wnfsx.php">
+											往年分数线
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643827" showpc="">
+										<a href="http://search.bucmdf.edu.cn/page195">
+											录取信息查询
+										</a>
+									</li>
+							</ul>
+					</li>
+					<li class="rflex isLi" pageid="1643479" showpc="">
+						<a class="mainMenuSet Onsub" href="JCFW.php">
+								就创服务
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1643863" showpc="">
+										<a href="JCFW_jyxw.php">
+											就业新闻
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643865" showpc="">
+										<a href="JCFW_tzgg.php">
+											通知公告
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643867" showpc="">
+										<a href="JCFW_jyzn.php">
+											就业指南
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643869" showpc="">
+										<a href="JCFW_cyzn.php">
+											创业指南
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643871" showpc="">
+										<a href="JCFW_bslc.php">
+											办事流程
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643873" showpc="">
+										<a href="JCFW_zpxx.php">
+											招聘信息
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643875" showpc="">
+										<a href="JCFW_qyfw.php">
+											企业服务
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643877" showpc="">
+										<a href="JCFW_yqlj.php">
+											友情链接
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1882135" showpc="">
+										<a href="JCFW_yxzpt.php">
+											云校招平台
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1888915" showpc="">
+										<a href="JCFW_gxbyszpzq.php">
+											高校毕业生招聘专区
+										</a>
+									</li>
+							</ul>
+					</li>
+					<li class="rflex isLi" pageid="1643481" showpc="">
+						<a class="mainMenuSet Onsub" href="DFWH_tycyljj.php">
+								东方文化
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1643879" showpc="">
+										<a href="DFWH_tycyljj.php">
+											田宜春同志言论集锦
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643881" showpc="">
+										<a href="DFWH_xywh.php">
+											学院文化
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643891" showpc="">
+										<a href="DFWH_lnaxfwzx.php">
+											老年爱心服务中心
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1643893" showpc="">
+										<a href="DFWH_xygh.php">
+											学院工会
+										</a>
+									</li>
+									<li class="subMenu02 arrow subMenuSet" pageid="1643895" showpc="">
+										<a href="DFWH_wmxy.php">
+											文明校园
+											<i class="fa fa-angle-right"></i>
+										</a>
+										<ul class="menuUl03 thrminSet">
+												<li class="subMenu03"><a class="thrMenuSet" href="DFWH_wmxy_shzy.php">社会主义核心价值观</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="DFWH_wmxy_xssz.php">学生守则</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="DFWH_wmxy_yxxz.php">优秀学子</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="DFWH_wmxy_jwm.php">讲文明树新风</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="DFWH_wmxy_xyjs.php">文明校园建设</a></li>
+												<li class="subMenu03"><a class="thrMenuSet" href="DFWH_wmxy_agzy.php">爱国主义教育</a></li>
+										</ul>
+									</li>
+							</ul>
+					</li>
+					<li class="rflex isLi" pageid="1643487" showpc="">
+						<a class="mainMenuSet Onsub" href="MZB.php">
+								门诊部
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="menuUl02 subminSet">
+									<li class="subMenu02 subMenuSet" pageid="1646903" showpc="">
+										<a href="MZB_mzyy.php">
+											门诊预约
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1646905" showpc="">
+										<a href="MZB_mzjj.php">
+											门诊简介
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1646907" showpc="">
+										<a href="MZB_ksjj.php">
+											科室简介
+										</a>
+									</li>
+									<li class="subMenu02 subMenuSet" pageid="1646909" showpc="">
+										<a href="MZB_mzdt.php">
+											门诊动态
+										</a>
+									</li>
+							</ul>
+					</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 导航栏目有下级时禁止跳转 -->
+<!-- 二级菜单宽度自适应 -->
+                </div>
+            </div>
+                        <div id="qqol_style_04_1611469951212" class="view style_04 qqol  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="qqol" class="view_contents" >
+                    <div class="online-service onlineStyle04">
+    <div class="main_box">
+        <ul class="main_ul">
+				<li class="main_li">
+					<div class="menu_ico phone"><i class="i"></i></div>
+					<a href="tel:01080841869">
+						<div class="menu_con">
+							<div class="con_box">
+								<span class="icon"><i class="i-icon i-phone"></i></span>
+								<div class="text">
+									<span>招生电话</span>
+									<span>01080841869</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="main_li">
+					<div class="menu_ico qrcode"><i class="i"></i></div>
+					<div class="menu_con"><img src="https://www.bucmdf.edu.cn/2021/zx/1.jpg" alt="微信公众号"/><div class="qr_text">微信公众号</div></div>
+				</li>
+            <li class="main_li gotop">
+                <div class="menu_ico" onclick="window.location='javascript:btnTop();'"><i class="i"></i></div>
+            </li>
+        </ul>
+    </div>
+</div>
+                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1560904973260" class="layout   scrollView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="banner_style_01_1560925144777" class="view style_01 banner  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="banner" class="view_contents" >
+                    <div class="bannerStyle_1 normal" viewId="banner_style_01_1560925144777" autoPc="0" autoPad="0" autoMobile="0">
+	<div class="main_visual">
+			<div class="flicking_con">
+					<a href="#" class=""></a>
+					<a href="#" class=""></a>
+					<a href="#" class=""></a>
+					<a href="#" class=""></a>
+					<a href="#" class=""></a>
+			</div>
+		<div class="ground_glass"></div>
+		<div class="main_image">
+			<div class="img-list">
+					<div class="img-item" style="">
+						<img src="https://cdn.yun.sooce.cn/4/44949/jpg/17096234181195344de501dfee13281b05113306c41e6.jpg?version=0"  class="hide_img noimgLoadLate"  alt="自信自强 守正创新 埋头苦干 勇毅前行 (3)"/>
+                            <a class="picSet"><span class="img_0"></span></a>
+                    </div>
+					<div class="img-item" style="left:100%;">
+						<img src="https://cdn.yun.sooce.cn/4/44949/jpg/17124555816947938c3d0cb5110d2deaeb8f3b21845c4.jpg?version=0"  class="hide_img noimgLoadLate"  alt="_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3739336604044737168&skey=@crypt_591e64d5_b4bc798169e4abd7c16150c6fed3758c&mmweb_appid=wx_webfilehelper"/>
+                            <a class="picSet"><span class="img_1"></span></a>
+                    </div>
+					<div class="img-item" style="left:100%;">
+						<img src="https://www.bucmdf.edu.cn/wangzhandatu/20230224.png"  class="hide_img noimgLoadLate"  alt="20230224"/>
+                            <a class="picSet"><span class="img_2"></span></a>
+                    </div>
+					<div class="img-item" style="left:100%;">
+						<img src="https://cdn.yun.sooce.cn/4/44949/jpg/17001034521689a2b9df7b24ba3c0d061bff54e1e8386.jpg?version=0"  class="hide_img noimgLoadLate"  alt="WechatIMG18 拷贝_20231116_17001034521626030"/>
+                            <a class="picSet"><span class="img_3"></span></a>
+                    </div>
+					<div class="img-item" style="left:100%;">
+						<img src="https://cdn.yun.sooce.cn/4/44949/jpg/170010125338393dd4de5cddba2c733c65f233097f05a.jpg?version=0"  class="hide_img noimgLoadLate"  alt="002"/>
+                            <a class="picSet"><span class="img_4"></span></a>
+                    </div>
+			</div>
+			<a href="javascript:;" class="btn_prev arrowSet"><i class='fa fa-angle-left awesome-font'></i><span class="text-font"><</span></a>
+			<a href="javascript:;" class="btn_next arrowSet"><i class='fa fa-angle-right awesome-font'></i><span class="text-font">></span></a>
+		</div>
+	</div>
+</div>
+                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1561029374463" class="layout   scrollView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="div_a_includeBlock_1561029432010" class="view a_includeBlock div  includeView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+                                <div id="image_style_01_1561001469703" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/SY/LJ_Title.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="text_style_01_1561002090725" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="http://www.hbjyw.cn/" target='_blank' style='color:inherit' class='editor-view-extend link-type-3-'>河北教育网</a>                </div>
+            </div>
+                        <div id="text_style_01_1561002225554" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="http://jyt.hebei.gov.cn/" target='_blank' style='color:inherit' class='editor-view-extend link-type-3-'>河北省教育厅</a>                </div>
+            </div>
+                        <div id="text_style_01_1561002231869" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="http://www.wenming.cn/" target='_blank' style='color:inherit' class='editor-view-extend link-type-3-'>中国文明网</a>                </div>
+            </div>
+                        <div id="text_style_01_1561002255883" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="http://www.seewww.cn/" target='_blank' style='color:inherit' class='editor-view-extend link-type-3-'>中国德育网</a>                </div>
+            </div>
+                        <div id="text_style_01_1561002269548" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="http://wpa.qq.com/msgrd?v=3&uin=2499036363&site=qq&menu=yes" target='_blank' style='color:inherit' class='editor-view-extend link-type-3-'>在线咨询</a>                </div>
+            </div>
+                        <div id="text_style_01_1561002275874" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="http://www.xinhuanet.com/" target='_blank' style='color:inherit' class='editor-view-extend link-type-3-'>新华网</a>                </div>
+            </div>
+                        <div id="text_style_01_1561002282654" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="http://www.people.com.cn/" target='_blank' style='color:inherit' class='editor-view-extend link-type-3-'>人民网</a>                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="div_a_includeBlock_1560936821770" class="view a_includeBlock div  includeView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+                                <div id="newsList_style_04_1561081421831" class="view style_04 newsList  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="newsList" class="view_contents" >
+                    <script>$(function(){$.getScript("https://admin.ppspain.com/exusers/js_trans_client_sess.php");});</script><style>/*新闻列表样式*/
+.boxNewsListStyle_4{width:100%; clear: both;}
+.boxNewsListStyle_4 *{transition: all ease .2s; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; box-sizing: border-box;}
+.boxNewsListStyle_4 ul{width: 100%; display: -webkit-flex; display: -moz-flex; display: flex; flex-wrap:wrap; justify-content:space-between;}
+.boxNewsListStyle_4 .sumary_list{list-style:none; background:#fff;overflow: hidden;}
+.boxNewsListStyle_4 .sumary_list .newPic{width:100%; min-width:100px; overflow:hidden; position:relative; box-sizing:border-box; background: #eee;}
+.boxNewsListStyle_4 .sumary_list:hover .newPic .News_img{transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -o-transform: scale(1.05); -ms-transform: scale(1.05);}
+.boxNewsListStyle_4 .sumary_list .newPic img{position:absolute; top:0; left:0; width:100%;}
+.boxNewsListStyle_4 .sumary_list .newPic .zTm{margin-top:100%;}
+.boxNewsListStyle_4 .sumary_list .newCont{width:100%;position: relative;z-index: 999;}
+.boxNewsListStyle_4 .sumary_list .newCont .newTitle{width:100%;}
+.boxNewsListStyle_4 .sumary_list .newName a{text-decoration:none; color: #333; line-height:1.1; font-size:14px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin: 10px 0;}
+.boxNewsListStyle_4 .sumary_list .newB{width:100%; line-height:2; padding-top: 5px;}
+.boxNewsListStyle_4 .sumary_list .newSort{color:#fff; background-color: #498D9C; font-size:12px; white-space: nowrap; padding:.5em 1em; margin-right:5px;}
+.boxNewsListStyle_4 .sumary_list .newsTime{text-align:right;color:#666; font-size:14px; white-space:nowrap;}
+.boxNewsListStyle_4 .sumary_list .newsTime span{white-space: nowrap;}
+.boxNewsListStyle_4 .sumary_list .newsTime span.nTime{display:none;}
+.boxNewsListStyle_4 .sumary_list .newDetail{width:100%; margin:0; color:#999; font-size:12px; line-height:1.6;border-bottom:1px solid #eee;}
+.boxNewsListStyle_4 .sumary_list .newDetail span{display: block;margin-bottom: 6px;overflow: hidden;}
+.boxNewsListStyle_4 .sumary_list .show_all{width:100%; margin-top:.5em;}
+.boxNewsListStyle_4 .sumary_list .show_all a{display:block; margin-top:.4em; text-decoration:none; border:1px solid #ddd; text-align:center; padding:.4em; font-size:12px;  color:#666; }</style><script></script><!--新闻列表区域-->
+<!--pageSet pagecurSet-->
+<div class="boxNewsListStyle_4">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list modSet">
+			
+				<div class="newPic imgSet">
+					<a href="ZW.php?newsid=5756843&_t=1730039430" target="_self"><img src="http://www.bucmdf.edu.cn/2024/xinwen/09/0902/20240902xinwen01.jpg"  alt="20240902xinwen01"  class="News_img"  ></a>
+					<div class="zTm" style="margin-top:67%"></div>
+				</div>
+			
+			<div class="newCont">
+				<div class="newTitle">
+					
+					<div class="newName">
+							<a class="titleSet newTitle pc" href="ZW.php?newsid=5756843&_t=1730039430" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">凝心聚力 开拓进取我院2024年...</div></a>
+							<a class="titleSet newTitle pad" href="ZW.php?newsid=5756843&_t=1730039430" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">凝心聚力 开拓进取我院2024年...</div></a>
+							<a class="titleSet newTitle mobile" href="ZW.php?newsid=5756843&_t=1730039430" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">凝心聚力 开拓进取我院2024年...</div></a>
+					</div>
+					
+					
+						<div class="newDetail detailSet pc" style="-webkit-line-clamp: ;"><div class="overhide">为全面提升教师综合素质和业务能力，推动学校教育教学发展，...</div></div>
+						<div class="newDetail detailSet pad" style="-webkit-line-clamp: ;"><div class="overhide">为全面提升教师综合素...</div></div>
+						<div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;"><div class="overhide">为全面提升教师综合素...</div></div>
+					
+				</div>
+				<div class="newB">
+					
+					
+					
+						<span class="newsTime timesSet"><span class="nDate">2024-09-02</span> <span class="nTime">00:00:00</span></span>
+					
+				</div>
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+				<div class="newPic imgSet">
+					<a href="ZW.php?newsid=5756841&_t=1730038572" target="_self"><img src="http://www.bucmdf.edu.cn/2024/xinwen/09/0901/20240901xinwen01.jpg"  alt="20240901xinwen01"  class="News_img"  ></a>
+					<div class="zTm" style="margin-top:67%"></div>
+				</div>
+			
+			<div class="newCont">
+				<div class="newTitle">
+					
+					<div class="newName">
+							<a class="titleSet newTitle pc" href="ZW.php?newsid=5756841&_t=1730038572" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">凝心聚力 再启新程马克思主义学院...</div></a>
+							<a class="titleSet newTitle pad" href="ZW.php?newsid=5756841&_t=1730038572" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">凝心聚力 再启新程马克思主义学院...</div></a>
+							<a class="titleSet newTitle mobile" href="ZW.php?newsid=5756841&_t=1730038572" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">凝心聚力 再启新程马克思主义学院...</div></a>
+					</div>
+					
+					
+						<div class="newDetail detailSet pc" style="-webkit-line-clamp: ;"><div class="overhide">新的学期，马克思主义学院全体教师必将继续勠力同心，砥砺前...</div></div>
+						<div class="newDetail detailSet pad" style="-webkit-line-clamp: ;"><div class="overhide">新的学期，马克思主义...</div></div>
+						<div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;"><div class="overhide">新的学期，马克思主义...</div></div>
+					
+				</div>
+				<div class="newB">
+					
+					
+					
+						<span class="newsTime timesSet"><span class="nDate">2024-09-01</span> <span class="nTime">00:00:00</span></span>
+					
+				</div>
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+				<div class="newPic imgSet">
+					<a href="ZW.php?newsid=5672203&_t=1725454868" target="_self"><img src="http://www.bucmdf.edu.cn/2024/xinwen/08/0831/20240831xinwen01.jpg"  alt="20240831xinwen01"  class="News_img"  ></a>
+					<div class="zTm" style="margin-top:67%"></div>
+				</div>
+			
+			<div class="newCont">
+				<div class="newTitle">
+					
+					<div class="newName">
+							<a class="titleSet newTitle pc" href="ZW.php?newsid=5672203&_t=1725454868" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">弘扬西柏坡精神 续写新时代华章|...</div></a>
+							<a class="titleSet newTitle pad" href="ZW.php?newsid=5672203&_t=1725454868" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">弘扬西柏坡精神 续写新时代华章|...</div></a>
+							<a class="titleSet newTitle mobile" href="ZW.php?newsid=5672203&_t=1725454868" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">弘扬西柏坡精神 续写新时代华章|...</div></a>
+					</div>
+					
+					
+						<div class="newDetail detailSet pc" style="-webkit-line-clamp: ;"><div class="overhide">为深入学习贯彻习近平新时代中国特色社会主义思想和党的二十...</div></div>
+						<div class="newDetail detailSet pad" style="-webkit-line-clamp: ;"><div class="overhide">为深入学习贯彻习近平...</div></div>
+						<div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;"><div class="overhide">为深入学习贯彻习近平...</div></div>
+					
+				</div>
+				<div class="newB">
+					
+					
+					
+						<span class="newsTime timesSet"><span class="nDate">2024-08-31</span> <span class="nTime">00:00:00</span></span>
+					
+				</div>
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+				<div class="newPic imgSet">
+					<a href="ZW.php?newsid=5672201&_t=1725454399" target="_self"><img src="http://www.bucmdf.edu.cn/2024/xinwen/08/0827/20240828xinwen01.jpg"  alt="20240828xinwen01"  class="News_img"  ></a>
+					<div class="zTm" style="margin-top:67%"></div>
+				</div>
+			
+			<div class="newCont">
+				<div class="newTitle">
+					
+					<div class="newName">
+							<a class="titleSet newTitle pc" href="ZW.php?newsid=5672201&_t=1725454399" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">新学期 新作为|2024年辅导员...</div></a>
+							<a class="titleSet newTitle pad" href="ZW.php?newsid=5672201&_t=1725454399" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">新学期 新作为|2024年辅导员...</div></a>
+							<a class="titleSet newTitle mobile" href="ZW.php?newsid=5672201&_t=1725454399" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">新学期 新作为|2024年辅导员...</div></a>
+					</div>
+					
+					
+						<div class="newDetail detailSet pc" style="-webkit-line-clamp: ;"><div class="overhide">为积极响应国家关于加强辅导员队伍建设的号召，明确政治立场...</div></div>
+						<div class="newDetail detailSet pad" style="-webkit-line-clamp: ;"><div class="overhide">为积极响应国家关于加...</div></div>
+						<div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;"><div class="overhide">为积极响应国家关于加...</div></div>
+					
+				</div>
+				<div class="newB">
+					
+					
+					
+						<span class="newsTime timesSet"><span class="nDate">2024-08-28</span> <span class="nTime">00:00:00</span></span>
+					
+				</div>
+				
+			</div>
+		</li>
+		
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	
+</div><script>
+			window.resizeTimeoutnewsList_style_04_1561081421831=setTimeout(function(){
+				diyAutoHeight($('#newsList_style_04_1561081421831'));
+				window.resizeTimeoutnewsList_style_04_1561081421831=null;
+			},350);</script>
+<style>
+	#newsList_style_04_1561081421831 .newDetail.pc {display:block;}
+	#newsList_style_04_1561081421831 .newDetail.pad, #newsList_style_04_1561081421831 .newDetail.mobile {display:none;}
+	#newsList_style_04_1561081421831 .newTitle.pc {display:block;}
+	#newsList_style_04_1561081421831 .newTitle.pad, #newsList_style_04_1561081421831 .newTitle.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_04_1561081421831 .newDetail.pad {display:block;}
+		#newsList_style_04_1561081421831 .newDetail.pc, #newsList_style_04_1561081421831 .newDetail.mobile {display:none;}
+		#newsList_style_04_1561081421831 .newTitle.pad {display:block;}
+		#newsList_style_04_1561081421831 .newTitle.pc, #newsList_style_04_1561081421831 .newTitle.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_04_1561081421831 .newDetail.mobile {display:block;}
+		#newsList_style_04_1561081421831 .newDetail.pc, #newsList_style_04_1561081421831 .newDetail.pad {display:none;}
+		#newsList_style_04_1561081421831 .newTitle.mobile {display:block;}
+		#newsList_style_04_1561081421831 .newTitle.pc, #newsList_style_04_1561081421831 .newTitle.pad {display:none;}
+	}
+</style>
+
+<style>
+/*pc*/
+#newsList_style_04_1561081421831 li{width: 24.25%;}
+#newsList_style_04_1561081421831 li.sumary_list{margin-bottom:1%;}
+@media screen and (max-width: 1024px){/*ipad*/
+	#newsList_style_04_1561081421831 li{width: 32.666666666667%;}
+	#newsList_style_04_1561081421831 li.sumary_list{margin-bottom:1%;}
+}
+@media screen and (max-width: 768px){/*mobi*/
+	#newsList_style_04_1561081421831  li{width: 49.5%;}
+	#newsList_style_04_1561081421831  li.sumary_list{margin-bottom:1%;}
+}
+</style>
+
+
+
+
+
+<style>
+@media screen and (min-width: 1025px) {
+}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+}
+@media screen and (max-width: 640px) {
+}
+
+</style>                </div>
+            </div>
+                        <div id="searchbox_style_01_1561434679991" class="view style_01 searchbox  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="searchbox" class="view_contents" >
+                    <div class="searchStyle_1">
+	<form  onsubmit="return goSearch(this);" target=_self>
+		<div class="searchForm modSet">
+            <span class="searchPos-r">
+          		<input class="inputSet search_input" name='nkeyword' id="nkeyword" placeholder="搜索热点新闻" />
+				<i class="fa fa-search searchIcoSet"></i>
+            </span>
+            <button type="button" class="search-btn btnaSet" attrhref="XWZX_xyzw.php" >搜索</button>
+		</div>
+	</form>
+</div>
+                </div>
+            </div>
+                        <div id="image_style_01_1560925320769" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+		<a href='XWZX_xyzw.php?pageid=1643565' target="_self" style="border-radius: inherit;">
+			<img class="link-type-" src="img/upimages/SY/xw_Title.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+		</a>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="text_style_01_1560927973180" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="XWZX_xyzw.php?pageid=1643565" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>更多/MORE+</a>                </div>
+            </div>
+                        <div id="newsList_style_18_1561536471908" class="view style_18 newsList  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="newsList" class="view_contents" >
+                    <style>/*新闻列表样式*/
+.boxNewsListStyle_18{width:100%; clear: both;}
+.boxNewsListStyle_18 *{transition: all ease .2s; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; box-sizing: border-box;}
+.boxNewsListStyle_18 li{clear:both;width:100%; list-style:none;padding-bottom: 10px; margin-bottom:10px; border-bottom:1px solid #eee; background: #fff; box-sizing:border-box; overflow: hidden;}
+.boxNewsListStyle_18 .outforeach{padding: 0;margin: 0;border: 0;background: revert;}
+.boxNewsListStyle_18 .sumary_list .newCont{width:100%; box-sizing:border-box; float: left;}
+.boxNewsListStyle_18 .sumary_list .newCont .newTitle{width:100%;}
+.boxNewsListStyle_18 .sumary_list .newName a{	display: inline-block; text-decoration:none; line-height:1.4; font-size:16px; color: #333;}
+.boxNewsListStyle_18 .sumary_list .newSort{color:#fff; font-size:12px; white-space: nowrap; padding:0 1em; height: 24px; line-height: 24px; background:#4dc0f8; margin-right:10px; float:left;}
+.boxNewsListStyle_18 .sumary_list .newsTime{text-align:right;color:#aaa; font-size:16px; white-space:nowrap;float: right;}
+.boxNewsListStyle_18 .sumary_list .newsTime span{white-space: nowrap;}
+.boxNewsListStyle_18 .sumary_list .newDetail{width:100%; padding:1em 0 0; color:#aaa; font-size:12px; line-height:1.6;overflow:hidden; text-overflow:ellipsis; display:-webkit-box;-webkit-line-clamp:2; -webkit-box-orient:vertical;}
+
+
+/*alex---后期加的图片样式*/
+.boxNewsListStyle_18 .newPic{background-color: #eee;width:110px; ;margin:0 10px 10px 0;overflow:hidden; position:relative; box-sizing:border-box; float:left; }
+.boxNewsListStyle_18 .sumary_list:hover .newPic .News_img{transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -o-transform: scale(1.05); -ms-transform: scale(1.05);}
+.boxNewsListStyle_18 .newPic a{display: block; position: absolute; left: 0; width: 100%;}
+.boxNewsListStyle_18 .newPic img{width:100%;}
+.boxNewsListStyle_18 .newPic2{display: none;}
+.boxNewsListStyle_18 .show_all{ margin-top:.5em;float: left;}
+.boxNewsListStyle_18 .show_all a{display:block; margin-top:.4em; text-decoration:none; border:1px solid #ddd; text-align:center; padding:.4em 1em; font-size:12px;  color:#666; }
+.boxNewsListStyle_18 .newSort{display: block;color:#999;}
+
+
+@media screen and (max-width:768px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:14px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:14px;}
+
+.boxNewsListStyle_18  .newPic{width:100%;float:none;margin-bottom: 6px;}
+.boxNewsListStyle_18 .show_all{width:40%;min-width: 160px; }
+
+
+}
+@media screen and (max-width:480px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:12px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:12px;}
+}
+
+</style><!---新闻列表区域-->
+<!--pageSet pagecurSet-->
+<div class="boxNewsListStyle_18">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5756843&_t=1730039430" target="_self" >凝心聚力 开拓进取我院2024年秋季学期教师培训会...</a>
+						
+					
+					</div>
+				</div>
+
+				
+					<div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">为全面提升教师综合素质和业务能力，推动学校教育教学发展，8月29日-8月...</div>
+					<div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">为全面提升教师综合素质和业务能力，推动学校教育教学发展，8月29日-8月...</div>
+					<div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">为全面提升教师综合素质和业务能力，推动学校教育教学发展，8月...</div>
+					
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5756841&_t=1730038572" target="_self" >凝心聚力 再启新程马克思主义学院召开2024年秋季...</a>
+						
+					
+					</div>
+				</div>
+
+				
+					<div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">新的学期，马克思主义学院全体教师必将继续勠力同心，砥砺前行，以更加饱满的...</div>
+					<div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">新的学期，马克思主义学院全体教师必将继续勠力同心，砥砺前行，以更加饱满的...</div>
+					<div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">新的学期，马克思主义学院全体教师必将继续勠力同心，砥砺前行，...</div>
+					
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5672203&_t=1725454868" target="_self" >弘扬西柏坡精神 续写新时代华章|我院西柏坡精神宣讲...</a>
+						
+					
+					</div>
+				</div>
+
+				
+					<div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">为深入学习贯彻习近平新时代中国特色社会主义思想和党的二十大精神，积极响应...</div>
+					<div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">为深入学习贯彻习近平新时代中国特色社会主义思想和党的二十大精神，积极响应...</div>
+					<div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">为深入学习贯彻习近平新时代中国特色社会主义思想和党的二十大精...</div>
+					
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+<script>
+			window.resizeTimeoutnewsList_style_18_1561536471908=setTimeout(function(){
+				diyAutoHeight($('#newsList_style_18_1561536471908'));
+				window.resizeTimeoutnewsList_style_18_1561536471908=null;
+			},350);</script>
+<style>
+	#newsList_style_18_1561536471908 .newDetail.pc {display:block;}
+	#newsList_style_18_1561536471908 .newDetail.pad, #newsList_style_18_1561536471908 .newDetail.mobile {display:none;}
+	#newsList_style_18_1561536471908 .newTitle.pc {display:block;}
+	#newsList_style_18_1561536471908 .newTitle.pad, #newsList_style_18_1561536471908 .newTitle.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_18_1561536471908 .newDetail.pad {display:block;}
+		#newsList_style_18_1561536471908 .newDetail.pc, #newsList_style_18_1561536471908 .newDetail.mobile {display:none;}
+		#newsList_style_18_1561536471908 .newTitle.pad {display:block;}
+		#newsList_style_18_1561536471908 .newTitle.pc, #newsList_style_18_1561536471908 .newTitle.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_18_1561536471908 .newDetail.mobile {display:block;}
+		#newsList_style_18_1561536471908 .newDetail.pc, #newsList_style_18_1561536471908 .newDetail.pad {display:none;}
+		#newsList_style_18_1561536471908 .newTitle.mobile {display:block;}
+		#newsList_style_18_1561536471908 .newTitle.pc, #newsList_style_18_1561536471908 .newTitle.pad {display:none;}
+	}
+</style>
+
+
+
+
+
+
+<style>
+@media screen and (min-width: 1025px) {
+	#newsList_style_18_1561536471908 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1561536471908 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1561536471908 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	#newsList_style_18_1561536471908 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1561536471908 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1561536471908 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (max-width: 640px) {
+            }
+
+</style>                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="image_style_01_1561076770666" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/4/44949/jpg/170052852949285cf77b36c41e3f038dd4883f71bca2f.jpg?version=0" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="tab_style_03_1560935843788" class="view style_03 tab  includeView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="tab" class="view_contents" >
+                    <div id="div_tab_style_03_1560935843788" class="niceTab tabStyle_3">
+	<div class="tab_nav tab_nav_top">
+		<div class="tab_nav_box ">
+			<div class="tab_arrow arrow_left" style="display: none;"><span class="ar l"><</span></div>
+			<div class="tab_scroll tab_scroll_top">
+				<ul class="tab_ul tab_ul_top">
+				<li class="tab_li tabItemSet tab_li_top tabCurItem">
+					<div class="tab_pos_r">
+													                                <div class="tab_img tabImgSet">
+                                    <img src="https://cdn.yun.sooce.cn/4/44949/png/165516634993792ac0d87786122b1.png?version=0"   alt="165516634993792ac0d87786122b1" style="" ondragstart="return false;"/>
+                                    <div class="bbx-new-font" style="color: ; font-size: px; display: none;" ondragstart="return false;">https://cdn.yun.sooce.cn/4/44949/png/165516634993792ac0d87786122b1.png?version=0</div>
+                                </div>
+                                                        <div class="tab_txt" onselectstart="return false"><p></p></div>
+											</div>
+					</li><li class="tab_li tabItemSet tab_li_top">
+					<div class="tab_pos_r">
+													                                <div class="tab_img tabImgSet">
+                                    <img src="https://www.bucmdf.edu.cn/2020/20200722-2/2.png"   alt="2" style="" ondragstart="return false;"/>
+                                    <div class="bbx-new-font" style="color: ; font-size: px; display: none;" ondragstart="return false;">https://www.bucmdf.edu.cn/2020/20200722-2/2.png</div>
+                                </div>
+                                                        <div class="tab_txt" onselectstart="return false"><p></p></div>
+											</div>
+					</li><li class="tab_li tabItemSet tab_li_top">
+					<div class="tab_pos_r">
+													                                <div class="tab_img tabImgSet">
+                                    <img src="https://www.bucmdf.edu.cn/2020/20200722-2/3.png"   alt="3" style="" ondragstart="return false;"/>
+                                    <div class="bbx-new-font" style="color: ; font-size: px; display: none;" ondragstart="return false;">https://www.bucmdf.edu.cn/2020/20200722-2/3.png</div>
+                                </div>
+                                                        <div class="tab_txt" onselectstart="return false"><p></p></div>
+											</div>
+					</li>				</ul>
+			</div>
+			<div class="tab_arrow arrow_right" style="display: none;"><span class="ar r">></span></div>
+		</div>
+	</div>
+	<div class="tab_box tab_box_top" style=""   >
+		<div class="tab_content">
+			<div class="tab_main niceTabContent tabconSet">
+							<div class="tab_div niceTabShow">
+					            <div id="image_style_01_1655168281797" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/4/44949/jpg/1655168403630f09ef55981247f31.jpg?version=0" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="newsList_style_02_1655169281626" class="view style_02 newsList  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="newsList" class="view_contents" >
+                    <style>/*新闻列表样式*/
+.boxNewsListStyle_2{width:100%; clear: both;}
+.boxNewsListStyle_2 *{transition: all ease .2s; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; box-sizing: border-box;}
+.boxNewsListStyle_2 li{width:100%; list-style:none; margin-bottom:10px; background:#fff;}
+.boxNewsListStyle_2 li .clear{clear:both;}
+.boxNewsListStyle_2 .sumary_list .newPic{float:left; width:150px; background: #eee; overflow:hidden; position:relative; border:1px solid #eee; box-sizing:border-box;}
+.boxNewsListStyle_2 .sumary_list .newPic img{position:absolute; top:0; left:0; width:100%;}
+.boxNewsListStyle_2 .sumary_list .newPic .zTm{margin-top:100%;}
+.boxNewsListStyle_2 .sumary_list .newCont{float:left; width:calc(100% - 150px); padding-left:1em; box-sizing:border-box;}
+.boxNewsListStyle_2 .sumary_list .newCont .newTitle{width:100%;}
+.boxNewsListStyle_2 .sumary_list .newName a{color:#333; text-decoration:none;font-size:16px;padding:15px 0 10px; border-bottom: 1px solid #eee;line-height: 1.4;-webkit-line-clamp: 1;display: -webkit-box;-webkit-box-orient: vertical;overflow: hidden;}
+.boxNewsListStyle_2 .sumary_list .newName a:hover{}
+.boxNewsListStyle_2 .sumary_list .newB{width:100%; line-height:2; padding-top:.5em;}
+.boxNewsListStyle_2 .sumary_list .newSort{color:#f37878; font-size:12px; white-space: nowrap; border-radius:1.5em; margin-right:5px;}
+.boxNewsListStyle_2 .sumary_list .newsTime{text-align:right;color:#888; font-size:14px; white-space:nowrap;}
+.boxNewsListStyle_2 .sumary_list .newsTime span{white-space: nowrap;}
+.boxNewsListStyle_2 .sumary_list .newDetail{width:100%; padding:.6em .6em 0 0;margin-bottom: 0.6em; color:#888; font-size:12px; line-height:1.6;}
+.boxNewsListStyle_2 .sumary_list .show_all{width:100%;}
+.boxNewsListStyle_2 .sumary_list .show_all a{display:inline-block; margin-top:.4em; text-decoration:underline; font-size:12px;  color:#fff; background: #f37878; padding: 4px 10px; }
+
+@media screen and (max-width:991px){
+.boxNewsListStyle_2 .sumary_list .newName{margin:.4em 0;}
+}
+@media screen and (max-width:768px){
+.boxNewsListStyle_2 li{float:left; width:calc((100% - 10px)/2); margin-right:10px;}
+.boxNewsListStyle_2 li:nth-child(even){margin-right:0;}
+.boxNewsListStyle_2 .sumary_list .newPic{float:none; width:100%;}
+.boxNewsListStyle_2 .sumary_list .newCont{float:none; width:100%; padding-left: 0;}
+.boxNewsListStyle_2 .sumary_list .newName{margin:.4em 0;}
+.boxNewsListStyle_2 .sumary_list .newName a{font-size:14px; }
+}
+@media screen and (max-width:480px){
+.boxNewsListStyle_2 li{float:none; width:100%; margin-right:0;}
+.boxNewsListStyle_2 .sumary_list .newName{margin:.4em 0;}
+.boxNewsListStyle_2 .sumary_list .newName a{font-size:14px;}
+}
+
+</style><!---新闻列表区域-->
+<!--pageSet pagecurSet-->
+<div class="boxNewsListStyle_2">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5554777&_t=1719625409" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">2024年专业介绍——专科</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5554777&_t=1719625409" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">2024年专业介绍——专科</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5554777&_t=1719625409" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">2024年专业介绍——专科</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5553823&_t=1719572718" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2024年招生简章</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5553823&_t=1719572718" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2024年招生简章</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5553823&_t=1719572718" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2024年招生简章</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5488907&_t=1716539408" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">2024年招生专业介绍——本科</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5488907&_t=1716539408" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">2024年招生专业介绍——本科</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5488907&_t=1716539408" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">2024年招生专业介绍——本科</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5489085&_t=1716556402" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">“百日冲刺行动”北京中医药大学东方学院2024届毕业生网络招聘会邀...</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5489085&_t=1716556402" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">“百日冲刺行动”北京中医药大学东方学院2024届毕业生网络招聘会邀...</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5489085&_t=1716556402" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">“百日冲刺行动”北京中医药大学东方学院2024届毕业生网络招聘会邀...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5385143&_t=1711532979" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2022-2023学年新疆西藏籍少数民族大学...</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5385143&_t=1711532979" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2022-2023学年新疆西藏籍少数民族大学...</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5385143&_t=1711532979" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2022-2023学年新疆西藏籍少数民族大学...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5385147&_t=1711533096" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2023-2024学年省级三好学生、优秀学生...</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5385147&_t=1711533096" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2023-2024学年省级三好学生、优秀学生...</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5385147&_t=1711533096" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2023-2024学年省级三好学生、优秀学生...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5249753&_t=1704803350" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于 “河北省普通高等学校专升本考试专项招生...</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5249753&_t=1704803350" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于 “河北省普通高等学校专升本考试专项招生...</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5249753&_t=1704803350" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于 “河北省普通高等学校专升本考试专项招生...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5228587&_t=1703475733" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">高等学校实验室消防安全管理规范</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5228587&_t=1703475733" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">高等学校实验室消防安全管理规范</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5228587&_t=1703475733" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">高等学校实验室消防安全管理规范</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+<script>
+			window.resizeTimeoutnewsList_style_02_1655169281626=setTimeout(function(){
+				diyAutoHeight($('#newsList_style_02_1655169281626'));
+				window.resizeTimeoutnewsList_style_02_1655169281626=null;
+			},350);</script>
+<style>
+	#newsList_style_02_1655169281626 .newDetail.pc {display:block;}
+	#newsList_style_02_1655169281626 .newDetail.pad, #newsList_style_02_1655169281626 .newDetail.mobile {display:none;}
+	#newsList_style_02_1655169281626 .newTitle.pc {display:block;}
+	#newsList_style_02_1655169281626 .newTitle.pad, #newsList_style_02_1655169281626 .newTitle.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_02_1655169281626 .newDetail.pad {display:block;}
+		#newsList_style_02_1655169281626 .newDetail.pc, #newsList_style_02_1655169281626 .newDetail.mobile {display:none;}
+		#newsList_style_02_1655169281626 .newTitle.pad {display:block;}
+		#newsList_style_02_1655169281626 .newTitle.pc, #newsList_style_02_1655169281626 .newTitle.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_02_1655169281626 .newDetail.mobile {display:block;}
+		#newsList_style_02_1655169281626 .newDetail.pc, #newsList_style_02_1655169281626 .newDetail.pad {display:none;}
+		#newsList_style_02_1655169281626 .newTitle.mobile {display:block;}
+		#newsList_style_02_1655169281626 .newTitle.pc, #newsList_style_02_1655169281626 .newTitle.pad {display:none;}
+	}
+</style>
+
+
+
+
+
+
+<style>
+@media screen and (min-width: 1025px) {
+	#newsList_style_02_1655169281626 .sumary_list .newPic{width: 0px;}
+	#newsList_style_02_1655169281626 .sumary_list .newCont{width: calc(100% - 0px);}
+}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	#newsList_style_02_1655169281626 .sumary_list .newPic{width: 0px;}
+	#newsList_style_02_1655169281626 .sumary_list .newCont{width: calc(100% - 0px);}
+}
+@media screen and (max-width: 640px) {
+	#newsList_style_02_1655169281626 .sumary_list .newPic{width: 0px;}
+}
+
+</style>                </div>
+            </div>
+                        <div id="div_blank_new01_1655169295964" class="view blank_new01 div  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="blank_new01">
+<div class="roundcs modSet" ></div>
+</div>
+                </div>
+            </div>
+                        <div id="text_style_01_1655169585858" class="view style_01 text  wow opacityHide a2 rubberBand lockHeightView "  data-wow-duration='1s' data-wow-delay='0.25s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="XWZX_tzgg.php?pageid=1643569" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>更多/MORE+</a>                </div>
+            </div>
+            				</div>
+							<div class="tab_div">
+					            <div id="div_blank_new01_1560991545311" class="view blank_new01 div  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="blank_new01">
+<div class="roundcs modSet" ></div>
+</div>
+                </div>
+            </div>
+                        <div id="text_style_01_1560999175041" class="view style_01 text  wow opacityHide a2 rubberBand lockHeightView "  data-wow-duration='1s' data-wow-delay='0.25s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script>MORE+                </div>
+            </div>
+                        <div id="image_style_01_1561346395781" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/SY/gs_bt.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="text_style_01_1561346459992" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="ZW.php?newsid=4168277" target='_self' style='color:inherit' class='editor-view-extend link-type-1-3'><div><br></div>尊敬的用人单位：&nbsp;<div>真诚感谢贵单位长期以来对我院毕业生的认可及对我院毕业生就业工作的关心与支持！&nbsp;</div><div>为持续做好我院毕业生就业工作，提升就业服务质量，切实保障各用人单位的引才需求，促进我院毕业生顺利就业，最大限度减少疫情对毕业生就业的影响，实现“就业服务不停歇、网络招聘不断线”，现决定举办“北京中医药大学东方学院2023年网络视频双选会”，现将有关事项函告，请关注通知公告内容。</div><div><br></div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 北京中医药大学东方学院</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;就业指导中心</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div><div><br></div><div><br></div></a>                </div>
+            </div>
+                        <div id="div_blank_new01_1561346526228" class="view blank_new01 div  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="blank_new01">
+<div class="roundcs modSet" ></div>
+</div>
+                </div>
+            </div>
+                        <div id="newsList_style_02_1561346592380" class="view style_02 newsList  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="newsList" class="view_contents" >
+                    <style>/*新闻列表样式*/
+.boxNewsListStyle_2{width:100%; clear: both;}
+.boxNewsListStyle_2 *{transition: all ease .2s; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; box-sizing: border-box;}
+.boxNewsListStyle_2 li{width:100%; list-style:none; margin-bottom:10px; background:#fff;}
+.boxNewsListStyle_2 li .clear{clear:both;}
+.boxNewsListStyle_2 .sumary_list .newPic{float:left; width:150px; background: #eee; overflow:hidden; position:relative; border:1px solid #eee; box-sizing:border-box;}
+.boxNewsListStyle_2 .sumary_list .newPic img{position:absolute; top:0; left:0; width:100%;}
+.boxNewsListStyle_2 .sumary_list .newPic .zTm{margin-top:100%;}
+.boxNewsListStyle_2 .sumary_list .newCont{float:left; width:calc(100% - 150px); padding-left:1em; box-sizing:border-box;}
+.boxNewsListStyle_2 .sumary_list .newCont .newTitle{width:100%;}
+.boxNewsListStyle_2 .sumary_list .newName a{color:#333; text-decoration:none;font-size:16px;padding:15px 0 10px; border-bottom: 1px solid #eee;line-height: 1.4;-webkit-line-clamp: 1;display: -webkit-box;-webkit-box-orient: vertical;overflow: hidden;}
+.boxNewsListStyle_2 .sumary_list .newName a:hover{}
+.boxNewsListStyle_2 .sumary_list .newB{width:100%; line-height:2; padding-top:.5em;}
+.boxNewsListStyle_2 .sumary_list .newSort{color:#f37878; font-size:12px; white-space: nowrap; border-radius:1.5em; margin-right:5px;}
+.boxNewsListStyle_2 .sumary_list .newsTime{text-align:right;color:#888; font-size:14px; white-space:nowrap;}
+.boxNewsListStyle_2 .sumary_list .newsTime span{white-space: nowrap;}
+.boxNewsListStyle_2 .sumary_list .newDetail{width:100%; padding:.6em .6em 0 0;margin-bottom: 0.6em; color:#888; font-size:12px; line-height:1.6;}
+.boxNewsListStyle_2 .sumary_list .show_all{width:100%;}
+.boxNewsListStyle_2 .sumary_list .show_all a{display:inline-block; margin-top:.4em; text-decoration:underline; font-size:12px;  color:#fff; background: #f37878; padding: 4px 10px; }
+
+@media screen and (max-width:991px){
+.boxNewsListStyle_2 .sumary_list .newName{margin:.4em 0;}
+}
+@media screen and (max-width:768px){
+.boxNewsListStyle_2 li{float:left; width:calc((100% - 10px)/2); margin-right:10px;}
+.boxNewsListStyle_2 li:nth-child(even){margin-right:0;}
+.boxNewsListStyle_2 .sumary_list .newPic{float:none; width:100%;}
+.boxNewsListStyle_2 .sumary_list .newCont{float:none; width:100%; padding-left: 0;}
+.boxNewsListStyle_2 .sumary_list .newName{margin:.4em 0;}
+.boxNewsListStyle_2 .sumary_list .newName a{font-size:14px; }
+}
+@media screen and (max-width:480px){
+.boxNewsListStyle_2 li{float:none; width:100%; margin-right:0;}
+.boxNewsListStyle_2 .sumary_list .newName{margin:.4em 0;}
+.boxNewsListStyle_2 .sumary_list .newName a{font-size:14px;}
+}
+
+</style><!---新闻列表区域-->
+<!--pageSet pagecurSet-->
+<div class="boxNewsListStyle_2">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5489085&_t=1716556402" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">“百日冲刺行动”北京中医药大学东方学院2024届毕业生网络招聘会邀...</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5489085&_t=1716556402" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">“百日冲刺行动”北京中医药大学东方学院2024届毕业生网络招聘会邀...</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5489085&_t=1716556402" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">“百日冲刺行动”北京中医药大学东方学院2024届毕业生网络招聘会邀...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5385143&_t=1711532979" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2022-2023学年新疆西藏籍少数民族大学...</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5385143&_t=1711532979" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2022-2023学年新疆西藏籍少数民族大学...</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5385143&_t=1711532979" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2022-2023学年新疆西藏籍少数民族大学...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5385147&_t=1711533096" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2023-2024学年省级三好学生、优秀学生...</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5385147&_t=1711533096" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2023-2024学年省级三好学生、优秀学生...</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5385147&_t=1711533096" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2023-2024学年省级三好学生、优秀学生...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5249753&_t=1704803350" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于 “河北省普通高等学校专升本考试专项招生...</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5249753&_t=1704803350" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于 “河北省普通高等学校专升本考试专项招生...</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5249753&_t=1704803350" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于 “河北省普通高等学校专升本考试专项招生...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5228587&_t=1703475733" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">高等学校实验室消防安全管理规范</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5228587&_t=1703475733" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">高等学校实验室消防安全管理规范</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5228587&_t=1703475733" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">高等学校实验室消防安全管理规范</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=5205619&_t=1702366460" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2023年收费项目公示表</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=5205619&_t=1702366460" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2023年收费项目公示表</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=5205619&_t=1702366460" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2023年收费项目公示表</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="ZW.php?newsid=4969869&_t=1691231479" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">关于北京中医药大学东方学院渤海校区 2023级新生团关系转入的相关...</div></a>
+						<a class="titleSet newTitle pad" href="ZW.php?newsid=4969869&_t=1691231479" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">关于北京中医药大学东方学院渤海校区 2023级新生团关系转入的相关...</div></a>
+						<a class="titleSet newTitle mobile" href="ZW.php?newsid=4969869&_t=1691231479" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">关于北京中医药大学东方学院渤海校区 2023级新生团关系转入的相关...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+<script>
+			window.resizeTimeoutnewsList_style_02_1561346592380=setTimeout(function(){
+				diyAutoHeight($('#newsList_style_02_1561346592380'));
+				window.resizeTimeoutnewsList_style_02_1561346592380=null;
+			},350);</script>
+<style>
+	#newsList_style_02_1561346592380 .newDetail.pc {display:block;}
+	#newsList_style_02_1561346592380 .newDetail.pad, #newsList_style_02_1561346592380 .newDetail.mobile {display:none;}
+	#newsList_style_02_1561346592380 .newTitle.pc {display:block;}
+	#newsList_style_02_1561346592380 .newTitle.pad, #newsList_style_02_1561346592380 .newTitle.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_02_1561346592380 .newDetail.pad {display:block;}
+		#newsList_style_02_1561346592380 .newDetail.pc, #newsList_style_02_1561346592380 .newDetail.mobile {display:none;}
+		#newsList_style_02_1561346592380 .newTitle.pad {display:block;}
+		#newsList_style_02_1561346592380 .newTitle.pc, #newsList_style_02_1561346592380 .newTitle.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_02_1561346592380 .newDetail.mobile {display:block;}
+		#newsList_style_02_1561346592380 .newDetail.pc, #newsList_style_02_1561346592380 .newDetail.pad {display:none;}
+		#newsList_style_02_1561346592380 .newTitle.mobile {display:block;}
+		#newsList_style_02_1561346592380 .newTitle.pc, #newsList_style_02_1561346592380 .newTitle.pad {display:none;}
+	}
+</style>
+
+
+
+
+
+
+<style>
+@media screen and (min-width: 1025px) {
+	#newsList_style_02_1561346592380 .sumary_list .newPic{width: 0px;}
+	#newsList_style_02_1561346592380 .sumary_list .newCont{width: calc(100% - 0px);}
+}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	#newsList_style_02_1561346592380 .sumary_list .newPic{width: 0px;}
+	#newsList_style_02_1561346592380 .sumary_list .newCont{width: calc(100% - 0px);}
+}
+@media screen and (max-width: 640px) {
+	#newsList_style_02_1561346592380 .sumary_list .newPic{width: 0px;}
+}
+
+</style>                </div>
+            </div>
+                        <div id="image_style_01_1561347037027" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/SY/tz_01.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="text_style_01_1595397939301" class="view style_01 text  wow opacityHide a2 rubberBand lockHeightView "  data-wow-duration='1s' data-wow-delay='0.25s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="XWZX_tzgg.php?pageid=1643569" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>更多/MORE+</a>                </div>
+            </div>
+            				</div>
+							<div class="tab_div">
+					            <div id="div_blank_new01_1561345372890" class="view blank_new01 div  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="blank_new01">
+<div class="roundcs modSet" ></div>
+</div>
+                </div>
+            </div>
+                        <div id="newsList_style_02_1561345413556" class="view style_02 newsList  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="newsList" class="view_contents" >
+                    <style>/*新闻列表样式*/
+.boxNewsListStyle_2{width:100%; clear: both;}
+.boxNewsListStyle_2 *{transition: all ease .2s; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; box-sizing: border-box;}
+.boxNewsListStyle_2 li{width:100%; list-style:none; margin-bottom:10px; background:#fff;}
+.boxNewsListStyle_2 li .clear{clear:both;}
+.boxNewsListStyle_2 .sumary_list .newPic{float:left; width:150px; background: #eee; overflow:hidden; position:relative; border:1px solid #eee; box-sizing:border-box;}
+.boxNewsListStyle_2 .sumary_list .newPic img{position:absolute; top:0; left:0; width:100%;}
+.boxNewsListStyle_2 .sumary_list .newPic .zTm{margin-top:100%;}
+.boxNewsListStyle_2 .sumary_list .newCont{float:left; width:calc(100% - 150px); padding-left:1em; box-sizing:border-box;}
+.boxNewsListStyle_2 .sumary_list .newCont .newTitle{width:100%;}
+.boxNewsListStyle_2 .sumary_list .newName a{color:#333; text-decoration:none;font-size:16px;padding:15px 0 10px; border-bottom: 1px solid #eee;line-height: 1.4;-webkit-line-clamp: 1;display: -webkit-box;-webkit-box-orient: vertical;overflow: hidden;}
+.boxNewsListStyle_2 .sumary_list .newName a:hover{}
+.boxNewsListStyle_2 .sumary_list .newB{width:100%; line-height:2; padding-top:.5em;}
+.boxNewsListStyle_2 .sumary_list .newSort{color:#f37878; font-size:12px; white-space: nowrap; border-radius:1.5em; margin-right:5px;}
+.boxNewsListStyle_2 .sumary_list .newsTime{text-align:right;color:#888; font-size:14px; white-space:nowrap;}
+.boxNewsListStyle_2 .sumary_list .newsTime span{white-space: nowrap;}
+.boxNewsListStyle_2 .sumary_list .newDetail{width:100%; padding:.6em .6em 0 0;margin-bottom: 0.6em; color:#888; font-size:12px; line-height:1.6;}
+.boxNewsListStyle_2 .sumary_list .show_all{width:100%;}
+.boxNewsListStyle_2 .sumary_list .show_all a{display:inline-block; margin-top:.4em; text-decoration:underline; font-size:12px;  color:#fff; background: #f37878; padding: 4px 10px; }
+
+@media screen and (max-width:991px){
+.boxNewsListStyle_2 .sumary_list .newName{margin:.4em 0;}
+}
+@media screen and (max-width:768px){
+.boxNewsListStyle_2 li{float:left; width:calc((100% - 10px)/2); margin-right:10px;}
+.boxNewsListStyle_2 li:nth-child(even){margin-right:0;}
+.boxNewsListStyle_2 .sumary_list .newPic{float:none; width:100%;}
+.boxNewsListStyle_2 .sumary_list .newCont{float:none; width:100%; padding-left: 0;}
+.boxNewsListStyle_2 .sumary_list .newName{margin:.4em 0;}
+.boxNewsListStyle_2 .sumary_list .newName a{font-size:14px; }
+}
+@media screen and (max-width:480px){
+.boxNewsListStyle_2 li{float:none; width:100%; margin-right:0;}
+.boxNewsListStyle_2 .sumary_list .newName{margin:.4em 0;}
+.boxNewsListStyle_2 .sumary_list .newName a{font-size:14px;}
+}
+
+</style><!---新闻列表区域-->
+<!--pageSet pagecurSet-->
+<div class="boxNewsListStyle_2">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="JYJX_jxyj_zw.php?newsid=5228477&_t=1703472089" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2022-2023学年本科教学质量报告</div></a>
+						<a class="titleSet newTitle pad" href="JYJX_jxyj_zw.php?newsid=5228477&_t=1703472089" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2022-2023学年本科教学质量报告</div></a>
+						<a class="titleSet newTitle mobile" href="JYJX_jxyj_zw.php?newsid=5228477&_t=1703472089" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2022-2023学年本科教学质量报告</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="JYJX_jxyj_zw.php?newsid=5136505&_t=1699319140" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于推荐参评2023年河北省一流本科课程的公示</div></a>
+						<a class="titleSet newTitle pad" href="JYJX_jxyj_zw.php?newsid=5136505&_t=1699319140" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于推荐参评2023年河北省一流本科课程的公示</div></a>
+						<a class="titleSet newTitle mobile" href="JYJX_jxyj_zw.php?newsid=5136505&_t=1699319140" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于推荐参评2023年河北省一流本科课程的公示</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="JYJX_jxyj_zw.php?newsid=4276885&_t=1671073338" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2021-2022学年  本科教学质量报告</div></a>
+						<a class="titleSet newTitle pad" href="JYJX_jxyj_zw.php?newsid=4276885&_t=1671073338" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2021-2022学年  本科教学质量报告</div></a>
+						<a class="titleSet newTitle mobile" href="JYJX_jxyj_zw.php?newsid=4276885&_t=1671073338" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2021-2022学年  本科教学质量报告</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="JYJX_jxyj_zw.php?newsid=3533915&_t=1636962835" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2020-2021学年 本科教学质量报告</div></a>
+						<a class="titleSet newTitle pad" href="JYJX_jxyj_zw.php?newsid=3533915&_t=1636962835" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2020-2021学年 本科教学质量报告</div></a>
+						<a class="titleSet newTitle mobile" href="JYJX_jxyj_zw.php?newsid=3533915&_t=1636962835" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2020-2021学年 本科教学质量报告</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="JYJX_jxyj_zw.php?newsid=2845673&_t=1611480047" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于2021 年度河北省高等学校科学研究、河北省教...</div></a>
+						<a class="titleSet newTitle pad" href="JYJX_jxyj_zw.php?newsid=2845673&_t=1611480047" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于2021 年度河北省高等学校科学研究、河北省教...</div></a>
+						<a class="titleSet newTitle mobile" href="JYJX_jxyj_zw.php?newsid=2845673&_t=1611480047" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院关于2021 年度河北省高等学校科学研究、河北省教...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="JYJX_jxyj_zw.php?newsid=2762249&_t=1608860701" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2019-2020学年本科教学质量报告</div></a>
+						<a class="titleSet newTitle pad" href="JYJX_jxyj_zw.php?newsid=2762249&_t=1608860701" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2019-2020学年本科教学质量报告</div></a>
+						<a class="titleSet newTitle mobile" href="JYJX_jxyj_zw.php?newsid=2762249&_t=1608860701" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2019-2020学年本科教学质量报告</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="JYJX_jxyj_zw.php?newsid=2643895&_t=1604654466" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">潜心教学，全心育人//教务处召开教研室主任座谈会</div></a>
+						<a class="titleSet newTitle pad" href="JYJX_jxyj_zw.php?newsid=2643895&_t=1604654466" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">潜心教学，全心育人//教务处召开教研室主任座谈会</div></a>
+						<a class="titleSet newTitle mobile" href="JYJX_jxyj_zw.php?newsid=2643895&_t=1604654466" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">潜心教学，全心育人//教务处召开教研室主任座谈会</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+		<li class="sumary_list modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					
+					<div class="newName">					
+						<a class="titleSet newTitle pc" href="JYJX_jxyj_zw.php?newsid=2256393&_t=1591175506" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2019--2020学年省级三好学生、优秀学生干部...</div></a>
+						<a class="titleSet newTitle pad" href="JYJX_jxyj_zw.php?newsid=2256393&_t=1591175506" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2019--2020学年省级三好学生、优秀学生干部...</div></a>
+						<a class="titleSet newTitle mobile" href="JYJX_jxyj_zw.php?newsid=2256393&_t=1591175506" target="_self" style="-webkit-line-clamp: ;"><div class="overhide">北京中医药大学东方学院2019--2020学年省级三好学生、优秀学生干部...</div></a>
+					</div>
+					
+					<div class="newB">
+	                    
+						
+	                    
+					</div>
+				</div>
+	            
+				
+			</div>
+			<div class="clear"></div>
+		</li>
+		
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+<script>
+			window.resizeTimeoutnewsList_style_02_1561345413556=setTimeout(function(){
+				diyAutoHeight($('#newsList_style_02_1561345413556'));
+				window.resizeTimeoutnewsList_style_02_1561345413556=null;
+			},350);</script>
+<style>
+	#newsList_style_02_1561345413556 .newDetail.pc {display:block;}
+	#newsList_style_02_1561345413556 .newDetail.pad, #newsList_style_02_1561345413556 .newDetail.mobile {display:none;}
+	#newsList_style_02_1561345413556 .newTitle.pc {display:block;}
+	#newsList_style_02_1561345413556 .newTitle.pad, #newsList_style_02_1561345413556 .newTitle.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_02_1561345413556 .newDetail.pad {display:block;}
+		#newsList_style_02_1561345413556 .newDetail.pc, #newsList_style_02_1561345413556 .newDetail.mobile {display:none;}
+		#newsList_style_02_1561345413556 .newTitle.pad {display:block;}
+		#newsList_style_02_1561345413556 .newTitle.pc, #newsList_style_02_1561345413556 .newTitle.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_02_1561345413556 .newDetail.mobile {display:block;}
+		#newsList_style_02_1561345413556 .newDetail.pc, #newsList_style_02_1561345413556 .newDetail.pad {display:none;}
+		#newsList_style_02_1561345413556 .newTitle.mobile {display:block;}
+		#newsList_style_02_1561345413556 .newTitle.pc, #newsList_style_02_1561345413556 .newTitle.pad {display:none;}
+	}
+</style>
+
+
+
+
+
+
+<style>
+@media screen and (min-width: 1025px) {
+	#newsList_style_02_1561345413556 .sumary_list .newPic{width: 0px;}
+	#newsList_style_02_1561345413556 .sumary_list .newCont{width: calc(100% - 0px);}
+}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	#newsList_style_02_1561345413556 .sumary_list .newPic{width: 0px;}
+	#newsList_style_02_1561345413556 .sumary_list .newCont{width: calc(100% - 0px);}
+}
+@media screen and (max-width: 640px) {
+	#newsList_style_02_1561345413556 .sumary_list .newPic{width: 0px;}
+}
+
+</style>                </div>
+            </div>
+                        <div id="image_style_01_1561345440014" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="https://www.bucmdf.edu.cn/img/upimages/SY/jx.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="text_style_01_1561345502966" class="view style_01 text  wow opacityHide a2 rubberBand lockHeightView "  data-wow-duration='1s' data-wow-delay='0.25s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="JYJX_jxyj.php?pageid=1646327" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>更多/MORE+</a>                </div>
+            </div>
+            				</div>
+						</div>
+			<div class="tab_left_arrow arrowSet "><</div>
+			<div class="tab_right_arrow arrowSet ">></div>
+		</div>
+	</div>
+</div>
+                </div>
+            </div>
+                        <div id="image_style_01_1560929224555" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/SY/ZT_Title.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="tab_style_03_1561532529471" class="view style_03 tab  includeView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="tab" class="view_contents" >
+                    <div id="div_tab_style_03_1561532529471" class="niceTab tabStyle_3">
+	<div class="tab_nav tab_nav_top">
+		<div class="tab_nav_box ">
+			<div class="tab_arrow arrow_left" style="display: none;"><span class="ar l"><</span></div>
+			<div class="tab_scroll tab_scroll_top">
+				<ul class="tab_ul tab_ul_top">
+				<li class="tab_li tabItemSet tab_li_top tabCurItem">
+					<div class="tab_pos_r">
+													                                <div class="tab_img tabImgSet">
+                                    <img src="https://cdn.yun.sooce.cn/4/44949/png/165516634993792ac0d87786122b1.png?version=1655166348"   alt="招生信息" style="" ondragstart="return false;"/>
+                                    <div class="bbx-new-font" style="color: ; font-size: px; display: none;" ondragstart="return false;">https://cdn.yun.sooce.cn/4/44949/png/165516634993792ac0d87786122b1.png?version=1655166348</div>
+                                </div>
+                                                        <div class="tab_txt" onselectstart="return false"><p></p></div>
+											</div>
+					</li><li class="tab_li tabItemSet tab_li_top">
+					<div class="tab_pos_r">
+													                                <div class="tab_img tabImgSet">
+                                    <img src="https://www.bucmdf.edu.cn/2021/zx/11.png"   alt="11" style="" ondragstart="return false;"/>
+                                    <div class="bbx-new-font" style="color: ; font-size: px; display: none;" ondragstart="return false;">https://www.bucmdf.edu.cn/2021/zx/11.png</div>
+                                </div>
+                                                        <div class="tab_txt" onselectstart="return false"><p></p></div>
+											</div>
+					</li><li class="tab_li tabItemSet tab_li_top">
+					<div class="tab_pos_r">
+													                                <div class="tab_img tabImgSet">
+                                    <img src="https://www.bucmdf.edu.cn/2020/20200722-2/2.png"   alt="2" style="" ondragstart="return false;"/>
+                                    <div class="bbx-new-font" style="color: ; font-size: px; display: none;" ondragstart="return false;">https://www.bucmdf.edu.cn/2020/20200722-2/2.png</div>
+                                </div>
+                                                        <div class="tab_txt" onselectstart="return false"><p></p></div>
+											</div>
+					</li><li class="tab_li tabItemSet tab_li_top">
+					<div class="tab_pos_r">
+													                                <div class="tab_img tabImgSet">
+                                    <img src="https://www.bucmdf.edu.cn/2020/20200722-2/3.png"   alt="3" style="" ondragstart="return false;"/>
+                                    <div class="bbx-new-font" style="color: ; font-size: px; display: none;" ondragstart="return false;">https://www.bucmdf.edu.cn/2020/20200722-2/3.png</div>
+                                </div>
+                                                        <div class="tab_txt" onselectstart="return false"><p></p></div>
+											</div>
+					</li>				</ul>
+			</div>
+			<div class="tab_arrow arrow_right" style="display: none;"><span class="ar r">></span></div>
+		</div>
+	</div>
+	<div class="tab_box tab_box_top" style=""   >
+		<div class="tab_content">
+			<div class="tab_main niceTabContent tabconSet">
+							<div class="tab_div niceTabShow">
+					            <div id="newsList_style_18_1655171087694" class="view style_18 newsList  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="newsList" class="view_contents" >
+                    <style>/*新闻列表样式*/
+.boxNewsListStyle_18{width:100%; clear: both;}
+.boxNewsListStyle_18 *{transition: all ease .2s; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; box-sizing: border-box;}
+.boxNewsListStyle_18 li{clear:both;width:100%; list-style:none;padding-bottom: 10px; margin-bottom:10px; border-bottom:1px solid #eee; background: #fff; box-sizing:border-box; overflow: hidden;}
+.boxNewsListStyle_18 .outforeach{padding: 0;margin: 0;border: 0;background: revert;}
+.boxNewsListStyle_18 .sumary_list .newCont{width:100%; box-sizing:border-box; float: left;}
+.boxNewsListStyle_18 .sumary_list .newCont .newTitle{width:100%;}
+.boxNewsListStyle_18 .sumary_list .newName a{	display: inline-block; text-decoration:none; line-height:1.4; font-size:16px; color: #333;}
+.boxNewsListStyle_18 .sumary_list .newSort{color:#fff; font-size:12px; white-space: nowrap; padding:0 1em; height: 24px; line-height: 24px; background:#4dc0f8; margin-right:10px; float:left;}
+.boxNewsListStyle_18 .sumary_list .newsTime{text-align:right;color:#aaa; font-size:16px; white-space:nowrap;float: right;}
+.boxNewsListStyle_18 .sumary_list .newsTime span{white-space: nowrap;}
+.boxNewsListStyle_18 .sumary_list .newDetail{width:100%; padding:1em 0 0; color:#aaa; font-size:12px; line-height:1.6;overflow:hidden; text-overflow:ellipsis; display:-webkit-box;-webkit-line-clamp:2; -webkit-box-orient:vertical;}
+
+
+/*alex---后期加的图片样式*/
+.boxNewsListStyle_18 .newPic{background-color: #eee;width:110px; ;margin:0 10px 10px 0;overflow:hidden; position:relative; box-sizing:border-box; float:left; }
+.boxNewsListStyle_18 .sumary_list:hover .newPic .News_img{transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -o-transform: scale(1.05); -ms-transform: scale(1.05);}
+.boxNewsListStyle_18 .newPic a{display: block; position: absolute; left: 0; width: 100%;}
+.boxNewsListStyle_18 .newPic img{width:100%;}
+.boxNewsListStyle_18 .newPic2{display: none;}
+.boxNewsListStyle_18 .show_all{ margin-top:.5em;float: left;}
+.boxNewsListStyle_18 .show_all a{display:block; margin-top:.4em; text-decoration:none; border:1px solid #ddd; text-align:center; padding:.4em 1em; font-size:12px;  color:#666; }
+.boxNewsListStyle_18 .newSort{display: block;color:#999;}
+
+
+@media screen and (max-width:768px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:14px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:14px;}
+
+.boxNewsListStyle_18  .newPic{width:100%;float:none;margin-bottom: 6px;}
+.boxNewsListStyle_18 .show_all{width:40%;min-width: 160px; }
+
+
+}
+@media screen and (max-width:480px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:12px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:12px;}
+}
+
+</style><!---新闻列表区域-->
+<!--pageSet pagecurSet-->
+<div class="boxNewsListStyle_18">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5554777&_t=1719625409" target="_self" >2024年专业介绍——专科</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5553823&_t=1719572718" target="_self" >北京中医药大学东方学院2024年招生简章</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5553811&_t=1719572015" target="_self" >2023本科各省录取分数线</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5553809&_t=1719571868" target="_self" >2023年专科各省录取分数线</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+<script>
+			window.resizeTimeoutnewsList_style_18_1655171087694=setTimeout(function(){
+				diyAutoHeight($('#newsList_style_18_1655171087694'));
+				window.resizeTimeoutnewsList_style_18_1655171087694=null;
+			},350);</script>
+<style>
+	#newsList_style_18_1655171087694 .newDetail.pc {display:block;}
+	#newsList_style_18_1655171087694 .newDetail.pad, #newsList_style_18_1655171087694 .newDetail.mobile {display:none;}
+	#newsList_style_18_1655171087694 .newTitle.pc {display:block;}
+	#newsList_style_18_1655171087694 .newTitle.pad, #newsList_style_18_1655171087694 .newTitle.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_18_1655171087694 .newDetail.pad {display:block;}
+		#newsList_style_18_1655171087694 .newDetail.pc, #newsList_style_18_1655171087694 .newDetail.mobile {display:none;}
+		#newsList_style_18_1655171087694 .newTitle.pad {display:block;}
+		#newsList_style_18_1655171087694 .newTitle.pc, #newsList_style_18_1655171087694 .newTitle.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_18_1655171087694 .newDetail.mobile {display:block;}
+		#newsList_style_18_1655171087694 .newDetail.pc, #newsList_style_18_1655171087694 .newDetail.pad {display:none;}
+		#newsList_style_18_1655171087694 .newTitle.mobile {display:block;}
+		#newsList_style_18_1655171087694 .newTitle.pc, #newsList_style_18_1655171087694 .newTitle.pad {display:none;}
+	}
+</style>
+
+
+
+
+
+
+<style>
+@media screen and (min-width: 1025px) {
+	#newsList_style_18_1655171087694 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1655171087694 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1655171087694 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	#newsList_style_18_1655171087694 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1655171087694 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1655171087694 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (max-width: 640px) {
+            }
+
+</style>                </div>
+            </div>
+                        <div id="image_style_01_1655171109627" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/SY/ditu2.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+            				</div>
+							<div class="tab_div">
+					            <div id="newsList_style_18_1611474420335" class="view style_18 newsList  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="newsList" class="view_contents" >
+                    <style>/*新闻列表样式*/
+.boxNewsListStyle_18{width:100%; clear: both;}
+.boxNewsListStyle_18 *{transition: all ease .2s; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; box-sizing: border-box;}
+.boxNewsListStyle_18 li{clear:both;width:100%; list-style:none;padding-bottom: 10px; margin-bottom:10px; border-bottom:1px solid #eee; background: #fff; box-sizing:border-box; overflow: hidden;}
+.boxNewsListStyle_18 .outforeach{padding: 0;margin: 0;border: 0;background: revert;}
+.boxNewsListStyle_18 .sumary_list .newCont{width:100%; box-sizing:border-box; float: left;}
+.boxNewsListStyle_18 .sumary_list .newCont .newTitle{width:100%;}
+.boxNewsListStyle_18 .sumary_list .newName a{	display: inline-block; text-decoration:none; line-height:1.4; font-size:16px; color: #333;}
+.boxNewsListStyle_18 .sumary_list .newSort{color:#fff; font-size:12px; white-space: nowrap; padding:0 1em; height: 24px; line-height: 24px; background:#4dc0f8; margin-right:10px; float:left;}
+.boxNewsListStyle_18 .sumary_list .newsTime{text-align:right;color:#aaa; font-size:16px; white-space:nowrap;float: right;}
+.boxNewsListStyle_18 .sumary_list .newsTime span{white-space: nowrap;}
+.boxNewsListStyle_18 .sumary_list .newDetail{width:100%; padding:1em 0 0; color:#aaa; font-size:12px; line-height:1.6;overflow:hidden; text-overflow:ellipsis; display:-webkit-box;-webkit-line-clamp:2; -webkit-box-orient:vertical;}
+
+
+/*alex---后期加的图片样式*/
+.boxNewsListStyle_18 .newPic{background-color: #eee;width:110px; ;margin:0 10px 10px 0;overflow:hidden; position:relative; box-sizing:border-box; float:left; }
+.boxNewsListStyle_18 .sumary_list:hover .newPic .News_img{transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -o-transform: scale(1.05); -ms-transform: scale(1.05);}
+.boxNewsListStyle_18 .newPic a{display: block; position: absolute; left: 0; width: 100%;}
+.boxNewsListStyle_18 .newPic img{width:100%;}
+.boxNewsListStyle_18 .newPic2{display: none;}
+.boxNewsListStyle_18 .show_all{ margin-top:.5em;float: left;}
+.boxNewsListStyle_18 .show_all a{display:block; margin-top:.4em; text-decoration:none; border:1px solid #ddd; text-align:center; padding:.4em 1em; font-size:12px;  color:#666; }
+.boxNewsListStyle_18 .newSort{display: block;color:#999;}
+
+
+@media screen and (max-width:768px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:14px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:14px;}
+
+.boxNewsListStyle_18  .newPic{width:100%;float:none;margin-bottom: 6px;}
+.boxNewsListStyle_18 .show_all{width:40%;min-width: 160px; }
+
+
+}
+@media screen and (max-width:480px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:12px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:12px;}
+}
+
+</style><!---新闻列表区域-->
+<!--pageSet pagecurSet-->
+<div class="boxNewsListStyle_18">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=3129483&_t=1621823923" target="_self" >严防聚集性疫情！教育部最新通知来了</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=2940765&_t=1614843584" target="_self" >青年战“疫”||北京中医药大学东方学院中药学院、医学检验学院志愿者在行动...</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=2940761&_t=1614843477" target="_self" >青年战“疫”||中药学院、医学检验学院志愿者在行动（2）</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=2916261&_t=1613975290" target="_self" >青年战“疫”||北京中医药大学东方学院中药学院、医学检验学院志愿者在行动...</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+<script>
+			window.resizeTimeoutnewsList_style_18_1611474420335=setTimeout(function(){
+				diyAutoHeight($('#newsList_style_18_1611474420335'));
+				window.resizeTimeoutnewsList_style_18_1611474420335=null;
+			},350);</script>
+<style>
+	#newsList_style_18_1611474420335 .newDetail.pc {display:block;}
+	#newsList_style_18_1611474420335 .newDetail.pad, #newsList_style_18_1611474420335 .newDetail.mobile {display:none;}
+	#newsList_style_18_1611474420335 .newTitle.pc {display:block;}
+	#newsList_style_18_1611474420335 .newTitle.pad, #newsList_style_18_1611474420335 .newTitle.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_18_1611474420335 .newDetail.pad {display:block;}
+		#newsList_style_18_1611474420335 .newDetail.pc, #newsList_style_18_1611474420335 .newDetail.mobile {display:none;}
+		#newsList_style_18_1611474420335 .newTitle.pad {display:block;}
+		#newsList_style_18_1611474420335 .newTitle.pc, #newsList_style_18_1611474420335 .newTitle.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_18_1611474420335 .newDetail.mobile {display:block;}
+		#newsList_style_18_1611474420335 .newDetail.pc, #newsList_style_18_1611474420335 .newDetail.pad {display:none;}
+		#newsList_style_18_1611474420335 .newTitle.mobile {display:block;}
+		#newsList_style_18_1611474420335 .newTitle.pc, #newsList_style_18_1611474420335 .newTitle.pad {display:none;}
+	}
+</style>
+
+
+
+
+
+
+<style>
+@media screen and (min-width: 1025px) {
+	#newsList_style_18_1611474420335 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1611474420335 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1611474420335 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	#newsList_style_18_1611474420335 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1611474420335 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1611474420335 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (max-width: 640px) {
+            }
+
+</style>                </div>
+            </div>
+                        <div id="image_style_01_1611474476410" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/SY/ditu2.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+            				</div>
+							<div class="tab_div">
+					            <div id="newsList_style_18_1561684653114" class="view style_18 newsList  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="newsList" class="view_contents" >
+                    <style>/*新闻列表样式*/
+.boxNewsListStyle_18{width:100%; clear: both;}
+.boxNewsListStyle_18 *{transition: all ease .2s; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; box-sizing: border-box;}
+.boxNewsListStyle_18 li{clear:both;width:100%; list-style:none;padding-bottom: 10px; margin-bottom:10px; border-bottom:1px solid #eee; background: #fff; box-sizing:border-box; overflow: hidden;}
+.boxNewsListStyle_18 .outforeach{padding: 0;margin: 0;border: 0;background: revert;}
+.boxNewsListStyle_18 .sumary_list .newCont{width:100%; box-sizing:border-box; float: left;}
+.boxNewsListStyle_18 .sumary_list .newCont .newTitle{width:100%;}
+.boxNewsListStyle_18 .sumary_list .newName a{	display: inline-block; text-decoration:none; line-height:1.4; font-size:16px; color: #333;}
+.boxNewsListStyle_18 .sumary_list .newSort{color:#fff; font-size:12px; white-space: nowrap; padding:0 1em; height: 24px; line-height: 24px; background:#4dc0f8; margin-right:10px; float:left;}
+.boxNewsListStyle_18 .sumary_list .newsTime{text-align:right;color:#aaa; font-size:16px; white-space:nowrap;float: right;}
+.boxNewsListStyle_18 .sumary_list .newsTime span{white-space: nowrap;}
+.boxNewsListStyle_18 .sumary_list .newDetail{width:100%; padding:1em 0 0; color:#aaa; font-size:12px; line-height:1.6;overflow:hidden; text-overflow:ellipsis; display:-webkit-box;-webkit-line-clamp:2; -webkit-box-orient:vertical;}
+
+
+/*alex---后期加的图片样式*/
+.boxNewsListStyle_18 .newPic{background-color: #eee;width:110px; ;margin:0 10px 10px 0;overflow:hidden; position:relative; box-sizing:border-box; float:left; }
+.boxNewsListStyle_18 .sumary_list:hover .newPic .News_img{transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -o-transform: scale(1.05); -ms-transform: scale(1.05);}
+.boxNewsListStyle_18 .newPic a{display: block; position: absolute; left: 0; width: 100%;}
+.boxNewsListStyle_18 .newPic img{width:100%;}
+.boxNewsListStyle_18 .newPic2{display: none;}
+.boxNewsListStyle_18 .show_all{ margin-top:.5em;float: left;}
+.boxNewsListStyle_18 .show_all a{display:block; margin-top:.4em; text-decoration:none; border:1px solid #ddd; text-align:center; padding:.4em 1em; font-size:12px;  color:#666; }
+.boxNewsListStyle_18 .newSort{display: block;color:#999;}
+
+
+@media screen and (max-width:768px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:14px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:14px;}
+
+.boxNewsListStyle_18  .newPic{width:100%;float:none;margin-bottom: 6px;}
+.boxNewsListStyle_18 .show_all{width:40%;min-width: 160px; }
+
+
+}
+@media screen and (max-width:480px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:12px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:12px;}
+}
+
+</style><!---新闻列表区域-->
+<!--pageSet pagecurSet-->
+<div class="boxNewsListStyle_18">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5489085&_t=1716556402" target="_self" >“百日冲刺行动”北京中医药大学东方学院2024届毕业生网络招聘会邀请函</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5385143&_t=1711532979" target="_self" >北京中医药大学东方学院2022-2023学年新疆西藏籍少数民族大学生省政...</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5385147&_t=1711533096" target="_self" >北京中医药大学东方学院2023-2024学年省级三好学生、优秀学生干部和...</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="ZW.php?newsid=5249753&_t=1704803350" target="_self" >北京中医药大学东方学院关于 “河北省普通高等学校专升本考试专项招生计划报...</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+<script>
+			window.resizeTimeoutnewsList_style_18_1561684653114=setTimeout(function(){
+				diyAutoHeight($('#newsList_style_18_1561684653114'));
+				window.resizeTimeoutnewsList_style_18_1561684653114=null;
+			},350);</script>
+<style>
+	#newsList_style_18_1561684653114 .newDetail.pc {display:block;}
+	#newsList_style_18_1561684653114 .newDetail.pad, #newsList_style_18_1561684653114 .newDetail.mobile {display:none;}
+	#newsList_style_18_1561684653114 .newTitle.pc {display:block;}
+	#newsList_style_18_1561684653114 .newTitle.pad, #newsList_style_18_1561684653114 .newTitle.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_18_1561684653114 .newDetail.pad {display:block;}
+		#newsList_style_18_1561684653114 .newDetail.pc, #newsList_style_18_1561684653114 .newDetail.mobile {display:none;}
+		#newsList_style_18_1561684653114 .newTitle.pad {display:block;}
+		#newsList_style_18_1561684653114 .newTitle.pc, #newsList_style_18_1561684653114 .newTitle.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_18_1561684653114 .newDetail.mobile {display:block;}
+		#newsList_style_18_1561684653114 .newDetail.pc, #newsList_style_18_1561684653114 .newDetail.pad {display:none;}
+		#newsList_style_18_1561684653114 .newTitle.mobile {display:block;}
+		#newsList_style_18_1561684653114 .newTitle.pc, #newsList_style_18_1561684653114 .newTitle.pad {display:none;}
+	}
+</style>
+
+
+
+
+
+
+<style>
+@media screen and (min-width: 1025px) {
+	#newsList_style_18_1561684653114 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1561684653114 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1561684653114 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	#newsList_style_18_1561684653114 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1561684653114 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1561684653114 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (max-width: 640px) {
+            }
+
+</style>                </div>
+            </div>
+                        <div id="image_style_01_1561684723993" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/SY/ditu2.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+            				</div>
+							<div class="tab_div">
+					            <div id="image_style_01_1561687809136" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/SY/ditu1.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="newsList_style_18_1561687867129" class="view style_18 newsList  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="newsList" class="view_contents" >
+                    <style>/*新闻列表样式*/
+.boxNewsListStyle_18{width:100%; clear: both;}
+.boxNewsListStyle_18 *{transition: all ease .2s; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; box-sizing: border-box;}
+.boxNewsListStyle_18 li{clear:both;width:100%; list-style:none;padding-bottom: 10px; margin-bottom:10px; border-bottom:1px solid #eee; background: #fff; box-sizing:border-box; overflow: hidden;}
+.boxNewsListStyle_18 .outforeach{padding: 0;margin: 0;border: 0;background: revert;}
+.boxNewsListStyle_18 .sumary_list .newCont{width:100%; box-sizing:border-box; float: left;}
+.boxNewsListStyle_18 .sumary_list .newCont .newTitle{width:100%;}
+.boxNewsListStyle_18 .sumary_list .newName a{	display: inline-block; text-decoration:none; line-height:1.4; font-size:16px; color: #333;}
+.boxNewsListStyle_18 .sumary_list .newSort{color:#fff; font-size:12px; white-space: nowrap; padding:0 1em; height: 24px; line-height: 24px; background:#4dc0f8; margin-right:10px; float:left;}
+.boxNewsListStyle_18 .sumary_list .newsTime{text-align:right;color:#aaa; font-size:16px; white-space:nowrap;float: right;}
+.boxNewsListStyle_18 .sumary_list .newsTime span{white-space: nowrap;}
+.boxNewsListStyle_18 .sumary_list .newDetail{width:100%; padding:1em 0 0; color:#aaa; font-size:12px; line-height:1.6;overflow:hidden; text-overflow:ellipsis; display:-webkit-box;-webkit-line-clamp:2; -webkit-box-orient:vertical;}
+
+
+/*alex---后期加的图片样式*/
+.boxNewsListStyle_18 .newPic{background-color: #eee;width:110px; ;margin:0 10px 10px 0;overflow:hidden; position:relative; box-sizing:border-box; float:left; }
+.boxNewsListStyle_18 .sumary_list:hover .newPic .News_img{transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -o-transform: scale(1.05); -ms-transform: scale(1.05);}
+.boxNewsListStyle_18 .newPic a{display: block; position: absolute; left: 0; width: 100%;}
+.boxNewsListStyle_18 .newPic img{width:100%;}
+.boxNewsListStyle_18 .newPic2{display: none;}
+.boxNewsListStyle_18 .show_all{ margin-top:.5em;float: left;}
+.boxNewsListStyle_18 .show_all a{display:block; margin-top:.4em; text-decoration:none; border:1px solid #ddd; text-align:center; padding:.4em 1em; font-size:12px;  color:#666; }
+.boxNewsListStyle_18 .newSort{display: block;color:#999;}
+
+
+@media screen and (max-width:768px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:14px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:14px;}
+
+.boxNewsListStyle_18  .newPic{width:100%;float:none;margin-bottom: 6px;}
+.boxNewsListStyle_18 .show_all{width:40%;min-width: 160px; }
+
+
+}
+@media screen and (max-width:480px){
+.boxNewsListStyle_18 .sumary_list .newName a{font-size:12px;}
+.boxNewsListStyle_18 .sumary_list .newsTime{font-size:12px;}
+}
+
+</style><!---新闻列表区域-->
+<!--pageSet pagecurSet-->
+<div class="boxNewsListStyle_18">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="JYJX_jxyj_zw.php?newsid=1302577&_t=1561787161" target="_self" >报送第七届河北省高等教育教学成果奖励结果公示--韩相军</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="JYJX_jxyj_zw.php?newsid=1302573&_t=1561787078" target="_self" >报送第七届河北省高等教育教学成果奖励结果公示--刘占文</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="JYJX_jxyj_zw.php?newsid=1302571&_t=1561786971" target="_self" >报送第七届河北省高等教育教学成果奖励结果公示--杨斌</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list onforeach modSet">
+			
+			<div class="newCont">
+				<div class="newTitle ">
+					<div class="newName ">
+						
+						
+							<a class="titleSet" href="JYJX_jxyj_zw.php?newsid=1302541&_t=1561786639" target="_self" >关于2013年申报本科新专业的公示</a>
+						
+					
+					</div>
+				</div>
+
+				
+				
+				
+
+				
+			</div>
+		</li>
+		
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+		<li class="sumary_list outforeach"></li>
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+<script>
+			window.resizeTimeoutnewsList_style_18_1561687867129=setTimeout(function(){
+				diyAutoHeight($('#newsList_style_18_1561687867129'));
+				window.resizeTimeoutnewsList_style_18_1561687867129=null;
+			},350);</script>
+<style>
+	#newsList_style_18_1561687867129 .newDetail.pc {display:block;}
+	#newsList_style_18_1561687867129 .newDetail.pad, #newsList_style_18_1561687867129 .newDetail.mobile {display:none;}
+	#newsList_style_18_1561687867129 .newTitle.pc {display:block;}
+	#newsList_style_18_1561687867129 .newTitle.pad, #newsList_style_18_1561687867129 .newTitle.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_18_1561687867129 .newDetail.pad {display:block;}
+		#newsList_style_18_1561687867129 .newDetail.pc, #newsList_style_18_1561687867129 .newDetail.mobile {display:none;}
+		#newsList_style_18_1561687867129 .newTitle.pad {display:block;}
+		#newsList_style_18_1561687867129 .newTitle.pc, #newsList_style_18_1561687867129 .newTitle.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_18_1561687867129 .newDetail.mobile {display:block;}
+		#newsList_style_18_1561687867129 .newDetail.pc, #newsList_style_18_1561687867129 .newDetail.pad {display:none;}
+		#newsList_style_18_1561687867129 .newTitle.mobile {display:block;}
+		#newsList_style_18_1561687867129 .newTitle.pc, #newsList_style_18_1561687867129 .newTitle.pad {display:none;}
+	}
+</style>
+
+
+
+
+
+
+<style>
+@media screen and (min-width: 1025px) {
+	#newsList_style_18_1561687867129 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1561687867129 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1561687867129 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	#newsList_style_18_1561687867129 .sumary_list .newPic{width: 0px;}
+	#newsList_style_18_1561687867129 .sumary_list .newCont{width: calc(100% - 0px - 10px);}
+			#newsList_style_18_1561687867129 .sumary_list .newCont{width: 100%;}
+		}
+@media screen and (max-width: 640px) {
+            }
+
+</style>                </div>
+            </div>
+            				</div>
+						</div>
+			<div class="tab_left_arrow arrowSet "><</div>
+			<div class="tab_right_arrow arrowSet ">></div>
+		</div>
+	</div>
+</div>
+                </div>
+            </div>
+                        <div id="image_style_01_1561533345812" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/4/44949/jpg/170052852949285cf77b36c41e3f038dd4883f71bca2f.jpg?version=1700528531" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="div_blank_new01_1560999780541" class="view blank_new01 div  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="JYJX.php?pageid=1643457" target='_self' style='color:inherit;width:100%;height:100%;z-index:999;' class='link-type-1-'><div class="blank_new01">
+<div class="roundcs modSet" ></div>
+</div>
+</a>
+                </div>
+            </div>
+                        <div id="div_blank_new01_1561000770505" class="view blank_new01 div  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="JCFW.php?pageid=1643479" target='_self' style='color:inherit;width:100%;height:100%;z-index:999;' class='link-type-1-'><div class="blank_new01">
+<div class="roundcs modSet" ></div>
+</div>
+</a>
+                </div>
+            </div>
+                        <div id="div_blank_new01_1561000778209" class="view blank_new01 div  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="XWZX_sdsf.php?pageid=1643573" target='_self' style='color:inherit;width:100%;height:100%;z-index:999;' class='link-type-1-'><div class="blank_new01">
+<div class="roundcs modSet" ></div>
+</div>
+</a>
+                </div>
+            </div>
+                        <div id="div_blank_new01_1561000787283" class="view blank_new01 div  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="XGZX_gfjy.php?pageid=1643857" target='_self' style='color:inherit;width:100%;height:100%;z-index:999;' class='link-type-1-'><div class="blank_new01">
+<div class="roundcs modSet" ></div>
+</div>
+</a>
+                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="comm_layout_footer" class="layout   scrollView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="text_style_01_1560914053617" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="XYGK_dfxyjj.php?pageid=1643599" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>学院概况</a>                </div>
+            </div>
+                        <div id="text_style_01_1560914243003" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="XWZX_xyzw.php?pageid=1643565" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>新闻中心</a>                </div>
+            </div>
+                        <div id="text_style_01_1560914274337" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="XYSZ.php?pageid=1643489" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>学院设置&nbsp;</a>                </div>
+            </div>
+                        <div id="text_style_01_1560914314026" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="DJZC_dwjj.php?pageid=1643639" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>党建之窗</a>                </div>
+            </div>
+                        <div id="text_style_01_1560914331931" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="JYJX_jxdt.php?pageid=1643651" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>教育教学</a>                </div>
+            </div>
+                        <div id="text_style_01_1560915728264" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="XGZX_xgdt.php?pageid=1643851" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>学工在线&nbsp;</a>                </div>
+            </div>
+                        <div id="text_style_01_1560915734784" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="ZSXX.php?pageid=1642481" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>招生信息&nbsp;</a>                </div>
+            </div>
+                        <div id="text_style_01_1560915746151" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="JCFW_jyxw.php?pageid=1643863" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>就创服务</a>                </div>
+            </div>
+                        <div id="image_style_01_1560915762058" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+			<img class="link-type-" src="img/upimages/SY/Db_logo.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="text_style_01_1561001789173" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="DFWH_tycyljj.php?pageid=1643879" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>东方文化</a>                </div>
+            </div>
+                        <div id="text_style_01_1561001823231" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="MZB_mzjj.php?pageid=1646905" target='_self' style='color:inherit' class='editor-view-extend link-type-1-'>门诊部</a>                </div>
+            </div>
+                        <div id="text_style_01_1561428892903" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script>校区校址：河北省沧州渤海新区中捷产业园区北京中医药大学东方学院                </div>
+            </div>
+                        <div id="text_style_01_1561429013812" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="https://beian.miit.gov.cn/" target='_blank' style='color:inherit' class='editor-view-extend link-type-3-'>公安备案号：13109902000011&nbsp; &nbsp; &nbsp; ICP备案号：冀ICP备16012929号-1</a>                </div>
+            </div>
+                        <div id="image_style_01_1561893974419" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+		<a href='copy_ZSXX_lxfs.php?pageid=1656353' target="_blank" style="border-radius: inherit;">
+			<img class="link-type-" src="img/upimages/SY/Db_wx.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+		</a>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="image_style_01_1562728713780" class="view style_01 image  "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image" class="view_contents" >
+<script class="editor-view-extend">
+    </script><div class="imgStyle CompatibleImg picSet" >
+		<a href='http://mail.bucmdf.edu.cn/' target="_blank" style="border-radius: inherit;">
+			<img class="link-type-" src="img/upimages/SY/YX.png" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"/>
+		</a>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="text_style_01_1575597944964" class="view style_01 text  lockHeightView "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text" class="view_contents" >
+<script class="editor-view-extend">
+    </script><a href="https://beian.miit.gov.cn/" target='_blank' style='color:inherit' class='editor-view-extend link-type-3-'>&nbsp;公安备案号：13109902000011&nbsp;&nbsp;<div>&nbsp;ICP备案号：冀ICP备16012929号-1</div></a>                </div>
+            </div>
+                            </div>
+            </div>
+            <div class="bottomMenu 123"><ul><li style="height:100%;">
+							<a href="javascript:void(0);" class="" style=""><div class="menuItem iconTxt"><div class="menuIco"><img src="//admin.ppspain.com/modules/bottomMenu/icon/style3-1.png" alt="点击修改"></div><input type="hidden" class="menuIcon" value="" ><input type="hidden" class="menuColor" value="" ><div class="menuName" style="color:#666666;">点击修改</div></div></a>
+							<div class="submenuItems" style="display:none;"></div>
+						</li><li style="height:100%;">
+							<a href="javascript:void(0);" class="" style=""><div class="menuItem iconTxt"><div class="menuIco"><img src="//admin.ppspain.com/modules/bottomMenu/icon/style3-2.png" alt="点击修改"></div><input type="hidden" class="menuIcon" value="" ><input type="hidden" class="menuColor" value="" ><div class="menuName" style="color:#666666;">点击修改</div></div></a>
+							<div class="submenuItems" style="display:none;"></div>
+						</li><li style="height:100%;">
+							<a href="javascript:void(0);" class="" style=""><div class="menuItem iconTxt"><div class="menuIco"><img src="//admin.ppspain.com/modules/bottomMenu/icon/style3-3.png" alt="点击修改"></div><input type="hidden" class="menuIcon" value="" ><input type="hidden" class="menuColor" value="" ><div class="menuName" style="color:#666666;">点击修改</div></div></a>
+							<div class="submenuItems" style="display:none;"></div>
+						</li><li style="height:100%;">
+							<a href="javascript:void(0);" class="" style=""><div class="menuItem iconTxt"><div class="menuIco"><img src="//admin.ppspain.com/modules/bottomMenu/icon/style3-4.png" alt="点击修改"></div><input type="hidden" class="menuIcon" value="" ><input type="hidden" class="menuColor" value="" ><div class="menuName" style="color:#666666;">点击修改</div></div></a>
+							<div class="submenuItems" style="display:none;"></div>
+						</li></ul></div>
+<script>
+$(function(){
+    // 当设备为iphoneX，ios13以上时，会出现黑色横条
+    let isIPhoneMobile = /iphone/gi.test(window.navigator.userAgent) && window.devicePixelRatio;
+    let isIPhoneX_XS = isIPhoneMobile && window.devicePixelRatio === 3 && window.screen.width === 375 && window.screen.height === 812;
+    let isIPhoneXSMax = isIPhoneMobile && window.devicePixelRatio === 3 && window.screen.width === 414 && window.screen.height === 896;
+    let isIPhoneXR = isIPhoneMobile && window.devicePixelRatio === 2 && window.screen.width === 414 && window.screen.height === 896;
+    let ver = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+    let type = ver?parseInt(ver[1],10):0;
+    if(isIPhoneX_XS || isIPhoneXSMax || isIPhoneXR || type>=13){
+        $("body").css("cssText", $("body").attr("style") + ";padding-bottom:65px!important;");
+        $(".bottomMenu ul").css("cssText", $(".bottomMenu ul").attr("style") + ";height:65px!important;padding-bottom:15px!important;");
+    }else if($("body").width()<640){
+        $("body").css("cssText", $("body").attr("style") + ";padding-bottom:50px!important;");
+    }
+    $(".showSubMenu").click(function(){
+        $(this).next().toggle();
+		$(this).parent("li").siblings("li").children(".showSubMenu").next().css("display","none");
+    });
+    var bottomLen = $(".bottomMenu > ul > li > a").length;
+    var url = window.location.pathname;
+    var loc = url.substring(url.lastIndexOf("/")+1, url.length);
+    for(var i=0;i<bottomLen;i++){
+        var curObj = $(".bottomMenu ul li a").eq(i);
+        if(loc == curObj.attr("href")){
+            var img = curObj.children(".menuItem").children(".menuIco").children("img").attr("src");
+            var menuIcon = curObj.children(".menuItem").children(".menuIcon").val();
+            var menuColor = curObj.children(".menuItem").children(".menuColor").val();
+            var menuName = curObj.children(".menuItem").children(".menuName").html();
+            if(menuIcon != ""){
+                curObj.children(".menuItem").children(".menuIco").children("img").attr("src",menuIcon);
+            }
+            if(menuColor != ""){
+                curObj.children(".menuItem").children(".menuName").css("color",menuColor);
+            }
+        }
+    }
+});
+$(window).resize(function(){
+    if($("body").width()>=640){
+        $("body").css("padding-bottom","0px");
+    }
+});
+</script>
+<script>
+        $(function() {
+           var lang = 0;
+           if (typeof(Default_isFT) !== 'undefined'){
+              if(lang == '0'){
+				lang = Default_isFT;
+				if(typeof(BodyIsFt) == 'undefined' || BodyIsFt == null){
+				    BodyIsFt = 0;
+                }
+				if(BodyIsFt == '0'){
+					lang = BodyIsFt;
+				}else if(BodyIsFt == '1'){
+					lang = BodyIsFt;
+				}
+			}
+			$('.bottomMenu a').each(function() {
+			  var hrefstr = $(this).attr('href');
+			  var laststr=hrefstr.substring(hrefstr.length-7);
+			  if (laststr == 'langid=') {
+			        hrefstr = hrefstr + lang;
+			    $(this).attr('href',hrefstr)
+			  }
+			})
+           }
+        });
+        </script>
+<script type="text/javascript" src="js/01642339_model.js?1720520703" charset="utf-8"></script>
+<script>
+	$(function(){
+		sendBatch(batchArr);
+	});
+</script>
+<script type="text/javascript" src="js/01642339_user.js?1720520703" charset="utf-8"></script>
+<script type="text/javascript" src="js/comm_user.js?1720520703" charset="utf-8"></script>
+<script type="text/javascript" src="https://admin.ppspain.com/webapp/UserPanel/share/js.js" charset="utf-8"></script>
+<script>var _paq = _paq || [];_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);window.onload = function(){var u=(("https:" == document.location.protocol) ? "https" : "http") + "://tj.nicebox.cn//";_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setSiteId", 9376]);var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";g.defer=true; g.async=true; g.src=u+"website.js"; s.parentNode.insertBefore(g,s);}</script>    <script type="text/javascript" src="js/comm/transform.js?201603091"></script>
+    <!-- 百度自动提交收录代码 -->
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https'){
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else{
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+</body>
+</html>

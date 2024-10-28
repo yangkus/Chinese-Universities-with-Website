@@ -1,0 +1,2171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <title>河南对外经济贸易职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="河南对外经济贸易职业学院">
+<META Name="keywords" Content="河南对外经济贸易职业学院" />
+
+    <link rel="stylesheet" href="style/f.css">
+    <link rel="stylesheet" href="style/a_animate.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+     <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="js/f.js"></script>
+    <script src="js/a_animate.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/set.js"></script>
+    <script src="js/public.js"></script>
+   <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7a4657525b5742000300024053 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1986849732)</script>
+</head>
+<body>
+
+<!--search-->
+<section class="search-dialog-box">
+    <div class="search-bg"></div>
+    <div class="search-dialog">
+        <div class="search-inner">
+            <div class="wrap-inner">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+    <form action="" method="get" class="search f-cb">
+                    <h3>请输入您搜索的信息！</h3>
+                    <div class="search-input f-cb clearfix">
+                        <input type="text" name="key" placeholder="" autocomplete="off" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                        <input type="submit" value="" v-on:click="onSubmit()"/>
+
+                        <a href="javascript:;" class="clear-btn"></a>
+                    </div>
+                </form>
+               <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1986849732";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://172.20.2.84:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+    </div>
+    <a href="javascript:;" class="pub-close">
+        <span class="bg"></span>
+        <i></i>
+    </a>
+</section>
+<!--search-->
+
+<!--wap-->
+<section class="wap-head ar_wap">
+    <div class="logo flex-v-center">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+                      <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79709)" target="_blank">                <img src="images/weixintupian_20240924090620.png" alt="">
+            </a>
+   
+</div>
+    <a href="javascript:;" class="navbtnm">
+        <i></i>
+    </a>
+</section>
+<section class="big-nav">
+    <div class="list_box0"><script language="javascript" src="/system/resource/js/openlink.js"></script>
+</div>
+    <div class="wap_search">
+
+
+<style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+    <form name="search" class="header-search">
+            <input type="text" class="input" placeholder="请输入搜索关键词" name="keyword" autocomplete="off" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+
+            <button type="submit" class="btn_blue" value="" v-on:click="onSubmit()"/>
+</button>
+        </form>
+                <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1986849732";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://172.20.2.84:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    <ul class="list_box_nav_mobile"> <li class="on">
+            <div class="con">
+                <a class="a" href="index.htm" title="首 页">首 页</a>
+            </div>
+        </li>
+
+ <li>
+            <div class="con">
+                <a class="a" href="xygk1/xyjj.htm" title="学院概况">学院概况</a>
+            </div>
+            <i></i>
+            <div class="list">
+                <a href="xygk1/xyjj.htm" title="学院简介">学院简介</a>
+
+                <a href="xygk1/ldbz.htm" title="领导班子">领导班子</a>
+
+                <a href="xygk1/jgsz.htm" title="机构设置">机构设置</a>
+
+                <a href="xygk1/xyfg.htm" title="校园风光">校园风光</a>
+
+                <a href="xygk1/gzzd.htm" title="规章制度">规章制度</a>
+
+                <a href="xygk1/lxwm.htm" title="联系我们">联系我们</a>
+
+                            </div>
+
+                    </li>
+
+ <li>
+            <div class="con">
+                <a class="a" href="xwzx1/xyxw.htm" title="新闻资讯">新闻资讯</a>
+            </div>
+            <i></i>
+            <div class="list">
+                <a href="xwzx1/xyxw.htm" title="学院新闻">学院新闻</a>
+
+                <a href="xwzx1/tzgg.htm" title="通知公告">通知公告</a>
+
+                <a href="xwzx1/mthwm.htm" title="媒体河外贸">媒体河外贸</a>
+
+                            </div>
+
+                    </li>
+
+ <li>
+            <div class="con">
+                <a class="a" href="yxsz.htm" title="院系设置">院系设置</a>
+            </div>
+        </li>
+
+ <li>
+            <div class="con">
+                <a class="a" href="zsjy1/zsxx.htm" title="招生就业">招生就业</a>
+            </div>
+            <i></i>
+            <div class="list">
+                <a href="zsjy1/zsxx.htm" title="招生信息">招生信息</a>
+
+                <a href="zsjy1/zyjs.htm" title="专业介绍">专业介绍</a>
+
+                <a href="zsjy1/lqcx.htm" title="录取查询">录取查询</a>
+
+                <a href="zsjy1/jycyfw.htm" title="就业创业服务">就业创业服务</a>
+
+                            </div>
+
+                    </li>
+
+ <li>
+            <div class="con">
+                <a class="a" href="jxky.htm" title="教学科研">教学科研</a>
+            </div>
+        </li>
+
+ <li>
+            <div class="con">
+                <a class="a" href="xywh/xhxq.htm" title="校园文化">校园文化</a>
+            </div>
+            <i></i>
+            <div class="list">
+                <a href="xywh/xhxq.htm" title="校徽校旗">校徽校旗</a>
+
+                <a href="xywh/xxxg.htm" title="校训校歌">校训校歌</a>
+
+                <a href="xywh/xymj.htm" title="校园美景">校园美景</a>
+
+                <a href="xywh/xxxl.htm" title="学校校历">学校校历</a>
+
+                <a href="xywh/xxcp.htm" title="校宣传片">校宣传片</a>
+
+                            </div>
+
+                    </li>
+
+ <li>
+            <div class="con">
+                <a class="a" href="ggfw1/xxgk.htm" title="公共服务">公共服务</a>
+            </div>
+            <i></i>
+            <div class="list">
+                <a href="ggfw1/xxgk.htm" title="信息公开">信息公开</a>
+
+                <a href="ggfw1/zlbg.htm" title="质量报告">质量报告</a>
+
+                <a href="https://zh.hnwmxy.edu.cn/" title="智慧校园门户">智慧校园门户</a>
+
+                            </div>
+
+                    </li>
+
+
+
+
+
+</ul>
+
+</section>
+<!--wap-->
+
+<header class="head ar_web">
+    <div class="wp">
+        <div class="logo">    
+                      <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79709)" target="_blank">                <img src="images/weixintupian_20240924090620.png" alt="">
+            </a>
+   
+</div>
+        <div class="header-right">
+            <nav id="nav">  <ul class="flex">
+
+ <li>
+                        <h2><a href="index.htm" title="首 页">首 页</a></h2>
+                    </li>
+
+ <li>
+                        <h2><a href="xygk1/xyjj.htm" title="学院概况">学院概况</a></h2>
+                        <div class="sub">
+                            <div class="box">
+                                <a href="xygk1/xyjj.htm" title="学院简介">学院简介</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xygk1/ldbz.htm" title="领导班子">领导班子</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xygk1/jgsz.htm" title="机构设置">机构设置</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xygk1/xyfg.htm" title="校园风光">校园风光</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xygk1/gzzd.htm" title="规章制度">规章制度</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xygk1/lxwm.htm" title="联系我们">联系我们</a>
+                                                           </div>
+
+                        </div>
+
+                                           </li>
+
+ <li>
+                        <h2><a href="xwzx1/xyxw.htm" title="新闻资讯">新闻资讯</a></h2>
+                        <div class="sub">
+                            <div class="box">
+                                <a href="xwzx1/xyxw.htm" title="学院新闻">学院新闻</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xwzx1/tzgg.htm" title="通知公告">通知公告</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xwzx1/mthwm.htm" title="媒体河外贸">媒体河外贸</a>
+                                                           </div>
+
+                        </div>
+
+                                           </li>
+
+ <li>
+                        <h2><a href="yxsz.htm" title="院系设置">院系设置</a></h2>
+                    </li>
+
+ <li>
+                        <h2><a href="zsjy1/zsxx.htm" title="招生就业">招生就业</a></h2>
+                        <div class="sub">
+                            <div class="box">
+                                <a href="zsjy1/zsxx.htm" title="招生信息">招生信息</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="zsjy1/zyjs.htm" title="专业介绍">专业介绍</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="zsjy1/lqcx.htm" title="录取查询">录取查询</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="zsjy1/jycyfw.htm" title="就业创业服务">就业创业服务</a>
+                                                           </div>
+
+                        </div>
+
+                                           </li>
+
+ <li>
+                        <h2><a href="jxky.htm" title="教学科研">教学科研</a></h2>
+                    </li>
+
+ <li>
+                        <h2><a href="xywh/xhxq.htm" title="校园文化">校园文化</a></h2>
+                        <div class="sub">
+                            <div class="box">
+                                <a href="xywh/xhxq.htm" title="校徽校旗">校徽校旗</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xywh/xxxg.htm" title="校训校歌">校训校歌</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xywh/xymj.htm" title="校园美景">校园美景</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xywh/xxxl.htm" title="学校校历">学校校历</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="xywh/xxcp.htm" title="校宣传片">校宣传片</a>
+                                                           </div>
+
+                        </div>
+
+                                           </li>
+
+ <li>
+                        <h2><a href="ggfw1/xxgk.htm" title="公共服务">公共服务</a></h2>
+                        <div class="sub">
+                            <div class="box">
+                                <a href="ggfw1/xxgk.htm" title="信息公开">信息公开</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="ggfw1/zlbg.htm" title="质量报告">质量报告</a>
+                                                           </div>
+
+                            <div class="box">
+                                <a href="https://zh.hnwmxy.edu.cn/" title="智慧校园门户">智慧校园门户</a>
+                                                           </div>
+
+                        </div>
+
+                                           </li>
+
+
+
+
+
+    <li class="search_li">
+                        <a href="javascript:;" class="search_btn">
+                            <img src="images/search.png" alt="">
+                        </a>
+                    </li>
+                </ul></nav>
+        </div>
+    </div>
+</header>
+<section class="banner swiper-container">
+           <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+            <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79714)" target="_blank">                <img src="images/263dfe1943e384e1eefdd21167c4335.jpg" alt="">
+            </a>
+        </div>
+
+                             
+   
+      
+            <div class="swiper-slide">
+            <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79713)" target="_blank">                <img src="images/xuexiguanchequanguojiaoyudahuijingshen.jpg" alt="">
+            </a>
+        </div>
+
+                             
+   
+      
+            <div class="swiper-slide">
+            <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79712)" target="_blank">                <img src="images/xinxueqixinqixiang.jpg" alt="">
+            </a>
+        </div>
+
+                             
+   
+      
+            <div class="swiper-slide">
+            <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79711)" target="_blank">                <img src="images/jiaoyujiajingshen.jpg" alt="">
+            </a>
+        </div>
+
+                             
+   
+   </div>
+
+    <div class="btnBox">
+        <div class="prev btn swiper-button-prev"></div>
+        <div class="page swiper-pagination"></div>
+        <div class="next btn swiper-button-next"></div>
+    </div>
+</section>
+<section class="homea">
+    <section class="home1">
+     <div class="title001 mid" data-aos="fade-up" data-aos-delay="200" style="max-width:16rem;margin:0 auto;">
+                <h2>河外贸新闻</h2>
+                <a href="xwzx1/xyxw.htm" class="more"></a>
+            </div>
+        <div class="wp flex" style="margin:40px auto;">
+       
+           <div class="left" data-aos="fade-up" data-aos-delay="200">
+               
+               <div class="list1w swiper-container">
+                   <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="swiper-wrapper">
+<div class="swiper-slide">
+                           <a href="info/1161/4781.htm" target="_blank" title="郑州市第十届职业技能竞赛装备制造行业工业机器人系统操作员大赛在我校举行" class="bg-mask">
+                               <div class="pic">
+                                   <span class="a" style="background-image: url(/__local/2/4F/7F/BC721F863E810A91E19098D7C9A_620888E0_5603C.jpg)"> </span>
+                               </div>
+                               <h2 class="eclip">郑州市第十届职业技能竞赛装备制造行业工业机器人...</h2>
+                           </a>
+                       </div>
+
+<div class="swiper-slide">
+                           <a href="info/1161/4771.htm" target="_blank" title="青春对话岁月，畅游品味宋韵——我校“五老”与青年携手走进历史名都“宋城”" class="bg-mask">
+                               <div class="pic">
+                                   <span class="a" style="background-image: url(/__local/C/3D/E2/7638554CB1D35A18D2C8BB04B79_750A5767_4A914.png)"> </span>
+                               </div>
+                               <h2 class="eclip">青春对话岁月，畅游品味宋韵——我校“五老”与青...</h2>
+                           </a>
+                       </div>
+
+<div class="swiper-slide">
+                           <a href="info/1161/4751.htm" target="_blank" title="青春闪耀 动力无限｜我校青年志愿者协会为2024中国大学生方程式汽车大赛保驾护航！" class="bg-mask">
+                               <div class="pic">
+                                   <span class="a" style="background-image: url(/__local/B/73/87/05A38B9232B29C85B3172153A71_9969DF49_1CD2E.jpeg)"> </span>
+                               </div>
+                               <h2 class="eclip">青春闪耀 动力无限｜我校青年志愿者协会为2024中国...</h2>
+                           </a>
+                       </div>
+
+<div class="swiper-slide">
+                           <a href="info/1161/4611.htm" target="_blank" title="中国对外贸易经济合作企业协会莅临我校调研指导" class="bg-mask">
+                               <div class="pic">
+                                   <span class="a" style="background-image: url(/__local/6/7A/48/3499601FA180F8AC6632B6D6AC2_6C66D055_50D1E.jpg)"> </span>
+                               </div>
+                               <h2 class="eclip">中国对外贸易经济合作企业协会莅临我校调研指导</h2>
+                           </a>
+                       </div>
+
+  </div>
+
+<script>_showDynClickBatch(['dynclicks_u8_4781','dynclicks_u8_4771','dynclicks_u8_4751','dynclicks_u8_4611'],[4781,4771,4751,4611],"wbnews", 1986849732)</script>
+
+                   <div class="page swiper-pagination"></div>
+               </div>
+           </div>
+           <div class="right" data-aos="fade-up" data-aos-delay="200">
+              
+               <div class="list_box1"><ul class="i-list">
+
+ <li class="show">
+                            <div class="box1">
+                               <a href="info/1161/4781.htm" target="_blank" title="郑州市第十届职业技能竞赛装备制造行业工业机器人系统操作员大赛在我校举行">                                   <h6 class="eclip">郑州市第十届职业技能竞赛装备制造行业工业机器人...</h6><time>2024-10-27</time>
+                               </a>
+                           </div>
+                           <div class="box2">
+                               <a href="info/1161/4781.htm" class="bg-mask">                                                                      <div class="pic">
+                                        <span class="a" style="background-image: url(/__local/2/4F/7F/BC721F863E810A91E19098D7C9A_620888E0_5603C.jpg)"> </span>
+                                   </div>
+                                   <div class="txt">
+                                       <time>
+                                           <span>10-27</span>
+                                           <em>2024</em>
+                                       </time>
+                                       <h3 class="l2">
+                                           郑州市第十届职业技能竞赛装备制造行业工业机器人...                                       </h3>
+                                       <p class="l2">
+                                           10月27日，历时两天的郑州市第十届职业技能大赛—装备制造行业工业机器人系统操作员大赛在我校郑州校区圆满落幕。大赛由郑州市职业技能鉴定评价中心主办，我校和河南省国际货运代理协会承办，河南轩明实业有限公司协办。大赛主办方多次到我校郑州市校区指导赛事筹备，检查赛场比赛实况。学校党委高度重视，召开专题会议部署安排。党委书记程相仁、校长张倩对比赛工作提出了具体要求，要求我校承办部门继续教育学院，严格按照主办方要求，制定完善相关制度和预案，相关职能部门全力配合，做好大赛各项服务保障工作，...                                       </p>
+                                   </div>
+                               </a>
+                           </div>
+                       </li>
+
+
+ <li>
+                           <div class="box1">
+                               <a href="info/1161/4771.htm" target="_blank" title="青春对话岁月，畅游品味宋韵——我校“五老”与青年携手走进历史名都“宋城”">                                   <h6 class="eclip">青春对话岁月，畅游品味宋韵——我校“五老”与青...</h6><time>2024-10-25</time>
+                               </a>
+                           </div>
+                           <div class="box2">
+                               <a href="info/1161/4771.htm" class="bg-mask">                                                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/C/3D/E2/7638554CB1D35A18D2C8BB04B79_750A5767_4A914.png)"> </span>
+                                   </div>
+                                   <div class="txt">
+                                       <time>
+                                           <span>10-25</span>
+                                           <em>2024</em>
+                                       </time>
+                                       <h3 class="l2">
+                                           青春对话岁月，畅游品味宋韵——我校“五老”与青...                                       </h3>
+                                       <p class="l2">
+                                           2024年10月23日，河南对外经济贸易职业学院关心下一代工作委员会联合校团委组织学校退休老干部与青年学生干部一同参加“大宋御河游船和开封博物馆一日游”活动。探寻历史文化，解锁文化密码，开启一堂“行走的历史思政课堂”。畅游开封水系，大宋御河游船是为保护古城风貌、凸显北方水城特色的文旅活动。外贸学子在水光和阳光的映射下感受历史的厚重，深入了解大宋御河的悠久历史文化和宋城的快速发展。“老干部”们和青年两代人进行深入沟通交流，共话成长、薪火相传。随后，老教师们与青年学生赴开封市博物馆...                                       </p>
+                                   </div>
+                               </a>
+                           </div>
+                       </li>
+
+
+ <li>
+                           <div class="box1">
+                               <a href="info/1161/4751.htm" target="_blank" title="青春闪耀 动力无限｜我校青年志愿者协会为2024中国大学生方程式汽车大赛保驾护航！">                                   <h6 class="eclip">青春闪耀 动力无限｜我校青年志愿者协会为2024中国...</h6><time>2024-10-15</time>
+                               </a>
+                           </div>
+                           <div class="box2">
+                               <a href="info/1161/4751.htm" class="bg-mask">                                                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/B/73/87/05A38B9232B29C85B3172153A71_9969DF49_1CD2E.jpeg)"> </span>
+                                   </div>
+                                   <div class="txt">
+                                       <time>
+                                           <span>10-15</span>
+                                           <em>2024</em>
+                                       </time>
+                                       <h3 class="l2">
+                                           青春闪耀 动力无限｜我校青年志愿者协会为2024中国...                                       </h3>
+                                       <p class="l2">
+                                           2024年10月9日至13日，由中国汽车工程学会主办，汽车行业骨干企业共同支持的“2024中国大学生方程式汽车大赛”在郑州市顺利举办。为保证大赛顺利进行，我校青年志愿者协会积极响应号召，满怀热忱到达比赛地点进行志愿服务，志愿者们以出众的服务能力和无私奉献的服务精神为本次大赛保驾护航。他们的身影遍布赛场内外，以微笑与奉献，为观众带来温馨关怀，成为大赛中一道亮丽的风景线。本次志愿活动，河外贸学子不仅点燃了比赛的激情，确保了赛事顺畅和辉煌落幕，更在挑战的熔炉中锻造了外贸学子的钢铁意志...                                       </p>
+                                   </div>
+                               </a>
+                           </div>
+                       </li>
+
+
+ <li>
+                           <div class="box1">
+                               <a href="info/1161/4611.htm" target="_blank" title="中国对外贸易经济合作企业协会莅临我校调研指导">                                   <h6 class="eclip">中国对外贸易经济合作企业协会莅临我校调研指导</h6><time>2024-09-19</time>
+                               </a>
+                           </div>
+                           <div class="box2">
+                               <a href="info/1161/4611.htm" class="bg-mask">                                                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/6/7A/48/3499601FA180F8AC6632B6D6AC2_6C66D055_50D1E.jpg)"> </span>
+                                   </div>
+                                   <div class="txt">
+                                       <time>
+                                           <span>09-19</span>
+                                           <em>2024</em>
+                                       </time>
+                                       <h3 class="l2">
+                                           中国对外贸易经济合作企业协会莅临我校调研指导                                       </h3>
+                                       <p class="l2">
+                                           9月19日上午，中国对外贸易经济合作企业协会副秘书长陈晓强一行莅临我校，就学校专业建设与发展和外经贸行业技能竞赛进行调研，就更好提升人才培养质量进行深入交流。校长张倩热情接待了陈晓强一行。座谈会上，张倩对陈晓强副秘书长一行的到来表示热烈欢迎，并简要介绍了学校的发展历程、专业设置、师资力量等情况。陈晓强表示，创建于1965年的河南对外经济贸易职业学院，作为河南省唯一一所外经贸专业高等职业院校，对河南省外经贸事业做出了积极贡献，外经贸行指委一直关注学校的发展变化，对学校近几年的良好...                                       </p>
+                                   </div>
+                               </a>
+                           </div>
+                       </li>
+
+
+ <li>
+                           <div class="box1">
+                               <a href="info/1161/4551.htm" target="_blank" title="我校2024级新生军训动员大会举行">                                   <h6 class="eclip">我校2024级新生军训动员大会举行</h6><time>2024-09-11</time>
+                               </a>
+                           </div>
+                           <div class="box2">
+                               <a href="info/1161/4551.htm" class="bg-mask">                                                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/9/96/99/58AAA548E31462F432BE2A7E56D_0B04E476_6142B.jpg)"> </span>
+                                   </div>
+                                   <div class="txt">
+                                       <time>
+                                           <span>09-11</span>
+                                           <em>2024</em>
+                                       </time>
+                                       <h3 class="l2">
+                                           我校2024级新生军训动员大会举行                                       </h3>
+                                       <p class="l2">
+                                           9月11日，我校2024级新生军训动员大会在校运动场隆重举行。党委书记程相仁、校长张倩、纪委书记董红军和承训部队首长出席，承训部队教官、相关部门负责人以及开封校区全体2024级新生参加了大会。军训动员大会由学生处处长兼武装部部长张志明主持。上午10时，2024级新生们身着统一的军训服装，精神抖擞，整齐列队。在庄严的国歌声中，军训动员大会拉开帷幕。党委书记程相仁作动员讲话。他对承训官兵表示敬意和欢迎。他指出，学生军训是高校人才培养的重要组成部分，是全面贯彻党的教育方针、新时代军事...                                       </p>
+                                   </div>
+                               </a>
+                           </div>
+                       </li>
+
+
+ <li>
+                           <div class="box1">
+                               <a href="info/1161/4471.htm" target="_blank" title="致河南对外经济贸易职业学院全体教职工的慰问信">                                   <h6 class="eclip">致河南对外经济贸易职业学院全体教职工的慰问信</h6><time>2024-09-10</time>
+                               </a>
+                           </div>
+                           <div class="box2">
+                               <a href="info/1161/4471.htm" class="bg-mask">                                                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/0/17/41/3E6A68D01BDF9E32BE068C5D42A_78864CEE_4DC5D.jpg)"> </span>
+                                   </div>
+                                   <div class="txt">
+                                       <time>
+                                           <span>09-10</span>
+                                           <em>2024</em>
+                                       </time>
+                                       <h3 class="l2">
+                                           致河南对外经济贸易职业学院全体教职工的慰问信                                       </h3>
+                                       <p class="l2">
+                                           全体教职工、离退休老同志：金秋送爽、丹桂飘香。在这充满希望和收获的季节里，在第40个教师节来临之际，谨向辛勤耕耘在教学、管理和服务一线的全体教职工致以节日的祝贺和衷心的感谢！向为学校建设作出贡献，至今仍心系学校发展的离退休老同志表示诚挚的感谢和亲切的问候！百舸争流、奋楫者先。过去的一年，学校深入学习贯彻党的二十大和二十届二中、三中全会精神和习近平新时代中国特色社会主义思想，全面贯彻落实省委十一届七次全会精神，坚守教书育人初心，担负立德树人使命，推动学校事业发展取得新成效。党的建...                                       </p>
+                                   </div>
+                               </a>
+                           </div>
+                       </li>
+
+
+ <li>
+                           <div class="box1">
+                               <a href="info/1161/4431.htm" target="_blank" title="热烈庆祝第40个教师节||我校召开2024年教师节表彰大会">                                   <h6 class="eclip">热烈庆祝第40个教师节||我校召开2024年教师节表彰...</h6><time>2024-09-09</time>
+                               </a>
+                           </div>
+                           <div class="box2">
+                               <a href="info/1161/4431.htm" class="bg-mask">                                                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/9/0E/15/E6BAE919D36177CFCA5566D7E09_D5627753_5EF80.jpg)"> </span>
+                                   </div>
+                                   <div class="txt">
+                                       <time>
+                                           <span>09-09</span>
+                                           <em>2024</em>
+                                       </time>
+                                       <h3 class="l2">
+                                           热烈庆祝第40个教师节||我校召开2024年教师节表彰...                                       </h3>
+                                       <p class="l2">
+                                           9月9日上午，在第40个教师节即将到来之际，我校召开2024年教师节表彰大会，表彰在教书育人等各项工作中取得突出成绩的教师。校领导班子成员出席，全体教职工参加。党委书记程相仁代表学校党委向全院教师和教育工作者致以节日的祝贺和诚挚问候，向长期以来为学校建设发展作出突出贡献的离退休老教师表示感谢。程相仁指出，学校坚持以办好人民满意教育为目标，以大投入建强教育硬件、以优配置保障教育资源、以强改革提升教育质量，聚力攻坚克难，以创先争优的精气神，实干苦干的硬作风，使各项工作取得了丰硕成果...                                       </p>
+                                   </div>
+                               </a>
+                           </div>
+                       </li>
+
+
+ <li>
+                           <div class="box1">
+                               <a href="info/1161/4421.htm" target="_blank" title="一见倾“新”！河外贸2024级专科新生入学报到">                                   <h6 class="eclip">一见倾“新”！河外贸2024级专科新生入学报到</h6><time>2024-09-09</time>
+                               </a>
+                           </div>
+                           <div class="box2">
+                               <a href="info/1161/4421.htm" class="bg-mask">                                                                      <div class="pic">
+                                       <span class="a" style="background-image: url(/__local/4/09/07/2CD451531057EB3E4F97C4532B4_DEFD3BCC_6A3A3.jpg)"> </span>
+                                   </div>
+                                   <div class="txt">
+                                       <time>
+                                           <span>09-09</span>
+                                           <em>2024</em>
+                                       </time>
+                                       <h3 class="l2">
+                                           一见倾“新”！河外贸2024级专科新生入学报到                                       </h3>
+                                       <p class="l2">
+                                           又是一年开学季，9月8日，河外贸迎来3000余名专科新同学，他们在此开启人生新旅程，也为河外贸大家庭注入新的生机与活力。校长张倩在纪委书记董红军和相关部门负责人陪同下前往迎新报到现场、学生宿舍、学生餐厅等场所，了解迎新工作进展、学生就餐、住宿安排等情况。张倩表示，感谢迎新工作人员和学生志愿者的辛勤付出，大家要以细致周到贴心的服务，为新生和家长做好保障，要以踏实务实的工作作风展现学校良好的精神风貌，要以学生和家长满意作为我们的工作宗旨和目标。这些来自五湖四海的莘莘学子，怀抱着斑斓...                                       </p>
+                                   </div>
+                               </a>
+                           </div>
+                       </li>
+
+
+</ul><script>_showDynClickBatch(['dynclicks_u9_4781','dynclicks_u9_4771','dynclicks_u9_4751','dynclicks_u9_4611','dynclicks_u9_4551','dynclicks_u9_4471','dynclicks_u9_4431','dynclicks_u9_4421'],[4781,4771,4751,4611,4551,4471,4431,4421],"wbnews", 1986849732)</script>
+</div>
+           </div>
+        </div>
+    </section>
+    <section class="home2">
+        <div class="wp">
+            <div class="content" data-aos="fade-up" data-aos-delay="200">
+                <div class="left">
+                    <div class="title001">
+                        <h2>
+                            通知公告
+                        </h2>
+                        <a href="xwzx1/tzgg.htm" class="more"></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="list_box2"> <ul class="flex">
+
+  <li>
+                                <a href="info/1171/4601.htm" target="_blank" title="关于举办郑州市第十届职业技能竞赛装备制造行业工业机器人系统操作员大赛的通知" class="eclip">关于举办郑州市第十届职业技能竞赛装备制造行业工业机器人系统操作员大...</a>
+                                <time>2024-09-19</time>
+                            </li>
+
+  <li>
+                                <a href="info/1171/4561.htm" target="_blank" title="关于组织开展2024年国家网络安全宣传周活动的通知" class="eclip">关于组织开展2024年国家网络安全宣传周活动的通知</a>
+                                <time>2024-09-11</time>
+                            </li>
+
+  <li>
+                                <a href="info/1171/4461.htm" target="_blank" title="河南对外经济贸易职业学院避雷检测项目（开封校区）终止公告" class="eclip">河南对外经济贸易职业学院避雷检测项目（开封校区）终止公告</a>
+                                <time>2024-09-09</time>
+                            </li>
+
+  <li>
+                                <a href="info/1171/4451.htm" target="_blank" title="河南对外经济贸易职业学院郑州校区超市经营权询价公告（二次）" class="eclip">河南对外经济贸易职业学院郑州校区超市经营权询价公告（二次）</a>
+                                <time>2024-09-09</time>
+                            </li>
+
+  <li>
+                                <a href="info/1171/4381.htm" target="_blank" title="河南对外经济贸易职业学院  避雷检测项目（开封校区）询价公告" class="eclip">河南对外经济贸易职业学院  避雷检测项目（开封校区）询价公告</a>
+                                <time>2024-09-06</time>
+                            </li>
+
+  <li>
+                                <a href="info/1171/4341.htm" target="_blank" title="河南对外经济贸易职业学院郑州校区超市经营权询价公告" class="eclip">河南对外经济贸易职业学院郑州校区超市经营权询价公告</a>
+                                <time>2024-09-02</time>
+                            </li>
+
+  <li>
+                                <a href="info/1171/4221.htm" target="_blank" title="2024年报废资产处置项目竞价结果公示" class="eclip">2024年报废资产处置项目竞价结果公示</a>
+                                <time>2024-08-13</time>
+                            </li>
+
+  <li>
+                                <a href="info/1171/4201.htm" target="_blank" title="2024年报废资产处置项目竞价公告" class="eclip">2024年报废资产处置项目竞价公告</a>
+                                <time>2024-08-03</time>
+                            </li>
+
+  <li>
+                                <a href="info/1171/4191.htm" target="_blank" title="关于2021级中专毕业生领取毕业证的通知" class="eclip">关于2021级中专毕业生领取毕业证的通知</a>
+                                <time>2024-08-02</time>
+                            </li>
+
+  <li>
+                                <a href="info/1171/4181.htm" target="_blank" title="关于受理违规吃喝问题监督举报的公告" class="eclip">关于受理违规吃喝问题监督举报的公告</a>
+                                <time>2024-07-27</time>
+                            </li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u10_4601','dynclicks_u10_4561','dynclicks_u10_4461','dynclicks_u10_4451','dynclicks_u10_4381','dynclicks_u10_4341','dynclicks_u10_4221','dynclicks_u10_4201','dynclicks_u10_4191','dynclicks_u10_4181'],[4601,4561,4461,4451,4381,4341,4221,4201,4191,4181],"wbnews", 1986849732)</script>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home3">
+        <div class="wp">
+            <div class="title001 mid zi3" data-aos="fade-up" data-aos-delay="200">
+                <h2>媒体河外贸</h2>
+                <a href="xwzx1/mthwm.htm" class="more"></a>
+            </div>
+            <div class="content" data-aos="fade-up" data-aos-delay="400">
+                <div class="list2w ">
+                    <div class="list2w1 swiper-container">
+                         <div class="swiper-wrapper">
+<div class="swiper-slide">
+                                <div class="con con1">
+                                    <a href="https://static.dingxinwen.com/dd-sharepage/detail/index.html?id=7985722#/?categoryId=-100" target="_blank" title="【顶端新闻】：河南对外经济贸易职业学院举办庆祝新中国成立75周年文艺晚会">                                        <div class="box1">
+                                            <div class="xwtit">
+                                                <h4></h4>
+                                                <div class="dots"></div>
+                                            </div>
+                                            <h3 class="l2">
+                                                【顶端新闻】：河南对外经济贸易职业学院举办庆祝新中国成立75周年文艺...                                            </h3>
+                                            <time>
+                                                <img src="images/s3-img02.png" alt="">
+                                                <i> 2024-10-12</i>
+                                            </time>
+                                            <p class="l2">
+                                               河南对外经济贸易职业学院举办庆祝新中国成立75周年文艺晚会                                            </p>
+                                        </div>
+                                        <div class="box2">
+                                            <h3 class="eclip">
+                                                【顶端新闻】：河南对外经济贸易职业学院举办庆祝新中国成立75周年文艺...                                            </h3>
+                                            <div class="img_box">
+                                                <i></i>
+                                                <div class="pic">
+                                                                                                    <span class="a" style="background-image: url(/__local/B/EB/20/591A4E7F8FB3098D5E1C8CE10B7_E44E1B38_45200.jpg)"> </span>
+                                                </div>
+                                            </div>
+                                            <p class="l2">
+                                               河南对外经济贸易职业学院举办庆祝新中国成立75周年文艺晚会                                            </p>
+                                            <time>2024-10-12</time>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+<div class="swiper-slide">
+                                <div class="con con1">
+                                    <a href="https://mp.weixin.qq.com/s/HGeIQ9lrFtIppjIQjbA9lw" target="_blank" title="【开封电视台】：开封市委常委组织部部长市委教育工委书记杨克俊到我校调研指导工作">                                        <div class="box1">
+                                            <div class="xwtit">
+                                                <h4></h4>
+                                                <div class="dots"></div>
+                                            </div>
+                                            <h3 class="l2">
+                                                【开封电视台】：开封市委常委组织部部长市委教育工委书记杨克俊到我校...                                            </h3>
+                                            <time>
+                                                <img src="images/s3-img02.png" alt="">
+                                                <i> 2024-10-12</i>
+                                            </time>
+                                            <p class="l2">
+                                               10月10日，市委常委、组织部部长、教育工委书记杨克俊带队到部分驻汴高校调研，出席驻汴高校座谈会并讲话，强调要深入学习贯彻党的二十...                                            </p>
+                                        </div>
+                                        <div class="box2">
+                                            <h3 class="eclip">
+                                                【开封电视台】：开封市委常委组织部部长市委教育工委书记杨克俊到我校...                                            </h3>
+                                            <div class="img_box">
+                                                <i></i>
+                                                <div class="pic">
+                                                                                                    <span class="a" style="background-image: url(/__local/D/3B/80/FF99CBF150FC670DC8B8701E6BB_44E517E3_2B5E3.png)"> </span>
+                                                </div>
+                                            </div>
+                                            <p class="l2">
+                                               10月10日，市委常委、组织部部长、教育工委书记杨克俊带队到部分驻汴高校调研，出席驻汴高校座谈会并讲话，强调要深入学习贯彻党的二十...                                            </p>
+                                            <time>2024-10-12</time>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+<div class="swiper-slide">
+                                <div class="con con1">
+                                    <a href="https://share.hntv.tv/news/0/1840628593972150273" target="_blank" title="【河南电视台】：河南对外经济贸易职业学院举行2024级新生军训表彰大会">                                        <div class="box1">
+                                            <div class="xwtit">
+                                                <h4></h4>
+                                                <div class="dots"></div>
+                                            </div>
+                                            <h3 class="l2">
+                                                【河南电视台】：河南对外经济贸易职业学院举行2024级新生军训表彰大会                                            </h3>
+                                            <time>
+                                                <img src="images/s3-img02.png" alt="">
+                                                <i> 2024-09-30</i>
+                                            </time>
+                                            <p class="l2">
+                                               9月29日，河南对外经济贸易职业学院隆重举行2024级新生军训总结表彰大会暨开学典礼。校长张倩、纪委书记董红军等校领导和承训部队首长出...                                            </p>
+                                        </div>
+                                        <div class="box2">
+                                            <h3 class="eclip">
+                                                【河南电视台】：河南对外经济贸易职业学院举行2024级新生军训表彰大会                                            </h3>
+                                            <div class="img_box">
+                                                <i></i>
+                                                <div class="pic">
+                                                                                                    <span class="a" style="background-image: url(/__local/1/8D/6B/BCCF88D48F39FA7D5E5AFED271B_D0AC4E46_3701A.jpg)"> </span>
+                                                </div>
+                                            </div>
+                                            <p class="l2">
+                                               9月29日，河南对外经济贸易职业学院隆重举行2024级新生军训总结表彰大会暨开学典礼。校长张倩、纪委书记董红军等校领导和承训部队首长出...                                            </p>
+                                            <time>2024-09-30</time>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+<div class="swiper-slide">
+                                <div class="con con1">
+                                    <a href="https://share.hntv.tv/news/1/1840733105123065858" target="_blank" title="【河南电视台】：河南对外经贸职业学院举行新生军训总结表彰大会暨开学典礼">                                        <div class="box1">
+                                            <div class="xwtit">
+                                                <h4></h4>
+                                                <div class="dots"></div>
+                                            </div>
+                                            <h3 class="l2">
+                                                【河南电视台】：河南对外经贸职业学院举行新生军训总结表彰大会暨开学典礼                                            </h3>
+                                            <time>
+                                                <img src="images/s3-img02.png" alt="">
+                                                <i> 2024-09-30</i>
+                                            </time>
+                                            <p class="l2">
+                                               河南对外经贸职业学院举行新生军训总结表彰大会暨开学典礼                                            </p>
+                                        </div>
+                                        <div class="box2">
+                                            <h3 class="eclip">
+                                                【河南电视台】：河南对外经贸职业学院举行新生军训总结表彰大会暨开学典礼                                            </h3>
+                                            <div class="img_box">
+                                                <i></i>
+                                                <div class="pic">
+                                                                                                    <span class="a" style="background-image: url(/__local/8/F9/72/A45537E74439D7915D3F2C97DBA_CAEEAE50_3CF4B.jpg)"> </span>
+                                                </div>
+                                            </div>
+                                            <p class="l2">
+                                               河南对外经贸职业学院举行新生军训总结表彰大会暨开学典礼                                            </p>
+                                            <time>2024-09-30</time>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+<div class="swiper-slide">
+                                <div class="con con1">
+                                    <a href="https://share.hntv.tv/news/0/1839142974150344705" target="_blank" title="【大象新闻】：陈晓强副秘书长到河南对外经济贸易职业学院调研">                                        <div class="box1">
+                                            <div class="xwtit">
+                                                <h4></h4>
+                                                <div class="dots"></div>
+                                            </div>
+                                            <h3 class="l2">
+                                                【大象新闻】：陈晓强副秘书长到河南对外经济贸易职业学院调研                                            </h3>
+                                            <time>
+                                                <img src="images/s3-img02.png" alt="">
+                                                <i> 2024-09-26</i>
+                                            </time>
+                                            <p class="l2">
+                                               9月19日，中国对外贸易经济合作企业协会副秘书长陈晓强一行到河南对外经济贸易职业学院调研，就学校专业建设与发展和外经贸行业技能竞赛...                                            </p>
+                                        </div>
+                                        <div class="box2">
+                                            <h3 class="eclip">
+                                                【大象新闻】：陈晓强副秘书长到河南对外经济贸易职业学院调研                                            </h3>
+                                            <div class="img_box">
+                                                <i></i>
+                                                <div class="pic">
+                                                                                                    <span class="a" style="background-image: url(/__local/6/7A/48/3499601FA180F8AC6632B6D6AC2_6C66D055_50D1E.jpg)"> </span>
+                                                </div>
+                                            </div>
+                                            <p class="l2">
+                                               9月19日，中国对外贸易经济合作企业协会副秘书长陈晓强一行到河南对外经济贸易职业学院调研，就学校专业建设与发展和外经贸行业技能竞赛...                                            </p>
+                                            <time>2024-09-26</time>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+<div class="swiper-slide">
+                                <div class="con con1">
+                                    <a href="https://share.hntv.tv/news/0/1839141165193166849" target="_blank" title="【大象新闻】：河南对外经济贸易职业学院举行2024级新生军训动员大会">                                        <div class="box1">
+                                            <div class="xwtit">
+                                                <h4></h4>
+                                                <div class="dots"></div>
+                                            </div>
+                                            <h3 class="l2">
+                                                【大象新闻】：河南对外经济贸易职业学院举行2024级新生军训动员大会                                            </h3>
+                                            <time>
+                                                <img src="images/s3-img02.png" alt="">
+                                                <i> 2024-09-26</i>
+                                            </time>
+                                            <p class="l2">
+                                               近日，河南对外经济贸易职业学院2024级新生军训动员大会在校运动场隆重举行。党委书记程相仁、校长张倩、纪委书记董红军和承训部队首长...                                            </p>
+                                        </div>
+                                        <div class="box2">
+                                            <h3 class="eclip">
+                                                【大象新闻】：河南对外经济贸易职业学院举行2024级新生军训动员大会                                            </h3>
+                                            <div class="img_box">
+                                                <i></i>
+                                                <div class="pic">
+                                                                                                    <span class="a" style="background-image: url(/__local/D/84/DD/B02CB1B1416E5FCAA9BE56F106F_036AB9E4_45B44.jpg)"> </span>
+                                                </div>
+                                            </div>
+                                            <p class="l2">
+                                               近日，河南对外经济贸易职业学院2024级新生军训动员大会在校运动场隆重举行。党委书记程相仁、校长张倩、纪委书记董红军和承训部队首长...                                            </p>
+                                            <time>2024-09-26</time>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+<div class="swiper-slide">
+                                <div class="con con1">
+                                    <a href="https://c.m.163.com/news/a/JCNOI2OG0518WUV0.html?spss=newsapp&spsnuid=VwfpK58hdZgxe2rjHS5QISBef%2FYCwGvajJY3iZ3QBS1B%2B5GG2sVZWm%2FHZnYSwhcCLKLFB1b60t5bfMyo%2BfU9vA%3D%3D&spsdevid=YWE0NjczMjAzNjRiZDVmMl9mZGI0NzlkYWM1MjVfUmVkbWlfMjQwNjlSQTIxQw%253D%253D&sp" target="_blank" title="【网易新闻】：河南省对外经济贸易会计学会会员大会暨第六届换届大会在郑州举行">                                        <div class="box1">
+                                            <div class="xwtit">
+                                                <h4></h4>
+                                                <div class="dots"></div>
+                                            </div>
+                                            <h3 class="l2">
+                                                【网易新闻】：河南省对外经济贸易会计学会会员大会暨第六届换届大会在...                                            </h3>
+                                            <time>
+                                                <img src="images/s3-img02.png" alt="">
+                                                <i> 2024-09-23</i>
+                                            </time>
+                                            <p class="l2">
+                                               2024年9月21日，河南省对外经济贸易会计学会会员大会暨第六届换届大会在郑州市举行。河南对外经济贸易职业学院校长张倩出席会议。中国对...                                            </p>
+                                        </div>
+                                        <div class="box2">
+                                            <h3 class="eclip">
+                                                【网易新闻】：河南省对外经济贸易会计学会会员大会暨第六届换届大会在...                                            </h3>
+                                            <div class="img_box">
+                                                <i></i>
+                                                <div class="pic">
+                                                                                                    <span class="a" style="background-image: url(/__local/D/93/AB/050C8A4353886CF9D0FEA85A8FC_C15EDDDF_66619.jpg)"> </span>
+                                                </div>
+                                            </div>
+                                            <p class="l2">
+                                               2024年9月21日，河南省对外经济贸易会计学会会员大会暨第六届换届大会在郑州市举行。河南对外经济贸易职业学院校长张倩出席会议。中国对...                                            </p>
+                                            <time>2024-09-23</time>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+<div class="swiper-slide">
+                                <div class="con con1">
+                                    <a href="https://c.m.163.com/news/a/JCM4T0RU0518WUV0.html?spss=newsapp&spsnuid=VwfpK58hdZgxe2rjHS5QISBef%2FYCwGvajJY3iZ3QBS1B%2B5GG2sVZWm%2FHZnYSwhcCLKLFB1b60t5bfMyo%2BfU9vA%3D%3D&spsdevid=YWE0NjczMjAzNjRiZDVmMl9mZGI0NzlkYWM1MjVfUmVkbWlfMjQwNjlSQTIxQw%253D%253D&sp" target="_blank" title="【网易新闻】：中国对外贸易经济合作企业协会莅临河南对外经贸职业学院调研指导">                                        <div class="box1">
+                                            <div class="xwtit">
+                                                <h4></h4>
+                                                <div class="dots"></div>
+                                            </div>
+                                            <h3 class="l2">
+                                                【网易新闻】：中国对外贸易经济合作企业协会莅临河南对外经贸职业学院...                                            </h3>
+                                            <time>
+                                                <img src="images/s3-img02.png" alt="">
+                                                <i> 2024-09-22</i>
+                                            </time>
+                                            <p class="l2">
+                                               9月19日上午，中国对外贸易经济合作企业协会副秘书长陈晓强一行莅临河南对外经济贸易职业学院，就学校专业建设与发展和外经贸行业技能竞...                                            </p>
+                                        </div>
+                                        <div class="box2">
+                                            <h3 class="eclip">
+                                                【网易新闻】：中国对外贸易经济合作企业协会莅临河南对外经贸职业学院...                                            </h3>
+                                            <div class="img_box">
+                                                <i></i>
+                                                <div class="pic">
+                                                                                                    <span class="a" style="background-image: url(/__local/6/7A/48/3499601FA180F8AC6632B6D6AC2_6C66D055_50D1E.jpg)"> </span>
+                                                </div>
+                                            </div>
+                                            <p class="l2">
+                                               9月19日上午，中国对外贸易经济合作企业协会副秘书长陈晓强一行莅临河南对外经济贸易职业学院，就学校专业建设与发展和外经贸行业技能竞...                                            </p>
+                                            <time>2024-09-22</time>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+    </div><script>_showDynClickBatch(['dynclicks_u11_4701','dynclicks_u11_4691','dynclicks_u11_4681','dynclicks_u11_4671','dynclicks_u11_4661','dynclicks_u11_4651','dynclicks_u11_4641','dynclicks_u11_4631'],[4701,4691,4681,4671,4661,4651,4641,4631],"wbnews", 1986849732)</script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<section class="home4">
+    <div class="wp">
+        <div class="left" data-aos="fade-right" data-aos-delay="200">
+            <div class="title001">
+                <h2>招生信息</h2>
+                <a href="zsjy1/zsxx.htm" class="more"></a>
+            </div>
+            <div class="txt">
+                <p class="l2"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+河南对外经济贸易职业学院是经河南省人民政府批准、国家教育部备案、隶属于河南省教育厅的公办全日制普通高等职业院校。目前，学院设有国际经贸学院、应用外语学院、信息工程学院、财会金融学院等9个教学院部，开设有国际经济与贸易、大数据与会计等19个专业，初步形成了以特色专业为...</p>
+            </div>
+            <div class="list_box4">
+             <ul class="flex-left">
+ <li>
+                        <a href="zsjy1/zsxx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76894)">                            <h4>招生信息</h4>
+                        </a>
+                    </li>
+
+ <li>
+                        <a href="zsjy1/zyjs.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76895)">                            <h4>专业介绍</h4>
+                        </a>
+                    </li>
+
+ <li>
+                        <a href="zsjy1/lqcx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76896)">                            <h4>录取查询</h4>
+                        </a>
+                    </li>
+
+ <li>
+                        <a href="zsjy1/jycyfw.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76897)">                            <h4>就业创业服务</h4>
+                        </a>
+                    </li>
+
+    </ul>
+
+            </div>
+        </div>
+        <div class="right" data-aos="fade-right" data-aos-delay="400">
+            <div class="img_box"><a href="info/1191/2451.htm" target="_blank" title="河南对外经济贸易职业学院2023年招生简章">     
+               <div class="pic">
+                        <span class="a" style="background-image: url(images/s4-img02.png)"></span>
+                    </div>
+                    <i class="play">
+                        <img src="images/s4-img03.png" alt="">
+                    </i>
+                </a>
+
+<script>_showDynClickBatch(['dynclicks_u14_2451'],[2451],"wbnews", 1986849732)</script>
+</div>
+        </div>
+    </div>
+</section>
+<section class="homeb">
+    <section class="home5">
+        <div class="titBox" data-aos="fade-up" data-aos-delay="200">
+            <div class="con">
+<div class="title001">
+ <h2>招生信息</h2>
+</div>
+<p class="l2">学院紧紧围绕我省开放带动主战略，加大外经贸人才培养力度，扩大人才培养规模，提高人才培养质量，服务我省开放型经济发展，助推产业转型升级。</p></div>
+        </div>
+        <div class="list3whgg swiper-container" data-aos="fade-up" data-aos-delay="400">
+           <div class="swiper-wrapper">
+ <div class="swiper-slide">
+                    <a href="info/1111/3481.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/0/8C/34/358372F62155B3C2F3159257116_CF48A56B_35DF5.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/3491.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/A/70/1F/7326502F1CA647AA4BF4F701A68_0DD919E6_41749.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/3501.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/C/C9/FB/9726906424FA4DD87139C407C64_E437BEEF_4080C.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/3511.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/C/0F/EA/910AADAD72FE20FEED19EFA9523_ABC11DFD_4B116.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/3521.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/C/8D/78/694F84DBF5B492D80BE3BF343B8_B75CE22A_30FE4.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/3531.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/8/0C/BA/49CFDF47CE87636A055F1E4295A_398DD546_452D9.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/3541.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/B/5B/A6/BAE1AD11378F19C369CE7D967D9_F62488D7_4B617.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/3551.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/4/7F/B4/EB107F8F075A48E6D0C19558AA8_3DE975C2_43FF5.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/1301.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/0/DB/C4/200F02756843C7915EB727D1F31_C448200F_E3290.jpg?e=.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/1321.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/D/18/FA/F543820D210EBA9BD2FCF45D292_97294031_9EDC3.jpg?e=.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/1341.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/0/71/8C/3DFC1EE0AFE235C1B664492F535_5ADEA34D_35CA02.jpg?e=.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/1331.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/5/9E/E7/33505688C825666CB1C0B46759B_46BF4651_C700C.jpg?e=.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/1311.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/D/F0/9F/67EE40257481643D2B7DF9049AB_4FB13678_48204.jpg?e=.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ <div class="swiper-slide">
+                    <a href="info/1111/1291.htm" target="_blank" title="学院风光">                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/6/95/AA/DC304BB263B3B5422946E8581DB_C4283A35_9F02E.jpg?e=.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">学院风光</h3>
+                        </div>
+                    </a>
+                </div>
+
+ </div>
+<script>_showDynClickBatch(['dynclicks_u16_3481','dynclicks_u16_3491','dynclicks_u16_3501','dynclicks_u16_3511','dynclicks_u16_3521','dynclicks_u16_3531','dynclicks_u16_3541','dynclicks_u16_3551','dynclicks_u16_1301','dynclicks_u16_1321','dynclicks_u16_1341','dynclicks_u16_1331','dynclicks_u16_1311','dynclicks_u16_1291'],[3481,3491,3501,3511,3521,3531,3541,3551,1301,1321,1341,1331,1311,1291],"wbnews", 1986849732)</script>
+
+        </div>
+        <div class="list3whg" data-aos="fade-up" data-aos-delay="600">
+            <div class="btn prev swiper-button-prev"></div>
+            <div class="swiper-container"><div class="swiper-wrapper">
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/0/8C/34/358372F62155B3C2F3159257116_CF48A56B_35DF5.png)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/A/70/1F/7326502F1CA647AA4BF4F701A68_0DD919E6_41749.png)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/C/C9/FB/9726906424FA4DD87139C407C64_E437BEEF_4080C.png)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/C/0F/EA/910AADAD72FE20FEED19EFA9523_ABC11DFD_4B116.png)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/C/8D/78/694F84DBF5B492D80BE3BF343B8_B75CE22A_30FE4.png)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/8/0C/BA/49CFDF47CE87636A055F1E4295A_398DD546_452D9.png)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/B/5B/A6/BAE1AD11378F19C369CE7D967D9_F62488D7_4B617.png)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/4/7F/B4/EB107F8F075A48E6D0C19558AA8_3DE975C2_43FF5.png)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/0/DB/C4/200F02756843C7915EB727D1F31_C448200F_E3290.jpg?e=.jpg)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/D/18/FA/F543820D210EBA9BD2FCF45D292_97294031_9EDC3.jpg?e=.jpg)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/0/71/8C/3DFC1EE0AFE235C1B664492F535_5ADEA34D_35CA02.jpg?e=.jpg)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/5/9E/E7/33505688C825666CB1C0B46759B_46BF4651_C700C.jpg?e=.jpg)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/D/F0/9F/67EE40257481643D2B7DF9049AB_4FB13678_48204.jpg?e=.jpg)"></span>
+                        </div>
+                    </div>
+
+ <div class="swiper-slide">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/6/95/AA/DC304BB263B3B5422946E8581DB_C4283A35_9F02E.jpg?e=.jpg)"></span>
+                        </div>
+                    </div>
+
+ </div>
+<script>_showDynClickBatch(['dynclicks_u17_3481','dynclicks_u17_3491','dynclicks_u17_3501','dynclicks_u17_3511','dynclicks_u17_3521','dynclicks_u17_3531','dynclicks_u17_3541','dynclicks_u17_3551','dynclicks_u17_1301','dynclicks_u17_1321','dynclicks_u17_1341','dynclicks_u17_1331','dynclicks_u17_1311','dynclicks_u17_1291'],[3481,3491,3501,3511,3521,3531,3541,3551,1301,1321,1341,1331,1311,1291],"wbnews", 1986849732)</script>
+</div>
+            <div class="btn next swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="home6">
+        <div class="wp">
+            <div class="title001 mid" data-aos="fade-up" data-aos-delay="200">
+                <h2>师生风采</h2>
+                <a href="ssfc.htm" class="more"></a>
+            </div>
+            <div class="content">
+                <div class="left" data-aos="fade-up" data-aos-delay="200">
+                    <div class="list4w swiper-container">
+                     <div class="swiper-wrapper">
+<div class="swiper-slide">
+                                <a href="info/1291/4441.htm" target="_blank" title="热烈庆祝第40个教师节||我校召开2024年教师节表彰大会" class="bg-mask">
+                                    <div class="pic">
+                                        <span class="a" style="background-image: url(/__local/9/0E/15/E6BAE919D36177CFCA5566D7E09_D5627753_5EF80.jpg)"> </span>
+                                    </div>
+                                    <div class="txt">
+                                        <h3 class="eclip">热烈庆祝第40个教师节||我校召开2024年教师节表彰大会</h3>
+                                        <time>
+                                           2024/09.09                                        </time>
+                                        <p class="l2">
+                                            9月9日上午，在第40个教师节即将到来之际，我校召开2024年教师节表彰大会，表彰在教书育人等各项工作中取得突出成绩的教师。校领导班子成员出席，全体教职工参加。党委书记程相仁代表学校党委向全院教师和教育工作者致以节日的祝贺和诚挚问候，向长期以来为学校建设发展作出突出贡献的离退休老教师表示感谢。程相仁指出，学校坚持以办好人民满意教育为目标，以大投入建强教育硬件、以优配置保障教育资源、以强改革提升教育质量，聚力攻坚克难，以创先争优的精气神，实干苦干的硬作风，使各项工作取得了丰硕成果...                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+<div class="swiper-slide">
+                                <a href="info/1291/4251.htm" target="_blank" title="青春返家乡 筑梦正当时——河外贸学子2024年暑假“返家乡”社会实践活动" class="bg-mask">
+                                    <div class="pic">
+                                        <span class="a" style="background-image: url(/__local/5/7C/6A/AA8A6B8CA5485C5E6C74937E10F_E1049DE3_4406F.png)"> </span>
+                                    </div>
+                                    <div class="txt">
+                                        <h3 class="eclip">青春返家乡 筑梦正当时——河外贸学子2024年暑假“返家乡”社会实践活动</h3>
+                                        <time>
+                                           2024/08.08                                        </time>
+                                        <p class="l2">
+                                            为深入学习贯彻落实习近平总书记关于青年工作的重要思想，引导青年学子返回家乡参与实践服务家乡建设发展工作，河外贸学子们积极响应国家号召，他们带着学院的嘱托，肩负着时代的使命，回到各自家乡，积极参加“返家乡”社会实践活动，以实际行动践行了青年的责任与担当。23应用外语学院魏祎彤：在本次暑假期间，我很高兴能够参加2024年暑假上蔡籍大学生“返家乡”社会实践活动。在活动期间我主要负责青少年心理健康服务进社区活动，心理老师为大学生们普及心理健康，相关内容讲解，九种心理型人格特点，并组织开...                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+<div class="swiper-slide">
+                                <a href="info/1291/4261.htm" target="_blank" title="喜报！我校荣获全国心理健康产教融合共同体2023年心理健康教育先进单位！" class="bg-mask">
+                                    <div class="pic">
+                                        <span class="a" style="background-image: url(/__local/6/AE/E3/F2E20B77E7EFF7A36DCDA9B6E6C_47BE1B2A_23449.jpeg)"> </span>
+                                    </div>
+                                    <div class="txt">
+                                        <h3 class="eclip">喜报！我校荣获全国心理健康产教融合共同体2023年心理健康教育先进单位...</h3>
+                                        <time>
+                                           2024/07.14                                        </time>
+                                        <p class="l2">
+                                            6月22日至23日，第二届全国心理健康职业教育发展峰会在菏泽市委党校召开，教育部职业教育发展中心战略发展处处长白汉刚、山东省教育厅职业教育处副处长钟京志出席会议并致辞。全国心理健康产教融合共同体理事单位、韩国国立大学、泰国素万那普皇家理工大学、山东大学、西南大学、华东交通大学等40余家院校负责人及菏泽市各县区教体局局长、山东高校、全市职业院校校长共计500余人参加会议。此次会议包括专家报告、工作年会、圆桌对话、表彰先进、经验分享、参观交流等十项内容。经推举，我校（河南对外经济贸...                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+<div class="swiper-slide">
+                                <a href="info/1291/4271.htm" target="_blank" title="祝贺我校闫照青同学获得供应链数据分析竞赛一等奖" class="bg-mask">
+                                    <div class="pic">
+                                        <span class="a" style="background-image: url(/__local/0/D9/A7/2F4BB7288A92FF2A5F82B752512_392FC574_4877F.jpg)"> </span>
+                                    </div>
+                                    <div class="txt">
+                                        <h3 class="eclip">祝贺我校闫照青同学获得供应链数据分析竞赛一等奖</h3>
+                                        <time>
+                                           2024/07.14                                        </time>
+                                        <p class="l2">
+                                            近日，由全国交通运输职业教育教学指导委员会指导，中国物资储运协会主办，北京络捷斯特科技发展股份有限公司、全国交通运输产教融合服务平台承办，中国物流集团国际速递供应链管理有限公司、杉数科技（北京）有限公司、北京旷视机器人技术有限公司协办，长风网提供技术支持的“第七届长风学霸赛之业务数字化运营与分析”竞赛落下帷幕。竞赛自2024年5月7日启动以来，共吸引了全国范围内355所院校的10084名选手踊跃参与。经过校园选拔赛、全国积分赛和全国总决赛的激烈角逐，各项赛果终于揭晓。由中国物资...                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+    </div>
+
+<script>_showDynClickBatch(['dynclicks_u18_4441','dynclicks_u18_4251','dynclicks_u18_4261','dynclicks_u18_4271'],[4441,4251,4261,4271],"wbnews", 1986849732)</script>
+
+                    </div>
+                </div>
+                <div class="right" data-aos="fade-up" data-aos-delay="400">
+                    <div class="list_box5"><ul>
+<li>
+                                <a href="info/1291/4441.htm" target="_blank" title="热烈庆祝第40个教师节||我校召开2024年教师节表彰大会">                                    <div class="txt">
+                                        <h3 class="eclip">热烈庆祝第40个教师节||我校召开2024年教师节表彰...</h3>
+                                        <p class="l2">
+                                          9月9日上午，在第40个教师节即将到来之际，我校召开2024年教师节表彰大会，表彰在教书育人等各项工作中...                                        </p>
+                                    </div>
+                                    <time>
+                                        <span>09-09</span>
+                                        <em>2024</em>
+                                    </time>
+                                </a>
+                            </li>
+
+<li>
+                                <a href="info/1291/4251.htm" target="_blank" title="青春返家乡 筑梦正当时——河外贸学子2024年暑假“返家乡”社会实践活动">                                    <div class="txt">
+                                        <h3 class="eclip">青春返家乡 筑梦正当时——河外贸学子2024年暑假“...</h3>
+                                        <p class="l2">
+                                          为深入学习贯彻落实习近平总书记关于青年工作的重要思想，引导青年学子返回家乡参与实践服务家乡建设发...                                        </p>
+                                    </div>
+                                    <time>
+                                        <span>08-08</span>
+                                        <em>2024</em>
+                                    </time>
+                                </a>
+                            </li>
+
+<li>
+                                <a href="info/1291/4261.htm" target="_blank" title="喜报！我校荣获全国心理健康产教融合共同体2023年心理健康教育先进单位！">                                    <div class="txt">
+                                        <h3 class="eclip">喜报！我校荣获全国心理健康产教融合共同体2023年...</h3>
+                                        <p class="l2">
+                                          6月22日至23日，第二届全国心理健康职业教育发展峰会在菏泽市委党校召开，教育部职业教育发展中心战略发...                                        </p>
+                                    </div>
+                                    <time>
+                                        <span>07-14</span>
+                                        <em>2024</em>
+                                    </time>
+                                </a>
+                            </li>
+
+<li>
+                                <a href="info/1291/4271.htm" target="_blank" title="祝贺我校闫照青同学获得供应链数据分析竞赛一等奖">                                    <div class="txt">
+                                        <h3 class="eclip">祝贺我校闫照青同学获得供应链数据分析竞赛一等奖</h3>
+                                        <p class="l2">
+                                          近日，由全国交通运输职业教育教学指导委员会指导，中国物资储运协会主办，北京络捷斯特科技发展股份有...                                        </p>
+                                    </div>
+                                    <time>
+                                        <span>07-14</span>
+                                        <em>2024</em>
+                                    </time>
+                                </a>
+                            </li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u19_4441','dynclicks_u19_4251','dynclicks_u19_4261','dynclicks_u19_4271'],[4441,4251,4261,4271],"wbnews", 1986849732)</script>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<section class="homec">
+    <section class="home7">
+        <div class="wp">
+            <div class="title001 mid zi3" data-aos="fade-up" data-aos-delay="200">
+                <h2>融媒河外贸</h2>
+                <div class="mt_list">     <ul class="flex">
+
+                      <li>
+                            <a href="rmhwm/rmtwb.htm" title="微博" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79507)" target="_blank">
+                                <img src="images/s7-ico01.png" alt="">
+                            </a>
+                            <div class="code">
+                                <img src="images/cs.jpg" alt="">
+                            </div>
+                        </li>
+
+                  <li>
+                            <a href="rmhwm/rmtwx1.htm" title="微信" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79508)" target="_blank">
+                                <img src="images/s7-ico02.png" alt="">
+                            </a>
+                            <div class="code">
+                                <img src="images/cs.jpg" alt="">
+                            </div>
+                        </li>
+
+                  <li>
+                            <a href="rmhwm/rmtdy.htm" title="抖音" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79509)" target="_blank">
+                                <img src="images/s7-ico03.png" alt="">
+                            </a>
+                            <div class="code">
+                                <img src="images/cs.jpg" alt="">
+                            </div>
+                        </li>
+
+                  <li>
+                            <a href="rmhwm/rmtwxgzh.htm" title="公众号" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79510)" target="_blank">
+                                <img src="images/s7-ico04.png" alt="">
+                            </a>
+                            <div class="code">
+                                <img src="images/ewm.png" alt="">
+                            </div>
+                        </li>
+
+                  <li>
+                            <a href="rmhwm.htm" title="更多" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79511)" target="_blank">
+                                <img src="images/s7-ico05.png" alt="">
+                            </a>
+                            
+                        </li>
+
+</ul></div>
+            </div>
+      <div class="content">
+               <div class="li li1 sp" data-aos="fade-right" data-aos-delay="200">
+<a href="https://www.douyin.com/user/MS4wLjABAAAA5a-PGHjY2-1fMCQFEbsLSqD6NKtNdlVl4Qb2uTKrKr0ePXl8-AuoTWepIY8Em286?from_tab_name=main&is_search=0&list_name=follow&nt=0" target="_blank" title="河南对外经济贸易职业学院" class="bg-mask">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/B/96/50/436754DBBB38262AFCC3C302B73_2D128B83_F2BD.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <h3 class="eclip">河南对外经济贸易职业学院</h3><img src="images/s7-img06.png" alt="">
+                        </div>
+                    </a>
+ 
+ </div>
+<script>_showDynClickBatch(['dynclicks_u21_2741'],[2741],"wbnews", 1986849732)</script>
+
+                  <div class="li li1" data-aos="fade-right" data-aos-delay="400">
+<a href="info/1331/2751.htm" target="_blank" title="参观廉政警示基地 筑牢廉政思想底线" class="bg-mask">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/B/8B/01/13B613DF2FDCEB951FF0ACD977C_57EB1D41_11D8A.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <img src="images/s7-img07.png" alt="" style="width: .25rem">
+                            <h3 class="eclip">参观廉政警示基地 筑牢廉政思想底线</h3>
+                        </div>
+                    </a>
+ 
+ </div>
+<script>_showDynClickBatch(['dynclicks_u22_2751'],[2751],"wbnews", 1986849732)</script>
+
+                <div class="li li2">
+                    <a href="rmhwm/spdyh.htm" target="_blank" title="迎“篮”而上勇超越，不负韶华正青春..." class="bg-mask" data-aos="fade-right" data-aos-delay="200">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/B/49/AC/0437AED02D64E34E371A4EFFE29_BBA83E4F_A134.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <img src="images/s7-img08.png" alt="" style="width: .26rem">
+                            <h3 class="eclip">迎“篮”而上勇超越，不负韶华正青春...</h3>
+                        </div>
+                    </a>
+  
+<script>_showDynClickBatch(['dynclicks_u23_2761'],[2761],"wbnews", 1986849732)</script>
+
+                   <a href="rmhwm/spdyh.htm" target="_blank" title="迎新视频" class="bg-mask" data-aos="fade-right" data-aos-delay="200">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/F/1F/8B/44B763128E0BC57F6B2D6BE96E4_0E074E17_19FCB.png)"></span>
+                        </div>
+                        <div class="txt">
+                            <img src="images/s7-img09.png" alt="" style="width: .26rem">
+                            <h3 class="eclip">迎新视频</h3>
+                        </div>
+                    </a>
+  
+<script>_showDynClickBatch(['dynclicks_u24_2771'],[2771],"wbnews", 1986849732)</script>
+
+                </div>
+                <div class="li li3">
+ <a href="https://mp.weixin.qq.com/s?__biz=MzkwODIzMTY0NQ==&mid=2247513115&idx=1&sn=cd36579d5c2096d03f1cb6422bf586b9&chksm=c0cfe2a9f7b86bbf12f9d9758dc5d020dcd5281d5df39b0c51983ee18798075e3af2501c0852&token=216536312&lang=zh_CN#rd" target="_blank" title="一见倾“新”！河外贸2024级专科新生入学报到" class="bg-mask" data-aos="fade-right" data-aos-delay="600">
+                        <div class="pic">
+                            <span class="a" style="background-image: url(/__local/4/09/07/2CD451531057EB3E4F97C4532B4_DEFD3BCC_6A3A3.jpg)"></span>
+                        </div>
+                        <div class="txt">
+                            <img src="images/s7-img10.png" alt="" style="width: .25rem">
+                            <h3 class="eclip">一见倾“新”！河外贸2024级专科新生入学报到</h3>
+                        </div>
+                    </a>
+  
+    </div><script>_showDynClickBatch(['dynclicks_u25_4541'],[4541],"wbnews", 1986849732)</script>
+
+            </div>
+            <div class="bg"></div>
+        </div>
+            </section>
+    <section class="home8">
+        <div class="wp">
+            <div class="title001 mid" data-aos="fade-up" data-aos-delay="200">
+                <h2>专题专栏</h2>
+                <a href="ztzl.htm" class="more"></a>
+            </div>
+            <div class="list5w swiper-container" data-aos="fade-up" data-aos-delay="200">
+                       <div class="swiper-wrapper">
+   
+             <div class="swiper-slide">
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79504)" target="_blank" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(images/s8-img03.jpg)"></span>
+                            </div>
+                            <h2 class="eclip"></h2>
+                        </a>
+                    </div>
+
+                              
+        
+ 
+             <div class="swiper-slide">
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79506)" target="_blank" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(images/s8-img05.jpg)"></span>
+                            </div>
+                            <h2 class="eclip"></h2>
+                        </a>
+                    </div>
+
+                              
+        
+ 
+             <div class="swiper-slide">
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79502)" target="_blank" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(images/s8-img01.jpg)"></span>
+                            </div>
+                            <h2 class="eclip"></h2>
+                        </a>
+                    </div>
+
+                              
+        
+ 
+             <div class="swiper-slide">
+                        <a href="ztzl/djxxjy.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79503)" target="_blank" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(images/djxx.png)"></span>
+                            </div>
+                            <h2 class="eclip"></h2>
+                        </a>
+                    </div>
+
+                              
+        
+ 
+             <div class="swiper-slide">
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79505)" target="_blank" class="bg-mask">
+                            <div class="pic">
+                                <span class="a" style="background-image: url(images/aqjy.png)"></span>
+                            </div>
+                            <h2 class="eclip"></h2>
+                        </a>
+                    </div>
+
+                              
+        
+ </div>
+
+            </div>
+        </div>
+    </section>
+   <section class="home9">
+        <div class="wp">
+            <div class="list_box6 zi3">
+                <ul class="flex-left">
+<li>
+                        <a href="http://www.mofcom.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76886)">
+                            <i>
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <div class="dots"></div>
+                            </i>
+                            <h5>商务部</h5>
+                        </a>
+                    </li>
+    
+<li>
+                        <a href="https://zh.hnwmxy.edu.cn/portal-pc/pc/hnwmxy/index.html#/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76887)">
+                            <i>
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <div class="dots"></div>
+                            </i>
+                            <h5>智慧校园内网</h5>
+                        </a>
+                    </li>
+    
+<li>
+                        <a href="https://webvpn.hnwmxy.edu.cn/https/77726476706e69737468656265737421eaff0f942927654867468ca88d1b203b/cas/login?service=https%3A%2" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76888)">
+                            <i>
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <div class="dots"></div>
+                            </i>
+                            <h5>智慧校园外网</h5>
+                        </a>
+                    </li>
+    
+<li>
+                        <a href="http://www.hnrsks.com/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76889)">
+                            <i>
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <div class="dots"></div>
+                            </i>
+                            <h5>河南省人考中心</h5>
+                        </a>
+                    </li>
+    
+<li>
+                        <a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76890)">
+                            <i>
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <div class="dots"></div>
+                            </i>
+                            <h5>省中考信息平台</h5>
+                        </a>
+                    </li>
+    
+<li>
+                        <a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76891)">
+                            <i>
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <div class="dots"></div>
+                            </i>
+                            <h5>省职业成人教育</h5>
+                        </a>
+                    </li>
+    
+<li>
+                        <a href="https://jyt.henan.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76892)">
+                            <i>
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <div class="dots"></div>
+                            </i>
+                            <h5>河南省教育厅</h5>
+                        </a>
+                    </li>
+    
+<li>
+                        <a href="https://hnsswt.henan.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76893)">
+                            <i>
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <div class="dots"></div>
+                            </i>
+                            <h5>河南省商务厅</h5>
+                        </a>
+                    </li>
+    
+</UL>
+            </div>
+            <div class="list6w ">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+<div class="swiper-slide">
+                            <a href="http://www.mofcom.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76886)">
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <h5>商务部</h5>
+                            </a>
+                        </div>
+    
+<div class="swiper-slide">
+                            <a href="https://zh.hnwmxy.edu.cn/portal-pc/pc/hnwmxy/index.html#/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76887)">
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <h5>智慧校园内网</h5>
+                            </a>
+                        </div>
+    
+<div class="swiper-slide">
+                            <a href="https://webvpn.hnwmxy.edu.cn/https/77726476706e69737468656265737421eaff0f942927654867468ca88d1b203b/cas/login?service=https%3A%2" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76888)">
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <h5>智慧校园外网</h5>
+                            </a>
+                        </div>
+    
+<div class="swiper-slide">
+                            <a href="http://www.hnrsks.com/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76889)">
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <h5>河南省人考中心</h5>
+                            </a>
+                        </div>
+    
+<div class="swiper-slide">
+                            <a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76890)">
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <h5>省中考信息平台</h5>
+                            </a>
+                        </div>
+    
+<div class="swiper-slide">
+                            <a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76891)">
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <h5>省职业成人教育</h5>
+                            </a>
+                        </div>
+    
+<div class="swiper-slide">
+                            <a href="https://jyt.henan.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76892)">
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <h5>河南省教育厅</h5>
+                            </a>
+                        </div>
+    
+<div class="swiper-slide">
+                            <a href="https://hnsswt.henan.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76893)">
+                                <div class="ico">
+                                    <img src="images/s9-ico01.png" alt="">
+                                </div>
+                                <h5>河南省商务厅</h5>
+                            </a>
+                        </div>
+    
+   </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="kslj">
+        <div class="wp">
+            <div class="title002">
+                <h2>快速链接</h2>
+            </div>
+            <div class="lj_list"> <ul class="flex-left">
+
+ <li>
+                        <a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76877)">对外经济</a>
+                    </li>
+
+ <li>
+                        <a href="http://www.hnwmxy.edu.cn/cjrh" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76898)">产教融合</a>
+                    </li>
+
+ <li>
+                        <a href="https://www.hnwmxy.edu.cn/jxjyxy/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76899)">继续教育</a>
+                    </li>
+
+ <li>
+                        <a href="ggfw1/xxgk.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76880)">公共服务</a>
+                    </li>
+
+ <li>
+                        <a href="zsjy1/zyjs.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76881)">专业介绍</a>
+                    </li>
+
+ <li>
+                        <a href="jxky.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76879)">教学科研</a>
+                    </li>
+
+ <li>
+                        <a href="zsjy1/zsxx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76878)">招生就业</a>
+                    </li>
+
+ <li>
+                        <a href="zsjy1/zsxx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76882)">招生信息</a>
+                    </li>
+
+ <li>
+                        <a href="http://www.hnwmxy.edu.cn/zsjyc" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76900)">就业创业</a>
+                    </li>
+
+ <li>
+                        <a href="xygk1/jgsz.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1986849732, 76901)">教辅部门</a>
+                    </li>
+
+</UL></div>
+        </div>
+    </section>
+</section>
+<div>   
+</SCRIPT></div>
+<footer class="foot">
+
+    <div class="wp">
+        <div class="ftlogo">
+                
+                      <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1986849732, 79709)" target="_blank">                <img src="images/weixintupian_20240924090620.png" alt="">
+            </a>
+   
+
+            <div class="bq">
+<p><a href="https://beian.miit.gov.cn/#/Integrated/index">Copyright © 河南对外经济贸易职业学院 &nbsp; &nbsp; 豫ICP备2020032748号</a></p></div>
+        </div>
+        <div class="ftadd">
+<p><span> 地址：郑州市金水区文化路91号</span> <span>郑汴一体化示范区龙亭区职教园区十大街</span></p>
+<p><span>电话：值班室：0371-22697110</span><span>办公室：0371-22697088</span></p>
+<p>招生就业处：0371-22697065/66/99</p></div>
+        <div class="ftewm">    
+        
+              <img src="images/ewm.png" alt="">
+            <p>官方微信公众号</p>
+
+      
+</div>
+    </div>
+</footer>
+<div class="" id="gotop">
+    <svg t="1620981491725" class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14041" width="16" height="16"><path d="M825.568 555.328l-287.392-289.28C531.808 259.648 523.488 256.576 515.2 256.64 514.08 256.544 513.12 256 512 256c-4.672 0-9.024 1.088-13.024 2.88-4.032 1.536-7.872 3.872-11.136 7.136l-259.328 258.88c-12.512 12.48-12.544 32.736-0.032 45.248 6.24 6.272 14.432 9.408 22.656 9.408 8.192 0 16.352-3.136 22.624-9.344L480 364.288 480 928c0 17.696 14.336 32 32 32s32-14.304 32-32L544 362.72l236.192 237.728c6.24 6.272 14.496 9.44 22.688 9.44s16.32-3.104 22.56-9.312C838.016 588.128 838.048 567.84 825.568 555.328zM864 192 160 192C142.336 192 128 177.664 128 160s14.336-32 32-32l704 0c17.696 0 32 14.336 32 32S881.696 192 864 192z" p-id="14042"></path></svg>
+</div>
+</body>
+
+    <script src="js/index.js"></script>
+    
+
+<script>
+    AOS.init({
+        disable: window.innerWidth < 1200,
+        // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded",
+        // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init",
+        // class applied after initialization
+        animatedClassName: "aos-animate",
+        // class applied on animation
+        useClassNames: false,
+        // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false,
+        // disables automatic mutations' detections (advanced)
+        debounceDelay: 50,
+        // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99,
+        //offset: 50, // offset (in px) from the original trigger point
+        delay: 0,
+        // values from 0 to 3000, with step 50ms
+        duration: 1500,
+        // values from 0 to 3000, with step 50ms
+        easing: "ease",
+        // default easing for AOS animations
+        mirror: false,
+        // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom",
+        // defines which position of the element regarding to window should trigger the animation
+    });
+</script>
+<script>
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop()>100){
+            $("#gotop").removeClass("hide");
+        }else{
+            $("#gotop").addClass("hide");
+        };
+    });
+    $('#gotop').click(function () {
+        $('html,body').animate({
+            scrollTop : '0px'
+        }, 800);
+    });
+    // 右边
+</script>
+</html>

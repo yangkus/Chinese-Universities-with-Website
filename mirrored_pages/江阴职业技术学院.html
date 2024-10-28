@@ -1,0 +1,1046 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>江阴职业技术学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="江阴职业技术学院">
+<META Name="keywords" Content="江阴职业技术学院" />
+
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    
+    <meta name="description" content="江阴职业技术学院" />
+    <link rel="stylesheet" href="new/dfiles/12591/statics/css/college2018/idangerous.swiper.css" type="text/css">
+    <link rel="stylesheet" href="new/dfiles/12591/statics/css/college2018/base.css" type="text/css">
+    <link rel="stylesheet" href="new/dfiles/12591/statics/css/college2018/style.css" type="text/css">
+    <link rel="stylesheet" href="new/dfiles/12591/statics/css/college2018/pagination.css" type="text/css">
+
+   
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:776562626572323077644655505a574200020002445c -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1956177179)</script>
+</head>
+
+<body>
+<div><script language="javascript" src="/system/resource/js/dynclicks.js"></script>   
+</SCRIPT></div>
+    <div id="header">
+        <div class="tip">
+            <div class="w1200 clearfix">
+                <div class="fr type f14"><script language="javascript" src="/system/resource/js/openlink.js"></script>
+ <a href="javascript:;" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91390)">学生</a> / 
+ <a href="javascript:;" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91391)">教职工</a> / 
+ <a href="javascript:;" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91392)">访客</a>
+</div>
+            </div>
+        </div>
+        <div class="top">
+            <div class="w1200">
+                <div class="pr top-box">
+                    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="主站2023"><img class="logo" src="new/dfiles/12591/statics/images/college2018/logo.png" alt=""></a>
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+        
+         <div class="search pa">
+                        <input type="text" class="fl search-input" placeholder="站内搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+                        <input type="submit" value=" " class="search-btn fl tc" v-on:click="onSubmit()"/>
+                    </div>
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1956177179";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://172.16.2.32:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                </div>  
+        
+        
+                <div class="list clearfix">    <div class="item  active "><a href="index.htm">首页</a>
+                    </div>
+    <div class="item "><a href="xygk/yzzc.htm">学院概况</a>
+                        <div class="drop-down f14">
+                            <div class="drop-down-box">
+
+                                <div class="drop-down-item"><a href="xygk/yzzc.htm" target="_blank">院长致辞</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xygk/xyjj.htm" target="_blank">学院简介</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xygk/fzlc.htm" target="_blank">发展历程</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xygk/xrld.htm" target="_blank">现任领导</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xygk/lrld.htm" target="_blank">历任领导</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xygk/nhsl.htm" target="_blank">内涵梳理</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xygk/xybs.htm" target="_blank">学院标识</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xygk/xyjg.htm" target="_blank">校园景观</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xygk/xyxcp.htm" target="_blank">学院宣传片</a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+    <div class="item "><a href="gljg.htm">管理机构</a>
+                    </div>
+    <div class="item "><a href="jxxb/jsjkxx.htm">教学系部</a>
+                        <div class="drop-down f14">
+                            <div class="drop-down-box">
+
+                                <div class="drop-down-item"><a href="jxxb/jsjkxx.htm" target="_blank">计算机科学系</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="jxxb/dzxxgcx.htm" target="_blank">电子信息工程系</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="jxxb/jdgcx.htm" target="_blank">机电工程系</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="jxxb/hjyclgcx.htm" target="_blank">环境与材料工程系</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="jxxb/jjglx.htm" target="_blank">经济管理系</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="jxxb/yssjx.htm" target="_blank">艺术设计系</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="jxxb/gjsmx.htm" target="_blank">国际商贸系</a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+    <div class="item "><a href="javaScript:;">招生就业</a>
+                        <div class="drop-down f14">
+                            <div class="drop-down-box">
+
+                                <div class="drop-down-item"><a href="http://zsb.jypc.edu.cn/" target="_blank">招生网</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="https://jypc.91job.org.cn/sub-station/home/13137" target="_blank">就业网</a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+    <div class="item "><a href="http://jycjy.jypc.edu.cn/">继续教育</a>
+                    </div>
+    <div class="item "><a href="djzc.htm">党建之窗</a>
+                    </div>
+    <div class="item "><a href="http://kjc.jypc.edu.cn/gzyj.htm">高职研究</a>
+                    </div>
+    <div class="item "><a href="xyfz/sjtz.htm">江院反诈</a>
+                        <div class="drop-down f14">
+                            <div class="drop-down-box">
+
+                                <div class="drop-down-item"><a href="xyfz/sjtz.htm" target="_blank">上级通知</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xyfz/fzxc.htm" target="_blank">反诈宣传</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xyfz/jsal.htm" target="_blank">警示案例</a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+    <div class="item "><a href="javaScript:;">校园生活</a>
+                        <div class="drop-down f14">
+                            <div class="drop-down-box">
+
+                                <div class="drop-down-item"><a href="http://tw.jypc.edu.cn/" target="_blank">社团风采</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xysh/xqxl.htm" target="_blank">学期校历</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="xysh/zxsj.htm" target="_blank">作息时间</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="http://bzz.jypc.edu.cn/" target="_blank">现代班组长</a></div>
+                                
+
+                                <div class="drop-down-item"><a href="http://xcb.jypc.edu.cn/xydjt.htm" target="_blank">学院大课堂</a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+  </div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+<style type="text/css">
+
+#lib_Tab2{
+
+    width: 626px;
+
+    margin-top: 5px;
+
+    padding: 0px;
+
+    margin-bottom: 15px;}
+
+.lib_tabborder{border:0px solid #95C9E1;}
+
+.lib_Menubox {
+
+    height: 48px;
+
+    line-height: 48px;
+
+    position: relative;}
+
+.lib_Menubox ul, li { list-style:none;padding:0;}
+
+.lib_Menubox ul { width:260px;  margin:50 auto; text-align:center;}
+
+.lib_Menubox li { float:left;  line-height:30px; margin-left:10px; margin-bottom:10px;margin-top: 10px;}
+
+.lib_Menubox .li1 { width:120px;border-bottom: 1px solid #2aae4e;cursor:pointer;
+
+     font-size: 20px;}
+
+.lib_Menubox .li2 { width:120px; cursor:pointer;
+
+    font-size: 20px;}
+
+p { margin:10px auto;}
+
+.lib_Contentbox{clear:both;margin-top:0px; border-top:none;height:311px; text-align:center;padding-top:8px;}
+
+
+
+.lib_Menuboxx {
+
+    height: 48px;
+
+    line-height: 48px;
+
+    position: relative;}
+
+.lib_Menuboxx ul, li { list-style:none;padding:0;}
+
+.lib_Menuboxx ul { width:260px;  margin:50 auto; text-align:center;}
+
+.lib_Menuboxx li { float:left;  line-height:30px; margin-left:10px; margin-bottom:10px;}
+
+.lib_Menuboxx .li3 { width:120px;border-bottom: 1px solid #2aae4e;cursor:pointer;
+
+     font-size: 20px;}
+
+.lib_Menuboxx .li4 { width:120px; cursor:pointer;
+
+    font-size: 20px;}
+
+p { margin:10px auto;}
+
+.lib_Contentboxx{clear:both;margin-top:0px; border-top:none;height:311px; text-align:center;padding-top:8px;}
+
+</style>
+
+
+
+    <link rel="stylesheet" href="new/dfiles/12591/statics/css/college2018/ad.css" type="text/css">
+
+
+    <div class="index-page">
+
+        <div class="swiper-box" style="overflow: hidden;width:1200px;margin:0 auto">    <div class="swiper" style="width:1200px">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                
+            <div class="swiper-slide" style="background-image: url(images/banner11.jpg);">
+                            <div class="slide-title">
+                                <span></span>
+                            </div>
+                            <div class="bg_line"></div>
+                        </div>
+          
+            
+            <div class="swiper-slide" style="background-image: url(new/dfiles/11292/uploadfile/2018/0615/20180615040313243.jpg);">
+                            <div class="slide-title">
+                                <span>自强不息 立德树人</span>
+                            </div>
+                            <div class="bg_line"></div>
+                        </div>
+          
+     </div>    <div class="swiper-pagination"></div>
+
+            
+<div class="left-line pa">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+ <div class="right-line pa">
+
+                        <span class="line"></span>
+
+                        <span class="line"></span>
+
+                        <span class="line"></span>
+
+                    </div>
+  
+                </div>
+            </div>
+    
+</div>
+
+
+
+
+
+
+
+        <div class="bg con-box">
+
+            <div class="news w1200">
+
+                <div class="top clearfix">
+
+                    <span class="fl">江院要闻</span>
+
+                    <a class="fr" href="jyyw.htm">查看更多>></a>
+
+                </div>
+
+                <div class="clearfix">
+
+                    <div><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>
+<div class="box   fl justify">
+                        <div class="box-img bg" style="background-image: url(/__local/9/6E/C1/1BC4F22199F154B837CF8D08DB7_EE1BA0C1_C763.jpg)"></div>
+                        <div class="f16 title t-clamp-1"><a href="info/1041/128011.htm" target="_blank">我院教师在江苏高校百校万名团干部思政技能大比武中斩获佳绩</a></div>
+                        <div class="f14 t-clamp-2 con">
+                            <a href="info/1041/128011.htm" target="_blank">9月29日，第四届江苏省团干部思政技能大比武在南京林业大学落下帷幕。经过思政课现场展示，互动问答等环...</a></div>
+                    </div>
+
+
+<div class="box  ml40 fl justify">
+                        <div class="box-img bg" style="background-image: url(/__local/4/DC/FF/8814112734909004A9AD027222B_6978A22D_B519.jpg)"></div>
+                        <div class="f16 title t-clamp-1"><a href="info/1041/127821.htm" target="_blank">学院成功举办“江苏工匠”岗位练兵职业技能竞赛移动应用开发赛项</a></div>
+                        <div class="f14 t-clamp-2 con">
+                            <a href="info/1041/127821.htm" target="_blank">2024年9月26日—27日，省级一类赛事“江苏工匠”岗位练兵职业技能大赛、2024年江苏省软件服务人员职业技...</a></div>
+                    </div>
+
+<script>_showDynClickBatch(['dynclicks_u6_128011','dynclicks_u6_127821'],[128011,127821],"wbnews", 1956177179)</script>
+</div>
+                    
+
+
+                    <ul class="list ml40 f16 fl">
+<li class="clearfix">
+                            <a href="info/1041/128011.htm" target="_blank" title="我院教师在江苏高校百校万名团干部思政技能大比武中斩获佳绩">
+                                <span class="fl con t-clamp-1">我院教师在江苏高校百校万名团干部思政技能大比武中斩获佳绩</span>
+                                <span class="fr time">2024-10-09</span>
+                            </a>
+                        </li>
+
+
+<li class="clearfix">
+                            <a href="info/1041/127821.htm" target="_blank" title="学院成功举办“江苏工匠”岗位练兵职业技能竞赛移动应用开发赛项">
+                                <span class="fl con t-clamp-1">学院成功举办“江苏工匠”岗位练兵职业技能竞赛移动应用开发赛项</span>
+                                <span class="fr time">2024-09-29</span>
+                            </a>
+                        </li>
+
+
+<li class="clearfix">
+                            <a href="info/1041/127771.htm" target="_blank" title="学习贯彻党的二十届三中全会精神市委宣讲团专场宣讲会在我院举行">
+                                <span class="fl con t-clamp-1">学习贯彻党的二十届三中全会精神市委宣讲团专场宣讲会在我院举行</span>
+                                <span class="fr time">2024-09-26</span>
+                            </a>
+                        </li>
+
+
+<li class="clearfix">
+                            <a href="info/1041/127681.htm" target="_blank" title="江阴市“全国科普日”暨第36届科普宣传周活动启动仪式在我院成功举办">
+                                <span class="fl con t-clamp-1">江阴市“全国科普日”暨第36届科普宣传周活动启动仪式在我院...</span>
+                                <span class="fr time">2024-09-24</span>
+                            </a>
+                        </li>
+
+
+<li class="clearfix">
+                            <a href="info/1041/127171.htm" target="_blank" title="学院举行庆祝第40个教师节暨“光荣从教三十年”颁奖大会">
+                                <span class="fl con t-clamp-1">学院举行庆祝第40个教师节暨“光荣从教三十年”颁奖大会</span>
+                                <span class="fr time">2024-09-12</span>
+                            </a>
+                        </li>
+
+
+<li class="clearfix">
+                            <a href="info/1041/127031.htm" target="_blank" title="江阴市人才发展集团来院调研人才服务工作">
+                                <span class="fl con t-clamp-1">江阴市人才发展集团来院调研人才服务工作</span>
+                                <span class="fr time">2024-09-06</span>
+                            </a>
+                        </li>
+
+
+<li class="clearfix">
+                            <a href="info/1041/126781.htm" target="_blank" title="新学期工作会议推动学院奋力向“新双高”目标加速迈进">
+                                <span class="fl con t-clamp-1">新学期工作会议推动学院奋力向“新双高”目标加速迈进</span>
+                                <span class="fr time">2024-08-30</span>
+                            </a>
+                        </li>
+
+
+<li class="clearfix">
+                            <a href="info/1041/126691.htm" target="_blank" title="学院与苏州德创测控科技有限公司举行“人工智能应用产业学院”签约揭牌仪式">
+                                <span class="fl con t-clamp-1">学院与苏州德创测控科技有限公司举行“人工智能应用产业学院...</span>
+                                <span class="fr time">2024-08-23</span>
+                            </a>
+                        </li>
+
+
+<li class="clearfix">
+                            <a href="info/1041/126571.htm" target="_blank" title="张庆堂院长应邀出席全国地方高校卓越工程人才培养学术研讨会并作专场主题报告">
+                                <span class="fl con t-clamp-1">张庆堂院长应邀出席全国地方高校卓越工程人才培养学术研讨会...</span>
+                                <span class="fr time">2024-07-28</span>
+                            </a>
+                        </li>
+
+<script>_showDynClickBatch(['dynclicks_u7_128011','dynclicks_u7_127821','dynclicks_u7_127771','dynclicks_u7_127681','dynclicks_u7_127171','dynclicks_u7_127031','dynclicks_u7_126781','dynclicks_u7_126691','dynclicks_u7_126571'],[128011,127821,127771,127681,127171,127031,126781,126691,126571],"wbnews", 1956177179)</script>
+</ul>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="notice w1200 clearfix">
+
+                <div class="xy fl">
+
+               
+
+<div class="lib_Menubox">
+
+<ul style="height:30px;">
+
+   <li id="one1" onmouseover="setTab('one',1,2)" class="li1">学院公告</li>
+
+   <li id="one2" onmouseover="setTab('one',2,2)" class="li2">校内通知</li>
+
+   
+
+</ul>
+
+</div>
+
+ <div class="lib_Contentbox lib_tabborder">  
+
+   <div id="con_one_1">
+
+                   
+
+                    <ul>
+<li>
+                            <div class="time fl tc"><span class="time-r f20">23</span><span class="f20">/</span>10月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                                <span class="con"><a href="info/1039/128461.htm" target="_blank" title="关于2024-2025学年第一学期重修名单核对、往届生重修报名的通知">关于2024-2025学年第一学期重修名单核对、往...</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">11</span><span class="f20">/</span>10月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                                <span class="con"><a href="info/1039/128061.htm" target="_blank" title="关于2024-2025学年第一学期申请课程免修的通知">关于2024-2025学年第一学期申请课程免修的通...</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">09</span><span class="f20">/</span>10月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                                <span class="con"><a href="info/1039/128021.htm" target="_blank" title="关于10月12日上课事宜的通知">关于10月12日上课事宜的通知</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">29</span><span class="f20">/</span>09月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                                <span class="con"><a href="info/1039/127841.htm" target="_blank" title="关于2024年秋往届生结业申请毕业的通知">关于2024年秋往届生结业申请毕业的通知</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">24</span><span class="f20">/</span>09月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                                <span class="con"><a href="info/1039/127621.htm" target="_blank" title="2024-2025学年第1学期尔雅网络课程学习的通知">2024-2025学年第1学期尔雅网络课程学习的通...</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">23</span><span class="f20">/</span>09月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                                <span class="con"><a href="info/1039/127561.htm" target="_blank" title="关于2025届（2022级）毕业生图像采集补拍重拍的通知">关于2025届（2022级）毕业生图像采集补拍重...</a></span>
+                            </div>
+                        </li>
+
+<a class="fr" href="xygg.htm">查看更多>></a><script>_showDynClickBatch(['dynclicks_u8_128461','dynclicks_u8_128061','dynclicks_u8_128021','dynclicks_u8_127841','dynclicks_u8_127621','dynclicks_u8_127561'],[128461,128061,128021,127841,127621,127561],"wbnews", 1956177179)</script>
+</ul></div>
+
+   <div id="con_one_2" style="display:none">
+
+                    <ul>
+<li>
+                            <div class="time fl tc"><span class="time-r f20">26</span><span class="f20">/</span>10月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                            <span class="fb">[<a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1047">人事处</a>]</span>
+                            
+                                <span class="con"><a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1047&wbnewsid=128541" target="_blank" title="2024年江阴职业技术学院教师职务任职资格评审结果公示">2024年江阴职业技术学院教师职务任职资格评...</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">25</span><span class="f20">/</span>10月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                            <span class="fb">[<a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1057">安保处</a>]</span>
+                            
+                                <span class="con"><a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1057&wbnewsid=128531" target="_blank" title="关于办理2024级学生户口迁移的通知">关于办理2024级学生户口迁移的通知</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">25</span><span class="f20">/</span>10月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                            <span class="fb">[<a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1050">科技处</a>]</span>
+                            
+                                <span class="con"><a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1050&wbnewsid=128511" target="_blank" title="江阴学院2024-2025（1）第九周学术讲座安排表">江阴学院2024-2025（1）第九周学术讲座安排...</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">25</span><span class="f20">/</span>10月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                            <span class="fb">[<a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1049">学工处</a>]</span>
+                            
+                                <span class="con"><a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1049&wbnewsid=128501" target="_blank" title="关于做好2024-2025学年学生基本医疗保险和补充保险征缴工作的通知">关于做好2024-2025学年学生基本医疗保险和补...</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">24</span><span class="f20">/</span>10月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                            <span class="fb">[<a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1047">人事处</a>]</span>
+                            
+                                <span class="con"><a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1047&wbnewsid=128481" target="_blank" title="关于黄娇同志申报图书专业职称的公示">关于黄娇同志申报图书专业职称的公示</a></span>
+                            </div>
+                        </li>
+
+
+<li>
+                            <div class="time fl tc"><span class="time-r f20">24</span><span class="f20">/</span>10月</div>
+                            <div class="li-r fl  t-clamp-1 justify">
+                            <span class="fb">[<a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1054">信息中心</a>]</span>
+                            
+                                <span class="con"><a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1054&wbnewsid=128471" target="_blank" title="关于开展学校教职工通信业务优惠活动的通知">关于开展学校教职工通信业务优惠活动的通知</a></span>
+                            </div>
+                        </li>
+
+<a class="fr" href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1040">查看更多>></a><script>_showDynClickBatch(['dynclicks_u9_128541','dynclicks_u9_128531','dynclicks_u9_128511','dynclicks_u9_128501','dynclicks_u9_128481','dynclicks_u9_128471'],[128541,128531,128511,128501,128481,128471],"wbnews", 1956177179)</script>
+</ul></div>
+
+                
+
+                </div>
+
+</div>
+
+
+
+
+
+                <div class="kstd fl">
+
+                   <div class="lib_Menuboxx">
+
+<ul style="height:30px;">
+
+   <li id="onee1" onmouseover="setTabb('onee',1,2)" class="li3">校园快讯</li>
+
+   <li id="onee2" onmouseover="setTabb('onee',2,2)" class="li4">数字校报</li>
+
+   
+
+</ul>
+
+
+
+                    </div>
+
+ <div class="lib_Contentboxx lib_tabborder">  
+
+   <div id="conn_onee_1"><ul class="f16 clearfix">
+
+ <li>
+                            <a href="info/1042/128521.htm" target="_blank" title="院党委召开新任职干部集体谈话暨廉政谈话会">
+                                <span class="fl con t-clamp-1">院党委召开新任职干部集体谈话暨廉政谈话会</span>
+                                <span class="fr time">2024-10-25</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1042/128451.htm" target="_blank" title="我院教师在2024年无锡市高校思政课程和课程思政说课比赛中喜获佳绩">
+                                <span class="fl con t-clamp-1">我院教师在2024年无锡市高校思政课程和课程...</span>
+                                <span class="fr time">2024-10-23</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1042/128391.htm" target="_blank" title="我院参加在澄高校大学生艺术教育实践基地揭牌仪式">
+                                <span class="fl con t-clamp-1">我院参加在澄高校大学生艺术教育实践基地揭...</span>
+                                <span class="fr time">2024-10-22</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1042/128381.htm" target="_blank" title="环境与材料工程系成功举办“才聚江阴 澄就未来”2025届毕业生秋季校园招聘会">
+                                <span class="fl con t-clamp-1">环境与材料工程系成功举办“才聚江阴 澄就未...</span>
+                                <span class="fr time">2024-10-22</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1042/128341.htm" target="_blank" title="我院民进支部主委王键荣获“民进全国组织工作先进个人”称号">
+                                <span class="fl con t-clamp-1">我院民进支部主委王键荣获“民进全国组织工...</span>
+                                <span class="fr time">2024-10-21</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1042/128331.htm" target="_blank" title="我院赴江苏长电科技开展现代学徒制人才合作培养调研">
+                                <span class="fl con t-clamp-1">我院赴江苏长电科技开展现代学徒制人才合作...</span>
+                                <span class="fr time">2024-10-21</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1042/128281.htm" target="_blank" title="经济管理系举办“0+2”旅游管理本科班专业教育">
+                                <span class="fl con t-clamp-1">经济管理系举办“0+2”旅游管理本科班专业教...</span>
+                                <span class="fr time">2024-10-18</span>
+                            </a>
+                        </li>
+
+<a class="fr" href="xykx.htm">查看更多>></a>
+</ul><script>_showDynClickBatch(['dynclicks_u10_128521','dynclicks_u10_128451','dynclicks_u10_128391','dynclicks_u10_128381','dynclicks_u10_128341','dynclicks_u10_128331','dynclicks_u10_128281'],[128521,128451,128391,128381,128341,128331,128281],"wbnews", 1956177179)</script>
+</div>
+
+              <div id="conn_onee_2" style="display:none"><ul class="f16 clearfix">
+
+ <li>
+                            <a href="info/1043/126391.htm" target="_blank" title="江阴学院院报159期（二、三版）">
+                                <span class="fl con t-clamp-1">江阴学院院报159期（二、三版）</span>
+                                <span class="fr time">2024-06-28</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1043/126401.htm" target="_blank" title="江阴学院院报159期（一、四版）">
+                                <span class="fl con t-clamp-1">江阴学院院报159期（一、四版）</span>
+                                <span class="fr time">2024-06-28</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1043/123681.htm" target="_blank" title="江阴学院院报158期（二、三版）">
+                                <span class="fl con t-clamp-1">江阴学院院报158期（二、三版）</span>
+                                <span class="fr time">2024-04-16</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1043/123691.htm" target="_blank" title="江阴学院院报158期（一、四版）">
+                                <span class="fl con t-clamp-1">江阴学院院报158期（一、四版）</span>
+                                <span class="fr time">2024-04-16</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1043/123711.htm" target="_blank" title="江阴学院院报157期（二、三版）">
+                                <span class="fl con t-clamp-1">江阴学院院报157期（二、三版）</span>
+                                <span class="fr time">2024-01-09</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1043/123701.htm" target="_blank" title="江阴学院院报157期（一、四版）">
+                                <span class="fl con t-clamp-1">江阴学院院报157期（一、四版）</span>
+                                <span class="fr time">2024-01-09</span>
+                            </a>
+                        </li>
+
+
+ <li>
+                            <a href="info/1043/119061.htm" target="_blank" title="江阴学院院报156期（一、四版）">
+                                <span class="fl con t-clamp-1">江阴学院院报156期（一、四版）</span>
+                                <span class="fr time">2023-11-07</span>
+                            </a>
+                        </li>
+
+<a class="fr" href="szxb.htm">查看更多>></a>
+</ul><script>_showDynClickBatch(['dynclicks_u11_126391','dynclicks_u11_126401','dynclicks_u11_123681','dynclicks_u11_123691','dynclicks_u11_123711','dynclicks_u11_123701','dynclicks_u11_119061'],[126391,126401,123681,123691,123711,123701,119061],"wbnews", 1956177179)</script>
+</div> </div>
+
+                    
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="type w1200 tc">
+
+                <ul class="clearfix f14">
+
+<li>
+                        <a href="https://1493oaw.mh.chaoxing.com/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91393)">                              
+                        <img src="new/dfiles/12591/statics/images/college2018/type-01.png" alt="">
+                        <p>泛雅/尔雅平台</p>
+                        </a>
+                    </li>
+
+
+<li>
+                        <a href="http://oa.jypc.org/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91394)">                              
+                        <img src="new/dfiles/12591/statics/images/college2018/type-02.png" alt="">
+                        <p>办公系统</p>
+                        </a>
+                    </li>
+
+
+<li>
+                        <a href="http://my.jypc.org" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91395)">                              
+                        <img src="new/dfiles/12591/statics/images/college2018/type-03.png" alt="">
+                        <p>校内信息门户</p>
+                        </a>
+                    </li>
+
+
+<li>
+                        <a href="https://vpn.jycollege.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91396)">                              
+                        <img src="new/dfiles/12591/statics/images/college2018/type-04.png" alt="">
+                        <p>校外VPN接入</p>
+                        </a>
+                    </li>
+
+
+<li>
+                        <a href="http://www.jypc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91397)">                              
+                        <img src="new/dfiles/12591/statics/images/college2018/type-05.png" alt="">
+                        <p>江阴终身学习网</p>
+                        </a>
+                    </li>
+
+
+<li>
+                        <a href="http://journal.jypc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91398)">                              
+                        <img src="new/dfiles/12591/statics/images/college2018/type-06.png" alt="">
+                        <p>江阴高职研究</p>
+                        </a>
+                    </li>
+
+
+<li>
+                        <a href="http://xxgk.jypc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91399)">                              
+                        <img src="new/dfiles/12591/statics/images/college2018/type-07.png" alt="">
+                        <p>信息公开</p>
+                        </a>
+                    </li>
+
+
+<li>
+                        <a href="https://myvpn.jypc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1956177179, 91400)">                              
+                        <img src="new/dfiles/12591/statics/images/college2018/type-08.png" alt="">
+                        <p>校外信息门户</p>
+                        </a>
+                    </li>
+
+</ul>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+ 
+
+
+
+
+
+
+
+    <div id="footer">
+        <div class="footer-box clearfix f14 w1200">
+            <div class="fl footer-l">
+                    
+<img src="new/dfiles/12591/statics/images/college2018/footer-logo.png" alt="">
+
+
+               <div><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Powered by 江阴职业技术学院 © 2015<a href="http://beian.miit.gov.cn"> 苏ICP备06037884号-5</a></p><p>地址：江阴市锡澄路168号 邮编：214405 电话：(0510)86022887&nbsp;</p><p>传真：(0510)86022815 邮箱： jypcdzb@126.com 院长信箱</p></div>
+            </div>
+            <div class="fr tc footer-r">        
+
+<a href="http://www.jypc.edu.cn/images/app/jypc.html" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1956177179, 78529)">
+                    <img src="images/jypc111.png" alt="">
+                    <p>智慧江院</p>
+                </a>
+
+
+<a href="https://m.weibo.cn/u/5541396923" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1956177179, 78496)">
+                    <img src="images/weibo.png" alt="">
+                    <p>官方微博</p>
+                </a>
+
+
+<a href="#" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1956177179, 78497)">
+                    <img src="images/weixin.png" alt="">
+                    <p>官方微信</p>
+                </a>
+
+
+<a href="http://www.jypc.edu.cn/xygk/xyxcp.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1956177179, 78498)">
+                    <img src="images/xuancppp.png" alt="">
+                    <p>学院宣传片</p>
+                </a>
+
+</div>
+        </div>
+    </div>
+</body>
+<script src="new/dfiles/12591/statics/js/college2018/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="new/dfiles/12591/statics/js/college2018/jquery.backgroundsize.js" type="text/javascript"></script>
+
+    <script src="new/dfiles/12591/statics/js/college2018/idangerous.swiper.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+
+
+
+function setTab(name,cursel,n){
+
+ for(i=1;i<=n;i++){
+
+  var menu=document.getElementById(name+i);
+
+  var con=document.getElementById("con_"+name+"_"+i);
+
+  menu.className=i==cursel?"li1":"li2";
+
+  con.style.display=i==cursel?"block":"none";
+
+ }
+
+}
+
+function setTabb(name,cursel,n){
+
+ for(i=1;i<=n;i++){
+
+  var menu=document.getElementById(name+i);
+
+  var con=document.getElementById("conn_"+name+"_"+i);
+
+  menu.className=i==cursel?"li3":"li4";
+
+  con.style.display=i==cursel?"block":"none";
+
+ }
+
+}
+
+
+
+</script>
+        <script>
+
+
+    $(function() {
+
+        $(".swiper-slide").css('background-size', 'cover')
+
+        var mySwiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            autoplay: 4000,
+            loop: true,
+        
+        })
+
+    });
+
+
+    </script>
+</html>

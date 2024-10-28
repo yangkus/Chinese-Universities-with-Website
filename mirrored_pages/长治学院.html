@@ -1,0 +1,1984 @@
+﻿    
+         
+         
+         
+         <!DOCTYPE html><html lang="zh-CN"><head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>长治学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="长治学院">
+<META Name="keywords" Content="长治学院" />
+
+    <link href="style/animate.min.css" rel="stylesheet">
+    <link href="style/slick.css" rel="stylesheet">
+    <link href="style/slick-theme.css" rel="stylesheet">
+    <link href="style/public.css" rel="stylesheet">
+    <link href="style/index.css" rel="stylesheet">
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b754655505b5742000200024357 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1883040496)</script>
+</head>
+
+<body>
+
+
+    
+    
+    
+    <!-- pc 顶部 导航 -->
+    <div class="b-top">
+        <div class="t-search-zzc"></div>
+        <div class="t-search">
+         
+   
+                
+                
+     
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 80%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed; float:left;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #8b0608;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;float:left;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+ 
+        
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1883040496";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://210.31.96.202:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        
+        </div>
+    </div>
+    <div class="head pc head_rgb">
+        <div class="head-top">
+            <div class="px1600">
+                <div class="logo">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="长治学院新2022"><img src="img/logo.png"></a>
+         
+                    
+            
+                </div>
+                <div class="nav">
+                    <div class="b-top-c">
+                        <div class="b-top-r">
+                            <ul>
+                  <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>    <LI><a href="https://tsg.czc.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88869)"><span>图书馆</span></a></li>
+    <LI><a href="https://www.czc.edu.cn/OA.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88921)"><span>OA办公</span></a></li>
+    <LI><a href="ggzx/xxgk_.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88866)"><span>信息公开</span></a></li>
+    <LI><a href="ggzx/ldxx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88867)"><span>领导信箱</span></a></li>
+    <LI><a href="https://www.czc.edu.cn/info/1054/31321.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88868)"><span>人才招聘</span></a></li>
+    <LI><a href="https://wlc.czc.edu.cn/wlyy/VPNxt.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88922)"><span>VPN登录</span></a></li>
+
+                  
+                  
+                  
+            <li><a class="search-switch" href="javascript:;"><img alt="" src="img/head-icon2.png"></a></li>  
+                  
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    
+                               <ul>
+                                    <li class="active"><a href="index.htm">首页</a>
+            
+                    </li>
+                    <li><a href="xxgk/xxjj.htm">学校概况</a>
+                <div>
+                                <ul>
+                        <li><a href="xxgk/xxjj.htm">学校简介</a>
+           
+                        </li>
+                        <li><a href="xxgk/lsyg.htm">历史沿革</a>
+           
+                        </li>
+                        <li><a href="xxgk/xrld.htm">现任领导</a>
+           
+                        </li>
+                        <li><a href="xxgk/xhxg.htm">校徽校歌</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="jgsz.htm">机构设置</a>
+                <div>
+                                <ul>
+                        <li><a href="jgsz/znbm.htm">职能部门</a>
+           
+                        </li>
+                        <li><a href="jgsz/jxxb.htm">教学系部</a>
+           
+                        </li>
+                        <li><a href="jgsz/jfjg.htm">教辅机构</a>
+           
+                        </li>
+                        <li><a href="jgsz/fsdw.htm">附属单位</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="djsz/esdxxzl.htm">党建思政</a>
+                <div>
+                                <ul>
+                        <li><a href="djsz/esdxxzl.htm">二十大学习专栏</a>
+           
+                        </li>
+                        <li><a href="djsz/djxxjyzl.htm">党纪学习教育专栏</a>
+           
+                        </li>
+                        <li><a href="djsz/qlxx.htm">清廉学校</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="jyjx/szgk.htm">教育教学</a>
+                <div>
+                                <ul>
+                        <li><a href="jyjx/szgk.htm">师资概况</a>
+           
+                        </li>
+                        <li><a href="jyjx/zysz.htm">专业设置</a>
+           
+                        </li>
+                        <li><a href="https://rsc.czc.edu.cn/">人事管理</a>
+           
+                        </li>
+                        <li><a href="http://jwc.czc.edu.cn/" target="_blank">教学管理</a>
+           
+                        </li>
+                        <li><a href="https://xsc.czc.edu.cn/" target="_blank">学生管理</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="http://jwc.czc.edu.cn/zsxx.htm" target="_blank">招生就业</a>
+                <div>
+                                <ul>
+                        <li><a href="https://zs.czc.edu.cn/" target="_blank">本科生招生</a>
+           
+                        </li>
+                        <li><a href="http://cjb.czc.edu.cn/" target="_blank">继续教育</a>
+           
+                        </li>
+                        <li><a href="http://jyzx.czc.edu.cn" target="_blank">就业创业</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="kxyj/yjjgypt.htm">科学研究</a>
+                <div>
+                                <ul>
+                        <li><a href="kxyj/yjjgypt.htm">研究机构与平台</a>
+           
+                        </li>
+                        <li><a href="http://kyc.czc.edu.cn/" target="_blank">科研信息</a>
+           
+                        </li>
+                        <li><a href="kxyj/kycg.htm">科研成果</a>
+           
+                        </li>
+                        <li><a href="kxyj/xkjs.htm">学科建设</a>
+           
+                        </li>
+                        <li><a href="kxyj/kxjsxh.htm">科学技术协会</a>
+           
+                        </li>
+                        <li><a href="kxyj/xswyh.htm">学术委员会</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="xysh/bgdh.htm">校园生活</a>
+                <div>
+                                <ul>
+                        <li><a href="xysh/bgdh.htm">办公电话</a>
+           
+                        </li>
+                        <li><a href="http://student.czc.edu.cn/hearthealth/#/">心理健康</a>
+           
+                        </li>
+                        <li><a href="xysh/xcskb.htm">校车时刻表</a>
+           
+                        </li>
+                        <li><a href="xysh/hqfw.htm">后勤服务</a>
+           
+                        </li>
+                        <li><a href="xysh/whhd.htm">文化活动</a>
+           
+                        </li>
+                        <li><a href="xysh/hwxxjsjz.htm">黄文秀先进事迹展</a>
+           
+                        </li>
+                        <li><a href="xysh/bwg.htm">博物馆</a>
+           
+                        </li>
+                        <li><a href="xysh/dwbbg.htm">动物标本馆</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="hzjl/xqhz.htm">合作交流</a>
+                <div>
+                                <ul>
+                        <li><a href="hzjl/xqhz.htm">校企合作</a>
+           
+                        </li>
+                        <li><a href="http://wsc.czc.edu.cn/" target="_blank">国际交流</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+      
+                        <div class="clear"></div>
+                    </ul>
+
+
+
+                    
+                                      <div class="clear"></div>
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="head pc head_wit">
+        <div class="head-top">
+            <div class="px1600">
+                <div class="logo">
+               
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="长治学院新2022"><img src="img/logo.png"></a>
+         
+                </div>
+                <div class="nav">
+                    <div class="b-top-c">
+                        <div class="b-top-r">
+                            <ul>
+                                                   <LI><a href="https://tsg.czc.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88869)"><span>图书馆</span></a></li>
+    <LI><a href="https://www.czc.edu.cn/OA.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88921)"><span>OA办公</span></a></li>
+    <LI><a href="ggzx/xxgk_.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88866)"><span>信息公开</span></a></li>
+    <LI><a href="ggzx/ldxx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88867)"><span>领导信箱</span></a></li>
+    <LI><a href="https://www.czc.edu.cn/info/1054/31321.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88868)"><span>人才招聘</span></a></li>
+    <LI><a href="https://wlc.czc.edu.cn/wlyy/VPNxt.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88922)"><span>VPN登录</span></a></li>
+                                <li><a class="search-switch" href="javascript:;"><img alt="" src="img/head-icon2.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                                                 <ul>
+                                    <li class="active"><a href="index.htm">首页</a>
+            
+                    </li>
+                    <li><a href="xxgk/xxjj.htm">学校概况</a>
+                <div>
+                                <ul>
+                        <li><a href="xxgk/xxjj.htm">学校简介</a>
+           
+                        </li>
+                        <li><a href="xxgk/lsyg.htm">历史沿革</a>
+           
+                        </li>
+                        <li><a href="xxgk/xrld.htm">现任领导</a>
+           
+                        </li>
+                        <li><a href="xxgk/xhxg.htm">校徽校歌</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="jgsz.htm">机构设置</a>
+                <div>
+                                <ul>
+                        <li><a href="jgsz/znbm.htm">职能部门</a>
+           
+                        </li>
+                        <li><a href="jgsz/jxxb.htm">教学系部</a>
+           
+                        </li>
+                        <li><a href="jgsz/jfjg.htm">教辅机构</a>
+           
+                        </li>
+                        <li><a href="jgsz/fsdw.htm">附属单位</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="djsz/esdxxzl.htm">党建思政</a>
+                <div>
+                                <ul>
+                        <li><a href="djsz/esdxxzl.htm">二十大学习专栏</a>
+           
+                        </li>
+                        <li><a href="djsz/djxxjyzl.htm">党纪学习教育专栏</a>
+           
+                        </li>
+                        <li><a href="djsz/qlxx.htm">清廉学校</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="jyjx/szgk.htm">教育教学</a>
+                <div>
+                                <ul>
+                        <li><a href="jyjx/szgk.htm">师资概况</a>
+           
+                        </li>
+                        <li><a href="jyjx/zysz.htm">专业设置</a>
+           
+                        </li>
+                        <li><a href="https://rsc.czc.edu.cn/">人事管理</a>
+           
+                        </li>
+                        <li><a href="http://jwc.czc.edu.cn/" target="_blank">教学管理</a>
+           
+                        </li>
+                        <li><a href="https://xsc.czc.edu.cn/" target="_blank">学生管理</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="http://jwc.czc.edu.cn/zsxx.htm" target="_blank">招生就业</a>
+                <div>
+                                <ul>
+                        <li><a href="https://zs.czc.edu.cn/" target="_blank">本科生招生</a>
+           
+                        </li>
+                        <li><a href="http://cjb.czc.edu.cn/" target="_blank">继续教育</a>
+           
+                        </li>
+                        <li><a href="http://jyzx.czc.edu.cn" target="_blank">就业创业</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="kxyj/yjjgypt.htm">科学研究</a>
+                <div>
+                                <ul>
+                        <li><a href="kxyj/yjjgypt.htm">研究机构与平台</a>
+           
+                        </li>
+                        <li><a href="http://kyc.czc.edu.cn/" target="_blank">科研信息</a>
+           
+                        </li>
+                        <li><a href="kxyj/kycg.htm">科研成果</a>
+           
+                        </li>
+                        <li><a href="kxyj/xkjs.htm">学科建设</a>
+           
+                        </li>
+                        <li><a href="kxyj/kxjsxh.htm">科学技术协会</a>
+           
+                        </li>
+                        <li><a href="kxyj/xswyh.htm">学术委员会</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="xysh/bgdh.htm">校园生活</a>
+                <div>
+                                <ul>
+                        <li><a href="xysh/bgdh.htm">办公电话</a>
+           
+                        </li>
+                        <li><a href="http://student.czc.edu.cn/hearthealth/#/">心理健康</a>
+           
+                        </li>
+                        <li><a href="xysh/xcskb.htm">校车时刻表</a>
+           
+                        </li>
+                        <li><a href="xysh/hqfw.htm">后勤服务</a>
+           
+                        </li>
+                        <li><a href="xysh/whhd.htm">文化活动</a>
+           
+                        </li>
+                        <li><a href="xysh/hwxxjsjz.htm">黄文秀先进事迹展</a>
+           
+                        </li>
+                        <li><a href="xysh/bwg.htm">博物馆</a>
+           
+                        </li>
+                        <li><a href="xysh/dwbbg.htm">动物标本馆</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+                    <li><a href="hzjl/xqhz.htm">合作交流</a>
+                <div>
+                                <ul>
+                        <li><a href="hzjl/xqhz.htm">校企合作</a>
+           
+                        </li>
+                        <li><a href="http://wsc.czc.edu.cn/" target="_blank">国际交流</a>
+           
+                        </li>
+                    </ul>
+                            </div>
+
+               
+                    </li>
+      
+                        <div class="clear"></div>
+                    </ul>
+
+
+                     <div class="clear"></div>
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img class="menu" alt="" src="img/menu.png">
+            <img class="close-menu" alt="" src="img/close.png">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">
+            <a href=""><img alt="" src="img/logo.png"></a>
+        </div>
+        <div class="m-nav">
+            <div class="m-tlink">
+               
+   <a href="https://tsg.czc.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88869)">图书馆</a>
+   <a href="https://www.czc.edu.cn/OA.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88921)">OA办公</a>
+   <a href="ggzx/xxgk_.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88866)">信息公开</a>
+   <a href="ggzx/ldxx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88867)">领导信箱</a>
+   <a href="https://www.czc.edu.cn/info/1054/31321.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88868)">人才招聘</a>
+             </div>
+            <div class="m-search">
+
+
+<style>
+    #appu8 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 80%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed; float:left;}
+    #appu8 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #8b0608;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;float:left;}
+</style>
+<div id="divu8"></div>
+<script type="text/html" id="htmlu8">
+    <div id="appu8">
+        <div v-if="!isError">
+ 
+        <input type="text"  placeholder="全文搜索" autocomplete=off  v-model=query.keyWord @keyup.enter="onSubmit" >
+            <input type="image" src="img/search.png" name="submit_button"  value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu8").html($("#htmlu8").text());
+</script>
+<script>
+    var appOwner = "1883040496";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu8",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://210.31.96.202:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    
+            </div>
+                       
+            
+            
+
+                <ul>
+                                    <li><a href="index.htm">首页</a>
+            
+                    </li>
+                    <li><a href="xxgk/xxjj.htm">学校概况</a>
+                  <span></span>
+                    <ul>
+                        <li><a href="xxgk/xxjj.htm">学校简介</a>
+           
+                        </li>
+                        <li><a href="xxgk/lsyg.htm">历史沿革</a>
+           
+                        </li>
+                        <li><a href="xxgk/xrld.htm">现任领导</a>
+           
+                        </li>
+                        <li><a href="xxgk/xhxg.htm">校徽校歌</a>
+           
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="jgsz.htm">机构设置</a>
+                  <span></span>
+                    <ul>
+                        <li><a href="jgsz/znbm.htm">职能部门</a>
+           
+                        </li>
+                        <li><a href="jgsz/jxxb.htm">教学系部</a>
+           
+                        </li>
+                        <li><a href="jgsz/jfjg.htm">教辅机构</a>
+           
+                        </li>
+                        <li><a href="jgsz/fsdw.htm">附属单位</a>
+           
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="djsz/esdxxzl.htm">党建思政</a>
+                  <span></span>
+                    <ul>
+                        <li><a href="djsz/esdxxzl.htm">二十大学习专栏</a>
+           
+                        </li>
+                        <li><a href="djsz/djxxjyzl.htm">党纪学习教育专栏</a>
+           
+                        </li>
+                        <li><a href="djsz/qlxx.htm">清廉学校</a>
+           
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="jyjx/szgk.htm">教育教学</a>
+                  <span></span>
+                    <ul>
+                        <li><a href="jyjx/szgk.htm">师资概况</a>
+           
+                        </li>
+                        <li><a href="jyjx/zysz.htm">专业设置</a>
+           
+                        </li>
+                        <li><a href="https://rsc.czc.edu.cn/">人事管理</a>
+           
+                        </li>
+                        <li><a href="http://jwc.czc.edu.cn/" target="_blank">教学管理</a>
+           
+                        </li>
+                        <li><a href="https://xsc.czc.edu.cn/" target="_blank">学生管理</a>
+           
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="http://jwc.czc.edu.cn/zsxx.htm" target="_blank">招生就业</a>
+                  <span></span>
+                    <ul>
+                        <li><a href="https://zs.czc.edu.cn/" target="_blank">本科生招生</a>
+           
+                        </li>
+                        <li><a href="http://cjb.czc.edu.cn/" target="_blank">继续教育</a>
+           
+                        </li>
+                        <li><a href="http://jyzx.czc.edu.cn" target="_blank">就业创业</a>
+           
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="kxyj/yjjgypt.htm">科学研究</a>
+                  <span></span>
+                    <ul>
+                        <li><a href="kxyj/yjjgypt.htm">研究机构与平台</a>
+           
+                        </li>
+                        <li><a href="http://kyc.czc.edu.cn/" target="_blank">科研信息</a>
+           
+                        </li>
+                        <li><a href="kxyj/kycg.htm">科研成果</a>
+           
+                        </li>
+                        <li><a href="kxyj/xkjs.htm">学科建设</a>
+           
+                        </li>
+                        <li><a href="kxyj/kxjsxh.htm">科学技术协会</a>
+           
+                        </li>
+                        <li><a href="kxyj/xswyh.htm">学术委员会</a>
+           
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="xysh/bgdh.htm">校园生活</a>
+                  <span></span>
+                    <ul>
+                        <li><a href="xysh/bgdh.htm">办公电话</a>
+           
+                        </li>
+                        <li><a href="http://student.czc.edu.cn/hearthealth/#/">心理健康</a>
+           
+                        </li>
+                        <li><a href="xysh/xcskb.htm">校车时刻表</a>
+           
+                        </li>
+                        <li><a href="xysh/hqfw.htm">后勤服务</a>
+           
+                        </li>
+                        <li><a href="xysh/whhd.htm">文化活动</a>
+           
+                        </li>
+                        <li><a href="xysh/hwxxjsjz.htm">黄文秀先进事迹展</a>
+           
+                        </li>
+                        <li><a href="xysh/bwg.htm">博物馆</a>
+           
+                        </li>
+                        <li><a href="xysh/dwbbg.htm">动物标本馆</a>
+           
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="hzjl/xqhz.htm">合作交流</a>
+                  <span></span>
+                    <ul>
+                        <li><a href="hzjl/xqhz.htm">校企合作</a>
+           
+                        </li>
+                        <li><a href="http://wsc.czc.edu.cn/" target="_blank">国际交流</a>
+           
+                        </li>
+                    </ul>
+               
+                    </li>
+      
+
+                <div class="clear"></div>
+            </ul>
+
+
+            
+            
+        </div>
+    </div>
+
+
+    <div class="banner">
+    
+    
+    
+    
+
+        
+        
+                      
+              <div class="banner">
+            
+                    <div class="slick">
+                                             <div>
+                        <a href="https://www.czc.edu.cn/djsz/djxxjyzl.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1883040496, 75989)" target="_blank">
+                            <img src="images/djxxjy.png" border="0">
+                        </a>  
+                </div>
+                <div>
+                        <img src="images/20240123.jpg" border="0">
+                </div>
+                <div>
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1883040496, 74773)" target="_blank">
+                            <img src="images/banner2.jpg" border="0">
+                        </a>  
+                </div>
+                <div>
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1883040496, 74603)" target="_blank">
+                            <img src="img/banner1.png" border="0">
+                        </a>  
+                </div>
+        
+  
+        </div>
+
+        <div id="downPage"><img alt="" src="img/downpage.png"></div>
+        
+ 
+    </div>
+   
+        
+    </div>
+
+    <div class="index">
+
+        <div class="section1">
+            <div class="px1400">
+                <div class="title">
+                    <h2><img alt="" src="img/tit-img1.png"><a href="xyxw/xwzx.htm">查看更多</a></h2>
+                </div>
+         
+                
+                <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script> <div class="s1-l">
+
+ <ul>
+                         <li>
+                            <a href="info/1053/42711.htm" target="_blank" title="党委书记曹景川讲授“思政与师德师风课”">
+                                <div class="pic">
+                                    <img src="/__local/5/46/42/CBA7D51DFADD182D12ECD57EA54_FDF4E0A1_41631.jpg">
+                                </div>
+                                <div class="s1-linfo">
+                                    <span>2024-10-22</span>
+                                    <h3>党委书记曹景川讲授“思政与师德师风课”</h3>
+                                    <p>为深入学习贯彻党的二十届三中全会精神，大力弘扬教育家精神,进一步深化学校师德师风建设，10月21日，党委书记曹景川以《弘扬教育家精神 传承强师报国初心使命》为题在北校区1号会议室讲授“思政与师德师风课”。校领导史晓东、焦雨、卫崇文、铁军、武月明出席。各二级党组织书记、各职能部门负责人、各院系班子成员、教工党支部书记及教研室主任、实验室主任、专职辅导员代表和附属太行中学班子成员等150余人参加。活动由党委委员、...</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1053/42601.htm" target="_blank" title="党委书记曹景川为2024级学生讲授“开学第一课”">
+                                <div class="pic">
+                                    <img src="/__local/F/FC/48/F14D8952838180749310C7B1684_D06902E8_4FF89.jpg">
+                                </div>
+                                <div class="s1-linfo">
+                                    <span>2024-10-16</span>
+                                    <h3>党委书记曹景川为2024级学生讲授“开学第一课”</h3>
+                                    <p>为深入学习贯彻党的二十届三中全会精神，落实好立德树人根本任务，10月16日下午，校党委书记曹景川以“追寻真实善美 践行强国有我”为题，在实验剧场为2024级学生讲授秋季学期“开学第一课”，勉励广大学子牢记习近平总书记对青年的殷切嘱托，全面了解学校发展历程、办学理念、办学特色和未来发展趋势，努力学习知识，不断提升本领，弘扬奥运精神，为强国建设贡献青春力量。党委办公室、学生工作部负责人，各院系党委副书记、团委书记、...</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1053/42571.htm" target="_blank" title="我校成功举办教师教育改革与创新研究论坛暨教师教育发展研究虚拟教研室成立仪式">
+                                <div class="pic">
+                                    <img src="/__local/0/E1/5D/94ABDCB35B1F4262B44C157D5F8_79EF03C2_4A803.jpg">
+                                </div>
+                                <div class="s1-linfo">
+                                    <span>2024-10-14</span>
+                                    <h3>我校成功举办教师教育改革与创新研究论坛暨教师教育发展研究虚拟教研室成立仪式</h3>
+                                    <p>10月13日，为贯彻落实党的二十届三中全会精神和全国教育大会精神，大力弘扬教育家精神，办好高质量师范教育，我校在北校区1号教学楼1号会议室举办教师教育改革与创新论坛暨教师教育发展研究虚拟教研室成立仪式。校党委书记曹景川出席并致辞。华东师范大学邹为诚教授、浙江师范大学秦金亮教授、北京师范大学第三附属中学白计明校长受邀作主旨报告。长治市教学研究中心及市实验中学、市五中、市友谊小学等8所中小学相关领导以及我校师生代表参加了本次论坛。...</p>
+                                </div>
+                            </a>
+                        </li>
+                                          </ul>  </div>
+<script>_showDynClickBatch(['dynclicks_u11_42711','dynclicks_u11_42601','dynclicks_u11_42571'],[42711,42601,42571],"wbnews", 1883040496)</script>
+
+                
+                
+                           
+                <div class="s1-r">
+                
+                
+                 <ul class="i-list3">
+   <li><a href="info/1053/42761.htm" target="_blank" title="喜报！我校两名教师党支部书记入选全国高校“双带头人”教师党支部书记  “强国行”专项行动团队"> <p>喜报！我校两名教师党支部书记入选全国高校“双带头人”教师党支部书记  “强国行”专项行动团队<span>2024-10-26</span></p></a></li>
+   <li><a href="info/1053/42771.htm" target="_blank" title="喜报 | 我校法律系教师王潘、李强获山西省法学会法学研究课题立项"> <p>喜报 | 我校法律系教师王潘、李强获山西省法学会法学研究课题立项<span>2024-10-26</span></p></a></li>
+   <li><a href="info/1053/42741.htm" target="_blank" title="以“赛”增谊·以“辩”精业 | 长治市第一届检察官与律师论辩赛在我校顺利举行"> <p>以“赛”增谊·以“辩”精业 | 长治市第一届检察官与律师论辩赛在我校顺利举行<span>2024-10-25</span></p></a></li>
+   <li><a href="info/1053/42751.htm" target="_blank" title="“典耀中华”主题读书行动经典进校园长治学院专场成功举办"> <p>“典耀中华”主题读书行动经典进校园长治学院专场成功举办<span>2024-10-25</span></p></a></li>
+   <li><a href="info/1053/42711.htm" target="_blank" title="党委书记曹景川讲授“思政与师德师风课”"> <p>党委书记曹景川讲授“思政与师德师风课”<span>2024-10-22</span></p></a></li>
+   <li><a href="info/1053/42701.htm" target="_blank" title="“2024文化融合视域下的音乐舞蹈学论坛”在我校成功举办"> <p>“2024文化融合视域下的音乐舞蹈学论坛”在我校成功举办<span>2024-10-22</span></p></a></li>
+   <li><a href="info/1053/42651.htm" target="_blank" title="长治学院党委第五轮巡察全面进驻"> <p>长治学院党委第五轮巡察全面进驻<span>2024-10-19</span></p></a></li>
+</ul>
+
+
+<script>_showDynClickBatch(['dynclicks_u12_42761','dynclicks_u12_42771','dynclicks_u12_42741','dynclicks_u12_42751','dynclicks_u12_42711','dynclicks_u12_42701','dynclicks_u12_42651'],[42761,42771,42741,42751,42711,42701,42651],"wbnews", 1883040496)</script>
+
+             
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="section2">
+            <div class="px1600 s2-c">
+                <div class="s2-l">
+                    <div class="title">
+                        <h2><img alt="" src="img/tit-img2.png"><a href="xyxw/tzgg.htm">查看更多</a></h2>
+                    </div>
+                    
+                    
+                    <ul class="text-list2">
+        <li>
+                            <a href="info/1054/41971.htm" target="_blank" title="长治学院2024年高层次人才引进公告">
+                                <div class="date2">
+                                    <p>29</p>
+                                    <span>2024-08</span>
+                                </div>
+                                <p>长治学院2024年高层次人才引进公告</p>
+                            </a>
+                        </li>
+        <li>
+                            <a href="info/1054/41621.htm" target="_blank" title="信息公示 | 我校推荐参加第十四届“挑战杯”中国大学生创业计划竞赛项目公示">
+                                <div class="date2">
+                                    <p>22</p>
+                                    <span>2024-07</span>
+                                </div>
+                                <p>信息公示 | 我校推荐参加第十四届“挑战杯”中国大学生创业计划竞赛项目公示</p>
+                            </a>
+                        </li>
+        <li>
+                            <a href="info/1054/39281.htm" target="_blank" title="长治学院2024届毕业生春季大型双选会邀请函">
+                                <div class="date2">
+                                    <p>26</p>
+                                    <span>2024-03</span>
+                                </div>
+                                <p>长治学院2024届毕业生春季大型双选会邀请函</p>
+                            </a>
+                        </li>
+        <li>
+                            <a href="info/1054/38961.htm" target="_blank" title="长治学院2024年高层次人才引进公告">
+                                <div class="date2">
+                                    <p>06</p>
+                                    <span>2024-03</span>
+                                </div>
+                                <p>长治学院2024年高层次人才引进公告</p>
+                            </a>
+                        </li>
+        <li>
+                            <a href="info/1054/38931.htm" target="_blank" title="长治学院复印纸采购比价通知">
+                                <div class="date2">
+                                    <p>04</p>
+                                    <span>2024-03</span>
+                                </div>
+                                <p>长治学院复印纸采购比价通知</p>
+                            </a>
+                        </li>
+
+                        <div class="clear"></div>
+                    </ul><script>_showDynClickBatch(['dynclicks_u13_41971','dynclicks_u13_41621','dynclicks_u13_39281','dynclicks_u13_38961','dynclicks_u13_38931'],[41971,41621,39281,38961,38931],"wbnews", 1883040496)</script>
+
+                    
+                    
+               
+                </div>
+                <div class="s2-m">
+                    <div class="title">
+                        <h2><img alt="" src="img/tit-img3.png"><a href="xyxw/jxky.htm">查看更多</a></h2>
+                    </div>
+                    <div class="s2-box">
+                    
+                      
+
+                        <div class="s2-first">
+                            <a href="info/1055/42691.htm" target="_blank" title="计算机系举办曹景川课程思政创新工作室教研沙龙——学习文秀事迹 弘扬太行精神 担当信创使命">
+                                <div class="s2-fimg">
+                                    <div class="pic"><img alt="" src="/__local/A/4B/AB/2E4F0EB185B776E218DCC9C57ED_61551387_4F38.jpg"></div>
+                                </div>
+                                <div class="s2-finfo">
+                                    <h3>计算机系举办曹景川课程思政创新工作室教研沙龙——学习文秀事迹 弘扬太行精神 担当信创使命</h3>
+                                    <p>10月19日，我校计算机系在北校区图书馆三楼会议室举办曹景川课程思政创新工作室课程思政教研沙龙。活动邀请中北大学薄瑞峰教授、龙芯中科（山西）技术有限公司生态经理文丁、中文系副教授王嘉、马克思主义学院教师曹凡参与现场交流，我校校友、北部湾大学电子与信息工程学院教师刘秀平、王青青专程走进百坭村进行线上分享交流。计算机系党政负责人、全体教职工和部分学生代表参加。活动由计算机系党委副书记、系主任张剑妹主持。薄瑞峰教授开篇引用习近平总书记在全国高校思想政治工作会议上的重要讲话，...</p>
+                                </div>
+                            </a>
+                        </div>
+                  
+                        <ul class="i-list3">
+                        
+                            <li>
+                                    <a href="info/1055/42661.htm" target="_blank" title="我校与北京联合大学成功签署战略合作框架协议">
+                                    <p>我校与北京联合大学成功签署战略合作框架协议<span>2024-10-17</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1055/42581.htm" target="_blank" title="我校教师段浩受邀为市局法制支队、政治部培训处进行习近平法治思想专题培训">
+                                    <p>我校教师段浩受邀为市局法制支队、政治部培训处进行习近平法治思想专题培训<span>2024-10-16</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1055/42591.htm" target="_blank" title="我校成功举办教师教育改革与创新研究论坛暨教师教育发展研究虚拟教研室成立仪式">
+                                    <p>我校成功举办教师教育改革与创新研究论坛暨教师教育发展研究虚拟教研室成立仪式<span>2024-10-14</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1055/42621.htm" target="_blank" title="学校召开2024年高等教育质量监测国家数据平台数据采集与填报工作会议">
+                                    <p>学校召开2024年高等教育质量监测国家数据平台数据采集与填报工作会议<span>2024-10-14</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1055/42341.htm" target="_blank" title="外语系举办“智慧云端 教研共进”系列讲座">
+                                    <p>外语系举办“智慧云端 教研共进”系列讲座<span>2024-09-25</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1055/42631.htm" target="_blank" title="“新文科背景下应用型法治人才培养研究暨法学学科专业建设”研讨会在我校举办">
+                                    <p>“新文科背景下应用型法治人才培养研究暨法学学科专业建设”研讨会在我校举办<span>2024-09-23</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1055/42411.htm" target="_blank" title="我校第三批文心秀行教育实习先锋队抵达百色开展教育实习">
+                                    <p>我校第三批文心秀行教育实习先锋队抵达百色开展教育实习<span>2024-09-20</span></p>
+                                </a>
+                            </li>
+                        </ul>
+<script>_showDynClickBatch(['dynclicks_u14_42691','dynclicks_u14_42661','dynclicks_u14_42581','dynclicks_u14_42591','dynclicks_u14_42621','dynclicks_u14_42341','dynclicks_u14_42631','dynclicks_u14_42411'],[42691,42661,42581,42591,42621,42341,42631,42411],"wbnews", 1883040496)</script>
+
+                    
+                    
+                                        </div>
+                </div>
+                <div class="s2-r">
+                    <div class="title">
+                        <h2><img alt="" src="img/tit-img4.png"><a href="xyxw/jwxy.htm">查看更多</a></h2>
+                    </div>
+                    <div class="s2-box">
+                    
+                    
+                        <div class="s2-first">
+                            <a href="info/1056/42781.htm" target="_blank" title="我校开展校园媒体工作交流座谈会">
+                                <div class="s2-fimg">
+                                    <div class="pic"><img alt="" src="/__local/7/B7/EA/2F46226A09158BA4F41564EFD29_A136427C_453B0.jpg"></div>
+                                </div>
+                                <div class="s2-finfo">
+                                    <h3>我校开展校园媒体工作交流座谈会</h3>
+                                    <p>为进一步提升校园媒体队伍工作能力，10月25日下午，我校在北校区2号会议室召开校园媒体工作交流座谈会。党委宣传部、团委相关人员以及融媒体中心、新媒体中心各部门学生代表参加。会上，与会师生围绕校园新媒体平台建设、运维机制、内容采编审、多平台联动和技术革新等方面进行了深入交流。两中心表示，校园新媒体平台建设要围绕我校事业发展大局，与学校党建思政、教学科研、文化服务等各方面深度融合，努力提升内容创意和技术能力，...</p>
+                                </div>
+                            </a>
+                        </div>
+                  
+                        <ul class="i-list3">
+                        
+                            <li>
+                                    <a href="info/1056/42721.htm" target="_blank" title="喜报丨法律系学子在第九届全国学生“学宪法 讲宪法”山西赛区中荣获佳绩">
+                                    <p>喜报丨法律系学子在第九届全国学生“学宪法 讲宪法”山西赛区中荣获佳绩<span>2024-10-23</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1056/42681.htm" target="_blank" title="我校法律系与君略律师事务所举行君略助学金发放暨实习、就业基地揭牌仪式">
+                                    <p>我校法律系与君略律师事务所举行君略助学金发放暨实习、就业基地揭牌仪式<span>2024-10-21</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1056/42671.htm" target="_blank" title="我校开展铸牢中华民族共同体意识主题宣传观影活动">
+                                    <p>我校开展铸牢中华民族共同体意识主题宣传观影活动<span>2024-10-19</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1056/42451.htm" target="_blank" title="计算机系举办“应用型本科发展之路该怎么走”专题讲座">
+                                    <p>计算机系举办“应用型本科发展之路该怎么走”专题讲座<span>2024-09-30</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1056/42421.htm" target="_blank" title="我校举办学生资助工作业务培训">
+                                    <p>我校举办学生资助工作业务培训<span>2024-09-29</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1056/42611.htm" target="_blank" title="山西公安英模“进高校”宣讲暨“同上一堂课”主题活动（长治专场）在我校举行">
+                                    <p>山西公安英模“进高校”宣讲暨“同上一堂课”主题活动（长治专场）在我校举行<span>2024-09-26</span></p>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                    <a href="info/1056/42361.htm" target="_blank" title="我校工会、离退休人员管理部联合举办健康知识讲座和专家义诊活动">
+                                    <p>我校工会、离退休人员管理部联合举办健康知识讲座和专家义诊活动<span>2024-09-26</span></p>
+                                </a>
+                            </li>
+                        </ul>
+<script>_showDynClickBatch(['dynclicks_u15_42781','dynclicks_u15_42721','dynclicks_u15_42681','dynclicks_u15_42671','dynclicks_u15_42451','dynclicks_u15_42421','dynclicks_u15_42611','dynclicks_u15_42361'],[42781,42721,42681,42671,42451,42421,42611,42361],"wbnews", 1883040496)</script>
+
+                    
+                    
+            
+                  
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="section3">
+            <div class="px1600 s3-c">
+                <div class="s3-l">
+                    <div>
+                        <h2>               <script language="javascript" src="/system/resource/js/calendar/simple.js"></script>
+<script language="JavaScript">
+    //阳历
+    var c_Calendar1075173EnDateString;
+
+    var c_Calendar1075173WeekDayString;
+
+    //阴历
+    var c_Calendar1075173CnDateString;
+    //节气
+    var c_Calendar1075173JQString;
+    //年
+    var c_Calendar1075173YearString;
+    //月
+    var c_Calendar1075173MonthString;
+    //日
+    var c_Calendar1075173DayString;
+    //周
+    var c_Calendar1075173WeekString;
+    //显示
+    var c_Calendar1075173ShowString;
+    function RunGLNL1075173()
+    {
+        var  sc =new Simple_Calendar ();
+        sc.init();
+        c_Calendar1075173CnDateString=sc.getCnDateString();
+        c_Calendar1075173WeekDayString=sc.getCalendarWeekString();
+        c_Calendar1075173JQString=sc.getJQString();
+        c_Calendar1075173EnDateString=sc.getEnDateString();
+        c_Calendar1075173YearString=sc.getYearString();
+        c_Calendar1075173MonthString=sc.getMonthString();
+        c_Calendar1075173DayString=sc.getDayString();
+        c_Calendar1075173WeekString=sc.getWeekString();
+        c_Calendar1075173ShowString= "";
+    }
+    RunGLNL1075173();
+
+    c_Calendar1075173ShowString+=c_Calendar1075173EnDateString;
+    c_Calendar1075173ShowString+="&nbsp;&nbsp;"+c_Calendar1075173WeekDayString;
+    //关闭标题上的年月日星期
+    c_Calendar1075173ShowString="";
+    
+    
+
+    
+    c_Calendar1075173ShowString+="&nbsp;&nbsp;2023－2024学年第二学期8周";
+    
+</script>
+<div id="c_lunar1075173" class="fontstyle1075173"></div>
+<script>
+    document.getElementById("c_lunar1075173").innerHTML = c_Calendar1075173ShowString;
+</script>
+</h2>
+                  
+<!-- 注:在更改样式时页面中所有元素的id和class名称请勿随意更改 -->
+<div class="rl">
+    <!-- 显示日历 -->
+
+    <div class="calendar" id="calendar"></div>
+    <div class="dqsj">
+        <div class="dqsj-title">
+        <a class="dqsj-link" target="_blank"></a>
+        <span>
+  
+        </span>
+        </div>
+            </div>
+</div> 
+
+<script>
+
+    var map = {}; //存储date-json:index对应关系
+    var tb = ["一","二","三","四","五","六","七","八","九","十","十一","十二",
+              "十三","十四","十五","十六","十七","十八","十九","二十","二十一",
+              "二十二","二十三","二十四","二十五","二十六","二十七","二十八","二十九","三十","三十一"];
+    
+    var json = []; //请求的数据。
+    
+     function getJson1075157(year,month){
+        var time=year+"-"+month;
+        var url="/system/resource/news/calendar/newsservices.jsp"; //文章数据请求地址
+        $.ajax({
+        url : url,
+        type: "post",
+        data:{"date":time,"owner":'1883040496',"contentid":'1076256',"is_future":'false'},
+        dataType : "json",
+        contentType : "application/x-www-form-urlencoded; charset=UTF-8",
+        async : false,
+        success : function(data) {
+            json = data;
+            calUtil.init(json[0]);
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+            //alert(textStatus);   
+            },   
+            complete: function(XMLHttpRequest, textStatus) { 
+            this; // 调用本次AJAX请求时传递的options参数   
+            }
+        }); 
+    } 
+    
+    //更新通知信息
+    function fillNotice1075157(i,item){
+        var url="http://www.czc.edu.cn/"+item.url; //文章内容页地址。
+        var title=item.title;     //文章标题
+        var summary=item.summary; //文章摘要
+        
+        var titlelen=30; 
+        var summarylen=0;
+        if(title.length>=parseInt(titlelen))
+        {
+            
+            title=title.substr(0,titlelen)+"...";
+        }
+        if(summary.length>=parseInt(summarylen))
+        {
+            summary=summary.substr(0,summarylen)+"...";
+        }
+        $(".dqsj-title a.dqsj-link").eq(i).text(title);
+        $(".dqsj-title a.dqsj-link").eq(i).attr("href",url);
+        $(".dqsj-summary").eq(i).text(summary);
+        
+    }
+    //更新通知信息 
+    function updateNotice1075157(date){
+        var num=2-1; //显示num篇文章
+        var item=json[0][map[date]];
+        fillNotice1075157(0,item); //填写第一个活动
+        var time=calUtil.showYear+"-"+calUtil.showMonth+"-"+date;
+        $(".dqsj").hide();
+        $(".dqsj").eq(0).show();
+        if (item.more!=undefined&&item.more.length!=0)
+        {
+            var index=item.more.length;
+            if(index>num)
+            {
+                index=num;
+            }
+            var htmls = new Array();
+            for(var i=0;i<index;i++)
+            {
+                htmls.push("<div class='dqsj'>");
+                htmls.push("<div class='dqsj-title'>");
+                htmls.push("<a class='dqsj-link' href='' target='_blank'></a>");
+                htmls.push("<span>");
+                htmls.push("<a class='dqsj-more' href='' style='color:#005bac;'>更多</a>");
+                htmls.push("</span>");
+                htmls.push("</div>");
+                if(false==true)
+                {
+	                htmls.push("<div class='dqsj-summary'></div>");
+                }
+                htmls.push("</div>");
+                $(".dqsj").eq(i).after(htmls.join(''));
+                fillNotice1075157(1+i,json[0][item.more[i]]);//填写其他活动
+            }
+            newsmore1075157(num,time);
+        }
+        else
+        {
+           $(".dqsj-more").hide();
+        }
+    }
+    //显示更多文章
+    function newsmore1075157(num,time)
+    {
+        $(".dqsj-more").eq(num).show();
+        var urlMore="xyxw/xwzx.htm&calendarselecteddate="+time; //每天文章数量超过num篇，查看更多链接地址
+        $(".dqsj-more").attr("href",urlMore);
+    }
+    
+    function updateCalName1075157(date){
+        var calendarName=calUtil.showYear+"-"+calUtil.showMonth+"-"+date;
+        $(".calendar_month_span").html(calendarName); 
+    }
+</script>
+<script type="text/javascript"> 
+var calUtil = {
+  //当前日历显示的年份
+  showYear:2018,
+  //当前日历显示的月份
+  showMonth:4,
+  //当前日历显示的天数
+  showDate:19,
+  curYear:2018,
+  curMonth:4,
+  curDate:19,
+  eventName:"load",
+  curTab:0,
+  //初始化日历
+  init:function(signList){
+    calUtil.setMonthAndDay();
+    calUtil.draw(signList);
+    calUtil.bindEnvent();
+  }
+  ,
+  draw:function(signList){
+    //绑定日历
+    var str = calUtil.drawCal(calUtil.showYear,calUtil.showMonth,signList);
+    $("#calendar").html(str); 
+    //绑定日历表头
+    if (calUtil.isCurrent()){
+        updateCalName1075157(parseInt(calUtil.curDate));
+    }else{
+        $(".calendar_month_span").html(calUtil.showYear+"-"+calUtil.showMonth+"-"+calUtil.curDate); 
+        $("#yuefen").attr("value",calUtil.showMonth);
+    }
+  },
+  //绑定事件
+  bindEnvent:function(){
+    //绑定上个月事件
+    $(".calendar_month_prev").click(function(){
+      //ajax获取日历json数据
+      calUtil.eventName="prev";
+      calUtil.init(json[calUtil.curTab]);
+      calUtil.eventName="current";
+      map=[];
+      var time=calUtil.showYear+"-"+calUtil.showMonth+"-"+calUtil.showDate;
+      getJson1075157(calUtil.showYear,calUtil.showMonth);
+    });
+    //绑定下个月事件
+    $(".calendar_month_next").click(function(){
+      //ajax获取日历json数据
+      calUtil.eventName="next";
+      calUtil.init(json[calUtil.curTab]);
+      calUtil.eventName="current";
+      map=[];
+      var time=calUtil.showYear+"-"+calUtil.showMonth+"-"+calUtil.showDate;
+      getJson1075157(calUtil.showYear,calUtil.showMonth);
+    });
+    //日期点击事件
+    $("#calendar tbody td").click(function(){
+      //ajax获取日历json数据
+      var date = $(this).text();
+      var time=calUtil.showYear+"-"+calUtil.showMonth+"-"+date;
+      if (date!=""){
+       //$(".calendar_cur_date").text(tb[calUtil.showMonth-1] + "月" + tb[date-1] + ((tb[date-1].length)>1?"":"日"));
+      }
+      //更新日历表头
+      updateCalName1075157(parseInt(date));
+      //更新活动通知
+      if ($(this).hasClass("on")){
+        updateNotice1075157(date);
+       }
+      else { 
+        $(".dqsj").hide();
+        
+        }
+    });
+  },
+  //获取当前选择的年月
+  setMonthAndDay:function(){
+    switch(calUtil.eventName)
+    {
+      case "load":
+        var current = new Date();
+        calUtil.curYear=calUtil.showYear=current.getFullYear();
+        calUtil.curMonth=calUtil.showMonth=current.getMonth() + 1;
+        calUtil.curDate=calUtil.showDate=current.getDate();
+        break;
+      case "prev":
+        var nowMonth=calUtil.showMonth;
+        calUtil.showMonth=parseInt(nowMonth)-1;
+        if(calUtil.showMonth==0)
+        {
+            calUtil.showMonth=12;
+            calUtil.showYear-=1;
+        }
+        break;
+      case "next":
+        var nowMonth=calUtil.showMonth;
+        calUtil.showMonth=parseInt(nowMonth)+1;
+        if(calUtil.showMonth==13)
+        {
+            calUtil.showMonth=1;
+            calUtil.showYear+=1;
+        }
+        break;
+      case "current":
+        break; 
+    }
+  },
+  getDaysInmonth : function(iMonth, iYear){
+   var dPrevDate = new Date(iYear, iMonth, 0);
+   return dPrevDate.getDate();
+  },
+  bulidCal : function(iYear, iMonth) {
+   var aMonth = new Array();
+   aMonth[0] = new Array(7);
+   aMonth[1] = new Array(7);
+   aMonth[2] = new Array(7);
+   aMonth[3] = new Array(7);
+   aMonth[4] = new Array(7);
+   aMonth[5] = new Array(7);
+   aMonth[6] = new Array(7);
+   var dCalDate = new Date(iYear, iMonth - 1, 1);
+   var iDayOfFirst = dCalDate.getDay();
+   if(iDayOfFirst==0)iDayOfFirst=7;
+   var iDaysInMonth = calUtil.getDaysInmonth(iMonth, iYear);
+   var iVarDate = 1;
+   var d, w;
+   aMonth[0][0] = "一";
+   aMonth[0][1] = "二";
+   aMonth[0][2] = "三";
+   aMonth[0][3] = "四";
+   aMonth[0][4] = "五";
+   aMonth[0][5] = "六";
+   aMonth[0][6] = "日";
+   for (d = iDayOfFirst-1; d < 7; d++) {
+    aMonth[1][d] = iVarDate;
+    iVarDate++;
+   }
+   for (w = 2; w < 7; w++) {
+    for (d = 0; d < 7; d++) {
+     if (iVarDate <= iDaysInMonth) {
+      aMonth[w][d] = iVarDate;
+      iVarDate++;
+     }
+    }
+   }
+   return aMonth;
+  },
+  ifHasSigned : function(signList,day){
+   var signed = false;
+   $.each(signList,function(index,item){
+    if(item.date == day) {
+     signed = true;
+     if(map[day]==undefined){
+        map[day]=index;
+     }else{//多个活动则在json中添加more字段
+        if(signList[map[day]].more==undefined){
+            signList[map[day]].more=[index];
+        }else {
+            signList[map[day]].more.push(index);
+        }
+     }  
+    }
+   });
+   return signed ;
+  },
+  isCurrent :function(){
+   return (calUtil.curYear==calUtil.showYear && calUtil.curMonth==calUtil.showMonth);
+  },
+  drawCal : function(iYear, iMonth ,signList) {
+   var myMonth = calUtil.bulidCal(iYear, iMonth);
+   var htmls = new Array();
+   htmls.push("<div class='cal_main' id='cal_layer'>");
+   htmls.push("<div class='cal_succ_calendar_title'>");
+   htmls.push("<div class='calendar_cur_date'></div>");
+   htmls.push("<div class='calendar_top_right'>");
+   htmls.push("<div class='calendar_month_next'><img src='/system/resource/news/calendar/images/right-jt.jpg'></div>");
+   htmls.push("<div class='calendar_month_prev'><img src='/system/resource/news/calendar/images/left-jt.jpg'></div>");
+   htmls.push("<div class='calendar_month_span'></div>");
+   htmls.push("</div></div>");
+   htmls.push("<div class='cal'>");
+   htmls.push("<table>");
+   htmls.push("<tr>");
+   htmls.push("<th>" + myMonth[0][0] + "</th>");
+   htmls.push("<th>" + myMonth[0][1] + "</th>");
+   htmls.push("<th>" + myMonth[0][2] + "</th>");
+   htmls.push("<th>" + myMonth[0][3] + "</th>");
+   htmls.push("<th>" + myMonth[0][4] + "</th>");
+   htmls.push("<th>" + myMonth[0][5] + "</th>");
+   htmls.push("<th>" + myMonth[0][6] + "</th>");
+   htmls.push("</tr>");
+   var d, w;
+   for (w = 1; w < 7; w++) {
+    htmls.push("<tr>");
+    for (d = 0; d < 7; d++) {
+     var ifHasSigned = calUtil.ifHasSigned(signList,myMonth[w][d]);
+     if(ifHasSigned){
+      htmls.push("<td class='on'>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ") + "</td>");
+     } else if(myMonth[w][d]==calUtil.curDate){
+      htmls.push("<td class='cur'>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ") + "</td>");
+      var str=tb[calUtil.showMonth-1] + "月" + tb[calUtil.showDate-1] + ((tb[calUtil.showDate-1].length)>1?"":"日");
+      htmls[2]="<div class=calendar_cur_date>"+str+"</div>"
+     } else {
+      if (!isNaN(myMonth[w][d]))
+      {
+        htmls.push("<td>" + myMonth[w][d] + "</td>");     
+      }
+      else{
+        htmls.push("<td class='empty'></td>");
+      }
+     }
+    }
+    htmls.push("</tr>");
+   }
+   htmls.push("</table>");
+   htmls.push("</div>");
+   htmls.push("</div>");
+   return htmls.join('');
+  }
+};
+
+//默认初始化
+calUtil.init([{"date":""}]);
+function getdata1075157(){
+      //使用服务器期时间戳,校正本地日历时间
+      var url="/system/resource/news/calendar/newsservices.jsp?date=2018-04";
+      $.get(url,function(data,state,xhr){  
+         var datestr=xhr.getResponseHeader("Date");
+         var date=new Date(datestr);
+         
+         if(datestr!=null && date!=undefined){
+             calUtil.curYear=calUtil.showYear=date.getFullYear();
+             calUtil.curMonth=calUtil.showMonth=date.getMonth() + 1;
+             calUtil.curDate=calUtil.showDate=date.getDate();
+         }
+         getJson1075157(calUtil.showYear,calUtil.showMonth);
+      },"json")
+}
+
+$(function (){
+    getdata1075157();
+    var time=calUtil.showYear+"-"+calUtil.showMonth+"-"+calUtil.showDate;
+})
+</script> 
+     
+                    </div>
+                </div>
+                <div class="s3-m">
+                    <div class="title">
+                        <h2><img alt="" src="img/tit-img5.png"><a href="xyxw/xsjz.htm">查看更多</a></h2>
+                    </div>
+     
+                    
+                    
+             
+               <ul>
+                        <li>
+                            <a href="info/1057/41551.htm" target="_blank" title="马克思主义学科建设">
+                                <p><b>刘焕明 二级教授</b><span><i>18</i>/ 2024-07</span></p>
+                                <h3>马克思主义学科建设</h3>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="info/1057/40821.htm" target="_blank" title="长治地区大中小学思政课建设的思考">
+                                <p><b>赵改萍 教授</b><span><i>27</i>/ 2024-05</span></p>
+                                <h3>长治地区大中小学思政课建设的思考</h3>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="info/1057/40801.htm" target="_blank" title="走进至圣孔子 感悟思想魅力">
+                                <p><b>张跃先 副教授</b><span><i>24</i>/ 2024-05</span></p>
+                                <h3>走进至圣孔子 感悟思想魅力</h3>
+                            </a>
+                        </li>
+                    </ul><script>_showDynClickBatch(['dynclicks_u18_41551','dynclicks_u18_40821','dynclicks_u18_40801'],[41551,40821,40801],"wbnews", 1883040496)</script>
+  
+                    
+                    
+                </div>
+                <div class="s3-r">
+                    <div class="title">
+                        <h2><img alt="" src="img/tit-img6.png"><a href="ztzl.htm">查看更多</a></h2>
+                    </div>
+                  
+                             
+    <div class="s3-rcon"> 
+   
+    <ul>
+                        
+                           <li>
+                        <a href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm?jump=true" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1883040496, 74570)" target="_blank">
+                          <div class="pic">  <img src="img/s3-rpic1.jpg" border="0"></div>
+                        </a>  
+                </li>
+                           <li>
+                        <a href="http://cpc.people.com.cn/GB/64192/105996/390438/index.html" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1883040496, 74571)" target="_blank">
+                          <div class="pic">  <img src="img/xjpbdrz.jpg" border="0"></div>
+                        </a>  
+                </li>
+                           <li>
+                        <a href="http://legalinfo.moj.gov.cn/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1883040496, 74572)" target="_blank">
+                          <div class="pic">  <img src="img/zgpfw.jpg" border="0"></div>
+                        </a>  
+                </li>
+                </ul> </div>
+
+                 
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="section4">
+            <div class="px1600">
+                <div class="kstd">
+                    <div class="title">
+                        <h2><img alt="" src="img/tit-img7.png"><a href="kstd.htm">查看更多</a></h2>
+                    </div>
+                    
+                    
+              <UL>
+    <LI><a href="https://172-16-249-191-8081.webvpn.czc.edu.cn/caslogin" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88877)"> <div><img alt="" src="img/kstd-icon1.png"></div>
+                                <p>教务管理</p>
+</a></li>
+    <LI><a href="http://172.16.248.194:8084/userAction!to_login.action" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88871)"> <div><img alt="" src="img/kstd-icon2.png"></div>
+                                <p>科研管理</p>
+</a></li>
+    <LI><a href="http://sxczc.fanya.chaoxing.com/portal" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88872)"> <div><img alt="" src="img/kstd-icon3.png"></div>
+                                <p>教学平台</p>
+</a></li>
+    <LI><a href="https://www.czc.edu.cn/OA.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88873)"> <div><img alt="" src="img/kstd-icon4.png"></div>
+                                <p>OA登陆</p>
+</a></li>
+    <LI><a href="http://one.czc.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88874)"> <div><img alt="" src="img/kstd-icon5.png"></div>
+                                <p>网上办事大厅</p>
+</a></li>
+    <LI><a href="http://172.16.248.200:9800/zcgl" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88875)"> <div><img alt="" src="img/kstd-icon6.png"></div>
+                                <p>资产管理</p>
+</a></li>
+    <LI><a href="http://172.16.197.2:9021/caslogin.aspx" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88870)"> <div><img alt="" src="img/kstd-icon7.png"></div>
+                                <p>财务平台</p>
+</a></li>
+    <LI><a href="https://wlc.czc.edu.cn/wlyy/VPNxt.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88923)"> <div><img alt="" src="img/kstd-icon8.png"></div>
+                                <p>VPN登录</p>
+</a></li>
+    <LI><a href="https://wlc.czc.edu.cn/info/1151/1801.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88952)"> <div><img alt="" src="img/kstd-icon9.png"></div>
+                                <p>校园信箱</p>
+</a></li>
+    <LI><a href="https://login.sxzfcg.zcygov.cn/user-login/#/login" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88972)"> <div><img alt="" src="img/kstd-icon10.png"></div>
+                                <p>政府采购平台</p>
+</a></li>
+</UL>
+
+                    <div class="kstd-btn">
+                        <div class="kstd-prev"><img alt="" src="img/s4-l.png"></div>
+                        <div class="kstd-next"><img alt="" src="img/s4-r.png"></div>
+                    </div>
+               
+                </div>
+
+            </div>
+
+            <div class="xysh">
+                <div class="title">
+                    <h2><img alt="" src="img/tit-img8.png"><a href="xyxw/xyfg.htm">查看更多</a></h2>
+                </div>
+                <div class="clear"></div>
+                
+                
+       <div class="xysh-m">
+                    <div class="xysh1">
+                        <ul>
+                        
+                                                  <li>
+                                <a href="info/1058/28761.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/E/CD/CD/313D2D41E211A7176B31E125E58_C9BEB094_550BD.jpg"></div>
+                                </a>
+                            </li>
+                            
+                            
+                            <li>
+                                <a href="info/1058/28751.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/0/97/E9/ACEC4583E3992221F303454F6CB_8F1C047A_4589C.jpg"></div>
+                                </a>
+                            </li>
+                            
+                            
+                  
+                        </ul>
+                    </div>
+                    <div class="xysh2">
+                        <div class="xysh2-t">
+                          <ul>
+                           
+                            <li>
+                                <a href="info/1058/28741.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/2/52/C6/1DDB154521A942997BF21FFDD27_8BA1AA23_2878D.jpg"></div>
+                                </a>
+                            </li>
+                            
+                            
+                            <li>
+                                <a href="info/1058/28731.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/3/6C/03/257A5FC87B2EDFBE96942045F77_EDE004C0_22C3E.jpg"></div>
+                                </a>
+                            </li>
+                            
+                            
+
+                        
+                 
+                            </ul>
+                            <div>
+                            
+                            
+                               
+                        
+                                <a href="info/1058/28721.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/7/83/DA/68E25305EDA0B9E3D3A7958CCE4_93CB429E_A7B8.jpg"></div>
+                                </a>
+                        
+                            
+                            
+                                
+                                
+                                </div>
+                        </div>
+                        <div class="xysh2-b">
+                            <div>
+                            
+                            
+                            <li>
+                                <a href="info/1058/1450.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/0/AF/F4/D82BE841C2FFDE4EE84CB696D63_9E0DC986_3E98F.jpg"></div>
+                                </a>
+                            </li>
+                            
+                            
+                                
+                                
+                                </div>
+                            <ul>
+                                                                                                                                                                                        <li>
+                                <a href="info/1058/1451.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/C/DA/82/274353EE5D8A355919D09AD8099_BBF4F39C_112DD.jpg"></div>
+                                </a>
+                            </li>
+                            
+                            
+                                                      <li>
+                                <a href="info/1058/1449.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/6/8C/F2/14AFC5EC4053B6F01FC554753B6_A4D44806_5A991.jpg"></div>
+                                </a>
+                            </li>
+                            
+                            
+                                                                                                            </ul>
+                        </div>
+                    </div>
+                    <div class="xysh3">
+                        <ul>
+                            <li>
+                                <a href="info/1058/1448.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/6/6A/03/E21F21C626EDE8E0217E77A5EFC_AB3A4DA2_1C0E2.jpg"></div>
+                                </a>
+                            </li>
+                            
+                            
+                            <li>
+                                <a href="info/1058/1447.htm" target="_blank" title="校园风光">
+                                    <div class="pic"><img src="/__local/3/13/3F/053B216A96433F93B8FCD70FB2D_53BA9C71_D85CB.jpg"></div>
+                                </a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div><script>_showDynClickBatch(['dynclicks_u21_28761','dynclicks_u21_28751','dynclicks_u21_28741','dynclicks_u21_28731','dynclicks_u21_28721','dynclicks_u21_1450','dynclicks_u21_1451','dynclicks_u21_1449','dynclicks_u21_1448','dynclicks_u21_1447'],[28761,28751,28741,28731,28721,1450,1451,1449,1448,1447],"wbnews", 1883040496)</script>
+
+                
+                
+         
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="px1600">
+                <div class="foot-logo">
+                           
+             
+                        <a href="index.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1883040496, 74567)" target="_blank">
+                            <img src="img/foot-logo.png" border="0">
+                        </a>  
+           
+
+                </div>
+                <div class="foot-c">
+                    <div class="foot-l">
+             <UL>
+    <LI><a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88855)">教育部</a></li>
+    <LI><a href="http://jyt.shanxi.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88856)">山西省教育厅</a></li>
+    <LI><a href="http://sxczc.fanya.chaoxing.com/portal" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88857)">网络教学平台</a></li>
+    <LI><a href="http://172.16.248.193/czc/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88876)">数据采集平台</a></li>
+    <LI><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88858)">资源共享课</a></li>
+    <LI><a href="https://udb.heec.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88859)">国家数据平台</a></li>
+    <LI><a href="http://sxczc.fanya.chaoxing.com/portal" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88860)">教学平台</a></li>
+    <LI><a href="http://kjt.shanxi.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1883040496, 88862)">山西省科技厅</a></li>
+</UL>
+                    </div>
+                    <div class="foot-r">
+                        <div class="foot-info"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<div>
+ <span>地 址：</span>
+ <p>长治市潞州区保宁门东街73号（北校区）<br>长治市潞州区东环路中段96号（南校区）</p>
+</div>
+<div>
+ <span>党办电话：</span>
+ <p>0355-2178101</p>
+</div>
+<div>
+ <span>校办电话：</span>
+ <p>0355-2178102</p>
+</div>
+<div>
+ <span>本科招生电话：</span>
+ <p>0355-2179651，2179761</p>
+</div>
+                  
+                        </div>
+                        <div class="foot-ewm">
+                                        
+            
+                        <img src="img/wxewm.png" border="0"><p>官方微信</p>
+            
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+            <div class="bq">
+        <div>版权所有：长治学院 晋公网安备14040202000083号 <a href="https://beian.miit.gov.cn/" target="_blank" style="color: rgb(255, 255, 255);">晋ICP备16006961号-1</a></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+   
+</SCRIPT>
+
+
+
+
+
+</body>
+
+
+
+
+<script src="js_new/jquery.js"></script><script src="js_new/slick.js"></script><script src="js_new/public.js"></script><script src="js_new/index.js"></script></html>

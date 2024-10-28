@@ -1,0 +1,907 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>吉林水利电力职业学院网站</title>
+    <meta name="description" content="company is a free job board template">
+    <meta name="author" content="Ohidul">
+    <meta name="keyword" content="html, css, bootstrap, job-board">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <link rel="stylesheet" href="/r/cms/www/jlsdzy/css/base.css">
+    <link rel="stylesheet" href="/r/cms/www/jlsdzy/css/index.css">
+    <link rel="stylesheet" href="/r/cms/www/jlsdzy/css/animate.min.css">
+    <link rel="icon" href="/r/cms/www/jlsdzy/images/icon.ico" type="image/x-icon" />
+    <script src="/r/cms/www/jlsdzy/js/jquery-1.8.3.min.js"></script>
+    <script src="/r/cms/www/jlsdzy/js/base.js"></script>
+    <script src="/r/cms/www/jlsdzy/js/index.js"></script>
+
+
+
+    <script type="text/javascript">
+        //头条内容 无缝滚动代码
+        function marquee(i, direction){
+            var obj = document.getElementById("marquee" + i);
+            var obj1 = document.getElementById("marquee" + i + "_1");
+            var obj2 = document.getElementById("marquee" + i + "_2");
+            if (direction == "up"){
+                if (obj2.offsetTop - obj.scrollTop <= 0){
+                    obj.scrollTop -= (obj1.offsetHeight + 20);
+                }else{
+                    var tmp = obj.scrollTop;
+                    obj.scrollTop++;
+                    if (obj.scrollTop == tmp){
+                        obj.scrollTop = 1;
+                    }
+                }
+            }else{
+                if (obj2.offsetWidth - obj.scrollLeft <= 0){
+                    obj.scrollLeft -= obj1.offsetWidth;
+                }else{
+                    obj.scrollLeft++;
+                }
+            }
+        }
+
+        function marqueeStart(i, direction){
+            var obj = document.getElementById("marquee" + i);
+            var obj1 = document.getElementById("marquee" + i + "_1");
+            var obj2 = document.getElementById("marquee" + i + "_2");
+
+            obj2.innerHTML = obj1.innerHTML;
+            var marqueeVar = window.setInterval("marquee("+ i +", '"+ direction +"')", 50);
+            obj.onmouseover = function(){
+                window.clearInterval(marqueeVar);
+            };
+            obj.onmouseout = function(){
+                marqueeVar = window.setInterval("marquee("+ i +", '"+ direction +"')", 50);
+            }
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+<!-- 其他顶部信息条 -->
+<div class="web-topInfo">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-sm-6 top-dateBox clearfix">
+                <span class="today">今天是：</span>
+                <span class="dateSpn">
+ 	<script language="javascript">
+       var day="";
+       var month="";
+       var ampm="";
+       var ampmhour="";
+       var myweekday="";
+       var year="";
+       mydate=new Date();
+       myweekday=mydate.getDay();
+       mymonth=mydate.getMonth()+1;
+       myday= mydate.getDate();
+       year= mydate.getFullYear();
+       if(myweekday == 0)
+       weekday=" 星期日 ";
+       else if(myweekday == 1)
+       weekday=" 星期一 ";
+       else if(myweekday == 2)
+       weekday=" 星期二 ";
+       else if(myweekday == 3)
+       weekday=" 星期三 ";
+       else if(myweekday == 4)
+       weekday=" 星期四 ";
+       else if(myweekday == 5)
+       weekday=" 星期五 ";
+       else if(myweekday == 6)
+       weekday=" 星期六 ";
+       document.write(year+"年"+mymonth+"月"+myday+"日 "+weekday);
+      </script>
+</span>            </div>
+            <div class="col-sm-6 top-linkBox">
+                <a href="JavaScript:void(0)">联系我们</a>
+                <!--<span>丨</span>
+                <a href="/guestbook.jspx">在线留言</a>-->
+            </div>
+        </div>
+    </div>
+</div><!-- /.顶部信息条 end -->
+<!-- 身体区域 -->
+<div class="web-bodyInfo">
+    <!-- logo内容 -->
+    <div class="web-logoInfo">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-sm-6 logo-box">
+                    <img class="logo" alt="logo" src="/r/cms/www/jlsdzy/images/logo.png">
+                </div>
+                <div class="col-sm-6 logo-txtBox clearfix">
+                    <img class="logo-txt" alt="logo-txt" src="/r/cms/www/jlsdzy/images/logo-txt.png">
+                </div>
+            </div>
+        </div>
+    </div><!-- /.logo内容 end -->
+    <!-- 导航内容 -->
+    <div class="web-navInfo">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="nav-cut">
+                    <div class="nav-class">
+                        <img class="nav-img" alt="导航按钮" src="/r/cms/www/jlsdzy/images/nav-img.png">
+                    </div>
+                <ul class="navUl-box clearfix">
+
+		        <li class="nav-close clearfix">
+                            <img alt="关闭" src="/r/cms/www/jlsdzy/images/nav-close.png">
+                        </li>
+                        <li class="navLi ">
+                            <a href="/">网站首页</a>
+                        </li>
+
+                        <li class="navLi animated ">
+                            <a href="http://www.jlsy.edu.cn/xyjj.jhtml">学院概况</a>
+                        </li>
+                        <li class="navLi animated ">
+                            <a href="http://www.jlsy.edu.cn/jlsldlzyxy/index.jhtml">机构设置</a>
+                        </li>
+                        <li class="navLi animated ">
+                            <a href="http://www.jlsy.edu.cn:80/djgz/index.jhtml">党建工作</a>
+                        </li>
+                        <li class="navLi animated ">
+                            <a href="http://www.jlsy.edu.cn:80/zsjyw/index.jhtml">招生信息</a>
+                        </li>
+                        <li class="navLi animated ">
+                            <a href="https://jlsycareer.hjiuye.com/">就业信息</a>
+                        </li>
+                        <li class="navLi animated ">
+                            <a href="http://www.jlsy.edu.cn:80/jyjx/index.jhtml">教育教学</a>
+                        </li>
+                        <li class="navLi animated ">
+                            <a href="http://www.jlsy.edu.cn:80/szdw/index.jhtml">师资队伍</a>
+                        </li>
+                        <li class="navLi animated ">
+                            <a href="http://www.jlsy.edu.cn:80/xstd/index.jhtml">学生天地</a>
+                        </li>
+                        <li class="navLi animated ">
+                            <a href="http://www.jlsy.edu.cn:80/jlhz/index.jhtml">交流合作</a>
+                        </li>
+                        <li class="navLi animated ">
+                            <a href="http://www.jlsy.edu.cn:80/xxgk/index.jhtml">信息公开</a>
+                        </li>
+                 
+                    </ul>
+                </div>
+                <!--<div class="search-cut">
+                    <div class="seekLi">
+			
+                        <form name="searchform"  action="/search.jspx" target="_blank">
+                            <label class="seek-label">
+                                <input name="q" id="txtKey" class="seek-input textfield" type="text" size="8" placeholder="智能搜索" value="" autocomplete="off"  onkeyup="myFunction()">
+
+                                <input type="image" name="" id="btnSearch" class="seek-btn"  src="/r/cms/www/jlsdzy/images/seek-btn.png" value="" autocomplete="off" onclick="return checkForm();">
+                            </label>
+                        </form>
+                        
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div><!-- /.导航内容 end -->
+
+<script>
+function myFunction(){
+	
+}
+
+function filterSqlStr(value){  
+    var sqlStr=sql_str().split(',');  
+    for(var i=0;i<sqlStr.length;i++){  
+       value = value.replace(sqlStr[i],"");
+    }  
+    return value;  
+}  
+
+
+function sql_str(){  
+    var str="and,delete,or,exec,insert,select,union,update,count,&,*,%,',(,),+,;,join,>,<";  
+    return str;  
+}  
+
+function checkForm(){
+ var regex = new RegExp("(^[\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]|[,，l])$");
+  if(!regex.test($("#txtKey").val())){
+     alert("只能输入中文和英文");
+     return false;
+  }
+}
+</script>
+<!-- 头条内容 -->
+    <div class="web-goodNews">
+        <div class="container">
+            <div class="row clearfix">
+                <img class="setting-lT" alt="左侧背景图" src="/r/cms/www/jlsdzy/images/setting-lT.png">
+                <img class="setting-rT" alt="右侧背景图" src="/r/cms/www/jlsdzy/images/setting-rT.png">
+				<!-- 花瓣 -->
+				<div class="maplebg"></div>
+				<!-- 花瓣结束 -->
+                <div class="goodNews-box">
+                    <div class="goodNews">
+                        <h1 class="goodNews-Title">
+                            <span class="red">【头条】</span>
+                            <a class="animated" href="https://www.jlsy.edu.cn/xxxw/20200531/2758.html"><span class="red" ><strong>学院二期规划效果图</strong></span></a>
+                        </h1>
+                        <p class="goodNews-P"></p>
+                    </div>
+                    <div id="marquee1" class="marqueeleft gN-linkBox">
+                        <div style="width:8000px;">
+                            <ul id="marquee1_1" class="goodNews-linkUl clearfix">
+                                <li class="goodNews-linkLi">
+                                    <a class="clearfix" href="/xxxw/20210129/1941.html">
+                                        <span class="gN-topic">喜讯！学院校园扩建项目一期工程可研报告获发改委批复</span>
+                                        <!--<span class="gN-date"> 01/29</span>-->
+                                    </a>
+                                </li>
+								
+                                <li class="goodNews-linkLi">
+                                    <a class="clearfix" href="/xxxw/20201231/1791.html">
+                                        <span class="gN-topic">优秀！我校就业工作被吉林省教育厅表扬!</span>
+                                        <!--<span class="gN-date"> 12/31</span>-->
+                                    </a>
+                                </li>
+								
+                                <li class="goodNews-linkLi">
+                                    <a class="clearfix" href="/xxxw/20210104/1800.html">
+                                        <span class="gN-topic">特色发展  再攀新高</span>
+                                        <!--<span class="gN-date"> 01/04</span>-->
+                                    </a>
+                                </li>
+								
+                                <li class="goodNews-linkLi">
+                                    <a class="clearfix" href="/xxxw/20201216/1850.html">
+                                        <span class="gN-topic">喜报！我校学子在第四届吉林省中华职业教育创新创业大赛中荣获...</span>
+                                        <!--<span class="gN-date"> 12/16</span>-->
+                                    </a>
+                                </li>
+								
+                            </ul>
+                            <ul id="marquee1_2" class="goodNews-linkUl">
+							
+							</ul>
+                        </div>
+                    </div><!--marqueeleft end-->
+                    <script type="text/javascript">marqueeStart(1, "left");</script>
+                </div>
+            </div>
+
+						
+        </div>
+    </div><!-- /.头条内容 end -->
+
+<!-- 新闻版块 -->
+<div class="web-News">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="news-box">
+                <div class="newCase clearfix">
+                    <!-- 图片新闻 -->
+                    <div class="slider slideShow">
+                        <div class="owl-carousel banner_box">
+                            <div class="owl-wrapper-outer banner">
+
+
+                                <!--  <div class="item" style="display:none"><img src="/r/cms/www/jlsdzy/images/width_pic3.png"></div>
+                                 <div class="item" style="display:none"><img src="/r/cms/www/jlsdzy/images/width_pic1.png"></div>
+                                 <div class="item" style="display:none"><img src="/r/cms/www/jlsdzy/images/width_pic4.png"></div> -->
+
+                                <div class="item"  style="display:black"><a href="/xxxw/20240927/3318.html"><img src="/u/cms/www/202410/091531452t9r.jpg" alt="松辽现代水利产教融合共同体成立大会隆重召开"></a></div>
+
+                                <div class="item"  style="display:none"><a href="/xxxw/20241009/3319.html"><img src="/u/cms/www/202410/09153309agb6.png" alt="吉林水利电力职业学院召开第二届大学生田径运动会"></a></div>
+
+                                <div class="item"  style="display:none"><a href="/xxxw/20240910/3320.html"><img src="/u/cms/www/202410/09153655m1sz.jpg" alt="学院举行庆祝第40个教师节大会暨2024年开学典礼"></a></div>
+
+                                <div class="item"  style="display:none"><a href="/xxxw/20240615/3317.html"><img src="/u/cms/www/202410/09152506a7uj.png" alt="学院承办吉林省水利“安全生产月”6.16安全宣传咨询日暨厅直属单位消防安全应急演练"></a></div>
+
+                                <div class="item"  style="display:none"><a href="/xxxw/20240413/3316.html"><img src="/u/cms/www/202410/09152401fq6m.jpg" alt="学院举办“工匠精神进校园”杨永修报告会"></a></div>
+
+                                <div class="item"  style="display:none"><a href="/xxxw/20240327/3223.html"><img src="/u/cms/www/202403/27123837y7wy.png" alt="吉林省水利厅党组书记、厅长杨少清到吉林水利电力职业学院调研"></a></div>
+
+                            </div>
+                            <div class="owl-controls owl-page-btn">
+                                <div class="owl-pagination clearfix">
+                                    <div class="owl-page active"><span></span></div>
+                                    <div class="owl-page"><span></span></div>
+                                    <div class="owl-page"><span></span></div>
+                                    <div class="owl-page"><span></span></div>
+                                    <div class="owl-page"><span></span></div>
+                                    <div class="owl-page"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 图片新闻结束 -->
+                    <!-- 学校新闻和媒体水院 -->
+                    <div class="newCase-content">
+                        <div class="nCase-box">
+                            <div class="nCase-title clearfix">
+                                <div class="caption">
+                                    <a class="nCase-CN ative" href="http://www.jlsy.edu.cn/xxxw/index.jhtml">学校新闻</a>
+                                    <span class="nCase-EN">school news</span>
+                                </div>
+                                <span class="nCase-dot"></span>
+                                <div class="caption">
+                                    <a class="nCase-CN" href="http://www.jlsy.edu.cn/mtsy/index.jhtml">媒体水院</a>
+                                    <span class="nCase-EN">Water courtyard</span>
+                                </div>
+                            </div>
+                            <!-- 学校新闻 -->
+                            <div class="newCase-major">
+
+                                <div class="major-new">
+                                    <h3 class="major-newTitle"><a href="/xxxw/20241022/3322.html" title="吉林水利电力职业学院举办2024级新生军训成果汇报" style="color:red;font-weight:bold">吉林水利电力职业学院举办2024级新生军训成果汇报</a></h3>
+                                    <p class="major-newP"><a href="/xxxw/20241022/3322.html"></a></p>
+                                    <!--<span class="major-newDate">2024/10/22</span>-->
+                                </div>
+
+                                <ul class="newList">
+                                    <li>
+                                    <a class="clearfix" href="/xxxw/20241009/3315.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">吉林水利电力职业学院召开第二届大学生田径运动会</h4>
+                                        <!--<span class="date">2024/10/09</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/xxxw/20240927/3312.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">松辽现代水利产教融合共同体成立大会隆重召开</h4>
+                                        <!--<span class="date">2024/09/27</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/xxxw/20240926/3311.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">吉林水利电力职业学院工会委员会 召开第五届第一次会员代表大会</h4>
+                                        <!--<span class="date">2024/09/26</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/xxxw/20240910/3305.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">学院举行庆祝第40个教师节大会暨2024年开学典礼</h4>
+                                        <!--<span class="date">2024/09/10</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/xxxw/20240615/3284.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">学院承办吉林省水利“安全生产月”6.16安全宣传咨询日暨厅直属单位消防安全应急演练</h4>
+                                        <!--<span class="date">2024/06/15</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/xxxw/20240413/3254.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">学院举办“工匠精神进校园”杨永修报告会</h4>
+                                        <!--<span class="date">2024/04/13</span>-->
+                                    </a>
+                                </li>
+
+
+                                </ul>
+                            </div>
+                            <!-- 媒体水院 -->
+                            <div class="newCase-major" style="display:none">
+
+                                <div class="major-new">
+                                    <h3 class="major-newTitle"><a href="/mtsy/20240524/3277.html" title="不负春光，共赴水电学院一场春意之约">不负春光，共赴水电学院一场春意之约</h3>
+                                    <p class="major-newP">摘要：</a></p>
+                                    <!--<span class="major-newDate">2024/05/24</span>-->
+                                </div>
+
+                                <ul class="newList">
+                                    <li>
+                                    <a class="clearfix" href="/mtsy/20240401/3234.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">学院隆重举行庆祝中国共产党成立102周年暨2023届毕业生毕业典礼</h4>
+                                        <!--<span class="date">2024/04/01</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/mtsy/20240401/3233.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">吉林水利电力职业学院举办2022级学生军训汇报表演</h4>
+                                        <!--<span class="date">2024/04/01</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/mtsy/20240401/3232.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">欢迎你，2023级的水电学子！</h4>
+                                        <!--<span class="date">2024/04/01</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/mtsy/20240401/3231.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">吉林水利电力职业学院2023级开学典礼暨军训成果汇报</h4>
+                                        <!--<span class="date">2024/04/01</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/mtsy/20240401/3230.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">吉林水利电力职业学院举办纪念毛泽东诞辰130周年暨建院七周年文艺汇演</h4>
+                                        <!--<span class="date">2024/04/01</span>-->
+                                    </a>
+                                </li>
+<li>
+                                    <a class="clearfix" href="/mtsy/20240401/3229.html">
+                                        <span class="disc"></span>
+                                        <h4 class="headline">高雅音乐进校园︱吉林水利电力职业学院举办2024新年音乐会</h4>
+                                        <!--<span class="date">2024/04/01</span>-->
+                                    </a>
+                                </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 图片新闻和校园新闻结束 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.新闻版块 end -->
+<!-- 党建工作&通知公告 -->
+<div class="web-listControl">
+    <div class="container">
+        <div class="row clearfix">
+            <!-- 党建工作 -->
+            <div class="listControl-box">
+                <div class="lControl lC-Left lControl-01">
+                    <div class="lC-head clearfix">
+                        <h6 class="lC-headH6">党建工作</h6>
+                        <a class="lC-headMore" href="http://www.jlsy.edu.cn:80/djgz/index.jhtml">更多</a>
+                    </div>
+                    <ul class="newList">
+                        <li>
+                            <a class="clearfix" href="/dwgz/20230628/3109.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院后勤保卫党支部与新立城镇爱国村党总支部开展庆“七·一”共建活动</h4>
+                                <!--<span class="date">06-28</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/dwgz/20211217/2596.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">中共吉林水利电力职业学院委员会党校第二期学生发展对象培训班开班</h4>
+                                <!--<span class="date">12-17</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/dwgz/20211112/2369.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">中国共产党第十九届中央委员会第六次全体会议公报</h4>
+                                <!--<span class="date">11-12</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/dwgz/20210714/2602.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院组织开展“重走抗联路，传承抗联精神”党史学习教育专题培训</h4>
+                                <!--<span class="date">07-14</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/dwgz/20210702/2603.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">我校师生认真收听收看中国共产党成立100周年庆祝大会直播</h4>
+                                <!--<span class="date">07-02</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/dwgz/20210701/2604.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">颂歌献给党|吉林水利电力职业学院举行升旗仪式</h4>
+                                <!--<span class="date">07-01</span>-->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 通知公告 -->
+            <div class="listControl-box">
+                <div class="lControl lC-Right">
+                    <div class="lC-head clearfix">
+                        <h6 class="lC-headH6">通知公告</h6>
+                        <a class="lC-headMore" href="/tzgg/">更多</a>
+                    </div>
+                    <ul class="newList">
+                        <li>
+                            <a class="clearfix" href="/tzgg/20240912/3304.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院公开招聘合同制工作人员公告</h4>
+                                <!--<span class="date">09-12</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/tzgg/20240905/3303.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">我校2024年万方数据资源系统开通使用通知</h4>
+                                <!--<span class="date">09-05</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/tzgg/20240808/3300.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院缴费说明</h4>
+                                <!--<span class="date">08-08</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/tzgg/20240721/3298.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">关于拟推荐申报2025年度吉林省教育厅高校思想政治工作专项课题的公示</h4>
+                                <!--<span class="date">07-21</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/tzgg/20240705/3299.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">关于拟推荐申报2025年度吉林省教育厅科研项目的公示</h4>
+                                <!--<span class="date">07-05</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/tzgg/20240312/3216.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院2024年学生退役后申请免试专升本人员名单公示</h4>
+                                <!--<span class="date">03-12</span>-->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.党建经纬&通知公告 end -->
+<!-- 招生就业&学生天地 -->
+<div class="web-listControl">
+    <div class="container">
+        <div class="row clearfix">
+            <!-- 招生就业 -->
+            <div class="listControl-box">
+                <div class="lControl lC-Left">
+                    <div class="lC-head clearfix">
+                        <h6 class="lC-headH6">招生就业</h6>
+                        <a class="lC-headMore" href="http://www.jlsy.edu.cn:80/zsjyw/index.jhtml">更多</a>
+                    </div>
+                    <ul class="newList">
+                        <li>
+                            <a class="clearfix" href="http://www.jlsy.edu.cn:80/zsdt/3285.jhtml">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院2024年招生简章</h4>
+                                <!--<span class="date">06-17</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="http://www.jlsy.edu.cn:80/zsdt/3253.jhtml">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院 2024年高职分类考试招生章程</h4>
+                                <!--<span class="date">04-10</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="http://www.jlsy.edu.cn:80/zsdt/3252.jhtml">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院 2024年高职单招职业技能测试报考指南</h4>
+                                <!--<span class="date">04-10</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="http://www.jlsy.edu.cn:80/zsdt/3217.jhtml">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院2024年高职分类考试招生计划表</h4>
+                                <!--<span class="date">03-14</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="http://www.jlsy.edu.cn:80/zszc2/3181.jhtml">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院2024年高职单招简章</h4>
+                                <!--<span class="date">11-22</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="http://www.jlsy.edu.cn:80/zsdt/3180.jhtml">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院2024年高职单招简章</h4>
+                                <!--<span class="date">11-22</span>-->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 学生天地 -->
+            <div class="listControl-box">
+                <div class="lControl lC-Right lControl-04">
+                    <div class="lC-head clearfix">
+                        <h6 class="lC-headH6">学生天地</h6>
+                        <a class="lC-headMore" href="http://www.jlsy.edu.cn:80/xstd/index.jhtml">更多</a>
+                    </div>
+                    <ul class="newList">
+                        <li>
+                            <a class="clearfix" href="/xsfc/20240831/3306.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">欢迎你，2024级的水电学子！</h4>
+                                <!--<span class="date">08-31</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/xsfc/20240703/3297.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">吉林水利电力职业学院新能源（能源与电力）学院 首届“能源杯”篮球赛成功举办</h4>
+                                <!--<span class="date">07-03</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/xsfc/20240625/3289.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">智能工程学院在第十五届“蓝桥杯”大赛中喜获佳绩</h4>
+                                <!--<span class="date">06-25</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/xsfc/20240527/3280.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">【喜报】我校建筑与测绘学院师生在2024年吉林省职业院校技能大赛中荣获多项佳绩</h4>
+                                <!--<span class="date">05-27</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/xsfc/20240524/3276.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">喜报 | 汗水铸就成绩</h4>
+                                <!--<span class="date">05-24</span>-->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="clearfix" href="/xsfc/20240402/3248.html">
+                                <span class="disc"></span>
+                                <h4 class="headline">“创业奋斗‘就’在吉林”吉林水利电力职业学院2024届春季校园招聘会</h4>
+                                <!--<span class="date">04-02</span>-->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.招生就业&学生天地 end -->
+<!-- 板块&公众号 -->
+<div class="web-listControl">
+    <div class="container">
+        <div class="row clearfix">
+            <!-- 板块 -->
+            <div class="listControl-box">
+                <div class="lControl lC-Left">
+                    <div class="plateBox clearfix">
+                        <div class="plate-left">
+                            <a class="plate-linkA plate-A" href="/zsjyzyjs/">
+                                <img class="plate-ico" src="/r/cms/www/jlsdzy/images/plate-ico01.png">
+                                <p class="plate-txt">专业介绍</p>
+                            </a>
+                        </div>
+                        <div class="plate-right">
+                            <a class="linkA-right linkA-rOne clearfix plate-A" href="/zsjyddzs/">
+                                <img class="plate-ico" src="/r/cms/www/jlsdzy/images/plate-ico02.png">
+                                <p class="plate-txt">单独招生</p>
+                            </a>
+                            <a class="linkA-right linkA-rTwo clearfix plate-A" href="http://www.jlsy.edu.cn:80/zsxx/index.jhtml">
+                                <img class="plate-ico" src="/r/cms/www/jlsdzy/images/plate-ico03.png">
+                                <p class="plate-txt">招生信息</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 公众号 -->
+            <div class="listControl-box">
+                <div class="lControl lC-Right">
+                    <div class="plateBox clearfix">
+                        <div class="vipcn clearfix">
+                            <img class="vipcnImg" alt="公众号" src="/r/cms/www/jlsdzy/images/vipcnImg.png">
+                            <div class="vipcnTxt-box">
+                                <h6 class="vipcn-title">校园公众号</h6>
+                                <p class="vipcn-p">吉林水利电力职业学院微信公众号（订阅号）是学院资讯发布的平台，欢迎社会各界朋友关注。</p>
+                            </div>
+                        </div>
+                        <div class="restBox clearfix">
+                            <a class="" href="http://oa.jlsy.edu.cn/">
+                                智慧校园综合服务管理云平台
+                            </a>
+                            <a href="http://www.jlsy.edu.cn/bwcxljsm/index.jhtml" style="background:#da2622; color:#fff000">
+                                  “不忘初心 牢记使命”专题
+                            </a>
+                           <!--a href="http://www.jlsy.edu.cn/xtjsz.jhtml">
+                                  智慧校园资源平台
+                            </a-->
+                            <a class="" href="https://oa.jlsy.edu.cn/SFX/">
+                                示范校专题展示平台
+                            </a>
+                            <a href="http://www.jlsy.edu.cn/xtjsz.jhtml">
+                                图书管理系统
+                            </a>
+                            <a class="" href="http://www.jlsy.edu.cn/xtjsz.jhtml">
+                                下载专区
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.板块&公众号 end -->
+<!-- 滚动图片 -->
+<div class="web-special">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="specialBox">
+                <img class="last" alt="上一张" title="上一张" src="/r/cms/www/jlsdzy/images/last-ico.png">
+                <img class="next" alt="下一张" title="下一张" src="/r/cms/www/jlsdzy/images/next-ico.png">
+                <div class="special-imgBox">
+                    <ul class="special-ul clearfix" style="width: 8000px">
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202309/070851166uzl.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/24110938ph7m.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/241109468gjb.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/24111510u9i1.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/24111004i8qb.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/24111013urep.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/24111127dexn.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202309/07085942fvsj.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/241117220kvj.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/2413375423w7.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/24133854ahgr.jpg"></a>
+                        </li>
+                        <li class="special-li">
+                            <a href="javascript:void(0)"><img class="special-img" src="/u/cms/www/202405/241339268b5t.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.滚动图片 end -->
+
+<!-- 页脚 -->
+<!-- footer -->
+<div class="web-footerBox">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="footerBox">
+                <div class="blogroll clearfix">
+                    <span class="blogroll-spn">相关链接</span>
+                    <div class="blogroll-aBox" style=" width: 91%;float:left">
+                        <a href="http://www.jl.gov.cn/">吉林省人民政府</a>
+                        <a href="http://slt.jl.gov.cn/">吉林省水利厅</a>
+                        <a href="http://jyt.jl.gov.cn/">吉林省教育厅</a>
+                        <a href="http://www.people.com.cn/">人民网</a>
+                        <a href="http://www.moe.gov.cn/">教育部</a>
+                        <a href="http://jky.jledu.gov.cn/">吉林省教育科学院</a>
+                        <a href="http://www.jleea.edu.cn/">吉林省教育考试院</a>
+                        <a href="https://jlsldl.ncss.cn/student/index.html/">国家24365大学生就业服务平台</a>
+                    </div>
+                </div>
+                <div class="copyright clearfix">
+                    <img class="copyright-img" src="/r/cms/www/jlsdzy/images/copyright-img.png">
+                    <div class="copyright-txt">
+                        <span>版权所有：吉林水利电力职业学院</span>
+                        <span><a href="https://beian.miit.gov.cn/" target="_blank">吉ICP备17003529号-2</a></span>
+                        <span><a href="https://beian.miit.gov.cn/" target="_blank">吉ICP备17003529号-3</a></span>
+                        <span><a href="http://www.beian.gov.cn//" target="_blank">吉公网安备22017202000384号</a></span>
+                        <span></span>
+                        <span>招生热线：0431-81120776／81120778／81120779</span>
+                        <span>办公电话：0431-81120711</span>
+                        <span>学校地址：吉林省长春市净月开发区聚业大街6566号</span>
+                        <span>邮编：130117</span>
+                        <span>访客数总量: <a id="visitor"></a>&nbsp;&nbsp今日访客数:  <a id="dayVisitor"></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.footer end --><script>
+    //花瓣飘落动效
+    var d = "<div class='maple'><img src='/r/cms/www/jlsdzy/images/petal.png'><div>";
+    setInterval(function () {
+        var f = $(document).width();
+        var e = Math.random() * f - 300; // 枫叶的定位left值
+        var o = 0.2 + Math.random(); // 枫叶的透明度
+        var fon = 25 + Math.random() * 10; // 枫叶大小
+        var l = e - 100 + 200 * Math.random(); // 枫叶的横向位移
+        var k = 8000 + 5000 * Math.random();
+        var deg = Math.random() * 360; // 枫叶的方向
+        $(d).clone().appendTo(".maplebg").css({
+            left: e + "px",
+            opacity: o,
+            transform: "rotate(" + deg + "deg)",
+            "font-size": fon,
+        }).animate({
+            top: "550px",
+            left: l + "px",
+            opacity: 0.1,
+        }, k, "linear", function () {
+            $(this).remove()
+        })
+    }, 500)
+</script>
+<!--访问-->
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+        Cms.siteFlow("", location.href, document.referrer, "true");
+//$(this).cookie("_site_id_cookie","1",{path: '' }); 
+    });
+</script>
+<!-- 飘窗3 -->
+<script type="text/javascript" src="/r/cms/www/jlsdzy/js/piaochuang.js"></script>
+
+<!--最原先的飘窗
+<div class="automv"  id='three' style="width: 420px;height:260px; z-index:9999;">
+    <a class="close">×</a>
+    <a target="_blank" href="https://dz.jlsy.edu.cn/">
+         <img src="/r/cms/www/jlsdzy/images/piaochuang-20240422.png" id="top" style="opacity: 1;width: 420px;" alt="广告图片">
+    </a>
+</div>
+-->
+
+<!--19年11月份招生固定窗口 
+<div style="position:fixed; top:20%; left:0;width: 125px;height: 300px; z-index:9998;">
+       <a target="" href="https://www.jlsy.edu.cn/zsdt/2783.jhtml">
+           <img src="/r/cms/www/jlsdzy/images/piaochuang-3.jpg" id="top" style="width:125px;" alt="广告图片" >
+       </a>
+</div>
+<div style="position:fixed; top:20%; right:0;width:325px;height: 372px; z-index:9998;">
+       <a target="" href="">
+           <img src="/r/cms/www/jlsdzy/images/piaochuang_big.jpg" id="top" style="width:325px;" alt="广告图片" >
+       </a>
+</div>
+-->
+<script type="text/javascript">
+    //测试插件
+    $('.automv').autoMove({angle:-Math.PI/4, speed:120});
+        //关闭按钮		
+        $('.close').click(function(){
+        $('#three').css('display','none');
+    });
+</script>
+
+
+<!-- 飘窗结束 --></body>
+</html>

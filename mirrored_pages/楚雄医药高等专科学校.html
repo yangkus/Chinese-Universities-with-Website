@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>楚雄医药高等专科学校</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta name="distribution" content="global" />
+<meta name="author" content="www.aykj.net">
+<meta name="Copyright" content="www.aykj.net">
+<meta name="format-detection" content="telephone=no"/>
+<link rel="shortcut icon" href="/subsiteSrc/cnPc/images/logo.ico" type="images/x-icon" />
+<link rel="stylesheet" type="text/css" href="/subsiteSrc/cnPc/style/base.css">
+<!-- 组件样式 -->
+<link rel="stylesheet" type="text/css" href="/subsiteSrc/cnPc/style/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/subsiteSrc/cnPc/components/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="/subsiteSrc/cnPc/components/swiper/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="/subsiteSrc/cnPc/components/easyScroll/easyScroll.css"> 
+<!-- 基本样式 -->
+<link rel="stylesheet" type="text/css" href="/subsiteSrc/cnPc/style/main.css"/>
+<link rel="stylesheet" type="text/css" href="/subsiteSrc/cnPc/style/common.css">
+<link rel="stylesheet" type="text/css" href="/subsiteSrc/cnPc/style/media.css"> 
+<!-- 组件js -->
+<script type="text/javascript" src="/subsiteSrc/cnPc/js/jquery.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/js/wow.min.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/easyScroll/mousewheel.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/easyScroll/easyscroll.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/waterFall/minigrid.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/slick/slick.min.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/superSlide/superslide.2.1.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/ckplayer/ckplayer.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/layer/layer.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/swiper/swiper.min.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/audiojs/audio.min.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/components/movePort/move_port.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/js/rollSmooth.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/js/jquery.roundabout.min.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/js/jquery.SuperSlide.js"></script>
+<link href="/subsiteSrc/cnPc/components/share/css/share.css" rel="stylesheet" type="text/css" />
+<script src="/subsiteSrc/cnPc/components/share/js/share.js" type="text/javascript" charset="utf-8"></script>
+ <!--音乐H5 begin-->
+<link rel="stylesheet" type="text/css" href="/subsiteSrc/cnPc/components/audiojs/audio.css"/>
+<script src="/subsiteSrc/cnPc/components/audiojs/audio.min.js"></script>
+ <!--音乐H5 end-->
+
+<!-- 基本js -->
+<script type="text/javascript" src="/subsiteSrc/cnPc/js/menu.js"></script>
+<script type="text/javascript" src="/subsiteSrc/cnPc/js/aykj.js"></script>
+</head>
+<body>
+<!-- 浏览器识别  -->
+<script>
+	function setCookie(key,value,t)
+	{
+		var oDate=new Date();
+		oDate.setDate(oDate.getDate()+t);
+		value = oDate.getTime();
+		document.cookie=key+"="+value+"; expires="+oDate.toDateString();
+		return decodeURI(value);
+	}	
+	function getCookie(key){
+		var arr1=document.cookie.split("; ");//由于cookie是通过一个分号+空格的形式串联起来的，所以这里需要先按分号空格截断,变成[name=Jack,pwd=123456,age=22]数组类型；
+		for(var i=0;i<arr1.length;i++){
+			var arr2=arr1[i].split("=");//通过=截断，把name=Jack截断成[name,Jack]数组；
+			if(arr2[0]==key){
+				return decodeURI(arr2[1]);
+			}
+		}
+	}
+	//浏览器及版本信息
+	var Sys = {};
+	var ua = navigator.userAgent.toLowerCase();
+	var s;
+	(s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+	(s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+	(s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+	(s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+	(s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+	
+	function getBrowserInfo(){
+	    var currentSys = {};
+	    var ua = navigator.userAgent.toLowerCase();
+	    var re =/(msie|firefox|chrome|opera|version).*?([\d.]+)/;
+	    var m = ua.match(re);
+		if(m!=undefined){
+			currentSys.browser =m[1]?m[1].replace(/version/, "'safari"):"";
+			currentSys.ver = m[2]?m[2]:"";
+		}
+	    return currentSys;
+	}
+
+	function myexplorer() {
+		var explorer = window.navigator.userAgent;
+		if (explorer.indexOf("QQBrowser") >= 0 || explorer.indexOf("QQ") >= 0) {
+			return myexplorer = "腾讯QQ";
+		} else if (explorer.indexOf("Safari") >= 0
+				&& explorer.indexOf("MetaSr") >= 0) {
+			return myexplorer = "搜狗";
+		} else if (!!window.ActiveXObject || "ActiveXObject" in window) {//IE
+			if (!window.XMLHttpRequest) {
+				return myexplorer = "IE6";
+			} else if (window.XMLHttpRequest && !document.documentMode) {
+				return myexplorer = "IE7";
+			} else if (!-[ 1, ] && document.documentMode
+					&& !("msDoNotTrack" in window.navigator)) {
+				return myexplorer = "IE8";
+			} else {//IE9 10 11
+				var hasStrictMode = (function() {
+					"use strict";
+					return this === undefined;
+				}());
+				if (hasStrictMode) {
+					if (!!window.attachEvent) {
+						return myexplorer = "IE10";
+					} else {
+						return myexplorer = "IE11";
+					}
+				} else {
+					return myexplorer = "IE9";
+				}
+			}
+		} else {//非IE
+			if (explorer.indexOf("LBBROWSER") >= 0) {
+				return myexplorer = "猎豹";
+			} else if (explorer.indexOf("360ee") >= 0) {
+				return myexplorer = "360极速浏览器";
+			} else if (explorer.indexOf("360se") >= 0) {
+				return myexplorer = "360安全浏览器";
+			} else if (explorer.indexOf("se") >= 0) {
+				return myexplorer = "搜狗浏览器";
+			} else if (explorer.indexOf("aoyou") >= 0) {
+				return myexplorer = "遨游浏览器";
+			} else if (explorer.indexOf("qqbrowser") >= 0) {
+				return myexplorer = "QQ浏览器";
+			} else if (explorer.indexOf("baidu") >= 0) {
+				return myexplorer = "百度浏览器";
+			} else if (explorer.indexOf("Firefox") >= 0) {
+				return myexplorer = "火狐";
+			} else if (explorer.indexOf("Maxthon") >= 0) {
+				return myexplorer = "遨游";
+			} else if (explorer.indexOf("Chrome") >= 0) {
+				return myexplorer = "谷歌";//谷歌（或360伪装）
+			} else if (explorer.indexOf("Opera") >= 0) {
+				return myexplorer = "欧朋";
+			} else if (explorer.indexOf("TheWorld") >= 0) {
+				return myexplorer = "世界之窗";
+			} else if (explorer.indexOf("Safari") >= 0) {
+				return myexplorer = "苹果";
+
+			} else {
+				return myexplorer = "其他";
+			}
+		}
+	}
+	$(function(){
+		//获取当前的浏览器信息
+		var sys = getBrowserInfo();  //这里是为了获取版本号  浏览器类型不用这个获取  不精准
+		var browser = myexplorer();
+		var screenObj=window.screen;
+		var screen =screenObj!=null&&screenObj!=undefined?(window.screen.width + "×" + window.screen.height):"";
+		var referrer = document.referrer;
+		var title = document.title;
+		var user = getCookie("AYKJDATA") ? getCookie("AYKJDATA") : setCookie(
+				"AYKJDATA", '', '');
+		var url = window.location.href;
+		var host = window.location.host;
+				$.ajax({
+					type : 'POST',
+					url : '/tongji/add',
+					data : 'newsClassId=30&subsiteId=22&type=&url='
+							+ url
+							+ "&host="
+							+ host
+							+ '&screen='
+							+ screen
+							+ '&title='
+							+ title
+							+ '&referrer='
+							+ referrer
+							+ '&browser='
+							+ browser
+							+ '&browserVersion='
+							+ sys.ver
+							+ '&user=' + user,
+					success : function(result) {
+						
+					}
+				});
+		
+	})
+</script>
+
+
+<input type="hidden" id ="startTimezh" value="2022/11/30 19:06:19"/> 
+<input type="hidden" id ="endTimezh" value="2022/12/07 00:00:00"/> 
+<script type="text/javascript">
+	$(function (){
+		var startTime = $("#startTimezh").val();
+		var endTime = $("#endTimezh").val();
+		if(checkedDate(startTime,endTime)){
+			getCss();
+		}
+	})
+	function checkedDate(beginStr,endStr){
+		var curDate = new Date(),
+		beginDate = new Date(beginStr),
+		endDate = new Date(endStr);
+		if(curDate>= beginDate && curDate <= endDate){
+			return true;
+		}
+		return false;
+	}
+	function  getCss(){
+		$("html").css({
+			'-webkit-filter':'grayscale(100%)', 
+			'-moz-filter': 'grayscale(100%)',
+			'-ms-filter': 'grayscale(100%)', 
+			'-o-filter': 'grayscale(100%)',
+			'filter':'progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)',
+			'_filter':'none'
+		})
+	}
+</script><!-- 表单提交  -->
+<script type="text/javascript" src="/jslib/common.js"></script>
+<input type="hidden" id="aaa" value="aaa30" /><input type="hidden" id="bbb" value="bbb30" /><script>
+   //引入到公共非head.jsp
+   //在需要继承的地方设置栏目id， 如二级栏目 class="bbb"
+   $(function(){
+       var aaa = $("#aaa").val();
+       var bbb = $("#bbb").val();
+       var ccc = $("#ccc").val();
+
+       $("."+aaa).addClass("hover");
+       $("."+bbb).addClass("hover");
+       $("."+ccc).addClass("hover");
+   })
+</script>
+<!--百度自动推送工具代码 begin-->
+<script>
+(function(){
+	var bp = document.createElement('script');
+	var curProtocol = window.location.protocol.split(':')[0];
+	if (curProtocol === 'https') {
+		bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+	}
+	else {
+		bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	}
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--百度自动推送工具代码 end-->
+<div class="topBox">
+	<div class="top">
+		<div class="top1">
+			<div class="wrap">
+				<div class="top1Con">
+					<div class="top1R fr">
+						<dl class="top1Dl fl">
+							<dd class="animated fadeInUp" style="animation-delay: 0.0s;">
+									<a target="_blank" href="http://www.x720yun.com/tour/38db6ffa17e86d5b">
+										VR全景</a>
+								</dd>
+							<dd class="animated fadeInUp" style="animation-delay: 0.1s;">
+									<a target="_top" href="http://www.cxmc.edu.cn/list/cnPc/22/1739/auto/12/0.html">
+										安全工作</a>
+								</dd>
+							<dd class="animated fadeInUp" style="animation-delay: 0.2s;">
+									<a target="_top" href="http://www.cxmc.edu.cn/list/cnPc/22/99/auto/12/0.html">
+										信息系统</a>
+								</dd>
+							<dd class="animated fadeInUp" style="animation-delay: 0.30000000000000004s;">
+									<a target="_blank" href="http://tsg.cxmtc.net/">
+										图书馆</a>
+								</dd>
+							<dd class="animated fadeInUp" style="animation-delay: 0.4s;">
+									<a target="_blank" href="https://www.ncss.cn/">
+										国家大学生就业服务平台—24365校园招聘服务</a>
+								</dd>
+							</dl>
+						<div class="topSearch fl">
+							<div class="searchIcn"></div>
+							<div class="searchBox">
+								<input type="text" id="indexSearchKey" placeholder="请输入关键词">
+								<i class="searchIcon"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top2">
+			<div class="wrap">
+				<div class="top2Con">
+					<h1 class="logo fl" title="楚雄医药高等专科学校">
+						<a target="_top" href="">
+							<img src="/uploadDir/png/20211228/1640678135189.png" class="logo1"/>
+							<img src="/uploadDir/png/20211228/1640678096872.png" class="logo2"/>
+						</a>
+					</h1>
+					<dl class="menuDl fr">
+						<dd class="aaa30 animated fadeInUp" >
+							<div class="yj">
+								<a target="_top" href="/list/cnPc/22/30/auto/12/0.html">
+									首页</a>
+							</div>
+							</dd>
+						<dd class="aaa31 animated fadeInUp" >
+							<div class="yj">
+								<a target="_top" href="/list/cnPc/22/38/auto/12/0.html">
+									学校概况</a>
+							</div>
+							<div class="ej ejMenuCon">
+								<div class="ejCon">
+									<div class="con clearC">
+										<div class="conL fl">
+											<div class="pic fl">
+												<!-- <img src="test/subPage/f-pic1.jpg" alt=""> -->
+												<img src="/uploadDir/png/20211113/1636784592222.png" >
+											</div>
+											<div class="text">
+												砺志笃行，大医精诚。楚雄医专欢迎你！</div>
+										</div>
+										<div class="conR">
+											<div class="menuEjddBox bbb38">
+												<a  target="_top" href="/list/cnPc/22/38/auto/12/0.html">
+													学校简介</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											<div class="menuEjddBox bbb1753">
+												<a  target="_top" href="/list/cnPc/22/1753/auto/12/0.html">
+													学校章程</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											<div class="menuEjddBox bbb39">
+												<a  target="_top" href="/list/cnPc/22/39/auto/12/0.html">
+													学校沿革</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											<div class="menuEjddBox bbb40">
+												<a  target="_top" href="/list/cnPc/22/40/auto/12/0.html">
+													现任领导</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											<div class="menuEjddBox bbb41">
+												<a  target="_top" href="/list/cnPc/22/41/auto/12/0.html">
+													历任领导</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											<div class="menuEjddBox bbb42">
+												<a  target="_top" href="/list/cnPc/22/43/auto/12/0.html">
+													学校标识</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											<div class="menuEjddBox bbb46">
+												<a  target="_top" href="/list/cnPc/22/46/auto/9/0.html">
+													学校专题片</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											<div class="menuEjddBox bbb47">
+												<a  target="_top" href="/list/cnPc/22/47/auto/12/0.html">
+													信息公开</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											<div class="menuEjddBox bbb275">
+												<a  target="_top" href="/list/cnPc/22/275/auto/12/0.html">
+													楚雄映像</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											</div>
+									</div>
+								</div>
+							</div>	
+							</dd>
+						<dd class="aaa32 animated fadeInUp zuZhi">
+								<div class="yj">
+									<a target="_top" href="/list/cnPc/22/32/auto/12/0.html">
+										组织机构</a>
+								</div>
+								<div class="ej ejMenuCon">
+									<div class="ejCon">
+										<div class="con clearC">
+											<div class="conL fl">
+												<div class="pic fl">
+													<!-- <img src="test/subPage/f-pic1.jpg" alt=""> -->
+													<img src="/uploadDir/png/20210823/1629685290448.png" >
+												</div>
+												<div class="text">
+													砺志笃行，大医精诚。楚雄医专欢迎你！</div>
+											</div>
+											<div class="conR">
+												<div class="menuEjddBox">
+													<a class="bbb84" target="_top" href="/list/cnPc/22/84/auto/12/0.html">
+														党政部门</a>
+													<div class="sjCon">
+														<ul class="sjConList">
+														<li>
+																<a href="/subsiteIndex/cndbPc.html"><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnjjcPc.html"><span></span>纪检处</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnzzrscPc.html"><span></span>组织部</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnxbPc.html"><span></span>宣传部</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cntzbPc.html"><span></span>统战部</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnjwcPc.html"><span></span>教务处</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnkjcPc.html"><span></span>科技信息处</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnxsgzcPc.html"><span></span>学生处（学生工作部、武装部）</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnjhcwcPc.html"><span></span>财务处</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnTestPc.html"><span></span>人事处</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnxxzxPc.html"><span></span>审计处</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnhqcPc.html"><span></span>保卫处</a>
+															</li>
+															</ul>
+													</div>
+												</div>	
+												<div class="menuEjddBox">
+													<a class="bbb85" target="_top" href="/list/cnPc/22/85/auto/12/0.html">
+														群团部门</a>
+													<div class="sjCon">
+														<ul class="sjConList">
+														<li>
+																<a href="http://cxmtc.net/subsiteIndex/cnxghPc.html"><span></span>校工会</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cntwPc.html"><span></span>校团委</a>
+															</li>
+															</ul>
+													</div>
+												</div>	
+												<div class="menuEjddBox">
+													<a class="bbb86" target="_top" href="/list/cnPc/22/86/auto/12/0.html">
+														教学部门</a>
+													<div class="sjCon">
+														<ul class="sjConList">
+														<li>
+																<a href="/subsiteIndex/cnyxxPc.html"><span></span>药学系</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnjyxPc.html"><span></span>检验系</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cntsgPc.html"><span></span>医学系</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnhlxyPc.html"><span></span>护理系</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnjcyxyPc.html"><span></span>基础医学系</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnjxjycPc.html"><span></span>继续教育系</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnggbtybPc.html"><span></span>公共部</a>
+															</li>
+															<li>
+																<a href="/subsiteIndex/cnszbPc.html"><span></span>马克思主义学院</a>
+															</li>
+															</ul>
+													</div>
+												</div>	
+												</div>
+										</div>
+									</div>
+								</div>	
+								</dd>
+							<dd class="aaa33 animated fadeInUp" >
+							<div class="yj">
+								<a target="_top" href="http://www.cxmc.edu.cn/list/cnjwcPc/32/643/auto/12/0.html">
+									招生</a>
+							</div>
+							</dd>
+						<dd class="aaa1693 animated fadeInUp" >
+							<div class="yj">
+								<a target="_blank" href="http://cxmtc.ynbys.cn/?target=_blank">
+									就业</a>
+							</div>
+							</dd>
+						<dd class="aaa35 animated fadeInUp" >
+							<div class="yj">
+								<a target="_blank" href="http://www.cxmc.edu.cn/list/cnTestPc/24/707/auto/12/0.html">
+									人才招聘</a>
+							</div>
+							</dd>
+						<dd class="aaa1641 animated fadeInUp" >
+							<div class="yj">
+								<a target="_blank" href="/list/cnPc/22/1641/auto/12/0.html">
+									财务公开</a>
+							</div>
+							</dd>
+						<dd class="aaa36 animated fadeInUp" >
+							<div class="yj">
+								<a target="_top" href="/list/cnPc/22/257/auto/12/0.html">
+									人才培养</a>
+							</div>
+							<div class="ej ejMenuCon">
+								<div class="ejCon">
+									<div class="con clearC">
+										<div class="conL fl">
+											<div class="pic fl">
+												<!-- <img src="test/subPage/f-pic1.jpg" alt=""> -->
+												<img src="/uploadDir/png/20211113/1636784988266.png" >
+											</div>
+											<div class="text">
+												砺志笃行，大医精诚。楚雄医专欢迎你！</div>
+										</div>
+										<div class="conR">
+											<div class="menuEjddBox bbb257">
+												<a  target="_blank" href="/list/cnPc/22/257/auto/12/0.html">
+													大专生培养</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											<div class="menuEjddBox bbb259">
+												<a  target="_blank" href="/list/cnPc/22/259/auto/12/0.html">
+													继续教育</a>
+												<div class="sjConBox">
+													<div class="sjCon">
+														<ul class="sjConList">
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															<li>
+																<a href=""><span></span>办公室（党委巡察办）</a>
+															</li>
+															</ul>
+													</div>
+												</div>
+											</div>	
+											</div>
+									</div>
+								</div>
+							</div>	
+							</dd>
+						<dd class="aaa1486 animated fadeInUp" >
+							<div class="yj">
+								<a target="_top" href="http://www.cxmc.edu.cn/list/cnPc/22/88/auto/12/0.html">
+									楚医新闻</a>
+							</div>
+							</dd>
+						</dl>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+var sto_nav;
+$(".menuDl dd").hover(
+	function(){
+		if($(this).find(".ej").length>0){
+			$(this).addClass("leng")
+		}
+		clearTimeout(sto_nav);
+		$(".ejMenuCon .ejCon").removeClass("show");
+		$(".menuDl dd.hover").removeClass("hover").addClass("active");
+		$(this).addClass("hover");
+		var ol=$(this).parents(".top2Con").offset().left;
+		var al=$(this).offset().left+$(this).outerWidth()*0.5;
+		var fl=al-ol;
+		var menuConDd=$(this).find(".ejMenuCon").find(".ejCon");
+		if(menuConDd.find(".conR a").length == 0){
+			menuConDd.hide()
+		}
+		var cl=fl-menuConDd.outerWidth()*0.5;
+		if(menuConDd.find("a").size()==0){menuConDd.hide();}
+		if(cl<0){
+			menuConDd.css("left",0);
+		}
+		else if(cl+menuConDd.outerWidth()>$(this).parents(".top2Con").outerWidth()){
+			menuConDd.css("right",0);
+		}
+		else{
+			menuConDd.css({'right':'50%','transform':"translateX(50%)"});
+		}
+		$(this).addClass("hover");
+		$(this).find(menuConDd).addClass("show");
+	},
+	function(){
+		sto_nav=setTimeout(function(){
+			$(".ejMenuCon .ejCon").removeClass("show");
+		},100);
+		$(this).removeClass("hover");
+		$(".menuDl dd.active").removeClass("active").addClass("hover");
+		
+			$(this).removeClass("leng")
+	}
+);
+$(".ejMenuCon .ejCon").hover(
+	function(){
+		clearTimeout(sto_nav);
+	},
+	function(){
+		$(".ejMenuCon .ejCon").removeClass("show");
+	}
+);
+function stopPropagation(event){
+    e=window.event||event;
+    if(document.all){e.cancelBubble=true;}else{e.stopPropagation();e.stopImmediatePropagation();}
+}
+$(".topSearch").mouseenter(function(){
+	$(".topSearch .searchBox").css({width:'218px',opacity: '1'})
+})
+$(".topSearch").mouseleave(function(){
+	$(".topSearch .searchBox").css({width:'0',opacity: '0'})
+})
+// $(window).click(function(event){
+// 	if($(".topSearch .searchBox").width()>0){
+// 		$(".topSearch .searchBox").css({width:'0',opacity: '0'})
+// 	}
+// })
+// $(".topSearch").click(function(enent){
+// 	stopPropagation(event)
+
+// })
+					
+				
+					
+				
+$(function(){
+	$("#indexSearchKey").on("keydown", function(event){if (event.which == 13) SearchDataIndex()});	
+	$("#indexSerachBtn").click(function(){
+		SearchDataIndex();
+	});
+});
+function SearchDataIndex(){
+	var searchKey = $("#indexSearchKey").val().trim();
+	if (searchKey!="" && searchKey!=null) {
+		window.location.href = "/search?start=1&pageSize=12&searchKey=" + searchKey + "&subsiteId=22&subsiteFlag=cnPc";
+		// 列表内检索方法
+		//window.location.href = "/subsiteIndex/toPage?start=1&pageSize=12&newsClassId=30&pageType=list&subsiteId="+subsiteId+"&subsiteFlag="+subsiteFlag+"&extendData="+searchTime.val().replace('年','')+":search:"+encodeURI(searchKey.val())+"";
+	}else{
+		layer.msg("请输入关键词");
+		focus("#indexSearchKey");
+		return false;
+	}
+}
+
+$(window).scroll(function(){
+	var x=$(this).scrollTop()
+	if(x>0){
+		$(".topBox .top").addClass("active")
+	}else{
+		$(".topBox .top").removeClass("active")
+	}
+})
+</script><!-- benner start -->
+
+
+<div class="indexBanner">
+	<div class="bd">
+		<div class="myslide"  dataType='img' style="background-image: url(/uploadDir/jpg/20231027/1698398546407.jpg);">
+				<a href="http://www.cxmc.edu.cn/">
+				<div class="img">
+						<div class="imgItem img1">
+							<img class="animated" style="animation-delay: 0.0s;"
+								src="/uploadDir/png/20211222/1640160371511.png" alt="" />
+							<img class="animated" style="animation-delay: 0.1s;"
+								src="/uploadDir/png/20211222/1640160375385.png" alt="" />
+							<img class="animated" style="animation-delay: 0.2s;"
+								src="/uploadDir/png/20211222/1640160381944.png" alt="" />
+							<img class="animated" style="animation-delay: 0.30000000000000004s;"
+								src="/uploadDir/png/20211222/1640160387595.png" alt="" />
+							<img class="animated" style="animation-delay: 0.4s;"
+								src="/uploadDir/png/20211222/1640160395674.png" alt="" />
+							<img class="animated" style="animation-delay: 0.5s;"
+								src="/uploadDir/png/20211222/1640160401322.png" alt="" />
+							<img class="animated" style="animation-delay: 0.6000000000000001s;"
+								src="/uploadDir/png/20211222/1640160411614.png" alt="" />
+							<img class="animated" style="animation-delay: 0.7000000000000001s;"
+								src="/uploadDir/png/20211222/1640160419955.png" alt="" />
+							</div>
+						<div class="imgItem img2">
+							<img class="animated" style="animation-delay: 1.1s;" src="/uploadDir/png/20211222/1640160426118.png" alt="" />
+						</div>
+					</div>
+					</a>
+			</div>
+			<div class="myslide"  dataType='img' style="background-image: url(/uploadDir/jpg/20211230/1640870435508.jpg);">
+				<a href="">
+				</a>
+			</div>
+			<div class="myslide"  dataType='img' style="background-image: url(/uploadDir/jpg/20211230/1640869676977.jpg);">
+				<a href="">
+				</a>
+			</div>
+			</div>
+</div>
+<script type="text/javascript">
+	function banner() {
+		var h = $(window).height();
+		$(".indexBanner .bd").height(h);
+		$(".indexBanner .myslide").height(h);
+	}
+	banner();
+	//banner带视频start
+	var t;
+	$(".indexBanner .bd").on("init", function(event, slick, currentSlide) {
+		$(".indexBanner .slick-dots li").each(function(i){
+			$(this).text(i+1)
+		})
+		var slide=slick.$slides.eq(slick.currentSlide).find(".img2 img")
+		var slide1=slick.$slides.eq(slick.currentSlide).find(".img1 img")
+		setTimeout(function(){slide.addClass("show fadeInUp")},100)
+		setTimeout(function(){slide1.addClass("show fadeInUp")},100)
+		//视频初始化开始
+		var dateType=slick.$slides.eq(slick.currentSlide).attr("dataType")
+		if(dateType != "video"){
+			t=setTimeout(function(){
+					$(".indexBanner .bd").slick("slickNext");
+			},4000)
+		}else{
+				slick.$slides.eq(slick.currentSlide).find("video")[0].play()
+				slick.$slides.eq(slick.currentSlide).find("video")[0].addEventListener("ended",function(){
+					t=setTimeout(function(){
+							$(".indexBanner .bd").slick("slickNext");
+					},1)
+					slick.$slides.eq(currentSlide).find("video")[0].load()
+				},false)
+			}
+		//视频初始化结束
+	});
+	$(".indexBanner .bd").on("beforeChange",function(event, slick, currentSlide, nextSlide) {
+		var lastSlide=slick.$slides.eq(currentSlide).find(".img2 img")
+		var lastSlide1=slick.$slides.eq(currentSlide).find(".img1 img")
+		lastSlide.removeClass("fadeInUp").addClass("fadeOutUp")
+		lastSlide1.removeClass("fadeInUp").addClass("fadeOutUp")
+		setTimeout(function(){lastSlide.removeClass("show fadeOutUp")},1300)
+		setTimeout(function(){lastSlide1.removeClass("show fadeOutUp")},1300)
+		//视频开始切换start
+		clearTimeout(t)
+		var dateType=slick.$slides.eq(nextSlide).attr("dataType")
+		if(dateType == "video"){
+			slick.$slides.eq(nextSlide).find("video")[0].load()
+		}
+		//视频开始切换end
+	});
+	$(".indexBanner .bd").on("afterChange",function(event, slick, currentSlide) {
+		slick.$slides.eq(currentSlide).find(".img2 img").addClass("show fadeInUp")
+		slick.$slides.eq(currentSlide).find(".img1 img").addClass("show fadeInUp")
+		//视频切换结束start
+		var dateType=slick.$slides.eq(currentSlide).attr("dataType")
+		if(dateType == "video"){
+			slick.$slides.eq(currentSlide).find("video")[0].play()
+			slick.$slides.eq(currentSlide).find("video")[0].addEventListener("ended",function(){
+				t=setTimeout(function(){
+						$(".indexBanner .bd").slick("slickNext");
+				},1)
+				slick.$slides.eq(currentSlide).find("video")[0].load()
+			},false)
+		}else{
+			t=setTimeout(function(){
+					$(".indexBanner .bd").slick("slickNext");
+			},4000)
+		}
+		//视频切换结束end
+	});
+	$(".indexBanner .bd").slick({
+		infinite: true,
+		slidesToShow: 1,
+		initialSlide: 0,
+		slidesToScroll: 1,
+		touchMove: false,
+		dots: true,
+		// appendDots:".indexBanner .slickBox",
+		fade: false,
+		autoplay: false,
+		arrows: false,
+		autoplaySpeed: 5000,
+		speed: 1000,
+		pauseOnFocus: false,
+		pauseOnDotsHover: false,
+		pauseOnHover: false,
+		draggable: false,
+	});
+</script><style type="text/css">
+	.topBox{height: 0;}
+</style>
+<div id="flutterBox">
+	<div class="pic ">
+		<a  rel="noopener noreferrer" target="_newWindow"  href="https://yn111.ncss.cn/student/index.html">
+			<img src="/uploadDir/jpg/20220719/1658208053458.jpg">
+		</a>
+	</div>
+</div>
+<script type="text/javascript">
+	move_obj("#flutterBox")
+</script>
+<!-- 首页内容区开始 -->
+	<!-- 第一通栏 start -->
+	<div class="column1Box">
+		<div class="wrap">
+			<div class="column1">
+				<div class="column1Scroll wow fadeInLeft">
+					<div class="bd">
+						<div class="mySlide">
+							<a target="_top" href="/view/cnPc/22/88/view/4233.html">
+								<div class="con imghover">
+									<img src="/uploadDir/jpg/20241023/1729683316303.jpg" alt="" />
+									<div class="text" style="display: none;">
+										<div class="textc">
+											北京中医药大学王学勇教授、赵保胜教授莅临我校开展学术讲座</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="mySlide">
+							<a target="_top" href="/view/cnPc/22/88/view/4232.html">
+								<div class="con imghover">
+									<img src="/uploadDir/png/20241023/1729682919313.png" alt="" />
+									<div class="text" style="display: none;">
+										<div class="textc">
+											楚雄医药高等专科学校举办新入职教师培训</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="mySlide">
+							<a target="_top" href="/view/cnPc/22/88/view/4231.html">
+								<div class="con imghover">
+									<img src="/uploadDir/jpg/20241023/1729682707668.jpg" alt="" />
+									<div class="text" style="display: none;">
+										<div class="textc">
+											楚雄医专开展铸牢中华民族共同体意识教育专题讲座</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						</div>
+					<div class="textNew"></div>
+					<script type="text/javascript">
+						// 初始化
+						$(".column1Scroll .bd").on("init", function(event, slick) {
+							var title = slick.$slides.eq(0).find(".textc").html();
+							$(".column1Scroll .textNew").html(title);
+						});
+						//更换幻灯片前触发
+						$(".column1Scroll .bd").on("beforeChange", function(event, slick, currentSlide, nextSlide){
+							var title = slick.$slides.eq(nextSlide).find(".textc").html();
+							$(".column1Scroll .textNew").html(title);
+						})
+						$(".column1Scroll .bd").slick({
+							infinite: true, //循环功能
+							slidesToShow: 1, //可见数
+							slidesToScroll: 1, //滚动个数
+							autoplay: true, //自动播放
+							arrows: false, //左右箭头
+							draggable: true, //拖拽功能
+							dots: true, //指示点
+							fade:false,// 开启渐隐切换模式
+							autoplaySpeed: 5000, //自动播放速度
+							speed: 1500, //切换动画速度
+						});
+					</script>
+				</div>
+				<div class="column1Right wow fadeInRight">
+					<div class="col1Title">
+						<div class="col1TitleL fl">
+							<span>楚医新闻</span>
+							<i>&nbsp;/&nbsp;实时了解学校最新信息</i>
+						</div>
+						<div class="colTitleR fr">
+							<a target="_top" href="/list/cnPc/22/88/auto/12/0.html">
+								MORE
+							</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="h30"></div>
+					
+					<dl class="col1RDl">
+						<dd>
+							<a target="_top" href="/view/cnPc/22/88/view/4233.html">
+								<span> 
+									2024-10-22</span>
+								<i class="clamp1">
+									北京中医药大学王学勇教授、赵保胜教授莅临我校开展学术讲座</i>
+							</a>
+						</dd>
+						<dd>
+							<a target="_top" href="/view/cnPc/22/88/view/4232.html">
+								<span> 
+									2024-10-22</span>
+								<i class="clamp1">
+									楚雄医药高等专科学校举办新入职教师培训</i>
+							</a>
+						</dd>
+						<dd>
+							<a target="_top" href="/view/cnPc/22/88/view/4231.html">
+								<span> 
+									2024-10-21</span>
+								<i class="clamp1">
+									楚雄医专开展铸牢中华民族共同体意识教育专题讲座</i>
+							</a>
+						</dd>
+						<dd>
+							<a target="_top" href="/view/cnPc/22/88/view/4230.html">
+								<span> 
+									2024-10-21</span>
+								<i class="clamp1">
+									母校情深师恩难忘——原云南省楚雄卫生学校1980级药剂10...</i>
+							</a>
+						</dd>
+						<dd>
+							<a target="_top" href="/view/cnPc/22/88/view/4227.html">
+								<span> 
+									2024-10-15</span>
+								<i class="clamp1">
+									青春迷彩热血集结——楚雄医药高等专科学校举行2024级学生...</i>
+							</a>
+						</dd>
+						<dd>
+							<a target="_top" href="/view/cnPc/22/88/view/4224.html">
+								<span> 
+									2024-10-15</span>
+								<i class="clamp1">
+									喜报！楚医学子在2024年云南省第十届科普讲解大赛中荣获佳...</i>
+							</a>
+						</dd>
+						</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 第一通栏 end  -->
+	<!-- 第二通栏 start -->
+	<div class="column2Box">
+		<div class="wrap" style="position: relative;z-index: 5;">
+			<div class="col2Title">
+				<dl class="col2TitleDl fl tab wow fadeInLeft">
+					<dd  class="hover">
+						<a target="_top" href="/list/cnPc/22/89/auto/12/0.html">
+							通知公告</a>
+					</dd>
+					<dd >
+						<a target="_top" href="/list/cnPc/22/90/auto/12/0.html">
+							公示材料</a>
+					</dd>
+					</dl>
+				<div class="colTitleR fr wow fadeInRight">
+					<a target="_top" href="/list/cnPc/22/88/auto/12/0.html">
+						MORE
+					</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="h10"></div>
+			<div class="col2Con tabC">
+				<dl class="col2Dl col2Animed col2D2">
+				<dd class="wow fadeInLeft" style="animation-delay: 0.1s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/4140.html" class="con">
+							 <div class="col2Date fl">
+								 <span>07-10</span>
+								 <i>2024</i>
+							 </div>
+							 <div class="title">
+								 楚雄医药高等专科学校2024年招生工作严正声明</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.2s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/3975.html" class="con">
+							 <div class="col2Date fl">
+								 <span>05-07</span>
+								 <i>2024</i>
+							 </div>
+							 <div class="title">
+								 楚雄医药高等专科学校精品在线开放课程录制、申报服务采购项目YNZZCX...</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.3s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/3886.html" class="con">
+							 <div class="col2Date fl">
+								 <span>02-05</span>
+								 <i>2024</i>
+							 </div>
+							 <div class="title">
+								 楚雄医药高等专科学校勤勉楼卫生所改造项目成交公示</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.4s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/2577.html" class="con">
+							 <div class="col2Date fl">
+								 <span>04-13</span>
+								 <i>2022</i>
+							 </div>
+							 <div class="title">
+								 20220413关于做好云南省职业学校实习管理监督咨询工作的通知</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.5s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/2413.html" class="con">
+							 <div class="col2Date fl">
+								 <span>03-03</span>
+								 <i>2022</i>
+							 </div>
+							 <div class="title">
+								 关于通报表扬优秀党务工作者、“守纪律、讲规矩”先进个人和“政治上的明白...</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.6s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/2410.html" class="con">
+							 <div class="col2Date fl">
+								 <span>03-03</span>
+								 <i>2022</i>
+							 </div>
+							 <div class="title">
+								 中共楚雄医药高等专科学校委员会关于表扬先进党支部和优秀共产党员、优秀党...</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.7s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/235.html" class="con">
+							 <div class="col2Date fl">
+								 <span>09-06</span>
+								 <i>2021</i>
+							 </div>
+							 <div class="title">
+								 关于2015届优秀实习生、实习小组、实习点评选结果的公示</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.8s;">
+						 <a target="_blank" href="/view/cnPc/22/88/view/96.html" class="con">
+							 <div class="col2Date fl">
+								 <span>06-23</span>
+								 <i>2021</i>
+							 </div>
+							 <div class="title">
+								 供需见面会延期通知</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.9s;">
+						 <a target="_blank" href="/view/cnPc/22/88/view/95.html" class="con">
+							 <div class="col2Date fl">
+								 <span>06-11</span>
+								 <i>2021</i>
+							 </div>
+							 <div class="title">
+								 2021年第二届双选会邀请函</div>
+						 </a>
+					 </dd>
+					<dt class="clear"></dt>
+				</dl>
+				<dl class="col2Dl col2Animed col2D3">
+				<dd class="wow fadeInLeft" style="animation-delay: 0.1s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/3768.html" class="con">
+							 <div class="col2Date fl">
+								 <span>11-29</span>
+								 <i>2023</i>
+							 </div>
+							 <div class="title">
+								 楚雄医药高等专科学校2022-2023学年信息公开年度报告</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.2s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/3687.html" class="con">
+							 <div class="col2Date fl">
+								 <span>04-29</span>
+								 <i>2023</i>
+							 </div>
+							 <div class="title">
+								 楚雄医药高等专科学校关于德贷项目4#及5#实验楼工程竣工结算审计发现问...</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.3s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/3686.html" class="con">
+							 <div class="col2Date fl">
+								 <span>04-17</span>
+								 <i>2023</i>
+							 </div>
+							 <div class="title">
+								 云南云投职教扶贫开发楚雄医专有限责任公司关于职教扶贫补短板项目审计发现...</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.4s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/3142.html" class="con">
+							 <div class="col2Date fl">
+								 <span>01-12</span>
+								 <i>2023</i>
+							 </div>
+							 <div class="title">
+								 楚雄医专2023年年度质量报告</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.5s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/3124.html" class="con">
+							 <div class="col2Date fl">
+								 <span>12-04</span>
+								 <i>2022</i>
+							 </div>
+							 <div class="title">
+								 关于学校财务管理及往来款管理情况专项审计调查整改结果的公告</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.6s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/3123.html" class="con">
+							 <div class="col2Date fl">
+								 <span>12-04</span>
+								 <i>2022</i>
+							 </div>
+							 <div class="title">
+								 关于德促贷款项目绩效审计整改结果的公告</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.7s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/3120.html" class="con">
+							 <div class="col2Date fl">
+								 <span>11-29</span>
+								 <i>2022</i>
+							 </div>
+							 <div class="title">
+								 楚雄医药高等专科学校2021-2022学年信息公开年度报告</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.8s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/2806.html" class="con">
+							 <div class="col2Date fl">
+								 <span>07-03</span>
+								 <i>2022</i>
+							 </div>
+							 <div class="title">
+								 关于2022年竞聘上岗拟聘用人员的公示公告</div>
+						 </a>
+					 </dd>
+					<dd class="wow fadeInLeft" style="animation-delay: 0.9s;">
+						 <a target="_top" href="/view/cnPc/22/88/view/2696.html" class="con">
+							 <div class="col2Date fl">
+								 <span>05-26</span>
+								 <i>2022</i>
+							 </div>
+							 <div class="title">
+								 拟表彰楚雄医药高等专科学校2022届优秀实习生公示</div>
+						 </a>
+					 </dd>
+					<dt class="clear"></dt>
+				</dl>
+				</div>
+			<!-- <script type="text/javascript">
+					//动画
+					$(".col2Dl dd").each(function(i){ $(this).addClass("fadeInLeft").css({ animationDelay:i*.4+"s"})})
+					$(".col2Animed dd").each(function(i){ $(this).addClass("fadeInLeft").css({ animationDelay:i*.4+"s"})})
+			</script> -->
+			<!--<div class="colSwripBox">
+				<!--<div class="col1Title">
+					<div class="col1TitleL fl wow fadeInLeft">
+						<span>校园看点</span>
+						<i>&nbsp;/&nbsp;更多校园精彩展示</i>
+					</div>
+					<div class="colTitleR fr wow fadeInRight">
+						<a target="_top" href="/list/cnPc/22/327/auto/12/0.html">
+							MORE
+						</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="h25"></div>-->
+				<!-- <div class="index-row2">
+					<div class="roundabout_box">
+						<ul class="roundabout-holder">
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/3981.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20240509/1715218531987.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												学校会议背景</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/1042.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20211222/1640157108517.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												以青春之我 守边固防——楚雄医药高等专科学校学子志愿守边固防</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/1041.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20211222/1640157082287.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												践行初心使命，筑牢思政主阵地——楚雄医专青春战“疫”故事</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/1039.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20211222/1640157051877.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												楚雄医专团委组织开展造血干细胞样本采集活动</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/1038.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20211222/1640157014610.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												“最美的逆行者”——楚雄医药高等专科学校学子 赴鄂抗疫群英谱系列报道（七）</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/1037.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20211222/1640156908420.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												“最美的逆行者”——楚雄医药高等专科学校学子赴鄂抗疫群英谱系列报道（六）</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/1036.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20211222/1640156829086.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												“最美的逆行者”——楚雄医药高等专科学校学子 赴鄂抗疫群英谱系列报道（五）</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/1035.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20211222/1640156794625.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												“最美的逆行者”——楚雄医药高等专科学校学子赴鄂抗疫群英谱系列报道（四）</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/1034.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20211222/1640156763926.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												“最美的逆行者”——楚雄医药高等专科学校学子赴鄂抗疫群英谱系列报道（三）</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a target="_top" href="/view/cnPc/22/327/view/1033.html">
+									<div class="pic">
+										<img src="/uploadDir/jpg/20211222/1640156719077.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												“最美的逆行者”——楚雄医药高等专科学校学子 赴鄂抗疫群英谱系列报道（二）</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							</ul>
+						
+					</div>
+				</div> -->
+				<!--<div class="index-row2 wow zoomIn">
+					<div id="top">
+						<div class="small">
+					    	<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								</ul>
+					
+					    </div>
+					
+					</div>
+					<div class="roundabout_box wow fadeInUp" id="box">
+						<ul class="roundabout-holder" id="list"> 
+							<li>
+								
+									<div class="pic">
+										<a target="_top" href="/view/cnPc/22/327/view/1030.html"></a>
+										<img src="/uploadDir/jpg/20211222/1640156601744.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												文体</span>
+										</div>
+										<div class="info">七十载物换星移、沧桑巨变七十载砥砺奋进、...</div>
+									</div>
+								
+							</li>
+							<li>
+								
+									<div class="pic">
+										<a target="_top" href="/view/cnPc/22/327/view/1023.html"></a>
+										<img src="/uploadDir/jpg/20211222/1640155613274.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												党建</span>
+										</div>
+										<div class="info">楚雄医药高等专科学校举行2021年五四表...</div>
+									</div>
+								
+							</li>
+							<li>
+								
+									<div class="pic">
+										<a target="_blank" href="/view/cnPc/22/327/view/1022.html"></a>
+										<img src="/uploadDir/jpg/20211222/1640152384293.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												党建</span>
+										</div>
+										<div class="info">筚路蓝缕忆百年栉风沐雨记初心——楚雄医药...</div>
+									</div>
+								
+							</li>
+							<li>
+								
+									<div class="pic">
+										<a target="_top" href="/view/cnPc/22/327/view/1029.html"></a>
+										<img src="/uploadDir/jpg/20211222/1640156572339.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												文体</span>
+										</div>
+										<div class="info">花样年华·正青春</div>
+									</div>
+								
+							</li>
+							<li>
+								
+									<div class="pic">
+										<a target="_top" href="/view/cnPc/22/327/view/3981.html"></a>
+										<img src="/uploadDir/jpg/20240509/1715218531987.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												</span>
+										</div>
+										<div class="info">学校会议背景</div>
+									</div>
+								
+							</li>
+							<li>
+								
+									<div class="pic">
+										<a target="_top" href="/view/cnPc/22/327/view/1042.html"></a>
+										<img src="/uploadDir/jpg/20211222/1640157108517.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												服务</span>
+										</div>
+										<div class="info">以青春之我守边固防——楚雄医药高等专科学...</div>
+									</div>
+								
+							</li>
+							<li>
+								
+									<div class="pic">
+										<a target="_top" href="/view/cnPc/22/327/view/1041.html"></a>
+										<img src="/uploadDir/jpg/20211222/1640157082287.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												服务</span>
+										</div>
+										<div class="info">践行初心使命，筑牢思政主阵地——楚雄医专...</div>
+									</div>
+								
+							</li>
+							<li>
+								
+									<div class="pic">
+										<a target="_top" href="/view/cnPc/22/327/view/1039.html"></a>
+										<img src="/uploadDir/jpg/20211222/1640157051877.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												服务</span>
+										</div>
+										<div class="info">楚雄医专团委组织开展造血干细胞样本采集活...</div>
+									</div>
+								
+							</li>
+							<li>
+								
+									<div class="pic">
+										<a target="_top" href="/view/cnPc/22/327/view/1038.html"></a>
+										<img src="/uploadDir/jpg/20211222/1640157014610.jpg" />
+										<div class="roundaboutTitle">
+											<span>
+												服务</span>
+										</div>
+										<div class="info">“最美的逆行者”——楚雄医药高等专科学校...</div>
+									</div>
+								
+							</li>
+							</ul>
+					</div>
+				</div>
+				<script type="text/javascript" src="/subsiteSrc/cnPc/js/main.js"></script>
+				<!-- <div class="colcl">
+					<img class="colcl1" src="/subsiteSrc/cnPc/images/chilun/cl1.png" alt="">
+					<img class="colcl2" src="/subsiteSrc/cnPc/images/chilun/cl2.png" alt="">
+					<img class="colcl3" src="/subsiteSrc/cnPc/images/chilun/cl3.png" alt="">
+					<img class="colcl4" src="/subsiteSrc/cnPc/images/chilun/cl4.png" alt="">
+					<img class="colcl5" src="/subsiteSrc/cnPc/images/chilun/cl5.png" alt="">
+				</div> -->
+			<!-- </div>-->
+		</div>
+	</div>
+	<!-- 第二通栏 end -->
+	<!-- 第三通栏 start -->
+	<div class="column3Box">
+		<div class="wrap">
+			<div class="col3Box">
+				<div class="col1Title">
+					<div class="col1TitleL fl wow fadeInLeft">
+						<span>校园风光</span>
+						<i>&nbsp;/&nbsp;更多校园美景展示</i>
+					</div>
+					<div class="colTitleR fr wow fadeInRight">
+						<a target="_top" href="/list/cnPc/22/91/auto/12/0.html">
+							MORE
+						</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="h20"></div>
+				<dl class="column3Dl">
+					<dd class="dd1 wow zoomIn">
+							<div class="con">
+								<a target="_top" href="/view/cnPc/22/91/view/183.html">
+									<div class="pic imghover">
+										<img src="/uploadDir/jpg/20211228/1640677195864.jpg" >
+									</div>
+									<div class="text">
+										<!-- <div class="title">
+											2021-08-24</div> -->
+										<div class="info clamp1">
+											楚雄医药高等专科学校正大门</div>
+									</div>
+								</a>
+							</div>
+						</dd>
+					<dd class="dd2 wow zoomIn">
+							<div class="con">
+								<a target="_top" href="/view/cnPc/22/91/view/182.html">
+									<div class="pic imghover">
+										<img src="/uploadDir/jpg/20211231/1640933070328.jpg" >
+									</div>
+									<div class="text">
+										<!-- <div class="title">
+											2021-08-24</div> -->
+										<div class="info clamp1">
+											图书馆穹顶</div>
+									</div>
+								</a>
+							</div>
+						</dd>
+					<dd class="dd3 wow zoomIn">
+							<div class="con">
+								<a target="_top" href="/view/cnPc/22/91/view/181.html">
+									<div class="pic imghover">
+										<img src="/uploadDir/jpg/20211231/1640933084559.jpg" >
+									</div>
+									<div class="text">
+										<!-- <div class="title">
+											2021-08-24</div> -->
+										<div class="info clamp1">
+											图书馆侧影</div>
+									</div>
+								</a>
+							</div>
+						</dd>
+					<dd class="dd4 wow zoomIn">
+							<div class="con">
+								<a target="_top" href="/view/cnPc/22/91/view/180.html">
+									<div class="pic imghover">
+										<img src="/uploadDir/jpg/20211231/1640933300756.jpg" >
+									</div>
+									<div class="text">
+										<!-- <div class="title">
+											2021-08-24</div> -->
+										<div class="info clamp1">
+											楚雄医药高等专科学校校史馆</div>
+									</div>
+								</a>
+							</div>
+						</dd>
+					<dd class="dd5 wow zoomIn">
+							<div class="con">
+								<a target="_top" href="/view/cnPc/22/91/view/179.html">
+									<div class="pic imghover">
+										<img src="/uploadDir/jpg/20211231/1640933285736.jpg" >
+									</div>
+									<div class="text">
+										<!-- <div class="title">
+											2021-08-24</div> -->
+										<div class="info clamp1">
+											楚雄医药高等专科学校樱花一角</div>
+									</div>
+								</a>
+							</div>
+						</dd>
+					<dd class="dd6 wow zoomIn">
+							<div class="con">
+								<a target="_top" href="/view/cnPc/22/91/view/178.html">
+									<div class="pic imghover">
+										<img src="/uploadDir/jpg/20211117/1637129563364.jpg" >
+									</div>
+									<div class="text">
+										<!-- <div class="title">
+											2021-08-24</div> -->
+										<div class="info clamp1">
+											楚雄医药高等专科学校田径场</div>
+									</div>
+								</a>
+							</div>
+						</dd>
+					<dt class="clear"></dt>
+				</dl>
+				<script type="text/javascript">
+						//动画
+						
+				</script>
+			</div>
+		</div>
+	</div>
+	<!-- 第三通栏 end -->
+	<!-- 第四通栏 start -->
+	<div class="column4Box" style="background: url(/subsiteSrc/cnPc/images/col4Bg.png);">
+		<div class="h50"></div>
+		<div class="wrap">
+			<div class="col4Box">
+				<div class="col1Title">
+					<div class="col1TitleL fl wow fadeInLeft">
+						<span>专题专栏</span>
+					</div>
+					<div class="colTitleR fr wow fadeInRight">
+						<a target="_top" href="/list/cnPc/22/93/auto/12/0.html">
+							MORE
+						</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="h35"></div>
+				<div class="col4List">
+					<div class="column4Scroll">
+						<div class="bd">
+							<div class="myslide wow">
+									<a target="_top" href="/list/cnPc/22/1705/auto/12/0.html">
+										<div class="con wow animtedHide imghover">
+											<div class="pic">
+												<img src="/uploadDir/jpg/20221017/1665992301028.jpg" >
+											</div>
+										</div>
+									</a>
+								</div>
+							<div class="myslide wow">
+									<a target="_top" href="/list/cnPc/22/277/auto/12/0.html">
+										<div class="con wow animtedHide imghover">
+											<div class="pic">
+												<img src="/uploadDir/png/20220223/1645605744873.png" >
+											</div>
+										</div>
+									</a>
+								</div>
+							<div class="myslide wow">
+									<a target="_top" href="/list/cnPc/22/1711/auto/12/0.html">
+										<div class="con wow animtedHide imghover">
+											<div class="pic">
+												<img src="/uploadDir/jpg/20230303/1677805117673.jpg" >
+											</div>
+										</div>
+									</a>
+								</div>
+							<div class="myslide wow">
+									<a target="_top" href="/list/cnPc/22/95/auto/12/0.html">
+										<div class="con wow animtedHide imghover">
+											<div class="pic">
+												<img src="/uploadDir/jpg/20240924/1727146958968.jpg" >
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(".column4Scroll .bd").slick({
+					infinite: true, //循环功能
+					slidesToShow: 4, //可见数
+					slidesToScroll: 1, //滚动个数
+					autoplay: true, //自动播放
+					arrows: true, //左右箭头
+					draggable: true, //拖拽功能
+					dots: false, //指示点
+					fade:false,// 开启渐隐切换模式
+					autoplaySpeed: 4000, //自动播放速度
+					speed: 1500, //切换动画速度
+				});
+				
+				$(".column4Scroll .myslide").each(function(i){ $(this).addClass("fadeInLeft").css({ animationDelay:i*.1+"s"})})
+			</script>
+		</div>
+		<div class="h50"></div>
+	</div>
+	<!-- 第四通栏 end -->
+<!-- 首页内容区结束 -->
+<!-- 友情链接 start -->
+	<div class="friendLink">
+		<div class="wrap">
+			<div class="conR fr wow fadeInRight">
+				<dl class="friendLinkBtn">
+				<dd>
+						<div class="pic">
+							<img src="/uploadDir/png/20211223/1640223653967.png" alt="" />
+						</div>
+						<span>公众号</span>
+						<div class="ewm">
+							<div class="icn"></div>
+							<div class="con">
+								<img src="/uploadDir/jpg/20211229/1640754234739.jpg" alt="" />
+							</div>
+						</div>
+					</dd>
+				 </dl>
+			</div>
+			<div class="conL">
+				<div class="title wow fadeInLeft">
+					友情链接
+				</div>
+				<div class="friendLinkScroll">
+					<div class="arrows wow fadeInDown"></div>
+					<div class="bd">
+						<div class="mySlide wow">
+							<a target="_blank" href="https://www.acabridge.edu.cn/">
+								学术桥</a>
+						</div>
+						<div class="mySlide wow">
+							<a target="_blank" href="http://www.moe.gov.cn/">
+								国家教育部</a>
+						</div>
+						<div class="mySlide wow">
+							<a target="_blank" href="https://www.chsi.com.cn/">
+								学信网</a>
+						</div>
+						<div class="mySlide wow">
+							<a target="_blank" href="https://www.21wecan.com/">
+								中国卫生人才网</a>
+						</div>
+						<div class="mySlide wow">
+							<a target="_blank" href="http://www.xinhuanet.com/">
+								新华网</a>
+						</div>
+						<div class="mySlide wow">
+							<a target="_blank" href="https://www.ncss.cn/">
+								大学生就业</a>
+						</div>
+						<div class="mySlide wow">
+							<a target="_blank" href="http://dxs.moe.gov.cn/zx/">
+								中国大学生在线</a>
+						</div>
+						<div class="mySlide wow">
+							<a target="_blank" href="https://www.gfbzb.gov.cn/">
+								全国征兵网</a>
+						</div>
+						<div class="mySlide wow">
+							<a target="_blank" href="http://jyt.yn.gov.cn/">
+								云南教育网</a>
+						</div>
+						<div class="mySlide wow">
+							<a target="_blank" href="https://www.yiban.cn/">
+								易班网</a>
+						</div>
+						</div>
+				</div>
+				<script>
+					$('.friendLinkScroll .bd').slick({
+					  dots: true,
+					  infinite: false,
+					  speed: 300,
+					  slidesToShow: 1,
+					  variableWidth: true,
+					  appendArrows: $(".friendLinkScroll .arrows")
+					});
+					
+					
+					$(".bd .mySlide").each(function(i){ $(this).addClass("fadeInLeft").css({ animationDelay:i*.1+"s"})})
+				</script>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- 友情链接 end -->
+<div class="footer">
+	<div class="wrap">
+	<div class="footerLogo wow fadeInUp">
+			<a href="/">
+				<img src="/uploadDir/png/20220104/1641261787788.png" alt="">
+			</a>
+		</div>
+	 <div class="footerDown wow fadeInUp">
+			<!--<div class="conR fr">
+				技术支持：<a href="http://www.aykj.net/" target="_blank">奥远科技</a>
+			</div>-->
+			<div class="conL">
+				<div class="item">
+					<span>版权所有 © 楚雄医药高等专科学校</span>
+				</div>
+				<div class="item">
+					<span>地址：云南省楚雄市东瓜镇</span>
+				</div>
+				<div class="item">
+					<span>邮编：675000</span>
+				</div>
+				<div class="item">
+					<span>云教ICP备1412003</span>
+				</div>
+				<div class="item">
+						<a href="http://beian.miit.gov.cn/"><span>滇ICP备05000822号</span></a>
+				</div>
+				<div class="item">
+                                       <img src="\subsiteSrc\cnPc\images\beian.png">
+					<a href="https://beian.mps.gov.cn/#/query/webSearch"><span>楚雄州公安局备案号：53230143031-22002号</span></a>
+				</div></div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<script>
+	//wow  动画
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		new WOW().init();
+	};
+</script>
+</body>
+</html>

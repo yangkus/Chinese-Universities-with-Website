@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>贵州建设职业技术学院网站</title>
+    <link rel="stylesheet" href="https://www.gzjszy.cn/ggzy_sy/css/public.css">
+    <link rel="stylesheet" href="https://www.gzjszy.cn/ggzy_sy/css/canvi.css">
+    <link rel="stylesheet" href="https://www.gzjszy.cn/ggzy_sy/css/swiper.min.css">
+    <link rel="stylesheet" href="https://www.gzjszy.cn/ggzy_sy/css/index.css">
+
+    <script src="https://www.gzjszy.cn/ggzy_sy/js/jquery.min.js"></script>
+</head>
+<body>
+  <style>
+  /*右侧二维码*/
+.ewm-box {
+    position: fixed !important;
+    right: 0px;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+  /*左侧浮漂*/
+.fp {
+    position: fixed !important;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+  </style>
+  <!-- 广告飘动 -->
+  <!-- 广告飘动 js -->
+  <script src="https://www.gzjszy.cn/js/advertisement.js"></script>
+  <!-- <div id="myadvertisement" style="position: absolute; left:0px; top:0px;z-index:999;">
+  <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzA5MTkxNDMwNg==&mid=2652150446&idx=1&sn=768ab689d1aacd95d7a47bb255818a62&chksm=8b951383bce29a954c36b6c0c471eb7fa20af6a692ccf60ab94f9ed3779d35f8f463591fa884&mpshare=1&scene=23&srcid=062696rJnla0dbU3WDw8MyHM&sharer_shareinfo=8292826946a082e2a7d121e2841c8b4a&sharer_shareinfo_first=12bb46fbd928e55c33f4cf40ca5e5b06#rd" style="display: inline-block;">
+      <img style="width: 270px;height: 110px; border: 0;" alt="" th:src="@{${dfsurl}+'/images/zsjz_2024.png'}" />
+    </a>
+    <span id="close_myadvertisement" style="display: inline-block; color: red;font-size: 16px; cursor: pointer">关闭</span>
+    <script type="text/javascript">
+      //调用广告飘动函数
+      //获取ID
+      var ad = new AdMove("myadvertisement");
+      //调用
+      ad.Run();
+
+      //点击关闭按钮触发
+      $("#close_myadvertisement").click(function () {
+        //隐藏父级盒子
+        $(this).parent().hide();
+      });
+    </script> 
+  </div> -->
+  <!-- 广告飘动 end -->
+  
+  <!--左侧浮漂-->
+    <!--  <div class="fp">
+         <div th:each="info:${#temp.infoList(1296,0,9,0,1)}">
+       <a th:href="${info.infourl}" th:title="${info.title}" target="_blank"><img th:src="${info.logo}" alt=""></a>
+         </div>   
+               <span id="fp" style="display: inline-block; color: red;font-size: 16px; cursor: pointer">关闭</span>
+               <script type="text/javascript">
+               //点击关闭按钮触发
+                    $("#fp").click(function () {
+               //隐藏父级盒子
+                   $(this).parent().hide();
+                       });
+               </script>
+      </div> --> 
+  <!--左侧浮漂 end-->
+<div class="js-canvi-content canvi-content">
+    <header id="header" class="header-container header-special">
+      	 <div class="header-mask1 header-mask">
+            <img src="https://www.gzjszy.cn/images/mask-1.png" alt="">
+        </div>
+        <div class="header-mask2 header-mask">
+            <img src="https://www.gzjszy.cn/images/mask-2.png" alt="">
+        </div>
+        <div class="swiper-container swiper1-cont swiper-no-swiping">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div><img src="https://www.gzjszy.cn/resource/info/logo/2022/05/06/21d06082-2e57-43ad-8ea0-f86f7acd4c09.jpg" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                    <div><img src="https://www.gzjszy.cn/resource/info/logo/2022/05/06/2a0da9e9-5399-41a4-8d23-a5d6c5147e1c.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="slogan">
+                <img src="https://www.gzjszy.cn/ggzy_sy/images/fonts_img.png" alt="">
+            </div>
+        </div>
+        <div class="header-layout">
+            <a href="https://www.gzjszy.cn" class="logo-wrap">
+                <img src="https://www.gzjszy.cn/ggzy_sy/images/logo-news.png" alt="">
+            </a>
+            <a href="https://www.gzjszy.cn/site7" class="English">
+              English
+            </a>
+            <nav id="nav" class="nav-wrap">
+                <ul class="nav-list">
+                    <li class="li" id="702"><a href="https://www.gzjszy.cn/n702/index.html">学院概况</a>
+                      <ul class="subNav-list">
+                        <li id="703"><a href="https://www.gzjszy.cn/n703/index.html">学院简介</a></li>
+                        <li id="1372"><a href="https://www.gzjszy.cn/n1372/index.html">学院章程</a></li>
+                        <li id="704"><a href="https://www.gzjszy.cn/n704/index.html">校训校徽校歌</a></li>
+                        <li id="705"><a href="https://www.gzjszy.cn/n705/index.html">现任领导</a></li>
+                        <li id="706"><a href="https://www.gzjszy.cn/n706/index.html">学院风光</a></li>
+                        <li id="707"><a href="https://www.gzjszy.cn/n707/index.html">学院荣誉</a></li>
+                        <li id="740"><a href="https://www.gzjszy.cn/n740/index.html">师资风采</a></li>
+                        <li id="709"><a href="https://www.gzjszy.cn/n709/index.html">联系地址</a></li>
+                      </ul>
+                   </li>
+                    <li class="li" id="708"><a href="https://www.gzjszy.cn/n708/index.html">机构设置</a>
+                      <ul class="subNav-list" style="display:none !important">
+                        <li id="711"><a href="https://www.gzjszy.cn/n711/index.html">党政部门</a></li>
+                        <li id="714"><a href="https://www.gzjszy.cn/n714/index.html">教学机构</a></li>
+                        <li id="713"><a href="https://www.gzjszy.cn/n713/index.html">教辅机构</a></li>
+                      </ul>
+                   </li>
+                    <li class="li" id="754"><a href="https://www.gzjszy.cn/n754/index.html">党的建设</a>
+                      <ul class="subNav-list">
+                        <li id="758"><a href="https://www.gzjszy.cn/n758/index.html">党建动态</a></li>
+                        <li id="759"><a href="https://www.gzjszy.cn/n759/index.html">政策文件</a></li>
+                      </ul>
+                   </li>
+                    <li class="li" id="745"><a href="https://www.gzjszy.cn/n745/index.html">教学科研</a>
+                      <ul class="subNav-list">
+                        <li id="1009"><a href="/site9">教务处</a></li>
+                        <li id="773"><a href="https://www.gzjszy.cn/n773/index.html">科研处</a></li>
+                      </ul>
+                   </li>
+                    <li class="li" id="1005"><a href="https://www.gzjszy.cn/n1005/index.html">团学工作</a>
+                      <ul class="subNav-list">
+                        <li id="1007"><a href="/n719">团委</a></li>
+                        <li id="1008"><a href="/site10">党委学生工作部</a></li>
+                      </ul>
+                   </li>
+                    <li class="li" id="746"><a href="https://www.gzjszy.cn/n746/index.html">招生就业</a>
+                      <ul class="subNav-list">
+                        <li id="789"><a href="http://www.gzjszy.cn/n593/index.html">招生服务</a></li>
+                        <li id="790"><a href="http://gzjsxy.bysjy.com.cn/">就业服务</a></li>
+                      </ul>
+                   </li>
+                    <li class="li" id="971"><a href="https://www.gzjszy.cn/n971/index.html">合作交流</a>
+                      <ul class="subNav-list">
+                        <li id="972"><a href="https://www.gzjszy.cn/n972/index.html">国际交流（含港澳台）</a></li>
+                        <li id="973"><a href="https://www.gzjszy.cn/n973/index.html">政校合作</a></li>
+                        <li id="974"><a href="https://www.gzjszy.cn/n974/index.html">校校合作</a></li>
+                        <li id="975"><a href="https://www.gzjszy.cn/n975/index.html">校企合作</a></li>
+                        <li id="976"><a href="https://www.gzjszy.cn/n976/index.html">社会服务</a></li>
+                      </ul>
+                   </li>
+                    <li class="li" id="747"><a href="https://www.gzjszy.cn/n747/index.html">学院服务</a>
+                      <ul class="subNav-list">
+                        <li id="791"><a href="https://www.gzjszy.cn/n791/index.html">人事评聘</a></li>
+                        <li id="792"><a href="https://www.gzjszy.cn/n792/index.html">办事指南</a></li>
+                        <li id="793"><a href="https://www.gzjszy.cn/n793/index.html">职工之家</a></li>
+                        <li id="794"><a href="https://www.gzjszy.cn/n794/index.html">示范建设</a></li>
+                        <li id="795"><a href="https://www.gzjszy.cn/n795/index.html">资料下载</a></li>
+                        <li id="796"><a href="http://gzjs.portal.chaoxing.com/">图书馆</a></li>
+                      </ul>
+                   </li>
+                    <li class="li" id="749"><a href="https://www.gzjszy.cn/n749/index.html">信息公开</a>
+                      <ul class="subNav-list">
+                        <li id="805"><a href="https://www.gzjszy.cn/n805/index.html">信息公开年度报告</a></li>
+                        <li id="1261"><a href="https://www.gzjszy.cn/n1261/index.html">经费管理</a></li>
+                      </ul>
+                   </li>
+                </ul>
+                <div class="subnav-box">
+                    <div class="nav-btn xs-show js-canvi-open-button--right btn">
+                        <span>导航</span>
+                        <i class="iconfont icon-daohang"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="swiper1-pagin_box">
+            <div class="swiper-pagination swiper1-pagin"></div>
+            <div class="header-search">
+                <div class="search-layout">
+                    <h4>搜索 <span>SEARCH</span></h4>
+                    <ul class="search-list">
+                        <li><a href="JavaScript:void(0);" onclick="Search('keyWords','招生')">招生</a></li>
+                        <li><a href="JavaScript:void(0);" onclick="Search('keyWords','建党100周年')">建党100周年</a></li>
+                      
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="keyWords" placeholder="请输入关键字" autocomplete="off">
+                    <button  onclick="Search('keyWords','');">
+                        <i class="iconfont icon-sousuo_o"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+  <script>
+  $(function() {
+	$("#keyWords").keypress(function(e) {
+		if (e.keyCode == 13) {
+			Search("keyWords","");
+		}
+	})
+    $("#708").find(".subNav-list").remove();
+})
+
+
+                function Search(obj,words) {
+                  var keyWords = words!=""?words:$("#"+obj).val();
+                    if (keyWords == "请输入关键字" || keyWords == "") {
+                        alert("您输入的内容为空！");
+                    } else {
+                       	window.location.href = "/search.html?siteId=1&searchTxt=" + $.trim(keyWords) + "&searchTime=0";
+                    }
+                }
+  </script>
+    <main id="main" class="main-container">
+        <!--学院要闻 及 通知公告-->
+        <div class="main-wrap newsNotice">
+            <div class="newsNotice-layout">
+                <div class="newsNotice-left">
+                    <div class="column-tit xyyw-tit">
+                        <h4>
+                            学院<span>要闻</span>
+                        </h4>
+                        <a href="https://www.gzjszy.cn/n743/index.html" class="more">
+                            新闻频道
+                        </a>
+                    </div>
+                    <a href="https://www.gzjszy.cn/n751/20241025/i13260.html" class="newsHeadlines">
+                        <h3>
+                            贵州建设职业技术学院举行第十九届校园技能文化艺术节文艺汇演
+                        </h3>
+                        <p>10月24日晚，贵州建设职业技术学院举办了以“职教育才·匠心铸魂”为主题的第十九届校园技能文化艺术节文艺汇演。</p>
+                        <span>2024.10.25</span>
+                    </a>
+                    <div class="news-layout">
+                        <div class="news-left">
+                            <div class="swiper-container newsSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="https://www.gzjszy.cn/n751/20241025/i13260.html">
+                                            <img src="https://www.gzjszy.cn/resource/info/logo/2024/10/25/3b84004d-2572-4661-b61a-69dfdffa14e4.jpeg" alt="">
+                                            <p>贵州建设职业技术学院举行第十九届校园技能文化艺术节文艺汇演</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://www.gzjszy.cn/n751/20241025/i13259.html">
+                                            <img src="https://www.gzjszy.cn/resource/info/logo/2024/10/25/1729842960432047261.jpeg" alt="">
+                                            <p>师生携手美化校园，绘就国风新风景</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://www.gzjszy.cn/n751/20241024/i13256.html">
+                                            <img src="https://www.gzjszy.cn/resource/info/logo/2024/10/24/56d1d0d1-9ff2-4b3b-a270-dce822008c9e.jpg" alt="">
+                                            <p>我院《音乐鉴赏》课程入选2023年职业 教育国家在线精品课程</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination newsSwiper-pagin"></div>
+                            </div>
+                        </div>
+                        <ul class="news-right">
+                            <li>
+                                <a href="https://www.gzjszy.cn/n751/20241025/i13259.html">
+                                    <p>师生携手美化校园，绘就国风新风景</p>
+                                    <span>2024.10.25</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gzjszy.cn/n751/20241024/i13256.html">
+                                    <p>我院《音乐鉴赏》课程入选2023年职业 教育国家在线精品课程</p>
+                                    <span>2024.10.24</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gzjszy.cn/n751/20241022/i13251.html">
+                                    <p>贵州护理职业技术学院到我院调研廉洁文化建设工作</p>
+                                    <span>2024.10.22</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gzjszy.cn/n751/20241019/i13249.html">
+                                    <p>“资助润心田，感恩筑未来”资助育人活动顺利开展</p>
+                                    <span>2024.10.18</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gzjszy.cn/n751/20241024/i13255.html">
+                                    <p>深化产教融合，共谋创新发展</p>
+                                    <span>2024.10.16</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="newsNotice-right">
+                    <div class="column-tit notice-tit">
+                        <h4>
+                            通知<span>公告</span>
+                        </h4>
+                        <a href="https://www.gzjszy.cn/n752/index.html">
+                            MORE+
+                        </a>
+                    </div>
+                    <ul class="notice-list">
+                        <li>
+                            <a href="https://www.gzjszy.cn/n752/20241025/i13258.html">
+                                <span>2024.10.25</span>
+                                <p>遴选优质企业共建产教融合汽修生产性实训基地项目中标（成...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gzjszy.cn/n752/20241025/i13257.html">
+                                <span>2024.10.25</span>
+                                <p>贵州建设职业技术学院汽车综合实训中心消防改造工程（二次...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gzjszy.cn/n752/20241024/i13254.html">
+                                <span>2024.10.24</span>
+                                <p>贵州建设职业技术学院汽车综合实训中心消防改造工程废标公告</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gzjszy.cn/n752/20241023/i13253.html">
+                                <span>2024.10.23</span>
+                                <p>承办2024年贵州省职业学校“职教杯”教职工足球邀请赛...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gzjszy.cn/n752/20241022/i13252.html">
+                                <span>2024.10.22</span>
+                                <p>贵州建设职业技术学院2024年公开招聘聘用制（非编制）...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gzjszy.cn/n752/20241018/i13248.html">
+                                <span>2024.10.18</span>
+                                <p>贵州建设职业技术学院汽车综合实训中心消防改造工程采购公告</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gzjszy.cn/n752/20241016/i13247.html">
+                                <span>2024.10.16</span>
+                                <p>​承办2024年贵州省职业学校“职教杯”教职工足球邀请...</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gzjszy.cn/n752/20241015/i13230.html">
+                                <span>2024.10.15</span>
+                                <p>竞争性磋商公告</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gzjszy.cn/n752/20241012/i13228.html">
+                                <span>2024.10.12</span>
+                                <p>遴选优质企业共建产教融合汽修生产性实训基地项目采购公告</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--学院要闻 及 通知公告 end-->
+        <!--专题专栏-->
+        <div class="main-wrap special">
+            <div class="column-tit special-tit">
+                <h4>
+                    专题<span>专栏</span>
+                </h4>
+                <a href="https://www.gzjszy.cn/n556/index.html" class="ztzlMore">
+                    MORE+
+                </a>
+                <div class="swiper-pagination special-pagin"></div>
+            </div>
+            <div class="special-cont">
+              		<div class="swiper-button-prev CollegeDirect1-prev"></div>
+              		<div class="swiper-button-next CollegeDirect1-next"></div>
+                <div class="swiper-container specialSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="/n1331/index.html" title="师德师风建设" target="_blank">
+                                <img src="https://www.gzjszy.cn/resource/info/logo/2023/08/11/7c38c775-134e-458c-a8bf-3c3d871275f2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="http://ztjy.people.cn/" title="主题教育" target="_blank">
+                                <img src="https://www.gzjszy.cn/resource/info/logo/2023/04/27/90630124-83b9-4ba3-bbfa-6d99b68bbf93.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/n587/index.html" title="思政专题网" target="_blank">
+                                <img src="https://www.gzjszy.cn/resource/info/logo/2022/05/05/1aef3f49-578c-4232-9a06-65edf2b9cb73.png" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.gzjszy.cn/site11/" title="贵州省建设职业教育集团" target="_blank">
+                                <img src="https://www.gzjszy.cn/resource/info/logo/2023/06/28/8861c9a4-eade-4bbb-ae53-32b25f390c81.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--专题专栏 end-->
+        
+      <!--快捷链接 start-->
+      	<div class="main-wrap list-wrap">
+            <ul class="kjlj-list">
+                <li>
+                  <a href="http://dz.gzjszy.net/dzsys/login.shtml" target="_blank">
+                    <div class="kjlj-item-tit icon1">
+                    </div>
+                    <p>招生顶岗</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://cas.gzjszy.net/lyuapServer/login" target="_blank">
+                    <div class="kjlj-item-tit icon2">
+                    </div>
+                    <p>智慧校园</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://onlinenew.enetedu.com/gzjszy" target="_blank">
+                    <div class="kjlj-item-tit icon3">
+                    </div>
+                    <p>教师培训</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://jw.gzjszy.net/jwglxt/xtgl/login_slogin.html" target="_blank">
+                    <div class="kjlj-item-tit icon4">
+                    </div>
+                    <p>教务系统</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gcfz.gzjszy.net/" target="_blank">
+                    <div class="kjlj-item-tit icon5">
+                    </div>
+                    <p>虚拟仿真教学平台</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/site9/n912/index.html" target="_blank">
+                    <div class="kjlj-item-tit icon6">
+                    </div>
+                    <p>贵州省人才质量提升工程</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.gzjszy.cn/site32/" target="_blank">
+                    <div class="kjlj-item-tit icon7">
+                    </div>
+                    <p>社会服务</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://gzjs.portal.chaoxing.com/" target="_blank">
+                    <div class="kjlj-item-tit icon8">
+                    </div>
+                    <p>图书馆</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/n803/index.html" target="_blank">
+                    <div class="kjlj-item-tit icon9">
+                    </div>
+                    <p>书记院长信箱</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/n1000/index.html" target="_blank">
+                    <div class="kjlj-item-tit icon10">
+                    </div>
+                    <p>建院视频</p>
+                  </a>
+                </li>
+            </ul>
+        </div>
+      <!--快捷链接 end-->
+        <!--校园直通车-->
+        <div class="main-wrap College-direct">
+            <div class="CollegeDirect-layout">
+                <div class="column-tit CollegeDirect-tit">
+                    <h4>
+                        院系<span>直通车</span>
+                    </h4>
+                </div>
+                <div class="CollegeDirect-cont">
+                    <div class="swiper-button-prev CollegeDirect-prev"></div>
+                    <div class="swiper-button-next CollegeDirect-next"></div>
+                    <div class="swiper-container CollegeDirect-swiper" style="padding:20px 0">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="/site5" target="_blank">
+                                    <div class="CollegeDirect-subtit">
+                                        <h4>机电工程学院</h4>
+                                    </div>
+                                    <div class="CollegeDirect-text">
+                                        <p>机电工程学院（原建筑设备学院）现开设建筑设备工程技术、机电一体化技术、建筑消防技术、电梯工程技术、电气自动化技术、汽车检测与维修技术6个专业。学院专任教师副高及以上职称占比为36％以上，双师型教师占比为90%以上；现有数名黄炎培职业教育杰出优秀教师、中国高职发展智库专家、行业协会专家、国家产业导师资源库技术技能大师、省级职教名师等。学院荣获国家级现代学徒制试点、国家级新型建筑材料教师教育教学创新团队、教育部专项科研课题项目等；师生在各类技能大赛中多次获奖。</p>
+                                      	 <div>
+                                            <i class="iconfont icon-lianjie"></i>
+                                            进入
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/site4" target="_blank">
+                                    <div class="CollegeDirect-subtit">
+                                        <h4>艺术设计学院</h4>
+                                    </div>
+                                    <div class="CollegeDirect-text">
+                                        <p>贵州建设职业技术学院艺术设计学院（原建筑设计学院）成立于2015年，是一个青春活力、具有特色并且勇于开拓的学院。</p>
+                                      	 <div>
+                                            <i class="iconfont icon-lianjie"></i>
+                                            进入
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/site2" target="_blank">
+                                    <div class="CollegeDirect-subtit">
+                                        <h4>建筑工程学院</h4>
+                                    </div>
+                                    <div class="CollegeDirect-text">
+                                        <p>建筑工程学院建筑工程学院专业设置以土建施工大类为主，下设建工、城建、水建三教研室。现有建筑工程技术、建设工程监理、建设工程管理、道路桥梁工程技术、地下工程与隧道工程技术、市政工程技术、城市轨道交通工程技术、给排水工程技术、水利水电工程技术等9个专业，其中建筑工程技术、市政工程技术、给排水工程技术作为三个骨干专业来建设。</p>
+                                      	 <div>
+                                            <i class="iconfont icon-lianjie"></i>
+                                            进入
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/site6" target="_blank">
+                                    <div class="CollegeDirect-subtit">
+                                        <h4>信息管理学院</h4>
+                                    </div>
+                                    <div class="CollegeDirect-text">
+                                        <p>信息管理学院信息管理学院成立于2016年，是一个年轻、充满活力的团队。现开设有计算机应用、软件编程、数字媒体技术、电子商务、物联网、会计电算化、建筑经济管理、旅游管理、轨道交通运营管理等九个专业。学院设有各专业配套实验实训设备，力求做到专业教育与兴趣引导相结合，并积极开展校企共建，为“互联网+”的时代培养具备经管知识的信息化复合型人才。</p>
+                                      	 <div>
+                                            <i class="iconfont icon-lianjie"></i>
+                                            进入
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--校园直通车 end-->
+		
+      
+      
+     
+      
+    </main>
+  <footer id="footer" class="footer-container">
+        <div class="Links">
+            <div class="links-layout">
+                <ul class="links-left">
+                    
+                </ul>
+                <div class="yqlj">
+                    友情链接
+                    <ul class="yqlj-list">
+                        <li><a href="https://www.gzyouth.cn/">贵州共青团</a></li>
+                        <li><a href="http://news.cyol.com/gb/channels/vrGlAKDl/index.html">青年大学习</a></li>
+                        <li><a href="https://zhtj.youth.cn/zhtj/signin">智慧团建</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-infor">
+            <div class="footerInfor-layout">
+                <div class="footerInfor-left">
+                    <div class="footerInfor-top">
+                        <a href="https://www.gzjszy.cn" class="footer-logo">
+                            <img src="https://www.gzjszy.cn/ggzy_sy/images/footer-logo_news.png" alt="">
+                        </a>
+                        <div class="contactInfor">
+                            <p>
+                                <span><i class="iconfont icon-dianhuatianchong"></i> 0851-84702126</span>
+                                <span><i class="iconfont icon-youxiang"></i> gzjy1979@126.com</span>
+                            </p>
+                            <p>
+                            <span>
+                                <i class="iconfont icon-daohangdizhi"></i>
+                                贵阳市清镇市职教城东区百花路
+                            </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footerInfor-bottom">
+                      <a href="https://bszs.conac.cn/sitename?method=show&amp;id=7BCB242434E166FBE05310291AAC7805">
+                         <img src="https://www.gzjszy.cn/site9/images/blue.png" alt="">
+                      </a>
+                        <p>
+                            <span>Copyright © 版权所有 贵州建设职业技术学院</span>
+                            <a href="https://beian.miit.gov.cn/" target="_blank">
+                                黔ICP备16001084号-1
+                            </a>
+                            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52018102008116" target="_blank">
+                                <img src="https://www.gzjszy.cn/images/beian.png" alt="">
+                                贵公网安备 52018102008116号
+                            </a>
+                            <a href="https://www.zzdsj.com.cn/" target="_blank">技术支持：智政科技</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footerInfor-right">
+                    <img src="https://www.gzjszy.cn/ggzy_sy/images/erweima.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+  </div>
+<!-- 移动端导航 -->
+<div class="column js-canvi-navbar--right canvi-navbar">
+    <div class="subNav">
+        <span class="nav-close" onclick="canvi.close()">
+        网站导航 <i class="iconfont icon-guanbi"></i>
+        </span>
+    </div>
+    <ul class="wap-nav-ul">
+        <li>
+          <a href="https://www.gzjszy.cn/n702/index.html">学院概况</a>
+            <ul class="subWap_nav-ul">
+                <li>
+                    <a href="https://www.gzjszy.cn/n703/index.html">学院简介</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n1372/index.html">学院章程</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n704/index.html">校训校徽校歌</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n705/index.html">现任领导</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n706/index.html">学院风光</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n707/index.html">学院荣誉</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n740/index.html">师资风采</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n709/index.html">联系地址</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://www.gzjszy.cn/n708/index.html">机构设置</a>
+            <ul class="subWap_nav-ul">
+                <li>
+                    <a href="https://www.gzjszy.cn/n711/index.html">党政部门</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n714/index.html">教学机构</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n713/index.html">教辅机构</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://www.gzjszy.cn/n754/index.html">党的建设</a>
+            <ul class="subWap_nav-ul">
+                <li>
+                    <a href="https://www.gzjszy.cn/n758/index.html">党建动态</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n759/index.html">政策文件</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://www.gzjszy.cn/n745/index.html">教学科研</a>
+            <ul class="subWap_nav-ul">
+                <li>
+                    <a href="/site9">教务处</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n773/index.html">科研处</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://www.gzjszy.cn/n1005/index.html">团学工作</a>
+            <ul class="subWap_nav-ul">
+                <li>
+                    <a href="/n719">团委</a>
+                </li>
+                <li>
+                    <a href="/site10">党委学生工作部</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://www.gzjszy.cn/n746/index.html">招生就业</a>
+            <ul class="subWap_nav-ul">
+                <li>
+                    <a href="http://www.gzjszy.cn/n593/index.html">招生服务</a>
+                </li>
+                <li>
+                    <a href="http://gzjsxy.bysjy.com.cn/">就业服务</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://www.gzjszy.cn/n971/index.html">合作交流</a>
+            <ul class="subWap_nav-ul">
+                <li>
+                    <a href="https://www.gzjszy.cn/n972/index.html">国际交流（含港澳台）</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n973/index.html">政校合作</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n974/index.html">校校合作</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n975/index.html">校企合作</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n976/index.html">社会服务</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://www.gzjszy.cn/n747/index.html">学院服务</a>
+            <ul class="subWap_nav-ul">
+                <li>
+                    <a href="https://www.gzjszy.cn/n791/index.html">人事评聘</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n792/index.html">办事指南</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n793/index.html">职工之家</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n794/index.html">示范建设</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n795/index.html">资料下载</a>
+                </li>
+                <li>
+                    <a href="http://gzjs.portal.chaoxing.com/">图书馆</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://www.gzjszy.cn/n749/index.html">信息公开</a>
+            <ul class="subWap_nav-ul">
+                <li>
+                    <a href="https://www.gzjszy.cn/n805/index.html">信息公开年度报告</a>
+                </li>
+                <li>
+                    <a href="https://www.gzjszy.cn/n1261/index.html">经费管理</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+    <script src="https://www.gzjszy.cn/ggzy_sy/js/swiper.min.js"></script>
+    <script src="https://www.gzjszy.cn/ggzy_sy/js/judgeIE.js"></script>
+    <script src="https://www.gzjszy.cn/ggzy_sy/js/canvi.js"></script>
+    <script src="https://www.gzjszy.cn/ggzy_sy/js/public.js"></script>
+    <script src="https://www.gzjszy.cn/ggzy_sy/js/index.js"></script>
+
+  </body>
+</html>

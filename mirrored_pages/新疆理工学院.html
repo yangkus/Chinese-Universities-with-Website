@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="新疆理工学院" />
+<meta name="description" content="新疆理工学院" />
+<title>新疆理工学院</title>
+<link href="/skin/sites/common/css/bootstrap.min.css" type="text/css"  rel="stylesheet" >
+<link href="/skin/sites/common/css/global.css" type="text/css"  rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="/skin/xjit/cms/../core/header/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/xjit/cms/../core/header/header.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/slick.css">
+<link rel="stylesheet" type="text/css" href="/skin/label/label.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/theme/theme.css" />
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/guowei.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/breakpoints.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/skin/xjit/cms/../js/common.js"></script>
+<script type="text/javascript" src="/js/lang/core/zh-cn.js"></script>
+<script type="text/javascript" src="/js/lang/cms/zh-cn.js"></script>
+<script type="text/javascript">
+P8CONFIG.RESOURCE = '';
+var SYSTEM = 'cms',
+MODULE = '',
+ACTION = 'main',
+LABEL_URL = '/index.php/cms-main?',
+STATIC_URL = 'https://manager.xjit.edu.cn',
+$this_router = P8CONFIG.URI[SYSTEM][MODULE].U_controller,
+$this_url = $this_router +'-'+ ACTION,
+SKIN = '/skin/xjit/cms/',
+TEMPLATE = 'xjit';
+mobile_status= '0',
+mobile_auto_jump='0',
+mobile_url = '/m';
+if(mobile_status=='1' && SYSTEM!='sites'){
+if(browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+if(mobile_auto_jump=='1' && mobile_url!=P8CONFIG.RESOURCE){
+var this_url = location.href,_pul=P8CONFIG.RESOURCE;
+if(this_url.indexOf(mobile_url)==-1 && this_url.indexOf('s.php')==-1 && this_url.indexOf('u.php')==-1 && this_url.indexOf('admin.php')==-1 && SYSTEM!='sites'){
+if(this_url.indexOf(P8CONFIG.RESOURCE+'/html')!=-1)_pul+='/html';
+if(P8CONFIG.RESOURCE==''){
+this_url = mobile_url.indexOf('http')==-1 ? this_url.mobile_url : mobile_url;
+}else{
+this_url = this_url.replace(_pul, mobile_url);
+}
+location.href = this_url;
+}
+}
+}
+}
+
+</script>
+</head>
+<body>
+<div class="indexTop showdiv option">
+<div class="topbox">
+<div class="top">
+<div class="navbar main-nav">
+<div class="container-fluid">
+<div class="header-main clearfix">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/" class="navbar-brand navbar-logo"><img src="/skin/xjit/cms/../core/header/images/logo.png" class="logo1"/>
+</a>
+</div>
+<div class="top-inner hidden-sm hidden-xs clearfix">
+<div class="topnav pull-right clearfix"><ul class="topnav-list clearfix" id="header_t">
+<li class="li1"><a href="https://www.xjit.edu.cn/" target="_blank">首页 </a></li>
+<li class="li2"><a href="https://webvpn.xjistedu.cn" target="_blank">webVPN登录</a></li>	
+<li class="li5"><a class="search" href="/search/index.html">搜索</a></li>
+</ul></div>
+</div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+<ul class="nav navbar-nav navbar-right navlist navbar-link2">
+<li class="dropdown">
+<a class="dropdown-toggle link on1" data-toggle="dropdown" data-hover="dropdown" href="/html/955/"  aria-expanded="false" role="button" target="">理工概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/955/" target="">理工简介</a></li>
+<li class="menu2"><a href="/html/947/" target="">理工章程</a></li>
+<li class="menu3"><a href="/html/948/" target="">办学定位</a></li>
+<li class="menu4"><a href="/html/949/" target="">现任领导</a></li>
+<li class="menu5"><a href="/html/1061/" target="">历任领导</a></li>
+<li class="menu6"><a href="/html/951/" target="">师资队伍</a></li>
+<li class="menu7"><a href="/html/953/" target="">理工标识</a></li>
+<li class="menu8"><a href="/html/950/" target="">资料下载</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on2" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">组织机构</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on3" data-hover="dropdown" href="/html/964/"  aria-expanded="false" role="button" target="">新闻中心</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target="">招生就业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://zs.xjit.edu.cn/" target="">招生信息网</a></li>
+<li class="menu2"><a href="http://job.xjit.edu.cn/" target="">就业信息网</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on5" data-hover="dropdown" href="https://manager.xjit.edu.cn/s.php/key"  aria-expanded="false" role="button" target="_blank">科学研究</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on6" data-toggle="dropdown" data-hover="dropdown" href="/html/1028/"  aria-expanded="false" role="button" target="">校园服务</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://lib.xjit.edu.cn/" target="">图书馆</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on7" data-hover="dropdown" href="http://bkpg.xjit.edu.cn/"  aria-expanded="false" role="button" target="">迎评促建</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on8" data-hover="dropdown" href="/html/956/"  aria-expanded="false" role="button" target="">人才招聘</a>		
+</li>
+</ul>
+<div class="top-inner visible-sm-block visible-xs-block">
+<div class="topnav pull-right clearfix"><ul class="topnav-list clearfix" id="header_t">
+<li class="li1"><a href="https://www.xjit.edu.cn/" target="_blank">首页 </a></li>
+<li class="li2"><a href="https://webvpn.xjistedu.cn" target="_blank">webVPN登录</a></li>	
+<li class="li5"><a class="search" href="/search/index.html">搜索</a></li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<a href="javascript:;" class="navbtn"></a>
+</div>
+</div>
+</div>
+<div class="big-nav">
+<div class="scroll">
+<ul class="flex "> 
+<li>
+<h2 class="h2"><a href="/html/955/" target="" class="n1">理工概况</a></h2>
+<div class="list">
+<h3><a href="/html/955/" target="">理工简介</a></h3>
+<h3><a href="/html/947/" target="">理工章程</a></h3>
+<h3><a href="/html/948/" target="">办学定位</a></h3>
+<h3><a href="/html/949/" target="">现任领导</a></h3>
+<h3><a href="/html/1061/" target="">历任领导</a></h3>
+<h3><a href="/html/951/" target="">师资队伍</a></h3>
+<h3><a href="/html/953/" target="">理工标识</a></h3>
+<h3><a href="/html/950/" target="">资料下载</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="/html/820/" target="" class="n2">组织机构</a></h2>  
+</li>
+<li>
+<h2 class="h2"><a href="/html/964/" target="" class="n3">新闻中心</a></h2>  
+</li>
+<li>
+<h2 class="h2"><a href="/html/45/" target="" class="n4">招生就业</a></h2>
+<div class="list">
+<h3><a href="http://zs.xjit.edu.cn/" target="">招生信息网</a></h3>
+<h3><a href="http://job.xjit.edu.cn/" target="">就业信息网</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="https://manager.xjit.edu.cn/s.php/key" target="_blank" class="n5">科学研究</a></h2>  
+</li>
+<li>
+<h2 class="h2"><a href="/html/1028/" target="" class="n6">校园服务</a></h2>
+<div class="list">
+<h3><a href="http://lib.xjit.edu.cn/" target="">图书馆</a></h3>
+</div>   
+</li>
+<li>
+<h2 class="h2"><a href="http://bkpg.xjit.edu.cn/" target="" class="n7">迎评促建</a></h2>  
+</li>
+<li>
+<h2 class="h2"><a href="/html/956/" target="" class="n8">人才招聘</a></h2>  
+</li>
+</ul>
+</div>
+</div>
+<div class="index-banner">
+
+<style type="text/css">
+.slider13-68052{width:100%;position:relative;height:100%;overflow:hidden;}
+.slider13-68052 .slick-list{height:100%;}
+.slider13-68052 .slick-track{height:100%;}
+.slider13-68052 .slick-slide,.slider13-68052 .slick-slide>div{height:100%;}
+.slider13-68052 .frame{height:100%;}
+.slider13-68052 .child{height:100%;position:relative;background-size:cover;background-position:center center;height:100%;position:relative;overflow:hidden;}
+.slider13-68052 .child img{position: absolute;left: 50%;top: 50%;min-height: 100%;min-width: 100%;max-width: 1000%;transform: translate(-50%, -50%);width: auto;height: 100%;}
+.slider13-68052 .slick-active .child{animation:scaleBig 5s linear 0s 1 both;transform-style:preserve-3d;}
+.slider13-68052 .slick-slide .image{width:100%;height:100%;position:relative;overflow:hidden;}
+.slider13-68052 .slick-slide .item,.slider13-68052 .slick-slide .item img{width:100%;height:100%;display:block;}
+.slider13-68052 .slick-slide video{width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;font-family: "object-fit: cover;";}
+.slider13-68052 .number{width:100%;position: absolute;left:0;bottom:60px;color: #fff;text-align: center;line-height:1;}
+.slider13-68052 .number li{width:45px;height:5px;margin:0 10px;background:#fff;border-radius:0;font-size:0;cursor:pointer;vertical-align: middle;display:inline-block;}
+.slider13-68052 .number li.slick-active{background:#225ca6;}
+.slider13-68052 .slick-arrow{width: 46px;height: 83px;background-repeat:no-repeat;background-position: center center;margin-top: -18px;position: absolute;top: 50%;z-index:100;cursor: pointer;font-size:0;border:0;background-color: rgba(0,0,0,.4);;transition: all 500ms ease;-webkit-transition: all 500ms ease;opacity: 0;visibility: hidden;}
+.slider13-68052 .slick-prev{background-image: url(/skin/label/left.png);left: 60px;}
+.slider13-68052 .slick-next{background-image: url(/skin/label/right.png);right: 60px;}
+.slider13-68052:hover .slick-arrow{opacity:1;visibility:visible;}
+@-webkit-keyframes scaleBig {0% {transform:scale(1);}
+100% {transform:scale(1.05);}
+}
+@keyframes scaleBig {0% {transform:scale(1);}
+100% {transform:scale(1.05);}
+}
+@media (max-width: 1200px){
+.slider13-68052,.slider13-68052 .frame,.slider13-68052 .slick-slide .item img{width:100%;height:46vw;}
+}
+@media (max-width: 991px){
+.slider13-68052 .number{bottom:20px;}
+.slider13-68052 .number li{width:10px;height:3px;margin:0 5px;}
+.slider13-68052 .slick-arrow{width:25px;height:35px;background-size:15px auto;}
+.slider13-68052 .slick-prev{left:10px;}
+.slider13-68052 .slick-next{right:10px;}
+}
+</style>
+<div class="slider13-68052">
+<div class="slider frame">
+<div class="child" style="background-image: url(/attachment/core/label/2024_10/08_12/c06c3cd136943758.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2022_12/12_17/6f4850f364f6a91a.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_09/18_11/09c57df7b965a1e2.jpg); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2023_09/06_16/868ab471b24f0db7.png); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a href="" target="_blank" title=""><video id="video" src="/attachment/core/label/2022_09/30_19/c7bfb9ea6bd1ab03.mp4" loop="loop" autoplay="autoplay" muted="muted" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow" airplay="allow" x5-video-orientation="h5" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" data-object-fit="fill"></video></a>	
+</div>
+</div>
+<div class="child" style="background-image: url(/attachment/core/label/2024_05/15_16/6be487c39cb7d311.png); width: 100%; display: inline-block; vertical-align: middle;">
+<div class="image">
+<a class="item" href="" target="_blank" title=""></a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a href="" target="_blank" title=""><video id="video" src="/attachment/core/label/2022_09/30_19/3a189f68efa2b205.mp4" loop="loop" autoplay="autoplay" muted="muted" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow" airplay="allow" x5-video-orientation="h5" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" data-object-fit="fill"></video></a>	
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a href="" target="_blank" title=""><video id="video" src="/attachment/core/label/2024_05/16_13/45e11a0646392664.mp4" loop="loop" autoplay="autoplay" muted="muted" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow" airplay="allow" x5-video-orientation="h5" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload="auto" data-object-fit="fill"></video></a>	
+</div>
+</div>
+</div>
+<div class="number"></div>
+</div>
+<script type="text/javascript">
+$(".slider13-68052 .frame").slick({
+fade:true,
+autoplay:true,
+autoplaySpeed:6000,
+pauseOnDotsHover:true,
+pauseOnFocus:false,
+speed:1000,
+arrows:true,
+dots:true,
+appendDots:".slider13-68052 .number",
+pauseOnHover:true,
+customPaging: function(slider, i) {  
+return i + 1;
+},
+});
+</script>
+</div>
+</div>
+<div class="indexBot">
+<script type="text/javascript">
+var USERNAME = get_username();
+$(document).ready(function(){
+//**show_edit**//
+init_labelshows('header_t');
+})
+</script>
+<script type="text/javascript">
+$(function(){
+$('.navbtn').click(function () {
+if ($('body').hasClass('navShow')) {
+$('body').removeClass('navShow')
+} else {
+$('body').addClass('navShow')
+}
+});
+})
+</script><link rel="stylesheet" type="text/css" href="/skin/xjit/cms/index/index.css" />
+<link rel="stylesheet" type="text/css" href="/skin/xjit/cms/index/animate.min.css" />
+<script type="text/javascript" src="/js/wow.min.js"></script>
+<div class="section-page1">
+<div class="section-news">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-12 col-xs-12">
+<div class="news-roll">
+<div class="title">中央新闻</div>
+<div class="main"><style type="text/css">
+.txtScroll-top68034{position:relative;overflow:hidden;}
+.txtScroll-top68034 .hd{position:absolute;top:0;right:30px;}
+.txtScroll-top68034 .hd .prev,.txtScroll-top68034 .hd .next{ display:block;width:10px;height:48px;float:left;margin:0 4px;overflow:hidden;cursor:pointer;background-position: center center;background-repeat:no-repeat;}
+.txtScroll-top68034 .hd .prev{background-image: url(/skin/label/theme/prev18.png);}
+.txtScroll-top68034 .hd .next{background-image: url(/skin/label/theme/next18.png);}
+.txtScroll-top68034 .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; }
+.txtScroll-top68034 .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("../images/icoCircle.gif") 0 -9px no-repeat; }
+.txtScroll-top68034 .hd ul li.on{ background-position:0 0; }
+.txtScroll-top68034 .bd{width:85%;}
+.txtScroll-top68034 .infoList li{height:48px;line-height:48px;font-size:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+@media (max-width: 1200px){
+.txtScroll-top68034 .hd{right:0;}
+}
+@media (max-width: 767px){
+.txtScroll-top68034 .infoList li{font-size:16px;}
+}
+</style>
+<div class="txtScroll-top68034">
+<div class="bd">
+<ul class="infoList">
+<li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=17175010679582761100&item_id=17175010679582761100" target="_blank" title="为促进世界和平与发展贡献中国智慧和方案">为促进世界和平与发展贡献中国智慧和方案</a></li>
+<li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=15844106672642712205&item_id=15844106672642712205" target="_blank" title="“时代的风浪越大，我们越要勇立潮头” ——习近平主席赴俄罗斯喀山出席金砖国家领导人第十六次会晤纪实">“时代的风浪越大，我们越要勇立潮头” ——习近平主席赴俄罗斯</a></li>
+<li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=11188336387758521038&item_id=11188336387758521038" target="_blank" title="习近平出席金砖国家领导人第十六次会晤并发表重要讲话">习近平出席金砖国家领导人第十六次会晤并发表重要讲话</a></li>
+<li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=12893199434473363176&item_id=12893199434473363176" target="_blank" title="习近平：在文艺工作座谈会上的讲话">习近平：在文艺工作座谈会上的讲话</a></li>
+<li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=5018445961313261640&item_id=5018445961313261640" target="_blank" title="习近平在视察火箭军某旅时强调 坚持政治引领 强化使命担当 埋头苦干实干 提升战略导弹部队威慑和实战能力">习近平在视察火箭军某旅时强调 坚持政治引领 强化使命担当 埋头</a></li>
+</ul>
+</div>
+<div class="hd">
+<a class="prev"></a>
+<a class="next"></a>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(".txtScroll-top68034").slide({mainCell:".bd ul",autoPage:true,effect:"topLoop",autoPlay:true});
+</script></div>
+</div>
+</div>
+<div class="col-md-6 col-sm-12 col-xs-12">
+<div class="news-roll">
+<div class="title">自治区要闻</div>
+<div class="main"><style type="text/css">
+.txtScroll-top68035{position:relative;overflow:hidden;}
+.txtScroll-top68035 .hd{position:absolute;top:0;right:15px;}
+.txtScroll-top68035 .hd .prev,.txtScroll-top68035 .hd .next{ display:block;width:10px;height:48px;float:left;margin:0 4px;overflow:hidden;cursor:pointer;background-position: center center;background-repeat:no-repeat;}
+.txtScroll-top68035 .hd .prev{background-image: url(/skin/label/theme/prev18.png);}
+.txtScroll-top68035 .hd .next{background-image: url(/skin/label/theme/next18.png);}
+.txtScroll-top68035 .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; }
+.txtScroll-top68035 .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("../images/icoCircle.gif") 0 -9px no-repeat; }
+.txtScroll-top68035 .hd ul li.on{ background-position:0 0; }
+.txtScroll-top68035 .bd{width:85%;}
+.txtScroll-top68035 .infoList li{height:48px;line-height:48px;font-size:20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+@media (max-width: 1200px){
+.txtScroll-top68035 .hd{right:0;}
+}
+@media (max-width: 767px){
+.txtScroll-top68035 .infoList li{font-size:16px;}
+}
+</style>
+<div class="txtScroll-top68035">
+<div class="bd">
+<ul class="infoList">
+<li><a href="https://tnews.xjmty.com/app/slyapp/tjzj/leader/mxr/202410/t20241018_24466938.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=24466938&aid=1&sid=10001&action=like&digg=435" target="_blank" title="马兴瑞艾尔肯·吐尼亚孜会见新疆全国民族团结进步模范集体代表和模范个人">马兴瑞艾尔肯·吐尼亚孜会见新疆全国民族团结进步模范集体代表和</a></li>
+<li><a href="https://tnews.xjmty.com/app/slyapp/tjzj/leader/mxr/202410/t20241017_24440381.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=24440381&aid=1&sid=10001&action=like&digg=552" target="_blank" title="自治区党委理论学习中心组专题学习习近平总书记关于总体国家安全观的重要论述">自治区党委理论学习中心组专题学习习近平总书记关于总体国家安全</a></li>
+<li><a href="https://tnews.xjmty.com/app/slyapp/tjzj/leader/mxr/202410/t20241017_24440038.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=24440038&aid=1&sid=10001&action=like&digg=588" target="_blank" title="自治区党委常委会召开会议">自治区党委常委会召开会议</a></li>
+<li><a href="https://tnews.xjmty.com/app/slyapp/tjzj/leader/mxr/202410/t20241013_24346708.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=24346708&aid=1&sid=10001&action=like&digg=578" target="_blank" title="第七次全国科技援疆暨“四方合作”推进会议在乌鲁木齐召开">第七次全国科技援疆暨“四方合作”推进会议在乌鲁木齐召开</a></li>
+<li><a href="https://tnews.xjmty.com/app/slyapp/tjzj/leader/mxr/202410/t20241014_24349813.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=24349813&aid=1&sid=10001&action=like&digg=567" target="_blank" title="马兴瑞艾尔肯·吐尼亚孜会见傅华等出席第六届世界媒体峰会中外嘉宾">马兴瑞艾尔肯·吐尼亚孜会见傅华等出席第六届世界媒体峰会中外嘉</a></li>
+</ul>
+</div>
+<div class="hd">
+<a class="prev"></a>
+<a class="next"></a>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(".txtScroll-top68035").slide({mainCell:".bd ul",autoPage:true,effect:"topLoop",autoPlay:true});
+</script></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row row-20">
+<div class="col-md-6 col-sm-12 col-xs-12 col-pd-20">
+<div class="news-box">
+<div class="head clearfix">
+<div class="title title1 fz28">理工新闻</div>
+<div class="more pull-right">
+<a href="/html/966/" target="_blank">更多>></a></div>
+</div>
+<div class="row">
+<div class="col-md-5 col-sm-5 col-xs-12"><style type="text/css">
+.label_theme_pic68018 li .item img{width:100%;height:210px;object-fit: fill;}
+</style>
+<ul class="label_theme_pic68018 label_theme_pic_ul">
+<li>
+<div class="item">
+<a href="/html/966/2024-10-27/content-11868.html" target="_blank" title="2024年自治区大学生校园篮球联赛圆满落幕"><img alt="2024年自治区大学生校园篮球联赛圆满落幕" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/27_22/5aa0cc4c4cdcaf59.jpg.thumb.jpg" /></a>
+</div>
+</li>
+</ul></div>
+<div class="col-md-7 col-sm-7 col-xs-12"><ul class="themelist37" style="font-size:16px;">
+<li>
+<div class="item"><span class="datatime">10-27</span><a href="/html/966/2024-10-27/content-11868.html" target="_blank" title="2024年自治区大学生校园篮球联赛圆满落幕">2024年自治区大学生校园篮球联赛圆满落幕</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-27</span><a href="/html/966/2024-10-27/content-11867.html" target="_blank" title="2000＋学子“赴约”！新疆理工学院2024年秋季校园招聘会成功举办">2000＋学子“赴约”！新疆理工学院2024年秋季校园招聘会成功举办</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-25</span><a href="/html/966/2024-10-25/content-11862.html" target="_blank" title="我爱浙疆——台州乱弹现代戏《我的芳林村》巡演活动走进新疆理工学院">我爱浙疆——台州乱弹现代戏《我的芳林村》巡演活动走进新疆理工</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-24</span><a href="/html/966/2024-10-24/content-11861.html" target="_blank" title="新疆理工学院召开2025年国家基金项目申报动员会">新疆理工学院召开2025年国家基金项目申报动员会</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-24</span><a href="/html/966/2024-10-24/content-11860.html" target="_blank" title="喜报！新疆理工学院在新疆维吾尔自治区第三届大学生乡村振兴创意大赛省级决赛中斩获 7金、11银、11铜！">喜报！新疆理工学院在新疆维吾尔自治区第三届大学生乡村振兴创意</a></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-12 col-xs-12 col-pd-20">
+<div class="news-box">
+<div class="head clearfix">
+<div class="title title2 fz28">媒体理工</div>
+<div class="more pull-right">
+<a href="/html/1023/" target="_blank">更多>></a></div>
+</div>
+<div class="row">
+<div class="col-md-5 col-sm-5 col-xs-12"><style type="text/css">
+.label_theme_pic68022 li .item img{width:100%;height:210px;object-fit: fill;}
+</style>
+<ul class="label_theme_pic68022 label_theme_pic_ul">
+<li>
+<div class="item">
+<a href="https://tnews.xjmty.com/app/pghlapp/xw/202410/t20241022_24535040.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=24535040&aid=1&sid=10126&action=like&digg=0" target="_blank" title="便捷交通 畅游阿克苏"><img alt="便捷交通 畅游阿克苏" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/26_15/3022e89386008524.png" /></a>
+</div>
+</li>
+</ul></div>
+<div class="col-md-7 col-sm-7 col-xs-12"><ul class="themelist37" style="font-size:16px;">
+<li>
+<div class="item"><span class="datatime">10-26</span><a href="https://tnews.xjmty.com/app/pghlapp/xw/202410/t20241022_24535040.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=24535040&aid=1&sid=10126&action=like&digg=0" target="_blank" title="便捷交通 畅游阿克苏">便捷交通 畅游阿克苏</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-21</span><a href="https://tnews.xjmty.com/app/slyapp/yw/202410/t20241018_24467128.html?diggurl=https://st-app.xjmty.com/open/digg/index&cid=24467128&aid=1&sid=10001&action=like&digg=4" target="_blank" title="陈伟俊在新疆理工学院讲授思政课 把握机遇 奋力书写新篇章">陈伟俊在新疆理工学院讲授思政课 把握机遇 奋力书写新篇章</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-16</span><a href="http://www.xj.chinanews.com.cn/dizhou/2024-10-14/detail-iheiaitf1646872.shtml" target="_blank" title="新疆理工学院又有6名教授被浙江高校遴选为联合培养硕士研究生导师">新疆理工学院又有6名教授被浙江高校遴选为联合培养硕士研究生导</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-12</span><a href="https://mp.weixin.qq.com/s/saRtGVvTlF68GeOmALBjMg" target="_blank" title="地区“艺心向党” 文艺志愿服务活动走进新疆理工大学">地区“艺心向党” 文艺志愿服务活动走进新疆理工大学</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-12</span><a href="https://mp.weixin.qq.com/s/jck-21ebaeWr8RrwXtGkPQ" target="_blank" title="新疆理工学院举行主题书画展及书画艺术家进校园活动">新疆理工学院举行主题书画展及书画艺术家进校园活动</a></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row row-20">
+<div class="col-md-6 col-sm-12 col-xs-12 col-pd-20">
+<div class="news-box">
+<div class="head clearfix">
+<div class="title title5 fz28">一校一院</div>
+<div class="more pull-right">
+<a href="/html/1082/" target="_blank">更多>></a></div>
+</div>
+<div class="main">
+<div class="row">
+<div class="col-md-5 col-sm-5 col-xs-12"><style type="text/css">
+.label_theme_pic68198 li .item img{width:100%;height:210px;object-fit: fill;}
+</style>
+<ul class="label_theme_pic68198 label_theme_pic_ul">
+<li>
+<div class="item">
+<a href="/html/1082/2024-10-25/content-11863.html" target="_blank" title="浙江高校－新疆理工学院开展深化“一校一院”工作机制学科建设专题交流座谈会"><img alt="浙江高校－新疆理工学院开展深化“一校一院”工作机制学科建设专题交流座谈会" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/26_15/1df21d5dff11b490.jpg.thumb.jpg" /></a>
+</div>
+</li>
+</ul></div>
+<div class="col-md-7 col-sm-7 col-xs-12"><ul class="themelist37" style="font-size:16px;">
+<li>
+<div class="item"><span class="datatime">10-25</span><a href="/html/1082/2024-10-25/content-11863.html" target="_blank" title="浙江高校－新疆理工学院开展深化“一校一院”工作机制学科建设专题交流座谈会">浙江高校－新疆理工学院开展深化“一校一院”工作机制学科建设专</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-18</span><a href="/html/1082/2024-10-18/content-11839.html" target="_blank" title="新疆理工学院与温州理工学院开展深化  “一校一院”工作机制交流座谈会">新疆理工学院与温州理工学院开展深化  “一校一院”工作机制交流</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-14</span><a href="/html/1082/2024-10-14/content-11826.html" target="_blank" title="我校机电工程学院与浙江水利水电学院开展落实“一校一院”工作机制座谈会">我校机电工程学院与浙江水利水电学院开展落实“一校一院”工作机</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-14</span><a href="/html/1082/2024-10-14/content-11811.html" target="_blank" title="振奋！我校又有6名教授被浙江高校遴选为联合培养硕士研究生导师">振奋！我校又有6名教授被浙江高校遴选为联合培养硕士研究生导师</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-10</span><a href="/html/1082/2024-10-10/content-11798.html" target="_blank" title="浙江高校-新疆理工学院“一校一院”对口支援之智慧水利工程学院（筹）学科专业建设 研讨会顺利召开">浙江高校-新疆理工学院“一校一院”对口支援之智慧水利工程学院</a></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-12 col-xs-12 col-pd-20">
+<div class="news-box">
+<div class="head clearfix">
+<div class="title title6 fz28">一院一产</div>
+<div class="more pull-right">
+<a href="/html/1083/" target="_blank">更多>></a></div>
+</div>
+<div class="main">
+<div class="row">
+<div class="col-md-5 col-sm-5 col-xs-12"><style type="text/css">
+.label_theme_pic68199 li .item img{width:100%;height:210px;object-fit: fill;}
+</style>
+<ul class="label_theme_pic68199 label_theme_pic_ul">
+<li>
+<div class="item">
+<a href="/html/1083/2024-10-22/content-11856.html" target="_blank" title="智慧水利工程学院（筹）专家赴伊犁州 开展调研"><img alt="智慧水利工程学院（筹）专家赴伊犁州 开展调研" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/22_17/ebc45d8e752d7630.png.thumb.jpg" /></a>
+</div>
+</li>
+</ul></div>
+<div class="col-md-7 col-sm-7 col-xs-12"><ul class="themelist37" style="font-size:16px;">
+<li>
+<div class="item"><span class="datatime">10-22</span><a href="/html/1083/2024-10-22/content-11856.html" target="_blank" title="智慧水利工程学院（筹）专家赴伊犁州 开展调研">智慧水利工程学院（筹）专家赴伊犁州 开展调研</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-17</span><a href="/html/1083/2024-10-17/content-11836.html" target="_blank" title="我校深入企业走访调研 协同推进  “一院一产”工作机制">我校深入企业走访调研 协同推进  “一院一产”工作机制</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-11</span><a href="/html/1083/2024-10-11/content-11834.html" target="_blank" title="校企合作在行动——我校与新疆红旗坡农牧业投资发展有限责任公司深入落实“一院一产业”工作机制">校企合作在行动——我校与新疆红旗坡农牧业投资发展有限责任公司</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">09-30</span><a href="/html/1083/2024-09-30/content-11801.html" target="_blank" title="新疆理工学院理学院：创新教学模式 夯实培养基础 全面提升应用型人才培养质量">新疆理工学院理学院：创新教学模式 夯实培养基础 全面提升应用型</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">09-25</span><a href="/html/1083/2024-09-25/content-11787.html" target="_blank" title="产业教授大讲堂开讲啦！明确产业发展 找准就业定位——新疆理工学院邀请产业教授姚仕林开展专题讲座">产业教授大讲堂开讲啦！明确产业发展 找准就业定位——新疆理工</a></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row row-20">
+<div class="col-md-6 col-sm-12 col-xs-12 col-pd-20">
+<div class="news-box">
+<div class="head clearfix">
+<div class="title title3 fz28">基层动态</div>
+<div class="more pull-right">
+<a href="/html/967/" target="_blank">更多>></a></div>
+</div>
+<div class="row">
+<div class="col-md-5 col-sm-5 col-xs-12"><style type="text/css">
+.label_theme_pic68023 li .item img{width:100%;height:210px;object-fit: fill;}
+</style>
+<ul class="label_theme_pic68023 label_theme_pic_ul">
+<li>
+<div class="item">
+<a href="/html/967/2024-10-22/content-11857.html" target="_blank" title="我校举办2024年考研经验交流会"><img alt="我校举办2024年考研经验交流会" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/22_17/c9e7ec5414e2ae18.png.thumb.jpg" /></a>
+</div>
+</li>
+</ul></div>
+<div class="col-md-7 col-sm-7 col-xs-12"><ul class="themelist37" style="font-size:16px;">
+<li>
+<div class="item"><span class="datatime">10-22</span><a href="/html/967/2024-10-22/content-11857.html" target="_blank" title="我校举办2024年考研经验交流会">我校举办2024年考研经验交流会</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-10</span><a href="/html/967/2024-10-10/content-11799.html" target="_blank" title="“10·10”世界精神卫生日相“愈”画卷 心“绘”理想百米画廊活动圆满落幕">“10·10”世界精神卫生日相“愈”画卷 心“绘”理想百米画廊活</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">09-26</span><a href="/html/967/2024-09-26/content-11745.html" target="_blank" title="“德润课堂，思政领航”——信息工程学院开展“青椒2024”教科研系列讲座第十期暨课程思政学术沙龙">“德润课堂，思政领航”——信息工程学院开展“青椒2024”教科研</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">09-20</span><a href="/html/967/2024-09-20/content-11726.html" target="_blank" title="携手并进，共绘校企合作新篇章——新疆理工学院机电工程学院与库车昊源城市供水有限公司洽谈校企合作">携手并进，共绘校企合作新篇章——新疆理工学院机电工程学院与库</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">09-19</span><a href="/html/967/2024-09-19/content-11717.html" target="_blank" title="科学启航，实验筑梦——新疆理工学院能源化工工程学院“十百万”科普志愿服务团队走进温宿县第七中学">科学启航，实验筑梦——新疆理工学院能源化工工程学院“十百万”</a></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-12 col-xs-12 col-pd-20">
+<div class="news-box">
+<div class="head clearfix">
+<div class="title title4 fz28">师生风采</div>
+<div class="more pull-right">
+<a href="/html/1076/" target="_blank">更多>></a></div>
+</div>
+<div class="row">
+<div class="col-md-5 col-sm-5 col-xs-12"><style type="text/css">
+.label_theme_pic68024 li .item img{width:100%;height:210px;object-fit: fill;}
+</style>
+<ul class="label_theme_pic68024 label_theme_pic_ul">
+<li>
+<div class="item">
+<a href="https://mp.weixin.qq.com/s/MIkU-1mWIr1ikc85mYNosw" target="_blank" title="微故事·展师者风采｜潘学聪—丹心如光 微以致远（第三十三期）"><img alt="微故事·展师者风采｜潘学聪—丹心如光 微以致远（第三十三期）" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/22_17/c3948518bda78e01.png.thumb.jpg" /></a>
+</div>
+</li>
+</ul></div>
+<div class="col-md-7 col-sm-7 col-xs-12"><ul class="themelist37" style="font-size:16px;">
+<li>
+<div class="item"><span class="datatime">10-22</span><a href="https://mp.weixin.qq.com/s/MIkU-1mWIr1ikc85mYNosw" target="_blank" title="微故事·展师者风采｜潘学聪—丹心如光 微以致远（第三十三期）">微故事·展师者风采｜潘学聪—丹心如光 微以致远（第三十三期）</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-17</span><a href="https://mp.weixin.qq.com/s/jsWpJTGB9Q5rgPmGj766FA" target="_blank" title="边疆献余热 银龄援新理 | 第四十四期：龄长德高育桃李 躬耕之花一路芬繁—新疆大学支援新疆理工学院银龄教师倪培强">边疆献余热 银龄援新理 | 第四十四期：龄长德高育桃李 躬耕之花</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-14</span><a href="https://mp.weixin.qq.com/s/pwv8u3R7NO7_DOidyXvmGA" target="_blank" title="微故事·展师者风采｜布海丽且姆·阿卜杜热合曼：后浪奔腾 不负韶华（第三十二期）">微故事·展师者风采｜布海丽且姆·阿卜杜热合曼：后浪奔腾 不负</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-12</span><a href="https://mp.weixin.qq.com/s/E_8RlMm2k24-FKfbLYxMaA" target="_blank" title="边疆献余热 银龄援新理 | 第四十三期：赓续初心 爱洒南疆——宝鸡文理学院支援新疆理工学院银龄教师张全省">边疆献余热 银龄援新理 | 第四十三期：赓续初心 爱洒南疆——宝</a></div>
+</li>
+<li>
+<div class="item"><span class="datatime">10-10</span><a href="https://mp.weixin.qq.com/s/Iq9ipicyzciKuMJ17j04oQ" target="_blank" title="边疆献余热 银龄援新理 | 第四十二期：寸寸春晖 润泽生命——东莞理工学院支援新疆理工学院银龄教师李秀平">边疆献余热 银龄援新理 | 第四十二期：寸寸春晖 润泽生命——东</a></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page2" style="background-image: url(/skin/xjit/cms/index/bg.png);background-position: center center;background-repeat:no-repeat;">
+<div class="container">
+<div class="common-tabs wow fadeInUp animated">
+<div class="hd">
+<ul class="tabs-nav clearfix">
+<li><h3 class="tit1">通知公告</h3></li>
+<li><h3 class="tit2">迎评促建</h3></li>
+<li><h3 class="tit3">数字图书</h3></li>
+<li><h3 class="tit4">理论学习</h3></li>
+</ul>
+</div>
+<div class="bd">
+<div class="tabs-item">
+<div class="news-list"><style type="text/css">
+.list_theme_date23 .item{margin-bottom:35px;padding:22px 20px;overflow:hidden;background:#ffffff;transition: transform linear 0.3s;}
+.list_theme_date23 .item .date{width:72px;height:68px;float:left;text-align:center;background:#951209;}
+.list_theme_date23 .item .date span{color:#ffffff;display:block;text-align:center;}
+.list_theme_date23 .item .date .d{color:#ffffff;font-size:22px;padding-top:10px;font-weight:bold;}
+.list_theme_date23 .item .date .y{opacity:.9;}
+.list_theme_date23 .item .text{margin-left:94px;}
+.list_theme_date23 .item .text h4{width:100%;line-height:34px;}
+.list_theme_date23 .item .text h4 a{font-size:18px;display:block;position:relative;background-image:linear-gradient(#d20b17,#d20b17);background-position:0 100%;background-size:0 1px;background-repeat:no-repeat;transition:background-size .5s;}
+.list_theme_date23 .item:hover .text h4 a{background-size:100% 1px;color: #d20b17;}
+</style>
+<ul class="list_theme_date23 row row-20">
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">09</span>
+<span class="y">2024-04</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="https://bkpg.xjit.edu.cn/2024_04/08_17/content-31126.html" target="_blank"><b>关于新疆理工学院2024年本科教学工作合格评估材料的公示</b></a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">10</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="https://tnews.xjmty.com/app/slyapp/sh/202410/t20241008_24251524.html?diggurl=https%3A%2F%2Fst-app.xjmty.com%2Fopeindex&cid=24251524&aid=1&sid=10001&action=like&digg=0&menu_id=2583%22%2C&_refluxos=a10" target="_blank">关于征集首届天山文学奖参评作品的公告</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">19</span>
+<span class="y">2024-09</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="https://kyc.xjit.edu.cn/2024_09/19_11/content-33789.html" target="_blank">关于转发《国家民委办公厅关于申报2024年度国家民委民族研究后期</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">13</span>
+<span class="y">2024-09</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="https://mp.weixin.qq.com/s/vdGXSH_QLbw1WbOfS82L_A" target="_blank">重大工程与高质量发展论坛暨2024年管理科学与工程学会工程管理分</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">11</span>
+<span class="y">2024-09</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="/html/968/2024-09-11/content-11669.html" target="_blank">浙江省科学技术厅关于组织申报2025年度“尖兵”“领雁”科技计划</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">11</span>
+<span class="y">2024-09</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="/html/968/2024-09-11/content-11668.html" target="_blank">2024年国家社会科学基金高校思想政治理论课研究专项申报公告</a></h4>
+</div>
+</div>
+</li>
+</ul></div>
+<div class="more">
+<a href="/html/968/" target="_blank">更多>></a></div>
+</div>
+<div class="tabs-item">
+<div class="news-list"><ul class="list_theme_date23 row row-20">
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">09</span>
+<span class="y">2024-04</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="https://bkpg.xjit.edu.cn/2024_04/08_17/content-31126.html" target="_blank"><b>关于新疆理工学院2024年本科教学工作合格评估材料的公示</b></a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">29</span>
+<span class="y">2024-03</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="/html/1062/2024-03-29/content-11018.html" target="_blank">【他山之石】北京市以统筹推进教育、科技、人才之力服务中国式现</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">28</span>
+<span class="y">2024-03</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="/html/1062/2024-03-28/content-11097.html" target="_blank">教学督导工作简报【2023-2024学年第二学期第1期】</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">19</span>
+<span class="y">2024-03</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="/html/1062/2024-03-19/content-11004.html" target="_blank">【他山之石】河南省以“五个聚焦”加强新时代教师队伍建设 ——2</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">18</span>
+<span class="y">2024-03</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="/html/1062/2024-03-18/content-10974.html" target="_blank">教育部办公厅关于印发《高等学校实验室安全规范》的通知</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">01</span>
+<span class="y">2024-03</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="/html/1062/2024-03-01/content-11016.html" target="_blank">【他山之石】一份评估报告就能保障人才培养质量，这所高校是如何</a></h4>
+</div>
+</div>
+</li>
+</ul></div>
+<div class="more">
+<a href="/html/1062/" target="_blank">更多>></a></div>
+</div>
+<div class="tabs-item">
+<div class="news-list">
+<div class="library-item">
+<div class="library-explain mb25 text-center"><ul class="tab-menu clearfix">
+<li class="on">馆藏书目</li>
+<li><a href="http://10.1.0.105:9988" target="_blank">理工电子书</a></li>
+<li><a href="http://www.sslibrary.com" target="_blank">超星电子书</a></li>
+<!--<li>万方数据</li>-->
+<!-- <li>万方视频</li> -->
+<li><a href="https://www.cnki.net/" target="_blank">中国知网</a></li>
+<li><a href="http://qikan.cqvip.com/" target="_blank">维普期刊</a></li>
+<li><a href="https://xuexi.cqvip.com/" target="_blank">维普学习</a></li>
+<li><a href="http://k.vipslib.com/" target="_blank">维普经纶</a></li>
+</ul></div>
+<div class="library-search clearfix">
+<form action="https://lib.xjistedu.cn/space/searchList" target="_blank" method="get" name="f" onsubmit="return chkForm(this)" id="f" class="library-search-form form-horizontal">	
+<div class="form-group">
+<div class="col-sm-3 col-xs-3">
+<select class="option" name="strSearchType" size="1">
+<option value="titles">题&nbsp;&nbsp;名</option>
+<option value="authors">责任者</option>
+<option value="subjects">主题词</option>
+<option value="isbn">ISBN/ISSN</option>
+<option value="asordno">订购号</option>
+<option value="classnoes">分类号</option>
+<option value="callno">索书号</option>
+<option value="publisher">出版社</option>
+<option value="series">丛书名</option>
+<option value="tpinyin">题名拼音</option>
+<option value="apinyin">责任者拼音</option>
+</select>
+</div>
+<div class="col-sm-6 col-xs-6">
+<input type="text" class="form-control" name="strText" id="strText" value="" placeholder="欢迎使用图书馆书目搜索">
+</div>
+<div class="col-sm-3 col-xs-3">
+<input type="submit" class="btn btn-primary" value="搜索">
+</div>
+</div>
+</form>
+</div>
+<div class="library-nav text-center">
+<p><a href="https://lib.xjit.edu.cn/opac/top100.php" target="_blank">查看30天内的热门检索词</a></p>
+</div>
+</div>
+</div>
+<div class="more"><a href="https://lib.xjit.edu.cn/" target="_blank">更多&gt;&gt;</a></div>
+</div>
+<div class="tabs-item">
+<div class="news-list"><style type="text/css">
+.list_theme_date23 .item{margin-bottom:35px;padding:22px 20px;overflow:hidden;background:#ffffff;transition: transform linear 0.3s;}
+.list_theme_date23 .item .date{width:72px;height:68px;float:left;text-align:center;background:#951209;}
+.list_theme_date23 .item .date span{color:#ffffff;display:block;text-align:center;}
+.list_theme_date23 .item .date .d{color:#ffffff;font-size:22px;padding-top:10px;font-weight:bold;}
+.list_theme_date23 .item .date .y{opacity:.9;}
+.list_theme_date23 .item .text{margin-left:94px;}
+.list_theme_date23 .item .text h4{width:100%;line-height:34px;}
+.list_theme_date23 .item .text h4 a{font-size:18px;display:block;position:relative;background-image:linear-gradient(#d20b17,#d20b17);background-position:0 100%;background-size:0 1px;background-repeat:no-repeat;transition:background-size .5s;}
+.list_theme_date23 .item:hover .text h4 a{background-size:100% 1px;color: #d20b17;}
+</style>
+<ul class="list_theme_date23 row row-20">
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">26</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="http://www.news.cn/politics/20241025/075f44989d1c49b99e6ae21b53750694/c.html" target="_blank">学习《决定》每日问答丨完善生育支持政策体系和激励机制需要把握</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">24</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="http://www.news.cn/politics/20241024/7bedd380095f4c468a0d3e4ee5eb9a7b/c.html" target="_blank">学习《决定》每日问答丨如何理解加快建设分级诊疗体系</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">22</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="http://www.news.cn/politics/20241021/93520102a6ef49b3bc18550d7fc60549/c.html" target="_blank">学习《决定》每日问答丨为什么要健全灵活就业人员、农民工、新就</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">20</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="http://www.news.cn/politics/20241020/5e46aeef0a644288ad45e66ec8e25a22/c.html" target="_blank">新华社消息丨中共中央办公厅 国务院办公厅印发《关于加快推动博</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">18</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="http://www.news.cn/politics/20241017/2e94707c127f40a59ee3c834426864ea/c.html" target="_blank">学习《决定》每日问答丨为什么要构建更有效力的国际传播体系</a></h4>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12 col-pd-20">
+<div class="item">
+<div class="date">
+<span class="d">16</span>
+<span class="y">2024-10</span>
+</div>
+<div class="text">
+<h4 class="l2"><a href="http://www.news.cn/politics/20241016/f22182a1767c44d38966cddb04eb1f9f/c.html" target="_blank">学习《决定》每日问答丨健全网络综合治理体系需要把握哪些重点</a></h4>
+</div>
+</div>
+</li>
+</ul></div>
+<div class="more">
+<a href="/html/1081/" target="_blank">更多>></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page3" style="background-image: url(/skin/xjit/cms/index/bg2.png);background-position: center center;background-repeat:no-repeat;">
+<div class="container">
+<div class="common-box wow fadeInUp animated">
+<div class="common-head clearfix">
+<div class="title title1 fz28">数据理工</div>
+<div class="more pull-right"></div>
+</div>
+<div class="common-main">
+<style>
+.data-roll3 .slick-list {height:400px;}
+.data-roll3 .slick-slide{height:auto;}
+.data-roll3 .item{width:255px;height:255px;position: relative;text-align: center;border:10px solid #ebd5a7;border-radius:50%;margin:20px auto;position: relative;text-align: center;transition: .3s}
+.data-roll3 .item .finish{position: absolute;left: 0;top:0;right: 0;bottom: 0;background-color: #fff;border-radius: 50%;opacity:0;transform: rotateY(-180deg);transition: .6s}
+.data-roll3 .item .start{position: absolute;left: 0;top:0;right: 0;bottom: 0;background-color: #fff;border-radius: 50%;transition: .3s}
+.data-roll3 .item .start p{font-size:16px;color:#2d2d2d;font-family: 'Georgia',geo;}
+.data-roll3 .item .start .num{font-size:22px;color:#961e19;margin-bottom:15px; }
+.data-roll3 .item .start span{font-size:50px;font-family: 'Georgia',geo;font-weight: bold}
+.data-roll3 .item .start .bg{position: absolute;left: 0;top:0;right: 0;bottom: 0;z-index: 0;border-radius: 50%;opacity: .05;}
+.data-roll3 .item .finish .txt p{color:#2d2d2d;line-height:24px;font-size:15px;}
+.data-roll3 .item .finish .txt{position: absolute;bottom: -80px;left:0;text-align: left;width:100%;}
+.data-roll3 .item .finish .txt .num{font-size:22px;color:#eaba7f; }
+.data-roll3 .item .finish .txt span{font-size:50px;font-family: 'Georgia',geo;font-weight: bold;color: #eaba7f;text-shadow: 0 5px .1rem rgba(0,0,0,.2)}
+.data-roll3 .item .finish .bg{position: absolute;left: 0;top:0;right: 0;bottom: 0;z-index: 0;border-radius: 50%;opacity:1;}
+.data-roll3 .item:hover{border:10px solid #961e19;transform:scale(1.1);}
+.data-roll3 .item:hover .finish{opacity: 1;transform: rotateY(0deg);}
+.data-roll3 .item:hover .start{opacity: 0;}
+.data-roll3 .slick-arrow{width:28px;height:50px;background-color:transparent;background-repeat:no-repeat;background-position: center;position: absolute;top:32%;z-index:100;cursor: pointer;font-size:0;border:0;outline: none}
+.data-roll3 .slick-prev {background-image: url(/skin/label/theme/prev17.png);left:-40px;}
+.data-roll3 .slick-next {background-image: url(/skin/label/theme/next17.png);right:-40px;}
+@media (max-width: 1200px){
+.data-roll3 .item{width:215px;height:215px;}
+.data-roll3 .slick-prev{left:0;}
+.data-roll3 .slick-next{right:0;}
+.data-roll3 .item .start span,.data-roll3 .item .finish .txt span{font-size:40px;}
+}
+@media (max-width: 767px){
+.data-roll3 .slick-list {height:350px;}
+.data-roll3 .item{width:185px;height:185px;}
+.data-roll3 .item .start{display:none;}
+.data-roll3 .item .finish{opacity: 1;transform: rotateY(0deg);}
+.data-roll3 .item .finish .txt span{font-size:30px;}
+.data-roll3 .slick-prev,.data-roll3 .slick-next{background-size:20px auto;}
+}
+</style>
+<div class="data-roll3" id="data-roll3">
+<div class="slick-item">
+<div class="item">
+<div class="start flex-v-center">
+<h3 class="num"><span>16000</span>余人</h3><p class="l2">全日制在校学生</p>
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/af4247872a2a16e4.jpg);"><img src="/attachment/core/label/2024_04/24_11/af4247872a2a16e4.jpg" class="hide" alt=""></div>
+</div>
+<div class="finish">
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/af4247872a2a16e4.jpg);"><img src="/attachment/core/label/2024_04/24_11/af4247872a2a16e4.jpg" class="hide" alt=""></div>
+<div class="txt">
+<h3 class="num"><span>16000</span>余人</h3><p class="l2">全日制在校学生</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slick-item">
+<div class="item">
+<div class="start flex-v-center">
+<h3 class="num"><span>1000</span>余名</h3><p class="l2">教职工</p>
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/ccd779b242ec4c15.jpg);"><img src="/attachment/core/label/2024_04/24_11/ccd779b242ec4c15.jpg" class="hide" alt=""></div>
+</div>
+<div class="finish">
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/ccd779b242ec4c15.jpg);"><img src="/attachment/core/label/2024_04/24_11/ccd779b242ec4c15.jpg" class="hide" alt=""></div>
+<div class="txt">
+<h3 class="num"><span>1000</span>余名</h3><p class="l2">教职工</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slick-item">
+<div class="item">
+<div class="start flex-v-center">
+<h3 class="num"><span>37</span>个</h3><p class="l2">开设专业</p>
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/b60617be2040df25.jpg);"><img src="/attachment/core/label/2024_04/24_11/b60617be2040df25.jpg" class="hide" alt=""></div>
+</div>
+<div class="finish">
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/b60617be2040df25.jpg);"><img src="/attachment/core/label/2024_04/24_11/b60617be2040df25.jpg" class="hide" alt=""></div>
+<div class="txt">
+<h3 class="num"><span>37</span>个</h3><p class="l2">开设专业</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slick-item">
+<div class="item">
+<div class="start flex-v-center">
+<h3 class="num"><span>5</span>个</h3><p class="l2">自治区一流专业建设点</p>
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/e3ab2bf315c796fb.png);"><img src="/attachment/core/label/2024_04/24_11/e3ab2bf315c796fb.png" class="hide" alt=""></div>
+</div>
+<div class="finish">
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/e3ab2bf315c796fb.png);"><img src="/attachment/core/label/2024_04/24_11/e3ab2bf315c796fb.png" class="hide" alt=""></div>
+<div class="txt">
+<h3 class="num"><span>5</span>个</h3><p class="l2">自治区一流专业建设点</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slick-item">
+<div class="item">
+<div class="start flex-v-center">
+<h3 class="num"><span>1</span>个</h3><p class="l2">国家一流专业建设点</p>
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/5877e20c05c195e9.png);"><img src="/attachment/core/label/2024_04/24_11/5877e20c05c195e9.png" class="hide" alt=""></div>
+</div>
+<div class="finish">
+<div class="bg bgimg" style="background-image: url(/attachment/core/label/2024_04/24_11/5877e20c05c195e9.png);"><img src="/attachment/core/label/2024_04/24_11/5877e20c05c195e9.png" class="hide" alt=""></div>
+<div class="txt">
+<h3 class="num"><span>1</span>个</h3><p class="l2">国家一流专业建设点</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$('#data-roll3').slick({
+dots: false,
+arrows: true,
+autoplay: false,
+slidesToShow: 5,
+slidesToScroll: 1,
+autoplaySpeed: 10000,
+pauseOnHover: true,
+responsive: [
+{
+breakpoint: 1680,
+settings: {
+slidesToShow: 4,
+}
+},
+{
+breakpoint: 1200,
+settings: {
+slidesToShow: 3,
+}
+},
+{
+breakpoint: 850,
+settings: {
+slidesToShow: 2,
+}
+},
+{
+breakpoint: 580,
+settings: {
+slidesToShow: 1,
+}
+}
+]
+});
+</script>
+</div>
+</div>
+</div>
+</div>
+<div class="section-page4">
+<div class="container">
+<div class="common-box">
+<div class="common-head wow fadeInUp animated clearfix">
+<div class="title title2 fz28">校园风采</div>
+<div class="more pull-right">
+<a href="/html/1074/" target="_blank">更多>></a></div>
+</div>
+<div class="common-main">
+<div class="row">
+<div class="col-md-6 col-md-6 col-xs-12 col-box1 wow fadeInUp animated">
+<div class="video-box mb20">
+
+<div class="video-box mb20">
+<img alt="在花海中绽放最灿烂的自己！" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_07/31_13/b4bcc75aa8ac311b.jpg.thumb.jpg" />
+<a href="/html/1075/2024-07-31/content-11541.html" target="_blank" title="在花海中绽放最灿烂的自己！" class="play"><span></span></a>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-md-6 col-xs-12">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-6 col-box2 wow fadeInUp animated" data-wow-delay="0.2s">
+<div class="show-box">
+<a href="/html/1074/2024-07-31/content-11542.html" target="_blank" title="翱翔理工天，学府美景连" class="item">
+<img data-src="/attachment/cms/item/2024_07/31_16/b3689c456794a70c.jpg.thumb.jpg" src="/attachment/cms/item/2024_07/31_16/b3689c456794a70c.jpg.thumb.jpg" alt="翱翔理工天，学府美景连">
+<div class="text">
+<h3 class="fz16 clam1">翱翔理工天，学府美景连</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 col-box2 wow fadeInUp animated" data-wow-delay="0.2s">
+<div class="show-box">
+<a href="/html/1074/2024-06-27/content-11459.html" target="_blank" title="悠悠荷香" class="item">
+<img data-src="/attachment/cms/item/2024_06/27_11/fdef6b3f365f253f.png.cthumb.jpg" src="/attachment/cms/item/2024_06/27_11/fdef6b3f365f253f.png.cthumb.jpg" alt="悠悠荷香">
+<div class="text">
+<h3 class="fz16 clam1">悠悠荷香</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 col-box2 wow fadeInUp animated" data-wow-delay="0.2s">
+<div class="show-box">
+<a href="/html/1074/2024-06-14/content-11422.html" target="_blank" title="雨过长虹现" class="item">
+<img data-src="/attachment/cms/item/2024_06/14_10/556826ff59e4a240.jpg.thumb.jpg" src="/attachment/cms/item/2024_06/14_10/556826ff59e4a240.jpg.thumb.jpg" alt="雨过长虹现">
+<div class="text">
+<h3 class="fz16 clam1">雨过长虹现</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 col-box2 wow fadeInUp animated" data-wow-delay="0.2s">
+<div class="show-box">
+<a href="/html/1074/2024-06-14/content-11421.html" target="_blank" title="天山与新理工" class="item">
+<img data-src="/attachment/cms/item/2024_06/14_10/6c2d3d38240ab8d5.jpg.thumb.jpg" src="/attachment/cms/item/2024_06/14_10/6c2d3d38240ab8d5.jpg.thumb.jpg" alt="天山与新理工">
+<div class="text">
+<h3 class="fz16 clam1">天山与新理工</h3>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">jQuery(".common-tabs").slide({});</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('.video-box .play').click(function() {
+$(this).siblings("video")[0].play();
+$(this).siblings("video").attr({
+'controls': true
+});
+$(this).fadeOut();
+var self = this;
+$(this).siblings("video")[0].addEventListener('pause', function() {
+$(self).fadeIn();
+$(self).siblings("video").attr({
+'controls': false
+});
+});
+});
+})
+</script>
+<script type="text/javascript">
+
+var bShow = false;
+
+function input_me(str){
+$("#strText").val(str);
+$("#historyCount").val("0");
+document.f.submit();
+}
+
+function showMore(){
+bShow = !bShow;
+if(bShow){
+$("#btnShowMore").val("取消限制");
+$("#location").val('ALL');
+}else{
+$("#btnShowMore").val("更多限制");
+}
+$("#child1").toggle(bShow);
+}
+
+$(function(){
+$("#topten").load("ajax_topten.php");
+$("#top_lend_shelf").load("ajax_top_lend_shelf.php");
+$.get("ajax_topkeywords.php",function(taglist){
+var attributes = {'allowScriptAccess':'always','wmode':'transparent','id':'swf'};
+var flashvars = { 'mode' : 'tags', 'distr' : 'false', 'tcolor' : '0x00ff00', 'hcolor' : '0x000000',  'speed' : 50 };
+flashvars["tagcloud"] = "<tags>" + taglist + "</tags>";
+swfobject.embedSWF("../tpl/opac/tagcloud.swf", "swf", 250, 200, '10', '', flashvars, {}, attributes);
+});
+
+$("#child1").hide();
+$("#location").val('ALL');
+
+});
+
+function chkForm(theForm){
+if (theForm.strText.value=="") {
+alert("［查询内容］不能为空");
+theForm.strText.focus();
+return (false);
+}
+}
+
+function matchFlagCheck(obj) {
+if(obj.value == 'any')
+{
+$.ajax({
+url: "ajax_search_option.php" ,
+async:false,
+success: function(html){
+var obj = eval('(' + html + ')');
+if( obj['any_to_fulltext'] == "1" )
+{
+$('#msg').html('任意匹配检索将会以全文检索的方式进行，限制检索的条件将不起作用');
+}
+else
+{
+$('#msg').html('');
+}
+}
+});
+}
+else
+$('#msg').html('');
+}
+if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8.")
+{
+// console.log(1);
+}
+else{
+new WOW().init();
+}
+</script><div class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-7 col-sm-12 col-xs-12">
+<div class="footer-box">
+<div class="footer-title footer-title1"><h3>友情链接</h3></div>
+<div class="footer-main">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="footer-select">
+<p>国务院部门</p>
+<ul>
+<li><a href="http://www.moe.gov.cn/" title="">中华人民共和国教育部  </a></li>
+<li><a href="https://www.heec.edu.cn//" title="">教育部教育质量评估中心  </a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="footer-select">
+<p>自治区人民政府</p>
+<ul>
+<li><a href="https://www.xinjiang.gov.cn/" title="">新疆政府网</a></li>
+<li><a href="https://jyt.xinjiang.gov.cn/" title="">自治区教育厅</a></li>
+<li><a href="https://kjt.xinjiang.gov.cn/" title="">自治区科学技术厅</a></li>
+<li><a href="https://rst.xinjiang.gov.cn/" title="">自治区人力资源与社会保障厅</a></li>
+<li><a href="https://wjw.xinjiang.gov.cn/" title="">自治区卫生健康委员会</a></li>
+<li><a href="https://ylbzj.xinjiang.gov.cn/" title="">自治区医疗保障局</a></li>
+<li><a href="https://mpa.xinjiang.gov.cn/" title="">自治区药品监督管理局</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="footer-select">
+<p>对口高校</p>
+<ul>
+<li><a href="https://www.cjlu.edu.cn/" title="">中国计量大学</a></li>
+<li><a href="http://www.zjut.edu.cn/" title="">浙江工业大学</a></li>
+<li><a href="https://www.zjnu.edu.cn/" title="">浙江师范大学</a></li>
+<li><a href="https://www.zstu.edu.cn/" title="">浙江理工大学</a></li>
+<li><a href="https://www.zufe.edu.cn/" title="">浙江财经大学</a></li>
+<li><a href="http://www.zjgsu.edu.cn/" title="">浙江工商大学</a></li>
+<li><a href="https://www.zafu.edu.cn/" title="">浙江农林大学</a></li>
+<li><a href="https://www.zjou.edu.cn/" title="">浙江海洋大学</a></li>
+<li><a href="https://www.nbu.edu.cn/" title="">宁波大学</a></li>
+<li><a href="http://www.cuz.edu.cn/" title="">浙江传媒学院</a></li>
+<li><a href="https://www.zust.edu.cn/" title="">浙江科技大学</a></li>
+<li><a href="https://www.zjweu.edu.cn/" title="">浙江水利水电学院</a></li>
+<li><a href="https://www.hdu.edu.cn/main.htm" title="">杭州电子科技大学</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-box">
+<div class="footer-title footer-title2"><h3>联系我们</h3></div>
+<div class="footer-main">
+<div class="copyright">
+招生电话：0997-2205566       0997-2205678<br>
+邮编：843100<br>
+地址： 新疆阿克苏市学府西路1号<br>
+备案号：<a href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none"><img src="" style="float:left;"/>新ICP备15001093号-1/</a>
+<a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none"><img src="" style="float:left;"/>新ICP备15001093号-2/</a>
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=65292202000119" style="display:inline-block;text-decoration:none;"><img src="" style="float:left;"/>新公网安备 65292202000119号</a>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-5 col-sm-12 col-xs-12">
+<div class="footer-box">
+<div class="footer-title footer-title3"><h3>常见链接</h3></div>
+<div class="footer-main">
+<ul class="footer-links row">
+<li class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.xjit.edu.cn/index.php/letter-list"><img src="/skin/xjit/core/header/images/ico8.png">阳光服务</a>
+</li>
+
+<li class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.xjit.edu.cn/html/1059/"><img src="/skin/xjit/core/header/images/ico9.png">领导信箱</a>
+</li>
+<li class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://xjistedu.zhihuishu.com/"><img src="/skin/xjit/core/header/images/ico10.png">教学资源平台</a>
+</li>
+<li class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://yzs.xjistedu.cn"><img src="/skin/xjit/core/header/images/ico11.png">一站式服务大厅</a>
+</li>
+</ul>
+
+</div>
+<div class="footer-main">
+<div class="row">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="footer-icons">
+<div class="tit wx"><img src="/skin/xjit/core/header/images/wx.png">官方微信</div>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="https://www.xjit.edu.cn/attachment/core/label/2021_08/04_10/dcf491cbd588c3ed.jpg" />
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="footer-icons">
+<div class="tit wx"><img src="/skin/xjit/core/header/images/tf.png">视频号</div>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="https://www.xjit.edu.cn/attachment/core/label/2021_11/11_19/618b07052a17cc26.jpg" />
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="footer-icons">
+<div class="tit wx"><img src="/skin/xjit/core/header/images/dy.png">官方抖音</div>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="https://www.xjit.edu.cn/attachment/core/label/2021_08/04_10/7b341d09b9e4552f.png" />
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="footer-icons">
+<div class="tit wx"><img src="/skin/xjit/core/header/images/wb.png">官方微博</div>
+<div class="code">
+<img width="100%" height="auto" border="none" alt="" src="https://www.xjit.edu.cn/attachment/core/label/2021_11/12_17/8aa42c0d0a07e7f3.jpg" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+$(function(){
+$('.footer-select').hover(function() {
+$(this).addClass('show').children('ul').stop().slideDown(450);
+}, function() {
+$(this).removeClass('show').children('ul').stop().slideUp(150);
+});
+})
+</script>
+</div>
+
+</body>
+</html>

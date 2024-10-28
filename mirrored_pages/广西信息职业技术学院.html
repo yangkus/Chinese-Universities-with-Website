@@ -1,0 +1,2011 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>广西开放大学（广西信息职业技术学院）</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="广西开放大学（广西信息职业技术学院）">
+<META Name="keywords" Content="广西开放大学（广西信息职业技术学院）" />
+
+    <meta name="description" content="" />
+    
+    <link rel="stylesheet" href="css/style.css" /><script src="js/jquery.min.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475d50535742000300034550 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1400678754)</script>
+</head>
+
+<body>
+    <!-- 搜索弹窗start -->
+    <div class="m-pop" id="sopop">
+        <div class="pop-bg"></div>
+        <div class="pop-con">
+            <div class="m-sobox">
+                <div class="close"><img src="images/i31.png" alt="" /></div>
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError"><div class="con">
+            <div class="inp"><input type="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"></div>
+            <input class="btn" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div></div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1400678754";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.4.33:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索弹窗end -->
+    <div class="header">
+        <div class="hd-top">
+            <div class="hd-link">
+                <div class="wp">
+                    <div class="info">
+                        <div class="date">
+                            <div class="ymd"></div>
+                            <div class="weeks"></div>
+                        </div>
+                        <div class="rbox">
+                            <div class="link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="https://cas.gxuie.cn/lyuapServer/login" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86190)" target="_blank">学生</a>
+<i></i>
+<a href="https://cas.gxuie.cn/lyuapServer/login" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86144)" target="_blank">教职工</a>
+</div>
+                            <div class="so myfancy" id="#sopop"><img src="images/i01.png" alt="" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hd-body">
+                <div class="wp">
+                    <div class="info">
+                        <div class="menuBtn"></div>
+                        <div class="logo">
+                            
+<div class="img1"><a href="index.htm" target="_blank"><img src="images/logo.png" alt="" /></a></div>
+<i></i>
+<div class="img2"><a href="index.htm" target="_blank"><img src="images/logo2.png" alt="" /></a></div>
+                        </div>
+                        <div class="titimg"><img src="images/tit01.png" alt="" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="wp">
+                <div class="hd-link-m">
+                    <a href="https://cas.gxuie.cn/lyuapServer/login" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86190)" target="_blank">学生</a>
+<i></i>
+<a href="https://cas.gxuie.cn/lyuapServer/login" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86144)" target="_blank">教职工</a>
+
+                    <div class="m-sobox">
+                        
+
+
+<style>
+    #appu4 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu4 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu4"></div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError"><div class="con">
+            <div class="inp"><input type="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"></div>
+            <input class="btn" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div></div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1400678754";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.4.33:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                    </div>
+                </div>
+                <ul class="hd-nav">                    <li class="on">
+                        <a href="index.htm" class="v1">首页</a>
+                    </li>
+                    <li class="">
+                        <a href="xxgk/xxjj.htm" class="v1">学校概况</a>
+                        <div class="arr"><img src="images/i32.png" alt=""></div>
+                        <div class="sub">
+                            <a href="xxgk/xxjj.htm" class="v2">学校简介</a>
+                            <a href="xxgk/xxld.htm" class="v2">学校领导</a>
+                            <a href="xxgk/bxtx.htm" class="v2">办学体系</a>
+                            <a href="xxgk/sjgh.htm" class="v2">上级关怀</a>
+                            <a href="xxgk/xx1.htm" class="v2">校训</a>
+                            <a href="xxgk/xh.htm" class="v2">校徽</a>
+                            <a href="xxgk/fwgzh.htm" class="v2">服务公众号</a>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a href="jgsz.htm" class="v1">机构设置</a>
+                        <div class="arr"><img src="images/i32.png" alt=""></div>
+                        <div class="sub">
+                            <a href="jgsz/dzbm.htm" class="v2">党政部门</a>
+                            <a href="jgsz/jxdw.htm" class="v2">教学单位</a>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a href="jyjx/xxpt.htm" class="v1">教育教学</a>
+                        <div class="arr"><img src="images/i32.png" alt=""></div>
+                        <div class="sub">
+                            <a href="jyjx/xxpt.htm" class="v2">学习平台</a>
+                            <a href="jyjx/jwdt.htm" class="v2">教务动态</a>
+                            <a href="jyjx/zyjs.htm" class="v2">专业建设</a>
+                            <a href="jyjx/szdw.htm" class="v2">师资队伍</a>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a href="zsjy/xljy.htm" class="v1">招生就业</a>
+                        <div class="arr"><img src="images/i32.png" alt=""></div>
+                        <div class="sub">
+                            <a href="zsjy/xljy.htm" class="v2">学历教育</a>
+                            <a href="zsjy/fxljy.htm" class="v2">非学历教育</a>
+                            <a href="zsjy/gzjy1/jyxx.htm" class="v2">高职就业</a>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a href="kxyj/kxyj.htm" class="v1">科学研究</a>
+                        <div class="arr"><img src="images/i32.png" alt=""></div>
+                        <div class="sub">
+                            <a href="kxyj/kxyj.htm" class="v2">科学研究</a>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a href="ggfw/xxzy.htm" class="v1">公共服务</a>
+                        <div class="arr"><img src="images/i32.png" alt=""></div>
+                        <div class="sub">
+                            <a href="ggfw/xxzy.htm" class="v2">学习资源</a>
+                            <a href="ggfw/tsg/gntz.htm" class="v2">图书馆</a>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a href="jlhz.htm" class="v1">交流合作</a>
+                    </li>
+                    <li class="">
+                        <a href="xywh.htm" class="v1">校园文化</a>
+                    </li>
+</ul>
+            </div>
+        </div>
+    </div>
+    <div class="in-ban">
+        <div class="swiper-wrapper">    <div class="swiper-slide">
+                <a href="" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70114)">
+                    <div class="img" style="background-image: url(images/24/09/14/1h8oyzrdmy/tuguaishou_xibaohongseshangwugongzhonghaofengmianshoutu.png);"></div>
+                </a>
+            </div>
+            
+<div class="swiper-slide">
+                <a href="" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70142)">
+                    <div class="img" style="background-image: url(images/xy2.jpg);"></div>
+                </a>
+            </div>
+            
+<div class="swiper-slide">
+                <a href="" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70128)">
+                    <div class="img" style="background-image: url(images/KFJYZS.jpg);"></div>
+                </a>
+            </div>
+            
+<div class="swiper-slide">
+                <a href="http://www.gxou.com.cn/jjxynet/content.jsp?urltype=news.NewsContentUrl&wbtreeid=1111&wbnewsid=1505" class="pic" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70127)">
+                    <div class="img" style="background-image: url(images/JXJYZS.jpg);"></div>
+                </a>
+            </div>
+            
+</div>
+        <div class="swiper-pagination"></div>
+        <div class="g-arr1">
+            <div class="wp">
+                <div class="info">
+                    <div class="arr prev"><img src="images/i02.png" alt="" /></div>
+                    <div class="arr next"><img src="images/i03.png" alt="" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-a1">
+        <div class="wp">
+            <div class="g-tit1 wow fadeInUp">
+                <div class="tabbox">
+                    <div class="icn"><img src="images/i07.png" alt="" /></div>
+                    <ul class="ul-tab1" id=".tab1">
+                        <li class="on">
+                            <div class="p">学校要闻</div>
+                            <a href="news/xxyw.htm" target="_blank" class="g-more1">
+                                <div class="t">更多</div>
+                                <div class="i"><img src="images/i08.png" alt="" /></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="p">媒体聚焦</div>
+                            <a href="news/mtjj.htm" target="_blank" class="g-more1">
+                                <div class="t">更多</div>
+                                <div class="i"><img src="images/i08.png" alt="" /></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="p">校园快讯</div>
+                            <a href="news/xykx.htm" target="_blank" class="g-more1">
+                                <div class="t">更多</div>
+                                <div class="i"><img src="images/i08.png" alt="" /></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="p">分校动态</div>
+                            <a href="news/fxdt.htm" target="_blank" class="g-more1">
+                                <div class="t">更多</div>
+                                <div class="i"><img src="images/i08.png" alt="" /></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-tabinfo1">
+                <div class="tab1">
+                    <div class="m-info1">
+                        <div class="lbox wow fadeInLeft">
+                            <div class="m-swiper1">
+                                <div class="swiper-wrapper"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="swiper-slide">
+                                        <a href="info/1031/25142.htm" target="_blank" title="喜讯！我校学生在2024年世界职业院校技能大赛总决赛争夺赛荣获银奖" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">27</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/E/04/5A/98D66CBD59C4CDF36181EC23D83_F3F15DDD_4FE16.png);"></div>
+                                            </div>
+                                            <div class="tit">喜讯！我校学生在2024年世界职业院校技能大赛总决赛争夺赛荣获银...</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1031/25042.htm" target="_blank" title="“广信杯”职场英语挑战赛圆满落幕，校级选拔结果出炉！" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">25</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/0/97/F9/7FBA092844A64DBF804A8CEE7B4_4E617866_FE861.png);"></div>
+                                            </div>
+                                            <div class="tit">“广信杯”职场英语挑战赛圆满落幕，校级选拔结果出炉！</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1031/25022.htm" target="_blank" title="广西信息职业技术学院教育教学工作合格评估动员大会召开" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">25</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/9/EC/5B/3DE4152D2AF5DD0689D5FD37A4B_3EF99C91_577FB.png);"></div>
+                                            </div>
+                                            <div class="tit">广西信息职业技术学院教育教学工作合格评估动员大会召开</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1031/25012.htm" target="_blank" title="我校召开2024年第四次党建工作例会" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">25</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/B/69/9C/66AB444AF88259C42B1EE90B163_86A615A7_568A5.png);"></div>
+                                            </div>
+                                            <div class="tit">我校召开2024年第四次党建工作例会</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1031/25002.htm" target="_blank" title="学校召开科级干部任前谈话暨廉政谈话会" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">25</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/B/22/98/46FBBEE27C1905E848C3E85EEB0_3D3B00EE_10568E.png);"></div>
+                                            </div>
+                                            <div class="tit">学校召开科级干部任前谈话暨廉政谈话会</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1031/24952.htm" target="_blank" title="广西开放大学与陆川县人民政府举行战略合作协议签约仪式暨陆川开放大学揭牌仪式" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">24</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/F/90/EE/AE7AB2396A6709F054EF66C9077_6470E25C_305B3.png);"></div>
+                                            </div>
+                                            <div class="tit">广西开放大学与陆川县人民政府举行战略合作协议签约仪式暨陆川开...</div>
+                                        </a>
+                                    </div>
+                                    
+<script>_showDynClickBatch(['dynclicks_u7_25142','dynclicks_u7_25042','dynclicks_u7_25022','dynclicks_u7_25012','dynclicks_u7_25002','dynclicks_u7_24952'],[25142,25042,25022,25012,25002,24952],"wbnews", 1400678754)</script>
+</div>
+                                <div class="g-arr2">
+                                    <div class="arr prev"><img src="images/i02.png" alt="" /></div>
+                                    <div class="arr next"><img src="images/i03.png" alt="" /></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="rbox wow fadeInRight">
+                            <ul class="ul-list1"><li>
+                                    <a href="info/1031/25142.htm" target="_blank" title="喜讯！我校学生在2024年世界职业院校技能大赛总决赛争夺赛荣获银奖" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">喜讯！我校学生在2024年世界职业院校技能大赛总决赛争夺赛荣获银奖</div>
+                                        <div class="date">2024.10.27</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1031/25102.htm" target="_blank" title="政校企协同发力  深度融合促发展" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">政校企协同发力  深度融合促发展</div>
+                                        <div class="date">2024.10.27</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1031/25092.htm" target="_blank" title="我校学生在2024年第六届码蹄杯全国大学生程序设计大赛总决赛中喜获佳绩" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">我校学生在2024年第六届码蹄杯全国大学生程序设计大赛总决赛中喜获佳绩</div>
+                                        <div class="date">2024.10.27</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1031/25062.htm" target="_blank" title="喜报！我校获批中国高校产学研创新基金项目2项" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">喜报！我校获批中国高校产学研创新基金项目2项</div>
+                                        <div class="date">2024.10.25</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1031/25052.htm" target="_blank" title="我校与东葛社区卫生服务中心联合开展义诊活动" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">我校与东葛社区卫生服务中心联合开展义诊活动</div>
+                                        <div class="date">2024.10.25</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1031/25042.htm" target="_blank" title="“广信杯”职场英语挑战赛圆满落幕，校级选拔结果出炉！" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">“广信杯”职场英语挑战赛圆满落幕，校级选拔结果出炉！</div>
+                                        <div class="date">2024.10.25</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1031/25022.htm" target="_blank" title="广西信息职业技术学院教育教学工作合格评估动员大会召开" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西信息职业技术学院教育教学工作合格评估动员大会召开</div>
+                                        <div class="date">2024.10.25</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1031/25012.htm" target="_blank" title="我校召开2024年第四次党建工作例会" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">我校召开2024年第四次党建工作例会</div>
+                                        <div class="date">2024.10.25</div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u8_25142','dynclicks_u8_25102','dynclicks_u8_25092','dynclicks_u8_25062','dynclicks_u8_25052','dynclicks_u8_25042','dynclicks_u8_25022','dynclicks_u8_25012'],[25142,25102,25092,25062,25052,25042,25022,25012],"wbnews", 1400678754)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab1">
+                    <div class="m-info1">
+                        <div class="lbox">
+                            <div class="m-swiper1">
+                                <div class="swiper-wrapper"><div class="swiper-slide">
+                                        <a href="info/1041/24652.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">12</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/B/3F/A8/32C4CD74E3D2AB1012DDFC63CEA_1F89683A_D99ED.png);"></div>
+                                            </div>
+                                            <div class="tit">我校教师接受广西电视台采访：插茱萸，赏秋菊，九九重阳孝亲敬老</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1041/22261.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">13</div>
+                                                    <div class="month">九月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/7/0A/FD/FE9C730950507C6104D926C75B0_4A70FBC2_3BE63.jpg?e=.jpg);"></div>
+                                            </div>
+                                            <div class="tit">[人民网]广西老年开放大学2024年秋季学期开学典礼顺利举行</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1041/22271.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">12</div>
+                                                    <div class="month">九月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/1/A4/80/B3E5FB0A03A79392C0D7EF5D3F1_CCCFB683_1C158.jpg?e=.jpg);"></div>
+                                            </div>
+                                            <div class="tit">[广西云-广西日报]广西老年开放大学迎来2024年秋季新学期</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1041/22281.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">11</div>
+                                                    <div class="month">九月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/9/87/6E/9D7D2FD9BF67C741DA6EEDF1A94_EB07B16E_33CFD.jpg?e=.jpg);"></div>
+                                            </div>
+                                            <div class="tit">[南国早报]广西老年开放大学开学啦！</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1041/22301.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">27</div>
+                                                    <div class="month">六月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/1/50/4F/03835C29A162122FEC6995F45F6_053BA3A6_90A27.png?e=.png);"></div>
+                                            </div>
+                                            <div class="tit">[广西日报]银发课堂开到老年人身边</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1041/22491.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">22</div>
+                                                    <div class="month">六月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/4/00/84/6F04DE9786950A8C357D518217B_1A90D158_768C5.png?e=.png);"></div>
+                                            </div>
+                                            <div class="tit">广西八桂职教网：广信职院在第三届广西学生运动操舞锦标赛中勇夺...</div>
+                                        </a>
+                                    </div>
+                                    
+<script>_showDynClickBatch(['dynclicks_u9_24652','dynclicks_u9_22261','dynclicks_u9_22271','dynclicks_u9_22281','dynclicks_u9_22301','dynclicks_u9_22491'],[24652,22261,22271,22281,22301,22491],"wbnews", 1400678754)</script>
+</div>
+                                <div class="g-arr2">
+                                    <div class="arr prev"><img src="images/i02.png" alt="" /></div>
+                                    <div class="arr next"><img src="images/i03.png" alt="" /></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="rbox">
+                            <ul class="ul-list1"><li>
+                                    <a href="info/1041/24652.htm" target="_blank" title="我校教师接受广西电视台采访：插茱萸，赏秋菊，九九重阳孝亲敬老" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">我校教师接受广西电视台采访：插茱萸，赏秋菊，九九重阳孝亲敬老</div>
+                                        <div class="date">2024.10.12</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1041/24562.htm" target="_blank" title="[人民网]广西开放大学举行危旧房改住房改造项目2号楼封顶仪式" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">[人民网]广西开放大学举行危旧房改住房改造项目2号楼封顶仪式</div>
+                                        <div class="date">2024.10.10</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1041/24062.htm" target="_blank" title="[人民网]广西开放大学举行“中国共产党人精神谱系”宣讲报告会" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">[人民网]广西开放大学举行“中国共产党人精神谱系”宣讲报告会</div>
+                                        <div class="date">2024.09.27</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1041/24072.htm" target="_blank" title="[广西日报]“银发”大学生迎来新学期" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">[广西日报]“银发”大学生迎来新学期</div>
+                                        <div class="date">2024.09.18</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1041/22261.htm" target="_blank" title="[人民网]广西老年开放大学2024年秋季学期开学典礼顺利举行" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">[人民网]广西老年开放大学2024年秋季学期开学典礼顺利举行</div>
+                                        <div class="date">2024.09.13</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1041/22271.htm" target="_blank" title="[广西云-广西日报]广西老年开放大学迎来2024年秋季新学期" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">[广西云-广西日报]广西老年开放大学迎来2024年秋季新学期</div>
+                                        <div class="date">2024.09.12</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1041/22251.htm" target="_blank" title="[广西广播电视台]广西老年开放大学2024年秋季学期开学 近百个班助你成为“最美夕阳红”" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">[广西广播电视台]广西老年开放大学2024年秋季学期开学 近百个班助你成为“...</div>
+                                        <div class="date">2024.09.11</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1041/22281.htm" target="_blank" title="[南国早报]广西老年开放大学开学啦！" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">[南国早报]广西老年开放大学开学啦！</div>
+                                        <div class="date">2024.09.11</div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u10_24652','dynclicks_u10_24562','dynclicks_u10_24062','dynclicks_u10_24072','dynclicks_u10_22261','dynclicks_u10_22271','dynclicks_u10_22251','dynclicks_u10_22281'],[24652,24562,24062,24072,22261,22271,22251,22281],"wbnews", 1400678754)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab1">
+                    <div class="m-info1">
+                        <div class="lbox">
+                            <div class="m-swiper1">
+                                <div class="swiper-wrapper"><div class="swiper-slide">
+                                        <a href="info/1051/25132.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">27</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/0/C6/16/D35F7BB236B4649C2F90CA480E6_A1CA8A6F_3F0C1.png);"></div>
+                                            </div>
+                                            <div class="tit">计算机与人工智能学院“筑梦中华 青春放歌”十大歌手比赛圆满落幕</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1051/24882.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">18</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/9/29/7F/98C43032292C8D572F8FDB18830_4F1A139A_1DA4F.jpg);"></div>
+                                            </div>
+                                            <div class="tit">我校举办第二课堂讲座</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1051/24592.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">10</div>
+                                                    <div class="month">十月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/C/39/A6/4B829893E8B05D97D2CAAAB0A1B_40BAF12D_282A0.jpg);"></div>
+                                            </div>
+                                            <div class="tit">我校师生参加2024年国家法定烈士纪念日纪念活动</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1051/24432.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">30</div>
+                                                    <div class="month">九月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/0/60/DB/71B8AF261876B5BF2154CBF3A50_716786B6_E6A0D.png);"></div>
+                                            </div>
+                                            <div class="tit">升国旗仪式庆祝新中国75周年华诞</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1051/12781.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">14</div>
+                                                    <div class="month">九月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/0/F6/91/0094B159166EE6147FD4CCA67F5_AB6F1427_CCA25.png);"></div>
+                                            </div>
+                                            <div class="tit">教务处组织开展《职业生涯规划与就业指导》课程集体备课会</div>
+                                        </a>
+                                    </div>
+                                    
+<div class="swiper-slide">
+                                        <a href="info/1051/12791.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">14</div>
+                                                    <div class="month">九月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/1/81/2C/1061F56BB0220AAF72AA95D7F0D_FB0F0559_DFA72.png);"></div>
+                                            </div>
+                                            <div class="tit">数字经济与管理学院教学业务交流培训会提升数字化教学能力</div>
+                                        </a>
+                                    </div>
+                                    
+<script>_showDynClickBatch(['dynclicks_u11_25132','dynclicks_u11_24882','dynclicks_u11_24592','dynclicks_u11_24432','dynclicks_u11_12781','dynclicks_u11_12791'],[25132,24882,24592,24432,12781,12791],"wbnews", 1400678754)</script>
+</div>
+                                <div class="g-arr2">
+                                    <div class="arr prev"><img src="images/i02.png" alt="" /></div>
+                                    <div class="arr next"><img src="images/i03.png" alt="" /></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="rbox">
+                            <ul class="ul-list1"><li>
+                                    <a href="info/1051/25132.htm" target="_blank" title="计算机与人工智能学院“筑梦中华 青春放歌”十大歌手比赛圆满落幕" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">计算机与人工智能学院“筑梦中华 青春放歌”十大歌手比赛圆满落幕</div>
+                                        <div class="date">2024.10.27</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1051/25082.htm" target="_blank" title="我校与南宁市第二妇幼保健院携手开展“两癌”免费筛查活动" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">我校与南宁市第二妇幼保健院携手开展“两癌”免费筛查活动</div>
+                                        <div class="date">2024.10.27</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1051/24962.htm" target="_blank" title="学生工作部、后勤保卫处联合开展学生宿舍安全隐患排查工作" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">学生工作部、后勤保卫处联合开展学生宿舍安全隐患排查工作</div>
+                                        <div class="date">2024.10.24</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1051/24932.htm" target="_blank" title="通识教育学院赴南宁职业技术大学考察调研" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">通识教育学院赴南宁职业技术大学考察调研</div>
+                                        <div class="date">2024.10.23</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1051/24912.htm" target="_blank" title="数字艺术与传媒学院赴南宁职业技术大学艺术设计学院学习交流" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">数字艺术与传媒学院赴南宁职业技术大学艺术设计学院学习交流</div>
+                                        <div class="date">2024.10.22</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1051/24882.htm" target="_blank" title="我校举办第二课堂讲座" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">我校举办第二课堂讲座</div>
+                                        <div class="date">2024.10.18</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1051/24592.htm" target="_blank" title="我校师生参加2024年国家法定烈士纪念日纪念活动" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">我校师生参加2024年国家法定烈士纪念日纪念活动</div>
+                                        <div class="date">2024.10.10</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1051/24542.htm" target="_blank" title="通识教育学院赴广西职业技术学院交流学习" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">通识教育学院赴广西职业技术学院交流学习</div>
+                                        <div class="date">2024.10.08</div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u12_25132','dynclicks_u12_25082','dynclicks_u12_24962','dynclicks_u12_24932','dynclicks_u12_24912','dynclicks_u12_24882','dynclicks_u12_24592','dynclicks_u12_24542'],[25132,25082,24962,24932,24912,24882,24592,24542],"wbnews", 1400678754)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab1">
+                    <div class="m-info1">
+                        <div class="lbox">
+                            <div class="m-swiper1">
+                                <div class="swiper-wrapper"><div class="swiper-slide">
+                                        <a href="info/1061/1041.htm" target="_blank" class="con">
+                                            <div class="pic">
+                                                <div class="date">
+                                                    <div class="day">02</div>
+                                                    <div class="month">七月</div>
+                                                </div>
+                                                <div class="img" style="background-image: url(/__local/D/F8/2C/BADEB5987298E87D6C1A7A2D540_F83701FE_5D540.png);"></div>
+                                            </div>
+                                            <div class="tit">梧州开放大学到红色教育基地开展“七一”主题党日活动</div>
+                                        </a>
+                                    </div>
+                                    
+<script>_showDynClickBatch(['dynclicks_u13_1041'],[1041],"wbnews", 1400678754)</script>
+</div>
+                                <div class="g-arr2">
+                                    <div class="arr prev"><img src="images/i02.png" alt="" /></div>
+                                    <div class="arr next"><img src="images/i03.png" alt="" /></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="rbox">
+                            <ul class="ul-list1"><li>
+                                    <a href="info/1061/7451.htm" target="_blank" title="贵港开放大学举行开放教育2024届（秋季）毕业典礼" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">贵港开放大学举行开放教育2024届（秋季）毕业典礼</div>
+                                        <div class="date">2024.09.14</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1061/1041.htm" target="_blank" title="梧州开放大学到红色教育基地开展“七一”主题党日活动" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">梧州开放大学到红色教育基地开展“七一”主题党日活动</div>
+                                        <div class="date">2024.07.02</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1061/1091.htm" target="_blank" title="贵港开放大学召开2024年春季学期一体化机考考务培训会" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">贵港开放大学召开2024年春季学期一体化机考考务培训会</div>
+                                        <div class="date">2024.06.25</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1061/1071.htm" target="_blank" title="百色开放大学组织收看国家开放大学教育家精神宣讲活动" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">百色开放大学组织收看国家开放大学教育家精神宣讲活动</div>
+                                        <div class="date">2024.06.18</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1061/1051.htm" target="_blank" title="百色开放大学开展2024年春季学期面授教学活动" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">百色开放大学开展2024年春季学期面授教学活动</div>
+                                        <div class="date">2024.05.20</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1061/1001.htm" target="_blank" title="梧州开放大学顺利完成全区优秀村“两委”干部中专学历教育2024年春季学期观摩实训活动" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">梧州开放大学顺利完成全区优秀村“两委”干部中专学历教育2024年春季学期...</div>
+                                        <div class="date">2024.05.14</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1061/1061.htm" target="_blank" title="梧州开放大学举行2024年春季学期开放教育新生开学典礼暨入学教育活动" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">梧州开放大学举行2024年春季学期开放教育新生开学典礼暨入学教育活动</div>
+                                        <div class="date">2024.05.14</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1061/1031.htm" target="_blank" title="贵港市政协副主席谭汝新一行到贵港开放大学开展专题调研" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">贵港市政协副主席谭汝新一行到贵港开放大学开展专题调研</div>
+                                        <div class="date">2024.05.10</div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u14_7451','dynclicks_u14_1041','dynclicks_u14_1091','dynclicks_u14_1071','dynclicks_u14_1051','dynclicks_u14_1001','dynclicks_u14_1061','dynclicks_u14_1031'],[7451,1041,1091,1071,1051,1001,1061,1031],"wbnews", 1400678754)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-a2" style="background-image: url(images/bg02.jpg);">
+        <div class="wp">
+            <div class="m-info2">
+                <div class="item wow fadeInLeft">
+                    <div class="g-tit1 sty2">
+                        <div class="tabbox">
+                            <div class="icn"><img src="images/i09.png" alt="" /></div>
+                            <ul class="ul-tab1 sty2 TAB_CLICK" id=".tab2">
+                                <li>
+                                    <div class="p">学校公告</div>
+                                    <a href="news/xxgg.htm" target="_blank" class="g-more1">
+                                        <div class="t">更多</div>
+                                        <div class="i"><img src="images/i08.png" alt="" /></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="p">招标采购</div>
+                                    <a href="news/zbcg.htm" target="_blank" class="g-more1">
+                                        <div class="t">更多</div>
+                                        <div class="i"><img src="images/i08.png" alt="" /></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="p">校园通知</div>
+                                    <a href="news/xytz.htm" target="_blank" class="g-more1">
+                                        <div class="t">更多</div>
+                                        <div class="i"><img src="images/i08.png" alt="" /></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="m-tabinfo2">
+                        <div class="tab2">
+                            <ul class="ul-list2"><li>
+                                    <a href="info/1071/24632.htm" target="_blank" title="长期有效！广西信息职业技术学院高层次人才招聘公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">29</div>
+                                                <div class="ym">2023.11</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">长期有效！广西信息职业技术学院高层次人才招聘公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1071/24892.htm" target="_blank" title="广西信息职业技术学院公开招聘高层次人才第二批拟聘人员公示" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">21</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">广西信息职业技术学院公开招聘高层次人才第二批拟聘人员公示</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1071/24852.htm" target="_blank" title="广西开放大学2023年度部门决算公开信息" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">18</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">广西开放大学2023年度部门决算公开信息</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1071/24842.htm" target="_blank" title="广西信息职业技术学院2023年度部门决算公开信息" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">18</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">广西信息职业技术学院2023年度部门决算公开信息</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1071/24312.htm" target="_blank" title="关于《广西信息职业技术学院建筑装饰材料与构造工艺实训室项目设施设备采购》流标公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">27</div>
+                                                <div class="ym">2024.09</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于《广西信息职业技术学院建筑装饰材料与构造工艺实训室项目设施设备采购》流标公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1071/24222.htm" target="_blank" title="关于开展广西开放大学（广西信息职业技术学院）新版主页上线试运行的通知" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">27</div>
+                                                <div class="ym">2024.09</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于开展广西开放大学（广西信息职业技术学院）新版主页上线试运行的通知</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1071/24272.htm" target="_blank" title="广西开放大学南宁市东宝路1-1号、2号小区危旧房改住房改造项目商铺评估服务单位遴选公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">27</div>
+                                                <div class="ym">2024.09</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">广西开放大学南宁市东宝路1-1号、2号小区危旧房改住房改造项目商铺评估服务单位遴选公告</div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u15_24632','dynclicks_u15_24892','dynclicks_u15_24852','dynclicks_u15_24842','dynclicks_u15_24312','dynclicks_u15_24222','dynclicks_u15_24272'],[24632,24892,24852,24842,24312,24222,24272],"wbnews", 1400678754)</script>
+</ul>
+                        </div>
+                        <div class="tab2">
+                            <ul class="ul-list2"><li>
+                                    <a href="info/1081/24902.htm" target="_blank" title="关于广西信息职业技术学院2024级学生军训服装供应商遴选结果的公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">22</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于广西信息职业技术学院2024级学生军训服装供应商遴选结果的公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1081/24812.htm" target="_blank" title="广西信息职业技术学院关于遴选2024级学生军训服装供应商的公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">16</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">广西信息职业技术学院关于遴选2024级学生军训服装供应商的公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1081/24802.htm" target="_blank" title="关于标准化考场电子设备公开询价采购结果的公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">16</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于标准化考场电子设备公开询价采购结果的公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1081/24762.htm" target="_blank" title="关于广西信息职业技术学院建筑装饰材料与构造工艺实训室项目设施设备采购项目（重）公开询价采购结果的公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">14</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于广西信息职业技术学院建筑装饰材料与构造工艺实训室项目设施设备采购项目（重）公开询价采购结果的公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1081/24752.htm" target="_blank" title="关于标准化考场电子设备采购项目公开询价采购的公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">14</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于标准化考场电子设备采购项目公开询价采购的公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1081/24572.htm" target="_blank" title="关于广西信息职业技术学院建筑装饰材料与构造工艺实训室项目设施设备重新公开询价采购的公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">10</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于广西信息职业技术学院建筑装饰材料与构造工艺实训室项目设施设备重新公开询价采购的公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1081/24492.htm" target="_blank" title="广西开放大学南宁市东宝路1-1号、2号小区危旧房改住房改造项目商铺（不含商业土地出让金）拍卖服务单位遴选公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">03</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">广西开放大学南宁市东宝路1-1号、2号小区危旧房改住房改造项目商铺（不含商业土地出让金）拍卖服务单位遴选...</div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u16_24902','dynclicks_u16_24812','dynclicks_u16_24802','dynclicks_u16_24762','dynclicks_u16_24752','dynclicks_u16_24572','dynclicks_u16_24492'],[24902,24812,24802,24762,24752,24572,24492],"wbnews", 1400678754)</script>
+</ul>
+                        </div>
+                        <div class="tab2">
+                            <ul class="ul-list2"><li>
+                                    <a href="info/1091/7861.htm" target="_blank" title="长期有效！广西信息职业技术学院高层次人才招聘公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">29</div>
+                                                <div class="ym">2023.11</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">长期有效！广西信息职业技术学院高层次人才招聘公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1091/24622.htm" target="_blank" title="关于参加学习贯彻全国教育大会精神宣讲会的通知" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">11</div>
+                                                <div class="ym">2024.10</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于参加学习贯彻全国教育大会精神宣讲会的通知</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1091/8161.htm" target="_blank" title="关于广西信息职业技术学院开学生活用品临时摊位招商项目公开竞价采购结果的公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">31</div>
+                                                <div class="ym">2024.08</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于广西信息职业技术学院开学生活用品临时摊位招商项目公开竞价采购结果的公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1091/7981.htm" target="_blank" title="广西信息职业技术学院开学生活用品临时摊位项目招商公告" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">26</div>
+                                                <div class="ym">2024.08</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">广西信息职业技术学院开学生活用品临时摊位项目招商公告</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1091/7541.htm" target="_blank" title="关于推荐参加第十四届“挑战杯”全国大学生创业计划竞赛作品的公示" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">20</div>
+                                                <div class="ym">2024.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">关于推荐参加第十四届“挑战杯”全国大学生创业计划竞赛作品的公示</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1091/7911.htm" target="_blank" title="广西信息职业技术学院公开招聘高层次人才第二批拟聘人员公示" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">11</div>
+                                                <div class="ym">2024.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">广西信息职业技术学院公开招聘高层次人才第二批拟聘人员公示</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1091/7681.htm" target="_blank" title="广西信息职业技术学院2024年公开招聘编外聘用人员第三批拟聘人员名单公示" class="con">
+                                        <div class="date">
+                                            <div class="bg">
+                                                <img src="images/i11.png" alt="" class="img1">
+                                                <img src="images/i12.png" alt="" class="img2">
+                                            </div>
+                                            <div class="txt">
+                                                <div class="day">10</div>
+                                                <div class="ym">2024.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="tit">广西信息职业技术学院2024年公开招聘编外聘用人员第三批拟聘人员名单公示</div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u17_7861','dynclicks_u17_24622','dynclicks_u17_8161','dynclicks_u17_7981','dynclicks_u17_7541','dynclicks_u17_7911','dynclicks_u17_7681'],[7861,24622,8161,7981,7541,7911,7681],"wbnews", 1400678754)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="item wow fadeInRight">
+                    <div class="g-tit1 sty2">
+                        <div class="tabbox">
+                            <div class="icn"><img src="images/i10.png" alt="" /></div>
+                            <ul class="ul-tab1 sty2 TAB_CLICK" id=".tab3">
+                                <li>
+                                    <div class="p">教务教学</div>
+                                    <a href="jyjx/jwdt.htm" target="_blank" class="g-more1">
+                                        <div class="t">更多</div>
+                                        <div class="i"><img src="images/i08.png" alt="" /></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="p">招生就业</div>
+                                    <a href="zsjy/gzjy1/jyxx.htm" target="_blank" class="g-more1">
+                                        <div class="t">更多</div>
+                                        <div class="i"><img src="images/i08.png" alt="" /></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="m-tabinfo3">
+                        <div class="tab3">
+                            <ul class="ul-list3"><li>
+                                    <a href="info/1251/25072.htm" target="_blank" title="广西开放大学关于开展2024年开放教育实地教学检查工作的通知" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西开放大学关于开展2024年开放教育实地教学检查工作的通知</div>
+                                        <div class="date">2024.10.27</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1251/24992.htm" target="_blank" title="广西开放大学关于2024年秋季学期开放教育期末考试工作安排的通知" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西开放大学关于2024年秋季学期开放教育期末考试工作安排的通知</div>
+                                        <div class="date">2024.10.25</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1251/24982.htm" target="_blank" title="广西开放大学关于举行开放教育2024年秋季新生开学典礼的通知" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西开放大学关于举行开放教育2024年秋季新生开学典礼的通知</div>
+                                        <div class="date">2024.10.22</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1251/24832.htm" target="_blank" title="关于我校2024级高职学生拟放弃入学资格名单公示" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">关于我校2024级高职学生拟放弃入学资格名单公示</div>
+                                        <div class="date">2024.10.18</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1251/24822.htm" target="_blank" title="关于2024年秋季学期国家开放大学学士学位申报工作的通知" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">关于2024年秋季学期国家开放大学学士学位申报工作的通知</div>
+                                        <div class="date">2024.10.18</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1251/24612.htm" target="_blank" title="关于开展2024年秋季学期开放教育10月面授直播课通知" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">关于开展2024年秋季学期开放教育10月面授直播课通知</div>
+                                        <div class="date">2024.10.10</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1251/24582.htm" target="_blank" title="广西信息职业技术学院学生岗位实习单位名单公示" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西信息职业技术学院学生岗位实习单位名单公示</div>
+                                        <div class="date">2024.10.10</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1251/24552.htm" target="_blank" title="广西开放大学关于开展2024年秋季学期开放教育考点设置工作的通知" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西开放大学关于开展2024年秋季学期开放教育考点设置工作的通知</div>
+                                        <div class="date">2024.10.09</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1251/24332.htm" target="_blank" title="广西开放大学关于开展2024年秋季学期国家开放大学学士学位英语考试工作的通知" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西开放大学关于开展2024年秋季学期国家开放大学学士学位英语考试工作的通知</div>
+                                        <div class="date">2024.09.24</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1251/24322.htm" target="_blank" title="关于召开广西开放大学2024秋季学期毕业论文指导教师培训会的通知" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">关于召开广西开放大学2024秋季学期毕业论文指导教师培训会的通知</div>
+                                        <div class="date">2024.09.19</div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u18_25072','dynclicks_u18_24992','dynclicks_u18_24982','dynclicks_u18_24832','dynclicks_u18_24822','dynclicks_u18_24612','dynclicks_u18_24582','dynclicks_u18_24552','dynclicks_u18_24332','dynclicks_u18_24322'],[25072,24992,24982,24832,24822,24612,24582,24552,24332,24322],"wbnews", 1400678754)</script>
+</ul>
+                        </div>
+                        <div class="tab3">
+                            <ul class="ul-list3"><li>
+                                    <a href="info/1591/23821.htm" target="_blank" title="广西信息职业技术学院2023年夏季校园双选会邀请函" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西信息职业技术学院2023年夏季校园双选会邀请函</div>
+                                        <div class="date">2023.05.18</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1591/23721.htm" target="_blank" title="广西信息职业技术学院2023年高职对口中职考试录取名单公示" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西信息职业技术学院2023年高职对口中职考试录取名单公示</div>
+                                        <div class="date">2023.05.17</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1591/23861.htm" target="_blank" title="广西信息职业技术学院2023年高职单招考试录取名单公示" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西信息职业技术学院2023年高职单招考试录取名单公示</div>
+                                        <div class="date">2023.05.17</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1591/23551.htm" target="_blank" title="广西公办高职高专院校招生联盟2023年单独/对口招生联合测试《文化基础测试+职业技能测试》对口招生考试大纲" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西公办高职高专院校招生联盟2023年单独/对口招生联合测试《文化基础测试+职...</div>
+                                        <div class="date">2023.03.20</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1591/23771.htm" target="_blank" title="广西公办高职高专院校招生联盟2023年单独/对口招生联合测试《职业适应性测试》单独招生考试大纲" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西公办高职高专院校招生联盟2023年单独/对口招生联合测试《职业适应性测试》...</div>
+                                        <div class="date">2023.03.20</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1591/23681.htm" target="_blank" title="广西信息职业技术学院2023年招生计划表" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西信息职业技术学院2023年招生计划表</div>
+                                        <div class="date">2023.03.18</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1591/23711.htm" target="_blank" title="广西信息职业技术学院2023年招生章程" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西信息职业技术学院2023年招生章程</div>
+                                        <div class="date">2023.03.18</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1591/23651.htm" target="_blank" title="广西信息职业技术学院2023年对口中等职业学校毕业生自主招生简章" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西信息职业技术学院2023年对口中等职业学校毕业生自主招生简章</div>
+                                        <div class="date">2023.03.14</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1591/23531.htm" target="_blank" title="广西信息职业技术学院2023年高等职业院校单独考试招生简章" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">广西信息职业技术学院2023年高等职业院校单独考试招生简章</div>
+                                        <div class="date">2023.03.14</div>
+                                    </a>
+                                </li>
+                                
+<li>
+                                    <a href="info/1591/23851.htm" target="_blank" title="2022年广西信息职业技术学院各专业最高与最低录取分数线参考表" class="con">
+                                        <div class="dot"></div>
+                                        <div class="tit">2022年广西信息职业技术学院各专业最高与最低录取分数线参考表</div>
+                                        <div class="date">2022.10.11</div>
+                                    </a>
+                                </li>
+                                
+<script>_showDynClickBatch(['dynclicks_u19_23821','dynclicks_u19_23721','dynclicks_u19_23861','dynclicks_u19_23551','dynclicks_u19_23771','dynclicks_u19_23681','dynclicks_u19_23711','dynclicks_u19_23651','dynclicks_u19_23531','dynclicks_u19_23851'],[23821,23721,23861,23551,23771,23681,23711,23651,23531,23851],"wbnews", 1400678754)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-a3">
+        <div class="wp">
+            <ul class="ul-list4">    <li class="wow fadeInUp" data-wow-delay="0.0s">
+                    <a href="https://cas.gxuie.cn/lyuapServer/login" target="_blank" class="con" title="办事大厅" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70110)">
+                        <div class="icn"><img src="images/i13.png" alt=""></div>
+                        <div class="tit">办事大厅</div>
+                    </a>
+                </li>
+                
+<li class="wow fadeInUp" data-wow-delay="0.1s">
+                    <a href="http://one.ouchn.cn/" target="_blank" class="con" title="国开学习网" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70116)">
+                        <div class="icn"><img src="images/i14.png" alt=""></div>
+                        <div class="tit">国开学习网</div>
+                    </a>
+                </li>
+                
+<li class="wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://open.gxou.com.cn/" target="_blank" class="con" title="广西开大学习网" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70117)">
+                        <div class="icn"><img src="images/i15.png" alt=""></div>
+                        <div class="tit">广西开大学习网</div>
+                    </a>
+                </li>
+                
+<li class="wow fadeInUp" data-wow-delay="0.3s">
+                    <a href="https://cas.gxuie.cn/lyuapServer/login" target="_blank" class="con" title="广信职院教学管理" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70118)">
+                        <div class="icn"><img src="images/i16.png" alt=""></div>
+                        <div class="tit">广信职院教学管理</div>
+                    </a>
+                </li>
+                
+<li class="wow fadeInUp" data-wow-delay="0.4s">
+                    <a href="https://atrust.gxou.com.cn" target="_blank" class="con" title="零信任" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70119)">
+                        <div class="icn"><img src="images/i17.png" alt=""></div>
+                        <div class="tit">零信任</div>
+                    </a>
+                </li>
+                
+<li class="wow fadeInUp" data-wow-delay="0.5s">
+                    <a href="https://www.iguiz.cn/" target="_blank" class="con" title="广西社区教育网" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70120)">
+                        <div class="icn"><img src="images/i18.png" alt=""></div>
+                        <div class="tit">广西社区教育网</div>
+                    </a>
+                </li>
+                
+<li class="wow fadeInUp" data-wow-delay="0.6s">
+                    <a href="https://oa.gxou.com.cn/" target="_blank" class="con" title="OA系统" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70121)">
+                        <div class="icn"><img src="images/i19.png" alt=""></div>
+                        <div class="tit">OA系统</div>
+                    </a>
+                </li>
+                
+<li class="wow fadeInUp" data-wow-delay="0.7s">
+                    <a href="http://mail.gxou.com.cn/" target="_blank" class="con" title="电子邮件系统" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70122)">
+                        <div class="icn"><img src="images/i20.png" alt=""></div>
+                        <div class="tit">电子邮件系统</div>
+                    </a>
+                </li>
+                
+<li class="wow fadeInUp" data-wow-delay="0.8s">
+                    <a href="ggfw/tsg/tsggk.htm" target="_blank" class="con" title="图书馆" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70123)">
+                        <div class="icn"><img src="images/i21.png" alt=""></div>
+                        <div class="tit">图书馆</div>
+                    </a>
+                </li>
+                
+<li class="wow fadeInUp" data-wow-delay="0.9s">
+                    <a href="http://gbds.cbpt.cnki.net/wkg/WebPublication/index.aspx?mid=gbds" target="_blank" class="con" title="学报投稿" onclick="_addDynClicks(&#34;wbimage&#34;, 1400678754, 70124)">
+                        <div class="icn"><img src="images/i22.png" alt=""></div>
+                        <div class="tit">学报投稿</div>
+                    </a>
+                </li>
+                
+</ul>
+        </div>
+    </div>
+    <div class="row-a4" style="background-image: url(images/bg03.jpg);">
+        <div class="wp">
+            <div class="m-info3">
+                <div class="item sty1 wow fadeInUp" data-wow-delay="0s">
+<a href="info/1031/17291.htm" class="con" target="_blank">
+                        <div class="pic">
+                            <div class="img" style="background-image: url(/__local/5/BC/86/255B8A30263B586B0E218EEE338_585DC361_273AC.jpg);"></div>
+                        </div>
+                        <div class="tit">广西信息职业技术学院举行2024届毕业典礼</div>
+                    </a>
+
+<script>_showDynClickBatch(['dynclicks_u21_22841'],[22841],"wbnews", 1400678754)</script>
+</div>
+                <div class="item sty2 wow fadeInDown" data-wow-delay="0.2s"><a href="info/1031/22891.htm" target="_blank" class="con">
+                        <div class="pic">
+                            <div class="img" style="background-image: url(/__local/D/F4/28/6403F4107740524624F29CB6372_8CEBA6CA_37013.jpg);"></div>
+                        </div>
+                        <div class="tit">【学习强国】踔厉奋发正当时 青春献礼二十大 | 广西信息职业技术学院青年学子谈“我们这十年”</div>
+                    </a>
+<a href="#" target="_blank" class="con">
+                        <div class="pic">
+                            <div class="img" style="background-image: url(/__local/8/83/77/97D7B2403F25FA47C8B715557C9_7E343938_9B74C.png);"></div>
+                        </div>
+                        <div class="tit">【学习强国】广西信息职业技术学院：《青年·清廉》</div>
+                    </a>
+<script>_showDynClickBatch(['dynclicks_u22_22841','dynclicks_u22_22831','dynclicks_u22_22821'],[22841,22831,22821],"wbnews", 1400678754)</script>
+</div>
+                <div class="item sty1 wow fadeInUp" data-wow-delay="0.4s"><a href="info/1031/16751.htm" class="con" target="_blank">
+                        <div class="pic">
+                            <div class="img" style="background-image: url(/__local/A/7A/76/329C6B8A904F135DBC9D50523B5_F3602BA7_1DE3B.jpg);"></div>
+                        </div>
+                        <div class="tit">火力全开！学校举行2023级学生军训总结会</div>
+                    </a>
+<script>_showDynClickBatch(['dynclicks_u23_22841','dynclicks_u23_22831','dynclicks_u23_22821','dynclicks_u23_22811'],[22841,22831,22821,22811],"wbnews", 1400678754)</script>
+</div>
+                <div class="item sty2 wow fadeInDown" data-wow-delay="0.6s"><a href="info/1041/22551.htm" target="_blank" class="con">
+                        <div class="pic">
+                            <div class="img" style="background-image: url(/__local/9/6B/AC/B07E1AAE2B2B1027E6194287A8C_603CEAE9_986E.jpg);"></div>
+                        </div>
+                        <div class="tit">广西八桂职教网：广西信息职业技术学院成功承办2024年广西职业院校技能大赛高职组《室内空间设计与制作》赛项比赛</div>
+                    </a>
+<a href="info/1031/16531.htm" target="_blank" class="con">
+                        <div class="pic">
+                            <div class="img" style="background-image: url(/__local/0/73/5A/6C293D09DD04A245E37AA173DDB_01A0F7F7_1E78F.png);"></div>
+                        </div>
+                        <div class="tit">让我们在图书馆“相遇”</div>
+                    </a>
+<script>_showDynClickBatch(['dynclicks_u24_22841','dynclicks_u24_22831','dynclicks_u24_22821','dynclicks_u24_22811','dynclicks_u24_22801','dynclicks_u24_22791'],[22841,22831,22821,22811,22801,22791],"wbnews", 1400678754)</script>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="row-a5" style="background-image: url(images/bg04.png);">
+        <div class="wp">
+            <div class="g-tit2 wow fadeInUp">
+                <div class="titbox">
+                    <div class="i"><img src="images/i24.png" alt="" /></div>
+                    <div class="p">专题专栏</div>
+                </div>
+            </div>
+            <ul class="ul-list5 pc">    
+
+                <li class="wow fadeInUp" data-wow-delay="0.1s">
+                    <a href="https://www.gxou.com.cn/ztjy/" class="con" target="_blank">
+                        <div class="pic">
+                            <div class="img" style="background-image: url(images/p08.jpg);"></div>
+                        </div>
+                        <div class="info">
+                            <div class="tit">学习贯彻习近平新时代中国特色社会主义思想主题教育</div>
+                            <div class="more">查看更多<i></i></div>
+                        </div>
+                    </a>
+                </li>
+             
+
+
+                <li class="wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="https://www.gxou.com.cn/xcbcs/" class="con" target="_blank">
+                        <div class="pic">
+                            <div class="img" style="background-image: url(images/p11.jpg);"></div>
+                        </div>
+                        <div class="info">
+                            <div class="tit">清廉学校</div>
+                            <div class="more">查看更多<i></i></div>
+                        </div>
+                    </a>
+                </li>
+             
+
+
+                <li class="wow fadeInUp" data-wow-delay="0.3s">
+                    <a href="" class="con" target="_blank">
+                        <div class="pic">
+                            <div class="img" style="background-image: url(images/p12.jpg);"></div>
+                        </div>
+                        <div class="info">
+                            <div class="tit">网络安全</div>
+                            <div class="more">查看更多<i></i></div>
+                        </div>
+                    </a>
+                </li>
+             
+</ul>
+            <div class="ul-list5 pe">
+                <div class="swiper">
+                    <div class="swiper-wrapper">    
+
+                        <div class="swiper-slide">
+                            <a href="https://www.gxou.com.cn/ztjy/" target="_blank" class="con">
+                                <div class="pic">
+                                    <div class="img" style="background-image: url(images/p08.jpg);"></div>
+                                </div>
+                                <div class="info">
+                                    <div class="tit">学习贯彻习近平新时代中国特色社会主义思想主题教育</div>
+                                    <div class="more">查看更多<i></i></div>
+                                </div>
+                            </a>
+                        </div>
+                       
+
+
+                        <div class="swiper-slide">
+                            <a href="https://www.gxou.com.cn/xcbcs/" target="_blank" class="con">
+                                <div class="pic">
+                                    <div class="img" style="background-image: url(images/p11.jpg);"></div>
+                                </div>
+                                <div class="info">
+                                    <div class="tit">清廉学校</div>
+                                    <div class="more">查看更多<i></i></div>
+                                </div>
+                            </a>
+                        </div>
+                       
+
+
+                        <div class="swiper-slide">
+                            <a href="" target="_blank" class="con">
+                                <div class="pic">
+                                    <div class="img" style="background-image: url(images/p12.jpg);"></div>
+                                </div>
+                                <div class="info">
+                                    <div class="tit">网络安全</div>
+                                    <div class="more">查看更多<i></i></div>
+                                </div>
+                            </a>
+                        </div>
+                       
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-links">
+        <div class="wp">
+            <div class="info">
+                <div class="tit">
+                    <div class="i"><img src="images/i25.png" alt="" /></div>
+                    <div class="p">友情链接</div>
+                </div>
+                <ul class="link"><li><a href="http://www.moe.gov.cn/" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86138)" target="_blank">教育部</a></li>
+                    
+<li><a href="http://www.gxzf.gov.cn/" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86139)" target="_blank">广西政府网</a></li>
+                    
+<li><a href="http://jyt.gxzf.gov.cn/" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86140)" target="_blank">广西教育厅</a></li>
+                    
+<li><a href="http://kjt.gxzf.gov.cn/" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86141)" target="_blank">广西科技厅</a></li>
+                    
+<li><a href="http://www.ouchn.edu.cn/" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86142)" target="_blank">国家开放大学</a></li>
+                    
+<li><a href="https://www.iguiz.cn/" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86143)" target="_blank">广西社区教育网</a></li>
+                    
+<li><a href="http://www.chinazy.org/" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86191)" target="_blank">中国职业技术教育网</a></li>
+                    
+<li><a href="http://www.tvet.net.cn/" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86192)" target="_blank">中国职业教育教学指导网</a></li>
+                    
+<li><a href="https://www.tech.net.cn/" class="v1" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1400678754, 86193)" target="_blank">现代高等职业技术教育网</a></li>
+                    
+</ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wp">
+            <div class="fd-top">
+                <div class="fd-logo">
+                    <div class="img1"><img src="images/fd-logo.png" alt="" /></div>
+                    <div class="img2"><img src="images/fd-logo2.png" alt="" /></div>
+                </div>
+                <div class="fd-tel"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<div class="tit1">
+ 联系我们
+</div>
+<div class="tit">
+ 东宝校区
+</div>
+<div class="desc">
+ <p>地址：广西南宁市青秀区东宝路1-1号&nbsp;&nbsp;邮编：530022</p>
+ <p>电话：0771-5851916（校长办公室） &nbsp; &nbsp;</p>
+</div>
+<div class="line"></div>
+<div class="tit">
+ 五象校区
+</div>
+<div class="desc">
+ <p>地址：广西南宁市邕宁区步云路31号&nbsp;&nbsp;邮编：530299</p>
+ <p>电话：0771-2205966（校长办公室） &nbsp;&nbsp;0771-2205522（招生就业处）</p>
+</div></div>
+                <ul class="fd-share">
+                    <li>
+                        <a href="javascript:void(0);" class="con">
+                            <div class="icn"><img src="images/i05.png" alt="" /></div>
+                            <div class="tit">官方微信</div>
+                            <div class="qr"><img src="images/ewm.png" alt="" /></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gfmt.htm" target="_blank" class="con">
+                            <div class="icn"><img src="images/i06.png" alt="" /></div>
+                            <div class="tit">官方媒体</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fd-copy"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>备案号：<a href="https://beian.miit.gov.cn" target="_blank" style="text-decoration: none; color: #fff">桂ICP备11001632号-1</a>&nbsp;&nbsp;&nbsp;&nbsp; 南宁网监ICP备案 4501200061号</p></div>
+        </div>
+    </div>
+    
+    <script src="js/lib.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <script src="js/wow.min.js"></script>
+    <script>
+        // 初始化wow.js
+        if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+            var wow = new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            });
+            wow.init();
+        };
+    </script>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <script src="js/swiper.min.js"></script>
+    <script>
+         (function(){
+             var elms = document.querySelectorAll('.tit');
+             for (var i = 0; i < elms.length; i++) {
+                 if (elms[i].innerText.indexOf('学习贯彻习近平新时代中国特色社会主义思想主题教育') != -1) {
+                     elms[i].innerHTML = '学习贯彻习近平新时代中国特色<br>社会主义思想主题教育';
+                 } 
+
+             }
+         })();
+        $(document).ready(function() {
+            var banSw = new Swiper('.in-ban', {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.in-ban .next',
+                    prevEl: '.in-ban .prev',
+                },
+                pagination: {
+                    el: '.in-ban .swiper-pagination',
+                    clickable: true,
+                },
+            });
+            var swiper1 = new Swiper('.m-swiper1', {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.m-swiper1 .next',
+                    prevEl: '.m-swiper1 .prev',
+                },
+                pagination: {
+                    el: '.m-swiper1 .swiper-pagination',
+                    type: "fraction",
+                },
+            });
+            $('.ul-tab1 li').click(function() {
+                var tab = $(this).parent(".ul-tab1");
+                var con = tab.attr("id");
+                var on = tab.find("li").index(this);
+                $(this).addClass('on').siblings(tab.find("li")).removeClass('on');
+                $(con).eq(on).addClass('show').siblings(con).removeClass('show');
+            });
+            $('.ul-tab1').each(function(index, el) {
+                if ($(this).find('li.on').length) {
+                    $(this).find("li.on").trigger('click');
+                } else {
+                    $(this).find("li").filter(':first').trigger('click');
+                }
+            });
+
+            var swiper2 = new Swiper('.ul-list5.pe .swiper', {
+                loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 4000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false,
+                },
+                
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,918 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML><HEAD><TITLE>温州医科大学仁济学院</TITLE><meta name="pageType" content="1">
+<meta name="pageTitle" content="温州医科大学仁济学院">
+<META Name="keywords" Content="温州医科大学仁济学院" />
+
+
+
+
+
+<META content="text/html; charset=UTF-8" http-equiv="Content-Type"><LINK rel="stylesheet" type="text/css" href="css/Global.css"><LINK rel="stylesheet" type="text/css" href="css/Style.css?act=6"><script src="js/modernizr.custom.js"></script><LINK rel="stylesheet" type="text/css" href="css/lanrenzhijia.css"><script src="js/jquery.js"></script><script src="js/banner.js"></script>
+<script src="js/strsubimg.js?act=4"></script>
+<LINK rel="stylesheet" href="css/mFYSlider.css"><script type="text/javascript" src="js/myfocus2.0.4.min.js"></script><script type="text/javascript" src="js/mFYSlider.js"></script>
+
+<script>
+        $(function () {
+            $(".notice_left_nav li").click(function () {
+                var index = $(this).index();
+                $(this).addClass("tab").siblings().removeClass("tab");
+                $(this).parent().parent().parent().find(".notice_left_con ul").siblings().hide().eq(index).show();
+            });
+        })
+    </script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b7647565050574200030001405d -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1037,'/index.jsp',-1,1414413814)</script>
+</HEAD>
+<BODY>
+
+<DIV class="top_nav">
+<div style="position: absolute;right: 50%;top: 130px;z-index:0; padding-right:600px;"><IMG src="images/leftxiaoxunfen2.png"></DIV>
+<div style="position: absolute;left: 50%;top: 130px;z-index:0;padding-left:600px"><IMG src="images/rightxiaoxunfen2.png"></DIV>
+<DIV class="top_nav_content" style="position: relative">
+<DIV class="top_left"><A href=""><IMG src="imges/topLeft.png"></A> </DIV>
+<DIV class="top_right_ue fr">
+<UL>
+
+<LI class="shouzhi"><A class="fontcolor" href="message.jsp?urltype=tree.TreeTempUrl&wbtreeid=1326">院长信箱</A> </LI>
+<LI class="shouzhi"><A class="fontcolor" href="http://wwwrjxy.wmu.edu.cn/home/zxjb">监督举报</A> </LI>
+<LI class="shouzhi"><A class="fontcolor" href="Home.htm">English</A> </LI>
+<LI class="shouzhi"><A class="fontcolor" href="https://authserver.wmu.edu.cn/authserver/login?service=https%3A%2F%2Fzhgw.wmu.edu.cn%3A443%2Fseeyon%2Fcaslogin%2Fsso">新OA系统</A> </LI>
+<LI class="shouzhi"><A class="fontcolor" href="http://newoa.wmu.edu.cn/wui/main.jsp">旧OA系统</A> </LI>
+<LI class="shouzhi"><A class="fontcolor" href="#">办事大厅</A> </LI>
+
+
+<LI id="small_li" class="shouzhi">
+<DIV class="topss"></DIV>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError" class="searfrom">
+           <input placeholder="输入搜索关键字" class="txt fl" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+           <input type='submit' class="btn fl" name="FindButton" value='' align="absmiddle" style="cursor: hand" v-on:click="onSubmit()"/>  
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1414413814";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://cmyy.wmu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script><script>            $('.searfrom').click(function(e) {              $(this).show();               e.stopPropagation();                       });              $(document).click(function(event) {                $('.searfrom').hide();                 $('.topss').show();            });                   $('.topss').click(function(e){              $('.searfrom').show();              e.stopPropagation();                 $('.topss').hide();            })        </script></LI></UL></DIV>
+<div class="top_right_shita fr">
+<UL>
+
+
+<LI class="nav_2 shouzhi"><A class="navcolor" href="xygk1/xyjj.htm">学院概况</A>
+<UL class="nav_2_xiahua" id="ml0">
+  <Li id="lat_1009"><A href="xygk1/xyjj.htm">学院简介</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1010"><A href="xygk1/mtys.htm">母体优势</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1011"><A href="xygk1/xrld.htm">现任领导</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1330"><A href="xygk1/xyjs.htm">学院精神</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1331"><A href="xygk1/xyfg1/xxq.htm">校园风光</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+</UL>
+
+
+
+</LI>
+
+<LI class="nav_2 shouzhi"><A class="navcolor" href="jgsz1/dqxt.htm">机构设置</A>
+<UL class="nav_2_xiahua" id="ml0">
+  <Li id="lat_1014"><A href="jgsz1/dqxt.htm">党群系统</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1015"><A href="jgsz1/xzxt.htm">行政系统</A>
+  
+
+<ul>
+
+<li><a href="#" target="_blank">办公室</a></li>
+<li><a href="jgsz1/xzxt/zzrsb.htm" target="_blank">组织人事部</a></li>
+<li><a href="jgsz1/xzxt/tw.htm" target="_blank">团委</a></li>
+<li><a href="jgsz1/xzxt/jxkytzb.htm" target="_blank">教学科研拓展部</a></li>
+<li><a href="jgsz1/xzxt/jwb.htm" target="_blank">教务部</a></li>
+<li><a href="jgsz1/xzxt/cxcyjyxb.htm" target="_blank">创新创业教育学部</a></li>
+<li><a href="jgsz1/xzxt/xgb.htm" target="_blank">学工部</a></li>
+
+</ul>
+
+  </LI>
+  
+  
+
+  
+  
+</UL>
+
+
+
+</LI>
+
+<LI class="nav_2 shouzhi"><A class="navcolor" href="rcpy.htm">人才培养</A>
+<UL class="nav_2_xiahua" id="ml0">
+  <Li id="lat_1016"><A href="rcpy/kycx.htm">科研创新</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1017"><A href="rcpy/hwjl.htm">海外交流</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1018"><A href="rcpy/szdw.htm">师资队伍</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1019"><A href="rcpy/xydt.htm">校友动态</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+</UL>
+
+
+
+</LI>
+
+<LI class="nav_2 shouzhi"><A class="navcolor" href="zhaosheng.htm">招生就业</A>
+<UL class="nav_2_xiahua" id="ml0">
+  <Li id="lat_1125"><A href="zhaosheng/index.htm">招生网</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1098"><A href="jgsz1/xzxt/xgb/jyfw/qzzp.htm">就业信息网</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+</UL>
+
+
+
+</LI>
+
+<LI class="nav_2 shouzhi"><A class="navcolor" href="djyd1.htm">党建园地</A>
+<UL class="nav_2_xiahua" id="ml0">
+  <Li id="lat_1110"><A href="djyd1/djyw.htm">党建要闻</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1111"><A href="djyd1/jcfc.htm">基层风采</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1105"><A href="djyd1/xxyd.htm">学习园地</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1301"><A href="djyd1/tzgg.htm">通知公告</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1106"><A href="djyd1/ljwh.htm">廉洁文化</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+</UL>
+
+
+
+</LI>
+
+<LI class="nav_2 shouzhi"><A class="navcolor" href="xxfw.htm">信息服务</A>
+<UL class="nav_2_xiahua" id="ml0">
+  <Li id="lat_1020"><A href="xxfw/xyxl.htm">学院校历</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1021"><A href="xxfw/zbgj.htm">周边公交</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1022"><A href="xxfw/xydh.htm">校园导航</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1023"><A href="xxfw/lxwm.htm">联系我们</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1024"><A href="xxfw/xxgk.htm">信息公开</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1025"><A href="xxfw/yzjdr.htm">院长接待日</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+  <Li id="lat_1421"><A href="xxfw/zlxz.htm">资料下载</A>
+  
+
+  </LI>
+  
+  
+
+  
+  
+</UL>
+
+
+
+</LI>
+
+
+
+
+
+
+
+</UL>
+</div>
+
+</DIV></DIV>
+
+
+<DIV class="container">
+<DIV id="Banner" class="cbp-fwslider"><!-- <a href="javascript:;" class="prev"></a>
+                <a href="javascript:;" class="next"></a>-->
+<UL class="pic">
+<UL>
+
+<LI class="width100" style="height: 645px; background: url(images/rj20d.jpg?act=1) no-repeat center top"><A href="javascript:;"></A></LI>
+
+
+
+<LI class="width100" style="height: 645px; background: url(images/bs8.jpg?act=1) no-repeat center top"><A href="javascript:;"></A></LI>
+
+<LI class="width100" style="height: 645px; background: url(images/bs2a.jpg?act=1) no-repeat center top"><A href="javascript:;"></A></LI>
+<LI class="width100" style="height: 645px; background: url(images/bs301.jpg?act=1) no-repeat center top"><A href="javascript:;"></A></LI>
+<LI class="width100" style="height: 645px; background: url(images/bs5.png?act=1) no-repeat center top"><A href="javascript:;"></A></LI>
+
+
+</UL></UL>
+<UL class="btn"></UL></DIV></DIV>
+
+<DIV class="container_1">
+<DIV class="focus">
+<DIV class="focus_top">
+<UL>
+<LI class="p1 pl26 fl backimge"></LI>
+<LI class="p2 fr ba666"><A class="genduo" href="xwzx/rjyw.htm">更多</A> </LI></UL></DIV>
+<DIV class="focus_box"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script> <div class="focus_box_left">                  
+ <ul class="row1pic">
+                         <li><a href="info/1026/185599.htm" class="pic"><img src="/__local/A/B0/E4/FAAE054E59F645F5BD2426E8376_AB644C72_41AF4.jpg" width="100%" height="100%" thumb="" alt="校党委副书记章成斌深入滨海校区开展调研指导" text="校党委副书记章成斌深入滨海校区开展调研指导" /></a></li>
+                         <li><a href="info/1026/184989.htm" class="pic"><img src="/__local/2/D0/29/88096EF21A3D4A5761D4278E6F6_ABCCF34B_46482.jpg" width="100%" height="100%" thumb="" alt="校党委委员、副校长朱雪波到我院宣讲党的二十届三中全会精神" text="校党委委员、副校长朱雪波到我院宣讲党的二十届三中全会精神" /></a></li>
+                         <li><a href="info/1026/181529.htm" class="pic"><img src="/__local/F/DC/31/EB1003857D60E639C75B41480C9_03C2DFB8_10B67.png" width="100%" height="100%" thumb="" alt="温州医科大学仁济学院召开党纪学习教育工作总结会" text="温州医科大学仁济学院召开党纪学习教育工作总结会" /></a></li>
+                    </ul>
+ <div class="clear"></div>
+                </div>
+                   
+
+<script>_showDynClickBatch(['dynclicks_u2_185599','dynclicks_u2_184989','dynclicks_u2_181529'],[185599,184989,181529],"wbnews", 1414413814)</script>
+<div class="focus_box_right">
+
+                    <ul>
+
+  <li><div class="lt"><a class="a_font_color" href="info/1026/186119.htm">喜报！我院学子在第七届全国高校大学日语演讲比赛中斩...</a></div><div class="ln"><img src="images/New.gif"></div><div class="ld">2024-10-28</span></div></li> 
+
+
+  <li><div class="lt"><a class="a_font_color" href="info/1026/185599.htm">校党委副书记章成斌深入滨海校区开展调研指导</a></div><div class="ln"></div><div class="ld">2024-10-23</span></div></li> 
+
+
+  <li><div class="lt"><a class="a_font_color" href="info/1026/185629.htm">学院“医路筑梦，实践风采”基层定向培养医学生社会实...</a></div><div class="ln"></div><div class="ld">2024-10-23</span></div></li> 
+
+
+  <li><div class="lt"><a class="a_font_color" href="info/1026/184989.htm">校党委委员、副校长朱雪波到我院宣讲党的二十届三中全...</a></div><div class="ln"></div><div class="ld">2024-10-19</span></div></li> 
+
+
+  <li><div class="lt"><a class="a_font_color" href="info/1026/185499.htm">喜报丨我院1部教材入选“十四五”省级规划教材</a></div><div class="ln"></div><div class="ld">2024-10-17</span></div></li> 
+
+
+  <li><div class="lt"><a class="a_font_color" href="info/1026/183649.htm">日本北陆大学代表来访仁济学院</a></div><div class="ln"></div><div class="ld">2024-10-12</span></div></li> 
+
+                    </ul>
+                </div>
+<script>_showDynClickBatch(['dynclicks_u3_186119','dynclicks_u3_185599','dynclicks_u3_185629','dynclicks_u3_184989','dynclicks_u3_185499','dynclicks_u3_183649'],[186119,185599,185629,184989,185499,183649],"wbnews", 1414413814)</script>
+</DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="notice">
+<DIV class="notice_top">
+<UL>
+<LI class="p2 fr"><A class="genduo" href="tzgg1/zhyw.htm">更多</A> </LI></UL></DIV>
+<DIV class="notice_left fl">
+<DIV class="notice_left_nav">
+<UL>
+<LI class="tab">综合院务 </LI>
+<LI>一周会议 </LI>
+<LI>教学教务 </LI>
+<LI>学生工作 
+<DIV class="clear"></DIV></LI></UL></DIV>
+<DIV class="clear"></DIV>
+<DIV class="notice_left_con">
+<UL class="notice_left_ul" style="display: block">   <li><a class="a_font_color" href="info/1035/184209.htm" title="关于开展2024年“瓯江青年社科学者培养计划”人选推荐的通知">关于开展2024年“瓯江青年社科学者培养计划”人选推荐的通... <span>2024-10-16</span> </a>
+</li>
+   <li><a class="a_font_color" href="show.jsp?urltype=news.NewsContentUrl&wbtreeid=1035&wbnewsid=182119" title="转发：温州医科大学关于开展2024年度专业技术职务评聘报名工作的通知">转发：温州医科大学关于开展2024年度专业技术职务评聘报名... <span>2024-09-30</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1035/180589.htm" title="关于做好2024年中秋、国庆期间正风肃纪工作的通知">关于做好2024年中秋、国庆期间正风肃纪工作的通知 <span>2024-09-14</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1035/180299.htm" title="关于2024年中秋节、国庆节放假安排的通知">关于2024年中秋节、国庆节放假安排的通知 <span>2024-09-11</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1035/180259.htm" title="关于召开新学期教职工大会暨师德师风建设专题会的通知">关于召开新学期教职工大会暨师德师风建设专题会的通知 <span>2024-09-09</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1035/177389.htm" title="关于2024年暑假放假安排的通知">关于2024年暑假放假安排的通知 <span>2024-07-05</span> </a>
+</li>
+<script>_showDynClickBatch(['dynclicks_u4_184209','dynclicks_u4_182119','dynclicks_u4_180589','dynclicks_u4_180299','dynclicks_u4_180259','dynclicks_u4_177389'],[184209,182119,180589,180299,180259,177389],"wbnews", 1414413814)</script>
+</UL>
+
+
+<UL class="notice_left_ul">   <li><a class="a_font_color" href="info/1036/185079.htm" title="第八周会议安排">第八周会议安排 <span>2024-10-21</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1036/183879.htm" title="第七周会议安排">第七周会议安排 <span>2024-10-15</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1036/182949.htm" title="第六周会议安排">第六周会议安排 <span>2024-10-09</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1036/181149.htm" title="第四周会议安排">第四周会议安排 <span>2024-09-24</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1036/180889.htm" title="第三周会议安排">第三周会议安排 <span>2024-09-18</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1036/180309.htm" title="第二周会议安排">第二周会议安排 <span>2024-09-09</span> </a>
+</li>
+<script>_showDynClickBatch(['dynclicks_u5_185079','dynclicks_u5_183879','dynclicks_u5_182949','dynclicks_u5_181149','dynclicks_u5_180889','dynclicks_u5_180309'],[185079,183879,182949,181149,180889,180309],"wbnews", 1414413814)</script>
+</UL>
+<UL class="notice_left_ul">   <li><a class="a_font_color" href="info/1030/185349.htm" title="关于开展第四届长三角民办高校教师教学技能大赛参赛教师申报推荐工作的通知">关于开展第四届长三角民办高校教师教学技能大赛参赛教师申... <span>2024-10-22</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1030/183439.htm" title="关于开展2024年度温州医科大学课程思政教学项目申报推荐工作的通知">关于开展2024年度温州医科大学课程思政教学项目申报推荐工... <span>2024-10-12</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1030/181859.htm" title="关于举办&quot;医路筑梦，实践风采”基层定向培养医学生社会实践风采大赛的通知">关于举办"医路筑梦，实践风采”基层定向培养医学生社会实践... <span>2024-09-30</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1030/181799.htm" title="关于《国家安全教育》修读通知">关于《国家安全教育》修读通知 <span>2024-09-29</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1030/181039.htm" title="关于2024-2025学年第一学期通识选修课开课的通知">关于2024-2025学年第一学期通识选修课开课的通知 <span>2024-09-20</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1030/180879.htm" title="关于2024－2025学年第一学期重修报名的通知">关于2024－2025学年第一学期重修报名的通知 <span>2024-09-18</span> </a>
+</li>
+<script>_showDynClickBatch(['dynclicks_u6_185349','dynclicks_u6_183439','dynclicks_u6_181859','dynclicks_u6_181799','dynclicks_u6_181039','dynclicks_u6_180879'],[185349,183439,181859,181799,181039,180879],"wbnews", 1414413814)</script>
+</UL>
+<UL class="notice_left_ul">   <li><a class="a_font_color" href="info/1031/185939.htm" title="关于选拔参加温州医科大学第十九届“挑战杯”大学生课外学术科技作品竞赛的预通知" style="font-weight:bold;">关于选拔参加温州医科大学第十九届“挑战杯”大学生课外学... <span>2024-10-25</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1031/184659.htm" title="关于组织开展温州医科大学仁济学院2024-2025学年第一学期学风建设系列教育活动的通知">关于组织开展温州医科大学仁济学院2024-2025学年第一学期学... <span>2024-10-18</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1031/183919.htm" title="关于开展温州医科大学仁济学院2024年新任心理委员岗前培训的通知">关于开展温州医科大学仁济学院2024年新任心理委员岗前培训... <span>2024-10-15</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1031/182829.htm" title="关于温州医科大学仁济学院双创导师招募的通知">关于温州医科大学仁济学院双创导师招募的通知 <span>2024-10-08</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1031/181249.htm" title="关于开展温州医科大学仁济学院2023年度校级学生科研立项结题工作的通知" style="font-weight:bold;">关于开展温州医科大学仁济学院2023年度校级学生科研立项结... <span>2024-09-23</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1031/178199.htm" title="关于拟推荐参加第十四届“挑战杯”中国大学生创业计划竞赛项目的公示">关于拟推荐参加第十四届“挑战杯”中国大学生创业计划竞赛... <span>2024-07-22</span> </a>
+</li>
+<script>_showDynClickBatch(['dynclicks_u7_185939','dynclicks_u7_184659','dynclicks_u7_183919','dynclicks_u7_182829','dynclicks_u7_181249','dynclicks_u7_178199'],[185939,184659,183919,182829,181249,178199],"wbnews", 1414413814)</script>
+</UL></DIV></DIV>
+<DIV class="notice_left fr">
+<DIV class="notice_left_nav">
+<UL>
+<LI class="tab">招生就业 </LI>
+<LI>人才招聘 </LI>
+<LI>科研创新 </LI>
+<LI>国际交流 
+<DIV class="clear"></DIV></LI></UL></DIV>
+<DIV class="clear"></DIV>
+<DIV class="notice_left_con">
+<UL class="notice_left_ul" style="display: block">   <li><a class="a_font_color" href="info/1029/171949.htm" title="温州医科大学仁济学院2024年普通高校招生章程">温州医科大学仁济学院2024年普通高校招生章程 <span>2024-05-10</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1029/172239.htm" title="温州医科大学仁济学院2024年专升本首轮拟录取工作顺利结束！">温州医科大学仁济学院2024年专升本首轮拟录取工作顺利结束... <span>2024-05-13</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1029/168319.htm" title="温州医科大学仁济学院关于公布2024年退役大学生士兵免试专升本招生拟录取结果的通知">温州医科大学仁济学院关于公布2024年退役大学生士兵免试专... <span>2024-04-04</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1029/165659.htm" title="温州医科大学仁济学院2024年退役大学生士兵免试专升本招生简章">温州医科大学仁济学院2024年退役大学生士兵免试专升本招生... <span>2024-03-12</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1029/165569.htm" title="温州医科大学仁济学院2024年专升本招生简章">温州医科大学仁济学院2024年专升本招生简章 <span>2024-03-12</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1029/20385.htm" title="温州医科大学仁济学院2023年报考指南">温州医科大学仁济学院2023年报考指南 <span>2023-06-19</span> </a>
+</li>
+<script>_showDynClickBatch(['dynclicks_u8_171949','dynclicks_u8_172239','dynclicks_u8_168319','dynclicks_u8_165659','dynclicks_u8_165569','dynclicks_u8_20385'],[171949,172239,168319,165659,165569,20385],"wbnews", 1414413814)</script>
+</UL>
+<UL class="notice_left_ul">   <li><a class="a_font_color" href="info/1032/181569.htm" title="温州人才有限公司2024年9月招聘2名劳务派遣人员启事 （派遣至温州医科大学仁济学院）">温州人才有限公司2024年9月招聘2名劳务派遣人员启事 （派遣... <span>2024-09-27</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1032/178819.htm" title="温州人才有限公司2024年8月招聘1名劳务派遣人员启事 （派遣至温州医科大学仁济学院）">温州人才有限公司2024年8月招聘1名劳务派遣人员启事 （派遣... <span>2024-08-12</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1032/170469.htm" title="温州人才有限公司2024年4月招聘1名劳务派遣人员启事 （派遣至温州医科大学仁济学院）">温州人才有限公司2024年4月招聘1名劳务派遣人员启事 （派遣... <span>2024-04-23</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1032/169169.htm" title="温州人才有限公司2024年4月招聘1名劳务派遣人员启事（派遣至温州医科大学仁济学院）">温州人才有限公司2024年4月招聘1名劳务派遣人员启事（派遣... <span>2024-04-11</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1032/157919.htm" title="温州人才有限公司2023年11月招聘1名劳务派遣人员启事 （派遣至温州医科大学仁济学院）">温州人才有限公司2023年11月招聘1名劳务派遣人员启事 （派... <span>2023-11-13</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1032/155039.htm" title="温州人才有限公司2023年10月招聘1名劳务派遣人员启事 （派遣至温州医科大学仁济学院）">温州人才有限公司2023年10月招聘1名劳务派遣人员启事 （派... <span>2023-10-24</span> </a>
+</li>
+<script>_showDynClickBatch(['dynclicks_u9_181569','dynclicks_u9_178819','dynclicks_u9_170469','dynclicks_u9_169169','dynclicks_u9_157919','dynclicks_u9_155039'],[181569,178819,170469,169169,157919,155039],"wbnews", 1414413814)</script>
+</UL>
+<UL class="notice_left_ul">   <li><a class="a_font_color" href="info/1033/182679.htm" title="关于组织申报2025年度浙江省自然科学基金联合基金第二批项目的通知">关于组织申报2025年度浙江省自然科学基金联合基金第二批项... <span>2024-09-30</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1033/182919.htm" title="关于开展2023—2024年度浙江省高校重大人文社科攻关计划项目申报工作的通知">关于开展2023—2024年度浙江省高校重大人文社科攻关计划项... <span>2024-09-30</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1033/182939.htm" title="关于开展2024年度温州市优秀党政调研成果和咨政调研成果申报的通知">关于开展2024年度温州市优秀党政调研成果和咨政调研成果申... <span>2024-09-26</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1033/182929.htm" title="关于开展2024年国家社会科学基金高校思想政治理论课研究专项申报通知">关于开展2024年国家社会科学基金高校思想政治理论课研究专... <span>2024-09-14</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1033/182689.htm" title="关于2024下半年横向科研项目劳务报酬发放的通知">关于2024下半年横向科研项目劳务报酬发放的通知 <span>2024-09-14</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1033/180249.htm" title="关于申报浙江省社科规划“党的二十届三中全会和省委十五届五次全会精神研究阐释” 专项课题的通知">关于申报浙江省社科规划“党的二十届三中全会和省委十五届... <span>2024-09-09</span> </a>
+</li>
+<script>_showDynClickBatch(['dynclicks_u10_182679','dynclicks_u10_182919','dynclicks_u10_182939','dynclicks_u10_182929','dynclicks_u10_182689','dynclicks_u10_180249'],[182679,182919,182939,182929,182689,180249],"wbnews", 1414413814)</script>
+</UL>
+<UL class="notice_left_ul">   <li><a class="a_font_color" href="info/1034/185869.htm" title="2024年秋季校级本科生托福与雅思考试奖学金及课程认定申请的通知">2024年秋季校级本科生托福与雅思考试奖学金及课程认定申请... <span>2024-10-25</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1034/185339.htm" title="2025年寒假波兰卢布林医科大学冬季医学营项目报名通知">2025年寒假波兰卢布林医科大学冬季医学营项目报名通知 <span>2024-10-22</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1034/184449.htm" title="2025年寒假日本医学交流项目报名通知">2025年寒假日本医学交流项目报名通知 <span>2024-10-17</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1034/184159.htm" title="2024年下半年本科生出国（境）交流奖学金拟发放名单公示">2024年下半年本科生出国（境）交流奖学金拟发放名单公示 <span>2024-10-16</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1034/183849.htm" title="2025年日本北陆大学2+2项目及短期留学项目补录通知">2025年日本北陆大学2+2项目及短期留学项目补录通知 <span>2024-10-14</span> </a>
+</li>
+   <li><a class="a_font_color" href="info/1034/183769.htm" title="关于日本北陆大学“世界美食”线上交流会的通知">关于日本北陆大学“世界美食”线上交流会的通知 <span>2024-10-14</span> </a>
+</li>
+<script>_showDynClickBatch(['dynclicks_u11_185869','dynclicks_u11_185339','dynclicks_u11_184449','dynclicks_u11_184159','dynclicks_u11_183849','dynclicks_u11_183769'],[185869,185339,184449,184159,183849,183769],"wbnews", 1414413814)</script>
+</UL></DIV></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="box_3">
+<DIV class="box_3_left">
+<DIV class="box_3_left_top">
+<DIV class="bt"></DIV>
+<UL>
+<LI class="p2 fr"><A class="genduo" href="xwzx/rjzh.htm">更多</A> </LI></UL></DIV>
+
+<DIV>
+
+     
+   <DIV class="box_3_right_content">
+<DIV class="box_3_right_content_left dd">
+<DIV class="ue">10月</DIV>
+<DIV class="shita">25</DIV></DIV>
+<DIV class="box_3_right_content_right">
+<P class="title"><A class="a_font_color" href="info/4201/185909.htm">学院升级优化滨海校区教学区教师休息室</A></P>
+<P class="zhaiyao">为进一步提升教师的工作与休息环境，积极践行“以人为本，服务教师”的理念，学院对滨海校区教学区教师休息室进行了升级优化...</P></DIV></DIV>
+   
+   
+   
+     
+   <DIV class="box_3_right_content">
+<DIV class="box_3_right_content_left dd">
+<DIV class="ue">10月</DIV>
+<DIV class="shita">24</DIV></DIV>
+<DIV class="box_3_right_content_right">
+<P class="title"><A class="a_font_color" href="info/4201/185839.htm">书香满园！仁济学院开展“晨读送餐”活动</A></P>
+<P class="zhaiyao">近日，温医大仁济学院在滨海校区精心推出“秋日书香，晨起诵读”之“晨生活达人”早读送餐活动，助力同学们养成健康、规律的...</P></DIV></DIV>
+   
+   
+   
+     
+   <DIV class="box_3_right_content">
+<DIV class="box_3_right_content_left dd">
+<DIV class="ue">10月</DIV>
+<DIV class="shita">24</DIV></DIV>
+<DIV class="box_3_right_content_right">
+<P class="title"><A class="a_font_color" href="info/4201/185669.htm">我院成功举办2024年新任心理委员岗前培训</A></P>
+<P class="zhaiyao">为进一步加强学生心理健康教育工作，完善“学校—学院—班级—寝室”四级心理健康网络建设，10月19日至20日，温州医科大学仁...</P></DIV></DIV>
+   
+   
+   
+<script>_showDynClickBatch(['dynclicks_u12_185909','dynclicks_u12_185839','dynclicks_u12_185669'],[185909,185839,185669],"wbnews", 1414413814)</script>
+
+
+
+</DIV>
+
+
+
+</DIV>
+
+<DIV class="box_3_right">
+<DIV class="box_3_right_top">
+<DIV class="bt"></DIV>
+<UL>
+<LI class="p2 fr"><A class="genduo" href="xwzx/mtrj.htm">更多</A> </LI></UL></DIV>
+<DIV>     
+   <DIV class="box_3_right_content">
+<DIV class="box_3_right_content_left dd">
+<DIV class="ue">10月</DIV>
+<DIV class="shita">28</DIV></DIV>
+<DIV class="box_3_right_content_right">
+<P class="title"><A class="a_font_color" href="info/1027/186139.htm">温度新闻： 温医大仁济学院举办新任心理委员岗前培训</A></P>
+<P class="zhaiyao">近日，温州医科大学仁济学院举办2024年新任心理委员岗前培训。130名2024级新生心理委员、2023级新任心理委员参与了培训活动。...</P></DIV></DIV>
+   
+   
+   
+     
+   <DIV class="box_3_right_content">
+<DIV class="box_3_right_content_left dd">
+<DIV class="ue">10月</DIV>
+<DIV class="shita">28</DIV></DIV>
+<DIV class="box_3_right_content_right">
+<P class="title"><A class="a_font_color" href="info/1027/186129.htm">温度新闻： 温医大仁济学院举办十佳歌手大赛</A></P>
+<P class="zhaiyao">近日，温州医科大学仁济学院“歌扬梦想，韵洒四方”十佳歌手决赛在滨海校区操场圆满落幕。本次比赛历经初赛海选的激烈角逐，...</P></DIV></DIV>
+   
+   
+   
+     
+   <DIV class="box_3_right_content">
+<DIV class="box_3_right_content_left dd">
+<DIV class="ue">10月</DIV>
+<DIV class="shita">24</DIV></DIV>
+<DIV class="box_3_right_content_right">
+<P class="title"><A class="a_font_color" href="info/1027/185849.htm">温度新闻：书香满园！仁济学院开展“晨读送餐”活动</A></P>
+<P class="zhaiyao">近日，温医大仁济学院在滨海校区精心推出“秋日书香，晨起诵读”之“晨生活达人”早读送餐活动，助力同学们养成健康、规律的...</P></DIV></DIV>
+   
+   
+   
+<script>_showDynClickBatch(['dynclicks_u13_186139','dynclicks_u13_186129','dynclicks_u13_185849'],[186139,186129,185849],"wbnews", 1414413814)</script>
+
+
+
+
+
+</DIV>
+
+
+</DIV>
+<DIV class="clear"></DIV></DIV>
+
+
+<DIV class="box_4">
+    <DIV class="box_4_left">
+    <DIV class="box_4_left_top">
+    <DIV class="bt"></DIV>
+    <UL>
+    <LI class="p2 fr"><A class="genduo" href="ztlm/zmrj.htm">更多</A> </LI></UL></DIV>
+    
+    <DIV class="box_4_left_content">
+    
+       <DIV class="dd mt18 pr18"><A href="ztlm/xxgcddesdjs.htm"><IMG src="images/dd20d.jpg"></A></DIV>
+
+<DIV class="dd mt18 pr18"><A href="ztlm/qsbgyx.htm"><IMG src="images/bgyx.jpg"></A></DIV>
+<DIV class="dd mt18 pr18"><A href="ztlm/ztjy.htm"><IMG src="images/ztjy.jpg"></A></DIV>
+<DIV class="dd mt18"><A href="ztlm/qkyx.htm"><IMG src="imges/box3left3.jpg"></A></DIV>
+        
+        
+        
+        
+        </DIV>
+
+
+</DIV>
+<DIV class="clear"></DIV>
+</DIV>    
+
+
+
+
+</DIV>
+<DIV class="big_foot">
+<DIV class="foot">
+<DIV class="foot_bumenlianjie dd">
+<H1 class="shouzhi">常用链接</H1>
+<DIV class="small_box"></DIV>
+<UL>
+<LI><A href="http://jyt.zj.gov.cn/" target="_blank">浙江省教育厅</A> </LI>
+<LI><A href="http://www.zucc.edu.cn/" target="_blank">浙江大学城市学院</A> </LI>
+<LI><A href="http://www.wmu.edu.cn/" target="_blank">温州医科大学</A> </LI>
+<LI><A href="https://www.wzut.edu.cn/" target="_blank">温州理工学院</A> </LI>
+<LI><A href="http://www.zjyc.edu.cn/" target="_blank">浙江农林大学暨阳学院</A> </LI>
+<LI><A href="http://www.ndky.edu.cn/" target="_blank">宁波大学科学技术学院</A> </LI>
+<LI><A href="http://www.zjxz.edu.cn/" target="_blank">浙江师范大学行知学院</A> </LI>
+<LI><A href="https://www.zzjc.edu.cn/" target="_blank">浙江工业大学之江学院</A> </LI>
+<LI style="width:300px"><A href="https://zxjb.wmu.edu.cn/" target="_blank">温医大纪委、监察专员办在线举报平台</A> </LI>
+
+
+</UL></DIV>
+<DIV class="foot_lianxiwm dd ml95">
+<H1 class="shouzhi">联系我们</H1>
+<DIV class="small_box"></DIV>
+<UL>
+<LI>&ensp;&ensp;&ensp;&ensp;招生电话：0577-866 82000 </LI><LI>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;0577-866 89885 </LI>
+<LI>&ensp;&ensp;&ensp;&ensp;联系电话：0577-866 99388 </LI>
+
+
+</UL></DIV>
+<DIV class="weixin  dd">
+<H1 class="shouzhi">学院招生微信</H1><IMG class="mt20" src="imges/footright.jpg"> </DIV>
+<DIV class="weixin_right dd">
+<H1 class="shouzhi">学院官方微信</H1><IMG class="mt20" src="imges/footleft.jpg?act=2"> </DIV>
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV class="big_foot_last">
+<DIV class="foot_last">
+<DIV class="fl">温州医科大学仁济学院 版权所有 学院地址：浙江省温州市茶山高教园区 校邮编：325035 <A href="http://www.miibeian.gov.cn/" target="_blank">浙ICP备11012900号</A></DIV><SPAN class="fr">技术支持：<a href="https://www.chinawebber.com/" target="_blank">博达软件</a> <script src="https://s19.cnzz.com/z_stat.php?id=1273363349&web_id=1273363349" language="JavaScript"></script>  </SPAN></DIV></DIV><script type="text/javascript" src="js/move.js">
+</script>
+
+<DIV id="ad1" align="right" style="position: absolute; left: 0px; z-index: 100000; top: 0px"></DIV><script type="text/javascript">            var _ad1 = new AdMove('ad1');            _ad1.Run();   $('.guanbi').click(function() {$('#ad1').hide();});          </script>
+
+<DIV></DIV>
+
+
+ <script language="JavaScript">
+
+     var bannerjr = new Array();
+     var bannerjrlink = new Array();
+     var jrNum = 0;
+bannerjr[0]='/images/xs.jpg'; bannerjrlink[0]='https://www.wmu.edu.cn/info/1057/84811.htm';
+
+    // bannerjr[1]="/images/2018dxzs.jpg"; 
+     //bannerjrlink[1]="http://rjxy.wmu.edu.cn/template/default/zsw/zslist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1129";
+
+     //bannerjr[1]="/images/rjzpgh.jpg"; 
+     // bannerjrlink[1]="http://rjxy.wmu.edu.cn/info/1035/10243.htm";
+   //  bannerjr[1]="/images/pc3.png"; 
+     // bannerjrlink[1]="http://rjxy.wmu.edu.cn/images/hs.pdf";
+  
+     var prelojredimages = new Array();
+     for (i = 0; i < bannerjr.length; i++) {
+         prelojredimages[i] = new Image();
+         prelojredimages[i].src = bannerjr[i];
+     }
+     function zqjsetTransition() {
+         if (document.all) {
+             bannerjrrotator.filters.revealTrans.Transition = Math.floor(Math.random() * 23);
+             bannerjrrotator.filters.revealTrans.apply();
+         }
+     }
+     function zqjplayTransition() {
+         if (document.all)
+             bannerjrrotator.filters.revealTrans.play()
+     }
+     function nextjr() {
+         if (jrNum < bannerjr.length - 1) jrNum++;
+         else jrNum = 0;
+         zqjsetTransition();
+         document.images.bannerjrrotator.src = bannerjr[jrNum];
+         zqjplayTransition();
+         theTimer = setTimeout("nextjr()", 4000);
+     }
+     function zqjjump2url() {
+         jumpUrl = bannerjrlink[jrNum];
+         jumpTarget = '_blank';
+         if (jumpUrl != '') {
+             if (jumpTarget != '') window.open(jumpUrl, jumpTarget);
+             else location.href = jumpUrl;
+         }
+     }
+     function zqjdisplayStatusMsg() {
+         status = bannerjrlink[jrNum];
+         document.returnValue = true;
+     }
+     function closeDiv(id) {
+         var o = document.getElementById(id);
+         o.style.display = "none";
+     }
+
+    </script>
+
+
+
+<script type="text/javascript">
+    function hidead()
+    { document.getElementById("ad").style.display = "none"; }
+</script>
+<script language="javascript" defer>
+    var x = 50, y = 60;
+    var xin = true, yin = true;
+    var step = 0.3;
+    var delay = 5;
+    function floatAD() {
+        var l = t = 0;
+        var r = document.documentElement.clientWidth - document.getElementById("ad").offsetWidth;
+        var b = document.documentElement.clientHeight - document.getElementById("ad").offsetHeight;
+        document.getElementById("ad").style.left = x + document.documentElement.scrollLeft + "px";
+        document.getElementById("ad").style.top = y + document.documentElement.scrollTop + "px";
+        x = x + step * (xin ? 1 : -1);
+        if (x < l)
+        { xin = true; x = l; }
+        if (x > r)
+        { xin = false; x = r; }
+        y = y + step * (yin ? 1 : -1);
+        if (y < t)
+        { yin = true; y = t; }
+        if (y > b)
+        { yin = false; y = b; } 
+    }
+    var itl = setInterval("floatAD()", delay)
+    document.getElementById("ad").onmouseover = function () { clearInterval(itl) }
+    document.getElementById("ad").onmouseout = function () { itl = setInterval("floatAD()", delay) } 
+
+</script> 
+
+
+<div id="ad" style="position:absolute;z-index:1000;">
+<DIV onclick="hidead();" align="right" style="font-size: 9pt; cursor: hand"><font color="red">×</font></DIV>
+ <a onmouseover="zqjdisplayStatusMsg();return document.returnValue" href="javascript:zqjjump2url()"><img src="images/xs.jpg" name="bannerjrrotator" width="200" border="0" align="middle" style=" filter: revealTrans(duration=2,transition=40) ;"></a>
+                  <script language="JavaScript">                      nextjr()</script>
+
+
+</BODY></HTML>
+
+

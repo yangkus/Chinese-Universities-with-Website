@@ -1,0 +1,470 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>长白山职业技术学院</title>
+<meta name ="keywords" content="" />
+<meta name ="description" content="" />
+<link rel="stylesheet" href="/template/1/hunanweb/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="/template/1/hunanweb/css/common.css">
+<link rel="stylesheet" type="text/css" href="/template/1/hunanweb/css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="/template/1/hunanweb/css/animate.min.css" />
+<link href="/template/1/hunanweb/css/offcanvas.min.css" rel="stylesheet" type="text/css">
+<script src="/template/1/hunanweb/js/jquery.js" type="text/javascript"></script>
+<script src="/template/1/hunanweb/js/bootstrap.min.js" type="text/javascript"></script>
+<!--[if lte IE 9]> 
+<script type="text/javascript" src="/template/1/hunanweb/tools/html5.js"></script>
+<script type="text/javascript" src="/template/1/hunanweb/tools/respond.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/template/1/hunanweb/tools/html5-css.css"/>
+<![endif]-->
+
+</head>
+<body><style>
+	.ib2_news>ul>li>a{
+		display: inline-block;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    display: -webkit-box;
+		    -webkit-box-orient: vertical;
+		    -webkit-line-clamp: 1;
+		max-width:80%;
+		text-align: left;
+	}
+	.ib1_title{
+		display: inline-block;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    display: -webkit-box;
+		    -webkit-box-orient: vertical;
+		    -webkit-line-clamp: 1;
+		max-width:100%;
+	}
+</style>
+  <!--头部-->
+  <div class="top clearfix">
+	<div class="container">
+    	<div class="fl hidden-xs">欢迎来到长白山职业技术学院~</div>
+        <div class="fr ewm">
+            <ul>
+              <li><a href="{$CATEGORYS[41][url]}">人才招聘</a></li>
+              <li><a href="{$CATEGORYS[42][url]}">图书馆</a></li>
+              <li>
+              	<form name="myform" method="get" action="{APP_PATH}index.php" class="search">
+                <input type="hidden" name="m" value="search"/> 
+                  <input type="hidden" name="c" value="index"/>
+    			<input type="hidden" name="a" value="init"/> 
+                  <input type="hidden" name="typeid" value="1" id="typeid"/>
+    				<input type="hidden" name="siteid" value="1" id="siteid"/>
+                <input type="text" name="q" required id="title" class="form-control"  onblur="this.value=(this.value==&#39;&#39;)?&#39;请输入关键字&#39;:(this.value)" onfocus="this.value=&#39;&#39;" value="请输入关键词">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">搜索</button>
+                </span>
+                </form>
+              </li>
+            </ul>
+        </div>
+    </div>
+</div>
+  <div class="header">
+  <div class="container">
+    <div class="clearfix smenu">
+      <div class="fl logo"><a href="/"><img src="/upload/1/appLogo/1703500883155.png"/></a></div>
+      <div class="menu">
+      	<div class="overlay"></div>
+        <nav id="navbar-example" class="navbar  navbar-inverse navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="offcanvas"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div class="collapse navbar-collapse sidebar-offcanvas" >
+          <ul class="nav navbar-nav">
+            <li><a href="/">网站首页</a></li>
+            <li class="dropdown">
+                <a class="nav" href="http://www.cbsvtc.com.cn/html/hunanweb/xueyuangaikuang/xueyuanjianjie/index.html" role="button" aria-haspopup="true" aria-expanded="false">学院概况</a>
+            	<div class="dropdown-menu clearfix">
+                  <ul class="child clearfix">
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/xueyuangaikuang/xueyuanjianjie/index.html" title="学院简介"> - 学院简介</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/xueyuangaikuang/yzjy/index.html" title="院长寄语"> - 院长寄语</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/xueyuangaikuang/zzjg/index.html" title="组织机构"> - 组织机构</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/xueyuangaikuang/llwm/index.html" title="联系我们"> - 联系我们</a></li>
+                  </ul>
+              </div>
+            </li>
+            <li class="dropdown">
+                <a class="nav" href="http://www.cbsvtc.com.cn/html/hunanweb/yuanxishezhi/index.html" role="button" aria-haspopup="true" aria-expanded="false">院系设置</a>
+            	<div class="dropdown-menu clearfix">
+                  <ul class="child clearfix">
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/yuanxishezhi/hulixi/index.html" title="护理系"> - 护理系</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/yuanxishezhi/jyx/index.html" title="教育系"> - 教育系</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/yuanxishezhi/gygcx/index.html" title="工业工程系"> - 工业工程系</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/yuanxishezhi/cjx/index.html" title="财经系"> - 财经系</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/yuanxishezhi/yxx/index.html" title="药学系"> - 药学系</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/yuanxishezhi/lyx/index.html" title="旅游系"> - 旅游系</a></li>
+                  </ul>
+              </div>
+            </li>
+            <li class="dropdown">
+                <a class="nav" href="http://www.cbsvtc.com.cn/html/hunanweb/djdt/index.html" role="button" aria-haspopup="true" aria-expanded="false">党建动态</a>
+            	<div class="dropdown-menu clearfix">
+                  <ul class="child clearfix">
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/djdt/zzgz/index.html" title="组织工作"> - 组织工作</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/djdt/xcgz/index.html" title="宣传工作"> - 宣传工作</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/djdt/qtgz/index.html" title="群团工作"> - 群团工作</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/djdt/sdgz/index.html" title="师德工作"> - 师德工作</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/djdt/fpgz/index.html" title="扶贫工作"> - 扶贫工作</a></li>
+                  </ul>
+              </div>
+            </li>
+            <li class="dropdown">
+                <a class="nav" href="http://www.cbsvtc.com.cn/html/hunanweb/jxky/index.html" role="button" aria-haspopup="true" aria-expanded="false">教学科研</a>
+            	<div class="dropdown-menu clearfix">
+                  <ul class="child clearfix">
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/jxky/jxgz/index.html" title="教学工作"> - 教学工作</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/jxky/kygz/index.html" title="科研工作"> - 科研工作</a></li>
+                  </ul>
+              </div>
+            </li>
+            <li class="dropdown">
+                <a class="nav" href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/sxzs/index.html" role="button" aria-haspopup="true" aria-expanded="false">招生就业</a>
+            	<div class="dropdown-menu clearfix">
+                  <ul class="child clearfix">
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/ptggzs/index.html" title="普通高考招生"> - 普通高考招生</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/gzzxkzzs/index.html" title="高职专项扩招招生"> - 高职专项扩招招生</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/sxzs/index.html" title="单独、对口升学招生"> - 单独、对口升学招生</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/zzzs/index.html" title="中职招生"> - 中职招生</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/bmjlqcx/index.html" title="报名及录取查询"> - 报名及录取查询</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/jygz/index.html" title="就业工作"> - 就业工作</a></li>
+                  </ul>
+              </div>
+            </li>
+            <li class="dropdown">
+                <a class="nav" href="http://www.cbsvtc.com.cn/html/hunanweb/xsgz/index.html" role="button" aria-haspopup="true" aria-expanded="false">学生工作</a>
+            	<div class="dropdown-menu clearfix">
+                  <ul class="child clearfix">
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/xsgz/xggz/index.html" title="学管工作"> - 学管工作</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/xsgz/zzzx/index.html" title="资助中心"> - 资助中心</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/xsgz/dxszb/index.html" title="大学生征兵"> - 大学生征兵</a></li>
+                  </ul>
+              </div>
+            </li>
+            <li class="dropdown">
+                <a class="nav" href="http://www.cbsvtc.com.cn/html/hunanweb/ztzl/index.html" role="button" aria-haspopup="true" aria-expanded="false">专题专栏</a>
+            	<div class="dropdown-menu clearfix">
+                  <ul class="child clearfix">
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/ztzl/wxgz/index.html" title="五项工程"> - 五项工程</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/ztzl/yywzzl/index.html" title="语言文字专栏"> - 语言文字专栏</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/ztzl/sdsfzl/index.html" title="师德师风专栏"> - 师德师风专栏</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/ztzl/zjxcy/index.html" title="职教宣传月"> - 职教宣传月</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/ztzl/zyyxpg/index.html" title="职业院校评估"> - 职业院校评估</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/ztzl/xxgcqhjs/index.html" title="学习贯彻十九届五中全会精神"> - 学习贯彻十九届五中全会精神</a></li>
+                    <li><a href="http://www.cbsvtc.com.cn/html/hunanweb/ztzl/rcpyfa/index.html" title="人才培养方案"> - 人才培养方案</a></li>
+                  </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- /.nav-collapse --> 
+      </div>
+      <!-- /.container-fluid --> 
+    </nav>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<div class="container">
+<div class="swiper-container" style="background: #ededed;">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="text-align: center;"><a href="http://www.cbsvtc.com.cn/html/hunanweb/banner/1739237701937696769.html"><img src="/upload/1/cms/content/1703501655948.jpg" /></a></div>
+    <div class="swiper-slide" style="text-align: center;"><a href="http://www.cbsvtc.com.cn/html/hunanweb/banner/1739236919226044417.html"><img src="/upload/1/cms/content/1703501672769.jpg" /></a></div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+</div>
+<!-- Swiper JS --> 
+<script src="template/1/hunanweb/js/swiper.min.js"></script> 
+
+<!-- Initialize Swiper --> 
+<style type="text/css">
+	.ib2_news{
+		border-radius: 10px;
+	}
+</style>
+<script>
+var swiper = new Swiper('.swiper-container', {
+	
+    autoplay: 5000,//可选选项，自动滑动
+    //pagination: '.swiper-pagination',
+	nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+	autoplay: 2500,
+    autoplayDisableOnInteraction: false,
+    paginationClickable: true,
+	effect : 'fade',
+
+	fade: {
+	  crossFade: false,
+	}
+});
+</script> 
+<div style="width:100%;background:#ededed">
+	<div class="container">
+		
+	
+<div class="loop" style="padding:12px">
+  
+    <script type="text/javascript" src="template/1/hunanweb/js/jquery.SuperSlide.2.1.1.js"></script>
+    <div class="fl laba">通知公告：</div>
+    <div class="txtMarquee-left">
+      <div class="bd clearfix">
+        <ul class="infoList" >
+            <li>&diams; <a target="_blank" href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/tzgg/1739525119182016513.html" title="SHCE举报信箱">SHCE举报信箱</a></li>
+            <li>&diams; <a target="_blank" href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/tzgg/1807678374106169345.html" title="公示">公示</a></li>
+            <li>&diams; <a target="_blank" href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/tzgg/1739239596454481921.html" title="师德师风监督及举报电话、邮箱">师德师风监督及举报电话、邮箱</a></li>
+            <li>&diams; <a target="_blank" href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/tzgg/1739524880660336641.html" title="长白山职院2019-2020学年信息公开工作年度报告">长白山职院2019-2020学年信息公开工作年度报告</a></li>
+            <li>&diams; <a target="_blank" href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/tzgg/1739524730512642049.html" title="关于公布校长信箱的通知">关于公布校长信箱的通知</a></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+	jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+	</script>
+  </div>
+</div>
+
+</div>
+<div class="bged wow fadeIn">
+    <div class="container">
+        <div class="index_box1">
+            <div class="ib1_cn">焦点新闻<i>Spot news</i><span><a href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/jdxw/index.html" class="fr">查看更多 +</a></span></div>
+            <div class="ib1_news row mt30">
+            	<div class="col-md-4">
+                	<a href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/jdxw/1845650507922771970.html" title="2024年各类招生计划和录取情况" target="_blank">
+                	<div class="ib1_pic"><img src="/upload/1/cms/content/1728872864035.jpg" /></div>
+                    <div class="ib1_title">2024年各类招生计划和录取情况</div>
+                    <!-- <div class="ib1_time">2024-10-14</div> -->
+                    </a>
+                </div>
+            	<div class="col-md-4">
+                	<a href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/jdxw/1808329514485350401.html" title="长白山职业技术学院2024高考招生简章" target="_blank">
+                	<div class="ib1_pic"><img src="/upload/1/cms/content/1720023787311.jpg" /></div>
+                    <div class="ib1_title">长白山职业技术学院2024高考招生简章</div>
+                    <!-- <div class="ib1_time">2024-07-03</div> -->
+                    </a>
+                </div>
+            	<div class="col-md-4">
+                	<a href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/jdxw/1805497494927376385.html" title="2024年高考招生计划" target="_blank">
+                	<div class="ib1_pic"><img src="/upload/1/cms/content/1719299433681.jpg" /></div>
+                    <div class="ib1_title">2024年高考招生计划</div>
+                    <!-- <div class="ib1_time">2024-06-25</div> -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+     <div class="row index_box2">
+            <div class="col-md-8 wow fadeInLeft">
+            <div class="ib1_cn  mt30 mb30">校园快讯<i>Campus News</i><span><a href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/xiaoykx/index.html" class="fr">查看更多 +</a></span></div>
+            <div class="ib2_news">
+                <ul>
+                    <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/xiaoykx/1849334540917641218.html" title="生逢其时，重任在肩——护理系开展青年教师说课提升活动" target="_blank">> 生逢其时，重任在肩——护理系开展青年教师说课提升活动</A>2024-10-24</li>
+                    <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/xiaoykx/1848332940552015873.html" title=""桃李飘香溢芬芳”——张文国老师执教四十年专场音乐会" target="_blank">> "桃李飘香溢芬芳”——张文国老师执教四十年专场音乐会</A>2024-10-21</li>
+                    <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/xiaoykx/1848332426275819522.html" title="健康水学院组织新生赴农夫山泉、娃哈哈企业开展岗位认知活动" target="_blank">> 健康水学院组织新生赴农夫山泉、娃哈哈企业开展岗位认知活动</A>2024-10-21</li>
+                    <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/xiaoykx/1846877007158284289.html" title="指点迷津，逐光相续——财经系举办会计岗位职业发展规划优秀校友分享讲座" target="_blank">> 指点迷津，逐光相续——财经系举办会计岗位职业发展规划优秀校友分享讲座</A>2024-10-17</li>
+                    <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/xiaoykx/1845853259433086977.html" title="重访红色足迹 传承革命精神——长白山职业技术学院开展 “赓续红色血脉 弘扬抗联精神”主题实践教育活动" target="_blank">> 重访红色足迹 传承革命精神——长白山职业技术学院开展 “赓续红色血脉 弘扬抗联精神”主题实践教育活动</A>2024-10-14</li>
+                    <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/xiaoykx/1844991468175986689.html" title="长白山职业技术学院 开展“铸牢中华民族共同体意识”主题研学活动" target="_blank">> 长白山职业技术学院 开展“铸牢中华民族共同体意识”主题研学活动</A>2024-10-12</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 wow fadeInRight">
+            <div class="ib1_cn  mt30 mb30">简介视频<i>Video Introduction</i></div>
+            <div class="ib2_news">
+                <video src="template/1/hunanweb/images/2.mp4" poster="template/1/hunanweb/images/company.jpg" preload="auto" controls width="100%" height="240px" style="margin-bottom: -5px;" id="video2" loop> 您的浏览器不支持 video 标签。 </video>
+            </div>
+        </div>
+    </div>
+    <!--招生信息-->
+    <div class="index_box3 mt30 wow fadeIn">
+    	 <style type="text/css">
+    	 	@media(min-width:768px){
+				.index-zsxx{
+					padding-left:50px;
+				}
+    	 	}
+    	 </style>
+         <div class="row">
+         	    <div class="col-md-12 wow fadeInLeft">
+         	    <div class="ib1_cn mt30 mb30">招生就业<i>Enrollment Information</i><span><a href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/sxzs/index.html" class="fr">查看更多 +</a></span></div>
+				<div class="row">
+         	    <div class="col-md-12 wow fadeInRight">
+				<div class="ib2_news">
+					<div class="ib2_news col-md-4">
+								<a href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/sxzs/1739480314435506178.html">
+									<img src="/upload/1/cms/content/1703753014837.jpg" alt="长白山职业技术学院2024年单独招生简章">
+								</a>
+					</div>
+					<div class="col-md-8 index-zsxx">
+						<ul>
+							<li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/ptggzs/1808537504496812034.html" title="长白山职业技术学院2024高考招生简章" target="_blank">>         长白山职业技术学院2024高考招生简章
+</A>2024-07-03</li>
+							<li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/sxzs/1788520132205686785.html" title="单招网上报名操作" target="_blank">>         单招网上报名操作
+</A>2024-04-16</li>
+							<li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/sxzs/1788514778973548546.html" title="长白山职业技术学院2024年单独招生计划表及单招考试组题规则" target="_blank">>         长白山职业技术学院2024年单独招生计划表...
+</A>2024-03-21</li>
+							<li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/ptggzs/1739511306110013441.html" title="2019年新生入学须知" target="_blank">>         2019年新生入学须知
+</A>2023-12-26</li>
+							<li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/ptggzs/1739511096931684353.html" title="长白山职业技术学院2020年高考各省招生计划表" target="_blank">>         长白山职业技术学院2020年高考各省招生计...
+</A>2023-12-26</li>
+							<li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/zsjy/ptggzs/1739510890316075009.html" title="长白山职业技术学院2020年单招专业计划表" target="_blank">>         长白山职业技术学院2020年单招专业计划表...
+</A>2023-12-26</li>
+						</ul>
+					</div>
+					<div style="clear: both;"></div>
+         	    </div>
+				</div>
+				</div>
+         	</div>
+         </div>
+    </div>
+    <div class="quick_link mt30 wow fadeIn clearfix">
+    	<div class="row">
+        	<div class="col-md-2 col-sm-4 col-xs-6"><A href="http://www.cbsvtc.com.cn/html/hunanweb/xfwzlj/1739515744862244865.html" title="单招、对口升学 QQ咨询群: 733471277" target="_blank">单招、对口升学 QQ咨询群: 733471277</A></div>
+        	<div class="col-md-2 col-sm-4 col-xs-6"><A href="http://www.cbsvtc.com.cn/html/hunanweb/xfwzlj/1739515690738946049.html" title="招生咨询电话：0439-3328604" target="_blank">招生咨询电话：0439-3328604</A></div>
+        	<div class="col-md-2 col-sm-4 col-xs-6"><A href="http://www.cbsvtc.com.cn/html/hunanweb/xfwzlj/1739515636754059266.html" title="2023单招网上 报名入口" target="_blank">2023单招网上 报名入口</A></div>
+        	<div class="col-md-2 col-sm-4 col-xs-6"><A href="http://www.cbsvtc.com.cn/html/hunanweb/xfwzlj/1739515571943673857.html" title="2023年单招准考证 查询" target="_blank">2023年单招准考证 查询</A></div>
+        	<div class="col-md-2 col-sm-4 col-xs-6"><A href="http://www.cbsvtc.com.cn/html/hunanweb/xfwzlj/1739515501097684994.html" title="2023单招成绩及 录取结果查询" target="_blank">2023单招成绩及 录取结果查询</A></div>
+        	<div class="col-md-2 col-sm-4 col-xs-6"><A href="http://www.cbsvtc.com.cn/html/hunanweb/xfwzlj/1739515437780471809.html" title="2023年单招征集志愿 成绩及录取查询" target="_blank">2023年单招征集志愿 成绩及录取查询</A></div>
+        </div>      
+    </div>
+    <!--二课风采、诊改专栏-->
+    <div class="index_box4 mt50">
+    	<div class="row">
+        	<div class="col-md-6 wow fadeInLeft">
+            	<div class="ib2_news clearfix">
+                	<div class="ib1_cn mb30">二课风采<i>Second Classroom</i><span><a href="http://www.cbsvtc.com.cn/html/hunanweb/ekfc/tongzgg/index.html" class="fr">查看更多 +</a></span></div>
+                    <div class="ib4 row">
+                    	<A href="http://www.cbsvtc.com.cn/html/hunanweb/ekfc/ekwx/1739519847596199938.html" title="长白山职业技术学院“二课”选课纪实">
+                        <div class="col-md-7">
+                        	<div class="ib4_pic"><img src="/upload/1/cms/content/1704161998379.jpg" /></div>
+                        </div>
+                        <div class="col-md-5">
+                        	<div class="ib4_time">2023-12-26</div>
+                            <div class="ib4_title">长白山职业技术学院“二课”选课纪实</div>
+                        </div>
+                        </A>
+                    </div>
+                    <ul style="margin-top:15px;">
+                        <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/ekfc/tongzgg/1739524562878894082.html" title="2022年长白山职业技术学院面向社会公开招聘工作人员公告" target="_blank">> 2022年长白山职业技术学院面向社会公开招聘工作人员公告</A>2023-12-26</li>
+                        <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/ekfc/tongzgg/1739523895804203009.html" title="关于2022年吉林省优秀大学生、优秀学生干部和先进班集体评审推荐结果的公示" target="_blank">> 关于2022年吉林省优秀大学生、优秀学生干部和先进班集体评审推荐结果的公示</A>2023-12-26</li>
+                        <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/ekfc/tongzgg/1739522067188322305.html" title="《“第二课堂成绩单”助力大学生成才》 ——长白山职业技术学院“第二课堂成绩单” 成果汇报展实施方案" target="_blank">> 《“第二课堂成绩单”助力大学生成才》 ——长白山职业技术学院“第二课堂成绩单” 成果汇报展实施方案</A>2023-12-26</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInRight">
+            	<div class="ib2_news clearfix">
+                	<div class="ib1_cn mb30">诊改专栏<i>Thematic Column</i><span><a href="http://www.cbsvtc.com.cn/html/hunanweb/zgzl/zcwj/index.html" class="fr">查看更多 +</a></span></div>
+                    <div class="ib4 row">
+                    	<A href="http://www.cbsvtc.com.cn/html/hunanweb/zgzl/gzdt/1739548272708980738.html" title="职院召开诊改学习培训交流会">
+                        <div class="col-md-7">
+                        	<div class="ib4_pic"><img src="/upload/1/cms/content/1704161761769.jpg" /></div>
+                        </div>
+                        <div class="col-md-5">
+                        	<div class="ib4_time">2023-12-26</div>
+                            <div class="ib4_title">职院召开诊改学习培训交流会</div>
+                        </div>
+                        </A>
+                    </div>
+                    <ul style="margin-top:15px;">
+                        <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/zgzl/zcwj/1739549154527842305.html" title="关于印发《高等职业院校内部质量保证体系诊断与改进指导方案（试行）》启动相关工作的通知" target="_blank">> 关于印发《高等职业院校内部质量保证体系诊断与改进指导方案（试行）》启动相关工作的通知</A>2023-12-26</li>
+                        <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/zgzl/zcwj/1739548886092386306.html" title="教育部办公厅关于建立职业院校教学工作诊断与改进制度的通知" target="_blank">> 教育部办公厅关于建立职业院校教学工作诊断与改进制度的通知</A>2023-12-26</li>
+                        <li><A  href="http://www.cbsvtc.com.cn/html/hunanweb/zgzl/zcwj/1739548704793595906.html" title="关于印发《高职院校内部质量保证体系诊断与改进试点院校复核专家工作手册（试行）》的通知" target="_blank">> 关于印发《高职院校内部质量保证体系诊断与改进试点院校复核专家工作手册（试行）》的通知</A>2023-12-26</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--校园文化-->
+<div class="bged mt50 wow fadeIn">
+	<div class="container">
+    	<div class="ib1_cn mb30">校园文化<i>Campus culture</i><span><a href="http://www.cbsvtc.com.cn/html/hunanweb/xiaoywh/index.html" class="fr">查看更多 +</a></span></div>
+    	<div class="row">
+        	<div class="col-md-3 col-xs-6 index_box5">
+            	<A href="http://www.cbsvtc.com.cn/html/hunanweb/xykx/xiaoykx/1800413929801842689.html" title="葳蕤生光·盛放可望|教育系2024届学生艺术作品毕业展" target="_blank">
+                <div class="hot_pic"><img src="/upload/1/cms/content/1718087935224.jpg" /></div>
+                <div class="hot_title" style="display:block;overflow:hidden;text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:1;">葳蕤生光·盛放可望|教育系2024届学生艺术作品毕业展</div>
+                </A>
+            </div>
+        	<div class="col-md-3 col-xs-6 index_box5">
+            	<A href="http://www.cbsvtc.com.cn/html/hunanweb/xiaoywh/1739550672693923842.html" title="歌舞载青春 礼仪展风采 逐梦新时代 绽放新精彩 ——旅游系“青春有礼 仪路有你”首届礼仪风采大赛及年度表彰大会圆满结束" target="_blank">
+                <div class="hot_pic"><img src="/upload/1/cms/content/1703576504093.jpg" /></div>
+                <div class="hot_title" style="display:block;overflow:hidden;text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:1;">歌舞载青春 礼仪展风采 逐梦新时代 绽放新精彩 ——旅游系“青春有礼 仪路有你”首届礼仪风采大赛及年度表彰大会圆满结束</div>
+                </A>
+            </div>
+        	<div class="col-md-3 col-xs-6 index_box5">
+            	<A href="http://www.cbsvtc.com.cn/html/hunanweb/xiaoywh/1739550549624655873.html" title="永远跟党走 奋进新征程 长白山职业技术学院纪念“一二•九”运动大合唱比赛" target="_blank">
+                <div class="hot_pic"><img src="/upload/1/cms/content/1703576488462.jpg" /></div>
+                <div class="hot_title" style="display:block;overflow:hidden;text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:1;">永远跟党走 奋进新征程 长白山职业技术学院纪念“一二•九”运动大合唱比赛</div>
+                </A>
+            </div>
+        	<div class="col-md-3 col-xs-6 index_box5">
+            	<A href="http://www.cbsvtc.com.cn/html/hunanweb/xiaoywh/1739550222229868545.html" title="方寸之间有乾坤  优秀作业展风采 ——长白山职业技术学院教育系第五届暑假作业作品展" target="_blank">
+                <div class="hot_pic"><img src="/upload/1/cms/content/1703576739079.jpg" /></div>
+                <div class="hot_title" style="display:block;overflow:hidden;text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:1;">方寸之间有乾坤  优秀作业展风采 ——长白山职业技术学院教育系第五届暑假作业作品展</div>
+                </A>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+	<div class="link wow fadeIn">
+    	<div class="ib1_cn mb30">友情链接<i>Quick Links</i>
+    	<span>
+                    <a href="http://www.chinaskills-jsw.org/" target="_blank">全国职业技能大赛</a> | 
+                    <a href="http://www.chinazy.org/" target="_blank">中国职业教育网</a> | 
+                    <a href="http://edu.cbs.gov.cn/" target="_blank">白山市教育局</a> | 
+                    <a href="http://jyt.jl.gov.cn/" target="_blank">吉林省教育厅</a> | 
+                    <a href="" target="_blank">吉林省职业与成人教育网</a> | 
+                    <a href="https://www.jlipedu.cn/" target="_blank">吉林省互联网+教育大平台</a> | 
+        </span></div>
+        <div class="linklist"></div>
+    </div>
+</div>
+<footer>
+  	<div class="container f_top">
+		<div class="row">
+        	<div class="zuo col-md-5 col-xs-12 hidden-xs">
+                <img src="/template/1/hunanweb/images/foot_logo.png" />
+            </div>
+            <div class="zhong col-md-4 col-xs-12">
+                <div class="f_address"><a style="color: #fff" href="http://www.cbsvtc.com.cn/html/hunanweb/wangzhangongyue/index.html">网站公约</a> </div>
+                <div class="f_address">地址：吉林白山浑江区北安大街2998号<br>招生电话：0439-3328604</div>
+            </div>
+            <div class="col-md-2  col-xs-12">
+                <div class="f_ewm"><img src="/template/1/hunanweb/images/ewm.jpg" /><span>官方微信公众号</span></div>
+            </div>
+            <div class="col-md-1 col-xs-12">
+                <div class="f_ewm"><img src="/template/1/hunanweb/images/bottom-icon.png" width="60" /></div>
+            </div>
+        </div>
+  	</div>
+  	<div class="f_bottom">
+  		<div class="container">版权所有：长白山职业技术学院  吉ICP备19004920号-1 </div>
+  	</div>
+</footer>
+<script type="text/javascript" src="/template/1/hunanweb/js/offcanvas.js"></script>
+<!--加载动画js-->
+<script src="/template/1/hunanweb/js/wow.min.js"></script>
+<script>
+if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+		new WOW().init();
+	};
+</script>
+ </body>
+</html>

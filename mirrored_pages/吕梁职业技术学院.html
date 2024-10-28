@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="吕梁职业技术学院" />
+        <meta name="description" content="吕梁职业技术学院于2007年经省政府批准筹建，2013年10月经山西省人民政府批准成立，2014年在国家教育部备案，2014年秋季面向省内首次招生。学院由山西省人民政府领导，吕梁市人民政府管理，教学工作接受省教育厅的检查和指导，学院基本建设投资和事业经费渠道由吕梁市负责。" />
+        <meta name="author" content="山西友盟科技有限公司">
+        <meta name="generator" content="v1.0.0">
+        <title>吕梁职业技术学院</title>
+        <link rel="stylesheet" href="/static/css/bootstrap.css" />
+        <link rel="stylesheet" href="/static/css/font/iconfont.css">
+        <link rel="stylesheet" href="/static/css/index/style.css" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <script>
+            let devices = ["iPhone", "Android", "Windows Phone"]
+            let ua = window.navigator.userAgent
+            for (let i = 0; i < devices.length; i++) {
+                if (ua.indexOf(devices[i]) !== -1) {
+                    window.location.href = '/e/wap/'
+                }
+            }
+        </script>
+        <script type="text/javascript" language="javascript">
+            //加入收藏 
+            function AddFavorite(sURL, sTitle) {
+                sURL = encodeURI(sURL);
+                try {
+                    window.external.addFavorite(sURL, sTitle);
+                } catch (e) {
+                    try {
+                        window.sidebar.addPanel(sTitle, sURL, "");
+                    } catch (e) {
+                        alert("加入收藏失败,请使用Ctrl+D进行添加,或手动在浏览器里进行设置");
+                    }
+                }
+            }
+            //设为首页 
+            function SetHome(url) {
+                if (document.all) {
+                    document.body.style.behavior = 'url(#default#homepage)';
+                    document.body.setHomePage(url);
+                } else {
+                    alert("您的浏览器不支持自动设置页面为首页功能,请手动在浏览器里设置该页面为首页");
+                }
+            }
+        </script>
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/popper.js"></script>
+        <script src="/static/js/tooltip.js"></script>
+        <script src="/static/js/bootstrap.js"></script>
+        <script src="/static/js/jquery.SuperSlide.js"></script>
+        <script src="/static/js/util.js"></script>
+    </head>
+    <body>
+                        <script language="javascript">
+    var t = null;
+    t = setTimeout(time, 100); //开始执行
+    function time() {
+        clearTimeout(t); //清除定时器
+        dt = new Date();
+        var y = dt.getYear() + 1900;
+        var mm = dt.getMonth() + 1;
+        var d = dt.getDate();
+        var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+        var day = dt.getDay();
+        var h = dt.getHours();
+        var m = dt.getMinutes();
+        var s = dt.getSeconds();
+        if (h < 10) {
+            h = "0" + h;
+        }
+        if (m < 10) {
+            m = "0" + m;
+        }
+        if (s < 10) {
+            s = "0" + s;
+        }
+        document.getElementById("timeShow").innerHTML =  "今天是" + y + "年" + mm + "月" + d + "日" + " " + weekday[day] +
+            " " + h +
+            ":" + m + ":" + s + "";
+        t = setTimeout(time, 1000); //设定定时器，循环执行           
+    }
+</script>
+<div class="date-wrap">
+    <div class="date">
+        <div id="timeShow"></div>
+        <div class="text">
+            <a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a> | <a
+                onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a> |
+            <a href="/main/xiaoyuanfuwu/shujixinxiang/">书记信箱</a> | <a href="/main/xiaoyuanfuwu/yuanzhangxinxiang/">院长信箱</a> |
+            <a href="https://jwxt.llzy.edu.cn/">教务系统</a>
+        </div>
+    </div>
+</div>
+<div class="top-wrap">
+    <div class="top">
+        <div class="logo">
+            <a href="/"><img src="/static/images/index/logo.png"></a>
+        </div>
+        <div class="tool">
+            <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+                <div class="form-inline tool-search">
+                    <input type="text" name="keyboard" id="keyboard" class="form-control form-control-sm"
+                        placeholder="输入关键词">
+                    <input type="hidden" name="show" value="title" />
+                    <input type="hidden" name="tempid" value="1" />
+                    <div class="input-group-append">
+                        <button class="btn btn-primary btn-sm" type="submit">查询</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="menu-wrap">
+    <div class="menu">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link text-white active" href="/">首页</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/main/xueyuangaikuang/"
+                    role="button" aria-haspopup="true" aria-expanded="false">学院概况</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-items-1">
+                        <a class="dropdown-item"
+                            href="/main/xueyuangaikuang/xueyuanjianjie/2021-11-28/6899.html">学院简介</a>
+                        <a class="dropdown-item" href="/main/xueyuangaikuang/xueyuanlingdao/2022-06-23/7155.html">学院领导</a>
+                        <a class="dropdown-item" href="/main/xueyuangaikuang/xueyuanfengguang/">学院风光</a>
+                        <a class="dropdown-item" href="/main/xueyuangaikuang/xuanchuanpian/2022-10-09/7484.html">学院宣传片</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/main/jigoushezhi/">机构设置</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/main/dangjianzhuanlan/"
+                    role="button" aria-haspopup="true" aria-expanded="false">党建专栏</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-items-1">
+                        <a class="dropdown-item" href="/main/dangjianzhuanlan/esd/">党的二十大</a>
+                        <a class="dropdown-item" href="/main/dangjianzhuanlan/zhutijiaoyu/">主题教育</a>
+                        <a class="dropdown-item" href="/main/dangjianzhuanlan/qinglianlvzhi/">清廉吕职</a>
+                        <a class="dropdown-item" href="/main/dangjianzhuanlan/dangjiangongzuo/">党建工作</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/main/jiaoxuekeyan/"
+                    role="button" aria-haspopup="true" aria-expanded="false">教学科研</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-items-1">
+                        <a class="dropdown-item" href="/main/jiaoxuekeyan/shiziduiwu/">师资队伍</a>
+                        <a class="dropdown-item" href="/main/jiaoxuekeyan/jiaoxuechengguo/">教学成果</a>
+                        <a class="dropdown-item" href="/main/jiaoxuekeyan/rencaipeiyang/">人才培养</a>
+                        <a class="dropdown-item" href="/main/jiaoxuekeyan/jiaoxueshebeizhanshi/">教学设备展示</a>
+                        <a class="dropdown-item"
+                            href="/main/jiaoxuekeyan/youxiujiaoshizhanshi/">优秀教师展示</a>
+                    </div>
+                </div>
+           </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/xueshenggongzuowang/">学生工作</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/main/zhaoshengjiuye/">招生就业</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/main/xueyuandongtai/"
+                    role="button" aria-haspopup="true" aria-expanded="false">学院动态</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-items-1">
+                        <a class="dropdown-item" href="/main/xueyuandongtai/xueyuanxinwen/">学院新闻</a>
+                        <a class="dropdown-item" href="/main/xueyuandongtai/tongzhigonggao/">通知公告</a>
+                        <a class="dropdown-item" href="/main/xueyuandongtai/zhijiaodongtai/">教职动态</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/main/yuweigongzuo/"
+                    role="button" aria-haspopup="true" aria-expanded="false">语委工作</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-items-1">
+                        <a class="dropdown-item" href="/main/yuweigongzuo/tongzhi/">通知</a>
+                        <a class="dropdown-item" href="/main/yuweigongzuo/dianyaozhonghuadushuxingdong/">典耀中华读书行动</a>
+                        <a class="dropdown-item" href="/main/yuweigongzuo/putonghuashuipingceshi/">普通话水平测试</a>
+                        <a class="dropdown-item" href="/main/yuweigongzuo/tuipuzhulixiangcunzhenxing/">推普助力乡村振兴</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/" role="button"
+                    aria-haspopup="true" aria-expanded="false">校园服务</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-items-1">
+                        <a class="dropdown-item" href="/main/xiaoyuanfuwu/xinxigongkai/">信息公开</a>
+                        <a class="dropdown-item" href="/main/xiaoyuanfuwu/wenjianxiazai/">文件下载</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/" role="button"
+                    aria-haspopup="true" aria-expanded="false">党的二十届三中全会专栏</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-items-1">
+                        <a class="dropdown-item" href="/main/esjszqhzl/gzdt/">工作动态</a>
+                        <a class="dropdown-item" href="/main/esjszqhzl/xxyd/">学习园地</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        <div class="slides">
+            <div id="bannersCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                                        <li data-target="#bannersCarousel" data-slide-to="0" class="active"></li>
+                                                            <li data-target="#bannersCarousel" data-slide-to="1"></li>
+                                        <li data-target="#bannersCarousel" data-slide-to="2"></li>
+                                    </ol>
+                <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                        <a href="https://www.llzy.edu.cn/main/esjszqhzl/"><img class="d-block w-100" src="/d/file/p/2024/09-14/d885bbed5e4eef48bc6b5895b2155d53.jpg"></a>
+                    </div>
+                                                            <div class="carousel-item">
+                        <a href="https://www.llzy.edu.cn/main/xueyuangaikuang/xueyuanjianjie/2021-11-28/6899.html"><img class="d-block w-100" src="/d/file/p/2022/06-27/0119c9d52efa94bc25eb0b18a7cd35ca.jpg"></a>
+                    </div>
+                                        <div class="carousel-item">
+                        <a href="https://www.llzy.edu.cn/qixiu.html"><img class="d-block w-100" src="/d/file/p/2022/10-25/d34d7b28bf40185779643f05fb4678bc.jpg"></a>
+                    </div>
+                                    </div>
+                <a class="carousel-control-prev" href="#bannersCarousel" role="button" data-slide="prev">
+                    <span class="iconfont icon-openleftbigicon text-white" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#bannersCarousel" role="button" data-slide="next">
+                    <span class="iconfont icon-openrightbigicon text-white
+                            " aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="news-wrap">
+            <div class="title">
+                <hr>
+                <div class="text">
+                    学院头条
+                </div>
+                <div class="desc">
+                    top events
+                </div>
+            </div>
+            <div class="hotnews">
+                <ul>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/aWYDE4LdgcOqTO_2VZ8Wzg"><img src="/d/file/p/2024/10-28/ab1350baa101a5cf1bcda09bece97ea6.jpg" alt="院领导深入包联点调研驻村帮扶工作"></a>
+                        <div class="text">
+                            <span><a href="https://mp.weixin.qq.com/s/aWYDE4LdgcOqTO_2VZ8Wzg" title="院领导深入包联点调研驻村帮扶工作">院领导深入包联点调研驻村帮扶工作</a></span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/yTwDHJN5sDqQdMchPp937g"><img src="/d/file/p/2024/10-21/bb0dce0e1cfe892fb208623479c942f9.jpg" alt="我院举行第27届推广普通话宣传月成果展演活动"></a>
+                        <div class="text">
+                            <span><a href="https://mp.weixin.qq.com/s/yTwDHJN5sDqQdMchPp937g" title="我院举行第27届推广普通话宣传月成果展演活动">我院举行第27届推广普通话宣传月成果展演活动</a></span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/beeuJzRc62araCuhJQklkA"><img src="/d/file/p/2024/10-21/085360e56f9ec71b4f29b7ef0c6c121a.png" alt="微视频：推广普通话 助力乡村振兴"></a>
+                        <div class="text">
+                            <span><a href="https://mp.weixin.qq.com/s/beeuJzRc62araCuhJQklkA" title="微视频：推广普通话 助力乡村振兴">微视频：推广普通话 助力乡村振兴</a></span>
+                        </div>
+                    </li>
+                                    </ul>
+            </div>
+            <hr>
+            <div class="news">
+                <div class="item">
+                    <div class="title"><a href="/main/xueyuandongtai/xueyuanxinwen/">学院要闻</a><span
+                            class="pointmore"><a href="/main/xueyuandongtai/xueyuanxinwen/">···</a></span>
+                    </div>
+                    <div class="content">
+                        <ul>
+                                                        <li><a href="https://mp.weixin.qq.com/s/aWYDE4LdgcOqTO_2VZ8Wzg"
+                                    title="院领导深入包联点调研驻村帮扶工作">院领导深入包联点调研驻村帮扶工作</a><span>10-28</span>
+                            </li>
+                                                        <li><a href="/main/xueyuandongtai/xueyuanxinwen/2024-10-23/10857.html"
+                                    title="我院获批多项省级课题立项">我院获批多项省级课题立项</a><span>10-23</span>
+                            </li>
+                                                        <li><a href="https://mp.weixin.qq.com/s/yTwDHJN5sDqQdMchPp937g"
+                                    title="我院举行第27届推广普通话宣传月成果展演活动">我院举行第27届推广普通话宣传月成果展演</a><span>10-21</span>
+                            </li>
+                                                        <li><a href="https://mp.weixin.qq.com/s/beeuJzRc62araCuhJQklkA"
+                                    title="微视频：推广普通话 助力乡村振兴">微视频：推广普通话 助力乡村振兴</a><span>10-21</span>
+                            </li>
+                                                        <li><a href="https://mp.weixin.qq.com/s/WoRfdoAhjEVhkudBsTtcBg"
+                                    title="微视频：贯彻落实党的二十大精神 吕职在行动">微视频：贯彻落实党的二十大精神 吕职在行</a><span>10-21</span>
+                            </li>
+                                                        <li><a href="https://mp.weixin.qq.com/s/KCui6lJueFWDVrDNeZ3_lg"
+                                    title="微视频：奋进强国路 阔步新征程">微视频：奋进强国路 阔步新征程</a><span>10-18</span>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title"><a href="/main/xueyuandongtai/zhijiaodongtai/">教职动态</a><span
+                            class="pointmore"><a
+                                href="/main/xueyuandongtai/zhijiaodongtai/">···</a></span></div>
+                    <div class="content">
+                        <ul>
+                                                        <li><a href="/main/xueyuandongtai/zhijiaodongtai/2022-07-02/7416.html"
+                                    title="吕梁职业技术学院鹏飞盛大培训中心揭牌及开班仪式在鹏飞集团盛大洗煤厂举行">吕梁职业技术学院鹏飞盛大培训中心揭牌及</a><span>07-02</span>
+                            </li>
+                                                        <li><a href="http://www.chinazy.org/info/1014/10798.htm"
+                                    title="教育部办公厅关于学习宣传和贯彻实施新修订的职业教育法的通知">教育部办公厅关于学习宣传和贯彻实施新修</a><span>06-23</span>
+                            </li>
+                                                        <li><a href="/main/xueyuandongtai/zhijiaodongtai/2022-06-19/7100.html"
+                                    title="我院召开访企拓岗促就业工作汇报会">我院召开访企拓岗促就业工作汇报会</a><span>06-17</span>
+                            </li>
+                                                        <li><a href="/main/xueyuandongtai/zhijiaodongtai/2022-06-15/7040.html"
+                                    title="我院与吉利汽车集团举行校企合作座谈会">我院与吉利汽车集团举行校企合作座谈会</a><span>06-11</span>
+                            </li>
+                                                        <li><a href="/main/xueyuandongtai/zhijiaodongtai/2022-06-25/7201.html"
+                                    title="深入企业调研 推进校企合作">深入企业调研 推进校企合作</a><span>06-02</span>
+                            </li>
+                                                        <li><a href="http://www.chinazy.org/info/1006/11009.htm"
+                                    title="刘宝民：学习贯彻新职教法 落实立德树人根本任务">刘宝民：学习贯彻新职教法 落实立德树人根</a><span>05-31</span>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title"><a href="/main/xueyuandongtai/tongzhigonggao/">通知公告</a><span
+                            class="pointmore float-right"><a
+                                href="/main/xueyuandongtai/tongzhigonggao/">···</a></span></div>
+                    <div class="content-cal">
+                        <ul class="content-cal-ul list-unstyled">
+                                                        <li>
+                                <div class="list">
+                                    <div class="date">
+                                        <div class="date-day">19</div>
+                                        <div class="date-month">2024-01</div>
+                                    </div>
+                                    <div class="text"><a href="/main/xueyuandongtai/tongzhigonggao/2024-01-19/9858.html"
+                                            title="关于2024年寒假安排的通知">关于2024年寒假安排的通知</a></div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list">
+                                    <div class="date">
+                                        <div class="date-day">28</div>
+                                        <div class="date-month">2023-12</div>
+                                    </div>
+                                    <div class="text"><a href="/main/xueyuandongtai/tongzhigonggao/2023-12-28/9736.html"
+                                            title="关于做好2024年元旦放假安排的通知">关于做好2024年元旦放假安排的通知</a></div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list">
+                                    <div class="date">
+                                        <div class="date-day">12</div>
+                                        <div class="date-month">2023-12</div>
+                                    </div>
+                                    <div class="text"><a href="/main/xueyuandongtai/tongzhigonggao/2023-12-12/9679.html"
+                                            title="山西省教育厅关于宣布失效废止一批文件的决定">山西省教育厅关于宣布失效废止一批文件的决定</a></div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list">
+                                    <div class="date">
+                                        <div class="date-day">06</div>
+                                        <div class="date-month">2023-12</div>
+                                    </div>
+                                    <div class="text"><a href="https://www.llrc.com.cn/article/8210"
+                                            title="吕梁职业技术学院2023年度第二批公开招聘工作人员公告">吕梁职业技术学院2023年度第二批公开招聘工作人员公告</a></div>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="teach-wrap">
+            <div class="title">
+                <hr>
+                <div class="text">
+                    教学成果
+                </div>
+                <div class="desc">
+                    achievement
+                </div>
+            </div>
+            <div class="teach">
+                <ul>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/ptXFRBNfAj_EkUCnCWPCUA"><img src="/d/file/p/2024/09-14/c75263ec91dfcfee02cddc87e5b370ad.jpg" alt="喜报！我院教师霍融荣获山西省“三晋技术能手”"></a>
+                        <div class="text">
+                            <span class="title"><a href="https://mp.weixin.qq.com/s/ptXFRBNfAj_EkUCnCWPCUA"
+                                    title="喜报！我院教师霍融荣获山西省“三晋技术能手”">喜报！我院教师霍融荣获山西省“三晋技术能手”</a></span>
+                            <span class="date">2024-09-14</span>
+                            <span class="desc"></span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/a-DeEvkAcHOCpm8WH1Qy3Q"><img src="/d/file/p/2024/09-14/26ab14171a9ee07956951192e1721245.jpg" alt="喜报！我院学子在2024年山西省大学生数学建模竞赛中斩获佳绩"></a>
+                        <div class="text">
+                            <span class="title"><a href="https://mp.weixin.qq.com/s/a-DeEvkAcHOCpm8WH1Qy3Q"
+                                    title="喜报！我院学子在2024年山西省大学生数学建模竞赛中斩获佳绩">喜报！我院学子在2024年山西省大学生数学建模竞赛中斩获</a></span>
+                            <span class="date">2024-09-14</span>
+                            <span class="desc"></span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/M_4RHEoAQFywhOo3I7JbaQ"><img src="/d/file/p/2024/05-22/9f95e49e2088f44f208f928ef2f6ef6c.png" alt="我院学子在第四届“外教社·词达人” 全国大学生英语词汇能力大赛喜获佳绩"></a>
+                        <div class="text">
+                            <span class="title"><a href="https://mp.weixin.qq.com/s/M_4RHEoAQFywhOo3I7JbaQ"
+                                    title="我院学子在第四届“外教社·词达人” 全国大学生英语词汇能力大赛喜获佳绩">我院学子在第四届“外教社·词达人” 全国大学生英语</a></span>
+                            <span class="date">2024-05-22</span>
+                            <span class="desc"></span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/p95bQcUSO6aTwHc9EsfHyA"><img src="/d/file/p/2023/12-14/ac0226bc884e27d25ce6e55994a2e090.png" alt="喜报！大数据学院师生在山西省第十七届职业院校技能大赛喜获佳绩"></a>
+                        <div class="text">
+                            <span class="title"><a href="https://mp.weixin.qq.com/s/p95bQcUSO6aTwHc9EsfHyA"
+                                    title="喜报！大数据学院师生在山西省第十七届职业院校技能大赛喜获佳绩">喜报！大数据学院师生在山西省第十七届职业院校技能大赛</a></span>
+                            <span class="date">2023-12-14</span>
+                            <span class="desc"></span>
+                        </div>
+                    </li>
+                                    </ul>
+            </div>
+			<div style="display: flex;justify-content: center;margin-top: -35px;margin-bottom: 30px">
+                <a style="color: gray" href="https://www.llzy.edu.cn/main/jiaoxuekeyan/jiaoxuechengguo/">查看更多</a>
+            </div>
+        </div>
+        <div class="teach-wrap">
+            <div class="title">
+                <hr>
+                <div class="text">
+                    教学设备展示
+                </div>
+                <div class="desc">
+                    equipment
+                </div>
+            </div>
+            <div class="teach">
+                <ul>
+                                        <li>
+                        <a href="/main/jiaoxuekeyan/jiaoxueshebeizhanshi/2022-11-01/7966.html"><img src="/d/file/p/2022/11-01/c254b8d5881097b6a66b071b94b62c7e.jpg" alt="汽修实训工厂"></a>
+                        <div class="text">
+                            <span class="title"><a href="/main/jiaoxuekeyan/jiaoxueshebeizhanshi/2022-11-01/7966.html"
+                                    title="汽修实训工厂">汽修实训工厂</a></span>
+                            <span class="date">2022-11-01</span>
+                            <span class="desc">　　由吕梁市政府投资1000万元、北方汽车教育集团投资1000万元建成的汽车实</span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="/main/jiaoxuekeyan/jiaoxueshebeizhanshi/2022-11-01/7975.html"><img src="/d/file/p/2022/11-01/57c12c57f444950009af19ca4039bcf6.jpg" alt="计算机实训机房"></a>
+                        <div class="text">
+                            <span class="title"><a href="/main/jiaoxuekeyan/jiaoxueshebeizhanshi/2022-11-01/7975.html"
+                                    title="计算机实训机房">计算机实训机房</a></span>
+                            <span class="date">2022-11-01</span>
+                            <span class="desc">　　我院计算机实训机房创建于2013年12月，位于教学楼四、五楼。其中普通实训</span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="/main/jiaoxuekeyan/jiaoxueshebeizhanshi/2022-11-01/7974.html"><img src="/d/file/p/2022/11-01/c51913ba6052f9ddcb69851458e784e5.jpg" alt="钳工实训基地"></a>
+                        <div class="text">
+                            <span class="title"><a href="/main/jiaoxuekeyan/jiaoxueshebeizhanshi/2022-11-01/7974.html"
+                                    title="钳工实训基地">钳工实训基地</a></span>
+                            <span class="date">2022-11-01</span>
+                            <span class="desc">　　钳工实训室是机械制造专业基础实训室之一，该实习间主要面向机械制造及其</span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="/main/jiaoxuekeyan/jiaoxueshebeizhanshi/2022-11-01/7973.html"><img src="/d/file/p/2022/11-01/78363c341b5a29a0ef4555d19622a419.png" alt="网络综合布线校内实训基地"></a>
+                        <div class="text">
+                            <span class="title"><a href="/main/jiaoxuekeyan/jiaoxueshebeizhanshi/2022-11-01/7973.html"
+                                    title="网络综合布线校内实训基地">网络综合布线校内实训基地</a></span>
+                            <span class="date">2022-11-01</span>
+                            <span class="desc">　　吕梁职业技术学院综合布线实训室建于2016年，共投资近40万元，目前，可以满足</span>
+                        </div>
+                    </li>
+                                    </ul>
+            </div>
+			<div style="display: flex;justify-content: center;margin-top: -35px;margin-bottom: 30px">
+                <a style="color: gray" href="https://www.llzy.edu.cn/main/jiaoxuekeyan/jiaoxueshebeizhanshi/">查看更多</a>
+            </div>
+        </div>
+        <div class="teacher-wrap">
+            <div class="title">
+                <hr>
+                <div class="text">
+                    优秀教师展示
+                </div>
+                <div class="desc">
+                    Excellent Teachers
+                </div>
+            </div>
+            <div class="teacher">
+                <ul>
+                                        <li>
+                        <a href="/main/jiaoxuekeyan/youxiujiaoshizhanshi/2022-06-22/7116.html"><img src="/d/file/p/2022/06-23/25671877e901d94d975d6a1ec916d1e5.png" alt="机电系党支部书记 李正术"></a>
+                        <div class="text">
+                            <span class="title"><a href="/main/jiaoxuekeyan/youxiujiaoshizhanshi/2022-06-22/7116.html"
+                                    title="机电系党支部书记 李正术">机电系党支部书记 李正术</a></span>
+                            <span class="date">2022-06-22</span>
+                            <span class="desc">李正术，男，1965年出生，1988年毕业于太原理工大学，大学本科学历，高级讲师，工程师，现</span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="/main/jiaoxuekeyan/youxiujiaoshizhanshi/2022-06-22/7117.html"><img src="/d/file/p/2022/06-22/e647fc02886ed80d0dbd3f6ae676a0b4.png" alt="测绘教研室主任 王晓"></a>
+                        <div class="text">
+                            <span class="title"><a href="/main/jiaoxuekeyan/youxiujiaoshizhanshi/2022-06-22/7117.html"
+                                    title="测绘教研室主任 王晓">测绘教研室主任 王晓</a></span>
+                            <span class="date">2022-06-21</span>
+                            <span class="desc">王晓，女，汉族，1986年7月出生，陕西渭南人，2008年5月加入中国共产党，2009年8月参加</span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="/main/jiaoxuekeyan/youxiujiaoshizhanshi/2022-06-25/7202.html"><img src="/d/file/p/2022/06-17/378e2682765cddda9a5d2daf8c5fbc50.png" alt="吕梁职业技术学院思政教师简介"></a>
+                        <div class="text">
+                            <span class="title"><a href="/main/jiaoxuekeyan/youxiujiaoshizhanshi/2022-06-25/7202.html"
+                                    title="吕梁职业技术学院思政教师简介">吕梁职业技术学院思政教师简介</a></span>
+                            <span class="date">2022-06-17</span>
+                            <span class="desc">　　张颖，女、孝义市人、中共党员、海南大学政治学理论专业法学硕士，吕梁职业</span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="/main/jiaoxuekeyan/youxiujiaoshizhanshi/2022-04-25/6990.html"><img src="/d/file/p/2022/04-25/342fd010b42c6c2a329edda671f37d3e.png" alt="我院任建英老师主讲的《中国共产党的创立》入选100名思政课教师优秀“党史微课”"></a>
+                        <div class="text">
+                            <span class="title"><a href="/main/jiaoxuekeyan/youxiujiaoshizhanshi/2022-04-25/6990.html"
+                                    title="我院任建英老师主讲的《中国共产党的创立》入选100名思政课教师优秀“党史微课”">我院任建英老师主讲的《中国共产党的创立》入选100名</a></span>
+                            <span class="date">2022-01-10</span>
+                            <span class="desc">　　近日，山西省教育厅发布通知：根据全省教育系统党史学习教育工作方案的部署</span>
+                        </div>
+                    </li>
+                                    </ul>
+            </div>
+			<div style="display: flex;justify-content: center;margin-top: -35px;margin-bottom: 30px">
+                <a style="color: gray" href="https://www.llzy.edu.cn/main/jiaoxuekeyan/youxiujiaoshizhanshi/">查看更多</a>
+            </div>
+        </div>
+        <div class="org-wrap">
+            <div class="title">
+                <div class="text">
+                    学院机构
+                </div>
+                <div class="desc">
+                    organization
+                </div>
+            </div>
+            <div class="org">
+                <div class="org-tab">
+                    <ul>
+                        <li class="cur">行政机构</li>
+                        <li>教学机构</li>
+                    </ul>
+                </div>
+                <div class="org-lists">
+                    <div class="org-list tab-none tab-on">
+                        <ul>
+                            <li>
+                                <a href="/dangweibangongshi/">党委办公室</a>
+                            </li>
+                            <li>
+                                <a href="/zuzhirenshibu/">组织人事部</a>
+                            </li>
+                            <li>
+                                <a href="/dangweixuanchuanbu/">党委宣传部</a>
+                            </li>
+                            <li>
+                                <a href="/tuanwei/">团委</a>
+                            </li>
+                            <li>
+                                <a href="/yuangonghui/">院工会</a>
+                            </li>
+                            <li>
+                                <a href="/xueyuanbangongshi/">学院办公室</a>
+                            </li>
+                            <li>
+                                <a href="/jiaowuchu/">教务处</a>
+                            </li>
+                            <li>
+                                <a href="/xueshengchu/">学生处</a>
+                            </li>
+                            <li>
+                                <a href="/zhaoshengjiuyechu/">招生就业处</a>
+                            </li>
+                            <li>
+                                <a href="/baoweichu/">保卫处</a>
+                            </li>
+                            <li>
+                                <a href="/caiwuchu/">计财处</a>
+                            </li>
+                            <li>
+                                <a href="/houqinchu/">后勤处</a>
+                            </li>
+                            <li>
+                                <a href="/xiandaizhiyejiaoyujishuzhongxin/">现代职业教育技术中心</a>
+                            </li>
+                            <li>
+                                <a href="/tushuguan/">图书馆</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="org-list tab-none">
+                        <ul>
+                            <li><a href="/dashujuxueyuan/">大数据学院</a></li>
+                            <li><a href="/dianzixinxixi/">电子信息系</a></li>
+                            <li><a href="/kuangyegongchengxi/">矿业工程系</a></li>
+                            <li><a href="/jichubu/">基础部</a></li>
+                            <li><a href="/jidianxi/">机电系</a></li>
+                            <li><a href="/jingjixi/">经济系</a></li>
+<li><a href="/sixiangzhengzhililunkejiaoxueyanjiubu/">思想政治理论课教学研究部</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="teach-wrap">
+            <div class="title">
+                <hr>
+                <div class="text">
+                    学生活动
+                </div>
+                <div class="desc">
+                    student activities
+                </div>
+            </div>
+            <div class="teach">
+                <ul>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/qO76XWVuvc1Sq6_2mDYakg"><img src="/d/file/p/2024/05-20/08e20a476a7df1f6c36d11ac47c50e25.jpg" alt="我院与孝义市公安局联合开展“筑牢安全防线，共建平安校园”反恐、反邪、反校园暴力、净网进校园主题宣传教育活动"></a>
+                        <div class="text">
+                            <span class="title"><a href="https://mp.weixin.qq.com/s/qO76XWVuvc1Sq6_2mDYakg"
+                                    title="我院与孝义市公安局联合开展“筑牢安全防线，共建平安校园”反恐、反邪、反校园暴力、净网进校园主题宣传教育活动">我院与孝义市公安局联合开展“筑牢安全防线，共建平安校</a></span>
+                            <span class="date">2024-05-17</span>
+                            <span class="desc"></span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/h2d_1e09Tss15Bdl4Eb0dA"><img src="/d/file/p/2024/05-09/a6755291db52267d79b4738cc39e912c.jpg" alt="我院学子闫雨竹荣获山西省“最美职校生”"></a>
+                        <div class="text">
+                            <span class="title"><a href="https://mp.weixin.qq.com/s/h2d_1e09Tss15Bdl4Eb0dA"
+                                    title="我院学子闫雨竹荣获山西省“最美职校生”">我院学子闫雨竹荣获山西省“最美职校生”</a></span>
+                            <span class="date">2024-05-09</span>
+                            <span class="desc"></span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="https://mp.weixin.qq.com/s/V5bsdIXcLe5RmVcj_T02zQ"><img src="/d/file/p/2024/04-29/ef0687d325f4e3e62a0fbdabfb7eb3c9.jpg" alt="吕梁职业技术学院首届读书行动启动"></a>
+                        <div class="text">
+                            <span class="title"><a href="https://mp.weixin.qq.com/s/V5bsdIXcLe5RmVcj_T02zQ"
+                                    title="吕梁职业技术学院首届读书行动启动">吕梁职业技术学院首届读书行动启动</a></span>
+                            <span class="date">2024-04-29</span>
+                            <span class="desc"></span>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="/main/xueshenggongzuo/2023-09-21/9393.html"><img src="/d/file/p/2023/09-21/79fc337f9a5e11bf1db4ebd8fcc22dff.jpg" alt="我院开展2023年法制安全教育讲座"></a>
+                        <div class="text">
+                            <span class="title"><a href="/main/xueshenggongzuo/2023-09-21/9393.html"
+                                    title="我院开展2023年法制安全教育讲座">我院开展2023年法制安全教育讲座</a></span>
+                            <span class="date">2023-09-21</span>
+                            <span class="desc">9月21日上午，我院开展2023年法制安全教育讲座。学校法制副校长王惠盛法制讲</span>
+                        </div>
+                    </li>
+                                    </ul>
+            </div>
+			<div style="display: flex;justify-content: center;margin-top: -35px;margin-bottom: 30px">
+                <a style="color: gray" href="https://www.llzy.edu.cn/main/xueshenggongzuo/">查看更多</a>
+            </div>
+        </div>
+        <div class="album-wrap">
+            <div class="title">
+                <hr>
+                <div class="text">
+                    学院风光
+                </div>
+                <div class="desc">
+                    environment
+                </div>
+            </div>
+            <div class="picMarquee">
+                <div class="album bd">
+                    <ul>
+                                                <li>
+                            <a href="/main/xueyuangaikuang/xueyuanfengguang/2021-11-28/6898.html"><img src="/d/file/p/2021/11-28/753ee2255bcfda3e0fdb1ea6086d1afb.png" alt="校园风光"></a>
+                        </li>
+                                                <li>
+                            <a href="/main/xueyuangaikuang/xueyuanfengguang/2021-11-28/6897.html"><img src="/d/file/p/2021/11-28/b026f0c8a72c6f86f9bf4e2b616c70ab.png" alt="校园风光"></a>
+                        </li>
+                                                <li>
+                            <a href="/main/xueyuangaikuang/xueyuanfengguang/2021-11-28/6896.html"><img src="/d/file/p/2021/11-28/b283c69afee5f1a572825d991365ef50.png" alt="校园风光"></a>
+                        </li>
+                                                <li>
+                            <a href="/main/xueyuangaikuang/xueyuanfengguang/2021-11-28/6895.html"><img src="/d/file/p/2021/11-28/0667794b9bb6499677bc799c7937c22b.png" alt="校园风光"></a>
+                        </li>
+                                                <li>
+                            <a href="/main/xueyuangaikuang/xueyuanfengguang/2021-09-06/6881.html"><img src="/d/file/p/2021/09-06/e531b245a355256d40df418833a29ae7.png" alt="校园风光"></a>
+                        </li>
+                                                <li>
+                            <a href="/main/xueyuangaikuang/xueyuanfengguang/2021-09-06/6880.html"><img src="/d/file/p/2021/09-06/146b888e1ea8341ec4e44b54f0997a59.png" alt="校园风光"></a>
+                        </li>
+                                                <li>
+                            <a href="/main/xueyuangaikuang/xueyuanfengguang/2021-09-06/6879.html"><img src="/d/file/p/2021/09-06/7f0cd890442ae045477c23e8fb8be4ef.png" alt="校园风光"></a>
+                        </li>
+                                                <li>
+                            <a href="/main/xueyuangaikuang/xueyuanfengguang/2021-09-06/6878.html"><img src="/d/file/p/2021/09-06/5215a0e94b6cf5ec8d75388ee4a22506.png" alt="校园风光"></a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="access">
+                <div class="title">
+                    <div class="text">
+                        快捷通道
+                    </div>
+                    <div class="desc">
+                        shortcut
+                    </div>
+                </div>
+                <div class="items">
+                    <ul>
+                        <li>
+                            <span class="iconfont icon-gonggao"></span>
+                            <span class="icontext"><a
+                                    href="/main/xiaoyuanfuwu/xinxigongkai/">信息公开</a></span>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-zhanqunguanlixitong"></span>
+                            <span class="icontext"><a href="https://jwxt.llzy.edu.cn">教务系统</a></span>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-tushuguan"></span>
+                            <span class="icontext"><a href="/tushuguan/">图书系统</a></span>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-caiwu"></span>
+                            <span class="icontext"><a href="/caiwuchu/">缴费查询</a></span>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-rili"></span>
+                            <span class="icontext"><a href="/main/xiaoyuanfuwu/xiaoli/">校历</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-wrap">
+    <div class="bottom">
+        <img src="/static/images/index/logo-bottom.png">
+        <div class="text">
+            <span>地址：山西省吕梁市孝义市湖滨路 邮编：032300</span>
+            <span>电话：0358-7849925（0358-7849923招生办公室）</span>
+            <span>© 2021 吕梁职业技术学院（www.llzy.edu.cn） 版权所有　<a href="https://beian.miit.gov.cn">晋ICP备2022001432号-1</a></span>
+        </div>
+        <div class="tool">
+            <div class="icons">
+                <span class="iconfont icon-weixin" data-toggle="tooltip" data-html="true"
+                    title="<img src='/static/images/index/wechat.png' width='90' height='90'>"></span>
+                <span class="iconfont icon-icon-douyin" data-toggle="tooltip" data-html="true"
+                    title="<img src='/static/images/index/douyin.png' width='90' height='90'>"></span>
+                <span class="iconfont icon-icon_baidulogo" onclick="javascript:window.location.href='https://tieba.baidu.com/f?kw=%E5%90%95%E6%A2%81%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&ie=utf-8'"></span>
+                <span class="iconfont icon-renrenwang" onclick="javascript:window.location.href='http://www.renren.com/login?to=http%3A%2F%2Fwww.renren.com%2F'"></span>
+            </div>
+            <div class="link">
+                <select class="form-control form-control-sm"
+                    onchange="window.open(this.options[selectedIndex].value,'','');">
+                    <option value="" selected> --- 相关链接 ---</option>
+                                        <option value="http://www.moe.gov.cn/">教育部</option>
+                                        <option value="https://www.chsi.com.cn/">学信网</option>
+                                        <option value="http://www.jyb.cn/">中国教育新闻网</option>
+                                        <option value="http://jyt.shanxi.gov.cn/">山西省教育厅</option>
+                                        <option value="https://www.chinazy.org/">中国职业技术教育网</option>
+                                        <option value="http://www.sxzy.edu.cn/">山西职业技术学院</option>
+                                        <option value="https://www.sxjdxy.org/">山西机电职业技术学院</option>
+                                        <option value="https://www.szpt.edu.cn/">深圳职业技术学院</option>
+                                    </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

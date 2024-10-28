@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<html><head>
+
+    
+        <meta charset="utf-8">
+        <title>广东理工职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="广东理工职业学院">
+<META Name="keywords" Content="广东理工职业学院" />
+
+        <link href="css/css.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78465550565742000200024454 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1580785211)</script>
+</head>
+    <body>
+        <div><script language="javascript" src="/system/resource/js/dynclicks.js"></script>   
+</SCRIPT></div>
+        <div class="header_bg">
+            <div class="header clearfix">
+                <div class="header_l pull-left"><script language="javascript" src="/system/resource/js/openlink.js"></script><a title="" href="https://vpn.ougd.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61916)" target="_blank">VPN入口</a>
+ | 
+<a title="" href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61918)" target="_blank">手机网站</a>
+</div>
+                <div class="header_r pull-right">
+                   <a href="http://www.ougd.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61919)" target="_blank">广东开放大学</a>
+ | 
+<a href="http://gdlndx.ougd.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61920)" target="_blank">广东老年大学</a>
+
+                    <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu3 .qwss{
+           position: absolute;
+    top: 0;
+    left: 0;
+    width: 185px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 5px;
+    border: none;
+    background: none;
+    font-size: 12px;
+    color: #666;}
+    #appu3 .tj{
+           position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 28px;}
+</style>
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+            <input type="text" class="qwss"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="image" src="img/search.png" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1580785211";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://210.38.32.68:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                </div>
+            </div>
+        </div>
+        <div class="top_w">
+            <div class="top">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="广东理工职业学院(新版)"><img src="img/logo.png" width="352" height="74" border="0" alt="广东理工职业学院(新版)" title="广东理工职业学院(新版)"></a></div>
+                <img class="top_pic" alt="" src="img/top_pic.png">
+            </div>
+        </div>
+        <div class="nav_w">
+            <ul class="nav clearfix" id="nav"><li class="nLi on">
+                    <h3><a href="index.htm">首页</a></h3>
+                </li>
+<li class="nLi ">
+    <h3><a href="xxgk.htm">学校概况</a></h3>
+    <ul class="sub">
+
+    <li><a href="xxgk/xxgk.htm">学校概况</a></li>
+
+    <li><a href="xxgk/xxzc.htm">学校章程</a></li>
+
+    <li><a href="xxgk/ldgh.htm">领导关怀</a></li>
+
+    <li><a href="xxgk/xxld.htm">学校领导</a></li>
+
+    <li><a href="xxgk/xyfj.htm">校园风景</a></li>
+    </ul>
+</li>
+<li class="nLi ">
+    <h3><a href="lgxw1/xydt.htm">理工新闻</a></h3>
+    <ul class="sub">
+
+    <li><a href="lgxw1/xydt.htm">学院动态</a></li>
+
+    <li><a href="lgxw1/ggtz.htm">公告通知</a></li>
+
+    <li><a href="lgxw1/zbcg.htm">招标采购</a></li>
+
+    <li><a href="lgxw1/xshd.htm">学生活动</a></li>
+
+    <li><a href="lgxw1/mylg.htm">媒眼理工</a></li>
+    </ul>
+</li>
+<li class="nLi ">
+    <h3><a href="zzjg1/jxbm.htm">组织机构</a></h3>
+    <ul class="sub">
+
+    <li><a href="zzjg1/jxbm.htm">教学部门</a></li>
+
+    <li><a href="zzjg1/znbm.htm">职能部门</a></li>
+    </ul>
+</li>
+<li class="nLi ">
+    <h3><a href="http://zs.gdpi.edu.cn/">招生信息</a></h3>
+</li>
+<li class="nLi ">
+    <h3><a href="http://xgb.gdpi.edu.cn/">学生管理</a></h3>
+</li>
+<li class="nLi ">
+    <h3><a href="http://jwc.gdpi.edu.cn/">教学教务</a></h3>
+</li>
+<li class="nLi ">
+    <h3><a href="http://library.gdpi.edu.cn/">图书馆</a></h3>
+</li>
+<li class="nLi ">
+    <h3><a href="http://tw.gdpi.edu.cn/">校园文化</a></h3>
+</li>
+<li class="nLi ">
+    <h3><a href="rczp.htm">人才招聘</a></h3>
+    <ul class="sub">
+
+    <li><a href="http://zp.ougd.cn" target="_blank">人才招聘平台</a></li>
+    </ul>
+</li>
+<li class="nLi ">
+    <h3><a href="zfzc/jybwj.htm">政府政策</a></h3>
+    <ul class="sub">
+
+    <li><a href="zfzc/jybwj.htm">教育部文件</a></li>
+
+    <li><a href="zfzc/jytwj.htm">教育厅文件</a></li>
+    </ul>
+</li>
+<li class="nLi ">
+    <h3><a href="xxfw.htm">信息服务</a></h3>
+</li>
+<li class="nLi ">
+    <h3><a href="xxgk1/jbxx.htm">信息公开</a></h3>
+    <ul class="sub" style="width:200%;left:-96px;">
+
+    <li><a href="xxgk1/jbxx.htm">基本信息</a></li>
+
+    <li><a href="xxgk1/dwxx.htm">党务信息</a></li>
+
+    <li><a href="xxgk1/zsksxx/zszc.htm">招生考试信息</a></li>
+
+    <li><a href="xxgk1/cw_zcjsf/yjsxx.htm">财务、资产及收费</a></li>
+
+    <li><a href="xxgk1/rsszxx.htm">人事师资信息</a></li>
+
+    <li><a href="xxgk1/jxzlxx.htm">教学质量信息</a></li>
+
+    <li><a href="xxgk1/xsglfwxx.htm">学生管理服务信息</a></li>
+
+    <li><a href="xxgk1/xfjsxx.htm">学风建设信息</a></li>
+
+    <li><a href="xxgk1/xw_xkxx.htm">学位、学科信息</a></li>
+
+    <li><a href="xxgk1/dwjlyhzxx.htm">对外交流与合作信息</a></li>
+
+    <li><a href="xxgk1/ssbf_nfsqb_.htm">实施办法（内附申请表）</a></li>
+
+    <li><a href="xxgk1/qt.htm">其他</a></li>
+    </ul>
+</li>
+</ul>
+        </div>
+        <!--banner开始-->
+        <div class="slider">    <div class="bd">
+                <ul>
+                    <li><a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1580785211, 1009571)"><img src="images/dangdeershijiesanzhongquanhuijingshen.jpg"></a></li>
+                    <li><a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1580785211, 1009573)"><img src="images/dangdeershijiesanzhongquanhuijingshen2.jpg"></a></li>
+                    <li><a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1580785211, 80209)"><img src="images/ligong1.jpg"></a></li>
+                    <li><a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1580785211, 76158)"><img src="images/shuangbaixingdong-datu.jpg"></a></li>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul>
+                </ul>
+            </div>
+            <!-- 自动分页 -->
+            <div class="pnBtn prev">
+                <span class="blackBg"></span>
+                <a class="arrow" href="javascript:void(0)"></a>
+            </div>
+            <div class="pnBtn next">
+                <span class="blackBg"></span>
+                <a class="arrow" href="javascript:void(0)"></a>
+            </div></div>
+        <!--banner结束-->
+
+            <div class="lgxw">
+                <div class="title">
+                    <h1 class="pull-left">理工新闻</h1>
+                    <div class="more pull-right"><a href="lgxw1/xydt.htm" target="_blank"><img src="img/more.png"></a></div>
+                </div>
+                <ul class="clearfix"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><li style="margin-left:0;">
+                        <div class="lgxw_img"><a href="info/1009/31070.htm" target="_blank">
+                        <img src="/__local/E/12/8E/4A18394D53FD939053911EC4BAA_33F8E704_A55E.jpg" /></a></div>
+                        <h1><a href="info/1009/31070.htm">校领导带队赴福建开放大学交流学习</a></h1>
+                        <div class="lgxw_time">2024-10-27</div>
+                    </li>
+                
+
+<li>
+                        <div class="lgxw_img"><a href="info/1009/31060.htm" target="_blank">
+                        <img src="/__local/5/DF/7B/BD2ACD2DCDFDB0C654954720556_0C3EEA33_59EC0.png" /></a></div>
+                        <h1><a href="info/1009/31060.htm">【“双百行动”系列报道之二十四】广东老年大学东源学院镇村教学点…</a></h1>
+                        <div class="lgxw_time">2024-10-27</div>
+                    </li>
+                
+
+<li>
+                        <div class="lgxw_img"><a href="info/1009/31040.htm" target="_blank">
+                        <img src="/__local/D/29/25/5A1E8301977D1C7067B543E57CA_6D38973F_C4FB.jpg" /></a></div>
+                        <h1><a href="info/1009/31040.htm">刘文清校长出席“2024数字化终身学习国际会议”并作报告</a></h1>
+                        <div class="lgxw_time">2024-10-26</div>
+                    </li>
+                
+
+<li>
+                        <div class="lgxw_img"><a href="info/1009/31050.htm" target="_blank">
+                        <img src="/__local/E/38/5E/0F6266315E7C3BC64C781BE1146_29B53F00_545C0.png" /></a></div>
+                        <h1><a href="info/1009/31050.htm">我校新一批乡村振兴驻镇帮镇扶村工作队进驻东源县义合镇开展工作</a></h1>
+                        <div class="lgxw_time">2024-10-26</div>
+                    </li>
+                
+
+<script>_showDynClickBatch(['dynclicks_u7_31070','dynclicks_u7_31060','dynclicks_u7_31040','dynclicks_u7_31050'],[31070,31060,31040,31050],"wbnews", 1580785211)</script>
+</ul>
+                <div class="clearfix">
+                    <div class="lgxw_list pull-left">
+                        <ul><li><i>2024-10-25</i><a href="info/1009/31030.htm" title="江西开放大学来校调研交流" target="_blank">江西开放大学来校调研交流</a></li>
+<li><i>2024-10-25</i><a href="info/1009/31020.htm" title="省产业工人素质提升班开学典礼暨劳模工匠本科班毕业典礼 举行" target="_blank">省产业工人素质提升班开学典礼暨劳模工匠本科班毕业典礼 举行</a></li>
+<li><i>2024-10-25</i><a href="info/1009/30990.htm" title="学校学子在中华经典诵写讲大赛中获佳绩" target="_blank">学校学子在中华经典诵写讲大赛中获佳绩</a></li>
+<li><i>2024-10-24</i><a href="info/1009/30980.htm" title="校领导在应用外国语学院教工党支部讲党课" target="_blank">校领导在应用外国语学院教工党支部讲党课</a></li>
+<li><i>2024-10-23</i><a href="info/1009/30930.htm" title="凝心聚力谋发展：学校召开老年学学科建设专家座谈会" target="_blank">凝心聚力谋发展：学校召开老年学学科建设专家座谈会</a></li>
+<li><i>2024-10-23</i><a href="info/1009/30920.htm" title="校领导带队赴意大利和德国访问交流" target="_blank">校领导带队赴意大利和德国访问交流</a></li>
+<script>_showDynClickBatch(['dynclicks_u8_31070','dynclicks_u8_31060','dynclicks_u8_31040','dynclicks_u8_31050','dynclicks_u8_31030','dynclicks_u8_31020','dynclicks_u8_30990','dynclicks_u8_30980','dynclicks_u8_30930','dynclicks_u8_30920'],[31070,31060,31040,31050,31030,31020,30990,30980,30930,30920],"wbnews", 1580785211)</script>
+</ul>
+                    </div>
+                    <div class="lgxw_list pull-right">
+                        <ul><li><i>2024-10-23</i><a href="info/1009/30880.htm" title="德国埃尔福特手工业协会来访" target="_blank">德国埃尔福特手工业协会来访</a></li>
+<li><i>2024-10-22</i><a href="info/1009/30850.htm" title="茂名和肇庆开大来校汇报交流" target="_blank">茂名和肇庆开大来校汇报交流</a></li>
+<li><i>2024-10-22</i><a href="info/1009/30840.htm" title="学校参加全国职业院校“双带头人”教师党支部书记研修班" target="_blank">学校参加全国职业院校“双带头人”教师党支部书记研修班</a></li>
+<li><i>2024-10-22</i><a href="info/1009/30830.htm" title="沉浸式实践教学让思政课出新更入心" target="_blank">沉浸式实践教学让思政课出新更入心</a></li>
+<li><i>2024-10-21</i><a href="info/1009/30820.htm" title="湖北开放大学来校调研交流" target="_blank">湖北开放大学来校调研交流</a></li>
+<li><i>2024-10-21</i><a href="info/1009/30810.htm" title="国立新西兰理工学院/尼尔森马尔伯勒理工学院来访" target="_blank">国立新西兰理工学院/尼尔森马尔伯勒理工学院来访</a></li>
+<script>_showDynClickBatch(['dynclicks_u9_31070','dynclicks_u9_31060','dynclicks_u9_31040','dynclicks_u9_31050','dynclicks_u9_31030','dynclicks_u9_31020','dynclicks_u9_30990','dynclicks_u9_30980','dynclicks_u9_30930','dynclicks_u9_30920','dynclicks_u9_30880','dynclicks_u9_30850','dynclicks_u9_30840','dynclicks_u9_30830','dynclicks_u9_30820','dynclicks_u9_30810'],[31070,31060,31040,31050,31030,31020,30990,30980,30930,30920,30880,30850,30840,30830,30820,30810],"wbnews", 1580785211)</script>
+</ul>
+                    </div>
+                </div>
+            </div>
+
+
+<div style="background: rgb(247, 252, 255); width: 100%; padding-bottom: 46px; margin-top: 25px;">
+            <div class="mt20 clearfix">
+                <div class="mtlg pull-left">
+                    <div class="title">
+                        <h1 class="pull-left">媒眼理工</h1>
+                        <div class="more pull-right"><a href="lgxw1/mylg.htm" target="_blank"><img src="img/more.png"></a></div>
+                    </div>
+                    <div class="mtlg_tt clearfix">
+
+                        <div class="mtlg_tt_l"><a href="https://app.gmdaily.cn/as/opened/n/08d879ba69b94174ba6bbacca0540a0d" title="光明日报：广东开放大学：奋力书写改革创新青春篇章" target="_blank"><img src="/__local/C/88/69/CDCB2442230BF1676429A2613E9_3BAC7EB2_E44A.jpg"></a></div>
+                        <div class="mtlg_tt_r">
+                            <h1><a href="https://app.gmdaily.cn/as/opened/n/08d879ba69b94174ba6bbacca0540a0d" title="光明日报：广东开放大学：奋力书写改革创新青春篇章" target="_blank">光明日报：广东开放大学：奋力书写改革创新青…</a></h1>
+                            <p>
+                                
+                            </p>
+                            <div class="mtlg_tt_sj">09-07</div>
+                        </div>
+                    
+
+<script>_showDynClickBatch(['dynclicks_u10_29460'],[29460],"wbnews", 1580785211)</script>
+</div>
+                    <ul><li><i>2024-10-23</i><a href="https://static.nfnews.com/content/202410/22/c10186144.html?colID=7747&firstColID=7747&appversion=11700&from=weChatMessage&enterColumnId=7747&date=&layer=3" target="_blank">南方+：广东开放大学：沉浸式实践教学让思政课出新更入心</a></li>
+<li><i>2024-10-18</i><a href="info/1041/30700.htm" target="_blank">光明日报等6家主流媒体报道广东开放大学党委书记讲授“思政第一课”：…</a></li>
+<li><i>2024-10-20</i><a href="info/1041/30770.htm" target="_blank">光明日报等5家主要媒体报道广东开放大学校长讲授“思政第一课”：勉励…</a></li>
+<li><i>2024-10-02</i><a href="info/1041/30300.htm" target="_blank">学习强国等3家主流媒体刊登我校楚恒体副教授撰写的文章《优秀传统文化…</a></li>
+<li><i>2024-09-29</i><a href="info/1041/30080.htm" target="_blank">光明日报等5家主流媒体报道“强化科技教育和人文教育协同”专题座谈会…</a></li>
+<li><i>2024-09-26</i><a href="https://static.nfnews.com/content/202409/26/c10100895.html?colID=89&firstColID=89&appversion=11600&from=weChatMessage&enterColumnId=89&date=&layer=3" target="_blank">南方+：“单兵突击”势单力薄，校地合作困局如何破？丨东源“双百行动…</a></li>
+<script>_showDynClickBatch(['dynclicks_u11_29460','dynclicks_u11_30860','dynclicks_u11_30700','dynclicks_u11_30770','dynclicks_u11_30300','dynclicks_u11_30080','dynclicks_u11_30050'],[29460,30860,30700,30770,30300,30080,30050],"wbnews", 1580785211)</script>
+</ul>
+                </div>
+                <div class="ggtz pull-right">
+                    <div class="title">
+                        <h1 class="pull-left">公告通知</h1>
+                        <div class="more pull-right"><a href="lgxw1/ggtz.htm" target="_blank"><img src="img/more.png"></a></div>
+                    </div>
+                    <ul><li>
+                            <div class="ggtz_time"><i>25</i><em>2024-10</em></div>
+                            <h1><a href="info/1011/31010.htm" target="_blank">采购结果——先进制造业数字化能力提质培优实践中心设备</a></h1>
+                        </li>
+                        
+<li>
+                            <div class="ggtz_time"><i>25</i><em>2024-10</em></div>
+                            <h1><a href="info/1011/31000.htm" target="_blank">采购公告——数字孪生职业技能实训室（一期）（重招）</a></h1>
+                        </li>
+                        
+<li>
+                            <div class="ggtz_time"><i>24</i><em>2024-10</em></div>
+                            <h1><a href="info/1011/30970.htm" target="_blank">结果公告——中山校区能源审计服务项目</a></h1>
+                        </li>
+                        
+<li>
+                            <div class="ggtz_time"><i>24</i><em>2024-10</em></div>
+                            <h1><a href="info/1011/30960.htm" target="_blank">采购公告——2025年-2026年证书印刷服务项目</a></h1>
+                        </li>
+                        
+<li>
+                            <div class="ggtz_time"><i>24</i><em>2024-10</em></div>
+                            <h1><a href="info/1011/30950.htm" target="_blank">采购公告——工商企业管理虚拟仿真实训室（重招）</a></h1>
+                        </li>
+                        
+<li>
+                            <div class="ggtz_time"><i>24</i><em>2024-10</em></div>
+                            <h1><a href="info/1011/30940.htm" target="_blank">结果公告——建设省级“刘磊智能工程技能大师工作室”项目</a></h1>
+                        </li>
+                        
+<script>_showDynClickBatch(['dynclicks_u12_31010','dynclicks_u12_31000','dynclicks_u12_30970','dynclicks_u12_30960','dynclicks_u12_30950','dynclicks_u12_30940'],[31010,31000,30970,30960,30950,30940],"wbnews", 1580785211)</script>
+</ul>
+                </div>
+            </div>
+</div>
+            <div class="zt">
+                <div class="title">
+                    <h1 class="pull-left">专题网站</h1>
+                    <div class="more pull-right"><a href="zt.htm" target="_blank"><img src="img/more.png"></a></div>
+                </div>
+                <div class="picMarquee-left">
+                    <div class="bd">    <ul class="picList">
+                            
+<li>
+                                <div class="pic"><a href="guangdongligongzhiyexueyuan-quanguoyifazhixiaoshifanxiaoshenbaobiao.pdf" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1580785211, 80189)" target="_blank"><img src="images/tupian_202403181.jpg"></a></div>
+                            </li>
+                            
+<li>
+                                <div class="pic"><a href="guangdongligongzhiyexueyuan-quanshengyifazhixiaoshifanxiaoshenbaobiao.pdf" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1580785211, 80190)" target="_blank"><img src="images/tupian_202403182.jpg"></a></div>
+                            </li>
+                            
+<li>
+                                <div class="pic"><a href="http://sgzyk.gdpi.edu.cn/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1580785211, 53879)" target="_blank"><img src="img/zt2.jpg"></a></div>
+                            </li>
+                            
+<li>
+                                <div class="pic"><a href="https://xl.psyedu.cn/gdpi" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1580785211, 53878)" target="_blank"><img src="img/zt3.png"></a></div>
+                            </li>
+                            
+</ul></div>
+                </div>
+            </div>
+            <div class="kstd clearfix">
+                <div class="kstd_ti pull-left">
+                    <p>支持服务</p><span>Fast&nbsp;&nbsp;&nbsp;&nbsp;Track</span>
+                </div>
+                <div class="kstdtx pull-left"><ul>
+                        
+<li class="kstd1"><a href="https://vpn.ougd.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61921)" " target="_blank"><i></i><p>VPN</p></a></li>
+                        
+<li class="kstd2"><a href="xl.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61922)" " target="_blank"><i></i><p>校历</p></a></li>
+                        
+<li class="kstd3"><a href="gzh.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61923)" " target="_blank"><i></i><p>公众号</p></a></li>
+                        
+<li class="kstd4"><a href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61926)" " target="_blank"><i></i><p>教务平台</p></a></li>
+                        
+<li class="kstd5"><a href="#" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61927)" " target="_blank"><i></i><p>在线报修</p></a></li>
+                        
+</ul></div>
+            </div>
+            <div class="link clearfix">
+                <div class="title">
+                    <h1 class="pull-left">快速链接</h1>
+                </div>
+                <ul><li><a href="http://210.38.32.174/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61930)" target="_blank">学生校内社会实践</a></li>
+<li><a href="http://www.ougd.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61933)" target="_blank">广东开放大学官网</a></li>
+<li><a href="http://xm.gdpi.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61934)" target="_blank">省级项目申报与验收专栏</a></li>
+<li><a href="http://jt.gdpi.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61935)" target="_blank">广东理工职院职教集团</a></li>
+<li><a href="http://210.38.32.222" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61966)" target="_blank">人才培养工作状态数据采集平台</a></li>
+<li><a href="https://cqgc2024.gdpi.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 61985)" target="_blank">“创新强校工程”年度考核材料</a></li>
+<li><a href="http://jxzl.ougd.cn/gzjy/gdzyjyzlnb.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 62945)" target="_blank">高等职业教育质量年度报告</a></li>
+<li><a href="https://jxzl.ougd.cn/gzjy/gzypgzpbg.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 65996)" target="_blank">高职院评估自评报告</a></li>
+<li><a href="https://wlh.gdpi.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 70456)" target="_blank">“特支计划”教学名师申报专栏</a></li>
+<li><a href="https://xm.gdpi.edu.cn/jxgz2023/index.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1124" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 86651)" target="_blank">2024年教学工作检查专栏</a></li>
+<li><a href="https://xm.gdpi.edu.cn/gspgzyx.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 70434)" target="_blank">省域高水平高职院校建设计划</a></li>
+<li><a href="list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1112" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 90755)" target="_blank">广东理工职业学院2023年职业教育国家教学文件检查专栏</a></li>
+<li><a href="https://szhbgxx.gdpi.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1580785211, 86524)" target="_blank" class="last">省高职教育数字化标杆学校申报专栏</a></li>
+</ul>
+            </div>
+
+        <div class="foot">
+            <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有 2009 广东理工职业学院　　联系电话：(020)83502785 &nbsp; 招生咨询电话：(020)83505073　　<a href="http://beian.miit.gov.cn/" target="_blank" style="color: rgb(255, 255, 255);">粤ICP备05008834号</a><br />学院信箱: xb@gdrtvu.edu.cn　　党委信箱: dw@gdrtvu.edu.cn　　校长信箱: xz@gdrtvu.edu.cn</p>
+            <div class="sydw">
+
+<a href="http://bszs.conac.cn/sitename?method=show&amp;id=2ED5B7C051C628D1E053022819ACF03C"><img src="img/sydw.png"></a>
+
+<a id="rwmdot" href="javascript:void(0);"><p id="rwmwrap">
+        <img src="images/erweima.jpg">
+    </p></a>
+        </div></div>
+        <div class="pcbtn"><a title="手机版" href="javascript:void(0);" onclick="_vsb_multiscreen.setDevice('mobile')">手机版</a></div>
+
+        <script type="text/javascript" src="js/bdtxk.js"></script>
+        <script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="js/bd.SuperSlide.js"></script>
+<script type="text/javascript">$(document).ready(function(){
+  $("#rwmdot").hover(function(){
+  $("#rwmwrap").toggle();
+  });
+});
+</script>
+        <script type="text/javascript">
+            jQuery("#nav").slide({ 
+                type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+                titCell:".nLi", //鼠标触发对象
+                targetCell:".sub", //titCell里面包含的要显示/消失的对象
+                effect:"slideDown", //targetCell下拉效果
+                delayTime:300 , //效果时间
+                triggerTime:0, //鼠标延迟触发时间（默认150）
+                returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+            });
+            //banner
+            /* 把最后一个放到第一个前面，然后通过外层ul{margin-left:-980px !important; }来显示第一个 */
+            jQuery(".slider .bd li").first().before( jQuery(".slider .bd li").last() );
+            /* 控制左右按钮显示 */
+            jQuery(".slider").hover(function(){ jQuery(this).find(".arrow").stop(true,true).fadeIn(300) },function(){ jQuery(this).find(".arrow").fadeOut(300) });
+            /* 调用SuperSlide */
+            jQuery(".slider").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop",  autoPlay:true, vis:3, autoPage:true, trigger:"click"});
+            // jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:25,trigger:"click"});
+            jQuery(".picMarquee-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,scroll:4,vis:4});
+
+        </script>
+
+</body>
+
+<!--[if lt IE 9]>
+     <script type="text/javascript">
+       document.write("<div style='position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 100000; width: 100%; height: 100%; padding-top: 200px;  background-color: #fff'><P  style='font-size: 50px; text-align: center'>请使用高版本IE浏览器或者谷歌浏览器！</P></div>")
+     </script>
+   <![endif]-->
+</html>

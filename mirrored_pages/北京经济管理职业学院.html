@@ -1,0 +1,1277 @@
+﻿<!DOCTYPE html>
+<HTML lang="en">
+
+<HEAD>
+  <TITLE>北京经济管理职业学院-北京经理学院</TITLE><META Name="keywords" Content="北京经济管理职业学院-北京经理学院" />
+
+
+
+
+
+  <META charset="UTF-8">
+
+  <META content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+  <META name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <LINK rel="stylesheet" href="css/main.css">
+  <LINK rel="stylesheet" href="css/media.css">
+  <LINK rel="stylesheet" href="css/swiper.min.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script>
+    $(function () {
+      // 导航
+      $(".navbar").click(function () {
+        $('html').addClass('showNav')
+      })
+      $(".nav-cover").click(function () {
+        $('html').removeClass('showNav')
+      })
+      // h5下的导航手风琴效果
+
+      $(".main-nav li .p1").click(function () {
+        $(this).next('.dropdown').stop(false, true).slideToggle();
+        $(this).parents('li').siblings().find('.dropdown').slideUp()
+      })
+      // 控制搜索
+      $(".search-ctrl").click(function () {
+        $('html').addClass('showSearch')
+      })
+      $("body").click(function () {
+        $('html').removeClass('showSearch')
+      })
+      $('.search,.search-ctrl').click(function (e) {
+        e.stopPropagation()
+      })
+      // 首页第一行H5下的的js控制展示更多
+      $("#showMore").click(function () {
+        $('.index-row1').toggleClass('show-all')
+      })
+
+      // 底部导航的js
+      $('.f-links li p').click(function () {
+        var li = $(this).parents('li')
+        li.toggleClass('on')
+        li.siblings('li').removeClass('on')
+        li.find('.dropdown').fadeToggle(300)
+        li.siblings().find('.dropdown').fadeOut(200)
+      })
+      $('body').click(function () {
+        $('.f-links li').removeClass('on')
+        $('.f-links li .dropdown').fadeOut()
+      })
+      $('.f-links .close img').click(function () {
+        $('.f-links li').removeClass('on')
+        $('.f-links li .dropdown').fadeOut()
+      })
+      $('.f-links li').click(function (e) {
+        e.stopPropagation()
+      })
+
+      var teacherSlide = new Swiper('#teacherSlide', {
+        pagination: '.pagination',
+        loop: true,
+        grabCursor: true,
+        paginationClickable: true,
+        autoplay: 3000,
+      });
+      $('#teacherSlide .arrow-left').on('click', function (e) {
+        e.preventDefault()
+        teacherSlide.swipePrev()
+      })
+      $('#teacherSlide .arrow-right').on('click', function (e) {
+        e.preventDefault()
+        teacherSlide.swipeNext()
+      })
+      var studentSlide = new Swiper('#studentSlide', {
+        pagination: '.pagination',
+        loop: true,
+        grabCursor: true,
+        paginationClickable: true,
+        autoplay: 3000,
+      });
+      $('#studentSlide .arrow-left').on('click', function (e) {
+        e.preventDefault()
+        studentSlide.swipePrev()
+      })
+      $('#studentSlide .arrow-right').on('click', function (e) {
+        e.preventDefault()
+        studentSlide.swipeNext()
+      })
+
+      $(window).resize(function () {
+        var w = $(window).width();
+        if (w > 740) {
+          $('html').attr('class', '')
+        }
+      })
+      setSwiper()
+      function setSwiper() {
+        var w = $(window).width();
+        if (w > 740) {
+          var specialSlide = new Swiper('#specialSlide', {
+            pagination: '.pagination',
+            loop: true,
+            grabCursor: true,
+            slidesPerView: 4,
+            autoplay: 3000,
+            paginationClickable: true,
+          });
+          $('#specialSlide .arrow-left').on('click', function (e) {
+            e.preventDefault()
+            specialSlide.swipePrev()
+          })
+          $('#specialSlide .arrow-right').on('click', function (e) {
+            e.preventDefault()
+            specialSlide.swipeNext()
+          })
+          var banner = new Swiper('#banner', {
+            autoplay: 5000,
+            pagination: '.pagination',
+            loop: true,
+            paginationClickable: true,
+          });
+
+        } else {
+          var specialSlide = new Swiper('#specialSlide', {
+            pagination: '.pagination',
+            loop: true,
+            grabCursor: true,
+            slidesPerView: 2,
+            autoplay: 3000,
+            paginationClickable: true,
+          });
+          $('#specialSlide .arrow-left').on('click', function (e) {
+            e.preventDefault()
+            specialSlide.swipePrev()
+          })
+          $('#specialSlide .arrow-right').on('click', function (e) {
+            e.preventDefault()
+            specialSlide.swipeNext()
+          })
+          var banner = new Swiper('#banner', {
+            autoplay: 5000,
+
+            pagination: '.pagination',
+            loop: true,
+            paginationClickable: true,
+          });
+        }
+      }
+    })
+  </script>
+  <STYLE>
+    /*背景层*/
+    #popLayer {
+      display: none;
+      /*  background-color: #b3b3b3;  */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      -moz-opacity: 0.8;
+      opacity: .80;
+      filter: alpha(opacity=80);}
+
+    /*弹出层*/
+    #popBox {
+      display: none;
+      background-color: #FFFFFF;
+      z-index: 11;
+      width: 720px;
+      height: 400px;
+      position: fixed;
+      /*   top:0;    */
+      right: 0;
+      /*    left:0;  */
+      bottom: 0px;
+      margin: auto;
+      overflow: auto;}
+
+    #popBox .close {
+      text-align: right;
+      margin-right: 5px;
+      background-color: #F8F8F8;}
+
+    /*关闭按钮*/
+    #popBox .close a {
+      text-decoration: none;
+      color: #2D2C3B;}
+
+    #content img {
+      width: 800px;
+      heigh: 900px;}
+
+    /*
+html {
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+filter: url("data:image/svg+xml;utf8,#grayscale");
+filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+-webkit-filter: grayscale(1);}
+*/
+  </STYLE>
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230797947545256554603090003 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1007,'/index.jsp',-1,1538436345)</script>
+</HEAD>
+
+<BODY><!-- 顶部 -->
+
+
+
+
+
+
+
+  <DIV style="display:none;"><!--<input type="button" name="popBox" value="弹出框" onclick="popBox()">-->
+        <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<DIV id="popLayer"></DIV>
+<DIV id="popBox">
+<DIV class="close"><A href="javascript:void(0)" onclick="closeBox()">关闭</A> </DIV>
+<DIV class="content">
+
+</DIV></DIV>
+
+    <script>
+      /*点击弹出按钮*/
+      window.onload = function popBox() {
+        var popBox = document.getElementById("popBox");
+        var popLayer = document.getElementById("popLayer");
+        popBox.style.display = "block";
+        popLayer.style.display = "block";
+      };
+
+      /*点击关闭按钮*/
+      function closeBox() {
+        var popBox = document.getElementById("popBox");
+        var popLayer = document.getElementById("popLayer");
+        popBox.style.display = "none";
+        popLayer.style.display = "none";
+      }
+    </script>
+  </DIV>
+  <DIV class="topbar">
+    <DIV class="wrap">
+      <DIV class="search-ctrl"></DIV><!-- PC下的连接 -->
+      <DIV class="pclink" style="  overflow: hidden;">
+
+        <script language="javascript" src="/system/resource/js/openlink.js"></script><div class="link-lf">
+
+<a href="xxfw/jzg.htm" target="_blank">教职工</a>
+<a href="xxfw/xs.htm" target="_blank">学生</a>
+<a href="xxfw/xy.htm" target="_blank">校友</a>
+
+
+</div>
+        <div class="link-rl">
+
+<a href="xinxiang-sj.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1158" target="_blank">书记校长信箱</a>
+<a href="https://jwbgs.biem.edu.cn/xinxiang-list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1142" target="_blank">纪委书记信箱</a>
+<a href="https://sso.biem.edu.cn/apaas/forwardjs/#/auth/check?appId=uda_65387378e4b07c37206b62e4&amp;state=1&amp;" target="_blank">WebVPN</a>
+<a href="http://smrz.biem.edu.cn/" target="_blank">实名</a>
+<a href="http://mail.biem.edu.cn/" target="_blank">邮箱</a>
+<a href="http://sso.biem.edu.cn/apaas/forwardjs/#/auth/check?appId=uda_6433b395e4b0a9fa7e24e96a&amp;state=sasasas&amp;" target="_blank">数字校园</a>
+
+
+</div>
+      </DIV><!-- H5下的连接 -->
+      <DIV class="h5link" style="  overflow: hidden;">
+
+        <div class="link-lf">
+
+<a href="xinxiang-sj.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1158">书记信箱</a>
+<a href="xinxiang-xz.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1159">校长信箱</a>
+<a href="http://jwbgs.biem.edu.cn/">纪委书记信箱</a>
+<a href="http://sso.biem.edu.cn/apaas/forwardjs/#/auth/check?appId=uda_6433b395e4b0a9fa7e24e96a&amp;state=sasasas&amp;">数字校园</a>
+<a href="https://sso.biem.edu.cn/apaas/forwardjs/#/auth/check?appId=uda_65387378e4b07c37206b62e4&amp;state=1&amp;">WebVPN</a>
+<a href="xxfw/jzg.htm">教职工</a>
+<a href="xxfw/xs.htm">学生</a>
+<a href="xxfw/xy.htm">校友</a>
+
+
+</div>
+
+        <div class="link-lf">
+
+
+
+</div>
+
+      </DIV>
+    </DIV>
+  </DIV><!-- 顶部 end --><!-- 头部 -->
+  <DIV class="header">
+    <DIV class="wrap clearfix">
+      <DIV class="search">
+        <script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode124156').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkey124156").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkey124156").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkey124156").value = base64.encode(document.getElementById("lucenenewssearchkey124156").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode124156"));
+        return true;
+    } 
+</script>
+<form action="search.jsp?wbtreeid=1007" method="post" id="au5a" name="au5a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkey124156" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype124156" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope124156" name="searchScope" value="1">
+
+ 
+ 
+ 
+<input type="text" class="text" placeholder="输入关键字" name="showkeycode" id="showkeycode124156">
+<button class="btn"></button>
+</form><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+
+      </DIV>
+      <DIV class="logo">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="" title="北京经济管理职业学院新版"><img src="images/logo.png" alt="北京经济管理职业学院新版"></a>
+
+      </DIV>
+      <DIV class="navbar"></DIV>
+    </DIV>
+  </DIV><!-- 头部end --><!-- 导航的遮罩，在740下才有用 勿删 -->
+  <DIV class="nav-cover"></DIV><!-- 主导航 -->
+  <DIV class="main-nav">
+    <DIV class="wrap">
+       <ul class="clearfix">
+ 
+                <li>
+                    <p><a href="xxgk/xxjj.htm">学校概况</a></p>
+                    <p class="p1">学校概况</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="copy_1_images/banxia-1.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="xxgk/xxjj.htm" target="_blank">学校简介</a>
+<a href="xxgk/xxzc.htm">学校章程</a>
+<a href="xxgk/ldjs.htm">领导介绍</a>
+<a href="xxgk/msfc.htm">名师风采</a>
+<a href="xxgk/sbby.htm">身边榜样</a>
+<a href="xxgk/bxtj.htm">办学条件</a>
+<a href="xxgk/lxfs.htm">联系方式</a>
+<a href="xxgk/lsyg.htm">历史沿革</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="javascript:void(0)">院部设置</a></p>
+                    <p class="p1">院部设置</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="copy_1_images/banxia-2.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="http://glxy.biem.edu.cn/" target="_blank">临空经济管理学院</a>
+<a href="http://kjyjr.biem.edu.cn/" target="_blank">数字财金学院</a>
+<a href="http://gcjsxy.biem.edu.cn/" target="_blank">人工智能学院</a>
+<a href="http://wyx.biem.edu.cn" target="_blank">外语与学前教育学院</a>
+<a href="http://zbyyssjxy.biem.edu.cn" target="_blank">珠宝与艺术设计学院</a>
+<a href="http://jcb.biem.edu.cn/" target="_blank">基础教育学院</a>
+<a href="http://szb.biem.edu.cn/" target="_blank">马克思主义学院</a>
+<a href="https://pxxy.biem.edu.cn">培训学院</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="javascript:void(0)">招生就业</a></p>
+                    <p class="p1">招生就业</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="images/20210423092912.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="https://zsb.biem.edu.cn/" target="_blank">招生网</a>
+<a href="https://jyxxwbiem.anlaxy.com/" target="_blank">就业网</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="http://xg.biem.edu.cn/" target="_blank">学工之窗</a></p>
+                    <p class="p1">学工之窗</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="copy_1_images/banxia-3.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="http://xg.biem.edu.cn/" target="_blank">学生工作</a>
+<a href="http://tw.biem.edu.cn/" target="_blank">团委</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="jyjx/gzjy.htm" target="_blank">教育教学</a></p>
+                    <p class="p1">教育教学</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="copy_1_images/banxia-4.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="jyjx/gzjy.htm">高职教育</a>
+<a href="http://jwc.biem.edu.cn/" target="_blank">教学管理</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="http://xkyc.biem.edu.cn/" target="_blank">科研工作</a></p>
+                    <p class="p1">科研工作</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="copy_1_images/banxia-5.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="http://xkyc.biem.edu.cn/" target="_blank">科研信息</a>
+<a href="http://gzyjs.biem.edu.cn/">高职研究</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="javascript:void(0)">校企合作</a></p>
+                    <p class="p1">校企合作</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="copy_1_images/banxia-6.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="xqhz/xqhzgk.htm">校企合作概况</a>
+<a href="xqhz/hzqy.htm">合作企业</a>
+<a href="xqhz/gzdt.htm">工作动态</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="javascript:void(0)">党群工作</a></p>
+                    <p class="p1">党群工作</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="copy_1_images/banxia-7.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="http://zzb.biem.edu.cn" target="_blank">组织工作</a>
+<a href="http://xcb.biem.edu.cn/" target="_blank">宣传之窗</a>
+<a href="http://gh.biem.edu.cn">教工之家</a>
+<a href="https://jwbgs.biem.edu.cn/">纪检监察办公室</a>
+<a href="https://fulian.biem.edu.cn/">经管女性</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="https://iec.biem.edu.cn">国际交流</a></p>
+                    <p class="p1">国际交流</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="copy_1_images/banxia-8.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="http://iso.biem.edu.cn/" target="_blank">留学生汉语教学</a>
+<a href="https://iec.biem.edu.cn" target="_blank">国际交流合作</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="https://pxxy.biem.edu.cn">培训工作</a></p>
+                    <p class="p1">培训工作</p>
+                    <div class="dropdown">
+                        <div class="wrap">
+                            <div class="pic">
+                                <a href=""><img src="copy_1_images/banxia-9.jpg" alt=""></a>
+                            </div>
+                            <div class="text">
+<a href="https://pxxy.biem.edu.cn/djpx/dzbsjpx.htm">党建培训</a>
+<a href="http://bjst.biem.edu.cn">应急培训</a>
+<a href="https://pxxy.biem.edu.cn/qypx/qyzcglpx.htm">企业培训</a>
+<a href="https://pxxy.biem.edu.cn/zypx1/Xzs_.htm">职业培训</a>
+<a href="https://iso.biem.edu.cn">国际培训</a>
+<a href="http://bjst.biem.edu.cn">安全生产培训网</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p><a href="https://lib.biem.edu.cn/">图书服务</a></p>
+                    <p class="p1">图书服务</p>
+                </li>
+
+
+                <li>
+                    <p><a href="https://international.biem.edu.cn/">English</a></p>
+                    <p class="p1">English</p>
+                </li>
+
+ </ul>
+    </DIV>
+  </DIV><!-- 主导航 end --><!-- banner -->
+  <DIV class="banner">
+        <div class="swiper-container" id="banner">
+            <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                    <a href="https://jjjzjyq.biem.edu.cn/" target="_blank">
+                        <div class="pic"><img src="images/banner/zhijiaodianji1.png" alt=""></div>
+                        
+                    </a>
+                </div>
+            <div class="swiper-slide">
+                    <a href="https://jjjzjyq.biem.edu.cn/" target="_blank">
+                        <div class="pic"><img src="images/zhijiaodianji.jpg" alt=""></div>
+                        
+                    </a>
+                </div>
+            <div class="swiper-slide">
+                    <a href="https://jjjzjyq.biem.edu.cn/" target="_blank">
+                        <div class="pic"><img src="images/banner/zhijiaodianji1.png" alt=""></div>
+                        
+                    </a>
+                </div>
+            <div class="swiper-slide">
+                    <a href="https://jjjzjyq.biem.edu.cn/" target="_blank">
+                        <div class="pic"><img src="images/banner/zhijiaodianji1.png" alt=""></div>
+                        
+                    </a>
+                </div>
+            <div class="swiper-slide">
+                    <a href="https://jjjzjyq.biem.edu.cn/" target="_blank">
+                        <div class="pic"><img src="images/banner/zhijiaodianji1.png" alt=""></div>
+                        
+                    </a>
+                </div>
+            </div>
+<div class="pagination"></div>
+        </div>
+  </DIV><!-- banner end --><!-- 首页第一行 -->
+  <DIV class="index-row1">
+    <DIV class="wrap">
+      <div class="list">
+	<ul class="clearfix">
+				<li style="font-size:14px"><a href="https://www.biem.edu.cn/xxgk/xxjj.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7312)">公办全日制高等职业学院</a></li>
+		<li style="font-size:14px"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7313)">全国高等职业院校国际影响力50强院校</a></li>
+		<li style="font-size:14px"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7314)">国家级高等职业教育示范专业高校</a></li>
+		<li style="font-size:14px"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7315)">国家级职业教育专业教学资源库主持单位</a></li>
+		<li style="font-size:14px"><a href="https://gcjsxy.biem.edu.cn/info/1067/1842.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7316)">教育部现代学徒制试点高校</a></li>
+		<li style="font-size:14px"><a href="https://gcjsxy.biem.edu.cn/info/1068/1833.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7317)">教育部人工智能学院试点高校</a></li>
+		<li style="font-size:14px"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7306)">北京市特色高水平骨干专业建设高校</a></li>
+		<li style="font-size:14px"><a href="https://gcjsxy.biem.edu.cn/info/1069/1840.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7307)">北京市特色高水平工程师学院建设高校</a></li>
+		<li style="font-size:14px"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7308)">北京市特色高水平大师工作室建设高校</a></li>
+		<li style="font-size:14px"><a href="https://pxxy.biem.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7309)">北京市职工继续教育基地</a></li>
+		<li style="font-size:14px"><a href="http://bjst.biem.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7310)">北京市安全生产教育培训基地</a></li>
+		<li style="font-size:14px"><a href="http://bjst.biem.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1538436345, 7311)">北京市安全生产高端培训示范基地</a></li>
+	</ul>
+	<div class="more"><a href="javascript:;" id="showMore"></a></div>
+</div>
+    </DIV>
+  </DIV><!-- 首页第一行 end--><!-- 首页第二行 这里面列表用的公用组件 -->
+  <DIV class="index-row2">
+    <div class="wrap">
+            <div class="main-tit">
+                <a href="index/xxxw.htm" class="more" target="_blank"></a>
+                <h6>学校新闻 <span>School news</span></h6>
+            </div>
+            <div class="news-list">
+                <ul class="clearfix">
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/15634.htm" target="_blank"><img src="/__local/3/8C/6F/E6C263CA2DD02CCEC655F287A1E_FD5AB901_D68F.png" alt="国内各大媒体聚焦京津冀职业教育改革示范园区成立大会进行报道"></a></div>
+                            <div class="text">
+                                <a href="info/1047/15634.htm" target="_blank">
+                                    <h3 title="国内各大媒体聚焦京津冀职业教育改革示范园区成立大会进行报道">国内各大媒体聚焦京津冀职业教育改革示范园区成立大会进行报道</h3>
+                                    <div class="date">2024-02-28</div>
+                                    <div class="desc" style="display:none;">2024年2月21日上午，在京津冀协同发展战略实施十周年之际，京津冀职业教育改革示范园区成立大会在北京经济管理职业学院固安校区顺利召开…
+                                    </div>
+                                    
+                                    <div class="more">党委宣传部</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/15594.htm" target="_blank"><img src="/__local/7/C4/8E/DE3AB19C491BC7E752A3EA845D5_EDF93858_BD145.png" alt="深入贯彻落实习近平总书记关于京津冀协同发展的重要讲话精神，开启京津冀职业教育高质量发展新赛道，打造京津冀教育协同增长极——京津冀职业教育改革​示范园区成立大会在北京经济管理职业学院固安校区顺利召开"></a></div>
+                            <div class="text">
+                                <a href="info/1047/15594.htm" target="_blank">
+                                    <h3 title="深入贯彻落实习近平总书记关于京津冀协同发展的重要讲话精神，开启京津冀职业教育高质量发展新赛道，打造京津冀教育协同增长极——京津冀职业教育改革​示范园区成立大会在北京经济管理职业学院固安校区顺利召开">深入贯彻落实习近平总书记关于京津冀协同发展的重要讲话精神，开启京津冀职业教育高质量发展新赛道，打造京津冀教育协同增长极——京津冀职业教育改革​示范园区成立大会在北京经济管理职业学院固安校区顺利召开</h3>
+                                    <div class="date">2024-02-22</div>
+                                    <div class="desc" style="display:none;">2024年2月21日上午，在京津冀协同发展战略实施十周年之际，京津冀职业教育改革示范园区成立大会在北京经济管理职业学院固安校区顺利召开…
+                                    </div>
+                                    
+                                    <div class="more">党委宣传部</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/16176.htm" target="_blank"><img src="/__local/1/44/EF/A9C2AF060E67753E8C82C2D3CCA_0490FD3A_26D2A.jpg" alt="我校代表队在首都高等学校第15届秋季学生田径运动会上获佳绩"></a></div>
+                            <div class="text">
+                                <a href="info/1047/16176.htm" target="_blank">
+                                    <h3 title="我校代表队在首都高等学校第15届秋季学生田径运动会上获佳绩">我校代表队在首都高等学校第15届秋季学生田径运动会上获佳绩</h3>
+                                    <div class="date">2024-10-26</div>
+                                    <div class="desc" style="display:none;">10月19-20日，由北京市教育委员会指导、北京市大学生体育协会主办，中国地质大学承办，北京市大学生体育协会田径分会执行的首都高等学校…
+                                    </div>
+                                    
+                                    <div class="more">基础教育学院</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/16175.htm" target="_blank"><img src="/__local/A/D1/75/847ED5C544C66213D571EDE8B1C_D3B691A5_1ACD4.jpg" alt="学校召开三届党委第二轮巡察动员会"></a></div>
+                            <div class="text">
+                                <a href="info/1047/16175.htm" target="_blank">
+                                    <h3 title="学校召开三届党委第二轮巡察动员会">学校召开三届党委第二轮巡察动员会</h3>
+                                    <div class="date">2024-10-26</div>
+                                    <div class="desc" style="display:none;">根据学校党委巡察工作统一部署，10月25日，学校三届党委第二轮巡察动员会召开。会上，学校党委副书记、京津冀职教改革示范园区本科生院党…
+                                    </div>
+                                    
+                                    <div class="more">党政办公室、党委巡察工作办公室（合署办公）</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/16174.htm" target="_blank"><img src="/__local/9/FC/26/181CB173BAC00C5B889442B98A8_D58110E9_5811C6.jpg" alt="一周新闻回顾（10.19-10.25）"></a></div>
+                            <div class="text">
+                                <a href="info/1047/16174.htm" target="_blank">
+                                    <h3 title="一周新闻回顾（10.19-10.25）">一周新闻回顾（10.19-10.25）</h3>
+                                    <div class="date">2024-10-25</div>
+                                    <div class="desc" style="display:none;">1.赋能业绩增长企业人才培养与培训精品班在我校成功举办据10月22日马克思主义学院信息报送，10月19日至20日，由北京天骐卓越企业管理咨询…
+                                    </div>
+                                    
+                                    <div class="more">党委宣传部（新闻中心）</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/16172.htm" target="_blank"><img src="/__local/1/3D/0B/53D69296B9E38047CCDFAE6D012_DA57586C_1AF6A7.png" alt="北京市街道乡镇非遗保护管理工作人员培训顺利​开班"></a></div>
+                            <div class="text">
+                                <a href="info/1047/16172.htm" target="_blank">
+                                    <h3 title="北京市街道乡镇非遗保护管理工作人员培训顺利​开班">北京市街道乡镇非遗保护管理工作人员培训顺利​开班</h3>
+                                    <div class="date">2024-10-24</div>
+                                    <div class="desc" style="display:none;">10月21日，由北京市文化和旅游局主办、北京经济管理职业学院承办的第四期北京市街道乡镇非遗保护管理工作人员培训班顺利开班，来自门头沟…
+                                    </div>
+                                    
+                                    <div class="more">珠宝与艺术设计学院</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/16173.htm" target="_blank"><img src="/__local/7/D1/3D/B4E2570A1484CBD54A0E3ACCE4D_14166813_75CCB.jpg" alt="学校举办“倾听心声 共话未来”——庆祝学校建校45周年师生面对面活动（第二期）"></a></div>
+                            <div class="text">
+                                <a href="info/1047/16173.htm" target="_blank">
+                                    <h3 title="学校举办“倾听心声 共话未来”——庆祝学校建校45周年师生面对面活动（第二期）">学校举办“倾听心声 共话未来”——庆祝学校建校45周年师生面对面活动（第二期）</h3>
+                                    <div class="date">2024-10-24</div>
+                                    <div class="desc" style="display:none;">近日，为庆祝学校建校45周年，落实立德树人根本任务，推动“一站式”学生社区建设，离退休人员工作处（关工委）、党委学生工作部（处）联…
+                                    </div>
+                                    
+                                    <div class="more">党委学生工作部（学生处、武装部）</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/16171.htm" target="_blank"><img src="/__local/D/28/7D/29C1C95459ACB50FC5BFE0E0BFB_7DE4075B_17D5A8.png" alt="学校举行“四十五载风华颂 强国有我建新功”建校45周年文艺汇演暨迎新晚会"></a></div>
+                            <div class="text">
+                                <a href="info/1047/16171.htm" target="_blank">
+                                    <h3 title="学校举行“四十五载风华颂 强国有我建新功”建校45周年文艺汇演暨迎新晚会">学校举行“四十五载风华颂 强国有我建新功”建校45周年文艺汇演暨迎新晚会</h3>
+                                    <div class="date">2024-10-23</div>
+                                    <div class="desc" style="display:none;">10月20日晚，为庆祝中华人民共和国成立75周年、北京经济管理职业学院建校45周年、喜迎2024级新同学而创作的文艺汇演暨迎新晚会《四十五载…
+                                    </div>
+                                    
+                                    <div class="more">团委</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/16170.htm" target="_blank"><img src="/__local/4/52/FB/5F14D6543E172EB7D176F8994C6_967976FC_14D12.jpg" alt="北京经济管理职业学院隆重举行建校45周年纪念大会暨京津冀职教改革示范园区人才培养研讨会"></a></div>
+                            <div class="text">
+                                <a href="info/1047/16170.htm" target="_blank">
+                                    <h3 title="北京经济管理职业学院隆重举行建校45周年纪念大会暨京津冀职教改革示范园区人才培养研讨会">北京经济管理职业学院隆重举行建校45周年纪念大会暨京津冀职教改革示范园区人才培养研讨会</h3>
+                                    <div class="date">2024-10-23</div>
+                                    <div class="desc" style="display:none;">金秋时节硕果丰，丹桂飘香秋意浓。在举国欢庆新中国成立75周年、全国教育系统深入学习党的二十届三中全会和全国教育大会精神之际，10月20…
+                                    </div>
+                                    
+                                    <div class="more">党政办公室、党委巡察工作办公室（合署办公）</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+<li>
+                        <div class="inner">
+                            <div class="pic">
+                            <a href="info/1047/16168.htm" target="_blank"><img src="/__local/5/7E/42/8D0E23124F8D33B843F6543DBC0_32DB1980_1CEDEC.png" alt="学校党委常委、副院长周丽带队赴北京邮电大学​​​​​开展AI助力人才培养工作调研交流"></a></div>
+                            <div class="text">
+                                <a href="info/1047/16168.htm" target="_blank">
+                                    <h3 title="学校党委常委、副院长周丽带队赴北京邮电大学​​​​​开展AI助力人才培养工作调研交流">学校党委常委、副院长周丽带队赴北京邮电大学​​​​​开展AI助力人才培养工作调研交流</h3>
+                                    <div class="date">2024-10-22</div>
+                                    <div class="desc" style="display:none;">10月18日上午，学校党委常委、副院长、京津冀职教改革示范园区本科生院院长（兼）周丽带队赴北京邮电大学开展AI助力人才培养工作调研交流…
+                                    </div>
+                                    
+                                    <div class="more">教务处、实践实训管理办公室（合署办公）</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+            </div>
+            <div class="godetail"><a href="index/xxxw.htm" target="_blank">查 看 更 多 <img src="images/more1.png" alt=""></a></div>
+        </div><script>_showDynClickBatch(['dynclicks_u10_15634','dynclicks_u10_15594','dynclicks_u10_16176','dynclicks_u10_16175','dynclicks_u10_16174','dynclicks_u10_16172','dynclicks_u10_16173','dynclicks_u10_16171','dynclicks_u10_16170','dynclicks_u10_16168'],[15634,15594,16176,16175,16174,16172,16173,16171,16170,16168],"wbnews", 1538436345)</script>
+
+  </DIV><!-- 首页第二行end --><!-- 首页第三行 这个在980下会变形成2行-->
+  <DIV class="index-row3">
+    <DIV class="wrap clearfix">
+      <div class="c1">
+                <div class="main-tit">
+                    <a href="index/tzgg.htm" class="more" target="_blank"></a>
+                    <h6>通知公告 <span>Notice announcement</span></h6>
+                </div>
+                <div class="notice-list">
+                    <ul class="clearfix">
+<li>
+                            <div class="date">
+                                <p>10-21</p>
+                                <p> 2024</p>
+                            </div>
+                            <div class="text">
+                                <a href="info/1048/16164.htm" title="北京经济管理职业学院家具采购比选结果公示" target="_blank">北京经济管理职业学院家具采购比选结果公示</a>
+                            </div>
+                        </li>
+<li>
+                            <div class="date">
+                                <p>10-15</p>
+                                <p> 2024</p>
+                            </div>
+                            <div class="text">
+                                <a href="info/1048/16160.htm" title="北京经济管理职业学院家具采购比选公告" target="_blank">北京经济管理职业学院家具采购比选公告</a>
+                            </div>
+                        </li>
+<li>
+                            <div class="date">
+                                <p>09-19</p>
+                                <p> 2024</p>
+                            </div>
+                            <div class="text">
+                                <a href="info/1048/16129.htm" title="北京经济管理职业学院（北京经理学院）2025年度“优培计划”招聘应届优秀大学毕业生公告" target="_blank">北京经济管理职业学院（北京经理学院）2025年度“优培计...</a>
+                            </div>
+                        </li>
+<li>
+                            <div class="date">
+                                <p>09-12</p>
+                                <p> 2024</p>
+                            </div>
+                            <div class="text">
+                                <a href="info/1048/16103.htm" title="关于公开学院2023年决算的通知" target="_blank">关于公开学院2023年决算的通知</a>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <div class="godetail"><a href="index/tzgg.htm" target="_blank">查 看 更 多 <img src="images/more1.png" alt=""></a></div><script>_showDynClickBatch(['dynclicks_u11_16164','dynclicks_u11_16160','dynclicks_u11_16129','dynclicks_u11_16103'],[16164,16160,16129,16103],"wbnews", 1538436345)</script>
+
+      <DIV class="c2 clearfix">
+        <div class="slide">
+                    <div class="main-tit">
+                        <a href="xxgk/msfc.htm" class="more" target="_blank"></a>
+                        <h6>名师风采 </h6>
+                    </div>
+                    <div class="swiper-container" id="teacherSlide">
+                        <div class="swiper-wrapper">
+<div class="swiper-slide"><a href="info/1204/10743.htm" target="_blank"><img src="/__local/5/82/30/232C2E644E7CDB1316713F8D5CD_F3BB5695_9396.jpg" alt="于久洪">
+                                    <div class="name">于久洪</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1204/10744.htm" target="_blank"><img src="/__local/5/0C/71/E737991EE439151E44608683395_289B40D6_D4A6.jpg" alt="王若军">
+                                    <div class="name">王若军</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/10681.htm" target="_blank"><img src="/__local/5/31/A8/496FF9C5A55A47B151ED421BEFC_310EB9E0_944C.jpg" alt="牛国良">
+                                    <div class="name">牛国良</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1204/10745.htm" target="_blank"><img src="/__local/5/31/A8/496FF9C5A55A47B151ED421BEFC_310EB9E0_944C.jpg" alt="牛国良">
+                                    <div class="name">牛国良</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/10680.htm" target="_blank"><img src="/__local/5/0C/71/E737991EE439151E44608683395_289B40D6_D4A6.jpg" alt="王若军">
+                                    <div class="name">王若军</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1204/10746.htm" target="_blank"><img src="/__local/7/5F/13/048983AE3D412DBF545306C6260_86244AD3_7DE5.jpg" alt="陈晓燕">
+                                    <div class="name">陈晓燕</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/12999.htm" target="_blank"><img src="/__local/6/11/78/3AB88001AE5C62AFBFD0A5BE21C_2FAD7F6C_51D3.jpg" alt="王杨">
+                                    <div class="name">王杨</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/12998.htm" target="_blank"><img src="/__local/F/E5/95/0AF40D98EEEF869B978715E8F83_DBFE49F7_1D33D.jpg" alt="田春霖">
+                                    <div class="name">田春霖</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/12997.htm" target="_blank"><img src="/__local/2/FD/3D/109BB3F77B05DDE5EDAB9920C68_EF657D75_4E20.jpg" alt="赵慧娟">
+                                    <div class="name">赵慧娟</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/12059.htm" target="_blank"><img src="/__local/E/B3/D0/1B476B7F4175A9DBE2A784BB699_6373E0DE_64E9.jpg" alt="王月会">
+                                    <div class="name">王月会</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/12058.htm" target="_blank"><img src="/__local/9/FA/C0/430F163FE1E2290E02825603021_A88A9DAD_4B67.jpg" alt="冯学东">
+                                    <div class="name">冯学东</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/12057.htm" target="_blank"><img src="/__local/C/0F/09/06B169900CE80C4E1B2FDD9989F_7BA660F6_692A.jpg" alt="陈红军">
+                                    <div class="name">陈红军</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/12056.htm" target="_blank"><img src="/__local/A/68/EF/3A1F95F7E8FEA530DF714BAA812_F07E857A_CFFF.jpg" alt="罗祥远">
+                                    <div class="name">罗祥远</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/12047.htm" target="_blank"><img src="/__local/B/43/65/C0C8C5E26F160B050A645E73A75_5AE597AA_A26E.jpg" alt="刘文龙">
+                                    <div class="name">刘文龙</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/10679.htm" target="_blank"><img src="/__local/5/82/30/232C2E644E7CDB1316713F8D5CD_F3BB5695_9396.jpg" alt="于久洪">
+                                    <div class="name">于久洪</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/10682.htm" target="_blank"><img src="/__local/D/A1/4E/DD2B64818CD8814E78E8539215A_490F582B_C5C6.jpg" alt="付丽琴">
+                                    <div class="name">付丽琴</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/10686.htm" target="_blank"><img src="/__local/2/8A/2C/FD8FFAD20A801A72F7884731FF7_DA1B8701_6941.jpg" alt="张晓晖">
+                                    <div class="name">张晓晖</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/13460.htm" target="_blank"><img src="/__local/D/71/90/EDE67C9A1453C21DACB551C21C1_74AC3D8A_7527.jpg" alt="冀建平">
+                                    <div class="name">冀建平</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/13461.htm" target="_blank"><img src="/__local/0/6E/2C/A7067E750D9489D221A572FA0AB_0603C961_E7C.jpg" alt="周国娟">
+                                    <div class="name">周国娟</div>
+                                </a></div>
+<div class="swiper-slide"><a href="info/1203/15925.htm" target="_blank"><img src="/__local/6/2A/E2/004337FF3DEF30A5A7161C57075_CE3D8E19_B4BD0.png" alt="潘凤焕">
+                                    <div class="name">潘凤焕</div>
+                                </a></div>
+                            
+                        </div>
+                        <!-- Add Arrows -->
+                        <a class="arrow-left" href="javascript:;"></a> 
+                        <a class="arrow-right" href="javascript:;"></a>
+                    </div>
+                </div><script>_showDynClickBatch(['dynclicks_u12_10743','dynclicks_u12_10744','dynclicks_u12_10681','dynclicks_u12_10745','dynclicks_u12_10680','dynclicks_u12_10746','dynclicks_u12_12999','dynclicks_u12_12998','dynclicks_u12_12997','dynclicks_u12_12059','dynclicks_u12_12058','dynclicks_u12_12057','dynclicks_u12_12056','dynclicks_u12_12047','dynclicks_u12_10679','dynclicks_u12_10682','dynclicks_u12_10686','dynclicks_u12_13460','dynclicks_u12_13461','dynclicks_u12_15925'],[10743,10744,10681,10745,10680,10746,12999,12998,12997,12059,12058,12057,12056,12047,10679,10682,10686,13460,13461,15925],"wbnews", 1538436345)</script>
+<div class="slide">
+                    <div class="main-tit">
+                        <a href="xgzc/yxxz.htm" class="more" target="_blank"></a>
+                        <h6>优秀学子</h6>
+                    </div>
+                    <div class="swiper-container" id="studentSlide">
+                        <div class="swiper-wrapper">
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15980.htm" target="_blank"><img src="/__local/5/E8/16/E21ACD51B799E7F38B1CB6BE179_157E2CF8_65744.jpg" alt="王子璇">
+                                    <div class="name">王子璇</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15979.htm" target="_blank"><img src="/__local/6/BA/4E/35FD1C68FBFF965AB2A522A203C_C8224A57_754FC.jpg" alt="郝佳">
+                                    <div class="name">郝佳</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15978.htm" target="_blank"><img src="/__local/6/D1/AF/564636B9A764FBACA3221EEC399_4B55F214_FAFC3.jpg" alt="夏宇豪">
+                                    <div class="name">夏宇豪</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15977.htm" target="_blank"><img src="/__local/7/A4/D8/65965D97718066C1D822542A73B_6744093D_281F9E.png" alt="孙焕响">
+                                    <div class="name">孙焕响</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15976.htm" target="_blank"><img src="/__local/3/CC/FC/9DAEE67EEF80B9AC1F9A1CA9DF4_C8A077A8_15392.jpg" alt="陈硕">
+                                    <div class="name">陈硕</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15975.htm" target="_blank"><img src="/__local/8/35/05/376D01500A8D6AA1BD94372CB85_2E197838_CF0E.png" alt="张礼阳">
+                                    <div class="name">张礼阳</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15974.htm" target="_blank"><img src="/__local/E/2E/F9/6C178A45CB22D17D9DE12D2ECCA_E6A952AA_25193.jpg" alt="杨启智">
+                                    <div class="name">杨启智</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15973.htm" target="_blank"><img src="/__local/A/C8/59/E6D310D510DD3604D1E12F2A986_90625B95_187ED.jpg" alt="刘国印">
+                                    <div class="name">刘国印</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15972.htm" target="_blank"><img src="/__local/0/B0/99/4DBCD48879C6E01B6B86C55107F_63C4EA49_122F0.jpg" alt="周事成">
+                                    <div class="name">周事成</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15971.htm" target="_blank"><img src="/__local/9/45/BE/145F936685F3DB876CD10E3B6FF_D61D70C2_C135.png" alt="徐铭">
+                                    <div class="name">徐铭</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15970.htm" target="_blank"><img src="/__local/9/04/13/1BE01A91465FED423441E8B78D9_BA1D903F_D942.png" alt="彭文超">
+                                    <div class="name">彭文超</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15969.htm" target="_blank"><img src="/__local/8/E9/1B/26390EAB1EBA6F0148FFEAFAD32_AD8CEE49_254E.jpg" alt="周晓茜">
+                                    <div class="name">周晓茜</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15968.htm" target="_blank"><img src="/__local/1/1A/F3/2397785DD6468D2AA1BE3D59663_9D7E5069_9907.jpg" alt="王鑫">
+                                    <div class="name">王鑫</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15967.htm" target="_blank"><img src="/__local/4/E2/84/9954AFE94E240ACC55A13348EA6_8CE5BD78_24994.jpg" alt="李洋">
+                                    <div class="name">李洋</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15966.htm" target="_blank"><img src="/__local/F/6C/1D/BA2576EA592105798754E399773_E3CDB4CB_B758.png" alt="祁腾波">
+                                    <div class="name">祁腾波</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15965.htm" target="_blank"><img src="/__local/4/B1/06/62DB4900D66DFED39945D5B6889_35E490A4_62E7.jpg" alt="康艳辉">
+                                    <div class="name">康艳辉</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15964.htm" target="_blank"><img src="/__local/2/F0/7D/09E9619F061C471CE5AD3BB25FE_59D782BF_3317.jpg" alt="侯磊">
+                                    <div class="name">侯磊</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15963.htm" target="_blank"><img src="/__local/5/70/32/35B333576431878500F7E2B8D8D_D4C5D0D7_402C.jpg" alt="卞通">
+                                    <div class="name">卞通</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15962.htm" target="_blank"><img src="/__local/9/5A/B7/D170EC3272202F254ECAEE15535_6FB114C1_47542.jpg" alt="赵玉鑫">
+                                    <div class="name">赵玉鑫</div>
+                                </a></div>
+<div class="swiper-slide" style="background:#ccc3b8"><a href="info/1024/15961.htm" target="_blank"><img src="/__local/8/C1/BF/47990AD8F19C8AACF25ED1C55ED_E318F25B_5458B.jpg" alt="杜璐佳">
+                                    <div class="name">杜璐佳</div>
+                                </a></div>
+                            
+                        </div>
+                        <!-- Add Arrows -->
+                       <a class="arrow-left" href="javascript:;"></a> 
+                        <a class="arrow-right" href="javascript:;"></a>
+                    </div>
+                </div><script>_showDynClickBatch(['dynclicks_u13_15980','dynclicks_u13_15979','dynclicks_u13_15978','dynclicks_u13_15977','dynclicks_u13_15976','dynclicks_u13_15975','dynclicks_u13_15974','dynclicks_u13_15973','dynclicks_u13_15972','dynclicks_u13_15971','dynclicks_u13_15970','dynclicks_u13_15969','dynclicks_u13_15968','dynclicks_u13_15967','dynclicks_u13_15966','dynclicks_u13_15965','dynclicks_u13_15964','dynclicks_u13_15963','dynclicks_u13_15962','dynclicks_u13_15961'],[15980,15979,15978,15977,15976,15975,15974,15973,15972,15971,15970,15969,15968,15967,15966,15965,15964,15963,15962,15961],"wbnews", 1538436345)</script>
+
+      </DIV>
+    </DIV>
+  </DIV><!-- 首页第三行end --><!-- 首页第四行  740下改为2行2列-->
+  <DIV class="index-row4">
+    <div class="wrap">
+            <div class="main-tit">
+                <a href="index/mtjg.htm" class="more" target="_blank"></a>
+                <h6>媒体经管 <span>Media</span></h6>
+            </div>
+            <ul class="clearfix">
+<li>
+                    <a href="info/1193/15575.htm" target="_blank">
+                        <div class="pic"><img src="/__local/C/7A/8A/D806B46F8730D993F2CA9AAC55B_8FACD191_83ED.png" alt="中央广播电视总台新闻联播：京津冀联手打造跨省域产教融合共同体" style="max-height:25px"></div>
+                        <h6>中央广播电视总台新闻联播：京津冀联手打造跨省域产教融合共同体</h6>
+                        <div class="text"></div>
+                    </a>
+                </li>
+<li>
+                    <a href="https://item.btime.com/24n4adgf0psk7en4lf1djpuumk0" target="_blank">
+                        <div class="pic"><img src="/__local/5/3E/DB/126E19EE38D94504831161FBE18_A78091BD_71E37.png" alt="北京广播电视台新闻频道《北京您早》：京津冀职业教育改革示范园区迎来首批新生！" style="max-height:25px"></div>
+                        <h6>北京广播电视台新闻频道《北京您早》：京津冀职业教育改革示范园区迎来首批新生！</h6>
+                        <div class="text"></div>
+                    </a>
+                </li>
+<li>
+                    <a href="https://edu.cnr.cn/dj/20240902/t20240902_526883958.shtml" target="_blank">
+                        <div class="pic"><img src="/__local/5/D9/94/490C3B29404165657488C7ECD73_8694660B_2CCE.jpg" alt="央广网：京津冀职教改革示范园区首批新生入学" style="max-height:25px"></div>
+                        <h6>央广网：京津冀职教改革示范园区首批新生入学</h6>
+                        <div class="text"></div>
+                    </a>
+                </li>
+<li>
+                    <a href="https://m.bjnews.com.cn/detail/1725116125168100.html" target="_blank">
+                        <div class="pic"><img src="/__local/C/20/2F/FE63DAB91F5FB7188A55E550CFB_CF5EB621_178B.png" alt="新京报：京津冀职教改革示范园区迎来首批1005名新生" style="max-height:25px"></div>
+                        <h6>新京报：京津冀职教改革示范园区迎来首批1005名新生</h6>
+                        <div class="text"></div>
+                    </a>
+                </li>
+               
+            </ul>
+        </div><script>_showDynClickBatch(['dynclicks_u14_15575','dynclicks_u14_16072','dynclicks_u14_16076','dynclicks_u14_16075'],[15575,16072,16076,16075],"wbnews", 1538436345)</script>
+
+  </DIV><!-- 首页第四行 end --><!-- 首页第五行 740下变成N行两列 -->
+  <DIV class="index-row5">
+    <DIV class="wrap">
+      <DIV class="main-tit"><A class="more" href="mlxy/tup.htm"></A>
+        <H6>魅力校园 <SPAN>Charming Campus</SPAN></H6>
+      </DIV>
+      <DIV class="pic-list">
+        <UL class="clearfix">
+          <li><a href="info/1196/15571.htm" target="_blank">
+<div class="cover"><img src="images/play.png" alt=""></div>
+                            <div class="pic"><img src="/__local/8/8D/84/23B840C72F83652798F1BFEDEF3_BEEA78AA_6D711.jpg" alt="京津冀职教改革示范园区宣传片"></div>
+                            <div class="text">京津冀职教改革示范园区宣传片</div>
+                        </a></li>
+<li><a href="info/1196/15646.htm" target="_blank">
+<div class="cover"><img src="images/play.png" alt=""></div>
+                            <div class="pic"><img src="/__local/A/83/D6/54884609E303BF8055A70024455_9DF2F65A_DB26.jpg" alt="京津冀职业教育改革示范园区成立大会"></div>
+                            <div class="text">京津冀职业教育改革示范园区...</div>
+                        </a></li>
+<li><a href="https://item.btime.com/27k1nl8f5ih4dtpr2liecpgare6" target="_blank">
+<div class="cover"><img src="images/play.png" alt=""></div>
+                            <div class="pic"><img src="/__local/6/D7/6E/AF5A7DBA4134F7B0185BBC637F2_50C4D72E_90322.png" alt="京津冀探索“本科人才订单培养”新模式 首批开设13个专业"></div>
+                            <div class="text">京津冀探索“本科人才订单培...</div>
+                        </a></li>
+<li><a href="info/1196/16177.htm" target="_blank">
+<div class="cover"><img src="images/play.png" alt=""></div>
+                            <div class="pic"><img src="/__local/C/CD/FE/1F406190917F6EB9E0DE4366776_00CC7246_1275C.png" alt="学校宣传片：我们"></div>
+                            <div class="text">学校宣传片：我们</div>
+                        </a></li>
+<script>_showDynClickBatch(['dynclicks_u15_15571','dynclicks_u15_15646','dynclicks_u15_15640','dynclicks_u15_16177'],[15571,15646,15640,16177],"wbnews", 1538436345)</script>
+<li><a href="info/1195/10794.htm" target="_blank">
+                            <div class="pic"><img src="/__local/5/95/58/BF901684F7F5974F66F0B1873BB_0C97B621_102D5.jpg" alt="&quot;幸福经管我来拍&quot;摄影获奖作品"></div>
+                            <div class="text">"幸福经管我来拍"摄影获奖作品</div>
+                        </a></li>
+<li><a href="info/1195/10639.htm" target="_blank">
+                            <div class="pic"><img src="/__local/F/F9/DC/F32D0B16DBFBE975032215C6957_9EEF6132_324F9.jpg" alt="校园风光"></div>
+                            <div class="text">校园风光</div>
+                        </a></li>
+<li><a href="info/1195/10641.htm" target="_blank">
+                            <div class="pic"><img src="/__local/9/65/D3/ECF4DC39BF20493CC4534740873_13CD8FA7_1E7D8.jpeg" alt="综合设施"></div>
+                            <div class="text">综合设施</div>
+                        </a></li>
+<li><a href="info/1195/10640.htm" target="_blank">
+                            <div class="pic"><img src="/__local/9/E6/24/2E773D4D8D84D9762F814517F7D_D7AC46BB_13F99.jpg" alt="幸福学园"></div>
+                            <div class="text">幸福学园</div>
+                        </a></li>
+<script>_showDynClickBatch(['dynclicks_u16_10794','dynclicks_u16_10639','dynclicks_u16_10641','dynclicks_u16_10640'],[10794,10639,10641,10640],"wbnews", 1538436345)</script>
+
+        </UL>
+      </DIV>
+    </DIV>
+  </DIV><!-- 首页第五行 end --><!-- 首页第六行 end  这个在740下 会变成2个图片，这个是通过js修改的-->
+  <DIV class="index-row6">
+        <div class="wrap">
+            <div class="main-tit">
+
+                <h6>专题 <span>Special</span></h6>
+            </div>
+            <div class="slide">
+                <div class="swiper-container" id="specialSlide">
+                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><a href="https://scddh.biem.edu.cn/" target="_blank"><img src="images/banner/zggcddscddh.jpg" alt="" height="104"></a></div>
+                    <div class="swiper-slide"><a href="https://xsxztjy.biem.edu.cn/" target="_blank"><img src="images/23/04/17/1tlg0v4hen/xsxqdx.png" alt="" height="104"></a></div>
+                    <div class="swiper-slide"><a href="https://xqesd.biem.edu.cn/" target="_blank"><img src="images/23/04/17/1tlg0v4hen/xxesd.png" alt="" height="104"></a></div>
+                    <div class="swiper-slide"><a href="https://jncc.biem.edu.cn/" target="_blank"><img src="images/23/04/17/1tlg0v4hen/jnccqgyw.png" alt="" height="104"></a></div>
+                    <div class="swiper-slide"><a href="https://ssw.biem.edu.cn/" target="_blank"><img src="images/shisiwuzt.jpg" alt="" height="104"></a></div>
+                    <div class="swiper-slide"><a href="https://ljfl.biem.edu.cn" target="_blank"><img src="images/zt-ljfl.png" alt="" height="104"></a></div>
+                    <div class="swiper-slide"><a href="https://h.eqxiu.com/s/XbHEHHMT?share_level=2&from_user=4e139874-bec1-4edb-a123-fa6c309785d2&from_id=20190414fe619564&share_time=" target="_blank"><img src="images/qmgjaq.jpg" alt="" height="104"></a></div>
+                    <div class="swiper-slide"><a href="http://xzb.biem.edu.cn/" target="_blank"><img src="images/pic-xzztw.jpg" alt="校志专题网" height="104"></a></div>
+                    </div>
+                    <a class="arrow-left" href="javascript:;"></a> 
+                    <a class="arrow-right" href="javascript:;"></a>
+                </div>
+            </div>
+        </div>
+  </DIV><!-- 首页第六行 end --><!-- 只有在移动端才出现的 -->
+  <DIV class="h5-links">
+        <div class="wrap" style="display: none;">
+            <ul class="clearfix">
+                            <li></li>
+            </ul>
+        </div>
+  </DIV>
+  <DIV class="f-links">
+    <DIV class="wrap">
+      <UL class="clearfix">
+        <LI>
+          <DIV class="dropdown">
+            <DIV class="inner">
+              <DIV class="close"><IMG alt="" src="images/close.png"></DIV>
+              <h6>党群机构（9个）</h6>
+<div class="list">
+<a href="http://xybgs.biem.edu.cn/" target="_blank">党政办公室、党委...</a>
+<a href="http://zzb.biem.edu.cn/" target="_blank">党委组织部(党校)...</a>
+<a href="http://xcb.biem.edu.cn/" target="_blank">党委宣传部（新闻...</a>
+<a href="http://jwbgs.biem.edu.cn/" target="_blank">纪委办公室(监察专...</a>
+<a href="http://bwc.biem.edu.cn/" target="_blank">党委安全稳定工作...</a>
+<a href="http://xg.biem.edu.cn/" target="_blank">党委学生工作部(学...</a>
+<a href="https://tw.biem.edu.cn/" target="_blank">团委</a>
+<a href="http://gh.biem.edu.cn/" target="_blank">工会、妇联(合署办...</a>
+<a href="http://ltx.biem.edu.cn/" target="_blank">离退休人员工作处...</a>
+</div>
+              <h6>行政机构(11个)</h6>
+<div class="list">
+<a href="http://jwc.biem.edu.cn/" target="_blank">教务处、实践实训办…</a>
+<a href="http://xkyc.biem.edu.cn/" target="_blank">科技处、产教融合办…</a>
+<a href="http://rsc.biem.edu.cn/" target="_blank">党委教师工作部、人…</a>
+<a href="http://cwc.biem.edu.cn/" target="_blank">财务处</a>
+<a href="https://pxc.biem.edu.cn" target="_blank">培训处</a>
+<a href="http://jcsjc.biem.edu.cn" target="_blank">审计处</a>
+<a href="http://zsb.biem.edu.cn" target="_blank">招生就业处(就业创…</a>
+<a href="http://zcc.biem.edu.cn/" target="_blank">资产管理处(招标采…</a>
+<a href="https://iec.biem.edu.cn" target="_blank">国际交流与合作处（…</a>
+<a href="https://jjc.biem.edu.cn/" target="_blank">基建处</a>
+<a href="http://hqxc.biem.edu.cn/" target="_blank">后勤管理处</a>
+</div>
+               <h6>教学培训单位(8个)</h6>
+<div class="list">
+<a href="http://glxy.biem.edu.cn/" target="_blank">临空经济管理学院</a>
+<a href="http://kjyjr.biem.edu.cn/" target="_blank">数字财金学院</a>
+<a href="http://gcjsxy.biem.edu.cn/" target="_blank">人工智能学院</a>
+<a href="http://wyx.biem.edu.cn" target="_blank">外语与学前教育学院</a>
+<a href="https://zbyyssjxy.biem.edu.cn" target="_blank">珠宝艺术设计学院</a>
+<a href="http://jcb.biem.edu.cn/" target="_blank">基础教育学院</a>
+<a href="http://szb.biem.edu.cn/" target="_blank">马克思主义学院</a>
+<a href="https://pxxy.biem.edu.cn/" target="_blank">培训学院(国际教育…</a>
+</div>
+               <h6>教辅直属单位(3个)</h6>
+<div class="list">
+<a href="http://lib.biem.edu.cn/" target="_blank">图书馆</a>
+<a href="https://xwzx.biem.edu.cn" target="_blank">信息网络中心</a>
+<a href="https://gzyjs.biem.edu.cn/" target="_blank">质量评价中心</a>
+</div>
+              <div style="display:none;">
+ <h6>社会培训与国际教育机构</h6>
+<div class="list">
+<a href="https://pxxy.biem.edu.cn">社会培训</a>
+<a href="https://iso.biem.edu.cn" target="_blank">国际培训</a>
+</div>
+
+</div>
+               <div style="display:none;">
+     <h6>后勤服务机构</h6>
+    <div class="list">
+        <a href="http://hqxc.biem.edu.cn/" target="_blank">后勤服务中心</a>
+    </div>
+</div>
+            </DIV>
+          </DIV>
+          <P><IMG alt="" src="images/f-icon1.png">组织机构</P>
+        </LI>
+        <LI>
+          <DIV class="dropdown" style="display: none">
+            <DIV class="inner" style="display: none">
+              <DIV class="close"><IMG alt="" src="images/close.png"></DIV>
+              <div class="list">
+</div>
+            </DIV>
+          </DIV>
+          <P><A href="index/xxgk.htm" target="_blank" style="color: #ffffff"><IMG alt="" src="images/f-icon2.png">信息公开</P></A>
+        </LI>
+        <LI>
+          <DIV class="dropdown">
+            <DIV class="inner">
+              <DIV class="close"><IMG alt="" src="images/close.png"></DIV>
+              <div class="list">
+<a href="http://jw.beijing.gov.cn/" target="_blank">北京市教委</a>
+<a href="http://gzw.beijing.gov.cn/" target="_blank">北京市国资委</a>
+<a href="http://www.gov.cn/" target="_blank">北京市人民政府网站</a>
+<a href="http://www.beijing.gov.cn/" target="_blank">首都之窗</a>
+<a href="http://www.moe.gov.cn/" target="_blank">教育部</a>
+<a href="http://rsj.beijing.gov.cn/" target="_blank">北京人力社保局</a>
+</div>
+            </DIV>
+          </DIV>
+          <P><IMG alt="" src="images/f-icon3.png">其他链接</P>
+        </LI>
+        <LI style="display:none;">
+          <DIV class="dropdown">
+            <DIV class="inner">
+              <DIV class="close"><IMG alt="" src="images/close.png"></DIV>
+              <div class="list">
+</div>
+            </DIV>
+          </DIV>
+          <P><IMG alt="" src="images/f-icon4.png">快速通道</P>
+        </LI>
+      </UL>
+    </DIV>
+  </DIV>
+  <DIV class="footer">
+    <DIV class="wrap clearfix">
+      <div class="f-pic"><img src="images/f-pic.png" alt=""></div>
+<div class="c1">
+                <div class="f-logo">
+                    <a><img src="images/f-logo.png" alt=""></a>
+                </div>
+                <div class="links">
+<p style="padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; padding-right: 0px">
+    <a>版权所有 ©北京经济管理职业学院</a>&nbsp; |&nbsp; <a>地址：北京市朝阳区花家地街12号</a>&nbsp; |&nbsp; <a>邮编：100102</a>
+</p>
+<p style="padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; padding-right: 0px">
+    <a href="https://beian.miit.gov.cn/">京ICP备13026052</a>&nbsp; |&nbsp;<a>京公网安备11010502027446</a>
+</p>
+<p style="padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; padding-right: 0px">
+    <a>建议您使用Chrome、Firefox、Edge、IE10及以上版本和360等主流浏览器浏览本网站</a>
+</p>
+                </div>
+            </div>
+            <div class="c2"><img src="images/dun.png" alt=""></div>    <div class="c3">
+                <div class="qr">
+                    <div class="pic"><img src="images/qr.png" alt="关注学校官微"></div>
+                    <p>关注学校官微</p>
+                </div>
+                <div class="qr">
+                    <div class="pic"><img src="images/14/wx_ep.png" alt="关注招生就业"></div>
+                    <p>关注招生就业</p>
+                </div>
+            </div>
+    </DIV>
+  </DIV>
+ <DIV class="aifdtp" style="display:none;">        
+
+        
+                        <a href="http://zjyqai.biem.edu.cn" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1538436345, 1010834)" target="_blank">
+                            <img src="images/AIxzs1x.png" border="0" class="aitunr">
+                        </a>  
+           
+      
+</DIV>
+</BODY>
+
+</HTML>

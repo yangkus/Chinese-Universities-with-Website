@@ -1,0 +1,841 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>临汾职业技术学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="临汾职业技术学院">
+<META Name="keywords" Content="临汾职业技术学院" />
+
+        <link href="font/iconfont.css" rel="stylesheet" />
+        <link href="css/common.css" rel="stylesheet" />
+        <link href="css/index.css" rel="stylesheet" />
+        <link href="css/swiper.min.css" rel="stylesheet" />
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/media.css" rel="stylesheet" />
+        <!--[if lte IE 9]>
+        <script src="js/jquery_ie8.js"></script>
+        <![endif]-->
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b75465453555742000200024051 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1883790040)</script>
+</head>
+    <body class="pcbody">
+        <div class="search_wrap">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div class="bck"></div>
+<div id="divu0" class="search_box"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        <input class="i_txt" type="text" name="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <input class="submit" type="submit" name="submit_button" value="搜索" v-on:click="onSubmit()">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1883790040";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        <div class="header"> 
+            <div class="w90 flex flex-c-center">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="临汾职业技术学院"><img src="img/logo.png" /></a></div>
+                <div class="header-right">
+                    <div class="toplink flexbox flex-right flex-c-center">
+                        <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="flexbox">
+<li><a href="javascript:void(0);" class="see_on" id="toolbarSwitch">无障碍浏览</a></li>
+    <li><a href="kjdh/yzxx.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1883790040, 1005)">院长信箱</a></li>                          
+   <li><a href="kjdh/xxxx.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1883790040, 1006)">学校邮箱</a></li>                          
+</ul>
+                        <div class="search">
+
+
+
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+        <input type="text" class="searchbox" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                            <input type="submit" class="search-button" value="" name="submit_button" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1883790040";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                        <div class="search_m iconfont icon-search"></div>
+                        <div class="nav-menu" id="selectBut">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/public.js"></script>
+        <script type="text/javascript" src="js/jq.js"></script>
+        <script type="text/javascript" src="js/totop.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script type="text/javascript" src="js/swiper.animate.min.js"></script>
+        <script type="text/javascript" src="js/gooey.min.js"></script>
+                    <div class="nav"><ul class="flex" id="nav">
+                            <li class="nLi">
+                                <h3><a href="xygk/xyjj.htm" class="defultLink" target="">学院概况</a><a href="xygk/xyjj.htm" class="hoverLink" target="">学院概况</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+
+                                        <li><a href="xygk/xyjj.htm" target="">学院简介</a></li>
+
+                                        <li><a href="xygk/xrld.htm" target="">现任领导</a></li>
+
+                                        <li><a href="xygk/xydt.htm" target="">校园地图</a></li>
+
+                                        <li><a href="https://www.lfvtc.cn/vr/index.html" target="target=" _blank"">全景校园</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="nLi">
+                                <h3><a href="dzjg.htm" class="defultLink" target="">党政机构</a><a href="dzjg.htm" class="hoverLink" target="">党政机构</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+
+                                        <li><a href="dzjg/xzbm.htm" target="">行政部门</a></li>
+
+                                        <li><a href="dzjg/jxxb.htm" target="">教学系部</a></li>
+
+                                        <li><a href="dzjg/jfbm.htm" target="">教辅部门</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="nLi">
+                                <h3><a href="jyjx.htm" class="defultLink" target="">教育教学</a><a href="jyjx.htm" class="hoverLink" target="">教育教学</a></h3>
+                            </li>
+                            
+                            <li class="nLi">
+                                <h3><a href="kxyj.htm" class="defultLink" target="">科学研究</a><a href="kxyj.htm" class="hoverLink" target="">科学研究</a></h3>
+                            </li>
+                            
+                            <li class="nLi">
+                                <h3><a href="szdw.htm" class="defultLink" target="">师资队伍</a><a href="szdw.htm" class="hoverLink" target="">师资队伍</a></h3>
+                            </li>
+                            
+                            <li class="nLi">
+                                <h3><a href="" class="defultLink" target="">招生就业</a><a href="" class="hoverLink" target="">招生就业</a></h3>
+                                <div class="sub">
+                                    <ul class="sub-h">
+
+                                        <li><a href="https://www.lfvtc.cn/zsc/" target="">招生信息</a></li>
+
+                                        <li><a href="https://www.lfvtc.cn/jyzdzx/" target="">就业信息</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="nLi">
+                                <h3><a href="https://www.lfvtc.cn/fsyy/index.htm" class="defultLink" target="target=" _blank"">附属医院</a><a href="https://www.lfvtc.cn/fsyy/index.htm" class="hoverLink" target="target=" _blank"">附属医院</a></h3>
+                            </li>
+                            
+                            <li class="nLi">
+                                <h3><a href="gjhz.htm" class="defultLink" target="">国际合作</a><a href="gjhz.htm" class="hoverLink" target="">国际合作</a></h3>
+                            </li>
+                            
+                            <li class="nLi">
+                                <h3><a href="xxgk2.htm" class="defultLink" target="">信息公开</a><a href="xxgk2.htm" class="hoverLink" target="">信息公开</a></h3>
+                            </li>
+                            
+                            <li class="nLi">
+                                <h3><a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2191" class="defultLink" target="">双高文件</a><a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2191" class="hoverLink" target="">双高文件</a></h3>
+                            </li>
+                            
+</ul></div>
+                </div>
+            </div>  
+        </div>
+        <div class="navm-box">
+            <div class="header-link"><ul class="flex">
+               
+<li><a href="kjdh/yzxx.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1883790040, 1005)">院长信箱</a></li>
+                    
+<li><a href="kjdh/xxxx.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1883790040, 1006)">学校邮箱</a></li>
+                    
+</ul></div>
+            <ul class="nav-wrap"><li>
+                    <a href="xygk/xyjj.htm">学院概况</a>
+                    <div class="iconfont icon-close"></div>
+                    <dl>
+                        <dt><a href="xygk/xyjj.htm">学院简介</a></dt>
+                        <dt><a href="xygk/xrld.htm">现任领导</a></dt>
+                        <dt><a href="xygk/xydt.htm">校园地图</a></dt>
+                        <dt><a href="https://www.lfvtc.cn/vr/index.html">全景校园</a></dt>
+                        
+                    </dl>
+                </li>
+                
+<li>
+                    <a href="dzjg.htm">党政机构</a>
+                    <div class="iconfont icon-close"></div>
+                    <dl>
+                        <dt><a href="dzjg/xzbm.htm">行政部门</a></dt>
+                        <dt><a href="dzjg/jxxb.htm">教学系部</a></dt>
+                        <dt><a href="dzjg/jfbm.htm">教辅部门</a></dt>
+                        
+                    </dl>
+                </li>
+                
+<li>
+                    <a href="jyjx.htm">教育教学</a>
+                </li>
+                
+<li>
+                    <a href="kxyj.htm">科学研究</a>
+                </li>
+                
+<li>
+                    <a href="szdw.htm">师资队伍</a>
+                </li>
+                
+<li>
+                    <a href="">招生就业</a>
+                    <div class="iconfont icon-close"></div>
+                    <dl>
+                        <dt><a href="https://www.lfvtc.cn/zsc/">招生信息</a></dt>
+                        <dt><a href="https://www.lfvtc.cn/jyzdzx/">就业信息</a></dt>
+                        
+                    </dl>
+                </li>
+                
+<li>
+                    <a href="https://www.lfvtc.cn/fsyy/index.htm">附属医院</a>
+                </li>
+                
+<li>
+                    <a href="gjhz.htm">国际合作</a>
+                </li>
+                
+<li>
+                    <a href="xxgk2.htm">信息公开</a>
+                </li>
+                
+<li>
+                    <a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2191">双高文件</a>
+                </li>
+                
+</ul>
+        </div>
+        <div class="banner swiper-container">    <div class="swiper-wrapper">
+                
+                
+<div class="swiper-slide"><img src="img/banner.jpg"><div class="ani txt" swiper-animate-effect="zoomIn" swiper-animate-duration="2s"><img src="img/banner-txt.png"></div>
+</div>
+                
+<div class="swiper-slide"><a href="https://www.gjwlaqxcz.cn/page/activities/video/works/" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 77405)"><img src="images/2024wlanxcz.jpg"></a>
+</div>
+                
+<div class="swiper-slide"><a href="ztzl/ddhzt.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 75384)"><img src="images/dangdaihuibannerdatu.jpg"></a>
+</div>
+                
+<div class="swiper-slide">
+<img src="images/quanminguojiaanquanjiaoyurixuanchuanjiaoyu.png">
+</div>
+                
+<div class="swiper-slide">
+<img src="img/banner1.jpg">
+</div>
+                
+</div>
+            <div class="swiper-pagination w90"></div></div>
+        <div class="part01">
+            <div class="w90">
+                <div class="title flex flex-c-center wow fadeInUp"><h3>临职要闻</h3><a class="more" href="index/lzyw.htm">MORE　></a></div>
+                <div class="newsbox flex"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="news-txt swiper-container wow fadeInLeft">
+                        <div class="swiper-wrapper">
+                            
+<div class="swiper-slide">
+                                <h3><a href="https://mp.weixin.qq.com/s/va_9nySEd2OodERl8m922Q" class="line2" title="临汾职业技术学院2024级新生开学典礼暨军训总结大会">临汾职业技术学院2024级新生开学典礼暨军训总结大会</a></h3>
+                                <p class="line3">秋光为序，筑梦启航。10月26日下午，我院2024级新生开学典礼暨军训总结大会在文化广场隆重举行。学院党委书记段江燕、院长屈学书，武警临汾支队一大队副大队长胡晋阳，学院党委副书记赵志轩，副院长宋世清、宋林乔，办公室主任史瑞武，组织人事处处长孙建强出席大会。</p>
+                                <span><i class="iconfont icon-times"></i>2024-10-28</span>
+                            </div>
+                            
+<div class="swiper-slide">
+                                <h3><a href="info/1004/18312.htm" class="line2" title="市委第三巡察组巡察临汾职业技术学院党委入驻动员会召开">市委第三巡察组巡察临汾职业技术学院党委入驻动员会召开</a></h3>
+                                <p class="line3">根据市委巡察工作统一部署，9月27日下午，市委第三巡察组巡察临汾职业技术学院党委工作动员会在图书楼三楼会场召开。会前，市委第三巡察组组长刘奇主持召开与临汾职业技术学院党委书记段江燕和党委副书记、院长屈学书的见面沟通会。动员会上，巡察组组长刘奇作巡察工作动员讲话，党委书记段江燕作表态发言，会议由党委副书记、院长屈学书主持。市委第三巡察组副组长解普选、市纪委监委第四监督检查室刁向辉、选人用人专项检查组...</p>
+                                <span><i class="iconfont icon-times"></i>2024-09-29</span>
+                            </div>
+                            
+<div class="swiper-slide">
+                                <h3><a href="https://mp.weixin.qq.com/s/5DFlzFpcKoSQ0HT2psbLxQ" class="line2" title="我院隆重举行庆祝第40个教师节暨表彰大会">我院隆重举行庆祝第40个教师节暨表彰大会</a></h3>
+                                <p class="line3">在深入学习贯彻党的二十届三中全会精神的重要时刻，我们迎来了以“大力弘扬教育家精神，加快建设教育强国”为主题的第40个教师节。</p>
+                                <span><i class="iconfont icon-times"></i>2024-09-11</span>
+                            </div>
+                            
+<div class="swiper-slide">
+                                <h3><a href="info/1004/18012.htm" class="line2" title="中国共产党第二十届中央委员会第三次全体会议公报">中国共产党第二十届中央委员会第三次全体会议公报</a></h3>
+                                <p class="line3">中国共产党第二十届中央委员会第三次全体会议公报（2024年7月18日中国共产党第二十届中央委员会第三次全体会议通过）中国共产党第二十届中央委员会第三次全体会议，于2024年7月15日至18日在北京举行。出席这次全会的有，中央委员199人，候补中央委员165人。中央纪律检查委员会常务委员会委员和有关方面负责同志列席会议。党的二十大代表中部分基层同志和专家学者也列席了会议。全会由中央政治局主持。中央委员会总书记习近平作...</p>
+                                <span><i class="iconfont icon-times"></i>2024-08-06</span>
+                            </div>
+                            
+<div class="swiper-slide">
+                                <h3><a href="info/1004/17732.htm" class="line2" title="临汾市2024年“征兵宣传进高校暨高校兵员预征预储试点观摩活动”在我院隆重举行">临汾市2024年“征兵宣传进高校暨高校兵员预征预储试点观摩活动”在我院隆重举行</a></h3>
+                                <p class="line3">为有效激发适龄青年参军报国热情，全面提升兵员征集质效，根据“一年两征”和全面推进高校兵员预征预储工作安排，6月13日上午，临汾市2024年“征兵宣传进高校暨高校兵员预征预储试点观摩活动”在我院隆重举行。市委常委、军分区大校司令员、市征兵工作领导小组副组长闫天兵，市政府副市长李艳萍出席并讲话，学院党委书记段江燕出席并致辞。临汾军分区大校政治委员、市征兵工作领导小组副组长王廷勤，学院党委副书记、院长屈学书...</p>
+                                <span><i class="iconfont icon-times"></i>2024-06-14</span>
+                            </div>
+                            
+</div>
+                        <div class="swiper-button-prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="swiper-button-next"><i class="iconfont icon-next"></i></div>
+                    </div>
+                    <div class="news-img swiper-container wow fadeInRight">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide no-swi"><a href="https://mp.weixin.qq.com/s/va_9nySEd2OodERl8m922Q" title="临汾职业技术学院2024级新生开学典礼暨军训总结大会"><div class="image"><img src="/__local/C/9C/FC/2B807C37436217D58F0604E6557_F91561EA_15BF5.jpg"></div></a></div>
+                            <div class="swiper-slide no-swi"><a href="info/1004/18312.htm" title="市委第三巡察组巡察临汾职业技术学院党委入驻动员会召开"><div class="image"><img src="/__local/F/63/D4/DD4458DBB3981D4EC12BF54E9BB_DE68B3CF_19BED.jpg"></div></a></div>
+                            <div class="swiper-slide no-swi"><a href="https://mp.weixin.qq.com/s/5DFlzFpcKoSQ0HT2psbLxQ" title="我院隆重举行庆祝第40个教师节暨表彰大会"><div class="image"><img src="/__local/8/2E/2C/9A97497CFF8EEE276108E53FCC7_DE142748_1843C.jpg"></div></a></div>
+                            <div class="swiper-slide no-swi"><a href="info/1004/18012.htm" title="中国共产党第二十届中央委员会第三次全体会议公报"><div class="image"><img src="/__local/D/03/03/C89C32A3A8B654D80E57B151736_37F59207_93CC.jpg"></div></a></div>
+                            <div class="swiper-slide no-swi"><a href="info/1004/17732.htm" title="临汾市2024年“征兵宣传进高校暨高校兵员预征预储试点观摩活动”在我院隆重举行"><div class="image"><img src="/__local/1/88/37/693C5BDF1947716C356D23C4C3A_E8CD1F00_25E5D.jpg"></div></a></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div><script>_showDynClickBatch(['dynclicks_u8_18632','dynclicks_u8_18312','dynclicks_u8_18182','dynclicks_u8_18012','dynclicks_u8_17732'],[18632,18312,18182,18012,17732],"wbnews", 1883790040)</script>
+</div>
+                <div class="news-list wow fadeInDown"><ul class="flexbox">
+                        
+<li><a href="info/1004/17722.htm" title="山西省职业教育生物化工教指委、学生实习专咨委、教学诊改专咨委年度工作会议圆满落下帷幕" class="flexbox flex-c-center">
+                            <div class="time"><span>06-07</span><span>2024</span></div>
+                            <p class="line2">山西省职业教育生物化工教指委、学生实习专咨委、教学诊改专咨委年度工作会议圆满落下帷幕</p>
+                        </a></li>
+<li><a href="info/1004/17392.htm" title="2024年临汾市职业教育活动周暨全民终身学习活动周启动仪式在我院举办" class="flexbox flex-c-center">
+                            <div class="time"><span>05-16</span><span>2024</span></div>
+                            <p class="line2">2024年临汾市职业教育活动周暨全民终身学习活动周启动仪式在我院举办</p>
+                        </a></li>
+<li><a href="info/1004/16992.htm" title="省老促会副会长冯改朵一行莅临我院调研指导" class="flexbox flex-c-center">
+                            <div class="time"><span>04-26</span><span>2024</span></div>
+                            <p class="line2">省老促会副会长冯改朵一行莅临我院调研指导</p>
+                        </a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u9_18632','dynclicks_u9_18312','dynclicks_u9_18182','dynclicks_u9_18012','dynclicks_u9_17732','dynclicks_u9_17722','dynclicks_u9_17392','dynclicks_u9_16992'],[18632,18312,18182,18012,17732,17722,17392,16992],"wbnews", 1883790040)</script>
+</div>
+            </div>
+        </div>
+        <div class="part02">
+            <div class="w90 flex">
+                <div class="notice p2box wow fadeInLeft">
+                    <div class="title flex flex-c-center"><h3>临职公告</h3><a class="more" href="index/lzgg.htm">MORE　></a></div>
+                    <div class="notice-list"><ul class="flexbox flex-wrap">
+                            
+<li><a href="info/1007/18412.htm" title="临汾职业技术学院所属第一附属医院2024年度公开招聘拟聘人员公示">
+                                <div class="time">
+                                    <div class="line"></div>
+                                    <p>12</p>
+                                    <span>2024-10</span>
+                                </div>
+                                <p class="line2">临汾职业技术学院所属第一附属医院2024年度公开招聘拟聘人员公示</p>
+                            </a></li>
+                            
+<li><a href="info/1007/18322.htm" title="临汾职业技术学院关于2024年新专业申报的公示">
+                                <div class="time">
+                                    <div class="line"></div>
+                                    <p>29</p>
+                                    <span>2024-09</span>
+                                </div>
+                                <p class="line2">临汾职业技术学院关于2024年新专业申报的公示</p>
+                            </a></li>
+                            
+<li><a href="info/1007/18242.htm" title="关于征集山西省第十八届职业院校技能大赛三个赛项合作企业遴选结果的公示">
+                                <div class="time">
+                                    <div class="line"></div>
+                                    <p>23</p>
+                                    <span>2024-09</span>
+                                </div>
+                                <p class="line2">关于征集山西省第十八届职业院校技能大赛三个赛项合作企业遴选结果的公示</p>
+                            </a></li>
+                            
+<li><a href="info/1007/18192.htm" title="关于开展山西省第十八届职业院校技能大赛（临汾职业技术学院赛区）合作企业征集工作的公告">
+                                <div class="time">
+                                    <div class="line"></div>
+                                    <p>12</p>
+                                    <span>2024-09</span>
+                                </div>
+                                <p class="line2">关于开展山西省第十八届职业院校技能大赛（临汾职业技术学院赛区）合作企业征集工作的公告</p>
+                            </a></li>
+                            
+<li><a href="info/1007/18062.htm" title="公   示">
+                                <div class="time">
+                                    <div class="line"></div>
+                                    <p>17</p>
+                                    <span>2024-08</span>
+                                </div>
+                                <p class="line2">公   示</p>
+                            </a></li>
+                            
+<li><a href="info/1007/18052.htm" title="临汾职业技术学院2024年招聘外聘教师公告">
+                                <div class="time">
+                                    <div class="line"></div>
+                                    <p>15</p>
+                                    <span>2024-08</span>
+                                </div>
+                                <p class="line2">临汾职业技术学院2024年招聘外聘教师公告</p>
+                            </a></li>
+                            
+</ul><script>_showDynClickBatch(['dynclicks_u10_18412','dynclicks_u10_18322','dynclicks_u10_18242','dynclicks_u10_18192','dynclicks_u10_18062','dynclicks_u10_18052'],[18412,18322,18242,18192,18062,18052],"wbnews", 1883790040)</script>
+</div>
+                </div>
+                <div class="science p2box wow fadeInRight">
+                    <div class="title flex flex-c-center"><h3>教学科研</h3><a class="more" href="index/jxky.htm">MORE　></a></div>
+                    <div class="sci-list"><ul>
+                            
+<li>
+                                <span><i class="iconfont icon-time"></i>2024-10-21</span>
+                                <a href="https://mp.weixin.qq.com/s/0npZM3Nc8w4DJ8NCgIUuWQ" class="line1" title="喜报 | 我院师生在第十四届“挑战杯”山西省大学生创业计划竞赛中荣获佳绩！">喜报 | 我院师生在第十四届“挑战杯”山西省大学生创业计划竞赛中荣获佳绩！</a>
+                            </li>
+                            
+<li>
+                                <span><i class="iconfont icon-time"></i>2024-10-21</span>
+                                <a href="https://mp.weixin.qq.com/s/y580yB75-EFuUS1G55M6Ow" class="line1" title="喜讯 | 我院护理系学生获2024一带一路暨金砖国家技能发展与技术创新大赛第二届校园急救与救护技术决赛二等奖">喜讯 | 我院护理系学生获2024一带一路暨金砖国家技能发展与技术创新大赛第二届校园急救与救护技术决赛二等奖</a>
+                            </li>
+                            
+<li>
+                                <span><i class="iconfont icon-time"></i>2024-10-08</span>
+                                <a href="https://mp.weixin.qq.com/s/9nOoL-M7PYZfFow3wVClSA" class="line1" title="喜报|我院教师在2024年全省高校青年教师教学竞赛中喜获佳绩">喜报|我院教师在2024年全省高校青年教师教学竞赛中喜获佳绩</a>
+                            </li>
+                            
+<li>
+                                <span><i class="iconfont icon-time"></i>2024-06-21</span>
+                                <a href="info/1021/17792.htm" class="line1" title="喜报丨我院学生获第五届全省职业技能大赛暨第三届全国技能大赛山西选拔赛“健康和社会照护”赛项一等奖">喜报丨我院学生获第五届全省职业技能大赛暨第三届全国技能大赛山西选拔赛“健康和社会照护”赛项一等奖</a>
+                            </li>
+                            
+<li>
+                                <span><i class="iconfont icon-time"></i>2024-04-22</span>
+                                <a href="info/1021/16952.htm" class="line1" title="喜报 | 热烈祝贺我院宋威老师获批山西省大健康产业高质量发展科研专项重点课题">喜报 | 热烈祝贺我院宋威老师获批山西省大健康产业高质量发展科研专项重点课题</a>
+                            </li>
+                            
+</ul><script>_showDynClickBatch(['dynclicks_u11_18572','dynclicks_u11_18562','dynclicks_u11_18342','dynclicks_u11_17792','dynclicks_u11_16952'],[18572,18562,18342,17792,16952],"wbnews", 1883790040)</script>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="part03">
+            <div class="w90">
+                <div class="title flex flex-c-center wow fadeInUp"><h3>聚焦校园</h3><a class="more" href="index/jjxy.htm">MORE　></a></div>
+                <div class="p3box swiper-container wow zoomIn"><div class="swiper-wrapper">
+                        
+<div class="swiper-slide"><a href="https://mp.weixin.qq.com/s/_uHKUIuS7xgWluI3XOkiZw" title="我院举办2024年辅导员素质能力提升培训会">
+                            <div class="p3img"><div class="image"><img src="/__local/2/6E/1A/5879955B45DE9563ADE0EDD9E03_48B35818_19FD9.jpg"></div></div>
+                            <p class="line2">我院举办2024年辅导员素质能力提升培训会</p>
+                            <div class="p3ifo flex flex-c-center"><span>2024-10-22</span><i class="iconfont icon-right"></i></div>
+                        </a></div>
+                        
+<div class="swiper-slide"><a href="https://mp.weixin.qq.com/s/v0He5avWMCl4QHSpmgVgiQ" title="我院召开2024级新生军训动员大会">
+                            <div class="p3img"><div class="image"><img src="/__local/5/85/27/7C4C480A1902AFD14089328DBB3_9F945169_2C6EA.jpg"></div></div>
+                            <p class="line2">我院召开2024级新生军训动员大会</p>
+                            <div class="p3ifo flex flex-c-center"><span>2024-10-16</span><i class="iconfont icon-right"></i></div>
+                        </a></div>
+                        
+<div class="swiper-slide"><a href="https://mp.weixin.qq.com/s/wZjfGSBckl32O-8hipD0Ew" title="临汾市第二届科普志愿风采展示竞赛圆满闭幕">
+                            <div class="p3img"><div class="image"><img src="/__local/B/91/77/1CAC8875B8B14B504B010691331_97DE60BE_2985C.png"></div></div>
+                            <p class="line2">临汾市第二届科普志愿风采展示竞赛圆满闭幕</p>
+                            <div class="p3ifo flex flex-c-center"><span>2024-09-19</span><i class="iconfont icon-right"></i></div>
+                        </a></div>
+                        
+<div class="swiper-slide"><a href="info/1022/17772.htm" title="“与辉同镜”唱黄河 | 再次演绎《保卫黄河》">
+                            <div class="p3img"><div class="image"><img src="/__local/6/D1/31/379CE7D8B2BC0133E159B8B7B5D_9E9D2707_1BB7F.jpg"></div></div>
+                            <p class="line2">“与辉同镜”唱黄河 | 再次演绎《保卫黄河》</p>
+                            <div class="p3ifo flex flex-c-center"><span>2024-06-14</span><i class="iconfont icon-right"></i></div>
+                        </a></div>
+                        
+<div class="swiper-slide"><a href="info/1022/17432.htm" title="我院第五届大学生校园心理健康情景剧大赛暨首个“心理健康宣传教育月”系列活动圆满闭幕">
+                            <div class="p3img"><div class="image"><img src="/__local/B/59/79/A577C55C9AA8E877C12B3C9B299_FCD7AE8B_1C2B5.jpg"></div></div>
+                            <p class="line2">我院第五届大学生校园心理健康情景剧大赛暨首个“心理健康宣传教育月”系列活动圆满闭幕</p>
+                            <div class="p3ifo flex flex-c-center"><span>2024-05-22</span><i class="iconfont icon-right"></i></div>
+                        </a></div>
+                        
+<div class="swiper-slide"><a href="info/1022/17362.htm" title="我院开展首个心理健康月宣传教育活动">
+                            <div class="p3img"><div class="image"><img src="/__local/3/B8/0A/2880FEA3E3A1E93A2761100C00A_DD902A83_2957D.jpg"></div></div>
+                            <p class="line2">我院开展首个心理健康月宣传教育活动</p>
+                            <div class="p3ifo flex flex-c-center"><span>2024-05-16</span><i class="iconfont icon-right"></i></div>
+                        </a></div>
+                        
+<div class="swiper-slide"><a href="info/1022/17012.htm" title="我院隆重举办纪念五四运动105周年“青春正当时 一起向未来”文艺汇演">
+                            <div class="p3img"><div class="image"><img src="/__local/E/DC/E0/7CB6888EB0BECCF42FEE5F78FFB_8BE8BCE7_6291A.png"></div></div>
+                            <p class="line2">我院隆重举办纪念五四运动105周年“青春正当时 一起向未来”文艺汇演</p>
+                            <div class="p3ifo flex flex-c-center"><span>2024-04-29</span><i class="iconfont icon-right"></i></div>
+                        </a></div>
+                        
+</div><script>_showDynClickBatch(['dynclicks_u12_18602','dynclicks_u12_18522','dynclicks_u12_18232','dynclicks_u12_17772','dynclicks_u12_17432','dynclicks_u12_17362','dynclicks_u12_17012'],[18602,18522,18232,17772,17432,17362,17012],"wbnews", 1883790040)</script>
+</div>
+            </div>
+        </div>
+        <div class="part04">
+            <div class="w90 flex">
+                <div class="p4left">
+                    <div class="title flex flex-c-center wow fadeInUp"><h3>媒体临职</h3><a class="more" href="index/mtlz.htm">MORE　></a></div>
+                    <div class="p4box flex">
+                        <div class="mediabox"><ul>
+                                
+<li class="wow zoomIn"><a href="info/1023/17412.htm" title="《光明日报》刊发党委书记段江燕、院长屈学书联合署名文章《努力打造培育高素质技术技能人才的“摇篮”》">
+                                    <div class="image"><img src="/__local/D/BD/49/8BC71C3CAB6B650C5D07C2AF890_7B0F3228_548A.jpg"></div>
+                                    <div class="txt flexbox flex-c-center"><p class="line1">《光明日报》刊发党委书记段江燕、院长屈学书联合署名文章《...</p></div>
+                                </a></li>
+                                
+<li class="wow zoomIn"><a href="info/1023/9252.htm" title="《山西日报》报道我院团委干部张志同志学习党的二十大精神感悟">
+                                    <div class="image"><img src="/__local/6/74/F6/A6515F1323E53904B4E074B6281_151783FD_21EF.jpg"></div>
+                                    <div class="txt flexbox flex-c-center"><p class="line1">《山西日报》报道我院团委干部张志同志学习党的二十大精神感悟</p></div>
+                                </a></li>
+                                
+</ul><script>_showDynClickBatch(['dynclicks_u13_17412','dynclicks_u13_9252'],[17412,9252],"wbnews", 1883790040)</script>
+</div>
+                        <div class="media-list"><ul>
+                                
+<li class="flexbox flex-c-center wow fadeInUp" data-wow-delay="0.1s"><span>媒体临职</span><a class="line1" href="info/1023/17412.htm" title="《光明日报》刊发党委书记段江燕、院长屈学书联合署名文章《努力打造培育高素质技术技能人才的“摇篮”》">《光明日报》刊发党委书记段江燕、院长屈学书联合署名文章《努力打造培育高素质技术技能人才的“摇篮”》</a></li>
+                                
+<li class="flexbox flex-c-center wow fadeInUp" data-wow-delay="0.2s"><span>媒体临职</span><a class="line1" href="info/1023/9252.htm" title="《山西日报》报道我院团委干部张志同志学习党的二十大精神感悟">《山西日报》报道我院团委干部张志同志学习党的二十大精神感悟</a></li>
+                                
+<li class="flexbox flex-c-center wow fadeInUp" data-wow-delay="0.3s"><span>媒体临职</span><a class="line1" href="info/1023/9362.htm" title="《临汾日报》报道《临汾职业技术学院举行学习宣传贯彻党的二十大精神宣讲团成立仪式暨集体备课会》">《临汾日报》报道《临汾职业技术学院举行学习宣传贯彻党的二十大精神宣讲团成立仪式暨集体备课会》</a></li>
+                                
+<li class="flexbox flex-c-center wow fadeInUp" data-wow-delay="0.4s"><span>媒体临职</span><a class="line1" href="info/1023/9352.htm" title="微信客户端“高校辅导员联盟”报道我院学生疫情防控工作">微信客户端“高校辅导员联盟”报道我院学生疫情防控工作</a></li>
+                                
+<li class="flexbox flex-c-center wow fadeInUp" data-wow-delay="0.5s"><span>媒体临职</span><a class="line1" href="info/1023/9242.htm" title="《山西青年报》报道我院学生暑期“三下乡”活动《爱心义诊送健康 文艺汇演展风采》">《山西青年报》报道我院学生暑期“三下乡”活动《爱心义诊送健康 文艺汇演展风采》</a></li>
+                                
+<li class="flexbox flex-c-center wow fadeInUp" data-wow-delay="0.6s"><span>媒体临职</span><a class="line1" href="info/1023/9232.htm" title="《山西青年报》报道我院学生暑期“三下乡”活动《党史宣讲进乡村》">《山西青年报》报道我院学生暑期“三下乡”活动《党史宣讲进乡村》</a></li>
+                                
+<li class="flexbox flex-c-center wow fadeInUp" data-wow-delay="0.7s"><span>媒体临职</span><a class="line1" href="info/1023/9342.htm" title="微信客户端“高校辅导员联盟”《高职辅导员迎新管理“通三关获六将”工作法》">微信客户端“高校辅导员联盟”《高职辅导员迎新管理“通三关获六将”工作法》</a></li>
+                                
+</ul><script>_showDynClickBatch(['dynclicks_u14_17412','dynclicks_u14_9252','dynclicks_u14_9362','dynclicks_u14_9352','dynclicks_u14_9242','dynclicks_u14_9232','dynclicks_u14_9342'],[17412,9252,9362,9352,9242,9232,9342],"wbnews", 1883790040)</script>
+</div>
+                    </div>
+                </div>
+                <div class="p4right">
+                    <div class="title flex flex-c-center wow fadeInUp"><h3>产教融合</h3><a class="more" href="index/cjrh.htm">MORE　></a></div>
+                    <div class="rhbox"><ul>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.1s">
+                                <span>(2024-05-28)</span>
+                                <div class="txt"><a href="info/1024/17462.htm" class="flexbox flex-c-center" title="院领导带队开展访企拓岗促就业活动"><p class="line1">院领导带队开展访企拓岗促就业活动</p><i class="iconfont icon-right"></i></a></div>
+                            </li>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.2s">
+                                <span>(2024-04-11)</span>
+                                <div class="txt"><a href="info/1024/16902.htm" class="flexbox flex-c-center" title="院长屈学书带队赴临汾市尧都区正元养老院考察调研"><p class="line1">院长屈学书带队赴临汾市尧都区正元养老院考察调研</p><i class="iconfont icon-right"></i></a></div>
+                            </li>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.3s">
+                                <span>(2023-12-20)</span>
+                                <div class="txt"><a href="info/1024/16272.htm" class="flexbox flex-c-center" title="临汾职业技术学院华为信息与网络技术（ICT）学院揭牌"><p class="line1">临汾职业技术学院华为信息与网络技术（ICT）学院揭牌</p><i class="iconfont icon-right"></i></a></div>
+                            </li>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.4s">
+                                <span>(2023-12-16)</span>
+                                <div class="txt"><a href="info/1024/16282.htm" class="flexbox flex-c-center" title="我院开展数字经济人才培养访企拓岗考察活动"><p class="line1">我院开展数字经济人才培养访企拓岗考察活动</p><i class="iconfont icon-right"></i></a></div>
+                            </li>
+                            
+<li class="wow fadeInUp" data-wow-delay="0.5s">
+                                <span>(2023-07-31)</span>
+                                <div class="txt"><a href="info/1024/10622.htm" class="flexbox flex-c-center" title="院领导带队调研乡宁文旅示范区 谋划构建产教融合"><p class="line1">院领导带队调研乡宁文旅示范区 谋划构建产教融合</p><i class="iconfont icon-right"></i></a></div>
+                            </li>
+                            
+</ul><script>_showDynClickBatch(['dynclicks_u15_17462','dynclicks_u15_16902','dynclicks_u15_16272','dynclicks_u15_16282','dynclicks_u15_10622'],[17462,16902,16272,16282,10622],"wbnews", 1883790040)</script>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="part05">
+            <div class="w90">
+                <div class="p5a">
+                    <div class="title flex flex-c-center wow fadeInUp"><h3>专题专栏</h3><a class="more" href="ztzl.htm">MORE　></a></div>
+                    <div class="zt swiper-container wow fadeInUp">    <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="ztzl/ddhzt.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 75382)"><div class="zt-img"><div class="image"><img src="images/dangdaihuipiaozi1.jpg" /></div></div><p></p></a></div>                            <div class="swiper-slide"><a href="ztzl/zyjyhdz.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 75368)"><div class="zt-img"><div class="image"><img src="img/xiazai.jpg" /></div></div><p>职业教育活动周</p></a></div>                            <div class="swiper-slide"><a href="ztzl/bmxc.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 75331)"><div class="zt-img"><div class="image"><img src="images/3c3f2e95301b4bd59726f98ad6676312.jpeg" /></div></div><p>保密宣传</p></a></div>                            <div class="swiper-slide"><a href="ztzl/qllz.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 1006)"><div class="zt-img"><div class="image"><img src="img/zt4.jpg" /></div></div><p>清廉临职</p></a></div>                            <div class="swiper-slide"><a href="info/1035/9112.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 75321)"><div class="zt-img"><div class="image"><img src="img/rcpyfa.jpg" /></div></div><p>高职专业人才培养方案建设</p></a></div>                            <div class="swiper-slide"><a href="ztzl/gdzyjyzlndbg.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 75320)"><div class="zt-img"><div class="image"><img src="images/jiaoyuzhiliangnianbao.jpg" /></div></div><p>质量年度报告</p></a></div>                            <div class="swiper-slide"><a href="ztzl/zyjs.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 75184)"><div class="zt-img"><div class="image"><img src="img/zt5.jpg" /></div></div><p>专业建设</p></a></div>
+                            
+                        </div>
+                        <div class="swiper-pagination"></div></div>
+                </div>
+                <div class="p5b flex">    <ul class="flexbox f0 b1">
+                        <li class="fli"><a href="img/gy1.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 1008)" target="_blank"><img src="img/gy1.jpg"><div class="title1 wow swing"><img src="img/lzgy_title.png"></div></a></li>
+                    </ul>
+                    <div class="p5img flex flex-column">
+                        <ul class="flexbox flex b2">
+                            <li class="fsc wow bounceInLeft"><a href="img/gy2.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 1009)" target="_blank" style="background: url(img/gy2.jpg);background-size:cover;background-position:0;"></a></li>                            <li class="fsc wow bounceInLeft"><a href="img/gy3.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 1010)" target="_blank" style="background: url(img/gy3.jpg);background-size:cover;background-position:0;"></a></li>
+                            
+                        </ul>
+                        <ul class="flexbox flex b2">
+                            
+<li class="fth wow flipInY" data-wow-delay="0.4s"><a href="img/gy4.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 73207)" target="_blank" style="background: url(img/gy4.jpg);background-size:cover;background-position:0;"></a></li>
+<li class="fth wow flipInY" data-wow-delay="0.5s"><a href="img/gy5.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74717)" target="_blank" style="background: url(img/gy5.jpg);background-size:cover;background-position:0;"></a></li>
+<li class="fth wow flipInY" data-wow-delay="0.6s"><a href="img/gy6.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74718)" target="_blank" style="background: url(img/gy6.jpg);background-size:cover;background-position:0;"></a></li>
+</ul>
+                    </div></div>
+                <div class="p5c">                        <ul class="flex flex-wrap">
+                                            <li class="wow fadeInUp" data-wow-delay="0.2s"><a href="img/gy2.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 1009)"><div class="image"><img src="img/gy2.jpg"></div><div class="title1"><img src="img/lzgy_title.png"></div></a></li>
+                        <li class="wow fadeInUp" data-wow-delay="0.3s"><a href="img/gy3.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 1010)"><div class="image"><img src="img/gy3.jpg"></div></a></li>
+                        <li class="wow fadeInUp" data-wow-delay="0.4s"><a href="img/gy4.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 73207)"><div class="image"><img src="img/gy4.jpg"></div></a></li>
+                        <li class="wow fadeInUp" data-wow-delay="0.5s"><a href="img/gy5.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74717)"><div class="image"><img src="img/gy5.jpg"></div></a></li>
+                        <li class="wow fadeInUp" data-wow-delay="0.6s"><a href="img/gy6.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74718)"><div class="image"><img src="img/gy6.jpg"></div></a></li>
+                    </ul>
+                
+
+</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="w90">
+                <div class="flink"><ul class="flexbox flex-wrap">
+                        
+<li><a href="http://www.moe.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1883790040, 1007)">中华人民共和国教育部</a></li>
+                        
+<li><a href="http://jyt.shanxi.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1883790040, 1008)">山西省教育厅</a></li>
+                        
+<li><a href="http://www.sxkszx.cn/index.html" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1883790040, 1009)">山西省招生考试网</a></li>
+                        
+<li><a href="http://www.linfen.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1883790040, 1010)">临汾市人民政府</a></li>
+                        
+</ul></div>
+                <div class="copyright flex flex-c-center">
+                    <div class="cleft"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>电话：0357-3087899　3087088&nbsp;&nbsp;&nbsp; 3087500（招生）</p><p>地址：山西省临汾市城东埝下　邮编：041000</p><p>版权所有 © 临汾职业技术学院　<a href="https://beian.miit.gov.cn/" target="_blank">晋ICP备09004811号</a>　<a class="police" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14100202000189" target="_blank">晋公安备14100202000189号</a></p></div>
+                    <div class="cright">    <ul class="flexbox">
+                            
+<li class="flexbox flex-c-center">
+                                <p>学院微信</p>
+                                <img src="img/ewm.jpg">
+                            </li>
+                            
+</ul></div>
+                </div>
+            </div>
+        </div>
+        <div class="link link1">    <ul>
+                
+<li><a href="xzzq.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74720)" target="_blank">
+                    <div class="iconbox"><img src="img/link/xzzq.png" /></div>
+                    <p>下载专区</p>
+                </a></li>
+                
+<li><a href="cgzb.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74721)" target="_blank">
+                    <div class="iconbox"><img src="img/link/cgzb.png" /></div>
+                    <p>采购招标</p>
+                </a></li>
+                
+<li><a href="http://59.48.128.15:1786/login.jsp" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74722)" target="_blank">
+                    <div class="iconbox"><img src="img/link/xxgk.png" /></div>
+                    <p>临职OA</p>
+                </a></li>
+                
+<li><a href="https://www.lfvtc.cn/vr/index.html" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74723)" target="_blank">
+                    <div class="iconbox"><img src="img/link/zdsys.png" /></div>
+                    <p>重点实验室</p>
+                </a></li>
+                
+<li><a href="xygk/xydt.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74724)" target="_blank">
+                    <div class="iconbox"><img src="img/link/xydt.png" /></div>
+                    <p>校园地图</p>
+                </a></li>
+                
+<li><a href="https://lfzyjx.mh.chaoxing.com/" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74725)" target="_blank">
+                    <div class="iconbox"><img src="img/link/bgxt.png" /></div>
+                    <p>教学一体化</p>
+                </a></li>
+                
+<li><a href="http://10.2.36.21:8188/pthome" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74726)" target="_blank">
+                    <div class="iconbox"><img src="img/link/tsg.png" /></div>
+                    <p>财务管理</p>
+                </a></li>
+                
+<li class="to-top">
+                    <div class="iconbox"><i class="iconfont icon-icon7"></i></div>
+                </li>
+            </ul>
+            <div class="inout iconfont icon-in hidebtn"></div></div>
+        <div class="link link2">
+            <ul>
+                <li class="txt">快捷导航</li>
+                <li class="to-top">
+                    <div class="iconbox"><i class="iconfont icon-icon7"></i></div>
+                </li>
+            </ul>
+            <div class="inout iconfont icon-in hidess"></div>
+        </div>
+        <div class="link_m">    <nav id="gooey-v">
+                <input type="checkbox" class="menu-open" name="menu-open4" id="menu-open4">
+                <label class="open-button" for="menu-open4">
+                <span class="burger burger-1"></span>
+                <span class="burger burger-2"></span>
+                <span class="burger burger-3"></span>
+                </label>
+                
+<a href="xzzq.htm" class="gooey-menu-item" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74720)"><i class="fa ">下载专区</i></a>
+                
+<a href="cgzb.htm" class="gooey-menu-item" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74721)"><i class="fa ">采购招标</i></a>
+                
+<a href="http://59.48.128.15:1786/login.jsp" class="gooey-menu-item" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74722)"><i class="fa ">临职OA</i></a>
+                
+<a href="https://www.lfvtc.cn/vr/index.html" class="gooey-menu-item" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74723)"><i class="fa sys">重点实验室</i></a>
+                
+<a href="xygk/xydt.htm" class="gooey-menu-item" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74724)"><i class="fa ">校园地图</i></a>
+                
+<a href="https://lfzyjx.mh.chaoxing.com/" class="gooey-menu-item" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74725)"><i class="fa ">教学一体化</i></a>
+                
+<a href="http://10.2.36.21:8188/pthome" class="gooey-menu-item" onclick="_addDynClicks(&#34;wbimage&#34;, 1883790040, 74726)"><i class="fa ">财务管理</i></a>
+                
+</nav></div>
+        <script src="https://auth.mangren.com/boots/lfvtc.cn/esdToolsInit.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="js/wow.min2.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        
+        <div>   
+</SCRIPT></div>
+        
+        
+    </body>
+</html>

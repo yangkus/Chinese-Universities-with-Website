@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>宣化科技职业学院</title>
+<link href="/skin/sites/common/css/bootstrap.min.css" type="text/css"  rel="stylesheet" >
+<link href="/skin/sites/common/css/global.css" type="text/css"  rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="/skin/school707/cms/../core/header/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/school707/cms/../core/header/header.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/label.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/theme/theme.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/slick.css">
+<!--[if lt IE 9]>
+<script src="/html5shiv.min.js"></script>
+<script src="/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/guowei.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/breakpoints.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/js/jquery.iosslider.js"></script>
+<script type="text/javascript" src="/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/js/lang/core/zh-cn.js"></script>
+<script type="text/javascript" src="/js/lang/cms/zh-cn.js"></script>
+<script type="text/javascript">
+P8CONFIG.RESOURCE = '';
+var SYSTEM = 'cms',
+MODULE = '',
+ACTION = 'main',
+LABEL_URL = '/index.php/cms-main?',
+$this_router = P8CONFIG.URI[SYSTEM][MODULE].U_controller,
+$this_url = $this_router +'-'+ ACTION,
+SKIN = '/skin/school707/cms/',
+TEMPLATE = 'school707';
+mobile_status= '0',
+mobile_auto_jump='0',
+mobile_url = '/m';
+if(mobile_status=='1' && SYSTEM!='sites'){
+if(browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+if(mobile_auto_jump=='1' && mobile_url!=P8CONFIG.RESOURCE){
+var this_url = location.href,_pul=P8CONFIG.RESOURCE;
+if(this_url.indexOf(mobile_url)==-1 && this_url.indexOf('s.php')==-1 && this_url.indexOf('u.php')==-1 && this_url.indexOf('admin.php')==-1 && SYSTEM!='sites'){
+if(this_url.indexOf(P8CONFIG.RESOURCE+'/html')!=-1)_pul+='/html';
+if(P8CONFIG.RESOURCE==''){
+this_url = mobile_url.indexOf('http')==-1 ? this_url.mobile_url : mobile_url;
+}else{
+this_url = this_url.replace(_pul, mobile_url);
+}
+location.href = this_url;
+}
+}
+}
+}
+
+</script>
+</head>
+<body>
+<div class="headbar">
+<div class="top hidden-xs">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="topbox pull-left clearfix">
+
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="topbox pull-right clearfix">
+<ul class="topnav">
+<li><a href="https://manager.xhkjzyxy.edu.cn:1443/dl.html" target="_blank">站群系统统一入口</a></li>
+<li><a href="http://www.xhkjzyxy.edu.cn/html/1014/" target="_blank">缴费入口</a></li>
+<li><a href="https://xhkjzyxy.edu.cn:18088/cas/login?" target="_blank">智慧校园</a></li>
+<li><a href="http://www.xhkjzyxy.edu.cn/search" target="_blank" class="search">搜索</a></li>
+<li><a href="http://www.xhkjzyxy.edu.cn/" target="_blank" class="homepage">学校主页</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navbar main-nav">
+<div class="header">
+<div class="container">
+<div class="header-main">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/" class="navbar-brand navbar-logo"><img src="/attachment/core/2023_03/14_11/dff999be658fae30.png"/></a>
+</div>
+<div class="motto"><img width="353" height="35" border="none" alt="" src="/attachment/core/label/2021_05/20_19/7957dc6e50b9dafa.png" /></div>
+</div>
+</div>
+</div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+<div class="container">
+<ul class="nav navbar-nav navlist">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="https://www.xhkjzyxy.edu.cn"  aria-expanded="false" role="button" target="">首  页</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/895/"  aria-expanded="false" role="button" target="">学院概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/895/" target="">学院简介</a></li>
+<li class="menu2"><a href="/html/937/" target="">学院领导</a></li>
+<li class="menu3"><a href="/html/942/" target="">机构设置</a></li>
+<li class="menu4"><a href="/html/943/" target="">历史沿革</a></li>
+<li class="menu5"><a href="/html/944/" target="">校园文化</a></li>
+<li class="menu6"><a href="/html/967/" target="">办学业绩</a></li>
+<li class="menu7"><a href="/html/977/" target="">校园风光</a></li>
+<li class="menu8"><a href="/html/968/" target="">媒体报道</a></li>
+<li class="menu9"><a href="/html/898/" target="">联系我们</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">教学机构</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://xqjyxy.xhkjzyxy.edu.cn" target="">学前教育学院</a></li>
+<li class="menu2"><a href="https://hkgtxy.xhkjzyxy.edu.cn" target="">航空铁道学院</a></li>
+<li class="menu3"><a href="https://xnyxy.xhkjzyxy.edu.cn" target="">新能源学院</a></li>
+<li class="menu4"><a href="https://whcmxy.xhkjzyxy.edu.cn" target="">文化传媒学院</a></li>
+<li class="menu5"><a href="https://glgcx.xhkjzyxy.edu.cn" target="">管理工程系</a></li>
+<li class="menu6"><a href="https://xxgc.xhkjzyxy.edu.cn" target="">信息工程系</a></li>
+<li class="menu7"><a href="https://tiyu.xhkjzyxy.edu.cn" target="">体育教学部</a></li>
+<li class="menu8"><a href="https://mkszyxy.xhkjzyxy.edu.cn" target="">马克思主义学院</a></li>
+<li class="menu9"><a href="https://www.xhkjzyxy.edu.cn/tsg/" target="">图书馆</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/953/"  aria-expanded="false" role="button" target="">党建园地</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/953/" target="">支部动态</a></li>
+<li class="menu2"><a href="/html/954/" target="">纪检监察</a></li>
+<li class="menu3"><a href="/html/974/" target="">理论学习</a></li>
+<li class="menu4"><a href="/html/975/" target="">管理制度</a></li>
+<li class="menu5"><a href="/html/976/" target="">身边榜样</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="/html/947/"  aria-expanded="false" role="button" target="">招生就业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://zsw.xhkjzyxy.edu.cn" target="">招生网</a></li>
+<li class="menu2"><a href="https://jyzdzx.xhkjzyxy.edu.cn" target="">就业创业网</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on6" data-toggle="dropdown" data-hover="dropdown" href="/html/958/"  aria-expanded="false" role="button" target="">教师发展</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/958/" target="">通知公告</a></li>
+<li class="menu2"><a href="/html/969/" target="">教学动态</a></li>
+<li class="menu3"><a href="/html/959/" target="">教学科研</a></li>
+<li class="menu4"><a href="/html/1032/" target="">教学成果</a></li>
+<li class="menu5"><a href="/html/961/" target="">教师培训</a></li>
+<li class="menu6"><a href="/html/962/" target="">职称评审</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="/html/997/"  aria-expanded="false" role="button" target="">专业建设</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/997/" target="">学前教育学院</a></li>
+<li class="menu2"><a href="/html/1019/" target="">航空铁道学院</a></li>
+<li class="menu3"><a href="/html/1027/" target="">新能源学院</a></li>
+<li class="menu4"><a href="/html/1003/" target="">文化传媒学院</a></li>
+<li class="menu5"><a href="/html/1005/" target="">管理工程系</a></li>
+<li class="menu6"><a href="/html/1028/" target="">信息工程系</a></li>
+<li class="menu7"><a href="/html/1009/" target="">马克思主义学院</a></li>
+<li class="menu8"><a href="/html/1010/" target="">体育教学部</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on8" data-toggle="dropdown" data-hover="dropdown" href="/html/980/"  aria-expanded="false" role="button" target="">学生服务</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/980/" target="">通知公告</a></li>
+<li class="menu2"><a href="/html/981/" target="">学生活动</a></li>
+<li class="menu3"><a href="/html/982/" target="">奖勤助贷</a></li>
+<li class="menu4"><a href="/html/983/" target="">评优评先</a></li>
+<li class="menu5"><a href="/html/984/" target="">国防教育</a></li>
+<li class="menu6"><a href="/html/987/" target="">安全教育</a></li>
+<li class="menu7"><a href="/html/988/" target="">健康指导</a></li>
+<li class="menu8"><a href="/html/986/" target="">学生信箱</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on9" data-toggle="dropdown" data-hover="dropdown" href="/html/951/"  aria-expanded="false" role="button" target="">产教融合</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/1037/" target="">实训基地介绍</a></li>
+<li class="menu2"><a href="/html/964/" target="">合作企业</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on10" data-toggle="dropdown" data-hover="dropdown" href="/html/978/"  aria-expanded="false" role="button" target="">国际交流</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/978/" target="">交流动态</a></li>
+<li class="menu2"><a href="/html/979/" target="">合作院校</a></li>
+</ul>		
+</li>
+</ul>
+<div class="top visible-xs-block">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-sm-7 col-xs-12">
+<div class="topnav clearfix">
+
+</div>
+</div>
+<div class="col-md-4 col-sm-5 col-xs-12">
+<div class="topnav clearfix">
+<ul class="topnav">
+<li><a href="https://manager.xhkjzyxy.edu.cn:1443/dl.html" target="_blank">站群系统统一入口</a></li>
+<li><a href="http://www.xhkjzyxy.edu.cn/html/1014/" target="_blank">缴费入口</a></li>
+<li><a href="https://xhkjzyxy.edu.cn:18088/cas/login?" target="_blank">智慧校园</a></li>
+<li><a href="http://www.xhkjzyxy.edu.cn/search" target="_blank" class="search">搜索</a></li>
+<li><a href="http://www.xhkjzyxy.edu.cn/" target="_blank" class="homepage">学校主页</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixednav hidden-xs">
+<div class="container">
+<div class="navbox clearfix">
+<ul id="menu_nav">
+<li class="" _t_nav="tabs1">
+<a href="https://www.xhkjzyxy.edu.cn" class="on1">首  页</a>
+</li>
+<li class="" _t_nav="tabs2">
+<a href="/html/895/" class="on2">学院概况</a>
+</li>
+<li class="" _t_nav="tabs3">
+<a href="/html/820/" class="on3">教学机构</a>
+</li>
+<li class="" _t_nav="tabs4">
+<a href="/html/953/" class="on4">党建园地</a>
+</li>
+<li class="" _t_nav="tabs5">
+<a href="/html/947/" class="on5">招生就业</a>
+</li>
+<li class="" _t_nav="tabs6">
+<a href="/html/958/" class="on6">教师发展</a>
+</li>
+<li class="" _t_nav="tabs7">
+<a href="/html/997/" class="on7">专业建设</a>
+</li>
+<li class="" _t_nav="tabs8">
+<a href="/html/980/" class="on8">学生服务</a>
+</li>
+<li class="" _t_nav="tabs9">
+<a href="/html/951/" class="on9">产教融合</a>
+</li>
+<li class="" _t_nav="tabs10">
+<a href="/html/978/" class="on10">国际交流</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var USERNAME = get_username();
+$(document).ready(function(){
+//**show_edit**//
+init_labelshows('header_t');
+})
+$(window).scroll(function(){
+var scrollTop = $(window).scrollTop();
+if(scrollTop > 140){
+$('.fixednav').css({display:'block'}).stop().animate({'opacity':'1',top:0},100);
+}else{
+$('.fixednav').css({display:'none'}).stop().animate({'opacity':'0',top:"-50px"},100);
+}
+});
+</script>
+<div class="content">
+<link rel="stylesheet" type="text/css" href="/skin/school707/cms/index/index.css" />
+<div class="slidebanner">
+<style type="text/css">
+.sliderbox29451{position: relative;height: 100%;overflow: hidden;}
+.sliderbox29451 .slick-slide .image img{width: 100%;display:inline-block;}
+.sliderbox29451 .number{position: absolute;bottom:5%;left:50%;display: table;padding: 0 20px;width: auto;text-align: center;transform: translateX(-50%);-webkit-transform: translateX(-50%);}
+.sliderbox29451 .number li{width: 10px;height: 10px;margin: 5px 7px;font-size:0;background: #d6d6d6;display:inline-block;-webkit-backface-visibility: visible;-webkit-transition: opacity 200ms ease;-moz-transition: opacity 200ms ease;-ms-transition: opacity 200ms ease;-o-transition: opacity 200ms ease;transition: opacity 200ms ease;-webkit-border-radius: 30px;-moz-border-radius: 30px;border-radius: 30px;}
+.sliderbox29451 .number li.slick-active{background: #165aa1;}
+.sliderbox29451 .slick-arrow{width:46px;height:80px;margin:0 16px;font-size:0;position:absolute;top:40%;z-index:100;background: rgba(0,0,0,.2);outline:none;border:none;}
+.sliderbox29451 .slick-prev{left:0;background-image: url(/skin/label/left.png);background-repeat: no-repeat;background-position: center center;}
+.sliderbox29451 .slick-next{right:0;background-image: url(/skin/label/right.png);background-repeat: no-repeat;background-position: center center;}
+@media (max-width: 767px){
+.sliderbox29451 .slick-arrow{display:none !important;}
+}
+</style>
+<div class="sliderbox29451">
+<div class="slider screen">
+<div>
+<div class="image">
+<a class="item" href="" target="_blank" title=""><img src="/attachment/core/label/2021_05/21_11/723f4894c0c00c84.jpg" alt="" ></a>
+</div>
+</div>
+<div>
+<div class="image">
+<a class="item" href="" target="_blank" title=""><img src="/attachment/core/label/2021_05/21_11/052a529922509dd2.jpg" alt="" ></a>
+</div>
+</div>
+<div>
+<div class="image">
+<a class="item" href="" target="_blank" title=""><img src="/attachment/core/label/2021_05/21_11/3ad94da8b19772bb.jpg" alt="" ></a>
+</div>
+</div>
+<div>
+<div class="image">
+<a class="item" href="" target="_blank" title=""><img src="/attachment/core/label/2021_05/21_11/1f6260edcdb1eae8.jpg" alt="" ></a>
+</div>
+</div>
+<div>
+<div class="image">
+<a class="item" href="" target="_blank" title=""><img src="/attachment/core/label/2021_05/21_11/e7c0b6dedffee616.jpg" alt="" ></a>
+</div>
+</div>
+</div>
+<div class="number"></div>
+</div>
+<script type="text/javascript">
+$(".sliderbox29451 .screen").slick({
+autoplay:true,
+autoplaySpeed:6000,
+pauseOnDotsHover:true,
+pauseOnFocus:false,
+speed:600,
+dots:true,
+appendDots:".sliderbox29451 .number",
+pauseOnHover:false,
+customPaging: function(slider, i) {  
+return i + 1;
+},
+});
+</script></div>
+<div class="section">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-sm-8 col-xs-12">
+<div class="box">
+<div class="hd">
+<div class="tit tit1">学院新闻</div>
+<span class="more"> 
+<span class="more-1"><a href="/html/903/" target="_blank">更多>></a></span></span>
+</div>
+<div class="row">
+
+<ul class="label_adap_pic_com_ul5">
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="media">
+<a href="/html/903/2024-09-05/content-4031.shtml" target="_blank" title="热血青春，共筑国防——市政府征兵办公室调研我院国防教育工作"><img width="250" height="140" alt="热血青春，共筑国防——市政府征兵办公室调研我院国防教育工作" onError="this.src='/images/nopic.jpg'" src="https://xhkjzyxy.edu.cn/attachment/cms/item/2024_09/09_11/e99cc0d1345b1108.png.cthumb.jpg" /></a>
+<div class="media-body">
+<h3 class="label_title"><a href="/html/903/2024-09-05/content-4031.shtml" target="_blank" title="热血青春，共筑国防——市政府征兵办公室调研我院国防教育工作">热血青春，共筑国防——市政府征兵办公室调研我院国防教育工作</a></h3>
+<p class="label_summary">2024 年 9 月 3 日上午，市委常委、军分区王锡杰政委、动员处处<span class="cDBlue"><a href="/html/903/2024-09-05/content-4031.shtml" target="_blank">[详细]</a></span></p>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="media">
+<a href="/html/903/2024-09-04/content-4030.shtml" target="_blank" title="宣化科技职业学院举行2024年学生军训开训动员大会"><img width="250" height="140" alt="宣化科技职业学院举行2024年学生军训开训动员大会" onError="this.src='/images/nopic.jpg'" src="https://xhkjzyxy.edu.cn/attachment/cms/item/2024_09/09_11/b0df7875609c4962.png.cthumb.jpg" /></a>
+<div class="media-body">
+<h3 class="label_title"><a href="/html/903/2024-09-04/content-4030.shtml" target="_blank" title="宣化科技职业学院举行2024年学生军训开训动员大会">宣化科技职业学院举行2024年学生军训开训动员大会</a></h3>
+<p class="label_summary">为了提高学生政治觉悟，激发爱国情怀，增强国防观念，培养良好的<span class="cDBlue"><a href="/html/903/2024-09-04/content-4030.shtml" target="_blank">[详细]</a></span></p>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="media">
+<a href="/html/903/2024-08-21/content-4029.shtml" target="_blank" title="我院领导参加“2024年高校人工智能大模型应用示范创新论坛暨墨客大会”"><img width="250" height="140" alt="我院领导参加“2024年高校人工智能大模型应用示范创新论坛暨墨客大会”" onError="this.src='/images/nopic.jpg'" src="https://mmbiz.qpic.cn/sz_mmbiz_png/hncu0hXxP0lQibHYOztguNibqxTlia8icS6bJT1Gqpm6ic2bN5jt1TmApPg7IgAYBKXkxANWiaVllPMR7SIZ7bnY7TXA/640?wx_fmt=png&amp;from=appmsg&amp;wxfrom=13" /></a>
+<div class="media-body">
+<h3 class="label_title"><a href="/html/903/2024-08-21/content-4029.shtml" target="_blank" title="我院领导参加“2024年高校人工智能大模型应用示范创新论坛暨墨客大会”">我院领导参加“2024年高校人工智能大模型应用示范创新论坛暨墨客</a></h3>
+<p class="label_summary">全球教育领域已经处于智能化转型的关键时期。2024年8月14-15日，<span class="cDBlue"><a href="/html/903/2024-08-21/content-4029.shtml" target="_blank">[详细]</a></span></p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="box">
+<div class="hd">
+<div class="tit tit2">通知公告</div>
+<span class="more">
+<span class="more-1"><a href="/html/840/" target="_blank">更多>></a></span></span>
+</div>
+<div class="bd">
+<style type="text/css">
+.list_adap_date10 li{margin-top:7px;padding-bottom:7px;}
+.list_adap_date10 .item, .list_adap_date10 .item-body {overflow: hidden;zoom: 1;}
+.list_adap_date10 .item>.pull-left{margin-right: 10px;}
+.list_adap_date10 .time{width:60px;height:60px;background:url(/skin/label/date_bg2.png) no-repeat;text-align:center;}
+.list_adap_date10 .time span{display:block;text-align:center;font-size:14px;padding:4px 0;}
+.list_adap_date10 .time .date{color:#ffffff;font-size: 18px;}
+.list_adap_date10 .time .year{color: #333333;font-size: 14px;}
+.list_adap_date10 .label_title{font-size:14px;font-weight:normal;margin:0;line-height:25px;}
+.list_adap_date10 .label_title a{display:block;color:#165aa1;text-decoration:none;}
+.list_adap_date10 .label_title a:hover{color:#9c231b;}
+.list_adap_date10 .label_summary{color: #646464;margin:0;}
+.list_adap_date10 .label_summary a{color:#646464;font-size:12px;text-decoration:none;}
+</style>
+<ul class="list_adap_date10">
+<li>
+<div class="item">
+<div class="pull-left time">
+<span class="date">07-10</span>
+<span class="year">2024</span>
+</div>
+<div class="item-body">
+<h4 class="label_title"><a href="/html/840/2024-07-10/content-3981.html" title="宣化科技职业学院2024年学生缴费流程" target="_blank">宣化科技职业学院2024年学生缴费流程</a></h4>
+<p class="label_summary"><a href="/html/840/2024-07-10/content-3981.html">宣化科技职业学院2024年学生缴费流程一、学</a></p>
+</div>
+</div>
+</li>
+<li>
+<div class="item">
+<div class="pull-left time">
+<span class="date">10-24</span>
+<span class="year">2024</span>
+</div>
+<div class="item-body">
+<h4 class="label_title"><a href="/html/840/2024-10-24/content-4093.html" title="宣化科技职业学院邮寄毕业证项目（三次）竞争性磋商公告" target="_blank">宣化科技职业学院邮寄毕业证项目（三次）竞争性磋商</a></h4>
+<p class="label_summary"><a href="/html/840/2024-10-24/content-4093.html">竞争性磋商公告项目概况宣化科技职业学院邮</a></p>
+</div>
+</div>
+</li>
+<li>
+<div class="item">
+<div class="pull-left time">
+<span class="date">10-24</span>
+<span class="year">2024</span>
+</div>
+<div class="item-body">
+<h4 class="label_title"><a href="/html/840/2024-10-24/content-4092.html" title="宣化科技职业学院东校区绿化卫生托管项目竞争性磋商公告" target="_blank">宣化科技职业学院东校区绿化卫生托管项目竞争性磋商</a></h4>
+<p class="label_summary"><a href="/html/840/2024-10-24/content-4092.html">竞争性磋商公告项目概况宣化科技职业学院东</a></p>
+</div>
+</div>
+</li>
+<li>
+<div class="item">
+<div class="pull-left time">
+<span class="date">10-22</span>
+<span class="year">2024</span>
+</div>
+<div class="item-body">
+<h4 class="label_title"><a href="/html/840/2024-10-22/content-4089.html" title="宣化科技职业学院新能源协同创新中心设备采购项目招标公告" target="_blank">宣化科技职业学院新能源协同创新中心设备采购项目招</a></h4>
+<p class="label_summary"><a href="/html/840/2024-10-22/content-4089.html">项目概况 宣化科技职业学院新能源协同创新</a></p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="box scroll-top1">
+<div class="hd">
+<div class="tit tit3">招生信息</div>
+<span class="more"> 
+<span class="more-1"><a href="/html/955/" target="_blank">更多>></a></span></span>
+</div>
+<div class="bd">
+<ul class="sidelist59" style="font-size:14px;color:#454545;">
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-05-17</span> <a href="/html/955/2023-05-17/content-3527.html" target="_blank" title="宣化科技职业学院2023年艺术类专业招生简章">宣化科技职业学院2023年艺术类专业招生简章</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-05-17</span> <a href="/html/955/2023-05-17/content-3534.html" target="_blank" title="宣化科技职业学院2023年艺术类专业招生简章">宣化科技职业学院2023年艺术类专业招生简章</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-04-23</span> <a href="/html/955/2023-04-23/content-3533.html" target="_blank" title="宣化科技职业学院2023年高职单招各类投档分数统计">宣化科技职业学院2023年高职单招各类投档分数统计</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-04-13</span> <a href="/html/955/2023-04-13/content-3532.html" target="_blank" title="宣化科技职业学院（中外合作办学）2023年高职单招招生计划">宣化科技职业学院（中外合作办学）2023年高职单招招生计划</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-04-12</span> <a href="/html/955/2023-04-12/content-3531.html" target="_blank" title="宣化科技职业学院2023年高职单招招生计划">宣化科技职业学院2023年高职单招招生计划</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-03-17</span> <a href="/html/955/2023-03-17/content-3529.html" target="_blank" title="宣化科技职业学院2023年单独考试招生简章">宣化科技职业学院2023年单独考试招生简章</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-03-17</span> <a href="/html/955/2023-03-17/content-3528.html" target="_blank" title="宣化科技职业学院2023年单独考试招生简章">宣化科技职业学院2023年单独考试招生简章</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-03-01</span> <a href="/html/955/2023-03-01/content-3530.html" target="_blank" title="宣化科技职业学院2023年河北高职单招实施技能拔尖人才免试录取要求">宣化科技职业学院2023年河北高职单招实施技能拔尖人才免试录取要求</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2022-06-26</span> <a href="/html/955/2022-06-26/content-3230.html" target="_blank" title="宣化科技职业学院2022年省外分专业招生计划">宣化科技职业学院2022年省外分专业招生计划</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2022-06-26</span> <a href="/html/955/2022-06-26/content-3231.html" target="_blank" title="宣化科技职业学院2022年河北省内分专业招生计划">宣化科技职业学院2022年河北省内分专业招生计划</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="box scroll-top2">
+<div class="hd">
+<div class="tit tit4">就业创业</div>
+<span class="more"> 
+<span class="more-1"><a href="/html/956/" target="_blank">更多>></a></span></span>
+</div>
+<div class="bd">
+<ul class="sidelist59" style="font-size:14px;color:#454545;">
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-10-23</span> <a href="/html/956/2024-10-23/content-4091.html" target="_blank" title="2024年河北省数字人才招聘大会将于10月24日举办">2024年河北省数字人才招聘大会将于10月24日举办...</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-10-22</span> <a href="/html/956/2024-10-22/content-4090.html" target="_blank" title="宣化科技职业学院“职引未来，筑梦前行”2025届毕业生秋季校园招聘月邀请函">宣化科技职业学院“职引未来，筑梦前行”2025届毕业生秋季校园招...</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-09-02</span> <a href="/html/956/2024-09-02/content-4016.html" target="_blank" title="【就业指导】求职必看！三个公式学会高效表达→">【就业指导】求职必看！三个公式学会高效表达→...</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-07-11</span> <a href="/html/956/2024-07-11/content-4017.html" target="_blank" title="国家大学生就业服务平台上新！12场招聘活动等你来参加">国家大学生就业服务平台上新！12场招聘活动等你来参加...</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-06-22</span> <a href="/html/956/2024-06-22/content-3965.html" target="_blank" title="致2024届高校毕业生的一封信">致2024届高校毕业生的一封信</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-06-22</span> <a href="/html/956/2024-06-22/content-3964.html" target="_blank" title="“新职业  新选择” 张家口首届产教融合招聘会成功举办">“新职业  新选择” 张家口首届产教融合招聘会成功举办...</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-06-19</span> <a href="/html/956/2024-06-19/content-3963.html" target="_blank" title="《职场第一课》开讲了！">《职场第一课》开讲了！</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-06-05</span> <a href="/html/956/2024-06-05/content-3947.html" target="_blank" title="基层就业天地广--河北省高校毕业生就业创业政策②">基层就业天地广--河北省高校毕业生就业创业政策②...</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-06-03</span> <a href="/html/956/2024-06-03/content-3942.html" target="_blank" title="企业吸纳有激励--河北省高校毕业生就业创业政策">企业吸纳有激励--河北省高校毕业生就业创业政策...</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-05-31</span> <a href="/html/956/2024-05-31/content-3935.html" target="_blank" title="毕业在“冀”！2024年河北省高校毕业生就业创业政策清单来了，请查收！">毕业在“冀”！2024年河北省高校毕业生就业创业政策清单来了，请...</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="box">
+<div class="hd">
+<div class="tit tit5">继续教育</div>
+<span class="more"> 
+<span class="more-1"><a href="/html/1017/" target="_blank">更多>></a></span></span>
+</div>
+<div class="bd">
+<ul class="sidelist59" style="font-size:14px;color:#454545;">
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-05-17</span> <a href="/html/1017/2024-05-17/content-3908.html" target="_blank" title="关于对 2024 级逾期未报到及入学资格初审不合格的新生 拟按“视为放弃入学资格”处理的公示">关于对 2024 级逾期未报到及入学资格初审不合格的新生 拟按“视为放弃入学</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2024-01-08</span> <a href="/html/1017/2024-01-08/content-3815.html" target="_blank" title="宣化科技职业学院新生报到须知">宣化科技职业学院新生报到须知</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-05-29</span> <a href="/html/1017/2023-05-29/content-3551.html" target="_blank" title="送教进社区    宣科在行动">送教进社区    宣科在行动</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-05-22</span> <a href="/html/1017/2023-05-22/content-3543.html" target="_blank" title="促进两校教育交流  推进中白国际合作 白俄罗斯国立信息与无线电大学校长鲍古什•瓦吉姆教授来我院访问交流">促进两校教育交流  推进中白国际合作 白俄罗斯国立信息与无线电大学校长鲍</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-04-25</span> <a href="/html/1017/2023-04-25/content-3513.html" target="_blank" title="老年大学招生简章">老年大学招生简章</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2022-08-09</span> <a href="/html/1017/2022-08-09/content-3113.html" target="_blank" title="成人高考报名通告">成人高考报名通告</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2022-07-13</span> <a href="/html/1017/2022-07-13/content-3114.html" target="_blank" title="关于公布2022年河北省老年教育试点学校的通知">关于公布2022年河北省老年教育试点学校的通知</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2022-06-28</span> <a href="/html/1017/2022-06-28/content-3115.html" target="_blank" title="宣化科技职业学院 关于成人学历教育学费标准的公示">宣化科技职业学院 关于成人学历教育学费标准的公示</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="box">
+<div class="hd">
+<div class="tit tit6">学生风采</div>
+<span class="more"> 
+<span class="more-1"><a href="/html/1018/" target="_blank">更多>></a></span></span>
+</div>
+<div class="con">
+<ul class="sidelist59" style="font-size:14px;color:#454545;">
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-07-03</span> <a href="/html/1018/2023-07-03/content-3709.html" target="_blank" title="职教榜样——学前教育学院 王雨薰">职教榜样——学前教育学院 王雨薰</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-07-03</span> <a href="/html/1018/2023-07-03/content-3708.html" target="_blank" title="职教榜样——学前教育学院  孟繁蕊">职教榜样——学前教育学院  孟繁蕊</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-07-03</span> <a href="/html/1018/2023-07-03/content-3707.html" target="_blank" title="职教榜样——信息工程系 于金龙">职教榜样——信息工程系 于金龙</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-07-03</span> <a href="/html/1018/2023-07-03/content-3706.html" target="_blank" title="职教榜样——信息工程学院 董宗伟">职教榜样——信息工程学院 董宗伟</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-07-03</span> <a href="/html/1018/2023-07-03/content-3705.html" target="_blank" title="职教榜样——新能源学院 王鹏">职教榜样——新能源学院 王鹏</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-07-03</span> <a href="/html/1018/2023-07-03/content-3704.html" target="_blank" title="职教榜样——新能源学院 常广瑞">职教榜样——新能源学院 常广瑞</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-07-03</span> <a href="/html/1018/2023-07-03/content-3703.html" target="_blank" title="职教榜样——文化传媒学院 屈鹏杰">职教榜样——文化传媒学院 屈鹏杰</a>
+</li>
+<li>
+<span class="label_datatime" style="font-size:14px;">2023-07-03</span> <a href="/html/1018/2023-07-03/content-3702.html" target="_blank" title="职教榜样——文化传媒学院 刘伟">职教榜样——文化传媒学院 刘伟</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="box">
+<div class="hd">
+<div class="tit tit7"></div>
+<span class="more"> </span>
+</div>
+<div class="row">
+
+</div>
+</div>
+</div>
+<div class="col-md-12 col-sm-12">
+<div class="box">
+<div class="hd">
+<div class="tit tit8">常用链接</div>
+<span class="more"> </span>
+</div>
+<div class="row">
+<ul class="link">
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="https://xhkjzyxy.edu.cn:18088/" class="bg1" target="_Blank">智慧校园</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="https://xhkjcas.chaoxing.com/cas/login?service=https%3A%2F%2Fxhkjbsdt.chaoxing.com%2Flogin%3FwhHint%3D%253F%253F%253F%253F" class="bg2" target="_Blank">师生办事大厅</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="https://zsw.xhkjzyxy.edu.cn/" class="bg8" target="_Blank">招生网</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="https://xhkjzyxy.mh.chaoxing.com/" class="bg9" target="_Blank">教师发展平台</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="http://120.211.98.242:84/#/login" class="bg4" target="_Blank">数据采集与管理平台</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="http://jyt.hebei.gov.cn/" class="bg7" target="_Blank">河北省教育厅</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="https://www.hebpta.com.cn/" class="bg5" target="_Blank">河北省人事考试网</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="http://hvae.hee.gov.cn/" class="bg10" target="_Blank">河北省职业教育与成人教育网</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="http://www.hebeea.edu.cn/" class="bg10" target="_Blank">河北省教育考试院</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="https://xhkjzyxy.ncss.cn/student/24365" class="bg6" target="_Blank">24365校园招聘服务</a></li>
+<li class="col-md-2dot4 col-sm-4 col-xs-12"><a href="https://xhkjzyxy.edu.cn:18088/pc/yingxin/#/login" class="bg6" target="_Blank">迎新系统</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(".scroll-top1").slide({mainCell:".bd ul",autoPage:true,effect:"topLoop",autoPlay:true,vis:10});
+jQuery(".scroll-top2").slide({mainCell:".bd ul",autoPage:true,effect:"topLoop",autoPlay:true,vis:10});
+</script></div>
+<div id="footer">
+<div class="container">
+<div class="footer-nav">
+
+</div>
+<div class="copyright">
+<ul>
+<li>版权所有：宣化科技职业学院 <a target="_blank" href="https://beian.miit.gov.cn" style="text-decoration:none;">冀ICP备19031783号-2</a> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13070502000120" style="text-decoration:none;"> 冀公网安备 13070502000120</a><br>
+
+地址：张家口市宣化区皇城桥路77号<br>
+
+联系电话：0313-7061300 举报电话：0313-7061312 技术支持：0313-7061315<br>
+
+举报邮箱：xkyjcsbgyx@163.com</li>
+</ul>
+</div>
+<div class="ficon text-center">
+<span id="_ideConac"><a href="#" target="_blank"><img id="imgConac" src="//dcs.conac.cn/image/blue.png" border="0" vspace="0" hspace="0"  data-bd-imgshare-binded="1"></a></span>
+</div>
+</div>
+</div>
+<div>  <script type="text/javascript" src="/js/0/11.js?ver=1730084448"></script></div>
+</body>
+</html>

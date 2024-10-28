@@ -1,0 +1,2366 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>西安文理学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="西安文理学院">
+<META Name="keywords" Content="西安文理学院" />
+
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/banner.css" />
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link href="image/favicon.ico" rel="shortcut icon">
+        <link href="image/favicon.ico" rel="shortcut icon">
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975465553545742000300034f5d -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1189,'/index.jsp',-1,1973380745)</script>
+</head>
+    <style>
+
+    </style>
+
+    <body>
+        <!-- 头 -->
+        <div class="header">
+            <a name="top"></a>
+            <!-- 搜索栏 -->
+            <div class="search fr">
+                <div class="search_box">
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError" class="search_wrap clearfix">
+            <input type="text" class="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" placeholder="请输入关键词">
+ 
+             <input class="tj submit" name="submit_button" type="submit" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1973380745";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                    <a class="cd-popup-close close_btn " href="javascript:;"></a>
+                </div>
+            </div>
+            <div class="topline"></div>
+            <div class="top">
+                <div class="back"></div>
+                <div class="block">
+                    <!-- 手机端菜单按钮  搜索按钮 -->
+                    <img class="search_an search_btn" src="image/fdjdh.png">
+                    <div class="minimenu"><span></span><span></span><span></span></div>
+                    <!-- 手机端菜单 -->
+                    <div class="nav">
+                        <ul class="clearfix ul2">
+      <li class="item">
+        <a href="index.htm">官网首页</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="index/wlyw.htm">文理要闻</a>
+        </li>
+        <li>
+            <a href="index/tzgg.htm">通知公告</a>
+        </li>
+        <li>
+            <a href="index/shfw.htm">社会服务</a>
+        </li>
+        <li>
+            <a href="index/rcpy1.htm">人才培养</a>
+        </li>
+        <li>
+            <a href="index/mtwl.htm">媒体文理</a>
+        </li>
+        <li>
+            <a href="index/szjj.htm">时政聚焦</a>
+        </li>
+        <li>
+            <a href="index/xsbg.htm">学术报告</a>
+        </li>
+        <li>
+            <a href="index/jcwlr.htm">精彩文理人</a>
+        </li>
+        <li>
+            <a href="index/kxyj.htm">科学研究</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item">
+        <a href="aboutus.htm">学校概况</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="aboutus/xxjj.htm">学校简介</a>
+        </li>
+        <li>
+            <a href="aboutus/xxbz.htm">学校标志</a>
+        </li>
+        <li>
+            <a href="aboutus/xrld.htm">现任领导</a>
+        </li>
+        <li>
+            <a href="aboutus/lrld1/dwsj.htm">历任领导</a>
+        </li>
+        <li>
+            <a href="aboutus/lsyg.htm">历史沿革</a>
+        </li>
+        <li>
+            <a href="aboutus/xyfg.htm">校园风光</a>
+        </li>
+        <li>
+            <a href="aboutus/zjxz1/ms.htm">专家学者</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item">
+        <a href="jgsz.htm">机构设置</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="jgsz/dqjg.htm">党群机构</a>
+        </li>
+        <li>
+            <a href="jgsz/xzbm.htm">行政部门</a>
+        </li>
+        <li>
+            <a href="jgsz/jxdw.htm">教学单位</a>
+        </li>
+        <li>
+            <a href="jgsz/jfdw.htm">教辅单位</a>
+        </li>
+        <li>
+            <a href="jgsz/fsyy.htm">附属医院</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item">
+        <a href="#">人才培养</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="http://xuewei.xawl.edu.cn/" target="_blank">研究生教育</a>
+        </li>
+        <li>
+            <a href="http://jwc.xawl.edu.cn/" target="_blank">本科生教育</a>
+        </li>
+        <li>
+            <a href="http://renshi.xawl.edu.cn/" target="_blank">教师培训</a>
+        </li>
+        <li>
+            <a href="http://jijiao.xawl.edu.cn/" target="_blank">成人教育</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item">
+        <a href="http://kjc.xawl.edu.cn/" target="_blank">科学研究</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="http://pgoffice.xawl.edu.cn/">重点学科</a>
+        </li>
+        <li>
+            <a href="http://ser.xawl.edu.cn/">重点实验室</a>
+        </li>
+        <li>
+            <a href="http://kjc.xawl.edu.cn/info/iList.jsp?cat_id=10083">产学研合作</a>
+        </li>
+        <li>
+            <a href="http://kjc.xawl.edu.cn/info/iList.jsp?cat_id=10070">项目研发</a>
+        </li>
+        <li>
+            <a href="http://kjc.xawl.edu.cn/info/iList.jsp?cat_id=10075">科研成果</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item">
+        <a href="#">招生就业</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="http://zsjyc.xawl.edu.cn/zjc/indexs.html" target="_blank">本科招生</a>
+        </li>
+        <li>
+            <a href="http://jijiao.xawl.edu.cn/" target="_blank">成人教育</a>
+        </li>
+        <li>
+            <a href="http://jiuye.xawl.edu.cn/" target="_blank">就业指导</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item">
+        <a href="#">校园文化</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="http://tuanwei.xawl.edu.cn/" target="_blank">文理先锋网</a>
+        </li>
+        <li>
+            <a href="xywh/wldjt.htm">文理大讲堂</a>
+        </li>
+        <li>
+            <a href="http://gonghui.xawl.edu.cn/" target="_blank">教工之家</a>
+        </li>
+        <li>
+            <a href="http://xawlxyb.ihwrm.com/" target="_blank">校报</a>
+        </li>
+        <li>
+            <a href="xywh/xb1.htm">学报</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item">
+        <a href="http://lib.xawl.edu.cn/" target="_blank">图书资源</a>
+        
+    </li>
+    <li class="item">
+        <a href="https://m.xawl.edu.cn/" target="_blank">旧版入口</a>
+        
+    </li>
+    <li class="item">
+        <a href="#">快速导航</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2800">一周安排</a>
+        </li>
+        <li>
+            <a href="http://oa.xawl.edu.cn/index.do" target="_blank">OA办公系统</a>
+        </li>
+        <li>
+            <a href="http://cas.xawl.edu.cn/cas/login?service=http%3A%2F%2Fi.xawl.edu.cn%2Fc%2Fportal%2Flogin%3Fredirect%3D%252Fc" target="_blank">信息门户</a>
+        </li>
+        <li>
+            <a href="http://ehall.xawl.edu.cn/EIP/nonlogin/homePage.htm" target="_blank">网上办事大厅</a>
+        </li>
+        <li>
+            <a href="http://zbh.xawl.edu.cn/" target="_blank">软件正版化</a>
+        </li>
+        <li>
+            <a href="http://lib.xawl.edu.cn/" target="_blank">图书资源</a>
+        </li>
+        <li>
+            <a href="http://jwgl.xawl.edu.cn/" target="_blank">教务系统</a>
+        </li>
+        <li>
+            <a href="ksdh/zxjx.htm">在线教学</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="#">专题导航</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="ztdh/awl_tgh.htm">爱文理 谈规划</a>
+        </li>
+        <li>
+            <a href="ztdh/bwcxljsm.htm">不忘初心牢记使命</a>
+        </li>
+        <li>
+            <a href="ztdh/xxgcddesdjs.htm">学习贯彻党的二十大精神</a>
+        </li>
+        <li>
+            <a href="ztdh/ypcj.htm">以评促建</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="#">学院导航</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="http://wenxue.xawl.edu.cn/" target="_blank">文学院</a>
+        </li>
+        <li>
+            <a href="http://waiyu.xawl.edu.cn/" target="_blank">外国语学院</a>
+        </li>
+        <li>
+            <a href="http://xxgc.xawl.edu.cn/" target="_blank">信息工程学院</a>
+        </li>
+        <li>
+            <a href="http://jixie.xawl.edu.cn/" target="_blank">机械与材料工程学院</a>
+        </li>
+        <li>
+            <a href="http://hg.xawl.edu.cn/" target="_blank">化学工程学院</a>
+        </li>
+        <li>
+            <a href="http://shengwu.xawl.edu.cn/" target="_blank">生物与环境工程学院</a>
+        </li>
+        <li>
+            <a href="http://xqjy.xawl.edu.cn/" target="_blank">学前教育学院</a>
+        </li>
+        <li>
+            <a href="http://jyxy.xawl.edu.cn/" target="_blank">师范学院</a>
+        </li>
+        <li>
+            <a href="http://jingguan.xawl.edu.cn/" target="_blank">经济管理学院</a>
+        </li>
+        <li>
+            <a href="http://lwl.xawl.edu.cn/" target="_blank">历史文化旅游学院</a>
+        </li>
+        <li>
+            <a href="http://marxism.xawl.edu.cn/" target="_blank">马克思主义学院</a>
+        </li>
+        <li>
+            <a href="http://tyxy.xawl.edu.cn/" target="_blank">体育学院</a>
+        </li>
+        <li>
+            <a href="http://yishu.xawl.edu.cn/" target="_blank">美术与设计学院</a>
+        </li>
+        <li>
+            <a href="http://yinyue.xawl.edu.cn/" target="_blank">音乐学院</a>
+        </li>
+        <li>
+            <a href="http://jijiao.xawl.edu.cn/" target="_blank">继续教育学院</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="sjxx.htm">书记信箱</a>
+        
+    </li>
+    <li class="item" style="display:none;">
+        <a href="jyyw.htm">教育要闻</a>
+        
+    </li>
+    <li class="item" style="display:none;">
+        <a href="xzxx.htm">校长信箱</a>
+        
+    </li>
+    <li class="item" style="display:none;">
+        <a href="ssyjxx.htm">师生意见信箱</a>
+        
+    </li>
+    <li class="item" style="display:none;">
+        <a href="xcp.htm">宣传片</a>
+        
+    </li>
+    <li class="item" style="display:none;">
+        <a href="#" target="_blank">党史学习教育</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="dsxxjy/s_y.htm">专题首页</a>
+        </li>
+        <li>
+            <a href="dsxxjy/xxdt.htm">学习动态</a>
+        </li>
+        <li>
+            <a href="dsxxjy/wwqzbss.htm">我为群众办实事</a>
+        </li>
+        <li>
+            <a href="dsxxjy/dswk.htm">党史微课</a>
+        </li>
+        <li>
+            <a href="dsxxjy/ywyl.htm">要闻要论</a>
+        </li>
+        <li>
+            <a href="dsxxjy/dszl.htm">党史资料</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="#" target="_blank">喜迎二十大</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="xyesd/s_y.htm">首 页</a>
+        </li>
+        <li>
+            <a href="xyesd/wldt.htm">文理动态</a>
+        </li>
+        <li>
+            <a href="xyesd/lhzg.htm">领航中国</a>
+        </li>
+        <li>
+            <a href="xyesd/ddjswdcj.htm">党的建设伟大成就</a>
+        </li>
+        <li>
+            <a href="xyesd/ywyl.htm">要闻要论</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="#" target="_blank">学习贯彻习近平新时代中国特色社会主义思想主题教育</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="xxgcxjpxsdzgtsshzysxztjy/ztsy.htm">专题首页</a>
+        </li>
+        <li>
+            <a href="xxgcxjpxsdzgtsshzysxztjy/wldt.htm">文理动态</a>
+        </li>
+        <li>
+            <a href="xxgcxjpxsdzgtsshzysxztjy/zyls.htm">重要论述</a>
+        </li>
+        <li>
+            <a href="xxgcxjpxsdzgtsshzysxztjy/zyjs.htm">中央精神</a>
+        </li>
+        <li>
+            <a href="xxgcxjpxsdzgtsshzysxztjy/llfd.htm">理论辅导</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="djxxjy.htm">党纪学习教育</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="djxxjy/xxyd.htm">学习园地</a>
+        </li>
+        <li>
+            <a href="djxxjy/wldt.htm">文理动态</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="xydt.htm">校园动态</a>
+        
+    </li>
+    <li class="item" style="display:none;">
+        <a href="gjjl.htm">国际交流</a>
+        
+    </li>
+    <li class="item" style="display:none;">
+        <a href="xmhc.htm">新媒荟萃</a>
+        
+    </li>
+    <li class="item" style="display:none;">
+        <a href="kslj.htm">快速链接</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2800">一周安排</a>
+        </li>
+        <li>
+            <a href="kslj/wlxl.htm">文理校历</a>
+        </li>
+        <li>
+            <a href="http://kygl.xawl.edu.cn/">科研管理系统</a>
+        </li>
+        <li>
+            <a href="https://idp.xawl.edu.cn">跨校资源认证中心</a>
+        </li>
+        <li>
+            <a href="https://www.720yun.com/t/a6vkO71hgdh?scene_id=57864698">文理VR</a>
+        </li>
+        <li>
+            <a href="kslj/wlVPN.htm">文理VPN</a>
+        </li>
+        <li>
+            <a href="http://fresh.xawl.edu.cn">迎新系统</a>
+        </li>
+        <li>
+            <a href="http://da.xawl.edu.cn/">档案管理系统</a>
+        </li>
+        <li>
+            <a href="http://lib.xawl.edu.cn/">图书情报</a>
+        </li>
+        <li>
+            <a href="http://mail.xawl.edu.cn/">电子邮箱</a>
+        </li>
+        <li>
+            <a href="http://xgxt.xawl.edu.cn/">学工管理系统</a>
+        </li>
+        <li>
+            <a href="http://xxgk.xawl.edu.cn/">信息公开</a>
+        </li>
+        <li>
+            <a href="http://oa.xawl.edu.cn/index.do">OA办公系统</a>
+        </li>
+        <li>
+            <a href="http://jwgl.xawl.edu.cn/">教务系统</a>
+        </li>
+        <li>
+            <a href="https://cloud.fanyu.com/organ/lib/xawl">毕业论文设计管理系统</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="sjxxsbxt.htm">视觉形象识别系统</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="sjxxsbxt/sjxxxtqy.htm">视觉形象系统前言</a>
+        </li>
+        <li>
+            <a href="sjxxsbxt/bzzz.htm">标志制作</a>
+        </li>
+        <li>
+            <a href="sjxxsbxt/bzztjl.htm">标准字体建立</a>
+        </li>
+        <li>
+            <a href="sjxxsbxt/jbyszhgf.htm">基本要素组合规范</a>
+        </li>
+        <li>
+            <a href="sjxxsbxt/bgswypsjbf.htm">办公事务用品设计部分</a>
+        </li>
+        <li>
+            <a href="sjxxsbxt/xcbf.htm">宣传部分</a>
+        </li>
+        <li>
+            <a href="sjxxsbxt/hjbf.htm">环境部分</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="jzyg.htm">教职员工</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="http://oa.xawl.edu.cn">OA办公</a>
+        </li>
+        <li>
+            <a href="http://kygl.xawl.edu.cn/">科研管理系统</a>
+        </li>
+        <li>
+            <a href="#">学工管理系统</a>
+        </li>
+        <li>
+            <a href="kslj/wlVPN.htm">文理VPN</a>
+        </li>
+        <li>
+            <a href="http://lib.xawl.edu.cn/">图书情报</a>
+        </li>
+        <li>
+            <a href="kslj/wlxl.htm">文理校历</a>
+        </li>
+        <li>
+            <a href="https://www.720yun.com/t/a6vkO71hgdh?scene_id=57864698">文理VR</a>
+        </li>
+        <li>
+            <a href="http://jwgl.xawl.edu.cn/%22">教务管理</a>
+        </li>
+        <li>
+            <a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2800">一周安排</a>
+        </li>
+        <li>
+            <a href="http://da.xawl.edu.cn/">档案管理系统</a>
+        </li>
+        <li>
+            <a href="http://xxgk.xawl.edu.cn/">信息公开</a>
+        </li>
+        <li>
+            <a href="https://idp.xawl.edu.cn/idp/">跨校资源认证中心</a>
+        </li>
+        <li>
+            <a href="https://fresh.xawl.edu.cn/p/index/index.html#/">迎新系统</a>
+        </li>
+        <li>
+            <a href="http://mail.xawl.edu.cn/">电子邮箱</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="zxxs.htm">在校学生</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="https://cloud.fanyu.com/organ/lib/xawl">毕业论文设计管理系统</a>
+        </li>
+        <li>
+            <a href="https://idp.xawl.edu.cn/idp/">跨校资源认证中心 </a>
+        </li>
+        <li>
+            <a href="kslj/wlVPN.htm">文理VPN</a>
+        </li>
+        <li>
+            <a href="http://lib.xawl.edu.cn/">图书情报 </a>
+        </li>
+        <li>
+            <a href="kslj/wlxl.htm">文理校历 </a>
+        </li>
+        <li>
+            <a href="http://xxgk.xawl.edu.cn/">信息公开</a>
+        </li>
+        <li>
+            <a href="https://www.720yun.com/t/a6vkO71hgdh?scene_id=57864698">文理VR</a>
+        </li>
+        <li>
+            <a href="ksdh/zxjx.htm">在线教学</a>
+        </li>
+        <li>
+            <a href="http://ehall.xawl.edu.cn/EIP/nonlogin/homePage.htm">网上办事大厅 </a>
+        </li>
+        <li>
+            <a href="index/tzgg.htm">通知公告 </a>
+        </li>
+        <li>
+            <a href="index/xsbg.htm">学术报告</a>
+        </li>
+        </ol>
+    </li>
+    <li class="item" style="display:none;">
+        <a href="byxy.htm">毕业校友</a>
+        <i></i>
+        <ol class="subitem">
+        <li>
+            <a href="aboutus.htm">学校概况</a>
+        </li>
+        <li>
+            <a href="https://www.720yun.com/t/a6vkO71hgdh?scene_id=57864698">文理VR</a>
+        </li>
+        <li>
+            <a href="kslj/wlxl.htm">文理校历</a>
+        </li>
+        <li>
+            <a href="byxy/xyfc.htm">校友风采</a>
+        </li>
+        <li>
+            <a href="#">校园文化</a>
+        </li>
+        </ol>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <div class="logo">
+                        
+
+
+<a href="index.htm" title="西安文理学院" class="logo1">
+<img src="image/logo.png" alt="">
+</a>
+                    </div>
+                    <div class="right">
+                        <div class="r_top">
+                            <div class="r_top1">
+                                <div class="tlist">
+                                    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>  <a href="sjxx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94307)" class="item op">书记信箱</a>
+  <a href="xzxx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94308)" class="item op">校长信箱</a>
+  <a href="ssyjxx.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94309)" class="item op">师生意见信箱</a>
+  <a href="http://mail.xawl.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94310)" class="item op">电子邮箱</a>
+  <a href="xcp.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94311)" class="item op">宣传片</a>
+  <a href="zxxs.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94326)" class="item op">在校学生</a>
+  <a href="byxy.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94324)" class="item op">毕业校友</a>
+  <a href="jzyg.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94325)" class="item op">教职员工</a>
+  <a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94312)" class="item op">师生诉求热线 029-88215619</a>
+  <a href="http://english.xawl.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1973380745, 94313)" class="item op">English</a>
+
+                                    <div class="clear"></div>
+                                </div>
+                                <img class="search_btn1 op" src="image/fdj.png" alt="">
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <!-- pc端菜单栏 -->
+                        <div class="menuOutside">
+                            <div class="menu">
+                                     <div href="" class="item menuStyle"><a href="index.htm" class="text">官网首页</a></div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="aboutus/xxjj.htm" class="menu2item">学校简介</a>
+                        <a href="aboutus/xxbz.htm" class="menu2item">学校标志</a>
+                        <a href="aboutus/xrld.htm" class="menu2item">现任领导</a>
+                        <a href="aboutus/lrld1/dwsj.htm" class="menu2item">历任领导</a>
+                        <a href="aboutus/lsyg.htm" class="menu2item">历史沿革</a>
+                        <a href="aboutus/xyfg.htm" class="menu2item">校园风光</a>
+                        <a href="aboutus/zjxz1/ms.htm" class="menu2item">专家学者</a>
+                </div>
+        <a href="aboutus.htm" class="text">学校概况</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="jgsz/dqjg.htm" class="menu2item">党群机构</a>
+                        <a href="jgsz/xzbm.htm" class="menu2item">行政部门</a>
+                        <a href="jgsz/jxdw.htm" class="menu2item">教学单位</a>
+                        <a href="jgsz/jfdw.htm" class="menu2item">教辅单位</a>
+                        <a href="jgsz/fsyy.htm" class="menu2item">附属医院</a>
+                </div>
+        <a href="jgsz.htm" class="text">机构设置</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="http://xuewei.xawl.edu.cn/" target="_blank" class="menu2item">研究生教育</a>
+                        <a href="http://jwc.xawl.edu.cn/" target="_blank" class="menu2item">本科生教育</a>
+                        <a href="http://renshi.xawl.edu.cn/" target="_blank" class="menu2item">教师培训</a>
+                        <a href="http://jijiao.xawl.edu.cn/" target="_blank" class="menu2item">成人教育</a>
+                </div>
+        <a href="#" class="text">人才培养</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="http://pgoffice.xawl.edu.cn/" class="menu2item">重点学科</a>
+                        <a href="http://ser.xawl.edu.cn/" class="menu2item">重点实验室</a>
+                        <a href="http://kjc.xawl.edu.cn/info/iList.jsp?cat_id=10083" class="menu2item">产学研合作</a>
+                        <a href="http://kjc.xawl.edu.cn/info/iList.jsp?cat_id=10070" class="menu2item">项目研发</a>
+                        <a href="http://kjc.xawl.edu.cn/info/iList.jsp?cat_id=10075" class="menu2item">科研成果</a>
+                </div>
+        <a href="http://kjc.xawl.edu.cn/" target="_blank" class="text">科学研究</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="http://zsjyc.xawl.edu.cn/zjc/indexs.html" target="_blank" class="menu2item">本科招生</a>
+                        <a href="http://jijiao.xawl.edu.cn/" target="_blank" class="menu2item">成人教育</a>
+                        <a href="http://jiuye.xawl.edu.cn/" target="_blank" class="menu2item">就业指导</a>
+                </div>
+        <a href="#" class="text">招生就业</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="http://tuanwei.xawl.edu.cn/" target="_blank" class="menu2item">文理先锋网</a>
+                        <a href="xywh/wldjt.htm" class="menu2item">文理大讲堂</a>
+                        <a href="http://gonghui.xawl.edu.cn/" target="_blank" class="menu2item">教工之家</a>
+                        <a href="http://xawlxyb.ihwrm.com/" target="_blank" class="menu2item">校报</a>
+                        <a href="xywh/xb1.htm" class="menu2item">学报</a>
+                </div>
+        <a href="#" class="text">校园文化</a>
+    </div>
+    <div href="" class="item">
+        <a href="http://lib.xawl.edu.cn/" target="_blank" class="text">图书资源</a>
+    </div>
+    <div href="" class="item">
+        <a href="https://m.xawl.edu.cn/" target="_blank" class="text">旧版入口</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2800" class="menu2item">一周安排</a>
+                        <a href="http://oa.xawl.edu.cn/index.do" target="_blank" class="menu2item">OA办公系统</a>
+                        <a href="http://cas.xawl.edu.cn/cas/login?service=http%3A%2F%2Fi.xawl.edu.cn%2Fc%2Fportal%2Flogin%3Fredirect%3D%252Fc" target="_blank" class="menu2item">信息门户</a>
+                        <a href="http://ehall.xawl.edu.cn/EIP/nonlogin/homePage.htm" target="_blank" class="menu2item">网上办事大厅</a>
+                        <a href="http://zbh.xawl.edu.cn/" target="_blank" class="menu2item">软件正版化</a>
+                        <a href="http://lib.xawl.edu.cn/" target="_blank" class="menu2item">图书资源</a>
+                        <a href="http://jwgl.xawl.edu.cn/" target="_blank" class="menu2item">教务系统</a>
+                        <a href="ksdh/zxjx.htm" class="menu2item">在线教学</a>
+                </div>
+        <a href="#" class="text" style="display:none;">快速导航</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="ztdh/awl_tgh.htm" class="menu2item">爱文理 谈规划</a>
+                        <a href="ztdh/bwcxljsm.htm" class="menu2item">不忘初心牢记使命</a>
+                        <a href="ztdh/xxgcddesdjs.htm" class="menu2item">学习贯彻党的二十大精神</a>
+                        <a href="ztdh/ypcj.htm" class="menu2item">以评促建</a>
+                </div>
+        <a href="#" class="text" style="display:none;">专题导航</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="http://wenxue.xawl.edu.cn/" target="_blank" class="menu2item">文学院</a>
+                        <a href="http://waiyu.xawl.edu.cn/" target="_blank" class="menu2item">外国语学院</a>
+                        <a href="http://xxgc.xawl.edu.cn/" target="_blank" class="menu2item">信息工程学院</a>
+                        <a href="http://jixie.xawl.edu.cn/" target="_blank" class="menu2item">机械与材料工程学院</a>
+                        <a href="http://hg.xawl.edu.cn/" target="_blank" class="menu2item">化学工程学院</a>
+                        <a href="http://shengwu.xawl.edu.cn/" target="_blank" class="menu2item">生物与环境工程学院</a>
+                        <a href="http://xqjy.xawl.edu.cn/" target="_blank" class="menu2item">学前教育学院</a>
+                        <a href="http://jyxy.xawl.edu.cn/" target="_blank" class="menu2item">师范学院</a>
+                        <a href="http://jingguan.xawl.edu.cn/" target="_blank" class="menu2item">经济管理学院</a>
+                        <a href="http://lwl.xawl.edu.cn/" target="_blank" class="menu2item">历史文化旅游学院</a>
+                        <a href="http://marxism.xawl.edu.cn/" target="_blank" class="menu2item">马克思主义学院</a>
+                        <a href="http://tyxy.xawl.edu.cn/" target="_blank" class="menu2item">体育学院</a>
+                        <a href="http://yishu.xawl.edu.cn/" target="_blank" class="menu2item">美术与设计学院</a>
+                        <a href="http://yinyue.xawl.edu.cn/" target="_blank" class="menu2item">音乐学院</a>
+                        <a href="http://jijiao.xawl.edu.cn/" target="_blank" class="menu2item">继续教育学院</a>
+                </div>
+        <a href="#" class="text" style="display:none;">学院导航</a>
+    </div>
+    <div href="" class="item">
+        <a href="sjxx.htm" class="text" style="display:none;">书记信箱</a>
+    </div>
+    <div href="" class="item">
+        <a href="jyyw.htm" class="text" style="display:none;">教育要闻</a>
+    </div>
+    <div href="" class="item">
+        <a href="xzxx.htm" class="text" style="display:none;">校长信箱</a>
+    </div>
+    <div href="" class="item">
+        <a href="ssyjxx.htm" class="text" style="display:none;">师生意见信箱</a>
+    </div>
+    <div href="" class="item">
+        <a href="xcp.htm" class="text" style="display:none;">宣传片</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="dsxxjy/s_y.htm" class="menu2item">专题首页</a>
+                        <a href="dsxxjy/xxdt.htm" class="menu2item">学习动态</a>
+                        <a href="dsxxjy/wwqzbss.htm" class="menu2item">我为群众办实事</a>
+                        <a href="dsxxjy/dswk.htm" class="menu2item">党史微课</a>
+                        <a href="dsxxjy/ywyl.htm" class="menu2item">要闻要论</a>
+                        <a href="dsxxjy/dszl.htm" class="menu2item">党史资料</a>
+                </div>
+        <a href="#" target="_blank" class="text" style="display:none;">党史学习教育</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="xyesd/s_y.htm" class="menu2item">首 页</a>
+                        <a href="xyesd/wldt.htm" class="menu2item">文理动态</a>
+                        <a href="xyesd/lhzg.htm" class="menu2item">领航中国</a>
+                        <a href="xyesd/ddjswdcj.htm" class="menu2item">党的建设伟大成就</a>
+                        <a href="xyesd/ywyl.htm" class="menu2item">要闻要论</a>
+                </div>
+        <a href="#" target="_blank" class="text" style="display:none;">喜迎二十大</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="xxgcxjpxsdzgtsshzysxztjy/ztsy.htm" class="menu2item">专题首页</a>
+                        <a href="xxgcxjpxsdzgtsshzysxztjy/wldt.htm" class="menu2item">文理动态</a>
+                        <a href="xxgcxjpxsdzgtsshzysxztjy/zyls.htm" class="menu2item">重要论述</a>
+                        <a href="xxgcxjpxsdzgtsshzysxztjy/zyjs.htm" class="menu2item">中央精神</a>
+                        <a href="xxgcxjpxsdzgtsshzysxztjy/llfd.htm" class="menu2item">理论辅导</a>
+                </div>
+        <a href="#" target="_blank" class="text" style="display:none;">学习贯彻习近平新时代中国特色社会主义思想主题教育</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="djxxjy/xxyd.htm" class="menu2item">学习园地</a>
+                        <a href="djxxjy/wldt.htm" class="menu2item">文理动态</a>
+                </div>
+        <a href="djxxjy.htm" class="text" style="display:none;">党纪学习教育</a>
+    </div>
+    <div href="" class="item">
+        <a href="xydt.htm" class="text" style="display:none;">校园动态</a>
+    </div>
+    <div href="" class="item">
+        <a href="gjjl.htm" class="text" style="display:none;">国际交流</a>
+    </div>
+    <div href="" class="item">
+        <a href="xmhc.htm" class="text" style="display:none;">新媒荟萃</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2800" class="menu2item">一周安排</a>
+                        <a href="kslj/wlxl.htm" class="menu2item">文理校历</a>
+                        <a href="http://kygl.xawl.edu.cn/" class="menu2item">科研管理系统</a>
+                        <a href="https://idp.xawl.edu.cn" class="menu2item">跨校资源认证中心</a>
+                        <a href="https://www.720yun.com/t/a6vkO71hgdh?scene_id=57864698" class="menu2item">文理VR</a>
+                        <a href="kslj/wlVPN.htm" class="menu2item">文理VPN</a>
+                        <a href="http://fresh.xawl.edu.cn" class="menu2item">迎新系统</a>
+                        <a href="http://da.xawl.edu.cn/" class="menu2item">档案管理系统</a>
+                        <a href="http://lib.xawl.edu.cn/" class="menu2item">图书情报</a>
+                        <a href="http://mail.xawl.edu.cn/" class="menu2item">电子邮箱</a>
+                        <a href="http://xgxt.xawl.edu.cn/" class="menu2item">学工管理系统</a>
+                        <a href="http://xxgk.xawl.edu.cn/" class="menu2item">信息公开</a>
+                        <a href="http://oa.xawl.edu.cn/index.do" class="menu2item">OA办公系统</a>
+                        <a href="http://jwgl.xawl.edu.cn/" class="menu2item">教务系统</a>
+                        <a href="https://cloud.fanyu.com/organ/lib/xawl" class="menu2item">毕业论文设计管理系统</a>
+                </div>
+        <a href="kslj.htm" class="text" style="display:none;">快速链接</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="sjxxsbxt/sjxxxtqy.htm" class="menu2item">视觉形象系统前言</a>
+                        <a href="sjxxsbxt/bzzz.htm" class="menu2item">标志制作</a>
+                        <a href="sjxxsbxt/bzztjl.htm" class="menu2item">标准字体建立</a>
+                        <a href="sjxxsbxt/jbyszhgf.htm" class="menu2item">基本要素组合规范</a>
+                        <a href="sjxxsbxt/bgswypsjbf.htm" class="menu2item">办公事务用品设计部分</a>
+                        <a href="sjxxsbxt/xcbf.htm" class="menu2item">宣传部分</a>
+                        <a href="sjxxsbxt/hjbf.htm" class="menu2item">环境部分</a>
+                </div>
+        <a href="sjxxsbxt.htm" class="text" style="display:none;">视觉形象识别系统</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="http://oa.xawl.edu.cn" class="menu2item">OA办公</a>
+                        <a href="http://kygl.xawl.edu.cn/" class="menu2item">科研管理系统</a>
+                        <a href="#" class="menu2item">学工管理系统</a>
+                        <a href="kslj/wlVPN.htm" class="menu2item">文理VPN</a>
+                        <a href="http://lib.xawl.edu.cn/" class="menu2item">图书情报</a>
+                        <a href="kslj/wlxl.htm" class="menu2item">文理校历</a>
+                        <a href="https://www.720yun.com/t/a6vkO71hgdh?scene_id=57864698" class="menu2item">文理VR</a>
+                        <a href="http://jwgl.xawl.edu.cn/%22" class="menu2item">教务管理</a>
+                        <a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2800" class="menu2item">一周安排</a>
+                        <a href="http://da.xawl.edu.cn/" class="menu2item">档案管理系统</a>
+                        <a href="http://xxgk.xawl.edu.cn/" class="menu2item">信息公开</a>
+                        <a href="https://idp.xawl.edu.cn/idp/" class="menu2item">跨校资源认证中心</a>
+                        <a href="https://fresh.xawl.edu.cn/p/index/index.html#/" class="menu2item">迎新系统</a>
+                        <a href="http://mail.xawl.edu.cn/" class="menu2item">电子邮箱</a>
+                </div>
+        <a href="jzyg.htm" class="text" style="display:none;">教职员工</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="https://cloud.fanyu.com/organ/lib/xawl" class="menu2item">毕业论文设计管理系统</a>
+                        <a href="https://idp.xawl.edu.cn/idp/" class="menu2item">跨校资源认证中心 </a>
+                        <a href="kslj/wlVPN.htm" class="menu2item">文理VPN</a>
+                        <a href="http://lib.xawl.edu.cn/" class="menu2item">图书情报 </a>
+                        <a href="kslj/wlxl.htm" class="menu2item">文理校历 </a>
+                        <a href="http://xxgk.xawl.edu.cn/" class="menu2item">信息公开</a>
+                        <a href="https://www.720yun.com/t/a6vkO71hgdh?scene_id=57864698" class="menu2item">文理VR</a>
+                        <a href="ksdh/zxjx.htm" class="menu2item">在线教学</a>
+                        <a href="http://ehall.xawl.edu.cn/EIP/nonlogin/homePage.htm" class="menu2item">网上办事大厅 </a>
+                        <a href="index/tzgg.htm" class="menu2item">通知公告 </a>
+                        <a href="index/xsbg.htm" class="menu2item">学术报告</a>
+                </div>
+        <a href="zxxs.htm" class="text" style="display:none;">在校学生</a>
+    </div>
+    <div href="" class="item">
+                <div class="menu2">
+                        <a href="aboutus.htm" class="menu2item">学校概况</a>
+                        <a href="https://www.720yun.com/t/a6vkO71hgdh?scene_id=57864698" class="menu2item">文理VR</a>
+                        <a href="kslj/wlxl.htm" class="menu2item">文理校历</a>
+                        <a href="byxy/xyfc.htm" class="menu2item">校友风采</a>
+                        <a href="#" class="menu2item">校园文化</a>
+                </div>
+        <a href="byxy.htm" class="text" style="display:none;">毕业校友</a>
+    </div>
+   
+
+
+
+
+
+
+
+
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="topheight"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+                <div class="slider fade-1">
+                <div class="item">
+                <div class="image">
+                        <a href="https://www.xawl.edu.cn/info/1191/277282.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 1012083)" target="_blank">
+                                <img src="112.jpg" border="0">
+                        </a>
+                </div>
+            </div>
+</div>
+        </div>
+        <div class="fix-top"></div>
+        <!-- 中间 -->
+        <div class="main2">
+            <div class="content">
+                <div class="cbdh">
+                         <a href="kslj.htm" title="快速链接" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79931)" target="_blank" class="item">
+    <div class="block">
+        <img src="image/link.png" alt="">
+        <div class="text">快速链接</div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+ </a>
+ <a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2800" title="一周安排" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79922)" target="_blank" class="item">
+    <div class="block">
+        <img src="image/gbcb1.png" alt="">
+        <div class="text">一周安排</div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+ </a>
+ <a href="http://oa.xawl.edu.cn/index.do" title="OA办公系统" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79923)" target="_blank" class="item">
+    <div class="block">
+        <img src="image/gbcb2.png" alt="">
+        <div class="text">OA办公系统</div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+ </a>
+ <a href="http://cas.xawl.edu.cn/cas/login?service=http%3A%2F%2Fi.xawl.edu.cn%2Fc%2Fportal%2Flogin%3Fredirect%3D%252Fc" title="信息门户" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79924)" target="_blank" class="item">
+    <div class="block">
+        <img src="image/gbcb3.png" alt="">
+        <div class="text">信息门户</div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+ </a>
+ <a href="http://ehall.xawl.edu.cn/EIP/nonlogin/homePage.htm" title="网上办事大厅" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79925)" target="_blank" class="item">
+    <div class="block">
+        <img src="image/gbcb4.png" alt="">
+        <div class="text">网上办事大厅</div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+ </a>
+ <a href="http://cas.xawl.edu.cn/cas/login?service=http%3A%2F%2Fzbh.xawl.edu.cn%2Findex%2Fuevplogin%2Findex.html" title="软件正版化" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79926)" target="_blank" class="item">
+    <div class="block">
+        <img src="image/gbcb5.png" alt="">
+        <div class="text">软件正版化</div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+ </a>
+ <a href="https://xxgk.xawl.edu.cn/" title="信息公开" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79927)" target="_blank" class="item">
+    <div class="block">
+        <img src="image/gbcb6.png" alt="">
+        <div class="text">信息公开</div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+ </a>
+ <a href="http://jwgl.xawl.edu.cn/jwglxt/xtgl/login_slogin.html" title="教务系统" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79928)" target="_blank" class="item">
+    <div class="block">
+        <img src="image/gbcb7.png" alt="">
+        <div class="text">教务系统</div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+ </a>
+ <a href="ksdh/zxjx.htm" title="在线教学" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79933)" target="_blank" class="item">
+    <div class="block">
+        <img src="image/zxjy.png" alt="">
+        <div class="text">在线教学</div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+ </a>
+
+                </div>
+                <div class="box1">
+                    <div class="box">
+                               <div class="title1 title1_xq">
+        <div class="text style">
+           <a href="index/wlyw.htm">
+            <div class="name">文理要闻</div>
+            <div class="ename">IMPORTANT NEWS</div>
+            </a>
+            <div class="clear"></div>
+        </div>
+        <a href="index/wlyw.htm" class="more op">MORE</a>
+        <div class="clear"></div>
+     </div>
+                        <div class="left wow fadeInLeft" data-wow-delay=".2s">
+                            <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script> 
+     <div class="item1">
+        <div class="top">
+                       <a href="info/3070/279032.htm" target="_blank" title="榆林学院党委书记张新柱一行来校调研交流" class="item">
+                <div class="img">
+                    <img class="img" src="/__local/D/56/A2/0600DAD050BF0CAC6DBA8CC84BC_8B1CDAD7_4EE2B.jpg" alt="">
+                    
+                </div>
+                <div class="date">2024-10-25</div>
+                <div class="text">
+                    <div class="title2 l1">榆林学院党委书记张新柱一行来校调研交流</div>
+                    <div class="summary1 l2">
+                        10月24日下午，榆林学院党委书记张新柱、副校长闫龙、科研处处长吴喜军一行3人来我校调研交流，双方围绕校际合作和发展进行了深入研讨交流。党委书记王育选主持会议，党委委员、校务委员鲍锋，党政办、人事处、科研处、教务处等相关部门负责同志参加座谈。王育选对张新柱一行的到来表示热烈欢迎。他简要介绍了学校的基本情况和近年来取得的主要办学成就。他指出，两校有着相似的发展历程和密切的交往渊源，希望双方以此次交流为契机，...
+                    </div>
+                </div>
+            </a>
+            <a href="info/3070/278722.htm" target="_blank" title="发挥我校科研优势，助力县域经济高质量发展——西安文理学院蓝田高质量发展研究院工作对接会顺利召开" class="item">
+                <div class="img">
+                    <img class="img" src="/__local/5/B1/59/FD4B52C2DD8A82B8FEDB486900C_2FB17CFA_248CB.jpg" alt="">
+                    
+                </div>
+                <div class="date">2024-10-24</div>
+                <div class="text">
+                    <div class="title2 l1">发挥我校科研优势，助力县域经济高质量发展——西安文理学院蓝田高质量发展研究院工作对接会顺利召开</div>
+                    <div class="summary1 l2">
+                        为进一步发挥我校在教育、科技、农业和文化等领域的优势，促进蓝田县域经济高质量发展，10月22日下午，西安文理学院蓝田高质量发展研究院工作对接会在蓝田县发改委召开，会议由副县长李永波主持，我校党委委员、校务委员鲍锋及专家团队，蓝田县发改委、教科局、农业农村局、文旅体育局主要负责同志参加。会上，我校专家团队分别汇报了目前与蓝田县开展合作的事项，蓝田县相关单位针对各自分管领域的实际需求，提出亟需我校协助解决的诸如：...
+                    </div>
+                </div>
+            </a>
+            <a href="info/3070/278622.htm" target="_blank" title="新疆工程学院党委书记李玉鸿一行来校调研交流" class="item">
+                <div class="img">
+                    <img class="img" src="/__local/7/9D/53/71B55EA3524383DF73CFCE2A766_30495625_6C35D.jpg" alt="">
+                    
+                </div>
+                <div class="date">2024-10-23</div>
+                <div class="text">
+                    <div class="title2 l1">新疆工程学院党委书记李玉鸿一行来校调研交流</div>
+                    <div class="summary1 l2">
+                        10月22日，新疆工程学院党委书记李玉鸿一行来校调研交流，双方围绕校际合作和校城融合发展进行了深入交流研讨。党委书记王育选主持会议，党政办、宣传部、教务处、科研处、学研处、人事处和服务地方工作办公室主要负责同志参加座谈。王育选对李玉鸿一行的到来表示热烈欢迎。他简要介绍了学校的基本情况、“十四五”以来取得的主要办学成就。他指出，两校有着相似的发展历程，都注重于应用型人才培养，为地域发展有着重要作用。希望双方今后进一步加强交流合作，...
+                    </div>
+                </div>
+            </a>
+            <a href="https://mp.weixin.qq.com/s/jIlhq9D411kluYDhwon5Pw" target="_blank" title="学校赴西安高新技术产业开发区观摩调研" class="item">
+                <div class="img">
+                    <img class="img" src="/__local/7/89/B8/26CF74B166CC4B8971F0C86A5AF_F3D48DEE_4D0D0.jpg" alt="">
+                    
+                </div>
+                <div class="date">2024-10-23</div>
+                <div class="text">
+                    <div class="title2 l1">学校赴西安高新技术产业开发区观摩调研</div>
+                    <div class="summary1 l2">
+                        
+                    </div>
+                </div>
+            </a>
+            <div class="clear"></div>
+        </div><script>_showDynClickBatch(['dynclicks_u7_279032','dynclicks_u7_278722','dynclicks_u7_278622','dynclicks_u7_278572'],[279032,278722,278622,278572],"wbnews", 1973380745)</script>
+
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="right wow fadeInRight" data-wow-delay=".2s">
+                         <div class="wlywx"><div class="list3 style">
+
+      <a href="info/3070/279032.htm" target="_blank" title="榆林学院党委书记张新柱一行来校调研交流" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">榆林学院党委书记张新柱一行来校调研交流</div>
+    <div class="date1">2024-10-25</div>
+ 
+    </a>
+    <a href="info/3070/278722.htm" target="_blank" title="发挥我校科研优势，助力县域经济高质量发展——西安文理学院蓝田高质量发展研究院工作对接会顺利召开" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">发挥我校科研优势，助力县域经济高质量发展——西安文理学院蓝田高质量发展研究院工作对接会顺利召开</div>
+    <div class="date1">2024-10-24</div>
+ 
+    </a>
+    <a href="info/3070/278622.htm" target="_blank" title="新疆工程学院党委书记李玉鸿一行来校调研交流" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">新疆工程学院党委书记李玉鸿一行来校调研交流</div>
+    <div class="date1">2024-10-23</div>
+ 
+    </a>
+    <a href="https://mp.weixin.qq.com/s/jIlhq9D411kluYDhwon5Pw" target="_blank" title="学校赴西安高新技术产业开发区观摩调研" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">学校赴西安高新技术产业开发区观摩调研</div>
+    <div class="date1">2024-10-23</div>
+ 
+    </a>
+    <a href="info/3070/278552.htm" target="_blank" title="西安市人力资源与社会保障局来我校调研" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">西安市人力资源与社会保障局来我校调研</div>
+    <div class="date1">2024-10-22</div>
+ 
+    </a>
+    <a href="info/3070/278482.htm" target="_blank" title="西安市秦创原梧桐树科转行动（高陵篇）：我校科研工作会暨高陵区“秦创原梧桐树科转行动”产学研金协同创新系列活动在高陵区泾渭大厦举行" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">西安市秦创原梧桐树科转行动（高陵篇）：我校科研工作会暨高陵区“秦创原梧桐树科转行动”产学研金协同创新系列活动在高陵区泾渭大厦举行</div>
+    <div class="date1">2024-10-21</div>
+ 
+    </a>
+</div><script>_showDynClickBatch(['dynclicks_u8_279032','dynclicks_u8_278722','dynclicks_u8_278622','dynclicks_u8_278572','dynclicks_u8_278552','dynclicks_u8_278482'],[279032,278722,278622,278572,278552,278482],"wbnews", 1973380745)</script>
+</div>
+                         
+                    
+                     <div class="title1x">
+                        <div class="title1">
+                            <div onmouseenter="select1(0)" class="text style">
+                               <a href="index/szjj.htm">
+                                <div class="name">时政聚焦</div>
+                                <div class="ename">CURRENT POLITICS</div>
+                                </a>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="dian"></div>
+                            <div onmouseenter="select1(1)" class="text">
+                                <a href="jyyw.htm">
+                                <div class="name">教育要闻</div>
+                                <div class="ename">EDUCATIONAL HIGHLIGHTS</div>
+                                </a>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="lists">
+                            <div class="list1 style">
+  <a href="index/szjj.htm" class="more op fr">MORE</a>
+    <a href="http://paper.people.com.cn/rmrb/html/2024-10/11/nw.D110000renmrb_20241011_2-01.htm" target="_blank" title="习近平致电祝贺赛义德当选连任突尼斯总统" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">习近平致电祝贺赛义德当选连任突尼斯总统</div>
+    <div class="date1">2024-10-12</div>
+    <img src="image/index77.png" alt="" class="more">
+    </a>
+    <a href="http://paper.people.com.cn/rmrb/html/2024-10/11/nw.D110000renmrb_20241011_1-01.htm" target="_blank" title="习近平回信勉励“银龄行动”老年志愿者代表 既要老有所养老有所乐又要老有所为 为推进中国式现代化贡献“银发力量”" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">习近平回信勉励“银龄行动”老年志愿者代表 既要老有所养老有所乐又要老有所为 为推进中国式现代化贡献“银发力量”</div>
+    <div class="date1">2024-10-12</div>
+    <img src="image/index77.png" alt="" class="more">
+    </a>
+    <a href="http://paper.people.com.cn/rmrb/html/2024-10/10/nw.D110000renmrb_20241010_1-01.htm" target="_blank" title="习近平致信中国红十字会第十二次全国会员代表大会强调 聚焦高质量发展提高人道服务能力 为强国建设民族复兴和人类和平与进步事业作出新的更大贡献 韩正出席开幕式并会见全体代表" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">习近平致信中国红十字会第十二次全国会员代表大会强调 聚焦高质量发展提高人道服务能力 为强国建设民族复兴和人类和平与进步事业作出新的更大贡献 韩正出席开幕式并会见全体代表</div>
+    <div class="date1">2024-10-12</div>
+    <img src="image/index77.png" alt="" class="more">
+    </a>
+    <a href="http://paper.people.com.cn/rmrb/html/2024-10/09/nw.D110000renmrb_20241009_3-01.htm" target="_blank" title="习近平《在全国民族团结进步表彰大会上的讲话》单行本出版" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">习近平《在全国民族团结进步表彰大会上的讲话》单行本出版</div>
+    <div class="date1">2024-10-12</div>
+    <img src="image/index77.png" alt="" class="more">
+    </a>
+    <a href="http://paper.people.com.cn/rmrb/html/2024-10/09/nw.D110000renmrb_20241009_2-01.htm" target="_blank" title="《习近平关于治水论述摘编》出版发行" class="item">
+    <div class="line"></div>
+    <div class="title2 l1">《习近平关于治水论述摘编》出版发行</div>
+    <div class="date1">2024-10-12</div>
+    <img src="image/index77.png" alt="" class="more">
+    </a>
+</div><script>_showDynClickBatch(['dynclicks_u9_277512','dynclicks_u9_277502','dynclicks_u9_277492','dynclicks_u9_277482','dynclicks_u9_277472'],[277512,277502,277492,277482,277472],"wbnews", 1973380745)</script>
+
+                            <div class="list1">
+   <a href="jyyw.htm" class="more op fr">MORE</a>
+    <a href="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202409/t20240922_1152467.html" target="_blank" title="第27届全国推广普通话宣传周重点活动在新疆喀什举办" class="item">
+        <div class="line"></div>
+        <div class="title2 l1">第27届全国推广普通话宣传周重点活动在新疆喀什举办</div>
+        <div class="date1">2024-10-12</div>
+        <img src="image/index77.png" alt="" class="more">
+    </a>
+    <a href="http://jyt.shaanxi.gov.cn/jynews/jyyw/202409/09/143363.html" target="_blank" title="致全省广大教师和教育工作者的慰问信" class="item">
+        <div class="line"></div>
+        <div class="title2 l1">致全省广大教师和教育工作者的慰问信</div>
+        <div class="date1">2024-09-12</div>
+        <img src="image/index77.png" alt="" class="more">
+    </a>
+    <a href="http://jyt.shaanxi.gov.cn/jynews/jyyw/202409/10/143396.html" target="_blank" title="赵一德在教师节前夕看望慰问教师 向全省广大教师和教育工作者致以节日问候和诚挚祝福" class="item">
+        <div class="line"></div>
+        <div class="title2 l1">赵一德在教师节前夕看望慰问教师 向全省广大教师和教育工作者致以节日问候和诚挚祝福</div>
+        <div class="date1">2024-09-12</div>
+        <img src="image/index77.png" alt="" class="more">
+    </a>
+    <a href="http://jyt.shaanxi.gov.cn/jynews/jyyw/202409/06/143276.html" target="_blank" title="赵刚：健全全面培养体系 力促优质均衡发展 努力培养更多担当民族复兴重任的时代新人" class="item">
+        <div class="line"></div>
+        <div class="title2 l1">赵刚：健全全面培养体系 力促优质均衡发展 努力培养更多担当民族复兴重任的时代新人</div>
+        <div class="date1">2024-09-12</div>
+        <img src="image/index77.png" alt="" class="more">
+    </a>
+    <a href="http://www.moe.gov.cn/jyb_xwfb/s5147/202409/t20240904_1148906.html" target="_blank" title="从严治党为建设教育强国提供坚强保障——教育部扎实开展党纪学习教育综述" class="item">
+        <div class="line"></div>
+        <div class="title2 l1">从严治党为建设教育强国提供坚强保障——教育部扎实开展党纪学习教育综述</div>
+        <div class="date1">2024-09-12</div>
+        <img src="image/index77.png" alt="" class="more">
+    </a>
+</div><script>_showDynClickBatch(['dynclicks_u10_277532','dynclicks_u10_275862','dynclicks_u10_275852','dynclicks_u10_275842','dynclicks_u10_275832'],[277532,275862,275852,275842,275832],"wbnews", 1973380745)</script>
+
+                        </div>
+                       </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="box21">
+                    <div class="box211">
+                        <div class="box">
+                            <div class="left wow fadeInLeft" data-wow-delay=".2s">
+                                <div class="title1">
+    <div class="text style">
+        <a href="xydt.htm">
+        <div class="name">校园动态</div>
+        <div class="ename">CAMPUS DYNAMICS</div>
+        </a>
+        <div class="clear"></div>
+    </div>
+    <a href="xydt.htm" class="more op">MORE</a>
+    <div class="clear"></div>
+</div>
+<div class="lists">
+    <div class="list1">
+        <a href="info/2740/279132.htm" target="_blank" title="我校教师董洪杰受邀赴泰国法政大学讲学" class="item">
+            <div class="line"></div>
+            <div class="title2 l1">我校教师董洪杰受邀赴泰国法政大学讲学</div>
+            <div class="date1">2024-10-28</div>
+            <img src="image/index77.png" alt="" class="more">
+        </a>
+        <a href="info/2740/279122.htm" target="_blank" title="我校为西咸泾河泾华学校做高考志愿填报公益讲座" class="item">
+            <div class="line"></div>
+            <div class="title2 l1">我校为西咸泾河泾华学校做高考志愿填报公益讲座</div>
+            <div class="date1">2024-10-28</div>
+            <img src="image/index77.png" alt="" class="more">
+        </a>
+        <a href="info/2740/279112.htm" target="_blank" title="咸阳高新领航学校师生来我校研学交流" class="item">
+            <div class="line"></div>
+            <div class="title2 l1">咸阳高新领航学校师生来我校研学交流</div>
+            <div class="date1">2024-10-28</div>
+            <img src="image/index77.png" alt="" class="more">
+        </a>
+        <a href="info/2740/279102.htm" target="_blank" title="陕西旭茂网络科技有限公司一行来访美术与设计学院" class="item">
+            <div class="line"></div>
+            <div class="title2 l1">陕西旭茂网络科技有限公司一行来访美术与设计学院</div>
+            <div class="date1">2024-10-28</div>
+            <img src="image/index77.png" alt="" class="more">
+        </a>
+        <a href="info/2740/279092.htm" target="_blank" title="美术与设计学院参加 “楚韵秦风” 湖北陕西水彩粉画作品学术交流展暨学术研讨会" class="item">
+            <div class="line"></div>
+            <div class="title2 l1">美术与设计学院参加 “楚韵秦风” 湖北陕西水彩粉画作品学术交流展暨学术研讨会</div>
+            <div class="date1">2024-10-28</div>
+            <img src="image/index77.png" alt="" class="more">
+        </a>
+        <a href="info/2740/279082.htm" target="_blank" title="研途有你 一路芬芳——美术与设计学院承办考研名师徐涛政治公开课" class="item">
+            <div class="line"></div>
+            <div class="title2 l1">研途有你 一路芬芳——美术与设计学院承办考研名师徐涛政治公开课</div>
+            <div class="date1">2024-10-28</div>
+            <img src="image/index77.png" alt="" class="more">
+        </a>
+        <a href="info/2740/279072.htm" target="_blank" title="文学院赴西安九州传媒洽谈新媒体人才培养新模式" class="item">
+            <div class="line"></div>
+            <div class="title2 l1">文学院赴西安九州传媒洽谈新媒体人才培养新模式</div>
+            <div class="date1">2024-10-28</div>
+            <img src="image/index77.png" alt="" class="more">
+        </a>
+        <a href="info/2740/279062.htm" target="_blank" title="生物与环境工程学院举行资源与环境学科建设成果转化项目签约仪式" class="item">
+            <div class="line"></div>
+            <div class="title2 l1">生物与环境工程学院举行资源与环境学科建设成果转化项目签约仪式</div>
+            <div class="date1">2024-10-28</div>
+            <img src="image/index77.png" alt="" class="more">
+        </a>
+    </div>
+</div><script>_showDynClickBatch(['dynclicks_u11_279132','dynclicks_u11_279122','dynclicks_u11_279112','dynclicks_u11_279102','dynclicks_u11_279092','dynclicks_u11_279082','dynclicks_u11_279072','dynclicks_u11_279062'],[279132,279122,279112,279102,279092,279082,279072,279062],"wbnews", 1973380745)</script>
+
+                            </div>
+                            <div class="right wow fadeInRight" data-wow-delay=".2s">
+                                <div class="top">
+                                    <div class="title1">
+                                        <div onmouseenter="select7(0)" class="text style">
+                                          <a href="index/rcpy1.htm">
+                                            <div class="name">人才培养</div>
+                                            <div class="ename">PERSONNEL TRAINING</div>
+                                            </a>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="dian"></div>
+                                        <div onmouseenter="select7(1)" class="text">
+                                           <a href="index/kxyj.htm">
+                                            <div class="name">科学研究</div>
+                                            <div class="ename">SCIENTIFIC RESEARCH</div>
+                                            </a>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="liststop clearfix">
+                                        <div class="list style clearfix">
+                                            
+<div class="item">
+ <a href="info/1470/278612.htm" target="_blank" title="教务处召开“七个五”首席专家工作推进会">
+    <div class="title l2">教务处召开“七个五”首席专家工作推进会</div>
+    <div class="summary l2">
+        10月22日下午，教务处联合服务地方办、学报编辑部召开“七个五”首席专家工作推进会，校务委员徐东升、二级学院教学副院长应邀参会，会议由教务处大创中心副主任张云哲主持。服务地方办副主任张杜鹃就“七个五”首席专家指导工作落实情况、机制建立及运行情况、工作亮点、存在问题及下一步工作计划进行了介绍；学报编辑部副主任唐健君就“七个五”首席专家论文发表工作的进展情况及存在问题进行了分析，提出完善约稿机制、加强与学报联系、...</div>
+    <div class="date">2024-10-23</div>
+   
+ </a>
+  <div class="more"><a href="index/rcpy1.htm">MORE</a></div>
+</div>
+<div class="item">
+ <a href="info/1470/278402.htm" target="_blank" title="关于省级第三批课程思政示范项目拟推荐项目的公示">
+    <div class="title l2">关于省级第三批课程思政示范项目拟推荐项目的公示</div>
+    <div class="summary l2">
+        各学院：根据《陕西省教育厅办公室关于开展第三批课程思政示范项目认定工作的通知》要求，学校认真组织开展了第三批省级课程思政示范项目的评审工作。经教师申报、资格审核、专家评议等程序，我校拟推荐《学前儿童健康教育》等9门课程参与省级课程思政示范课程和教学团队评选，现将拟推荐项目（见附件）予以公示。公示时间：2024年10月21日-2024年10月23日。公示期内如有异议，请提供书面材料并署真实姓名后向教务处实践教学科反映。...</div>
+    <div class="date">2024-10-21</div>
+   
+ </a>
+  <div class="more"><a href="index/rcpy1.htm">MORE</a></div>
+</div>
+<script>_showDynClickBatch(['dynclicks_u12_278612','dynclicks_u12_278402'],[278612,278402],"wbnews", 1973380745)</script>
+
+                                        </div>
+                                        <div class="list clearfix">
+                                            <div class="item">
+ <a href="info/2470/278972.htm" target="_blank" title="教育部办公厅关于教育部哲学社会科学研究专项（全国教育大会精神研究）申报工作的通知">
+    <div class="title l2">教育部办公厅关于教育部哲学社会科学研究专项（全国教育大会精神研究）申报工作的通知</div>
+    <div class="summary l2">
+        各相关单位：为深入学习贯彻习近平总书记在全国教育大会上的重要讲话精神，加强《论教育》和全国教育大会精神研究阐释，教育部决定开展教育部哲学社会科学研究专项（全国教育大会精神研究）申报工作。现将有关事项通知如下。一、研究重点。深刻认识和把握习近平总书记重要讲话的核心要义、精神实质、实践要求，深刻认识和把握习近平总书记擘画的教育强国战略图景，深刻认识和把握习近平总书记强调的教育强国建设科学规律，把学习研究阐释习近平总书记重要讲话精神与学习《...</div>
+    <div class="date">2024-10-25</div>
+   
+ </a>
+  <div class="more"><a href="index/kxyj.htm">MORE</a></div>
+</div>
+<div class="item">
+ <a href="info/2470/278592.htm" target="_blank" title="关于开展2025年度陕西省哲学社会科学研究专项一般项目、青年项目申报工作的通知">
+    <div class="title l2">关于开展2025年度陕西省哲学社会科学研究专项一般项目、青年项目申报工作的通知</div>
+    <div class="summary l2">
+        各相关学院：根据年度工作计划，依据《陕西省哲学社会科学研究专项管理办法》，现将2025年度陕西省哲学社会科学研究专项一般项目、青年项目（下称一般项目、青年项目） 申报有关事项通知如下：一、指导思想坚持以习近平新时代中国特色社会主义思想为指导，全面贯彻落实党的二十大、党的二十届三中全会精神，坚持正确的政治方向、价值取向和学术导向，围绕哲学社会科学学科体系、学术体系、话语体系建设和我省经济社会高质量发展中的重大理论与现实问题，...</div>
+    <div class="date">2024-10-23</div>
+   
+ </a>
+  <div class="more"><a href="index/kxyj.htm">MORE</a></div>
+</div>
+<script>_showDynClickBatch(['dynclicks_u13_278972','dynclicks_u13_278592'],[278972,278592],"wbnews", 1973380745)</script>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="title1">
+                                        <div onmouseenter="select8(0)" class="text style">
+                                             <a href="index/shfw.htm">
+                                            <div class="name">社会服务</div>
+                                            <div class="ename">SOCIAL SERVICE</div>
+                                            </a>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="dian"></div>
+                                        <div onmouseenter="select8(1)" class="text">
+                                             <a href="gjjl.htm">
+                                            <div class="name">国际交流</div>
+                                            <div class="ename">INTERNATIONAL EXCHANGE</div>
+                                            </a>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="listsbottom">
+                                        <div class="list style">
+                                            <div class="item">
+ <a href="info/1460/278392.htm" target="_blank" title="外国语学院与科大讯飞深度合作 共筑智能语言服务新未来">
+    <div class="date">2024-10-21</div>
+    <div class="title l1">外国语学院与科大讯飞深度合作 共筑智能语言服务新未来</div>
+    <div class="clear"></div>
+   
+ </a>
+  
+</div>
+
+<div class="item">
+ <a href="info/1460/278352.htm" target="_blank" title="历史文化旅游学院赴西安太白学校调研并授牌">
+    <div class="date">2024-10-21</div>
+    <div class="title l1">历史文化旅游学院赴西安太白学校调研并授牌</div>
+    <div class="clear"></div>
+   
+ </a>
+  
+</div>
+
+<div class="item">
+ <a href="info/1460/278342.htm" target="_blank" title="历史文化旅游学院赴西安高级中学访企拓岗">
+    <div class="date">2024-10-21</div>
+    <div class="title l1">历史文化旅游学院赴西安高级中学访企拓岗</div>
+    <div class="clear"></div>
+   
+ </a>
+  
+</div>
+
+ <div class="more"><a href="index/shfw.htm">MORE</a></div>
+<script>_showDynClickBatch(['dynclicks_u14_278392','dynclicks_u14_278352','dynclicks_u14_278342'],[278392,278352,278342],"wbnews", 1973380745)</script>
+
+                                        </div>
+                                        <div class="list">
+                                            <div class="item">
+ <a href="info/2750/279142.htm" target="_blank" title="我校教师董洪杰受邀赴泰国法政大学讲学">
+    <div class="date">2024-10-28</div>
+    <div class="title l1">我校教师董洪杰受邀赴泰国法政大学讲学</div>
+    <div class="clear"></div>
+   
+ </a>
+  
+</div>
+
+<div class="item">
+ <a href="info/2750/278892.htm" target="_blank" title="ICC项目海外合作大学签约会暨项目专业指导会在我校举行">
+    <div class="date">2024-10-24</div>
+    <div class="title l1">ICC项目海外合作大学签约会暨项目专业指导会在我校举行</div>
+    <div class="clear"></div>
+   
+ </a>
+  
+</div>
+
+<div class="item">
+ <a href="info/2750/278842.htm" target="_blank" title="新西兰梅西大学访问我校">
+    <div class="date">2024-10-24</div>
+    <div class="title l1">新西兰梅西大学访问我校</div>
+    <div class="clear"></div>
+   
+ </a>
+  
+</div>
+
+ <div class="more"><a href="gjjl.htm">MORE</a></div>
+<script>_showDynClickBatch(['dynclicks_u15_279142','dynclicks_u15_278892','dynclicks_u15_278842'],[279142,278892,278842],"wbnews", 1973380745)</script>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="box">
+                        <div class="blocks">
+                            <div class="block b1 wow fadeInLeft mtwlx" data-wow-delay=".2s">
+                                <div class="title1">
+                                    <div onmouseenter="select2(0)" class="text style">
+                                        <a href="index/mtwl.htm">
+                                        <div class="name">媒体文理</div>
+                                        <div class="ename">MEDIUM</div>
+                                        </a>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="dian"></div>
+                                    <div onmouseenter="select2(1)" class="text">
+                                       <a href="xmhc.htm">
+                                        <div class="name">新媒荟萃</div>
+                                        <div class="ename">NEW MEDIA</div>
+                                        </a>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                 <div class="sel2 style">
+    <a href="index/mtwl.htm" class="more op fr">MORE</a>
+            <a href="https://article.xuexi.cn/articles/index.html?art_id=3166516030330170772&item_id=3166516030330170772&cdn=https%3A%2F%2Fregion-shaanxi-resource&t=1727662835844&study_style_id=video_default&pid=&ptype=-1&source=share&share_to=wx_single" target="_blank" title="【学习强国】：【七十五载正青春】西安文理学院师生诗朗诵：《唐诗里的中国》" class="item1 item_1">
+                <div class="img">
+                    <img src="/__local/F/B9/64/A9313B7605644E73B483CD379CD_FEC1A6CD_EDC.jpg" alt="">
+                </div>
+                <div class="rightText">
+                    <div class="title2 l2">【学习强国】：【七十五载正青春】西安文理学院师生诗朗诵：《唐诗里的中国》
+                    </div>
+                    <div class="date1">2024-10-06</div>
+                    <div class="summary1 l2">
+                        
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </a>
+
+            <div class="list1">
+                    <a href="https://article.xuexi.cn/articles/index.html?art_id=5911744564078308960&cdn=https%3A%2F%2Fregion-shaanxi-resource&item_id=5911744564078308960&study_style_id=feeds_opaque&t=1727662823239&pid=&ptype=-1&source=share&share_to=wx_single" target="_blank" title="【学习强国】：【理论面对面】“学习贯彻党的二十届三中全会精神专场”走进西安文理学院" class="item">
+                        <div class="line"></div>
+                        <div class="title2 l1">【学习强国】：【理论面对面】“学习贯彻党的二十届三中全会精神专场”走进西安文理学院</div>
+                        <div class="date1">2024-10-06</div>
+                        <img src="image/index77.png" alt="" class="more">
+                    </a>
+                    <a href="https://yuandian.xiancity.cn/application/fcinformation/mobile/#/ArticleDetail/408614/undefined" target="_blank" title="【原点新闻】：理论面对面——走进西安文理学院" class="item">
+                        <div class="line"></div>
+                        <div class="title2 l1">【原点新闻】：理论面对面——走进西安文理学院</div>
+                        <div class="date1">2024-10-06</div>
+                        <img src="image/index77.png" alt="" class="more">
+                    </a>
+                    <a href="https://yuandian.xiancity.cn/application/fcinformation/mobile/#/ArticleDetail/408611/undefined" target="_blank" title="【原点新闻】：唐诗里的中国" class="item">
+                        <div class="line"></div>
+                        <div class="title2 l1">【原点新闻】：唐诗里的中国</div>
+                        <div class="date1">2024-10-06</div>
+                        <img src="image/index77.png" alt="" class="more">
+                    </a>
+                    <a href="https://yuandian.xiancity.cn/application/fcinformation/mobile/#/ArticleDetail/401939/undefined" target="_blank" title="【原点新闻】：乘风而行 一“路”生香" class="item">
+                        <div class="line"></div>
+                        <div class="title2 l1">【原点新闻】：乘风而行 一“路”生香</div>
+                        <div class="date1">2024-09-18</div>
+                        <img src="image/index77.png" alt="" class="more">
+                    </a>
+ </div>
+
+
+ </div><script>_showDynClickBatch(['dynclicks_u16_277242','dynclicks_u16_277232','dynclicks_u16_277222','dynclicks_u16_277212','dynclicks_u16_276202'],[277242,277232,277222,277212,276202],"wbnews", 1973380745)</script>
+
+                                 <div class="sel2">
+  <a href="xmhc.htm" class="more op fr">MORE</a>
+            <a href="https://mp.weixin.qq.com/s/cNPHwiSpy1Bq1QIIvLqDcg" target="_blank" title="大力弘扬教育家精神 加快建设教育强国丨学校举行庆祝第40个教师节暨表彰大会" class="item1 item_1">
+                <div class="img">
+                    <img src="/__local/E/57/4F/8448181151EA08F0CEA3CEDE33F_0EFC29BA_5A7A2.jpg" alt="">
+                </div>
+                <div class="rightText">
+                    <div class="title2 l2">大力弘扬教育家精神 加快建设教育强国丨学校举行庆祝第40个教师节暨表彰大会
+                    </div>
+                    <div class="date1">2024-09-12</div>
+                    <div class="summary1 l2">
+                        
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </a>
+
+            <div class="list1">
+                    <a href="https://mp.weixin.qq.com/s/wAlb_pTicagSRUxvbj9nig" target="_blank" title="开学第一课 | 党委书记王育选为2024级新生讲授思政课" class="item">
+                        <div class="line"></div>
+                        <div class="title2 l1">开学第一课 | 党委书记王育选为2024级新生讲授思政课</div>
+                        <div class="date1">2024-09-12</div>
+                        <img src="image/index77.png" alt="" class="more">
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/sChqIf0w6uv36JdoE0eBPA" target="_blank" title="新生代表学前教育学院陈雅婧在开学典礼上的发言" class="item">
+                        <div class="line"></div>
+                        <div class="title2 l1">新生代表学前教育学院陈雅婧在开学典礼上的发言</div>
+                        <div class="date1">2024-09-12</div>
+                        <img src="image/index77.png" alt="" class="more">
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/o2hN_dyho6GYivl8kJCgNw" target="_blank" title="凝“新”聚力，青春启程 | 西安文理学院举行2024级新生开学典礼暨军训动员大会" class="item">
+                        <div class="line"></div>
+                        <div class="title2 l1">凝“新”聚力，青春启程 | 西安文理学院举行2024级新生开学典礼暨军训动员大会</div>
+                        <div class="date1">2024-09-12</div>
+                        <img src="image/index77.png" alt="" class="more">
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/vZRwKTBRDbRJXE_zcn0OuA" target="_blank" title="如期而至，“新”动文理 !" class="item">
+                        <div class="line"></div>
+                        <div class="title2 l1">如期而至，“新”动文理 !</div>
+                        <div class="date1">2024-09-12</div>
+                        <img src="image/index77.png" alt="" class="more">
+                    </a>
+ </div>
+ </div>
+<script>_showDynClickBatch(['dynclicks_u17_275762','dynclicks_u17_275752','dynclicks_u17_275742','dynclicks_u17_275732','dynclicks_u17_275722'],[275762,275752,275742,275732,275722],"wbnews", 1973380745)</script>
+
+                            </div>
+                            <div class="block b2 wow fadeInUp jcwlr" data-wow-delay=".2s">
+                                <div class="title1">
+    <div class="text style">
+     <a href="index/jcwlr.htm">
+    <div class="name">精彩文理人</div>
+    <div class="ename">WONDERFUL PEOPLE</div>
+    </a>
+    <div class="clear"></div>
+    </div>
+    <a href="index/jcwlr.htm" class="more op">MORE</a>
+    <div class="clear"></div>
+</div>
+    <a href="https://mp.weixin.qq.com/s/UzfIaKH4yR-ltUN_lIR3rA" target="_blank" title="三全育人•管理育人 | 刘梦瑜：五维并举赋能学生成长成才" class="item1">
+        <div class="img">
+        <img src="/__local/A/0F/25/8F72A3B30154639051DE07D59FA_F2F14278_474E.jpg" alt="">
+        </div>
+        <div class="rightText">
+        <div class="title2">
+            三全育人•管理育人 | 刘梦瑜：五维并举赋能学生成长成才
+        </div>
+        <div class="date1">2024年09月11日</div>
+        <div class="summary1 l2">
+            
+        </div>
+        </div>
+        <div class="clear"></div>
+    </a>
+    <a href="https://mp.weixin.qq.com/s/-HB9KrFBkXwITj6vX8hNVQ" target="_blank" title="三全育人•资助育人 | 贺丹丹：怀抱朴守拙之初心 助学生成长全面化" class="item1 style">
+        <div class="img">
+        <img src="/__local/C/89/0A/2A295B3F66763683F8FD98CA8D9_5F793736_B77B.jpg" alt="">
+        </div>
+        <div class="rightText">
+        <div class="title2">
+            三全育人•资助育人 | 贺丹丹：怀抱朴守拙之初心 助学生成长全面化
+        </div>
+        <div class="date1">2024年09月11日</div>
+        <div class="summary1 l2">
+            
+        </div>
+        </div>
+        <div class="clear"></div>
+    </a>
+    <a href="https://mp.weixin.qq.com/s/jM0jGz_CKVvQQDD57kigJQ" target="_blank" title="三全育人•服务育人 | 戴玉珊：做有情怀、有大爱、有想法、有温度的学生引路人" class="item1">
+        <div class="img">
+        <img src="/__local/B/95/6D/AE7F613333D870B0B01227B8AC3_7E733078_303BB.jpg" alt="">
+        </div>
+        <div class="rightText">
+        <div class="title2">
+            三全育人•服务育人 | 戴玉珊：做有情怀、有大爱、有想法、有温度的学生引路人
+        </div>
+        <div class="date1">2024年09月11日</div>
+        <div class="summary1 l2">
+            
+        </div>
+        </div>
+        <div class="clear"></div>
+    </a>
+<script>_showDynClickBatch(['dynclicks_u18_275602','dynclicks_u18_275592','dynclicks_u18_275582'],[275602,275592,275582],"wbnews", 1973380745)</script>
+
+                            </div>
+                            <div class="block b3 wow fadeInRight" data-wow-delay=".2s">
+                                <div class="title1">
+                                    <div onmouseenter="select3(0)" class="text style">
+                                       <a href="index/tzgg.htm">
+                                        <div class="name">通知公告</div>
+                                        <div class="ename">NOTIFICATION</div>
+                                        </a>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="dian"></div>
+                                    <div onmouseenter="select3(1)" class="text">
+                                       <a href="index/xsbg.htm">
+                                        <div class="name">学术报告</div>
+                                        <div class="ename">ACADEMIC REPORT</div>
+                                        </a>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="lists">
+                                        <div class="list1 style">
+    <a href="index/tzgg.htm" class="more op fr">MORE</a>
+            <a href="info/1191/277282.htm" target="_blank" title="西安文理学院2025年硕士研究生招生简章" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">西安文理学院2025年硕士研究生招生简章</div>
+                <div class="date1">2024-10-09</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1191/276792.htm" target="_blank" title="2024年10月值班、带班表" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">2024年10月值班、带班表</div>
+                <div class="date1">2024-09-27</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1191/276782.htm" target="_blank" title="2024年国庆节放假通知" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">2024年国庆节放假通知</div>
+                <div class="date1">2024-09-27</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1191/274572.htm" target="_blank" title="2024年9月值班、带班表" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">2024年9月值班、带班表</div>
+                <div class="date1">2024-08-28</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1191/273142.htm" target="_blank" title="关于2024年暑期放假安排的通知" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">关于2024年暑期放假安排的通知</div>
+                <div class="date1">2024-07-12</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1191/272812.htm" target="_blank" title="西安文理学院2024年暑期值班、带班表" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">西安文理学院2024年暑期值班、带班表</div>
+                <div class="date1">2024-07-08</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+
+    </div>
+<script>_showDynClickBatch(['dynclicks_u19_277282','dynclicks_u19_276792','dynclicks_u19_276782','dynclicks_u19_274572','dynclicks_u19_273142','dynclicks_u19_272812'],[277282,276792,276782,274572,273142,272812],"wbnews", 1973380745)</script>
+
+                                        <div class="list1">
+    <a href="index/xsbg.htm" class="more op fr">MORE</a>
+            <a href="info/1540/279022.htm" target="_blank" title="教师发展中心笃学讲坛：课堂教学设计与实践" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">教师发展中心笃学讲坛：课堂教学设计与实践</div>
+                <div class="date1">2024-10-25</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1540/279012.htm" target="_blank" title="教师发展中心笃学讲坛：OBE理念下的人才培养方案修订" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">教师发展中心笃学讲坛：OBE理念下的人才培养方案修订</div>
+                <div class="date1">2024-10-25</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1540/278862.htm" target="_blank" title="学前教育学院：人工智能背景下教育学科的实践进路" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">学前教育学院：人工智能背景下教育学科的实践进路</div>
+                <div class="date1">2024-10-24</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1540/278162.htm" target="_blank" title="学前教育学院：国际高水平期刊论文发表策略" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">学前教育学院：国际高水平期刊论文发表策略</div>
+                <div class="date1">2024-10-21</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1540/277802.htm" target="_blank" title="教师发展中心笃学讲坛：课程思政融入策略与教学案例解析" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">教师发展中心笃学讲坛：课程思政融入策略与教学案例解析</div>
+                <div class="date1">2024-10-15</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+            <a href="info/1540/277792.htm" target="_blank" title="教师发展中心笃学讲坛：基于O-LIS-E的课程思政教学效果提质增效策略" class="item">
+                <div class="line"></div>
+                <div class="title2 l1">教师发展中心笃学讲坛：基于O-LIS-E的课程思政教学效果提质增效策略</div>
+                <div class="date1">2024-10-15</div>
+                <img src="image/index77.png" alt="" class="more">
+            </a>
+
+    </div>
+<script>_showDynClickBatch(['dynclicks_u20_279022','dynclicks_u20_279012','dynclicks_u20_278862','dynclicks_u20_278162','dynclicks_u20_277802','dynclicks_u20_277792'],[279022,279012,278862,278162,277802,277792],"wbnews", 1973380745)</script>
+
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box22">
+                    <div class="box">
+                        <div class="left wow fadeInLeft" data-wow-delay=".2s">
+                                
+    
+             
+                        <a href="dsxxjy/s_y.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79896)" target="_blank" class="img">
+                            <img src="image/zz2.jpg" border="0">
+                        </a>  
+            
+             
+                        <a href="ztdh/xxgcddesdjs.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79897)" target="_blank" class="img">
+                            <img src="image/zz3.jpg" border="0">
+                        </a>  
+            
+        
+
+             
+                        <a href="xxgcxjpxsdzgtsshzysxztjy/ztsy.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79898)" target="_blank" class="img">
+                            <img src="image/zz4.jpg" border="0">
+                        </a>  
+            
+        
+
+                        </div>
+                        <div class="right wow fadeInRight" data-wow-delay=".2s">
+                            <div class="title1">
+                                <div class="text style">
+                                   <a href="ztdh/awl_tgh.htm">
+                                    <div class="name">文理专题</div>
+                                    <div class="ename">SPECIAL SUBJECT</div>
+                                    </a>
+                                    <div class="clear"></div>
+                                </div>
+                                <a href="ztdh/awl_tgh.htm" class="more op">MORE</a>
+                                <div class="clear"></div>
+                            </div>
+                                
+            
+                
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1973380745, 79921)" target="_blank" class="list">
+                            <img src="image/zz5.jpg" border="0">
+                        </a>  
+                
+      
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="box23" style="display:none;">
+                    <div class="box wow fadeInDown" data-wow-delay=".2s">
+                        <div class="title1">
+                            <div class="text style">
+                                <div class="name">学院导航</div>
+                                <div class="ename">COLLEGE NAVIGATION</div>
+                                <div class="clear"></div>
+                            </div>
+                            <a href="jgsz.htm" class="more op">MORE</a>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="list">
+                            <div class="slider fade-2">
+                                
+
+
+
+ <div class="item">
+    <a href="http://wenxue.xawl.edu.cn/" target="_blank" title="文学院" class="image">
+        <div class="img">
+            <img src="image/zz11.png" />
+        </div>
+        <div class="text">
+            <div class="title l1">文学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                文学院是西安文理学院办学历史最长的文科院系之一。自1990年开办汉语言文学本科专业以来，我们薪火相传，砥砺前行。“取精用弘，学优行范”是我们的院训，业精技熟，博约用广，是我们三十余载办学传统的积淀与凝练。先后有师长泰、廉文瀓、王仲生、贺信民等多位著名学者在此任教，名师大家的言传身教是我们宝贵的精神财富。
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://waiyu.xawl.edu.cn/" target="_blank" title="外国语学院" class="image">
+        <div class="img">
+            <img src="image/zz12.png" />
+        </div>
+        <div class="text">
+            <div class="title l1">外国语学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                外国语学院已有43年的办学历史，设有英语、日语、翻译三个本科专业，在校学生750名，现有教职工87人，外籍专家4人，其中教授8人、副教授29人，国培、省培计划专家5人，校级教学名师1人，教师中65%以上具有海外访学、研修经历。学院先后荣获陕西省大学生社会实践优秀单位、陕西省高校优秀校园文化建设成果二等奖、西安市教育局先进基层党组织和校级师德先进集体等荣誉称号。
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://xxgc.xawl.edu.cn/" target="_blank" title="信息工程学院" class="image">
+        <div class="img">
+            <img src="image/zz13.png" />
+        </div>
+        <div class="text">
+            <div class="title l1">信息工程学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                2015年，信息工程学院由原数学与计算机工程学院、软件学院、电子信息工程专业合并组建而成。学院现有计算机科学系、数学系、电子工程系3个二级系和1个实验中心，有计算机科学与技术、软件工程、数学与应用数学、数据科学与大数据技术、电子信息工程及物联网工程等6个本科专业。信息工程学院实验中心是省级计算机实验教学示范中心。目前，实验中心拥有5个专业实验室，1个专业基础实验室(实训机房),4个科研实验室，3个学科竞赛工作室及1个科研工作室。实验中心总面积3500余平方米，仪器设备共有5000余台（件），价值3000余
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://jixie.xawl.edu.cn/" target="_blank" title="机械与材料工程学院" class="image">
+        <div class="img">
+            <img src="image/zz14.png" />
+        </div>
+        <div class="text">
+            <div class="title l1">机械与材料工程学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                机械与材料工程学院开设机械设计制造及其自动化等7个本科专业，形成了“智能制造”专业集群和师范教育的专业特色。现有教职工111人，专任教师80人，教授16人，博士占比71.25%。学院建有陕西省表面工程与再制造重点实验室等省市级科研平台8个，拥有原子与分子物理学等省市级重点学科3个，建有秦创原“科学家+工程师”团队等科研创新团队6个，成立了西安市智能制造产学研合作联盟并担任秘书长单位、建有校级课程思政工作坊。近五年来，教师主持国家自然科学基金项目等纵向项目50多项，科研经费3000余万元，授权专利130多件
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://hg.xawl.edu.cn/" target="_blank" title="化学工程学院" class="image">
+        <div class="img">
+            <img src="image/hxgc.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">化学工程学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                化学工程学院现有教师69人，有国家突出贡献中青年专家1人，陕西省教学名师2人，陕西省中青年科技创新领军人才2人，青年科技人才5人，“双师型”教师17人，近年来承担国家级项目13项，省部级项目23项，校企联合技术攻关课题40余项，发表学术论文330余篇，授权国家发明专利40余项。近三年在全国化工设计大赛、实验技能大赛、科技作品大赛、创新创业训练项目、互联网创业竞赛等各类赛事中获奖200余项，近20%学生考取研究生继续深造。
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://shengwu.xawl.edu.cn/" target="_blank" title="生物与环境工程学院" class="image">
+        <div class="img">
+            <img src="image/j2.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">生物与环境工程学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                生物与环境工程学院最早于1985年开始办生物教育和地理教育专业，具有三十多年的办学积淀。目前开设生物科学、生物制药、环境生态工程（省一流）、地理空间信息工程四个本科专业。为生物医药产业、大健康产业、城市生态、秦岭生态保护、黄河流域生态保护和高质量发展、城市空间与历史遗迹数字化、航天科技与现代农业培养应用型人才。
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://xqjy.xawl.edu.cn/" target="_blank" title="学前教育学院" class="image">
+        <div class="img">
+            <img src="image/js.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">学前教育学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                学前教育学院前身为陕西省西安幼儿师范学校，幼儿教育办学始于1955年，是当时“全国首批、西北最早、陕西唯一”专门培养幼教师资的专业院校。2006年整建制合并进入西安文理学院，2008年增设学前教育全日制本科专业，2013年成为西安文理学院重点建设专业，2014年获批陕西省研究生联合培养示范工作站，2015年获批陕西省高等继续教育特色专业、西安市学前教育公费师范生培养单位，2017年获批陕西省一流建设专业，2018年获批陕西省高等学校教学管理先进集体、西安市重点学科，2019年获批教育部“双万计划”省级一
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://jyxy.xawl.edu.cn/" target="_blank" title="师范学院" class="image">
+        <div class="img">
+            <img src="image/j5.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">师范学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                (师范学院办学历史悠久，绵延百年，其前身为陕西西安师范学校。西安师范学校继承关中书院之胜地，延续百年师范之传统，办学历史可上溯至明代关学大儒冯从吾1609年创办的关中书院，1903年更名改建为陕西师范学堂，是陕西近代师范教育的发端。学院秉承“德为人先、学为人师、行为世范”的院训，遵循“崇德尚美、厚积笃行”的育人理念，凸显应用型人才培养特色。
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://jingguan.xawl.edu.cn/" target="_blank" title="经济管理学院" class="image">
+        <div class="img">
+            <img src="image/j1.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">经济管理学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                经济管理学院秉承“知行合一，经世致用”的院训，立足西安，面向全国，培养经管类应用型人才。学院目前开设会计学、市场营销、经济与金融、电子商务四个本科专业，新增养老服务管理本科专业将于2022年9月开始招生。学院设有西安经济发展研究中心、陕西省西安公众科学素质与创新发展研究中心、域金融研究院、创新教育与创业孵化工作部、陕西省九三学社参政议政研究中心。会计学专业为省级一流专业建设点、会计实验与创新实践教学中心为省级实验教学示范中心、会计学专业为市级重点建设专业、工商管理学科为市级重点建设学科，会计学专业为学
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://lwl.xawl.edu.cn/" target="_blank" title="历史文化旅游学院" class="image">
+        <div class="img">
+            <img src="image/j6.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">历史文化旅游学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                历史文化旅游学院为西安文理学院新建的二级学院，成立于2018年1月22日。为适应国家和西安地方文化旅游战略性支柱产业大发展的需要，传承辐射古都文明，培养全新一代文化旅游人才，造就文旅融合的特色学院，学校整合优势资源，将历史学、文物与博物馆学、旅游管理三个专业与长安历史文化研究中心合并，组建了历史文化旅游学院。
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://marxism.xawl.edu.cn/" target="_blank" title="马克思主义学院" class="image">
+        <div class="img">
+            <img src="image/j7.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">马克思主义学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                马克思主义学院是在原政治学院（思政部、西安廉政研究中心）基础上组建而成。承担了全校学生的思想政治理论课教育教学、科学研究和马克思主义理论学科的建设工作。学院现有一个本科专业和一个研究中心。思想政治教育专业在全国首批开设纪检监察专业方向；西安廉政研究中心是西安市党风廉政和反腐倡廉机制建设的唯一研究机构。
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://tyxy.xawl.edu.cn/" target="_blank" title="体育学院" class="image">
+        <div class="img">
+            <img src="image/j8.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">体育学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                体育学院下设体育教育系、大学体育教学部、群体竞训中心、学生体质健康测试中心、实验场馆管理与地方合作中心、运动与健康研究所等机构；学院现有教师49人，其中专任教师43人，具备教授职称4人，副教授15人，讲师18人，助教6人；具有博士学位1人，在读博士1人。
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://yishu.xawl.edu.cn/" target="_blank" title="美术与设计学院" class="image">
+        <div class="img">
+            <img src="image/j9.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">美术与设计学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                美术与设计学院创办艺术专业教育始于1983年，是陕西省最早开办艺术专业的教学单位之一。现有视觉传达设计系、美术学系、公共艺术系、数字媒体艺术系、基础部5个教学单位，艺术展演中心、纪录片创作基地两个实践教学场所，西安文理学院艺术馆挂靠在学院。有“耀州窑陶瓷文化研究所”、“关中民俗文创研究所”、“关中传统艺术研究所”三个内设研究机构。学院招生范围涵盖陕西、山西、江苏、福建、河北、山东、湖南、广西、河南、甘肃十个省份，第一志愿录取率连续四年为100%，2022年在校生996人。
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://yinyue.xawl.edu.cn/" target="_blank" title="音乐学院" class="image">
+        <div class="img">
+            <img src="image/j10.jpg" />
+        </div>
+        <div class="text">
+            <div class="title l1">音乐学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                音乐学院始创于1983年，是陕西省最早开办音乐专业教育的教学单位之一。现有音乐学（师范）、音乐表演2个本科专业，2018年音乐学（师范）专业获批为市级一流本科专业建设点。目前我院现有教职工48人，其中专任教师39人，正高职称6人，副高职称11人，讲师22人，博士9人（含在读），硕士33人。多人担任国家、省市各类艺术工作委员和评审专家
+            </div>
+        </div>
+    </a>
+ </div>
+ <div class="item">
+    <a href="http://jijiao.xawl.edu.cn/" target="_blank" title="继续教育学院" class="image">
+        <div class="img">
+            <img src="image/zz11.png" />
+        </div>
+        <div class="text">
+            <div class="title l1">继续教育学院</div>
+            <div class="line"></div>
+            <div class="summary l3">
+                西安文理学院是2002年经国家教育部批准，由西安市人民政府主办，省市共建，面向全国招生的全日制普通本科高校。2000年经陕西省教育厅批准，成立西安联合大学成人教育学院，开始举办函授、业余、脱产形式的成人学历教育；2003年与原西安教育学院成人教育业务合并更名成立西安文理学院成人教育学院；2012年为了理顺办学关系，有效整合办学资源，促进教师终身教育服务体系建设，学校将西安联合大学成人教育学院，教师继续教育学院合并成立新的西安文理学院继续教育学院，并将原陕西省西安师范学校研训部（幼教培训）、原西安市小学教师
+            </div>
+        </div>
+    </a>
+ </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box24 row-a5">
+                    <div class="bg wow fadeInUp">
+                        <video src="image/dmwl1.mp4" autoplay muted loop playsinline="true"></video>
+                    </div>
+                    <div class="box">
+                        <div class="m-data">
+                               <li><a href="http://wenxue.xawl.edu.cn/" target="_blank" title="文学院"><div class="txt">文学院</div></a></li>
+   
+   <li><a href="http://waiyu.xawl.edu.cn/" target="_blank" title="外国语学院"><div class="txt">外国语学院</div></a></li>
+   
+   <li><a href="http://xxgc.xawl.edu.cn/" target="_blank" title="信息工程学院"><div class="txt">信息工程学院</div></a></li>
+   
+   <li><a href="http://jixie.xawl.edu.cn/" target="_blank" title="机械与材料工程学院"><div class="txt">机械与材料工程学院</div></a></li>
+   
+   <li><a href="http://hg.xawl.edu.cn/" target="_blank" title="化学工程学院"><div class="txt">化学工程学院</div></a></li>
+   
+   <li><a href="http://shengwu.xawl.edu.cn/" target="_blank" title="生物与环境工程学院"><div class="txt">生物与环境工程学院</div></a></li>
+   
+   <li><a href="http://xqjy.xawl.edu.cn/" target="_blank" title="学前教育学院"><div class="txt">学前教育学院</div></a></li>
+   
+   <li><a href="http://jyxy.xawl.edu.cn/" target="_blank" title="师范学院"><div class="txt">师范学院</div></a></li>
+   
+   <li><a href="http://jingguan.xawl.edu.cn/" target="_blank" title="经济管理学院"><div class="txt">经济管理学院</div></a></li>
+   
+   <li><a href="http://lwl.xawl.edu.cn/" target="_blank" title="历史文化旅游学院"><div class="txt">历史文化旅游学院</div></a></li>
+   
+   <li><a href="http://marxism.xawl.edu.cn/" target="_blank" title="马克思主义学院"><div class="txt">马克思主义学院</div></a></li>
+   
+   <li><a href="http://tyxy.xawl.edu.cn/" target="_blank" title="体育学院"><div class="txt">体育学院</div></a></li>
+   
+   <li><a href="http://yishu.xawl.edu.cn/" target="_blank" title="美术与设计学院"><div class="txt">美术与设计学院</div></a></li>
+   
+   <li><a href="http://yinyue.xawl.edu.cn/" target="_blank" title="音乐学院"><div class="txt">音乐学院</div></a></li>
+   
+   <li><a href="http://jijiao.xawl.edu.cn/" target="_blank" title="继续教育学院"><div class="txt">继续教育学院</div></a></li>
+   
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 尾 -->
+        <div class="footer">
+            <div class="top">
+                <div class="block">
+                    <div class="item1">
+                                
+        
+                
+                        <img src="image/logo.png" border="0">
+                
+       
+
+                    </div>
+                    <script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<div class="item2"> 
+ <p class="item">电话：029-88215619</p> 
+ <p class="item">邮编：710065</p> 
+ <p class="item">地址：西安市科技六路1号</p> 
+</div>
+                        
+
+
+
+ <div class="item3">
+                         <div class="item">
+                        <img src="image/ewm1.png" alt="" class="img">
+                        <div class="text">新浪微博</div>
+                    </div>
+                   
+                    <div class="item">
+                        <img src="image/ewm2.png" alt="" class="img">
+                        <div class="text">抖音</div>
+                    </div>
+                   
+                    <div class="item">
+                        <img src="image/ewm3.png" alt="" class="img">
+                        <div class="text">微信公众号</div>
+                    </div>
+                   
+                    <div class="item">
+                        <img src="image/ewm4.png" alt="" class="img">
+                        <div class="text">一网通办事大厅</div>
+                    </div>
+                   
+                    <div class="clear"></div>
+                </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="bottom">版权所有 © 西安文理学院　<a href="https://beian.miit.gov.cn/" target="_blank" style="color:#b0cfff;">陕ICP备2021006934号</a></div>
+        </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <script>
+        function select1(index) {
+            select10(".box1 .right .title1 .text", index);
+            select10(".box1 .right .lists .list1", index);
+        }
+
+        function select2(index) {
+            select10(".box2 .b1 .title1 .text", index);
+            select10(".box2 .b1 .sel2", index);
+        }
+
+        function select3(index) {
+            select10(".box2 .b3 .title1 .text", index);
+            select10(".box2 .b3 .lists .list1", index);
+        }
+
+        function select4(index) {
+            select10(".box5 .item1 .title1 .text", index);
+            select10(".box5 .item1 .lists .list1", index);
+        }
+
+        function select5(index) {
+            select10(".box5 .item2 .title1 .text", index);
+            select10(".box5 .item2 .lists .list1", index);
+        }
+
+        function select6(index) {
+            select10(".box5 .item3 .title1 .text", index);
+            select10(".box5 .item3 .lists .list1", index);
+        }
+
+        function select7(index) {
+            select10(".box21 .right .top .title1 .text", index);
+            select10(".box21 .right .top .liststop .list", index);
+        }
+
+        function select8(index) {
+            select10(".box21 .right .bottom .title1 .text", index);
+            select10(".box21 .right .bottom .listsbottom .list", index);
+        }
+
+        function select10(css, index) {
+            var list = document.querySelectorAll(css);
+            for (var i = 0; i < list.length; i++) {
+                list[i].classList.remove("style")
+            }
+            list[index].classList.add("style")
+        }
+        $(function() {
+            $('.fade-1').slick({
+                autoplay: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                arrows: false,
+                cssEase: 'linear'
+            });
+        })
+        $('.fade-2').slick({
+            responsive: [
+
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 601,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+            ],
+            autoplay: true,
+            infinite: true,
+            speed: 500,
+            arrows: true,
+            cssEase: 'linear',
+            slidesToShow: 4,
+            slidesToScroll: 1
+        });
+    </script>
+    <script type="text/javascript">
+        function mouwl() {
+            if ($(window).width() > 1200) {
+                $(window).bind('mousewheel', function(event, delta, deltaX, deltaY) {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop == 0 && $('.fix-top').hasClass('fixed') && deltaY >= 0) {
+                        $('.header').removeClass('on');
+                        $('.fix-top').removeClass('fixed');
+                        setTimeout(function() {
+                            $(window).scrollTop(0);
+                            $('body').removeClass('fixed');
+                        }, 300);
+                    }
+                    if (!$('.fix-top').hasClass('fixed') && deltaY < 0) {
+                        $('.header').addClass('on');
+                        $('.fix-top').addClass('fixed');
+                        $('body').addClass('fixed');
+                        setTimeout(function() {
+                            $(window).scrollTop(5);
+                            $('body').removeClass('fixed');
+                            $(window).scrollTop(0);
+                        }, 300);
+                    }
+                });
+            } else {
+                $('video').remove();
+                $('.header').removeClass('on');
+                $('.fix-top').removeClass('fixed');
+                $('.fix-top').css({
+                    "display": 'none'
+                });
+            }
+        }
+        mouwl();
+        $(window).on('resize', function(e) {
+            mouwl();
+        });
+    </script>
+
+</html>

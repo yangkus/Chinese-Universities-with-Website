@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="海南软件职业技术学院" />
+<meta name="description" content="海南软件职业技术学院" />
+<title>海南软件职业技术学院</title>
+<link href="/skin/sites/common/css/bootstrap2.min.css" type="text/css"  rel="stylesheet" >
+<link href="/skin/sites/common/css/global.css" type="text/css"  rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="/skin/school811/cms/../core/header/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/school811/cms/../core/header/header.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/label.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/theme/theme.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/slick.css">
+<!--[if lt IE 9]>
+<script src="/html5shiv.min.js"></script>
+<script src="/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/guowei.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/breakpoints.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/js/jquery.iosslider.js"></script>
+<script type="text/javascript" src="/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script type="text/javascript" src="/js/lang/core/zh-cn.js"></script>
+<script type="text/javascript" src="/js/lang/cms/zh-cn.js"></script>
+<script type="text/javascript">
+P8CONFIG.RESOURCE = '';
+var SYSTEM = 'cms',
+MODULE = '',
+ACTION = 'main',
+LABEL_URL = '/index.php/cms-main?',
+$this_router = P8CONFIG.URI[SYSTEM][MODULE].U_controller,
+$this_url = $this_router +'-'+ ACTION,
+SKIN = '/skin/school811/cms/',
+TEMPLATE = 'school811';
+mobile_status= '1',
+mobile_auto_jump='0',
+mobile_url = '/m';
+if(mobile_status=='1' && SYSTEM!='sites'){
+if(browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+if(mobile_auto_jump=='1' && mobile_url!=P8CONFIG.RESOURCE){
+var this_url = location.href,_pul=P8CONFIG.RESOURCE;
+if(this_url.indexOf(mobile_url)==-1 && this_url.indexOf('s.php')==-1 && this_url.indexOf('u.php')==-1 && this_url.indexOf('admin.php')==-1 && SYSTEM!='sites'){
+if(this_url.indexOf(P8CONFIG.RESOURCE+'/html')!=-1)_pul+='/html';
+if(P8CONFIG.RESOURCE==''){
+this_url = mobile_url.indexOf('http')==-1 ? this_url.mobile_url : mobile_url;
+}else{
+this_url = this_url.replace(_pul, mobile_url);
+}
+location.href = this_url;
+}
+}
+}
+}
+
+</script>
+</head>
+<body>
+<header class="headbar">
+<div class="top hidden-sm hidden-xs">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="topnav clearfix">
+
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="search pull-right">
+<form action="/search" target="_blank" method="get" name="form1" id="form1">
+<input type="text" placeholder="Search" class="keyword" id="keyword" name="word"> 
+<button type="submit" class="submitbtn" id="button" name="button"><i class="iconfont icon-sel"></i></button>
+</form>
+</div>
+<div class="topnav2 pull-right clearfix">
+<ul>
+<li><span style="font-size:16px;"><a href="#" target="_blank">网站首页</a></span></li>
+<li><span style="font-size:16px;"><a href="https://ehall.hncst.edu.cn/" target="_blank">服务大厅</a></span></li>
+<li><span style="font-size:16px;"><a href="https://vpn.hncst.edu.cn/" target="_blank">VPN入口</a></span></li>
+<li><span style="font-size:16px;"><a href="https://int.hncst.edu.cn/" target="_blank">English</a></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="navbar main-nav">
+<div class="container">
+<div class="header clearfix">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/" class="navbar-brand navbar-logo"><img src="https://www.hncst.edu.cn/attachment/core/2022_02/10_17/e6d66f87fd63e79e.png"/></a>
+</div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+<ul class="nav navbar-nav navbar-right navlist navbar-link hidden-xs">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="/"  aria-expanded="false" role="button" target=""><span>首  页</span></a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/1007/"  aria-expanded="false" role="button" target=""><span>学校概况</span></a>
+<div class="dropdown-menu2 dropdown-ul2" role="menu">
+<div class="dropdown-item">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-md-4 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2021_12/14_18/3a47d9d6f14995d0.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="row dropdown-subcolumn">
+<ul class="clearfix">
+<li class="col-md-6 col-sm-6 col-xs-12 li1"><a href="/html/1007/" target="">学校简介</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12 li2"><a href="/html/1008/" target="">现任领导</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12 li3"><a href="/html/915/" target="">荣誉殿堂</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12 li4"><a href="/html/1083/" target="">百年校史</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-5 col-md-5 col-xs-12">
+<div class="dropdown-summary">海南软件职业技术学院坐落在博鳌亚洲论坛永久会址所在地、红色娘子军的故乡、中国优秀旅游城市、海南省东部中心城市——海南省琼海市市中心。<br>学校前身溯源于明万历三十二年（1604年）在琼州府会同县（1914年易名为“琼东县”，今琼海市）创办的正蒙清馆，历经应台书院、同文书院、端山书院、端山学堂、会同县立第一高等小学、琼东县立第一高等小学等办学历程；1923年5月，在琼东县县长王大鹏等一批早期共产党人的极力.....</div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target=""><span>机构设置</span></a>
+<div class="dropdown-menu2 dropdown-ul3" role="menu">
+<div class="dropdown-item">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-md-4 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2021_12/14_18/de49e379be69952c.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="row dropdown-subcolumn">
+<ul class="clearfix">
+<li class="col-md-6 col-sm-6 col-xs-12 li1"><a href="/html/829/" target="">党政管理部门</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12 li2"><a href="/html/830/" target="">教辅部门</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12 li3"><a href="/html/828/" target="">教学单位</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-5 col-md-5 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target=""><span>招生就业创业</span></a>
+<div class="dropdown-menu2 dropdown-ul4" role="menu">
+<div class="dropdown-item">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-md-4 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/2021_12/14_18/1ea8ae513bb572d5.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="row dropdown-subcolumn">
+<ul class="clearfix">
+<li class="col-md-6 col-sm-6 col-xs-12 li1"><a href="http://zs.hncst.edu.cn" target="_blank">招生信息网</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12 li2"><a href="http://job.hncst.edu.cn" target="_blank">就业创业信息网</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-5 col-md-5 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on5" data-hover="dropdown" href="/html/972/"  aria-expanded="false" role="button" target=""><span>省&quot;双高&quot;申报栏</span></a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on6" data-hover="dropdown" href="/html/1017/"  aria-expanded="false" role="button" target=""><span>线上逛校园</span></a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="/"  aria-expanded="false" role="button" target=""><span>稿件征集</span></a>
+<div class="dropdown-menu2 dropdown-ul7" role="menu">
+<div class="dropdown-item">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-md-4 col-xs-12">
+<div class="dropdown-frame"><img src="/attachment/core/label/2021_12/14_18/b3ab120b328bcf34.jpg"/></div>
+</div>
+<div class="col-md-3 col-md-3 col-xs-12">
+<div class="row dropdown-subcolumn">
+<ul class="clearfix">
+<li class="col-md-6 col-sm-6 col-xs-12 li1"><a href="/" target="">优秀网络文化作品创作征集：</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12 li2"><a href="/" target="">投稿邮箱376885633@qq.com</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-5 col-md-5 col-xs-12">
+<div class="dropdown-summary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>		
+</li>
+</ul>
+<ul class="nav navbar-nav navlist navbar-link2 visible-xs">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="/"  aria-expanded="false" role="button" target="">首  页</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/1007/"  aria-expanded="false" role="button" target="">学校概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/1007/" target="">学校简介</a></li>
+<li class="menu2"><a href="/html/1008/" target="">现任领导</a></li>
+<li class="menu3"><a href="/html/915/" target="">荣誉殿堂</a></li>
+<li class="menu4"><a href="/html/1083/" target="">百年校史</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/html/820/"  aria-expanded="false" role="button" target="">机构设置</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/829/" target="">党政管理部门</a></li>
+<li class="menu2"><a href="/html/830/" target="">教辅部门</a></li>
+<li class="menu3"><a href="/html/828/" target="">教学单位</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/html/45/"  aria-expanded="false" role="button" target="">招生就业创业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="http://zs.hncst.edu.cn" target="_blank">招生信息网</a></li>
+<li class="menu2"><a href="http://job.hncst.edu.cn" target="_blank">就业创业信息网</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on5" data-hover="dropdown" href="/html/972/"  aria-expanded="false" role="button" target="">省&quot;双高&quot;申报栏</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on6" data-hover="dropdown" href="/html/1017/"  aria-expanded="false" role="button" target="">线上逛校园</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on7" data-toggle="dropdown" data-hover="dropdown" href="/"  aria-expanded="false" role="button" target="">稿件征集</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/" target="">优秀网络文化作品创作征集：</a></li>
+<li class="menu2"><a href="/" target="">投稿邮箱376885633@qq.com</a></li>
+</ul>		
+</li>
+</ul>
+<div class="top visible-xs">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-sm-7 col-xs-12">
+<div class="topnav clearfix">
+
+</div>
+</div>
+<div class="col-md-4 col-sm-5 col-xs-12">
+<div class="topnav2 text-right clearfix">
+<ul>
+<li><span style="font-size:16px;"><a href="#" target="_blank">网站首页</a></span></li>
+<li><span style="font-size:16px;"><a href="https://ehall.hncst.edu.cn/" target="_blank">服务大厅</a></span></li>
+<li><span style="font-size:16px;"><a href="https://vpn.hncst.edu.cn/" target="_blank">VPN入口</a></span></li>
+<li><span style="font-size:16px;"><a href="https://int.hncst.edu.cn/" target="_blank">English</a></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="banner">
+<style type="text/css">
+.sliderbox52685{width:100%;position:relative;height:100%;overflow:hidden;}
+.sliderbox52685 .slick-list{height:100%;}
+.sliderbox52685 .slick-track{height:100%;}
+.sliderbox52685 .slick-slide>div{height:100%;}
+.sliderbox52685 .frame{height:100%;}
+.sliderbox52685 .child{height:100%;position:relative;overflow:hidden;}
+.sliderbox52685 .slick-slide .image{width:100%;height:100%;position:relative;overflow:hidden;}
+.sliderbox52685 .slick-slide .item,.sliderbox52685 .slick-slide .item img{width:100%;height:100%;display:block;}
+.sliderbox52685 .slick-slide video{width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;font-family: "object-fit: cover;";}
+.sliderbox52685 .number{position: absolute;right:100px;bottom:50px;color: #fff;text-align: center;line-height:1;}
+.sliderbox52685 .number li{width:10px;height:10px;margin:0 10px;background:#fff;border-radius:50%;font-size:0;cursor:pointer;vertical-align: middle;display:inline-block;}
+.sliderbox52685 .number li.slick-active{background:#1b5996;}
+.sliderbox52685 .slick-arrow{width: 46px;height: 83px;background-repeat:no-repeat;background-position: center center;margin-top: -18px;position: absolute;top: 50%;z-index:100;cursor: pointer;font-size:0;border:0;background-color: rgba(0,0,0,.4);;transition: all 500ms ease;-webkit-transition: all 500ms ease;opacity: 0;visibility: hidden;}
+.sliderbox52685 .slick-prev{background-image: url(/skin/label/left.png);left: 60px;}
+.sliderbox52685 .slick-next{background-image: url(/skin/label/right.png);right: 60px;}
+.sliderbox52685:hover .slick-arrow{opacity:1;visibility:visible;}
+@media (max-width: 767px){
+.sliderbox52685,.sliderbox52685 .frame,.slick-slide .item img{width:100%;height:30vh;}
+.sliderbox52685 .slick-slide .item .title{padding-left:20px;font-size:16px;line-height:24px;bottom:10px;}
+}
+</style>
+<div class="sliderbox52685">
+<div class="slider frame">
+<div class="child">
+<div class="image">
+<a class="item" href="http://www.hncst.edu.cn/html/1027/" target="_blank" title="">
+<img src="/attachment/core/label/2024_10/23_10/9fbb490f1a0b416d.jpg" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="" target="_blank" title="">
+<img src="/attachment/core/label/2024_09/29_08/18418fa243db1aa1.jpg" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="http://www.hncst.edu.cn/html/1021/" target="_blank" title="">
+<img src="/attachment/core/label/2024_09/09_15/ba0158904153c38b.jpg" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="https://admin.hncst.edu.cn/index.php/cms/item-list-category-1030?edit_label=1" target="_blank" title="">
+<img src="/attachment/core/label/2024_04/16_11/54448e77d60d1d85.jpg" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="" target="_blank" title="">
+<img src="/attachment/core/label/2023_10/20_18/d1f06d01fed72cb6.jpg" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="http://www.hncst.edu.cn/html/1023/" target="_blank" title="">
+<img src="/attachment/core/label/2023_08/28_18/37f8964ab7812885.jpg" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="" target="_blank" title="">
+<img src="/attachment/core/label/2024_01/12_15/54dac8b33f36b752.jpg" alt="" >
+</a>
+</div>
+</div>
+<div class="child">
+<div class="image">
+<a class="item" href="" target="_blank" title="">
+<img src="/attachment/core/label/2023_10/08_11/d730ed60990b554b.jpg" alt="" >
+</a>
+</div>
+</div>
+</div>
+<div class="number"></div>
+</div>
+<script type="text/javascript">
+$(".sliderbox52685 .frame").slick({
+fade:true,
+autoplay:true,
+autoplaySpeed:6000,
+pauseOnDotsHover:true,
+pauseOnFocus:false,
+speed:1000,
+arrows:true,
+dots:true,
+appendDots:".sliderbox52685 .number",
+pauseOnHover:false,
+customPaging: function(slider, i) {  
+return i + 1;
+},
+});
+</script></div>
+<div class="fixed-top"></div>
+<script type="text/javascript">
+var USERNAME = get_username();
+$(document).ready(function(){
+//**show_edit**//
+init_labelshows('header_t');
+})
+</script>
+<script type="text/javascript">
+$(window).bind('mousewheel', function(event, delta, deltaX, deltaY) {
+var scrollTop = $(window).scrollTop();
+if (scrollTop == 0 && $('.fixed-top').hasClass('fixed') && deltaY >= 0) {
+$('.fixed-top').removeClass('fixed');
+$('body').removeClass('fixedok');
+setTimeout(function() {
+$(window).scrollTop(0);
+$('body').removeClass('fixed');
+}, 300);
+}
+if (!$('.fixed-top').hasClass('fixed') && deltaY < 0) {
+$('.fixed-top').addClass('fixed');
+$('body').addClass('fixed');
+setTimeout(function() {
+$(window).scrollTop(5);
+$('body').removeClass('fixed');
+$(window).scrollTop(0);
+}, 300);            
+setTimeout(function() { 
+$('body').addClass('fixedok');
+}, 800);
+}
+});
+</script>
+<div id="content-full" class="content-full"><link rel="stylesheet" type="text/css" href="/skin/school811/cms/index/index.css" />
+<link rel="stylesheet" type="text/css" href="/skin/school811/cms/index/animate.css" />
+<script type="text/javascript" src="/js/wow.min.js"></script>
+<div class="section section1">
+<div class="container">
+<div class="nbox">
+<div class="hdb">
+<div class="title">海软要闻</div>
+<div class="hmore">
+<a href="/html/985/" target="_blank">更多>></a></div>
+</div>
+<div class="row">
+<div class="col-md-8 col-sm-12 col-xs-12">
+<div class="row">
+<ul class="label_pic_com_ul11">
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="pic"><a href="https://mp.weixin.qq.com/s/Dfkd7kpmBQpCaHtSy7qsag" target="_blank" title="2024年世界职业院校技能大赛总决赛争夺赛高职组电子与信息赛道二大数据应用开发赛项在琼海开赛‌"><img width="465" height="300" class="coverImg" alt="2024年世界职业院校技能大赛总决赛争夺赛高职组电子与信息赛道二大数据应用开发赛项在琼海开赛‌" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/28_08/4585e87dc71c8c75.jpg.thumb.jpg" /></a></div>
+<div class="text">
+<a href="https://mp.weixin.qq.com/s/Dfkd7kpmBQpCaHtSy7qsag" target="_blank" title="2024年世界职业院校技能大赛总决赛争夺赛高职组电子与信息赛道二大数据应用开发赛项在琼海开赛‌">
+<h3>2024年世界职业院校技能大赛总决赛争夺赛高职组电子与信息赛道二</h3>
+<p class="summary">...</p>
+<p class="date clearfix">2024-10-27<span class="details"></span></p>
+</a>
+</div>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="pic"><a href="https://mp.weixin.qq.com/s/3KzQPHii6gYnUKPBKcXtmQ" target="_blank" title="群英毕至 青春闪耀——开赛在即，参赛人员陆续抵达琼海报到"><img width="465" height="300" class="coverImg" alt="群英毕至 青春闪耀——开赛在即，参赛人员陆续抵达琼海报到" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/28_08/3ba2598b1271a576.jpg.thumb.jpg" /></a></div>
+<div class="text">
+<a href="https://mp.weixin.qq.com/s/3KzQPHii6gYnUKPBKcXtmQ" target="_blank" title="群英毕至 青春闪耀——开赛在即，参赛人员陆续抵达琼海报到">
+<h3>群英毕至 青春闪耀——开赛在即，参赛人员陆续抵达琼海报到</h3>
+<p class="summary">...</p>
+<p class="date clearfix">2024-10-26<span class="details"></span></p>
+</a>
+</div>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="pic"><a href="https://mp.weixin.qq.com/s/wNClxCvP-5oGDXSv-CTPvg" target="_blank" title="一切就绪，只等你来！"><img width="465" height="300" class="coverImg" alt="一切就绪，只等你来！" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/28_08/944656f89b8c337a.jpg.thumb.jpg" /></a></div>
+<div class="text">
+<a href="https://mp.weixin.qq.com/s/wNClxCvP-5oGDXSv-CTPvg" target="_blank" title="一切就绪，只等你来！">
+<h3>一切就绪，只等你来！</h3>
+<p class="summary">...</p>
+<p class="date clearfix">2024-10-25<span class="details"></span></p>
+</a>
+</div>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="pic"><a href="https://mp.weixin.qq.com/s/2CtpsE8NRX0oUjhhsqV2Ig" target="_blank" title="倒计时2天！"><img width="465" height="300" class="coverImg" alt="倒计时2天！" onError="this.src='/images/nopic.jpg'" src="/attachment/cms/item/2024_10/25_08/f428526df929fb08.jpg.thumb.jpg" /></a></div>
+<div class="text">
+<a href="https://mp.weixin.qq.com/s/2CtpsE8NRX0oUjhhsqV2Ig" target="_blank" title="倒计时2天！">
+<h3>倒计时2天！</h3>
+<p class="summary">...</p>
+<p class="date clearfix">2024-10-24<span class="details"></span></p>
+</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+<div class="news-list">
+<style type="text/css">
+.list_date10 li{padding:10px 10px;margin-bottom:23px;background-color:#fff;overflow:hidden;box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+.list_date10 li .date{width:84px;height:84px;float:left;text-align:center;}
+.list_date10 li .date span{display:block;text-align:center;}
+.list_date10 li .date .d{color:#474747;font-size:36px;padding:15px 0 10px;}
+.list_date10 li .date .y{color:#474747;font-size:16px;}
+.list_date10 li .text{margin-left:100px;height:84px;padding:10px 30px;border-left:2px solid #ececec;}
+.list_date10 li .text h4{width:100%;line-height:32px;display:block;text-overflow:-o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;line-clamp: 2;-webkit-box-orient: vertical;}
+.list_date10 li .text h4 a{color:#4c4b4b;font-size:16px;}
+.list_date10 li:hover{background-color:#0179d4;}
+.list_date10 li:hover .date .d{color:#fff;}
+.list_date10 li:hover .date .y{color:#e5e5e5;}
+.list_date10 li:hover .text h4 a{color:#fff;}
+@media (max-width:1439px){
+.list_date10 li{margin-bottom:14px;}
+.list_date10 li .date,.list_date10 li .text{height:64px;}
+.list_date10 li .date .d{font-size:20px;}
+.list_date10 li .date .y{font-size:14px;}
+.list_date10 li .text h4{line-height:22px;}
+.list_date10 li .text h4 a{font-size:15px;}
+}
+@media (max-width:1199px){
+.list_date10 li{margin-bottom:14px;}
+.list_date10 li .date,.list_date10 li .text{height:47px;padding:0 10px;}
+.list_date10 li .date .d{font-size:20px;padding:5px 0 0;}
+.list_date10 li .date .y{font-size:14px;}
+.list_date10 li .text{margin-left:80px;}
+.list_date10 li .text h4{line-height:22px;}
+.list_date10 li .text h4 a{font-size:15px;}
+}
+</style>
+<ul class="list_date10">	
+<li>
+<div class="date">
+<span class="d">27</span>
+<span class="y">2024/10</span>
+</div>
+<div class="text">
+<h4><a href="https://mp.weixin.qq.com/s/Dfkd7kpmBQpCaHtSy7qsag" target="_blank">2024年世界职业院校技能大赛总决赛争夺赛高职组电子与信息赛道二</a></h4>
+</div>
+</li>	
+<li>
+<div class="date">
+<span class="d">26</span>
+<span class="y">2024/10</span>
+</div>
+<div class="text">
+<h4><a href="https://mp.weixin.qq.com/s/3KzQPHii6gYnUKPBKcXtmQ" target="_blank">群英毕至 青春闪耀——开赛在即，参赛人员陆续抵达琼海报到</a></h4>
+</div>
+</li>	
+<li>
+<div class="date">
+<span class="d">25</span>
+<span class="y">2024/10</span>
+</div>
+<div class="text">
+<h4><a href="https://mp.weixin.qq.com/s/wNClxCvP-5oGDXSv-CTPvg" target="_blank">一切就绪，只等你来！</a></h4>
+</div>
+</li>	
+<li>
+<div class="date">
+<span class="d">24</span>
+<span class="y">2024/10</span>
+</div>
+<div class="text">
+<h4><a href="/html/985/2024-10-24/content-13340.html" target="_blank">我校师生设计的作品闪耀第七届中国农民丰收节</a></h4>
+</div>
+</li>	
+<li>
+<div class="date">
+<span class="d">24</span>
+<span class="y">2024/10</span>
+</div>
+<div class="text">
+<h4><a href="https://mp.weixin.qq.com/s/2CtpsE8NRX0oUjhhsqV2Ig" target="_blank">倒计时2天！</a></h4>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section section2">
+<div class="plane2">
+<div class="container">
+<div class="nbox">
+<div class="hdb">
+<div class="title">通知公告</div>
+<div class="hmore">
+<a href="/html/986/" target="_blank">更多>></a></div>
+</div>
+<div class="n-con">
+<style type="text/css">
+.list_adap_date34 li{margin-bottom:50px;}
+.list_adap_date34 .time{width:84px;height:94px;float:left;text-align:center;margin-right:15px;border:1px solid #0179d4;border-bottom: 6px solid #0179d4;border-radius: 6px;background: #fff;}
+.list_adap_date34 .time span{display:block;text-align:center;}
+.list_adap_date34 .time .date{color:#1b5996;line-height:34px;font-size:30px;margin-top:15px;}
+.list_adap_date34 .time .year{color:#1b5996;font-size:14px;line-height:34px;}
+.list_adap_date34 .text{padding-left:8px;}
+.list_adap_date34 .text h4{font-weight:normal;margin-top:0;margin-bottom:5px;line-height:30px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;text-overflow: ellipsis;}
+.list_adap_date34 .text h4 a{color:#1f1f1f;font-size:16px;}
+.list_adap_date34 .text p{color:#4c4b4b;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;text-overflow: ellipsis;}
+.list_adap_date34 li:hover .time{background: #0179d4;}
+.list_adap_date34 li:hover .date,.list_adap_date34 li:hover .year{color:#fff;}
+.list_adap_date34 li:hover h4 a{color:#1b5996;}
+</style>
+<ul class="list_adap_date34">
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="media">
+<div class="time">
+<span class="date">22</span>
+<span class="year">2024-08</span>
+</div>
+<div class="media-body">
+<div class="text">
+<h4><a href="/html/986/2024-08-22/content-13124.html" target="_blank">海南软件职业技术学院2024年考核招聘博士学位事业编制专任教师公告</a></h4>
+<p class="summary">海南软件职业技术学院是2003年3月经海南省人民政府批准设立，教育部备案，主要培养信息、软件行业的高素质技术技能人才的公办全</p>
+</div>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="media">
+<div class="time">
+<span class="date">23</span>
+<span class="year">2024-10</span>
+</div>
+<div class="media-body">
+<div class="text">
+<h4><a href="/html/986/2024-10-23/content-13334.html" target="_blank">海南软件职业技术学院2024年虚拟仿真实训基地建设（一期）项目招标代理机构比选公告</a></h4>
+<p class="summary">一、项目概况1．项目名称：2024年虚拟仿真实训基地建设（一期）项目招标代理机构比选2．项目编号：HNRJ2024-123．采购方式：比选</p>
+</div>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="media">
+<div class="time">
+<span class="date">23</span>
+<span class="year">2024-10</span>
+</div>
+<div class="media-body">
+<div class="text">
+<h4><a href="/html/986/2024-10-23/content-13333.html" target="_blank">海南软件职业技术学院动画与数字创意学院平面设计工作室项目（训506）（第三次）-竞争</a></h4>
+<p class="summary">项目概况动画与数字创意学院平面设计工作室项目（训506）（第三次） 采购项目的潜在供应商应在系统获取采购文件，并于2024年11月</p>
+</div>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="media">
+<div class="time">
+<span class="date">22</span>
+<span class="year">2024-10</span>
+</div>
+<div class="media-body">
+<div class="text">
+<h4><a href="/html/986/2024-10-22/content-13329.html" target="_blank">海南省高校思想政治工作研究项目校内初步评审结果公示</a></h4>
+<p class="summary">各单位、各部门：为做好第一、二批全省高校思想政治工作培养建设项目结项工作，根据海南省教育厅关于开展高校思想政治工作培育建</p>
+</div>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="media">
+<div class="time">
+<span class="date">22</span>
+<span class="year">2024-10</span>
+</div>
+<div class="media-body">
+<div class="text">
+<h4><a href="/html/986/2024-10-22/content-13326.html" target="_blank">海南软件职业技术学院-软件产业协同创新中心-中标公告</a></h4>
+<p class="summary">一、项目基本情况项目编号HNDWZB20240943二、项目名称项目名称软件产业协同创新中心三、中标信息：中标供应商名称北京中软国际教</p>
+</div>
+</div>
+</div>
+</li>
+<li class="col-md-4 col-sm-4 col-xs-12">
+<div class="media">
+<div class="time">
+<span class="date">18</span>
+<span class="year">2024-10</span>
+</div>
+<div class="media-body">
+<div class="text">
+<h4><a href="/html/986/2024-10-18/content-13356.html" target="_blank">海南软件职业技术学院新一代信息技术产教融合实训基地项目中标候选人公示</a></h4>
+<p class="summary"></p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section section3">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-12 col-xs-12">
+<div class="nbox">
+<div class="hdb2 clearfix">
+<div class="title pull-left">媒体关注</div>
+<div class="hmore pull-right">
+<a href="/html/976/" target="_blank">更多>></a></div>
+</div>
+<div class="n-con">
+<div class="tbox mb25">
+
+<style type="text/css">
+#slick12-focus53304{position: relative;height:100%;}
+#slick12-focus53304 .slider-item{position:relative;}
+#slick12-focus53304 .child a{width:100%;height:100%;display:block;position:relative;padding-bottom:100px;}
+#slick12-focus53304 .child .pic{width:90%;position:relative;z-index:2;}
+#slick12-focus53304 .child .pic img{width:100%;height:430px;}
+#slick12-focus53304 .child .text{width:90%;height:90%;background:#0179d4;padding:20px 20px;position:absolute;bottom:0;right:0;}
+#slick12-focus53304 .child .text h3{width:100%;font-size:18px;color:#fff;margin:0;text-align:center;position:absolute;bottom:40px;right:0;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
+#slick12-focus53304 .number{position: absolute;right:30px;bottom:30px;color: #fff;text-align: center;line-height:1;}
+#slick12-focus53304 .number li{width:10px;height:10px;margin:0 10px;background:#0179d4;border-radius:50%;font-size:0;cursor:pointer;vertical-align: middle;display:inline-block;}
+#slick12-focus53304 .number li.slick-active{background:#fff;}
+#slick12-focus53304 .slick-arrow{font-size:0;border:0;outline: none;opacity:0}
+#slick12-focus53304 .slick-prev { left: 0;}
+#slick12-focus53304 .slick-next { right:10%; background-position: -60px 0; }
+#slick12-focus53304 .slick-next:hover, #first-focus53304 .slick-prev:hover { opacity: 1; }
+#slick12-focus53304 .slick-prev { cursor: pointer; position: absolute; z-index: 100; top: 40%; background: url(/skin/label/prevnext.png) no-repeat; height: 60px; width: 35px; transition: left .3s; border-radius: 0;transition: left .3s; }
+#slick12-focus53304 .slick-next { cursor: pointer; position: absolute; z-index: 100; top: 40%; background: url(/skin/label/prevnext.png) no-repeat; height: 60px; width: 35px; transition: left .3s; border-radius: 0;transition: right .3s; background-position: -49px 0; }
+#slick12-focus53304 {overflow: hidden;}
+#slick12-focus53304:hover .slick-prev {opacity:1; }
+#slick12-focus53304:hover .slick-next { opacity:1; }
+#slick12-focus53304 .slick-next:hover { background-position: -143px 0; }
+#slick12-focus53304 .slick-prev:hover { background-position: -99px 0; }
+@media screen and (max-width: 767px){
+#slick12-focus53304 .child .pic img{width:100%;height:50vh;}
+#slick12-focus53304 .child .text h3{width:100%;}
+#slick12-focus53304 .number{bottom:20px;}
+}
+</style>
+<div id="slick12-focus53304">
+<div class="slider-item">
+<div class="frame">
+<div class="child">
+<a href="https://res.hndaily.cn/file/news/20241027/cid_92_520521.html" target="_blank" title="【海南日报】2024年世界职业院校技能大赛争夺赛大数据应用开发赛项在琼海开赛">
+<div class="pic">
+<img src="/attachment/cms/item/2024_10/28_09/cfa7044c72a1757e.jpg.thumb.jpg" alt="【海南日报】2024年世界职业院校技能大赛争夺赛大数据应用开发赛项在琼海开赛">
+</div>
+<div class="text">
+<h3>【海南日报】2024年世界职业院校技能大赛争夺赛大数据应用开发赛</h3>
+</div>
+</a>
+</div>
+<div class="child">
+<a href="https://h.xinhuaxmt.com/vh512/share/12252505?d=134da83&channel=weixin" target="_blank" title="【新华社】2024年世界职业院校技能大赛争夺赛大数据应用开发赛项在琼海开赛">
+<div class="pic">
+<img src="/attachment/cms/item/2024_10/28_09/6777f6cc273e14f0.jpg.thumb.jpg" alt="【新华社】2024年世界职业院校技能大赛争夺赛大数据应用开发赛项在琼海开赛">
+</div>
+<div class="text">
+<h3>【新华社】2024年世界职业院校技能大赛争夺赛大数据应用开发赛项</h3>
+</div>
+</a>
+</div>
+<div class="child">
+<a href="https://rm-xhn-1.hinews.cn/page.html?newsId=2573684&siteId=11&mediumTypeId=1&siteLayoutModuleArticleStyleId=0" target="_blank" title="【南海网】2024年世界职业院校技能大赛争夺赛大数据应用开发赛项在琼海开赛‌">
+<div class="pic">
+<img src="/attachment/cms/item/2024_10/28_09/2f19c24f216724b0.jpg.thumb.jpg" alt="【南海网】2024年世界职业院校技能大赛争夺赛大数据应用开发赛项在琼海开赛‌">
+</div>
+<div class="text">
+<h3>【南海网】2024年世界职业院校技能大赛争夺赛大数据应用开发赛项</h3>
+</div>
+</a>
+</div>
+<div class="child">
+<a href="https://mp.weixin.qq.com/s/PfDgCJNu1nOOuuDgUOL_Ww" target="_blank" title="【海南音乐广播】我校师生献礼中华人民共和国成立75周年歌曲《中国梦灿烂辉煌》正式发布">
+<div class="pic">
+<img src="/attachment/cms/item/2024_09/30_08/0655f6582f5bbde9.png.thumb.jpg" alt="【海南音乐广播】我校师生献礼中华人民共和国成立75周年歌曲《中国梦灿烂辉煌》正式发布">
+</div>
+<div class="text">
+<h3>【海南音乐广播】我校师生献礼中华人民共和国成立75周年歌曲《中</h3>
+</div>
+</a>
+</div>
+<div class="child">
+<a href="http://hi.people.com.cn/n2/2024/0926/c231190-40990443.html" target="_blank" title="【人民网】海南人工智能与数据产业学院在海口揭牌成立">
+<div class="pic">
+<img src="/attachment/cms/item/2024_09/27_14/602d89d398bdd586.jpg.thumb.jpg" alt="【人民网】海南人工智能与数据产业学院在海口揭牌成立">
+</div>
+<div class="text">
+<h3>【人民网】海南人工智能与数据产业学院在海口揭牌成立</h3>
+</div>
+</a>
+</div>
+<div class="child">
+<a href="https://res.hndaily.cn/file/news/20240923/cid_107_512574.html" target="_blank" title="【海南日报】海南省信息技术应用创新职教集团第二届产教融合论坛暨信创+数字经济产业学院揭牌仪式在琼海举行">
+<div class="pic">
+<img src="/attachment/cms/item/2024_09/24_09/a2d71364eabc0407.jpg.thumb.jpg" alt="【海南日报】海南省信息技术应用创新职教集团第二届产教融合论坛暨信创+数字经济产业学院揭牌仪式在琼海举行">
+</div>
+<div class="text">
+<h3>【海南日报】海南省信息技术应用创新职教集团第二届产教融合论坛</h3>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="number"></div>
+</div>
+<script type="text/javascript">
+$('#slick12-focus53304 .frame').slick({
+infinite: true,
+slidesToShow: 1,
+slidesToScroll: 1,
+autoplay: true,
+centerMode: false,
+arrows:true,
+dots:false,
+appendDots:"#slick12-focus53304 .number",
+pauseOnHover:false,
+customPaging: function(slider, i) {  
+return i + 1;
+},
+autoplaySpeed:4000,
+});
+</script>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-12 col-xs-12">
+<div class="nbox">
+<div class="hdb2 clearfix">
+<div class="title pull-left">部门动态</div>
+<div class="hmore pull-right">
+<a href="/html/929/" target="_blank">更多>></a></div>
+</div>
+<div class="n-con">
+<div class="row">
+<ul class="label_pic_ul11">
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="pic"><a href="/html/929/2024-10-23/content-13332.shtml" target="_blank" title="筑牢反诈防线 共建法治校园——学生工作部开展“反电诈”法治宣传进校园宣讲活动"><img width="435" height="220" class="coverImg" alt="筑牢反诈防线 共建法治校园——学生工作部开展“反电诈”法治宣传进校园宣讲活动" onError="this.src='/images/nopic.jpg'" src="/attachment/sites/item/2024_10/23_11/3b6ffd72c61a2657.JPG.cthumb.jpg" /></a></div>
+<div class="text" style="padding:0;margin-top:15px;">
+<h3 style="margin:0"><a href="/html/929/2024-10-23/content-13332.shtml" target="_blank" title="筑牢反诈防线 共建法治校园——学生工作部开展“反电诈”法治宣传进校园宣讲活动">筑牢反诈防线 共建法治校园——学生工作部开展“反电诈”法治宣</a></h3>
+</div>
+</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="item">
+<div class="pic"><a href="/html/929/2024-10-23/content-13331.shtml" target="_blank" title="喜报丨我校学子在第九届海南省学生“学宪法 讲宪法”活动中再获佳绩"><img width="435" height="220" class="coverImg" alt="喜报丨我校学子在第九届海南省学生“学宪法 讲宪法”活动中再获佳绩" onError="this.src='/images/nopic.jpg'" src="/attachment/core/spider/2024_10/23_10/58ef9e5edc5a2e10.jpg.cthumb.jpg" /></a></div>
+<div class="text" style="padding:0;margin-top:15px;">
+<h3 style="margin:0"><a href="/html/929/2024-10-23/content-13331.shtml" target="_blank" title="喜报丨我校学子在第九届海南省学生“学宪法 讲宪法”活动中再获佳绩">喜报丨我校学子在第九届海南省学生“学宪法 讲宪法”活动中再获</a></h3>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="news-list">
+<ul class="sidelist4">
+<li style=";"><span class="fleft cRed" style="font-size:14px; margin-right:10px;color:#0574bb">[<a href="/html/929/" target="_blank" style="color:#0574bb">学生工作部</a>] </span> <span class="label_datatime">2024-10-23</span><a class="normal_title" target="_blank" title="筑牢反诈防线 共建法治校园——学生工作部开展“反电诈”法治宣传进校园宣讲活动" href="/html/929/2024-10-23/content-13332.shtml">筑牢反诈防线 共建法治校园——学生工作部开展“反电诈”法治宣</a></li>
+<li style=";"><span class="fleft cRed" style="font-size:14px; margin-right:10px;color:#0574bb">[<a href="/html/929/" target="_blank" style="color:#0574bb">团委</a>] </span> <span class="label_datatime">2024-10-23</span><a class="normal_title" target="_blank" title="喜报丨我校学子在第九届海南省学生“学宪法 讲宪法”活动中再获佳绩" href="/html/929/2024-10-23/content-13331.shtml">喜报丨我校学子在第九届海南省学生“学宪法 讲宪法”活动中再获</a></li>
+<li style=";"><span class="fleft cRed" style="font-size:14px; margin-right:10px;color:#0574bb">[<a href="/html/929/" target="_blank" style="color:#0574bb">学生工作部</a>] </span> <span class="label_datatime">2024-10-21</span><a class="normal_title" target="_blank" title="辅导员素质能力提升培训班第二期如期举办" href="/html/929/2024-10-21/content-13325.shtml">辅导员素质能力提升培训班第二期如期举办</a></li>
+<li style=";"><span class="fleft cRed" style="font-size:14px; margin-right:10px;color:#0574bb">[<a href="/html/929/" target="_blank" style="color:#0574bb">学生工作部</a>] </span> <span class="label_datatime">2024-10-16</span><a class="normal_title" target="_blank" title="从“心”赋能 “育”见美好——学生工作部举办班主任心理健康教育专题培训" href="/html/929/2024-10-16/content-13311.shtml">从“心”赋能 “育”见美好——学生工作部举办班主任心理健康教</a></li>
+<li style=";"><span class="fleft cRed" style="font-size:14px; margin-right:10px;color:#0574bb">[<a href="/html/929/" target="_blank" style="color:#0574bb">学生工作部</a>] </span> <span class="label_datatime">2024-10-14</span><a class="normal_title" target="_blank" title="学生工作部召开“一站式”学生社区综合管理模式建设工作推进会" href="/html/929/2024-10-14/content-13309.shtml">学生工作部召开“一站式”学生社区综合管理模式建设工作推进会</a></li>
+<li style=";"><span class="fleft cRed" style="font-size:14px; margin-right:10px;color:#0574bb">[<a href="/html/929/" target="_blank" style="color:#0574bb">教育与艺术学院</a>] </span> <span class="label_datatime">2024-10-14</span><a class="normal_title" target="_blank" title="喜报丨教育与艺术学院“艺”起看星星——海软教艺志愿服务队在2024年海南省万名大学生基层科普行活动中获多项荣誉" href="/html/929/2024-10-14/content-13330.shtml">喜报丨教育与艺术学院“艺”起看星星——海软教艺志愿服务队在20</a></li>
+<li style=";"><span class="fleft cRed" style="font-size:14px; margin-right:10px;color:#0574bb">[<a href="/html/929/" target="_blank" style="color:#0574bb">信息技术中心</a>] </span> <span class="label_datatime">2024-09-29</span><a class="normal_title" target="_blank" title="信息技术中心2024年国庆值班安排表" href="/html/929/2024-09-29/content-13258.shtml">信息技术中心2024年国庆值班安排表</a></li>
+<li style=";"><span class="fleft cRed" style="font-size:14px; margin-right:10px;color:#0574bb">[<a href="/html/929/" target="_blank" style="color:#0574bb">学生工作部</a>] </span> <span class="label_datatime">2024-09-25</span><a class="normal_title" target="_blank" title="学生工作部举办2024年辅导员素质能力提升培训班" href="/html/929/2024-09-25/content-13252.shtml">学生工作部举办2024年辅导员素质能力提升培训班</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section section5">
+<div class="plane4">
+<div class="container">
+<div class="nbox">
+<div class="hdb">
+<div class="title">专题专栏</div>
+<div class="hmore">
+<a href="/html/977/" target="_blank">更多>></a></div>
+</div>
+<div class="main">
+<style type="text/css">
+.pic6-responsive54554{padding:0 50px;}
+.pic6-responsive54554 .ul-list3{position:relative}
+.pic6-responsive54554 .ul-list3 .con{display:block;}
+.pic6-responsive54554 .ul-list3 .con .pic{margin-bottom:40px;border-bottom: 4px solid transparent;overflow:hidden;}
+.pic6-responsive54554 .ul-list3 .con .pic img{width:100%;height: auto;-webkit-transition:.3s;-moz-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s;}
+.pic6-responsive54554 .ul-list3 .con:hover .pic{border-bottom:4px solid #0179d4;transition: all 0.35s ease-in-out;}
+.pic6-responsive54554 .ul-list3 .con:hover .pic img{-webkit-transform:scale(1.08);-moz-transform:scale(1.08);-ms-transform:scale(1.08);-o-transform:scale(1.08);transform:scale(1.08);}
+.pic6-responsive54554 .slick-arrow{width:20px;height:40px;background-repeat:no-repeat;background-position: center;position: absolute;top:39%;z-index:100;cursor: pointer;font-size:0;border:0;outline: none;}
+.pic6-responsive54554 .slick-prev {background-image: url(/skin/label/sites/prev4.png);left:0px;}
+.pic6-responsive54554 .slick-next {background-image: url(/skin/label/sites/next4.png);right:0px;}
+@media only screen and (max-width: 767px){
+.pic6-responsive54554 .ul-list3 .con .pic{margin-bottom:20px;}
+}
+</style>
+<div class="pic6-responsive54554"> 
+<div class="item">
+<ul class="ul-list3 row">
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/978/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2021_12/14_17/50a2ab583e88f937.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/980/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2021_12/14_17/57295b7b084aadbe.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/981/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2021_12/14_17/777cffd7b49f43be.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/982/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2021_12/14_17/b133e02af1adc57d.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/983/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2021_12/14_17/09c6134c376c81d9.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1010/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2022_04/06_15/15dd075788fd544a.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/979/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2022_04/06_15/1ab109752c67d979.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/977/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2021_12/14_17/bad7acdbdd787d2c.jpg" alt="">
+</div>
+</a>
+</li>
+</ul> 
+</div> 
+<div class="item">
+<ul class="ul-list3 row">
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1021/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2023_04/13_18/5fcc05fae1f0e1fe.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1022/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2023_09/14_18/473a963fd10d49bb.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1023/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2023_08/28_18/193044929da9d606.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1024/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2023_09/20_10/3322c7fa207a224c.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1025/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2023_09/14_17/e7cc3f70bc744200.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1026/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2023_09/14_17/01b10a3e465a2137.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1027/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2024_10/23_10/6a72655eeeace1d1.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1028/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2023_10/13_11/c3936ee6ac722378.jpg" alt="">
+</div>
+</a>
+</li>
+</ul> 
+</div> 
+<div class="item">
+<ul class="ul-list3 row">
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="https://www.hncst.edu.cn/html/1030/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2024_04/15_10/fa73ff0d81a4c0b4.jpg" alt="">
+</div>
+</a>
+</li>
+<li class="col-md-3 col-sm-3 col-xs-6">
+<a href="http://www.hncst.edu.cn/html/1082/" class="con">
+<div class="pic">
+<img src="/attachment/core/label/2024_06/13_15/05b8cf3a9b95be21.jpg" alt="">
+</div>
+</a>
+</li>
+</ul> 
+</div>
+</div>
+<script type="text/javascript">
+$('.pic6-responsive54554').slick({
+dots: false,
+arrows: true,
+autoplay: true,
+autoplaySpeed: 5000,
+infinite: true,
+slidesToShow: 1,
+slidesToScroll: 1
+});
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section section7">
+<div class="container">
+<div class="plane6">
+<div class="nbox">
+<div class="hdb">
+<div class="title">快捷链接</div>
+</div>
+<div class="n-con">
+<ul class="row">
+<li class="col-md-3 col-sm-3 col-xs-6 link1"><a href="https://www.hncst.edu.cn/html/993/" target="_blank"><img src="/skin/school811/cms/index/icon1.png" style="width: 50px; height: 50px;" /></a><a href="https://www.hncst.edu.cn/html/993/">友情链接</a></li>
+<li class="col-md-3 col-sm-3 col-xs-6 link2"><a href="https://www.hncst.edu.cn/html/995/" target="_blank"><img src="/skin/school811/cms/index/icon2.png" style="width: 50px; height: 50px;" /></a><a href="https://www.hncst.edu.cn/html/995/">公共服务</a></li>
+<li class="col-md-3 col-sm-3 col-xs-6 link3"><a href="https://www.hncst.edu.cn/html/996/" target="_blank"><img src="/skin/school811/cms/index/icon3.png" style="width: 50px; height: 50px;" /></a><a href="https://www.hncst.edu.cn/html/996/">协同办公</a></li>
+<!--<li class="col-md-2 col-sm-4 col-xs-6 link4"><a href="#"><img src="/skin/school811/cms/index/icon4.png" />官方微信</a></li>-->
+<li class="col-md-3 col-sm-3 col-xs-6 link5"><a href="http://www.yiban.cn/" target="_blank"><img src="/skin/school811/cms/index/icon5.png" style="width: 50px; height: 50px;" /></a><a href="http://www.yiban.cn/">易班</a></li>
+<!--<li class="col-md-2 col-sm-4 col-xs-6 link6"><a href="#"><img src="/skin/school811/cms/index/icon6.png" />校园地图</a></li>-->
+<li class="col-md-3 col-sm-3 col-xs-6 link2"><a href="https://www.hncst.edu.cn/index.php/forms-post?mid=206" target="_blank"><img src="/skin/school811/cms/index/icon2.png" style="width: 50px; height: 50px;" /></a><a href="https://www.hncst.edu.cn/index.php/forms-post?mid=206">疫情防控投诉平台</br>0898-32051558</a></li>
+<li class="col-md-3 col-sm-3 col-xs-6 link5"><a href="https://campusmart.wisedu.com/" target="_blank"><img src="/skin/school811/cms/index/icon4.png" style="width: 50px; height: 50px;" /></a><a href="https://campusmart.wisedu.com/">今日校园</a></li>
+<li class="col-md-3 col-sm-3 col-xs-6 link5"><a href="https://dsj.hainan.gov.cn/ggpt/hzt/" target="_blank"><img src="/skin/school811/cms/index/icon21.png" style="width: 50px; height: 50px;" /></a><a href="https://download-xc-pro-ding.hzt.hainan.gov.cn/">信创版海政通</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8.")
+{
+// console.log(1);
+}
+else{
+new WOW().init();
+}
+</script></div>
+<div id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-1 col-sm-1 col-xs-2">
+<div class="foot-pic text-center">
+<a class="sydw" href="http://bszs.conac.cn/sitename?method=show&id=0B6A4983B9F5290BE053022819AC2ACB"><img alt="" src="/images/sydw.png" style="height: 51px; width: 40px;" /></a>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-10">
+<div class="copyright">
+<p><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=46900202000062"><img src="/images/lwtb1.png">琼公网安备 46900202000062号    琼ICP备12001104号 </a></p>
+<p>学校地址：海南省琼海市富海路128号 邮编：571400| 联系电话：0898-62932272(传真)</p>
+<p>技术支持：信息技术中心&nbsp;&nbsp;信息管理：宣传统战部&nbsp;&nbsp;</p>
+</div>
+</div>
+<div class="col-md-5 col-sm-5 col-xs-12">
+<div class="row">
+<div class="col-md-5 col-sm-5 col-xs-12">
+<div class="follow">
+
+</div>
+</div>
+<div class="col-md-7 col-sm-7 col-xs-12">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-6">
+<div class="follow-box text-center">
+<div class="pic">
+<img width="129" height="129" border="none" alt="" src="/attachment/core/label/2021_12/10_16/8f5b37513a82b9a4.png" />
+</div>
+<h3>官方微信</h3>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6">
+<div class="follow-box text-center">
+<div class="pic">
+<img width="129" height="129" border="none" alt="" src="/attachment/core/label/2024_09/26_10/92007b3c81fa9e9d.png" />
+</div>
+<h3> 访客预约</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>  <script type="text/javascript" src="/js/0/7.js?ver=1730089456"></script></div>
+</body>
+</html>

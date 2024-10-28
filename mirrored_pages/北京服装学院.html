@@ -1,0 +1,1453 @@
+<html xmlns="http://www-w3-org.vpn.bift.edu.cn/1999/xhtml"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+<title>北京服装学院</title> <!--banner的css和js--> 
+<link media="screen,projection" rel="stylesheet" type="text/css" href="css/screen.css"> 
+<link rel="stylesheet" href="css/slick.css"> 
+<script src="js/20210622jquery-1.7.2.min.js "></script> 
+<script>
+ var j14=jQuery.noConflict();
+</script> 
+<link href="css/index.css" rel="stylesheet" type="text/css"><body >
+<SCRIPT type=text/javascript>
+    function addEvent(obj,evtType,func,cap){
+        cap=cap||false;
+        if(obj.addEventListener){
+            obj.addEventListener(evtType,func,cap);
+            return true;
+        }else if(obj.attachEvent){
+            if(cap){
+                obj.setCapture();
+                return true;
+            }else{
+                return obj.attachEvent("on" + evtType,func);
+            }
+        }else{
+            return false;
+        }
+    }
+    function getPageScroll(){
+        var xScroll,yScroll;
+        if (self.pageXOffset) {
+            xScroll = self.pageXOffset;
+        } else if (document.documentElement && document.documentElement.scrollLeft){
+            xScroll = document.documentElement.scrollLeft;
+        } else if (document.body) {
+            xScroll = document.body.scrollLeft;
+        }
+        if (self.pageYOffset) {
+            yScroll = self.pageYOffset;
+        } else if (document.documentElement && document.documentElement.scrollTop){
+            yScroll = document.documentElement.scrollTop;
+        } else if (document.body) {
+            yScroll = document.body.scrollTop;
+        }
+        arrayPageScroll = new Array(xScroll,yScroll);
+        return arrayPageScroll;
+    }
+    function GetPageSize(){
+        var xScroll, yScroll;
+        if (window.innerHeight && window.scrollMaxY) {
+            xScroll = document.body.scrollWidth;
+            yScroll = window.innerHeight + window.scrollMaxY;
+        } else if (document.body.scrollHeight > document.body.offsetHeight){
+            xScroll = document.body.scrollWidth;
+            yScroll = document.body.scrollHeight;
+        } else {
+            xScroll = document.body.offsetWidth;
+            yScroll = document.body.offsetHeight;
+        }
+        var windowWidth, windowHeight;
+        if (self.innerHeight) {
+            windowWidth = self.innerWidth;
+            windowHeight = self.innerHeight;
+        } else if (document.documentElement && document.documentElement.clientHeight) {
+            windowWidth = document.documentElement.clientWidth;
+            windowHeight = document.documentElement.clientHeight;
+        } else if (document.body) {
+            windowWidth = document.body.clientWidth;
+            windowHeight = document.body.clientHeight;
+        }
+        if(yScroll < windowHeight){
+            pageHeight = windowHeight;
+        } else {
+            pageHeight = yScroll;
+        }
+        if(xScroll < windowWidth){
+            pageWidth = windowWidth;
+        } else {
+            pageWidth = xScroll;
+        }
+        arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight)
+        return arrayPageSize;
+    }
+
+    var AdMoveConfig=new Object();
+    AdMoveConfig.IsInitialized=false;
+    AdMoveConfig.ScrollX=0;
+    AdMoveConfig.ScrollY=0;
+    AdMoveConfig.MoveWidth=0;
+    AdMoveConfig.MoveHeight=0;
+    AdMoveConfig.Resize=function(){
+        var winsize=GetPageSize();
+        AdMoveConfig.MoveWidth=winsize[2];
+        AdMoveConfig.MoveHeight=winsize[3];
+        AdMoveConfig.Scroll();
+    }
+    AdMoveConfig.Scroll=function(){
+        var winscroll=getPageScroll();
+        AdMoveConfig.ScrollX=winscroll[0];
+        AdMoveConfig.ScrollY=winscroll[1];
+    }
+    addEvent(window,"resize",AdMoveConfig.Resize);
+    addEvent(window,"scroll",AdMoveConfig.Scroll);
+    function AdMove(id){
+        if(!AdMoveConfig.IsInitialized){
+            AdMoveConfig.Resize();
+            AdMoveConfig.IsInitialized=true;
+        }
+        var obj=document.getElementById(id);
+        obj.style.position="absolute";
+        var W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+        var H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+        var x = W*Math.random(),y = H*Math.random();
+        var rad=(Math.random()+1)*Math.PI/6;
+        var kx=Math.sin(rad),ky=Math.cos(rad);
+        var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1);
+        var step = 1;
+        var interval;
+        this.SetLocation=function(vx,vy){x=vx;y=vy;}
+        this.SetDirection=function(vx,vy){dirx=vx;diry=vy;}
+        obj.CustomMethod=function(){
+            obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+            obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+            rad=(Math.random()+1)*Math.PI/6;
+            W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+            H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+            x = x + step*kx*dirx;
+            if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);}
+            if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);}
+            y = y + step*ky*diry;
+            if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);}
+            if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);}
+        }
+        this.Run=function(){
+            var delay = 10;
+            interval=setInterval(obj.CustomMethod,delay);
+            obj.onmouseover=function(){clearInterval(interval);}
+            obj.onmouseout=function(){interval=setInterval(obj.CustomMethod, delay);}
+        }
+    }
+</SCRIPT>
+<DIV id=ad1 style="Z-INDEX: 5">
+
+    <!--漂浮开始-->
+     <!--漂浮结束-->
+
+
+</DIV>
+<SCRIPT type=text/javascript><!--
+var ad1=new AdMove("ad1");
+ad1.Run();
+//多组漂浮
+//var ad1=new AdMove("ad2");
+//ad2.Run();
+//-->
+</SCRIPT>
+
+
+
+
+
+
+
+<div id="banner_img">
+    <ul class="flexslider">
+                    <li>
+                <a href="xwgg/sydt/83e7078c6e354db9a2a09ba66812f942.htm">
+                    <div class="gp-img-responsive">
+                        <img src="images/2024-10/366d1f38b2fc4ab7b4c2269d0d2d56d3.jpg" alt="slider 2">
+                    </div>
+                </a>
+            </li>
+                    <li>
+                <a href="xwgg/sydt/ce93055fccf44e1599fd0094952bebd7.htm">
+                    <div class="gp-img-responsive">
+                        <img src="images/2024-09/be08eab9a7f74469b3fa65800fdb752c.jpg" alt="slider 2">
+                    </div>
+                </a>
+            </li>
+                    <li>
+                <a href="xwgg/sydt/0a0726db2d3343598610b6361b07f67d.htm">
+                    <div class="gp-img-responsive">
+                        <img src="images/2024-09/2c66df283bcd4324ac4b5ba5a00f5c9e.jpg" alt="slider 2">
+                    </div>
+                </a>
+            </li>
+                    <li>
+                <a href="xwgg/sydt/a3fa4671502945b79607166dc631dd9f.htm">
+                    <div class="gp-img-responsive">
+                        <img src="images/2024-06/fb2323d8d1044aebbd123e84909c5ed1.jpg" alt="slider 2">
+                    </div>
+                </a>
+            </li>
+                    <li>
+                <a href="xwgg/sydt/0c27c49a6a7a46aa983329b941fc1b3b.htm">
+                    <div class="gp-img-responsive">
+                        <img src="images/2024-04/65ddc94bd6ef4f23b8f0e2f9dd39c91e.jpg" alt="slider 2">
+                    </div>
+                </a>
+            </li>
+                    <li>
+                <a href="xwgg/sydt/1e4543817fdc43f89883ddafc47fe76e.htm">
+                    <div class="gp-img-responsive">
+                        <img src="images/2024-04/f8398b90ad664be99495fb6e22486d23.jpg" alt="slider 2">
+                    </div>
+                </a>
+            </li>
+            </ul>
+</div>
+
+
+
+</div>
+<!--整个页面开始-->
+<div id="container">
+    <!--内容区域开始-->
+    <div id="content">
+        <!--link-begin-->
+        
+<div id="link" style="background:#fff;" >
+                     <ul>
+                        <li class="first"><a href="index.html" target="_blank"><img src="images/bf_index/bf.jpg"></a></li>
+                        <li class="second"><a href="">学院概况</a></li>
+                        <li><a href="">机构设置</a></li> 
+                        <li><a href="">师资队伍</a></li>                      
+                        <li><a href="">人才培养</a></li>
+                        <li><a href="">科学研究</a></li>
+                        <li><a href="">办事与服务</a></li>
+                        <li><a href="">招生就业</a></li>
+                     </ul>
+                     <span class="five">&nbsp;</span>
+             </div>           
+             <!--下拉菜单begin-->
+             <div id="link_son">
+                 <div ></div>
+                 <div id="sc_status" class="hide">                 
+                    <div  class="status_left">
+                    <ul>
+                       <li class="white"><a href="xxgk/xyjj/index.htm" target="_blank">学院简介</a></li>
+<li><a href="xxgk/xyzc/index.htm" target="_blank">学院章程</a></li>
+		       <li><a href="xxgk/lsyg/index.htm" target="_blank">历史沿革</a></li>					   
+		       <li><a href="xxgk/xrld/index.htm" target="_blank" >现任领导</a></li>
+		       <li><a href="xxgk/lrld/index.htm" target="_blank">历任领导</a></li>
+                    </ul>
+                    </div>
+                    <div class="status_right">
+                     <div>
+                    <ul>
+                       <li class="st_one">北京服装学院是一所有着深厚家国情怀和鲜明办学特色的时尚高校。学校前身是1959年2月创建的北京纺织工学院，1961年7月更名为北京化学纤维工学院，1987年2月改扩建为北京服装学院，是我国第一所公办服装高校。1998年，学校划归北京市管理，2019年由理工院校变更为艺术院校，2020年按照北京市属高校分类办学发展政策明确为高水平特色型大学。
+<a href="xxgk/xyjj/index.htm">详情</a></li>
+                    <!--   <li class="st_two">
+			<a href="lxwm/txdz/index.htm" target="_blank">学院地址</a><br>
+			<a href="lxwm/txdz/index.htm" target="_blank">联系我们</a><br>
+			<a href="http://bxq.bift.edu.cn/?p=9804" target="_blank">校历</a></li>-->
+                       <li class="st_three"><a href="xxgk/degsp/index.htm" target="_blank"><img src="images/bf_index/status.png"></a> </li>
+                    </ul>
+                    </div>                                                                            
+                   </div>
+                 </div>
+                 <div class="hide" id="organ">
+                    <div class="organ_left"> 
+                    <ul>
+                       <li class="white"><a href="">院系教辅</a></li>
+                       <li><a href="">管理机构</a></li> 
+                       <li><a href="">研究机构</a></li>                                  
+                    </ul>
+                    </div>
+                    <div class="organ_right">
+                   <div>
+                     
+ <ul>
+                                             <li><a href="http://fzy.bift.edu.cn/"  title="服装艺术与工程学院" target="_blank" >服装艺术与工程学院</a></li>
+                                          <li><a href="http://fsy.bift.edu.cn"  title="服饰艺术与工程学院" target="_blank" >服饰艺术与工程学院</a></li>
+                                          <li><a href="http://cly.bift.edu.cn/"  title="材料设计与工程学院" target="_blank" >材料设计与工程学院</a></li>
+                                          <li><a href="http://ys.bift.edu.cn/"  title="艺术设计学院" target="_blank" >艺术设计学院</a></li>
+                                          <li><a href="http://sfc.bift.edu.cn/"  title="时尚传播学院" target="_blank" >时尚传播学院</a></li>
+                                          <li><a href="http://biz.bift.edu.cn/"  title="商学院" target="_blank" >商学院</a></li>
+                                          <li><a href="http://msxy.bift.edu.cn/"  title="美术学院" target="_blank" >美术学院</a></li>
+                                          <li><a href="http://wlxy.bift.edu.cn/"  title="文理学院" target="_blank" >文理学院</a></li>
+                                          <li><a href="http://szb.bift.edu.cn/"  title="马克思主义学院" target="_blank" >马克思主义学院</a></li>
+                                          <li><a href="http://itc.bift.edu.cn/"  title="信息中心(信息化工作办公室挂靠)" target="_blank" >信息中心(信息化工作...</a></li>
+                                          <li><a href="https://lib.bift.edu.cn/"  title="图书馆" target="_blank" >图书馆</a></li>
+                                          <li><a href="http://www.biftmuseum.com/"  title="民族服饰博物馆" target="_blank" >民族服饰博物馆</a></li>
+                                          <li><a href="http://bxq.bift.edu.cn/"  title="北校区" target="_blank" >北校区</a></li>
+                                          <li><a href="https://www.bift.edu.cn"  title="国内合作与教育实践部" target="_blank" >国内合作与教育实践部</a></li>
+                                           </ul>
+
+
+
+
+                   </div>
+                   <div class="hide">
+                      <ul>
+                                             <li><a href="http://dyb.bift.edu.cn/"  title="党委办公室、巡察办公室、院长办公室合署办公" target="_blank" >党委办公室、巡察办公...</a></li>
+                                          <li><a href="http://zzb.bift.edu.cn/"  title="党委组织部、统战部、校党委党校" target="_blank" >党委组织部、统战部、...</a></li>
+                                          <li><a href="https://www.bift.edu.cn/xwzx/index.htm"  title="党委宣传部、新闻中心合署办公" target="_blank" >党委宣传部、新闻中心...</a></li>
+                                          <li><a href="http://jsc.bift.edu.cn/"  title="纪检监察办公室" target="_blank" >纪检监察办公室</a></li>
+                                          <li><a href="http://xsc.bift.edu.cn/"  title="党委学生工作部、武装部、学生处（大学生服务中心、大学生就业指导中心、学生资助管理中心）" target="_blank" >党委学生工作部、武装...</a></li>
+                                          <li><a href="http://bwc.bift.edu.cn/"  title="安全稳定工作部、保卫处" target="_blank" >安全稳定工作部、保卫...</a></li>
+                                          <li><a href="http://ltc.bift.edu.cn/"  title="离退休工作处" target="_blank" >离退休工作处</a></li>
+                                          <li><a href="https://fzghc.bift.edu.cn/"  title="发展规划处（北京服装学院研究室、教学督导与评价办公室）" target="_blank" >发展规划处（北京服装...</a></li>
+                                          <li><a href="http://yjs.bift.edu.cn/"  title="研究生院（北京服装学院学科发展办公室挂靠）" target="_blank" >研究生院（北京服装学...</a></li>
+                                          <li><a href="http://jwc.bift.edu.cn/"  title="教务处" target="_blank" >教务处</a></li>
+                                          <li><a href="http://kjc.bift.edu.cn/"  title="科学技术处(北京服装学院科协挂靠）" target="_blank" >科学技术处(北京服装...</a></li>
+                                          <li><a href="http://rsc.bift.edu.cn/"  title="党委教师工作部、人事处" target="_blank" >党委教师工作部、人事...</a></li>
+                                          <li><a href="http://ghc.bift.edu.cn/"  title="国际合作与交流处（国际学院、港澳台事务办公室）" target="_blank" >国际合作与交流处（国...</a></li>
+                                          <li><a href="http://www.bift.edu.cn"  title="财务处（招投标工作办公室挂靠）" target="_blank" >财务处（招投标工作办...</a></li>
+                                          <li><a href="http://sjc.bift.edu.cn/"  title="审计处" target="_blank" >审计处</a></li>
+                                          <li><a href="http://bkzs.bift.edu.cn/"  title="招生工作处" target="_blank" >招生工作处</a></li>
+                                          <li><a href="http://gz.bift.edu.cn/"  title="国有资产管理处、校办产业管理办公室" target="_blank" >国有资产管理处、校办...</a></li>
+                                          <li><a href="http://hq.bift.edu.cn/"  title="后勤基建处" target="_blank" >后勤基建处</a></li>
+                                          <li><a href="http://gh.bift.edu.cn/"  title="院工会、妇联" target="_blank" >院工会、妇联</a></li>
+                                          <li><a href="http://www.bift.edu.cn/"  title="院团委" target="_blank" >院团委</a></li>
+                     
+                      </ul>
+                   </div>
+
+
+ <div class="hide">
+                      <ul>
+
+
+
+                        <li><a href="http://www.bift.edu.cn"  title="运动时尚创新研究院" target="_blank" >运动时尚创新研究院</a></li>
+                                          <li><a href="http://www.bift.edu.cn"  title="服装科技研究院" target="_blank" >服装科技研究院</a></li>
+                                          <li><a href="http://www.bift.edu.cn"  title="中国生活方式设计研究院" target="_blank" >中国生活方式设计研究...</a></li>
+                                          <li><a href="http://www.bift.edu.cn"  title="时尚研究院" target="_blank" >时尚研究院</a></li>
+                                          <li><a href="http://www.bift.edu.cn"  title="新时代中国美研究院" target="_blank" >新时代中国美研究院</a></li>
+                                          <li><a href="http://www.bift.edu.cn"  title="服饰文化研究院" target="_blank" >服饰文化研究院</a></li>
+                                          <li><a href="http://www.bift.edu.cn"  title="敦煌服饰文化研究暨创新设计中心" target="_blank" >敦煌服饰文化研究暨创...</a></li>
+                     
+
+
+                      </ul>
+                   </div>
+
+
+
+
+
+
+                   </div>
+                 </div>
+                 <div class="hide" id="teacher">
+                    <ul>                       
+                       <li><a href="szdw/msfc/index.htm" target="_blank">名师风采</a></li>
+                       <li><a href="szdw/wpjs/index.htm" target="_blank">外聘教授</a></li>                  
+                       <li><a href="szdw/kytd/index.htm" target="_blank">科研团队</a></li> 
+                    </ul>
+                 </div>                
+                 <div class="hide" id="talents">
+                   <ul>
+                       <li><a href="http://jwc.bift.edu.cn/" target="_blank">本科生教育</a></li>
+                       <li><a href="http://yjs.bift.edu.cn/" target="_blank">研究生教育</a></li>
+                       <li><a href="http://gjy.bift.edu.cn/" target="_blank">留学生教育</a></li>                  
+                       <li><a href="http://sce.bift.edu.cn/" target="_blank">继续教育</a></li>                  
+                       <li><a href="https://eol.bift.edu.cn/" target="_blank">网络教学</a></li>                  
+                       <li><a href="https://eol.bift.edu.cn/meol/custom.do;jsessionid=FFF4EFA780D201AC80FD9F8BBA91033D.TM2?menuId=5" target="_blank">精品课程</a></li>                  
+                    </ul>
+                 </div>
+                
+
+  <DIV class="hide" id="research2">
+<DIV class="empl_left">
+<UL>
+   <li><a href="https://xb.bift.edu.cn/" target="_blank">学术期刊</a></li> 
+<li class="white"><a href="http://kjc.bift.edu.cn/kjyxz/index.htm" target="_blank">科研动态</a></li>
+   <li><a href="http://kjc.bift.edu.cn/kyjd/index.htm" target="_blank">科研基地</a></li>
+   
+     
+  
+  
+  </UL></DIV>
+<DIV class="empl_right">
+<DIV>
+<UL>
+<li><a href="https://xb.bift.edu.cn/" target="_blank">北服学报自然科学版</a></li>
+   <li><a href="https://yssjyj.bift.edu.cn/" target="_blank">艺术设计研究</a></li>
+
+
+</UL></DIV>
+
+<DIV class="hide">
+<UL>
+  <LI><A href="http://kjc.bift.edu.cn/kjyxz/index.htm" target="_blank">科研动态</A></LI>
+ 
+  </UL></DIV>
+<DIV class="hide">
+<UL>
+  <LI><A href="http://kjc.bift.edu.cn/kyjd/index.htm" target="_blank">科研基地</A></LI>
+ </UL></DIV>
+ 
+ 
+</DIV></DIV>
+
+
+
+
+
+
+
+
+
+                 <div class="hide" id="service">
+                  <div class="serv_left">
+                    <ul>
+                       <li class="white"><a href="">学生</a></li>
+                       <li><a href="">教工</a></li>
+                       <li><a href="">校友</a></li>
+                       <li><a href="">联系我们</a></li>
+                                      
+                    </ul>
+                   </div>
+                  <div class="serv_right">
+                    <div>
+                      <ul>
+                        
+                        <li><a href="http://bxq.bift.edu.cn" target="_blank">新生专区</a></li>
+                  
+                        <li><a href="http://xsc.bift.edu.cn/zzjy/index.htm" target="_blank">奖励资助</a></li>
+                     
+                        <li><a href="http://ghc.bift.edu.cn/cgcj/cgcjcs/index.htm" target="_blank">出国出境</a></li>
+                      </ul>
+                   </div>
+                    <div class="hide">
+                      <ul>
+                        <li><a href="http://jwc.bift.edu.cn/gzzd/jyfg/index.htm" target="_blank">教学管理</a></li>
+                        <li><a href="http://dyb.bift.edu.cn/" target="_blank">公文处理</a></li>
+                     
+                        <li><a href="http://zzb.bift.edu.cn/" target="_blank">党员在线学习</a></li>
+                        <li><a href="" target="_blank">新闻投稿</a></li>
+                        
+                      </ul>
+                   </div>                   
+                  
+
+            <div class="hide">
+                      <ul>
+                        <li><a href="" target="_blank">校友网</a></li>
+                        <li><a href="xxgk/xqhg/index.htm" >校庆回顾</a></li>                                      
+                      </ul>
+                   </div>
+
+
+
+
+
+                   <div class="hide">
+                      <ul>
+                        <li><a href="lxwm/txdz/index.htm" target="_blank">通讯地址</a></li>
+                       <!-- <li><a href="lxwm/ggjt/index.htm" target="_blank">公共交通</a></li>-->
+                        <li><a href="lxwm/xytj/index.htm" target="_blank">校园停车</a></li>
+                      </ul>
+                   </div>
+
+          
+                  </div>
+                 </div>
+                 <div class="hide" id="employ">  
+                    <div class="empl_left">
+                    <ul>
+                       <li class="white"><a href="">招生</a></li>
+                       <li><a href="https://jy.bift.edu.cn/" target="_blank">就业</a></li>                    
+                    </ul>
+                   </div>
+                    <div class="empl_right">
+                    <div>
+                      <ul>
+                        <li><a href="http://bkzs.bift.edu.cn/" target="_blank">本科生招生</a></li>
+                        <li><a href="http://yjs.bift.edu.cn/" target="_blank">研究生招生</a></li>
+                        <li><a href="http://gjy.bift.edu.cn/" target="_blank">留学生招生</a></li>
+                        <li><a href="http://gjy.bift.edu.cn/" target="_blank">港澳台招生</a></li>
+                        <li><a href="http://sce.bift.edu.cn/" target="_blank">继续教育招生</a></li>
+                         <li><a href="http://sce.bift.edu.cn/cms/kclb/index.htm?openId=ff8080816f8fe14a016f9ddbf27c1180" target="_blank">国际本科招生</a></li>
+                         <li><a href="http://ifc.bift.edu.cn/" target="_blank">国际预科招生</a></li>
+                        
+                         
+
+
+                      </ul>
+                   </div>     
+                   <div class="hide">
+                      <ul>
+                       <li><a href="https://jy.bift.edu.cn/" target="_blank">就业信息网</a></li>
+                      </ul>
+                   </div>
+
+                  </div>
+                 </div>
+             </div>
+             <!--下拉菜单over-->
+             <div id="link_bottom">
+                     <ul >
+                        <li class="one_lb"><a href="https://www.bift.edu.cn/">中文 </a> | <a href="http://english.bift.edu.cn/"> ENGLISH </a></li>
+                        <li class="two_lb" >
+			<a href="xwzx/index.htm" target="_blank">新闻网 </a>  | <a href="xwgg/ztbgg/index.htm" >招投标公告</a> | <a href="https://mail.bift.edu.cn/" target="_blank"> 北服邮箱 </a> | <a href="http://info.bift.edu.cn/" target="_blank"> 校园内网 </a>| <a href="https://www.bift.edu.cn/xzxx2015/index.htm" target="_blank"> 校长信箱 </a><span id="sea_img"><img src="images/bf_index/search.jpg"></span></li></ul>                     
+             </div>
+             
+             
+             <div class="hide" id="sea_form" >
+               <form name="dataForm" action="/cms/web/search/index.jsp" target="_blank" method="post">
+	       <script type="text/javascript" src="/cms/web/search/token.jsp"></script>
+	       <input name="siteID"  value="10022" type="hidden">
+<input type="hidden" name="searchScope" value="1" />
+                  <input type="text"   name="query" value="请输入关键字搜索新闻" id="search">
+		  
+                  <input type="submit" value="" id="sea_button">
+               </form>
+             </div><!--B19gaK/ckwWP/66jMEaobWzZGvEqfqanIZ/XI7gMsNhVzZ1V6+J8yYFAUXGzLyqUkH+UsCh3dUlk0+FAU0kb7Sc/0pNaKFiOL8J0w1HP56Ih6xrCVUkUawA5Ptw6QoGhzY5GVar+xWbQzNnSLyTnAA==-->        <div style="margin-left:auto;margin-right:auto;width:100px;" id="jiantou"><a href="#mao"><img src="images/bf_index/jiantou.jpg"></a>
+            <a name="mao"></a>
+        </div>
+
+        <!--link-over-->
+        <!--main-begin-->
+
+        <div id="main" >
+            <div id="main_news">
+
+                <div class="all_news">
+
+                    <p>新闻  NEWS<span style="float:right;font-size:14px;margin-right:30px;"><a href="xwgg/bfxw/index.htm"  target="_blank">more</a></span></p>
+                </div>
+
+                <!--新闻模块主要内容-->
+                <div class="news_center">
+
+                    <div class="example">
+                        <ul id="picture">
+                            
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/bef8e8a0ee5b4605835bb3e0753034c1.htm" title="时尚+未来 | “广告智能 时尚未来”高端论坛暨2024第16届大广赛北京赛区颁奖典礼在北京服装学院举办
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/34f7ad15055643d49deb867d0b3ef494.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">时尚+未来 | “广告智能 时尚未来”高端论坛暨2024第16届大广...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-25</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/72970005b7354b98b7b3ab4c29e26e30.htm" title="时尚+未来 | 北京服装学院举办第十二届大学生人文知识竞赛
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/7356f2cb789b4ea9815d1eeaf4a79992.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">时尚+未来 | 北京服装学院举办第十二届大学生人文知识竞赛
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-25</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/2a12c186c1644e75bb5e4fbe78c9a150.htm" title="北京服装学院召开意识形态和安全稳定分析研判会
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/ce8bfedc988b4a91932179f483f2e1d6.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">北京服装学院召开意识形态和安全稳定分析研判会
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-25</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/7862342375a44ca79e0b56f92c4dea3e.htm" title="北京服装学院举办国家自然基金项目申报经验分享暨2025年度预申报启动会
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/199c8c7723b04001a449c1e451e7ebb6.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">北京服装学院举办国家自然基金项目申报经验分享暨2025年度预申报启动...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-25</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/2ea0538d430749408115233d9a192854.htm" title="时尚+未来 | 北京服装学院召开第三届时尚策展论坛
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/081be759741848a8ba2b7ef1c6eb5371.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">时尚+未来 | 北京服装学院召开第三届时尚策展论坛
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-24</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/abb7d4bf2c5c4871a59401c20e86600f.htm" title="感谢您，献血者 | 北服学子积极参与2024年无偿献血活动
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/793d101961ed44f1a6274ff77a4eb766.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">感谢您，献血者 | 北服学子积极参与2024年无偿献血活动
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-24</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/8d82df593fd5436dab59aee2e1ae8327.htm" title="北京服装学院参加首届TASA-ICoD设计教育变革与课程体系演进大会暨2024国际设计联合会平台会议" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/b85ad755bbc94a98b243fb8a0313a32a.png"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">北京服装学院参加首届TASA-ICoD设计教育变革与课程体系演进大会...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-24</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/5ffb195d1c0c4e6fb639b813dbfc0f9a.htm" title="北京服装学院学生记者团纳新，让我们一起做校媒人
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/d41ed15d6718456aa1cfd0937127820a.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">北京服装学院学生记者团纳新，让我们一起做校媒人
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-23</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/b3530f5623794c7c9872d13a5d4becf6.htm" title="北京服装学院举办中国影像故事系列展之二——“美好·678”暨北京服装学院时尚传播学院摄影专业建立20周年影像艺术展
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/279247d331b14e0ebfa9a2c86e412f25.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">北京服装学院举办中国影像故事系列展之二——“美好·678”暨北京服装...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-22</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/e4df8ee3073c448aa07d2f38cf6dd3b7.htm" title="时尚+未来 | 北京服装学院举办2024“时尚经济•未来商业”论坛暨第九届北服创新创业主题活动月启动仪式
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/71d256cf72a7412587bcaf1755993912.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">时尚+未来 | 北京服装学院举办2024“时尚经济•未来商业”论坛暨...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-22</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/21c0bb51c0504eb7948857190a80217f.htm" title="北京服装学院研究生高水平拔尖创新人才培育项目“交叉学科背景下的非遗策展工作坊”助力第八届中国非物质文化遗产博览会" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/d2912ae0db634319b4a1674344903fe2.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">北京服装学院研究生高水平拔尖创新人才培育项目“交叉学科背景下的非遗策...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-22</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/4472fe2c4af940e68141dbf8bfca4882.htm" title="校纪委召开纪检委员交流座谈会" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/ddc0da964dc246e69b0a379983c386e7.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">校纪委召开纪检委员交流座谈会</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-22</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/cc2df6d528ec462cb867001355f5ae4b.htm" title="贯通•融合 | 北京服装学院合作研究成果登上国际学术期刊《Science Advances》：温度自适应织物助力可持续发展
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/27046d4b72bf4394b3e0ebd87359dc8b.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">贯通•融合 | 北京服装学院合作研究成果登上国际学术期刊《Scien...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-21</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/d7736860dc4d4f79a1e0bf316b1eeb98.htm" title="时尚+未来 | 拾光璀璨·六五芳华——Bronze Lucia×第四届北服校友品牌创意集市启幕
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/bb50037fe1844ff29e98a09ade089a3d.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">时尚+未来 | 拾光璀璨·六五芳华——Bronze Lucia×第四...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-20</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/4b54b5d7a0fd4fb09c73aee5687554cb.htm" title="时尚+未来 | 北京服装学院第十三届首都大学生创意集市火热开集
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/8eebe3d82e574082b11da8e060505562.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">时尚+未来 | 北京服装学院第十三届首都大学生创意集市火热开集
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-20</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/cef478bc3aa442a2aed422692e512064.htm" title="喜报！北服师生在第十八届全国高校商业精英挑战赛文旅与会展创新创业实践竞赛中斩获多项殊荣
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/767ae2ce31e440f08eb1bed75c6805d9.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">喜报！北服师生在第十八届全国高校商业精英挑战赛文旅与会展创新创业实践...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-19</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/a15204f776744d0988d1b584af0dff6d.htm" title="北京服装学院召开2023—2024学年研究生国家奖学金校级评审会" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/e59d203f0b044034b0c5d892ad081fde.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">北京服装学院召开2023—2024学年研究生国家奖学金校级评审会</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-19</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/7937113a66ab4917aa31a2336b888b0c.htm" title="黄克瀛同志任北京服装学院党委书记
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/afca3cadd7c2453daa3fb0af608a58f1.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">黄克瀛同志任北京服装学院党委书记
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-18</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/c4cb6f5fdfda4d15a3eafba549c49543.htm" title="金秋逐梦 职引未来 | 北京服装学院举办2025届毕业生校园秋季双选会
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/d64429839ad442cc913770b95e57644f.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">金秋逐梦 职引未来 | 北京服装学院举办2025届毕业生校园秋季双选...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-18</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/652bfb4651ae4c6a9a4b3bd6197d1e9b.htm" title="交流·互鉴 | 秀水街集团领导一行到北京服装学院调研交流
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/936b2249b5384072b54cd06dae8f132c.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">交流·互鉴 | 秀水街集团领导一行到北京服装学院调研交流
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-17</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/4e7d03bb7eb748a5b131375d079f41ca.htm" title="喜报！北服两位教师书画作品在“祖国颂”首都职工书画作品展中获奖" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/3cecdc10c7344a0f8997a87c799a1461.png"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">喜报！北服两位教师书画作品在“祖国颂”首都职工书画作品展中获奖</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-16</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/dd0e9f362a8c41299053400185c33c61.htm" title="北京服装学院2024年教职工“四人制足球赛”开赛" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/e5487152077a4f94a437e6f6b7a075c9.png"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">北京服装学院2024年教职工“四人制足球赛”开赛</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-16</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/e42f6befbbed42a8b2a4047c8755d929.htm" title="感恩母校 | “杨帅的梦境与平行世界”绘画展在北京服装学院举办
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/9325437930194f449ed03bdb98c1b968.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">感恩母校 | “杨帅的梦境与平行世界”绘画展在北京服装学院举办
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-15</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/3fd6705037d34af5b27edcaf2cea9338.htm" title="纤维科技助力时尚设计 | 华峰千禧·中国纤维品牌联动创享汇——第一届“千禧”杯服装设计大赛成功举办" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/a07dc26d078344b3b1399e7d42d16caf.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">纤维科技助力时尚设计 | 华峰千禧·中国纤维品牌联动创享汇——第一届...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-15</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/63c06b0e982d4d1da2bd6c4accbf6d91.htm" title="“京绣传承人文创设计开发研修班”开班典礼举办" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/88c17154e79c42f08f2527d78958d7a0.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">“京绣传承人文创设计开发研修班”开班典礼举办</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-14</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/3acd2ed41f164e1fac9968267deb51c0.htm" title="交流·互鉴 | 欧洲应用科技大学校长一行访问我校" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/d00caa7c176f4f06bbbba36389182b11.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">交流·互鉴 | 欧洲应用科技大学校长一行访问我校</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-14</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/68f7ac6a93074ed6a382c49f84254f2d.htm" title="时尚+未来 | “躬耕教坛 书香致远”北京服装学院建校65周年著作成果展开幕
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/af7eae70fc12470c8a2b567ce75f1a0b.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">时尚+未来 | “躬耕教坛 书香致远”北京服装学院建校65周年著作成...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-13</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/6ddeb01fbf1b4a82b85fcf26b859900c.htm" title="时尚+未来 | 北京服装学院师生作品展精彩亮相SS2025北京时装周时尚嘉年华活动" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/c1c5ad2572b44ee189e2fea716741d1e.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">时尚+未来 | 北京服装学院师生作品展精彩亮相SS2025北京时装周...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-12</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/fc45a350aabf40539673834f674b86c7.htm" title="时尚+未来 | 北京服装学院举办第二十届“科学·艺术·时尚”节系列活动暨“时尚之城学术论坛：服装X建筑”
+
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/99066b0109c443ddbfa51969a5cc383f.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">时尚+未来 | 北京服装学院举办第二十届“科学·艺术·时尚”节系列活...</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-12</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/e5270d2a11954d0ca69cefbcf15ba783.htm" title="我校第九届党委第四轮校内巡察完成进驻" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/4ddffbe104f344d082b4bb4cf749e8fa.png"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">我校第九届党委第四轮校内巡察完成进驻</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-11</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/84bb2b8327ae486aa537c703179ec60a.htm" title="情暖重阳敬韶华 | 北京服装学院召开2024年重阳节座谈会
+
+" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/317710a6236d4c94af4cbaa5287d52d6.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">情暖重阳敬韶华 | 北京服装学院召开2024年重阳节座谈会
+
+</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-11</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="xwgg/bfxw/847334a3ecb64a8db623d2441a2a779d.htm" title="北京服装学院召开2023—2024学年本科生国家奖学金校级评审会" target="_blank">
+                                        <div class="out">
+                                            <div class="in">
+                                                     <span class="in_one">北服新闻</span><br>
+                                                                                                                                                    <span class="in_two"><img src="images/2024-10/9b811b8df6b942dea86f37b506cb2291.jpg"  width="225"  height="157"></span><br>
+                                                
+                                                <span class="word" style="margin-top:0px;">北京服装学院召开2023—2024学年本科生国家奖学金校级评审会</span><br>
+                                                <span class="times" style="margin-top:0px;"></span>
+                                                <span class="times" style="margin-top:5px;">24-10-11</span>
+                                            </div>
+                                    </a>
+                                </li>
+                            
+
+
+                        </ul>
+                        <a class="prev" href="" style="height:0px;_display:none;"></a><a class="next" href="" style="height:0px;_display:none;"></a>
+                    </div>
+                </div>
+
+                <!--新闻模块主要内容结束-->
+            </div>
+            <div id="main_exhi">
+
+                <div class="all_exhi">
+                    <p>展览讲座  EXHIBITIONS<span style="float:right;font-size:14px;margin-right:30px;"><a href="xwgg/zxjz/index.htm" target="_blank">more</a></span></p>
+                </div>
+                <!--展览模块主要内容-->
+                <div class="exhi_center">
+                    <div class="middle">
+                        <ul id="exhi_pic">
+
+                                                                                        <li><a href="xwgg/zxjz/0e32dc88cc174146a82ddc73d8c9948f.htm" title="预告 | CUMULUS、ICoD驻北京服装学院秘书处九月活动等你来参加"  target="_blank">
+                                    <div class="out">
+                                        <div class="in">
+                                                                                            <span class="in_one"></span><br>
+                                            
+
+                                                                                            <span class="in_two"><img src="images/2024-09/390398fdc43043ce8f972d157690e6c4.jpg" width="225"  height="157" ></span><br>
+                                                                                        <span class="word">预告 | CUMULUS、ICoD驻北京服装...<br>&nbsp;</span><br>
+                                                                                            <span ></span>
+                                                                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/zxjz/b6def0bcfadf416fa829897a9d5132de.htm" title="与美同行！“五彩锦簇——中华服饰文化展”即将开展
+
+"  target="_blank">
+                                    <div class="out">
+                                        <div class="in">
+                                                                                            <span class="in_one"></span><br>
+                                            
+
+                                                                                            <span class="in_two"><img src="images/2024-06/5b2ad31a0f0247569e5f4c4f1bf543be.jpg" width="225"  height="157" ></span><br>
+                                                                                        <span class="word">与美同行！“五彩锦簇——中华服饰文化展”即将...<br>&nbsp;</span><br>
+                                                                                            <span ></span>
+                                                                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/zxjz/84233aab9e964b35a521c98973c2d701.htm" title="火力全开！2024设计马拉松X科技工作者日系列活动等你来探索
+
+"  target="_blank">
+                                    <div class="out">
+                                        <div class="in">
+                                                                                            <span class="in_one"></span><br>
+                                            
+
+                                                                                            <span class="in_two"><img src="images/2024-05/bb2b2924d73f4de4814c9a78d65b9482.png" width="225"  height="157" ></span><br>
+                                                                                        <span class="word">火力全开！2024设计马拉松X科技工作者日系...<br>&nbsp;</span><br>
+                                                                                            <span ></span>
+                                                                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/zxjz/90639b7f85d64bff935c6021a1bfcf56.htm" title="2024中华民族服饰文化国际学术研讨会征稿启事
+
+"  target="_blank">
+                                    <div class="out">
+                                        <div class="in">
+                                                                                            <span class="in_one"></span><br>
+                                            
+
+                                                                                            <span class="in_two"><img src="images/2024-05/52050c92beba49beb6a0f7bb21d96abe.png" width="225"  height="157" ></span><br>
+                                                                                        <span class="word">2024中华民族服饰文化国际学术研讨会征稿启...<br>&nbsp;</span><br>
+                                                                                            <span ></span>
+                                                                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/zxjz/b319844d5e1442a3b732ee5cc409a059.htm" title="迭奏Ritornello | 2024北京服装学院本科毕业作品展即将开启
+
+"  target="_blank">
+                                    <div class="out">
+                                        <div class="in">
+                                                                                            <span class="in_one"></span><br>
+                                            
+
+                                                                                            <span class="in_two"><img src="images/2024-04/7b00b11614b5494f899109e0244ac787.jpg" width="225"  height="157" ></span><br>
+                                                                                        <span class="word">迭奏Ritornello | 2024北京服...<br>&nbsp;</span><br>
+                                                                                            <span ></span>
+                                                                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/zxjz/840a7d5e1b4b44b0856054066640b717.htm" title="首次！“北服日”即将登陆2024中国国际时装周
+
+"  target="_blank">
+                                    <div class="out">
+                                        <div class="in">
+                                                                                            <span class="in_one"></span><br>
+                                            
+
+                                                                                            <span class="in_two"><img src="images/2024-03/00a4e96e76a944d982a7c40f8e325964.png" width="225"  height="157" ></span><br>
+                                                                                        <span class="word">首次！“北服日”即将登陆2024中国国际时装...<br>&nbsp;</span><br>
+                                                                                            <span ></span>
+                                                                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/zxjz/88618afc4b604915a41052aea7a8fea3.htm" title="以美育人！“第二届全国少年儿童艺术时尚风采大会”大幕将启"  target="_blank">
+                                    <div class="out">
+                                        <div class="in">
+                                                                                            <span class="in_one"></span><br>
+                                            
+
+                                                                                            <span class="in_two"><img src="images/2024-02/11178655a15447d48cf02eae19c179ef.png" width="225"  height="157" ></span><br>
+                                                                                        <span class="word">以美育人！“第二届全国少年儿童艺术时尚风采大...<br>&nbsp;</span><br>
+                                                                                            <span ></span>
+                                                                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/zxjz/8bb4e0c8baea404c95d0bdda3e19bb99.htm" title="以美育人 | “第二届全国少年儿童艺术时尚风采大会”预告
+
+"  target="_blank">
+                                    <div class="out">
+                                        <div class="in">
+                                                                                            <span class="in_one"></span><br>
+                                            
+
+                                                                                            <span class="in_two"><img src="images/2024-01/da8440f7becf42088e1d753fac9abcfc.jpg" width="225"  height="157" ></span><br>
+                                                                                        <span class="word">以美育人 | “第二届全国少年儿童艺术时尚风...<br>&nbsp;</span><br>
+                                                                                            <span ></span>
+                                                                                    </div>
+                                </a></li>
+                            
+
+
+                        </ul>
+                        <a class="prev" href="" style="height:0px;_display:none;"></a><a class="next" href="" style="height:0px; _display:none;"></a>
+                    </div>
+                </div>
+                <!--展览模块主要内容结束-->
+            </div>
+            <div id="main_anno">
+                <div class="all_anno">
+                    <p>通知  ANNOUNCEMENT<span style="float:right;font-size:14px;margin-right:30px;"><a href="xwgg/tzgg/index.htm" target="_blank">more</a></span></p>
+                </div>
+
+                <!--通知模块主要内容开始-->
+                <div class="anno_center">
+                    <div class="anno_exam">
+                        <ul id="anno_pic">
+
+                                                            <li><a href="xwgg/tzgg/d5fce5e7bfac470a9a8083be561cbe6d.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">关于2024年申请增设新专业的公示
+
+</span><br>
+                                                                                            <span class="addr"></span><br>
+                                                                                        <span class="time">24-08-25</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/819bea26cc7c45018984ecc356b197b4.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">关于开展2023届本科毕业生培养质量评价的通知
+
+</span><br>
+                                                                                            <span class="addr"></span><br>
+                                                                                        <span class="time">24-04-02</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/6097f493a9ee401c8f201611fa681485.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">北京服装学院2023届毕业生就业质量年度报告</span><br>
+                                                                                            <span class="addr"></span><br>
+                                                                                        <span class="time">23-12-29</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/3307b2c55226479db58212e966125de9.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">关于开展2022届毕业生培养质量评价的通知</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">23-04-17</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/8f5f1bc4c5a84af5be2d58631f4e09e5.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">北京服装学院2022届毕业生就业质量年度报告</span><br>
+                                                                                            <span class="addr"></span><br>
+                                                                                        <span class="time">22-12-31</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/7c692ae2559b43ed868d97ff641aeeac.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">2022年申请增设新专业公示</span><br>
+                                                                                            <span class="addr"></span><br>
+                                                                                        <span class="time">22-07-18</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/0b23f49f582b45018557495867e1b432.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">关于开展2017届&2021届毕业生培养质量评价的通知</span><br>
+                                                                                            <span class="addr"></span><br>
+                                                                                        <span class="time">22-05-25</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/97458.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">北京服装学院2021届毕业生就业质量年度报告</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">21-12-31</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/97043.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">国家艺术基金2020年度艺术人才培养项目《中国传统服饰艺...</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">21-12-16</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/96614.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">北京服装学院关于进一步加强校园疫情防控工作的通知</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">21-10-25</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/93831.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">关于开展2020届本科毕业生培养质量评价的通知</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">21-06-08</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/91988.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">北京服装学院关于2020-2021学年春季学期开学相关工...</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">21-02-20</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/91766.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">北京服装学院2020届毕业生就业质量年度报告</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">20-12-31</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/86355.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">关于开展2019届毕业生培养质量评价的通知</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">20-06-28</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/86001.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">北京服装学院关于2020年春季学期学生返校安排的通知</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">20-05-31</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                            <li><a href="xwgg/tzgg/85282.htm" target="_blank">
+                                    <div class="anno_out">
+                                        <div class="anno_in">
+                                            <span class="about">关于假冒北京服装学院学报（自然科学版）网站的声明</span><br>
+                                                                                            <span class="addr">通知公告</span><br>
+                                                                                        <span class="time">20-04-28</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                                    </ul>
+                        <a href="" class="prev" style="height:0px;_display:none;" ></a><a href="" class="next" style="height:0px; _display:none;"></a>
+                    </div>
+                </div>
+                <!--通知模块主要内容结束-->
+            </div>
+            <div style="background:#DEDEDE;box-shadow:0px -1px 3px #999;">
+
+
+
+                <div style="width:1200px;margin:0px auto;">
+                    <p>&nbsp;<span style="float:right;font-size:14px;padding-right:18px;margin-top:10px;color:#000000;"><a href="bfld/index.htm" target="_blank">more</a></span></p>
+                </div>
+
+
+                <!--
+
+
+<p>&nbsp;<span style="float:right;font-size:14px;margin-right:130px!important;margin-right:110px;margin-top:10px;color:#000000;"><a href="bfld/index.htm" target="_blank">more</a></span></p>
+
+
+<div style="height:30px; line-height:30px; width:100%;padding-right:130px!important;padding-right:110px;"><a href="bfld/index.htm" target="_blank">more</a></div>
+
+<div class="all_anno" style="width:900px;height:40px;line-height:40px;">
+<span style="text-align:right;"><a href="bfld/index.htm" target="_blank">more</a></span>
+</div>
+-->
+
+
+                <div id="main_high">
+                    <div style="float:left;margin-top:70px;margin-left:-28px;">
+                        <img src="images/bf_index/pic13.jpg">
+                    </div>
+                    <div class="main_exam">
+                        <ul id="main_pic">
+                            
+	<li><a href="http://www.bift.edu.cn/bfld/xsxztjy/index.htm"  target="_blank"><img src="images/2023-04/1f34cb2ac23b4c368143a94f7df5b97e.jpg"></a></li>
+	<li><a href="http://www.bift.edu.cn/bfld/llxx/index.htm"  target="_blank"><img src="images/content/2020-03/20200311132753843252.jpg"></a></li>
+	<li><a href="http://www.bift.edu.cn/bfld/xyesd/index.htm"  target="_blank"><img src="images/2022-10/8427ba532d8f4ea79cf94f40b02bde4b.jpg"></a></li>
+	<li><a href="http://www.bift.edu.cn/bfld/jfjslm/index.htm"  target="_blank"><img src="images/2022-05/043a1e4737a34c479aecee3875b1164e.jpg"></a></li>
+	<li><a href="http://www.bift.edu.cn/bfld/415gjaqr/index.htm"  target="_blank"><img src="images/content/2018-04/20180410101716855278.jpg"></a></li>
+	<li><a href="http://www.bift.edu.cn/bfld/xdjjddh/index.htm"  target="_blank"><img src="images/2022-09/3c401b113a9845fc91be52bc6130b57a.jpg"></a></li>
+	<li><a href="http://www.bift.edu.cn/bfld/qfbf/index.htm"  target="_blank"><img src="images/2023-03/077025b3939b44569c1507ab01eed5db.jpg"></a></li>
+	<li><a href="http://www.bift.edu.cn/bfld/sjjlzqkjs/index.htm"  target="_blank"><img src="images/content/2021-12/20211223163207274649.png"></a></li>
+	<li><a href="http://www.bift.edu.cn/bfld/dshm/index.htm"  target="_blank"><img src="images/content/2021-02/20210228145051615759.png"></a></li>
+	<li><a href="http://www.bift.edu.cn/bfld/wwqzbss1/index.htm"  target="_blank"><img src="images/content/2021-07/20210703224722715497.jpg"></a></li>
+                        </ul>
+                        <a href="" class="prev" style="height:0px;_display:none;"> </a><a href="" class="next" style="height:0px;_display:none;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--main-over-->
+
+    </div>
+    <!--内容区域结束-->
+
+</div>
+<!--footer-begin-->
+
+<div id="foot">
+             <div id="footer" >
+               <p style="text-align:center;"><img src="images/bf_index/footer.jpg">
+<!--
+<br>
+<img src="images/bf_index/biftewm.jpg" width=73 height=73>
+-->
+</p>
+<ul>
+ <li style="color:#fff;width:650px;">地址：北京市朝阳区樱花东街甲2号 邮编：100029  <br>
+Email: dyb@bift.edu.cn  &nbsp;&nbsp;北京服装学院官方微博 http://weibo.com/u/2010168052</li>
+<li  style="color:#fff;width:650px;">北京服装学院官方微信号：bift1959 &nbsp;&nbsp;</li>
+<li  style="color:#fff;width:650px;">北京服装学院版权所有 | Copyright © 2013 Beijing Institute of Fashion Technology&nbsp;&nbsp;</br>
+<a href="http://beian.miit.gov.cn/" target="_blank" >京ICP备09090416号-7</a> | 文保网安备案号：110105000&nbsp;&nbsp;&nbsp; |<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502033062"><img src="images/bf_index/batb.png" >京公网安备 11010502033062号</a></li>
+
+               </ul>
+
+
+<p style="float:left;display:block;margin-top:-150px;padding-left:800px;">
+
+<a href="http://bszs.conac.cn/sitename?method=show&id=29E2A6BA60BF2400E053012819AC9E4B" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="images/blue.png" data-bd-imgshare-binded="1"></a>
+</p>
+
+
+
+<p style="float:right;display:block;margin-top:-150px;padding-right:200px;"><img src="images/bf_index/biftewm.jpg" width=100 height=100></p>
+
+             </div>
+         </div><!--footer-over-->
+<!--整个页面结束-->
+
+<!--下拉菜单特效-->
+
+
+<script src="js/20210622jquery-1.7.2.min.js "></script>
+
+
+<script  type="text/javascript" src="js/link.js"></script>
+<script  type="text/javascript" src="js/link3.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<!--内容翻屏效果-->
+<script  type="text/javascript" src="js/bxCarousel.js"></script>
+<!--搜索功能-->
+<script  type="text/javascript" src="js/search.js"></script>
+
+<!--<script type="text/javascript" src="js/20210622jquery-1.7.2.min.js"></script>-->
+<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+
+
+
+
+
+
+<script src="js/slick.js"></script>
+<script>
+    $('.flexslider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+
+    });
+</script><script type='text/javascript' src='g_style/g_index.js'></script><script src='/cms/web/writeLog.jsp?siteID=10022' async='async'></script>
+</body></html>

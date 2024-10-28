@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- common start -->
+	
+	<!-- common end -->
+<title>宁夏大学-新华学院</title>
+<link rel="stylesheet" type="text/css" href="/templates/xhxy/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="/templates/xhxy/css/lb.css">
+<script type="text/javascript" src="/templates/xhxy/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/templates/xhxy/js/jquery_downav.js"></script>
+<script type="text/javascript" src="/templates/xhxy/js/jqFocus.js"></script>
+<script type="text/javascript" src="/templates/xhxy/js/jquery.hiSlider.min.js"></script>
+<script type="text/javascript" src="/templates/xhxy/js/tab.js"></script>
+<script type="text/javascript" src="/templates/xhxy/js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="/templates/xhxy/js/jquery.touchSlider.js"></script>
+<script type="text/javascript" src="/templates/xhxy/js/jquery.marquee.js"></script>
+
+<script type="text/javascript">
+$(function(){
+    $('#marquee1').marquee({direction:'left'});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 5000);
+	
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},5000);
+	});
+	
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+	});
+	
+});
+</script>
+
+<script>
+$(document).ready(function(){
+	$('.hiSlider1').hiSlider();
+})
+</script>
+
+<script type="text/javascript">
+function setTab(name,cursel,n){
+ for(i=1;i<=n;i++){
+  var menu=document.getElementById(name+i);
+  var con=document.getElementById("con_"+name+"_"+i);
+  menu.className=i==cursel?"hover":"";
+  con.style.display=i==cursel?"block":"none";
+ }
+}
+</script>
+<script language="JavaScript">
+	/**
+	*实时显示系统时间
+	*/
+	function getLangDate(){
+	var dateObj = new Date(); //表示当前系统时间的Date对象 
+	var year = dateObj.getFullYear(); //当前系统时间的完整年份值
+	var month = dateObj.getMonth()+1; //当前系统时间的月份值 
+	var date = dateObj.getDate(); //当前系统时间的月份中的日
+	var day = dateObj.getDay(); //当前系统时间中的星期值
+	var weeks = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+	var week = weeks[day]; //根据星期值，从数组中获取对应的星期字符串 
+	var hour = dateObj.getHours(); //当前系统时间的小时值 
+	var minute = dateObj.getMinutes(); //当前系统时间的分钟值
+	var second = dateObj.getSeconds(); //当前系统时间的秒钟值
+	//如果月、日、小时、分、秒的值小于10，在前面补0
+	if(month<10){
+	month = "0"+month;
+	}
+	if(date<10){
+	date = "0"+date;
+	}
+	if(hour<10){
+	hour = "0"+hour;
+	}
+	if(minute<10){
+	minute = "0"+minute;
+	}
+	if(second<10){
+	second = "0"+second;
+	}
+	var newDate = year+"年"+month+"月"+date+"日 "+week+" "+hour+":"+minute+":"+second;
+	document.getElementById("dateStr").innerHTML = ""+newDate+"";
+	setTimeout("getLangDate()",1000);//每隔1秒重新调用一次该函数 
+	}
+	</script>
+</head>
+
+<body onLoad="getLangDate()" style="zoom:1">
+<style>
+        #adbox{
+            width:150px;
+            height:150px;
+            position: absolute;
+            z-index:999;
+        }
+        #adbox img{
+            border: none;
+        }
+        #adbox b{
+		wodth:160px;
+            position: absolute;
+            right: 5px;
+            top: 0;
+            cursor: pointer;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+   
+<div class="header">
+	<div class="h_cont">
+		<div class="timebox">
+			<span class="fl" style="color:white">今天是</span>
+			<div class="rq">
+				<div id="dateStr" style="color:white"></div>
+				
+			</div>
+			
+		</div>
+		
+		
+		<div class="gunbox">
+           <!--滚动信息-->
+            <div id="marquee1"  >
+
+             </div>
+             <!--滚动信息结束-->
+         </div>
+		
+		<ul class="top_list">
+		
+			
+			<li ><a href="https://xinhua.nxu.edu.cn/" style="color:white"> 旧版网站</a></li>
+			<li><span>|</span></li>
+			<li><a href="#" style="color:white">设为首页</a></li>
+			<li><span>|</span></li>
+			<li><a href="#" style="color:white">加入收藏</a></li>
+		</ul>
+	
+	</div>
+</div>
+<script>
+function seaone(){
+var a=document.getElementById("nn") 
+a.value=0; 
+
+};
+
+</script>
+
+<div class="top">
+	<div class="top_cont">
+		<div class="logo"><img src="/templates/xhxy/images/logo.png" /></div>
+		<div class="trb">
+			<div class="searchbox">
+           
+		  <!-- <form  cms-class="cms-search-form-pagelet" cms-options="{page:'69'}" name="SearchForm" method="post">
+				<input class="searchinput" type="text" maxlength="50" size="20" name="word"> 
+				<input class="searchbtn" type="submit" value="确定 "> 
+				 <input id="nn" type="hidden" name="all" value=1  />
+				 <select style="width:77px;height:39px;">
+				  <option onclick="seaall()" value ="volvo">全站搜索</option>
+				  <option onclick="seaone()"value ="saab">子站搜索</option>
+				  
+				</select>
+		   </form>-->
+		   
+		   
+		   <form action="/content/search?id=25" method="post" onsubmit="return _nl_ys_check()" style="display: inline">
+					<input type="hidden"  value=""><input type="hidden"  value="1"><input type="hidden" value="0">
+					<div class="form">
+
+						<input  class="searchinput" type="text" id="keyword" name="keyword" value="" >
+							<input class="searchbtn"  id="bnt_close" type="submit" value="确定 " style="cursor: hand">
+					</div>
+</form>
+		          	</div>
+			
+		</div>
+	</div>
+</div> 
+ 
+<!--导航 开始-->
+
+<!-- common start -->
+
+<!-- common end -->
+<!--导航 开始-->
+<div class="menubox">
+  <div id="navmenu">
+    <ul>
+      <li class="cur"><div class="t_i"><img src="/templates/xhxy/images/nav_top.png" /></div><a href="/ " cms-class="cms-link-pagelet" cms-options="{key:'home',value:'',name:''}" target="_blank">学院首页</a></li>
+      <li><a>学院概况</a>
+			<ul>
+            	<li><a href="/xhxy/content?id=60893"  target="_blank">学院简介</a></li>
+                <li><a href="/xhxy/category?id=1508"   target="_blank">现任领导</a></li>
+            </ul>
+	  </li>
+	 	  
+      <li><a href="/xhxy/category?id=1509"  target="_blank">机构设置</a>
+      		<ul>
+            	<li><a href="/xhxy/category?id=1509" target="_blank">党政部门</a></li>
+                <li><a href="/xhxy/category?id=1510"  target="_blank">教学单位</a></li>
+				<li><a href="/xhxy/category?id=1511"  target="_blank">教辅单位</a></li>
+            </ul>
+      </li>
+    
+	  <li><a >人才培养</a>
+			<ul>
+            	<li><a href="https://www.nxxhxy.com/jwc/" target="_blank">教学工作</a></li>
+				<li><a href="https://www.nxxhxy.com/cxcyxy/" target="_blank">创新创业中心</a></li>
+				
+                <li><a href="https://www.nxxhxy.com/yyzxztw/" target="_blank">转型发展</a></li>			
+            </ul>
+	  </li>
+      <li><a href="https://www.nxxhxy.com/xsc/"  target="_blank">学生工作</a>
+      		
+      </li>
+      <li><a href="https://www.nxxhxy.com/rsc/" target="_blank" >人事管理</a>
+      		
+      </li>
+      <li><a href="https://www.nxxhxy.com/hzjl/" target="_blank" > 合作交流</a></li>
+	  
+      <li><a href="https://www.nxxhxy.com/zsw/"  target="_blank">招生就业</a>
+      		<ul>
+            	<li><a href="https://www.nxxhxy.com/zsw/" target="_blank" >招生信息</a></li>
+                <li><a href="https://xinhua.nxbys.cn/" target="_blank">就业指南</a></li>
+                <li><a href="https://www.nxxhxy.com/byj/" target="_blank" >毕业季</a></li>
+            </ul>
+      </li>
+      <li><a href="https://www.nxxhxy.com/tw/"  target="_blank">校园文化</a>
+		
+	  </li>
+	  <li><a href="https://www.nxxhxy.com/shce/" target="_blank">扫黑除恶</a>	  </li>
+	  <li><a href="https://www.nxxhxy.com/bwc/" target="_blank">安全工作</a>	  </li>
+    </ul>
+  </div>
+</div>
+<!--导航 结束-->
+<!--导航 结束-->
+
+<div class="main_visual">
+	<div class="flicking_con">
+		<a href="#" class=""></a>
+		<a href="#" class=""></a>
+		<a href="#" class="on"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+	</div>
+	<div class="main_image">
+
+		<ul style="width: 100%; overflow: visible;" class="sub_box ml10 mr20" >
+			<li style="float: none; display: block; position: absolute; top: 0px; left: -1600px; width: 100%;"><a href="/xhxy/content?id=379536"><img style="width:100%;height:420px;margin-left:-9px;" src="/static/upload/a650ea5c-fb8b-44ca-9ce5-151b6dc1e878.jpg"></a></li>
+			<li style="float: none; display: block; position: absolute; top: 0px; left: -1600px; width: 100%;"><a href="/xhxy/content?id=55982"><img style="width:100%;height:420px;margin-left:-9px;" src="http://www.nxxhxy.com/picture//xhxy/20220228/8e1c5f88139243049ee95b7e60946a5b.jpg"></a></li>
+			<li style="float: none; display: block; position: absolute; top: 0px; left: -1600px; width: 100%;"><a href="/xhxy/content?id=51764"><img style="width:100%;height:420px;margin-left:-9px;" src="http://www.nxxhxy.com/picture//xhxy/20221113/3ea289cd507c46adae1c76d56dd08bac.jpg"></a></li>
+		</ul>
+		<a href="javascript:;" id="btn_prev" style="width: 100%; overflow: visible; display: inline; opacity: 0.99698;"></a>
+		<a href="javascript:;" id="btn_next" style="width: 100%; overflow: visible; display: inline; opacity: 0.99698;"></a>
+	</div>
+</div>
+
+<div class="box">  
+ 
+  <div class="content">
+  
+     <!--焦点图片切换 开始-->
+    <div class="sub_box ml10 mr20" >
+    	<div id="wrap">
+		  <ul class="hiSlider hiSlider1">
+				<li data-title="中国共产党宁夏大学新华学院第四次代表大会胜利闭幕" class="hiSlider-item" cmsid=25><a href="/xww/content?id=381169" cmsid=26>
+				<img src="/static/upload/224110c9-023d-4bab-977b-b026d0a12b78.jpg"   cmsid=27></a></li>
+
+				<li data-title="中国共产党宁夏大学新华学院第四次代表大会隆重开幕" class="hiSlider-item" cmsid=25><a href="/xww/content?id=381168" cmsid=26>
+				<img src="/static/upload/3b040d99-226d-4100-b971-b43dc1dd2894.jpg"   cmsid=27></a></li>
+
+				<li data-title="学院召开宁夏大学新华学院党委理论学习中心组2024年第11次（扩大）学习会" class="hiSlider-item" cmsid=25><a href="/xww/content?id=381167" cmsid=26>
+				<img src="/static/upload/97360b18-1d1f-4812-b737-ef3deae1323d.JPG"   cmsid=27></a></li>
+
+			
+		  </ul>
+    	</div>
+    </div>
+    <!--焦点图片切换 结束--> 
+	
+    
+    <div class="cont w400 fl">
+       <div class="tit_tab">
+          <ul>
+            <li  class="hover"><span>学院要闻</span></li>
+          </ul>
+		   <p  target="_blank" class="more"><a href="/xww/category?id=1530"　target="_blank">更多 &gt;&gt;</a></p>
+      </div>
+      
+      <div class="list_l bor h233 " >
+          	<ul>
+			<li cmsid=82 style="color:red;">
+				<span class="xx"  cmsid=44><a  href="/xww/content?id=381169" title="中国共产党宁夏大学新华学院第四次代表大会胜利闭幕" target="_blank"   cmsid=45>中国共产党宁夏大学新华学院第四次代表大会胜利闭幕</a></span>
+              <span class="date"  cmsid=46>  2024-10-27 </span>
+			</li>
+          </ul>
+          	<ul>
+			<li cmsid=82 style="color:red;">
+				<span class="xx"  cmsid=44><a  href="/xww/content?id=381168" title="中国共产党宁夏大学新华学院第四次代表大会隆重开幕" target="_blank"   cmsid=45>中国共产党宁夏大学新华学院第四次代表大会隆重开幕</a></span>
+              <span class="date"  cmsid=46>  2024-10-27 </span>
+			</li>
+          </ul>
+          	<ul>
+			<li cmsid=82 style="color:red;">
+				<span class="xx"  cmsid=44><a  href="/xww/content?id=381167" title="学院召开宁夏大学新华学院党委理论学习中心组2024年第11次（扩大）学习会" target="_blank"   cmsid=45>学院召开宁夏大学新华学院党委理论学习中心组2024年第11次（扩大）学习会</a></span>
+              <span class="date"  cmsid=46>  2024-10-25 </span>
+			</li>
+          </ul>
+          	<ul>
+			<li cmsid=82 style="color:red;">
+				<span class="xx"  cmsid=44><a  href="/xww/content?id=381166" title="喜报！艺术与体育系师生在“深入生活、扎根人民”宁夏采风创作优秀舞蹈展演中荣获优秀创新作品奖" target="_blank"   cmsid=45>喜报！艺术与体育系师生在“深入生活、扎根人民”宁夏采风创作优秀舞蹈展演中荣获优秀创新作品奖</a></span>
+              <span class="date"  cmsid=46>  2024-10-25 </span>
+			</li>
+          </ul>
+          	<ul>
+			<li cmsid=82 style="color:red;">
+				<span class="xx"  cmsid=44><a  href="/xww/content?id=381165" title="喜报！学院2024年自治区社科规划项目立项创历史新高" target="_blank"   cmsid=45>喜报！学院2024年自治区社科规划项目立项创历史新高</a></span>
+              <span class="date"  cmsid=46>  2024-10-25 </span>
+			</li>
+          </ul>
+          	<ul>
+			<li cmsid=82 style="color:red;">
+				<span class="xx"  cmsid=44><a  href="/xww/content?id=381164" title="学院举办第七期辅导员沙龙活动" target="_blank"   cmsid=45>学院举办第七期辅导员沙龙活动</a></span>
+              <span class="date"  cmsid=46>  2024-10-25 </span>
+			</li>
+          </ul>
+          	<ul>
+			<li cmsid=82 style="color:red;">
+				<span class="xx"  cmsid=44><a  href="/xww/content?id=381127" title="学院举办国家社科基金项目申报经验分享会" target="_blank"   cmsid=45>学院举办国家社科基金项目申报经验分享会</a></span>
+              <span class="date"  cmsid=46>  2024-10-24 </span>
+			</li>
+          </ul>
+          	<ul>
+			<li cmsid=82 style="color:red;">
+				<span class="xx"  cmsid=44><a  href="/xww/content?id=381116" title="“就”在金秋，“职”面未来——学院成功举办2025届毕业生秋季校园双选洽谈会" target="_blank"   cmsid=45>“就”在金秋，“职”面未来——学院成功举办2025届毕业生秋季校园双选洽谈会</a></span>
+              <span class="date"  cmsid=46>  2024-10-23 </span>
+			</li>
+          </ul>
+
+		  <div class="clear"></div>
+      </div>
+      
+      <div class="clear"></div>
+    </div>
+    
+	<div class="cont w400 fr mr10">
+       <div class="tit_tab" >
+          <ul>
+            <li class="hover"><span>通知公告</span></li>
+          </ul>
+		   <p  target="_blank" class="more"><a href="/xhxy/category?id=1632"　target="_blank">更多 &gt;&gt;</a></p>
+      </div>
+
+      <div class="list_l bor h233" >
+         <ul>
+
+			 <li cmsid=82 style="color:red;">
+				 <span class="xx"  cmsid=44><a  href="/xhxy/content?id=381135" title="宁夏大学新华学院2024年软件设计大赛进入决赛名单" target="_blank"   cmsid=45>宁夏大学新华学院2024年软件设计大赛进入决赛名单</a></span>
+				 <span class="date"  cmsid=46>  2024-10-24 </span>
+			 </li>
+		 </ul>
+         <ul>
+
+			 <li cmsid=82 style="color:red;">
+				 <span class="xx"  cmsid=44><a  href="/xhxy/content?id=381078" title="关于举办宁夏大学新华学院体育学科专业交流大赛——“全民健身”校园健身气功大赛的通知" target="_blank"   cmsid=45>关于举办宁夏大学新华学院体育学科专业交流大赛——“全民健身”校园健身气功大赛的通知</a></span>
+				 <span class="date"  cmsid=46>  2024-10-23 </span>
+			 </li>
+		 </ul>
+         <ul>
+
+			 <li cmsid=82 style="color:red;">
+				 <span class="xx"  cmsid=44><a  href="/xhxy/content?id=381002" title="关于举办宁夏大学新华学院2024年新闻传播创新实践技能大赛的通知" target="_blank"   cmsid=45>关于举办宁夏大学新华学院2024年新闻传播创新实践技能大赛的通知</a></span>
+				 <span class="date"  cmsid=46>  2024-10-19 </span>
+			 </li>
+		 </ul>
+         <ul>
+
+			 <li cmsid=82 style="color:red;">
+				 <span class="xx"  cmsid=44><a  href="/xhxy/content?id=380875" title="关于举办2024年宁夏大学新华学院 BIM技术应用与造价技能竞赛的通知" target="_blank"   cmsid=45>关于举办2024年宁夏大学新华学院 BIM技术应用与造价技能竞赛的通知</a></span>
+				 <span class="date"  cmsid=46>  2024-10-12 </span>
+			 </li>
+		 </ul>
+         <ul>
+
+			 <li cmsid=82 style="color:red;">
+				 <span class="xx"  cmsid=44><a  href="/xhxy/content?id=380853" title="关于举办宁夏大学新华学院2025年大学生市场调查与分析大赛的通知" target="_blank"   cmsid=45>关于举办宁夏大学新华学院2025年大学生市场调查与分析大赛的通知</a></span>
+				 <span class="date"  cmsid=46>  2024-10-11 </span>
+			 </li>
+		 </ul>
+         <ul>
+
+			 <li cmsid=82 style="color:red;">
+				 <span class="xx"  cmsid=44><a  href="/xhxy/content?id=380843" title="关于举办2024 年宁夏大学生BIM 造价技能大赛的通知" target="_blank"   cmsid=45>关于举办2024 年宁夏大学生BIM 造价技能大赛的通知</a></span>
+				 <span class="date"  cmsid=46>  2024-10-10 </span>
+			 </li>
+		 </ul>
+         <ul>
+
+			 <li cmsid=82 style="color:red;">
+				 <span class="xx"  cmsid=44><a  href="/xhxy/content?id=380706" title="关于供暖系统注水的通知" target="_blank"   cmsid=45>关于供暖系统注水的通知</a></span>
+				 <span class="date"  cmsid=46>  2024-09-26 </span>
+			 </li>
+		 </ul>
+         <ul>
+
+			 <li cmsid=82 style="color:red;">
+				 <span class="xx"  cmsid=44><a  href="/xhxy/content?id=380703" title="关于水质监测报告的公示" target="_blank"   cmsid=45>关于水质监测报告的公示</a></span>
+				 <span class="date"  cmsid=46>  2024-09-26 </span>
+			 </li>
+		 </ul>
+          <div class="clear"></div>
+      </div>
+      
+      <div class="clear"></div>
+    </div>
+	
+	<div class="clear"></div>
+	
+	<div class="list_fw mt20">
+		<ul>
+			<li><a href="https://mh.nxxhxy.com/wcsas" target="_blank"><img src="/templates/xhxy/images/ico_02.png" />信息门户</a></li>
+			<li><a href="https://www.nxxhxy.com/xww/" target="_blank"><img src="/templates/xhxy/images/ico_07.png" />新闻网</a></li>
+			<li><a href="https://www.nxxhxy.com/djgz/" target="_blank"><img src="/templates/xhxy/images/ico_01.png" />党建工作</a></li>
+			<li><a href="https://www.nxxhxy.com/xybgs/category?id=1221" target="_blank" ><img src="/templates/xhxy/images/ico_03.png" />党政发文</a></li>
+			<li><a href="https://www.nxxhxy.com/xybgs/category?id=1223"  target="_blank" ><img src="/templates/xhxy/images/ico_08.png" />部门文件</a></li>
+			<li><a href="https://jwgl.nxxhxy.com/" target="_blank"><img src="/templates/xhxy/images/ico_02.png" />教务系统</a></li>
+			
+			<li><a href="https://xgpt.nxxhxy.com:8000/login"  target="_blank"><img src="/templates/xhxy/images/xuegong.png" />学工平台</a></li>
+			<li><a href="/xhxy/category?id=1646" target="_blank"><img src="/templates/xhxy/images/ico_10.png" />领导信箱</a></li>
+			
+			<li><a href="/xhxy/category?id=1518"   target="_blank"><img src="/templates/xhxy/images/ico_05.png" />校历查询</a></li>
+			
+			
+			
+		</ul>
+	</div>
+	
+    <div class="clear"></div>
+  </div>
+    
+  <div class="clear"></div>  
+</div>
+
+<div class="clear"></div>
+
+<div class="footer mt15">
+  <div class="k">
+    <p>
+		<span>版权所有：宁夏大学新华学院</span>
+		<span>@ 2014 宁夏大学新华学院</span>
+		<span><a style="color:white;" href="https://beian.miit.gov.cn/#/Integrated/recordQuery">宁ICP备2020001277号-1</a></span>
+		<span>地址：宁夏银川市西夏区贺兰山西路686号</span>
+		<span>邮政编码：750021</span>
+		<span>联系电话：0951-2062708</span>
+		<span>传真：0951-2062708</span>
+	</p>
+  </div>
+</div>
+
+<!--漂浮--> 
+<div id="ewm" class="ewm" style="width: 50px;">
+	<div class="ewm_l">
+	  <div id="con_1" class="ewm_l_1" style="display: none;"><img title="宁夏大学新华学院官方微信" src="/templates/xhxy/images/weixinQRCode.png" /></div>
+	  <div id="con_2" class="ewm_l_1" style="display: none;"><img title="宁夏大学新华学院官方微博" src="/templates/xhxy/images/weiboQRCode.png" /></div>
+	  <div id="con_3" class="ewm_l_2" style="display: none;"><a title="宁夏大学党建网" href="http://nddj.nxu.edu.cn/">宁夏大学党建网</a></div>
+	  <div id="con_4" class="ewm_l_3" style="display: none;"><a title="电子校报" href="http://202.201.128.123:9999/" target="_blank">电子校报</a></div>
+	</div>
+	<div class="ewm_r">
+	  <ul>
+		<li class="li1"><a id="menu_1" href="javascript:void(0)" onmouseout="tabClosd('con_1')" onmouseover="tabShow('menu_','con_',1,4)" class="">微信</a> </li>
+		<li class="li2"><a id="menu_2" href="http://weibo.com/nxu1958" target="_blank" onmouseout="tabClosd('con_2')" onmouseover="tabShow('menu_','con_',2,4)" class="">新浪微博</a> </li>
+		<li class="li3"><a id="menu_3" title="书记信箱" href="#" cms-class="cms-link-pagelet" cms-options="{key:'catalog',value:'1645',name:'%u515A%u5EFA%u8981%u95FB'}" onmouseout="tabClosd('con_3')" onmouseover="tabShow('menu_','con_',3,4)" class="">书记信箱</a> </li>
+		<li class="li4"><a id="menu_4" title="院长信箱" href="#"  cms-class="cms-link-pagelet" cms-options="{key:'catalog',value:'1646',name:'%u515A%u5EFA%u8981%u95FB'}" target="_blank" onmouseout="tabClosd('con_4')" onmouseover="tabShow('menu_','con_',4,4)" class="cur">院长信箱</a> </li>
+	  </ul>
+	</div>
+</div>
+<!--漂浮结束--> 
+
+
+<!--飘窗-->
+
+<style type="text/css">
+    #flow{
+        LEFT: 10px;
+        WIDTH: 200px; 
+        POSITION: absolute; TOP: 147px;
+        HEIGHT: 163px;
+        /*background-color: #EFEFEF;*/
+        /*background-color:#7EF030;*/ 
+        border: 1px none #000000; 
+    }
+        
+</style>
+<!--悬浮-->
+<!--
+    <div id="flow" onMouseOver="stop()" onMouseOut="start()">    
+    <!--这里是内容-->
+	<!--
+    <table width=90>
+            <tbody>
+                <tr>
+                    
+                        <td>
+						<a href="https://xinhua.nxbys.cn/largefairs/view/id/2394/domain/xinhua" target="_blank">
+						<IMG src="/templates/xhxy/images/112233.png" style="width:360px;height:300px" border=0>
+						</a>
+						</td>
+                    
+                </tr> 
+                <tr>  
+                    <td>
+                        <div align=right><a onclick="stopAd()">关闭 </a></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	-->
+<!--浮动飘窗代码-->
+<script type="text/javascript">
+var xPos = 100; 
+var yPos = 100; 
+var step = 1; 
+var delay =100; 
+var height = 0; 
+var Hoffset = 0; 
+var Woffset = 0; 
+var yon = 0; 
+var xon = 0; 
+var interval;
+flowE=document.getElementById("flow");
+flowE.style.top = yPos+"px";
+function changePos() { 
+width = document.documentElement.clientWidth; 
+height = document.documentElement.clientHeight; 
+Hoffset = flowE.offsetHeight; 
+Woffset = flowE.offsetWidth; 
+flowE.style.left = (xPos + document.body.scrollLeft)+"px"; 
+flowE.style.top = (yPos + document.body.scrollTop)+"px"; 
+// //
+    yon==0?yPos+=step:yPos-=step;
+    xon==0?xPos-=step:xPos+=step;
+    if(xPos>=(width-Woffset)){
+        xPos=(width-Woffset);
+        xon=0;
+    }
+    else if(xPos<=0){
+        xPos=0;
+        xon=1;
+    }
+    if(yPos>=(height-Hoffset))
+    {  
+        yPos = (height - Hoffset);
+        yon=1;
+    }
+    else if(yPos<=0){
+        yPos =0;
+        yon=0;
+    }
+////
+} 
+<!--关闭浮动飘窗-->
+    function stopAd(){
+        flowE.style.display = 'none';
+        clearInterval(interval);
+    }
+<!--这里是自己家的，点击底部的关闭，该div消失代码-->
+    
+function start() {interval = setInterval('changePos()', delay); }
+function stop(){clearInterval(interval);} 
+start();
+</script>
+
+<!--飘窗-->
+
+</body>
+</html>

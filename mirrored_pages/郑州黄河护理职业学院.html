@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>郑州黄河护理职业学院</title>
+    <link rel="stylesheet" href="https://www.zyrnvc.com/assets/hhhl/css/sty2017.css" />
+    <script src="https://www.zyrnvc.com/assets/hhhl/js/jquery.min.js"></script>
+        <script >
+        //滚动
+        (function($){
+            $.fn.kxbdMarquee = function(options){
+                console.log("1")
+                var opts = $.extend({},$.fn.kxbdMarquee.defaults, options);
+                console.log("2")
+                return this.each(function(){
+                    var $marquee = $(this);//滚动元素容器
+                    var _scrollObj = $marquee.get(0);//滚动元素容器DOM
+                    var scrollW = $marquee.width();//滚动元素容器的宽度
+                    var scrollH = $marquee.height();//滚动元素容器的高度
+                    var $element = $marquee.children(); //滚动元素
+                    var $kids = $element.children();//滚动子元素
+                    var scrollSize=0;//滚动元素尺寸
+                    var _type = (opts.direction == 'left' || opts.direction == 'right') ? 1:0;//滚动类型，1左右，0上下
+
+                    //防止滚动子元素比滚动元素宽而取不到实际滚动子元素宽度
+                    $element.css(_type?'width':'height',10000);
+                    //获取滚动元素的尺寸
+                    if (opts.isEqual) {
+                        scrollSize = $kids[_type?'outerWidth':'outerHeight']() * $kids.length;
+                    }else{
+                        $kids.each(function(){
+                            scrollSize += $(this)[_type?'outerWidth':'outerHeight']();
+                        });
+                    }
+                    //滚动元素总尺寸小于容器尺寸，不滚动
+                    if (scrollSize<(_type?scrollW:scrollH)) return;
+                    //克隆滚动子元素将其插入到滚动元素后，并设定滚动元素宽度
+                    $element.append($kids.clone()).css(_type?'width':'height',scrollSize*2);
+
+                    var numMoved = 0;
+                    function scrollFunc(){
+                        var _dir = (opts.direction == 'left' || opts.direction == 'right') ? 'scrollLeft':'scrollTop';
+                        if (opts.loop > 0) {
+                            numMoved+=opts.scrollAmount;
+                            if(numMoved>scrollSize*opts.loop){
+                                _scrollObj[_dir] = 0;
+                                return clearInterval(moveId);
+                            }
+                        }
+                        if(opts.direction == 'left' || opts.direction == 'up'){
+                            var newPos = _scrollObj[_dir] + opts.scrollAmount;
+                            if(newPos>=scrollSize){
+                                newPos -= scrollSize;
+                            }
+                            _scrollObj[_dir] = newPos;
+                        }else{
+                            var newPos = _scrollObj[_dir] - opts.scrollAmount;
+                            if(newPos<=0){
+                                newPos += scrollSize;
+                            }
+                            _scrollObj[_dir] = newPos;
+                        }
+                    };
+                    //滚动开始
+                    var moveId = setInterval(scrollFunc, opts.scrollDelay);
+                    //鼠标划过停止滚动
+                    $marquee.hover(
+                        function(){
+                            clearInterval(moveId);
+                        },
+                        function(){
+                            clearInterval(moveId);
+                            moveId = setInterval(scrollFunc, opts.scrollDelay);
+                        }
+                    );
+
+                    //控制加速运动
+                    if(opts.controlBtn){
+                        $.each(opts.controlBtn, function(i,val){
+                            $(val).bind(opts.eventA,function(){
+                                opts.direction = i;
+                                opts.oldAmount = opts.scrollAmount;
+                                opts.scrollAmount = opts.newAmount;
+                            }).bind(opts.eventB,function(){
+                                opts.scrollAmount = opts.oldAmount;
+                            });
+                        });
+                    }
+                });
+            };
+            console.log("3")
+            $.fn.kxbdMarquee.defaults = {
+                isEqual:true,//所有滚动的元素长宽是否相等,true,false
+                loop: 0,//循环滚动次数，0时无限
+                direction: 'left',//滚动方向，'left','right','up','down'
+                scrollAmount:1,//步长
+                scrollDelay:10,//时长
+                newAmount:3,//加速滚动的步长
+                eventA:'mousedown',//鼠标事件，加速
+                eventB:'mouseup'//鼠标事件，原速
+            };
+            console.log("4")
+            $.fn.kxbdMarquee.setDefaults = function(settings) {
+                console.log("5")
+                $.extend( $.fn.kxbdMarquee.defaults, settings );
+            };
+
+        })(jQuery);
+
+    </script>
+    <style>
+        a{ font-size:13px; color:#333333; text-decoration:none;}
+        a:hover{color:red; text-decoration:underline;}
+        img{ border:none;}
+        .marquee {width:1200px;height:200px;overflow:hidden;border:0px solid #333; margin-top:20px;}
+        .marquee li{ display:inline; float:left; margin-right:12px;}
+        .marquee li a{ width:230px; height:260px; display:block; float:left; text-align:center; font-size:14px;}
+        .marquee li a:hove{ text-decoration:none;}
+        .marquee li img {width:215px; height:160px;}
+        .marquee li em{font-style: normal; height:24px; line-height:24px; display:block; margin-top:8px;}
+    </style>
+	
+	
+</head>
+<body>
+
+<div class="x_top" style="z-index:99">
+  <h1 class="x_top_logo"><img src="https://www.zyrnvc.com/assets/hhhl/img/logo20171222.jpg" /></h1>    
+    <div id="dh_nav">
+        <ul>
+            <li class="mainlevel nav_01 dq_navcur">
+                <a href="/">首页</a>
+            </li>
+            <li class="mainlevel ">
+                <a href="/schoolSurvey?key=jianjie">学校概况</a>
+                <ul style="z-index: 999;">
+                                            <li><a href="/schoolSurvey?key=jianjie">学院简介</a> </li>
+                                            <li><a href="/schoolSurvey?key=fengcai">领导风采</a> </li>
+                                            <li><a href="/schoolSurvey?key=chengnuo">党员承诺</a> </li>
+                                            <li><a href="/schoolSurvey?key=rongyu">资质荣誉</a> </li>
+                                            <li><a href="/schoolSurvey?key=xiaoge">学校校歌</a> </li>
+                                            <li><a href="/schoolSurvey?key=jingshen">学院精神</a> </li>
+                                            <li><a href="/schoolSurvey?key=lianxi">联系我们</a> </li>
+                                    </ul>
+            </li>
+            <li class="mainlevel ">
+                <a href="/mechanism?key=party">机构设置</a>
+                <ul style="z-index: 999;">
+                                            <li><a href="/mechanism?key=party">党群机构</a> </li>
+                                            <li><a href="/mechanism?key=administration">行政机构</a> </li>
+                                            <li><a href="/mechanism?key=teaching">教学机构</a> </li>
+                                            <li><a href="/mechanism?key=supplementary">教辅机构</a> </li>
+                                            <li><a href="/mechanism?key=department">科室负责人</a> </li>
+                                    </ul>
+            </li>
+
+            <li class="mainlevel ">
+                <a href="/jiaowuchu">教育教学</a>
+                <ul style="z-index: 999;">
+                    
+                <!--    <li><a href="/jiaowuchu">成绩查询</a> </li>
+                 -->
+                </ul>
+            </li>
+
+            <li class="mainlevel  ">
+                <a href="/news">新闻资讯</a>
+                <ul style="z-index: 999;">
+                                        <li><a href="/news?id=58">政声速递</a> </li>
+                                        <li><a href="/news?id=52">学院新闻</a> </li>
+                                        <li><a href="/news?id=53">公告通知</a> </li>
+                                        <li><a href="/news?id=54">校庆动态</a> </li>
+                                        <li><a href="/news?id=55">招生频道</a> </li>
+                                        <li><a href="/news?id=56">系部动态</a> </li>
+                                        <li><a href="/news?id=57">信息公开</a> </li>
+                                    </ul>
+            </li>
+
+            <li class="mainlevel">
+                <a href="#">招生就业</a>
+                <ul style="z-index: 999;">
+                    <li><a href="https://zyrnvc.com/zhaoshengbu">招生信息</a> </li>
+                    <li><a href="http://zzhhhl.goworkla.cn/">就业信息</a> </li>
+                </ul>
+            </li>
+
+            <li class="mainlevel ">
+                <a href="/schoolCulture">校园文化</a>
+                <ul style="z-index: 999;">
+                                            <li><a href="/schoolCulture?key=schoolelife">校园生活</a> </li>
+                                            <li><a href="/schoolCulture?key=leadershipcare">书香校园</a> </li>
+                                            <li><a href="/schoolCulture?key=employment">见习实习</a> </li>
+                                            <li><a href="/schoolCulture?key=schoolScenery">学校风景</a> </li>
+                                            <li><a href="/schoolCulture?key=graduationPhoto">毕业合影</a> </li>
+                                            <li><a href="/schoolCulture?key=partyMember">优秀党员</a> </li>
+                                            <li><a href="/schoolCulture?key=teacher">优秀教师</a> </li>
+                                    </ul>
+            </li>
+
+            <li class="mainlevel">
+                <a href="#">信息公开</a>
+                <ul style="z-index: 999;">
+					<li><a href="https://zyrnvc.com/news_info?id=378">公开目录</a> </li>
+					<li><a href="https://zyrnvc.com/news_info?id=379">公开指南</a> </li>
+					<li><a href="https://zyrnvc.com/dangzheng">规章制度</a> </li>
+					<li><a href="https://zyrnvc.com/news_info?id=355">校长信箱</a> </li>
+                    <li><a href="https://zyrnvc.com/schoolSurvey?key=lianxi">电话咨询</a> </li>
+                    <li><a href="https://zyrnvc.com/news_info?id=283">官方微博</a> </li>
+                    <li><a href="https://zyrnvc.com/news_info?id=281">官方微信</a> </li>
+					
+                </ul>
+            </li>
+			 
+
+        </ul>
+    </div>
+
+                                                                    		
+        <div class="x_topdh">0371-67898116</div>
+    <div class="x_topss"><input class="inptext" type="text" placeholder="全站搜索" /><input class="inpimg" type="image" src="https://www.zyrnvc.com/assets/hhhl/img/icon_1.png" /></div>
+</div>
+
+<!--  div id="danzhao" align="right" style="position:absolute,z-index:9999" ><a   href="http://61.163.243.114:8088" target="_blank"><img src="https://www.zyrnvc.com/assets/hhhl/img/danzhao.png" border="0">  </a></div  -->
+
+		<!-- 幻灯代码 开始 -->
+<div class="slide_container">
+	<ul class="rslides" id="slider">
+									<li style=" background: url(http://www.zyrnvc.com/uploads/news/20240629/20240629140427_934406.jpg) center top no-repeat; background-size: cover ;">
+									</li>
+												<li>
+					<img src="http://www.zyrnvc.com/uploads/news/20230426/20230426013919_744869.jpg" alt="">
+									</li>
+												<li>
+					<img src="http://www.zyrnvc.com/uploads/news/20230306/20230306035400_274907.jpg" alt="">
+									</li>
+					
+	</ul>
+</div>
+<script src="https://www.zyrnvc.com/assets/hhhl/js/responsiveslides.min.js"></script>
+<script src="https://www.zyrnvc.com/assets/hhhl/js/slide.js"></script>
+<!-- 代码 结束 -->
+
+<div class="box1200_m20">
+	<div class="indnew1">
+		<h2>学院新闻<i>College News</i><a href="/news?id=52"><img src="https://www.zyrnvc.com/assets/hhhl/img/more.png" /></a></h2>
+		<div class="indnew10">
+			<div class="indnew11">
+				<img src="http://www.zyrnvc.com/uploads/news/20240714/20240714023950_868904.jpg" />
+				<a href="/news_info?id=1890"><strong>喜报！我院护理专业立项为河南省职业教育示范性骨干专业点建设项目</strong></a>
+				<p></p>
+			</div>
+			<div class="indnew12">
+				<ul class="indnew120>
+																
+						<a href="/news_info?id=1890"> <strong>喜报！我院护理专业立项为河南省职业教育示范性骨干专业点建设项目</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1933"> <strong>有情怀的教育家 | 刘仁：砥砺前行的教育世家传承人</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1938"> <strong>我院召开党委理论学习中心组（扩大）会议</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1940"> <strong>我院与高新区消防救援大队联合开展消防安全技能培训及实战演练</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1939"> <strong>我院与中创科技集团携手共建实习就业基地</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1937"> <strong>河南省卫健委中医药科技教育处处长姬淅伟到我院新密校区走访调研</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1936"> <strong>全省高校秋季学期思政课&ldquo;大听课 大调研&rdquo;第一调研组到我院开展调研</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1935"> <strong>河南省教育厅民办教育学科专业建设资助项目专家组来我院开展调研工作</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1934"> <strong>我院召开2024年校级教育教学改革研究与实践项目秋季结项答辩会</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1928"> <strong>我院与郑州妃她医疗科技集团有限公司举行共建校企研发中心揭牌仪式</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1931"> <strong>我院举办&ldquo;中华民族一家亲 同心共筑中国梦&rdquo;主题演讲比赛</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1930"> <strong>我院新密校区开展&ldquo;全民同心，反诈同行&rdquo;专题讲座</strong></a>
+						<p></p>
+					
+											
+						<a href="/news_info?id=1929"> <strong>学院创办人、理事长刘仁教授讲授秋季学期&ldquo;开学思政第一课&rdquo;</strong></a>
+						<p></p>
+					
+															</ul>
+			</div><br class="clr" />
+		</div>
+	</div>
+	<div class="indnew2">
+		<h2>通知公告<i>Notice Bulletin</i><a href="/news?id=53"><img src="https://www.zyrnvc.com/assets/hhhl/img/more.png" /></a></h2>
+		<ul class="indnew21">
+						<a href="/news_info?id=1941"><li>郑州黄河护理职业学院招聘公告</li></a>
+						<a href="/news_info?id=1926"><li>郑州黄河护理职业学院网站升级数字赋能项目竞争性磋商公告</li></a>
+						<a href="/news_info?id=1922"><li>郑州黄河护理职业学院招聘公告</li></a>
+						<a href="/news_info?id=1908"><li>郑州黄河护理职业学院招聘公告</li></a>
+						<a href="/news_info?id=1906"><li>郑州黄河护理职业学院招聘公告</li></a>
+						<a href="/news_info?id=1891"><li>郑州黄河护理职业学院招聘公告</li></a>
+						<a href="/news_info?id=1885"><li>郑州黄河护理职业学院关于2024年招生工作的郑重声明</li></a>
+						<a href="/news_info?id=1878"><li>郑州黄河护理职业学院2024年报考指南</li></a>
+						<a href="/news_info?id=1871"><li>郑州黄河护理职业学院招聘公告</li></a>
+						<a href="/news_info?id=1843"><li>郑州黄河护理职业学院2024年招生章程</li></a>
+						<a href="/news_info?id=1836"><li>郑州黄河护理职业学院招聘公告</li></a>
+						<a href="/news_info?id=1842"><li>郑州黄河护理职业学院2024年&ldquo;5&middot;25&rdquo;心理健康宣传月活动方案</li></a>
+						<a href="/news_info?id=1819"><li>关于2024年高职单招成绩及拟录取结果公示的通知</li></a>
+					</ul>
+	</div><br class="clr" />
+</div>
+<div class="box1200_m20">
+	<div class="indnew3">
+		<h3>招生频道<i>Admissions channel</i><a href="/news?id=55"><img src="https://www.zyrnvc.com/assets/hhhl/img/more.png" /></a></h3>
+		<div class="indnew30">
+						<div class="indnew31">
+				<img src="http://www.zyrnvc.com/lib/img/zwtp.png" />
+				<a href="/news_info?id=1905"> <strong>学院微信公众号</strong></a>
+				<p></p>
+			</div>
+									<ul class="indnew32">
+									<a href="/news_info?id=1905"> <li>学院微信公众号</li></a>
+									<a href="/news_info?id=1792"> <li>2024年大专招生简章</li></a>
+									<a href="/news_info?id=1918"> <li>郑州黄河护理职业学院2024年高等学历继续教育招生简章</li></a>
+									<a href="/news_info?id=1917"> <li>郑州黄河护理职业学院关于开展成人高等教育招生的公告</li></a>
+									<a href="/news_info?id=1852"> <li>2024年中专招生简章</li></a>
+									<a href="/news_info?id=1799"> <li>郑州黄河护理职业学院2024年高职单招考试《职业适应性测试》考试大纲及样题</li></a>
+							</ul>
+					</div>
+	</div>
+	<div class="indnew4">
+		<h3>校庆动态<i> School anniversary updates </i><a href="/news?id=54"><img src="https://www.zyrnvc.com/assets/hhhl/img/more.png" /></a></h3>
+		<div class="indnew30">
+						<ul class="indnew32">
+									<a href="/news_info?id=1704"><li>【校庆动态】我院举行建校30周年庆典暨办学成果汇报大会</li></a>
+									<a href="/news_info?id=1710"><li>【校庆动态】郑州黄河护理职业学院举行庆祝建校30周年文艺晚会</li></a>
+									<a href="/news_info?id=1711"><li>【校庆动态】我院组织召开专业建设研讨会</li></a>
+									<a href="/news_info?id=1716"><li>【校庆征文】学院30周年校庆征文选登（六）</li></a>
+									<a href="/news_info?id=1714"><li>【校庆征文】学院30周年校庆征文选登（五）</li></a>
+									<a href="/news_info?id=1715"><li>【校庆征文】学院30周年校庆征文选登（四）</li></a>
+									<a href="/news_info?id=1713"><li>【校庆征文】学院30周年校庆征文选登（三）</li></a>
+									<a href="/news_info?id=1699"><li>【校庆公告】郑州黄河护理职业学院30周年校庆公告</li></a>
+									<a href="/news_info?id=1701"><li>【校庆动态】我院举行校史校情专题报告会</li></a>
+									<a href="/news_info?id=1712"><li>【校庆征文】学院30周年校庆征文选登（二）</li></a>
+							</ul>
+					</div>
+	</div>
+	<div class="indnew5">
+		<h3>系部动态<i>Department</i><a href="/news?id=56"><img src="https://www.zyrnvc.com/assets/hhhl/img/more.png" /></a></h3>
+		<ul class="indnew51">
+												<a href="/news_info?id=1932"><li>【护理系】我院举办2024年护理技能竞赛校级初选赛</li></a>
+									<a href="/news_info?id=1892"><li>【就业创业指导服务中心】我院召开2024届毕业生就业监测数据核查工作会议</li></a>
+									<a href="/news_info?id=1876"><li>【教育系】我院举办学前教育专业美术作品展活动</li></a>
+									<a href="/news_info?id=1867"><li>【护理系】我院护理系举办护理技能竞赛选拔赛</li></a>
+									<a href="/news_info?id=1856"><li>【中专部】我院中专部召开实习动员会</li></a>
+									<a href="/news_info?id=1855"><li>【医学技术系】我院医学技术系举办第一届药品质量检测技能大赛</li></a>
+									<a href="/news_info?id=1848"><li>【医学技术系】我院举办第一届全口义齿排牙技能大赛</li></a>
+									<a href="/news_info?id=1832"><li>【医学技术系】我院医学技术系举办药用植物标本创意制作活动</li></a>
+									<a href="/news_info?id=1829"><li>【公共教学部】我院&ldquo;领跑杯&rdquo;校园篮球赛圆满落幕</li></a>
+									<a href="/news_info?id=1831"><li>【马克思主义学院】马克思主义学院组织开展公开课暨思政课教师教学技能&ldquo;大练兵&rdquo;活动</li></a>
+									<a href="/news_info?id=1830"><li>【护理系】我院护理系2022级实习生面试工作顺利开展</li></a>
+									<a href="/news_info?id=1828"><li>【康复治疗系】我院康复治疗系开展实习动员活动</li></a>
+									</ul>
+	</div><br class="clr" />
+</div>
+
+
+<div class="indnew7">
+	<h4>校园文化<i>campus culture</i></h4>
+
+    <div class="marquee">
+        <ul>
+                            <li><a href="/schoolCulture?key=schoolelife"><img src="https://www.zyrnvc.com/assets/hhhl/img/xywh/schoolelife.jpg"/><em>校园生活</em></a></li>
+                            <li><a href="/schoolCulture?key=leadershipcare"><img src="https://www.zyrnvc.com/assets/hhhl/img/xywh/leadershipcare.jpg"/><em>书香校园</em></a></li>
+                            <li><a href="/schoolCulture?key=employment"><img src="https://www.zyrnvc.com/assets/hhhl/img/xywh/employment.jpg"/><em>见习实习</em></a></li>
+                            <li><a href="/schoolCulture?key=schoolScenery"><img src="https://www.zyrnvc.com/assets/hhhl/img/xywh/schoolScenery.jpg"/><em>学校风景</em></a></li>
+                            <li><a href="/schoolCulture?key=graduationPhoto"><img src="https://www.zyrnvc.com/assets/hhhl/img/xywh/graduationPhoto.jpg"/><em>毕业合影</em></a></li>
+                            <li><a href="/schoolCulture?key=partyMember"><img src="https://www.zyrnvc.com/assets/hhhl/img/xywh/partyMember.jpg"/><em>优秀党员</em></a></li>
+                            <li><a href="/schoolCulture?key=teacher"><img src="https://www.zyrnvc.com/assets/hhhl/img/xywh/teacher.jpg"/><em>优秀教师</em></a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="indnew7">
+	<h4>友情链接<i>Friendship link</i></h4>
+	<div class="indnew72">
+        <a href="http://www.haedu.gov.cn/" target="_blank">河南教育厅</a>
+        <a href="http://www.chsi.com.cn/" target="_blank">学信网</a>
+        <a href="http://www.zzu.edu.cn/" target="_blank">郑州大学</a>
+        <a href="http://www.henu.edu.cn/" target="_blank">河南大学</a>
+        <a href="https://www.zdyfy.com/" target="_blank">郑大第一附属医院</a>
+        <a href="http://www.huazhuo-hospital.com/" target="_blank">郑州华卓医院</a>
+	</div>
+</div>
+
+
+        <!-- bott -->
+<div class="bott1" style="z-index:99">
+    <div class="box1200">
+        <div class="bott11">
+                            <a href="/mechanism?key=party">党群机构</a>
+                            <a href="/mechanism?key=administration">行政机构</a>
+                            <a href="/mechanism?key=teaching">教学机构</a>
+                            <a href="/mechanism?key=supplementary">教辅机构</a>
+                            <a href="/mechanism?key=department">科室负责人</a>
+                                </div>
+        <div class="bott12">&nbsp;</div><br class="clr" />
+    </div>
+</div>
+<div class="bott2" style="z-index:99">
+    <div class="box1200">
+        <div class="bott21">
+            地址：郑州市铁魏路东段  邮编:450066 总机:0371-67898116；传真:0371-67898068<br />
+            Email:hhyxy@126.com；学校办公室0371-67898068；招生办公室0371-67898118<br />
+            版权所有 © 2012 郑州黄河护理职业学院 All Rights Reserved  <a href="https://beian.miit.gov.cn/" ><font color="00ff00">豫ICP备16011670号</font></a></div>
+                <br class="clr" />
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#dh_nav li").hover(function(){
+            $(this).find("ul").slideDown("slow");
+        },function () {
+            $(this).find("ul").slideUp("fast");
+        })
+    })
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.marquee').kxbdMarquee({
+                direction:'left',
+                eventA:'mouseenter',
+                eventB:'mouseleave'
+            });
+        });
+    </script>
+
+
+
+</body>
+</html>

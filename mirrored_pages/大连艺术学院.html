@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=500, user-scalable=0" />
+<meta name="Keywords" content="大连艺术学院,大连艺术学院官网" />
+<meta name="Description" content="大连艺术学院是经国家教育部批准，具有普通高等学历教育招生资格的本科院校，学校代码13599。2009年4月，学院成功完成了由“东北大学大连艺术学院”的转设，从而由独立学院升级为全日制普通本科院校。" />
+<link href="/v/layout.css?202403" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+<title>大连艺术学院</title>
+<script src="/v/jquery-3.7.0.min.js"></script>
+<style>
+#content img{height:auto!important}
+@media only screen and (max-width: 1080px) {
+	#content img{max-width: 100%;}
+}
+</style></head>
+<body id="page_main_gate" class="hidescroll">
+<div style="height:1px;top:-100px;width:100%;position:absolute;text-align:left;overflow:hidden;"><div style="display:inline-block;font-size:100px;">大</div><div id="detect" style="display:inline-block;overflow:hidden;">a</div><div id="eye" style="display:none"></div></div>
+<script>
+var ismo = ($(document).width()<1081);
+/*eyefix*/
+var eyefix_time=10;
+function eyefix(){
+	if($("#detect").offset().left>120){if($("#eye").html()==""){$("#eye").html('<link href="/v/eyefix?" rel="stylesheet" type="text/css">');}}
+	if(eyefix_time>0){window.setTimeout("eyefix()",500);eyefix_time--;}
+}
+eyefix();
+/*scroll*/
+var scrollTop=0, downed=0, uped=0, ifdown=0, ifup=0, isdown=0, isup=0;
+$(document).scroll(function(){
+	scrollfun();
+	if($(document).scrollTop()>(scrollTop)){ifdown+=1;}
+	if($(document).scrollTop()<(scrollTop)){ifup+=1;}
+	if(ifdown>5){isdown=1;isup=0;ifdown=0;ifup=0;}
+	if(ifup>5){isdown=0;isup=1;ifdown=0;ifup=0;}
+	scrollTop = $(document).scrollTop();
+	if(!ismo){
+		if(isdown && !downed){
+			if(scrollTop>70 && scrollTop<300){
+				$("html, body").animate({"scrollTop": $(window).height()-150}, 500);
+				downed=1;
+				uped=0;
+			}
+		}
+		if(isup && !uped){
+			if(scrollTop<($(window).height()-150) && (scrollTop<$(window).height()-220)){
+				$("html, body").animate({"scrollTop": 0}, 500);
+				uped=1;
+				downed=0;
+			}
+		}
+		if($(this).scrollTop()>($(window).height()-160)){
+			$("body").removeClass("hidescroll");
+		}else{
+			$("body").addClass("hidescroll");
+		}
+	}
+
+
+	if($(this).scrollTop()>70){
+	//	$(".header").addClass("header_hide");
+		$(".topbanner").addClass("show_as_top");
+	}else{
+	//	$(".header").removeClass("header_hide");
+		$(".topbanner").removeClass("show_as_top");
+	}
+//	$("#imgsilder li").each(function(){$(this).css("backgroundImage","url('/images/slider/0" + ismo +($(this).index()+1)+ ".jpg')");});
+});
+$(window).on("load",function () {
+
+});	
+function scrollnumber(element, cssname, after) {
+	var a, b, c, d;
+	d = $(element).offset().top;
+	a = eval(d + after);
+	b = $(window).scrollTop();
+	c = $(window).height();
+	if (b + c > a){$((element)).addClass((cssname));}
+	if (b + c < d){$((element)).removeClass((cssname));}
+}
+function scrollfun() {
+	scrollnumber("#tb0 .page_imglist", 'tb1_action', 50);
+	scrollnumber("#tb0 .page_more li", 'tb1_action', 50);
+	scrollnumber("#tb2 .page_imglist li", 'tb2_action', 0);
+	scrollnumber("#tb3 svg", 'iconplay', 0);
+}
+function gocontact(){
+	if (navigator.userAgent.toLowerCase().indexOf('micromessenger')>0){
+		window.location='http://apps.dac.edu.cn/contact';
+	}else{
+		$("#contact_qrbg").fadeToggle(200);
+	}
+}
+</script>
+<div class="topbanner"><div id="banner_c">
+		<div class="continner">
+			<a href="/" class="left"><img id="top_logo" src="/images/logo_shadow.png" height="68" border="0" /></a>
+			<div class="top_icon right" style="display:none">
+				<svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" id="search_icon"><path d="M953.504 908.256l-152.608-163.296c61.856-74.496 95.872-167.36 95.872-265.12 0-229.344-186.624-415.968-416.032-415.968-229.344 0-415.968 186.592-415.968 415.968s186.624 415.968 416 415.968c60.096-0.032 118.048-12.576 172.224-37.248 16.096-7.328 23.2-26.304 15.872-42.368-7.328-16.128-26.4-23.264-42.368-15.872-45.856 20.864-94.88 31.456-145.76 31.488-194.08 0-351.968-157.888-351.968-351.968 0-194.048 157.888-351.968 351.968-351.968 194.112 0 352.032 157.888 352.032 351.968 0 91.36-34.848 177.92-98.08 243.744-12.256 12.736-11.84 32.992 0.864 45.248 0.96 0.928 2.208 1.28 3.296 2.08 0.864 1.28 1.312 2.752 2.4 3.904l165.504 177.088c6.272 6.752 14.816 10.144 23.36 10.144 7.84 0 15.68-2.848 21.856-8.64C964.864 941.408 965.568 921.152 953.504 908.256z"></path></svg>
+				<div class="top_search"><input id="keyword" autocomplete="off" onkeydown="if (event.keyCode==13) {window.location=('/search/' + this.value)};" placeholder="站内搜索" type="text" value=""><svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" onclick="window.location=('/search/' + keyword.value);" class="search_botton"><path d="M953.504 908.256l-152.608-163.296c61.856-74.496 95.872-167.36 95.872-265.12 0-229.344-186.624-415.968-416.032-415.968-229.344 0-415.968 186.592-415.968 415.968s186.624 415.968 416 415.968c60.096-0.032 118.048-12.576 172.224-37.248 16.096-7.328 23.2-26.304 15.872-42.368-7.328-16.128-26.4-23.264-42.368-15.872-45.856 20.864-94.88 31.456-145.76 31.488-194.08 0-351.968-157.888-351.968-351.968 0-194.048 157.888-351.968 351.968-351.968 194.112 0 352.032 157.888 352.032 351.968 0 91.36-34.848 177.92-98.08 243.744-12.256 12.736-11.84 32.992 0.864 45.248 0.96 0.928 2.208 1.28 3.296 2.08 0.864 1.28 1.312 2.752 2.4 3.904l165.504 177.088c6.272 6.752 14.816 10.144 23.36 10.144 7.84 0 15.68-2.848 21.856-8.64C964.864 941.408 965.568 921.152 953.504 908.256z"></path></svg></div>
+			</div>
+			<div class="top_icon right"><a href="http://en.dac.edu.cn/">EN</a></div>
+			
+<style>
+#links{overflow:hidden;}
+#links #link_main, #links #link_main ul{padding:0;margin:0;list-style:none;}
+#links #link_main{display: block;padding:0.5em 0;margin:0 auto;}
+#links #link_main a{display: block;margin-right:1em;text-decoration:none;}
+#links #link_main li{float: left;}
+#links #link_main ul{padding:1px;}
+#links #link_main ul a{margin-bottom:1px;margin-right:0;padding:0.5em;}
+#links ul{z-index:10;}
+#links #link_main ul li{width:10em;line-height:150%;}
+#links #link_main li ul{position:absolute;width:10em;}
+#links #link_main li ul ul{margin:-2.65em 0 0 10em;}
+#links #link_main li:hover ul ul, #links #link_main li:hover ul ul ul, #links #link_main li ul{left:-999em;}
+#links #link_main li:hover ul, #links #link_main li li:hover ul, #links #link_main li li li:hover ul{left:auto;}
+</style>
+<div id="links"><ul id="link_main"><li><a href="/" class="menu_link">首页</a><li><a href="/morepro/1" class="menu_tree">概况</a><ul class="menub" id="tree1"><li><a href="/display/71" class="menu_display">学院简介</a><li><a href="/display/73" class="menu_display">现任领导</a><li><a href="/scenery" class="menu_link">校园风光</a></ul><li><a href="/display/23" class="menu_display">院系</a><li><a href="/display/2" class="menu_display">部门</a><li><a href="http://kyc.dac.edu.cn/" class="menu_link">科研</a><li><a href="http://xsc.dac.edu.cn" class="menu_link">学工</a><li><a href="http://jwc.dac.edu.cn" class="menu_link">教学</a><li><a href="http://zsgzc.dac.edu.cn" class="menu_link">招生</a><li><a href="https://dac.jysd.com/" class="menu_link">就业</a><li><a href="http://gjjlhzc.dac.edu.cn/" class="menu_link">交流</a><li><a href="http://sjjxglzx.dac.edu.cn/" class="menu_link">实践</a></ul></div>
+			<div class="menu_fold">
+				<div class="menu_fold_icon menu_fold_out"><span></span><span></span><span></span></div>
+			</div>
+			<div class="menu_expand">
+				<div id="menu_logo"><img id="top_logo" src="/images/logo_600.png" height="68" border="0" /></div>
+				<div id="menu_all"></div>
+			</div>
+		</div>
+<div class=clear></div>
+</div>
+</div>
+<style>#links #link_main li:hover ul, #links #link_main li li:hover ul, #links #link_main li li li:hover ul{left: 320px;}</style>
+<div class="header">
+	<ul id="docker">
+		<li>
+			<a href="http://mail.dac.edu.cn" target="_blank"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 39H44V24V9H24H4V24V39Z"></path><path d="M4 9L24 24L44 9"></path><path d="M24 9H4V24"></path><path d="M44 24V9H24"></path></svg><br>
+			电子邮箱</a>
+		</li>
+		<li>
+			<a href="http://59.46.195.190:8010" target="_blank"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4Z"></path><path d="M18 28H6C4.89543 28 4 28.8954 4 30V42C4 43.1046 4.89543 44 6 44H18C19.1046 44 20 43.1046 20 42V30C20 28.8954 19.1046 28 18 28Z"></path><path d="M42 4H30C28.8954 4 28 4.89543 28 6V18C28 19.1046 28.8954 20 30 20H42C43.1046 20 44 19.1046 44 18V6C44 4.89543 43.1046 4 42 4Z"></path><path d="M28 28H44"></path><path d="M36 36H44"></path><path d="M28 44H44"></path></svg><br>
+			办事大厅</a>
+		</li>
+		<li>
+			<a href="http://tsg.dac.edu.cn/" target="_blank"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M7 37C7 29.2967 7 11 7 11C7 7.68629 9.68629 5 13 5H35V31C35 31 18.2326 31 13 31C9.7 31 7 33.6842 7 37Z"></path><path d="M35 31C35 31 14.1537 31 13 31C9.68629 31 7 33.6863 7 37C7 40.3137 9.68629 43 13 43C15.2091 43 25.8758 43 41 43V7"></path><path d="M14 37H34"></path></svg><br>
+			图书馆</a>
+		</li>
+		<li>
+			<span onclick="gocontact();"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10 6C10 4.89543 10.8954 4 12 4H40C41.1046 4 42 4.89543 42 6V42C42 43.1046 41.1046 44 40 44H12C10.8954 44 10 43.1046 10 42V6Z"></path><path d="M34 6V42"></path><path d="M6 14H14"></path><path d="M6 24H14"></path><path d="M6 34H14"></path><path d="M27 4H39"></path><path d="M27 44H39"></path></svg><br>
+			校长信箱</span>
+		</li>
+		<li>
+			<a href="https://www.dac.edu.cn/more/2329" target="_blank"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 19V5"></path><path d="M30 13L24 19L18 13"></path><path d="M40 24H12L14.5 34H36L40 24Z"></path><path d="M12 24L8 15H3.5"></path><circle cx="20" cy="41" r="3"></circle><circle cx="31" cy="41" r="3"></circle></svg><br>
+			采购招标</a>
+		</li>
+	</ul>
+	<!--*imgsilder*-->
+	<div id="imgsilder">
+		<div class="rotate">
+			<div class="contain">
+				<li></li>
+				<li></li>
+				<li></li>
+			</div>
+			<div class="spot"></div><div class="prev nav"><svg viewBox="0 0 1024 1024" version="1.1" width="30" height="30"><path d="M716.608 1010.112L218.88 512.384 717.376 13.888l45.248 45.248-453.248 453.248 452.48 452.48z"></path></svg></div><div class="next nav"><svg viewBox="0 0 1024 1024" version="1.1" width="30" height="30"><path d="M264.896 1010.112l497.728-497.728L264.128 13.888 218.88 59.136l453.248 453.248-452.48 452.48z"></path></svg></div>
+		</div>
+	</div>
+	<script>
+	curwin = 1;
+	window.onblur = function() {curwin = 0;};
+	window.onfocus = function() {curwin = 1;};
+	if(!ismo){imgmo=0;}else{imgmo=1;}
+	index=0; var ifplay;
+	$("#imgsilder li").each(function(){$(this).css("backgroundImage","url('/images/slider/" + imgmo +($(this).index()+1)+ ".jpg')");});
+	$("#imgsilder .rotate").mouseover(function(){clearInterval(ifplay);});
+	$("#imgsilder .rotate").mouseout(function(){autoplay();})
+	$("#imgsilder .prev").click(function(){prev_pic();})
+	$("#imgsilder .next").click(function(){next_pic();})
+	$("#imgsilder .spot").html("<span></span>".repeat($("#imgsilder .contain").find("li").length));
+	$("#imgsilder .spot span").mouseover(function(){index = $(this).index();addStyle();})
+	autoplay();
+	$("#imgsilder .contain li").eq(index).fadeIn().siblings().fadeOut();
+	$("#imgsilder .spot span").eq(index).addClass("active");
+	function next_pic(){index++;if(index>$("#imgsilder .contain").find("li").length-1){index=0;}addStyle();}
+	function prev_pic(){index--;if(index<0){index=$("#imgsilder .contain").find("li").length-1;}addStyle();}
+	function addStyle(){if(curwin==0){return;}$("#imgsilder .contain li").eq(index).fadeIn().siblings().fadeOut();$("#imgsilder .spot span").eq(index).addClass("active").siblings().removeClass("active");}
+	function autoplay(){ifplay = setInterval(function(){next_pic();},3000);}
+	$(window).resize(function(e) {if(!($(document).width()<1081)){imgmo=0;}else{imgmo=1;}$("#imgsilder li").each(function(){$(this).css("backgroundImage","url('/images/slider/" + imgmo +($(this).index()+1)+ ".jpg')");}); }); 
+	</script>
+	<!--/*imgsilder*/-->
+</div>
+<style>
+</style>
+<div id="content" class="continner">
+<div id="body_main" class="body_main body_main_ body_main__">
+
+
+<table id="tb0" cellspacing="3" border="0" width="100%" height="50"><tr>
+<td valign="top" class="eachunit" id="td_0_0" width="100%"><h5 class="h510" id="h5100"><span class="title_text">新闻动态</span><a class="morelinks" href="/more/10"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><ul class="page_imglist">
+	<li><span class="listpot"></span><a href="/detail/10_6621fa0f8e69d9e7cefea23950c0d6b9.html" target="_blank"><img src="/upload/image/202311/1699280604130568.jpg" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2023</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">26</span></span></span><a href="/detail/10_6621fa0f8e69d9e7cefea23950c0d6b9.html" target="_blank"><span class="more_title">学校举行2023年喜迎国庆、欢度中秋迎新晚会</span></div><div class="more_desc">挺膺担当砺青春，奋楫扬帆启新程。9月26日晚，大连艺术学院举行2023年喜迎国庆、欢度中秋迎新文艺晚会。中国舞蹈家协会副主席、辽宁省文联副主席，辽宁省舞蹈家协会主席、辽宁歌舞团团长吕萌，海军大连舰艇学院政训部政委李杨，大连艺术学院创办者、党委书记、董事长王贤俊，大连艺术学院驻校执行董事王晶，大连艺术</div></a></li><!--1-->
+	<li><span class="listpot"></span><a href="/detail/10_c24ce52ca7f16e51dfdbb8e6f65d0a6b.html" target="_blank"><img src="/upload/image/202311/1699280425533523.jpg" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2023</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">24</span></span></span><a href="/detail/10_c24ce52ca7f16e51dfdbb8e6f65d0a6b.html" target="_blank"><span class="more_title">大艺学子关童月荣获“2023年辽宁省大学生年度人物”称号</span></div><div class="more_desc">　　近日，由中共辽宁省委教育工委、辽宁省教育厅举办的“2023年辽宁省高校辅导员、大学生年度影响力人物、年度人物颁奖仪式”举行。我校2021级播音与主持艺术专业学生关童月荣获“2023年辽宁省大学生年度人物”称号。</div></a></li></ul><h5 class="h510" id="h5101"><span class="title_text">新闻动态</span><a class="morelinks" href="/more/10"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><ul class="page_more more10" id="more101">
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2023</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">08</span><span class="more_time_bmd">-</span><span class="more_time_d">20</span></span></span><a href="/detail/10_24ea22640c5a06f5531bd49a59f2b3d2.html" target="_blank" class="more_title" title="“我们对东北振兴充满信心”——习近平总书记考察辽宁纪实">“我们对东北振兴充满信心”——习近平总书记考察辽宁纪实</a></li><!--1-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">23</span></span></span><a href="/detail/10_cdbcbcb73e0fb8d662bdd2d5697cf097.html" target="_blank" class="more_title" title="金普新区迎来文化新地标：大连艺术学院大剧院动工">金普新区迎来文化新地标：大连艺术学院大剧院动工</a></li><!--2-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">19</span></span></span><a href="/detail/10_ca10afe039ee3b1ef3341135572f8eae.html" target="_blank" class="more_title" title="辽宁省公安厅向学校致感谢信">辽宁省公安厅向学校致感谢信</a></li><!--3-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">09</span></span></span><a href="/detail/10_6c082137b912c742563475ea39e9952f.html" target="_blank" class="more_title" title="辽宁省文联领导一行莅临我校调研指导">辽宁省文联领导一行莅临我校调研指导</a></li><!--4-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">09</span></span></span><a href="/detail/10_3272977b8151937758b22d13f6884609.html" target="_blank" class="more_title" title="学校2024级新生开学典礼暨军训开营仪式隆重举行">学校2024级新生开学典礼暨军训开营仪式隆重举行</a></li><!--5-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">09</span></span></span><a href="/detail/10_32d2c3ed8bd59385b6ee435b0984d339.html" target="_blank" class="more_title" title="学校召开本科教育教学审核评估启动会暨线上评估专家见面会">学校召开本科教育教学审核评估启动会暨线上评估专家见面会</a></li><!--6-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">05</span></span></span><a href="/detail/10_b4e19f7ef0918aabe1eaa9b18ad6740a.html" target="_blank" class="more_title" title="学校分别与省纺织服装协会、省服装设计师协会签署协议">学校分别与省纺织服装协会、省服装设计师协会签署协议</a></li><!--7-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2022</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">11</span><span class="more_time_bmd">-</span><span class="more_time_d">24</span></span></span><a href="/detail/10_f72cb7d0ed56589d3c31d6c66d5c342e.html" target="_blank" class="more_title" title="贯彻二十大，辽宁在行动">贯彻二十大，辽宁在行动</a></li></ul></td></tr></table>
+<table id="tb1" cellspacing="3" border="0" width="100%" height="50"><tr>
+<td valign="top" class="eachunit" id="td_1_0" width="50%"><h5 class="h512" id="h5122"><span class="title_text">通知公告/NOTICE</span><a class="morelinks" href="/more/12"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><ul class="page_more more12" id="more122">
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">05</span><span class="more_time_bmd">-</span><span class="more_time_d">14</span></span></span><a href="/detail/12_2465d50f4d983b695c288e12957ddc64.html" target="_blank" class="more_title" title="关于聘任大连艺术学院第一批廉洁文化监督员的决定（大艺纪﹝2024﹞6号）">关于聘任大连艺术学院第一批廉洁文化监督员的决定（大艺纪﹝2024﹞6号）</a></li><!--1-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">05</span><span class="more_time_bmd">-</span><span class="more_time_d">14</span></span></span><a href="/detail/12_fe9e453f37faf02e2d1a112250473e28.html" target="_blank" class="more_title" title="大连艺术学院开展群众身边不正之风和腐败问题集中整治工作方案（大艺纪﹝2024﹞7号）">大连艺术学院开展群众身边不正之风和腐败问题集中整治工作方案（大艺纪﹝2024﹞7号）</a></li><!--2-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">03</span><span class="more_time_bmd">-</span><span class="more_time_d">09</span></span></span><a href="/detail/12_660da79d767fdea39ef5ed809a67e422.html" target="_blank" class="more_title" title="关于举办 2023—2024 学年全国青少年航天创新大赛 （辽宁赛区选拔赛）的通知">关于举办 2023—2024 学年全国青少年航天创新大赛 （辽宁赛区选拔赛）的通知</a></li><!--3-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">01</span><span class="more_time_bmd">-</span><span class="more_time_d">20</span></span></span><a href="/detail/12_e0f4a1e43a856fce57cd2c892193b77e.html" target="_blank" class="more_title" title="《辽宁文化艺术研究》征稿启事">《辽宁文化艺术研究》征稿启事</a></li><!--4-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2023</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">12</span><span class="more_time_bmd">-</span><span class="more_time_d">25</span></span></span><a href="/detail/12_02f8b651f7deb3ff1a313f11a9f509c4.html" target="_blank" class="more_title" title="大连艺术学院《办事不找关系指南》">大连艺术学院《办事不找关系指南》</a></li><!--5-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2023</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">02</span><span class="more_time_bmd">-</span><span class="more_time_d">14</span></span></span><a href="/detail/12_8eeaae1a9dc48d6ac0596c6d91f2801e.html" target="_blank" class="more_title" title="2023年艺术类专业考试校考考试安排的通知">2023年艺术类专业考试校考考试安排的通知</a></li><!--6-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2022</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">11</span><span class="more_time_bmd">-</span><span class="more_time_d">10</span></span></span><a href="/detail/12_cdb8cc14439dfa25b66bc4b1c4701546.html" target="_blank" class="more_title" title="大连艺术学院疫情防控投诉平台">大连艺术学院疫情防控投诉平台</a></li><!--7-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2023</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">02</span><span class="more_time_bmd">-</span><span class="more_time_d">14</span></span></span><a href="/detail/12_17719ba2f7e237f84ea99091ef3bf8f4.html" target="_blank" class="more_title" title="大连艺术学院2023年艺术类专业考试（网络录制视频）校考考试安排的通知">大连艺术学院2023年艺术类专业考试（网络录制视频）校考考试安排的通知</a></li></ul><h5 class="h5160" id="h51608"><span class="title_text">index_links_via_img</span><a class="morelinks" href="/display/160"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><div class="page_display display160" id="display1608"><p><a href="http://shpg.dac.edu.cn" target="_blank"><strong>本科教育教学<br/>审核评估网</strong></a><a onclick="gocontact()"><strong>校领导信箱</strong></a></p></div></td>
+<td valign="top" class="eachunit" id="td_1_1" width="50%"><h5 class="h511" id="h5113"><span class="title_text">媒体报道/REPORT</span><a class="morelinks" href="/more/11"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><ul class="page_imglist">
+	<li><span class="listpot"></span><a href="/detail/11_6bbe20cd9d003378a38213890cd91fa2.html" target="_blank"><img src="/upload/image/202409/1725159934633300.jpg" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">07</span><span class="more_time_bmd">-</span><span class="more_time_d">01</span></span></span><a href="/detail/11_6bbe20cd9d003378a38213890cd91fa2.html" target="_blank"><span class="more_title">【中国新闻网】原创音乐剧《一路芳华》在大连上演</span></div><div class="more_desc">　　&nbsp; &nbsp; &nbsp; &nbsp; 中新网辽宁新闻6月23日电 “不要哭，生活注定有艰难险阻，仰起头，勇敢地走完你选择的路。”为推动思政课改革创新的良好氛围，用广大师生喜闻乐见的方式阐发立德树人核心要义，增强入脑入心育人效果，6月22日，由中共辽宁省委教育工委、辽宁省教育厅指</div></a></li></ul><h5 class="h511" id="h5114"><span class="title_text">媒体报道/REPORT</span><a class="morelinks" href="/more/11"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><ul class="page_more more11" id="more114">
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">07</span><span class="more_time_bmd">-</span><span class="more_time_d">01</span></span></span><a href="/detail/11_6bbe20cd9d003378a38213890cd91fa2.html" target="_blank" class="more_title" title="【中国新闻网】原创音乐剧《一路芳华》在大连上演">【中国新闻网】原创音乐剧《一路芳华》在大连上演</a></li><!--1-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">07</span><span class="more_time_bmd">-</span><span class="more_time_d">01</span></span></span><a href="/detail/11_1eb8491966eb8d04fb8c0bbea4307598.html" target="_blank" class="more_title" title="【掌上金普客户端】原创音乐剧《一路芳华》震撼首演，绽放艺术魅力">【掌上金普客户端】原创音乐剧《一路芳华》震撼首演，绽放艺术魅力</a></li><!--2-->
+	<li><span class="listpot"></span><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">10</span><span class="more_time_bmd">-</span><span class="more_time_d">09</span></span></span><a href="/detail/11_a5c5171056730faefd3cbb02dd427039.html" target="_blank" class="more_title" title="【大连电视台】航天院士专家进大连科普讲座举行">【大连电视台】航天院士专家进大连科普讲座举行</a></li></ul></td></tr></table>
+<table id="tb2" cellspacing="3" border="0" width="100%" height="50"><tr>
+<td valign="top" class="eachunit" id="td_2_0" width="100%"><h5 class="h5258" id="h525810"><span class="title_text">专题</span><a class="morelinks" href="/more/258"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><ul class="page_imglist">
+	<li><span class="listpot"></span><a href="/detail/258_97c8364088b3ac0dda4344c07ec8459b.html" target="_blank"><img src="/upload/image/202410/1729146160610415.gif" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">10</span><span class="more_time_bmd">-</span><span class="more_time_d">17</span></span></span><a href="/detail/258_97c8364088b3ac0dda4344c07ec8459b.html" target="_blank"><span class="more_title">大连艺术学院原创剧目集锦</span></div><div class="more_desc"></div></a></li><!--1-->
+	<li><span class="listpot"></span><a href="/detail/258_2326b3f7f8529da549c765ccd386357e.html" target="_blank"><img src="/upload/image/202308/1692697380224200.png" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2023</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">08</span><span class="more_time_bmd">-</span><span class="more_time_d">29</span></span></span><a href="/detail/258_2326b3f7f8529da549c765ccd386357e.html" target="_blank"><span class="more_title">大型歌舞剧《丝路·青春》</span></div><div class="more_desc"></div></a></li><!--2-->
+	<li><span class="listpot"></span><a href="/detail/258_d51a6efbfc85b15c503428f9e0c945f5.html" target="_blank"><img src="/upload/image/202308/1692702714757037.png" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2023</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">08</span><span class="more_time_bmd">-</span><span class="more_time_d">29</span></span></span><a href="/detail/258_d51a6efbfc85b15c503428f9e0c945f5.html" target="_blank"><span class="more_title">原创音乐剧《追梦·青春》</span></div><div class="more_desc"></div></a></li><!--3-->
+	<li><span class="listpot"></span><a href="/detail/258_c81f1e3b483509afb9a4412f3e755bee.html" target="_blank"><img src="/upload/image/202308/1692697397243550.png" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2023</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">08</span><span class="more_time_bmd">-</span><span class="more_time_d">29</span></span></span><a href="/detail/258_c81f1e3b483509afb9a4412f3e755bee.html" target="_blank"><span class="more_title">《和平颂》教学汇报演出</span></div><div class="more_desc"></div></a></li></ul></td></tr></table>
+<table id="tb3" cellspacing="3" border="0" width="100%" height="50"><tr>
+<td valign="top" class="eachunit" id="td_3_0" width="100%"><h5 class="h5138" id="h51385"><span class="title_text">快速链接</span><a class="morelinks" href="/display/138"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><div class="page_display display138" id="display1385"><ul class=" list-paddingleft-2"><li><p><a href="http://dycas.dac.edu.cn/cas/login" target="_blank">统一认证</a></p></li><li><p><a href="http://cyy.dac.edu.cn/" target="_blank">创新创业</a></p></li><li><p><a href="http://jxjyzx.dac.edu.cn/" target="_blank">继续教育</a></p></li><li><p><a href="/more/216" target="_blank">课程思政</a></p></li><li><p><a href="/display/16" target="_blank">校内资源</a></p></li><li><p><a href="https://jyt.ln.gov.cn/" target="_blank">省教育厅</a></p></li><li><p><a href="http://dyrszp.dac.edu.cn/zp.html" target="_blank">人才招聘</a></p></li><li><p><a href="http://dac.fy.chaoxing.com/portal" target="_blank">网络教学</a></p></li><li><p><a href="http://app.dac.edu.cn/cha/lq" target="_blank">录取查询</a></p></li></ul></div></td></tr></table>
+<table id="tb4" cellspacing="3" border="0" width="100%" height="50"><tr>
+<td valign="top" class="eachunit" id="td_4_0" width="100%"><h5 class="h5186" id="h51866"><span class="title_text">大艺视频/VIDEOS</span><a class="morelinks" href="/more/186"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><ul class="page_imglist">
+	<li><span class="listpot"></span><a href="/detail/186_c8f57beb39f58b17edf0951d2efd661d.html" target="_blank"><img src="/upload/image/202405/1716812476227909.jpg" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">05</span><span class="more_time_bmd">-</span><span class="more_time_d">27</span></span></span><a href="/detail/186_c8f57beb39f58b17edf0951d2efd661d.html" target="_blank"><span class="more_title">原创大型思政舞台剧《辽宁之歌》　</span></div><div class="more_desc"></div></a></li><!--1-->
+	<li><span class="listpot"></span><a href="/detail/186_5fde3f5bd40d64f66cfc2134ef07c64f.html" target="_blank"><img src="/upload/image/202308/1692758208676164.jpg" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2022</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">02</span><span class="more_time_bmd">-</span><span class="more_time_d">06</span></span></span><a href="/detail/186_5fde3f5bd40d64f66cfc2134ef07c64f.html" target="_blank"><span class="more_title">纪实舞台剧《拥抱·青春》</span></div><div class="more_desc"></div></a></li><!--2-->
+	<li><span class="listpot"></span><a href="/detail/186_53b36bf64ce52ca876f71b588ed0b610.html" target="_blank"><img src="/upload/image/202308/1692758219470743.jpg" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2021</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">10</span><span class="more_time_bmd">-</span><span class="more_time_d">29</span></span></span><a href="/detail/186_53b36bf64ce52ca876f71b588ed0b610.html" target="_blank"><span class="more_title">原创音乐剧《信念·青春》</span></div><div class="more_desc">https://article.xuexi.cn/articles/index.html?art_id=17938067615291142049&amp;t=1623351601246&amp;showmenu=false&amp;study_style_id=video_de</div></a></li><!--3-->
+	<li><span class="listpot"></span><a href="/detail/186_5cc622ac2b7b86289bcb684458aa7a88.html" target="_blank"><img src="/upload/image/202308/1692759491956982.jpg" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2021</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">01</span><span class="more_time_bmd">-</span><span class="more_time_d">17</span></span></span><a href="/detail/186_5cc622ac2b7b86289bcb684458aa7a88.html" target="_blank"><span class="more_title">大连艺术学院原创舞台剧《梦想·青春》</span></div><div class="more_desc">&nbsp; &nbsp;</div></a></li></ul><h5 class="h5257" id="h52579"><span class="title_text">index_video</span><a class="morelinks" href="/display/257"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><div class="page_display display257" id="display2579"><p><a href="https://wx.vzan.com/live/page/1646093767?v=1716775302747" target="_blank"><img src="/upload/image/202405/1716812888512362.jpg" title="1716812888512362.jpg" alt="0.jpg"/></a></p></div></td></tr></table>
+<table id="tb5" cellspacing="3" border="0" width="100%" height="50"><tr>
+<td valign="top" class="eachunit" id="td_5_0" width="100%"><h5 class="h5187" id="h51877"><span class="title_text">官微聚萃/WECHAT</span><a class="morelinks" href="/more/187"><span class="more_larger">&gt;&gt;</span><span class="morezh">更多</span><span class="more_larger_right">&gt;&gt;</span><span class="moreen">more</span><span class="moreellipsis">...</span></a></h5><ul class="page_imglist">
+	<li><span class="listpot"></span><a href="/detail/187_722216a235ac5f0128a1faf923d49573.html" target="_blank"><img src="/upload/image/202409/1726274559857552.png" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">13</span></span></span><a href="/detail/187_722216a235ac5f0128a1faf923d49573.html" target="_blank"><span class="more_title">大学军训初体验 别young青春</span></div><div class="more_desc"></div></a></li><!--1-->
+	<li><span class="listpot"></span><a href="/detail/187_9b3730eaa0d442179e851bd898aed03a.html" target="_blank"><img src="/upload/image/202409/1726274638229813.png" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">12</span></span></span><a href="/detail/187_9b3730eaa0d442179e851bd898aed03a.html" target="_blank"><span class="more_title">一觉醒来，身处冰激凌校园了</span></div><div class="more_desc"></div></a></li><!--2-->
+	<li><span class="listpot"></span><a href="/detail/187_f0561757bdfa2ecab754c8e23d496521.html" target="_blank"><img src="/upload/image/202409/1726274706736401.png" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">11</span></span></span><a href="/detail/187_f0561757bdfa2ecab754c8e23d496521.html" target="_blank"><span class="more_title">火爆出圈 大艺的奶茶包甜的</span></div><div class="more_desc"></div></a></li><!--3-->
+	<li><span class="listpot"></span><a href="/detail/187_54ee2a45711842e0612a7e6db4b04931.html" target="_blank"><img src="/upload/image/202409/1726274774267944.png" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">10</span></span></span><a href="/detail/187_54ee2a45711842e0612a7e6db4b04931.html" target="_blank"><span class="more_title">大力弘扬教育家精神 | 大连艺术学院举行庆祝第40个教师节大会</span></div><div class="more_desc"></div></a></li><!--4-->
+	<li><span class="listpot"></span><a href="/detail/187_6d42a540c30c4f4ce7a2f54497f871ae.html" target="_blank"><img src="/upload/image/202409/1726274860530964.png" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">09</span></span></span><a href="/detail/187_6d42a540c30c4f4ce7a2f54497f871ae.html" target="_blank"><span class="more_title">秋日“顶流”快来打卡 大艺满屏向日葵超美！</span></div><div class="more_desc"></div></a></li><!--5-->
+	<li><span class="listpot"></span><a href="/detail/187_d74a5b86f4df22335aa67f2ec7eaa9c7.html" target="_blank"><img src="/upload/image/202409/1725848704520864.png" class="more_img" border="0" width="100%"></a><div class="title_time"><span class="more_time"><span class="more_time_y">2024</span><span class="more_time_bym">-</span><span class="more_time_md"><span class="more_time_m">09</span><span class="more_time_bmd">-</span><span class="more_time_d">08</span></span></span><a href="/detail/187_d74a5b86f4df22335aa67f2ec7eaa9c7.html" target="_blank"><span class="more_title">辽宁省文联领导一行莅临我校调研指导</span></div><div class="more_desc"></div></a></li></ul></td></tr></table>
+<!--iframe height="420" src="https://v.qq.com/txp/iframe/player.html?vid=k3221ei7z9d" frameborder="0" width="750" allowfullscreen="true"></iframe-->
+</div>
+</div>
+<script src="/v/quick_svg.js"></script>
+<div id="footer">
+	<div id="footer_infor" class="continner">
+		<div id="copy_main">
+			Copyright © 大连艺术学院 版权所有 DAC.EDU.CN<br>
+			辽宁省大连市金普新区同汇路19号 邮编：116600<br>
+			辽宁省大连市经济技术开发区东北大街92号(老校区)<br>
+			联系电话(传真)：0411-39256188<br>
+			纪委信箱：dyjw@dac.edu.cn 纪委电话：0411-39256105<br>
+			<a href="https://beian.mps.gov.cn/#/query/webSearch?code=21021702000660\" rel="noreferrer" target="_blank"><img width=15 src="data:image/gif;base64,R0lGODlhDwARALMAAPXWZRwGVqGmi+JPIaqTa9QSDPOoQgo0l+u+WShOm9WeTcezdFpxmN5/N4GBiXhWSyH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzBCMEQ3QjRBMDAxMTFFRUJEQ0NEOTM3QzJFQUNCNjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzBCMEQ3QjVBMDAxMTFFRUJEQ0NEOTM3QzJFQUNCNjAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDMEIwRDdCMkEwMDExMUVFQkRDQ0Q5MzdDMkVBQ0I2MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDMEIwRDdCM0EwMDExMUVFQkRDQ0Q5MzdDMkVBQ0I2MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAAAAAAALAAAAAAPABEAAASeMJ15EnOOybmne89AEI9DUUIQDoPBPMz5PU1RDAXyxpUTGLbgYBEwHQSx2g1XUBwwDIMPgVNQG0TCwmEgHB4GVmMAeBwWCkLDkAiwBuNBIAFQOBQAn+1dCAgABHcIAAcBhod0CFoKDQACbSABBwQABnZoawCaCAsLBg0KCwcMmIMIg3WhCaunrYOWAJwSDJutlqeaGhYOIwq+nQIOqxEAOw=="> 辽公网安备21021702000660号</a> <a href="https://beian.miit.gov.cn/">辽ICP备13001600号-1</a><br><br>
+		</div>
+	</div>
+</div>
+<table id="contact_qrbg" onclick="gocontact()" style="display:none"><tr><td align="center" valign="middle"><div id="qr_bg"><div id="qr_title">请使用微信扫码留言</div><div id="qr_img"></div></div></td></tr></table>
+<script>
+	/*menu*/
+	$(".menu_fold").click(function(){
+		$(".menu_fold_icon").toggleClass("menu_fold_click menu_fold_out");
+		$(".menu_expand").toggleClass("menuexpand");
+	});
+	$("#menu_all").html($("#links").html());
+	$("#search_icon").click(function(){$(".top_search").fadeToggle(200);});
+	scrollfun();
+</script>
+<span id="bdana"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F807fec0a73733895f33d99bd5e3ea6eb' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37500184-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--a key ="522d36a124306332d33330e9"  logo_size="124x47"  logo_type="official"  href="http://www.anquan.org" ><script src="https://static.anquan.org/static/outer/js/aq_auth.js"></script></a--></span>
+</body>
+</html>

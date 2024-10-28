@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>西安高新科技职业学院</title><meta content="西安高新科技职业学院创立于1999年，高新学院（高新学院）由十八博士创办的国家统招普通高校。高新学院（高新学院）现有西咸、长安和太平三个校区。
+" name="Description"/><meta content="西安高新科技职业学院官网,高新学院官网,西安高新科技职业学院官网,西安高新科技职业学院,西安高新科技学院,高新学院" name="Keywords"/><link href="Yh/Tpl/gaoxin/include/css/index.css" rel="stylesheet" type="text/css"><script src="Yh/Tpl/gaoxin/include/js/jquery-1.js" type="text/javascript"></script><link href="Yh/Tpl/gaoxin/static/swiper/swiper.min.css" rel="stylesheet" type="text/css"><script src="Yh/Tpl/gaoxin/static/swiper/swiper-bundle.min.js" type="text/javascript"></script><script type="text/javascript">// JavaScript Document
+jQuery(function($){
+	var index = 0;
+	var maximg = $("#lunhuanback p").length;
+	//$('<div id="flow"></div>').appendTo("#myjQuery");
+
+	//滑动导航改变内容	
+	$("#lunbonum li").hover(function(){
+		if(MyTime){
+			clearInterval(MyTime);
+		}
+		index  =  $("#lunbonum li").index(this);
+		MyTime = setTimeout(function(){
+		ShowjQueryFlash(index);
+		$('#lunhuanback').stop();
+		} , 400);
+
+	}, function(){
+		clearInterval(MyTime);
+		MyTime = setInterval(function(){
+		ShowjQueryFlash(index);
+		index++;
+		if(index==maximg){index=0;}
+		} , 6000);
+	});
+	//滑入 停止动画，滑出开始动画.
+	 $('#lunhuanback').hover(function(){
+			  if(MyTime){
+				 clearInterval(MyTime);
+			  }
+	 },function(){
+				MyTime = setInterval(function(){
+				ShowjQueryFlash(index);
+				index++;
+				if(index==maximg){index=0;}
+			  } , 6000);
+	 });
+	//自动播放
+	var MyTime = setInterval(function(){
+		ShowjQueryFlash(index);
+		index++;
+		if(index==maximg){index=0;}
+	} , 6000);
+});
+function ShowjQueryFlash(i) {
+$("#lunhuanback p").eq(i).animate({opacity: 1},1000).css({"z-index": "1"}).siblings().animate({opacity: 0},1000).css({"z-index": "0"});
+//$("#flow").animate({ left: 652+(i*76) +"px"}, 300 ); //滑块滑动
+$("#lunbonum li").eq(i).addClass("lunboone").siblings().removeClass("lunboone");
+}
+</script><head><body><!-- background-color:#2c95e6; --><div style='width:100%;  
+    margin: 0 auto;    min-width: 1150px; height:200px;background-size:100% 100%; background-image:url(Yh/Tpl/gaoxin/static/images/bg.png) '><div class="top_bar" style='height:180px' ><div class="l_index_top"  ><a href="#"><img src="Yh/Tpl/gaoxin/static/images/logo.png" alt="西安高新科技学院" height="120" style="margin-left:120px;margin-top:30px;display:none;" /></a></div><div class="r_index_top"  ><form method="post" name="mysearch" action="/index.php?s=/Seach" target="_blank"  onsubmit="return CheckSearch();"><p  ><!--  <a href="/index.php?s=/Index/column/s/1/c/1" title="学校概况">学校概况</a>            --><a target="_blank" href="/index.php?s=/Index/single_page/s/1/c/70" style="color:#fff" title="联系我们">联系我们</a><a target="_blank" href="/index.php?s=/Index/single_page/s/1/c/215" style="color:#fff" title="微信平台">微信平台</a><!--  <a href="/index.php?s=/Index/message" title="在线留言" class="bg_none">在线留言</a>--><a href="#" ><input name="keyword" type="text" style="font-size:11px;width:120px" placeholder="搜索..."><input src="Yh/Tpl/gaoxin/include/images/btn_1.jpg"   type="image" width="24"></a></p></form><a target="_blank"  href="/index.php?s=/Index/single_page/s/1/c/224"><img src="Yh/Tpl/gaoxin/static/xx.png" alt="西安高新科技学院校训" height="160" style="margin-right: 330px;margin-top: -10px;display:none;"/></a></div></div><!-- 
+<div class="banner"><div id="lunhuanback"><p style='opacity: 1;filter:alpha(opacity=100);' onclick=window.open('#')><a href="javascript:" style='background-image:url(Public/images/banner1.jpg);'>&nbsp;&nbsp;</a></p><p onclick=window.open('#')><a href="javascript:" style='background-image:url(Public/images/banner2.jpg);'>&nbsp;&nbsp;</a></p><p onclick=window.open('#')><a href="javascript:" style='background-image:url(Public/images/banner3.jpg);'>&nbsp;&nbsp;</a></p></div><div id='lunbonum'><ul><li class='lunboone'></li><li></li><li></li></ul></div></div> --><style >nav ul {
+  font-size: 0;
+  position: relative;
+  padding: 0;
+  width: 480px;
+  margin: 40px auto;
+  user-select: none;
+}
+ 
+nav li {
+  display: inline-block; 
+  font-size: 16px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}     
+     
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+ 
+.rippleEffect {
+  -webkit-animation: rippleDrop .4s linear;
+  animation: rippleDrop .4s linear;
+}
+ 
+@-webkit-keyframes 
+  rippleDrop {  100% {
+   -webkit-transform: scale(2);
+   transform: scale(2);
+   opacity: 0;
+  }
+}
+@keyframes 
+  rippleDrop {  100% {
+   -webkit-transform: scale(2);
+   transform: scale(2);
+   opacity: 0;
+  }
+}   
+
+</style><div class="nav"  ><ul class="menu"><li class="menu1 "><a href="/index.php?s=/Index/index/s/1.html">首页</a></li><li class="menu2 " ><a href="http://www.xhtu.com.cn/index.php?s=/Index/single_page/s/1/c/2.html"  target="_blank">学院概况</a><ul style=""><li><a href="/index.php?s=/Index/single_page/s/1/c/2.html"  target="_blank">学院简介</a></li><li><a href="/index.php?s=/Index/single_page/s/1/c/3.html"  target="_blank">学院领导</a></li><li><a href="/index.php?s=/Index/single_page/s/1/c/4.html"  target="_blank">组织机构</a></li><li><a href="/index.php?s=/Index/single_page/s/1/c/8.html"  target="_blank">学院校训</a></li><li><a href="/index.php?s=/Index/pic_view/s/1/c/7.html"  target="_blank">荣誉展示</a></li><li><a href="/index.php?s=/Index/pic_view/s/1/c/6.html"  target="_blank">校园风貌</a></li></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/column/s/1/c/18.html"  target="_blank">党团建设</a><ul style=""><li><a href="/index.php?s=/Index/column/s/1/c/19.html"  target="_blank">党建工作</a></li><li><a href="/index.php?s=/Index/column/s/1/c/20.html"  target="_blank">团委工作</a></li><li><a href="/index.php?s=/Index/column/s/1/c/21.html"  target="_blank">工会活动</a></li><li><a href="/index.php?s=/Index/column/s/1/c/340.html"  target="_blank">主题教育</a></li><li><a href="/index.php?s=/Index/column/s/1/c/303.html"  target="_blank">样板支部</a></li><li><a href="/index.php?s=/Index/column/s/1/c/342.html"  target="_blank">党纪学习教育</a></li><li><a href="/index.php?s=/Index/column/s/1/c/345.html"  target="_blank">民族宗教</a></li></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/column/s/1/c/67.html"  target="_blank">新闻中心</a><ul style=""><li><a href="/index.php?s=/Index/column/s/1/c/69.html"  target="_blank">学校公告</a></li><li><a href="/index.php?s=/Index/column/s/1/c/103.html"  target="_blank">聚焦西高</a></li><li><a href="/index.php?s=/Index/column/s/1/c/221.html"  target="_blank">微西高</a></li><li><a href="/index.php?s=/Index/column/s/1/c/68.html"  target="_blank">学校新闻</a></li></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/column/s/1/c/9.html"  target="_blank">教务教学</a><ul style=""><li><a href="/index.php?s=/Index/column/s/1/c/10.html"  target="_blank">教务动态</a></li><li><a href="/index.php?s=/Index/column/s/1/c/11.html"  target="_blank">实验实训</a></li><li><a href="/index.php?s=/Index/column/s/1/c/12.html"  target="_blank">教改中心</a></li><li><a href="https://xgzyxy.mh.chaoxing.com/"  target="_blank">数字图书</a></li><li><a href="/index.php?s=/Index/column/s/1/c/343.html"  target="_blank">教育家精神</a></li><li><a href="/index.php?s=/Index/column/s/1/c/344.html"  target="_blank">艺术欣赏与现代科技</a></li></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/video_view/s/1/c/216.html"  target="_blank">图片视频</a><ul style=""></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/index/s/10"  target="_blank">招生专栏</a><ul style=""><li><a href="/index.php?s=/Index/column/s/1/c/295.html"  target="_blank">招生计划</a></li><li><a href="/index.php?s=/Index/column/s/1/c/27.html"  target="_blank">学院画册</a></li><li><a href="/index.php?s=/Index/column/s/1/c/31.html"  target="_blank">招生资讯</a></li><li><a href="/index.php?s=/Index/video_view/s/1/c/162.html"  target="_blank">专业介绍</a></li></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/column/s/1/c/33.html"  target="_blank">就业专题</a><ul style=""><li><a href="http://www.xhtu.com.cn/index.php?s=/Index/pic_view/s/10/c/272/tj_id/40.html"  target="_blank">校友动态</a></li><li><a href="https://xhtu.jiuyeqiao.cn/"  target="_blank">就业桥</a></li><li><a href="/index.php?s=/Index/column/s/1/c/118.html"  target="_blank">政策法规</a></li><li><a href="/index.php?s=/Index/column/s/1/c/117.html"  target="_blank">就业指导</a></li><li><a href="/index.php?s=/Index/column/s/1/c/34.html"  target="_blank">招聘信息</a></li><li><a href="/index.php?s=/Index/column/s/1/c/119.html"  target="_blank">应征入伍</a></li><li><a href="https://www.cnxincai.com/schoolreception/cloudTalents/yunNew/?sId=640ffd9411ab11ea9df1fa163e37bec4"  target="_blank">网络招聘会</a></li><li><a href="http://jyweb.sneducloud.com/website/index.aspx"  target="_blank">就业管理系统</a></li></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/column/s/1/c/54.html"  target="_blank">学工动态</a><ul style=""><li><a href="/index.php?s=/Index/column/s/1/c/55.html"  target="_blank">学生管理</a></li><li><a href="/index.php?s=/Index/column/s/1/c/56.html"  target="_blank">学生活动</a></li><li><a href="/index.php?s=/Index/column/s/1/c/167.html"  target="_blank">班级风采</a></li><li><a href="/index.php?s=/Index/column/s/1/c/168.html"  target="_blank">奖助学金</a></li><li><a href="/index.php?s=/Index/column/s/1/c/169.html"  target="_blank">心理咨询</a></li><li><a href="/index.php?s=/Index/column/s/1/c/174.html"  target="_blank">教育时政</a></li></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/column/s/1/c/57.html"  target="_blank">校园生活</a><ul style=""><li><a href="http://www.xhtu.com.cn/index.php?s=/Index/pic_view/s/10/c/272/tj_id/36.html"  target="_blank">大学生活</a></li><li><a href="http://www.xhtu.com.cn/index.php?s=/Index/pic_view/s/10/c/272/tj_id/41.html"  target="_blank">特色社团</a></li><li><a href="http://www.xhtu.com.cn/index.php?s=/Index/pic_view/s/10/c/272/tj_id/42.html"  target="_blank">精彩课堂</a></li><li><a href="http://www.xhtu.com.cn/index.php?s=/Index/pic_view/s/10/c/272/tj_id/39.html"  target="_blank">校运动会</a></li><li><a href="/index.php?s=/Index/column/s/1/c/290.html"  target="_blank">校友服务</a></li></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/column/s/1/c/45.html"  target="_blank">师资团队</a><ul style=""><li><a href="/index.php?s=/Index/column/s/1/c/46.html"  target="_blank">博士专栏</a></li><li><a href="/index.php?s=/Index/column/s/1/c/47.html"  target="_blank">专业委员</a></li></ul></li><li class="menu2 " ><a href="/index.php?s=/Index/column/s/1/c/109.html"  target="_blank">特色专业</a><ul style=""><li><a href="/index.php?s=/Index/column/s/1/c/110.html"  target="_blank">机械电子类</a></li><li><a href="/index.php?s=/Index/column/s/1/c/111.html"  target="_blank">建筑类专业</a></li><li><a href="/index.php?s=/Index/column/s/1/c/112.html"  target="_blank">网络软件类</a></li><li><a href="/index.php?s=/Index/column/s/1/c/113.html"  target="_blank">财经类专业</a></li><li><a href="/index.php?s=/Index/column/s/1/c/114.html"  target="_blank">管理类专业</a></li></ul></li></ul><script type="text/javascript">	$("ul li").click(function(e) {
+ 
+  if ($(this).hasClass('slider')) {
+    return;
+  }
+ 
+  var whatTab = $(this).index();
+ 
+  var howFar = 160 * whatTab;
+ 
+  
+  $(".ripple").remove();
+ 
+  var posX = $(this).offset().left,
+      posY = $(this).offset().top,
+      buttonWidth = $(this).width(),
+      buttonHeight = $(this).height();
+ 
+  $(this).prepend("<span class='ripple'></span>");
+ 
+  if (buttonWidth >= buttonHeight) {
+    buttonHeight = buttonWidth;
+  } else {
+    buttonWidth = buttonHeight;
+  }
+ 
+  var x = e.pageX - posX - buttonWidth / 2;
+  var y = e.pageY - posY - buttonHeight / 2;
+ 
+  $(".ripple").css({
+    width: buttonWidth,
+    height: buttonHeight,
+    top: y + 'px',
+    left: x + 'px'
+  }).addClass("rippleEffect");
+   
+});               
+    $(function(){		
+        //切换
+        $('.nav li:has(ul)').hover(function(){
+            $(this).children("ul").slideDown(8000);
+        },function(){
+            $(this).children("ul").slideUp('slow');
+        });
+    });
+    </script></div><div id="codefans_net" style="position:absolute;left: 0px; top: 0px;z-index:1999;display:inline">
+	 <a href="https://24365.smartedu.cn/"_blank">
+	 <img src="./24365.png" border="0" style="width:260px;">
+	</a>
+</div><script>var x = 20,y = 30 
+var xin = true, yin = true 
+var step = 1 
+var delay = 10 
+var obj= document.getElementById("codefans_net") 
+ 
+function float() { 
+	 
+	var L=T=0
+	var R = $(window).width() - obj.offsetWidth 
+	var B = $(window).height() - obj.offsetHeight 
+ 
+	$("#codefans_net").css('left', x + document.body.scrollLeft ); 
+	$("#codefans_net").css('top',  y + document.body.scrollTop ); 
+	 
+	x = x + step*(xin?1:-1) 
+	
+	if (x < L) { xin = true; x = L} 
+	if (x > R){ xin = false; x = R} 
+	y = y + step*(yin?1:-1) 
+	if (y < T) { yin = true; y = T } 
+	if (y > B) { yin = false; y = B } 
+} 
+var itl= setInterval("float()", delay) 
+obj.onmouseover=function(){clearInterval(itl)} 
+obj.onmouseout=function(){itl=setInterval("float()", delay)} 
+
+ 
+</script><div class="main_shang" style="width: 1150px;
+    margin: auto;
+    margin-top: 5px;
+	margin-bottom:5px;
+    border-left: 1px solid #CFCFCF; border-right: 1px solid #CFCFCF;"><style>
+      .swiper {
+        width: 1150px;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+       
+    </style><div class="swiper mySwiper"><div class="swiper-wrapper"><div class="swiper-slide"><a href="/" target="_blank"><img src="./public/images/75.jpg" /></a></div><div class="swiper-slide"><a href="https://www.12371.cn/" target="_blank"><img src="./public/images/ershidajingshen.jpg" /></a></div><div class="swiper-slide"><a href="https://www.12371.cn/xxsx/" target="_blank"><img src="./public/images/shtszy.jpg" /></a></div><div class="swiper-slide"><a href="https://www.12371.cn/" target="_blank"><img src="./public/images/dangjixuexi.png" /></a></div></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div><div class="swiper-pagination"></div></div><script>	    var mySwiper = new Swiper(".mySwiper", {
+        
+        <!-- effect: "fade",  -->
+		loop : true,
+		autoplay : {
+			delay:3000
+		}, 
+		speed:500,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+	   
+    </script><!-- <a href="https://www.12371.cn/" target="_blank"> --><!-- <img src="./public/images/ershidajingshen.jpg" style=" --><!-- width: 100%; --><!-- "></a> --><!-- <a href="https://www.12371.cn/xxsx/" target="_blank"> --><!-- <img src="./public/images/shtszy.jpg" style=" --><!-- width: 100%; --><!-- "> --><!-- </a> --><div class="main_c_0"  style="padding-bottom: 0px;" ><div class="left_hd_news"><div id="zzsc"><ul id="img"><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/68/id/8011.html "><img src="/admin/Upload/WenZhangFM/1727599666.jpg" width="385" height="280" alt="西安高新科技职业学院举行2024级新生军训汇报表演暨开学典礼" /></a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/68/id/6565.html "><img src="/admin/Upload/WenZhangFM/1676008067.jpg" width="385" height="280" alt="西安高新科技职业学院成功举办艺术设计作品成果美育展" /></a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/68/id/5728.html "><img src="/admin/Upload/WenZhangFM/1562577846.jpg" width="385" height="280" alt="西安高新科技职业学院发挥优势助脱贫 长安区“双百工程”调研见成效" /></a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/68/id/5707.html "><img src="/admin/Upload/WenZhangFM/1562577913.png" width="385" height="280" alt="西安高新科技职业学院助力长安区脱贫攻坚接洽涉贫特色农产品进校园" /></a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/68/id/5559.html "><img src="/admin/Upload/WenZhangFM/1545188007.jpg" width="385" height="280" alt="承改革之风，强化时代意识---学院师生共赏“庆祝改革开放40周年”直播盛况" /></a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/68/id/5533.html "><img src="/admin/Upload/WenZhangFM/1543888193.jpg" width="385" height="280" alt="西安高新科技职业学院党员干部不忘初心守规矩增强党性" /></a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/68/id/5528.html "><img src="/admin/Upload/WenZhangFM/1543804576.JPG" width="385" height="280" alt="西安高新科技职业学院党委中心组组织学习贯彻习近平总书记全国教育大会重要讲话精神" /></a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/68/id/5527.html "><img src="/admin/Upload/WenZhangFM/1543804013.JPG" width="385" height="280" alt="中共西安高新科技职业学院委员会第二十期党校开课典礼成功举行！" /></a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/0/id/5526.html "><img src="/admin/" width="385" height="280" alt="中共西安高新科技职业学院委员会第二十期党校开课典礼成功举行！" /></a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/68/id/5500.html "><img src="/admin/Upload/WenZhangFM/1541380164.jpg" width="385" height="280" alt="承前启后 继往开来——董事长胡列教授2018年国庆后干部会议工作部署" /></a></li></ul><ul id="num"  ><li class="hover"></li><li></li><li></li><li></li><li></li></ul></div><script type="text/javascript">		var img = document.getElementById("img");
+        var num = document.getElementById("num");
+        var ali = img.getElementsByTagName("li");
+        var oli = num.getElementsByTagName("li");
+        var time = null
+        zzscing = document.getElementById("zzsc");
+        img.style.width = ali.length * 385 + "px", inow = 0;
+        for (var i = 0; i < oli.length; i++) {
+            oli[i].index = i
+            oli[i].onmouseover = function() {
+                inow = this.index;
+                tab();
+                window.clearInterval(time)
+            }
+            oli[i].onmouseout = function() {
+                time = window.setInterval(autoPlay, 4000)
+            }
+        }
+        
+        function tab() {
+            for (var i = 0; i < oli.length; i++) {
+                oli[i].className = ""
+            }
+            oli[inow].className = "hover"
+            startMove(img, {
+                left: -inow * 385
+            }, 'buffer')
+        }
+        
+       /** function autoPlay() {
+            inow++;
+            if (inow >= ali.length) {
+                inow = 0
+            }
+            tab();
+        }
+         
+		 time = window.setInterval(autoPlay, 6000)  
+		**/
+        </script></div><div class="news2"><div class="title_home_style2"><a href="/index.php?s=/Index/column/s/1/c/68.html" target="_blank" class="more" title="西高新闻"><h3 style="border-bottom: 2px #e0823d solid;"><span class="icon3" >西高新闻<font color="#CC9966" style="text-transform:none">/News</font></span></h3></a><span><a href="/index.php?s=/Index/column/s/1/c/68.html" target="_blank" class="more" title="点击查看更多">>>>更多</a></span></div><div class="news_c2" style="height:256px;overflow:hidden"><ul><li><a target="_blank" style="font-weight: 550;" href="/index.php?s=/Index/view/s/1/c/68/id/8025.html				 " title="南京四所高校党委书记一行莅临西安高新科技职业学院调研党建工作交流座谈">南京四所高校党委书记一行莅临西安高新科技职业学院调</a></li><li><a target="_blank" style="font-weight: 550;" href="/index.php?s=/Index/view/s/1/c/68/id/8041.html				 " title="西安高新科技职业学院后勤处检查学院食堂守护校园食品安全">西安高新科技职业学院后勤处检查学院食堂守护校园食品</a></li><li><a target="_blank" style="font-weight: 550;" href="/index.php?s=/Index/view/s/1/c/68/id/8024.html				 " title="西安高新科技职业学院党委书记张双前给学生上大思政课">西安高新科技职业学院党委书记张双前给学生上大思政课</a></li><li><a target="_blank"  href="/index.php?s=/Index/view/s/1/c/68/id/8040.html				 " title="西安高新科技职业学院开展政治辅导员座谈会">西安高新科技职业学院开展政治辅导员座谈会</a></li><li><a target="_blank"  href="/index.php?s=/Index/view/s/1/c/68/id/8020.html				 " title="西安高新科技职业学院2024级新生出血热疫苗接种顺利完成">西安高新科技职业学院2024级新生出血热疫苗接种顺</a></li><li><a target="_blank"  href="/index.php?s=/Index/view/s/1/c/68/id/8019.html				 " title="西安高新科技职业学院师生庆祝中华人民共和国成立75周年">西安高新科技职业学院师生庆祝中华人民共和国成立75</a></li><li><a target="_blank"  href="/index.php?s=/Index/view/s/1/c/68/id/8014.html				 " title="西安高新科技职业学院召开第三季度安全稳定研判会暨近期安全稳定工作部署会">西安高新科技职业学院召开第三季度安全稳定研判会暨近</a></li><li><a target="_blank"  href="/index.php?s=/Index/view/s/1/c/68/id/8011.html				 " title="西安高新科技职业学院举行2024级新生军训汇报表演暨开学典礼">西安高新科技职业学院举行2024级新生军训汇报表演</a></li><li><a target="_blank"  href="/index.php?s=/Index/view/s/1/c/68/id/8013.html				 " title="西安高新科技职业学院开展2024年秋季传染病预防及禁毒安全知识讲座">西安高新科技职业学院开展2024年秋季传染病预防及</a></li><li><a target="_blank"  href="/index.php?s=/Index/view/s/1/c/68/id/8009.html				 " title="西安高新科技职业学院开展2024-2025学年秋季学期消防应急疏散演练">西安高新科技职业学院开展2024-2025学年秋季</a></li></ul></div></div><script type="text/javascript">
+$(document).ready(function(){
+	$(function(){
+		$('.news .title_home_style h3 b').mouseenter(function(){
+			$(this).siblings().removeClass()
+			$(this).attr("class","on")
+			$(this).parent().parent(".title_home_style").next(".news_c").children("ul").fadeOut()
+			$(this).parent().parent(".title_home_style").next(".news_c").children("ul").eq($(this).index()).fadeIn()
+		});
+	});
+});
+</script><div class="news2"><div class="title_home_style2"><a href="/index.php?s=/Index/column/s/1/c/69.html" target="_blank" class="more" title="学院公告"><h3  style=" border-bottom: 2px #01aef0  solid;"><span class="icon2">
+		学院公告<font  style="text-transform:none;color:#01aef0">/Notice</font></span></h3></a><span><a href="/index.php?s=/Index/column/s/1/c/69.html" target="_blank" class="more" title="点击查看更多">>>>更多</a></span></div><div class="news_c2" style="height:256px;overflow:hidden" ><ul><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/8021.html " title="【招标】西安高新科技职业学院电类实验室招标文件">【招标】西安高新科技职业学院电类实验室招标文件</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/8022.html " title="【招标】西安高新科技职业学院教学实验投影设备采购招标文件">【招标】西安高新科技职业学院教学实验投影设备采购招标文件</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/8015.html " title="【公示】西安高新科技职业学院关于2024年陕西省高校教师岗前培训暨教师资格教育基础理论知识培训报名人员的公示">【公示】西安高新科技职业学院关于2024年陕西省高校教师岗前培训暨教师资格教育基础理论知识培训报名人员的公示</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/8012.html " title="【招标】西安高新科技职业学院陶瓷静电地板报价单">【招标】西安高新科技职业学院陶瓷静电地板报价单</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/7958.html " title="【招标】西安高新科技职业学院1#实验楼、2#教学楼室外电缆采购及铺设报价单.pdf">【招标】西安高新科技职业学院1#实验楼、2#教学楼室外电缆采购及铺设报价单.pdf</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/7953.html " title="关于组织申报2024年度陕西省教育厅科学研究计划项目的通知">关于组织申报2024年度陕西省教育厅科学研究计划项目的通知</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/7938.html " title="【招标】西安高新科技职业学院粮油招标文件">【招标】西安高新科技职业学院粮油招标文件</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/7935.html " title="【招标】西安高新科技职业学院室内会议椅招标文件20240724">【招标】西安高新科技职业学院室内会议椅招标文件20240724</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/7922.html " title="【招标】学院餐厅二楼经营承包权项目招标文件">【招标】学院餐厅二楼经营承包权项目招标文件</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/69/id/7914.html " title="【招标】西安高新科技职业学院学生公寓洗浴、直饮水、洗衣BOT项目竞争性磋商文件">【招标】西安高新科技职业学院学生公寓洗浴、直饮水、洗衣BOT项目竞争性磋商文件</a></li></ul></div></div><div class="clear"></div></div><div class="main_c_1"><div class="title_pic" style="    background-image: url('Yh/Tpl/gaoxin/static/images/2222.png');"  ><a href="/index.php?s=/Index/pic_view/s/1/c/220.html" target="_blank" class="more" title="学院公告"><span class="title_pic_span"   title="校园图库" >
+	 美丽校园</span></a></div><div id="demo3"><div id="indemo1"><div id="demo4"><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4a943620.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4cc7a508.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4bbad188.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/601ca12064190.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/601bbaeeb3b00.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/601ca135ca260.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/601bbb550b3b0.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/601bbb4726930.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/601bb5b265ce8.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5cc7ec96e4458.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5cc7ec91f03c0.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4a68e170.JPG" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5cc45af44f588.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4c08d5b8.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4b802af8.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4b39e728.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4af64190.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4aa2fda0.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4a985ca0.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5caac4a184918.jpg" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5bd810aca2d78.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5bd81094f1f18.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5bd81087a7f80.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl><dl><dt><a target="_blank" href="/index.php?s=/Index/pic_view/c/6/tj_id/51.html" title=""><img src="admin/Upload/Pic/51/5bd8107990c68.png" width="215" height="160" alt=""/></a></dt><!--  <dd><a href="#" title=""></a></dd> --></dl></div><div id="demo5"></div></div></div><div class="clear"></div><script type="text/javascript">	var speeda=20; 
+    var tab3=document.getElementById("demo3");
+    var tab4=document.getElementById("demo4");
+    var tab5=document.getElementById("demo5");
+    tab5.innerHTML=tab4.innerHTML;
+    function Marqueea(){
+    if(tab5.offsetWidth-tab3.scrollLeft<=0)
+    tab3.scrollLeft-=tab4.offsetWidth
+    else{
+    tab3.scrollLeft++;
+    }
+    }
+    var MyMara=setInterval(Marqueea,speeda);
+    tab3.onmouseover=function() {clearInterval(MyMara)};
+    tab3.onmouseout=function() {MyMara=setInterval(Marqueea,speeda)};
+	 
+    </script></div><div class="main_c_2"><div class="news news_jyky"><div class="title_home_style"><h3><b class="on"><a href="/index.php?s=/Index/column/s/1/c/158.html" target="_blank"   title="党建工作">     党建工作</a></b><b><a href="/index.php?s=/Index/column/s/1/c/174.html" target="_blank"   title="教育时政">		 教育时政</a></b></h3></div><div class="news_c" style="height:200px;overflow:hidden"><ul><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/158/id/8016.html" title="人民日报社论：壮阔的行进 光明的前程——热烈庆祝中华人民共和国成立七十五周年">人民日报社论：壮阔的行进 光明的前程——热烈庆祝中华人民共和国成立七十五周年</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/158/id/8017.html" title="庆祝中华人民共和国成立75周年招待会隆重举行 习近平发表重要讲话">庆祝中华人民共和国成立75周年招待会隆重举行 习近平发表重要讲话</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/158/id/8003.html" title="在建设教育强国中绽放青春光彩 ——习近平总书记在全国教育大会上的重要讲话指引青年学子逐梦向前">在建设教育强国中绽放青春光彩 ——习近平总书记在全国教育大会上的重要讲话指引青年学子逐梦向前</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/158/id/8002.html" title="在建设教育强国新征程中实干笃行 ——习近平总书记在全国教育大会上的重要讲话指引方向催人奋进">在建设教育强国新征程中实干笃行 ——习近平总书记在全国教育大会上的重要讲话指引方向催人奋进</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/157/id/8001.html" title="努力培养德智体美劳全面发展的社会主义建设者和接班人 ——习近平总书记在全国教育大会上的重要讲话在广大少先队辅导员和少先队工作者中引起热烈反响">努力培养德智体美劳全面发展的社会主义建设者和接班人 ——习近平总书记在全国教育大会上的重要讲话在广大少先队辅导员和少先队工作者中引起热烈反响</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/158/id/8005.html" title="深入推动教育高水平对外开放 ——八论学习贯彻习近平总书记在全国教育大会上的重要讲话精神">深入推动教育高水平对外开放 ——八论学习贯彻习近平总书记在全国教育大会上的重要讲话精神</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/158/id/8018.html" title="奋进在教育强国大路上——新中国成立75周年教育事业发展成就综述">奋进在教育强国大路上——新中国成立75周年教育事业发展成就综述</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/158/id/7994.html" title="习近平在庆祝全国人民代表大会成立70周年大会上发表重要讲话强调 坚定道路自信理论自信制度自信文化自信 继续把人民代表大会制度坚持好完善好运行好">习近平在庆祝全国人民代表大会成立70周年大会上发表重要讲话强调 坚定道路自信理论自信制度自信文化自信 继续把人民代表大会制度坚持好完善好运行好</a></li></ul><ul style="display:none"><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a  target="_blank" href="/index.php?s=/Index/view/s/1/c/174/id/8028.html" title="第十三届西北联大与中国高等教育发展论坛举行">第十三届西北联大与中国高等教育发展论坛举行</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a  target="_blank" href="/index.php?s=/Index/view/s/1/c/174/id/8029.html" title="习近平出席金砖国家领导人第十六次会晤并发表重要讲话">习近平出席金砖国家领导人第十六次会晤并发表重要讲话</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a  target="_blank" href="/index.php?s=/Index/view/s/1/c/174/id/8030.html" title="朝着建成教育强国战略目标扎实迈进">朝着建成教育强国战略目标扎实迈进</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a  target="_blank" href="/index.php?s=/Index/view/s/1/c/174/id/7993.html" title="第27届全国推广普通话宣传周重点活动在新疆喀什举办">第27届全国推广普通话宣传周重点活动在新疆喀什举办</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a  target="_blank" href="/index.php?s=/Index/view/s/1/c/174/id/8004.html" title="建设教育强国责任重大使命光荣 ——习近平总书记在全国教育大会上的重要讲话指引方向凝聚力量">建设教育强国责任重大使命光荣 ——习近平总书记在全国教育大会上的重要讲话指引方向凝聚力量</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a  target="_blank" href="/index.php?s=/Index/view/s/1/c/174/id/7996.html" title="加大推普力度 筑牢强国语言基石 ——第27届全国推广普通话宣传周海报发布">加大推普力度 筑牢强国语言基石 ——第27届全国推广普通话宣传周海报发布</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a  target="_blank" href="/index.php?s=/Index/view/s/1/c/174/id/7959.html" title="统筹推进教育科技人才体制机制一体改革 ——访教育部党组书记、部长怀进鹏">统筹推进教育科技人才体制机制一体改革 ——访教育部党组书记、部长怀进鹏</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a  target="_blank" href="/index.php?s=/Index/view/s/1/c/174/id/7960.html" title="深化教育综合改革 办好人民满意的教育——访教育部党组书记、部长怀进鹏">深化教育综合改革 办好人民满意的教育——访教育部党组书记、部长怀进鹏</a></li></ul></div></div><div class="news news_djgz"><div class="title_home_style"><h3  ><b class="on"><a href="/index.php?s=/Index/column/s/1/c/163.html" target="_blank"   title="招生专栏">
+		招生专栏</a></b><b><a href="/index.php?s=/Index/column/s/1/c/33.html" target="_blank"   title="就业专题">
+		就业专题</a></b></h3></div><div class="news_c" style="height:200px;overflow:hidden"><ul><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/10/c/275/id/7750.html" title="西安高新科技职业学院2024年高职分类招生章程">西安高新科技职业学院2024年高职分类招生章程</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/10/c/252/id/7582.html" title="甘肃省2023年招生计划一览表">甘肃省2023年招生计划一览表</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/10/c/252/id/7583.html" title="新疆2023年招生计划一览表">新疆2023年招生计划一览表</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/10/c/252/id/7566.html" title="陕西省2023年分类分专业招生计划（院校代号：8103）">陕西省2023年分类分专业招生计划（院校代号：8103）</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/10/c/252/id/7568.html" title="山西省2023年分类分专业招生计划（院校代号：5560）">山西省2023年分类分专业招生计划（院校代号：5560）</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/10/c/252/id/7561.html" title="湖北省2023年分类分专业招生计划（院校代号：X299）">湖北省2023年分类分专业招生计划（院校代号：X299）</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/10/c/252/id/7560.html" title="湖南省2023年分类分专业招生计划（院校代号：6172）">湖南省2023年分类分专业招生计划（院校代号：6172）</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/10/c/252/id/7563.html" title="山东省2023年分类分专业招生计划（院校代号：D122）">山东省2023年分类分专业招生计划（院校代号：D122）</a></li></ul><ul style="display:none"><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/118/id/7913.html" title="陕西省教育厅办公室关于做好2024年特岗教师招聘考试工作有关事项的通知">陕西省教育厅办公室关于做好2024年特岗教师招聘考试工作有关事项的通知</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/118/id/7902.html" title=" 国务院办公厅关于印发《促进创业投资  高质量发展的若干政策措施》的通知"> 国务院办公厅关于印发《促进创业投资  高质量发展的若干政策措施》的通知</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/118/id/7833.html" title="教育部部署开展2024届高校毕业生就业“百日冲刺”行动">教育部部署开展2024届高校毕业生就业“百日冲刺”行动</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/118/id/7474.html" title="关于公布毕业生就业工作监督举报电话的通告">关于公布毕业生就业工作监督举报电话的通告</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/118/id/7430.html" title="取消毕业生就业报到证！五部门发文">取消毕业生就业报到证！五部门发文</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/118/id/7393.html" title="西安高新科技职业学院2024届求职创业补贴的公示">西安高新科技职业学院2024届求职创业补贴的公示</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/118/id/7414.html" title="西安乐业补贴申领开始啦~最高可领取12000元！">西安乐业补贴申领开始啦~最高可领取12000元！</a></li><li  target="_blank" style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/118/id/7415.html" title="高校毕业生：自主创业，这些补贴别忘申领！">高校毕业生：自主创业，这些补贴别忘申领！</a></li></ul></div></div><div class="news news_dyyd"><div class="title_home_style"><h3><b class="on"><a href="/index.php?s=/Index/column/s/1/c/10.html" target="_blank"   title="教务教学">
+	教务教学</a></b><b><a href="/index.php?s=/Index/column/s/1/c/55.html" target="_blank"   title="学工动态">
+	学工动态</a></b></h3></div><div class="news_c" style="height:200px;overflow:hidden"><ul><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/10/id/7979.html" title="喜讯/我院学子在第十二届未来设计师.全国高校数字艺术设计大赛（NCDA）喜获佳绩">喜讯/我院学子在第十二届未来设计师.全国高校数字艺术设计大赛（NCDA）喜获佳绩</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/10/id/7977.html" title="西安高新科技职业学院秋季开学第一天教学秩序井然">西安高新科技职业学院秋季开学第一天教学秩序井然</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/10/id/7873.html" title="西安高新科技职业学院举办第二届CAD技能大赛颁奖典礼">西安高新科技职业学院举办第二届CAD技能大赛颁奖典礼</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/10/id/7854.html" title="西安高新科技职业学院师生在陕西省职业院校技能大赛上再创佳绩">西安高新科技职业学院师生在陕西省职业院校技能大赛上再创佳绩</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/10/id/7843.html" title="以赛促学 以赛促教：西安高新科技职业学院第二届CAD技能大赛圆满落幕">以赛促学 以赛促教：西安高新科技职业学院第二届CAD技能大赛圆满落幕</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/10/id/7800.html" title="坚守教育初心 共筑育人梦想：西安高新科技职业学院思政部全体教师集体观看《我要当老师》">坚守教育初心 共筑育人梦想：西安高新科技职业学院思政部全体教师集体观看《我要当老师》</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/10/id/7804.html" title="青春无惧挑战  创新点亮未来：西安高新科技职业学院挑战杯决赛">青春无惧挑战  创新点亮未来：西安高新科技职业学院挑战杯决赛</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/10/id/7795.html" title="西安高新科技职业学院师生研学参观2024西安当代设计周体验设计美学">西安高新科技职业学院师生研学参观2024西安当代设计周体验设计美学</a></li></ul><ul style="display:none"><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/56/id/7809.html" title="两校女足友谊赛快乐运动强体魄 凝心聚力展学子青春风采">两校女足友谊赛快乐运动强体魄 凝心聚力展学子青春风采</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/56/id/7792.html" title="西安高新科技职业学院2024年文体艺术节开幕">西安高新科技职业学院2024年文体艺术节开幕</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/56/id/7662.html" title="西安高新科技职业学院开展第32个全国消防日宣传活动">西安高新科技职业学院开展第32个全国消防日宣传活动</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/56/id/7490.html" title="节约点滴水，保卫生命源——2023年全国城市节约用水宣传周倡议书">节约点滴水，保卫生命源——2023年全国城市节约用水宣传周倡议书</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/56/id/7500.html" title="西安高新科技职业学院举办田径趣味竞赛解读及裁判培训会">西安高新科技职业学院举办田径趣味竞赛解读及裁判培训会</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/56/id/7499.html" title="西安高新科技职业学院开展扬青春之歌声展青年之风采文艺晚会">西安高新科技职业学院开展扬青春之歌声展青年之风采文艺晚会</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/56/id/7489.html" title=" 2023年全国节水宣传周"> 2023年全国节水宣传周</a></li><li  style=" background: url(Yh/Tpl/gaoxin/static/images/arrow.gif) no-repeat left center;"><a target="_blank" href="/index.php?s=/Index/view/s/1/c/56/id/7484.html" title="世界水日∣生命之源的节日">世界水日∣生命之源的节日</a></li></ul></div></div><div class="clear"></div></div><div style="clear:both;margin-bottom:5px;height: 170px;"><a target="_blank" href="http://www.xhtu.com.cn/index.php?s=/Index/column/s/1/c/340.html"><img src="./public/images/djxx.png" style="width:49%;float:left; margin-left: 1%;" alt="党纪学习教育"></a><a target="_blank" href="http://theory.people.com.cn/GB/40557/120709/"><img src="Yh/Tpl/gaoxin/static/jzg.jpg" style="width:49%;float:right; margin-left: 1%;" alt="社会主义核心价值观"></a></div><!-- <div class="main_c_2" style="padding: 0px 0px; padding-bottom:10px"><a href="/index.php?s=/Zw/index/s/1" target="_blank"><img src="Yh/Tpl/gaoxin/include/images/idimg3.jpg" alt="毕业了，母校还是你的家征文活动" style="width:100%"></img></a></div> --><div class="main_c_2" style="padding-top: 0px;margin-bottom:0px"><div class="news news_jyky"><div class="title_home_style"><h3  ><b class="on"><a target="_blank" href="/index.php?s=/Index/video_view/s/1/c/219.html" target="_blank"   title="学院视频">	学院视频</a></b><b><a target="_blank" href="/index.php?s=/Index/column/s/1/c/221.html" target="_blank"   title="学院视频">
+	微 西 高
+</a></b><!-- <font color="#CC9966" style="text-transform:none">/Notice</font> --></h3></div><div class="news_c" style="height:205px;overflow:hidden"><ul style="padding-top: 0px;"><div class="video" id="CuPlayer" style="width: 400px; height: 200px;">
+ 播放容器</div><link type="text/css" rel="stylesheet" href="public/ckplayer/css/ckplayer.css" /><!--
+			如果需要使用其它语言，请在此处引入相应的js,比如:<script type="text/javascript" src="ckplayer/language/en.js" charset="UTF-8"></script>
+		--><script type="text/javascript" src="public/ckplayer/js/ckplayer.min.js" charset="UTF-8"></script><script>
+			//调用开始
+			var videoObject = {
+				container: '.video', //视频容器
+				poster:'../admin/Upload/Pic_vid/15485/6711c143579cd.png',//封面图片
+				video:'../admin/Upload/Video/2024-10/6711c11fd946a.mp4',//视频地址
+				smallWindows:true
+			};
+			var player=new ckplayer(videoObject)//调用播放器并赋值给变量player
+			/*
+			 * ===============================================================================================
+			 * 以上代码已完成调用演示，下方的代码是演示监听动作和外部控制的部分
+			 * ===============================================================================================
+			 * ===============================================================================================
+			 */
+			player.play(function(){
+				document.getElementById('state').innerHTML='监听到播放';
+			});
+			player.pause(function(){
+				document.getElementById('state').innerHTML='监听到暂停';
+			});
+			player.volume(function(vol){
+				document.getElementById('state').innerHTML='监听到音量改变：'+vol;
+			});
+			player.muted(function(b){
+				document.getElementById('state2').innerHTML='监听到静音状态：'+b;
+			});
+			player.full(function(b){
+				document.getElementById('state').innerHTML='监听到全屏状态：'+b;
+			});
+			player.ended(function(){
+				document.getElementById('state').innerHTML='监听到播放结束';
+			});
+		</script><!--myplayer/begin--><!--myplayer/end--><p></p></ul><ul style="display:none"><li><a target="_blank" href="" title="教育部：确保2019年高考各项工作安全平稳有序实施"  target="_bank">教育部：确保2019年高考各项工作安全平稳有序实施</a></li><li><a target="_blank" href="" title="习近平在纪念五四运动100周年大会上的讲话"  target="_bank">习近平在纪念五四运动100周年大会上的讲话</a></li><li><a target="_blank" href="" title="西高学子关爱湖南湘西山区留守儿童"  target="_bank">西高学子关爱湖南湘西山区留守儿童</a></li><li><a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MjM5ODk1MDA2Mg==&mid=2658123664&idx=1&sn=8f35d04d7af00b8935b722f213c0dae7&chksm=bd59fa518a2e7347a4d30909dbe9c23736554d8ef3e21b499d306d85c37d3f6e0528a30d11f7#rd" title="西高·我成长的园地"  target="_bank">西高·我成长的园地</a></li><li><a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MjM5ODk1MDA2Mg==&mid=2658123662&idx=1&sn=d8274f4a2aa635b43302d7076349174e&chksm=bd59fa4f8a2e7359a1954175951dc8f35386d2f2d780991e931ce226fff9413aeb95f1216021#rd" title="听说英语AB级来了？！（内附考场安排）"  target="_bank">听说英语AB级来了？！（内附考场安排）</a></li><li><a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MjM5ODk1MDA2Mg==&mid=2658123682&idx=1&sn=11a39086ea931936d719496815583f08&chksm=bd59fa638a2e73752adf98618d9d4fce1d7c441a2265ca725efd641c066feac1d66b2b8d6e00#rd" title="跨年， 总意味着一点不同"  target="_bank">跨年， 总意味着一点不同</a></li><li><a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MjM5ODk1MDA2Mg==&mid=2658123667&idx=1&sn=ccbe5c116c6be015ab2a378cf7a5815d&chksm=bd59fa528a2e7344b42e38065e4f21a597f950299a74436fefebdd4f0b1c95705b7c9b1bfa5e#rd" title="省教育厅档案工作专家组莅临我校检查指导工作"  target="_bank">省教育厅档案工作专家组莅临我校检查指导工作</a></li><li><a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MjM5ODk1MDA2Mg==&mid=2658123680&idx=1&sn=cc9dd29863b485a996a1ab8fb7acd86e&chksm=bd59fa618a2e737776b3febb90e1f3601191dd2d41189a07e90063886cda0f49db0aac745dff#rd" title="你的寒假放假通知已到账，请注意查收！"  target="_bank">你的寒假放假通知已到账，请注意查收！</a></li></ul></div></div><div class="news2 news_djgz"><div class="title_home_style2"><h3 style="border-bottom: 2px #e0823d solid;"><span>&nbsp;<a href="/index.php?s=/Index/column/s/1/c/218.html" target="_blank"   title="点击查看更多">
+		校园之声</a><font color="#CC9966" style="text-transform:none">/Radio</font></span></h3><span><a href="/index.php?s=/Index/column/s/1/c/218.html" target="_blank" class="more" title="点击查看更多">
+		>>>更多</a></span></div><div class="news_c2" style="height:205px;overflow:hidden"><ul><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/218/id/5637.html" title="希望好心情，每天都照常营业">希望好心情，每天都照常营业</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/218/id/4981.html" title="阿柒说（第三期）">阿柒说（第三期）</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/218/id/4980.html" title="阿柒说（第二期）">阿柒说（第二期）</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/218/id/4979.html" title="阿柒说（第一期）">阿柒说（第一期）</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/218/id/4945.html" title="西高之声——我们在这里">西高之声——我们在这里</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/218/id/4562.html" title="温情港湾之《毕业》">温情港湾之《毕业》</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/218/id/4445.html" title="2017年校园之声音乐风尚第4期">2017年校园之声音乐风尚第4期</a></li><li><a target="_blank" href="/index.php?s=/Index/view/s/1/c/218/id/4446.html" title="2017年校园之声音乐风尚第5期">2017年校园之声音乐风尚第5期</a></li></ul></div></div><div class="icons_r"><a href="/index.php?s=/Index/column/s/1/c/12" target="_blank" title="教改科研"><dl><dt class="icons_r_1"></dt><dd>教改科研 </dd></dl></a><script>
+		function ziyuan(){
+			if(confirm("是否使用内网访问?"))
+ 
+			{ 
+					//如果是true ，那么就把页面转向thcjp.cnblogs.com  
+				window.open("http://172.17.200.200/"); 
+			 } else {
+		 
+				//如果是true ，那么就把页面转向thcjp.cnblogs.com  
+				window.open("http://124.47.32.130:9999/");  
+			}
+		}
+		 
+ 
+		</script><a href="/index.php?s=/Index/view/s/1/c/10/id/4209.html" target="_blank" title="教学资源"><dl><dt class="icons_r_0"></dt><dd>教学资源</dd></dl></a><a href="http://www.xhtu.com.cn/index.php?s=/Index/single_page/s/10/c/254" target="_blank" title="录取查询"><dl><dt class="icons_r_2"></dt><dd>录取查询</dd></dl></a><a href="http://www.xhtu.com.cn/index.php?s=/Index/column/s/1/c/245.html" target="_blank" title="招标公告"><dl><dt class="icons_r_3"></dt><dd>招标公告</dd></dl></a><a href="/index.php?s=/Index/column/s/1/c/287/" target="_blank" title="人事招聘"><dl><dt class="icons_r_4"></dt><dd>人事招聘</dd></dl></a><a href="https://xgzyxy.mh.chaoxing.com/" target="_blank" title="图书档案"><dl><dt class="icons_r_5"></dt><dd>数字图书</dd></dl></a><a href="/index.php?s=/Index/column/s/1/c/256.html" target="_blank" title="校报校刊"><dl><dt class="icons_r_6"></dt><dd>校报校刊</dd></dl></a><a href="http://www.xhtu.com.cn/index.php?s=/Index/column/s/1/c/335.html" target="_blank" title="信息公开"><dl><dt class="icons_r_7"></dt><dd>信息公开</dd></dl></a></div><div class="clear"></div></div><!-- <a href="/index.php?s=/Index/column/s/1/c/244.html" target="_blank"   ><div class="main_c_2" style="padding: 0px 0px; padding-bottom:10px"><img src="Yh/Tpl/gaoxin/include/images/gongzuo.png" alt="毕业了，母校还是你的家征文活动" style="width:100%"></img></div></a>  --><div style="clear:both;margin-bottom:5px;"><a target="_blank" href="/index.php?s=/Index/column/s/1/c/324.html"><img src="/20240514154450.jpg" ccc="Yh/Tpl/gaoxin/static/20240514154450.jpg" style="width:49%;float:left; margin-left: 1%;" alt="社会主义核心价值观"></a><a target="_blank" href="/index.php?s=/Zw/index/s/1"><img src="Yh/Tpl/gaoxin/static/idimg3650.jpg" style="width:49%;float:right; margin-left: 1%;" alt="两学一做"></a></div><div style="clear:both"></div></div><div><div class="footer"><div class="footer_c"><div class="footer_nav"><dl><dt>友情链接：</dt></dl><dl><dd><a href="http://www.moe.gov.cn/" target="_blank" > 教育部  </a></dd><dd><a href="http://www.shaanxi.gov.cn/" target="_blank" > 陕西省政府</a></dd><dd><a href="http://www.snedu.gov.cn/" target="_blank" >陕西省教育厅 </a></dd></dl><dl><dd><a href="http://www.people.com.cn/" target="_blank" >人民网  </a></dd><dd><a href="http://www.news.cn/" target="_blank" > 新华网  </a></dd><dd><a href="http://www.chsi.com.cn/" target="_blank" > 学生信息网  </a></dd></dl><dl><dd><a href="http://www.xaut.edu.cn/" target="_blank" >西安理工大学 </a></dd><dd><a href="http://www.xthtc.com/" target="_blank">理工大高科学院</a></dd><dd><a href="http://www.xthtc.com/zhaosw/index.htm" target="_blank">理工高科招生网</a></dd></dl><dl><dd><a href="http://lz.xhtu.com.cn/jwc/" target="_blank" >学院教务网 </a></dd><dd><a href="http://lz.xhtu.com.cn/zsw/" target="_blank">学院招生网</a></dd><dd><a href="http://lz.xhtu.com.cn/dangban/" target="_blank">学院党建网</a></dd></dl><dl><dd><a href="http://jy.xhtu.com.cn/Main/index.asp" target="_blank" >学院就业网 </a></dd><dd><a href="http://lz.xhtu.com.cn/xsc/Ch/" target="_blank">学院学工网</a></dd><dd><a href="http://lz.xhtu.com.cn/sysx/" target="_blank">学院实验室</a></dd></div><div class="r_img_c" style="padding-right: 50px;"><ul><li><div class="f_logo" style="margin-left:5px;"><font class="r_img_c_font"  style=" ">微信平台</font><img src="Public/images/wx.jpg" alt="西安高新科技学院微信公众号" width="70" style="margin-top: 5px;" /></div></li><li><div class="f_logo" style="margin-left:5px;"><font class="r_img_c_font" style="margin-top:5px;" >学院新闻</font><img src="Public/images/ewm.png" width="70" alt="西安高新科技学院新闻客户端"  style="margin-top: 5px;" /></div></li><li><a href="http://t.qq.com/hulie1999"  ><div class="f_logo" style="margin-left:5px;"><font class="r_img_c_font">院长微博</font><img src="Public/images/yz.png" width="70" alt="西安高新科技学院院长微博" style="margin-top:5px;"/></div></a></li><li><a href="http://t.qq.com/hulie1999"  ><div class="f_logo" style="margin-left:5px;"><font class="r_img_c_font">书记邮箱</font><img src="Public/images/sj.jpg" width="70" alt="西安高新科技学院书记邮箱" style="margin-top:5px;"/></div></a></li></ul></div><div class="clear"></div></div></div><div class="f_copyright"><div class="footer_bottom"><div class="l_f_copyright"></div><div class="r_img_c"></div><div class="clear"></div><div style="text-align:center; font-size:13px;"><style ><!-- .span a{ color:#FFF} -->	 .tongji a {color:#FFF}
+	 p {
+      margin: 0px;  
+}
+		</style><!-- 	 <p>  今日：&nbsp&nbsp;总：</p>   --><p>	 学院地址:西安市西咸新区泾河新城  邮编：713700  招生热线：029-38028999,38028777 
+			</p><p>	 CopyRight© 西安高新科技职业学院1999-2020 
+				<a target="_blank"  style="color: #fff;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61110502000105" ><img src="/gaba.png"  />陕公网安备 61110502000105号  </a><a target="_blank" style="color: #fff;" href="https://beian.miit.gov.cn/" target="_blank">陕ICP备12005087号-1</a><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259691354'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1259691354%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p></div></div></div><a id="gotopbtn" style="position:fixed;bottom:50px;right:70px;display:none;cursor:pointer;"><img src="Public/images/backtop.png" alt="西高学院" width="45" height="45" /></a><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?58ba3022ac4a6c6a9e1a8bb95ab1a99d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script type="text/javascript" src="Yh/Tpl/gaoxin/include/js/backtop.js"></script><script src="Yh/Tpl/gaoxin/include/js/hd_index.js" type="text/javascript"></script><script>(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script></body></html>

@@ -1,0 +1,225 @@
+<html>
+	<head>
+		<!-- Import style -->
+		<link rel="icon" href="/u/cms/static/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>宁波大学科学技术学院</title>
+		<style stype="text/css">
+			* {
+				margin: 0;
+				padding: 0
+			}
+
+			html body {
+				background-color: undefined;
+				width: 100%;
+				height: 100%;
+			}
+
+			body * {
+				/* -webkit-filter: grayscale(100%); 
+				-moz-filter: grayscale(100%); 
+				-ms-filter: grayscale(100%);
+				-o-filter: grayscale(100%); 
+				filter: grayscale(100%);
+				filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); 
+				filter:gray; */
+			}
+
+			.flex {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.flowHidden {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<!-- <complete>ssdfsdf</complete> -->
+
+		</div>
+		<script src="/static/site1/default/js/H5webSite.js"></script>
+		<script>
+			/*5.加载文件*/
+			/* 已加载文件缓存列表,用于判断文件是否已加载过，若已加载则不再次加载*/
+			const prefix_path = window.location.origin.includes('127') ? (H5webSite + '/server-front/front/') :
+				window.location.origin + '/server-front/front/';
+
+			function ajax(type, url, success) {
+				if (window.XMLHttpRequest) {
+					var oajax = new XMLHttpRequest();
+				} else {
+					var oajax = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+
+				oajax.open(type, url, true);
+				if (localStorage.userInfo) {
+					let token = JSON.parse(localStorage.userInfo).token;
+					oajax.setRequestHeader('Token', token);
+				}
+
+				oajax.send();
+				oajax.onreadystatechange = function() {
+					if (oajax.readyState == 4) {
+						if (oajax.status == 200 || oajax.status == 304) {
+							success && success(JSON.parse(oajax.responseText));
+						}
+					}
+				}
+			}
+			ajax("get", prefix_path + 'home/path', function(res) {
+				if (res.code == '00000 00000') {
+					let meta = document.createElement('meta');
+					meta.name = res.data.seoKeyword;
+					meta.content = res.data.seoDescription;
+					document.getElementsByTagName('head')[0].appendChild(meta);
+					document.getElementsByTagName('title')[0].innerHTML = res.data.seoTitle;
+				}
+			})
+
+			var classcodes = [];
+			window.Import = {
+				/*加载一批文件，_files:文件路径数组,可包括js,css,less文件,succes:加载成功回调函数*/
+				LoadFileList: function(_files, succes) {
+					var FileArray = [];
+					if (typeof _files === "object") {
+						FileArray = _files;
+					} else {
+						/*如果文件列表是字符串，则用,切分成数组*/
+						if (typeof _files === "string") {
+							FileArray = _files.split(",");
+						}
+					}
+					if (FileArray != null && FileArray.length > 0) {
+						var LoadedCount = 0;
+						for (var i = 0; i < FileArray.length; i++) {
+							loadFile(FileArray[i], function() {
+								LoadedCount++;
+								if (LoadedCount == FileArray.length) {
+									succes();
+								}
+							})
+						}
+					}
+					/*加载JS文件,url:文件路径,success:加载成功回调函数*/
+					function loadFile(url, success) {
+						if (!FileIsExt(classcodes, url)) {
+							var ThisType = GetFileType(url);
+							var fileObj = null;
+							if (ThisType == ".js") {
+								fileObj = document.createElement('script');
+								fileObj.src = url.includes('http') ? url : rootPath + url;
+							} else if (ThisType == ".css") {
+								fileObj = document.createElement('link');
+								fileObj.href = rootPath + url;
+								fileObj.type = "text/css";
+								fileObj.rel = "stylesheet";
+							}
+							success = success || function() {};
+							fileObj.onload = fileObj.onreadystatechange = function() {
+								if (!this.readyState || 'loaded' === this.readyState || 'complete' === this
+									.readyState) {
+									success();
+									classcodes.push(url)
+								}
+							}
+							document.getElementsByTagName('head')[0].appendChild(fileObj);
+						} else {
+							success();
+						}
+					}
+					/*获取文件类型,后缀名，小写*/
+					function GetFileType(url) {
+						if (url != null && url.length > 0) {
+							return url.substr(url.lastIndexOf(".")).toLowerCase();
+						}
+						return "";
+					}
+					/*文件是否已加载*/
+					function FileIsExt(FileArray, _url) {
+						if (FileArray != null && FileArray.length > 0) {
+							var len = FileArray.length;
+							for (var i = 0; i < len; i++) {
+								if (FileArray[i] == _url) {
+									return true;
+								}
+							}
+						}
+						return false;
+					}
+				}
+			}
+
+			var FilesArray = ['/font/iconfont.css', '/css/common.css', '/css/animate.min.css', '/css/swiper.min.css', '/css/element-plus.css',
+				'/js/vue3-sfc-loader.js', '/js/vue3.2.47.js', '/js/Jq3.js',
+				'/js/element-plus.js', '/js/axios.min.js', '/src/api/axios.js',
+				'/src/api/apis/home.js', '/src/api/apis/content.js', '/js/common.js',
+				'/font/iconfont.js', '/js/swiper-bundle.min.js', '/js/chinese.js',
+			];
+
+
+
+			var rootPath = '';
+
+			ajax("get", prefix_path + 'getResPrefix', function(res) {
+				if (res.code == '00000 00000') {
+					rootPath = window.location.origin.includes('127') ? '/site1/' : res.data;
+					Import.LoadFileList(FilesArray, function() {
+						/*这里写加载完成后需要执行的代码或方法*/
+						const options = {
+							moduleCache: {
+								vue: Vue
+							},
+							async getFile(url) {
+								const res = await fetch(url);
+								if (!res.ok)
+									throw Object.assign(new Error(res.statusText + ' ' + url), {
+										res
+									});
+								return {
+									getContentData: asBinary => asBinary ? res.arrayBuffer() : res
+										.text(),
+								}
+							},
+							addStyle(textContent) {
+								const style = Object.assign(document.createElement('style'), {
+									textContent
+								});
+								const ref = document.head.getElementsByTagName('style')[0] || null;
+								document.head.insertBefore(style, ref);
+							},
+						}
+
+						const {
+							loadModule
+						} = window['vue3-sfc-loader'];
+						let template = `
+										<my-component>
+										</my-component>
+										`
+						const app = Vue.createApp({
+							components: {
+								'my-component': Vue.defineAsyncComponent(() => loadModule(rootPath +
+									'src/views/home.vue', options)),
+							},
+							template: template,
+							data() {
+								return {
+									data: 111
+								}
+
+							},
+
+						}).use(ElementPlus).mount('#app');
+					})
+				}
+			});
+		</script>
+	</body>
+</html>

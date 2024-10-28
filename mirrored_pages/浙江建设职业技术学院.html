@@ -1,0 +1,618 @@
+
+
+
+
+<!DOCTYPE html>
+<HTML xmlns:jsp><HEAD><TITLE>浙江建设职业技术学院</TITLE>
+<META charset=utf-8>
+<LINK rel=stylesheet type=text/css href="/style/style.css">
+
+
+<SCRIPT type=text/javascript>
+var ishttps = 'https:' == document.location.protocol ? true: false;
+if(!ishttps){
+window.location.href = "https://www.zjjs.edu.cn";
+}
+
+</SCRIPT>
+<!--漂浮广告START--><!-- <IMG onclick="javascript:window.open('https://tqzsjy.eduw.cn/bm/');" id=webjx1 style="CURSOR: pointer; POSITION: absolute; z-index:999;" src="/images/baoming.png" width=352 height=150 yDir="-1" xDir="-1">
+
+
+<SCRIPT type=text/javascript>
+window.location.href = "https://www.zjjs.edu.cn";
+
+
+GoGoGo("webjx1");
+
+function GoGoGo(objName)
+{
+var img=document.getElementById(objName) ;
+img.style.position="absolute";
+img.style.left=parseInt(window.screen.availWidth*Math.random()) + "px";
+img.style.top=parseInt(window.screen.availHeight*Math.random()) + "px";
+img.setAttribute("xDir",1);//xker.com
+img.setAttribute("yDir",1);
+window.setInterval("randPosition(" + objName + ")","30","JavaScript");
+}
+
+function randPosition(obj)
+{
+var x=parseInt(obj.style.left);
+if(x>=window.screen.availWidth-obj.width-20)
+obj.setAttribute("xDir",-1);
+if(x<=0)
+obj.setAttribute("xDir",1);
+x+=parseInt(obj.getAttribute("xDir"));
+
+var y=parseInt(obj.style.top);
+if(y>=window.screen.availHeight-obj.height-100)
+obj.setAttribute("yDir",-1);
+if(y<=0)
+obj.setAttribute("yDir",1);
+y+=parseInt(obj.getAttribute("yDir"));
+ 
+obj.style.left=x +"px";
+obj.style.top =y +"px";
+
+}
+</SCRIPT>-->
+<SCRIPT type=text/javascript>
+//平台、设备和操作系统
+var system ={
+win : false,
+mac : false,
+xll : false
+};
+//检测平台
+var p = navigator.platform;
+
+system.win = p.indexOf("Win") == 0;
+system.mac = p.indexOf("Mac") == 0;
+system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+//跳转语句
+if(system.win||system.mac||system.xll){//转向后台登陆页面
+
+}else{
+proxyLoc(window.location).href="http://www.zjjs.edu.cn/wap/appindex.jsp";
+}
+
+</SCRIPT>
+<SCRIPT src="/js/jquery.min.js"></SCRIPT>
+
+<SCRIPT src="/js/jquery.flexslider-min.js"></SCRIPT>
+
+</HEAD>
+<BODY>
+
+<SCRIPT>
+//公共脚本文件main.js
+function addEvent(obj,evtType,func,cap){
+cap=cap||false;
+if(obj.addEventListener){
+obj.addEventListener(evtType,func,cap);
+return true;
+}else if(obj.attachEvent){
+if(cap){
+obj.setCapture();
+return true;
+}else{
+return obj.attachEvent("on" + evtType,func);
+}
+}else{
+return false;
+}
+}
+function getPageScroll(){
+var xScroll,yScroll;
+if (self.pageXOffset) {
+xScroll = self.pageXOffset;
+} else if (document.documentElement && document.documentElement.scrollLeft){
+xScroll = document.documentElement.scrollLeft;
+} else if (document.body) {
+xScroll = document.body.scrollLeft;
+}
+if (self.pageYOffset) {
+yScroll = self.pageYOffset;
+} else if (document.documentElement && document.documentElement.scrollTop){
+yScroll = document.documentElement.scrollTop;
+} else if (document.body) {
+yScroll = document.body.scrollTop;
+}
+arrayPageScroll = new Array(xScroll,yScroll);
+return arrayPageScroll;
+}
+function GetPageSize(){
+var xScroll, yScroll;
+if (window.innerHeight && window.scrollMaxY) { 
+xScroll = document.body.scrollWidth;
+yScroll = window.innerHeight + window.scrollMaxY;
+} else if (document.body.scrollHeight > document.body.offsetHeight){
+xScroll = document.body.scrollWidth;
+yScroll = document.body.scrollHeight;
+} else {
+xScroll = document.body.offsetWidth;
+yScroll = document.body.offsetHeight;
+}
+var windowWidth, windowHeight;
+if (self.innerHeight) {
+windowWidth = self.innerWidth;
+windowHeight = self.innerHeight;
+} else if (document.documentElement && document.documentElement.clientHeight) {
+windowWidth = document.documentElement.clientWidth;
+windowHeight = document.documentElement.clientHeight;
+} else if (document.body) {
+windowWidth = document.body.clientWidth;
+windowHeight = document.body.clientHeight;
+} 
+if(yScroll < windowHeight){
+pageHeight = windowHeight;
+} else { 
+pageHeight = yScroll;
+}
+if(xScroll < windowWidth){ 
+pageWidth = windowWidth;
+} else {
+pageWidth = xScroll;
+}
+arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight) 
+return arrayPageSize;
+}
+
+var AdMoveConfig=new Object();
+AdMoveConfig.IsInitialized=false;
+AdMoveConfig.ScrollX=0;
+AdMoveConfig.ScrollY=0;
+AdMoveConfig.MoveWidth=0;
+AdMoveConfig.MoveHeight=0;
+AdMoveConfig.Resize=function(){
+var winsize=GetPageSize();
+AdMoveConfig.MoveWidth=winsize[2];
+AdMoveConfig.MoveHeight=winsize[3];
+AdMoveConfig.Scroll();
+}
+AdMoveConfig.Scroll=function(){
+var winscroll=getPageScroll();
+AdMoveConfig.ScrollX=winscroll[0];
+AdMoveConfig.ScrollY=winscroll[1];
+}
+addEvent(window,"resize",AdMoveConfig.Resize);
+addEvent(window,"scroll",AdMoveConfig.Scroll);
+function AdMove(id){
+if(!AdMoveConfig.IsInitialized){
+AdMoveConfig.Resize();
+AdMoveConfig.IsInitialized=true;
+}
+var obj=document.getElementById(id);
+obj.style.position="absolute";
+var W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+var H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+var x = W*Math.random(),y = H*Math.random();
+var rad=(Math.random()+1)*Math.PI/6;
+var kx=Math.sin(rad),ky=Math.cos(rad);
+var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1);
+var step = 1;
+var interval;
+this.SetLocation=function(vx,vy){x=vx;y=vy;}
+this.SetDirection=function(vx,vy){dirx=vx;diry=vy;}
+obj.CustomMethod=function(){
+obj.style.left = (x + AdMoveConfig.ScrollX-20) + "px";
+obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+rad=(Math.random()+1)*Math.PI/6;
+W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+x = x + step*kx*dirx;
+if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);}
+y = y + step*ky*diry;
+if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);}
+}
+this.Run=function(){
+var delay = 10;
+interval=setInterval(obj.CustomMethod,delay);
+obj.onmouseover=function(){clearInterval(interval);}
+obj.onmouseout=function(){interval=setInterval(obj.CustomMethod, delay);}
+}
+}
+
+
+</SCRIPT>
+<!---->
+<DIV style="POSITION: absolute; TOP: 284px; LEFT: 525px" id="div_floatimg_1"><A href="https://jyw.zjjs.edu.cn/career/zphxx/view/9071836279162802095" target="_blank"><IMG style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px;width:320px;height:133px; " src="/_img/2024/10/21/20241021091118261.png"></A>
+<a style='text-decoration: none;color:#000;font-size:12px;text-align:right; cursor: hand; display:block;width:352' href='javascript:void(0)' onclick='javascript:Closediv1()' hidefocus='true'>关闭</a>
+</DIV>
+<SCRIPT type=text/javascript> 
+function Closediv1()
+{
+div_floatimg_1.style.visibility="hidden";
+}
+new AdMove("div_floatimg_1").Run();
+</SCRIPT>
+
+<!--
+
+
+
+
+
+<SCRIPT>
+//公共脚本文件main.js
+function addEvent(obj,evtType,func,cap){
+cap=cap||false;
+if(obj.addEventListener){
+obj.addEventListener(evtType,func,cap);
+return true;
+}else if(obj.attachEvent){
+if(cap){
+obj.setCapture();
+return true;
+}else{
+return obj.attachEvent("on" + evtType,func);
+}
+}else{
+return false;
+}
+}
+function getPageScroll(){
+var xScroll,yScroll;
+if (self.pageXOffset) {
+xScroll = self.pageXOffset;
+} else if (document.documentElement && document.documentElement.scrollLeft){
+xScroll = document.documentElement.scrollLeft;
+} else if (document.body) {
+xScroll = document.body.scrollLeft;
+}
+if (self.pageYOffset) {
+yScroll = self.pageYOffset;
+} else if (document.documentElement && document.documentElement.scrollTop){
+yScroll = document.documentElement.scrollTop;
+} else if (document.body) {
+yScroll = document.body.scrollTop;
+}
+arrayPageScroll = new Array(xScroll,yScroll);
+return arrayPageScroll;
+}
+function GetPageSize(){
+var xScroll, yScroll;
+if (window.innerHeight && window.scrollMaxY) { 
+xScroll = document.body.scrollWidth;
+yScroll = window.innerHeight + window.scrollMaxY;
+} else if (document.body.scrollHeight > document.body.offsetHeight){
+xScroll = document.body.scrollWidth;
+yScroll = document.body.scrollHeight;
+} else {
+xScroll = document.body.offsetWidth;
+yScroll = document.body.offsetHeight;
+}
+var windowWidth, windowHeight;
+if (self.innerHeight) {
+windowWidth = self.innerWidth;
+windowHeight = self.innerHeight;
+} else if (document.documentElement && document.documentElement.clientHeight) {
+windowWidth = document.documentElement.clientWidth;
+windowHeight = document.documentElement.clientHeight;
+} else if (document.body) {
+windowWidth = document.body.clientWidth;
+windowHeight = document.body.clientHeight;
+} 
+if(yScroll < windowHeight){
+pageHeight = windowHeight;
+} else { 
+pageHeight = yScroll;
+}
+if(xScroll < windowWidth){ 
+pageWidth = windowWidth;
+} else {
+pageWidth = xScroll;
+}
+arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight) 
+return arrayPageSize;
+}
+
+var AdMoveConfig=new Object();
+AdMoveConfig.IsInitialized=false;
+AdMoveConfig.ScrollX=0;
+AdMoveConfig.ScrollY=0;
+AdMoveConfig.MoveWidth=0;
+AdMoveConfig.MoveHeight=0;
+AdMoveConfig.Resize=function(){
+var winsize=GetPageSize();
+AdMoveConfig.MoveWidth=winsize[2];
+AdMoveConfig.MoveHeight=winsize[3];
+AdMoveConfig.Scroll();
+}
+AdMoveConfig.Scroll=function(){
+var winscroll=getPageScroll();
+AdMoveConfig.ScrollX=winscroll[0];
+AdMoveConfig.ScrollY=winscroll[1];
+}
+addEvent(window,"resize",AdMoveConfig.Resize);
+addEvent(window,"scroll",AdMoveConfig.Scroll);
+function AdMove(id){
+if(!AdMoveConfig.IsInitialized){
+AdMoveConfig.Resize();
+AdMoveConfig.IsInitialized=true;
+}
+var obj=document.getElementById(id);
+obj.style.position="absolute";
+var W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+var H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+var x = W*Math.random(),y = H*Math.random();
+var rad=(Math.random()+1)*Math.PI/6;
+var kx=Math.sin(rad),ky=Math.cos(rad);
+var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1);
+var step = 1;
+var interval;
+this.SetLocation=function(vx,vy){x=vx;y=vy;}
+this.SetDirection=function(vx,vy){dirx=vx;diry=vy;}
+obj.CustomMethod=function(){
+obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+rad=(Math.random()+1)*Math.PI/6;
+W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+x = x + step*kx*dirx;
+if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);}
+y = y + step*ky*diry;
+if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);}
+}
+this.Run=function(){
+var delay = 10;
+interval=setInterval(obj.CustomMethod,delay);
+obj.onmouseover=function(){clearInterval(interval);}
+obj.onmouseout=function(){interval=setInterval(obj.CustomMethod, delay);}
+}
+}
+
+
+</SCRIPT>
+-->
+
+
+
+
+<!--<LINK rel=stylesheet type=text/css href="/style/red_style.css">-->
+<HTML><HEAD></HEAD>
+<BODY>
+<DIV class=pTop_img></DIV>
+<DIV class=header>
+<DIV class=top></DIV>
+<DIV class=logo>
+<DIV class=logo_con><A href=""><IMG src="images/logo.jpg"></A> <!--<div style="width:326px; height:122px; background:url(images/60year-logo.jpg) no-repeat; position:absolute; top:0; right:0;">
+  <div id="60year-logo-div" style="position:absolute; width:40px; height:35px; text-align:center; line-height:35px; font-size:24px; color:#FFF; font-weight:700; left:173px; top:44px;"></div>
+</div>
+<script type="text/javascript">
+window.onload=clock;
+function clock(){
+var today=new Date(),//当前时间
+    h=today.getHours(),
+    m=today.getMinutes(),
+    s=today.getSeconds();
+  var stopTime=new Date("Dec 2 2018 00:00:00"),//结束时间
+    stopH=stopTime.getHours(),
+    stopM=stopTime.getMinutes(),
+    stopS=stopTime.getSeconds();
+  var shenyu=stopTime.getTime()-today.getTime(),//倒计时毫秒数
+    shengyuD=parseInt(shenyu/(60*60*24*1000)),//转换为天
+    D=parseInt(shenyu)-parseInt(shengyuD*60*60*24*1000),//除去天的毫秒数
+    shengyuH=parseInt(D/(60*60*1000)),//除去天的毫秒数转换成小时
+    H=D-shengyuH*60*60*1000,//除去天、小时的毫秒数
+    shengyuM=parseInt(H/(60*1000)),//除去天的毫秒数转换成分钟
+    M=H-shengyuM*60*1000;//除去天、小时、分的毫秒数
+    S=parseInt((shenyu-shengyuD*60*60*24*1000-shengyuH*60*60*1000-shengyuM*60*1000)/1000)//除去天、小时、分的毫秒数转化为秒
+    document.getElementById("60year-logo-div").innerHTML=(shengyuD);
+    // setTimeout("clock()",500);
+    setTimeout(clock,500);
+}
+</script>--></DIV></DIV>
+<DIV class=nav>
+<UL>
+<LI><A href=" https://www.zjjs.edu.cn/">网站首页</A> 
+<LI><A href="/content.jsp?id=ff8080815eb731a4016080cbacda1e08">学校总览</A> 
+<UL>
+<LI><A href="/content.jsp?id=ff8080815eb731a4016080cbacda1e08">学校简介</A> 
+<LI><A href="/content.jsp?id=ff8080818ecdf03501908400c0151a36">现任领导</A>
+<LI><A href="/content.jsp?id=ff8080818ecdf035019085783be01a78">组织机构</A>
+<LI><A href="/pagelist.jsp?id=5be51fcaf0214a3fbb866258f341f216">校园风光</A> 
+<LI><A href="/pagelist.jsp?id=927e024939254549b25e704191f87e3c">学校荣誉</A> 
+<LI><A href="/content.jsp?id=ff8080815eb731a4016080cc4afe1e42">校训校歌</A> </LI></UL>
+<LI><A href="javascript:void(0);">二级学院</A> 
+<UL>
+<LI><A href="https://jgx.zjjs.edu.cn/" target=_blank>建筑工程学院</A> 
+<LI><A href="https://jingguan.zjjs.edu.cn/" target=_blank>工程管理学院</A> 
+<LI><A href="https://csjsgcx.zjjs.edu.cn/" target=_blank>建筑设备学院</A> 
+<LI><A href="https://jzx.zjjs.edu.cn/" target=_blank>建筑艺术学院</A> 
+<LI><A href="https://rwxx.zjjs.edu.cn/" target=_blank>管理与信息学院</A>  
+<!--<LI><A href="https://ies.zjjs.edu.cn/" target=_blank>国际教育学院</A> 
+<LI><A href="https://sgxy.zjjs.edu.cn/" target=_blank>士官学院</A>
+<LI><A href="https://yth.zjjs.edu.cn/" target=_blank>建筑一体化学院</A> -->
+<LI><A href="https://jixu.zjjs.edu.cn/" target=_blank>继续教育学院</A> </LI></UL>
+<LI><A href="/jsml.jsp?id=d55ce21ad4c040f49bb26a313c24fbb8">师资队伍</A> 
+<UL><!--<li><a href="/jsml.jsp?id=d55ce21ad4c040f49bb26a313c24fbb8">教授名录</a> </li>
+							<li><a href="/jsfc.jsp?id=9b53f47c6c204fe6b5296eea90903e00">教师风采</a> </li>-->
+<LI><A href="https://rczp.zjjs.edu.cn/"  target=_blank>人才招聘</A> </LI></UL>
+<LI><A href="https://ky.zjjs.edu.cn/"  target=_blank>科学研究</A> <!--<ul>
+							<li><a href="/content.jsp?id=ff8080815eb731a40160816c9a7e1f8b"  target=_blank>教学</a> </li>
+							<li><a href="http://ky.zjjs.edu.cn/"  target=_blank>科研</a> </li>
+						</ul>-->
+<LI><A href="https://fzhz.zjjs.edu.cn/" target=_blank>交流合作</A> 
+<LI><A href="https://zsw.zjjs.edu.cn/"  target=_blank>招生就业</A> 
+<UL>
+<LI><A href="https://zsw.zjjs.edu.cn/" target=_blank>招生网</A> 
+<LI><A href="https://jyw.zjjs.edu.cn/" target=_blank>就业网</A> </LI></UL>
+<LI><A href="javascript:void(0);">文化校园</A> 
+<UL>
+
+<LI><A href="https://tuanwei.zjjs.edu.cn/ " target=_blank>建院青年</A> <!--<li><a href="https://gonghui.zjjs.edu.cn/" target="_blank">职工之家</a> </li>--></LI></UL><!--<li><a href="xytd.jsp">校友天地</a> </li>-->
+
+
+<!--<LI><A href="/mtkjy/" target="_blank">媒体看建院</A> 
+<UL>
+<LI><A href="/pagelist.jsp?id=23191532487d4c30923919d73abd7db2">国家级媒体</A> 
+<LI><A href="/pagelist.jsp?id=99b04abbea554dd0b08f1847327801ac">省级媒体</A> 
+<LI><A href="/pagelist.jsp?id=373a6b19ef2a4fa4b17b027bfdd9b025">建院视频</A> 
+<LI><A href="/pagelist.jsp?id=9351e21f127e4dcf9999998e74d21527">第三方评价 </A> 
+</UL>
+</LI>-->
+<LI><A href="/pagelist.jsp?id=9995b37529a841d5af6141109844ffa8">校务公开</A> 
+<UL style="WIDTH: 260px; LEFT: -80px">
+<LI><A href="/pagelist.jsp?id=9995b37529a841d5af6141109844ffa8">高校科研经费使用信息公开</A> 
+<LI><A href="/pagelist.jsp?id=1527b024192e4052b1d6c6a5f4cbff59">学员收费公示</A> 
+<LI><A href="/pagelist.jsp?id=d6c47a0ab78c4ab98fb11206dd60fa19">预决算信息公开</A> 
+<LI><A href="/pagelist.jsp?id=af48007fc3c2436bb932ecad6a1fb664">信息公开工作年度报告</A> 
+<!--<LI><A href="/pagelist.jsp?id=c27b118ec9aa4850a17f0af9998a50">适应社会需求能力评估自评报告</A> -->
+<LI><A href="/pagelist.jsp?id=c130c4b7ddc443e49aa9326bf813f2b6">专业人才培养方案</A> </LI>
+<!--<LI><A href="/content.jsp?id=ff8080817f93bb840180f854ce461d50">双高计划中期绩效评价自评报告公示</A> </LI>-->
+
+</UL>
+<!--<LI><A href="/content.jsp?id=ff8080815eb731a401608178392220a4">信息保障</A> 
+<UL>
+<LI><A href="content.jsp?id=ff8080815eb731a401608178392220a4">常用电话</A> 
+<LI><A href="content.jsp?id=ff8080815eb731a401608178730420a8">学校导示</A> 
+<LI><A href="content.jsp?id=ff8080816732a5d70169781c7660295e">班车安排</A> </LI>
+</UL>
+</LI>-->
+
+
+</UL></DIV><!--end nav--></DIV><!--end header--></BODY></HTML>
+
+
+
+<HTML><HEAD></HEAD>
+<BODY>
+<DIV class=flexslider>
+<UL class=slides><li><a href=" " ><img src="/_img/2024/09/10/20240910111255260.png"/></a></li><li><a href=" " ><img src="/_img/2024/09/10/20240910111214696.png"/></a></li><li><a href="javascript:;" ><img src="/_img/2018/03/05/20180305145855363.png"/></a></li><li><a href="javascript:;" ><img src="/_img/2018/03/05/20180305145820429.png"/></a></li><li><a href="javascript:;" ><img src="/_img/2018/03/05/20180305145708264.png"/></a></li></UL></DIV></BODY></HTML>
+<DIV class=w1200>
+<!--<a href="http://www.zjjy.net/dsxx/index.jsp" target="_blank" style="margin-top:10px;display:block"><img src="dsxx/img/img20210402.jpg" /></a>-->
+
+
+
+
+<div class="dateTime">
+				<div class="times"></div><!--end times-->
+				<div class="usrlogins"><a href="https://vpn.zjjs.edu.cn" class="login" target="_blank">登录个人数字化校园  </a>&nbsp;
+<a href="https://spg.zjjs.edu.cn:9111/main/security/retakepwdUser/index" target="_blank">密码找回</a></div> 			
+</div>
+<DIV class=zjLeft>
+<DIV class=zjNews>
+<H6 class=title1>
+<P><SPAN>图片新闻</SPAN><A href="/jdtplb.jsp?id=cc679fdb52e54920a569e5a71808a34e">MORE</A></P></H6>
+<UL><li>
+							<a href="content.jsp?id=ff8080818ecdf0350192929e14f12a34"><img src="/_img/2024/10/15/20241015155719199.png" alt="喜报|我校获中国国际大学生创新大赛（2024）国赛金奖"></a>
+							<p>喜报|我校获中国国际大学生创新大赛（2024）国赛金奖</p>
+							<p><a href="content.jsp?id=ff8080818ecdf0350192929e14f12a34" target="'_blank">阅读全文……</a></p>
+						</li><li>
+							<a href="content.jsp?id=ff8080818ecdf0350191c8307b4f20fb"><img src="/_img/2024/09/06/20240906083328830.png" alt="浙江省医养建筑BIM数智化产业学院2024级正式开班暨产业学院湖州实训基地启用仪式隆重举行"></a>
+							<p>浙江省医养建筑BIM数智化产业学院2024级正式开班暨产业学院湖州实训基地启用仪式隆重举行</p>
+							<p><a href="content.jsp?id=ff8080818ecdf0350191c8307b4f20fb" target="'_blank">阅读全文……</a></p>
+						</li><li>
+							<a href="content.jsp?id=ff8080818ecdf0350190d40dcd421d19"><img src="/_img/2024/07/20/20240720224638985.jpg" alt="全国职业学校教师创新发展联盟土木建筑领域共同体成立"></a>
+							<p>全国职业学校教师创新发展联盟土木建筑领域共同体成立</p>
+							<p><a href="content.jsp?id=ff8080818ecdf0350190d40dcd421d19" target="'_blank">阅读全文……</a></p>
+						</li></UL></DIV><!--end zjNews-->
+<DIV class=zjConRight>
+<DIV class=zjxNews>
+<H6 class=title1>
+<P><SPAN>学校要闻</SPAN><A href="/pagelist.jsp?id=cc679fdb52e54920a569e5a71808a34e">MORE</A></P></H6>
+<UL class=zjList><li><a href="content.jsp?id=ff8080818ecdf0350192c4b7fc752d98 " title="标题：我校参加省住房和城乡建设系统智库联盟启动大会" target="_blank">  我校参加省住房和城乡建设系统智库联盟启动... </a><span>[ 10月25日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192c06720592d68 " title="标题：浙江省建设厅村镇处吴毅峰处长一行来校调研交流" target="_blank">  浙江省建设厅村镇处吴毅峰处长一行来校调研... </a><span>[ 10月24日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192bba9b4892cf8 " title="标题：深化师德师风建设  强化廉政警示教育——我校举行2024年秋季师德专题警示教育大会" target="_blank">  深化师德师风建设  强化廉政警示教育——... </a><span>[ 10月23日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192bb85a7c92cf4 " title="标题：我校参加2024年高校毕业生就业协会职业教育工作委员会年会" target="_blank">  我校参加2024年高校毕业生就业协会职业... </a><span>[ 10月23日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192ba22a5182cce " title="标题：浙江省工程建设质量管理协会朱永斌会长一行来校考察交流" target="_blank">  浙江省工程建设质量管理协会朱永斌会长一行... </a><span>[ 10月23日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192b164885c2c2b " title="标题：深化校地合作 共促行业转型——浙江建院与嘉兴市住建局签订合作框架协议" target="_blank">  深化校地合作 共促行业转型——浙江建院与... </a><span>[ 10月18日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192b15febd22c29 " title="标题：安吉县住建局、公共就业和人才服务中心、溪龙乡政府来校调研" target="_blank">  安吉县住建局、公共就业和人才服务中心、溪... </a><span>[ 10月18日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192979200e22ac7 " title="标题：我校在首届绍兴市高校辅导员素质能力大赛中荣获佳绩" target="_blank">  我校在首届绍兴市高校辅导员素质能力大赛中... </a><span>[ 10月16日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192929e14f12a34 " title="标题：喜报|我校获中国国际大学生创新大赛（2024）国赛金奖" target="_blank">  喜报|我校获中国国际大学生创新大赛（20... </a><span>[ 10月15日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192981e5ecf2ad0 " title="标题：学校工程造价学院工会小组获评“全国模范职工小家”" target="_blank">  学校工程造价学院工会小组获评“全国模范职... </a><span>[ 10月14日 ]</span> </li></UL></DIV><!--end zjxNews-->
+<DIV class=zjxNews style="PADDING-TOP: 28px">
+<H6 class=title1>
+<P><SPAN>校园动态</SPAN><A href="/pagelist.jsp?id=2eb887c39d3e418faf19e35651a5b192">MORE</A></P></H6>
+<UL class=zjList><li><a href="content.jsp?id=ff8080818ecdf0350192d44ffd6e2e0f " title="标题：“新苗”育师路，启航筑梦行——我校新教师岗前培训精彩启幕" target="_blank">  “新苗”育师路，启航筑梦行——我校新教师... </a><span>[ 10月28日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192d4401f6c2e0b " title="标题：建筑艺术学院（贝茨建筑工程师学院）学生参与FBC未来幕墙科技周论坛" target="_blank">  建筑艺术学院（贝茨建筑工程师学院）学生参... </a><span>[ 10月28日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192d43b36892e09 " title="标题：点亮职业规划之路，绽放青春梦想之花——学校第十五届职业规划大赛第二期集训辅导讲座圆满结束" target="_blank">  点亮职业规划之路，绽放青春梦想之花——学... </a><span>[ 10月28日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192d4353e592e07 " title="标题：继续教育学院承办浙江省城乡规划设计研究院经营与造价素质提升培训班" target="_blank">  继续教育学院承办浙江省城乡规划设计研究院... </a><span>[ 10月28日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192d431c7592e05 " title="标题：马克思主义学院赴新疆石河子职业技术学院开展调研交流" target="_blank">  马克思主义学院赴新疆石河子职业技术学院开... </a><span>[ 10月28日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192c4ce621c2d9e " title="标题：马克思主义学院开展师德师风专题教育学习活动" target="_blank">  马克思主义学院开展师德师风专题教育学习活... </a><span>[ 10月25日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192c4c6a2622d9c " title="标题：公共教育学院党总支第一、第二教师党支部开展“回望来路不忘初心，踔厉奋发牢记使命”循迹溯源主题党日活动" target="_blank">  公共教育学院党总支第一、第二教师党支部开... </a><span>[ 10月25日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192c4c1208b2d9a " title="标题：建筑艺术学院（贝茨建筑工程师学院）开展党建联建接洽回访活动" target="_blank">  建筑艺术学院（贝茨建筑工程师学院）开展党... </a><span>[ 10月25日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192c4b4e25d2d96 " title="标题：建筑设备学院举行“问渠·乐享秋意”劳动教育基地秋播仪式" target="_blank">  建筑设备学院举行“问渠·乐享秋意”劳动教... </a><span>[ 10月25日 ]</span> </li></UL></DIV><!--end zjxNews-->
+<DIV class=zjxNews style="PADDING-TOP: 30px">
+<H6 class=title1>
+<P><SPAN>公告公示</SPAN><A href="/pagelist.jsp?id=192aa0e39b7f4f1a82b35cb5b6257ebb">MORE</A></P></H6>
+<UL class=zjList><li><a href="content.jsp?id=ff8080818ecdf0350192a171a36c2bac " title="标题：2024年10月职业技能等级认定考生报名结果信息公示" target="_blank">  2024年10月职业技能等级认定考生报名... </a><span>[ 10月18日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192a119939d2b84 " title="标题：关于我校2024年录取新生保留入学资格名单公示" target="_blank">  关于我校2024年录取新生保留入学资格名... </a><span>[ 10月18日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350192a11648ef2b82 " title="标题：关于我校2024年录取新生自动放弃入学资格名单公示" target="_blank">  关于我校2024年录取新生自动放弃入学资... </a><span>[ 10月18日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf03501922ff2837b2600 " title="标题：2024年9月职业技能等级认定合格人员名单公示" target="_blank">  2024年9月职业技能等级认定合格人员名... </a><span>[ 09月25日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350191e8a2ed032316 " title="标题：2024年9月职业技能等级认定考生报名结果信息公示" target="_blank">  2024年9月职业技能等级认定考生报名结... </a><span>[ 09月12日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf0350191c8366b222108 " title="标题：浙江建设职业技术学院2024年学历继续教育招生章程" target="_blank">  浙江建设职业技术学院2024年学历继续教... </a><span>[ 09月04日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf03501918087471f1f72 " title="标题：2023年省属企业工资分配信息披露" target="_blank">  2023年省属企业工资分配信息披露 </a><span>[ 08月23日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf03501917a40cf2a1eb0 " title="标题：浙江建设职业技术学院资产经营有限公司工资分配信息披露" target="_blank">  浙江建设职业技术学院资产经营有限公司工资... </a><span>[ 08月16日 ]</span> </li><li><a href="content.jsp?id=ff8080818ecdf035018fc12a34340f47 " title="标题：2024年5月职业技能等级认定合格人员名单公示" target="_blank">  2024年5月职业技能等级认定合格人员名... </a><span>[ 05月28日 ]</span> </li></UL></DIV><!--end zjxNews--></DIV><!--end zjConRight--></DIV><!--end zjLeft-->
+<DIV class=zjRight>
+<DIV class=searchDiv><STYLE>
+ 
+
+	.qdclass{}
+	.qw_jiansuo { margin: 0px; padding: 0px; height: 23px; width: auto; font-size:12px;}
+	.qw_jiansuo .inputbox {BORDER-TOP: 0px; HEIGHT: 33px; BORDER-RIGHT: 0px; WIDTH: 190px; BORDER-BOTTOM: 0px; FLOAT: left; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: 0px; OUTLINE-COLOR: invert; LINE-HEIGHT: 34px; BACKGROUND-COLOR: transparent}
+	
+		.qw_jiansuo .btn {CURSOR: pointer; BORDER-TOP: 0px; HEIGHT: 33px; BORDER-RIGHT: 0px; WIDTH: 88px; BORDER-BOTTOM: 0px; FLOAT: right; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; BORDER-LEFT: 0px; OUTLINE-COLOR: invert; BACKGROUND-COLOR: transparent;background-image: url(''); background-repeat: no-repeat;}
+	 
+
+
+</STYLE><DIV class=qw_jiansuo><INPUT id=info_title class=inputbox> <INPUT onclick=sousuo() class=btn type=button>
+<SCRIPT>
+			        function sousuo(){
+			        	var t=document.getElementById("info_title").value;
+			        	if(null==t||t==""){
+			        		window.open("/systemFile/show.jsp");
+			        	}else{
+			        		window.open("/index/s?query="+encodeURI(encodeURI(document.getElementById("info_title").value))+"&c=0");
+			        	}
+			       }
+			  </SCRIPT>
+ </DIV></DIV>
+<DIV class=email><A class=m1 href="/sjxx.jsp" target=_blank>书记信箱</A> <A class=m2 href="/yzxx.jsp" target=_blank>校长信箱</A> </DIV>
+<DIV><a target="_blank" href="/dydb/"><img border="0" src="/_img/2024/04/26/20240426152954526.png"></a><a target="_blank" href="/mtkjy/"><img border="0" src="/_img/2023/12/01/20231201112442819.png"></a> </DIV>
+<DIV class=zjZt style="MARGIN-TOP: 87px">
+<H6><SPAN>专题网站</SPAN></H6>
+<UL></UL></DIV><!--end zjZt-->
+<!--<DIV class=zjYz><A href="/mediapage.jsp?id=ff8080815eb731a40160bd13fbca25ac">媒体看建院</A></DIV>
+<DIV class=zjYz><A href="/pagelist.jsp?id=9995b37529a841d5af6141109844ffa8">高校科研经费使用信息公开</A></DIV>
+<DIV class=zjYz><A href="/_img/2022/10/24/20221024144454166.pdf" target=_blank>浙江建设职业技术学院章程</A></DIV> -->
+<DIV class=zjYz><A href="http://www.zjjysjy.com/" target=_blank>浙江建院建筑规划设计院</A></DIV>
+<DIV class=zjYz><A href="https://10-10-6-248-8080-p.webvpn.zjjs.edu.cn:8118/main " target=_blank>浙江省建设职业教育集团网</A></DIV>
+<!--<DIV class=zjYz><A href="http://www.zjjs.edu.cn/lsxx/index.jsp" target=_blank>浙江建设职业技术学院绿色学校</A></DIV>-->
+<DIV class=zjYz><A href="http://jyjj.zjjs.edu.cn/ " target=_blank>浙江建设职业技术学院教育基金会</A></DIV>
+<DIV class=zjYz><A href="http://jixu.zjjs.edu.cn/hzbx " target=_blank>继续教育合作办学专栏</A></DIV>
+<DIV class=zjEr>
+<UL>
+<LI><I>官方微信</I> <IMG src="images/sina.jpg"> </LI>
+<LI><I>官方微博</I> <IMG src="images/whcat.jpg"> </LI>
+<LI><I>官方视频号</I> <IMG src="images/3.png"> </LI>
+<LI><I>官方抖音号</I> <IMG src="images/4.png"> </LI>
+</UL>
+
+</DIV><!--end zjEr--></DIV><!--end zjRight--></DIV><!--end w1200-->
+
+
+
+	<div class="footer">
+			<div class="bottom">
+				<a style="MARGIN-LEFT: 30px" href="http://www.moe.gov.cn/" target="_blank">教育部&nbsp;&nbsp;|</a> 
+				<a href="http://www.mohurd.gov.cn/" target="_blank">建设部&nbsp;&nbsp;|</a>   
+				<a href="http://www.zj.gov.cn/" target="_blank">省人民政府&nbsp;&nbsp;|</a>  
+				<a href="http://jst.zj.gov.cn" target="_blank">省建设厅&nbsp;&nbsp;|</a>  
+				<a href="http://www.zjedu.gov.cn" target="_blank">省教育厅&nbsp;&nbsp;|</a>   
+				<a href="http://kjt.zj.gov.cn/" target="_blank">省科技厅&nbsp;&nbsp;|</a> 
+				<a href="http://www.tech.net.cn/web/index.aspx" target="_blank">中国高职高专网&nbsp;&nbsp;</a> 			</div>
+           <p>浙江建设职业技术学院&nbsp;&nbsp;版权所有&nbsp;&nbsp;联系电话：0571-82862555(办公室)&nbsp;&nbsp;0571-82606927(纪委)&nbsp;&nbsp;0571-82606965(宣传部)&nbsp;&nbsp;招生热线：82871234<br>地址：杭州萧山高教园区&nbsp;&nbsp;邮编：311231&nbsp;&nbsp;<a href="https://beian.miit.gov.cn"  target="_blank">浙ICP备11036365号-2</a>
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010902001808" style="color: #fff;display:inline-block;text-decoration:none;height:20px;line-height:20px;" ><img src="images/beianimg.png" style="float:left;"/>&nbsp;浙公网安备 33010902001808号</a></p>
+		</div>
+		
+<!--<DIV style="HEIGHT: 200px; WIDTH: 500px; RIGHT: 0px; POSITION: fixed; Z-INDEX: 998; BOTTOM: 0px"><A href="http://f2.zj.chinanews.com/zhuanti/2018115xq/xq.html" target=_blank><IMG src="images/60year-img.jpg" width=500 height=200></A> <A class=60year-tit style="FONT-SIZE: 16px; TEXT-DECORATION: none; HEIGHT: 32px; WIDTH: 500px; BACKGROUND: url(images/60year-titbg.png); POSITION: absolute; COLOR: #fff; TEXT-ALIGN: center; LEFT: 0px; Z-INDEX: 999; DISPLAY: block; LINE-HEIGHT: 30px; BOTTOM: 0px" href="http://f2.zj.chinanews.com/zhuanti/2018115xq/gg.html" target=_blank>一号公告</A> <a class="60year-tit" href="javascript:void(0)" style="position:absolute; z-index:999; right:0; bottom:0; width:249px; height:32px; display:block; color:#FFF; font-size:16px; text-align:center; line-height:30px; background:url(images/60year-titbg.png) repeat; text-decoration:none; ">第二公告</a></DIV>-->
+
+
+<SCRIPT>
+
+(function(){
+$(function(){
+			$('.flexslider').flexslider({
+				directionNav: true,
+				pauseOnAction: false
+			});
+			
+			var dats=new Date();
+			var year=dats.getFullYear();
+			var month=dats.getMonth()+1;
+			var dates=dats.getDate();
+			
+			var datas=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+			var day=" "+datas[dats.getDay()];
+			$('.times').text(year+'年'+month+'月'+dates+'日'+' '+day);
+
+$('.zjZt ul li:odd').css('margin-left','9px');
+		});
+
+})()
+</SCRIPT>
+
+
+</BODY></HTML>

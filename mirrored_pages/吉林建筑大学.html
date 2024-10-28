@@ -1,0 +1,1420 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>吉林建筑大学</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="吉林建筑大学">
+<META Name="keywords" Content="吉林建筑大学" />
+
+    <link rel="stylesheet" href="2024/style/slick.css">
+    <link rel="stylesheet" href="2024/style/slick-theme.css">
+    <link rel="stylesheet" href="2024/style/reset.css">
+    <link rel="stylesheet" href="2024/style/public.css">
+    <link rel="stylesheet" href="2024/style/index.css">
+
+    <script src="2024/js/jquery.js"></script>
+    <script src="2024/js/slick.js"></script>
+    <script src="2024/js/public.js"></script>
+
+    
+    <link rel="shortcut icon" href="#" />
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307668475c52575742000200034350 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,2059457167)</script>
+</head>
+
+<body ontouchstart>
+
+
+<div class="head">
+        <div class="h-top pc">
+            <div class="w16">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="吉林建筑大学"><img alt="" src="2024/images/logo.png"></a></div>
+                <div class="head-r">
+                   <div class="h-lk">
+                     <script language="javascript" src="/system/resource/js/dynclicks.js"></script><a href="https://www.jlju.edu.cn/old/" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1014120)" target="_blank"><img src="2024/images/h-i1.png" border="0">旧站入口</a>
+
+<a href="https://portal.jlju.edu.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011409)" target="_blank"><img src="2024/images/h-i2.png" border="0">融合服务门户</a>
+
+
+                    
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+             <div class="ser">
+            <input type="text" placeholder="请输入关键词" name="" id="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                         
+                         <button class="ser-btn" v-on:click="onSubmit()"></button>
+                           </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "2059457167";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.100.38.6:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                    </div>
+                   <div class="nav">
+                <ul>                        
+                        <li>
+                            <a href="index.htm">首页</a>
+                            <div>
+                                <ul>
+
+                                    <li>
+                                        <a href="index/zhxw.htm" target="_blank">综合新闻</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="index/xykx.htm" target="_blank">校园快讯</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="index/tzgg.htm" target="_blank">通知公告</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="index/kydt.htm" target="_blank">科研动态</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="index/ztzl.htm" target="_blank">专题专栏</a>
+                                    </li>
+                                  </ul>
+                            </div>
+
+                        </li>
+
+
+                        
+                        <li>
+                            <a href="xxgk/xxjj.htm">学校概况</a>
+                            <div>
+                                <ul>
+
+                                    <li>
+                                        <a href="xxgk/xxjj.htm" target="_blank">学校简介</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="xxgk/xxbs.htm" target="_blank">学校标识</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="xxgk/xxzc.htm" target="_blank">学校章程</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="xxgk/xxld.htm" target="_blank">学校领导</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="xxgk/ldtc.htm" target="_blank">领导题词</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="xxgk/xxfg1.htm" target="_blank">学校风光</a>
+                                    </li>
+                                  </ul>
+                            </div>
+
+                        </li>
+
+
+                        
+                        <li>
+                            <a href="jgsz.htm">机构设置</a>
+
+                        </li>
+
+
+                        
+                        <li>
+                            <a href="#">人才培养</a>
+                            <div>
+                                <ul>
+
+                                    <li>
+                                        <a href="http://jwc.jlju.edu.cn/" target="_blank">本科教育</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://yjs.jlju.edu.cn/" target="_blank">研究生教育</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://gjjlxy.jlju.edu.cn/index.htm" target="_blank">留学生教育</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://adult.jlju.edu.cn/" target="_blank">继续教育</a>
+                                    </li>
+                                  </ul>
+                            </div>
+
+                        </li>
+
+
+                        
+                        <li>
+                            <a href="kxyj/kydt.htm">科学研究</a>
+                            <div>
+                                <ul>
+
+                                    <li>
+                                        <a href="kxyj/kydt.htm" target="_blank">科研动态</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="kxyj/kycg.htm" target="_blank">科研成果</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="kxyj/kyjg.htm" target="_blank">科研机构</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://kyc.jlju.edu.cn/xswyh.htm" target="_blank">学术委员会</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://jljz.cbpt.cnki.net/portal" target="_blank">学术期刊</a>
+                                    </li>
+                                  </ul>
+                            </div>
+
+                        </li>
+
+
+                        
+                        <li>
+                            <a href="szdw/szgk.htm">师资队伍</a>
+                            <div>
+                                <ul>
+
+                                    <li>
+                                        <a href="szdw/szgk.htm" target="_blank">师资概况</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://yjs.jlju.edu.cn/xkjs.htm" target="_blank">学科带头人</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="szdw/rczp.htm" target="_blank">人才招聘</a>
+                                    </li>
+                                  </ul>
+                            </div>
+
+                        </li>
+
+
+                        
+                        <li>
+                            <a href="#">招生就业</a>
+                            <div>
+                                <ul>
+
+                                    <li>
+                                        <a href="https://zsxxw.jlju.edu.cn/" target="_blank">本科招生</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://yjs.jlju.edu.cn/" target="_blank">研究生招生</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://adult.jlju.edu.cn/" target="_blank">成人教育招生</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://jlju.hjiuye.com/" target="_blank">就业工作</a>
+                                    </li>
+                                  </ul>
+                            </div>
+
+                        </li>
+
+
+                        
+</ul>
+                <div class="search_btn"></div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="std_nav_1600_008 banner">
+        <div class="stdnav16_1_banner">
+           
+                    <div class="stdnav16_1_banner1">
+                    <ul>
+                        
+<li>
+                            <a class="chg_14" href="https://adult.jlju.edu.cn/shpgww/" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1014119)">
+                                <img alt="" src="2024/images/banner22.jpg">
+                            </a>
+                        </li>
+                        
+<li>
+                            <a class="chg_14" href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011412)">
+                                <img alt="" src="images/banner21.jpg">
+                            </a>
+                        </li>
+                        
+<li>
+                            <a class="chg_14" href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011411)">
+                                <img alt="" src="2024/images/bn001.png">
+                            </a>
+                        </li>
+                        
+</ul>
+                </div>
+         
+        </div>
+    </div>
+
+
+
+    <!-- 移动端导航 -->
+    <div class="m-index">
+        <section class="m_header_box">
+            <header id="m_header">
+                <div id="logo">    
+
+                <a href="index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011416)"><img src="2024/images/logo.png" border="0"></a>
+                
+
+</div>
+                
+                
+                <div class="m-lk">
+                    <a href="https://portal.jlju.edu.cn/" target="_blank"><img src="2024/images/h-i2.png">融合服务门户</a>
+                </div>
+                
+                
+                <div id="nav_btn_box" class="on">
+                    <aside id="nav_btn">
+                        <div class="point" name="1" id="mbtn"> <span class="navbtn"></span> </div>
+                    </aside>
+                </div>
+            </header>
+        </section>
+        <nav id="m_nav">
+            <div class="wap_search">
+
+
+<style>
+    #appu6 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu6 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu6"></div>
+<script type="text/html" id="htmlu6">
+    <div id="appu6">
+        <div v-if="!isError">
+          <div class="header-search">
+        
+            <input type="text" class="input" placeholder="请输入搜索关键词"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">                    
+           
+            <button type="button" class="btn_blue" value="" v-on:click="onSubmit()"/></button>
+            
+            </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu6").html($("#htmlu6").text());
+</script>
+<script>
+    var appOwner = "2059457167";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu6",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.100.38.6:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+
+            <ul class="list_box_nav_mobile">                <li class="on">
+                    <div class="con">
+                        <a class="a" href="index.htm">首页</a>
+                        <i></i>
+                        
+                    </div>
+                       <div class="list">
+
+                        <a href="index/zhxw.htm">综合新闻</a>
+
+                        <a href="index/xykx.htm">校园快讯</a>
+
+                        <a href="index/tzgg.htm">通知公告</a>
+
+                        <a href="index/kydt.htm">科研动态</a>
+
+                        <a href="index/ztzl.htm">专题专栏</a>
+                    </div>
+
+               </li>
+                 
+                <li>
+                    <div class="con">
+                        <a class="a" href="xxgk/xxjj.htm">学校概况</a>
+                        <i></i>
+                        
+                    </div>
+                       <div class="list">
+
+                        <a href="xxgk/xxjj.htm">学校简介</a>
+
+                        <a href="xxgk/xxbs.htm">学校标识</a>
+
+                        <a href="xxgk/xxzc.htm">学校章程</a>
+
+                        <a href="xxgk/xxld.htm">学校领导</a>
+
+                        <a href="xxgk/ldtc.htm">领导题词</a>
+
+                        <a href="xxgk/xxfg1.htm">学校风光</a>
+                    </div>
+
+               </li>
+                 
+                <li>
+                    <div class="con">
+                        <a class="a" href="jgsz.htm">机构设置</a>
+                        
+                        
+                    </div>
+               </li>
+                 
+                <li>
+                    <div class="con">
+                        <a class="a" href="#">人才培养</a>
+                        <i></i>
+                        
+                    </div>
+                       <div class="list">
+
+                        <a href="http://jwc.jlju.edu.cn/">本科教育</a>
+
+                        <a href="http://yjs.jlju.edu.cn/">研究生教育</a>
+
+                        <a href="https://gjjlxy.jlju.edu.cn/index.htm">留学生教育</a>
+
+                        <a href="http://adult.jlju.edu.cn/">继续教育</a>
+                    </div>
+
+               </li>
+                 
+                <li>
+                    <div class="con">
+                        <a class="a" href="kxyj/kydt.htm">科学研究</a>
+                        <i></i>
+                        
+                    </div>
+                       <div class="list">
+
+                        <a href="kxyj/kydt.htm">科研动态</a>
+
+                        <a href="kxyj/kycg.htm">科研成果</a>
+
+                        <a href="kxyj/kyjg.htm">科研机构</a>
+
+                        <a href="https://kyc.jlju.edu.cn/xswyh.htm">学术委员会</a>
+
+                        <a href="https://jljz.cbpt.cnki.net/portal">学术期刊</a>
+                    </div>
+
+               </li>
+                 
+                <li>
+                    <div class="con">
+                        <a class="a" href="szdw/szgk.htm">师资队伍</a>
+                        <i></i>
+                        
+                    </div>
+                       <div class="list">
+
+                        <a href="szdw/szgk.htm">师资概况</a>
+
+                        <a href="https://yjs.jlju.edu.cn/xkjs.htm">学科带头人</a>
+
+                        <a href="szdw/rczp.htm">人才招聘</a>
+                    </div>
+
+               </li>
+                 
+                <li>
+                    <div class="con">
+                        <a class="a" href="#">招生就业</a>
+                        <i></i>
+                        
+                    </div>
+                       <div class="list">
+
+                        <a href="https://zsxxw.jlju.edu.cn/">本科招生</a>
+
+                        <a href="http://yjs.jlju.edu.cn/">研究生招生</a>
+
+                        <a href="http://adult.jlju.edu.cn/">成人教育招生</a>
+
+                        <a href="http://jlju.hjiuye.com/">就业工作</a>
+                    </div>
+
+               </li>
+                 
+</ul>
+            <div class="list_box0 flex"><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="li ">
+                    <a href="xxgk1.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 102944)">
+                    
+                    
+                    
+                    
+                    
+                    信息公开</a>                </div>
+                
+<div class="li ">
+                    <a href="http://jwc.jlju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 95490)">
+                    
+                    
+                    
+                    
+                    
+                    教务处</a>                </div>
+                
+<div class="li ">
+                    <a href="http://yjs.jlju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 95491)">
+                    
+                    
+                    
+                    
+                    
+                    研究生处</a>                </div>
+                
+<div class="li ">
+                    <a href="http://rsc.jlju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 95492)">
+                    
+                    
+                    
+                    
+                    
+                    人事处</a>                </div>
+                
+<div class="li ">
+                    <a href="http://tsg.jlju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 95493)">
+                    
+                    
+                    
+                    
+                    
+                    图书馆</a>                </div>
+                
+<div class="li ">
+                    <a href="info/1001/112322.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 102957)">
+                    
+                    
+                    
+                    
+                    
+                    服务热线</a>                </div>
+                
+<div class="li ">
+                    <a href="http://xiaoyou.jlju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 95578)">
+                    
+                    
+                    
+                    
+                    
+                    校友之家</a>                </div>
+                
+<div class="li ">
+                    <a href="http://kyc.jlju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 95562)">
+                    
+                    
+                    
+                    
+                    
+                    科研处</a>                </div>
+                
+<div class="li ">
+                    <a href="http://dachuang.jlju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 95579)">
+                    
+                    
+                    
+                    
+                    
+                    大学生创新创业学院</a>                </div>
+                
+<div class="li ">
+                    <a href="https://jljz.cbpt.cnki.net/portal" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 102958)">
+                    
+                    
+                    
+                    
+                    
+                    学报投稿</a>                </div>
+                
+<div class="li ">
+                    <a href="index/sjxzxx.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 102959)">
+                    <img src="images/xx-sj.png" style="width: 0.15rem;    margin-right: 0.03rem;">
+                    
+                    
+                    
+                    
+                    书记校长信箱</a>                </div>
+                
+<div class="li m-lk">
+                    <a href="https://portal.jlju.edu.cn/main.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2059457167, 102956)">
+                    
+                    
+                    <img src="images/h-i2_red.png">
+                    
+                    
+                    融合服务门户</a>                </div>
+                
+</div>
+            <div class="close">×</div>
+        </nav>
+    </div>
+
+    <!-- index -->
+    <div class="index">
+        <div class="s1">
+            <div class="w16">
+                <div class="tit">
+                    <h3>
+                        <b>综合新闻</b>
+                        <span>General news</span>
+                    </h3>
+                    <a href="index/zhxw.htm">查看更多</a>
+                </div>
+                <div class="s1-lt"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+                        
+<li>
+                           <a href="info/1026/114822.htm" target="_blank" title="山东航空学院党委书记李长海一行来校调研交流">
+                 <div class="pic">
+                                    <img alt="" src="/__local/0/E3/38/5E210C5BC2E75A16CDF102E7F08_ABA63421_398B5.jpg">
+                                    <span>2024-10-25</span>
+                                </div>
+                                <div class="s1-tx">
+                                    <p>山东航空学院党委书记李长海一行来校调研交流</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+<li>
+                           <a href="info/1026/114812.htm" target="_blank" title="学校市政与环境工程学院教工党支部入选全国高校“双带头人”教师党支部书记“强国行”专项行动团队">
+                 <div class="pic">
+                                    <img alt="" src="/__local/5/AE/53/AAEB5867CD326A7122ACEEB9A11_3C82EEE4_28D3D.jpg">
+                                    <span>2024-10-25</span>
+                                </div>
+                                <div class="s1-tx">
+                                    <p>学校市政与环境工程学院教工党支部入选全国高校“双带头人”教师党支部书记“强国行”专项行动团队</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+<li>
+                           <a href="info/1026/114582.htm" target="_blank" title="【审核评估】学校召开本科教育教学审核评估线上评估启动会">
+                 <div class="pic">
+                                    <img alt="" src="/__local/B/7F/E7/D1EB5BC54F50DB9F66A41DEFBE4_4118BF25_6EA2C.jpg">
+                                    <span>2024-10-21</span>
+                                </div>
+                                <div class="s1-tx">
+                                    <p>【审核评估】学校召开本科教育教学审核评估线上评估启动会</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+</ul><script>_showDynClickBatch(['dynclicks_u9_114822','dynclicks_u9_114812','dynclicks_u9_114582'],[114822,114812,114582],"wbnews", 2059457167)</script>
+</div>
+                
+                
+                <!-- 移动端新闻展示 -->
+                <div class="ms1-lt"><ul>
+                        
+<li>
+                        <a href="info/1026/114822.htm" target="_blank" title="山东航空学院党委书记李长海一行来校调研交流">
+                                <div class="pic">
+                                    <img src="/__local/0/E3/38/5E210C5BC2E75A16CDF102E7F08_ABA63421_398B5.jpg" alt="">
+                                </div>
+                                <div class="s1-txt">
+                                    <h3>山东航空学院党委书记李长海一行来校调研交流</h3>
+                                    <p>2024-10-25</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+<li>
+                        <a href="info/1026/114812.htm" target="_blank" title="学校市政与环境工程学院教工党支部入选全国高校“双带头人”教师党支部书记“强国行”专项行动团队">
+                                <div class="pic">
+                                    <img src="/__local/5/AE/53/AAEB5867CD326A7122ACEEB9A11_3C82EEE4_28D3D.jpg" alt="">
+                                </div>
+                                <div class="s1-txt">
+                                    <h3>学校市政与环境工程学院教工党支部入选全国高校“双带头人”教师党支部书记“强国行”专项行动团队</h3>
+                                    <p>2024-10-25</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+<li>
+                        <a href="info/1026/114582.htm" target="_blank" title="【审核评估】学校召开本科教育教学审核评估线上评估启动会">
+                                <div class="pic">
+                                    <img src="/__local/B/7F/E7/D1EB5BC54F50DB9F66A41DEFBE4_4118BF25_6EA2C.jpg" alt="">
+                                </div>
+                                <div class="s1-txt">
+                                    <h3>【审核评估】学校召开本科教育教学审核评估线上评估启动会</h3>
+                                    <p>2024-10-21</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+</ul><script>_showDynClickBatch(['dynclicks_u10_114822','dynclicks_u10_114812','dynclicks_u10_114582'],[114822,114812,114582],"wbnews", 2059457167)</script>
+</div>
+                <!-- 移动端新闻展示end -->
+                
+                
+            </div>
+        </div>
+        <div class="s2">
+            <div class="w16">
+                <div class="s2-c">
+                    <div class="s2-l">
+                        <div class="tit">
+                            <h3>
+                                <b>校园快讯</b>
+                                <span>Campus news</span>
+                            </h3>
+                            <a href="index/xykx.htm">查看更多</a>
+                        </div>
+                        <div class="s2-lt"><ul>
+                                
+<li>
+ <a href="info/1028/114802.htm" target="_blank" title="学校副校长王岩松出席长春市装配式建筑产业园区综合服务平台揭牌仪式">
+   <p>学校副校长王岩松出席长春市装配式建筑产业园区综合服务平台揭牌仪式</p>
+   <span>2024-10-25</span>
+                                    </a>
+                                </li>
+                                
+<li>
+ <a href="info/1028/114732.htm" target="_blank" title="学校与春城热力公司携手积极解决供暖问题确保师生温暖过冬">
+   <p>学校与春城热力公司携手积极解决供暖问题确保师生温暖过冬</p>
+   <span>2024-10-24</span>
+                                    </a>
+                                </li>
+                                
+<li>
+ <a href="info/1028/114722.htm" target="_blank" title="学校举办“成长课堂系列讲座——我的大学”活动">
+   <p>学校举办“成长课堂系列讲座——我的大学”活动</p>
+   <span>2024-10-22</span>
+                                    </a>
+                                </li>
+                                
+<li>
+ <a href="info/1028/114712.htm" target="_blank" title="学校举办苹果梨义买活动助力乡村振兴">
+   <p>学校举办苹果梨义买活动助力乡村振兴</p>
+   <span>2024-10-22</span>
+                                    </a>
+                                </li>
+                                
+<li>
+ <a href="info/1028/114702.htm" target="_blank" title="学校举办第十二届大学生外语文化节">
+   <p>学校举办第十二届大学生外语文化节</p>
+   <span>2024-10-22</span>
+                                    </a>
+                                </li>
+                                
+<li>
+ <a href="info/1028/114532.htm" target="_blank" title="【审核评估】建筑与规划学院全力推进迎评工作">
+   <p>【审核评估】建筑与规划学院全力推进迎评工作</p>
+   <span>2024-10-21</span>
+                                    </a>
+                                </li>
+                                
+<li>
+ <a href="info/1028/114482.htm" target="_blank" title="经济与管理学院举行2024级新生开学典礼">
+   <p>经济与管理学院举行2024级新生开学典礼</p>
+   <span>2024-10-18</span>
+                                    </a>
+                                </li>
+                                
+<li>
+ <a href="info/1028/114472.htm" target="_blank" title="国际交流学院开展党的二十届三中全会精神宣讲">
+   <p>国际交流学院开展党的二十届三中全会精神宣讲</p>
+   <span>2024-10-18</span>
+                                    </a>
+                                </li>
+                                
+<li>
+ <a href="info/1028/114462.htm" target="_blank" title="【审核评估】公共外语教研部召开本科教育教学审核评估重要工作说明会">
+   <p>【审核评估】公共外语教研部召开本科教育教学审核评估重要工作说明会</p>
+   <span>2024-10-18</span>
+                                    </a>
+                                </li>
+                                
+</ul><script>_showDynClickBatch(['dynclicks_u11_114802','dynclicks_u11_114732','dynclicks_u11_114722','dynclicks_u11_114712','dynclicks_u11_114702','dynclicks_u11_114532','dynclicks_u11_114482','dynclicks_u11_114472','dynclicks_u11_114462'],[114802,114732,114722,114712,114702,114532,114482,114472,114462],"wbnews", 2059457167)</script>
+</div>
+                    </div>
+                    <div class="s2-r">
+                        <div class="tit">
+                            <h3>
+                                <b>通知公告</b>
+                                <span>Notice</span>
+                            </h3>
+                            <a href="index/tzgg.htm">查看更多</a>
+                        </div>
+                        <div class="s2-rt"><ul>
+                                
+<li class="on">
+<a href="info/1027/113442.htm" target="_blank" title="关于更换学校班车的通知">
+                                        <div class="s2-date">
+                                            <b>27</b>
+                                            <span>2024-09</span>
+                                        </div>
+                                        <div class="s2-tx">
+                                            <h3><span>2024-09-27</span>关于更换学校班车的通知</h3>
+                                            <p>
+                                            <span>
+                                            各部门、单位：为更好地服务广大教职员工，提高通勤效率，提升乘车体验，我校决定自2024年10月7日（星期一）开始对现有班车进行更换。新班车前风挡玻璃上方悬挂吉林建筑大学条幅，请乘车人员仔细查看车牌号码，以免误乘。各线路车牌号及司机联系方式1号线 吉AP6112 刘永昌 199172201552号线 吉AY0448 韩  雪 165043025673号线 吉AY7320 吕成龙 185044050234号线 吉AU4304 张立军 135969660605号线 吉AY5576 朱广彬 187044559596号线 ...</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+<a href="info/1027/113432.htm" target="_blank" title="校史资料和实物征集启事">
+                                        <div class="s2-date">
+                                            <b>06</b>
+                                            <span>2024-06</span>
+                                        </div>
+                                        <div class="s2-tx">
+                                            <h3><span>2024-06-06</span>校史资料和实物征集启事</h3>
+                                            <p>
+                                            <span>
+                                            吉林建筑大学的历史，是一部建大人艰苦卓绝的创业史、拼搏创新的奋斗史，更是一部培育建筑栋梁的光辉史。为更好地传承、弘扬、展示学校近七十年的办学历程和光荣传统，丰富校史馆藏和展览内容，推动校史研究工作，现重点征集1956年至2016年期间的史料及文物；2016年至今的相关资料和实物亦在征集之列。征集内容：1.红旗街老校址和净月新校区建设时期相关图片及音视频、实物。2.学校重大活动、重要事件相关文献、图片、音视频以及证件、...</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+<a href="info/1027/113462.htm" target="_blank" title="安全保卫处面向校内公开选聘工作人员的通知">
+                                        <div class="s2-date">
+                                            <b>12</b>
+                                            <span>2024-10</span>
+                                        </div>
+                                        <div class="s2-tx">
+                                            <h3><span>2024-10-12</span>安全保卫处面向校内公开选聘工作人员的通知</h3>
+                                            <p>
+                                            <span>
+                                            校内各部门、单位：根据工作需要，按照《吉林建筑大学校内人事调配管理办法（试行）》（校字〔2024〕32号）的要求，安全保卫处现面向校内公开选聘工作人员1人，具体事宜通知如下：一、选聘岗位名称及数量校园110报警综合服务中心护卫队员岗位 1人。二、应聘条件及要求1.年龄58周岁以下，身体健康，有高度的政治思想素养，遵守国家法律法规，恪尽职守，爱岗敬业。2.具有较强的事业心和责任感，工作能够积极主动，高质高效完成各项工作任务，...</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+<a href="info/1027/113452.htm" target="_blank" title="关于清理校园公共楼宇堆放物的通知">
+                                        <div class="s2-date">
+                                            <b>10</b>
+                                            <span>2024-10</span>
+                                        </div>
+                                        <div class="s2-tx">
+                                            <h3><span>2024-10-10</span>关于清理校园公共楼宇堆放物的通知</h3>
+                                            <p>
+                                            <span>
+                                            各部门、单位：为营造一个整洁、安全、舒适的校园环境，迎接本科教育教学评估工作，确保各楼宇通道畅通无阻，消除火灾隐患，学校决定对各公共楼宇内公共区域堆放物品进行集中清理。现将有关事项通知如下：请各部门、单位充分认识到清理堆放物的重要性，自行清理，将需保留物品尽快存放到自有空间，废弃物品尽快妥善处理，不得占用走廊通道、楼梯间、安全出口、门厅、缓台等公共区域，并于10月15日前清理完毕，逾期未清理的物品将按废弃物统一处理。...</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+<a href="info/1027/113422.htm" target="_blank" title="关于开展2024年专业技术人员继续教育学习的通知">
+                                        <div class="s2-date">
+                                            <b>26</b>
+                                            <span>2024-09</span>
+                                        </div>
+                                        <div class="s2-tx">
+                                            <h3><span>2024-09-26</span>关于开展2024年专业技术人员继续教育学习的通知</h3>
+                                            <p>
+                                            <span>
+                                            学校专业技术人员：按照吉林省人力资源和社会保障厅《关于做好2024年吉林省专业技术人员继续教育学习有关工作的通知》要求，吉林省人社厅已开通吉林省专业技术人员继续教育公共服务平台，组织开展全省专业技术人员继续教育线上学习，现将《关于做好2024年吉林省专业技术人员继续教育学习有关工作的通知》转发给你们，请学校专业技术人员按照省人社厅通知要求完成本年度继续教育学习。吉林建筑大学人事处   2024年9月26日     </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+<a href="info/1027/113412.htm" target="_blank" title="书法学院面向校内公开选聘工作人员的通知">
+                                        <div class="s2-date">
+                                            <b>24</b>
+                                            <span>2024-09</span>
+                                        </div>
+                                        <div class="s2-tx">
+                                            <h3><span>2024-09-24</span>书法学院面向校内公开选聘工作人员的通知</h3>
+                                            <p>
+                                            <span>
+                                            校内各部门、单位：根据工作需要，按照《吉林建筑大学校内人事调配管理办法（试行）》（校字〔2024〕32号）的要求，书法学院现面向校内公开选聘工作人员1人，具体事宜通知如下：一、选聘岗位名称及数量书法学院书法艺术馆管理岗位，1人。二、应聘条件及要求1.中共党员，具有较强的服务意识和沟通协调能力；2.具有岗位所需的业务能力和技能条件，能够完成本岗位工作任务，有图书馆管理工作经验优先；3.具有图书情报系或图书馆学本科及以上学历。...</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+<li>
+<a href="info/1027/41634.htm" target="_blank" title="图书馆开通住房城乡建设领域法规标准知识服务平台试用通知">
+                                        <div class="s2-date">
+                                            <b>23</b>
+                                            <span>2024-09</span>
+                                        </div>
+                                        <div class="s2-tx">
+                                            <h3><span>2024-09-23</span>图书馆开通住房城乡建设领域法规标准知识服务平台试用通知</h3>
+                                            <p>
+                                            <span>
+                                            为切实服务学校教学与科研的高质量发展，满足师生们对优质信息资源的需求，图书馆现开通住房城乡建设领域法规标准知识服务平台试用，欢迎广大师生试用并提供宝贵意见。一、电子资源名称：住房城乡建设领域法规标准知识服务平台二、使用时间：即日起至2024年12月31日三、使用方法：登录www.kscecs.com，用手机号注册账号，并在个人信息页面输入机构码 【qyZ7H】即可使用。四、访问方式：手机号注册并绑定机构码后可在PC端、移动APP、...</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+</ul><script>_showDynClickBatch(['dynclicks_u12_113442','dynclicks_u12_113432','dynclicks_u12_113462','dynclicks_u12_113452','dynclicks_u12_113422','dynclicks_u12_113412','dynclicks_u12_41634'],[113442,113432,113462,113452,113422,113412,41634],"wbnews", 2059457167)</script>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="s3">
+            <div class="w16">
+                <div class="s3-top">
+                    <div class="s3-l">
+                        <div class="tit">
+                            <h3>
+                                <b>科研动态</b>
+                                <span>Research Trends</span>
+                            </h3>
+                            <a href="index/kydt.htm">查看更多</a>
+                        </div>
+                        <ul><li>
+
+                                <a href="info/2071/112162.htm" target="_blank" title="副校长张学建参加第十一届建筑类高校科技合作与交流研讨会">
+                                    <div class="s3-date">
+                                        <b>19</b><span> / 2024-07</span>
+                                    </div>
+                                    <div class="s3-tx">
+                                        <p>
+                                        副校长张学建参加第十一届建筑类高校科技合作与交流研讨会
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+
+                                <a href="info/2071/112172.htm" target="_blank" title="2024年中国城市规划学会城市生态规划专业委员会年会在我校召开">
+                                    <div class="s3-date">
+                                        <b>12</b><span> / 2024-07</span>
+                                    </div>
+                                    <div class="s3-tx">
+                                        <p>
+                                        2024年中国城市规划学会城市生态规划专业委员会年会在我校召开
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+
+                                <a href="info/2071/112182.htm" target="_blank" title="《吉林建筑大学学报》被评为“RCCSE中国准核心学术期刊”">
+                                    <div class="s3-date">
+                                        <b>11</b><span> / 2024-07</span>
+                                    </div>
+                                    <div class="s3-tx">
+                                        <p>
+                                        《吉林建筑大学学报》被评为“RCCSE中国准核心学术期刊”
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+
+                                <a href="info/2071/112192.htm" target="_blank" title="寒地建筑综合节能教育部重点实验室学术委员会换届会议暨2024年度学术委员会会议召开">
+                                    <div class="s3-date">
+                                        <b>10</b><span> / 2024-07</span>
+                                    </div>
+                                    <div class="s3-tx">
+                                        <p>
+                                        寒地建筑综合节能教育部重点实验室学术委员会换届会议暨2024年度学术委员会会议召开
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<script>_showDynClickBatch(['dynclicks_u13_112162','dynclicks_u13_112172','dynclicks_u13_112182','dynclicks_u13_112192'],[112162,112172,112182,112192],"wbnews", 2059457167)</script>
+</ul>
+                    </div>
+                    <div class="s3-r">
+                        <div class="tit">
+                            <h3>
+                                <b>专题专栏</b>
+                                <span>Feature</span>
+                            </h3>
+                            <a href="index/ztzl.htm">查看更多</a>
+                        </div>
+                        <ul>    <li>
+                                <a href="https://adult.jlju.edu.cn/shpgww/" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1014116)" target="_blank">
+                                    <div class="pic">
+                                        <img alt="" src="images/bkpg.jpg">
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="http://ztjy.jlju.edu.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011420)" target="_blank">
+                                    <div class="pic">
+                                        <img alt="" src="2024/images/s3-p1.jpg">
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1001/114372.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1014121)" target="_blank">
+                                    <div class="pic">
+                                        <img alt="" src="2024/images/zwhz.jpg">
+                                    </div>
+                                </a>
+                            </li>
+                            
+</ul>
+                    </div>
+                </div>
+                <div class="s3-bot"><ul>
+
+              
+              <li class="num1">
+        <a href="xxgk1.htm" target="_blank">
+            <div class="ico">
+                <span>
+
+                    
+                </span>
+            </div>
+            <p>信息公开</p>
+        </a>
+    </li>
+                
+
+              
+              <li class="num2">
+        <a href="http://jwc.jlju.edu.cn/" target="_blank">
+            <div class="ico">
+                <span>
+
+                    
+                </span>
+            </div>
+            <p>教务处</p>
+        </a>
+    </li>
+                
+
+              
+              <li class="num3">
+        <a href="http://yjs.jlju.edu.cn/" target="_blank">
+            <div class="ico">
+                <span>
+
+                    
+                </span>
+            </div>
+            <p>研究生处</p>
+        </a>
+    </li>
+                
+
+              
+              <li class="num4">
+        <a href="http://rsc.jlju.edu.cn/" target="_blank">
+            <div class="ico">
+                <span>
+
+                    
+                </span>
+            </div>
+            <p>人事处</p>
+        </a>
+    </li>
+                
+
+              
+              <li class="num5">
+        <a href="http://tsg.jlju.edu.cn/" target="_blank">
+            <div class="ico">
+                <span>
+
+                    
+                </span>
+            </div>
+            <p>图书馆</p>
+        </a>
+    </li>
+                
+
+              
+              <li class="num6">
+        <a href="info/1001/112322.htm" target="_blank">
+            <div class="ico">
+                <span>
+
+                    
+                </span>
+            </div>
+            <p>服务热线</p>
+        </a>
+    </li>
+                
+
+              
+              <li class="num7">
+        <a href="http://xiaoyou.jlju.edu.cn/" target="_blank">
+            <div class="ico">
+                <span>
+
+                    
+                </span>
+            </div>
+            <p>校友之家</p>
+        </a>
+    </li>
+                
+
+              
+              <li class="num8">
+        <a href="http://kyc.jlju.edu.cn/" target="_blank">
+            <div class="ico">
+                <span>
+
+                    
+                </span>
+            </div>
+            <p>科研处</p>
+        </a>
+    </li>
+                
+
+              
+              <li class="num9">
+        <a href="http://dachuang.jlju.edu.cn/" target="_blank">
+            <div class="ico">
+                <span>
+
+                    
+                </span>
+            </div>
+            <p>大学生创新创业学院</p>
+        </a>
+    </li>
+                
+
+</ul>
+<div class="s3-btn">
+                        <div class="s3-p"></div>
+                        <div class="s3-n"></div>
+                    </div></div>
+            </div>
+        </div>
+
+    </div>
+
+        <!-- 侧边链接 -->
+        <div class="side-lk">    <a href="info/1001/112322.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011419)" target="_blank">
+                <div class="ico">
+                    <img alt="" src="2024/images/side1.png">
+                </div>
+                <p>服务热线</p>
+            </a>
+            
+<a href="https://jljz.cbpt.cnki.net/portal" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011418)" target="_blank">
+                <div class="ico">
+                    <img alt="" src="2024/images/side2.png">
+                </div>
+                <p>学报投稿</p>
+            </a>
+            
+<a href="index/sjxzxx.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011417)" target="_blank">
+                <div class="ico">
+                    <img alt="" src="2024/images/side3.png">
+                </div>
+                <p>书记校长信箱</p>
+            </a>
+            
+</div>
+        
+        
+        
+    <!-- foot -->
+    <div class="foot">
+        <div class="w16">
+            <div class="f-lg">    
+<a href="index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011414)"><img src="2024/images/f-lg.png" border="0"></a>
+                            
+
+</div>
+            <div class="f-mid">
+             <div class="f-ld">    
+
+               <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=22017202000221" target="_blank"><img src="2024/images/landun.png"></a>
+             
+
+</div>
+            <div class="f-lx">
+            <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>
+    地址：吉林省长春市新城大街5088号
+</p>
+<p>
+    版权所有：吉林建筑大学 &nbsp;网站技术：<a href="http://net.jlju.edu.cn/" target="_blank">网络信息中心</a> &nbsp;<a href="https://beian.miit.gov.cn/" target="_blank">吉ICP备16008289号</a>
+</p>
+<p>
+    <img src="http://www.beian.gov.cn/file/ghs.png" />吉公网安备 22017202000221 号
+</p></div>
+            
+            </div>
+            <div class="f-ewm">    
+
+                <div class="ewm">
+                    <img alt="" onclick="_addDynClicks(&#34;wbimage&#34;, 2059457167, 1011415)" src="2024/images/ewm.png">
+                    </div>
+                <p></p>
+            
+
+</div>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script src="2024/js/index.js"></script>
+<script>
+    $('.std_nav_1600_008  .stdnav16_1_banner1>ul').slick({
+        autoplay: true,
+        dots: true,
+        arrows: false,
+        accessibility: true,
+        speed:1000,
+        autoplaySpeed: 3000,
+    });
+    for (var i = 0; i < $(".std_nav_1600_008 .stdnav16_1_banner .slick-dots li").length; i++) {
+        var _actHtml = $(".std_nav_1600_008 .stdnav16_1_banner1 ul .slick-slide").eq(i + 1).find("a img").attr("src");
+        $(".std_nav_1600_008 .stdnav16_1_banner .slick-dots li").eq(i).append("<div><img src='" + _actHtml + "'></div>")
+    }
+</script>
+
+</html>

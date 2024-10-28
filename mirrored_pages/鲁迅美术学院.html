@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>鲁迅美术学院</title><META Name="keywords" Content="鲁迅美术学院，鲁美，美术学院，鲁美学院" />
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchslider.js"></script><!--背景js-->
+<script type="text/javascript" src="js/koala.min.1.5.js"></script><!--展览js-->
+<script type="text/javascript" src="js/terminator2.2.min.js"></script><!--展览js-->
+<LINK rel="stylesheet" type="text/css" href="style/index.css">
+<!--背景js-->
+<script type="text/javascript">
+$(document).ready(function () {
+    $(".main_visual").hover(function(){
+        $("#btn_prev,#btn_next").fadeIn()
+        },function(){
+        $("#btn_prev,#btn_next").fadeOut()
+        })
+    $dragBln = false;
+    $(".main_image").touchSlider({
+        flexible : true,
+        speed : 0,
+        btn_prev : $("#btn_prev"),
+        btn_next : $("#btn_next"),
+        paging : $(".flicking_con a"),
+        counter : function (e) {
+            $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+        }
+    });
+    $(".main_image").bind("mousedown", function() {
+        $dragBln = false;
+    })
+    $(".main_image").bind("dragstart", function() {
+        $dragBln = true;
+    })
+    $(".main_image a").click(function() {
+        if($dragBln) {
+            return false;
+        }
+    })
+    timer = setInterval(function() { $("#btn_next").click();}, 3000);
+    $(".main_visual").hover(function() {
+        clearInterval(timer);
+    }, function() {
+        timer = setInterval(function() { $("#btn_next").click();}, 3000);
+    })
+    $(".main_image").bind("touchstart", function() {
+        clearInterval(timer);
+    }).bind("touchend", function() {
+        timer = setInterval(function() { $("#btn_next").click();}, 3000);
+    })
+});
+</script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230797347565350544003060002 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1316343854)</script>
+</head>
+<body>
+<DIV class="all" style="position: relative;">
+<div class="main_visual">
+<div class="flicking_con">
+<div class="flicking_inner" style="display:none;">
+<a href="#">1</a>
+<a href="#">2</a>
+<a href="#">3</a>
+<a href="#">4</a>
+<a href="#">5</a>
+</div>
+</div>
+<div class="main_image" style="min-height:996px;">
+<ul>                    
+<li><img src="images/shouyeb2.jpg" style="min-height:996px;"></li>
+
+</ul>
+<a href="javascript:;" id="btn_prev" style="display:none!important;"></a>
+<a href="javascript:;" id="btn_next" style="display:none!important;"></a>
+</div>
+</div>
+<DIV class="logo-center">
+<DIV class="logo"><a href="http://www.lumei.edu.cn" target="_blank"><img src="images/logo.png" style="width:254px;height:89px;"></a></DIV>
+<DIV class="daohang">
+<!--#begineditable clone="0" namechanged="0" order="0" ispublic="0" tagname="网站导航" viewid="124990" contentviewid="" contype="" stylesysid="" layout="" action="" name="网站导航"-->    <DIV class="biaoti"><a href="g_y.htm" class="c124990" title="关 于" style="border-right:#767370 1px solid;border-bottom: #767370 1px solid;"><span style="display:block;font-size:17px;font-family:微软雅黑;text-align:center;padding-top:11px;padding-bottom:11px;">关 于</span></a>
+    </div>
+    <DIV class="biaoti"><a href="x_w.htm" class="c124990" title="新 闻" style="border-right:#767370 1px solid;border-bottom: #767370 1px solid;"><span style="display:block;font-size:17px;font-family:微软雅黑;text-align:center;padding-top:11px;padding-bottom:11px;">新 闻</span></a>
+    </div>
+    <DIV class="biaoti"><a href="j_y.htm" class="c124990" title="教 育" style="border-right:#767370 1px solid;border-bottom: #767370 1px solid;"><span style="display:block;font-size:17px;font-family:微软雅黑;text-align:center;padding-top:11px;padding-bottom:11px;">教 育</span></a>
+    </div>
+    <DIV class="biaoti"><a href="http://lmky.hsjsj.cn/" class="c124990" target="_blank" title="科 研" style="border-right:#767370 1px solid;border-bottom: #767370 1px solid;"><span style="display:block;font-size:17px;font-family:微软雅黑;text-align:center;padding-top:11px;padding-bottom:11px;">科 研</span></a>
+    </div>
+    <DIV class="biaoti"><a href="z_s.htm" class="c124990" title="招 生" style="border-right:#767370 1px solid;"><span style="display:block;font-size:17px;font-family:微软雅黑;text-align:center;padding-top:11px;padding-bottom:11px;">招 生</span></a>
+    </div>
+    <DIV class="biaoti"><a href="x_t.htm" class="c124990" title="学 团" style="border-right:#767370 1px solid;"><span style="display:block;font-size:17px;font-family:微软雅黑;text-align:center;padding-top:11px;padding-bottom:11px;">学 团</span></a>
+    </div>
+    <DIV class="biaoti"><a href="f_w.htm" class="c124990" title="服 务" style="border-right:#767370 1px solid;"><span style="display:block;font-size:17px;font-family:微软雅黑;text-align:center;padding-top:11px;padding-bottom:11px;">服 务</span></a>
+    </div>
+    <DIV class="biaoti"><a href="s_j.htm" class="c124990" title="事 件" style="border-right:#767370 1px solid;"><span style="display:block;font-size:17px;font-family:微软雅黑;text-align:center;padding-top:11px;padding-bottom:11px;">事 件</span></a>
+    </div>
+<!--#endeditable--></DIV>
+<DIV class="pingtairukou">
+<A href="https://oa.lumei.edu.cn:8443" referrerpolicy="no-referrer" style="border-bottom: #767370 1px solid;"><SPAN class="xydlpt">OA</SPAN></A>
+<A href="http://mail.lumei.edu.cn/"><SPAN class="xydlpt">邮箱</SPAN></A>
+</DIV>
+<DIV class="search">
+<div style="width:190px;height:44px;"><!--#begineditable name="全文检索" action="webber.wbst.com.SpaceStaticAction" layout="/system/_component/news/tplnewslucenesearch.jsp" tpltype="1" contype="" clone="" viewid="124991" contentviewid="" tagname="全文检索"--><script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode124991').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkeyword124991").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkeyword124991").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkeyword124991").value = base64.encode(document.getElementById("lucenenewssearchkeyword124991").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode124991"));
+        return true;
+    } 
+</script>
+<form action="ssjgy.jsp?wbtreeid=1001" method="post" id="au1a" name="au1a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkeyword124991" name="lucenenewssearchkeyword" value=""><input type="hidden" id="_lucenesearchtype124991" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope124991" name="searchScope" value="0">
+ <div style="padding:0px;margin-left:10px;margin-top:15px;float:left;background:url(images/searchtubiao2.png) no-repeat;">
+<input type="text" name="showkeycode" id="showkeycode124991" autocomplete="off" required="true" value="" onblur="if(this.value==''){this.style.color='#fff';this.style.background='url(images/searchtubiao.png) no-repeat';}" onfocus="if(true) { this.value='';this.style.background='url(images/searchtubiao1.png) no-repeat'; }" style="width:128px;height:26px;line-height:26px;font-size:14px;border:0;outline: none;background:url(images/searchtubiao.png) no-repeat;margin-left:5px;color:#fff;float:left;">
+<input type="image" src="images/indexsearch.png" align="absmiddle" style="cursor: hand;height:26px;width:26px;outline: none;float:left;">
+ </div>
+ <div style="clear:both;"></div>
+</form><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+<!--#endeditable--></div>
+<div style="width:190px;height:44px;"><!--#begineditable name="浮动图片" action="webber.wbst.com.image.ColumnImage" layout="/system/_component/columnimage/floatimage.jsp" tpltype="0" contype="image" clone="" viewid="128943" contentviewid="" tagname="浮动图片"-->   
+   
+   
+   
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script> 
+    
+<DIV id="adu2" width="159" style="Z-index:10;LEFT: 0px; POSITION: absolute; TOP: 0px"> 
+<iframe frameborder="0" src="about:blank" style="position:absolute;Z-index:-1;width:100%;height:100%;top:0;left:0;scrolling:no;filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0)"></iframe>
+    <TABLE cellspacing="0" cellpadding="0" border="0">   
+    <TBODY>   
+   
+        <TR align="center">   
+            <TD align="left"><A href="info/1193/6558.htm" target="_blank" title="" onclick="_addDynClicks('wbimage',1316343854,20790)"><img src="images/xsgg.jpg" width="300" height="130" border="0"></A></TD> 
+        </TR>
+   
+        <TR>   
+            <TD align="right" style="padding-top:1px"><table border="0" cellpadding="10" cellspacing="0"><tr><td style="background-color:#f5f5f5;padding:1px"><a href="javascript:showimagecloseu2();" class="closestyle128943">关闭</a></td></tr></table></TD> 
+        </TR>   
+   
+   
+    </TBODY> 
+    </TABLE> 
+</DIV>
+  
+<SCRIPT>   
+function showimagecloseu2()   
+{   
+    var obju2=document.getElementById("adu2");   
+    obju2.style.display = 'none';   
+};   
+//水平             //上下    
+   
+var xu2 = 0;yu2 = 0;   
+   
+var xinu2 = true; yinu2 = true;   
+var stepu2 = 1;   
+   
+var delayu2 = 88;   
+ 
+var obju2=document.getElementById("adu2");
+var bdyu2 = document.body;  
+    if (document.compatMode && document.compatMode != "BackCompat")
+        bdyu2 = document.documentElement;
+    else
+        bdyu2 = document.body;
+function floatADu2()
+{
+    var bdy_scrollTop = document.body.scrollTop | document.documentElement.scrollTop;
+    var Lu2=Tu2=0;   
+    var Ru2= bdyu2.clientWidth-obju2.offsetWidth;  
+    var Bu2 = bdyu2.clientHeight-obju2.offsetHeight; 
+    obju2.style.left = xu2 + bdyu2.scrollLeft+"px";   
+    obju2.style.top = yu2 + bdy_scrollTop+"px";   
+    xu2 = xu2 + stepu2*(xinu2?1:-1);    
+    if(xu2 < Lu2) 
+    { 
+        xinu2 = true;
+        xu2 = Lu2;
+    }  
+    if(xu2 > Ru2)
+    { 
+        xinu2 = false; 
+        xu2 = Ru2;
+    }  
+    yu2 = yu2 + stepu2*(yinu2?1:-1);    
+    if(yu2 < Tu2) 
+    { 
+        yinu2 = true; 
+        yu2 = Tu2; 
+    }
+    if(yu2 > Bu2) 
+    { 
+        yinu2 = false; 
+        yu2 = Bu2; 
+    }
+} 
+var itlu2;
+if(window.navigator.userAgent.indexOf("MSIE")>=1)
+{
+    window.attachEvent('onload', adftu2);
+}
+else
+{
+    window.addEventListener('load',adftu2, false);
+}
+function adftu2()
+{
+    itlu2 = setInterval("floatADu2()", delayu2);   
+}
+    obju2.onmouseover=function(){clearInterval(itlu2);};   
+    obju2.onmouseout=function(){itlu2=setInterval("floatADu2()", delayu2)};      
+   
+</SCRIPT><!--#endeditable--></div></DIV>
+<DIV style="clear: both"></DIV></DIV>
+<div class="djxcxx">
+
+<div style="float:right;width:388px;height:38px;background:url(images/indexsearchbackground.png);border-bottom:1px solid #767370;-moz-border-radius: 4px 4px 0px 0px;-webkit-border-radius:4px 4px 0px 0px;border-radius:4px 4px 0px 0px;"><span style="display:block;font-size:17px;font-family:微软雅黑;color:#767370;margin-left:14px;line-height:38px;">重要信息</span></div>
+<div style="margin-left:792px;margin-top:38px;width:388px;height:129px;margin-right:38px;background:url(images/indexsearchbackground.png);-moz-border-radius: 0px 0px 4px 4px;-webkit-border-radius:0px 0px 4px 4px;border-radius:0px 0px 4px 4px;"><!--#begineditable name="重要信息" action="webber.wbst.com.news.ColumnNews" layout="/system/_component/news/list/tpltitlelist.jsp" tpltype="1" contype="news" clone="" viewid="125012" contentviewid="" tagname="重要信息"--><ul style="list-style-type:none;padding-top:7px;margin-left:14px;">
+<li><a href="info/1191/6555.htm" class="c125012" target="_blank" title="省委第三巡视组巡视鲁迅美术学院党委工作动员会召开" style="display:block;"><span style="display:block;">省委第三巡视组巡视鲁迅美术学院党委工作动员会召开</span></a></li>
+<li><a href="info/1191/6529.htm" class="c125012" target="_blank" title="关于公布鲁迅美术学院2024年面向社会公开招聘工作人员总成绩和体检名单的通知" style="display:block;"><span style="display:block;">关于公布鲁迅美术学院2024年面向社会公开招聘工作人员总</span></a></li>
+<li><a href="info/1191/6533.htm" class="c125012" target="_blank" title="逐梦扬帆 乘风破浪——我校举行2024届学生毕业典礼暨学位授予仪式" style="display:block;"><span style="display:block;">逐梦扬帆 乘风破浪——我校举行2024届学生毕业典礼暨学</span></a></li>
+<li><a href="info/1191/6525.htm" class="c125012" target="_blank" title="鲁迅美术学院2024年面向社会公开招聘工作人员面试工作通知" style="display:block;"><span style="display:block;">鲁迅美术学院2024年面向社会公开招聘工作人员面试工作通</span></a></li>
+<li><a href="info/1191/6492.htm" class="c125012" target="_blank" title="关于2024年鲁迅美术学院公开招聘工作人员资格复审相关工作安排的通知" style="display:block;"><span style="display:block;">关于2024年鲁迅美术学院公开招聘工作人员资格复审相关工</span></a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u3_6555','dynclicks_u3_6529','dynclicks_u3_6533','dynclicks_u3_6525','dynclicks_u3_6492'],[6555,6529,6533,6525,6492],"wbnews", 1316343854)</script>
+<!--#endeditable--></div>
+
+</div>
+<div class="xxlb">
+<div class="xxlb1" style="margin-right:8px;-moz-border-radius: 4px 0px 0px 0px;-webkit-border-radius: 4px 0px 0px 0px;border-radius:4px 0px 0px 0px;">
+<div style="width:388px;height:40px;border-bottom:1px solid #6c6761;"><span style="display:block;font-size:18px;font-family:微软雅黑;color:#fff;width:316px;height:18px;line-height:18px;float:left;margin-left:26px;margin-top:12px;">专题</span><a href="x_w/ztbd.htm" target="_blank"><img src="images/gengduo.png" style="margin-top:14px;"></a></div>
+<div style="width:388px;clear:both;"><!--#begineditable name="专题" action="webber.wbst.com.news.ColumnNews" layout="/system/_component/news/list/tpltitlelist.jsp" tpltype="1" contype="news" clone="" viewid="125008" contentviewid="" tagname="专题"--><ul style="list-type-style:none;margin-top:19px;">
+<li><a href="https://www.lumei.edu.cn/wlaqxc/" class="c125008" target="_blank" title="国家网络安全宣传周专题网站" style="display:block;"><span style="display:block;margin-left:30px;">国家网络安全宣传周专题网站</span></a></li>
+<li><a href="info/1192/5524.htm" class="c125008" target="_blank" title="鲁迅美术学院预决算公开" style="display:block;"><span style="display:block;margin-left:30px;">鲁迅美术学院预决算公开</span></a></li>
+<li><a href="https://www.lumei.edu.cn/djxx/" class="c125008" target="_blank" title="党纪学习教育专题" style="display:block;"><span style="display:block;margin-left:30px;">党纪学习教育专题</span></a></li>
+<li><a href="info/1192/6418.htm" class="c125008" target="_blank" title="向陆国斌同志学习 做雷锋精神坚定践行者" style="display:block;"><span style="display:block;margin-left:30px;">向陆国斌同志学习 做雷锋精神坚定践行者</span></a></li>
+<li><a href="info/1192/6392.htm" class="c125008" target="_blank" title="2023届毕业生就业质量年度报告" style="display:block;"><span style="display:block;margin-left:30px;">2023届毕业生就业质量年度报告</span></a></li>
+</ul>
+<script>_showDynClickBatch(['dynclicks_u4_3468','dynclicks_u4_5524','dynclicks_u4_6469','dynclicks_u4_6418','dynclicks_u4_6392'],[3468,5524,6469,6418,6392],"wbnews", 1316343854)</script>
+<!--#endeditable--></div>
+</div>
+<div class="xxlb1" style="margin-right:8px;">
+<div style="width:388px;height:40px;"><span style="display:block;font-size:18px;font-family:微软雅黑;color:#fff;width:316px;height:18px;line-height:18px;float:left;margin-left:26px;margin-top:12px;">展览</span><a href="x_w/zlzx.htm" target="_blank"><img src="images/gengduo.png" style="margin-top:14px;"></a></div>
+<div style="width:388px;clear:both;"><!--#begineditable name="展览" action="webber.wbst.com.news.ColumnNews" layout="/system/_component/news/list/tpltitlelist.jsp" tpltype="1" contype="news" clone="" viewid="125049" contentviewid="" tagname="展览"--><div id="fsD1" class="focus">  
+    <div id="D1pic1" class="fPic"> 
+            <div class="fcon" style="display: none;">
+            <a target="_blank" href="info/1198/6610.htm"><img src="/__local/A/26/5A/E3FD8F0190D6152004D047EA6B5_80B31DC0_1DF10.jpg"></a>
+            <span class="shadow" style="display:none;"><a target="_blank" href="info/1198/6610.htm">学校举办“翰墨书盛世 丹青谱华章”...</a></span>
+        </div>   
+        <div class="fcon" style="display: none;">
+            <a target="_blank" href="info/1198/6566.htm"><img src="/__local/9/EB/0F/0CC9CDCF1BE61EE216343A3192C_792513CE_C8B49.jpg"></a>
+            <span class="shadow" style="display:none;"><a target="_blank" href="info/1198/6566.htm">国家艺术基金2024年度艺术人才培养...</a></span>
+        </div>   
+        <div class="fcon" style="display: none;">
+            <a target="_blank" href="info/1198/6508.htm"><img src="/__local/3/C3/A7/6B75311444380EF75DF5B01997C_50817B64_7B34.jpg"></a>
+            <span class="shadow" style="display:none;"><a target="_blank" href="info/1198/6508.htm">鲁迅美术学院2024届本科生毕业作品...</a></span>
+        </div>   
+        <div class="fcon" style="display: none;">
+            <a target="_blank" href="info/1198/6488.htm"><img src="/__local/3/A1/E2/A4D0563A54C7A4606F6C46A9500_170E9F7D_8842ED.gif"></a>
+            <span class="shadow" style="display:none;"><a target="_blank" href="info/1198/6488.htm">​鲁迅美术学院2024届研究生毕业作...</a></span>
+        </div>   
+    </div>
+    <div class="fbg">  
+    <div class="D1fBt" id="D1fBt" style="display:none;">  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class="">1</a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class="">2</a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class="current">3</a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class="">4</a>  
+    </div>  
+    </div>  
+    <span class="prev"></span>   
+    <span class="next"></span>    
+</div>  
+<script type="text/javascript">
+    Qfast.add('widgets', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+    Qfast(false, 'widgets', function () {
+        K.tabs({
+            id: 'fsD1',   //焦点图包裹id  
+            conId: "D1pic1",  //** 大图域包裹id  
+            tabId:"D1fBt",  
+            tabTn:"a",
+            conCn: '.fcon', //** 大图域配置class       
+            auto: 1,   //自动播放 1或0
+            effect: 'fade',   //效果配置
+            eType: 'click', //** 鼠标事件
+            pageBt:true,//是否有按钮切换页码
+            bns: ['.prev', '.next'],//** 前后按钮配置class                          
+            interval: 3000  //** 停顿时间  
+        }) 
+    })  
+</script><script>_showDynClickBatch(['dynclicks_u5_6610','dynclicks_u5_6566','dynclicks_u5_6508','dynclicks_u5_6488'],[6610,6566,6508,6488],"wbnews", 1316343854)</script>
+<!--#endeditable--></div>
+</div>
+<div class="xxlb1" style="-moz-border-radius: 0px 4px 0px 0px;-webkit-border-radius: 0px 4px 0px 0px;border-radius:0px 4px 0px 0px;">
+<div style="width:388px;height:40px;border-bottom:1px solid #6c6761;"><span style="display:block;font-size:18px;font-family:微软雅黑;color:#fff;width:316px;height:18px;line-height:18px;float:left;margin-left:26px;margin-top:12px;">新闻</span><a href="x_w.htm" target="_blank"><img src="images/gengduo.png" style="margin-top:14px;"></a></div>
+<div style="width:388px;clear:both;"><!--#begineditable name="新闻" action="webber.wbst.com.news.ColumnNews" layout="/system/_component/news/list/tpltitlelist.jsp" tpltype="1" contype="news" clone="" viewid="125010" contentviewid="" tagname="新闻"--><ul style="list-type-style:none;margin-top:19px;">
+<li><a href="info/1195/6618.htm" class="c125010" target="_blank" title="鲁迅美术学院团队创作《追梦》荣获第四届“中国美术奖”评委会特别奖" style="display:block;"><span style="display:block;margin-left:30px;">鲁迅美术学院团队创作《追梦》荣获第四届“...</span></a></li>
+<li><a href="info/1195/6617.htm" class="c125010" target="_blank" title="新质引擎·智绘未来——2024出行设计产教融合创新论坛在鲁迅美术学院成功举办" style="display:block;"><span style="display:block;margin-left:30px;">新质引擎·智绘未来——2024出行设计产教融合...</span></a></li>
+<li><a href="info/1195/6616.htm" class="c125010" target="_blank" title="人工智能与设计教育融合创新——鲁美-特赞设计人工智能联合实验室成立" style="display:block;"><span style="display:block;margin-left:30px;">人工智能与设计教育融合创新——鲁美-特赞设...</span></a></li>
+<li><a href="info/1195/6614.htm" class="c125010" target="_blank" title="辉煌时代 开放之门——庆祝改革开放46周年动画短片正式发布" style="display:block;"><span style="display:block;margin-left:30px;">辉煌时代 开放之门——庆祝改革开放46周年动...</span></a></li>
+<li><a href="info/1196/6615.htm" class="c125010" target="_blank" title="国之大者——中国当代大型主题性雕塑创作手稿巡展暨学术研讨会在四川美术学院开幕" style="display:block;"><span style="display:block;margin-left:30px;">国之大者——中国当代大型主题性雕塑创作手...</span></a></li>
+</ul>
+<script>_showDynClickBatch(['dynclicks_u6_6618','dynclicks_u6_6617','dynclicks_u6_6616','dynclicks_u6_6614','dynclicks_u6_6615'],[6618,6617,6616,6614,6615],"wbnews", 1316343854)</script>
+<!--#endeditable--></div>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="xiaoqulj">
+<div class="xqlj1" style="margin-right:8px;"><a href="http://www.lumei.edu.cn/dlxq/index.htm" target="_blank"><span style="display:block;font-size:12px;font-family:微软雅黑;color:#fff;height:32px;line-height:32px;text-align:center;">大连校区</span></a></div>
+<div class="xqlj1" style="margin-right:8px;"><a href="http://www.lumei.edu.cn/gjysjy/" target="_blank"><span style="display:block;font-size:12px;font-family:微软雅黑;color:#fff;height:32px;line-height:32px;text-align:center;">国际交流</span></a></div>
+<div class="xqlj1" style="margin-right:8px;"><a href="http://tsg.lumei.edu.cn/" target="_blank"><span style="display:block;font-size:12px;font-family:微软雅黑;color:#fff;height:32px;line-height:32px;text-align:center;">图书馆</span></a></div> 
+<div class="xqlj1" style="margin-right:8px;"><a href="index/ysgz.htm" target="_blank"><span style="display:block;font-size:12px;font-family:微软雅黑;color:#fff;height:32px;line-height:32px;text-align:center;">艺术工作</span></a></div>
+<div class="xqlj1" style="margin-right:8px;"><a href="https://ehall.lumei.edu.cn/"><span style="display:block;font-size:12px;font-family:微软雅黑;color:#fff;height:32px;line-height:32px;text-align:center;">办事服务大厅</span></a></div>
+<div class="xqlj1"><a href="https://cw.lumei.edu.cn/WFManager/getcode.jsp" target="_blank"><span style="display:block;font-size:12px;font-family:微软雅黑;color:#fff;height:32px;line-height:32px;text-align:center;">财务系统</span></a></div>
+
+
+<div style="clear:both;"></div>
+</div>
+<div class="footbottom">
+<div class="footyqlj">鲁迅美术学院友情链接</div>
+<!--#begineditable name="鲁迅美术学院友情链接列表" action="webber.wbst.com.url.ColumnUrl" layout="/system/_component/columnurl/tpllinklist.jsp" tpltype="1" contype="url" clone="" viewid="126119" contentviewid="" tagname="鲁迅美术学院友情链接列表"--><script language="javascript" src="/system/resource/js/openlink.js"></script>    <div class="foot1"><a href="http://www.lumei.edu.cn/x_w/jjlm.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1316343854, 15488)"><span class="foot1span">聚焦鲁美</span></a></div>
+    <div class="foot1"><a href="http://www.lumei.edu.cn/jjjcw" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1316343854, 15489)"><span class="foot1span">纪委工作</span></a></div>
+    <div class="foot1"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1316343854, 15490)"><span class="foot1span">教工之家</span></a></div>
+    <div class="foot1"><a href="https://www.lumei.edu.cn/xxgk/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1316343854, 15491)"><span class="foot1span">信息公开</span></a></div>
+    <div class="foot1"><a href="https://dag.lumei.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1316343854, 15492)"><span class="foot1span">档案管理</span></a></div>
+    <div class="foot1"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1316343854, 15493)"><span class="foot1span">联系我们</span></a></div>
+<!--#endeditable-->
+<div class="footbeian"><A href="http://beian.miit.gov.cn"><span class="foot1span">备案序号：辽ICP备17006107号-2&nbsp;Copyright&nbsp;By&nbsp;Lumei.edu.cn.2016&nbsp;All&nbsp;Rights&nbsp;Reserved</span></A></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+
+</body>
+</html>

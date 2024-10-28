@@ -1,0 +1,1022 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+
+
+
+
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="dfiles/21819/templates2014/css/cbe90c813e166b817d9650e066955e98_style.css" rel="stylesheet" type="text/css">
+
+    <title>安徽师范大学皖江学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="安徽师范大学皖江学院">
+<META Name="keywords" Content="安徽师范大学皖江学院,首页" />
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307678475d505a5742000300034451 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1544449841)</script>
+</head>
+
+<body>
+
+    <!--顶部开始-->
+    <div class="top">
+        <div class="top-content">
+            <span class="fl fz14">
+<script language="javascript">
+function dosuba242030a()
+{
+    try{
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf("msie 8")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE8
+        }else if(ua.toLowerCase().indexOf("rv:")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE11+
+        }else{
+            if (document.all) 
+            {
+                window.external.addFavorite(document.location.href, document.title);
+            }else if(window.sidebar)
+            {
+                window.sidebar.addPanel( document.title, document.location.href, "");//firefox
+            }
+            else
+            {
+                alert(hotKeysa242030a());
+            }
+        }
+
+    }
+    catch (e){alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");}
+}
+function hotKeysa242030a() 
+{
+    var ua = navigator.userAgent.toLowerCase(); 
+    var str = "";    
+    var isWebkit = (ua.indexOf('webkit') != - 1); 
+    var isMac = (ua.indexOf('mac') != - 1);     
+    if (ua.indexOf('konqueror') != - 1) 
+    {  
+        str = 'CTRL + B'; // Konqueror   
+    } 
+    else if (window.home || isWebkit || isMac) 
+    {        
+        str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac   
+    }
+    return ((str) ? '无法自动添加到收藏夹，请使用' + str + '手动添加' : str);
+}
+function setHomepagea242030a()
+{
+    var url = document.location.href;
+    if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+        document.body.setHomePage(url);
+    }
+    else if (window.sidebar)
+    {
+        if(window.netscape)
+        {
+             try{
+                  netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch (e){
+                   alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+             }
+        }
+    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage',url);
+    }
+    else
+    {
+        alert("浏览器不支持自动设为首页，请手动设置");
+    }
+}
+</script>
+
+
+ 
+<a href="https://www.ahnu.edu.cn/" target="_blank">师大首页</a> | 
+<a href="javascript:setHomepagea242030a()">设为主页</a> | 
+<a onclick="javascript:dosuba242030a();" href="#">加入收藏</a> | 
+<a href="javascript:;">ENGLISH</a>
+</span>
+         
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1"></div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError" style="position: relative;margin-top: 7px;"><span class="fr">
+            <input type="text" class="s_text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+              
+            <input type="submit" name="submit" class="s_submit" value="" v-on:click="onSubmit()"/></span>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1544449841";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://openapp.ahnu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+    </div>
+    <!--顶部结束-->
+
+
+    <!--banner和导航开始-->
+    <div class="banner">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="https://www.uwh.edu.cn" title="皖江学院主站">
+ <div class="logo needpng"></div>
+</a>
+      <div class="nav">
+            <ul>
+    
+
+
+        <li>
+                <a href="index.htm" title="网站首页">网站首页</a>
+
+        </li>
+
+
+
+        <li class="nav-box">
+                <a href="xygk.htm" title="学院概况">学院概况</a>
+                    <div class="sed-nav" style="display:none">
+                        <ul>
+
+
+                                <li><a href="info/1011/1031.htm" title="现任领导">现任领导</a></li>
+
+
+                                <li><a href="info/1011/1017.htm" title="学院简介">学院简介</a></li>
+                        </ul>
+                    </div>
+
+        </li>
+
+
+
+        <li>
+                <a href="jgsz1.htm" title="机构设置">机构设置</a>
+
+        </li>
+
+
+
+        <li>
+                <a href="xbsz1.htm" title="系部设置">系部设置</a>
+
+        </li>
+
+
+
+        <li class="nav-box">
+                <a href="szdw1.htm" title="师资队伍">师资队伍</a>
+                    <div class="sed-nav" style="display:none">
+                        <ul>
+
+
+                                <li><a href="szdw1/tpjs1.htm" title="特聘教授">特聘教授</a></li>
+
+
+                                <li><a href="szdw1/wjzj1.htm" title="外籍专家">外籍专家</a></li>
+
+
+                                <li><a href="szdw1/sjyxjs1.htm" title="省级优秀教师">省级优秀教师</a></li>
+
+
+                                <li><a href="szdw1/sjjtxx.htm" title="省级教坛新秀">省级教坛新秀</a></li>
+
+
+                                <li><a href="szdw1/sjyxqnrcjj1.htm" title="省级优秀青年人才基金">省级优秀青年人才基金</a></li>
+                        </ul>
+                    </div>
+
+        </li>
+
+
+
+        <li>
+                <a href="http://wjdj.ahnu.edu.cn" target="_blank" title="党建工作">党建工作</a>
+
+        </li>
+
+
+
+        <li class="nav-box">
+                <a href="http://wjjwc.ahnu.edu.cn/" target="_blank" title="教学科研">教学科研</a>
+                    <div class="sed-nav" style="display:none">
+                        <ul>
+
+
+                                <li><a href="http://wjjwc.ahnu.edu.cn/" title="教务处">教务处</a></li>
+
+
+                                <li><a href="http://wjkyc.ahnu.edu.cn" title="科研处">科研处</a></li>
+                        </ul>
+                    </div>
+
+        </li>
+
+
+
+        <li>
+                <a href="http://wjxsc.ahnu.edu.cn/" target="_blank" title="学生工作">学生工作</a>
+
+        </li>
+
+
+
+        <li>
+                <a href="https://www.uwh.edu.cn/zsw" target="_blank" title="招生工作">招生工作</a>
+
+        </li>
+
+
+
+        <li>
+                <a href="http://wjjy.ahnu.edu.cn/" target="_blank" title="就业创业">就业创业</a>
+
+        </li>
+
+
+
+        <li>
+                <a href="dwjl1.htm" title="对外交流">对外交流</a>
+
+        </li>
+</ul>
+        </div>
+    </div>
+   
+    <div style="width:960px;margin:0 auto;">
+     <a href="https://www.uwh.edu.cn"><style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u4_{
+    width:960px;
+    height:232px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u4_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u4_ ul{
+    display:none;
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u4_ ul li{
+    display:none;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u4_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,4000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,4000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,4000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tr><td><div id="flashBoxu_u4_"><a href="https://www.uwh.edu.cn" target="_blank"><img src="images/banner-wjfuben.png" border="0" width="960" height="232" /></a></div></td></tr></table><SCRIPT language="JavaScript">new flashBoxCtrl("flashBoxu_u4_");</SCRIPT></a> </div>
+    <!--banner和导航结束-->
+
+
+
+
+    <!--block1 图片新闻 皖江新闻 通知公告-->
+    <div class="block1">
+        <div class="fl block1-l">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>
+<div class="FocusPic">
+    <div class="content" id="main-slide">
+        <div class="changeDiv">
+            <a href="http://www.news.cn/politics/leaders/20240718/a41ada3016874e358d5064bba05eba98/c.html" title="中国共产党第二十届中央委员会第三次全体会议公报" style="font-weight:bold;">
+            <img src="/__local/A/CB/A8/B1EA8687C70219F83F8F716F584_A3CA66E0_22A1B.jpg" width="310" height="207" />
+            </a>
+            <a href="info/1032/11458.htm" title="党委中心组举行第三期党纪学习教育专题读书班">
+            <img src="/__local/0/7E/52/97468D155EFF1B2C3F94068F5A6_65AE6ECE_6D8D3.jpg" width="310" height="207" />
+            </a>
+            <a href="info/1032/11428.htm" title="致2024届毕业生的一封信">
+            <img src="/__local/D/6B/C3/75D47E24676968C17051B358C4E_774DC90A_336CC.jpg" width="310" height="207" />
+            </a>
+            <a href="https://www.ahnu.edu.cn/info/1104/88500.htm" title="校党委书记张立驰来院调研">
+            <img src="/__local/E/94/0B/6E63BD17A7210E4541DC7D7F05E_7BDC5D0D_56A35.jpg" width="310" height="207" />
+            </a>
+            <a href="info/1032/11268.htm" title="学院举行2024年“五四”表彰大会暨2022-2023学年学业颁奖典礼">
+            <img src="/__local/F/92/FF/4EE6D0D66E2C2D6D45855CE93A1_85039E59_4E2B3.jpg" width="310" height="207" />
+            </a>
+          
+
+        </div>
+    </div>
+</div><script>_showDynClickBatch(['dynclicks_u5_11488','dynclicks_u5_11458','dynclicks_u5_11428','dynclicks_u5_11368','dynclicks_u5_11268'],[11488,11458,11428,11368,11268],"wbnews", 1544449841)</script>
+
+        </div>
+
+        <div class="fl block1-c">
+            <div class="title">
+    <span class="fl fz14 fzb">皖江新闻</span>
+    <span class="fr"><a href="index/wjxw.htm" class="more fzb fz16">></a></span>
+</div>
+
+
+<div class="content new sub1">
+    <ul>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="http://www.news.cn/politics/leaders/20240718/a41ada3016874e358d5064bba05eba98/c.html" title="中国共产党第二十届中央委员会第三次全体会议公报" time="2024-07-18" style="font-weight:bold;">中国共产党第二十届中央委员会第三次全体会议公报</a>
+        
+        </span></li>        
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1032/11498.htm" title="党委中心组传达学习党的二十届三中全会精神" time="2024-08-01">党委中心组传达学习党的二十届三中全会精神</a>
+        
+        </span></li>        
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1032/11508.htm" title="院领导左方敏深入二级系部调研毕业生就业工作" time="2024-08-01">院领导左方敏深入二级系部调研毕业生就业工作</a>
+        
+        </span></li>        
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1032/11478.htm" title="院领导左方敏慰问暑期社会实践重点团队" time="2024-07-16">院领导左方敏慰问暑期社会实践重点团队</a>
+        
+        </span></li>        
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1032/11468.htm" title="院长李子华带队开展访企拓岗专项行动" time="2024-07-03">院长李子华带队开展访企拓岗专项行动</a>
+        
+        </span></li>        
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1032/11458.htm" title="党委中心组举行第三期党纪学习教育专题读书班" time="2024-06-27">党委中心组举行第三期党纪学习教育专题读书班</a>
+        
+        </span></li>        
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1032/11448.htm" title="院领导为毕业生党员讲授党课" time="2024-06-19">院领导为毕业生党员讲授党课</a>
+        
+        </span></li>        
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1032/11438.htm" title="“一站式”学生社区举办2024届毕业生代表座谈会" time="2024-06-17">“一站式”学生社区举办2024届毕业生代表座谈会</a>
+        
+        </span></li>        
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1032/11428.htm" title="致2024届毕业生的一封信" time="2024-06-14">致2024届毕业生的一封信</a>
+        
+        </span></li>        
+      
+    </ul>
+</div>
+<script>_showDynClickBatch(['dynclicks_u6_11488','dynclicks_u6_11498','dynclicks_u6_11508','dynclicks_u6_11478','dynclicks_u6_11468','dynclicks_u6_11458','dynclicks_u6_11448','dynclicks_u6_11438','dynclicks_u6_11428'],[11488,11498,11508,11478,11468,11458,11448,11438,11428],"wbnews", 1544449841)</script>
+
+        </div>
+
+        <div class="fr block1-r">
+            <div class="title">
+   <span class="fl fz14 fzb"> 通知公告</span>
+    <span class="fr"><a href="index/tzgg.htm" class="more fzb fz16">></a></span>
+</div>
+
+
+<div class="content new sub2">
+    <ul>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="https://wjrsc.ahnu.edu.cn/info/1005/1754.htm" title="芜湖学院（筹）2023年实验人..." time="2023-12-08">芜湖学院（筹）2023年实验人...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="https://wjhbc.ahnu.edu.cn/info/1006/4545.htm" title="安徽师范大学皖江学院江北校..." time="2023-12-07">安徽师范大学皖江学院江北校...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="https://wjrsc.ahnu.edu.cn/info/1005/1744.htm" title="芜湖学院（筹）微电子系2023..." time="2023-12-06">芜湖学院（筹）微电子系2023...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="https://wjrsc.ahnu.edu.cn/info/1005/1734.htm" title="芜湖学院（筹）2023年专任教..." time="2023-12-06">芜湖学院（筹）2023年专任教...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="https://wjrsc.ahnu.edu.cn/info/1005/1724.htm" title="芜湖学院（筹）2023年高层次..." time="2023-12-06">芜湖学院（筹）2023年高层次...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="https://wjrsc.ahnu.edu.cn/info/1005/1714.htm" title="芜湖学院（筹）2023年实验人..." time="2023-11-15">芜湖学院（筹）2023年实验人...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="https://wjrsc.ahnu.edu.cn/info/1005/1654.htm" title="芜湖学院（筹）2023年财会人..." time="2023-10-25">芜湖学院（筹）2023年财会人...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="https://wjhbc.ahnu.edu.cn/info/1006/3995.htm" title="安徽师范大学皖江学院化学实..." time="2023-10-24">安徽师范大学皖江学院化学实...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="https://wjhbc.ahnu.edu.cn/info/1006/4005.htm" title="安徽师范大学皖江学院江北校..." time="2023-10-24">安徽师范大学皖江学院江北校...</a></span></li>
+      
+    </ul>
+</div>
+<script>_showDynClickBatch(['dynclicks_u7_10358','dynclicks_u7_10328','dynclicks_u7_10298','dynclicks_u7_10288','dynclicks_u7_10278','dynclicks_u7_10078','dynclicks_u7_9808','dynclicks_u7_9758','dynclicks_u7_9748'],[10358,10328,10298,10288,10278,10078,9808,9758,9748],"wbnews", 1544449841)</script>
+
+        </div>
+    </div>
+    <!--block1 图片新闻 皖江新闻 通知公告-->
+
+   <div>                      
+
+
+        <div class="pic1">
+                        <a href="https://www.uwh.edu.cn" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 52991)" target="_blank">
+                            <img src="images/20fuben.jpg">
+                        </a>  
+        </div>
+
+</div>
+
+    <!--blcok2 报考皖江 公共服务 影像皖江 校园动态 快速通道-->
+    <div class="block2">
+        <!--报考皖江 公共服务-->
+        <div class="fl block2-l">
+            <div class="block2-l-top">
+                <div class="title">
+    <span class="fl fz14 fzb">报考皖江</span>
+    <span class="fr"><a href="https://www.uwh.edu.cn/zsw" class="more fzb fz16">></a></span>
+</div>
+
+
+<div class="content new sub2">
+    <ul>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1034/9313.htm" title="我院公布2023年本科招生咨询方式" time="2023-06-22" style="color:#000000;">我院公布2023年本科招生咨询方式</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1034/9312.htm" title="2023年分省分专业招生计划及收费标准" time="2023-06-22" style="color:#000000;">2023年分省分专业招生计划及收费标准</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1034/9209.htm" title="2023年普通高校专升本专业课考试考前提..." time="2023-04-17">2023年普通高校专升本专业课考试考前提...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1034/9107.htm" title="我校2023年普通专升本拟招生专业" time="2023-02-20">我校2023年普通专升本拟招生专业</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1034/8802.htm" title="我院在安徽省艺术类本科批次录取结束" time="2022-07-15">我院在安徽省艺术类本科批次录取结束</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1034/8799.htm" title="关于公布专升本招生考试专业课笔试成绩..." time="2022-07-08">关于公布专升本招生考试专业课笔试成绩...</a></span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1034/8769.htm" title="我院公布2022年本科招生咨询方式" time="2022-06-16" style="font-weight:bold;color:#ff0000;">我院公布2022年本科招生咨询方式</a></span></li>
+      
+    </ul>
+</div>
+<script>_showDynClickBatch(['dynclicks_u9_9313','dynclicks_u9_9312','dynclicks_u9_9209','dynclicks_u9_9107','dynclicks_u9_8802','dynclicks_u9_8799','dynclicks_u9_8769'],[9313,9312,9209,9107,8802,8799,8769],"wbnews", 1544449841)</script>
+
+            </div>
+
+            <div class="block2-l-bottom">
+                <div class="title">
+                    <span class="fl fz14 fzb">公共服务</span>
+                </div>
+                <div class="content">
+                        <div class="content">
+    <ul class="">
+                    <li>
+                    <a href="info/1061/6671.htm" title="校车" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46946)">
+                            <img src="dfiles/21819/templates2014/imgs/logo1.jpg" border="0">
+                    </a>
+                <a href="info/1061/6671.htm" title="校车" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46946)">校车</a>
+            </li>
+            <li>
+                    <a href="info/1061/6672.htm" title="领导信箱" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46947)">
+                            <img src="dfiles/21819/templates2014/imgs/logo5.jpg" border="0">
+                    </a>
+                <a href="info/1061/6672.htm" title="领导信箱" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46947)">领导信箱</a>
+            </li>
+            <li>
+                    <a href="info/1061/6674.htm" title="校历" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46948)">
+                            <img src="dfiles/21819/templates2014/imgs/logo2.jpg" border="0">
+                    </a>
+                <a href="info/1061/6674.htm" title="校历" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46948)">校历</a>
+            </li>
+            <li>
+                    <a href="info/1061/6676.htm" title="温馨电话" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46949)">
+                            <img src="dfiles/21819/templates2014/imgs/logo6.jpg" border="0">
+                    </a>
+                <a href="info/1061/6676.htm" title="温馨电话" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46949)">温馨电话</a>
+            </li>
+            <li>
+                    <a href="http://lib1.ahnu.edu.cn/" title="图书期刊" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46950)">
+                            <img src="dfiles/21819/templates2014/imgs/logo3.jpg" border="0">
+                    </a>
+                <a href="http://lib1.ahnu.edu.cn/" title="图书期刊" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46950)">图书期刊</a>
+            </li>
+            <li>
+                    <a href="http://imc.ahnu.edu.cn/82/view/188891" title="VPN下载" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46951)">
+                            <img src="dfiles/21819/templates2014/imgs/logo7.jpg" border="0">
+                    </a>
+                <a href="http://imc.ahnu.edu.cn/82/view/188891" title="VPN下载" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46951)">VPN下载</a>
+            </li>
+            <li>
+                    <a href="http://wjxljk.ahnu.edu.cn/" title="心理健康" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46952)">
+                            <img src="dfiles/21819/templates2014/imgs/logo4.jpg" border="0">
+                    </a>
+                <a href="http://wjxljk.ahnu.edu.cn/" title="心理健康" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46952)">心理健康</a>
+            </li>
+            <li>
+                    <a href="http://210.45.192.104/" title="网络资源" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46953)">
+                            <img src="dfiles/21819/templates2014/imgs/logo8.jpg" border="0">
+                    </a>
+                <a href="http://210.45.192.104/" title="网络资源" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46953)">网络资源</a>
+            </li>
+    </ul>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <!--影像皖江 校园动态-->
+        <div class="fl block2-c">
+            <div class="block2-c-top">
+                <div class="title">
+    <span class="fl fz14 fzb">影像皖江</span>
+    <span class="fr"><a href="index/yxwj.htm" class="more fzb fz16">&gt;</a></span>
+</div>
+<div class="content new">
+
+
+<div class="video">
+    <div class="fl video_thumb">
+                <a href="info/1035/10618.htm" title="学院举办“迎新年•迎新生”文艺晚会">
+                    <div class="pBox_btn needpng pa"></div>
+                    <div class="pBox_bg pa">学院举办“迎新年•迎新生”文艺晚会</div>
+                    <img src="dfiles/21819/sjtemplates2017/images/20190226141733959dSF.jpg" width="153" height="110">
+                </a>
+    </div>
+
+
+    <ul class="fl video1 sub4">
+                <li>
+                    <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+                    <span><a href="info/1035/10618.htm" target="_blank" title="学院举办“迎新年•迎新生”文艺晚会">
+                            学院举办“迎新年•迎新生”文艺晚会</a>
+                        </span>
+                </li>
+
+
+                <li>
+                    <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+                    <span><a href="info/1035/9488.htm" target="_blank" title="新生开学典礼 | 三千师生齐唱“没有共产党就没有新中国”">
+                            新生开学典礼 | 三千师生齐唱“没有共产党就没有新...</a>
+                        </span>
+                </li>
+
+
+                <li>
+                    <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+                    <span><a href="info/1035/9397.htm" target="_blank" title="相约皖江向未来 | 2023年学院招生宣传片">
+                            相约皖江向未来 | 2023年学院招生宣传片</a>
+                        </span>
+                </li>
+
+
+                <li>
+                    <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+                    <span><a href="info/1035/9396.htm" target="_blank" title="主题教育 | 5月19日，学院举行主题教育专家辅导报告会。">
+                            主题教育 | 5月19日，学院举行主题教育专家辅导报...</a>
+                        </span>
+                </li>
+
+
+                <li>
+                    <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+                    <span><a href="info/1035/9395.htm" target="_blank" title="主题教育 | 5月17日，学院组织党员干部赴中分村开展主题教育实践活动。">
+                            主题教育 | 5月17日，学院组织党员干部赴中分村开...</a>
+                        </span>
+                </li>
+
+
+
+
+
+
+
+
+    </ul>
+</div>
+
+
+
+    <ul class="sub5">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li>
+                       <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+                        <span class="fl t"><a href="info/1035/9393.htm">五四青年节 | 学院举行2023年“五四”表彰大会暨20...</a></span>
+                     </li> 
+
+
+                    <li>
+                       <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+                        <span class="fl t"><a href="info/1035/9392.htm">绿植领养 | 第十三届全国青少年绿植领养皖江学院站...</a></span>
+                     </li> 
+
+
+    </ul>
+
+
+
+</div><script>_showDynClickBatch(['dynclicks_u11_10618','dynclicks_u11_9488','dynclicks_u11_9397','dynclicks_u11_9396','dynclicks_u11_9395','dynclicks_u11_9394','dynclicks_u11_9393','dynclicks_u11_9392'],[10618,9488,9397,9396,9395,9394,9393,9392],"wbnews", 1544449841)</script>
+
+            </div>
+
+            <div class="block2-c-bottom">
+                <div class="title">
+     <span class="fl fz14 fzb">校园动态</span>
+    <span class="fr"><a href="index/xydt.htm" class="more fzb fz16">></a></span>
+</div>
+
+
+<div class="content new sub6">
+    <ul>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1036/11218.htm" title="“一站式”学生社区举办“皖江200”读书分享会" time="2024-04-17">“一站式”学生社区举办“皖江200”读书分享会</a>
+        
+        </span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1036/11208.htm" title="学院举行2024年“国家安全教育日”主题升旗仪式" time="2024-04-17">学院举行2024年“国家安全教育日”主题升旗仪式</a>
+        
+        </span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1036/11168.htm" title="“一站式”学生社区举办防范电信网络诈骗主题教育活动" time="2024-04-11">“一站式”学生社区举办防范电信网络诈骗主题教育活动</a>
+        
+        </span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1036/11138.htm" title="2024年春季校媒学生骨干培训圆满结束" time="2024-04-08">2024年春季校媒学生骨干培训圆满结束</a>
+        
+        </span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1036/11108.htm" title="院团委组织开展“清明祭英烈 共筑中华魂”清明主题系列活动" time="2024-04-02">院团委组织开展“清明祭英烈 共筑中华魂”清明主题系列活动</a>
+        
+        </span></li>
+
+        <li>
+        <span class="fl mark"><img src="dfiles/21819/templates2014/imgs/mark.jpg"></span>
+        <span class="fl t"><a href="info/1036/11098.htm" title="2024年“青马工程”暨入党积极分子培训班开班" time="2024-04-02">2024年“青马工程”暨入党积极分子培训班开班</a>
+        
+        </span></li>
+      
+    </ul>
+</div>
+<script>_showDynClickBatch(['dynclicks_u12_11218','dynclicks_u12_11208','dynclicks_u12_11168','dynclicks_u12_11138','dynclicks_u12_11108','dynclicks_u12_11098'],[11218,11208,11168,11138,11108,11098],"wbnews", 1544449841)</script>
+
+            </div>
+        </div>
+
+        <!--快速通道-->
+        <div class="fr block2-r">
+            <div class="title">
+                <span class="fl fz14 fzb">快速通道</span>
+            </div>
+            <div class="content">
+                <script language="javascript" src="/system/resource/js/openlink.js"></script>
+
+
+<ul>
+     <li><img src="dfiles/21819/templates2014/imgs/mark1.jpg">
+     <a href="http://auth.ahnu.edu.cn/login" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1544449841, 54025)">师大认证平台</a></li>
+     <li><img src="dfiles/21819/templates2014/imgs/mark1.jpg">
+     <a href="http://210.45.192.148:88" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1544449841, 54026)">行政办公系统</a></li>
+     <li><img src="dfiles/21819/templates2014/imgs/mark1.jpg">
+     <a href="http://210.45.195.69:8080/system/login.jsp" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1544449841, 92697)">网站管理系统</a></li>
+     <li><img src="dfiles/21819/templates2014/imgs/mark1.jpg">
+     <a href="https://ehall.uwh.edu.cn/default/index.html#/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1544449841, 54027)">教务管理系统</a></li>
+     <li><img src="dfiles/21819/templates2014/imgs/mark1.jpg">
+     <a href="http://210.45.192.245:8080/wjxy" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1544449841, 54028)">成绩管理系统</a></li>
+     <li><img src="dfiles/21819/templates2014/imgs/mark1.jpg">
+     <a href="https://ehall.uwh.edu.cn/wjkyxt/web/index.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1544449841, 54029)">教科研管理系统</a></li>
+     <li><img src="dfiles/21819/templates2014/imgs/mark1.jpg">
+     <a href="https://www.uwh.edu.cn/hbc/detail/657/2808.html" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1544449841, 92695)">访客预约系统</a></li>
+     <li><img src="dfiles/21819/templates2014/imgs/mark1.jpg">
+     <a href="http://yuyue.c.zmit.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1544449841, 92696)">讲座预约系统</a></li>
+ </ul>
+            </div>
+        </div>
+    </div>
+    <!--blcok2 报考皖江 公共服务 影像皖江 校园动态 快速通道-->
+    <!--link-->
+    <div class="link-bg">
+            <div class="link">
+            <a href="http://wjhxkc.ahnu.edu.cn" target="_blank" title="核心课程网" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 55029)" target="_blank">
+        <img src="images/link6.jpg" width="173" height="80" />
+        </a>
+  
+        <a href="http://wjxxgk.ahnu.edu.cn/" target="_blank" title="信息公开网" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46954)" target="_blank">
+        <img src="dfiles/21819/sjtemplates2017/images/link0.jpg" width="173" height="80" />
+        </a>
+  
+        <a href="http://wjzsb.ahnu.edu.cn/" target="_blank" title="招生信息网" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 46955)" target="_blank">
+        <img src="dfiles/21819/sjtemplates2017/images/link1.jpg" width="173" height="80" />
+        </a>
+  
+        <a href="http://ahnuwj.fanya.chaoxing.com/portal" target="_blank" title="皖江学堂" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 55991)" target="_blank">
+        <img src="images/link5fuben.jpg" width="173" height="80" />
+        </a>
+  
+        <a href="https://www.ahwhrcw.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1544449841, 61679)" target="_blank" style="float:right; margin-right:0px">
+        <img src="images/weixintupian_20230131180825.jpg" width="173" height="80" />
+        </a>
+  
+    </div>
+    </div>
+    <!--link-->
+    <!--foot-->
+    <div class="foot">
+        <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p class="p1">
+    地址：安徽省芜湖市鸠江区苏州路66号 邮编：241008 版权所有：安徽师范大学皖江学院 &nbsp;电话：0553-5773790
+</p>
+<p class="p2">
+    Copyright @ 2014 Wanjiang College Of Anhui Normal University. All Rights Reserved. &nbsp;技术支持：<a href="http://www.chinawebber.com/">博达软件</a> &nbsp;<a href="http://210.45.195.69:8080/system/login.jsp">网站后台</a>
+</p>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9b20359f5531435d62aca73adbfbf6dc";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!--foot-->
+        <script src="dfiles/21819/templates2014/js/jquery.min.js" type="text/javascript"></script>
+          <script src="dfiles/21819/templates2014/js/jquery-migrate.min.js" type="text/javascript"></script>
+            <script src="dfiles/21819/templates2014/js/jquery.SuperSlide.js" type="text/javascript"></script>
+    <script src="dfiles/21819/templates2014/js/jquery.sgallery.js" type="text/javascript"></script>
+    <script src="dfiles/21819/templates2014/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script src="dfiles/21819/templates2014/js/wanjiang.js" type="text/javascript"></script>
+
+
+<div style="display:none;"><a href="http://webscan.360.cn/index/checkwebsite/url/wjcollege.ahnu.edu.cn" name="f5491742df3f22a0ee2419d503ab0425">网站安全检测平台</a></div>
+
+
+
+</body></html>
+
+
+
+
+
+
+
+

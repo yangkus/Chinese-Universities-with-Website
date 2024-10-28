@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9,chrome=1">
+   <title>重庆警察学院</title>
+   <meta name="Keywords" content="重庆警察学院,警院,重庆警院,警察学院" />
+   <meta name="Description" content="重庆警察学院（以下简称“学校”）是由重庆市人民政府举办、受重庆市公安局管理和重庆市教育委员会指导的全日制本科院校" />
+   <meta name="siteid" content="1" />
+ <link rel="stylesheet" href="/templates/site/iconfont/iconfont.css">
+  <link rel="stylesheet" href="/templates/site/plugIn/element/element-index.css">
+  <link rel="stylesheet" href="/templates/site/css/index.css">
+  <link rel="stylesheet" href="/templates/site/css/header.css">
+  <link rel="stylesheet" href="/templates/site/css/foot.css">
+  <script type="text/javascript" src="/templates/site/plugIn/vue/vue.min.js"></script>
+  <script src="/templates/site/plugIn/element/element-index.js"></script>
+  <script type="text/javascript" src="/templates/site/plugIn/axios.min.js"></script>
+  <script src="/templates/site/component/header/header.js"></script>
+  <script src="/templates/site/request/api.js"></script>
+  <link rel="stylesheet" href="/templates/site/css/posterAlert.css">
+  <script src="/templates/site/request/baseurl.js"></script>
+  <link rel="stylesheet" href="/templates/site/css/animate.min.css">
+  <script src="/templates/site/plugIn/wow.min.js"></script>
+  <link rel="stylesheet" href="/templates/site/css/response.css">
+   <script src="/script/Jooye.common.js" type="text/javascript"></script>
+   <script src="/script/jquery.min.js" type="text/javascript"></script>
+   <script src="/script/jquery.SuperSlide.js" type="text/javascript"></script>
+   <script src="/script/move.js" type="text/javascript"></script>
+   <script src="/script/YlFloat.js" type="text/javascript"></script>
+   <script src="/script/jquery.tmpl.js" type="text/javascript"></script>
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script src="/script/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script src="/html/iaa/1/index.js?"></script>
+</head>
+
+<body>
+ 
+<style>
+   @font-face {
+      font-family: 'maozedong';
+      src: url('/templates/site/fonts/maozedong.ttf') format('truetype');
+   }
+
+   [v-cloak] {
+      display: none;
+   }
+</style>
+<div id="app" v-cloak>
+   <div class="videoBox" v-if="bigImage">
+      <div class="videoClose" @click="videoClose()">×</div>
+      <div class="block-big">
+        <el-carousel arrow="always" height="840px" :initial-index="bigSwiperImgIndex">
+          <el-carousel-item v-for="item in policeFigureImages">
+            <img class="bigSwiperImg" :src="item.imageUrl" alt="" @click="swiperToLink(item)">
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+    </div>
+   <div class="indexHeader">
+      <my-header ref="header" :head-background="headBackground"></my-header>
+   </div>
+   <div class="swiper-top">
+      <div class="swiper-mask">
+         <img src="/templates/site/img/首页/矩形 1 拷贝@2x.png" alt="">
+      </div>
+      <div class="swiper">
+         <div class="swiperBox">
+            <el-carousel ref="carousel" @change="((pre, next) => {change(pre, next)})">
+              <el-carousel-item height="1080px" v-for="(item,index) in swiperImg" :label="index+1">
+                <img class="swiperImg" :src="item.imageUrl" alt="" @click="swiperToLink(item)">
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+      </div>
+   </div>
+   <div class="indexBody2" ref="scrollview" @mousewheel="scrollChange" :style="{'top':peak?'133px':''}">
+      <div class="newsBox">
+         <div class="newsBox-content">
+            <div class="content">
+               <div class="item">
+                  <div class="newsBox-title">
+                     <div>头条 · <span class="blueText">新闻</span></span></div>
+                     <a class="operate" href="/html/ttxw/" target="_blank">
+                        <img src="/templates/site/img/首页/组 1@2x(9).png" alt="">
+                        <span class="redText">查看更多</span>
+                     </a>
+                  </div>
+                  <div class="newsBox-list">
+                     <div class="newsBox-card-box" v-for="(item,index) in headNews.articles" v-if="index<4" :key="index"
+                        @click="toDetail(item.id,0,item)" @mouseenter="newshift(index)">
+                        
+                        <div class="newsBox-card">
+                           <div class="newsBox-card-title">{{item.title}}
+                           </div>
+                           <div class="newsBox-date" style="color: #666666">{{item.publishDate.substring(0, 10)}}</div>
+                           <i class="el-icon-caret-left sanjiao" v-if="index!=newIndex&&!changeStruck"></i>
+                        </div>
+                        <div class="newsBox-img" v-show="index==newIndex" v-if="!phone"
+                           @click="toDetail(item.id,0,item)">
+                           <img :src="item.coverUrl" alt="" :class="index==newIndex?'newsBox-img-img':''">
+                           <img class="newsBox-masking" :class="index==newIndex?'newsBox-img-img':''"
+                              src="/templates/site/img/首页/矩形 2 拷贝 5@2x.png" alt="">
+                           <div class="newsBox-img-text" v-if="headNews">
+                              {{item.title}}（{{item.publishDate.substring(0, 10)}}）
+                           </div>
+                        </div>
+                        <!-- phone -->
+                        <div class="phone-newsBox-img" v-else @click="toDetail(item.id,0,item)">
+                           <img :src="item.coverUrl" alt="">
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="newsflashTwo">
+               <div class="newsflashTwo-img">
+                  <div class="newsflashBox-list-title" style="margin-bottom: 57px;">
+                     <div class="newsflashBox-title" style="display: flex;">
+                        <div style="margin-right: 86px;">校园 · <span class="blueText">快讯</span></span></div>
+                        <a class="operate" style="margin-bottom: 0;" href="/html/xykx/" target="_blank">
+                           <img style="width:36px ;height: 30px;" src="/templates/site/img/首页/组 1@2x(9).png" alt="">
+                           <span class="redText notification-operate">查看更多</span>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="school-info">
+                     <div class="newsflashTwoImg animatebox" style="animation-name: slideInUp;"
+                        v-if="scholAnimation&&!changeStruck" @click="toDetail(imgSrcInfo.id,0,imgSrcInfo)">
+                        <img v-for="(item, index) in campusNewsList.articles" v-if="index == campusImgAnimationIndex"
+                           :key="index" :class="index == campusImgAnimationIndex ? 'newsBox-img-img' : 'imgAni'"
+                           :src="item.coverUrl" alt="">
+                        <div v-for="(item, index) in campusNewsList.articles" v-if="index == campusImgAnimationIndex"
+                           :key="item.id" class="newsflashTwoImg-explain">{{item.title}}
+                        </div>
+                     </div>
+                     <div class="newsflashTwo-content">
+                        <div class="list-item-news animatebox" style="margin-bottom:26px ;
+                                      animation-name: slideInRight;" v-for="(item,index) in campusNewsList.articles"
+                           :key="item.id" @mouseenter="campusImg(index,item)" v-if="index<3&&scholAnimation"
+                           @click="toDetail(item.id,0,item)">
+                           <div class="list-item-date">
+                              <img src="/templates/site/img/首页/形状 2@2x.png" alt="">
+                              <span>{{item.publishDate.substring(0, 10)}}</span>
+                           </div>
+                           <div class="list-item-title">
+                              {{item.title}}
+                           </div>
+                           <div class="list-item-content">
+                              {{item.remarks}}
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="newsflashTwo-img">
+                  <div class="newsflashBox-list-title" style="margin-bottom: 57px;">
+                     <div class="newsflashBox-title" style="display: flex;">
+                        <div style="margin-right: 86px;">专题 · <span class="blueText">专栏</span></span></div>
+                        <a class="operate" style="margin-bottom: 0;" href="/html/ztzl/" target="_blank">
+                           <img style="width:36px ;height: 30px;" src="/templates/site/img/首页/组 1@2x(9).png" alt="">
+                           <span class="redText notification-operate">查看更多</span>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="subject-box-content-news">
+                     <div class="subject-box-img-list">
+    <div class="subject-box-img-news" :class="scholAnimation?'subject-box-img${index+1}':''">
+        <div class="subject-title-img-news">
+            本科教育教学审核评估
+        </div>
+        <div class="subject-more-news" style="z-index: 10">
+            <a href="/html/ztzl/bkjyjxshpg/" target="_blank" style="display: flex;align-items: center;">
+                <img class="bigMoreImg" src="/templates/site/img/首页/组 1@2x(8).png" alt="">
+                <span>查看更多</span>
+            </a>
+        </div>
+        <img src="https://www.cqpc.edu.cn/Upload/Default/336642353676357.png" style="position:absolute;top:0;z-index: 0;width: 100%;height: 100%;right: 0;left: 0">
+    </div>
+</div><div class="subject-box-img-list">
+    <div class="subject-box-img-news" :class="scholAnimation?'subject-box-img${index+1}':''">
+        <div class="subject-title-img-news">
+            语言文字工作
+        </div>
+        <div class="subject-more-news" style="z-index: 10">
+            <a href="/html/ztzl/yywzgz/" target="_blank" style="display: flex;align-items: center;">
+                <img class="bigMoreImg" src="/templates/site/img/首页/组 1@2x(8).png" alt="">
+                <span>查看更多</span>
+            </a>
+        </div>
+        <img src="https://www.cqpc.edu.cn/Upload/Default/414493327794245.jpg" style="position:absolute;top:0;z-index: 0;width: 100%;height: 100%;right: 0;left: 0">
+    </div>
+</div><div class="subject-box-img-list">
+    <div class="subject-box-img-news" :class="scholAnimation?'subject-box-img${index+1}':''">
+        <div class="subject-title-img-news">
+            不忘初心牢记使命
+        </div>
+        <div class="subject-more-news" style="z-index: 10">
+            <a href="https://www.12371.cn/cxsm/" target="_blank" style="display: flex;align-items: center;">
+                <img class="bigMoreImg" src="/templates/site/img/首页/组 1@2x(8).png" alt="">
+                <span>查看更多</span>
+            </a>
+        </div>
+        <img src="https://www.cqpc.edu.cn/Upload/Default/336642490605637.png" style="position:absolute;top:0;z-index: 0;width: 100%;height: 100%;right: 0;left: 0">
+    </div>
+</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="actives">
+            <div class="student-active" style="padding-top: 0">
+               <div class="section-item animatebox" v-if="teachticaAnimation" style="animation-name: slideInLeft">
+                  <div class="section-item-name">
+                     <div class="list-title" style="color: black">
+                        <div>教学</div>
+                        <div>·</div>
+                        <div class="list-title-color-news">科研</div>
+                     </div>
+                     <div class="more-detail">
+                        <img style="width: 36px;height: 30px;" src="/templates/site/img/首页/组 1@2x(7).png" alt="" />
+                        <a style="color:#BF1B34 ;font-size: 14px; font-weight: bold;" href="/html/jxky/jyjx/"
+                           target="_blank">
+                           查看更多
+                        </a>
+                     </div>
+                  </div>
+                  <div class="content-grid-news">
+                     <div v-if="!changeStruck">
+                        <img :src="research.articles[0].coverUrl"
+                          @click="toDetail(research.articles[0].id,0,research.articles[0])" :class="gridImgf?'gridImgf':''" />
+                      </div>
+                      <div class="grid-content-news" v-for="(item,index) in research.articles" v-if="index<2"
+                        @mouseenter="gridMousf(index,0)" @mouseleave="gridMousf(index,1)" @click="toDetail(item.id,0,item)"
+                        :key="index">
+                        <div class="content-title-news">
+                          {{item.title}}
+                        </div>
+                        <div class="content-detail-news">
+                          {{item.remarks}}
+                        </div>
+                        <div class="hold-time">
+                          <img src="/templates/site/img/首页/形状 2@2x.png" />
+                          <div>{{item.publishDate.substring(0, 10)}}</div>
+                        </div>
+                      </div>
+                      <div v-if="!changeStruck">
+                        <img :src="research.articles[1].coverUrl"
+                          @click="toDetail(research.articles[1].id,0,studentTrends.articles[1])" />
+                      </div>
+                  </div>
+               </div>
+               <div class="section-item animatebox phone-student-section-item" v-if="teachticaAnimation"
+                  style="animation-name: slideInRight">
+                  <div class="section-item-name">
+                     <div class="list-title" style="color: black">
+                        <div>
+                           学生
+                        </div>
+                        <div>·</div>
+                        <div class="list-title-color-news">风采</div>
+                     </div>
+                     <a class="more-detail" href="/html/xsfc/" target="_blank">
+                        <img style="width: 36px;height: 30px;" src="/templates/site/img/首页/组 1@2x(7).png" alt="" />
+                        <div style="color:#BF1B34 ;font-size: 14px;font-weight: bold;">查看更多</div>
+                     </a>
+                  </div>
+                  <div class="content-grid-news">
+                     <div v-if="!changeStruck">
+                        <img :src="studentTrends.articles[0].coverUrl"
+                          @click="toDetail(studentTrends.articles[0].id,0,studentTrends.articles[0])"
+                          :class="gridImg?'gridImg':''" />
+                      </div>
+                      <div class="grid-content-news" v-for="(item,index) in studentTrends.articles" :key="index"
+                        v-if="index<2" @mouseenter="gridMous(index,0)" @mouseleave="gridMous(index,1)"
+                        @click="toDetail(item.id,0,item)">
+                        <div class="content-title-news">
+                          {{item.title}}
+                        </div>
+                        <div class="content-detail-news">
+                          {{item.remarks}}
+                        </div>
+                        <div class="hold-time">
+                          <img src="/templates/site/img/首页/形状 2@2x.png" />
+                          <div>{{item.publishDate.substring(0, 10)}}</div>
+                        </div>
+                      </div>
+                      <div v-if="!changeStruck" class="animateGrid">
+                        <img :src="studentTrends.articles[1].coverUrl"
+                          @click="toDetail(studentTrends.articles[1].id,0,studentTrends.articles[1])" />
+                      </div>
+                  </div>
+               </div>
+               <div class="section-item animatebox" v-else style="height: 500px;"></div>
+            </div>
+            <div class="notification-box">
+               <div class="notification-list" :class="!toproll.show? 'notificationleft' :''">
+                  <div class="newsBox-title notification-title">
+                     <div>通知 · <span class="blueText">公告</span></span></div>
+                     <a class="operate" href="/html/tzgg/" target="_blank">
+                        <img style="width: 36px;height: 30px;" src="/templates/site/img/首页/组 1@2x(9).png" alt="">
+                        <span class="redText notification-operate">查看更多</span>
+                     </a>
+                  </div>
+                  <div class="notification-list-item">
+                     <div class="list-item" v-for="(item,index) in noticeInfo.articles" v-if="index<6" :key="index"
+                        @click="toDetail(item.id,0,item)">
+                        <div class="list-item-date">
+                        <img src="/templates/site/img/首页/形状 2@2x.png" alt="">
+                        <span>{{item.publishDate.substring(0, 10)}}</span>
+                        </div>
+                        <div class="list-item-title">
+                        {{item.title}}
+                        </div>
+                        <div class="list-item-content">
+                        {{item.remarks}}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="notification-img" :class="!toproll.show? 'notificationrigth' :''">
+                  <div class="notification-img-title">
+                     <div class="newsBox-title">
+                        <div>招标 · <span class="blueText">采购</span></span></div>
+                        <a class="operate" href="/html/zbcg/" target="_blank">
+                           <img style="width: 36px;height: 30px;" src="/templates/site/img/首页/组 1@2x(9).png" alt="">
+                           <span class="redText notification-operate">查看更多</span>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="subject-box-list">
+                     <div class="subject-list-item animatebox" style="animation-name: slideInRight;"
+                        v-for="(item,index) in biddings.articles" :key="item.id" v-if="index<4"
+                        @click="toDetail(item.id,0,item)">
+                        <div class="subject-date">
+                        <div class="subject-date-month">{{item.publishDate.substring(8, 10)}}</div>
+                        <div>{{item.publishDate.substring(0, 4)}}.{{item.publishDate.substring(5, 7)}}</div>
+                        </div>
+                        <div class="subject-content">
+                        <div class="subject-content-title">
+                           {{item.title}}
+                        </div>
+                        <div class="subjectContent">
+                           {{item.remarks}}
+                        </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="block">
+               <div class="redEducation">
+                  <div class="redEducation-title" v-if="!changeStruck">
+                     <div class="redEducation-title-text">红色 · 教育</div>
+                     <div>
+                        <img src="/templates/site/img/首页/组 1@2x(4).png" alt="" @click="redEducationLeft">
+                        <img style="margin-left:42px;" src="/templates/site/img/首页/组 1@2x(5).png" alt=""
+                           @click="redEducationRight">
+                     </div>
+                  </div>
+                  <div class="newsBox-title" style="font-size: 20px" v-else>
+                     <div>红色 · <span class="blueText">教育</span></span></div>
+                     <a class="operate" href="/html/hsjy/" target="_blank">
+                        <img src="/templates/site/img/首页/组 1@2x(9).png" alt="">
+                        <span class="redText">查看更多</span>
+                     </a>
+                  </div>
+                  <div class="redEducation-content">
+                     <template v-if="!phone">
+                        <template v-for="(item,index) in redEducations.articles" :key="index">
+                          <template v-if="item.articleType === 2">
+                            <div class="redEducation-item animatebox" :style="`animation-name: fadeInUp`" v-if="redAnimation">
+                              <a :href="item.remarks" target="_blank">
+                                <div class="item">
+                                  <div class="redEducation-item-img" style="height: 70%;">
+                                    <img :src="item.coverUrl" alt="">
+                                  </div>
+                                  <div class="redEducation-item-content" style="height: 15%;">
+                                    <div class="item-content-title">{{item.title}}</div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </template>
+                          <template v-else>
+                            <div class="redEducation-item animatebox" :style="`animation-name: fadeInUp`" v-if="redAnimation"
+                              @click="toDetail(item.id,0,item)">
+                              <div class="item">
+                                <div class="redEducation-item-img">
+                                  <img :src="item.coverUrl" alt="" />
+                                </div>
+                                <div class="redEducation-item-content">
+                                  <div class="item-content-title">{{item.title}}</div>
+                                  <div class="item-content-content">{{item.remarks}}</div>
+                                  <div class="date">{{item.publishDate.substring(0, 10)}}</div>
+                                </div>
+                              </div>
+                            </div>
+                          </template>
+                        </template>
+                      </template>
+      
+                      <template v-else>
+                        <div class="redEducation-contaniner">
+                          <a :href="item.remarks" target="_blank" v-for="(item,index) in redEducations.articles" :key="index">
+                            <div class="item">
+                              <div class="redEducation-item-img" style="height: 70%;">
+                                <img :src="item.coverUrl" alt="">
+                              </div>
+                              <div class="redEducation-item-content" style="height: 15%;">
+                                <div class="item-content-title">{{item.title}}</div>
+                                <!-- <div class="date">{{item.publishDate.substring(0, 10)}}</div> -->
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </template>
+                  </div>
+
+                  <a class="redEducation-more" v-if="!changeStruck" href="/html/hsjy/" target="_blank">
+                     <img style="width:65.1px ;height: 53.1px;" src="/templates/site/img/首页/组 1@2x(9).png" alt="">
+                     <div class="redEducationMore">查看更多</div>
+                  </a>
+                  <img class="redEducationImg" src='/templates/site/img/首页/redre.png' alt=""
+                     :class="educationAnimation? 'redEducationAnimation' :''">
+               </div>
+               <div class="actives">
+                  <div class="student-active" v-if="!phone">
+                     <div class="section-item" v-if="studentA" :class="studentA? 'notificationleft' :''">
+                        <div class="section-item-name">
+                           <div class="list-title">
+                              <div>警苑</div>
+                              <div>·</div>
+                              <div class="list-title-color">故事</div>
+                           </div>
+                           <div class="more-detail">
+                              <img style="width: 36px;height: 30px;" src="/templates/site/img/首页/组 1@2x(10).png"
+                                 alt="" />
+                              <a style="color:white;font-size: 14px; font-weight: bold;" href="/html/jygs/"
+                                 target="_blank">
+                                 查看更多
+                              </a>
+                           </div>
+                        </div>
+                        <div class="content-grid">
+                           <div class="ColumnItem" v-for="(item,index) in policeStory.articles" v-if="index<3"
+                              @click="toDetail(item.id,0,item)" :key="item.id">
+                              <div class="backwhite"></div>
+                              <div class="active-img">
+                                 <img :src="item.coverUrl" :class="gridImgf?'gridImgf':''" />
+                              </div>
+                              <div class="grid-content">
+                                 <div class="content-title">
+                                 {{item.title}}
+                                 </div>
+                                 <div class="content-detail">
+                                 {{item.remarks}}
+                                 </div>
+                                 <div class="hold-time">
+                                 <div>{{item.publishDate.substring(0, 10)}}</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="section-item" v-if="studentA" :class="studentA? 'notificationrigth' :''">
+                        <div class="section-item-name">
+                           <div class="list-title">
+                              <div>
+                                 书香
+                              </div>
+                              <div>·</div>
+                              <div class="list-title-color">园地</div>
+                           </div>
+                           <a class="more-detail" href="/html/sxyd/" target="_blank">
+                              <img style="width: 36px;height: 30px;" src="/templates/site/img/首页/组 1@2x(10).png"
+                                 alt="" />
+                              <div style="color:white ;font-size: 14px;font-weight: bold;">查看更多</div>
+                           </a>
+                        </div>
+                        <div class="book-grid">
+                           <a href="/html/content/24/09/3957.shtml" title="《消失的城市》　 " target="_blank">
+    <div class="WrapItem">
+        <div class="backwhite"></div>
+        <div class="book-img">
+            <img src="/upfiles/202409/20240914155146791.png" class="gridImgf?'gridImgf':''" />
+        </div>
+        <div class="book-content">
+            <div class="book-title">
+                《消失的城市》
+            </div>
+            <div class="book-details">作者：大卫·沃克索书号：K915-49/1馆藏地：502室02架A面06列02层荐理由：庞贝、巴比伦、特洛伊、统万、佩特拉、克诺塞斯、楼兰、高昌、科潘、马丘・比丘，一个个消失的城市。作者通过文字..</div>
+        </div>
+    </div>
+</a><a href="/html/content/24/09/3956.shtml" title="《警察职业认同:理论与实践研究》" target="_blank">
+    <div class="WrapItem">
+        <div class="backwhite"></div>
+        <div class="book-img">
+            <img src="/upfiles/202409/20240914155121534.png" class="gridImgf?'gridImgf':''" />
+        </div>
+        <div class="book-content">
+            <div class="book-title">
+                《警察职业认同:理论与实践研究》
+            </div>
+            <div class="book-details">作者：陈秋菊索书号：D631.19/123馆藏地：书吧推荐理由：本书在马克思主义相关理论、社会心理学相关理论以及相关激励理论的指导下，通过对文本资料的扎实研究，提炼出警察职业认同的维度、影响警察职..</div>
+        </div>
+    </div>
+</a><a href="/html/content/24/09/3955.shtml" title="《制造安全感》 " target="_blank">
+    <div class="WrapItem">
+        <div class="backwhite"></div>
+        <div class="book-img">
+            <img src="/upfiles/202409/20240914155040158.png" class="gridImgf?'gridImgf':''" />
+        </div>
+        <div class="book-content">
+            <div class="book-title">
+                《制造安全感》
+            </div>
+            <div class="book-details">作者：[加]理查德索书号：D035.3/258馆藏地：书吧推荐理由：现代社会充斥着风险。风险感知和集体忧虑已经成了人们社会体验的基础之一，这加深了人们的不安全感，激发了人们对社会知识的需求。但是对..</div>
+        </div>
+    </div>
+</a><a href="/html/content/24/09/3954.shtml" title="《乡土中国》 " target="_blank">
+    <div class="WrapItem">
+        <div class="backwhite"></div>
+        <div class="book-img">
+            <img src="/upfiles/202409/20240914155000698.png" class="gridImgf?'gridImgf':''" />
+        </div>
+        <div class="book-content">
+            <div class="book-title">
+                《乡土中国》
+            </div>
+            <div class="book-details">作者：费孝通推荐理由：本书是我国著名社会学家和人类学家费孝通的作品，由作者于20世纪40年代后期在西南联大和云南大学讲授乡村社会学的底稿扩充改写后出版发行。温故而知新。在书目出版后的70余年间，我..</div>
+        </div>
+    </div>
+</a><a href="/html/content/24/09/3953.shtml" title="《中国精神》　　　" target="_blank">
+    <div class="WrapItem">
+        <div class="backwhite"></div>
+        <div class="book-img">
+            <img src="/upfiles/202409/20240914154705566.png" class="gridImgf?'gridImgf':''" />
+        </div>
+        <div class="book-content">
+            <div class="book-title">
+                《中国精神》
+            </div>
+            <div class="book-details">推荐理由：实现中华民族伟大复兴的中国梦，必须弘扬中国精神，这就是以爱国主义为核心的民族精神和以改革创新为核心的时代精神。阅读途径：通过重庆警察学院数字图书馆“掌阅”平台阅读。</div>
+        </div>
+    </div>
+</a><a href="/html/content/24/09/3952.shtml" title="《警察职业生涯规划与管理》　" target="_blank">
+    <div class="WrapItem">
+        <div class="backwhite"></div>
+        <div class="book-img">
+            <img src="/upfiles/202409/20240914150630460.png" class="gridImgf?'gridImgf':''" />
+        </div>
+        <div class="book-content">
+            <div class="book-title">
+                《警察职业生涯规划与管理》
+            </div>
+            <div class="book-details">作者：王光森索书号：D631.19/91馆藏地：204推荐理由：本书根据公安思想政治工作和公安队伍管理目标的特殊性，从基本概念和基本理论入手，围绕警察职业生涯四个阶段的情形、警察职业生涯规划管理的..</div>
+        </div>
+    </div>
+</a>
+                        </div>
+                     </div>
+                     <div class="section-item" v-else style="height: 400px;"></div>
+                  </div>
+                  <div class="student-video">
+                     <div class="section-item">
+                        <!-- phone -->
+                        <div class="section-item-name" v-if="changeStruck">
+                           <div class="list-title">
+                              <div>
+                                 警苑
+                              </div>
+                              <div>·</div>
+                              <div class="list-title-color">映像</div>
+                           </div>
+                           <a class="more-detail" href="/html/jyyx/" target="_blank">
+                              <img style="width: 36px;height: 30px;" src="/templates/site/img/首页/组 1@2x(7).png"
+                                 alt="" />
+                              <div style="color:#BF1B34 ;font-size: 14px;font-weight: bold;">查看更多</div>
+                           </a>
+                        </div>
+                        <!-- pc -->
+                        <div class="section--video-item-name" v-else>
+                           <div class="list-title">
+                              <div>警苑</div>
+                              <div>·</div>
+                              <div class="">映像</div>
+                           </div>
+                           <a class="more-detail" href="/html/jyyx/" target="_blank">
+                              <img src="/templates/site/img/首页/组 1@2x(8).png" alt="" />
+                              <div style="font-weight: bold;font-size: 14px;">查看更多</div>
+                           </a>
+                        </div>
+                        <!-- conetent -->
+                        <template>
+                           <div class="video-grid" v-if="!phone">
+                              <div class="vieoImg" v-if="imageA" :class="imageA? 'fadeInUp animatebox' :''">
+                                 <img v-for="(item,index) in policeFigureImages" v-if="index<2" class="scaleBig"
+                                   :src="item.imageUrl" @click="getBigImage(item,index)" />
+                               </div>
+                              <div class="video-item" v-if="imageA" :class="imageA? 'fadeInUp animatebox' :''">
+                                 <a href="/html/content/22/09/3.shtml" title="你就是传奇" target="_blank">
+    <img class="video-img" src="/upfiles/202406/20240627104039655_s.jpg" />
+    <div class="video-introduce">
+        <div class="tool">
+            <img src="/templates/site/img/首页/组 1@2x(6).png" alt="" />
+        </div>
+        <div class="intro-title">你就是传奇</div>
+        <div class="intro-content">欢迎走进重庆警察学院</div>
+    </div>
+    <div class="info-back-liner"></div>
+</a>
+                              </div>
+                              <div class="vieoImg" v-if="imageA" :class="imageA? 'fadeInUp animatebox' :''">
+                                 <img v-for="(item,index) in policeFigureImages" v-if="index>1&&index<4" class="scaleBig"
+                                   :src="item.imageUrl" @click="getBigImage(item,index)" />
+                               </div>
+                              <div class="vieoImg" v-else style="height: 600px;"></div>
+                              <div class="vieoImg" v-else style="height: 600px;"></div>
+                              <div class="vieoImg" v-else style="height: 600px;"></div>
+                           </div>
+                           <!-- phone -->
+                           <div class="phoneVideoBox" v-else>
+                              <div class="item" v-for="(item,index) in policeFigureImages" v-if="index<2">
+                                 <img :src="item.imageUrl" class="scaleBig" @click="toList('警苑映像',policeFigures.id,0)">
+                               </div>
+                              <div class="item video-item">
+                                 <a href="/html/content/22/09/3.shtml" title="你就是传奇" target="_blank">
+    <img src="/upfiles/202406/20240627104039655_s.jpg" />
+    <div class="video-introduce-phone">
+        <div class="tool">
+            <img src="/templates/site/img/首页/组 1@2x(6).png" alt="" />
+        </div>
+    </div>
+</a>
+                              </div>
+                              <div class="item" v-for="(item,index) in policeFigureImages" v-if="index>1&&index<4">
+                                 <img :src="item.imageUrl" @click="toList('警苑映像',policeFigures.id,0)">
+                               </div>
+                           </div>
+                        </template>
+                     </div>
+                  </div>
+                  <img src="/templates/site/img/首页/红色背景@2x.png" class="actives-back" v-if="!phone">
+               </div>
+               <div class="footBox">
+   <div class="footContainer">
+      <div class="foot-mobile" class="footnoneShow">
+         <div class="iconfont icon-qingchu"  style="margin-right: 30px"></div>
+         <div class="foot-menu" style="animation-name: slideInDown;">
+            <div class="foot-menu-flex">
+               <div><a href="http://video.cqpc.edu.cn/" target="_blank">视频资源</a></div>
+            </div>
+            <div class="foot-menu-flex">
+               <div><a href="/html/xnyyxt/" target="_blank">校内应用</a></div>
+            </div>
+            <div class="foot-menu-flex">
+               <div><a href="http://netteaching.cqpc.edu.cn/meol/index.do" target="_blank">优慕课平台</a></div>
+            </div>
+            <div class="foot-menu-flex">
+               <div><a href="http://cqjy.fanya.chaoxing.com/portal" target="_blank">超星一平三端</a></div>
+            </div>
+            <div class="foot-menu-flex">
+               <div><a href="https://ic.cqpc.edu.cn" target="_blank">智慧校园</a></div>
+            </div>
+            <div class="foot-menu-flex">
+               <div><a href="http://www.cqpc.edu.cn/html/5/Index.shtml" target="_blank">信息公开</a></div>
+            </div>
+            <div class="foot-menu-flex">
+               <div><a href="/html/yqlj/" target="_blank">友情链接</a> </div>
+            </div>
+         </div>
+      </div>
+      <div class="foot-head" class="slide-in">
+         <div class="foot-head-left">
+            <div class="logo">
+               <img class="logoImg" src="/templates/site/img/首页/logo.png" alt="" />
+               <div class="logoFont">
+                  <div class="czg">重庆警察学院</div>
+                  <div class="eng">CHONGQING POLICE COLLEGE</div>
+               </div>
+            </div>
+         </div>
+         <div class="foot-head-left">
+            <div class="foot-head-flex">
+               <div><a href="http://video.cqpc.edu.cn/" target="_blank">视频资源</a></div>
+               <div><a href="/html/xnyyxt/" target="_blank">校内应用</a></div>
+               <div><a href="http://netteaching.cqpc.edu.cn/meol/index.do" target="_blank">优慕课平台</a></div>
+               <div><a href="http://cqjy.fanya.chaoxing.com/portal" target="_blank">超星一平三端</a></div>
+               <div><a href="https://ic.cqpc.edu.cn" target="_blank">智慧校园</a></div>
+               <div><a href="http://www.cqpc.edu.cn/html/5/Index.shtml" target="_blank">信息公开</a></div>
+               <div><a href="/html/yqlj/" target="_blank">友情链接</a> </div>
+            </div>
+
+         </div>
+      </div>
+      <div class="foot-detailInfo" class="slide-in">
+         <div class="foot-col1-1">
+            <div class="foot-row-1">
+               地址：重庆市沙坪坝区大学城景铮路666号
+            </div>
+            <div class="foot-row-2">
+               邮编：401331
+            </div>
+            <div class="foot-row-3">
+               <div>值班电话：023-63964500</div>
+               <div>招生电话：023-63964580</div>
+            </div>
+         </div>
+         <div class="foot-col-2">
+            <div>信息管理：重庆警察学院党委宣传部</div>
+            <div class="foot-tech">技术维护：重庆警察学院信息技术中心</div>
+         </div>
+         <div class="foot-col-3">
+            <div class="QRcode-box">
+               <img src="/templates/site/img/通知公告/图层 3@2x.png" alt="" />
+               <div class="Qrcode-name">学校微信公众号</div>
+            </div>
+            <div class="QRcode-box">
+               <img src="/templates/site/img/通知公告/图层 4@2x.png" alt="" />
+               <div class="Qrcode-name">团委官方微博</div>
+            </div>
+
+            <div class="QRcode-box">
+               <a target="_blank"
+                  href="https://xyt.xcc.cn/getpcInfo?sn=1643822139075121152&certType=8&url=*.cqpc.edu.cn&language=CN"><img
+                     src="https://program.xinchacha.com/xyt/xcc_small_ssl.png" style="max-width:70px;height:70px"></a>
+
+            </div>
+         </div>
+      </div>
+      <div class="foot-broswe">
+         <div class="container">
+            &copy;2022 重庆警察学院 &nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" class="browseItem">渝ICP备18008611号-2</a>&nbsp; <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50010602504625" target="_blank" class="browseItem"> 渝公网安备50010602504625</a>
+            <span id="show51lacount"></span>
+         </div>
+      </div>
+   </div>
+</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JiSptRVPYYIJhBBW",ck: "JiSptRVPYYIJhBBW"})</script>
+<div id="51lacount" style="display: none;">
+  <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JiSptRVPYYIJhBBW/quote.js?theme=#FFFFFF,#333333,#FFFFFF,#FFFFFF,#75727D,#FFFFFF,15&f=14&display=0,0,1,1,1,1,0,1"></script>
+</div>
+<script>
+   // 书香园地简介换行
+   $(".book-details").each(function (index, element) {
+      $(this).html($(this).html().replace(/\n/g, "<br />"));
+   });
+   var wow = new WOW({
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 0,
+      mobile: true,
+      live: true
+   });
+   wow.init();
+   window.addEventListener('scroll', () => {
+      if (document.body.clientWidth < 1000) {
+         console.log("执行手机函数")
+         let s = document.documentElement.scrollTop || document.body.scrollTop;
+         var indexBody2 = document.getElementsByClassName('indexBody2')[0]
+         var indexHeader = document.getElementsByClassName('indexHeader')[0]
+         var backdefaut = document.getElementsByClassName('backdefaut')[0]
+         console.log(s)
+         if (s > 100) {
+            indexBody2.style['overflow-y'] = 'hidden'
+            backdefaut.style.background = '#1249A3'
+            indexHeader.style.background = '#1249A3'
+            indexBody2.style.animation = ""
+            indexBody2.style.animation = 'forward 0.4s linear'
+            indexHeader.style.animation = 'frames 0.4s linear'
+            // this.studentA = true
+         } else {
+            indexBody2.style.top = ``
+            backdefaut.style.background = 'rgb(18 73 163 / 0%)'
+            indexHeader.style.background = 'rgb(18 73 163 / 0%)'
+            indexBody2.style.animation = ""
+            indexBody2.style.animation = 'unforward 0.4s linear'
+            indexHeader.style.animation = 'unframes 0.4s linear'
+         }
+      } else {
+         return
+      }
+   }, true)
+   var isScreen = false;
+   var toproll = {
+      show: true,
+      index: 0,
+   };
+   document.documentElement.onmousewheel = function (event) {
+
+      if (!isScreen) {
+         console.log("电脑")
+         var indexBody2 = document.getElementsByClassName('indexBody2')[0]
+         var indexHeader = document.getElementsByClassName('indexHeader')[0]
+         var backdefaut = document.getElementsByClassName('backdefaut')[0]
+         var info1 = document.getElementsByClassName('list-item')[0]
+         var info2 = document.getElementsByClassName('list-item')[1]
+         var info3 = document.getElementsByClassName('list-item')[2]
+         var info4 = document.getElementsByClassName('list-item')[3]
+         var info5 = document.getElementsByClassName('list-item')[4]
+         var info6 = document.getElementsByClassName('list-item')[5]
+         // indexBody2.style['overflow-y'] = 'auto'
+         let bodyStyle = document.body.style
+         console.log(1111, event.wheelDelta)
+         if (event.wheelDelta <= -120 * window.devicePixelRatio) {
+            if (!toproll.show)
+               return;
+            toproll.show = false
+            backdefaut.style.background = '#1249A3'
+            indexHeader.style.background = '#1249A3'
+            indexBody2.style.top = `${133}px`
+            indexBody2.style.animation = 'forward 0.4s linear'
+            indexHeader.style.animation = 'frames 0.4s linear'
+            if (document.body.clientWidth > 1000) {
+               setTimeout(() => {
+                  indexBody2.style['overflow-y'] = 'auto'
+               }, 450)
+               info1.style.animation = "left 2s"
+               info3.style.animation = "left 2s"
+               info5.style.animation = "left 2s"
+               info2.style.animation = "right 2s"
+               info4.style.animation = "right 2s"
+               info6.style.animation = "right 2s"
+            }
+         } else {
+            var scrollTop = indexBody2.scrollTop;
+            if (scrollTop == 0 && !toproll.show) {
+               toproll.index = toproll.index < 0 ? 0 : toproll.index;
+               // console.log(toproll.index,"toproll.index")
+               if (++toproll.index > 3) {
+                  toproll.show = true
+                  toproll.index = 0
+                  setTimeout(() => {
+                     indexBody2.style.top = ``
+                     backdefaut.style.background = 'rgb(18 73 163 / 0%)'
+                     indexHeader.style.background = 'rgb(18 73 163 / 0%)'
+                  }, 380)
+                  indexBody2.style.animation = ""
+                  indexBody2.style.animation = 'unforward 0.4s linear'
+                  indexHeader.style.animation = 'unframes 0.4s linear'
+               }
+            }
+         }
+      }
+   }
+   var app = new Vue({
+      el: '#app',
+      data: {
+         phone: false,
+         browse: '0001',
+         backFoot: "background: url('/templates/site/img/首页/组 3@2x.png') no-repeat;background-size: 100% 100%",
+         body_r: false,
+         infoBackList: ['/templates/site/img/首页/形状 6@2x.png', '/templates/site/img/首页/形状 6@2x (1).png 6@2x.png', '/templates/site/img/首页/形状 6@2x (2).png', '/templates/site/img/首页/形状 6@2x (3).png',],
+         //初始红色教育
+         redEducationItem: [],
+         swiperImg: [],
+         msg: 'hello',
+         headBackground: 'rgb(18 73 163 / 0%)',
+         value1: 0,
+         // thematicaAnimation: false,
+         toproll: toproll,
+         fadeInImg: false,
+         srcImgUrl: '/templates/site/img/首页/newBack.png',
+         studentA: false,
+         teachingIndex: 0,
+         checkedBackIndex: false,
+         teachingAnimation: true,
+         teachticaAnimation: false,
+         scholAnimation: false,
+         redAnimation: false,
+         showNone: false,
+         redbar: {
+            index: 0,
+            max: 0,
+         },
+         isStart: null,
+         imageA: false,
+         imageATrigger: false,
+         peak: false,
+         //监听窗口改变
+         changeStruck: false,
+         screenWidth: document.body.clientWidth,
+         //    热门新闻
+         hotNews: [],
+         //头条新闻
+         headNews: {},
+         //通知公告
+         noticeInfo: {},
+         //专题专栏
+         specialSections: {},
+         //校园快讯
+         campusNewsList: {},
+         //红色教育
+         redEducations: {},
+         // 教学科研
+         research: {},
+         // 学生风采
+         studentTrends: {},
+         // 警苑故事
+         policeStory: {},
+         //警苑形象
+         policeFigures: {},
+         //书香园地
+         scholarlyGardens: {},
+         //值班人员
+         workPeopleMax: {},
+         workPeople: {},
+         //招标采购
+         biddings: {},
+         //警苑形象图片
+         policeFigureImages: {},
+         controls: false,
+         timer: 0,
+         totleNum: 0,
+         num: 0,
+         //    广告弹窗
+         posterContent: '',
+         bodyShow: false,
+         specialIndex: 0,
+         bigSwiperImgIndex: 0,
+         //    页面滚动的距离
+
+         myscrollTop: 0,
+         newIndex: 0,
+         isShowVideo: false,
+         gridImg: false,
+         gridImgf: false,
+         imgSrcInfo: '',
+         campusImgAnimationIndex: false,
+         educationAnimation: false,
+         bigImage: false,
+      },
+      created() {
+         this.isScreen()
+         this.getUnitData()
+      },
+      computed: {
+         reversedMessage: function () {
+            return { "left": "-" + (this.redbar.index * 410) + "px" }
+         },
+      },
+      mounted() {
+         if (document.body.clientWidth < 1000) {
+            this.phone = true
+         } else {
+            this.phone = false
+         }
+         const that = this
+         window.onresize = () => {
+            return (() => {
+               window.screenWidth =
+                  that.screenWidth = window.screenWidth
+            })()
+         }
+         document.getElementById("show51lacount").innerHTML=document.getElementById("51lacount").innerHTML;
+         // window.addEventListener("scroll", this.watchScroll);
+      },
+      beforeDestroy() {
+         const scrollview = this.$refs['scrollview']
+         scrollview.removeEventListener('scroll', this.scrollChange, true)
+      },
+      destroyed() {
+         // window.removeEventListener('scroll', this.getScroll)
+      },
+      updated() {
+         
+      },
+      methods: {
+         getBigImage(item, index) {
+            this.videoTilte = item.remarks
+            this.bigSwiperImgIndex = index
+            console.log(index)
+            this.bigImage = true
+         },
+         gridMous(index, ins) {
+            if (index) {
+               return
+            }
+            if (ins) {
+               this.gridImg = false
+            } else {
+               this.gridImg = true
+            }
+
+            console.log(this.gridImg)
+         },
+         campusImg(index, item) {
+            this.campusImgAnimationIndex = index
+            this.imgSrcInfo = item
+         },
+         gridMousf(index, ins) {
+            if (index) {
+               return
+            }
+            if (ins) {
+               this.gridImgf = false
+            } else {
+               this.gridImgf = true
+            }
+         },
+         videoClose() {
+            this.isShowVideo = false
+            this.bigImage = false
+         },
+         newshift(index) {
+            this.newIndex = index
+         },
+         changeSpecial(index) {
+            this.specialIndex = index
+            console.log(this.specialIndex)
+            console.log(this.specialSections.sectionInfos[this.specialIndex].articles)
+         },
+         change(pre, next) {
+            document.getElementsByTagName('ul')[0].setAttribute("data-before", this.swiperImg[pre].remarks)
+         },
+         getbodyrShow() {
+            this.body_r = true
+            console.log(this.body_r)
+         },
+         getIndexBack() {
+            this.body_r = false
+         },
+
+         getStart(index, url, title) {
+            console.log(title)
+            this.videoTilte = title
+            this.isShowVideo = true
+            this.isStart = index
+            this.videoURL = url
+            this.$refs.myVideo[index].play();
+         },
+         //初始化数据
+         async getUnitData() {
+            // const res1 = await getHeadlineNews()
+            this.headNews = {"articles": [{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "学院召开党委理论学习中心组2024年第18次学习会专题研讨推进学院高质量发展",
+    "coverUrl": "/upfiles/202410/20241017154457169.jpg",
+    "publishDate": "2024-10-17 00:00:00",
+    "articleType": 1,
+    "remarks": "10月17日上午，学院党委书记吴余川主持召开2024年第18次党委理论学习中心组学习会，集中学习“习近平总书记关于金融高质量发展重要论述”。中心组成员结合学习体会和工作实际围绕推进公安高等教育高质量发展作交流研讨，研究部署贯彻落实措施。会议指出，习近平总书记对金融事业发展的重大理论和实践问题作出一系列重要论述，高屋建瓴，内涵丰富、思想深刻，把党对金融工作本质规律和发展道路的认识提升到了新高度，..",
+    "url": "/html/content/24/10/3992.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "学院召开2024年思政课建设工作座谈会",
+    "coverUrl": "/upfiles/202410/20241016170416254.jpg",
+    "publishDate": "2024-10-16 00:00:00",
+    "articleType": 1,
+    "remarks": "为深学笃用习近平总书记关于学校思政课建设的重要指示、在全国教育大会上的重要讲话等精神，贯彻落实教育部、市教委关于新时代学校思政课建设推进会议精神，切实推动学院思政课建设工作高质量发展，10月16日上午，学院党委书记吴余川，党委副书记、院长刘想树，党委副书记彭林权，党委委员、副院长黎宏到马克思主义学院参加2024年思政课建设。党委副书记彭林权主持会议。",
+    "url": "/html/content/24/10/3991.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "“青春红岩”网上主题宣传“进校园”首场活动在重庆警察学院成功举行",
+    "coverUrl": "/upfiles/202410/20241021160224559.jpg",
+    "publishDate": "2024-10-16 00:00:00",
+    "articleType": 1,
+    "remarks": "红岩精神是重庆这座城市的鲜明标识和精神堡垒，也是重庆公安教育得天独厚的精神之源。以红岩精神为核心的忠诚铸魂教育是我校的办学特色和代际传承。在新中国成立75周年之际，由重庆市委网信办指导，重庆警察学院主办，公安政治系、马克思主义学院承办的“青春红岩”网上主题宣传进校园首场活动于2024年10月16日下午在学校礼堂成功举行。学校党委副书记彭林权，市委网信办传播处副处长张宝、干事周杉，公安政治系和马..",
+    "url": "/html/content/24/10/3998.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "学院党委书记吴余川看望慰问孙斌烈士母亲",
+    "coverUrl": "/upfiles/202409/20240930163458421_s.jpg",
+    "publishDate": "2024-09-30 00:00:00",
+    "articleType": 1,
+    "remarks": "在第十一个烈士纪念日来临之际，为深切缅怀公安英烈，弘扬公安民警英勇无畏的奉献精神，9月30日，学院党委书记吴余川代表学院党委对孙斌烈士母亲进行了慰问。在孙斌烈士母亲家中，余川书记详细询问了孙斌烈士母亲的身体情况、生活状况及存在的困难，并为她送去了慰问金，嘱咐她要保重身体，同时转达市局党委对孙斌烈士家属的关怀和慰问。孙斌烈士母亲表示，每一次的关心厚爱都感到非常温暖。学院党委组织部负责人及相关同志..",
+    "url": "/html/content/24/09/3980.shtml"
+  },]}
+            // this.headNews.articles.forEach((item, index) => {
+            //    item.coverUrl = imgBaseUrl + item.coverUrl
+            // })
+
+            // const res2 = await getNotices()
+            this.noticeInfo = {"articles": [{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "重庆警察学院2024年考核招聘事业单位工作人员参加体检人员公告",
+    "coverUrl": "",
+    "publishDate": "2024-10-13 00:00:00",
+    "articleType": 1,
+    "remarks": "按照重庆人力资源和社会保障网（rlsbj.cq.gov.cn）2024年8月12日发布的《重庆警察学院2024年考核招聘事业单位工作人员公告》，现将14名体检人员予以公示。一、公示期2024年10月14—16日（3个工作日）二、受理机构及联系方式受理地点：重庆警察学院党委组织部（人事处）、纪检监察室（重庆市沙坪坝区大学城景铮路666号，邮编：401331）联系方式：党委组织部（人事处）何老师0..",
+    "url": "/html/content/24/10/3990.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "重庆警察学院考核招聘事业单位工作人员报名登记表",
+    "coverUrl": "",
+    "publishDate": "2024-08-09 00:00:00",
+    "articleType": 1,
+    "remarks": "重庆警察学院考核招聘事业单位工作人员报名登记表附件：重庆警察学院考核招聘事业单位工作人员报名登记表.docx",
+    "url": "/html/content/24/08/2847.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "关于举办2024年第一期“清雅谈”活动的通知",
+    "coverUrl": "",
+    "publishDate": "2024-01-17 00:00:00",
+    "articleType": 1,
+    "remarks": "为提升课程思政教学能力，帮助教师理解和把握课程思政教学的内涵和要求，学院于2023年开展了教师课程思政示范课系列培训，为进一步提升培训效果、交流学习心得，拟开展“清雅谈”活动",
+    "url": "/html/content/24/01/2621.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "关于房屋及其附属物维修维护申报的通知",
+    "coverUrl": "",
+    "publishDate": "2024-01-03 00:00:00",
+    "articleType": 1,
+    "remarks": "为保证学校办公教学的正常运转，请各单位结合实际，认真梳理，申报需要维修维护的房屋及附属物，包括维修内容和数量（申报内容和数量需客观真实）。",
+    "url": "/html/content/24/01/2620.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "关于举办2023年秋季学期第一次“清雅谈”活动的通知",
+    "coverUrl": "",
+    "publishDate": "2023-10-25 00:00:00",
+    "articleType": 1,
+    "remarks": "为提升学生创新项目和竞赛的质量，提高教师指导水平，深化创新创业教育改革，学校拟邀请陆军勤务学院教师到校开展本学期第一次“清雅谈”活动。",
+    "url": "/html/content/23/10/2619.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "关于开展第三届语言文字论文评选活动的通知",
+    "coverUrl": "",
+    "publishDate": "2023-09-22 00:00:00",
+    "articleType": 1,
+    "remarks": "无",
+    "url": "/html/content/23/09/2615.shtml"
+  },]}
+            // this.noticeInfo.articles.forEach((item, index) => {
+            //    item.backUrl = this.infoBackList[index]
+            //    item.coverUrl = imgBaseUrl + item.coverUrl
+            // })
+
+            // const res3 = await getSpecialSections()
+            // this.specialSections = res3.data
+            // this.specialSections.sectionInfos.forEach((item, index) => {
+            //    item.sectionUrl = imgBaseUrl + item.sectionUrl
+            // })
+
+            // const res4 = await getBanners()
+            this.swiperImg = [{"imageUrl": "/upfiles/202409/20240929090930339.jpg", "targetUrl": "  ", "remarks": " " },{"imageUrl": "/upfiles/202407/20240731101036215.jpg", "targetUrl": "  ", "remarks": " " },{"imageUrl": "https://www.cqpc.edu.cn/Upload/Default/541170158026821.png", "targetUrl": "  ", "remarks": " " },{"imageUrl": "https://www.cqpc.edu.cn/Upload/Default/389009591296069.png", "targetUrl": "  ", "remarks": " " },{"imageUrl": "https://www.cqpc.edu.cn/Upload/Default/345407528456261.png", "targetUrl": "  ", "remarks": " " },{"imageUrl": "https://www.cqpc.edu.cn/Upload/Default/334787114729541.jpg", "targetUrl": "  ", "remarks": " " },{"imageUrl": "https://www.cqpc.edu.cn/Upload/Default/344002359050309.png", "targetUrl": "  ", "remarks": " " },]
+            // this.totleNum = this.swiperImg.length
+            // this.swiperImg.forEach((item, index) => {
+            //    item.imageUrl = imgBaseUrl + item.imageUrl
+            // })
+
+            // const res5 = await getCampusNews()
+            this.campusNewsList = {"articles": [{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "学院组织离退休干部开展 “漫步古道·情满金秋”健步走活动",
+    "coverUrl": "/upfiles/202410/20241024170144483.jpg",
+    "publishDate": "2024-10-24 00:00:00",
+    "articleType": 1,
+    "remarks": "为弘扬中华民族敬老爱老传统美德，营造关爱老年群体的良好氛围，10月23日，学院组织40余名离退休干部赴璧山古道湾公园开展“漫步古道·情满金秋”健步走活动。古道上，老同志们健步而行，精神饱满、热情高涨，一路欢歌笑语。大家纷纷感慨，健步走活动既锻炼了身体，丰富了退休生活，又加强了老同志之间的感情交流，也深切感受到了组织的温暖和关怀。一致表示，将以更加健康的身心状态为重庆公安教育事业发挥余热、贡献..",
+    "url": "/html/content/24/10/4001.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "陈红副院长参加2024级涉外警务专业新生见面会暨新青年项目开班仪式",
+    "coverUrl": "/upfiles/202410/20241022152952791.jpg",
+    "publishDate": "2024-10-22 00:00:00",
+    "articleType": 1,
+    "remarks": "10月18日下午，学院2024级涉外警务专业新生见面会暨2024-2025学年“新青年全球胜任力人才培养计划项目”开班仪式在培训基地外警培训楼1教室举行。学院党委委员、陈红副院长参加并讲话，国际执法学院全体教师及2024级涉外警务专业新生与“新青年班”全体学生参加开班仪式。陈红副院长紧密结合涉外警务人才培养，宣讲了党的二十届三中全会精神，指导涉外警务专业建设。国际执法学院负责人讲解了涉外警务专..",
+    "url": "/html/content/24/10/3999.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "黎宏副院长主持召开学院高质量发展征求意见会",
+    "coverUrl": "/upfiles/202410/20241021144849904.jpg",
+    "publishDate": "2024-10-21 00:00:00",
+    "articleType": 1,
+    "remarks": "为学院高质量发展，按照院长办公会的要求，10月16日，副院长黎宏主持召开了征求意见会，各单位负责人参加了会议。",
+    "url": "/html/content/24/10/3997.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "学院召开2024年秋季学期教学工作例会",
+    "coverUrl": "/upfiles/202410/20241021101102817.jpg",
+    "publishDate": "2024-10-21 00:00:00",
+    "articleType": 1,
+    "remarks": "10月18日上午，学院召开2024年秋季学期第一次教学工作例会。副院长黎宏参加会议。会上，教务处组织学习了《关于加快推进公安高等教育高质量发展的意见》《教育部办公厅关于在高等学校开设国家安全教育公共基础课的通知》等文件，传达了市教委2024年秋季学期本科教学工作会议、全市新时代学校思政课建设推进会议精神，通报了学院教学运行情况，结合学院“1348”工作部署和高质量发展要求，布置了本学期教学重点..",
+    "url": "/html/content/24/10/3995.shtml"
+  },]}
+            // this.campusNewsList.articles.forEach((item, index) => {
+            //    item.coverUrl = imgBaseUrl + item.coverUrl
+            // })
+            this.imgSrcInfo = this.campusNewsList.articles[0]
+
+            // const res6 = await getRedEducations()
+            this.redEducations = {"articles": [{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "红岩联线",
+    "coverUrl": "https://www.cqpc.edu.cn/Upload/Default/332006464532549.png",
+    "publishDate": "{yyyy}-{mm}-{dd} 00:00:00",
+    "articleType": 2,
+    "remarks": "https://www.hongyan.info/"
+},{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "学习强国",
+    "coverUrl": "https://www.cqpc.edu.cn/Upload/Default/332008674287685.png",
+    "publishDate": "{yyyy}-{mm}-{dd} 00:00:00",
+    "articleType": 2,
+    "remarks": "https://www.xuexi.cn/482f31e90c481f2161a19ecfcbb91f8b/e6109f421e472b4399b006ba21bc2ecd.html"
+},{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "党史学习",
+    "coverUrl": "https://www.cqpc.edu.cn/Upload/Default/332010313084997.png",
+    "publishDate": "{yyyy}-{mm}-{dd} 00:00:00",
+    "articleType": 2,
+    "remarks": "https://www.dswxyjy.org.cn/"
+},{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "党史文献",
+    "coverUrl": "https://www.cqpc.edu.cn/Upload/Default/332008042946629.png",
+    "publishDate": "{yyyy}-{mm}-{dd} 00:00:00",
+    "articleType": 2,
+    "remarks": "http://dangshi.people.com.cn/"
+},]}
+            // this.redEducations.articles.forEach((item, index) => {
+            //    item.coverUrl = imgBaseUrl + item.coverUrl
+            // })
+
+            // const res7 = await getResearch()
+            this.research = {"articles": [{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "刑科系开展2024级新生见面会暨人才培养方案宣讲会",
+    "coverUrl": "/upfiles/202410/20241021105953249.jpg",
+    "publishDate": "2024-10-21 00:00:00",
+    "articleType": 1,
+    "remarks": "10月15日上午，刑科系副主任李博在勤勉楼413室组织召开2024级刑事科学技术专业新生见面会暨人才培养方案宣讲会，各教研室主任及2024级全体新生参加此次会议。会上，李博副主任从系情简介、专业概况、培养方案解读、成长寄语四个方面，向同学们解读专业特色、培养模式。各教研室主任分别从课程架构、能力培养、素质达成等方面，给予了新同学学习、生活指引，勉励同学们不忘初心、珍惜当下，提高自主学习能力，积..",
+    "url": "/html/content/24/10/3996.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "警务战术系组织召开警务指挥与战术专业建设暨教师专业能力培训会",
+    "coverUrl": "/upfiles/202410/20241012102327763.jpg",
+    "publishDate": "2024-10-12 00:00:00",
+    "articleType": 1,
+    "remarks": "10月9日上午，警务战术系组织召开警务指挥与战术专业建设暨教师专业能力培训会。会议邀请了2022年渝警楷模、璧山区公安局特警支队副支队长徐开放，以及万州区公安局无人机具反制大队大队长张望作主题分享，警务战术系教师、警务指挥与战术专业及无人机社团学生代表共计50余人参加了此次培训会。徐开放和张望教官从警务实战需求入手，重点介绍了当前公安机关空地一体化协同执法技战法创新应用，及无人机安全防控的前沿..",
+    "url": "/html/content/24/10/3989.shtml"
+  },]}
+            // this.research.articles.forEach((item, index) => {
+            //    item.coverUrl = imgBaseUrl + item.coverUrl
+            // })
+            // const res8 = await getStudentTrends()
+            // const res9 = await getPoliceStory()
+            // if (res9.data.articles) {
+               this.policeStory = {"articles": [{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "优秀校友面对面|刘婧镒：一颗警心，温暖民心",
+    "coverUrl": "/upfiles/202409/20240920145349785.jpg",
+    "publishDate": "2024-09-20 00:00:00",
+    "articleType": 1,
+    "remarks": "写在前面：韶光流转，岁月如歌。重庆警察学院即将迎来建校75周年，数十载光阴见证着警院的历史变迁，也见证着警院人不变的忠诚使命与责任担当。建校75年来，重庆警察学院始终坚持与国家命运起伏共振，与国家..",
+    "url": "/html/content/24/09/3962.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "治学路上，在坚守中踏实追梦 ——记全国公安教育工作成绩突出教师马永坤",
+    "coverUrl": "/ueditor/upload/image/20230224/6381284985448868382868093.JPG",
+    "publishDate": "2023-02-24 00:00:00",
+    "articleType": 1,
+    "remarks": "“坚守”是一个老生常谈的话题。关于“坚守”的故事我们听过太多，以至于觉得这个事再平凡不过。然而，当下快节奏的工作和生活方式，让人们越来越难以静下心来专注做好一件事，并没有多少人能做到真正的坚守。",
+    "url": "/html/content/23/02/2655.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "从实战前线到育人讲台——他坚守初心播撒“藏蓝种子”",
+    "coverUrl": "/ueditor/upload/image/20221017/6380162087348525429235147.jpg",
+    "publishDate": "2022-10-17 00:00:00",
+    "articleType": 1,
+    "remarks": "从饱经历练的“资深”民警到初登讲台的“新手”教师，从镇定从容地面对各种穷凶极恶的犯罪分子到忐忑不安地面对一张张青春面孔、充满阳光活力的青年学警，从实战一线到育人讲台，会产生怎样的碰撞与火花？又会有..",
+    "url": "/html/content/22/10/2654.shtml"
+  },]}
+            //    this.policeStory.articles.forEach((item, index) => {
+            //       item.coverUrl = imgBaseUrl + item.coverUrl
+            //    })
+            // }
+            // const res10 = await getPoliceFigures()
+            // if (res10.data.articles) {
+            //    this.policeFigures = res10.data
+            //    this.policeFigures.articles.forEach((item, index) => {
+            //       item.content = imgBaseUrl + item.content
+            //       console.log(item.content)
+            //    })
+            // }
+            // const res11 = await getAdvertList({ pageNo: 1, pageSize: 10 })
+            // if (res11.data.rows.length > 0) {
+            //    this.bodyShow = true
+            //    this.posterContent = res11.data.rows[0]
+            //    console.log(this.bodyShow)
+            // } else {
+            //    this.bodyShow = false
+            // }
+            console.log(this.posterContent)
+            this.studentTrends = {"articles": [{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "党委学工部组织开展2024级新生军训第二次会操比赛",
+    "coverUrl": "/upfiles/202409/20240925100408445.jpg",
+    "publishDate": "2024-09-25 00:00:00",
+    "articleType": 1,
+    "remarks": "为全面检验新生近期训练成果，展示他们的青春活力、团队协作精神和纪律性，9月24日，党委学工部组织开展了2024级新生军训第二次会操比赛。清晨8点，2024级全体新生准时在操场上集结完毕。各连队依次进行展示，他们步伐整齐、口号响亮，彰显了军训期间取得的显著进步和成长。从基础的立正、稍息到复杂的队列变换，每一个动作都力求精准，充分体现了同学们不畏艰难、勇于挑战的精神。经过激烈角逐，治安1区队以其出..",
+    "url": "/html/content/24/09/3968.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "学院2024级新生军训纪实（一）",
+    "coverUrl": "/upfiles/202409/20240912160915948.jpg",
+    "publishDate": "2024-09-12 00:00:00",
+    "articleType": 1,
+    "remarks": "9月11日，学校迎来了2024级新生军训的热烈氛围。操场上，一排排整齐的队列，一声声响亮的口号，共同绘制出一幅青春激昂、奋发向上的画面。烈日下，同学们在教官的指导下，认真学习站军姿、走正步、队列变换等基本军事技能。",
+    "url": "/html/content/24/09/3951.shtml"
+  },]}
+            // this.studentTrends.articles.forEach((item, index) => {
+            //    item.coverUrl = imgBaseUrl + item.coverUrl
+            // })
+            // console.log(this.studentTrends)
+
+            // const res12 = await getTodayDutyInfoOutput()
+            // if (res12.data.length > 0) {
+            //    this.workPeople = res12.data
+            //    this.workPeople.forEach((item1, index) => {
+            //       item1.todayDutyInfo.forEach((item, index) => {
+            //          item.dutyAvatar = imgBaseUrl + '/' + item.dutyAvatar
+            //       })
+            //    })
+            //    this.index1 = this.workPeople[0].todayDutyInfo.length
+            //    this.index2 = this.workPeople[1].todayDutyInfo.length
+            //    this.workredbar.max = Math.max(this.index1, this.index2) - 5
+            //    this.workPeopleMax = Math.max(this.index1, this.index2)
+            // }
+
+            // const res13 = await getBiddings()
+            this.biddings = {"articles": [{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "单一来源采购方式需求公示表",
+    "coverUrl": "",
+    "publishDate": "2024-10-23 00:00:00",
+    "articleType": 1,
+    "remarks": "采购单位（全称）重庆警察学院党政办公室拟采购品目（项目名称）警院党政办公室订阅学院2025年报刊杂志项目内容征订报刊杂志类别涵盖政法、财经、都市、妇幼、家庭、教育、保健、医药、自然、旅游、计算机、影视、军事、体育、政务等领域，必须保证所提供报刊杂志符合国家相关法律法规之规定，必须是出版的正版报刊杂志，不得夹杂非法、盗版、盗印报刊，保障服务质量、到货率、时效性及送货上门等服务。采购预算14万元拟..",
+    "url": "/html/content/24/10/4000.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "单一来源采购方式需求公示表",
+    "coverUrl": "",
+    "publishDate": "2024-05-27 00:00:00",
+    "articleType": 1,
+    "remarks": "单一来源采购方式需求公示表",
+    "url": "/html/content/24/05/2643.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "单一来源采购方式需求公示表",
+    "coverUrl": "",
+    "publishDate": "2024-05-27 00:00:00",
+    "articleType": 1,
+    "remarks": "单一来源采购方式需求公示表",
+    "url": "/html/content/24/05/2644.shtml"
+  },{
+    "id": 0,
+    "chapterId": 0,
+    "sectionId": 0,
+    "title": "单一来源采购方式需求公示表",
+    "coverUrl": "",
+    "publishDate": "2024-05-27 00:00:00",
+    "articleType": 1,
+    "remarks": "单一来源采购方式需求公示表",
+    "url": "/html/content/24/05/2645.shtml"
+  },]}
+            // this.biddings.articles.forEach((item, index) => {
+            //    item.coverUrl = imgBaseUrl + item.coverUrl
+            // })
+            // const res14 = await getScholarlyGardens()
+            // this.scholarlyGardens = res14.data
+            // this.scholarlyGardens.articles.forEach((item, index) => {
+            //    item.coverUrl = imgBaseUrl + item.coverUrl
+            //    //遇到换行符分成数组
+            //    item.remarks = item.remarks.split('\n')
+            // })
+            // const res15 = await getPoliceFigureImages()
+            this.policeFigureImages = [{
+            "imageUrl": "https://www.cqpc.edu.cn/Upload/Default/345043172929605.jpg",
+            "targetUrl": "1",
+            "remarks": "警苑映像"
+        },{
+            "imageUrl": "https://www.cqpc.edu.cn/Upload/Default/340114821509189.jpg",
+            "targetUrl": "1",
+            "remarks": "警苑映像"
+        },{
+            "imageUrl": "https://www.cqpc.edu.cn/Upload/Default/340112905232453.jpg",
+            "targetUrl": "1",
+            "remarks": "警苑映像"
+        },{
+            "imageUrl": "https://www.cqpc.edu.cn/Upload/Default/334519628886085.jpg",
+            "targetUrl": "1",
+            "remarks": "警苑映像"
+        },]
+            // this.policeFigureImages.forEach((item, index) => {
+            //    item.imageUrl = imgBaseUrl + item.imageUrl
+            // })
+            // const res16 = await getBrowseCount()
+            // this.browse = res16.data
+
+            this.getClientHeight()
+            this.$nextTick(() => {
+               this.redbar.max = this.redEducations.articles.length + 1 - 6
+               const scrollview = this.$refs['scrollview']
+               scrollview.addEventListener('scroll', this.scrollChange, true)
+               //默认第一个轮播图文字
+               document.getElementsByTagName('ul')[0].setAttribute("data-before", this.swiperImg[0].remarks)
+            })
+         },
+         //可视高度
+         getClientHeight() {
+            this.$nextTick(() => {
+               if (!this.changeStruck) {
+                  document.getElementsByClassName('indexBody2')[0].style.height = (document.documentElement.clientHeight - 133) + 'px'
+
+                  document.getElementsByClassName('swiper-top')[0].style['margin-top'] = 0 + 'px'
+
+               }
+               if (this.changeStruck) {
+                  this.redAnimation = true
+                  this.scholAnimation = true
+                  this.teachticaAnimation = true
+                  document.getElementsByClassName('el-carousel__container')[0].style.height = document.getElementsByClassName("swiperImg")[0].offsetHeight;
+                  console.log(document.getElementsByClassName("swiperImg")[0].offsetHeight, "swiperInbg")
+                  var swiperTop = document.getElementsByClassName("indexHeader")[0].offsetHeight;
+
+               }
+            })
+         },
+         isScreen() {
+            if (document.body.clientWidth <= 600) {
+               this.showNone = true
+            }
+            if (document.body.clientWidth < 1000) {
+               this.changeStruck = true
+               isScreen = true
+               // this.$refs.header.getClientWidth();
+            } else {
+               this.changeStruck = false
+               isScreen = false
+            }
+         },
+         redEducationLeft() {
+            if (this.redbar.index > 0) {
+               this.redbar.index--
+            }
+            var e = document.getElementsByClassName("redEducation-content")[0];
+            e.scrollTo({ left: this.redbar.index * 500, behavior: "smooth" })
+         },
+         redEducationRight() {
+            if (this.redbar.index < this.redbar.max + 1) {
+               this.redbar.index++
+            }
+            var e = document.getElementsByClassName("redEducation-content")[0];
+            e.scrollTo({ left: this.redbar.index * 500, behavior: "smooth" })
+         },
+         redworkLeft() {
+            if (this.workredbar.index > 0) {
+               this.workredbar.index--
+            }
+            var e1 = document.getElementsByClassName("school-duty-img")[1];
+            var e2 = document.getElementsByClassName("school-duty-img")[0];
+            e1.scrollTo({ left: this.workredbar.index * 92, behavior: "smooth" })
+            e2.scrollTo({ left: this.workredbar.index * 92, behavior: "smooth" })
+         },
+         redworkRight() {
+            console.log(this.workredbar.max)
+            console.log(this.workredbar.index)
+            if (this.workredbar.index < this.workredbar.max + 1) {
+               this.workredbar.index++
+            }
+            var e1 = document.getElementsByClassName("school-duty-img")[1];
+            var e2 = document.getElementsByClassName("school-duty-img")[0];
+            e1.scrollTo({ left: this.workredbar.index * 92, behavior: "smooth" })
+            e2.scrollTo({ left: this.workredbar.index * 92, behavior: "smooth" })
+         },
+         swiperToLink(item) {
+            if (item.targetUrl) {
+               window.location.href = item.targetUrl
+            }
+         },
+         // 教学选择
+         teaching(index, id) {
+            this.teachingIndex = index
+            this.imgTrans = true
+            var that = this
+         },
+         toList(title, id, backId, cid) {
+            if (cid) {
+               window.location.href = '/templates/site/announceList.html?chapterId=' + id + '&title=' + title + '&backId=' + backId + '&cid=' + cid
+            } else if (title == '警苑映像') {
+               window.location.href = '/templates/site/spannounceList.html?chapterId=' + id + '&title=' + title + '&backId=' + backId
+            } else {
+               window.location.href = '/templates/site/announceList.html?chapterId=' + id + '&title=' + title + '&backId=' + backId
+            }
+         },
+         toDetail(id, backId, item) {
+            console.log(item)
+            //true跳转到外部，false跳转内部
+            if (!item.isLink) {
+               window.location.href = item.url
+            } else {
+               window.open(item.linkUrl)
+            }
+         },
+         scrollChange(e) {
+            var scrollTop = this.$refs.scrollview.scrollTop
+            console.log(scrollTop)
+            if (scrollTop > 1000) {
+               // this.thematicaAnimation = true
+            }
+            if (scrollTop > 500) {
+               this.teachticaAnimation = true
+            }
+            if (scrollTop > 1700) {
+               this.redAnimation = true
+            }
+            if (scrollTop > 240) {
+               this.scholAnimation = true
+            }
+            if (scrollTop > 2700) {
+               this.studentA = true
+            }
+            if (scrollTop > 1100) {
+               this.educationAnimation = true
+            }
+            if (scrollTop > 3379) {
+               this.teachingIndex = 0
+               this.fadeInImg = true
+            }
+            if (scrollTop > 3600 && !this.imageATrigger) {
+               this.imageA = true
+               this.imageATrigger = true
+               // console.log('scroll imageA',this.imageA);
+            }
+         },
+      },
+      watch: {
+         screenWidth: {
+            handler: function (val, oldVal) {
+               var _this = this
+               _this.$nextTick(() => {
+                  if (val <= 1000) {
+                     this.isScreen()
+                     this.getClientHeight()
+                  } else {
+                     this.isScreen()
+                     this.getClientHeight()
+                  }
+
+               })
+
+            },
+            immediate: false
+         },
+         body_r: {
+            handler: function (val, oldVal) {
+               var _this = this
+               _this.$nextTick(() => {
+                  if (val <= 1000) {
+                     this.getClientHeight()
+                  } else {
+                     this.getClientHeight()
+                  }
+               })
+            },
+            immediate: false
+         },
+      }
+
+   })
+</script>
+<style>
+   .bgImg0 {
+      background: url("/templates/site/img/首页/1.png") no-repeat;
+   }
+
+   .bgImg1 {
+      margin-top: 30px !important;
+      background: url('/templates/site/img/首页/2.png') no-repeat;
+   }
+
+   .bgImg2 {
+      background: url('/templates/site/img/首页/3.png') no-repeat;
+   }
+
+   .bgImg3 {
+      margin-top: 30px !important;
+      background: url('/templates/site/img/首页/4.png') no-repeat;
+   }
+
+   .inforight {
+      animation: right 1s
+   }
+
+   .infoleft {
+      animation: left 1s
+   }
+
+   /* 通知动画 */
+   @keyframes notificationLeft {
+      0% {
+         transform: translateY(-100px);
+      }
+
+      100% {
+         transform: translateY(0);
+      }
+   }
+
+   /* 通知动画 */
+   @keyframes notificationRigth {
+      0% {
+         transform: translateY(100px);
+      }
+
+      100% {
+         transform: translateY(0);
+      }
+   }
+
+   .notificationleft {
+      animation: notificationLeft 1s
+   }
+
+   .notificationrigth {
+      animation: notificationRigth 1s
+   }
+
+   .ceiling {
+      top: 198px;
+      animation: forward 1s
+   }
+
+   .indexHeaderFrames {
+      animation: frames 1s
+   }
+
+   .subject-box-img2 {
+      animation: subjectBox2 1.5s
+   }
+
+   .subject-box-img3 {
+      animation: subjectBox3 1.5s
+   }
+
+   .subject-box-img1 {
+      animation: subjectBox3 1.5s
+   }
+
+   .subject-box-img4 {
+      animation: subjectBox2 1.5s
+   }
+
+   .fadeIn {
+      animation: fadeio 6s;
+   }
+
+   .redEducationAnimation {
+      animation: education 5s;
+   }
+
+   @keyframes education {
+      0% {
+         opacity: 0.2;
+      }
+
+      100% {
+         opacity: 1;
+      }
+   }
+
+   @keyframes unforward {
+      0% {
+         top: 133px;
+      }
+
+      100% {
+         top: 1300px;
+      }
+   }
+
+   @keyframes unframes {
+      0% {
+         top: 0px;
+      }
+
+      100% {
+         top: -133px;
+      }
+   }
+
+   .checkedBack {
+      background-image: url('/templates/site/img/首页/newBack.png')
+   }
+
+   .checkedIndex {
+      margin-left: 30px;
+      color: #1249A3;
+   }
+
+   .teachingA {
+      animation: teachingA 1s;
+   }
+
+   @keyframes teachingA {
+      0% {
+         transform: translateX(-100px);
+      }
+
+      80% {
+         transform: translateX(50px);
+      }
+
+      100% {
+         transform: translateX(0);
+      }
+   }
+
+   @keyframes imageA {
+      0% {
+         transform: translate(-100px, -30px);
+      }
+
+      100% {
+         transform: translate(0px, 0px);
+      }
+   }
+
+   @keyframes imageB {
+      0% {
+         transform: translate(100px, -30px);
+      }
+
+      100% {
+         transform: translate(0px, 0px);
+      }
+   }
+
+   @keyframes imageC {
+      0% {
+         transform: translate(-100px, 30px);
+      }
+
+      100% {
+         transform: translate(0px, 0px);
+      }
+   }
+
+   @keyframes imageD {
+      0% {
+         transform: translate(100px, 30px);
+      }
+
+      100% {
+         transform: translate(0px, 0px);
+      }
+   }
+
+   .image {
+      transform: translate(0, 0) !important;
+      transition: transform 1s ease-in-out !important;
+      /* animation: imageA 1s; */
+   }
+
+   .image1 {
+      animation: imageB 1s;
+   }
+
+   .image2 {
+      animation: imageC 1s;
+   }
+
+   .image3 {
+      animation: imageD 1s;
+   }
+
+   #app {
+      width: 100vw;
+      height: 100%;
+   }
+   .footContainer{background-image: url('/templates/site/img/首页/组 3@2x.png');}
+</style>
+</body>
+</html>

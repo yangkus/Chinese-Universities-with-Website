@@ -1,0 +1,39 @@
+<script  type="text/javascript">
+
+//�жϷ����ն�
+var browser={
+    versions:function(){
+        var u = navigator.userAgent, app = navigator.appVersion;
+        return {
+            trident: u.indexOf('Trident') > -1, //IE�ں�
+            presto: u.indexOf('Presto') > -1, //opera�ں�
+            webKit: u.indexOf('AppleWebKit') > -1, //ƻ�����ȸ��ں�
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//����ں�
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //�Ƿ�Ϊ�ƶ��ն�
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios�ն�
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android�ն˻���uc�����
+            iPhone: u.indexOf('iPhone') > -1 , //�Ƿ�ΪiPhone����QQHD�����
+            iPad: u.indexOf('iPad') > -1, //�Ƿ�iPad
+            webApp: u.indexOf('Safari') == -1 //�Ƿ�webӦ�ó���û��ͷ����ײ�
+        };
+    }(),
+    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+}
+//browser.versions.trident������٣�������IE�ںˣ��Դ�����browser.versions.webKit�Ƿ�Ϊ�ȸ��ں�
+//�ж��Ƿ�IE�ں�
+//if(browser.versions.trident){
+//    alert("is IE");
+//}
+//�ж��Ƿ�webKit�ں�
+//if(browser.versions.webKit){
+//    alert("is webKit");
+//} 
+//�ж��Ƿ��ƶ���
+if(browser.versions.mobile||browser.versions.android||browser.versions.ios){
+    window.location.href = window.location.protocol+"//"+window.location.host+"/mobile";
+}else{
+	window.location.href = window.location.protocol+"//"+window.location.host+"/index";
+}
+ 
+
+</script>

@@ -1,0 +1,890 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>�������ְҵѧԺ</title>
+<meta name="keywords" content="�������ְҵѧԺ,������棬���ѧԺ���������ѧԺ���������ѧԺ��������棬�������ְҵ�������������ѧԺ��">
+<meta name="description" content="�������ְҵѧԺ���Ǿ�����ʡ������׼��������������ʡ����ͨԺУ������1993�꣬Ϊ���ڹ��רҵԺУ֮�״���">
+<meta name="baidu-site-verification" content="8PlkwssJel" />
+
+
+
+<script type="text/javascript">
+host = window.location.host; 
+var site= "www.ggxy.com";
+if (host!=site )
+{ 
+alert(window.location.host+':Ϊ�Ƿ�������վ��Ϊ�����İ�ȫ���ڴ����ص�ԭ��վ');  
+location.href='http://'+site+window.location.pathname; 
+}
+</script>
+
+
+
+<!--
+<script type="text/javascript">
+function ie6(){
+ if (!-[1,]&&!window.XMLHttpRequest){
+    window.location.href="home102411.htm";
+    return false;
+  };
+ if (screen.width < 1240){
+    window.location.href="home102411.htm";
+    return false;
+  }; 
+}
+ie6();
+</script>
+-->
+
+
+
+<SCRIPT Language="Javascript">
+function openWin(route,pop,option) {
+	new_win=window.open(route,pop,option);
+	new_win.focus();
+}
+</SCRIPT> 
+
+
+<link rel="shortcut icon" href="/index-mb/index2017/themes/images/ruc.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/index-mb/index2017/themes/style.css"  />
+<link rel="stylesheet" type="text/css" href="/index-mb/index2017/themes/css/bgstretcher.css"  />
+
+<link rel="stylesheet" type="text/css" href="/index-mb/index2017/themes/css/style-1.css"  />
+
+<script type="text/javascript" src="/index-mb/index2017/themes/js/jquery-1.8.1.min.js" ></script>
+<script type="text/javascript" src="/index-mb/index2017/themes/js/bgstretcher.js" ></script>
+
+<link href="/index-mb/index2017/top-style/layout2.css"  rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/index-mb/index2017/top-style/common_new.js" ></script>
+
+<!--
+<link rel="stylesheet" type="text/css" href="/templates/site/sitegray_hb/sitegray_d.css" />
+<script language="javascript" src="/templates/site/sitegray_hb/sitegray.js"></script>
+-->
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	var storage = window.localStorage;
+        var winHeight = jQuery(window).height();
+        var navPosition = $('#tipimg').position();
+
+        $('.slide-arrow').css('top',winHeight*0.32);
+        $('#nav').css('top',winHeight*0.32);
+        $('#nav').css('left',navPosition.left-36);
+        
+        jQuery(window).bind("resize", changeSAposition);
+ 
+        function changeSAposition( e ) {
+            var winHeight = jQuery(window).height();
+            var navPosition = $('#tipimg').position();
+            
+            $('.slide-arrow').css('top',winHeight*0.32);
+            $('#nav').css('left',navPosition.left-36);
+        };
+        
+        //  Initialize Backgound Stretcher	   	
+        $('BODY').bgStretcher({
+        images: ['/templates/index/index_img/2024-1.jpg','/index-mb/default/luanxian/2023/2023-2.jpg','/index-mb/default/luanxian/2023/2022-1.jpg','/index-mb/default/luanxian/2023/2023-3.jpg','/index-mb/default/luanxian/2023/2022-2.jpg','/index-mb/default/luanxian/2023/2023-4.jpg','/index-mb/default/luanxian/2023/2023-5.jpg'],
+        imageWidth: 1680, 
+        imageHeight: 1050,
+        transitionEffect: 'fade',
+        sequenceMode: 'normal',
+        buttonPrev: '#cclb-btn-prev',
+        buttonNext: '#cclb-btn-next',
+        nextSlideDelay: '20000',
+        preloadImg: true 
+  //pagination: '#nav'
+});                
+                $('#cclb-btn-pause').click(function(){
+                        if ($(this).html() == "Pause"){
+                                $(this).html("Resume");
+                                $(this).attr('class','cclb-btn-start');
+                                $('BODY').bgStretcher.pause();
+                        } else {
+                                $(this).html("Pause");
+                                $(this).attr('class','cclb-btn-pause');
+                                $('BODY').bgStretcher.play();
+                        }
+		})
+		
+		$('.logo').hover(function(){
+			$('.lang').slideDown(200);
+            $('.animate-area div').stop(true, true);
+			$('.sum-content').slideUp(200);
+			$('.animate').animate({
+				width: '200'
+			},200, function(){
+				$('.sum').removeClass('no-bg-color');
+				$('.sum-content span').removeClass('changebg');
+			});
+		},function(){
+			$('.lang').slideUp(200);
+		});
+
+		$('.animate span').mouseenter(function(){
+            $('#searchbox').slideUp(200);
+			$('.animate-area div').stop(true, true);
+			$('.animate').removeClass('no-bg-color');
+			$('.animate span').removeClass('changebg');
+			$(this).addClass('changebg');
+			$('.aa-content').hide();
+			var box = $(this).parent();
+			box.removeClass('animate');
+			box.animate({
+				width: '300'
+			}, 200, function(){
+				box.addClass('no-bg-color');
+				box.children('.aa-content').slideDown(200);
+				box.addClass('animate');
+			});
+			$('.animate').animate({
+				width: '150'
+			}, 200);
+		});
+		
+		$('.aa-content').mouseleave(function(){
+			$('.animate-area div').stop(true, true);
+			$(this).slideUp(200);
+			$('.animate').animate({
+				width: '200'
+			},200, function(){
+				$(this).removeClass('no-bg-color');
+				$('.animate span').removeClass('changebg');
+			});
+		});
+		
+		$('#search').click(function(){
+			$('#searchbox').toggle();
+			$(this).css('font-weight','700');
+		});
+		
+		$('#s').focusin(function(){
+			var val = $(this).val();
+			if(val == '��������������...'){
+				$(this).val('');
+			}
+		});
+		
+		$('#s').focusout(function(){
+			var val = $(this).val();
+			if(val == ''){
+				$(this).val('��������������...');
+			}
+		});
+		
+		$(document).keypress(function(e) {
+			if (e.shiftKey && e.which == 70) $('#searchbox').toggle();
+			$('#search').css('font-weight','700');
+		});
+		
+		
+		if (storage.getItem("lastvisitURL") && storage.getItem("lastvisitSite")){ 
+			$('#lastvisitLink').html(storage.getItem("lastvisitSite"));
+			$('#lastvisitLink').attr('href',storage.getItem("lastvisitURL"));
+			$('.lastvisit').show();
+		};
+
+		$('.newsbox').hover(function(){
+                        $('#togobox').attr('class','mb-left');
+                        $('.infolist').hide();
+                        $('#newslist').show();
+                });
+                $('.infobox').hover(function(){
+                	$('#togobox').attr('class','mb-left-info');
+                });
+                $('.infobox a').hover(function(){
+                        var target=$(this).attr('box');
+                        $('.infolist').hide();
+                        $('#'+target).show();
+                });
+                
+            	$('.links').hover(function(){
+          	$('#searchbox').slideDown();
+		$('.serv-content').slideUp(200);
+                $('.serv').removeClass('no-bg-color');;
+         	 });
+                
+	});
+	
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7ee2aefcf0cdd219628cb91281491445";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+
+<div style="background: red; width: 200px; height: 100px;" id="float"></div>
+
+
+    <div id="homepage">
+	
+<!--������Ϣbegin-->
+<html>
+ <head></head>
+ <body>
+  <div class="xin_top"> 
+   <div class="xin_header"> 
+    <div class="xin_logo">
+     <a href="#"><img src="/index-mb/index2017/top-style/logo.png" /></a>
+    </div> 
+    <!--����begin--> 
+    <div class="xin_nav"> 
+     <ul id="xin_nav"> 
+      <li><span><a href="/default.asp" style="font-family:΢���ź�;font-size:14px">��ҳ</a></span> </li>
+      <li><span><a href="/fenye/xxgk/index.shtml" style="font-family:΢���ź�;font-size:14px">ѧԺ�ſ�</a> 
+        <!--��������--> 
+        <ul class="xin_subnav"> 
+         <li><a href="/fenye/xxgk/xxjj.shtml">ѧУ���</a></li> 
+         <li><a href="/fenye/xxgk/xhxx.shtml">У��Уѵ</a></li>
+         <li><a href="/fenye/xxgk/zzjg.shtml">��֯����</a></li>
+         <li><a href="/fenye/xxgk/lrld.shtml">�����쵼</a></li> 
+         <li><a href="/photo/">У԰���</a></li> 
+
+         <!--
+         <li><a href="/fenye/xxgk/gyyy.shtml">У԰Ӱ��</a></li> 
+ <li><a href="/fenye/xxgk/szll.shtml">ʦ������</a></li> 									 
+<li><a href="http://zsc.ggxy.com/201901/6033.shtml" >רҵ����</a></li> 
+<li><a href="/fenye/yxsz/yxx.shtml" >Ժϵ����</a></li>  
+--> 
+         <li><a href="/fenye/xxgk/map/luxiantu/lianxi/">��ͨ��ʽ</a></li> 
+        </ul> </span> 
+       <!--����������͸����--> 
+       <div class="xin_subNav_bg"> 
+       </div> </li> 
+      <li><span><a href="http://zsc.ggxy.com/" style="font-family:΢���ź�;font-size:14px">������Ϣ</a> 
+        <!--��������--> 
+        <ul class="xin_subnav"> 
+         <li><a href="https://zsc.ggxy.com/List_364.shtml">�����³�</a></li> 
+         <li><a href="https://zsc.ggxy.com/Special/28/">����רҵ</a></li> 
+         <li><a href="https://zsc.ggxy.com/List_92.shtml">�߿�����</a></li> 
+         <li><a href="http://zsc.ggxy.com/List_216.shtml">��������</a></li> 
+         <li><a href="http://zsc.ggxy.com/List_220.shtml">ע����ѧ</a></li> 
+         <li><a href="https://zsc.ggxy.com/List_363.shtml">������̬</a></li> 
+         <li><a href="https://zsc.ggxy.com/List_366.shtml">������ѧ</a></li> 
+         <li><a href="https://zsc.ggxy.com/List_93.shtml">�����ʴ�</a></li> 
+        </ul> </span> 
+       <!--����������͸����--> 
+       <div class="xin_subNav_bg"> 
+       </div> </li> 
+      <li><span><a href="http://jwc.ggxy.com" style="font-family:΢���ź�;font-size:14px">����̬</a> 
+        <!--��������--> 
+        <ul class="xin_subnav"> 
+         <li><a href="http://jwc.ggxy.com/jwgg/">���񹫸�</a></li> 
+         <li><a href="http://jwc.ggxy.com/jwdt/">����̬</a></li> 
+         <li><a href="http://jwc.ggxy.com/jxwj/">��ѧ�ļ�</a></li> 
+         <li><a href="http://jwc.ggxy.com/ksjs/">���Ծ���</a></li> 
+         <li><a href="http://jwc.ggxy.com/xzzq/">�ļ�����</a></li> 
+         <li><a href="http://www.ggxy.com/verification/jwc.asp">�ɼ���ѯ</a></li> 
+ 
+        </ul> </span> 
+       <!--����������͸����--> 
+       <div class="xin_subNav_bg"> 
+       </div> </li> 
+      <li><span><a href="http://xsc.ggxy.com" style="font-family:΢���ź�;font-size:14px">ѧ������</a> 
+        <!--��������--> 
+        <ul class="xin_subnav"> 
+         <li><a href="http://xsc.ggxy.com/ShowSpecial.asp?SpecialID=3">����ָ��</a></li> 
+         <li><a href="http://xsc.ggxy.com/List_72.shtml">������̬</a></li> 
+         <li><a href="http://xsc.ggxy.com/List_73.shtml">������ѧ</a></li> 
+         <li><a href="http://xsc.ggxy.com/List_74.shtml">�����ƶ�</a></li> 
+         <li><a href="http://xsc.ggxy.com/List_75.shtml">ѧ������</a></li> 
+         <li><a href="http://xsc.ggxy.com/List_157.shtml">ѧԺ��ί</a></li> 
+         <li><a href="http://xsc.ggxy.com/List_77.shtml">�������</a></li> 
+         <li><a href="http://xsc.ggxy.com/List_76.shtml">����Ա����</a></li> 
+         <li><a href="http://xlzx.ggxy.com">����������</a></li> 
+        </ul> </span> 
+       <!--����������͸����--> 
+       <div class="xin_subNav_bg"> 
+       </div> </li> 
+      <li><span><a href="http://lnggzyxy.bysjy.com.cn/" style="font-family:΢���ź�;font-size:14px">ʵϰ��ҵ</a> 
+        <!--��������--> 
+        <ul class="xin_subnav"> 
+         <li><a href="http://lnggzyxy.bysjy.com.cn/module/news?type_id=18086&menu_id=37628">���Ź���</a></li> 
+         <li><a href="http://lnggzyxy.bysjy.com.cn/module/careers?menu_id=37631">������</a></li> 
+         <li><a href="http://lnggzyxy.bysjy.com.cn/module/news?type_id=18088&menu_id=37636">��ҵ����</a></li> 
+         <li><a href="http://lnggzyxy.bysjy.com.cn/module/news?type_id=18094&menu_id=37637">��ҵָ��</a></li> 
+         <li><a href="http://lnggzyxy.bysjy.com.cn/module/news?type_id=18090&menu_id=37638">����ָ��</a></li> 
+
+        </ul> </span> 
+       <!--����������͸����--> 
+       <div class="xin_subNav_bg"> 
+       </div> </li> 
+      <li><span><a href="http://www.ggxy.com/index.asp" style="font-family:΢���ź�;font-size:14px">����ר��</a> 
+        <!--��������--> 
+        <ul class="xin_subnav"> 
+         <li><a href="http://www.ggxy.com/Article/">ѧԺ����</a></li> 
+         <li><a href="http://www.ggxy.com/yuanxi/">Ժϵ����</a></li> 
+         <li><a href="http://www.ggxy.com/video">У԰Ӱ��</a></li> 
+         <li><a href="/News.asp?id=66">ͼƬ����</a></li> 
+         <li><a href="http://www.ggxy.com/spxw/">��Ƶ����</a></li> 
+         <li><a href="http://www.ggxy.com/photo/">У԰ͼ��</a></li> 
+         <li><a href="http://sz.ggxy.com">˼��ר��</a></li> 
+         <li><a href="http://xxgk.ggxy.com/">��Ϣ����</a></li> 
+         <li><a href="http://xf.ggxy.com/">ѧ�罨��</a></li> 
+        </ul> </span> 
+       <!--����������͸����--> 
+       <div class="xin_subNav_bg"> 
+       </div></li> 
+      <li><span><a href="https://kzb.ggxy.com/" style="font-family:΢���ź�;font-size:14px">�Ž�ƽ̨</a> 
+        <!--��������--> 
+        <ul class="xin_subnav"> 
+        </ul> </span> 
+       <!--����������͸����--> 
+       <div class="xin_subNav_bg"> 
+       </div> </li> 
+      <li><span><a href="international.html" style="font-family:΢���ź�;font-size:14px">�������</a> 
+        <!--��������--> 
+        <ul class="xin_subnav"> 
+         <li><a href="http://www.ggxy.com/verification/jwc.asp">����ϵͳ</a></li> 
+         <li><a href="http://xlcp.ggxy.com/login.asp">��������</a></li> 
+         <li><a href="http://jyw.ggxy.com/dacx.asp">������ѯ</a></li> 
+         <li><a href="https://my.chsi.com.cn/archive/index.jsp">ѧ�ŵ���</a></li> 
+         <li><a href="https://account.chsi.com.cn/account/help/txjd.jsp">ͼ��У��</a></li> 
+         <li><a href="http://www.chsi.com.cn/xlcx/bgcx.jsp">ѧ����֤</a></li> 
+         <li><a href="http://gaokao.ggxy.com/ddzs/index2.asp">������������</a></li> 
+         <li><a href="http://gaokao.ggxy.com/zcrx/index2.asp">ע����ѧ����</a></li> 
+        </ul> </span> 
+       <!--����������͸����--> 
+       <div class="xin_subNav_bg"> 
+       </div></li> 
+     </ul> 
+    </div> 
+    <!--����end--> 
+    <!--����--> 
+    <div class="xin_search" style="width:175px"> 
+     <ul> 
+      <li style="float:left;width:200px;text-align:right;height:30px;line-height:30px;"> <a href="#" style="color:#ffffff;font-family:΢���ź�">�ڲ���</a> <a href="#" style="color:#ffffff;font-family:΢���ź�">ENGLISH</a> </li> 
+     </ul> 
+     <ul style="float:left;width:175px;height:25px;background:url(/index-mb/index2017/top-style/search_box.png) no-repeat;"> 
+      <li style="width:130px;height:25px;float:left;padding-top:3px;padding-left:15px;"> 
+       <form action="http://www.szu.edu.cn/2014/search.asp" id="searchForm" method="get" onsubmit="return checkSubmit()"> 
+        <input type="hidden" name="action" value="search" /> 
+        <input type="text" name="kw" id="kw" style="width:122px;border:0px;height:18px;font-size:12px;padding-top:2px;" />
+       </form> </li> 
+      <li style="width:30px;height:25px;float:left;cursor:pointer" id="doSearch"></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <!--������Ϣend--> 
+ </body>
+</html>
+
+
+<!--
+		<div class="top">
+		</div>
+-->		
+
+		<div class="content">
+			<div id="home-content">
+			
+			
+			                 
+								<div class="cc-short cc-short-peiyang">
+					<div class="mbright-box">
+					<!--
+                                        <div class="mbrbox-links">
+                                        <a href="http://zsc.ggxy.com/" >����</a>
+                                        <a href="http://jwc.ggxy.com/" >��ѧ</a>
+                                        <a href="http://xsc.ggxy.com/"  target="_blank">ѧ��</a>
+                                        <a href="http://jyw.ggxy.com/"  target="_blank">��ҵ</a>
+                                        <a href="http://www.ggxy.com/index.asp"  target="_blank">����</a>
+                                        </div>
+					-->
+                                        <div class="mbrbox-info" id="studentnewsfeed">
+<!--	
+<div class="mbrbox-info-left"><a href="#"  target="_blank"><img src="http://www.ggxy.com/gongao/UploadFiles_8195/201705/2017051115415996.jpg"  /></a></div>
+<div class="mbrbox-info-right"><a href="http://jwc.ggxy.com/201706/5252.shtml"  target="_blank">2017���ϰ��������ҵ��֪<span>(2017/6/6)</span></a><br></div>   
+-->
+
+<link rel="stylesheet" type="text/css" href="/news_video/html/video.css" />
+<script src="/news_video/html/pingzi_video.js" type="text/javascript" charset="utf-8"></script>
+<div class="m-video" data-src="https://disk.ggxy.com/?explorer/share/file&hash=1bb45scMnDGtevv3ZKl1Si9nH3ddgU31MwSNhcLGDPdVxgkICvkYcKCvzT8uoHaPHFY" style="width: 180px;text-align: center;cursor: pointer;">
+<br>
+<img src="https://www.ggxy.com/spxw/UploadFiles_4168/202405/202405220337336580747.jpg" width="180" HEIGHT="120"/><br>
+<a href="JavaScript:return false;"  target="_blank" style="color:#FFEEC6;">30��������Ƭ������鿴��</a>
+</div>
+       
+	   
+                                        </div>
+                                          <div class="mbrbox-more"></div>
+                                        </div>
+				</div>
+			
+
+                                 <div class="cc-short2 cc-short-yanjiu">
+					                         <div class="mbyaowen-box">
+					                         <!--  
+                                        <div class="mbyaowen-links">
+                                        <a href="#"  target="_blank">��̬</a>
+                                        <a href="#"  target="_blank">ѧ��</a>
+                                        <a href="#"  target="_blank">����</a>
+                                        <a href="#"  target="_blank">�ڿ�</a>
+                                        </div>
+                                    -->
+                                        <div class="mbyaowen-info" id="researchnewsfeed">
+                                        
+                                        
+
+<style type="text/css">
+
+.divcss5{ margin:0 auto; width:350px; overflow:hidden;padding-bottom:7px;}
+.divcss5 img{ float:left; width:112px; height:75px;}
+.divcss5 a{color:#FFEEC6;text-decoration:none} 
+.divcss5 a:hover{color:#ffffff}
+.divcss5 .right{ float:right; width:230px; text-align:left;}
+.divcss5 .right h3{ height:26px; line-height:26px;font-family:"Microsoft YaHei"; font-size:16px; overflow:hidden;}
+.divcss5 .right div{ overflow:hidden;padding-top:5px; height:44px;line-height:25px;color:#FFffff; font-size:12px;}
+.divcss5 .right div span{color:#FFEEC6}
+
+</style>
+
+<div style="PADDING-TOP: 0px">
+<div>
+<div id=marqueebox0 style="OVERFLOW: hidden; FONT-SIZE: 14px; HEIGHT: 155px; LINE-HEIGHT: 155px"> 
+<div class=divcss5><A href="https://www.ggxy.com/Article/202403/7373.shtml" target=_blank><img class='pic1' src='https://www.ggxy.com/Article/UploadFiles/202403/202403291523008944868.jpg'  width='112' height='75' border='0'></A> 
+<div class=right>
+<H3><A href="https://www.ggxy.com/Article/202403/7373.shtml" target=_blank>���ۺ�֮�С��������飬��</A></H3>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;���������ְҵѧԺ��Ʒ�Ķ�Ƭ��Ӱ���ۺ�֮�С���2022��10�¿���������6���µ����������������ۺ�֮�С���2023��3��������ɣ���������һ�ε�Ӱ����ѡ֮�á�����2023����ף�ӰƬ���ۺ�֮�С��ڹ�����ʮ�����Ӱ����Χ��ն����ཱ�����36���й��𼦰ٻ���Ӱ�ڡ����Ľ�𼦺�Ͽ�����߸۰������Ƭ������������������ɼ��������Ƭ�ھ����Ƭ�ܳ��ɾͽ�/������Ѷ�Ƭ������Լ���ǵ�Ӱ����Ѷ�Ƭ������Χ�����⾵��Ӱ�ڡ���ɼ����̫��Ӱ�ڡ�WSXA��ķ˹�ص���Ӱ�ڡ���ӥ���ʵ�Ӱ�ڡ��мӹ��ʵ�Ӱ�ڵȡ����⣬ӰƬ���ڽ�Ӱչ��ɽ��Ӱ�񼾡��������϶�Ƭ��������ѧ���������ְҵѧԺ�����¡�����ƽ̨�����˹�����ӳ���ջ��˴�������Ч���������Ų���֮�󣬡��ۺ�֮�С����������ߣ������ڴ��� <SPAN>...<A href="https://www.ggxy.com/Article/202403/7373.shtml" target=_blank>[��ϸ]</A></SPAN></div></div></div> 
+<div class=divcss5><A href="https://www.ggxy.com/Article/202409/7647.shtml" target=_blank><img class='pic1' src='https://www.ggxy.com/Article/UploadFiles/202409/202409140303391545713.jpg'  width='112' height='75' border='0'></A> 
+<div class=right>
+<H3><A href="https://www.ggxy.com/Article/202409/7647.shtml" target=_blank>ϲ��|ѧԺ���߻�ϵѧ����</A></H3>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;8��24�գ��й���ѧ�����������ѧԺ��2024�������������佱�����ഺʢ�䡱�ڱ������У�ȫ�����صĹ��ѧ�ӡ�ҵ��ר���Լ������˲Ż��һ�ã�����ʢ�䡣ѧԺ�߻�ϵ��ʦ��ˬ����������ԭ��ָͬ����2022�����߻�רҵѧ������ˡ�������߻�ִ�еĿɱȿ�Ӫ���߻�ʵ����Ŀ��Ȥʳ�Ļ��磬�ഺ�㸺�������ٻ�2024����ʳƷӪ���߻�ʵ������������һ�Ƚ�����������Ƚ���ָ����ʦ��ˬ����������ԭ�ٻ�����ָ����ʦ�ƺţ�ѧԺ�ٻ�����ں�ʵ�����������ƺš� <SPAN>...<A href="https://www.ggxy.com/Article/202409/7647.shtml" target=_blank>[��ϸ]</A></SPAN></div></div></div> 
+<div class=divcss5><A href="https://www.ggxy.com/Article/202408/7625.shtml" target=_blank><img class='pic1' src='https://www.ggxy.com/Article/UploadFiles/202408/202408290948301096921.jpg'  width='112' height='75' border='0'></A> 
+<div class=right>
+<H3><A href="https://www.ggxy.com/Article/202408/7625.shtml" target=_blank>��������Ҫ��һ�δ�ѧ��</A></H3>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;�������ְҵѧԺ��һ�������εĴ�ѧ��ֵ�õĴ�ѧ�����εĴ�ѧ���������������Ĵ�ѧ�����������ڴ������㷢����ֿ���룬�������������������������ڿ��Ա�֯δ�����ɹ�Ժ�����������Ĵ�ѧʱ�⣬�����ǿ����Ѿõ����찿�衣 <SPAN>...<A href="https://www.ggxy.com/Article/202408/7625.shtml" target=_blank>[��ϸ]</A></SPAN></div></div></div> 
+<div class=divcss5><A href="https://www.ggxy.com/Article/202407/7610.shtml" target=_blank><img class='pic1' src='https://www.ggxy.com/Article/UploadFiles/202407/202407280749389051985.jpg'  width='112' height='75' border='0'></A> 
+<div class=right>
+<H3><A href="https://www.ggxy.com/Article/202407/7610.shtml" target=_blank>�ɹ�Ժ��һ��У����ְ����</A></H3>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;Ϊ��Ӧְҵ������������չ��������Ҫ�󣬽���һ֧�ṹ���������ʾ����Ľ�ʦ���飬�����ʱ��ְҵ����������������������ʦʾ���������ã�����ѧԺ�ں����裬�Ա�ʡ��������ѡ��Ŀ������ʡ����ְ����ʦ����ʦ������д���5��7����֯��չУ����ְ����ʦ����ѡ���������ѡ��������Ӱ�������ϵ�����ε�����������ϵ��������ǣ�Ӱ�������ϵ�����ŷ�Ԫ����������ϵ������ԭ���߻�ϵ��Ϊ��һ��У����ְ����ʦ���� <SPAN>...<A href="https://www.ggxy.com/Article/202407/7610.shtml" target=_blank>[��ϸ]</A></SPAN></div></div></div> 
+<div class=divcss5><A href="https://www.ggxy.com/Article/202407/7606.shtml" target=_blank><img class='pic1' src='https://www.ggxy.com/Article/UploadFiles/202407/202407280653555561353.jpg'  width='112' height='75' border='0'></A> 
+<div class=right>
+<H3><A href="https://www.ggxy.com/Article/202407/7606.shtml" target=_blank>С����</A></H3>
+<div>&nbsp;&nbsp;&nbsp;&nbsp; <SPAN>...<A href="https://www.ggxy.com/Article/202407/7606.shtml" target=_blank>[��ϸ]</A></SPAN></div></div></div> 
+<!-- ���� ���� -->
+
+<SCRIPT>
+function startmarquee(lh,speed,delay,index){
+var t;
+var p=false;
+var o=document.getElementById("marqueebox"+index);
+o.innerHTML+=o.innerHTML;
+o.onmouseover=function(){p=true}
+o.onmouseout=function(){p=false}
+o.scrollTop = 0;
+function start(){
+t=setInterval(scrolling,speed);
+if(!p) o.scrollTop += 2;
+}
+function scrolling(){
+if(o.scrollTop%lh!=0){
+o.scrollTop += 2;
+if(o.scrollTop>=o.scrollHeight/2) o.scrollTop = 0;
+}else{
+clearInterval(t);
+setTimeout(start,delay);
+}
+}
+setTimeout(start,delay);
+}
+startmarquee(82,18,3200,0);
+function autoSelect(itm, val){
+var o=G(itm);
+for (i=0;i<o.options.length;i++){
+   if(o.options[i].value==val){
+    o.selectedIndex = i;
+    break;
+   }
+}
+}
+</SCRIPT>
+ </div></div></div>
+
+ 
+
+                           
+<!--
+				<IFRAME src="http://www.ggxy.com/Article/index_message_new.asp" frameBorder=0 scrolling=no width=100% HEIGHT=100%></IFRAME>		   
+-->
+                                             
+                                             
+                                        </div>
+                                        </div>
+				                            </div>
+				                            
+
+                       	
+			
+			
+			
+				<div class="cc-long">
+				
+<!--������ϢSTART-->
+            <div id="togobox" class="mb-left">
+
+        
+    <div class="mbleft-nav">
+        <div class="newsbox"><a href="http://www.ggxy.com/Article/"  target="_blank">����NEWS</a></div>
+        <div class="infobox">
+            <a box="gonggao" style="width:100px;" href="http://www.ggxy.com/gongao/Index.shtml" ></a>
+            <a box="gonggao" href="http://www.ggxy.com/gongao/Index.shtml" >����</a>
+            <a box="jiaowu" href="http://jwc.ggxy.com/" >����</a>
+            <a box="zhaosheng" href="http://zsc.ggxy.com/" >����</a>
+            <a box="xuegong" href="http://xsc.ggxy.com/" >ѧ��</a>
+            <a box="jiuye" href="http://lnggzyxy.bysjy.com.cn/" >��ҵ</a>
+        </div>
+    </div>
+    
+    <div id="newslist" class="infolist" style="display:block;">
+	
+		<div class="featured">
+ 
+ <A href="https://www.ggxy.com/Article/202403/7373.shtml" target=_blank>���ۺ�֮�С��������飬�����ڷ����������</A>
+ 
+</div>
+
+		
+<ul style="height:99px;">
+<!--
+  <table cellSpacing=5 cellPadding=0 width="100%" align=center border=0>
+    <tr vAlign=top>
+ 
+      <td align=center><A href="https://www.ggxy.com/Article/202403/7373.shtml" target=_blank><img class='pic1' src='https://www.ggxy.com/Article/UploadFiles/202403/202403291523008944868.jpg'  width='60' height='40' border='0'></A><BR>
+<A href="https://www.ggxy.com/Article/202403/7373.shtml" target=_blank>���ۺ�֮��</A></td>
+ 
+      <td align=center><A href="https://www.ggxy.com/Article/202409/7647.shtml" target=_blank><img class='pic1' src='https://www.ggxy.com/Article/UploadFiles/202409/202409140303391545713.jpg'  width='60' height='40' border='0'></A><BR>
+<A href="https://www.ggxy.com/Article/202409/7647.shtml" target=_blank>ϲ��|ѧԺ��</A></td>
+ 
+      <td align=center><A href="https://www.ggxy.com/Article/202409/7646.shtml" target=_blank><img class='pic1' src='https://www.ggxy.com/Article/UploadFiles/202409/202409140301105302213.jpg'  width='60' height='40' border='0'></A><BR>
+<A href="https://www.ggxy.com/Article/202409/7646.shtml" target=_blank>ϲѶ|�ɹ�Ժ</A></td>
+ 
+      <td align=center><A href="https://www.ggxy.com/Article/202409/7645.shtml" target=_blank><img class='pic1' src='https://www.ggxy.com/Article/UploadFiles/202409/202409140253297476683.jpg'  width='60' height='40' border='0'></A><BR>
+<A href="https://www.ggxy.com/Article/202409/7645.shtml" target=_blank>ѧУ�ٿ���</A></td>
+ 
+    </tr>
+  </table>
+-->
+  <table width="100%" cellpadding="0" cellspacing="0"><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202403/7373.shtml"  target="_blank">���ۺ�֮�С��������飬�����ڷ����������</a></td><td align="right" class="index_style_date" width="40">03-06</td></tr><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202409/7647.shtml"  target="_blank">ϲ��|ѧԺ���߻�ϵѧ���ٻ��й���ѧ�����������ѧԺ��һ�Ƚ���</a></td><td align="right" class="index_style_date" width="40"><font color="#999999">09-13</font></td></tr><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202409/7646.shtml"  target="_blank">ϲѶ|�ɹ�Ժѧ�����й����ʴ�ѧ�����´�������ʡ����ʵ��˫��ͻ��</a></td><td align="right" class="index_style_date" width="40"><font color="#999999">09-13</font></td></tr><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202409/7645.shtml"  target="_blank">ѧУ�ٿ���ί����ѧϰ������������飬����ѧϰϰ��ƽ�������ȫ</a></td><td align="right" class="index_style_date" width="40"><font color="#999999">09-12</font></td></tr><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202409/7644.shtml"  target="_blank">ѧУ��ί�ٿ�����ѧϰ�����ܽ����</a></td><td align="right" class="index_style_date" width="40"><font color="#999999">09-12</font></td></tr><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202409/7643.shtml"  target="_blank">�ɹ�Ժ������ף��40����ʦ����2024��ȡ���Ƚ������ô��</a></td><td align="right" class="index_style_date" width="40"><font color="#999999">09-11</font></td></tr><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202409/7642.shtml"  target="_blank">ѧԺ�ٿ���ף��40����ʦ����̸��</a></td><td align="right" class="index_style_date" width="40"><font color="#999999">09-11</font></td></tr><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202409/7641.shtml"  target="_blank">���簲ȫ֪ʶ�ֲ���ʽ���������������������簲ȫ֪ʶ~</a></td><td align="right" class="index_style_date" width="40"><font color="#999999">09-11</font></td></tr><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202409/7640.shtml"  target="_blank">������������Ҿ��񣬼ӿ콨�����ǿ��ح��ף��40����ʦ��</a></td><td align="right" class="index_style_date" width="40"><font color="#999999">09-10</font></td></tr><tr><td class=""><a class="" href="https://www.ggxy.com/Article/202409/7639.shtml"  target="_blank">2024��������ѵ�ɹ��㱨�����������ѧ����¡�ؾ���</a></td><td align="right" class="index_style_date" width="40">09-07</td></tr><tr></tr></table>
+</ul>
+        <a class="go2rucnews" href="http://www.ggxy.com/index.asp"  target="_blank">��Ժ������</a>
+    </div>
+    
+	
+    <div id="gonggao" class="infolist">
+        <ul>
+
+		
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td class="">[<a class="index_font" href="http://rsc.ggxy.com/List_42.shtml">��ʦ��Ƹ</a>]&nbsp;<a class="index_font" href="http://rsc.ggxy.com/202312/7340.shtml"  target="_self">��Ƹ�����רҵ��ʦһ��</a></td><td align="right" class="index_style_date" width="80">2023-12-28</td></tr><tr><td class="">[<a class="index_font" href="http://rsc.ggxy.com/List_42.shtml">��ʦ��Ƹ</a>]&nbsp;<a class="index_font" href="http://rsc.ggxy.com/202312/7333.shtml"  target="_self">��Ƹ������Ӧ�ü���רҵ��ʦ1��</a></td><td align="right" class="index_style_date" width="80">2023-12-28</td></tr><tr><td class="">[<a class="index_font" href="http://rsc.ggxy.com/List_42.shtml">��ʦ��Ƹ</a>]&nbsp;<a class="index_font" href="http://rsc.ggxy.com/202311/7304.shtml"  target="_self">��Ƹ�����ݹ�����Ӧ��רҵ��ʦһ��</a></td><td align="right" class="index_style_date" width="80">2023-11-22</td></tr><tr><td class="">[<a class="index_font" href="https://www.ggxy.com/gongao/List_28.shtml">ѧԺ����</a>]&nbsp;<a class="index_font" href="https://www.ggxy.com/gongao/202407/7599.shtml"  target="_self">2024��7����Ժ����8��ѧ����λʵϰ��ҵ</a></td><td align="right" class="index_style_date" width="80">2024-07-19</td></tr><tr><td class="">[<a class="index_font" href="https://www.ggxy.com/gongao/List_28.shtml">ѧԺ����</a>]&nbsp;<a class="index_font" href="https://www.ggxy.com/gongao/202407/7598.shtml"  target="_self">2024��6����Ժ����14��ѧ����λʵϰ��ҵ</a></td><td align="right" class="index_style_date" width="80">2024-07-18</td></tr><tr><td class="">[<a class="index_font" href="http://rsc.ggxy.com/List_42.shtml">��ʦ��Ƹ</a>]&nbsp;<a class="index_font" href="http://rsc.ggxy.com/202406/7597.shtml"  target="_self">��Ƹ���ֻ���Ӫרҵ��ʦһ��</a></td><td align="right" class="index_style_date" width="80">2024-06-25</td></tr><tr><td class="">[<a class="index_font" href="https://www.ggxy.com/gongao/List_28.shtml">ѧԺ����</a>]&nbsp;<a class="index_font" href="https://www.ggxy.com/gongao/202405/7513.shtml"  target="_self">�������ְҵѧԺ���²��ҹ�ϵָ��</a></td><td align="right" class="index_style_date" width="80">2024-05-20</td></tr><tr><td class="">[<a class="index_font" href="https://www.ggxy.com/gongao/List_28.shtml">ѧԺ����</a>]&nbsp;<a class="index_font" href="https://www.ggxy.com/gongao/202404/7382.shtml"  target="_self">��Ժ����10��ѧ����λʵϰ��ҵ</a></td><td align="right" class="index_style_date" width="80">2024-04-10</td></tr><tr><td class="">[<a class="index_font" href="https://www.ggxy.com/gongao/List_28.shtml">ѧԺ����</a>]&nbsp;<a class="index_font" href="https://www.ggxy.com/gongao/202404/7381.shtml"  target="_self">��У����У�����ʵϰ��ҵ����</a></td><td align="right" class="index_style_date" width="80">2024-04-10</td></tr><tr><td class="">[<a class="index_font" href="http://rsc.ggxy.com/List_42.shtml">��ʦ��Ƹ</a>]&nbsp;<a class="index_font" href="http://rsc.ggxy.com/202401/7341.shtml"  target="_self">��Ƹ���˻�רҵ��ʦһ��</a></td><td align="right" class="index_style_date" width="80">2024-01-04</td></tr><tr><td class="">[<a class="index_font" href="http://rsc.ggxy.com/List_42.shtml">��ʦ��Ƹ</a>]&nbsp;<a class="index_font" href="http://rsc.ggxy.com/202312/7339.shtml"  target="_self">��Ƹ��������רҵ��ʦ1��</a></td><td align="right" class="index_style_date" width="80">2023-12-28</td></tr><tr></tr></table> 
+		
+                    </ul>
+        <a class="go2rucnews" href="http://www.ggxy.com/gongao/Index.shtml" >������Ϣ</a>
+    </div>
+    
+    
+    <div id="jiaowu" class="infolist">
+        <ul>
+
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td class="">[<a class="index_font" href="https://jwc.ggxy.com/List_343.shtml">������</a>]&nbsp;<a class="index_font" href="https://jwc.ggxy.com/202406/7572.shtml"  target="_blank">���ڽ�ʦ����Ҫ��</a></td><td align="right" class="index_style_date" width="80">2024-06-07</td></tr><tr><td class="">[<a class="index_font" href="https://jwc.ggxy.com/List_355.shtml">���񹫿�</a>]&nbsp;<a class="index_font" href="https://jwc.ggxy.com/202406/7571.shtml"  target="_blank">�������ְҵѧԺרҵ����һ����</a></td><td align="right" class="index_style_date" width="80">2024-06-07</td></tr><tr><td class="">[<a class="index_font" href="https://jwc.ggxy.com/List_341.shtml">ѧԺУ��</a>]&nbsp;<a class="index_font" href="https://jwc.ggxy.com/202406/7570.shtml"  target="_blank">2024-2025ѧ���һѧ��У��</a></td><td align="right" class="index_style_date" width="80">2024-06-07</td></tr><tr><td class="">[<a class="index_font" href="https://jwc.ggxy.com/List_341.shtml">ѧԺУ��</a>]&nbsp;<a class="index_font" href="https://jwc.ggxy.com/202406/7569.shtml"  target="_blank">2023-2024ѧ��ڶ�ѧ��У��</a></td><td align="right" class="index_style_date" width="80">2024-06-07</td></tr><tr><td class="">[<a class="index_font" href="https://jwc.ggxy.com/List_341.shtml">ѧԺУ��</a>]&nbsp;<a class="index_font" href="https://jwc.ggxy.com/202406/7568.shtml"  target="_blank">2023-2024ѧ���һѧ��У��</a></td><td align="right" class="index_style_date" width="80">2024-06-07</td></tr><tr><td class="">[<a class="index_font" href="https://jwc.ggxy.com/List_341.shtml">ѧԺУ��</a>]&nbsp;<a class="index_font" href="https://jwc.ggxy.com/202406/7567.shtml"  target="_blank">2022-2023ѧ��ڶ�ѧ��У��</a></td><td align="right" class="index_style_date" width="80">2024-06-07</td></tr><tr><td class="">[<a class="index_font" href="https://jwc.ggxy.com/List_341.shtml">ѧԺУ��</a>]&nbsp;<a class="index_font" href="https://jwc.ggxy.com/202406/7566.shtml"  target="_blank">2021-2022ѧ��ڶ�ѧ��У��</a></td><td align="right" class="index_style_date" width="80">2024-06-07</td></tr><tr></tr></table> 
+         </ul>
+        <a class="go2rucnews" href="http://jwc.ggxy.com/" >������Ϣ</a>
+    </div>
+    
+    <div id="zhaosheng" class="infolist">
+        <ul>
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td class="">[<a class="" href="https://zsc.ggxy.com/List_100.shtml">�߿���̬</a>]&nbsp;<a class="" href="https://zsc.ggxy.com/202406/7596.shtml"  target="_self">2024��߿����⼯��</a></td><td align="right" class="index_style_date" width="80">2024-06-13</td></tr><tr><td class="">[<a class="" href="https://zsc.ggxy.com/List_100.shtml">�߿���̬</a>]&nbsp;<a class="" href="https://zsc.ggxy.com/202406/7595.shtml"  target="_self">�߿�־Ը�����13�ʴ�����ĵĶ������</a></td><td align="right" class="index_style_date" width="80">2024-06-14</td></tr><tr><td class="">[<a class="" href="https://zsc.ggxy.com/List_100.shtml">�߿���̬</a>]&nbsp;<a class="" href="https://zsc.ggxy.com/202406/7594.shtml"  target="_self">��ʡ�߿���������ƽ������</a></td><td align="right" class="index_style_date" width="80">2024-06-19</td></tr><tr><td class="">[<a class="" href="https://zsc.ggxy.com/List_100.shtml">�߿���̬</a>]&nbsp;<a class="" href="https://zsc.ggxy.com/202406/7573.shtml"  target="_self">@ȫ�忼�����ҳ�����Щ�߿�����ҥ������Ҫ�ܿ���</a></td><td align="right" class="index_style_date" width="80">2024-06-11</td></tr><tr><td class="">[<a class="" href="https://zsc.ggxy.com/List_100.shtml">�߿���̬</a>]&nbsp;<a class="" href="https://zsc.ggxy.com/202406/7556.shtml"  target="_self">2024��߿��ڼ�У����ѵ�����濼�й���Ϊ�Ĺ���</a></td><td align="right" class="index_style_date" width="80">2024-06-03</td></tr><tr><td class="">[<a class="" href="https://zsc.ggxy.com/List_104.shtml">��������</a>]&nbsp;<a class="" href="https://zsc.ggxy.com/202405/7503.shtml"  target="_self">2024���������ְҵѧԺȫ��ͳһ��������</a></td><td align="right" class="index_style_date" width="80">2024-05-07</td></tr><tr><td class="">[<a class="" href="https://zsc.ggxy.com/List_101.shtml">��������</a>]&nbsp;<a class="" href="https://zsc.ggxy.com/202405/7502.shtml"  target="_self">������2024����ͨ�߿��ӷ֣���ͬ����������¼��</a></td><td align="right" class="index_style_date" width="80">2024-05-07</td></tr><tr></tr></table> 
+        </ul>
+        <a class="go2rucnews" href="http://zsc.ggxy.com/" >������Ϣ</a>
+    </div>
+    
+    <div id="xuegong" class="infolist">
+        <ul>
+
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td class="">[<a class="" href="http://xsc.ggxy.com/List_72.shtml">������̬</a>]&nbsp;<a class="" href="http://xsc.ggxy.com/202101/6777.shtml"  target="_self">������Ժ�����ڼ�û����֯ѧ����ͼ�ę́��ȡ��</a></td><td align="right" class="index_style_date" width="80">2021-01-11</td></tr><tr><td class="">[<a class="" href="http://xsc.ggxy.com/List_75.shtml">ѧ������</a>]&nbsp;<a class="" href="http://xsc.ggxy.com/202012/6742.shtml"  target="_self">�������ְҵѧԺѧ������֯�ĸ��ƽ����������</a></td><td align="right" class="index_style_date" width="80">2020-12-11</td></tr><tr><td class="">[<a class="" href="http://xsc.ggxy.com/List_157.shtml">ѧԺ��ί</a>]&nbsp;<a class="" href="http://xsc.ggxy.com/201810/5896.shtml"  target="_self">����ʮ�ڵ�У�����ߵ�һ���ڿ�</a></td><td align="right" class="index_style_date" width="80">2018-10-23</td></tr><tr><td class="">[<a class="" href="http://xsc.ggxy.com/List_75.shtml">ѧ������</a>]&nbsp;<a class="" href="http://xsc.ggxy.com/201810/5895.shtml"  target="_self">�ڰ˽조��У�裬Բ���롱������ϳ�����</a></td><td align="right" class="index_style_date" width="80">2018-10-23</td></tr><tr><td class="">[<a class="" href="http://xsc.ggxy.com/List_157.shtml">ѧԺ��ί</a>]&nbsp;<a class="" href="http://xsc.ggxy.com/201810/5894.shtml"  target="_self">��116����֤��������</a></td><td align="right" class="index_style_date" width="80">2018-10-23</td></tr><tr><td class="">[<a class="" href="http://xsc.ggxy.com/List_75.shtml">ѧ������</a>]&nbsp;<a class="" href="http://xsc.ggxy.com/201810/5893.shtml"  target="_self">��18��GBA����������Ļʽ</a></td><td align="right" class="index_style_date" width="80">2018-10-23</td></tr><tr><td class="">[<a class="" href="http://xsc.ggxy.com/List_75.shtml">ѧ������</a>]&nbsp;<a class="" href="http://xsc.ggxy.com/201810/5880.shtml"  target="_self">�������ְҵѧԺ���ഺ����ս����ʦ�����˼��</a></td><td align="right" class="index_style_date" width="80">2018-10-15</td></tr><tr></tr></table> 
+         </ul>
+        <a class="go2rucnews" href="http://xsc.ggxy.com/" >������Ϣ</a>
+    </div>
+    
+    <div id="jiuye" class="infolist">
+        <ul>
+
+         </ul>
+        <a class="go2rucnews" href="http://lnggzyxy.bysjy.com.cn/" >������Ϣ</a>
+    </div>
+    
+    
+</div> 
+
+<!--������ϢEND-->
+   
+      
+				</div>
+                
+    	
+			            
+				<div class="cc-right">
+					<div class="ccr-up"><a href="https://zsc.ggxy.com/Brochure/2024/tongzhao/"  target="_blank"><img id="tipimg" src="http://zsc.ggxy.com/UploadFiles_1584/202206/202206211220538477949.jpg" /></a>  </div>
+				</div>
+		  	</div>
+
+
+		</div>
+		
+		<div class="bottom">
+			<div id="home-bottom">
+				<div class="bc-line-1">
+                      <div class="bc-left-1">��ַ������ʡ_������_�ں���_�򱱴�ѧ��&nbsp;&nbsp;&nbsp;&nbsp;
+					  �����������ţ�<a href="https://beian.miit.gov.cn/" target="_blank">��ICP��12016437��-1</a>
+					  �����������ţ�<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21011402000312"><img src="" style="float:left;"/>�ɹ������� 21011402000312��</a>
+					  <span id="ipinfo" style="margin-left:10px;color:#000000;">�������ӣ�</span>
+					  </div>
+					<div class="bc-right-1">
+                        <a href="http://jyt.ln.gov.cn/" target="_blank">����ʡ������</a><span>|</span>
+						<a href="privacy.htm" target="_blank">��˽��Ȩ</a><span>|</span>
+						<a href="mailto:web@ruc.edu.cn" target="_blank">��ϵ����</a><span>|</span>
+						<a href="sitemap.htm" target="_blank">��վ��ͼ</a>
+					</div>
+				</div>
+				<div class="bc-line-2">
+					<div class="bc-left-2">--------</div>
+					<div class="bc-right-2">  <span>  </span>  <a href=" "  target="_blank">   </a></div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+     <div id="slide-arrow-box"><a id="cclb-btn-prev" class="slide-arrow slide-arrow-prev"></a><a id="cclb-btn-next" class="slide-arrow slide-arrow-next"></a></div>
+
+
+<script type="text/javascript">
+function SetCookie(name,value)
+{
+    var Days = 30;
+    var exp  = new Date();  
+    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+SetCookie("screen", "wide");
+</script>
+
+
+<script type="text/javascript">
+  $('#ipinfo').load('/getip');
+</script>
+
+
+
+</body>
+</html>
+
+	
+
+
+<style>
+.w { position:absolute; right:25px; top:135px; width:150px; height:290px; overflow:hidden; cursor:default;}
+.winBody { line-height:30px;font-size: 14px;text-align:center;height:15em; background-color:#F3F3F3; filter:alpha(Opacity=80);opacity:.80; height:390px;}
+.importantGuide { height:25px;background-color:#C5A97F;line-height:25px;color:#ffffff;}
+
+.importantline { height:2px;background-color:#FFFFFF;}
+.w li {width:150px;height:25px;line-height:25px;}
+</style>
+<div class="w">
+<div class="winBody" style="position:fixed">
+	<ul><li class="importantGuide">�ȵ�Ŀ¼</li></ul>
+
+	<ul class=importantline></ul>
+	<ul><li style="background-color:#a52025;margin-top:10px;"><a style="color:#ffffff;" target="_blank" href="https://www.lnzwfw.gov.cn/images/pdf/web/viewer.html?file=https://www.lnzwfw.gov.cn/bsbzgxzn/bsbzgxzq/sgxbsbzgxzn/202308/P020230828344416764731.pdf">���²��ҹ�ϵָ��</a></li></ul>
+	<ul><li style="background-color:#464696;margin-top:10px;height:50px;"><a style="color:#ffffff;" target="_blank" href="https://xxgk.ggxy.com/List_437.shtml">��2024�꣩<br>�Ǽ�רҵ����</a></li></ul>
+<!--
+	<ul><li style="background-color:#464696;margin-top:10px;height:50px;"><a style="color:#ffffff;" target="_blank" href="https://gaokao.ggxy.com/cjcx/">��2024�꣩<br>ȫ���߿�¼ȡ��ѯ</a></li></ul>
+	<ul><li style="background-color:#464696;margin-top:10px;height:50px;"><a style="color:#ffffff;" target="_blank" href="https://zsc.ggxy.com/Brochure/2024/tongzhao/">��2024�꣩<br>ȫ��ͳ����������</a></li></ul>
+	<ul class=importantline></ul>
+	<ul>
+	<li style="background-color:#29ad2f;margin-top:10px;height:80px;"><span style="color:#ffffff;">����΢����ѯ����<br>����ԤԼ�ι�����<br>ɨ��ά������</span><br><img src="https://www.ggxy.com/templates/zsc/wap/V2/lxwm/diqu-bg/ggxy_weixin.jpg" width="100%" border=0></li>
+-->
+	</ul>
+
+<!--
+	<ul><li style="margin-top:10px;"><a target="_blank" href="https://gaokao.ggxy.com/ddzs">���б������Զ����</a></li></ul>
+    <ul class=importantline></ul>
+	<ul style="color:#9a9a9a;margin-top:10px;margin-bottom:22px;">
+	<li>С����汨�����<br><img src="https://gaokao.ggxy.com/ddzs/p/main/xiaochengxu.jpg" width="90" height="90" border=0 title="�������ְҵѧԺ�����������"></li>
+	</ul>
+
+	<ul class=importantline></ul>
+	<ul style="color:#9a9a9a;margin-top:90px;margin-bottom:22px;">
+	<li>΢��ƽ̨�������<br><img src="https://gaokao.ggxy.com/ddzs/p/main/gongzhonghao.jpg" width="90" height="90" border=0 title="�������ְҵѧԺ�����������"></li>
+	</ul>
+
+	<ul><li style="margin-top:10px;"><a target="_blank" href="https://zsc.ggxy.com/List_216.shtml">��������ר��</a></li></ul>
+
+		<ul class=importantline></ul>
+	<ul style="background-color:#ffffff;color:#9a9a9a;">
+		<li><a target="_blank" href="https://gaokao.ggxy.com/ddzs"><img border="0" src="http://wpa.qq.com/pa?p=2:2855530942:51" alt="��QQ��Ϊ��2855530942" title="��QQ��Ϊ��2855530942"/></a></li>
+	</ul>
+
+
+	<ul class=importantline></ul>
+	<ul style="background-color:#ffffff;color:#9a9a9a;">
+		<li>����΢����ѯ<br><img src="http://www.ggxy.com/index-mb/default/wx/΢������.files/image001.jpg" width="90" height="90" border=0 title="�������ְҵѧԺ�ٷ�������ѯ΢��ƽ̨"></li>
+	</ul>
+
+
+		<ul class=importantline></ul>
+	<ul style="background-color:#ffffff;color:#9a9a9a;">
+		<li><a href="http://zsc.ggxy.com/List_220.shtml" >ע����ѧר��</a></li>
+	</ul>
+
+
+
+	<ul>
+		<li class="importantGuide">2017¼ȡ��ѯ</li>
+	</ul>
+
+	<ul class=importantline></ul>
+	<ul>
+		<li> <a target="_blank" href="http://gaokao.ggxy.com/tyzs/cx_login.asp">��������ѯ</a></li>
+	</ul>
+
+
+
+	<ul>
+		<li class="importantGuide">2017���Ӽ���</li>
+	</ul>
+
+	<ul class=importantline></ul>
+	<ul>
+		<li><img src="http://www.ggxy.com/2017���Ӽ���.png" width="90" height="90" border=0 title="2017���Ӽ���"></li>
+	</ul>
+
+	<ul><li class="importantGuide">2018���ҵѡ��</li></ul>
+	<ul class=importantline></ul>
+	<ul><li><a target="_blank" href="http://www.ggxy.com/gongao/bysj/18by/">�������</a></li></ul>
+
+
+
+	<ul><li style="background-color:#a52025;color:#ffffff;">2019���ҵ�������</li></ul>
+	<ul class=importantline></ul>
+	<ul style="background-color:#ffffff;color:#9a9a9a;"><li><a href="javascript:void(0)" onClick="openWin('http://www.ggxy.com/gongao/bysj/19by/index.html', 'popupNotice', 'height=570, width=710, toolbar=no, menubar=no, scrollbars=yes, resizable=no, location=yes, status=no')">�������</a></li></ul> 
+-->
+
+</div>
+</div>
+
+
+
+
+
+<style>
+#img {
+	/* */
+    z-index:1;
+	position:absolute;
+	background:url("bg.png") no-repeat;
+	background-size:100% 100%;
+	width:200;
+	height:200;
+}
+#img img {
+	width:100%;
+	height:100%;
+}</style>
+
+<div id="img" style="position: absolute; cursor: pointer; left: 824px; top: 13px;">
+<a target="_blank" href="https://xxgk.ggxy.com/List_437.shtml"><img src="2024_xingjipinggu.png"></a>
+</div>
+<!---->
+
+<script>/*
+ *   speed //Ԫ���ƶ��ٶ�
+ *   xPos  //Ԫ��һ��ʼ�����
+ *   yPos  //Ԫ��һ��ʼ�Ͼ���
+ *   $('#div1').imgFloat({speed:30,xPos:10,yPos:10});
+ *   $('#div2').imgFloat();   //��������Ĭ�ϣ�speed:15,xPos:0,yPos:0��
+ */
+
+(function($) {
+
+    jQuery.fn.imgFloat = function(options) {
+        var own = this;
+        var xD = 0;
+        var yD = 0;
+        var i = 1;
+        var settings = {
+            speed: 15,
+            xPos: 0,
+            yPos: 0
+        };
+        jQuery.extend(settings, options);
+        var ownTop = settings.xPos;
+        var ownLeft = settings.yPos;
+        own.css({
+            position: "absolute",
+            cursor: "pointer"
+        });
+
+        function imgPosition() {
+            var winWidth = $(window).width() - own.width();
+            var winHeight = $(window).height() - own.height();
+            if (xD == 0) {
+                ownLeft += i;
+                own.css({
+                    left: ownLeft
+                });
+                if (ownLeft >= winWidth) {
+                    ownLeft = winWidth;
+                    xD = 1;
+                }
+            }
+            if (xD == 1) {
+                ownLeft -= i;
+                own.css({
+                    left: ownLeft
+                });
+                if (ownLeft <= 0) xD = 0;
+            }
+            if (yD == 0) {
+                ownTop += i;
+                own.css({
+                    top: ownTop
+                });
+                if (ownTop >= winHeight) {
+                    ownTop = winHeight;
+                    yD = 1;
+                }
+            }
+            if (yD == 1) {
+                ownTop -= i;
+                own.css({
+                    top: ownTop
+                });
+                if (ownTop <= 0) yD = 0;
+            }
+        }
+        var imgHover = setInterval(imgPosition, settings.speed);
+        own.hover(function() {
+                clearInterval(imgHover);
+            },
+            function() {
+                imgHover = setInterval(imgPosition, settings.speed);
+            });
+    }
+})(jQuery);
+
+//$("#img").imgFloat();   //��������Ĭ�ϣ�speed:10,xPos:0,yPos:0��
+$("#img").imgFloat({
+    speed: 15,
+    xPos: 10,
+    yPos: 10
+});</script>

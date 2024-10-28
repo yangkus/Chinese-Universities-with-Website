@@ -1,0 +1,993 @@
+﻿<html sizset="0" sizcache016758095063362643="9">
+<head>
+<title>广西民族师范学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="广西民族师范学院">
+<META Name="keywords" Content="广西民族师范学院" />
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="style/sty.css">
+<link rel="stylesheet" type="text/css" href="icons/iconfont.css">
+<link rel="stylesheet" type="text/css" href="style/slide.css">
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script><script type="text/javascript" src="js/tabscript.js"></script><script src="js/slide.js"></script><script src="js/publick.js"></script>
+<script src="js/index.js"></script>
+<meta name="viewport" content="width=1300,user-scalable=yes">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c754655525a5742000200034e57 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1062437058)</script>
+</head>
+<body>
+<div style="height: 120px;width: 300px;position: absolute;z-index: 99999 !important"><script language="javascript" src="/system/resource/js/dynclicks.js"></script>   
+</SCRIPT></div>
+<div class="tour">
+  <div class="tour1">
+    <div class="tour2"><img src="images/ll0212.png"> </div>
+    <div class="tour3">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #divu1{
+      padding-left:20px;
+      padding-top:5px;}
+    #appu1{
+        position: relative;
+        width: 160px;
+        height: 30px;}
+    #appu1 .qwss{
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        left: 0px;
+        top: 0px;
+        outline:none;
+        border:0px;}
+    #appu1 .tj{
+        position:absolute;
+        top: 0px;
+        right: -8px;        
+        width: 38px;
+        height: 30px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border: 0;
+        background:url(images/msyss0420.png) no-repeat;
+        background-size:20px 20px;
+        background-position:center;
+        cursor:pointer;}
+</style>
+<div id="divu1"></div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="请输入要查找的内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" id="qwss">
+            <input class="tj" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1062437058";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://172.18.172.82:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+    document.getElementById('qwss').addEventListener('click', function() {
+  
+  this.placeholder="";
+});
+</script></div>
+  </div>
+</div>
+<div id="navBar" class="nacct">
+  <div class="nvc">
+    <div class="MutiNav">
+      <ul class="multiUl">
+            <li><a href="index.htm" class="on">首页</a>
+    </li>
+    <li><a href="javascript:void(0);" target="_blank">学校概况</a>
+                <blockquote>
+                    <div class="ChildNavIn">
+                        <a class="First " href="xxgk/xxjs.htm" target="_blank">学校介绍</a>
+                        <a class="" href="xxgk/dwcwxld.htm" target="_blank">党委常委、校领导</a>
+                        <a class="" href="xxgk/xxjs2.htm" target="_blank">历史沿革</a>
+                        <a class="" href="info/1006/2933.htm" target="_blank">校园风光</a>
+                        <a class="" href="xxgk/xxzc.htm">学校章程</a>
+                    </div>
+                </blockquote>
+    </li>
+    <li><a href="javascript:void(0)">机构设置</a>
+                <blockquote>
+                    <div class="ChildNavIn">
+                        <a class="First " href="jgsz/dzbm.htm">党政部门</a>
+                        <a class="" href="jgsz/jxdw.htm">教学单位</a>
+                        <a class="" href="jgsz/jfbm.htm">教辅部门</a>
+                        <a class="" href="jgsz/kyjg.htm">科研机构</a>
+                    </div>
+                </blockquote>
+    </li>
+    <li><a href="rczp.htm">人才招聘</a>
+    </li>
+    <li><a href="javascript:void(0)" target="_blank">招生就业</a>
+                <blockquote>
+                    <div class="ChildNavIn">
+                        <a class="First " href="http://zsw.gxnun.edu.cn/">招生信息网</a>
+                        <a class="" href="http://gxnun.doerjob.com/" target="_blank">就业信息网</a>
+                    </div>
+                </blockquote>
+    </li>
+    <li><a href="javascript:void(0)" target="_blank">教学科研</a>
+                <blockquote>
+                    <div class="ChildNavIn">
+                        <a class="First " href="http://jwc.gxnun.edu.cn/" target="_blank">教务处</a>
+                        <a class="" href="http://kyc.gxnun.edu.cn" target="_blank">科研处</a>
+                    </div>
+                </blockquote>
+    </li>
+    <li><a href="javascript:void(0)" target="_blank">公共服务</a>
+                <blockquote>
+                    <div class="ChildNavIn">
+                        <a class="First " href="http://tsg.gxnun.edu.cn" target="_blank">图书馆网站</a>
+                        <a class="" href="http://www.10ms.edu.cn/" target="_blank">教科网资源</a>
+                    </div>
+                </blockquote>
+    </li>
+    <li><a href="javascript:void(0)">校园文化</a>
+                <blockquote>
+                    <div class="ChildNavIn">
+                        <a class="First " href="http://tw.gxnun.edu.cn/" target="_blank">团委网站</a>
+                    </div>
+                </blockquote>
+    </li>
+
+      </ul>
+      <script type="text/javascript">
+            var mst;
+            jQuery(".multiUl li").hover(function(){
+            var curItem = jQuery(this);
+            mst = setTimeout(function(){//延时触发
+                curItem.find("blockquote").fadeIn('');
+                mst = null;
+            });
+            }, function(){
+            if(mst!=null)clearTimeout(mst);
+            jQuery(this).find("blockquote").fadeOut('');
+            });
+            
+ </script></div>
+  </div>
+</div>
+<div class="divFrame"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><div id="imgbanner">
+<div id="leftmask2" class="masks2"></div>
+<div id="leftmask" class="masks"></div>
+<div id="nunbox">
+<a href="javascript:;" id="nunleft">&lt;</a>
+<a href="javascript:;" id="nunright">&gt;</a>
+<ul>
+<li>
+<a href="info/1173/42441.htm" target="_blank" title="."><img src="/__local/3/18/24/FC07BF444BCD05CF2FD80D33853_58FC8B67_17929.jpg" alt="." width="1440px" height="480px"></a> 
+<div class="nuntitle"><a href="info/1173/42441.htm" target="_blank">.</a></div>
+</li> 
+<li>
+<a href="info/1173/42541.htm" target="_blank" title="."><img src="/__local/E/87/66/D66335C1C031416078463A96A5A_69CEF13F_175A5.jpg" alt="." width="1440px" height="480px"></a> 
+<div class="nuntitle"><a href="info/1173/42541.htm" target="_blank">.</a></div>
+</li> 
+<li>
+<a href="info/1173/42551.htm" target="_blank" title="."><img src="/__local/E/B9/09/16E6BB3F0C3921C231D87064464_66D9AD8B_112C0.jpg" alt="." width="1440px" height="480px"></a> 
+<div class="nuntitle"><a href="info/1173/42551.htm" target="_blank">.</a></div>
+</li> 
+<li>
+<a href="info/1173/26201.htm" target="_blank" title="."><img src="/__local/7/E7/62/1075EEC2E93BE5EB7E26226D608_69CD2567_30788.jpg" alt="." width="1440px" height="480px"></a> 
+<div class="nuntitle"><a href="info/1173/26201.htm" target="_blank">.</a></div>
+</li> 
+<li>
+<a href="info/1173/38041.htm" target="_blank" title="."><img src="/__local/3/4C/2F/D491F3E030FD5EB5DF899ADAF61_A44BEE3C_3C6A2.jpg" alt="." width="1440px" height="480px"></a> 
+<div class="nuntitle"><a href="info/1173/38041.htm" target="_blank">.</a></div>
+</li> 
+</ul>
+<ol>
+<li class="nuncurrent">1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+ </ol>
+</div>
+<div id="rightmask" class="masks"></div>
+<div id="rightmask2" class="masks2"></div>
+</div><script>_showDynClickBatch(['dynclicks_u3_42441','dynclicks_u3_42541','dynclicks_u3_42551','dynclicks_u3_26201','dynclicks_u3_38041'],[42441,42541,42551,26201,38041],"wbnews", 1062437058)</script>
+</div>
+<div class="zhenw1167">
+  <div class="gxnunkslj">
+    <div class="gxnunkslj1">学校新闻</div>
+    <div id="tabmore"><a href="xwzx/tzgg21.htm" target="_blank">更多+</a></div>
+  </div>
+  <div class="gxnunnews">
+    <div class="gxnunnews1"><div class="xxnews">
+<a href="javascript:;" class="newsleft"></a>
+ <a href="javascript:;" class="newsright"></a>
+<ul>
+<li>
+<a href="info/1054/43101.htm" target="_blank" title="2024年广西语文教学法专业委员会学术年会暨 语文“四新”教学改革研讨交流会在我校举行"><img src="/__local/9/D0/D8/BB5D24C285DB696DBFC2CDD7AE5_4AD53F50_7E52C.jpg" alt="2024年广西语文教学法专业委员会学术年会暨 语文“四新”教学改革研讨交流会在我校举行" width="565px" height="340px"></a> 
+<div class="xxnewstitle"><a href="info/1054/43101.htm" target="_blank">2024年广西语文教学法专业委员会学术年会暨 语文“四新”教学改革研讨交流会在我校举行</a></div>
+</li> 
+<li>
+<a href="info/1054/43011.htm" target="_blank" title="我校组织2024级新生代表开展“红色基因体验行”专题研学活动"><img src="/__local/7/5F/3E/67912105EB279F3F03F12972540_A4C134B4_9D769.jpeg" alt="我校组织2024级新生代表开展“红色基因体验行”专题研学活动" width="565px" height="340px"></a> 
+<div class="xxnewstitle"><a href="info/1054/43011.htm" target="_blank">我校组织2024级新生代表开展“红色基因体验行”专题研学活动</a></div>
+</li> 
+<li>
+<a href="info/1054/42451.htm" target="_blank" title="我校召开2024年秋季学期宣传思想文化工作会议"><img src="/__local/A/A5/27/F3C265598ED877F11DC120BC45A_6AA23F00_3A9C4.jpg" alt="我校召开2024年秋季学期宣传思想文化工作会议" width="565px" height="340px"></a> 
+<div class="xxnewstitle"><a href="info/1054/42451.htm" target="_blank">我校召开2024年秋季学期宣传思想文化工作会议</a></div>
+</li> 
+<li>
+<a href="info/1054/42031.htm" target="_blank" title="“丹青颂华诞 翰墨铸同心”主题书画展在我校开展"><img src="/__local/0/B5/EE/BC95A65D62C5C1CE1E748DF79C0_A0894DB6_5427B.jpg" alt="“丹青颂华诞 翰墨铸同心”主题书画展在我校开展" width="565px" height="340px"></a> 
+<div class="xxnewstitle"><a href="info/1054/42031.htm" target="_blank">“丹青颂华诞 翰墨铸同心”主题书画展在我校开展</a></div>
+</li> 
+<li>
+<a href="info/1054/41991.htm" target="_blank" title="我校举行庆祝中华人民共和国成立75周年艺术思政课暨迎新晚会"><img src="/__local/E/DE/C6/A92B41A2401CD8541905AE5110D_099B059C_59691.jpg" alt="我校举行庆祝中华人民共和国成立75周年艺术思政课暨迎新晚会" width="565px" height="340px"></a> 
+<div class="xxnewstitle"><a href="info/1054/41991.htm" target="_blank">我校举行庆祝中华人民共和国成立75周年艺术思政课暨迎新晚会</a></div>
+</li> 
+</ul>
+ <div class="newsbt">
+   <ol>
+     <li class="newscurrent">1</li>
+       <li>2</li>
+       <li>3</li>
+        <li>4</li>
+         <li>5</li>
+   </ol>
+</div></div><script>_showDynClickBatch(['dynclicks_u4_43101','dynclicks_u4_43011','dynclicks_u4_42451','dynclicks_u4_42031','dynclicks_u4_41991'],[43101,43011,42451,42031,41991],"wbnews", 1062437058)</script>
+</div>
+    <div class="gxnunnews2"><table width="100%" cellspacing="3" cellpadding="0">
+  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1054/43101.htm" class="c59635" title="2024年广西语文教学法专业委员会学术年会暨 语文“四新”教学改革研讨交流会在我校举行" target="_blank">
+        2024年广西语文教学法专业委员会学术年会暨 语文“四...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59635" width="1%" nowrap>10-26</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1054/43091.htm" class="c59635" title="校领导带队赴广西农业职业技术大学学习交流" target="_blank">
+        校领导带队赴广西农业职业技术大学学习交流
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59635" width="1%" nowrap>10-26</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1054/43071.htm" class="c59635" title="我校教师在2024年国家安全教育“精彩一课”作品征集和评选活动中获奖" target="_blank">
+        我校教师在2024年国家安全教育“精彩一课”作品征集...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59635" width="1%" nowrap>10-25</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1054/43061.htm" class="c59635" title="我校承训的广西2024年“国培计划”第一批自治区统筹项目--小学党组织书记（2班）研修培训班圆满结束" target="_blank">
+        我校承训的广西2024年“国培计划”第一批自治区统筹...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59635" width="1%" nowrap>10-25</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1054/43031.htm" class="c59635" title="我校新媒体作品在第七届全国大学生网络文化节和全国高校网络教育优秀作品推选展示活动中获奖" target="_blank">
+        我校新媒体作品在第七届全国大学生网络文化节和全国...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59635" width="1%" nowrap>10-24</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1054/43021.htm" class="c59635" title="我校教师在2024年全区资助育人“精彩一课”微课比赛中获奖" target="_blank">
+        我校教师在2024年全区资助育人“精彩一课”微课比赛...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59635" width="1%" nowrap>10-24</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1054/43011.htm" class="c59635" title="我校组织2024级新生代表开展“红色基因体验行”专题研学活动" target="_blank">
+        我校组织2024级新生代表开展“红色基因体验行”专题...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59635" width="1%" nowrap>10-24</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1054/42941.htm" class="c59635" title="我校召开规范优化学校国有资产管理会议" target="_blank">
+        我校召开规范优化学校国有资产管理会议
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59635" width="1%" nowrap>10-21</td></tr>
+</table></div>
+  </div>
+</div>
+<div class="zhenw1167">
+  <div id="nundiv">
+    <div class="nuntab">
+      <div class="nuntab-tit">
+        <ul>
+          <li id="nuntab-tit1" class="tabselect">通知公告 </li>
+          <li id="nuntab-tit2">红木棉讲坛 </li>
+        </ul>
+        <div id="tabmore"><a id="taba" href="https://www.gxnun.edu.cn/xwzx/tzgg.htm" target="_blank">更多+</a></div>
+      </div>
+      <div id="tab-con" class="tab-con">
+        <div id="tab-con1"><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+   <div class="newsli"><div class="li_date"><div class="li_date1"> <script>document.write('2024年10月10日'.substr(8,3))</script></div><div class="li_date2"> <script>document.write('2024年10月10日'.substr(0,8))</script></div></div><div class="li_a"><a href="info/1008/42391.htm" target="_blank">关于做好我校考点2025年全国硕士研究生招生考试报名工作的通知</a></div>
+     </div>
+   <div class="newsli"><div class="li_date"><div class="li_date1"> <script>document.write('2024年01月10日'.substr(8,3))</script></div><div class="li_date2"> <script>document.write('2024年01月10日'.substr(0,8))</script></div></div><div class="li_a"><a href="info/1008/33351.htm" target="_blank">广西民族师范学院2024年度高层次人才招聘公告</a></div>
+     </div>
+   <div class="newsli"><div class="li_date"><div class="li_date1"> <script>document.write('2024年10月28日'.substr(8,3))</script></div><div class="li_date2"> <script>document.write('2024年10月28日'.substr(0,8))</script></div></div><div class="li_a"><a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1008&wbnewsid=43111" target="_blank">学校一周会议安排表 （2024年10月28日—2024年11月1日）</a></div>
+     </div>
+   <div class="newsli"><div class="li_date"><div class="li_date1"> <script>document.write('2024年10月25日'.substr(8,3))</script></div><div class="li_date2"> <script>document.write('2024年10月25日'.substr(0,8))</script></div></div><div class="li_a"><a href="http://zfcg.gxzf.gov.cn/site/detail?parentId=66485&articleId=83KyyAftPvYIxx+Yl5twfQ==" target="_blank">关于高校采资房一体化管理平台升级及采购项目成交公告</a></div>
+     </div>
+</ul>
+<script>_showDynClickBatch(['dynclicks_u6_42391','dynclicks_u6_33351','dynclicks_u6_43111','dynclicks_u6_43081'],[42391,33351,43111,43081],"wbnews", 1062437058)</script>
+</div>
+        <div id="tab-con2" style="display: none"><div class="tiohh2">
+<a href="info/1152/42841.htm"><img src="/__local/7/0E/81/1427D1690D7CC2AB12AD3DF561E_F4B2EAFB_227D0.jpg" /></a>
+<p><a href="info/1152/42841.htm">周边传播中的“三体传播”论</a></p>
+<span><a href="info/1152/42841.htm" id="msyjzxx">主题：周边传播中的“三体传播”论;主讲人：陆地 教授;时间：2024年10月21日 9:00-12:00;地点：崇文楼花山剧场</a></span>
+<span><a href="info/1152/42841.htm" id="msyjzxx2"></a></span>
+<span><a href="info/1152/42841.htm" id="msyjzxx3"></a></span>
+<span><a href="info/1152/42841.htm" id="msyjzxx4"></a></span>
+<span><a href="info/1152/42841.htm" id="msyjzxx5"></a></span>
+<span><a href="info/1152/42841.htm" id="msyjzxx6"></a></span>
+</div>
+<div class="lfdli"><a href="info/1152/42621.htm" target="_blank" title="数字文明的社会化指向——中国互联30年回顾与展望">数字文明的社会化指向——中国互联30年回顾与展望</a></div>
+<div class="lfdli"><a href="info/1152/37831.htm" target="_blank" title="阅读与写作——汉语言文学专业学生的基本素养">阅读与写作——汉语言文学专业学生的基本素养</a></div>
+<script>_showDynClickBatch(['dynclicks_u7_42841','dynclicks_u7_42621','dynclicks_u7_37831'],[42841,42621,37831],"wbnews", 1062437058)</script>
+</div>
+      </div>
+    </div>
+    <div class="nuntab">
+      <div class="nuntab-tit">
+        <ul>
+          <li id="nuntab-tit3" class="tabselect">院部动态 </li>
+          <li id="nuntab-tit4">媒体民师 </li>
+          <li id="nuntab-tit5">热点新闻 </li>
+        </ul>
+        <div id="tabmore"><a id="taba1" href="http://www.gxnun.edu.cn/xwzx/ybdt.htm" target="_blank">更多+</a></div>
+      </div>
+      <div id="tab-con" class="tab-con">
+        <div id="tab-con3" style="font-size: 12pt;color: black"><table width="100%" cellspacing="3" cellpadding="0">
+  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1009/43041.htm" class="c59639" title="我校举行2024全区师德师风演讲比赛选拔赛" target="_blank">
+        我校举行2024全区师德师风演讲比赛选拔赛
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59639" width="1%" nowrap>10-25</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1009/42991.htm" class="c59639" title="大新县委宣传部到历史文化与旅游学院调研交流" target="_blank">
+        大新县委宣传部到历史文化与旅游学院调研交流
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59639" width="1%" nowrap>10-23</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1009/42821.htm" class="c59639" title="【三全育人】教育科学学院顺利开展2024年“秋日好时光，一起‘趣’社区”社区艺术活动" target="_blank">
+        【三全育人】教育科学学院顺利开展2024年“秋日好时光...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59639" width="1%" nowrap>10-18</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1009/42811.htm" class="c59639" title="外国语学院5名学生赴马来西亚玛拉工艺大学开展校园实习" target="_blank">
+        外国语学院5名学生赴马来西亚玛拉工艺大学开展校园实习
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59639" width="1%" nowrap>10-18</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://mp.weixin.qq.com/s/MjJmeyqaI_EVln__oJvv5A" class="c59639" title="我校2200多名青年志愿者助力2024环广西公路自行车世界巡回赛（崇左-靖西段）" target="_blank">
+        我校2200多名青年志愿者助力2024环广西公路自行车世界...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59639" width="1%" nowrap>10-18</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1009/42751.htm" class="c59639" title="【教育援边帮扶】历史文化与旅游学院赴龙州县开展“教育援边帮扶项目”中学地理帮扶活动" target="_blank">
+        【教育援边帮扶】历史文化与旅游学院赴龙州县开展“教...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59639" width="1%" nowrap>10-16</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1009/42701.htm" class="c59639" title="直属机关第一党支部开展“践初心 显担当 办实事”以物换画主题党日活动" target="_blank">
+        直属机关第一党支部开展“践初心 显担当 办实事”以物...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59639" width="1%" nowrap>10-16</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1009/42641.htm" class="c59639" title="我校举办“九九重阳 乐享金秋”2024年“我们的节日·重阳”主题活动" target="_blank">
+        我校举办“九九重阳 乐享金秋”2024年“我们的节日·重...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59639" width="1%" nowrap>10-15</td></tr>
+</table></div>
+        <div id="tab-con4" style="display: none"><table width="100%" cellspacing="3" cellpadding="0">
+  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://v.gxnews.com.cn/a/21635186" class="c59640" title="【广西新闻网】广西民族师范学院开展“迎国庆 戍南疆”爱国主义教育" target="_blank">
+        【广西新闻网】广西民族师范学院开展“迎国庆 戍南疆”...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59640" width="1%" nowrap>10-05</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="http://www.news.cn/culture/20240925/e4986ed514444c41aba99b0d12086a4b/c.html" class="c59640" title="【新华网】音乐剧《玉壶公主》精彩亮相第十二届广西剧展" target="_blank">
+        【新华网】音乐剧《玉壶公主》精彩亮相第十二届广西剧展
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59640" width="1%" nowrap>09-26</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="http://gx.people.com.cn/n2/2024/0921/c390645-40984687.html" class="c59640" title="【人民网】第27届全国推广普通话宣传周广西启动仪式在崇左开幕" target="_blank">
+        【人民网】第27届全国推广普通话宣传周广西启动仪式在...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59640" width="1%" nowrap>09-25</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://baijiahao.baidu.com/s?id=1810703637744396150&wfr=spider&for=pc" class="c59640" title="【中国教育报】第27届全国推广普通话宣传周广西启动仪式在崇左开幕" target="_blank">
+        【中国教育报】第27届全国推广普通话宣传周广西启动仪...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59640" width="1%" nowrap>09-21</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-09-01&code=009&xuhao=4" class="c59640" title="【广西日报】五体共育 聚力赋能——广西民族师范学院积极探索全媒体应用型人才培养模式" target="_blank">
+        【广西日报】五体共育 聚力赋能——广西民族师范学院积...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59640" width="1%" nowrap>09-03</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="http://paper.jyb.cn/zgjyb/html/2024-08/30/content_144746_17762508.htm" class="c59640" title="【中国教育报】广西民族师范学院积极探索新型校地合作育人模式" target="_blank">
+        【中国教育报】广西民族师范学院积极探索新型校地合作...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59640" width="1%" nowrap>08-31</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://mp.weixin.qq.com/s/wDQlveq6_9spnpnXoDF7Xg" class="c59640" title="【崇左新闻网】崇澳青年心相连 双向奔赴情谊" target="_blank">
+        【崇左新闻网】崇澳青年心相连 双向奔赴情谊
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59640" width="1%" nowrap>08-20</td></tr>  
+<tr><td align="center" valign="middle" width="0" nowrap><span></span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="http://www.gxnews.com.cn/staticpages/20240806/newgx66b2263d-21589542.shtml" class="c59640" title="【广西新闻网】广西民族师范学院：绘边疆新颜 展壮美画卷" target="_blank">
+        【广西新闻网】广西民族师范学院：绘边疆新颜 展壮美画卷
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle59640" width="1%" nowrap>08-20</td></tr>
+</table></div>
+        <div id="tab-con5" style="display: none"><div class="tiohh">
+<a href="https://www.gov.cn/yaowen/liebiao/202409/content_6973522.htm"><img src="/__local/7/38/80/B7AF081891B26B5670AD1F1102D_1D909CC9_7DE9.jpg" /></a>
+<p><a href="https://www.gov.cn/yaowen/liebiao/202409/content_6973522.htm">习近平在全国教育大会上强调：紧紧围绕立德树人根本任务 朝...</a></p>
+<span><a href="https://www.gov.cn/yaowen/liebiao/202409/content_6973522.htm"></a></span>
+</div>
+<div class="lfdli"><a href="http://www.news.cn/politics/leaders/20241020/15f2c9b999f04fe2a6fcae92b3b4ae2c/c.html" target="_blank" title="习近平对国家级经济技术开发区工作作出重要指示">习近平对国家级经济技术开发区工作作出重要指示</a></div>
+<div class="lfdli"><a href="http://www.news.cn/politics/leaders/20241019/b10e0a89b82641b1a11ac116306735a5/c.html" target="_blank" title="习近平在视察火箭军某旅时强调 坚持政治引领 强化使命担当 埋头苦干实干 提升战略导弹部队威慑和实战能力">习近平在视察火箭军某旅时强调 坚持政治引领 强化使命担当 埋...</a></div>
+<div class="lfdli"><a href="http://www.news.cn/politics/leaders/20241018/5927ace1aa4a4dada90fa4f2c8817e3a/c.html" target="_blank" title="习近平就组建中国资源循环集团有限公司作出重要指示">习近平就组建中国资源循环集团有限公司作出重要指示</a></div>
+<div class="lfdli"><a href="http://www.news.cn/politics/leaders/20241018/89f9b973b01240258e74dfb9c4c87902/c.html" target="_blank" title="习近平在安徽考察时强调 发挥多重国家发展战略叠加优势 奋力谱写中国式现代化安徽篇章">习近平在安徽考察时强调 发挥多重国家发展战略叠加优势 奋力...</a></div>
+<script>_showDynClickBatch(['dynclicks_u10_42061','dynclicks_u10_42931','dynclicks_u10_42901','dynclicks_u10_42921','dynclicks_u10_42891'],[42061,42931,42901,42921,42891],"wbnews", 1062437058)</script>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="zhenw1167">
+  <div class="gxnunkslj">
+    <div class="gxnunkslj1">快速链接</div>
+  </div>
+  <div class="gxnunkslj2">
+  	<script language="javascript" src="/system/resource/js/openlink.js"></script>   <UL class="it-links">
+                    <LI class="item nlb align-middle">
+                <a href="http://res.sw.gxnun.edu.cn/guidePage/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1062437058, 76630)">
+                    <span class="icon iconfont icon-siyouwangluo"></span>
+                                       
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="title">校内入口</div>
+                </a>
+            </li>
+            <LI class="item nlb align-middle">
+                <a href="https://ehall.gxnun.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1062437058, 76629)">
+                    
+                    <span class="icon iconfont icon-banshidating"></span>                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="title">融合门户</div>
+                </a>
+            </li>
+            <LI class="item nlb align-middle">
+                <a href="https://vpn.gxnun.edu.cn/login" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1062437058, 76631)">
+                    
+                                       
+                    <span class="icon iconfont icon--shield"></span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="title">VPN</div>
+                </a>
+            </li>
+            <LI class="item nlb align-middle">
+                <a href="https://www.gxnun.edu.cn/wjxt-index.html" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1062437058, 76632)">
+                    
+                                       
+                    
+                    <span class="icon iconfont icon-a-weibiaoti-1_huaban1fuben12"></span>
+                    
+                    
+                    
+                    
+                    
+                    <div class="title">文件管理系统</div>
+                </a>
+            </li>
+            <LI class="item nlb align-middle">
+                <a href="https://www.gxnun.edu.cn/jiaowu-index.html" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1062437058, 76633)">
+                    
+                                       
+                    
+                    
+                    <span class="icon iconfont icon-icon_chengjipeizhi"></span>
+                    
+                    
+                    
+                    
+                    <div class="title">教务系统</div>
+                </a>
+            </li>
+            <LI class="item nlb align-middle">
+                <a href="http://cwglxt.sw.gxnun.edu.cn/dlpt/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1062437058, 76634)">
+                    
+                                       
+                    
+                    
+                    
+                    <span class="icon iconfont icon-feiyongguanli"></span>
+                    
+                    
+                    
+                    <div class="title">财务办公平台</div>
+                </a>
+            </li>
+            <LI class="item nlb align-middle">
+                <a href="https://gxmzsfxy.mh.chaoxing.com/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1062437058, 76635)">
+                    
+                                       
+                    
+                    
+                    
+                    
+                    <span class="icon iconfont icon-wangluojiaoxueanpai"></span>
+                    
+                    
+                    <div class="title">超星网络教学平台</div>
+                </a>
+            </li>
+            <LI class="item nlb align-middle">
+                <a href="http://mail.gxnun.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1062437058, 76636)">
+                    
+                                       
+                    
+                    
+                    
+                    
+                    
+                    <span class="icon iconfont icon-youjian" style="font-weight:bold;"></span>
+                    
+                    <div class="title">电子信箱</div>
+                </a>
+            </li>
+            <LI class="item nlb align-middle">
+                <a href="xx_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1059" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1062437058, 76637)">
+                    
+                                       
+                    
+                    
+                    
+                    
+                    
+                    
+                    <span class="icon iconfont icon-xinxiang" style="font-weight:bold;"></span>
+                    <div class="title">校长信箱</div>
+                </a>
+            </li>
+        </UL>
+  </div>
+</div>
+<div class="zhenw1167" style="padding-bottom: 10px;padding-top: 20px">
+  <div class="gxnunkslj">
+    <div class="gxnunkslj1">专题栏目</div>
+  </div>
+  <div class="zhnc219">
+    <div id="demo">
+      <div id="indemo">
+        <div id="demo1">        
+
+
+<a href="https://mztj.gxnun.edu.cn/" target="_blank"><img src="images/2023/mztjjbcjwebber.jpg" /></a>                       
+
+<a href="https://zpc.gxnun.edu.cn/" target="_blank"><img src="images/2024/shenhepinggu.jpg" /></a>                       
+
+<a href="http://jnxgx.gxnun.edu.cn/" target="_blank"><img src="images/cjjnxgxztw2024.jpg" /></a>                       
+
+<a href="http://zsw.gxnun.edu.cn/zsjz2024n.htm" target="_blank"><img src="images/2024nzsjzfm.jpg" /></a>                       
+
+<a href="https://mp.weixin.qq.com/s?__biz=MzAwNDU2NzgwMw==&mid=2652696247&idx=1&sn=90c598ca356c864dc39dc07a1e38c876&chksm=80c1a923b7b6203" target="_blank"><img src="images/msyxcp20180622105218.jpg" /></a>                       
+
+<a href="http://jw.gxnun.edu.cn/jbptydy.htm" target="_blank"><img src="images/jpbt20180518.jpg" /></a>                       
+
+</div>
+        <div id="demo2"></div>
+      </div>
+    </div>
+    <script>
+<!--
+var speed=50;
+var tab=document.getElementById("demo");
+var tab1=document.getElementById("demo1");
+var tab2=document.getElementById("demo2");
+tab2.innerHTML=tab1.innerHTML;
+function Marquee(){
+if(tab2.offsetWidth-tab.scrollLeft<=0)
+tab.scrollLeft-=tab1.offsetWidth
+else{
+tab.scrollLeft++;
+}
+}
+var MyMar=setInterval(Marquee,speed);
+tab.onmouseover=function() {clearInterval(MyMar)};
+tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+-->
+</script>
+    <div class="zhi182">
+      <div class="zhixil">    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu13(o)    
+    {    
+        var link=document.getElementsByName("su13")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu13");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa54696aa");
+        _addDynClicks('wburl',1062437058,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table class="winstyle54696">    
+    <tr><td align="center">    
+            <span class="titlestyle54696"></span> <a id="hu13"></a>    
+            <select name="su13" class="selectstyle54696" onChange="doLinksu13(this)">    
+                <option value="">　　　--友情链接--</option>    
+                <option vsbhrefname="value" aa54696aa="5944" value="http://jyt.gxzf.gov.cn/">广西壮族自治区教育厅    
+                <option vsbhrefname="value" aa54696aa="5945" value="http://www.gxnews.com.cn/">广西新闻网    
+                <option vsbhrefname="value" aa54696aa="5946" value="http://www.gxcznews.com.cn/">崇左新闻网    
+                </select>    
+        </td><tr></table></div>
+      <div class="zhixil">    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu14(o)    
+    {    
+        var link=document.getElementsByName("su14")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu14");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa54697aa");
+        _addDynClicks('wburl',1062437058,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table class="winstyle54697">    
+    <tr><td align="center">    
+            <span class="titlestyle54697"></span> <a id="hu14"></a>    
+            <select name="su14" class="selectstyle54697" onChange="doLinksu14(this)">    
+                <option value="">　　　--友情链接--</option>    
+                <option vsbhrefname="value" aa54697aa="6502" value="http://life.ccb.com/cn/paymentv3/bill_item/2012032220392150561545.html">广西民族师范学院代缴学杂费    
+                <option vsbhrefname="value" aa54697aa="6503" value="http://life.ccb.com/cn/payment/index.html">中国建设银行悦生活    
+                </select>    
+        </td><tr></table></div>
+    </div>
+  </div>
+</div>
+<div class="bpti24"></div>
+<div class="bjaot100">
+  <div class="wangj113lf"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/21/321/0000/41283862/CA213210000412838620003.js' type='text/javascript'%3E%3C/script%3E"));</script></div>
+  <div class="bij910"><p>Copyright ©2010 广西民族师范学院 电话：0771-7870769 传真：0771-7870799 邮编：532200</p><p>招生电话：0771-7870718/7870709&nbsp; 校内报警：0771-7870536&nbsp;校内急救：0771-7870532&nbsp; 地址：广西崇左市江州区佛子路23号</p><p target="_blank">前置审核编号：桂JS201301-013 &nbsp;桂JS201506-005&nbsp;&nbsp;备案号：<a href="https://beian.miit.gov.cn" target="_blank">桂ICP备11003239号-3</a> <a href="https://beian.miit.gov.cn" target="_blank">桂ICP备11003239号-5</a></p><p>&nbsp;</p></div>
+  <div class="wangj113"><a href="http://www.gx.cyberpolice.cn/NewsCategory/lstNewCate.do" onfocus="undefined"><img src="images/w-1_47.png"></a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,769 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>北京卫生职业学院</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<script src="js/vue.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/crypto-js.min.js"></script>
+	<script src="js/des.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/function.js"></script>
+	<script src="js/layui/layui.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+	<script src="js/vue.min.js"></script>
+	<script src="./js/element-ui.js"></script>
+	<script src="./js/elementui-index.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/element.css">
+
+	<style>
+		/*
+#app{
+			filter: grayscale(100%);
+		}
+*/
+		a {
+			color: unset
+		}
+
+		a:hover {
+			color: unset
+		}
+
+		.active {
+			color: #fff !important
+		}
+
+		.pc {
+			position: fixed;
+			width: 25vw;
+			height: 20vh;
+			/* background: url(./images/zzbj.jpg) no-repeat; */
+			background-size: cover;
+			right: 3vw;
+			bottom: 3vh;
+			z-index: 99;
+			cursor: pointer;
+		}
+
+		.close {
+			background: rgb(12, 54, 190);
+			color: rgb(252, 248, 248);
+			border-radius: 12px;
+			line-height: 20px;
+			text-align: center;
+			height: 20px;
+			width: 20px;
+			font-size: 18px;
+			padding: 1px;
+
+		}
+
+		.close::before {
+			content: "\2716";
+		}
+
+		.close {
+			top: -10px;
+			right: -10px;
+			position: absolute;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<div class="pc" v-if="close"
+			style="position: fixed; width: 25vw; height: 20vh; right: 3vw; bottom: 3vh; z-index: 99; cursor: pointer; display: flex; justify-content: center; align-items: center; background-size: cover;"
+			@click="location.href = `https://www.bjhvc.edu.cn/article.html?lid=27&pid=false&id=1056&lx=5`">
+			<div class="close" @click.stop="PcClose"></div>
+			<div
+				style="font-size: 4vw; background: #1072bb; color: #fff; text-align: center; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+				重要声明
+			</div>
+		</div>
+
+
+		<div class="header">
+			<div class="mask">
+				<div class="mask-top">
+					<img class="mask-logo" src="images/new_logo.png" />
+					<div class="nav-frame">
+						<div class="tools-bar">
+							<div class="right">
+								<div class="item rczp margin5">
+									<a href="article.html?lid=45&lx=1" style="font-weight: bold;">人才招聘</a>
+								</div>
+								<div class="item margin5" v-if="searchShow == true"
+									style="display: flex;flex-direction: row;justify-content: center;">
+
+									<!-- <input class="search" placeholder="搜索" type="text" v-model="serch" /> -->
+
+									<el-input class="anmin" v-model="serch" placeholder="搜索" id="zinput"></el-input>
+									<div class="img-box">
+										<img class="search-img" src="images/search.png" @click="linkSearch()"
+											style="" />
+										<img class="search-img" src="images/rili.png" @click="anmi" style="" />
+									</div>
+
+								</div>
+
+								<div class="item margin5" v-else
+									style="display: flex;flex-direction: row;align-items: center;">
+									<el-date-picker class="tobig" v-model="value1" type="daterange" id="sinput"
+										range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期">
+									</el-date-picker>
+									<!-- <input class="search" placeholder="搜索2" type="text" v-model="serch" /> -->
+									<div class="img-box">
+										<img class="search-img" src="images/search.png" @click="linkSearch1()"
+											style="" />
+										<img class="search-img" src="images/rili.png" @click="anmi" style="" />
+									</div>
+
+
+								</div>
+								<a class="fr" href="http://wjw.beijing.gov.cn">
+									<img src="images/index_icon1.png" width="164" height="46">
+								</a>
+							</div>
+						</div>
+						<!-- <index-nav-bar></index-nav-bar> -->
+					</div>
+				</div>
+			</div>
+			<div class="new-nav">
+				<div class="nav-li" style="height: 100%;">
+					<div class="item" v-for="i,iindex in list" v-if="i.parent == '0'" @mouseenter="openNav(iindex)"
+						@mouseleave="hideNav" style="line-height: 60px;">
+						<div class="shutitle" style="height: 60px; line-height: 60px;">
+							<a :href="isList(i.list,i.id,i.parent,iindex,i.lx)">{{i.name}}</a>
+						</div>
+						<div class="nav-item-son" v-show="activeIndex == iindex" style="background-color: #007FD0;">
+							<ul>
+								<li v-for="j,index in list" v-if="i.id == j.parent">
+									<a :href="isList(j.list,j.id,j.parent,index,j.lx)" style="">{{j.name}}</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <topmenu></topmenu> -->
+		<div class="body">
+			<!-- header -->
+
+			<!--导航栏-->
+
+			<!-- 轮播 -->
+			<!-- <div class="layui-carousel carousel" id="carousel1">
+				<div carousel-item>
+					<a v-for="i in cList[0]" :href="i.href">
+					<img  :src="i.src" style="height: 600px;"/>
+				</a>
+				</div>
+			</div> -->
+
+			<!--
+			<div id="roll" class="roll">
+				<a href="http://8.130.78.218:8088/wsxyzz/us/toLogin.action" target="_blank">
+					 
+					<img src="./img/roll.jpg" alt="" style="width: 100%;height: 100%">
+				</a>
+			</div>-->
+
+
+
+
+			<template>
+				<el-carousel class="ele-carousel">
+					<el-carousel-item v-for="(i,item) in cList[0]" :key="item">
+						<a :href="i.href">
+							<img :src="i.src" height="600px" />
+						</a>
+					</el-carousel-item>
+				</el-carousel>
+			</template>
+			<!-- 专题 -->
+
+			<div class="title">
+				{{getDateWeeks()}}
+			</div>
+			<div class="subject">
+				<div class="content">
+					<div class="item width2">
+						<div class="title">
+							<div class="item-group">
+								<div class="pitem point" style=" color: black;" @click="clickIxwtem('xw')"
+									:class="{active:xwitem == 0}">卫院新闻</div>
+								<div class="pitem point" style="margin-left: 10px; color: black;"
+									@click="clickIxwtem('dj')" :class="{active:xwitem == 1}">党建园地</div>
+							</div>
+
+							<div class="item">
+								<a :href="xwhref">更多</a>
+							</div>
+						</div>
+						<div class="content his-content" v-if="xwitem == 0">
+							<div class="left">
+								<!-- <div class="layui-carousel carousel" id="xw" v-for="i in wyxstp">
+									<div carousel-item>
+										<a :href="'article.html?lid='+i.id+'&pid=false&id='+i.wzid+'&lx=5'">
+											<img :src="i" />
+										</a>
+									</div>
+								</div> -->
+								<el-carousel class="ele-carousel" arrow="never" width="100%">
+									<el-carousel-item v-for="(i,item) in wyxstp" :key="item">
+
+										<a href="article.html?lid=1&pid=0&lx=1">
+											<img :src="i.fmtp" height="50%" />
+										</a>
+									</el-carousel-item>
+								</el-carousel>
+							</div>
+							<div class="right">
+								<div class="content img-news">
+									<ul class="news-list">
+										<li v-for="i in wyxw">
+											<a :href="'article.html?lid='+i.id+'&pid=false&id='+i.wzid+'&lx=5'">
+												<div class="title">
+													{{i.wzm}}
+												</div>
+												<div class="date">
+													{{i.sj.split(" ")[0]}}
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="content his-content" v-if="xwitem == 1">
+							<div class="left">
+								<!-- <div class="layui-carousel carousel" id="xw" v-for="i in wyxstp">
+									<div carousel-item>
+										<a :href="'article.html?lid='+i.id+'&pid=false&id='+i.wzid+'&lx=5'">
+											<img :src="i" />
+										</a>
+									</div>
+								</div> -->
+								<el-carousel class="ele-carousel" arrow="never" width="100%">
+									<el-carousel-item v-for="(i,item) in djydlb" :key="item">
+										<a href="article.html?lid=1&pid=0&lx=1">
+											<img :src="i" />
+										</a>
+									</el-carousel-item>
+								</el-carousel>
+
+							</div>
+							<div class="right">
+								<div class="content img-news">
+									<ul class="news-list">
+										<li v-for="i in djyd">
+											<a :href="'article.html?lid='+i.id+'&pid=false&id='+i.wzid+'&lx=5'">
+												<div class="title">
+													{{i.wzm}}
+												</div>
+												<div class="date">
+													{{i.sj.split(" ")[0]}}
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="title">
+							<div class="pitem point" style="color: black;" @click="clickItem('tz')"
+								:class="{active:item == 0}">通知公告
+							</div>
+							<div class="pitem point" style="margin-right: 6em; color: black;" @click="clickItem('xx')"
+								:class="{active:item == 1}">信息公开</div>
+							<div></div>
+							<div class="item">
+								<a :href="ithref">更多</a>
+							</div>
+						</div>
+						<div class="content">
+							<ul class="news-list" v-if="item == 0">
+								<li v-for="i in tzgj">
+									<a :href="'article.html?lid='+i.id+'&pid=false&id='+i.wzid+'&lx=5'">
+										<div class="title">
+											{{i.wzm}}
+										</div>
+										<div class="date">
+											{{i.sj.split(" ")[0]}}
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news-list" v-if="item == 1">
+								<li v-for="i in xxgk">
+									<a :href="'article.html?lid='+i.id+'&pid=false&id='+i.wzid+'&lx=5'">
+										<div class="title">
+											{{i.wzm}}
+										</div>
+										<div class="date">
+											{{i.sj.split(" ")[0]}}
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- <div class="row motto">
+				<img src="images/WechatIMG551.png" />
+			</div> -->
+			<div class="subject">
+				<div class="content">
+					<div class="item">
+						<div class="title">
+							<div class="item">招生实习就业</div>
+							<div class="item">
+								<a href="article.html?lid=18&pid=17&list=1&lx=2">更多</a>
+							</div>
+						</div>
+						<div class="content img-news">
+							<div class="top">
+								<div class="left">
+									<div id="" v-for="(i , index) in zsjy" :key="index" v-if="index < 1">
+										<img class="img" src="./images/e812456983b60e2a358c9d082a5c0e9.jpg" />
+									</div>
+
+								</div>
+								<div class="right">
+									<ul class="news-list">
+										<li v-for="(i , index) in zsjy" :key="index" v-if="index < 5">
+											<a
+												:href="'article.html?lid='+i.lmid+'&pid='+i.parentid+'&id='+i.wzid+'&lx=4'">
+												<div class="title">
+													{{i.wzm}}
+												</div>
+												<div class="date">
+													{{i.sj.split(" ")[0].substring(5,10)}}
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="bottom">
+								<ul class="news-list">
+									<li v-for="(i , index) in zsjy" :key="index" v-if="index >= 5">
+										<a :href="'article.html?lid='+i.lmid+'&pid='+i.parentid+'&id='+i.wzid+'&lx=4'">
+											<div class="title">
+												{{i.wzm}}
+											</div>
+											<div class="date">
+												{{i.sj.split(" ")[0]}}
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="title">
+							<div class="item">教育教学</div>
+							<div class="item">
+								<a href="article.html?lid=13&pid=12&list=1&lx=2">更多</a>
+							</div>
+						</div>
+						<div class="content img-news">
+							<div class="top">
+								<div class="left">
+									<div id="" v-for="(i , index) in jxjy" :key="index" v-if="index < 1">
+										<img class="img" src="./images/jyjx.jpg" />
+									</div>
+								</div>
+								<div class="right">
+									<ul class="news-list">
+										<li v-for="(i , index) in jxjy" :key="index" v-if="index < 5">
+											<a
+												:href="'article.html?lid='+i.lmid+'&pid='+i.parentid+'&id='+i.wzid+'&lx=4'">
+												<div class="title">
+													{{i.wzm}}
+												</div>
+												<div class="date">
+													{{i.sj.split(" ")[0].substring(5,10)}}
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="bottom">
+								<ul class="news-list">
+									<li v-for="(i , index) in jxjy" :key="index" v-if="index >= 5">
+										<a :href="'article.html?lid='+i.lmid+'&pid='+i.parentid+'&id='+i.wzid+'&lx=4'">
+											<div class="title">
+												{{i.wzm}}
+											</div>
+											<div class="date">
+												{{i.sj.split(" ")[0]}}
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="title">
+							<div class="item">校史校友</div>
+							<div class="item">
+								<a href="article.html?lid=25&pid=24&lx=1">更多</a>
+							</div>
+						</div>
+						<div class="content img-news">
+							<div class="top">
+								<div class="left">
+									<div id="" v-for="(i , index) in xsxy" :key="index" v-if="index < 1">
+										<img class="img" :src="xsxytp[0].fmtp" />
+									</div>
+								</div>
+								<div class="right">
+									<ul class="news-list">
+										<li v-for="(i , index) in xsxy" :key="index" v-if="index < 5">
+											<a
+												:href="'article.html?lid='+i.lmid+'&pid='+i.parentid+'&id='+i.wzid+'&lx=4'">
+												<div class="title">
+													{{i.wzm}}
+												</div>
+												<div class="date">
+													{{i.sj.split(" ")[0].substring(5,10)}}
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="bottom">
+								<ul class="news-list">
+									<li v-for="(i , index) in xsxy" :key="index" v-if="index >= 5">
+										<a :href="'article.html?lid='+i.id+'&pid='+i.parentid+'&id='+i.wzid+'&lx=4'">
+											<div class="title">
+												{{i.wzm}}
+											</div>
+											<div class="date">
+												{{i.sj.split(" ")[0]}}
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap-content">
+				<div class="conent-title">
+					<div class="pitem point conent-item" style="color: black;" @click="clickContentItem('xyfc')"
+						:class="{active:contentItem == 1}">校园风采
+					</div>
+					<div class="pitem point conent-item" style="color: black;" @click="clickContentItem('xsfc')"
+						:class="{active:contentItem == 0}">
+						学生风采
+					</div>
+
+				</div>
+				<div class="subject xyfc" v-if="contentItem == 1">
+					<div class="content">
+						<div class="carousel" id="xyfc1" v-for="i in schoolMien">
+							<div class="fc-img-frame">
+								<img class="full-img" :src="i.fmtp" />
+							</div>
+						</div>
+					</div>
+					<div class="title">校园风采</div>
+				</div>
+
+				<div class="subject wyxs" v-if="contentItem == 0">
+					<div class="title">学生风采</div>
+					<div class="content">
+						<div class="carousel" id="wyxs1">
+							<div carousel-item>
+								<div class="carousel-content">
+									<div class="img-frame" style="overflow: hidden;">
+										<img class="full-img" :src="xsfc[0].fmtp" v-if="xsfc[0].fmtp != ''"
+											style="transform: scaleY(1.25)" />
+										<div class="null-img" v-else>
+											<img src="./img/null.png" alt="暂无图片">
+										</div>
+
+									</div>
+									<div class="info" style="background-color: #fff;">
+										<div class="title">
+											{{xsfc[0].wzm}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="carousel" id="wyxs2">
+							<div carousel-item>
+								<div class="carousel-content">
+									<div class="img-frame" style="overflow: hidden;">
+										<img class="full-img" :src="xsfc[1].fmtp" v-if="xsfc[1].fmtp != ''"
+											style="transform: scaleY(1.25)" />
+										<div class="null-img" v-else>
+											<img src="./img/null.png" alt="暂无图片">
+										</div>
+									</div>
+									<div class="info" style="background-color: #fff;">
+										<div class="title">
+											{{xsfc[1].wzm}}
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="list">
+							<ul class="news-list change-news-list">
+								<li v-for="i  in xsfc">
+									<a :href="'article.html?lid='+i.id+'&pid='+i.parentid+'&id='+i.wzid+'&lx=4'">
+										<div class="title">
+											{{i.wzm}}
+										</div>
+										<div class="date">
+											{{i.sj.split(" ")[0]}}
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="wrap-model">
+				<div class="container">
+					<ul>
+						<li v-for="i,index in link">
+							<div @mouseover="mouseOver(index)" @mouseleave="mouseLeave">
+								<a :href="i.src">
+									<div class="wrap-img">
+										<img :src="i.img" alt="" :class="[isActive === index ? moveCls : defaultCls]"
+											:key="index">
+									</div>
+									<div class="strong">
+										{{ i.title }}
+									</div>
+								</a>
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- <qrcode></qrcode> -->
+			<div class="footer">
+				<div class="footer-content">
+					<!-- <div class="logo">
+						<img class="mask-logo" src="images/new_logo.png" />
+					</div> -->
+					<div class="logo" style="padding-top:0;margin-top: -19px;margin-right: 8px;">
+						<div style="display: flex;flex-direction:column;">
+							<div>学校地址:北京市通州区九棵树东路128号</div>
+							<div>邮政编码: 101101</div>
+							<div>值班室:010-63209000(非工作时间)</div>
+							<div>院办(传真): 010-63209001（工作时间）</div>
+						</div>
+					</div>
+					<!-- <div class="row motto">
+						<img src="images/WechatIMG551.png" height="45px" width="310px"/>
+					</div> -->
+
+					<div class="copyright">
+						Copyright by beijing Health Vocational College
+						版权所有©北京卫生职业学院
+						<p> <a href="https://beian.miit.gov.cn/#/Integrated/index">京ICP备2020047075号-1</a> </p>
+						<p>京公网安备 11011202002779号</p>
+						<a href="https://xyt.xcc.cn/getpcInfo?sn=1636334987865104384&language=CN&certType=8&url=*.bjhvc.edu.cn"
+							target="_blank" style="position: relative;display: inline-block;height: 38px;">
+							<div style="width:100%;height:100%;position: absolute;top: 0;left: 0;"></div><embed
+								src="https://program.xinchacha.com/web/1636334987865104384=*.bjhvc.edu.cn.svg"
+								width="103" height="38" type="image/svg+xml"
+								pluginspage="//www.adobe.com/svg/viewer/install/" />
+						</a>
+					</div>
+					<div class="item text-footer">
+						<div class="top">
+							<div class="qrcode">
+								<img src="./images/erweima.jpg">
+								<div class="qrcode-title">微博</div>
+							</div>
+							<div class="qrcode">
+								<img src="./images/qrcode_for_gh_505f86a795f9_1280.jpg">
+								<div class="qrcode-title">微信</div>
+							</div>
+						</div>
+						<!-- <div id="zsrkbg" class="item img-footer" @click="openweb('zsrkbg')">
+						<div class="title">
+							招生入口
+						</div>
+					</div>
+					</a>
+					<div id="wyrm" class="item img-footer" @click="openweb('wyrm')">
+						<div class="title">
+							卫院融媒
+						</div>
+					</div>
+					<div id="lxwm" class="item img-footer" @click="openweb('lxwm')">
+						<div class="title">
+							联系我们
+						</div>
+					</div>
+					
+						<div class="bottom">
+							<div class="map">
+								<div class="left">
+									<div>
+										<a href="complaints.html?lid=54&lx=9">书记信箱</a>
+									</div>
+									<div>
+										<a href="complaints.html?lid=55&lx=9">院长信箱</a>
+									</div>
+									<div>
+										<a href="complaints.html?lid=53&lx=9">师德投诉</a>
+									</div>
+								</div>
+								<div class="right">
+									<div>
+										<a href="complaints.html?lid=56&lx=9">监督举报</a>
+									</div>
+									<div>在线咨询</div>
+									<div>
+										<a href="complaints.html?lid=57&lx=9">投诉建议</a>
+									</div>
+								</div>
+							</div>
+						</div> -->
+
+
+					</div>
+				</div>
+				<div class="bloglink" style="margin-bottom: 30px">
+					<div class="btitle">友情链接：</div>
+					<div class="linkdiv" v-for="i in blogList"><a :href="i.url">{{ i.title }}</a></div>
+				</div>
+			</div>
+
+		</div>
+
+</body>
+<!-- <script>
+		var id, stepX, stepY, delay, left = 0, top1 = 0, objWidth, objHeight, bodyWidth, bodyHeight, directionX = "right", directionY = "down", floatObj;
+		//解析js文件后面的参数
+
+		var move = function () {
+			//判断移动方向
+			if (directionX == "right") {
+				if ((left + objWidth + stepX) > bodyWidth) {
+					directionX = "left";
+				} else {
+					directionX = "right";
+				}
+			} else {
+				if ((left - stepX) < 0) {
+					directionX = "right";
+				} else {
+					directionX = "left";
+				}
+			}
+
+			if (directionY == "down") {
+				// console.log(top1, objHeight, bodyHeight)
+
+				if ((top1 + objHeight + stepY) > bodyHeight) {
+					directionY = "up";
+				} else {
+					directionY = "down";
+				}
+			} else {
+				if ((top1 - stepY) < 0) {
+
+					directionY = "down";
+				} else {
+					directionY = "up";
+				}
+			}
+
+			//移动
+			if (directionX == "right") {
+
+				left += stepX;
+			} else {
+				left -= stepX;
+			}
+			if (directionY == "down") {
+				top1 += stepY;
+			} else {
+				top1 -= stepY;
+			}
+			floatObj.style.left = left + "px";
+			floatObj.style.top = top1 + "px";
+		};
+
+		var start = function () {
+			interval = setInterval('move()', delay);
+		};
+
+		//获取参数
+		// var params = getArgs();
+		id = 'roll';
+		stepX = parseFloat(2);
+		stepY = parseFloat(2);
+		delay = parseFloat(20);
+
+		window.addEventListener("load", function () {
+			floatObj = document.getElementById(id);
+
+
+			// objWidth = parseFloat(floatObj.style.width);
+			// objHeight = parseFloat(floatObj.style.height);
+			objWidth = 260;
+			objHeight = 120;
+			floatObj.style.position = "fixed";
+			floatObj.style.zIndex = 99999999;
+			floatObj.style.left = left + "px";
+			floatObj.style.top = top1 + "px";
+
+			// bodyWidth = parseFloat(document.body.clientWidth);
+			// bodyHeight = parseFloat(document.body.clientHeight);
+			bodyWidth = parseFloat(document.documentElement.clientWidth);
+			bodyHeight = parseFloat(document.documentElement.clientHeight);
+			console.log(bodyWidth, bodyHeight)
+			console.log(objWidth)
+			console.log(objHeight)
+
+			start();
+
+			floatObj.addEventListener("mouseover", function () { clearInterval(interval) });
+			floatObj.addEventListener("mouseout", function () { interval = setInterval('move()', delay) });
+		});
+
+	</script> -->
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/component.js"></script>
+<script src="js/home.js"></script>
+
+
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="wap-font-scale" content="no">
+<title>福建水利电力职业技术学院-学校首页</title>
+<script type="text/JavaScript">
+	var baseUrl;
+	function writeBase() {
+		var theUrl = location.href;
+		baseUrl = theUrl;
+		var siteStr = "/www2/www.fjsdxy.com";
+ 		var indexNum = theUrl.indexOf(siteStr);
+		var httpsNum = theUrl.indexOf("https");
+		if(httpsNum>-1){
+			if (indexNum > 0) { // 如果从后台预览进入
+			baseUrl = theUrl.substring(0, indexNum + siteStr.length) + "/"; // 最后一个斜杠很重要
+		 }else {
+			httpsNum  = theUrl.indexOf(".com", 7);
+			baseUrl = theUrl.substring(0, httpsNum ) + ".com/";
+			}
+		}else{
+	 	if (indexNum > 0) { // 如果从后台预览进入
+	 	baseUrl = theUrl.substring(0, indexNum + siteStr.length) + "/"; // 最后一个斜杠很重要
+		 }else {
+	 	indexNum = theUrl.indexOf("/", 7);  	// 7 = "http://".length
+	 	baseUrl = theUrl.substring(0, indexNum) + "/"; // 最后一个斜杠很重要
+	 }}
+ 		document.writeln("<base href=\"" + baseUrl + "\"></base>");
+	}
+ 	writeBase();
+ 	
+ 	function qhms(value){
+		document.cookie = "vsb_screen_set_device=" + escape(value)
+		document.location.reload(true)
+	}
+	
+</script>
+<link rel="stylesheet" href="res/css/layout.css">
+<link rel="stylesheet" href="res/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="res/css/index.css">
+<script src="res/js/jquery.js"></script>
+<script src="res/js/main.js"></script>
+<script src="res/js/swiper-bundle.min.js"></script>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/rem/1.3.4/js/rem.min.js"></script><script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="res/js/constant.js"></script>
+<script type="text/javascript">  
+var browser={  
+    versions:function(){   
+           var u = navigator.userAgent, app = navigator.appVersion;   
+           return {//移动终端浏览器版本信息   
+                trident: u.indexOf('Trident') > -1, //IE内核  
+                presto: u.indexOf('Presto') > -1, //opera内核  
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核  
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核  
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端  
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器  
+                iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器  
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+		iPod: u.indexOf('iPod') > -1, //是否iPod  
+                webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部  
+                weixin: u.indexOf('MicroMessenger') > -1, //是否微信   
+                qq: u.match(/\sQQ/i) == " qq" //是否QQ  
+            };  
+         }(),  
+         language:(navigator.browserLanguage || navigator.language).toLowerCase()  
+}   
+  
+  if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+    browser.versions.iPhone){        
+        // window.location = "http://www.fjsdxy.com/wap";      
+  }
+</script> 
+
+</head>
+
+<body>
+<script src="res/style/js/jquery-lasted.min.js"></script>
+<script src="res/style/js/swfobject.js"></script>
+
+
+<body>
+		<!-- Header -->
+		<div class="header-wrapper">
+			<div class="mauto">
+				<a href="https://www.fjsdxy.com/xyw/" class="mr20">校友天地</a>
+				<a href="ldxx/index.html" class="mr20">领导信箱</a>
+				<a href="####" class="mr20" onclick="qhms(&#39;mobile&#39;)">手机版</a>
+								<a href="https://www.fjsdxy.com/wzdt" class="mr20">网站地图</a>
+				<div class="search-box">
+					<input type="text" class="inp" name="keyword" id="keyword"/>
+					<span class="s-btn" onclick="mySearch();"></span>
+					<script language='JavaScript' type="text/javascript">
+             document.onkeydown=function(){
+						     if(event.keyCode==13){
+						     	if(document.activeElement.id=="keyword"){
+						         	mySearch();  
+						         }
+						      }
+						  };
+			        	String.prototype.trim = function(){
+							    return this.replace(/(^\s*)|(\s*$)/g, "");    
+							  }  
+						function mySearch(){
+							var key =document.getElementById("keyword").value.trim();
+							if(key.length <=0){
+								alert("关键字必填");
+							}else{
+								/* var url = appPath + "lwgl/common/result!allSearch.action?keyword="+key+"&lwSiteId=402881e65964160a0159641b08770002"; */
+								var url = appPath + "lwgl/common/result!allSearch.action?keyword="+key; 
+								url = encodeURI(encodeURI(url));
+								window.open(url);
+							}
+						}
+				 	</script>
+				</div>
+			</div>
+		</div>
+		<!-- Body -->
+		<div class="body-wrapper">
+			<!-- Nav -->
+			<div class="nav-wrapper">
+				<div class="mauto flex">
+					<a href="index.html" class="logo"><img src="res/images/logo.png" class="img100"></a>
+					<div class="nav-box">
+						<div class="nav-item">
+							<span class="name"><a href="xygk/index.html" target="_blank">学校概况</a></span>
+							<div class="nav-pop-container">
+								<div class="nav-pop-box">
+									<img src="upload/extendAttachFile/154ebcc3-4557-43af-b6f2-1852e2a191021681461841353.jpg" class="nav-img">
+									<div class="s-nav-box">
+											<a href="xyjj/index.html" class="s-item">学校简介</a>
+											<a href="xyld/index.html" class="s-item">学校领导</a>
+											<a href="xyzc/index.html" class="s-item">学校章程</a>
+											<a href="xb/index.html" class="s-item">校标</a>
+											<a href="xh/index.html" class="s-item">校徽</a>
+											<a href="xq/index.html" class="s-item">校旗</a>
+											<a href="xx/index.html" class="s-item">校训</a>
+											<a href="xf/index.html" class="s-item">校风</a>
+											<a href="xg/index.html" class="s-item">校歌</a>
+									</div>
+									<div class="s-nav-detail">
+										福建水利电力职业技术学院是福建省唯一一所以水利、电力为主要专业特色，电子信息类、建筑类、机电类、交通类和经济管理类专业协调发展的全日制公办普通高等职业院校，是福建省教育厅和省水利厅共建单位。
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item">
+							<span class="name"><a href="jgsz/index.html" target="_blank">机构设置</a></span>
+							<div class="nav-pop-container">
+								<div class="nav-pop-box">
+									<img src="upload/extendAttachFile/da844b65-3a51-4fe4-8ca5-d076ab8c30631681461431125.jpg" class="nav-img">
+									<div class="s-nav-box">
+											<a href="https://www.fjsdxy.com/jgsz/index.html" class="s-item">党政管理机构</a>
+											<a href="https://www.fjsdxy.com/jgsz/index.html" class="s-item">教学机构</a>
+											<a href="https://www.fjsdxy.com/jgsz/index.html" class="s-item">教学辅助机构</a>
+									</div>
+									<div class="s-nav-detail">
+										福建水利电力职业技术学院是福建省唯一一所以水利、电力为主要专业特色，电子信息类、建筑类、机电类、交通类和经济管理类专业协调发展的全日制公办普通高等职业院校，是福建省教育厅和省水利厅共建单位。
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item">
+							<span class="name"><a href="jyjx/index.html" target="_blank">教育教学</a></span>
+							<div class="nav-pop-container">
+								<div class="nav-pop-box">
+									<img src="upload/extendAttachFile/d01f4d3f-4f21-4984-8fa0-45fc0b7b03241681461491458.jpg" class="nav-img">
+									<div class="s-nav-box">
+											<a href="jnjs/index.html" class="s-item">技能竞赛</a>
+											<a href="jcjs/index.html" class="s-item">教材建设</a>
+											<a href="jxbs/index.html" class="s-item">教学比赛</a>
+											<a href="https://www.fjsdxy.com/jxcg/2022/" class="s-item">教学成果</a>
+											<a href="rczp/index.html" class="s-item">人才招聘</a>
+											<a href="szdw/index.html" class="s-item">师资队伍</a>
+									</div>
+									<div class="s-nav-detail">
+										学校以“三教”改革为抓手, 以内涵建设为基础，以强化特色发展为重点，以提升教育质量为核心，建立院、校、省、国家四级竞赛制度，坚持工学结合、知行合一，促进优质教育资源应用与共享，全面提升教育教学水平和人才培养质量。
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item">
+							<span class="name"><a href="kyfw/index.html" target="_blank">科研服务</a></span>
+							<div class="nav-pop-container">
+								<div class="nav-pop-box">
+									<img src="upload/extendAttachFile/bfdb00e4-8700-44d7-8696-33863f0acba61681461502707.jpg" class="nav-img">
+									<div class="s-nav-box">
+											<a href="kyfw/index.html#kypt" class="s-item">科研平台</a>
+											<a href="kyfw/index.html#kycg" class="s-item">科研成果</a>
+											<a href="kyfw/index.html#kjtpy" class="s-item">科技特派员</a>
+											<a href="kyfw/index.html#kphd" class="s-item">科普活动</a>
+									</div>
+									<div class="s-nav-detail">
+										立足社会服务职能，以深化产教融合为重点，以科教融汇为新方向，依托全国示范性院士专家工作站等20多个科研平台，积极助力经济社会发展热点、难点，科研创新攻关，面向智慧水利、新能源、河湖治理、乡村振兴等领域开展大量课题研究、科学普及、教育教学等工作。
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item">
+							<span class="name"><a href="syjxjy/index.html" target="_blank">继续教育</a></span>
+							<div class="nav-pop-container">
+								<div class="nav-pop-box">
+									<img src="upload/extendAttachFile/f3d24d7b-6654-4d09-91e9-e33a724e1e9a1681461511535.jpg" class="nav-img">
+									<div class="s-nav-box">
+											<a href="xzjj/index.html" class="s-item">中心简介</a>
+											<a href="hsjy/index.html" class="s-item">函授教育</a>
+											<a href="zxks/index.html" class="s-item">自学考试</a>
+											<a href="jnjd/index.html" class="s-item">技能鉴定</a>
+											<a href="jspx/index.html" class="s-item">技术培训</a>
+											<a href="jjjyzsjz/index.html" class="s-item">终身教育</a>
+									</div>
+									<div class="s-nav-detail">
+										以国家终身教育发展规划为依据，以发展成人学历教育和职业技术培训为两翼，紧密依托水利电力行业，牢记服务社会宗旨，不断创新继续教育教学和管理模式，为培养适应社会需要的具有全面职业能力和综合素质的人才贡献“水院智慧”。
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item">
+							<span class="name"><a href="syzsjy/index.html" target="_blank">招生就业</a></span>
+							<div class="nav-pop-container">
+								<div class="nav-pop-box">
+									<img src="upload/extendAttachFile/4231ae97-f023-4562-9f80-e75b55bc4bdf1681461749494.jpg" class="nav-img">
+									<div class="s-nav-box">
+											<a href="https://www.fjsdxy.com/zs/zszc/index.html" class="s-item">招生章程</a>
+											<a href="https://www.fjsdxy.com/zs/zsjh/index.html" class="s-item">招生计划</a>
+											<a href="https://www.fjsdxy.com/zs/jzyhd/index.html" class="s-item">历年分数</a>
+											<a href="https://www.fjsdxy.com/zs/zyjs/index.html" class="s-item">专业介绍</a>
+											<a href="https://www.fjsdxy.com/jyxx/xyjj/index.html" class="s-item">毕业生简况</a>
+											<a href="https://www.fjsdxy.com/jyxx/zpxx/index.html" class="s-item">求职招聘</a>
+											<a href="https://www.fjsdxy.com/jyxx/jyzc/index.html" class="s-item">就业政策</a>
+											<a href="https://www.fjsdxy.com/zs" class="s-item">招生专题网</a>
+									</div>
+									<div class="s-nav-detail">
+										福建水利电力职业技术学院是全日制公办普通高等职业院校，是福建省教育厅和省水利厅共建单位。学校紧贴市场办学，每年招生时将依据实际情况对专业进行适当调整。学校通过普通高考、高职分类招考及五年制高职招生批次招收全日制学历教育学生，也招收港澳台及国际学历教育学生。
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+<div class="Clear"></div>
+
+
+			<!-- Banner -->
+			<div class="banner-wrapper">
+				<div class="swiper swiper0">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="upload/AttachImage/20240726165710UJw6.jpg" class="img100"></div>
+						<div class="swiper-slide"><img src="upload/AttachImage/20241016163112E9DV.png" class="img100"></div>
+						<div class="swiper-slide"><img src="upload/AttachImage/20201009092647WPL3.jpg" class="img100"></div>
+						<div class="swiper-slide"><img src="upload/AttachImage/20211026110133VY6U.jpg" class="img100"></div>
+						<div class="swiper-slide"><img src="upload/AttachImage/20211101152800HJic.jpg" class="img100"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<div class="first-content mauto">
+				<!-- 学校要闻 -->
+				<div class="left">
+					<div class="common-title">学校要闻<a href="xyyw/index.html" target="_blank"><span class="next-btn"></span></a></div>
+					<div class="news-wrapper">
+						<div class="news-item">
+								<a href="xyyw/202410/28092315bqgr.html" target="_blank" class="news-img-text">
+									<div class="img"><img src="upload/image/2024102809225584157.jpg" class="img100" /></div>
+									<div class="text els2">校长孙学耕带队走访中锐网络</div>
+								</a>
+							
+							<a href="xyyw/202410/28092315bqgr.html" title="校长孙学耕带队走访中锐网络" target="_blank" class="common-item">
+								<div class="ovh txt">校长孙学耕带队走访中锐网络</div>
+								<div class="date">2024-10-27</div>
+							</a>
+							<a href="xyyw/202410/28090333xx3p.html" title="中国海峡人才市场一行莅校调研交流" target="_blank" class="common-item">
+								<div class="ovh txt">中国海峡人才市场一行莅校调研交流</div>
+								<div class="date">2024-10-26</div>
+							</a>
+							<a href="xyyw/202410/281029201muj.html" title="福建水院举行2024年教职工趣味运动会" target="_blank" class="common-item">
+								<div class="ovh txt">福建水院举行2024年教职工趣味运动会</div>
+								<div class="date">2024-10-25</div>
+							</a>
+							<a href="xyyw/202410/22145442ozq9.html" title="马来西亚汉文化中心一行莅校参访交流" target="_blank" class="common-item">
+								<div class="ovh txt">马来西亚汉文化中心一行莅校参访交流</div>
+								<div class="date">2024-10-22</div>
+							</a>
+							<a href="xyyw/202410/22092331jxes.html" title="福建水院召开教育思想大学习大讨论交流会" target="_blank" class="common-item">
+								<div class="ovh txt">福建水院召开教育思想大学习大讨论交流会</div>
+								<div class="date">2024-10-21</div>
+							</a>
+							<a href="xyyw/202410/18100819bsyn.html" title="事关“金课”“金教材”，福建水院承办这个省级会议" target="_blank" class="common-item">
+								<div class="ovh txt">事关“金课”“金教材”，福建水院承办这个省级会议</div>
+								<div class="date">2024-10-18</div>
+							</a>
+							<a href="xyyw/202410/17081625drya.html" title="省委党校肖剑南教授到校作习近平文化思想专题报告" target="_blank" class="common-item">
+								<div class="ovh txt">省委党校肖剑南教授到校作习近平文化思想专题报告</div>
+								<div class="date">2024-10-16</div>
+							</a>
+						</div>
+						<div class="news-item">
+								<a href="xyyw/202410/280911574l3a.html" target="_blank" class="news-img-text">
+									<div class="img"><img src="upload/image/2024102809172321678.jpg" class="img100" /></div>
+									<div class="text els2">喜讯│“潇湘杯”喜获1金4银6铜</div>
+								</a>
+							<a href="xyyw/202410/280911574l3a.html" title="喜讯│“潇湘杯”喜获1金4银6铜" target="_blank" class="common-item">
+								<div class="ovh txt">喜讯│“潇湘杯”喜获1金4银6铜</div>
+								<div class="date">2024-10-27</div>
+							</a>
+							<a href="xyyw/202410/28103735q7p9.html" title="面对面丨学校领导与建筑学子共话校史" target="_blank" class="common-item">
+								<div class="ovh txt">面对面丨学校领导与建筑学子共话校史</div>
+								<div class="date">2024-10-25</div>
+							</a>
+							<a href="xyyw/202410/22225523ryh2.html" title="福建水院认真学习贯彻习近平总书记在福建考察时的重要讲话精神" target="_blank" class="common-item">
+								<div class="ovh txt">福建水院认真学习贯彻习近平总书记在福建考察时的重要讲话精神</div>
+								<div class="date">2024-10-22</div>
+							</a>
+							<a href="xyyw/202410/2114330458nq.html" title="含金量十足！这项工作再添10项省级以上荣誉！" target="_blank" class="common-item">
+								<div class="ovh txt">含金量十足！这项工作再添10项省级以上荣誉！</div>
+								<div class="date">2024-10-21</div>
+							</a>
+							<a href="xyyw/202410/20232617yhzm.html" title="学校领导带队赴福州开展“闽台职业教育融合行”系列交流活动" target="_blank" class="common-item">
+								<div class="ovh txt">学校领导带队赴福州开展“闽台职业教育融合行”系列交流活动</div>
+								<div class="date">2024-10-19</div>
+							</a>
+							<a href="xyyw/202410/20235439fiqb.html" title="福建水院召开学生工作例会" target="_blank" class="common-item">
+								<div class="ovh txt">福建水院召开学生工作例会</div>
+								<div class="date">2024-10-17</div>
+							</a>
+							<a href="xyyw/202410/18095511g8eh.html" title="福建水院大学生三创项目（乡村振兴）孵化基地在将乐县挂牌成立" target="_blank" class="common-item">
+								<div class="ovh txt">福建水院大学生三创项目（乡村振兴）孵化基地在将乐县挂牌成立</div>
+								<div class="date">2024-10-16</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- 媒体报道  通知公告 -->
+				<div class="right">
+					<div class="top" style="margin-bottom:20px;">
+						<div class="common-title mt">媒体报道<a href="mtsy/index.html" target="_blank"><span class="next-btn"></span></a></div>
+						<div class="swiper swiper1" style="height:153px;">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="mtsy/202410/15231250mpb7.html" class="common-item" title="【海博TV】福建水利电力职业技术学院：面向需求办教育 产教融合育英才" target="_blank">
+										<div class="ovh txt">【海博TV】福建水利电力职业技术学院：面向需求办教育 产教融合育英才</div>
+										<div class="date">2024-10-08</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="mtsy/202410/152312032g11.html" class="common-item" title="【福建省教育厅】关于“追寻领袖足迹 体悟伟大变革”2024年全省大学生暑期社会实践活动评选结果的公示" target="_blank">
+										<div class="ovh txt">【福建省教育厅】关于“追寻领袖足迹 体悟伟大变革”2024年全省大学生暑期社会实践活动评选结果的公示</div>
+										<div class="date">2024-10-08</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="mtsy/202410/152311189e4t.html" class="common-item" title="【学习强国-福建学习平台】发展全过程人民民主 | 让爱与希望同行——三明永安市人大常委会关注寄宿制学校学生成长侧记" target="_blank">
+										<div class="ovh txt">【学习强国-福建学习平台】发展全过程人民民主 | 让爱与希望同行——三明永安市人大常委会关注寄宿制学校学生成长侧记</div>
+										<div class="date">2024-10-08</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="mtsy/202410/15231017vyu3.html" class="common-item" title="【水清三明[微信]】喜迎国庆 ，志愿者们为水而行！" target="_blank">
+										<div class="ovh txt">【水清三明[微信]】喜迎国庆 ，志愿者们为水而行！</div>
+										<div class="date">2024-10-08</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="mtsy/202410/15232046w3bo.html" class="common-item" title="【新福建】“迎国庆 乐重阳 爱在福利院”永安市开展主题文艺汇演" target="_blank">
+										<div class="ovh txt">【新福建】“迎国庆 乐重阳 爱在福利院”永安市开展主题文艺汇演</div>
+										<div class="date">2024-10-06</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="mtsy/202410/15231952ebwb.html" class="common-item" title="【学习强国-福建学习平台】学校思政|孝廉故事青年说——《学习谷文昌先进事迹 弘扬新时代水利精神》" target="_blank">
+										<div class="ovh txt">【学习强国-福建学习平台】学校思政|孝廉故事青年说——《学习谷文昌先进事迹 弘扬新时代水利精神》</div>
+										<div class="date">2024-10-06</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="mtsy/202410/15231902nol0.html" class="common-item" title="【学习强国-福建学习平台】学校思政 | 孝廉故事青年说——《半条被子 温暖初心》" target="_blank">
+										<div class="ovh txt">【学习强国-福建学习平台】学校思政 | 孝廉故事青年说——《半条被子 温暖初心》</div>
+										<div class="date">2024-10-05</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="mtsy/202410/15231814620x.html" class="common-item" title="【学习强国-福建学习平台】学校思政 | 孝廉故事青年说——《一件睡衣的自述》" target="_blank">
+										<div class="ovh txt">【学习强国-福建学习平台】学校思政 | 孝廉故事青年说——《一件睡衣的自述》</div>
+										<div class="date">2024-10-04</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="mtsy/202410/15231720y9nm.html" class="common-item" title="【学习强国-福建学习平台】宣讲动态 | 三明永安：讲述改革好故事 创新理论进基层" target="_blank">
+										<div class="ovh txt">【学习强国-福建学习平台】宣讲动态 | 三明永安：讲述改革好故事 创新理论进基层</div>
+										<div class="date">2024-10-03</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom" style="margin-bottom:20px;">
+						<div class="common-title dt">校园动态<a href="xwsd/index.html" target="_blank"><span class="next-btn"></span></a></div>
+							<a href="xwsd/202410/28100749edpd.html" class="common-item" title="辅导员培训：守护青春,“救”在身边" target="_blank">
+								<div class="ovh txt">辅导员培训：守护青春,“救”在身边</div>
+								<div class="date">2024-10-25</div>
+							</a>
+							<a href="xwsd/202410/21143733rj1c.html" class="common-item" title="湖北水院一行到我校交流" target="_blank">
+								<div class="ovh txt">湖北水院一行到我校交流</div>
+								<div class="date">2024-10-21</div>
+							</a>
+							<a href="xwsd/202410/21143001nd94.html" class="common-item" title="七个有力│电力工程学院教工党支部走进清流爱国主义教育基地" target="_blank">
+								<div class="ovh txt">七个有力│电力工程学院教工党支部走进清流爱国主义教育基地</div>
+								<div class="date">2024-10-21</div>
+							</a>
+					</div>
+					<div class="bottom" style="margin-bottom:20px;">
+						<div class="common-title hd">学术活动<a href="xyxshd/index.html" target="_blank"><span class="next-btn"></span></a></div>
+							<a href="xyxshd/202410/28110838h3bd.html" class="common-item" target="_blank">
+								<div class="date grey">2024-10-28</div>
+								<div class="ovh txt" title="学术讲座--学习贯彻党的二十届三中全会精神深化现代职业教育体系建设改革">学术讲座--学习贯彻党的二十届三中全会精神深化现代职业教育体系建设改革</div>
+							</a>
+							<a href="xyxshd/202410/23095157fut7.html" class="common-item" target="_blank">
+								<div class="date grey">2024-10-21</div>
+								<div class="ovh txt" title="学术讲座--第六届GIS文化节暨超图软件走进校园活动">学术讲座--第六届GIS文化节暨超图软件走进校园活动</div>
+							</a>
+					</div>
+					<div class="bottom">
+						<div class="common-title gg">公告通知<a href="ggtz/index.html" target="_blank"><span class="next-btn"></span></a></div>
+							<a href="rczp/202410/24092307v35v.html" class="common-item" target="_blank">
+								<div class="date grey">2024-10-23</div>
+								<div class="ovh txt" title="关于《2024年福建省省属事业单位公开招聘 工作人员方案（二）》 省教育厅直属单位拟聘人员公示（二）">关于《2024年福建省省属事业单位公开招聘 工作人员方案（二）》 省教育厅直属单位拟聘人员公示（二）</div>
+							</a>
+							<a href="rczp/202410/22094939qwnb.html" class="common-item" target="_blank">
+								<div class="date grey">2024-10-22</div>
+								<div class="ovh txt" title="关于公布福建水利电力职业技术学院公开招聘总量控制工作人员试讲范围的公告">关于公布福建水利电力职业技术学院公开招聘总量控制工作人员试讲范围的公告</div>
+							</a>
+					</div>
+				</div>
+			</div>
+			<!-- 快速通道 -->
+			<div class="fast-wrapper mauto">
+				<div class="fast-name">
+					<div class="txt">快速通道</div>
+					<div>fast track</div>
+				</div>
+				<div class="swiper swiper2">
+					<div class="swiper-wrapper">
+						<a href="https://i.fjsdxy.com" target="_blank" class="swiper-slide">
+							<div class="icon icon1"></div>
+							<div>数字水院</div>
+						</a>
+						<a href="https://www.fjsdxy.com/rczp/index.html" class="swiper-slide">
+							<div class="icon icon2"></div>
+							<div>人才招聘</div>
+						</a>
+						<a href="https://fjsldltsg.mh.chaoxing.com/" target="_blank" class="swiper-slide">
+							<div class="icon icon3"></div>
+							<div>图书资源</div>
+						</a>
+						<a href="https://www.fjsdxy.com/bsdt" target="_blank" class="swiper-slide">
+							<div class="icon icon4"></div>
+							<div>学生事务</div>
+						</a>
+						<a href="https://i.fjsdxy.com/user/transit" target="_blank" class="swiper-slide">
+							<div class="icon icon5"></div>
+							<div>VPN通道</div>
+						</a>
+						<a href="https://www.fjsdxy.com/gk/index.html" target="_blank" class="swiper-slide">
+							<div class="icon icon6"></div>
+							<div>信息公开</div>
+						</a>
+
+					
+						<a href="http://10.120.0.10" target="_blank" class="swiper-slide">
+							<div class="icon icon8"></div>
+							<div>办公系统（OA）</div>
+						</a>
+						<a href="https://www.fjsdxy.com/zs/" target="_blank" class="swiper-slide">
+							<div class="icon icon9"></div>
+							<div>招生专题网</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- 专题栏目 影像校园 学生活动 -->
+			<div class="card-title-wrapper mauto">
+				<div class="item icon1 act">专题栏目 <span class="en">/ SUBJECT</span></div>
+				<div class="item icon2"><a href="yxxy/index.html">影像校园</a> <span class="en">/ IMAGE</span></div>
+				<div class="item icon3"><a href="xshd/index.html">学生活动</a> <span class="en">/ STUDENT</span></div>
+			</div>
+			<div class="card-wrapper mauto">
+					<a href="https://www.fjsdxy.com/zt/ndbg.html" target="_blank" class="item one">
+					<div class="img"><img src="upload/AttachImage/20230326221949tnqr.jpg" class="img100" /></div>
+					<div class="text">
+						<div class="c-title">学院高等职业教育质量年度报告</div>
+						<div class="c-date">2024-08-29</div>
+					</div>
+				</a>
+				<a href="https://www.fjsdxy.com/jwc/rcpyfa/index.html" target="_blank" class="item two">
+					<div class="img"><img src="upload/AttachImage/202304101200426Src.jpg" class="img100" /></div>
+					<div class="text">
+						<div class="c-title">人才培养方案</div>
+						<div class="c-date">2024-08-29</div>
+					</div>
+				</a>
+				<a href="https://www.fjsdxy.com/jxcg/2024" target="_blank" class="item three">
+					<div class="img"><img src="upload/AttachImage/20230326221035Xmya.jpg" class="img100" /></div>
+					<div class="text">职业教育教学成果奖</div>
+				</a>
+				<a href="https://720yun.com/t/a0vkib7e0rh?scene_id=37039954" target="_blank" class="item four">
+					<div class="img"><img src="upload/AttachImage/20230326221711oTqX.jpg" class="img100" /></div>
+					<div class="text">校园全景导览</div>
+				</a>
+				<a href="https://www.12371.cn/special/xg20djs/" target="_blank" class="item five">
+					<div class="img"><img src="upload/AttachImage/20230326221156ap1Y.jpg" class="img100" /></div>
+					<div class="text">学习贯彻党的二十大精神</div>
+				</a>
+				<a href="http://ztjy.people.cn/" target="_blank" class="item six">
+					<div class="img"><img src="upload/AttachImage/202311281119199yiC.jpg" class="img100" /></div>
+					<div class="text">学习贯彻习近平新时代中国特色社会主义思想主题教育</div>
+				</a>		
+			</div>
+			<div class="card-wrapper mauto">
+					<a href="yxxy/202311/28105647eb0o.html" target="_blank" class="item one">
+					<div class="img"><img src="upload/AttachImage/202311281056350FVT.jpg" class="img100" /></div>
+					<div class="text">
+						<div class="c-title">校园风光</div>
+						<div class="c-date">2023-11-28</div>
+					</div>
+				</a>
+				
+				
+				<a href="yxxy/202311/28105722hh34.html" target="_blank" class="item two">
+					<div class="img"><img src="upload/AttachImage/20231128105700lbZW.jpg" class="img100" /></div>
+					<div class="text">
+						<div class="c-title">体育馆</div>
+						<div class="c-date">2023-11-28</div>
+					</div>
+				</a>
+				
+				<a href="yxxy/202311/281053043t59.html" target="_blank" class="item three">
+					<div class="img"><img src="upload/AttachImage/20231128105244o6Nv.jpg" class="img100" /></div>
+					<div class="text">天鹅湖</div>
+				</a>
+				
+				<a href="yxxy/202311/28105231ht8h.html" target="_blank" class="item four">
+					<div class="img"><img src="upload/AttachImage/20231128105215leJR.jpg" class="img100" /></div>
+					<div class="text">教学楼</div>
+				</a>
+				
+				<a href="yxxy/202311/281052001km4.html" target="_blank" class="item five">
+					<div class="img"><img src="upload/AttachImage/2023112810514814Kf.jpg" class="img100" /></div>
+					<div class="text">晨曦</div>
+				</a>
+				
+				<a href="yxxy/202311/28110333d48a.html" target="_blank" class="item six">
+					<div class="img"><img src="upload/AttachImage/20231128110315jk3m.jpg" class="img100" /></div>
+					<div class="text">天鹅</div>
+				</a>				
+			</div>
+			<div class="card-wrapper mauto">
+					<a href="xshd/202406/24090326do35.html" target="_blank" class="item one">
+					<div class="img"><img src="upload/image/2024061209042592712.jpeg" class="img100" /></div>
+					<div class="text">
+						<div class="c-title">盆栽艺韵，美育心生｜校长孙学耕与学生共植绿色未来</div>
+						<div class="c-date">2024-06-07</div>
+					</div>
+				</a>
+				
+				
+				<a href="xshd/202405/28084058jtcg.html" target="_blank" class="item two">
+					<div class="img"><img src="upload/image/2024052009120913065.jpeg" class="img100" /></div>
+					<div class="text">
+						<div class="c-title">一场别开生面的“约会”丨学校党委书记李建兴参加“书记校长接待日”活动</div>
+						<div class="c-date">2024-05-19</div>
+					</div>
+				</a>
+				
+				<a href="xshd/202405/28084058lp5h.html" target="_blank" class="item three">
+					<div class="img"><img src="upload/image/2024051616143022969.jpeg" class="img100" /></div>
+					<div class="text">福建水院大学生心理健康文化节正式启动</div>
+				</a>
+				
+				<a href="xshd/202404/12082238gloo.html" target="_blank" class="item four">
+					<div class="img"><img src="upload/image/2024041117183896319.jpg" class="img100" /></div>
+					<div class="text">倾听“生”音，护航成长</div>
+				</a>
+				
+				<a href="xshd/202404/12082238955o.html" target="_blank" class="item five">
+					<div class="img"><img src="upload/image/2024040211162350201.jpg" class="img100" /></div>
+					<div class="text">石榴红，青团香！福建水院各族师生共话清明</div>
+				</a>
+				
+				<a href="xshd/202404/12082238yue5.html" target="_blank" class="item six">
+					<div class="img"><img src="upload/image/2024030714333945266.jpg" class="img100" /></div>
+					<div class="text">福建水院举行2024年春季“开学第一课”暨升国旗仪式</div>
+				</a>				
+			</div>
+		</div>
+
+
+		<!-- 常用链接 -->
+		<div class="link-wrapper mauto">
+			<div class="l-title">常用链接</div>
+			<div class="link-box">
+				<a href="http://jyt.fujian.gov.cn/" target="_blank" class="item">福建省教育厅</a>
+				<a href="http://slt.fujian.gov.cn/" target="_blank" class="item">福建水利信息网</a>
+				<a href="http://www.ya.gov.cn/" target="_blank" class="item">永安市人民政府网</a>
+				<a href="http://www.fujian.gov.cn/" target="_blank" class="item">福建省人民政府网</a>
+				<a href="http://www.moe.gov.cn/" target="_blank" class="item">中华人民共和国教育部</a>
+				<a href="http://www.mwr.gov.cn/" target="_blank" class="item">中华人民共和国水利部</a>
+				<a href="http://rst.fujian.gov.cn/" target="_blank" class="item">福建省人力资源和社会保障厅</a>
+				<a href="http://www.xinhuanet.com/" target="_blank" class="item">新华网</a>
+			</div>
+			<div class="qrcode"><img src="res/images/qrcode.png" class="img100"></div>
+		</div>
+		<!-- Footer -->
+		<div class="footer-wrapper">
+			<div class="mauto">
+				<div class="top">
+					<a href='http://bszs.conac.cn/sitename?method=show&id=09E90653C2217F45E053022819AC8363' target="_blank"><img src="res/images/footer-icon.png" class="f-icon"></a>
+					<div class="f-text">
+						<div>联系地址：福建省永安市巴溪大道2199号 366000</div>
+						<div>电话：0598-8823835（党政办） 0598-8823856/8823857（招生） </div>
+						<div>传真：0598-3634273 </div>
+<div>中文域名：福建水利电力职业技术学院.公益 </div>
+
+					</div>
+				</div>
+				<div class="flex">
+					<div>版权所有：福建水利电力职业技术学院(2018-2024) 网站备案号：<a  href="https://beian.miit.gov.cn/">闽ICP备05010200号</a></div>
+					<div class="go-back">返回顶部 ↑</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var mySwiper = new Swiper('.swiper0', {
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				}
+			})
+
+			var mySwiper1 = new Swiper('.swiper1', {
+				loop: true,
+				speed: 2000,
+				slidesPerView: 3,
+				direction: "vertical",
+				autoplay: {
+					delay: 3000,
+					stopOnLastSlide: false,
+					disableOnInteraction: false,
+				}
+			})
+			var mySwiper2 = new Swiper('.swiper2', {
+				loop: true,
+				speed: 2000,
+				slidesPerView: 9,
+				autoplay: {
+					delay: 3000,
+					stopOnLastSlide: false,
+					disableOnInteraction: false,
+				}
+			})
+		</script>
+<script type="text/javascript" src="res/js/tongji.js"></script>
+	</body>
+
+</html>

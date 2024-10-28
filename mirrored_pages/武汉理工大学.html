@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=no, user-scalable=1">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+<title>武汉理工大学欢迎您</title>           
+<script type="text/javascript" src="./images/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./images/jquery.textPlaceholder.js"></script>
+<script type="text/javascript" src="./images/jQuery.textSlider.js"></script>
+<script type="text/javascript" src="./images/responsiveslides.min.js"></script>
+<link href="./images/main.css" rel="stylesheet" type="text/css" />
+<link href="./images/responsiveslides.css" rel="stylesheet" type="text/css" />
+<script>
+	
+	
+	$(document).ready(function(){
+
+		//placeholder 用于搜索初始文字替换兼容IE
+		$(".ainput").textPlaceholder();
+		//滚动公告
+		$("#scroll_box").textSlider({line:1,speed:500,timer:3000});
+		//幻灯
+		//$("#slider4").responsiveSlides({
+		//	auto: true,
+		//	pager: false,
+		//	nav: false,
+		//	speed: 1000,
+		//	namespace: "callbacks",
+		//	before: function () {
+		//	  $('.events').append("<li>before event fired.</li>");
+		//	},
+		//	after: function () {
+		//	  $('.events').append("<li>after event fired.</li>");
+		//	}
+		//});
+		
+		//微信弹出框
+		//$('.open-popup-link').magnificPopup({
+		//  type:'inline',
+		//  midClick: true 
+		//});
+		
+		//微信鼠标滑过二维码
+		$('.weixin_nr').hide();
+		
+		$(".weixin_qr").hover(
+			function(){
+				$('.weixin_nr').show();
+			},
+			function(){
+				$('.weixin_nr').hide();
+			}
+		);
+		
+        //响应可控幻灯片
+		
+		$(".rslides").responsiveSlides({
+			auto: true,
+			pager: false,
+			nav: true,
+			speed: 500,
+			nav: true,
+			namespace: "rslides"
+		   
+		});				
+	}); 	
+</script>
+
+    
+</head>
+
+<body>
+
+<div class="nav">
+	<div class="wrap">
+		<ul>
+          <li><a href="http://www.whut.edu.cn/index.htm">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+				<li><A href="./xxgk/" target=_blank>学校概况</a></li>
+				<li><A href="./szdw/" target=_blank>师资队伍</a></li>
+				<li><A href="./rcpy/" target=_blank>人才培养</a></li>
+				<li><A href="./kxyj/" target=_blank>科学研究</a></li>
+				<li><A href="./gjjy/" target=_blank>国际教育</a></li>
+				<li><A href="./hzjl/" target=_blank>合作交流</a></li>
+             	                <li><A href="./xywh/" target=_blank>校园文化</a></li>
+				<li><A href="./zsjy/" target=_blank>招生就业</a></li>
+				<li><A href="./rczp/" target=_blank>人才招聘</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="header">
+	<div class="wrap">
+		<div class="logo"><img src="./images/whutlogo.png" /></div>
+		<div class="slogan">厚德博学&nbsp;&nbsp;追求卓越</div>
+          <div class="ver_link"><a href="https://zhlgd.whut.edu.cn/" target="_blank">智慧理工大</a>&nbsp;/&nbsp;<a href="./zj/" target="_blank">综合信息服务系统</a>&nbsp;/&nbsp;<a href="http://english.whut.edu.cn">English Ver</a></div>
+		<div class="search_box">
+			<div class="s_input"><input class="ainput" type=text placeholder="请输入关键词" /></div>
+			<button>搜&nbsp;索</button>
+		</div>
+	</div>
+</div>
+
+<div class="notice">
+	<div class="wrap">
+		<div id="scroll_box">
+			<div class="notice_tit">滚动信息：</div>
+			<div class="scrollText">
+				<ul style="margin-top: 0px; ">
+	                            
+			            <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241014_1285695.shtml" target="_blank" title="我校获得2024赛季全国大学生方程式汽车大赛亚军">我校获得2024赛季全国大学生方程式汽车大赛亚军</a></li>
+                                     
+			            <li><a href="https://news.whut.edu.cn/zhxw/202409/t20240909_1278647.shtml" target="_blank" title="我校材料学院获评“全国教育系统先进集体”">我校材料学院获评“全国教育系统先进集体”</a></li>
+                                     
+			            <li><a href="https://news.whut.edu.cn/zhxw/202408/t20240828_1172312.shtml" target="_blank" title="我校在第十七届全国大学生节能减排社会实践与科技竞赛决赛中荣获佳绩">我校在第十七届全国大学生节能减排社会实践与科技竞赛决赛中荣获佳绩</a></li>
+                                     
+			            <li><a href="https://news.whut.edu.cn/zhxw/202406/t20240625_1004599.shtml" target="_blank" title="我校创办的高水平学术期刊Interdisciplinary Materials首获佳绩">我校创办的高水平学术期刊Interdisciplinary Materials首获佳绩</a></li>
+                                    
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>		
+	
+<div class="slide_box">
+
+	<ul class="rslides">
+	     	
+			<li>
+			  <a href="http://www.whut.edu.cn/" target="_blank"><img src="./syhd/202311/W020231127532627310374.jpg" alt="校训" /></a>			
+			</li>
+         	
+			<li>
+			  <a href="http://www.whut.edu.cn/" target="_blank"><img src="./syhd/202311/W020231106380660111811.jpg" alt="党建引领 数据驱动 协同共享 提质增效" /></a>			
+			</li>
+         	
+			<li>
+			  <a href="http://www.whut.edu.cn/" target="_blank"><img src="./syhd/202311/W020231106543266116645.jpg" alt="让每个学生更卓越" /></a>			
+			</li>
+         	
+			<li>
+			  <a href="http://www.whut.edu.cn/" target="_blank"><img src="./syhd/201905/W020220427548083397633.jpg" alt="实施卓越教育、培养卓越人才、创造卓越人生" /></a>			
+			</li>
+         	
+			<li>
+			  <a href="http://www.whut.edu.cn/" target="_blank"><img src="./syhd/202409/W020240927703019545811.png" alt="2024年国庆" /></a>			
+			</li>
+         
+	</ul>
+
+</div>	
+		
+<div class="main">	
+	<div class="wrap">
+		<div class="column_box">	
+			
+			<div class="normal_box style1">
+				<div class="normal_tit">
+					<h2>学校动态</h2>
+				</div>
+				<ul class="art_list">
+					        
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241023_1288142.shtml" target="_blank" title="学校获评“交通强国建设试点成效突出单位”">学校获评“交通强国建设试点成效突出单位”</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241022_1287683.shtml" target="_blank" title="学校与厦门港务控股集团签署全面合作协议">学校与厦门港务控股集团签署全面合作协议</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241021_1287540.shtml" target="_blank" title="IEEE光学传感器理事会和国际光学传感技术研讨会在校举行">IEEE光学传感器理事会和国际光学传感技...</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241021_1287511.shtml" target="_blank" title="我校2024年教职工乒乓球团体赛举行">我校2024年教职工乒乓球团体赛举行</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241021_1287366.shtml" target="_blank" title="校领导出访保加利亚、塞尔维亚">校领导出访保加利亚、塞尔维亚</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241018_1287125.shtml" target="_blank" title="校党委书记信思金带队拜访中国建筑集团有限公司">校党委书记信思金带队拜访中国建筑集团...</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241018_1287115.shtml" target="_blank" title="百家企业携万余岗位揽才 高质量行业双选会在学校举行">百家企业携万余岗位揽才 高质量行业双选...</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241015_1286049.shtml" target="_blank" title="学校与深圳华大基因科技有限公司签署全面合作协议">学校与深圳华大基因科技有限公司签署全...</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241015_1285760.shtml" target="_blank" title="校长杨宗凯受邀参加2024高等教育国际论坛年会并作主旨报告">校长杨宗凯受邀参加2024高等教育国际论...</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241015_1285763.shtml" target="_blank" title="我校第24届社团文化节举行">我校第24届社团文化节举行</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241014_1285744.shtml" target="_blank" title="校党委书记信思金率队走访湖北联投集团">校党委书记信思金率队走访湖北联投集团</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241014_1285695.shtml" target="_blank" title="我校获得2024赛季全国大学生方程式汽车大赛亚军">我校获得2024赛季全国大学生方程式汽车...</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241014_1285610.shtml" target="_blank" title="第九届中国先进材料产业博览会暨军民两用新材料大会在青岛召开">第九届中国先进材料产业博览会暨军民两...</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241012_1285427.shtml" target="_blank" title="西南科技大学党委书记杨俊辉一行来校调研">西南科技大学党委书记杨俊辉一行来校调研</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241011_1285358.shtml" target="_blank" title="学校举办“赞辉煌成就 聚银发力量”庆祝新中国成立75周年暨第二届老年大学教学成果展演">学校举办“赞辉煌成就 聚银发力量”庆祝...</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241011_1285353.shtml" target="_blank" title="校长杨宗凯一行赴石泉县、保康县等地推进定点帮扶与乡村振兴工作">校长杨宗凯一行赴石泉县、保康县等地推...</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241011_1285340.shtml" target="_blank" title="新疆师范大学党委书记葛国一行来校调研">新疆师范大学党委书记葛国一行来校调研</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241011_1285339.shtml" target="_blank" title="济宁市委常委、组织部长庞建栋一行来校调研">济宁市委常委、组织部长庞建栋一行来校调研</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241010_1285093.shtml" target="_blank" title="校党委书记信思金讲授“开学第一堂思政课”">校党委书记信思金讲授“开学第一堂思政课”</a></li>
+                            
+			        <li><a href="https://news.whut.edu.cn/zhxw/202410/t20241009_1284973.shtml" target="_blank" title="【党建引领】武汉理工大学自动化学院： “四高四维”促学生党员发挥先锋作用">【党建引领】武汉理工大学自动化学院： ...</a></li>
+                          
+					
+				</ul>	
+				<div class="bt_more"><a href="http://news.whut.edu.cn/"  target="_blank"><img src="./images/more1.png" /></a></div>
+			</div>
+			
+			<div class="normal_box style2 ">
+				<div class="normal_tit">
+					<h2>通知公告</h2>
+				</div>
+				<ul class="art_list">
+					       
+			        <li><span>09.23</span><a href="./tzgg/202409/t20240923_594237.htm" target="_blank" title="关于2024年国庆节放假安排的通知">关于2024年国庆节放假安排的通知</a></li>
+                           
+			        <li><span>09.18</span><a href="./tzgg/202409/t20240918_593837.htm" target="_blank" title="武汉理工大学尤雅教授课题组招聘博士后启事">武汉理工大学尤雅教授课题组招聘博士后启事</a></li>
+                           
+			        <li><span>09.18</span><a href="./tzgg/202409/t20240918_593836.htm" target="_blank" title="武汉理工大学吴兵研究员课题组招聘博士后启事">武汉理工大学吴兵研究员课题组招聘博士后启事</a></li>
+                           
+			        <li><span>09.18</span><a href="./tzgg/202409/t20240918_593835.htm" target="_blank" title="武汉理工大学刘勇研究员课题组招聘博士后启事">武汉理工大学刘勇研究员课题组招聘博士后启事</a></li>
+                           
+			        <li><span>09.18</span><a href="./tzgg/202409/t20240918_593833.htm" target="_blank" title="武汉理工大学王献忠教授课题组招聘博士后启事">武汉理工大学王献忠教授课题组招聘博士后启事</a></li>
+                           
+			        <li><span>09.18</span><a href="./tzgg/202409/t20240918_593832.htm" target="_blank" title="武汉理工大学李天梁教授课题组招聘博士后启事">武汉理工大学李天梁教授课题组招聘博士后启事</a></li>
+                           
+			        <li><span>09.18</span><a href="./tzgg/202409/t20240918_593831.htm" target="_blank" title="武汉理工大学王涛教授课题组招聘博士后启事">武汉理工大学王涛教授课题组招聘博士后启事</a></li>
+                           
+			        <li><span>09.13</span><a href="./tzgg/202409/t20240913_593616.htm" target="_blank" title="武汉理工大学刘文教授课题组招聘博士后启事">武汉理工大学刘文教授课题组招聘博士后启事</a></li>
+                           
+			        <li><span>09.13</span><a href="./tzgg/202409/t20240913_593615.htm" target="_blank" title="武汉理工大学周俊伟教授课题组招聘博士后启事">武汉理工大学周俊伟教授课题组招聘博士后启事</a></li>
+                           
+			        <li><span>09.13</span><a href="./tzgg/202409/t20240913_593614.htm" target="_blank" title="武汉理工大学曲政尧研究员课题组招聘博士后启事">武汉理工大学曲政尧研究员课题组招聘博士后启事</a></li>
+                           
+			        <li><span>09.13</span><a href="./tzgg/202409/t20240913_593613.htm" target="_blank" title="武汉理工大学贾菲菲教授课题组博士后招聘启事">武汉理工大学贾菲菲教授课题组博士后招聘启事</a></li>
+                           
+			        <li><span>09.11</span><a href="./tzgg/202409/t20240912_593422.htm" target="_blank" title="武汉理工大学沈忠慧课题组招聘博士后启事">武汉理工大学沈忠慧课题组招聘博士后启事</a></li>
+                         
+				</ul>	
+				<div class="bt_more"><a href="./tzgg/" target=_blank><img src="./images/more1.png" /></a></div>				
+			</div>
+	
+			<div class="tool_box">
+                <a class="icon1" href="http://mail.whut.edu.cn" target="_blank">邮件系统</a>
+				<a class="icon3" href="http://lib.whut.edu.cn" target="_blank">图书馆</a>
+				<a class="icon4" href="http://news.whut.edu.cn/" target="_blank">新 闻 网</a>
+				<a class="icon5" href="http://wut.ihwrm.com/" target="_blank">校报</a>				
+				<a class="icon6 weixin_qr">
+					<span>微信</span>
+					<div class="weixin_nr">
+						<img src="./images/weixin.jpg" width="100" height="100" />
+						关注官方微信
+						<div class="arrow"></div>
+					</div>
+				</a>
+				<a class="icon2" href="http://weibo.com/whut2010" target="_blank">微博</a>
+			</div>
+		
+			
+		</div>
+		<div class="index_side">
+			<div class="normal_box style3">
+				<div class="normal_tit">
+					<h2>媒体理工</h2>
+				</div>
+				<ul class="art_list">
+	                            
+			            <li><a href="http://www.moe.gov.cn/jyb_xwfb/s6192/s133/s200/202410/t20241024_1159004.html" target="_blank" title="【教育部网站】武汉理工大学着力锻造高质量思政课教师队伍">【教育部网站】武汉理工大学着力锻造高...</a></li>
+                                     
+			            <li><a href="https://share.app3.jyb.cn/news_d/7aa3e1de1b519e17dff665ffefdf9f8e?from=UC92azc3djZYbnBlb2NaNkRvdVR4YzRHRkpQM2owSnlRcXdBY3dVUmhFQ2hNYXEzVHoydzB6alRmdTFmM1Y1bA%3D%3D&_refluxos=a10" target="_blank" title="【中国教育报客户端】第二届CCF中国智能汽车学术年会（CIVS 2024）在汉召开">【中国教育报客户端】第二届CCF中国智能...</a></li>
+                                     
+			            <li><a href="https://www.zgsyb.com/news.html?aid=698548" target="_blank" title="【中国水运报】武汉理工大学：勇担使命 积极作为 贡献交通强国建设“理工力量”">【中国水运报】武汉理工大学：勇担使命 ...</a></li>
+                                     
+			            <li><a href="https://mp.weixin.qq.com/s/HVDe_KqvxROF8rk2fKZmug" target="_blank" title="【中国志愿微信号】在武汉，他们用爱关怀农民工子女，成就“卓越梦想家”！">【中国志愿微信号】在武汉，他们用爱关...</a></li>
+                                     
+			            <li><a href="https://m.hbtv.com.cn/p/4477439.html" target="_blank" title="【长江云】第二届CCF中国智能汽车学术年会在武汉召开">【长江云】第二届CCF中国智能汽车学术年...</a></li>
+                                     
+			            <li><a href="https://www.sizhengwang.cn/a/dxjy_djtz/241018/1945211.shtml" target="_blank" title="【全国高校思政网】武汉理工大学：以高质量纪检工作 护航学校事业高质量发展">【全国高校思政网】武汉理工大学：以高...</a></li>
+                                     
+			            <li><a href="https://www.sizhengwang.cn/a/gzdt_yx/241016/1933007.shtml" target="_blank" title="【全国高校思政网】武汉理工大学土木工程与建筑学院：“三个相结合”推进学生党支部建设">【全国高校思政网】武汉理工大学土木工...</a></li>
+                                     
+			            <li><a href="https://www.sizhengwang.cn/a/qggxzggcdrjspxxjxj_ydhd/241001/1940382.shtml" target="_blank" title="【全国高校思政网】武汉理工大学：原创歌曲 MV《同行·有为》">【全国高校思政网】武汉理工大学：原创...</a></li>
+                                     
+			            <li><a href="https://edu.cctv.com/2024/09/23/VIDE3fJGjGthJk6cNxLkdR0w240923.shtml?spm=C66253428820.P9AcUXmiJZ5q.0.0" target="_blank" title="【央视网】“一校一金句” 武汉理工大学：尽小者大 慎微者著 拧紧当代大学生廉洁自律的发条">【央视网】“一校一金句” 武汉理工大学...</a></li>
+                                     
+			            <li><a href="https://h.xinhuaxmt.com/vh512/share/12231839?d=134da75&channel=weixin" target="_blank" title="【新华社客户端】科研人员在水系锌离子电池研究方面取得新进展">【新华社客户端】科研人员在水系锌离子...</a></li>
+                                     
+			            <li><a href="https://w.yangshipin.cn/video?type=0&vid=k000049n6bb" target="_blank" title="【央视频】2024第九届中国先进材料产业博览会暨军民两用新材料大会在青岛召开">【央视频】2024第九届中国先进材料产业...</a></li>
+                                     
+			            <li><a href="http://zqb.cyol.com/html/2024-10/08/nw.D110000zgqnb_20241008_1-03.htm" target="_blank" title="【中国青年报】“缝缝补补的心脏更要用力跳动”">【中国青年报】“缝缝补补的心脏更要用...</a></li>
+                                     
+			            <li><a href="https://mp.weixin.qq.com/s/lPXKoyxxLieY69R-0vYerQ" target="_blank" title="【全国高校思政网】典型经验｜武汉理工大学：持续以高质量党建引领推动学校事业高质量发展">【全国高校思政网】典型经验｜武汉理工...</a></li>
+                                    
+				</ul>	
+				<div class="bt_more"><a href="http://news.whut.edu.cn/mtlg/" target="_blank"><img src="./images/more2.png" /></a></div>				
+			</div>
+                        <div><a href="http://shpg.whut.edu.cn/" target=_blank><img src="./images2023/bkshpgw01.png" /></a></div>
+			<div><a href="https://zs.whut.edu.cn" target="_blank"><img src="./images/zs2021.jpg" /></a></div>
+			<div class="normal_box style4">
+				<div class="normal_tit">
+					<h2>专题</h2>
+				</div>
+				<ul class="art_list">
+                         <li><a href="http://arts.whut.edu.cn" target="_blank">艺术馆</a></li>
+	                 <li><a href="http://arc.whut.edu.cn/xsg/pics" target="_blank">校史馆</a></li>	
+				</ul>		
+			</div>
+			
+		</div>
+		
+		
+	</div>	
+</div>
+
+<div class="foot">
+	<div class="wrap">
+	<div class="wrap">
+          <div class="left_link">
+			<a href="http://shhzc.whut.edu.cn">社会合作与校友工作处</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://alumni.whut.edu.cn">校友会</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://edf.whut.edu.cn">基金会</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://shhzc.whut.edu.cn/web-overall/index.html">董事会</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<br/>
+			<a href="http://jwc.whut.edu.cn">本科生院</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://kfy.whut.edu.cn">科发院</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://gd.whut.edu.cn">研究生院</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://rshc.whut.edu.cn/">人事处</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<br/>
+			<a href="http://zhaopin.whut.edu.cn">人才招聘网</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://stuplaza.whut.edu.cn/">学工广场</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://youth.whut.edu.cn/">理工青年</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<br/>
+			<a href="http://xxgk.whut.edu.cn">信息公开</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://cgyztb.whut.edu.cn/">招投标网</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://yqgx.whut.edu.cn">仪器共享</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		</div>
+		
+		<div class="copyright">
+			<div class="sydw"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/18/000/0000/60752214/CA180000000607522140005.js' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+			<div class="copytext">
+				<p>版权所有 &copy;  武汉理工大学 &nbsp;&nbsp;&nbsp;&nbsp;</p> 
+				<p>地址：湖北省武汉市珞狮路122号 &nbsp;&nbsp;邮编：430070 </p> 
+				<p>网管:webmaster@whut.edu.cn &nbsp;&nbsp; </p> 
+				<p><a href="https://beian.miit.gov.cn/">鄂ICP备05003336号-1</a> &nbsp;&nbsp;		 	
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102000200"><img src="./images/gaba.png" />鄂公网安备42011102000200号</a></p>
+			</div>
+		</div>
+	</div>
+</div>	
+</body>
+</html>

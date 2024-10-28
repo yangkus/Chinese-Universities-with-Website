@@ -1,0 +1,2031 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>益阳师范高等专科学校</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="益阳师范高等专科学校">
+<META Name="keywords" Content="益阳师范高等专科学校" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style/animate.min.css">
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/mousewheel.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747a465752545742000300024152 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1994609199)</script>
+</head>
+
+<body> 
+    <!-- pc 顶部 导航 -->
+    <div class="b-top">
+        <div class="t-search-zzc"></div>
+        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        
+         <div class="t-search">
+ <div>
+                <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <div class="search-btn">
+                    <input type="image" src="images/search2.png" v-on:click="onSubmit()">
+                </div>
+            </div>
+ </div>
+        
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1994609199";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    </div>
+    <div class="head pc hide">
+        <div class="head-top">
+            <div class="logo">
+<a href="index.htm">
+                    <img class="logo1" src="images/logo.png" alt="">
+                </a></div>
+            <div class="h-right">
+                <div class="h-link">
+                    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script> 
+  <a href="http://58.47.177.20:8888" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1994609199, 91787)"><img src="images/earth.png" alt="">OA</a>
+
+                    <span>|</span>
+                    <a class="search-switch"><img src="images/ser.png" alt="">搜索</a>
+                </div>
+
+                <div class="nav"><ul class="">
+
+<li class="active">
+                            <a href="index.htm">学校首页</a>
+                        </li>
+
+
+<li>
+                            <a href="xxgk/xxjj.htm">学校概况</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/nav-pic.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+                            <li><a href="xxgk/xxjj.htm">学校简介</a></li>
+                            <li><a href="xxgk/xrld.htm">现任领导</a></li>
+                            <li><a href="xxgk/lrld.htm">历任领导</a></li>
+                            <li><a href="xxgk/xxzc.htm">学校章程</a></li>
+                            <li><a href="xxgk/xxbs.htm">学校标识</a></li>
+                            <li><a href="xxgk/xxxg.htm">校训校歌</a></li>
+                            <li><a href="xxgk/xywh.htm">校园文化</a></li>
+                            <li><a href="xxgk/lxwm.htm">联系我们</a></li>
+                            </ul>
+                            </div>
+                        </li>
+
+
+<li>
+                            <a href="jgsz/dzjg.htm">机构设置</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/nav-pic.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+                            <li><a href="jgsz/dzjg.htm">党政机构</a></li>
+                            <li><a href="jgsz/jjjcjg.htm">纪检监察机构</a></li>
+                            <li><a href="jgsz/qtzz.htm">群团组织</a></li>
+                            <li><a href="jgsz/jfjg.htm">教辅机构</a></li>
+                            <li><a href="jgsz/jxjg.htm">教学机构</a></li>
+                            </ul>
+                            </div>
+                        </li>
+
+
+<li>
+                            <a href="http://jwk.newyishi.com/" target="_blank">教育教学</a>
+                        </li>
+
+
+<li>
+                            <a href="http://zzrs.newyishi.com/" target="_blank">师资队伍</a>
+                        </li>
+
+
+<li>
+                            <a href="http://jwk.newyishi.com/" target="_blank">教研科研</a>
+                        </li>
+
+
+<li>
+                            <a href="http://zsjy.newyishi.com/" target="_blank">招生就业</a>
+                        </li>
+
+
+<li>
+                            <a href="http://dj.newyishi.com/" target="_blank">党的建设</a>
+                        </li>
+
+<div class="clear"></div>
+                    </ul></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="g-navk">
+            <div class="g-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="head2 pc">
+        <div class="nav2">
+            <ul class="yjnav">
+<li>
+                    <a href="xxgk/xxjj.htm">学校概况</a>
+                    <div class="ejnav">
+                        <div class="pics">
+                            <div class="pic">
+                                <img src="images/nav-pic.jpg" alt="">
+                            </div>
+                        </div>
+                        <ul>
+                    <li><a href="xxgk/xxjj.htm">学校简介</a></li>
+                    <li><a href="xxgk/xrld.htm">现任领导</a></li>
+                    <li><a href="xxgk/lrld.htm">历任领导</a></li>
+                    <li><a href="xxgk/xxzc.htm">学校章程</a></li>
+                    <li><a href="xxgk/xxbs.htm">学校标识</a></li>
+                    <li><a href="xxgk/xxxg.htm">校训校歌</a></li>
+                    <li><a href="xxgk/xywh.htm">校园文化</a></li>
+                    <li><a href="xxgk/lxwm.htm">联系我们</a></li>
+                     </ul>
+                     </div>
+                </li>
+<li>
+                    <a href="jgsz/dzjg.htm">机构设置</a>
+                    <div class="ejnav">
+                        <div class="pics">
+                            <div class="pic">
+                                <img src="images/nav-pic.jpg" alt="">
+                            </div>
+                        </div>
+                        <ul>
+                    <li><a href="jgsz/dzjg.htm">党政机构</a></li>
+                    <li><a href="jgsz/jjjcjg.htm">纪检监察机构</a></li>
+                    <li><a href="jgsz/qtzz.htm">群团组织</a></li>
+                    <li><a href="jgsz/jfjg.htm">教辅机构</a></li>
+                    <li><a href="jgsz/jxjg.htm">教学机构</a></li>
+                     </ul>
+                     </div>
+                </li>
+<li>
+                    <a href="http://jwk.newyishi.com/" target="_blank">教育教学</a>
+                </li>
+
+
+<li class="midlogo">
+                    <a href="index.htm"><img src="images/midlogo.png" alt=""></a>
+                </li>
+
+
+<li>
+                    <a href="http://zzrs.newyishi.com/" target="_blank">师资队伍</a>
+                </li>
+<li>
+                    <a href="http://jwk.newyishi.com/" target="_blank">教研科研</a>
+                </li>
+<li>
+                    <a href="http://zsjy.newyishi.com/" target="_blank">招生就业</a>
+                </li>
+<li>
+                    <a href="http://dj.newyishi.com/" target="_blank">党的建设</a>
+                </li>
+<div class="clear"></div>
+</ul>
+        </div>
+        <div class="g-navk">
+            <div class="g-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-yc">
+        <div class="top-yc-main">
+            <div class="tnav animated"><ul>
+ <li class="active">
+                        <a href="xxgk/xxjj.htm">学校概况</a>
+                       
+                    </li>
+ <li>
+                        <a href="jgsz/dzjg.htm">机构设置</a>
+                       
+                    </li>
+ <li>
+                        <a href="http://jwk.newyishi.com/" target="_blank">教育教学</a>
+                       
+                    </li>
+ <li>
+                        <a href="http://zzrs.newyishi.com/" target="_blank">师资队伍</a>
+                       
+                    </li>
+ <li>
+                        <a href="http://jwk.newyishi.com/" target="_blank">教研科研</a>
+                       
+                    </li>
+ <li>
+                        <a href="http://zsjy.newyishi.com/" target="_blank">招生就业</a>
+                       
+                    </li>
+ <li>
+                        <a href="http://dj.newyishi.com/" target="_blank">党的建设</a>
+                       
+                    </li>
+ </ul></div>
+            <div class="tejnav animated">
+<div class="pics"><img src="images/nav-pic2.jpg" alt=""></div>
+<ul>
+<li><a href="xxgk/xxjj.htm">学校简介</a></li>
+<li><a href="xxgk/xrld.htm">现任领导</a></li>
+<li><a href="xxgk/lrld.htm">历任领导</a></li>
+<li><a href="xxgk/xxzc.htm">学校章程</a></li>
+<li><a href="xxgk/xxbs.htm">学校标识</a></li>
+<li><a href="xxgk/xxxg.htm">校训校歌</a></li>
+<li><a href="xxgk/xywh.htm">校园文化</a></li>
+<li><a href="xxgk/lxwm.htm">联系我们</a></li>
+</ul></div>
+            <div class="taddress animated">
+                <div class="taddress-box"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<h3> <img src="/__local/7/BE/92/E1E6D20E666D770539BA00FC25B_C74A3392_592.png?e=.png" vsbhref="vurl" vurl="/_vsl/7BE92E1E6D20E666D770539BA00FC25B/C74A3392/592?e=.png" vheight="" vwidth="" orisrc="/__local/7/BE/92/E1E6D20E666D770539BA00FC25B_C74A3392_592.png?e=.png" class="img_vsb_content"> <p> 湖南益阳市益阳大道（西）238号 </p> </h3> 
+<div> 
+ <p> 办公热线：0737—6188111 </p> 
+ <p> 招生办公室电话：0737—6183777 </p> 
+ <p> 就业指导办公室电话：0737—6186289 </p> 
+</div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 移动端导航 -->
+    <div class="top wap">
+        <div class="wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">    
+            
+           
+                   
+                        <a href="index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81155)">
+                            <img src="images/logo.png">
+                        </a>  
+                    
+      
+</div>
+        <div class="m-nav">
+            <div class="m-search">
+
+
+<style>
+    #appu9 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu9 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu9"></div>
+<script type="text/html" id="htmlu9">
+    <div id="appu9">
+        <div v-if="!isError">
+        
+         <input type="text" placeholder="请输入内容"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+ <input type="image" src="images/search2.png" v-on:click="onSubmit()">
+        
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu9").html($("#htmlu9").text());
+</script>
+<script>
+    var appOwner = "1994609199";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu9",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="">
+ <li>
+                    <a href="index.htm">学校首页</a>
+                    <span></span>
+                    <ul>
+                    <li><a href="index/ysxw.htm">益师新闻</a></li>
+                    <li><a href="index/tzgg.htm">通知公告</a></li>
+                    <li><a href="index/mtjj.htm">媒体聚焦</a></li>
+                    <li><a href="index/bnys.htm">百年益师</a></li>
+                    <li><a href="index/jxky.htm">教学科研</a></li>
+                    </ul>
+                    
+                </li>
+ 
+
+ <li>
+                    <a href="xxgk/xxjj.htm">学校概况</a>
+                    <span></span>
+                    <ul>
+                    <li><a href="xxgk/xxjj.htm">学校简介</a></li>
+                    <li><a href="xxgk/xrld.htm">现任领导</a></li>
+                    <li><a href="xxgk/lrld.htm">历任领导</a></li>
+                    <li><a href="xxgk/xxzc.htm">学校章程</a></li>
+                    <li><a href="xxgk/xxbs.htm">学校标识</a></li>
+                    <li><a href="xxgk/xxxg.htm">校训校歌</a></li>
+                    <li><a href="xxgk/xywh.htm">校园文化</a></li>
+                    <li><a href="xxgk/lxwm.htm">联系我们</a></li>
+                    </ul>
+                    
+                </li>
+ 
+
+ <li>
+                    <a href="jgsz/dzjg.htm">机构设置</a>
+                    <span></span>
+                    <ul>
+                    <li><a href="jgsz/dzjg.htm">党政机构</a></li>
+                    <li><a href="jgsz/jjjcjg.htm">纪检监察机构</a></li>
+                    <li><a href="jgsz/qtzz.htm">群团组织</a></li>
+                    <li><a href="jgsz/jfjg.htm">教辅机构</a></li>
+                    <li><a href="jgsz/jxjg.htm">教学机构</a></li>
+                    </ul>
+                    
+                </li>
+ 
+
+ <li>
+                    <a href="http://jwk.newyishi.com/" target="_blank">教育教学</a>
+                </li>
+ 
+
+ <li>
+                    <a href="http://zzrs.newyishi.com/" target="_blank">师资队伍</a>
+                </li>
+ 
+
+ <li>
+                    <a href="http://jwk.newyishi.com/" target="_blank">教研科研</a>
+                </li>
+ 
+
+ <li>
+                    <a href="http://zsjy.newyishi.com/" target="_blank">招生就业</a>
+                </li>
+ 
+
+ <li>
+                    <a href="http://dj.newyishi.com/" target="_blank">党的建设</a>
+                </li>
+ 
+  <div class="clear"></div></ul>
+        </div>
+    </div>
+
+
+    <div class="banner">
+            <div class="slick">
+            
+             
+             <div>
+                <a onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81208)">
+                    <img src="images/xywh/xuexiao.jpg" alt="">
+                   
+                </a>
+            </div>
+             
+              
+       
+ </div>
+        <div class="banner-btm">
+            <div class="banner-arrow banner-prev arrow-hov"><img src="images/prev.png" alt=""></div>
+            <div class="banner-line banner-linel">
+                <div></div>
+            </div>
+            <div id="downPage"><img src="images/down-page-btn.png" alt=""></div>
+            <div class="banner-line banner-liner">
+                <div></div>
+            </div>
+            <div class="banner-arrow banner-next arrow-hov"><img src="images/next.png" alt=""></div>
+        </div>
+    </div>
+
+    <div class="index">
+        <div class="s1">
+            <div class="w15">
+                <div class="title wow fadeInUp">
+                    <div class="titname">
+                        <div class="titicon">
+                            <img src="images/tit-icon1.png" alt="">
+                        </div>
+                        <div class="tittext">
+                            <div>
+                                <h3><span>益师</span><i></i><b>新闻</b></h3>
+                            </div>
+                            <p>湖南省人民政府批准、教育部备案的全日制公办普通高等学校</p>
+                        </div>
+                    </div>
+                    <div class="titmore">
+                        <a href="index/ysxw.htm">探索更多</a>
+                    </div>
+                </div>
+
+                <div class="s1-c"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="s1-l">
+<ul>
+ <li>
+                                <a href="https://mp.weixin.qq.com/s/1W5qPGv8_HmdPlNGolVeGA" class="wow fadeInUp">
+                                    <div class="pic"><img src="/__local/E/DE/33/3A92EC3325C70DE3F5B1B6AB630_D3D58D09_3A3B0.jpg" alt=""></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>铸牢同心 共谋发展——我校召开2024年党外人士谈心谈话会</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+ <li>
+                                <a href="https://mp.weixin.qq.com/s/JfzPOup186KdWaZQz3y5uQ" class="wow fadeInUp">
+                                    <div class="pic"><img src="/__local/0/F0/E5/E27BAC8B8FCEF002636295A7483_A990B68E_1869D.jpg" alt=""></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>国培计划！益阳市赫山区农村幼儿园教师课程游戏化设计能力提升培训在我校开班</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+ <li>
+                                <a href="https://mp.weixin.qq.com/s/VLQAzrwHTza4AgbfMNQbfg" class="wow fadeInUp">
+                                    <div class="pic"><img src="/__local/6/AB/AE/B45507E8DB9204F6D3316263494_C765B53A_212BF.jpg" alt=""></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>罗攀登赴安化调研乡村振兴等工作</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+ <li>
+                                <a href="https://mp.weixin.qq.com/s/gIp5keCsDl7eX4jO91pmAQ" class="wow fadeInUp">
+                                    <div class="pic"><img src="/__local/3/08/11/7BDE13A20A97C54E613F8439FB6_6A94C30D_161D8.jpg" alt=""></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>牢记总书记嘱托 争做时代好青年——党委书记李梦醒教授在2024级新生开学典礼上的开学第一课</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+ <li>
+                                <a href="https://mp.weixin.qq.com/s/zACcZF48GCHiXZvab3AwnA" class="wow fadeInUp">
+                                    <div class="pic"><img src="/__local/3/9E/83/EA9A48C728AE32DE11331635575_84A9962D_2D468.jpg" alt=""></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>请检阅！超燃军训成果</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+  </ul>
+                        <div class="s1-arrow">
+                            <div>
+                                <div class="s1-lprev arrow-hov"><img src="images/prev-r.png" alt=""></div>
+                                <div class="s1-svg"></div>
+                                <div class="s1-lnext arrow-hov"><img src="images/next-r.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+   <div class="s1-r">
+  <div class="s1-rt wow fadeInUp">
+                            <a href="https://bwk.newyishi.com/info/1030/1857.htm">
+                                <div class="info s1-rinfo">
+                                    <b>09.30</b>
+                                    <h3 class="titline"><i>我校召开秋季安全工作会议</i></h3>
+                                    <span></span>
+                                </div>
+                                <div class="pics">
+                                    <div class="pic"><img src="/__local/E/22/2F/D817E9C176960CE2B6E27072B8C_5A4776C5_3A1B2.jpg" alt=""></div>
+                                </div>
+                            </a>
+                        </div>  
+  
+  
+   <div class="s1-rb">
+   <ul>    
+      <li class="wow fadeInUp" data-wow-delay=" .2s">
+                                    <a href="https://mp.weixin.qq.com/s/QG4CkE-WTi_0hVbnMyFmqg">
+                                        <div class="s1-rinfo">
+                                            <b>09.29</b>
+                                            <h3 class="titline"><i>广州格米网络科技有限公司捐赠签约仪式在我校举行</i></h3>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </li>  
+      <li class="wow fadeInUp" data-wow-delay=".5s">
+                                    <a href="https://mp.weixin.qq.com/s?__biz=MzU1NTg4OTc3Ng==&mid=2247547056&idx=1&sn=3335b545486fbd4a82b2a0cb080afa4c&chksm=fbcf1dafccb894b9569c375396e69d962cbbd2715f425be25682c09cc74b9b393de968fd5c16&token=1457555627&lang=zh_CN#rd">
+                                        <div class="s1-rinfo">
+                                            <b>09.27</b>
+                                            <h3 class="titline"><i>有温度！有深度！这场宣讲“声”入人心</i></h3>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </li>  
+   </ul>
+                        </div>
+                    </div>                         
+                            
+                            
+                            
+                            
+<script>_showDynClickBatch(['dynclicks_u12_9841','dynclicks_u12_9831','dynclicks_u12_9821','dynclicks_u12_9811','dynclicks_u12_9791','dynclicks_u12_9781','dynclicks_u12_9751','dynclicks_u12_9731'],[9841,9831,9821,9811,9791,9781,9751,9731],"wbnews", 1994609199)</script>
+</div>
+            </div>
+        </div>
+        <div class="s2">
+            <div class="w15">
+                <div class="s2-c">
+                    <div class="s2-l"><div class="title wow fadeInLeft">
+                            <div class="titname">
+                                <div class="titicon">
+                                    <img src="images/tit-icon2.png" alt="">
+                                </div>
+                                <div class="tittext">
+                                    <div>
+                                        <h3><span>通知</span><i></i><b>公告</b></h3>
+                                    </div>
+                                    <p>栉风沐雨近百年，涵育了优秀的师范文化</p>
+                                </div>
+                            </div>
+                            <div class="titmore">
+                                <a href="index/tzgg.htm">探索更多</a>
+                            </div>
+                        </div>
+                        <ul>
+
+<li class="wow fadeInUp" data-wow-delay=".1s">
+                                <a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1003&wbnewsid=9381">
+                                    <div class="date"><span>08.26</span></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>益阳师范高等专科学校6、7号宿舍空调建设（BOT）采购中标（成交）公告</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+
+
+
+<li class="wow fadeInUp" data-wow-delay=".2s">
+                                <a href="info/1003/9421.htm">
+                                    <div class="date"><span>08.26</span></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>益阳师范高等专科学校2024年代课（兼职） 拟聘人员公示</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+
+
+
+<li class="wow fadeInUp" data-wow-delay=".3s">
+                                <a href="info/1003/9371.htm">
+                                    <div class="date"><span>08.21</span></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>教学辅助设施采购项目采购中标（成交）公告</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+
+
+
+<li class="wow fadeInUp" data-wow-delay=".4s">
+                                <a href="info/1003/9331.htm">
+                                    <div class="date"><span>08.19</span></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>益阳师范高等专科学校 6、7号宿舍空调建设（BOT）采购磋商邀请公告</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+
+
+
+<li class="wow fadeInUp" data-wow-delay=".5s">
+                                <a href="info/1003/9311.htm">
+                                    <div class="date"><span>08.19</span></div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>益阳师范高等专科学校 6、7号宿舍空调服务采购流标公告</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+
+
+</ul><script>_showDynClickBatch(['dynclicks_u13_9381','dynclicks_u13_9421','dynclicks_u13_9371','dynclicks_u13_9331','dynclicks_u13_9311'],[9381,9421,9371,9331,9311],"wbnews", 1994609199)</script>
+</div>
+                    <div class="s2-r">
+                    <div class="title wow fadeInUp">
+                            <div class="titname">
+                                <div class="titicon">
+                                    <img src="images/tit-icon3.png" alt="">
+                                </div>
+                                <div class="tittext">
+                                    <div>
+                                        <h3><span>媒体</span><i></i><b>聚焦</b></h3>
+                                    </div>
+                                    <p>教育经验丰富，艺术特色鲜明</p>
+                                </div>
+                            </div>
+                            <div class="titmore">
+                                <a href="index/mtjj.htm">探索更多</a>
+                            </div>
+                        </div>
+                        <div class="s2-rc ">
+                     
+ <ul>
+
+<li>
+                                    <a href="https://apps.yyrb.cn/local/20241012/a0dde49470f1bbbfcd968dce1da13d52.html" class="wow fadeInUp">
+                                        <div class="date">
+                                            <div>
+                                                
+                                            </div>
+                                            <span>10.14</span>
+                                        </div>
+                                        <div class="pic"><img src="/__local/9/DB/60/31C7E17804AA317E86DA983AD36_70541DCC_3B1AA.jpg" alt=""></div>
+                                        <div class="info">
+                                            <h3 class="titline"><i>益阳日报：熊炜：树百年品牌 办精品学校 育时代英才</i></h3>
+                                        </div>
+                                        <div class="itemore">
+                                            <b>查看详情</b><span></span>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+
+<li>
+                                    <a href="https://moment.rednet.cn/content/646843/60/14309483.html" class="wow fadeInUp">
+                                        <div class="date">
+                                            <div>
+                                                
+                                            </div>
+                                            <span>09.27</span>
+                                        </div>
+                                        <div class="pic"><img src="/__local/5/28/6F/5F066320DF6BA2E3E6D21DAED54_05933767_7C293.png" alt=""></div>
+                                        <div class="info">
+                                            <h3 class="titline"><i>有温度！有深度！益阳师专这场宣讲“声”入人心</i></h3>
+                                        </div>
+                                        <div class="itemore">
+                                            <b>查看详情</b><span></span>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+
+<li>
+                                    <a href="https://hunan.eol.cn/hunzy/202409/t20240919_2633847.shtml" class="wow fadeInUp">
+                                        <div class="date">
+                                            <div>
+                                                
+                                            </div>
+                                            <span>09.20</span>
+                                        </div>
+                                        <div class="pic"><img src="/__local/B/BF/C5/ECBD40946A184066DACDF2C187E_F556A82C_160C1.jpg" alt=""></div>
+                                        <div class="info">
+                                            <h3 class="titline"><i>中国教育在线：益阳师专“花式”迎新 2300余名新生开启逐梦之旅</i></h3>
+                                        </div>
+                                        <div class="itemore">
+                                            <b>查看详情</b><span></span>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+
+<li>
+                                    <a href="https://moment.rednet.cn/content/646843/59/14277378.html" class="wow fadeInUp">
+                                        <div class="date">
+                                            <div>
+                                                
+                                            </div>
+                                            <span>09.17</span>
+                                        </div>
+                                        <div class="pic"><img src="/__local/9/B8/38/A056CBAB619670BA131FD9BA463_22258D24_DECC.jpg" alt=""></div>
+                                        <div class="info">
+                                            <h3 class="titline"><i>红网时刻：益阳师专：今天，我的饭搭子是校长！</i></h3>
+                                        </div>
+                                        <div class="itemore">
+                                            <b>查看详情</b><span></span>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+
+<li>
+                                    <a href="https://moment.rednet.cn/content/646843/99/14249730.html" class="wow fadeInUp">
+                                        <div class="date">
+                                            <div>
+                                                
+                                            </div>
+                                            <span>09.09</span>
+                                        </div>
+                                        <div class="pic"><img src="/__local/E/A1/79/C4E5C01DE6C9EA48649BBADFDB3_AF7FA090_8A08.jpg" alt=""></div>
+                                        <div class="info">
+                                            <h3 class="titline"><i>红网时刻：刘同携新书《等一切风平浪静》做客益阳师专</i></h3>
+                                        </div>
+                                        <div class="itemore">
+                                            <b>查看详情</b><span></span>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+</ul>
+<script>_showDynClickBatch(['dynclicks_u14_9801','dynclicks_u14_9741','dynclicks_u14_9701','dynclicks_u14_9691','dynclicks_u14_9561'],[9801,9741,9701,9691,9561],"wbnews", 1994609199)</script>
+
+                    <div class="s2-arrow wow fadeInUp" data-wow-delay=".2s">
+                                <div>
+                                    <div class="s2-rprev arrow-hov"><img src="images/prev-r.png" alt=""></div>
+                                    <div class="s2-svg"></div>
+                                    <div class="s2-rnext arrow-hov"><img src="images/next-r.png" alt=""></div>
+                                </div>
+                                <ol>        
+        
+              <li>
+                                        <img src="images/sweixin.png" alt="">
+                                        <div>
+                                            <img src="images/ewm.jpg" alt="">
+                                        </div>
+                                    </li>
+               
+              <li>
+                                        <img src="images/douyin.png" alt="">
+                                        <div>
+                                            <img src="images/dyewm.jpg" alt="">
+                                        </div>
+                                    </li>                      
+               
+       
+</ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="s3">
+            <div class="w15">
+                <div class="title title2 wow fadeInUp">
+                    <div class="titname">
+                        <div class="titicon">
+                            <img src="images/tit-icon4.png" alt="">
+                        </div>
+                        <div class="tittext">
+                            <div>
+                                <h3><span>教学</span><i></i><b>科研</b></h3>
+                            </div>
+                            <p>“产教融合”的人才培养模式</p>
+                        </div>
+                    </div>
+                    <div class="titmore">
+                        <a href="index/jxky.htm">探索更多</a>
+                    </div>
+                </div>
+
+                <div class="s3-c">
+                    <div class="s3-l wow fadeInLeft"><ul class="s3-list">
+
+<li class="wow fadeInUp" data-wow-delay=".1s">
+                                <a href="info/1055/9861.htm">
+                                    <div class="date">
+                                        <b>10.24</b><span>2024</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3>关于湖南省哲学社会科学重点实验室申报工作的通知</h3>
+                                    </div>
+                                </a>
+                            </li>
+ 
+
+<li class="wow fadeInUp" data-wow-delay=".2s">
+                                <a href="info/1055/9771.htm">
+                                    <div class="date">
+                                        <b>09.30</b><span>2024</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3>关于认真做好2024年度湖南省社会科学基金项目申报工作的通知</h3>
+                                    </div>
+                                </a>
+                            </li>
+ 
+
+<li class="wow fadeInUp" data-wow-delay=".3s">
+                                <a href="info/1055/9611.htm">
+                                    <div class="date">
+                                        <b>09.11</b><span>2024</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3>关于做好2025年度湖南省社会科学成果评审委员会课题申报工作的通知</h3>
+                                    </div>
+                                </a>
+                            </li>
+ 
+</ul><script>_showDynClickBatch(['dynclicks_u16_9861','dynclicks_u16_9771','dynclicks_u16_9611'],[9861,9771,9611],"wbnews", 1994609199)</script>
+</div>
+                    <div class="s3-m wow zoomIn" data-wow-delay=".1s">
+                        <div class="s3-mbj"><img src="images/s3-mbj.png" alt=""></div>
+                        <div class="pics">
+                            <div class="pic"><img src="images/s3-mpic.png" alt=""></div>
+                        </div>
+                        <div class="s3-mdot">
+                            <div>
+                                <span></span>
+                            </div>
+                            <div>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="s3-line">
+                            <div class="s3-lline">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="s3-rline">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s3-r"><ul class="s3-list">
+<li class="wow fadeInUp" data-wow-delay=".4s">
+                                <a href="http://www.nopss.gov.cn/n1/2024/0906/c431029-40314889.html">
+                                    <div class="date">
+                                        <b>09.07</b><span>2024</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3>2024年国家社会科学基金高校思想政治理论课研究专项申报公告</h3>
+                                    </div>
+                                </a>
+                            </li>
+<li class="wow fadeInUp" data-wow-delay=".5s">
+                                <a href="info/1055/9521.htm">
+                                    <div class="date">
+                                        <b>09.05</b><span>2024</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3>关于开展2024年银城科技人才托举工程项目和“小荷”人才项目申报工作的通知</h3>
+                                    </div>
+                                </a>
+                            </li>
+<li class="wow fadeInUp" data-wow-delay=".6s">
+                                <a href="https://mp.weixin.qq.com/s/p8GSu19u4Ci5b0TRhMgKrQ">
+                                    <div class="date">
+                                        <b>09.05</b><span>2024</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3>重磅！2025年度湖南省自然科学基金项目申报指南发布</h3>
+                                    </div>
+                                </a>
+                            </li>
+</ul><script>_showDynClickBatch(['dynclicks_u17_9861','dynclicks_u17_9771','dynclicks_u17_9611','dynclicks_u17_9541','dynclicks_u17_9521','dynclicks_u17_9511'],[9861,9771,9611,9541,9521,9511],"wbnews", 1994609199)</script>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bigbck">
+            <div class="s4">
+                <div class="w15">
+                    <div class="title wow fadeInUp">
+                        <div class="titname">
+                            <div class="titicon">
+                                <img src="images/tit-icon5.png" alt="">
+                            </div>
+                            <div class="tittext">
+                                <div>
+                                    <h3><span>益师</span><i></i><b>风采</b></h3>
+                                </div>
+                                <p>坚持人才强校，打造了一支素质优良、结构合理、专兼结合的师资队伍</p>
+                            </div>
+                            <div class="s4-hd">
+                                <ul>
+                                    <li class="on"><a>教师风采</a></li>
+                                    <li><a>学生风采</a></li>
+                                    <li><a>校园风采</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="titmore">
+                            <a href="ysfc/jsfc.htm">探索更多</a>
+                            <a href="ysfc/xsfc.htm" class="hide">探索更多</a>
+                            <a href="xxgk/xywh.htm" class="hide">探索更多</a>
+                        </div>
+                    </div>
+
+                    <div class="s4-c wow fadeInUp">
+                        <div class="s4-list ijsfc on"><ul>
+
+ <li>
+                                    <a href="info/1052/7631.htm">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <div class="m-bg" style="background-image:url(/__local/D/51/3E/579EB205F95F610A58EFE71AA9D_DBDB18BB_450E.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3>李梦醒</h3>
+                                            <p>李梦醒，男，汉族，1972年出生，湖南宁乡人，中共党员，博士，教授，硕士生导师，高级物联网工程师，程序设计师，湖南省高校青年骨干教师。1996年获兰州大学学士学位，2004年获兰州大学工学硕士学位，2009年获北京邮电大学工学博士学位。为湖南省企业科技特派专家、湖南省大学生创新创业导师、湖南省智能制造专家委员会专家、湖南省经信委委管专项资金专家库候选专家、湖南省中小学竞赛评审专家、益阳市自然科学优秀学术成果评审专家库成员、...</p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+
+ <li class="on">
+                                    <a href="info/1052/8781.htm">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <div class="m-bg" style="background-image:url(/__local/6/15/5B/01FCBAB42469FCA591A362CE51D_1D5EAE07_3FD86.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3>鲁良</h3>
+                                            <p>鲁良，男，汉族，1980年生，湖南浏阳人，中共党员，武汉大学法学博士，教授，博士生导师。教育部人文社会科学重点研究基地中华伦理文明研究中心研究员，澳大利亚国立大学访问学者。系教育部首批高校思想政治工作中青年骨干、湖南省“芙蓉计划”高校思政工作“名师工作室”主持人，湖南省思想政治教育中青年杰出人才。曾任湖南师范大学旅游学院党委书记、党委教师工作部部长、人事处处长（人才办主任）、教育科学学院党委书记、学生工作部（...</p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+
+ <li>
+                                    <a href="info/1052/7751.htm">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <div class="m-bg" style="background-image:url(/__local/E/CA/53/38BEBA9A18B08166A43ACF25214_54AB446B_476B.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3>​杨浩藜</h3>
+                                            <p>杨浩藜，河北张家口人，1984年7月出生，中共党员，音乐学专业硕士研究生，副教授。从事高校音乐教学14年，致力于高校钢琴教学研究与改革，善于根据专业特点、学生特点优化钢琴教学法，多次指导学生参加大学生艺术节、全国大学生艺术展演等各级各类音乐比赛，荣获多项“优秀教学成果奖”，被授予“全国优秀艺术指导教师”荣誉称号。主持艺术类、教育类2个本科专业的申报与评估工作，参与1个省级一流本科专业建设。近五年发表论文20余篇，...</p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+
+ <li>
+                                    <a href="info/1052/7641.htm">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <div class="m-bg" style="background-image:url(/__local/A/73/83/1B4691442E732A71E083BA7FA9E_5B4DE959_61B8D.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3>思维</h3>
+                                            <p>思维，1980年出生，陕西榆林人，中共党员，研究员，教育领导与管理博士，国家级普通话测试员、湖南省一级普通话资格复审员，现任益阳师范高等专科学校基础教育学院院长。具有20年高校教学与管理工作经历，两度获评为湖南省思想政治教育先进个人，主持的《当代大学生理想信念教育问题研究》获湖南省哲学社科基金优秀结题项目。现为湖南省教育科学规划项目评委，湖南省职业院校评估与咨询专家库入库专家、湖南省语言文字工作者协会会员、...</p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+</ul><script>_showDynClickBatch(['dynclicks_u18_7631','dynclicks_u18_8781','dynclicks_u18_7751','dynclicks_u18_7641'],[7631,8781,7751,7641],"wbnews", 1994609199)</script>
+</div>
+                        <div class="s4-list"><ul>
+
+ <li>
+                                    <a href="https://mp.weixin.qq.com/s/Ar4kMaczUml7BRMVgXR0xQ">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <div class="m-bg" style="background-image:url(/__local/2/94/59/89EE4D6FA085FAC25414F056898_B0833127_172A2.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3>益师榜样丨省级三好学生孟雅琴</h3>
+                                            <p></p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+
+ <li class="on">
+                                    <a href="https://mp.weixin.qq.com/s/R3pkoTlIbVs1pKR1wYIJyg">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <div class="m-bg" style="background-image:url(/__local/8/CA/3C/4E702F08DF0E6EF9B6005C7C597_14FCB1DC_2AA00.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3>军训日记丨磨砺青春之锐 升华自我之境</h3>
+                                            <p></p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+
+ <li>
+                                    <a href="https://mp.weixin.qq.com/s/cUDF-yIfkrBm8fxED--ObA">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <div class="m-bg" style="background-image:url(/__local/9/39/3F/8937D388F151AA202AFF0249771_CA0077BC_DBED.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3>喜报|我校学子喜获益阳市“双建”主题演讲比赛一等奖！</h3>
+                                            <p></p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+ 
+</ul><script>_showDynClickBatch(['dynclicks_u19_9851','dynclicks_u19_9761','dynclicks_u19_7911'],[9851,9761,7911],"wbnews", 1994609199)</script>
+</div>
+                        <div class="s4-list">    <ul>
+           
+               
+                <li>
+                                    <a href="images/xywh/weixintupian_20240319135928.png" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81219)" target="_blank">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <img src="images/xywh/weixintupian_20240319135928.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3></h3>
+                                            <p></p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+               
+                
+        
+       
+               
+                <li class="on">
+                                    <a href="images/xywh/weixintupian_20240319135836.png" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81218)" target="_blank">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <img src="images/xywh/weixintupian_20240319135836.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3></h3>
+                                            <p></p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+               
+                
+        
+       
+               
+                <li>
+                                    <a href="images/xywh/weixintupian_20230909160651.jpg" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81217)" target="_blank">
+                                        <div class="pics">
+                                            <div class="pic">
+                                                <img src="images/xywh/weixintupian_20230909160651.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h3></h3>
+                                            <p></p>
+                                            <div>
+                                                <span>查看详情</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+               
+                
+        
+</ul></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="s5">
+                <div class="w15">
+                    <div class="title title2 wow fadeInUp">
+                        <div class="titname">
+                            <div class="titicon">
+                                <img src="images/tit-icon6.png" alt="">
+                            </div>
+                            <div class="tittext">
+                                <div>
+                                    <h3><span>百年</span><i></i><b>益师</b></h3>
+                                </div>
+                                <p>资水绵延教泽长敷，百年师范弦歌相续</p>
+                            </div>
+                        </div>
+                        <div class="titmore">
+                            <a href="index/bnys.htm">探索更多</a>
+                        </div>
+                    </div>
+
+                    <div class="s5-c">
+                        <div class="s5-t">
+<h3 class="wow fadeInUp" data-wow-delay=".1s">百年师范 弦歌相续</h3>
+<div>
+<p class="wow fadeInUp" data-wow-delay=".2s">资水绵延教泽长敷，百年师范弦歌相续。</p> 
+<p class="wow fadeInUp" data-wow-delay=".3s">益阳师范高等专科学校虽几易其址，几更其名，而初心不改，桃李满枝。</p> 
+<p class="wow fadeInUp" data-wow-delay=".4s">得山水之精灵，受春风之泽化，校誉昭昭，硕果累累。</p>
+</div></div>
+                    </div>
+                </div>
+
+                <div class="s5-b">
+
+
+
+
+
+
+
+
+
+
+
+<div class="s5-bbox scroll-box">
+<ul>
+
+<li>
+                                <a href="javascript:;">
+                                    <div class="pics wow bounceIn" data-wow-delay=".1s">
+                                        <div class="pic"><img src="/__local/8/AD/9F/72825E55A579073E20B5218C855_77A12828_873C.png" alt=""></div>
+                                    </div>
+                                    <div class="info">
+                                        <h3><b>1551</b><span>年</span></h3>
+                                        <p>龙洲书院</p>
+                                    </div>
+                                </a>
+                            </li>
+ 
+
+<li>
+                                <a href="javascript:;">
+                                    <div class="pics wow bounceIn" data-wow-delay=".2s">
+                                        <div class="pic"><img src="/__local/3/63/C9/6FDC924965ADD05CFFD59143676_4C0498DD_A6B3.png" alt=""></div>
+                                    </div>
+                                    <div class="info">
+                                        <h3><b>1925</b><span>年4月</span></h3>
+                                        <p>益阳县立龙洲师范学校</p>
+                                    </div>
+                                </a>
+                            </li>
+ 
+
+<li>
+                                <a href="javascript:;">
+                                    <div class="pics wow bounceIn" data-wow-delay=".1s">
+                                        <div class="pic"><img src="/__local/A/05/01/FDF3D737E89AC93203397D038B7_76A4F3D2_C335.png" alt=""></div>
+                                    </div>
+                                    <div class="info">
+                                        <h3><b>1941</b><span>年5月</span></h3>
+                                        <p>湖南省立第五师范学校</p>
+                                    </div>
+                                </a>
+                            </li>
+ 
+
+<li>
+                                <a href="javascript:;">
+                                    <div class="pics wow bounceIn" data-wow-delay=".2s">
+                                        <div class="pic"><img src="/__local/4/6C/B1/4C04AA87A62CCAAAC149ECC3F02_65BBB02F_8A34.png" alt=""></div>
+                                    </div>
+                                    <div class="info">
+                                        <h3><b>1949</b><span>年9月</span></h3>
+                                        <p>湖南省益阳师范学校</p>
+                                    </div>
+                                </a>
+                            </li>
+ 
+
+<li>
+                                <a href="javascript:;">
+                                    <div class="pics wow bounceIn" data-wow-delay=".1s">
+                                        <div class="pic"><img src="/__local/E/50/8C/D878EBC082DC139B0BAB014A80A_F11906D5_7EB9.png" alt=""></div>
+                                    </div>
+                                    <div class="info">
+                                        <h3><b>2021</b><span>年</span></h3>
+                                        <p>益阳师范高等专科学校</p>
+                                    </div>
+                                </a>
+                            </li>
+ 
+</ul>
+</div>
+<div class="s5-content">                   
+
+  <div>
+                            <div class="colse-s5-cont"><span></span><span></span></div>
+                            <div class="pics">
+                                <div class="pic"><img src="/__local/8/AD/9F/72825E55A579073E20B5218C855_77A12828_873C.png" alt=""></div>
+                            </div>
+                            <div class="info">
+                                <h3 class="titline"><i>龙洲书院</i></h3>
+                                <p><p class="vsbcontent_start">湖南省益阳师范学校起始于1551年设立的龙洲书院，前身为益阳县立龙洲师范学校和湖南省立第五师范学校。益阳县立龙洲师范学校创办于1925年，湖南省立第五师范学校创办于1941年。1949年10月1日，益阳县立龙洲师范学校于湖南省立第五师范学校合并，成立湖南省益阳师范学校。时移世易，岁月匆匆，益阳师范学校已度过96个春秋。虽几易其址，几更其名，而弦歌未绝，教泽长敷。得山水之精灵，受春风之泽化，校誉昭昭，硕果累累，被誉为资水文明的摇篮。</p></p>
+                            </div>
+                        </div>
+
+
+
+  <div>
+                            <div class="colse-s5-cont"><span></span><span></span></div>
+                            <div class="pics">
+                                <div class="pic"><img src="/__local/3/63/C9/6FDC924965ADD05CFFD59143676_4C0498DD_A6B3.png" alt=""></div>
+                            </div>
+                            <div class="info">
+                                <h3 class="titline"><i>益阳县立龙洲师范学校</i></h3>
+                                <p><p class="vsbcontent_start">益阳县立龙洲师范学校的历史始于1925年，其前身是龙洲书院，位于益阳县城南龟台山（今益阳市二中校址），明嘉靖三十年（1551）设立。1912年改称为益阳县立第一高等小学校。1925年4月，由校长周则顾主持，将学校改为益阳县龙洲学校，设师范部并设高小补习班。师范部招收高小（旧制）毕业生，学制2年，1929年省教育厅饬令改名为益阳龙洲师范学校，学制3年，1931年奉令学制4年，同年8月设立附属初级小学并附设民众学校一所。1934年10月奉命更名为益阳县立龙洲简易乡村师范学校。1938年11月为避免日寇空袭，将学校迁至桃江马家坪周祠；1940年8月因周祠狭窄，将学校迁至大桥乡清塘陈家村张宅，开始兼收女生；1941年8月学校奉令增班，因张宅难于容纳，迁瑶华乡符家塅秦文周公祠；1944年6月，日军进犯益阳，学校奉令迁至良乡代用中心国民学校；次年2月迁至桃源乡剑桥胡氏光华小学；1945年8月，抗战胜利，学校初移桃谷乡中心小学；同年10月，学校奉县政府令迁回原址；1946年10月，学校更名为益阳县立龙洲简易师范学校，1948年，增设中师部更名为益阳县立龙洲师范学校。</p></p>
+                            </div>
+                        </div>
+
+
+
+  <div>
+                            <div class="colse-s5-cont"><span></span><span></span></div>
+                            <div class="pics">
+                                <div class="pic"><img src="/__local/A/05/01/FDF3D737E89AC93203397D038B7_76A4F3D2_C335.png" alt=""></div>
+                            </div>
+                            <div class="info">
+                                <h3 class="titline"><i>湖南省立第五师范学校</i></h3>
+                                <p><p class="vsbcontent_start">湖南省立第五师范学校创办于1941年5月。当时，湖南省政府按全省行政督察区域分区设学，益阳为第五行政督察区，所以创办时定名为湖南省立第五师范学校。由首任校长周维祯奉命筹办。九月开学，临时校址设益阳县涧山乡板子桥。1942年上学期，益阳县政府划拨益阳县涧山乡三重塘学产山场为五师永久校址。1944年新建校舍。1945年夏季，教师、礼堂、教职员工住宅均告落成，部分班级迁入。下半年日军犯境，益阳沦陷，学校为避难转迁安化江南坪。1945年9月，学校迁回益阳。当时，三重塘校舍大部分被敌人炸毁或拆毁，临时校址设在益阳市学门口，龙山港，并着手重建三重塘校舍。1949年8月，全校师生迁回三重塘新校舍上课。1949年上学期全校有5个年级9个教学班。学生420名，教职员工66名，拥有大小房屋16栋，校教具及图书仪器较为齐全，是一所初具规模的中等师范学校。</p></p>
+                            </div>
+                        </div>
+
+
+
+  <div>
+                            <div class="colse-s5-cont"><span></span><span></span></div>
+                            <div class="pics">
+                                <div class="pic"><img src="/__local/4/6C/B1/4C04AA87A62CCAAAC149ECC3F02_65BBB02F_8A34.png" alt=""></div>
+                            </div>
+                            <div class="info">
+                                <h3 class="titline"><i>湖南省益阳师范学校</i></h3>
+                                <p><p class="vsbcontent_start">1949年8月，益阳县城解放，当年9月，湖南省人民政府益阳专员行政公署训令，益阳县立龙洲师范学校与省立第五师范学校合并，校址设省立五师原址，10月1日学校正式更名为湖南省立益阳师范学校。湖南省教育厅任命林伯森为益师首任校长，1953年9月，校名奉命更改为湖南省益阳师范学校。从1956年开始，学校按照《师范学校规程》办学，长期稳定在12个中师班，2个小学教师轮训班，并设函授部，文化大革命前的17年，学校按确定的规模进行配套建设。当时，校区面积有250亩，建筑面积达10000余平方米，校具教具齐全，图书仪器充足，师资队伍强，教学质量高。是湖南省建设得较好的中等师范学校之一。1966年6月，“文化大革命”开始，学校停止招生并遭到严重破坏。1970年，学校被撤销，校园被占，校具教具失散，图书仪器瓜分，教职员工调走，益师附小也随同消失。1973年奉命恢复益阳师范学校，更名为湖南省益阳地区师范学校，在原益阳县羊舞岭公社七里桥大队黄洲子山（今益阳市赫山区赫山镇东风岭）重建校舍。校园面积74亩，按16个班规模配套建设，1975年开始招生。1978年4月，中共益阳地委决定恢复湖南省益阳师范学校名称，1980年，学校贯彻执行《中等师范学校规程》，从此，益师围绕培养合格的小学教师开展教育教学活动。1982年下学期改制招收应届初中毕业生，学制三年。1984年3月召开的湖南省中师“三定”（定规模、定改建项目、定投资额）会议，根据益师条件，确定学校规模为24个班，对学校布局进行了调整和全面规划，1987年底，湖南省中师“三定”会议下达的扩建任务基本完成。新建校舍分教学、体育运动、教工生活、学生生活、校办工厂等五个区域。学校办学条件逐年改善。</p></p>
+                            </div>
+                        </div>
+
+
+
+  <div>
+                            <div class="colse-s5-cont"><span></span><span></span></div>
+                            <div class="pics">
+                                <div class="pic"><img src="/__local/E/50/8C/D878EBC082DC139B0BAB014A80A_F11906D5_7EB9.png" alt=""></div>
+                            </div>
+                            <div class="info">
+                                <h3 class="titline"><i>益阳师范高等专科学校</i></h3>
+                                <p><p class="vsbcontent_start">益阳师范高等专科学校是经湖南省人民政府批准、教育部备案的全日制公办普通高等学校。学校脱胎于1551年创建的龙洲书院，筑基于1925年更名的益阳县立龙洲师范学校，起始于1949年10月1日定名的湖南省益阳师范学校。栉风沐雨近百年，学校涵育了优秀的师范文化，形成了成熟的教师培养、培训理念和模式，在湖南师范教育史上有着重要地位。2021年，在百年师范基础上，益阳师范高等专科学校成功获批为专科层次的高等学校，开启全新征程。</p>
+<p>学校位于益阳市中心城区益阳大道（西）238号，环境优美，交通便利。学校办学规模为5500人，规划建设用地450余亩，设有附属学校1所，合作实习单位102个。</p>
+<p>学校专业丰富，开设有小学教育、学前教育、早期教育、体育教育、婴幼儿托育服务与管理、现代教育技术、工业机器人技术、软件技术、人工智能技术应用、音乐表演、舞蹈表演、环境艺术设计、数字媒体艺术设计等专业。学校教育经验丰富，艺术特色鲜明，实施“产教融合”的人才培养模式，近三年在文明风采、黄炎培创新创业大赛、职业技能大赛、艺术展演活动中多次获得国家、省、市级一二等奖，参与省、市大型文艺演出20多次。毕业生长期供不应求，就业率达100%。</p>
+<p>学校坚持人才强校，打造了一支素质优良、结构合理、专兼结合的师资队伍。学校现有教职工326人，其中教授5名，具有副教授（副高级）职称89人，“双师型”教师39人，省级优秀教师、省级优秀班主任、省特级教师5人，市级名校长、名师、学科带头人和骨干教师23人，2人荣获益阳市教育突出贡献奖，2人成为湖南省职业教育行业指导委员会委员，2人成为湖南省国内访问学者，3人纳入益阳市首批高层次人才库，2人纳入益阳市科技专家库。近年来，学校教师在各级各类比赛中成果丰硕，斩获国家级奖励3项，省级奖励39项。教学论文、设计、案例、课件等获国家与省级以上奖项281人次；共有200余篇论文在省级以上刊物发表，其中SCI、EI、CSSCI、CSCD核心收录58篇；编写教材或著作40本，获得专利28项；取得课题130项，有2个国家级规划课题、37个省级课题成功结题。</p>
+<p class="vsbcontent_end">益阳师范高等专科学校将始终秉承“学高为师，身正为范”的校训，“团结奋进，求实创新”的校风，弘扬师范教育的优良传统，立足益阳，面向湖南，辐射周边省市，以提升办学整体实力和核心竞争力为重点，以建设培养义务教育、学前教育教师的高标准、现代化师范高等学校为目标，实施“政治建校、质量立校、人才强校、特色兴校、文化铸校”的办学方针，抢抓机遇，创造条件，致力于将学校建成省内一流、全国知名的师范高等专科学校。</p></p>
+                            </div>
+                        </div>
+
+
+ </div><script>_showDynClickBatch(['dynclicks_u22_1585','dynclicks_u22_1586','dynclicks_u22_1590','dynclicks_u22_1589','dynclicks_u22_1588'],[1585,1586,1590,1589,1588],"wbnews", 1994609199)</script></div>
+
+                <div class="s5-svg">
+                    <div class="s5-svg1 wow fadeInUp" wow-delay=".2s">
+                        <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 223 142" enable-background="new 0 0 223 142" xml:space="preserve">
+                            <g>
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="219.22,135.974 221.5,47.062 196.422,41.363        196.422,45.922 59.635,18.565 59.635,11.725 11.759,1.466 11.759,15.145 1.5,29.964 1.5,139.394    " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="220.93,61.311 209.531,59.031 208.391,136.544  " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="11.189,16.285 11.189,27.114 16.889,28.254     " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="14.609,27.114 18.028,23.694 18.028,140.534    " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="40.826,138.824 40.826,28.254 17.657,24.066    " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="12.329,139.964 13.469,32.813 18.028,27.579    " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.769" y1="40.793" x2="7.769" y2="51.052" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.769" y1="56.751" x2="7.769" y2="68.15" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.769" y1="73.85" x2="7.769" y2="85.249" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.769" y1="89.808" x2="7.769" y2="102.347" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.769" y1="106.907" x2="7.769" y2="117.166" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.769" y1="122.865" x2="7.769" y2="135.404" />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="105.801,117.166 105.801,121.725 119.479,120.585        181.034,121.725 181.034,118.306 119.479,116.026     " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="176.474" y1="139.964" x2="176.474" y2="121.725" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="119.479" y1="139.964" x2="119.479" y2="120.592" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="132.018" y1="139.964" x2="132.018" y2="120.83" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="166.215" y1="139.964" x2="166.215" y2="121.725" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="106.94" y1="139.964" x2="106.94" y2="121.725" />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="199.272,135.404 206.111,135.404 207.251,59.031         199.272,57.891  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="44.246,29.394 57.925,31.674 57.925,137.684 44.246,137.684          " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="25.894" y1="25.555" x2="25.438" y2="139.394" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="33.284" y1="26.89" x2="32.847" y2="138.824" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="44.246" y1="43.141" x2="57.925" y2="45.399" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="44.246" y1="49.917" x2="57.925" y2="52.051" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="44.246" y1="66.357" x2="57.925" y2="67.612" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="44.246" y1="84.553" x2="57.925" y2="85.249" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="44.246" y1="102.347" x2="57.925" y2="102.875" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="44.246" y1="120.83" x2="57.925" y2="120.83" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="199.272" y1="67.01" x2="207.111" y2="68.43" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="199.272" y1="72.71" x2="207.111" y2="73.698" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="199.272" y1="85.249" x2="206.855" y2="85.561" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="199.272" y1="97.788" x2="207.251" y2="97.788" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="199.272" y1="110.97" x2="206.476" y2="110.97" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="199.272" y1="124.146" x2="206.279" y2="124.146" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="151.396" y1="121.725" x2="151.396" y2="139.964" />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="62.484,35.093 73.883,37.145 73.883,47.974 62.484,46.492            " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="80.723,38.513 89.842,39.653 89.842,50.026 80.723,48.772            " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="96.681,41.933 105.801,43.073 105.801,53.332 96.681,52.192          " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="112.64,44.212 120.619,45.352 120.619,55.611 112.64,54.472          " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="127.459,46.492 135.438,47.632 135.438,57.891       127.459,56.751  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="141.137,48.772 147.977,49.912 147.977,59.943       141.137,58.803  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="153.676,51.052 161.655,52.192 161.655,61.311       153.676,60.171  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="166.215,53.332 173.054,54.472 173.054,63.591       166.215,62.451  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="177.614,55.611 184.453,56.751 184.453,64.731       177.614,63.591  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="189.013,57.093 194.712,58.233 194.712,67.01 189.013,65.87          " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="62.484,52.192 73.883,54.244 73.883,68.492 62.484,67.01             " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="80.723,55.611 89.842,56.751 89.842,70.544 80.723,69.29             " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="96.681,57.891 105.801,59.031 105.801,72.71 96.681,71.57            " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="112.64,60.171 120.619,61.311 120.619,73.85 112.64,72.71            " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="127.459,62.451 135.438,63.591 135.438,76.13 127.459,74.99          " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="141.137,64.731 147.977,65.87 147.977,77.041        141.137,75.902  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="153.676,65.87 161.655,67.01 161.655,79.549 153.676,78.409          " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="166.215,68.15 173.054,69.29 173.054,80.689 166.215,79.549          " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="177.614,69.29 184.453,70.43 184.453,81.829 177.614,80.689          " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="189.013,70.772 194.712,71.912 194.712,82.969       189.013,82.513  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="62.484,70.43 73.883,71.342 73.883,85.591 62.484,84.907             " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="80.723,72.71 89.842,73.85 89.842,87.642 80.723,86.389  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="96.681,74.99 105.801,76.13 105.801,88.668 96.681,87.528            " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="112.64,76.13 120.619,77.269 120.619,89.808 112.64,88.896           " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="127.459,78.409 135.438,79.549 135.438,91.746       127.459,90.948  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="141.137,79.549 147.977,80.689 147.977,92.772       141.137,91.86   " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="153.676,81.031 161.655,81.829 161.655,94.026 153.676,93            " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="166.215,82.171 173.054,82.969 173.054,94.368       166.215,93.57   " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="177.614,83.767 184.453,85.021 184.453,95.508       177.614,95.166  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="189.013,85.591 194.712,86.389 194.712,96.648       189.013,96.192  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="62.484,87.528 73.883,88.44 73.883,102.689 62.484,102.005           " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="80.723,89.808 89.842,90.606 89.842,104.285 80.723,103.487          " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="96.681,90.948 105.801,91.86 105.801,104.399        96.681,103.829  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="112.64,92.088 120.619,93.228 120.619,105.539       112.64,104.855  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="127.459,93.228 135.438,94.368 135.438,105.767      127.459,105.767     " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="141.137,94.368 147.977,95.508 147.977,106.907      141.137,106.679     " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="153.676,95.85 161.655,96.648 161.655,107.705       153.676,107.249     " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="166.215,96.99 173.054,97.788 173.054,108.161       166.215,107.933     " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="177.614,97.446 184.453,98.472 184.453,109.187      177.614,108.845     " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="189.013,99.269 194.712,100.067 194.712,109.756         189.013,109.528     " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="213.081" y1="59.601" x2="211.811" y2="136.544" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="216.846" y1="60.342" x2="215.459" y2="136.544" />
+                                <rect x="62.484" y="122.865" fill="none" stroke="#000000" stroke-miterlimit="10" width="10.259" height="12.539" />
+                                <rect x="80.723" y="122.865" fill="none" stroke="#000000" stroke-miterlimit="10" width="9.119" height="12.539" />
+                                <rect x="96.681" y="122.865" fill="none" stroke="#000000" stroke-miterlimit="10" width="7.979" height="12.539" />
+                                <rect x="178.754" y="125.145" fill="none" stroke="#000000" stroke-miterlimit="10" width="5.699" height="10.259" />
+                                <rect x="189.013" y="125.145" fill="none" stroke="#000000" stroke-miterlimit="10" width="6.839" height="10.259" />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="62.484,104.969 73.883,105.767 73.883,120.585       62.484,120.358  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="80.723,106.109 89.842,106.907 89.842,120.585       80.723,120.585  " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="105.801,117.166 105.801,106.907 96.681,106.907        96.681,120.585 105.801,120.592  " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="112.385,116.617 112.385,108.047 120.619,108.047       120.619,116.068     " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="127.459,116.026 127.459,108.047 135.438,108.047       135.438,116.026     " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="141.137,117.166 141.137,109.187 147.977,109.187       147.977,117.166     " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="153.676,117.292 153.676,110.326 161.655,110.326       161.655,117.578     " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="166.215,117.166 166.215,110.326 173.054,110.326       173.054,118.01  " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="177.614,118.306 177.614,111.466 184.453,111.466       184.453,121.725 181.034,121.725     " />
+                                <rect x="189.013" y="111.466" fill="none" stroke="#000000" stroke-miterlimit="10" width="5.699" height="10.259" />
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="s5-svg2 wow fadeInUp" wow-delay=".3s">
+                        <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 265 170" enable-background="new 0 0 265 170" xml:space="preserve">
+                            <g>
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="1.5,165.197 1.5,81.008 11.661,76.654 11.661,72.299                                 49.4,54.881 55.206,56.332 79.882,44.72 88.591,46.172 88.591,12.787 107.461,1.175 139.395,14.238 139.395,56.332 210.519,76.654                                 210.519,83.911 140.12,65.767 140.12,71.573 218.503,88.992 218.503,140.521    " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="106.735" y1="168.825" x2="107.461" y2="1.175" />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="185.118,68.67 225.76,58.51 241.727,64.316     " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="238.824,62.864 247.533,59.961 253.339,62.864                                 253.339,87.54 247.533,86.089 241.727,87.54 241.727,64.316    " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="253.339,68.67 263.5,71.573 263.5,165.922  " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="247.533" y1="86.089" x2="247.533" y2="59.961" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="225.76" y1="167.374" x2="225.76" y2="58.51" />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="135.766,167.374 135.766,93.346 138.669,88.992                                 143.024,88.992 218.503,103.167  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="90.769,16.416 103.832,9.158 103.832,23.673 90.769,29.479                                   " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="111.09,9.158 135.766,17.867 135.766,30.931 111.09,22.222                                   " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="79.157" y1="43.994" x2="80.608" y2="167.374" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="89.317" y1="167.374" x2="88.591" y2="46.172" />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="225.76,141.247 192.375,138.343 172.054,139.795                                 172.054,147.053 192.375,145.601 225.76,147.352     " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="214.148" y1="165.922" x2="214.148" y2="146.781" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="192.375" y1="166.648" x2="192.375" y2="145.601" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="177.134" y1="146.781" x2="177.134" y2="166.648" />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="11.661,76.654 11.661,94.798 50.126,80.283 50.126,55.607                                   " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="55.932,56.332 55.932,83.186 50.126,80.283     " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="11.661,94.798 16.741,97.701 55.932,83.186 55.932,167.374                                     " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="96.575" y1="13.512" x2="103.832" y2="16.416" />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="111.09,17.867 119.799,20.77 130.238,15.916    " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1.5" y1="152.865" x2="80.608" y2="148.504" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1.5" y1="139.682" x2="80.161" y2="129.375" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1.5" y1="126.338" x2="79.882" y2="110.518" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1.5" y1="113.315" x2="79.882" y2="91.182" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1.5" y1="99.252" x2="12.216" y2="95.115" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="55.932" y1="80.283" x2="79.491" y2="72.405" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1.5" y1="86.868" x2="10.935" y2="83.186" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="55.932" y1="64.316" x2="79.157" y2="54.155" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="71.899" y1="58.51" x2="71.899" y2="167.374" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="62.324" y1="61.519" x2="61.738" y2="167.374" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="6.286" y1="85" x2="6.58" y2="165.922" />
+                                <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M47.489,86.313c0,0,1.186,82.513,1.186,81.061" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="32.546" y1="91.847" x2="34.159" y2="167.374" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="21.497" y1="95.939" x2="21.096" y2="167.374" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="13.059" y1="95.939" x2="13.838" y2="167.374" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="40.691" y1="88.992" x2="41.417" y2="167.374" />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="89.317,147.053 106.735,145.601 135.766,147.053    " />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="155.481" y1="75.202" x2="155.481" y2="91.182" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="167.119" y1="77.573" x2="167.119" y2="93.346" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="178.185" y1="80.032" x2="178.185" y2="95.595" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="189.987" y1="82.655" x2="189.987" y2="97.812" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="200.919" y1="85.084" x2="200.919" y2="99.933" />
+                                <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="210.342" y1="87.178" x2="210.342" y2="101.635" />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="177.86,139.069 177.86,133.989 201.084,135.44                                 200.919,139.086  " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="241.727,70.488 247.533,69.21 253.339,71.127   " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="241.727,78.831 247.533,77.573 253.339,79.437  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="147.378,97.701 153.184,99.152 153.184,113.232                                 147.378,112.216  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="158.99,99.588 164.796,100.604 164.796,114.684                                 158.99,113.668   " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="169.877,101.039 174.957,102.055 174.957,116.135                                 169.877,115.119    " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="181.489,103.144 186.569,104.16 186.569,118.24                                 181.489,117.224  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="193.101,105.394 198.181,106.41 198.181,119.038                                 193.101,118.022     " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="203.262,106.845 207.616,107.861 207.616,120.49                                 203.262,119.474     " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="211.245,108.297 215.6,109.313 215.6,121.941                                 211.245,120.925    " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="147.378,116.31 153.184,117.559 153.184,131.639                                 147.378,130.826     " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="158.99,117.792 164.796,118.605 164.796,132.685                                 158.99,131.872  " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="169.877,118.863 174.957,119.702 174.957,133.782                                 169.877,132.943    " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="181.489,134.223 181.489,120.143 186.569,120.982                                 186.569,135.061   " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="193.101,135.035 193.101,122.407 198.181,123.245                                 198.181,135.874   " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="203.262,123.503 207.616,124.367 207.616,135.544                                 203.262,134.68     " />
+                                <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="211.245,124.676 215.6,125.54 215.6,136.717                                 211.245,135.853     " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="12.386,77.38 45.771,62.864 45.771,77.38 11.661,90.623                                     " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="140.12,71.573 137.217,77.38 137.217,90.443    " />
+                                <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="142.298,71.996 142.298,88.992 143.024,168.1   " />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="s5-svg3 wow fadeInUp" wow-delay=".5s">
+                        <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 708 261" enable-background="new 0 0 708 261" xml:space="preserve">
+                            <g>
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="2,260.023 2,196.521 17.766,189.513                                 16.89,260.023   " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="706,253.235 704.248,211.192                                 611.403,208.564 611.403,210.754 582.499,210.316 582.499,220.827 643.374,222.14 643.374,254.549     " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="582.499,210.316 518.997,212.944                                 518.997,222.578 582.499,220.827    " />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="529.069" y1="222.578" x2="529.069" y2="253.673" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="578.344" y1="220.941" x2="578.557" y2="253.673" />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="537.39,253.235 537.39,232.651                                 563.667,232.213 564.105,253.673  " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="207.835,258.84 207.835,199.98                                 317.147,202.783 317.147,216.797 207.835,213.995  " />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="291.921" y1="216.797" x2="291.921" y2="258.84" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="238.667" y1="213.995" x2="238.667" y2="258.84" />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="244.272,258.84 244.272,228.009                                 286.315,228.009 286.315,258.84  " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="597.433,211.192 597.433,202.783                                 580.616,202.783 580.616,191.572 597.433,191.572 597.433,180.36 580.616,180.36 580.616,169.149 597.433,169.149 597.433,157.937                                 580.616,157.937 580.616,146.726 597.433,146.726 597.433,132.712 580.616,132.712 577.813,62.64 555.39,65.443 549.784,65.443                                 549.784,57.034 544.179,57.034 488.121,73.852 488.121,90.669   " />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="546.981" y1="211.192" x2="542.777" y2="57.455" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="572.207" y1="211.192" x2="569.978" y2="63.619" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="555.39" y1="211.192" x2="549.784" y2="65.443" />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="387.218,256.038 387.218,191.572                                 462.896,194.375 462.896,256.038    " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="398.43,256.038 398.43,202.783                                 454.487,205.586 454.487,256.038  " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="263.892,62.64 527.361,96.274                                 530.164,211.192   " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="17.766,189.513 233.061,194.375                                 233.061,200.627     " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="266.695,201.382 263.892,9.386                                 252.681,9.386 244.272,14.991 221.849,12.189 221.849,3.78 207.835,0.977 174.201,26.203 174.201,71.049 154.581,82.26                                 154.581,90.669    " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="179.807,93.472 56.481,82.26                                 50.875,87.866 50.875,96.274 45.269,99.077 45.269,188.769   " />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="210.638" y1="194.375" x2="207.835" y2="0.977" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="255.484" y1="201.382" x2="252.681" y2="9.386" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="221.849" y1="12.189" x2="224.652" y2="194.375" />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="179.807,192.973 179.807,82.26                                 193.821,73.852 193.821,193.684   " />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="265.294" y1="104.683" x2="527.361" y2="132.712" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="265.747" y1="135.514" x2="527.361" y2="155.135" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="266.695" y1="167.49" x2="530.164" y2="180.45" />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="387.218,195.725 373.204,197.177                                 373.204,256.038    " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="56.481,82.26 56.481,99.077                                 50.875,101.88 50.875,95.516     " />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="179.807" y1="109.402" x2="56.481" y2="99.077" />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="179.807,126.064 56.481,115.894                                 50.875,118.697 50.875,135.514 56.481,132.712 179.807,139.95     " />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="56.481" y1="132.712" x2="56.481" y2="115.894" />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="50.875,101.88 62.086,101.88                                 61.593,116.316     " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="50.875,135.514 62.086,135.514                                 62.086,149.529   " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="179.807,156.896 56.481,149.529                                 50.875,152.332 50.875,169.149 56.481,166.346 179.807,170.782    " />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="56.481" y1="166.346" x2="56.481" y2="149.529" />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="50.875,169.149 62.086,169.149                                 62.086,183.163   " />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="179.807,187.085 56.481,183.163                                 56.481,190.388  " />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="182.609" y1="31.809" x2="182.609" y2="45.823" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="188.215" y1="27.604" x2="188.215" y2="41.619" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="193.821" y1="24.801" x2="193.821" y2="38.816" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="504.938" y1="76.654" x2="504.938" y2="87.866" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="511.946" y1="75.253" x2="511.946" y2="86.464" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="518.953" y1="72.45" x2="518.953" y2="83.662" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="611.447" y1="222.403" x2="611.447" y2="253.235" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="578.557" y1="232.213" x2="611.447" y2="232.213" />
+                                <polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" points="76.101,242.023 76.101,208.389                                 126.552,208.389 126.552,242.023 76.101,242.023   " />
+                                <rect x="134.961" y="216.797" fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" width="44.846" height="30.831" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="264.861" y1="75.253" x2="527.361" y2="107.486" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="330.84" y1="83.662" x2="331.161" y2="256.038" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="475.259" y1="101.088" x2="476.91" y2="254.636" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="511.946" y1="105.593" x2="510.544" y2="253.235" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="281.784" y1="77.331" x2="283.015" y2="201.908" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="306.54" y1="80.859" x2="306.54" y2="202.783" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="306.54" y1="216.797" x2="305.935" y2="256.038" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="353.288" y1="86.464" x2="353.584" y2="256.038" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="374.333" y1="88.695" x2="373.204" y2="197.177" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="396.111" y1="91.369" x2="396.111" y2="191.901" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="416.956" y1="93.929" x2="418.05" y2="191.572" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="437.099" y1="96.402" x2="436.115" y2="193.383" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="455.811" y1="99.077" x2="454.487" y2="194.375" />
+                                <line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="493.122" y1="103.282" x2="493.727" y2="253.235" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="s6">
+            <div class="w15">    <div class="title title2 wow fadeInUp">
+                    <div class="titname">
+                        <div class="titicon">
+                            <img src="images/tit-icon7.png" alt="">
+                        </div>
+                        <div class="tittext">
+                            <div>
+                                <h3><span>专题</span><i></i><b>专栏</b></h3>
+                            </div>
+                            <p>团结奋进，求实创新</p>
+                        </div>
+                    </div>
+                    <div class="titmore">
+                        <a href="ztzl.htm">探索更多</a>
+                    </div>
+                </div>
+
+                <div class="s6-c">
+                    <ul>
+        
+             
+              <li>
+                            <a href="https://mp.weixin.qq.com/s/bnStJKkSqS_lK-suXksD3A#" class="wow fadeInUp" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81173)">
+                                <div class="pic">
+                                    <img src="images/s6-pic1.jpg" alt="">
+                                </div>
+                            </a>
+                        </li>
+              
+             
+              <li>
+                            <a href="https://mp.weixin.qq.com/s/-8bLcKXYKZILQt6sqXWsmA" class="wow fadeInUp" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81170)">
+                                <div class="pic">
+                                    <img src="images/s6-pic2.jpg" alt="">
+                                </div>
+                            </a>
+                        </li>
+              
+             
+              <li>
+                            <a href="https://mp.weixin.qq.com/s/SzMjUuDTmo7BfmubOCxirg" class="wow fadeInUp" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81171)">
+                                <div class="pic">
+                                    <img src="images/s6-pic3.jpg" alt="">
+                                </div>
+                            </a>
+                        </li>
+              
+             
+              <li>
+                            <a href="https://mp.weixin.qq.com/s/crCrTu1Upvu7V3HttMe-oA" class="wow fadeInUp" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81172)">
+                                <div class="pic">
+                                    <img src="images/s6-pic4.jpg" alt="">
+                                </div>
+                            </a>
+                        </li>
+              
+       
+ </ul>
+                </div></div>
+        </div>
+
+
+        <div class="footer">
+            <div class="foot-t">
+                <span style="background: #B92626;"></span>
+                <span style="background: #EDA755;"></span>
+                <div>     
+          
+              
+              <a class="wow fadeInUp" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81152)"><img src="images/logo-r.png" alt=""></a>
+              <a class="wow fadeInUp" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81152)"><img src="images/foot-scholl.png" alt=""></a>
+              
+               
+        
+</div>
+                <span style="background: #6D8CAD;"></span>
+                <span style="background: #D0B27E;"></span>
+            </div>
+
+            <div class="foot-b">
+                <div class="w15">
+                    <div class="foot-c">
+                        <div class="foot-l">
+                                <ul> 
+         
+              
+              <li>
+                                    <a href="https://cas.newyishi.com/" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81148)" target="_blank">
+                                        <div class="icon icons"><img src="images/foot-icon2.png" alt=""></div>
+                                        <p>统一门户</p>
+                                    </a>
+                                </li>
+              
+               
+      
+     
+              
+              <li>
+                                    <a href="https://jw.newyishi.com" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81147)" target="_blank">
+                                        <div class="icon icons"><img src="images/foot-icon1.png" alt=""></div>
+                                        <p>教务系统</p>
+                                    </a>
+                                </li>
+              
+               
+      
+     
+              
+              <li>
+                                    <a href="http://58.47.177.20:8888" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81149)" target="_blank">
+                                        <div class="icon icons"><img src="images/foot-icon3.png" alt=""></div>
+                                        <p>OA</p>
+                                    </a>
+                                </li>
+              
+               
+      
+     
+              
+              <li>
+                                    <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81150)" target="_blank">
+                                        <div class="icon icons"><img src="images/foot-icon4.png" alt=""></div>
+                                        <p>管理登录</p>
+                                    </a>
+                                </li>
+              
+               
+      
+     
+              
+              <li>
+                                    <a href="http://ysyx.newyishi.com:6111/#/index" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81151)" target="_blank">
+                                        <div class="icon icons"><img src="images/foot-icon5.png" alt=""></div>
+                                        <p>迎新服务网</p>
+                                    </a>
+                                </li>
+              
+               
+      
+ </ul>
+                            <ol>
+                                <li>
+                                    <div class="icons"><img src="images/foot-icon6.png" alt=""></div>
+                                    
+<p>值班热线：0737—6188111</p>
+                                </li>
+                                <li>
+                                    <div class="icons"><img src="images/foot-icon7.png" alt=""></div>
+                                    
+<p>就业指导办公室电话：0737—6186289</p>
+                                </li>
+                                <li>
+                                    <div class="icons"><img src="images/foot-icon8.png" alt=""></div>
+                                    
+<p>招生办公室电话：0737—6183777</p>
+                                </li>
+                                <li>
+                                    <div class="icons"><img src="images/foot-icon9.png" alt=""></div>
+                                    
+<p> 地址：湖南省益阳市益阳大道（西）238号 </p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="foot-r">
+                            <div class="links">
+                                <div><p>友情链接</p>
+<div>
+   <a href="http://www.moe.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1994609199, 91781)">中华人民共和国教育部</a>
+   <a href="https://www.eol.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1994609199, 91782)">中国教育在线</a>
+   <a href="http://jyt.hunan.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1994609199, 91783)">湖南省教育厅</a>
+   <a href="http://www.hnedu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1994609199, 91784)">湖南教育网</a>
+   <a href="https://www.hneeb.cn/hnxxg/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1994609199, 91785)">湖南招生考试信息港</a>
+   <a href="http://edu.yiyang.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1994609199, 91786)">益阳市教育局</a>
+</div></div>
+                            </div>
+                            <div class="foot-bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div><a href="https://bszs.conac.cn/sitename?method=show&id=F06802AD1D200DC8E05310291AAC0F1B" target="_blank"><img src="images/unit.png" alt="" /></a><a><img src="images/foot-ga.png" alt="" /></a></div><ul><li><p>Copyright©益阳师范高等专科学校 版权所有</p></li><li><p><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">湘ICP备11020599号-1</a></p></li></ul></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<div class="fixed-r">    <div class="fixed-logo">
+            <a><img src="images/fixed-logo.png" alt=""></a>
+        </div>
+        <ul>
+        
+               
+               <li>
+                <a href="https://cas.newyishi.com/" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81148)" target="_blank">
+                    <div class="icon"><img src="images/foot-icon2.png" alt=""></div>
+                    <p>统一门户</p>
+                </a>
+            </li>
+                
+        
+        
+               
+               <li>
+                <a href="https://jw.newyishi.com" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81147)" target="_blank">
+                    <div class="icon"><img src="images/foot-icon1.png" alt=""></div>
+                    <p>教务系统</p>
+                </a>
+            </li>
+                
+        
+        
+               
+               <li>
+                <a href="http://58.47.177.20:8888" onclick="_addDynClicks(&#34;wbimage&#34;, 1994609199, 81149)" target="_blank">
+                    <div class="icon"><img src="images/foot-icon3.png" alt=""></div>
+                    <p>OA</p>
+                </a>
+            </li>
+                
+        
+ </ul>
+        <div class="gotop">
+            <img src="images/fixed-gotop.png" alt="">
+        </div></div>
+
+
+
+    <script>
+        $(function () {
+            new WOW().init();
+        })
+    </script>
+    <script src="js/index.js"></script>
+    <script>
+        var box = document.querySelector(".scroll-box ul");
+        box.addEventListener("wheel", function (event) {
+            var oldLenght = box.scrollLeft
+            box.scrollLeft += event.deltaY;
+
+            if (event.deltaY > 0) {
+                if (box.scrollLeft > oldLenght) {
+                    event.preventDefault();
+                }
+            }
+            if (event.deltaY < 0) {
+                if (box.scrollLeft < oldLenght) {
+                    event.preventDefault();
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

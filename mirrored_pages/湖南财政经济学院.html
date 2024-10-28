@@ -1,0 +1,1234 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>湖南财政经济学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="湖南财政经济学院">
+<META Name="keywords" Content="湖南财政经济学院" />
+
+  <meta name="description" content="湖南财政经济学院" />
+  
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="email=no" />
+  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="date=no" />
+  <link rel="stylesheet" type="text/css" href="css/libs.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="shortcut icon" href="images/tbn.png" type="image/x-icon">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!--[if lte IE 9]>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="js/script.js"></script>
+ 
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747a465553505742000300034f57 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1970496908)</script>
+</head>
+
+<body class="home">
+  <div id="app">
+    <div class="loader"></div>
+    <div class="header">
+      <div class="wp flex">
+        <div class="logo">
+<a href="index.htm"><img src="images/logo.png"></a></div>
+        <div class="topnav">
+          <div class="topnavt flex-right">
+          <div class="xxmh"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><UL>
+    <LI><a href="https://vpn.hufe.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93636)">信息门户(校外)</a></li>
+    <LI><a href="http://i.hufe.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 95122)">信息门户(校内)</a></li>
+</UL></div>
+            <span class="topser">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <form action="">
+        <input type="text" class="inp"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <button type="submit" class="sub" v-on:click="onSubmit()"><i class="swiper-icons swi-sousuo"></i></button>
+        </form>
+          
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1970496908";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></span>
+            <span class="lan"></span>
+          </div>
+          <ul class="flex navList"><li><a href="index.htm">首页</a></li>
+<li><a href="xxgk/xxjj.htm">学校概况</a>
+             <div class="sub-nav ">
+                            <div class="sub-nav-h">
+
+                              <a href="xxgk/xxjj.htm">学校简介</a>
+                             
+
+                              <a href="xxgk/xxls.htm">学校历史</a>
+                             
+
+                              <a href="xxgk/xrld.htm">现任领导</a>
+                             
+
+                              <a href="xxgk/lrld.htm">历任领导</a>
+                             
+
+                              <a href="xxgk/xxbs.htm">学校标识</a>
+                             
+
+                              <a href="xxgk/dlwz.htm">地理位置</a>
+                             
+                            </div>
+                          </div>
+            </li>
+
+<li><a href="https://news.hufe.edu.cn/" target="_blank">湖财新闻</a>
+            </li>
+
+<li><a href="jgsz.htm">机构设置</a>
+             <div class="sub-nav ">
+                            <div class="sub-nav-h">
+
+                              <a href="jgsz.htm#jjjcjg">纪检监察机构</a>
+                             
+
+                              <a href="jgsz.htm#dzgljg">党政管理机构</a>
+                             
+
+                              <a href="jgsz.htm#qtzz">群团组织</a>
+                             
+
+                              <a href="jgsz.htm#jxkyjg">教学科研机构</a>
+                             
+
+                              <a href="jgsz.htm#jfjg">教辅机构</a>
+                             
+
+                              <a href="jgsz.htm#xbqy">校办企业</a>
+                             
+                            </div>
+                          </div>
+            </li>
+
+<li><a href="szdw/szgk.htm">师资队伍</a>
+             <div class="sub-nav ">
+                            <div class="sub-nav-h">
+
+                              <a href="szdw/szgk.htm">师资概况</a>
+                             
+
+                              <a href="szdw/zgjml.htm">正高级名录</a>
+                             
+
+                              <a href="szdw/jcrc.htm">杰出人才</a>
+                             
+                            </div>
+                          </div>
+            </li>
+
+<li><a href="javascript:;">人才培养</a>
+             <div class="sub-nav ">
+                            <div class="sub-nav-h">
+
+                              <a href="http://www.hufe.edu.cn/jwc">本科生教育</a>
+                             
+
+                              <a href="http://www.hufe.edu.cn/kyc">联合培养</a>
+                             
+
+                              <a href="http://www.hufe.edu.cn/jxjyxy">继续教育</a>
+                             
+                            </div>
+                          </div>
+            </li>
+
+<li><a href="xsky/xkzy.htm">学术科研</a>
+             <div class="sub-nav ">
+                            <div class="sub-nav-h">
+
+                              <a href="xsky/xkzy.htm">学科专业</a>
+                             
+
+                              <a href="xsky/kypt.htm">科研平台</a>
+                             
+
+                              <a href="xsky/fwzn.htm">服务指南</a>
+                             
+                            </div>
+                          </div>
+            </li>
+
+<li><a href="xxgk1.htm">信息公开</a>
+             <div class="sub-nav ">
+                            <div class="sub-nav-h">
+
+                              <a href="xxgk1/gksx.htm">公开事项</a>
+                             
+
+                              <a href="xxgk1/ndbg.htm">年度报告</a>
+                             
+
+                              <a href="xxgk1/ysqgk.htm">依申请公开</a>
+                             
+
+                              <a href="xxgk1/zdwj.htm">制度文件</a>
+                             
+
+                              <a href="xxgk1.htm#xqxl">学期校历</a>
+                             
+                            </div>
+                          </div>
+            </li>
+
+<li><a href="javascript:;">招生就业</a>
+             <div class="sub-nav ">
+                            <div class="sub-nav-h">
+
+                              <a href="http://www.hufe.edu.cn/zsw">招生网</a>
+                             
+
+                              <a href="https://jy.hufe.edu.cn/">就业网</a>
+                             
+                            </div>
+                          </div>
+            </li>
+
+<li><a href="javascript:;">常用服务</a>
+             <div class="sub-nav ">
+                            <div class="sub-nav-h">
+
+                              <a href="https://yxlx.hufe.edu.cn/zhyx/topcyxdh">自助迎新</a>
+                             
+
+                              <a href="http://jiaowu2.hufe.edu.cn/sso.jsp">教务系统（校内）</a>
+                             
+
+                              <a href="http://i.hufe.edu.cn/">信息门户（校内）</a>
+                             
+
+                              <a href="https://fysso.chaoxing.com/sso/hufe ">超星教学平台</a>
+                             
+
+                              <a href="http://oa.hufe.edu.cn/Home/LoginCas">办公系统</a>
+                             
+
+                              <a href="http://ygpt.hufe.edu.cn:8080/SunHufe/show.do?action=searchAll">阳光服务中心</a>
+                             
+
+                              <a href="http://mail.hufe.edu.cn/">EDU教育邮箱</a>
+                             
+
+                              <a href="http://rszp.hufe.edu.cn:8888">人才招聘系统</a>
+                             
+
+                              <a href="http://www.hufe.edu.cn/tsg" target="_blank">数字图书</a>
+                             
+
+                              <a href="http://ceping.hufe.edu.cn:8080/CadreTest/">干部测评系统</a>
+                             
+
+                              <a href="https://uia.hufe.edu.cn/gate/">统一身份认证系统</a>
+                             
+                            </div>
+                          </div>
+            </li>
+
+</ul>
+
+        </div>
+        <a href="javascript:;" class="navbtn"><button class="menu-btn"><span class="line-1"></span><span class="line-2"></span><span class="line-3"></span></button></a>
+      </div>
+    </div>
+
+    <div class="banner">    <div class="swiper-container slide-ba">
+        <div class="swiper-wrapper">
+         
+            
+            <div class="swiper-slide item">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 80570)">
+              <div class="imgBox sc">
+                <div class="img"><img data-src="images/weixintupian_20240930183930.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+                
+                   
+            
+            
+            <div class="swiper-slide item">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 80561)">
+              <div class="imgBox sc">
+                <div class="img"><img data-src="images/2024nianjiaoshijie.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+                
+                   
+            
+            
+            <div class="swiper-slide item">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 80544)">
+              <div class="imgBox sc">
+                <div class="img"><img data-src="images/2024nianqiujikaixuedatu_fuben.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+                
+                   
+            
+            
+            <div class="swiper-slide item">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 80504)">
+              <div class="imgBox sc">
+                <div class="img"><img data-src="images/lianjiedatu.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+                
+                   
+            
+            
+            <div class="swiper-slide item">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 80477)">
+              <div class="imgBox sc">
+                <div class="img"><img data-src="images/weixintupian_20240422153632.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+                
+                   
+            
+            
+            <div class="swiper-slide item">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 80457)">
+              <div class="imgBox sc">
+                <div class="img"><img data-src="images/weixintupian_20240430152903.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+                
+                   
+            
+            
+            <div class="swiper-slide item">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 80461)">
+              <div class="imgBox sc">
+                <div class="img"><img data-src="images/xueleifeng.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+                
+                   
+            
+            
+            <div class="swiper-slide item">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 80417)">
+              <div class="imgBox sc">
+                <div class="img"><img data-src="images/weixintupian_20240105115318.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+                
+                   
+            
+            
+            <div class="swiper-slide item">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 79769)">
+              <div class="imgBox sc">
+                <div class="img"><img data-src="images/weixintupian_20231026083133.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+                
+                   
+            
+      
+</div>
+
+        <div class="swiDots"></div>
+      </div></div>
+    
+    <div class="homea overhide">
+      <div class="wp pore">
+          <div class="intit" data-aos="fade-up"><div class="h4 flex-left"><i class="ico ia"></i><span class="cn">图片新闻</span></div></div>
+          <div class="box flex">
+             <div class="left" data-aos="fade-right" data-aos-delay="100">
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="swiper-container slide-a">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+                        <div class="item a">
+                        <a href="info/1047/149951.htm">
+                           <div class="imgBox trans"><div class="img"><img data-src="/__local/A/34/1D/6035EA896A2277F7F930E5AD551_7FEFD367_54211.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt">
+                            <h4 class="eclip">一起“趣”运动  快乐“味”健康</h4>
+                           </div>
+                        </a>
+                        </div>
+                      </div>
+
+
+<div class="swiper-slide">
+                        <div class="item a">
+                        <a href="info/1047/149921.htm">
+                           <div class="imgBox trans"><div class="img"><img data-src="/__local/4/6C/14/0B007944E1C379B783488DABDE3_C74C704C_7A5E4.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt">
+                            <h4 class="eclip">运动场上的育人实践——2024年校运会举行</h4>
+                           </div>
+                        </a>
+                        </div>
+                      </div>
+
+
+<div class="swiper-slide">
+                        <div class="item a">
+                        <a href="info/1047/149941.htm">
+                           <div class="imgBox trans"><div class="img"><img data-src="/__local/A/54/38/9AE1FCAA63667AA712A65C6EF6A_B12611B2_4E482.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt">
+                            <h4 class="eclip">学校召开本科教育教学审核评估工作例会</h4>
+                           </div>
+                        </a>
+                        </div>
+                      </div>
+
+
+<div class="swiper-slide">
+                        <div class="item a">
+                        <a href="info/1047/149911.htm">
+                           <div class="imgBox trans"><div class="img"><img data-src="/__local/0/9F/15/240E5C92F046C1EDD5A8061E2CB_9805D2D6_47F80.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt">
+                            <h4 class="eclip">我校举办2025届毕业生秋季双选会暨第二届校友单位专场招聘会</h4>
+                           </div>
+                        </a>
+                        </div>
+                      </div>
+
+
+<div class="swiper-slide">
+                        <div class="item a">
+                        <a href="info/1047/149891.htm">
+                           <div class="imgBox trans"><div class="img"><img data-src="/__local/9/44/60/402E8714EAB9AE3454166380B16_6391E393_3A55F.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt">
+                            <h4 class="eclip">“传承红色基因、学思践悟中国共产党人精神谱系”主题正德讲堂开讲</h4>
+                           </div>
+                        </a>
+                        </div>
+                      </div>
+
+</div>
+                    <div class="swiDots"></div>
+                </div><script>_showDynClickBatch(['dynclicks_u6_149951','dynclicks_u6_149921','dynclicks_u6_149941','dynclicks_u6_149911','dynclicks_u6_149891'],[149951,149921,149941,149911,149891],"wbnews", 1970496908)</script>
+</div>
+             <div class="right" data-aos="fade-left" data-aos-delay="200">
+
+<ul>
+
+<li><a href="info/1047/149951.htm"><div class="time"><time class="ath"><span>27</span>2024.10</time></div><div class="h4 line2">一起“趣”运动  快乐“味”健康</div></a></li>
+
+   
+
+<li><a href="info/1047/149921.htm"><div class="time"><time class="ath"><span>26</span>2024.10</time></div><div class="h4 line2">运动场上的育人实践——2024年校运会举行</div></a></li>
+
+   
+
+<li><a href="info/1047/149941.htm"><div class="time"><time class="ath"><span>26</span>2024.10</time></div><div class="h4 line2">学校召开本科教育教学审核评估工作例会</div></a></li>
+
+   
+
+<li><a href="info/1047/149911.htm"><div class="time"><time class="ath"><span>25</span>2024.10</time></div><div class="h4 line2">我校举办2025届毕业生秋季双选会暨第二届校友单位专场招聘会</div></a></li>
+
+   
+
+<li><a href="info/1047/149891.htm"><div class="time"><time class="ath"><span>24</span>2024.10</time></div><div class="h4 line2">“传承红色基因、学思践悟中国共产党人精神谱系”主题正德讲堂开讲</div></a></li>
+
+   
+</ul><script>_showDynClickBatch(['dynclicks_u7_149951','dynclicks_u7_149921','dynclicks_u7_149941','dynclicks_u7_149911','dynclicks_u7_149891'],[149951,149921,149941,149911,149891],"wbnews", 1970496908)</script>
+</div>
+          </div>
+          <div class="more abmore" data-aos="fade-up"><a href="https://news.hufe.edu.cn/" target=""><span>进入新闻网</span></a></div>
+      </div>
+    </div>
+    <div class="homeb">
+      <div class="wp pore zi5">
+         <div class="intit" data-aos="fade-up"><div class="h4 flex-left"><i class="ico ib"></i><span class="cn">通知公告</span></div></div>
+         
+
+<ul class="flex">
+
+<li data-aos="fade-up" data-aos-delay="100"><a href="info/1048/141311.htm"><h4 class="line2">湖南财政经济学院2024年高层次人才招聘启事</h4><time class="dtime dtimeon ath">2024.03.28</time></a></li>
+
+  
+
+<li data-aos="fade-up" data-aos-delay="200"><a href="info/1048/149761.htm"><h4 class="line2">关于2024—2025学年寒假名校进名企--新加坡项目招募的通知</h4><time class="dtime dtimeon ath">2024.10.22</time></a></li>
+
+  
+
+<li data-aos="fade-up" data-aos-delay="300"><a href="info/1048/149741.htm"><h4 class="line2">关于报名英国布拉德福德大学双学位项目的通知</h4><time class="dtime dtimeon ath">2024.10.21</time></a></li>
+
+  
+
+<li data-aos="fade-up" data-aos-delay="400"><a href="info/1048/149721.htm"><h4 class="line2">湖南省政府采购网：湖南财政经济学院数智商科综合实验室建设项目公开招标公告</h4><time class="dtime dtimeon ath">2024.10.18</time></a></li>
+
+  
+
+<li data-aos="fade-up" data-aos-delay="500"><a href="info/1048/149711.htm"><h4 class="line2">湖南省政府采购网：湖南财政经济学院电子信息专业基础实验室 项目公开招标公告</h4><time class="dtime dtimeon ath">2024.10.18</time></a></li>
+
+  
+
+<li data-aos="fade-up" data-aos-delay="600"><a href="info/1048/149451.htm"><h4 class="line2">关于报名2024-2025学年寒假澳大利亚西澳大学访学项目的通知</h4><time class="dtime dtimeon ath">2024.10.15</time></a></li>
+
+  
+</ul><script>_showDynClickBatch(['dynclicks_u8_141311','dynclicks_u8_149761','dynclicks_u8_149741','dynclicks_u8_149721','dynclicks_u8_149711','dynclicks_u8_149451'],[141311,149761,149741,149721,149711,149451],"wbnews", 1970496908)</script>
+
+         <div class="more abmore" data-aos="fade-left"><a href="index/tzgg.htm"><span>查看更多</span></a></div>
+      </div>
+    </div> 
+    <div class="homec overhide">
+      <div class="aniLayer">
+         <ul class="flex-center">
+           <li data-aos="fade-right" data-aos-delay="200"><img src="images/t1.png"></li>
+           <li data-aos="fade-right" data-aos-delay="400"><img src="images/t2.png"></li>
+           <li data-aos="fade-right" data-aos-delay="600"><img src="images/t3.png"></li>
+           <li data-aos="fade-right" data-aos-delay="800"><img src="images/t4.png"></li>
+           <li data-aos="fade-left" data-aos-delay="200"><img src="images/t5.png"></li>
+           <li data-aos="fade-left" data-aos-delay="400"><img src="images/t6.png"></li>
+           <li data-aos="fade-left" data-aos-delay="600"><img src="images/t7.png"></li>
+           <li data-aos="fade-left" data-aos-delay="800"><img src="images/t8.png"></li>
+         </ul>
+         <img data-original="images/cc1.png" class="bg lazy" data-aos="fade-up" data-aos-delay="100">
+      </div>
+      <div class="wp pore">
+          <div class="intit" data-aos="fade-up"><div class="h4 flex-center"><i class="ico ic"></i><span class="cn">媒体关注</span></div></div>
+           
+
+<div class="box flex">
+<ul class="left" data-aos="fade-right" data-aos-delay="200">
+ <li><a href="info/1049/149851.htm"><h4 class="line2">【外媒】新湖南：湖南财院厚生国际教育学院开展“团结奋进新征程 同心共筑中国梦”主题党日活动</h4><time class="dtime dtimeon">2024.10.22</time></a></li>
+
+ <li><a href="info/1049/149841.htm"><h4 class="line2">【】新湖南：湖南财院召开2023-2024学年国家奖学金评审会</h4><time class="dtime dtimeon">2024.10.22</time></a></li>
+
+ <li><a href="info/1049/149831.htm"><h4 class="line2">【外媒】新湖南：湖南财院党委副书记苏玲带队赴雷锋街道走访调研</h4><time class="dtime dtimeon">2024.10.22</time></a></li>
+
+</ul>
+<ul class="right flex" data-aos="fade-left" data-aos-delay="300">
+
+<li class="a">
+                <a href="info/1049/149431.htm"> 
+                  <div class="imgBox trans"><div class="img"><img data-original="/__local/7/62/A7/86871CAB721CEDEED1D2F43E88D_A15A39E2_1104E.jpg" alt="" class="lazy"></div></div>
+                  <div class="txt">
+                    <span class="slog">【外媒】</span>
+                    <h4 class="line2">光明日报、学习强国、湖南教育发布、红网、新湖南：湖南财政经济学院：以书院制改革推动学校高质量发展</h4>
+                    <p class="line2">10月9日，湖南财政经济学院雷锋书院厚生学馆正式揭牌。厚生学馆是继学校雷锋书院正德学馆、经世学馆、济用学馆之后亮相的第四个学馆。在学校探索书院制发展的第四年成立雷锋书院，是学校进一步完善“书院+学院”人才培养模式、健全五育并举格局、加快建设财经特色鲜明的应用型一流大学的重要举措。学校雷锋书院厚生学馆正式揭牌搭建平台，让书院改革有“基础”学校自2021年开始推行书院制改革，在雷锋的出生地、成长地——湖南湘江新区（...</p>
+                    <time class="dtime">2024.10.12</time>
+                  </div>
+                </a>
+               </li>
+
+
+<li class="a">
+                <a href="info/1049/149861.htm"> 
+                  <div class="imgBox trans"><div class="img"><img data-original="/__local/4/EF/C4/995FAB6ECCF382AEF9058EEC397_4B82C580_8AFD2.png?e=.png" alt="" class="lazy"></div></div>
+                  <div class="txt">
+                    <span class="slog">【外媒】</span>
+                    <h4 class="line2">新湖南：湖南财院人文与艺术学院入党积极分子培训班开班</h4>
+                    <p class="line2">10月17日晚，湖南财政经济学院人文与艺术学院2024年下半年入党积极分子培训班开班仪式暨第一次党课在第二教学楼2J02学术报告厅举行。湖南财院党委副书记苏玲出席并开讲第一课。开班仪式由院党委副书记杨艳主持，组织员童静、学生党支部书记及本期培训班全体入党积极分子参加。开班仪式现场杨艳为同学们介绍了党课培训的重要性，并宣读了此次培训纪律及相关规定，希望学员们珍惜培训机会，通过党课学习净化心灵、提升思想认识和党性修养，...</p>
+                    <time class="dtime">2024.10.22</time>
+                  </div>
+                </a>
+               </li>
+
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u9_149431','dynclicks_u9_149861','dynclicks_u9_149851','dynclicks_u9_149841','dynclicks_u9_149831'],[149431,149861,149851,149841,149831],"wbnews", 1970496908)</script>
+
+          <div class="more abmore"><a href="index/mtgz.htm"><span>查看更多</span></a></div>
+      </div>
+    </div>
+    <div class="homed" data-aos="eye-open" data-aos-delay="800">
+      <div class="wp pore zi5" data-aos="fade-in" data-aos-delay="1200">
+          <div class="intit"><div class="h4 flex-center"><i class="ico id"></i><span class="cn">学术活动</span></div></div>
+          <div class="more abmore"><a href="index/xshd.htm"><span>查看更多</span></a></div>
+      </div>
+
+          
+
+<div class="swiper-container slide-d" data-aos="fade-in" data-aos-delay="1200">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+                        <div class="item a">
+                          <a href="info/1050/149871.htm" class="abUrl"></a>
+                           <div class="imgs"><div class="imgBox trans"><div class="img"><img src="/__local/C/FE/8C/782AA8F6B5D95BA7CA337233E7F_7A566681_5F4D1.jpg" alt=""></div></div></div>
+                            <div class="txt">
+                             <h4>数学与统计学院、科研处联合举办学术讲座</h4>
+                             <p class="line3">（本网讯）10月23日上午，应数学与统计学院和科研处的邀请，江西财经大学统计学学科带头人、国务院政府特殊津贴专家、国家社科基金重大项目首席专家、教育部高等学校经济类教学指导委员会委员罗良清教授在办公楼715会议室作了题为“当代国势学的几个基本问题——中国特色的社会经济统计学”的学术报告。副校长潘爱民主持报告会。讲座现场在报告中，罗良清介绍了国势学的研究对象、研究方法、研究对象、研究基础，就传统国势学特色和新时代国势学特色进行了比较分析，...</p>
+                             <time class="dtime">2024.10.24</time>
+                          </div>
+                        </div>
+                      </div>
+
+  
+
+<div class="swiper-slide">
+                        <div class="item a">
+                          <a href="info/1050/149481.htm" class="abUrl"></a>
+                           <div class="imgs"><div class="imgBox trans"><div class="img"><img src="/__local/D/46/48/C61C02E5A7A5FBB08DD42EE9F33_6A0A847A_22DF0.jpeg" alt=""></div></div></div>
+                            <div class="txt">
+                             <h4>美育大课堂解析“黄永玉的艺术与人生”</h4>
+                             <p class="line3">（本网讯）10月15日上午，学校美育大课堂迎来了一位特别的老师，吉首大学原正校级督导，文化学者张建永教授来到雷锋书院，与150多名雷锋书院正德学馆的师生一起分享他对“黄永玉的艺术与人生”的理解和感悟。活动由人文与艺术学院院长林铁主持。讲座现场张建永从凤凰之美、思想性格、诗歌艺术、散文小说、漫画艺术、设计艺术和生命状态7个部分，以文本细读的方式，用图文并茂的PPT和激情风趣的语言，生动阐述了一代艺术大师黄永玉的艺术成就、...</p>
+                             <time class="dtime">2024.10.16</time>
+                          </div>
+                        </div>
+                      </div>
+
+  
+
+<div class="swiper-slide">
+                        <div class="item a">
+                          <a href="info/1050/149471.htm" class="abUrl"></a>
+                           <div class="imgs"><div class="imgBox trans"><div class="img"><img src="/__local/A/5A/E3/041FE088EAA3B3322BDCD22CB85_EBF1F179_335F7.jpg" alt=""></div></div></div>
+                            <div class="txt">
+                             <h4>三院联合举办学术论文写作和国家社科基金课题申报指导讲座</h4>
+                             <p class="line3">（本网讯）10月15日，数学与统计学院、经济学院和财政金融学院联合举办学术论文写作和国家社科基金课题申报指导讲座，南开大学王乃合教授、湛泳教授应邀到会指导。讲座分别由数学与统计学院院长尹向飞、经济学院副院长彭千芮主持。经济学院副院长陈雯以及数学与统计学院、经济学院、财政金融学院青年博士参会。讲座现场王乃合围绕“铸牢学术品质，坚守科研诚信”主题，以资深编辑视角，从选题偏好、审稿标准等角度就如何撰写科研论文进行了指导。...</p>
+                             <time class="dtime">2024.10.16</time>
+                          </div>
+                        </div>
+                      </div>
+
+  
+
+<div class="swiper-slide">
+                        <div class="item a">
+                          <a href="info/1050/149381.htm" class="abUrl"></a>
+                           <div class="imgs"><div class="imgBox trans"><div class="img"><img src="/__local/A/7A/84/B673AB93AF43D4EDC50EAB0EA80_D6F82F82_494E9.jpg" alt=""></div></div></div>
+                            <div class="txt">
+                             <h4>美育大课堂开讲“经典传承与国家文化安全”</h4>
+                             <p class="line3">（本网讯）10月9日下午，上海交通大学胡惠林教授作客我校美育大课堂，在雷锋书院至诚楼L1115作了一场主题为“经典传承与国家文化安全”的讲座。讲座由人文与艺术学院副院长王美霞主持，正德学馆260余名学生到场聆听。讲座现场胡惠林从当前国家政策环境、市场环境等环境变化的大背景谈起，指出当前国家、市场对人才的需求也发生了变化。他从自己研究兴趣的变化和创办文化产业管理专业的经验，启发同学们要积极适应大学生的身份和角色变化，...</p>
+                             <time class="dtime">2024.10.12</time>
+                          </div>
+                        </div>
+                      </div>
+
+  
+
+<div class="swiper-slide">
+                        <div class="item a">
+                          <a href="info/1050/149411.htm" class="abUrl"></a>
+                           <div class="imgs"><div class="imgBox trans"><div class="img"><img src="/__local/C/D0/40/3D2BF6A657ACB63399A05A057F6_EED408B0_199B1.jpeg" alt=""></div></div></div>
+                            <div class="txt">
+                             <h4>厚生学馆“开馆第一课”开课</h4>
+                             <p class="line3">（本网讯）10月9日下午，校党委副书记、雷锋书院院长苏玲围绕“弘扬金融文化，践行雷锋精神”主题为雷锋书院厚生学馆师生开讲学馆“第一课”。会计学院院长、厚生学馆轮值主席潘彬，会计学院党委书记戴恩湘，工商管理学院党委书记王跃军以及学馆200余名师生聆听了讲座。讲座现场苏玲介绍了我校书院制改革的背景、意义以及雷锋书院基本情况，结合厚生学馆经管类专业特色，深入解读了“五要五不要”中国特色金融文化，并就新时代新青年如何弘扬与传承雷锋精神作了简要论述。...</p>
+                             <time class="dtime">2024.10.09</time>
+                          </div>
+                        </div>
+                      </div>
+
+  
+
+<div class="swiper-slide">
+                        <div class="item a">
+                          <a href="info/1050/149301.htm" class="abUrl"></a>
+                           <div class="imgs"><div class="imgBox trans"><div class="img"><img src="/__local/7/44/0B/F33C1FE6729CD95276396D9296E_44EF5916_168CC.jpeg" alt=""></div></div></div>
+                            <div class="txt">
+                             <h4>雷锋书院厚生学馆揭牌</h4>
+                             <p class="line3">（本网讯）10月9日上午，雷锋书院厚生学馆正式揭牌。校党委书记杨兰英，校党委副书记、雷锋书院院长苏玲，教务处、学生工作部、雷锋书院、会计学院、工商管理学院负责人出席揭牌仪式。仪式由会计学院党委书记戴恩湘主持。揭牌仪式现场 黎自强/摄揭牌仪式上，苏玲致辞时表示，书院制是高等教育发展道路上的重要尝试，也是我校加快建设财经特色鲜明的应用型一流大学的重要一环。厚生学馆中的会计学院和工商管理学院要打破专业壁垒，实现优势互补。...</p>
+                             <time class="dtime">2024.10.09</time>
+                          </div>
+                        </div>
+                      </div>
+
+  
+</div>
+                <div class="swiBtn flex">
+                  <a href="javascript:;" class="prev swiper-icons swi-moreal"></a>
+                  <a href="javascript:;" class="next swiper-icons swi-morear"></a>
+                </div>
+</div><script>_showDynClickBatch(['dynclicks_u10_149871','dynclicks_u10_149481','dynclicks_u10_149471','dynclicks_u10_149381','dynclicks_u10_149411','dynclicks_u10_149301'],[149871,149481,149471,149381,149411,149301],"wbnews", 1970496908)</script>
+
+           <div class="more"><a href="index/xshd.htm"><span>查看更多</span></a></div>
+    </div>
+
+    <div class="homee">
+      <div class="wp">
+         <div class="intit" data-aos="fade-up"><div class="h4 flex-left"><i class="ico ie"></i><span class="cn">视觉湖财</span></div></div>
+         <div class="more zi5" data-aos="fade-up" data-aos-delay="100"><a href="index/sjhc.htm"><span>查看更多</span></a></div>
+         
+
+<div class="box flex zi2">
+<div class="left">
+<ul class="items flex">
+
+<li class="a" data-aos="fade-up" data-aos-delay="100"><a href="info/1051/135671.htm"> <div class="imgBox trans"><div class="img"><img data-original="/__local/F/F3/DB/7EC0E6C9059816945584B4F7058_1CEC055A_34734.jpg" alt="" class="lazy"></div></div><div class="txt"><h4 class="eclip">湖南财政经济学院赋</h4></div></a></li>
+
+
+<li class="a" data-aos="fade-up" data-aos-delay="200"><a href="info/1051/7322.htm"> <div class="imgBox trans"><div class="img"><img data-original="/__local/D/6E/2B/9F6AFDAAAEA892D6B7319B540BF_70AF1DAD_FAA48.png" alt="" class="lazy"></div></div><div class="txt"><h4 class="eclip">校园全景</h4></div></a></li>
+
+</ul>
+<div class="swiper-container slide-e" data-aos="fade-up" data-aos-delay="300">
+<ul class="swiper-wrapper">
+
+<li class="swiper-slide item">
+                         <a href="info/1051/7314.htm"> <div class="imgBox trans"><div class="img"><img data-src="/__local/B/1F/DF/F8D3271BCF129AD872772F298B8_AF49E64F_1D17A.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div><div class="txt"><h4>图书馆</h4></div></a>
+                      </li>
+
+
+<li class="swiper-slide item">
+                         <a href="info/1051/7166.htm"> <div class="imgBox trans"><div class="img"><img data-src="/__local/A/B9/A9/D250F60B513CF6559E953FD33B2_7DC0D56B_F947E.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div><div class="txt"><h4>108级台阶</h4></div></a>
+                      </li>
+
+
+<li class="swiper-slide item">
+                         <a href="info/1051/7150.htm"> <div class="imgBox trans"><div class="img"><img data-src="/__local/9/86/7D/82E38E7547C91D1625F0D9281F1_D059639E_21110.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div><div class="txt"><h4>“我爱财院”文化标牌</h4></div></a>
+                      </li>
+
+
+<li class="swiper-slide item">
+                         <a href="info/1051/7303.htm"> <div class="imgBox trans"><div class="img"><img data-src="/__local/1/39/CA/5DE2A3CC878295DF62E04A0B75F_C8CD6EAA_18D45.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div><div class="txt"><h4>教学楼</h4></div></a>
+                      </li>
+
+
+<li class="swiper-slide item">
+                         <a href="info/1051/7284.htm"> <div class="imgBox trans"><div class="img"><img data-src="/__local/4/EA/C7/B320AE9877AC6AD2F4F3654FA49_C6C99B42_B83A1.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div><div class="txt"><h4>体育馆</h4></div></a>
+                      </li>
+
+</ul>
+<div class="swiDots"></div>
+</div>
+</div>
+<div class="right" data-aos="fade-up" data-aos-delay="400">
+
+<div class="item a">
+                  <a href="info/1051/135661.htm"> <div class="imgBox trans"><div class="img"><img data-original="/__local/5/F0/97/E335F9C5AD8AC11653CB8DBCA3E_3C82B1A8_18C9D.jpg" alt="" class="lazy"></div></div>
+                    <div class="txt">
+                      <h4 class="eclips">眼界</h4>
+                      <p class="line2">        2023年10月28日，学校宣传片《眼界》重磅发布！</p>
+                      <i class="swiper-icons swi-arrrb"></i>
+                    </div>
+                  </a>
+               </div>
+
+</div>
+</div><script>_showDynClickBatch(['dynclicks_u11_135661','dynclicks_u11_135671','dynclicks_u11_7322','dynclicks_u11_7314','dynclicks_u11_7166','dynclicks_u11_7150','dynclicks_u11_7303','dynclicks_u11_7284'],[135661,135671,7322,7314,7166,7150,7303,7284],"wbnews", 1970496908)</script>
+
+      </div>
+    </div>
+    <div class="homef">
+      <div class="wp">
+         <div class="intit zi5" data-aos="fade-up"><div class="h4 flex-center"><i class="ico if"></i><span class="cn">数说湖财</span></div></div>
+         <div class="box flex">
+           <div class="left"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<ul class="flex">
+               <li>
+                 <i class="dot" data-aos="fade-up" data-aos-delay="100"></i>
+                 <div class="item" data-aos="fade-up" data-aos-delay="200"><span class="scNum ath">760</span><p>现有2个校区<br>占地 760亩</p></div>
+                 <div class="empty"></div>
+                 <div class="item" data-aos="fade-up" data-aos-delay="300"><span class="scNum ath">1652</span><p>教职工1652人</p></div>
+                 <div class="item sp" data-aos="fade-up" data-aos-delay="400"><span class="scNum ath">22075</span><p>全日制在校本科生22075人</p></div>
+                 <i class="dot" data-aos="fade-up" data-aos-delay="500"></i>
+                 <i class="dot sp" data-aos="fade-up" data-aos-delay="600"></i>
+                 <i class="dot sp" data-aos="fade-up" data-aos-delay="700"></i>
+               </li>
+               <li>
+                 <div class="item" data-aos="fade-up" data-aos-delay="100"><span class="scNum ath">152</span><p>正高职称教师152人</p></div>
+                 <i class="dot" data-aos="fade-up" data-aos-delay="200"></i>
+                 <div class="empty"></div>
+                 <i class="dot" data-aos="fade-up" data-aos-delay="300"></i>
+                 <i class="dot sp" data-aos="fade-up" data-aos-delay="400"></i>
+                 <i class="dot sp" data-aos="fade-up" data-aos-delay="500"></i>
+                 <div class="item" data-aos="fade-up" data-aos-delay="600"><span class="scNum ath">316</span><p>副高职称教师316人</p></div>
+                 <div class="item sp" data-aos="fade-up" data-aos-delay="700"><span class="scNum ath">449</span><p>博士学位教师449人</p></div>
+               </li>
+               <li>
+                 <i class="dot" data-aos="fade-up" data-aos-delay="100"></i>
+                 <div class="item" data-aos="fade-up" data-aos-delay="200"><span class="scNum ath">10</span><p>博士生导师10余人</p></div>
+                 <div class="empty"></div>
+                 <div class="item" data-aos="fade-up" data-aos-delay="300"><span class="scNum ath">80</span><p>硕士生导师80余人</p></div>
+                 <div class="item sp" data-aos="fade-up" data-aos-delay="400"><span class="scNum ath">4</span><p>4个省级重点实验室</p></div>
+                 <i class="dot" data-aos="fade-up" data-aos-delay="500"></i>
+                 <i class="dot sp" data-aos="fade-up" data-aos-delay="600"></i>
+                 <i class="dot sp" data-aos="fade-up" data-aos-delay="700"></i>
+               </li>
+               <li>
+                 <div class="item" data-aos="fade-up" data-aos-delay="100"><span class="scNum ath">16</span><p>2023获国家社科基金项目16项</p></div>
+                 <i class="dot" data-aos="fade-up" data-aos-delay="200"></i>
+                 <div class="empty"></div>
+                 <i class="dot" data-aos="fade-up" data-aos-delay="300"></i>
+                 <i class="dot sp" data-aos="fade-up" data-aos-delay="400"></i>
+                 <i class="dot sp" data-aos="fade-up" data-aos-delay="500"></i>
+                 <div class="item" data-aos="fade-up" data-aos-delay="700"><span class="scNum ath">2000</span><p>获得各级各类科研项目2000项</p></div>
+                 <div class="item sp" data-aos="fade-up" data-aos-delay="700"><span class="scNum ath">23</span><p>省部级科研成果奖23项</p></div>
+               </li>
+             </ul></div>
+           
+
+<div class="right pore">
+<div class="tit" data-aos="fade-up">发展历程</div>
+<div class="swiper-container slide-f" data-aos="fade-up" data-aos-delay="100">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1933.5～1942</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/4/AC/A8/4D8C453734271CD28F025414909_505F0BB0_27888.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南厚生会计讲习所</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1942～1951.10</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/6/20/1F/FF780985A7BDBAC87EA8F6603D9_E1C7987F_C65C.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南私立厚生会计学校</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1951.10～1952.11</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/2/24/6B/59FF70D7544B0A009C2C6BA4BF4_E88055BE_22706.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南厚生会计学校</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1952.11～1954.1</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/D/27/FC/D65AD7A1A1BCDB61AB87EF4CC88_463FAEA2_2712F.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南省财政学校</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1958.9～1960.4</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/0/8E/D0/FEE92D647D42286DEF1D7A512E3_8D0D58EC_244AE.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南省财贸干部学校</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1960.4～1960.12</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/E/17/5A/9F739115C245A366AD060475EA5_76C028C3_178E0.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南省财贸学校</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1960.12～1965.9</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/F/3E/EB/F51819BFCFF20E870E7F606DEF1_0E7CE6D9_2ABB9.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南省财贸学院附属中专部（对外仍称湖南省财贸学校）</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1965.9～1969.1</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/8/F3/63/FE3F8CB7FC44582C9B79AA2E060_AF9DB157_2525B.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南省财政会计学校</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1970.12～1973.3</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/8/65/5B/F758170088021FB55CF640DC1B7_C38129CC_153F2.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南省五.七总校财会培训班</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1973.3～1979.1</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/8/B2/FC/9C05DEAFFDDF9E853D1BA02F2BE_B208EE28_1D7BE.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南省财会学校</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1979.1～1985.5</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/8/24/14/FEC1580F63540DBF5FE538B55DD_637C5AB6_188EA.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南省财会学校（重建）</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1985.5～1993.5</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/3/B0/DF/2CD208DC12EEC7DE4A4D96B0FD2_54695B00_25CB4.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南财经专科学校</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">1993.5～</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/5/8C/5C/B98D2DCD98920452C3188111F5B_2F79962A_20F9A.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南财经高等专科学校（更名）</p></div>
+                        </div>
+                      </div>
+
+   
+
+<div class="swiper-slide">
+                        <div class="item">
+                           <div class="year ath">2010.3～</div>
+                           <div class="imgBox"><div class="img"><img data-src="/__local/5/9B/62/5B9C1416CE52299E050D58C12EE_6DFCFD4B_1F87F.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div></div>
+                           <div class="txt line3"><p>湖南财政经济学院（本科）</p></div>
+                        </div>
+                      </div>
+
+   
+</div>
+               </div>
+               <div class="hdTool" data-aos="fade-left" data-aos-delay="300"> 
+                 <a href="javascript:;" class="prev swiper-icons swi-upb"></a>
+                 <div class="swiDots"></div>
+                 <a href="javascript:;" class="next swiper-icons swi-downb"></a>
+               </div>
+              <div class="more" data-aos="fade-up" data-aos-delay="200"><a href="xxgk/xxls.htm"><span>查看更多</span></a></div>
+</div><script>_showDynClickBatch(['dynclicks_u13_10859','dynclicks_u13_10858','dynclicks_u13_10857','dynclicks_u13_10856','dynclicks_u13_10855','dynclicks_u13_10854','dynclicks_u13_10853','dynclicks_u13_10852','dynclicks_u13_10851','dynclicks_u13_10850','dynclicks_u13_10849','dynclicks_u13_10848','dynclicks_u13_10847','dynclicks_u13_7706'],[10859,10858,10857,10856,10855,10854,10853,10852,10851,10850,10849,10848,10847,7706],"wbnews", 1970496908)</script>
+
+         </div>
+      </div>
+    </div>
+    <div class="homeg">
+      <div class="wp pore">    <div class="intit" data-aos="fade-up"><div class="h4 flex-center"><i class="ico ig"></i><span class="cn">专题专栏</span></div></div>
+          <div class="swiper-container slide-g" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+          
+            
+            <div class="swiper-slide">
+                <div class="item">
+                  <a href="https://www.hufe.edu.cn/bdjypg/index.htm" class="transImg" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 80551)"><img src="images/xjp2rtypo.jpg" alt=""></a>
+                </div>
+              </div>
+          
+                     
+              
+            
+            <div class="swiper-slide">
+                <div class="item">
+                  <a href="http://www.hufe.edu.cn/znxt" class="transImg" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 79277)"><img src="images/90y.png" alt=""></a>
+                </div>
+              </div>
+          
+                     
+              
+            
+            <div class="swiper-slide">
+                <div class="item">
+                  <a href="http://www.hufe.edu.cn/xyhjjh" class="transImg" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 79278)"><img src="images/xjp2.jpg" alt=""></a>
+                </div>
+              </div>
+          
+                     
+              
+            
+            <div class="swiper-slide">
+                <div class="item">
+                  <a href="http://www.hufe.edu.cn/ddh" class="transImg" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 79257)"><img src="images/zt10.png" alt=""></a>
+                </div>
+              </div>
+          
+                     
+              
+            
+            <div class="swiper-slide">
+                <div class="item">
+                  <a href="http://www.hufe.edu.cn/dsxxindex" class="transImg" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 79258)"><img src="images/zt20.png" alt=""></a>
+                </div>
+              </div>
+          
+                     
+              
+            
+            <div class="swiper-slide">
+                <div class="item">
+                  <a href="index/ztbd1/pyhjxshzyhxjzg.htm" class="transImg" onclick="_addDynClicks(&#34;wbimage&#34;, 1970496908, 79259)"><img src="images/zt30.png" alt=""></a>
+                </div>
+              </div>
+          
+                     
+              
+     
+</div>
+          </div>
+         <div class="swiBtn flex" data-aos="fade-up" data-aos-delay="200">
+          <a href="javascript:;" class="prev swiper-icons swi-moreal"></a>
+          <a href="javascript:;" class="next swiper-icons swi-morear"></a>
+        </div></div>
+    </div>
+
+    <div class="footer">
+      <div class="ft-a">
+          <div class="wp">
+             <div class="ft-aa flex">
+                <div class="logo">
+<a href="index.htm"><img src="images/logo.png"></a></div>
+                    <div class="codes flex">
+      
+            
+            <div class="item">
+                    <a href="javascript:;" class="popCode"><i class="swiper-icons swi-weixin"></i><span><img src="images/code.png" alt=""></span></span></a>
+                    <p>官方微信</p>
+                  </div>
+            
+                     
+           
+            
+            <div class="item">
+                    <a href="javascript:;" class="popCode"><i class="swiper-icons swi-weixin"></i><span><img src="images/xyhewm.png" alt=""></span></span></a>
+                    <p>校友会</p>
+                  </div>
+            
+                     
+           
+            
+            <div class="item">
+                    <a href="javascript:;" class="popCode"><i class="swiper-icons swi-weixin"></i><span><img src="images/yjyewm.png" alt=""></span></span></a>
+                    <p>云就业平台</p>
+                  </div>
+            
+                     
+           
+    
+</div>
+             </div>
+              <div class="ft-ab flex">
+                <div class="info">
+<p><span>主校区：湖南省长沙市湘江新区枫林二路139号</span></p>
+<p><span>雷锋校区：湖南湘江新区（长沙高新区）雷锋街道黄桥大道</span></p>
+<p><span>总值班电话：0731-88811003</p>
+<p><span>招生咨询电话：0731-88811755、88811788</span></p>
+<p><span>学校档案室：0731-88811915</span></p>
+<p><span>邮编: 410205</span></p></div>
+                <ul class="links clearfix">
+
+<li><a href="http://www.dangjian.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93399)" target="_blank">党建网</a></li>
+
+   
+
+<li><a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93400)" target="_blank">国家教育部</a></li>
+
+   
+
+<li><a href="https://www.hnedu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93401)" target="_blank">湖南教育网</a></li>
+
+   
+
+<li><a href="http://jyt.hunan.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93402)" target="_blank">湖南省教育厅</a></li>
+
+   
+
+<li><a href="http://czjd.hufe.edu.cn:88/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93403)" target="_blank">财政研究基地</a></li>
+
+   
+
+<li><a href="https://www.hufe.edu.cn/hncywz/cjdsj" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93404)" target="_blank">财经大数据中心</a></li>
+
+   
+
+<li><a href="http://www.hncj.cbpt.cnki.net/wkg/WebPublication/index.aspx?mid=hncj" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93405)" target="_blank">学报采编系统</a></li>
+
+   
+
+<li><a href="http://ceping.hufe.edu.cn:8080/CadreTest/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93406)" target="_blank">干部测评系统</a></li>
+
+   
+</ul>
+             </div>
+          </div>
+      </div>
+       <div class="ft-b"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="wp flex flexc"><div class="copy"><span> ©2023 湖南财政经济学院版权所有</span> &nbsp; <span><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">湘ICP备18011312号-1</a></span> &nbsp; <span><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">湘教QS3-2005050000253号</a></span></div><div class="dzjg"><a href="http://bszs.conac.cn/sitename?method=show&id=2FC8A7820F0E78AAE053022819AC0231" target="_blank"><img src="images/blue.png" alt="" /></a></div></div></div>
+    </div>
+
+    <div class="rightFix">
+      <div class="btn"><img src="images/right.png" alt=""></div>
+      <ul>
+<li>
+           <a href="javascript:;" title="&lt;p&gt;招生热线：&lt;/p&gt;&lt;p&gt;0731-88811788&lt;/p&gt;&lt;p&gt;0731-88811755&lt;/p&gt;" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93408)"><i class="fico i1"></i>
+           <div class="pop tel"><div class="c"><p>招生热线：</p><p>0731-88811788</p><p>0731-88811755</p></div></div>
+           <p class="p">招生热线</p>
+           </a>
+           
+            
+          </a></li>
+
+  
+
+<li>
+           
+           <a href="tencent://message/?uin=2885742908" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93409)"><i class="fico i2"></i>
+           <p class="p">在线咨询</p>
+           </a>
+           
+            
+          </a></li>
+
+  
+
+<li>
+           <a href="javascript:;" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1970496908, 93410)"><i class="fico i3"></i>
+           <div class="pop code"><div class="c"><img src="images/code1.png" alt=""></div></div>
+           <p class="p">微信关注</p>
+           </a>
+           
+            
+          </a></li>
+
+  
+</ul>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/lazyImg.js"></script>
+  <script type="text/javascript" src="js/waypoints.js"></script>
+  <script type="text/javascript" src="js/countup.js"></script>
+    <script type="text/javascript" src="js/libs.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

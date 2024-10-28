@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+	<!-- 静态资源引入 -->
+	<head>
+	<meta charset="UTF-8">
+	<base href="https://zykqxy.com/">
+	<title>资阳口腔职业学院</title>
+	<meta name="Keywords" content="资阳口腔职业学院官方网站,资阳口腔职业学院官网,资阳口腔职业学院,资阳口腔,口腔学院,口职院" />
+	<meta name="description" content="资阳口腔职业学院是四川省人民政府批准、国家教育部备案、四川省教育厅主管的一所独立设置的全日制普通高等学校。学校立足四川、服务西部、辐射全国，以口腔医疗和医疗设备产业为重点服务对象；适应四川省现代制造业、现代服务业的发展需求；以差异化、品牌化、国际化为努力方向，致力于培养具有良好职业道德和敬业精神的高素质技能型人才。力争经过5-10年的努力，把学院办成一所管理规范、规模适度、特色鲜明的中国一流“产学研”一体的口腔高职院校。" />
+	<!-- favicon图标 -->
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/Reoam-base-css.css" />
+	<link rel="stylesheet" type="text/css" href="css/pages.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/royalslider.css" />
+	<link rel="stylesheet" type="text/css" href="css/rs-default.css" />
+	<!-- websit gray
+	<style type=”text/css”>
+		html {
+					filter: gray;
+				}
+	</style>-->
+	<!-- JS -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery.royalslider.min.js"></script>
+	<script src="js/spin.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/pages.js" v="1.0"></script>
+</head>
+	<style>
+		#s1 {
+			background: url(img/indexbg1.jpg) no-repeat top center;
+		}
+		#news2 .typenews li a {
+			border-color:#fff;
+		}
+		#ldgh .img{
+			overflow: hidden;
+			position: relative;
+		}
+		#ldgh .img .imgbox{
+			height: 100%;
+			width: 100%;
+		}
+		.typenews li .active:after {
+		    background-color: #fff;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0.575rem;
+			border-color:  transparent #4E2B6A transparent transparent;
+			/*为了照顾兼容性低版本的浏览器，加上font-size: 0; line-height: 0;*/
+			font-size: 0;
+			line-height: 0;
+			top: 0.6rem;
+			left: -0.7425rem;
+		}
+	</style>
+	<body>
+		<!-- 顶部轮播图 -->
+			<section id="gallery-1" class="royalSlider rsDefault">
+			<a class="rsImg bugaga" href="https://zykqxy.com/imageFiles/banner/20210928145739_279194123208032356270.jpg"></a>
+			<a class="rsImg bugaga" href="https://zykqxy.com/imageFiles/banner/20201231101748_44882214419642401831.jpg"></a>
+			<a class="rsImg bugaga" href="https://zykqxy.com/imageFiles/banner/20221207094042_63696569105507492549.png"></a>
+	</section>
+
+		<header class="0"></header>
+		<section id="s1">
+			<div class="inner flex-box flex-wrap space-between">
+				<!-- 学院要闻/公示公告 -->
+				<div id="news1">
+					<div class="btn flex-box space-between">
+						<div class="flex-box h3chose h3choset">
+							<a onclick="activet(0)" class="active" data-href="index-news.html"><h3>学院要闻</h3></a>
+							<a onclick="activet(1)" data-href="index-notice.html"><h3>公示公告</h3></a>
+						</div>
+						<a href="javascript:void();" onclick="moreClick(this)" target="_blank" class="more">更多>></a>
+					</div>
+					<ul id="h3cbox">
+						<!-- 学院要闻 -->
+						<li class="index-news"><ul class="typenews"></ul></li>
+						<!-- 公示公告 -->
+						<li class="index-notice" style="display: none;"><ul class="typenews"></ul></li>
+					</ul>
+				</div>
+				<!-- 招生动态 -->
+				<div class="index-recruit" id="news2">
+					<div class="btn flex-box space-between">
+						<div class="flex-box">
+							<h3>招生动态</h3>
+						</div>
+						<a href="index-recruitStudents.html" target="_blank" class="more">更多>></a>
+					</div>
+					<ul class="typenews"></ul>
+				</div>
+				<!-- 学院相册 -->
+				<div id="album">
+	<div class="btn flex-box space-between">
+		<div class="flex-box space-between">
+			<h3>学院相册</h3>
+		</div>
+		<ul class="alnav">
+								<li><a class="active" onclick="alnav(0)">校园环境</a></li>
+					<li><a onclick="alnav(1)">生活服务</a></li>
+					<li><a onclick="alnav(2)">学生风采</a></li>
+			<span class="alnavbp"></span>
+		</ul>
+	</div>
+	<div>
+		<ul class="flex-box">
+				<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20211109163442_315540356189609847400.jpg"><span><p><br/>校园航拍图</p></span></li>
+				<div>
+					<div class="flex-box">
+						<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20220316092616_425011291081452654128.jpg"><span><p><br/>春景</p></span></li>
+						<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20220412155540_44857293113064063.jpg"><span><p><br/>柠檬园</p></span></li>
+					</div>
+					<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20220316092529_425010820442385951461.jpg"><span><p><br/>校园一角</p></span></li>
+				</div>
+				<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20210310145211_104662840591627262825.jpg"><span><p><br/>学生食堂</p></span></li>
+				<div>
+					<div class="flex-box">
+						<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20210310145227_104663001336598491577.jpg"><span><p><br/>学生宿舍内景</p></span></li>
+						<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20210310145246_104663191636320900987.jpg"><span><p><br/>室内游泳馆</p></span></li>
+					</div>
+					<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20210310145300_104663332605687997082.jpg"><span><p><br/>图书馆</p></span></li>
+				</div>
+				<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20210310145330_104663635393959470218.jpg"><span><p><br/>向日葵夏日计划</p></span></li>
+				<div>
+					<div class="flex-box">
+						<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20210310145410_104664028805290478465.jpg"><span><p><br/>国旗下的讲话</p></span></li>
+						<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20210310145424_104664170906608070127.jpg"><span><p><br/>劳动教育</p></span></li>
+					</div>
+					<li class="imgbox"><img src="https://zykqxy.com/imageFiles/collegePhoto/20210310145434_104664274735369234654.jpg"><span><p><br/>运动会</p></span></li>
+				</div>
+		</ul>
+	</div>
+</div>
+				<!-- 学院视频 -->
+				<div id="vediobox">
+	<div class="btn flex-box space-between">
+		<div class="flex-box">
+			<h3>学院视频</h3>
+		</div>
+	</div>
+	<ul id="vul">
+						<li class="active" title="口职院青年教师庄严宣誓"><a onclick="openvedio('https://zykqxy.com/imageFiles/collegeVideo/20201201112612_1606793172700.mp4')"><div class="imgbox"><img src="https://zykqxy.com/imageFiles/collegeVideo/20201201145720_1606805840992.jpg"></div><p class="lineoverflow">口职院青年教师庄严宣誓</p></a></li>
+				<li title="2020级新生萌动笑脸"><a onclick="openvedio('https://zykqxy.com/imageFiles/collegeVideo/20201201112645_1606793205341.mp4')"><div class="imgbox"><img src="https://zykqxy.com/imageFiles/collegeVideo/20201201145739_1606805859729.jpg"></div><p class="lineoverflow">2020级新生萌动笑脸</p></a></li>
+				<li title="资阳口腔职业学院2020年元旦晚会"><a onclick="openvedio('https://zykqxy.com/imageFiles/collegeVideo/20201129210446_1606655086313.mp4')"><div class="imgbox"><img src="https://zykqxy.com/imageFiles/collegeVideo/20201201145749_1606805869702.jpg"></div><p class="lineoverflow">“青春口院  筑梦启航“新年晚会</p></a></li>
+				<li title="青春口职院 带你一起来参观"><a onclick="openvedio('https://zykqxy.com/imageFiles/collegeVideo/20210309085533_103584857756953544959.MP4')"><div class="imgbox"><img src="https://zykqxy.com/imageFiles/collegeVideo/20210309085510_10358463235538956.jpg"></div><p class="lineoverflow">青春口职院</p></a></li>
+	</ul>
+	<div id="vedio">
+		<a class="close abcenter" onclick="closevedio()"></a>
+		<video id="vv" src="" controls="controls" autoplay="autoplay" width="90%" height="90%" class="abcenter"></video>
+	</div>
+</div>
+			</div>
+		</section>
+		<section id="s2">
+			<div class="inner flex-box flex-wrap space-between">
+				<!-- 领导关怀 -->
+					<div id="ldgh" class=" flex-box flex-wrap">
+		<div class="img"><div class="imgbox"><img src=""></div></div>
+		<div class="list bb" style="box-sizing: border-box; height: 21.375rem; width: 42.8125rem;">
+			<div class="btn flex-box space-between">
+				<div class="flex-box">
+					<h3>领导关怀</h3>
+				</div>
+				<a href="index-leaderCare.html" target="_blank" class="more">更多>></a>
+			</div>
+			<ul class="typenews">
+						<li><a data-href="https://zykqxy.com/imageFiles/leaderCare/20240605083824_158894687683526058383.png" onclick="ldgh(this)" class="active"><p title="杨兴平副省长赴资阳口腔职业学院调研">杨兴平副省长赴资阳口腔职业学院调研</p><time>2024/06/05</time></a></li>
+						<li><a data-href="https://zykqxy.com/imageFiles/leaderCare/20231108154101_354216765724664136670.jpg" onclick="ldgh(this)"><p title="省卫生健康委徐斌主任调研组一行到学院参观调研">省卫生健康委徐斌主任调研组一行到学院参观调研</p><time>2023/11/08</time></a></li>
+						<li><a data-href="https://zykqxy.com/imageFiles/leaderCare/20221229102041_82728559275240849963.JPG" onclick="ldgh(this)"><p title="四川省退役军人事务厅党组书记、厅长鞠波一行到学院调研教育培训工作">四川省退役军人事务厅党组书记、厅长鞠波一行到学院调研教育培训工作</p><time>2022/12/29</time></a></li>
+						<li><a data-href="https://zykqxy.com/imageFiles/leaderCare/20220610151446_610823587343054190.jpg" onclick="ldgh(this)"><p title="四川省委统战部副部长陈泉一行莅临资阳口腔职业学院调研">四川省委统战部副部长陈泉一行莅临资阳口腔职业学院调研</p><time>2022/06/10</time></a></li>
+						<li><a data-href="https://zykqxy.com/imageFiles/leaderCare/20210310150242_104669147529954075333.jpg" onclick="ldgh(this)"><p title="四川省退役军人事务厅党组成员、副厅长陈发清到学院调研">四川省退役军人事务厅党组成员、副厅长陈发清到学院调研</p><time>2021/03/10</time></a></li>
+						<li><a data-href="https://zykqxy.com/imageFiles/leaderCare/20230301090513_13625127745939827.png" onclick="ldgh(this)"><p title="省委教育工委委员，教育厅党组成员、副厅长石静到学院调研指导">省委教育工委委员，教育厅党组成员、副厅长石静到学院调研指导</p><time>2023/03/01</time></a></li>
+			</ul>
+		</div>
+	</div>
+
+				<!-- 交流合作 -->
+					<div id="jlhz" class=" flex-box flex-wrap">
+		<div class="list bb">
+			<div class="btn flex-box space-between">
+				<div class="flex-box">
+					<h3>交流合作</h3>
+				</div>
+				<a href="index-cooperation.html" target="_blank" class="more">更多>></a>
+			</div>
+			<ul class="typenews">
+					<li><a href="/articleDetail/a/a/1699409936865.html" target="_blank"><p title="协同创新  驱动发展——学院开展校企产教联合体创建工作洽谈会">协同创新  驱动发展——学院开展校企产教联合体创建工作洽谈会</p><time>2023/11/08</time></a></li>
+					<li><a href="/articleDetail/7/c/1682055322373.html" target="_blank"><p title="合作以信任·共赢以同仁—资阳口腔职业学院与资阳齿康牙米校企合作签约暨授牌仪式">合作以信任·共赢以同仁—资阳口腔职业学院与资阳齿康牙米校企合作签约暨授牌仪式</p><time>2023/04/21</time></a></li>
+					<li><a href="/articleDetail/9/8/1681183435257.html" target="_blank"><p title="校院合作共育人，协同创新赢未来 ——圣贝医生为资阳口腔职业学院学子授课">校院合作共育人，协同创新赢未来 ——圣贝医生为资阳口腔职业学院学子授课</p><time>2023/04/11</time></a></li>
+					<li><a href="/articleDetail/2/0/1681184109739.html" target="_blank"><p title="紧密合作 共赢未来 ——交流合作部走访企业系列报道">紧密合作 共赢未来 ——交流合作部走访企业系列报道</p><time>2023/04/11</time></a></li>
+					<li><a href="/articleDetail/6/a/1681181075391.html" target="_blank"><p title="校企合作，协同育人 ——交流合作部走访企业系列报道">校企合作，协同育人 ——交流合作部走访企业系列报道</p><time>2023/04/11</time></a></li>
+			</ul>
+		</div>
+	</div>
+
+				<!-- 新媒体 -->
+					<div id="xmt" class=" flex-box flex-wrap">
+		<div class="list bb">
+			<div class="btn flex-box space-between">
+				<div class="flex-box">
+					<h3>新媒体</h3>
+				</div>
+				<a href="index-newMedia.html" target="_blank" class="more">更多>></a>
+			</div>
+			<ul class="typenews">
+					<li><a href="https://mp.weixin.qq.com/s/oRYPXPPo4XF2Bpe4YhKw0A" target="_blank" class="topnew"><img src="img/Wechat.png"><time>2022/12/29</time><p title="坐上时光机，去看看你手机里最舍不得删除的那张照片！">坐上时光机，去看看你手机里最舍不得删除的那张照片！</p><span class="lsoverflow">https://mp.weixin.qq.com/s/oRYPXPPo4XF2Bpe4YhKw0A
+
+
+</span></a></li>
+			</ul>
+		</div>
+	</div>
+
+			</div>
+		</section>
+		<!-- 口腔数据 -->
+		<section id="s3" class="kqsj">
+	<div class="inner">
+		<h3>口腔数据</h3>
+					<ul class="kqsjul flex-box flex-wrap">
+					<li class="flex-box"><div><img src="https://zykqxy.com/imageFiles/oralData/20201129192222_1606648942714.png"></div><div><div class="flex-box space-between"><p>1</p><p>第一所</p></div><p>口腔高等职业学院</p></div></li>
+					<li class="flex-box"><div><img src="https://zykqxy.com/imageFiles/oralData/20201129192244_1606648964785.png"></div><div><div class="flex-box space-between"><p>12</p><p>亿元</p></div><p>总投资</p></div></li>
+					<li class="flex-box"><div><img src="https://zykqxy.com/imageFiles/oralData/20201129192251_1606648971982.png"></div><div><div class="flex-box space-between"><p>20</p><p>万平方米</p></div><p>建筑面积</p></div></li>
+					<li class="flex-box"><div><img src="https://zykqxy.com/imageFiles/oralData/20201129192258_1606648978723.png"></div><div><div class="flex-box space-between"><p>20</p><p>余位</p></div><p>华西专家</p></div></li>
+					<li class="flex-box"><div><img src="https://zykqxy.com/imageFiles/oralData/20201129192305_1606648985780.png"></div><div><div class="flex-box space-between"><p>70</p><p>余间</p></div><p>实验实训室</p></div></li>
+					<li class="flex-box"><div><img src="https://zykqxy.com/imageFiles/oralData/20201129192312_1606648992047.png"></div><div><div class="flex-box space-between"><p>100</p><p>余家</p></div><p>校企合作单位</p></div></li>
+					<li class="flex-box"><div><img src="https://zykqxy.com/imageFiles/oralData/20201129192319_1606648999109.png"></div><div><div class="flex-box space-between"><p>8</p><p>支</p></div><p>学生社团</p></div></li>
+					<li class="flex-box"><div><img src="https://zykqxy.com/imageFiles/oralData/20201129192324_1606649004723.png"></div><div><div class="flex-box space-between"><p>30</p><p>万册</p></div><p>图书馆藏</p></div></li>
+			</ul>
+		<ul id="kqsjnav" class="flex-box flex-center"></ul>
+	</div>
+</section>
+		<!-- 友情链接 -->
+		<section id="s4">
+	<div class="inner">
+		<h3>友情链接</h3>
+		<ul class="flex-box space-between flex-wrap">
+			<li><a href="https://www.sc.gov.cn/" target="_blank"><img src="img/yq6.png"></a></li>
+			<li><a href="https://www.invest.com.cn/" target="_blank"><img src="img/yq1.png"></a></li>
+			<li><a href="https://www.sckqyy.com.cn/" target="_blank"><img src="img/yq2.png"></a></li>
+			<li><a href="http://www.hxdental.cn/" target="_blank"><img src="img/yq3.png"></a></li>
+			<li><a href="http://www.scedu.net/" target="_blank"><img src="img/yq4.png"></a></li>
+		</ul>
+	</div>
+</section>
+		<script>
+			var kqsjul = $('.kqsjul')
+			kqsjul.hide();
+			$(kqsjul[0]).show();
+			if(kqsjul.length>1){
+				for(a=0;a<kqsjul.length;a++){
+					document.getElementById('kqsjnav').innerHTML += '<li onclick="kqsjact(' + a + ')"></li>';
+				}
+			}
+			$($('#kqsjnav li')[0]).addClass('active');
+			function kqsjact(a){
+				kqsjul.hide();
+				$(kqsjul[a]).show();
+				$('#kqsjnav li').removeClass('active');
+				$($('#kqsjnav li')[a]).addClass('active');
+			}
+			
+			function ldgh(obj){
+				$('#ldgh .typenews a').removeClass('active');
+				$(obj).addClass('active');
+				$("#ldgh .imgbox img").attr("src", $("#ldgh .typenews a.active").attr("data-href"));
+			}
+			
+			function moreClick(obj){
+				$(obj).attr("href", $("#s1 .h3chose a.active").attr("data-href"));		
+			}
+			
+			$(function(){
+				// 1、默认选中第一个图片
+				$("#ldgh .imgbox img").attr("src", $("#ldgh .typenews a.active").attr("data-href"));
+				var portalAPIUrl = getPortalAPIUrl();
+				// 2、获首页学院要闻
+				selectIndexNewsList(portalAPIUrl);
+				// 3、获首页公示公告
+				selectIndexNoticeList(portalAPIUrl);
+				// 4、获首页招生动态
+				selectIndexRecruitList(portalAPIUrl);
+			});
+			
+			// 获首页学院要闻
+			function selectIndexNewsList(portalAPIUrl){
+				$.ajax({
+					url: portalAPIUrl+"/article/selectIndexNewsList",
+					data: {
+						secondColumnIdStr: '3,19,26,44'
+					},
+					type: "GET",
+					success:function(result){
+						var liStr = '';
+						var dataList = result.data.newsList;
+						if(dataList.length > 0){
+							$.each(dataList, function(index, item){
+								if(index === 0){
+									var imgs = JSON.parse(item.imgStr);
+									if(imgs.length > 0){
+										liStr += '<li>'+
+													'<a class="topnew" href="'+item.articleDetailUrl+'" target="_blank">'+
+														'<div class="imgbox"><img src="'+imgs[0].showUrl+'"></div>'+
+														'<time>'+item.publishTimeStr+'</time><p title="'+item.title+'">'+item.title+'</p>'+
+														'<span class="lsoverflow">'+item.profile+'</span>'+
+													'</a>'+
+												  '</li>'
+									} else {
+										liStr += '<li class="noimg">'+
+													'<a class="topnew" href="'+item.articleDetailUrl+'" target="_blank">'+
+														'<time>'+item.publishTimeStr+'</time><p title="'+item.title+'">'+item.title+'</p>'+
+														'<span class="lsoverflow">'+item.profile+'</span>'+
+													'</a>'+
+												 '</li>	'
+									}
+								} else {
+									liStr += '<li><a href="'+item.articleDetailUrl+'" target="_blank"><p>'+item.title+'</p><time>'+item.publishTimeStr+'</time></a></li>';
+								}
+							});
+						} else {
+							liStr += '<li><img class="abcenter" src="./img/empty.png" /></li>';
+						}
+						$(".index-news .typenews").empty().append(liStr);
+					}
+				});
+			}
+			
+			// 获首页公示公告
+			function selectIndexNoticeList(portalAPIUrl){
+				$.ajax({
+					url: portalAPIUrl+"/article/selectIndexNoticeList",
+					data: {
+						secondColumnIdStr: '13,20,27'
+					},
+					type: "GET",
+					success:function(result){
+						var liStr = '';
+						var dataList = result.data.noticeList;
+						if(dataList.length > 0){
+							$.each(dataList, function(index, item){
+								if(index === 0){
+									var imgs = JSON.parse(item.imgStr);
+									if(imgs.length > 0){
+										liStr += '<li>'+
+													'<a class="topnew" href="'+item.articleDetailUrl+'" target="_blank">'+
+														'<div class="imgbox"><img src="'+imgs[0].showUrl+'"></div>'+
+														'<time>'+item.publishTimeStr+'</time><p title="'+item.title+'">'+item.title+'</p>'+
+														'<span class="lsoverflow">'+item.profile+'</span>'+
+													'</a>'+
+												  '</li>'
+									} else {
+										liStr += '<li class="noimg">'+
+													'<a class="topnew" href="'+item.articleDetailUrl+'" target="_blank">'+
+														'<time>'+item.publishTimeStr+'</time><p title="'+item.title+'">'+item.title+'</p>'+
+														'<span class="lsoverflow">'+item.profile+'</span>'+
+													'</a>'+
+												 '</li>	'
+									}
+								} else {
+									liStr += '<li><a href="'+item.articleDetailUrl+'" target="_blank"><p>'+item.title+'</p><time>'+item.publishTimeStr+'</time></a></li>';
+								}
+							});
+						} else {
+							liStr += '<li><img class="abcenter" src="./img/empty.png" /></li>';
+						}
+						$(".index-notice .typenews").empty().append(liStr);
+					}
+				});
+			}
+			
+			// 获首页招生动态
+			function selectIndexRecruitList(portalAPIUrl){
+				$.ajax({
+					url: portalAPIUrl+"/article/selectIndexRecruitList",
+					data: {
+						secondColumnIdStr: '33'
+					},
+					type: "GET",
+					success:function(result){
+						var liStr = '';
+						var dataList = result.data.recruitList;
+						if(dataList.length > 0){
+							$.each(dataList, function(index, item){
+								liStr += '<li><a href="'+item.articleDetailUrl+'" target="_blank"><p title="'+item.title+'" class="lsoverflow"><time>'+item.publishTimeStr+'</time>'+item.title+'</p></a></li>';
+							});
+						} else {
+							liStr += '<li><img class="abcenter" src="./img/empty.png" /></li>';
+						}
+						$(".index-recruit .typenews").empty().append(liStr);
+					}
+				});
+			}
+		</script>
+		<footer></footer>
+	</body>
+</html>

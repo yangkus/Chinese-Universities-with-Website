@@ -1,0 +1,1669 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>大连装备制造职业技术学院</title>
+<meta name="keywords" content="官方网站,招生平台,航海学院,新官方网站,汽车工程系,机械工程系,电气工程系,后勤处,装备学院,装备制造学院,大连装备,大连装备学院">
+<meta name="description" content="官方网站,招生平台,航海学院,新官方网站,汽车工程系,机械工程系,电气工程系,后勤处,装备学院,装备制造学院,大连装备,大连装备学院">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<link rel="stylesheet" type="text/css" href="/template/pc/cn2016/css/index.css">
+<link rel="stylesheet" type="text/css" href="/template/pc/cn2016/css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="/template/pc/cn2016/css/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="/template/pc/cn2016/css/style.css" />
+<!--[if IE]>
+<script type="text/javascript" src="/template/pc/cn2016/js/html5.js"></script>
+<![endif]-->
+<link type="text/css" href="/template/pc/cn2016/css/bannerstyle.css" rel="stylesheet"/>
+<script type="text/javascript" src="/template/pc/cn2016/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/template/pc/cn2016/js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="/template/pc/cn2016/js/jquery.touchSlider.js"></script>
+
+<script src="/template/pc/cn2016/js/script.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	$dragBln = false;
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 5000);
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},5000);
+	});
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+	});
+	$(".nav").click(function(){
+		$("nav ul").toggleClass("active_nav")
+	});
+	$(".serbtn").click(function(){
+		$(this).toggleClass("search1-x")
+		$(".ser-con").toggleClass("active_nav")
+	});
+	$(".search-wap").click(function(){
+		$(this).toggleClass("search-wapx")
+		$(".search-wapform").toggleClass("active_nav")
+	});
+});
+
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.inactive').click(function(){
+			if($(this).siblings('ul').css('display')=='none'){
+				$(this).parent('li').siblings('li').removeClass('inactives');
+				$(this).addClass('inactives');
+				$(this).siblings('ul').slideDown(100).children('li');
+				if($(this).parents('li').siblings('li').children('ul').css('display')=='block'){
+					$(this).parents('li').siblings('li').children('ul').parent('li').children('a').removeClass('inactives');
+					$(this).parents('li').siblings('li').children('ul').slideUp(100);
+
+				}
+			}else{
+				//控制自身变成+号
+				$(this).removeClass('inactives');
+				//控制自身菜单下子菜单隐藏
+				$(this).siblings('ul').slideUp(100);
+				//控制自身子菜单变成+号
+				$(this).siblings('ul').children('li').children('ul').parent('li').children('a').addClass('inactives');
+				//控制自身菜单下子菜单隐藏
+				$(this).siblings('ul').children('li').children('ul').slideUp(100);
+
+				//控制同级菜单只保持一个是展开的（-号显示）
+				$(this).siblings('ul').children('li').children('a').removeClass('inactives');
+			}
+		})
+	});
+	</script>
+
+<style>
+	.active_nav{display: block!important; transition: all 2s;}
+	.ser-con{display: none;}
+	
+</style>
+</head>
+<body style="background: #fff;">
+<header>
+<div class="pageWrap">
+	<div class="daima">学校代码：14227</div>
+	
+	<div class="headerItem headerItemLan">
+				<a href="http://218.24.131.78:8008"target="_blank"">教务管理系统</a> | <a href="/?about/229.html">内部质量</a> | <!--<a href="/?Mailto:595782246@qq.com.html">院长信箱</a> |--> <a href="/?about/230.html">联系我们</a>
+	</div>
+	<div class="big-link open pc-open" id="open" data-reveal-id="myModal" data-animation="fade" style="background: #498fc3;color: #fff; padding: 7px 11px;font-size: 14px; margin-left: 11px;float: right;margin-top: 7px;border-radius: 4px;cursor:pointer;">
+          AD
+     </div>
+	<!--<div class="headerItem headerItemLogin">
+		<a alt="/" href="">中文</a>|<a alt="" href="##">EN</a>
+	</div>-->
+	<!--	<div class="search1">
+</div>
+-->
+<form class="search"  method="post"  action="/search/">
+ 	<input type="hidden"   name='searchcol' value="C_Content,zauthor" />
+	<input class="ser-con" type="text" name="keys" value="" placeholder="请输入搜索内容">
+	<div class="serbtn" value=""></div>
+</form>
+
+</div>
+</header>
+
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+	var window_height = $(window).height();
+    var window_width = $(window).width();
+
+		// 获取导航栏到屏幕顶部的距离
+		var oTop = $(".nav-pc").offset().top;
+		//获取导航栏的高度，此高度用于保证内容的平滑过渡
+		var martop = $('.nav-pc').outerHeight();
+
+		var sTop = 48;
+		// 监听页面的滚动
+		$(window).scroll(function(){
+			// 获取页面向上滚动的距离
+			sTop = $(this).scrollTop();
+			// 当导航栏到达屏幕顶端
+			if (sTop >= oTop) {
+				// 修改导航栏position属性，使之固定在屏幕顶端
+				$(".nav-pc").css({ "position": "fixed","top": "0" ,"left":"0","z-index": "9999"});
+				// 修改内容的margin-top值，保证平滑过渡
+				$(".focusbox").css({ "margin-top": "120px"});
+			} else {
+				// 当导航栏脱离屏幕顶端时，回复原来的属性
+				$(".nav-pc").css({ "position": "static"});
+				$(".focusbox").css({ "margin-top":"0"});
+			}
+		});
+	
+	})
+
+</script>	
+
+<div style="background: url(/upload/news/1640950684956528.png) center no-repeat; width: 100%;" class="nav-pc">
+	<div class="head" id="head">
+
+		<a name="top"></a>
+		<div class="logo lf">
+			<a href="/">
+				<img src="/template/pc/cn2016/picture/logo_left.png" class="logo-left" style="float: left;">
+				<img src="/template/pc/cn2016/picture/logo_right.png" style="float: left;margin-left: 10px;">
+			</a>
+		</div>
+		<div class="nav rg">
+			<ul class="nav_pc">
+			<li><a class="a1 a1a" href="/">首页</a></li>
+			
+				<li>
+					<a class="a1 a1a" href="/?list/1.html">学院概况</a>
+					<div class="div1 ">
+						<div class="p1">
+						 
+							<a href="/?about/2.html">学院简介</a>
+							 
+							<a href="/?about/3.html">学院领导</a>
+							 
+							<a href="/?about/4.html">机构设置</a>
+							 
+							<a href="/?list/5.html">学院大事记</a>
+							 
+							<a href="/?about/6.html">学院荣誉</a>
+							 
+							<a href="/?list/7.html">校园风光</a>
+							
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				
+				<li>
+					<a class="a1 a1a" href="/?list/8.html">党群建设</a>
+					<div class="div1 ">
+						<div class="p1">
+						 
+							<a href="/?list/9.html">党建工作</a>
+							 
+							<a href="/?list/10.html">基层支部</a>
+							 
+							<a href="/?list/11.html">团学工作</a>
+							 
+							<a href="/?list/12.html">学院工会</a>
+							
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				
+				<li>
+					<a class="a1 a1a" href="/?list/13.html">教学管理</a>
+					<div class="div1 ">
+						<div class="p1">
+						 
+							<a href="/?list/76.html">教学公告</a>
+							 
+							<a href="/?list/77.html">教研教改</a>
+							 
+							<a href="/?list/78.html">教学管理</a>
+							 
+							<a href="/?list/79.html">学籍管理</a>
+							 
+							<a href="/?list/80.html">考试管理</a>
+							 
+							<a href="/?list/83.html">管理水平提升行动计划</a>
+							 
+							<a href="/?list/84.html">实验室安全管理</a>
+							 
+							<a href="/?list/85.html">师生竞赛</a>
+							 
+							<a href="/?list/88.html">质量管理</a>
+							 
+							<a href="/?list/89.html">图  书  馆</a>
+							 
+							<a href="/?list/95.html">下载专区</a>
+							
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				
+				<li>
+					<a class="a1 a1a" href="/?list/16.html">系部设置</a>
+					<div class="div1 ">
+						<div class="p1">
+						 
+							<a href="/?list/17.html">机械工程系</a>
+							 
+							<a href="/?list/18.html">电气工程系</a>
+							 
+							<a href="/?list/19.html">汽车工程系</a>
+							 
+							<a href="/?list/21.html">管理工程系</a>
+							 
+							<a href="/?list/237.html">信息工程系</a>
+							 
+							<a href="/?list/22.html">基础教学部</a>
+							 
+							<a href="/?list/23.html">思政教学部</a>
+							
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				
+				<li>
+					<a class="a1 a1a" href="/?list/24.html">学生工作</a>
+					<div class="div1 ">
+						<div class="p1">
+						 
+							<a href="/?list/25.html">通知通告</a>
+							 
+							<a href="/?list/26.html">学生管理</a>
+							 
+							<a href="/?list/27.html">资助管理</a>
+							 
+							<a href="/?list/28.html">武装工作</a>
+							 
+							<a href="/?list/29.html">保卫建设</a>
+							 
+							<a href="/?list/30.html">光  荣  榜</a>
+							 
+							<a href="/?list/31.html">公寓管理</a>
+							 
+							<a href="/?list/32.html">团 委</a>
+							 
+							<a href="/?list/33.html">学生社团</a>
+							
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				
+				<li>
+					<a class="a1 a1a" href="/?list/34.html">招生就业</a>
+					<div class="div1 ">
+						<div class="p1">
+						 
+							<a href="http://zsb.dlemcedu.cn/"target="_blank"">招生信息</a>
+							 
+							<a href="/?list/35.html">就业动态</a>
+							 
+							<a href="/?list/38.html">招聘信息</a>
+							 
+							<a href="/?list/45.html">毕业生风采</a>
+							 
+							<a href="/?list/234.html">档案查询</a>
+							
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				
+				<li>
+					<a class="a1 a1a" href="/?list/46.html">技能培训</a>
+					<div class="div1 ">
+						<div class="p1">
+						 
+							<a href="/?list/47.html">技能考试</a>
+							 
+							<a href="/?list/48.html">公共培训</a>
+							
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				
+
+				<div class="clear"></div>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<!--移动端导航开始-->
+<style>
+	/*.search-wap{display: inline-block;margin-right: 16px;height: 20px;width: 20px;background: url(/template/pc/cn2016/images/search-wap.png) center;}*/
+	.search-wapx{background: url(/template/pc/cn2016/images/search-wapx.png) center;}
+	.moblie_head{position: relative;}
+    .search-wapform{display: none;padding: 25px 5%;width: 100%;}
+	.ser-con1{width: 78%;height: 36px;float: left;line-height: 36px;font-size: 14px;    border: 1px solid #498fc3;padding-left: 10px;}
+	.serbtn1{width: 22%;height: 36px;float: left;line-height: 36px;font-size: 14px;color: #fff;background: #1883d0;border: 0;}
+	.ser-con1 input[type=text] {color: #333;font-size: 14px;}
+	
+	@media screen and (max-width: 800px){
+	.search-wapform{display: block;padding: 5px 5% 35px;width: 100%;}	
+	.ser-con1{width: 78%;height: 36px;float: left;line-height: 36px;font-size: 14px; color: :#fff;  border: 1px solid #ffffff;background-color: #1883d0;padding-left: 10px;}
+	.serbtn1{width: 22%;height: 36px;float: left;line-height: 36px;font-size: 14px;color: #1883d0;background: #ffffff;border: 0;border-radius: 0;}
+    input::-webkit-input-placeholder { /* WebKit browsers */color: #ffffff; } 
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #ffffff; } 
+	input::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #ffffff; } 
+	input:-ms-input-placeholder { /* Internet Explorer 10+ */ color: #ffffff; } 
+		
+	}
+	
+	.ser-con1 input[type=text] {color: #333;font-size: 14px;}
+	.reveal-modal {
+    top: 100px;
+    left: 50%;
+    margin-left: -300px;
+    width: 520px;
+    background: #eee url(../images/modal-gloss.png) no-repeat -200px -80px;
+    position: absolute;
+    z-index: 11111112;
+    padding: 30px 40px 34px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -box-shadow: 0 0 10px rgba(0,0,0,.4);
+	position: fixed;
+}
+	.btn-close {
+    font-size: 18px;
+    color: #888;
+    position: absolute;
+    right: 85px;
+    top: 30px;
+    z-index: 99;
+}
+	[class^="ti-"], [class*=" ti-"] {
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+	.xx {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    background: rgba(0,0,0,.8);
+    top: 0;
+    left: 0;
+    visibility: visible;
+	z-index: 11111111;
+	
+}
+	.guanggao{margin-top: 25px; z-index: 111111111;max-width: 100%;}
+	.zwzt{font-size: 20px;color: #333;}
+	@media screen and (max-width: 800px){
+	.reveal-modal {
+    width: 90% !important;
+    margin-left: 5% !important;
+		left: 0;
+		padding: 5%;
+	}
+		
+		.xx {
+    font-size: 15px !important;
+    line-height: 1.5;
+}
+		.zwzt{font-size: 15px;}
+		.pc-open{display: none;}
+		.btn-close{right: 5%!important;top: 7%!important;}
+		.guanggao{margin-top: 15px; z-index: 111111111;max-width: 100%;}
+	}
+	
+	</style>
+	
+
+<script>
+$(document).ready(function(){
+	 $("#close").click(function(){
+      $("#myModal").hide( );
+      $(".reveal-modal-bg").hide( );
+      $(".xx").hide( );
+    });
+    $("#open").click(function(){
+      $("#myModal").show( );
+      $(".xx").show( );
+    });
+	 $("#open1").click(function(){
+      $("#myModal").show( );
+      $(".xx").show( );
+    });
+})
+
+</script>
+
+	
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+	var window_height = $(window).height();
+    var window_width = $(window).width();
+
+		// 获取导航栏到屏幕顶部的距离
+		var oTop = $(".moblie_head").offset().top;
+		//获取导航栏的高度，此高度用于保证内容的平滑过渡
+		var martop = $('.moblie_head').outerHeight();
+
+		var sTop = 40;
+		// 监听页面的滚动
+		$(window).scroll(function(){
+			// 获取页面向上滚动的距离
+			sTop = $(this).scrollTop();
+			// 当导航栏到达屏幕顶端
+			if (sTop >= oTop) {
+				// 修改导航栏position属性，使之固定在屏幕顶端
+				$(".moblie_head").css({ "position": "fixed","top": "0" ,"left":"0","z-index": "9999"});
+				// 修改内容的margin-top值，保证平滑过渡
+				$(".main_visual").css({ "margin-top": "60px"});
+			} else {
+				// 当导航栏脱离屏幕顶端时，回复原来的属性
+				$(".moblie_head").css({ "position": "relative"});
+				$(".main_visual").css({ "margin-top":"0"});
+			}
+		});
+	
+	})
+
+</script>	
+	
+	
+	
+<div class="moblie_head" >
+	<div class="lf">
+		<a href="/">
+		<img src="/template/pc/cn2016/picture/logo_left.png">
+		<img src="/template/pc/cn2016/picture/logo_rightwap.png">
+		</a>
+	</div>
+	
+	<div class="rg">
+<!--	<div class="big-link open1" id="open1" data-reveal-id="myModal" data-animation="fade" style="color: #333; padding: 0px 2px;font-size: 13px;display: inline-block;    position: relative;
+    top: -4px;
+    margin-right: 10px;
+    border: solid 1px #777;">
+          AD
+     </div>-->
+		<div class="search-wap">
+			
+		</div>
+		<a href="javascript:;" class="a_js">
+		<img src="/template/pc/cn2016/picture/1_07.png">
+		</a>
+	</div>
+	<div class="clear"></div>
+	<!--
+	<form class="search-wapform"  method="post"  action="/search/">
+				<input type="hidden"   name='searchcol' value="C_Content,zauthor" />
+				<input class="ser-con1" type="text" name="keys" value="" placeholder="请输入搜索内容">
+				<input type='submit'  class="serbtn1" value="搜索"/>
+		</form>
+	-->
+		
+</div>
+
+<div class="a_txt">
+
+	<div class="div1 a_closed"></div>
+	<div class="div2">
+		<a href="javascript:;" class="a_closed">
+		<img src="/template/pc/cn2016/picture/close.png" width="22"></a>
+	</div>
+	<div class="div3">
+		<ul>
+			<li>
+				<a href="/">首页</a>
+			</li>
+			
+			<li>
+				<a href="/?list/1.html">学院概况 </a>
+				<span  class="a_js2"></span>
+				<div class="a_txt2">
+					 
+						<a href="/?about/2.html">学院简介</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?about/3.html">学院领导</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?about/4.html">机构设置</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/5.html">学院大事记</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?about/6.html">学院荣誉</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/7.html">校园风光</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					
+				</div>
+			</li>
+			
+			<li>
+				<a href="/?list/8.html">党群建设 </a>
+				<span  class="a_js2"></span>
+				<div class="a_txt2">
+					 
+						<a href="/?list/9.html">党建工作</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/49.html">学习十九大精神</a>
+								 
+									<a href="/?about/50.html">组织概况</a>
+								 
+									<a href="/?list/51.html">规章制度</a>
+								 
+									<a href="/?list/52.html">党建动态</a>
+								 
+									<a href="/?list/53.html">学习教育</a>
+								 
+									<a href="/?list/54.html">党务公开</a>
+								 
+									<a href="/?list/55.html">通      知</a>
+								
+							</div>
+					 
+						<a href="/?list/10.html">基层支部</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/58.html">行政管理联合党支部</a>
+								 
+									<a href="/?list/59.html">教学管理联合党支部</a>
+								 
+									<a href="/?list/60.html">机械工程系党支部</a>
+								 
+									<a href="/?list/61.html">电气工程系党支部</a>
+								 
+									<a href="/?list/62.html">汽车工程系党支部</a>
+								 
+									<a href="/?list/63.html">管理工程系党支部</a>
+								 
+									<a href="/?list/253.html">信息工程系党支部</a>
+								
+							</div>
+					 
+						<a href="/?list/11.html">团学工作</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/65.html">部门简介</a>
+								 
+									<a href="/?list/66.html">新闻公告</a>
+								 
+									<a href="/?list/67.html">团学组织</a>
+								 
+									<a href="/?list/68.html">团学动态</a>
+								 
+									<a href="/?list/69.html">学习园地</a>
+								 
+									<a href="/?list/70.html">光  荣  榜</a>
+								
+							</div>
+					 
+						<a href="/?list/12.html">学院工会</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/71.html">公示公告</a>
+								 
+									<a href="/?list/72.html">资讯报道</a>
+								 
+									<a href="/?list/73.html">资料下载</a>
+								 
+									<a href="/?list/74.html">政策法规</a>
+								 
+									<a href="/?list/75.html">工会活动</a>
+								
+							</div>
+					
+				</div>
+			</li>
+			
+			<li>
+				<a href="/?list/13.html">教学管理 </a>
+				<span  class="a_js2"></span>
+				<div class="a_txt2">
+					 
+						<a href="/?list/76.html">教学公告</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/77.html">教研教改</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/78.html">教学管理</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/79.html">学籍管理</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/80.html">考试管理</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/81.html">考试安排</a>
+								 
+									<a href="/?list/82.html">考试资讯</a>
+								
+							</div>
+					 
+						<a href="/?list/83.html">管理水平提升行动计划</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/84.html">实验室安全管理</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/85.html">师生竞赛</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/86.html">教师比赛</a>
+								 
+									<a href="/?list/87.html">学生比赛</a>
+								
+							</div>
+					 
+						<a href="/?list/88.html">质量管理</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/89.html">图  书  馆</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/90.html">公共检索</a>
+								 
+									<a href="/?list/91.html">读者指南</a>
+								 
+									<a href="/?list/92.html">相关活动</a>
+								 
+									<a href="/?list/93.html">图书管理</a>
+								 
+									<a href="/?list/94.html">图书资源</a>
+								
+							</div>
+					 
+						<a href="/?list/95.html">下载专区</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					
+				</div>
+			</li>
+			
+			<li>
+				<a href="/?list/16.html">系部设置 </a>
+				<span  class="a_js2"></span>
+				<div class="a_txt2">
+					 
+						<a href="/?list/17.html">机械工程系</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/96.html">系部简介</a>
+								 
+									<a href="/?list/100.html">教育教学</a>
+								 
+									<a href="/?list/101.html">党建工作</a>
+								 
+									<a href="/?list/104.html">学生工作</a>
+								 
+									<a href="/?list/108.html">就业之窗</a>
+								
+							</div>
+					 
+						<a href="/?list/18.html">电气工程系</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/111.html">系部简介</a>
+								 
+									<a href="/?list/114.html">教育教学</a>
+								 
+									<a href="/?list/115.html">党建工作</a>
+								 
+									<a href="/?list/118.html">学生工作</a>
+								 
+									<a href="/?list/121.html">就业之窗</a>
+								
+							</div>
+					 
+						<a href="/?list/19.html">汽车工程系</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/144.html">系部简介</a>
+								 
+									<a href="/?list/150.html">党建工作</a>
+								 
+									<a href="/?list/154.html">教学工作</a>
+								 
+									<a href="/?list/157.html">学生活动</a>
+								 
+									<a href="/?list/162.html">就业导航</a>
+								
+							</div>
+					 
+						<a href="/?list/21.html">管理工程系</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/166.html">系部简介</a>
+								 
+									<a href="/?list/170.html">教学动态</a>
+								 
+									<a href="/?list/171.html">党建工作</a>
+								 
+									<a href="/?list/174.html">学生工作</a>
+								 
+									<a href="/?list/175.html">就业创业</a>
+								
+							</div>
+					 
+						<a href="/?list/237.html">信息工程系</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/238.html">系部简介</a>
+								 
+									<a href="/?list/243.html">党建工作</a>
+								 
+									<a href="/?list/246.html">学生工作</a>
+								 
+									<a href="/?list/250.html">就业之窗</a>
+								
+							</div>
+					 
+						<a href="/?list/22.html">基础教学部</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/178.html">系部简介</a>
+								 
+									<a href="/?about/179.html">教师介绍</a>
+								 
+									<a href="/?list/180.html">教学科研</a>
+								 
+									<a href="/?list/181.html">网络安全</a>
+								 
+									<a href="/?list/182.html">部门活动</a>
+								 
+									<a href="/?list/183.html">心灵之窗</a>
+								
+							</div>
+					 
+						<a href="/?list/23.html">思政教学部</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/184.html">系部介绍</a>
+								 
+									<a href="/?about/185.html">教师介绍</a>
+								 
+									<a href="/?list/186.html">文件精神</a>
+								 
+									<a href="/?list/187.html">教学科研</a>
+								 
+									<a href="/?list/188.html">实践教学</a>
+								
+							</div>
+					
+				</div>
+			</li>
+			
+			<li>
+				<a href="/?list/24.html">学生工作 </a>
+				<span  class="a_js2"></span>
+				<div class="a_txt2">
+					 
+						<a href="/?list/25.html">通知通告</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/26.html">学生管理</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/27.html">资助管理</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/189.html">奖助学金</a>
+								 
+									<a href="/?list/190.html">助学贷款</a>
+								 
+									<a href="/?list/191.html">勤工助学</a>
+								
+							</div>
+					 
+						<a href="/?list/28.html">武装工作</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/29.html">保卫建设</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/30.html">光  荣  榜</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/31.html">公寓管理</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/32.html">团 委</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/33.html">学生社团</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								 
+									<a href="/?list/192.html">社团活动</a>
+								
+							</div>
+					
+				</div>
+			</li>
+			
+			<li>
+				<a href="/?list/34.html">招生就业 </a>
+				<span  class="a_js2"></span>
+				<div class="a_txt2">
+					 
+						<a href="http://zsb.dlemcedu.cn/"target="_blank"">招生信息</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/35.html">就业动态</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/38.html">招聘信息</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/45.html">毕业生风采</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/234.html">档案查询</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					
+				</div>
+			</li>
+			
+			<li>
+				<a href="/?list/46.html">技能培训 </a>
+				<span  class="a_js2"></span>
+				<div class="a_txt2">
+					 
+						<a href="/?list/47.html">技能考试</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					 
+						<a href="/?list/48.html">公共培训</a>
+							<span  class="a_js3"></span>
+							<div class="a_txt3">
+								
+							</div>
+					
+				</div>
+			</li>
+			
+			
+			<div class="clear"></div>
+		</ul>
+	</div>
+</div>
+<!--移动端导航结束--> 
+<style type="text/css">
+
+.focusbox{position:relative;overflow:hidden;zoom:1;}
+#fullbanner{width:1280px;height:550px;margin:auto;position:relative;}
+#fullbanner li a{display:block;width:1280px;height:550px;overflow:hidden;}
+#fullbanner img{width:1280px;height:550px;}
+#fullbanner ul{width:1280px;height:550px;}
+#fullbanner .wrappic{overflow:visible;position:absolute;}
+#fullbanner .next, #fullbanner .prev{filter:alpha(Opacity=70);opacity:.7;position:absolute;top:50%;margin-top:-25px;margin-left:0px;background-color:#303030;z-index:3;}
+#fullbanner .next:hover, #fullbanner .prev:hover{background-color:#1883d0;}
+#fullbanner .next{margin:-25px 0px 0 0;right:0;}
+#fullbanner .mask-left, #fullbanner .mask-right, #fullbanner .plan{background:#fff;z-index:1;position:absolute;top:0;left:0;width:1280px;height:550px;overflow:hidden;left:1920px;}
+#fullbanner .mask-right, #fullbanner .mask-left{z-index:4;left:-1280px;filter:alpha(Opacity=50);opacity:.5;background:#fff;overflow:hidden;}
+#fullbanner .mask-right{left:1280px;}
+
+.arrow-left,.arrow-right{background:url(/template/pc/cn2016/images/icon-sd26986d847.png) no-repeat;}
+.arrow-left{background-position:15px 12px;height:50px;width:50px;}
+.arrow-left:hover{background-position:-45px 12px;}
+.arrow-right{background-position:-103px 12px;height:50px;width:50px;}
+.arrow-right:hover{background-position:-163px 12px;}
+	.focusbox{display: block;}
+	.main_visual{display: none;}
+	
+@media (max-width: 800px) {
+#fullbanner{width:100vw;height:180px;margin:auto;position:relative;}
+#fullbanner li a{display:block;width:100vw;height:180px;overflow:hidden;}
+#fullbanner img{width:100vw;height:180px;}
+#fullbanner ul{width:100vw;height:180px;}
+#fullbanner .wrappic{overflow:visible;position:absolute;}
+#fullbanner .next, #fullbanner .prev{filter:alpha(Opacity=70);opacity:.7;position:absolute;top:50%;margin-top:-25px;margin-left:0px;background-color:#303030;z-index:3;}
+#fullbanner .next:hover, #fullbanner .prev:hover{background-color:#1883d0;}
+#fullbanner .next{margin:-25px 0px 0 0;right:0;}
+#fullbanner .mask-left, #fullbanner .mask-right, #fullbanner .plan{background:#fff;z-index:1;position:absolute;top:0;left:0;width:100vw;height:400px;overflow:hidden;left:100%;}
+#fullbanner .mask-right, #fullbanner .mask-left{z-index:4;left:-100vw;filter:alpha(Opacity=50);opacity:.5;background:#fff;overflow:hidden;}
+#fullbanner .mask-right{left:100vw;}
+	.focusbox{display: none;}
+	.main_visual{display: block;}
+	
+	}
+	div.flicking_con1{position:absolute;bottom: 30px;left:50%;z-index:999;height:21px;text-align: center;width: 200px;margin-left: -100px;}
+div.flicking_con1 a{width:21px;height:21px;margin:0;padding:0;background:url('/template/pc/cn2016/images/btn_main_img.png') 0 0 no-repeat;display:inline-block;text-indent:-1000px}
+div.flicking_con1 a.on1{background-position:0 -21px}
+	
+</style>
+<script src="/template/pc/cn2016/js/jquery.foucs.js" type="text/javascript"></script>
+<!--<script type="text/javascript">
+$(document).ready(function(){
+	$dragBln = false;
+	$(".wrappic").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $(".prev"),
+		btn_next : $(".next"),
+		paging : $(".flicking_con1 a"),
+		counter : function (e){
+			$(".flicking_con1 a").removeClass("on1").eq(e.current-1).addClass("on1");
+		}
+	});
+});
+
+</script>-->
+<div class="focusbox" >
+	<div id="fullbanner">
+	<div class="flicking_con1">
+	
+		<a href="#"  class="on1" ></a>
+		
+		<a href="#" ></a>
+		
+		<a href="#" ></a>
+		
+		<a href="#" ></a>
+		
+		<a href="#" ></a>
+		
+		<a href="#" ></a>
+		
+	
+	</div>
+		<div class="wrappic">
+			<ul>
+			
+				<li class="plan"><a href="" target="_blank"><img  src="/upload/slide/1571358554792474.jpg" alt="" /></a></li>
+				
+				<li class="plan"><a href="" target="_blank"><img  src="/upload/slide/1683689178223520.jpg" alt="" /></a></li>
+				
+				<li class="plan"><a href="" target="_blank"><img  src="/upload/slide/1694480436122084.jpg" alt="" /></a></li>
+				
+				<li class="plan"><a href="" target="_blank"><img  src="/upload/slide/1717657769231406.jpg" alt="" /></a></li>
+				
+				<li class="plan"><a href="" target="_blank"><img  src="/upload/slide/1717660823445753.jpg" alt="" /></a></li>
+				
+				<li class="plan"><a href="" target="_blank"><img  src="/upload/slide/1719801631836446.jpg" alt="" /></a></li>
+				
+				
+			</ul>
+		</div>
+		
+		<div class="helper">
+			<div class="mask-left"></div>
+			<div class="mask-right"></div>
+			<a href="javascript:void();" class="prev arrow-left"></a>
+			<a href="javascript:void();" class="next arrow-right"></a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$.foucs({
+		direction: 'right'
+	});
+});
+
+	
+	//返回顶部的js
+$(function(){
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function () {
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>100){
+                    $("#toTop").fadeIn(1500);
+                }
+                else
+                {
+                    $("#toTop").fadeOut(1500);
+                }
+            });
+            //当点击跳转链接后，回到页面顶部位置
+            $("#toTop").click(function(){
+                $('body,html').animate({scrollTop:0},1000);
+                return false;
+            });
+        });
+    });
+</script>
+
+<div class="main_visual">
+	<div class="flicking_con">
+	
+		<a href="#"></a>
+		
+		<a href="#"></a>
+		
+		<a href="#"></a>
+		
+		<a href="#"></a>
+		
+		<a href="#"></a>
+		
+		<a href="#"></a>
+		
+	
+	</div>
+	<div class="main_image">
+	<img src="/template/pc/cn2016/picture/kong.png">
+		<ul>
+		
+		<!--<span style="background:url('/upload/slide/1571358554792474.jpg') center top no-repeat;background-size: auto 100%;">-->
+			<li><a href=""><img src="/upload/slide/1571358554792474.jpg"></a></li>
+			
+		<!--<span style="background:url('/upload/slide/1683689178223520.jpg') center top no-repeat;background-size: auto 100%;">-->
+			<li><a href=""><img src="/upload/slide/1683689178223520.jpg"></a></li>
+			
+		<!--<span style="background:url('/upload/slide/1694480436122084.jpg') center top no-repeat;background-size: auto 100%;">-->
+			<li><a href=""><img src="/upload/slide/1694480436122084.jpg"></a></li>
+			
+		<!--<span style="background:url('/upload/slide/1717657769231406.jpg') center top no-repeat;background-size: auto 100%;">-->
+			<li><a href=""><img src="/upload/slide/1717657769231406.jpg"></a></li>
+			
+		<!--<span style="background:url('/upload/slide/1717660823445753.jpg') center top no-repeat;background-size: auto 100%;">-->
+			<li><a href=""><img src="/upload/slide/1717660823445753.jpg"></a></li>
+			
+		<!--<span style="background:url('/upload/slide/1719801631836446.jpg') center top no-repeat;background-size: auto 100%;">-->
+			<li><a href=""><img src="/upload/slide/1719801631836446.jpg"></a></li>
+			
+		
+		</ul>
+		<a href="javascript:;" id="btn_prev"></a>
+		<a href="javascript:;" id="btn_next"></a>
+
+	</div>
+</div>
+
+
+
+<section class="info" >
+<div class="pageWrap">
+	<div class="info-con info-con1">
+		
+		<div class="info-right">
+		
+			<div class="section-title pc">
+							<i></i>招生专栏 / <span>Enrollment Column</span>
+				<a href="/?list/199.html" alt="">更多&gt;</a>
+			</div>
+			
+			<ul class="info-right-icon pc">
+			
+				<li><a href="http://zsxt.yiwu2016.com/"target="_blank""><div class="info-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-1.png" alt=""></div><span>单招报名</span></a></li>
+			
+				<li><a href="http://zsxt.yiwu2016.com/"target="_blank""><div class="info-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-2.png" alt=""></div><span>注册报名</span></a></li>
+			
+				<li><a href="http://zsb.dlemcedu.cn/?about/4.html"target="_blank""><div class="info-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-3.png" alt=""></div><span>预录查询</span></a></li>
+			
+				<li><a href="http://zsxt.yiwu2016.com/"target="_blank""><div class="info-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-4.png" alt=""></div><span>录取查询</span></a></li>
+			
+				<li><a href="http://zsxt.yiwu2016.com/"target="_blank""><div class="info-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-5.png" alt=""></div><span>在线缴费</span></a></li>
+			
+				<li><a href="http://zsb.dlemcedu.cn/"target="_blank""><div class="info-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-6.png" alt=""></div><span>招生信息</span></a></li>
+			
+				
+				<li class="wap"><a href="http://zsxt.yiwu2016.com/admin/login.php"target="_blank""><div class="info-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-kj1.png" alt=""></div><span>招生管理</span></a></li>
+				
+				
+				<li class="wap"><a href="http://59.46.137.138:8088/"target="_blank""><div class="info-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-kj1.png" alt=""></div><span>成绩查询</span></a></li>
+				
+				<div style="clear: both;"></div>
+			</ul>
+			
+			<link href="/template/pc/cn2016/css1/owl.carousel.css" type="text/css" rel="stylesheet" />
+			<link href="/template/pc/cn2016/css1/owl.theme.css" type="text/css" rel="stylesheet" />
+			
+			<script type="text/javascript" src="/template/pc/cn2016/js1/owl.carousel.js"></script> 
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$("#owl-demo").owlCarousel({
+						items : 4,
+						lazyLoad : true,
+						navigation : true
+					});
+				});
+				</script>
+				<div class="wap owl-carousel" id="owl-demo">
+			<ul class="info-right-icon item">
+				
+				<li class=""><a href="http://zsxt.yiwu2016.com/"target="_blank""><div class="info-right-icon-kj info-right-icon-kj-1"><img src="/template/pc/cn2016/picture/icon-1.png" alt=""></div><span>单招报名</span></a></li>
+				
+				
+				<li class=""><a href="http://zsxt.yiwu2016.com/"target="_blank""><div class="info-right-icon-kj info-right-icon-kj-2"><img src="/template/pc/cn2016/picture/icon-2.png" alt=""></div><span>注册报名</span></a></li>
+				
+				
+				<li class=""><a href="http://zsb.dlemcedu.cn/?about/4.html"target="_blank""><div class="info-right-icon-kj info-right-icon-kj-3"><img src="/template/pc/cn2016/picture/icon-3.png" alt=""></div><span>预录查询</span></a></li>
+				
+				
+				<li class=""><a href="http://zsxt.yiwu2016.com/"target="_blank""><div class="info-right-icon-kj info-right-icon-kj-4"><img src="/template/pc/cn2016/picture/icon-4.png" alt=""></div><span>录取查询</span></a></li>
+				
+				</ul>
+				<ul  class="info-right-icon item">
+				
+				<li class=""><a href="http://zsxt.yiwu2016.com/"target="_blank""><div class="info-right-icon-kj info-right-icon-kj-1"><img src="/template/pc/cn2016/picture/icon-5.png" alt=""></div><span>在线缴费</span></a></li>
+				
+				
+				<li class=""><a href="http://zsb.dlemcedu.cn/"target="_blank""><div class="info-right-icon-kj info-right-icon-kj-2"><img src="/template/pc/cn2016/picture/icon-6.png" alt=""></div><span>招生信息</span></a></li>
+				
+			
+				
+				<li class=""><a href="http://zsxt.yiwu2016.com/admin/login.php"target="_blank""><div class="info-right-icon-kj info-right-icon-kj-3"><img src="/template/pc/cn2016/picture/icon-kj1.png" alt=""></div><span>招生管理</span></a></li>
+				
+				
+				<li class=""><a href="http://59.46.137.138:8088/"target="_blank""><div class="info-right-icon-kj info-right-icon-kj-4"><img src="/template/pc/cn2016/picture/icon-kj2.png" alt=""></div><span>成绩查询</span></a></li>
+				
+				<div style="clear: both;"></div>
+			</ul>
+			</div>
+		
+		
+			
+			<div class="section-title" >
+							通知公告<span> | </span> <span>Notice</span>
+				<a href="/?list/204.html" alt="">更多&gt;</a>
+			</div>
+			
+			<ul class="info-right-con">
+			
+				<li>
+				<div class="event-left">
+					<div class="event-left-img">
+						<img src="/upload/news/1651983624437854.png" alt=""/>
+						<span></span>
+					</div>
+					
+					<h3 class="event-left-title">大连装备制造职业技术学院 202...</h3>
+					<p>
+					</p>
+				</div>
+				<div class="event-right">
+					<div class="event-date">
+					
+						<img src="/template/pc/cn2016/picture/date.png" alt=""/>
+						<div style="font-size: 12px;">
+							2022-05-08
+						</div>
+					</div>
+					<div class="event-location">
+						<img src="/template/pc/cn2016/picture/location.png" alt=""/>
+						<div>
+							
+						</div>
+					</div>
+				</div>
+				<a href="/?news/1895.html" alt="">查看</a>
+				</li>
+				
+				<li>
+				<div class="event-left">
+					<div class="event-left-img">
+						<img src="/upload/news/1588751075510080.png" alt=""/>
+						<span></span>
+					</div>
+					
+					<h3 class="event-left-title">关于应征入伍服兵役高等学校学生国...</h3>
+					<p>
+					</p>
+				</div>
+				<div class="event-right">
+					<div class="event-date">
+					
+						<img src="/template/pc/cn2016/picture/date.png" alt=""/>
+						<div style="font-size: 12px;">
+							2020-05-03
+						</div>
+					</div>
+					<div class="event-location">
+						<img src="/template/pc/cn2016/picture/location.png" alt=""/>
+						<div>
+							
+						</div>
+					</div>
+				</div>
+				<a href="/?news/1348.html" alt="">查看</a>
+				</li>
+				
+				
+				
+			</ul>
+		</div>
+		<div class="info-left">
+			 
+			<div class="section-title">
+							新闻动态<span> | </span><span>Latest News</span>
+				<a href="/?list/201.html" alt="">更多&gt;</a>
+			</div>
+			
+			<ul class="info-section">
+			
+				<li>
+					<div class="info-section-img"><img src="/upload/news/1727420501634078.jpg" alt=""/></div>
+				<h3><a href="/?news/2429.html">教研经验齐分享，教育之路共前行 ——挂职锻炼心得分享会</a></h3>
+				<span>2024-09-27</span>
+				<p>
+					2024年9月25日，在教学楼315多媒体室进行了以“教研经验齐分享，教育之路共前行”为主题的挂职锻炼心得分享会�
+				</p>
+				</li>
+			
+				<li>
+					<div class="info-section-img"><img src="/upload/news/1726798504336261.jpg" alt=""/></div>
+				<h3><a href="/?news/2418.html">汇聚智慧，共促教育提升——省培心得分享会</a></h3>
+				<span>2024-09-20</span>
+				<p>
+					2024年9月18日，在教学楼315多媒体室进行了以“汇聚智慧，共促教育提升”为主题的省培心得分享会，此次教研活�
+				</p>
+				</li>
+			
+				<li>
+					<div class="info-section-img"><img src="/upload/news/1725870521610074.jpg" alt=""/></div>
+				<h3><a href="/?news/2400.html">碰撞思维火花，提升教育品质 ——省培心得分享会</a></h3>
+				<span>2024-09-05</span>
+				<p>
+					2024年9月4日，在教学楼315多媒体室进行了以“碰撞思维火花，提升教育品质”为主题的省培心得分享会，由电气工
+				</p>
+				</li>
+			
+				<li>
+					<div class="info-section-img"><img src="/upload/news/1725258636189424.jpg" alt=""/></div>
+				<h3><a href="/?news/2393.html">大连装备制造职业技术学院举行教师师德师风建设专题培训：强化教育初心与使命担当</a></h3>
+				<span>2024-09-02</span>
+				<p>
+					为进一步加强教师队伍建设，提升新入职教师的师德修养和职业素养，大连装备制造职业技术学院于8月30日在315多
+				</p>
+				</li>
+			
+				
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</section>
+<style>
+	.point .point-con .point-left ul li{position: relative;}
+	.point-left-imgkj-title{    width: 100%!important;
+    margin-top: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    line-height: 40px;
+    background: rgba(255, 255, 255, 0.32);width: 100%;margin-top: 14px;}
+	.point-left-imgkj-title h3{line-height: 50px!important;color: #fff;}
+	.point-left-imgkj-title h3 a{color: #fff;}
+	@media (max-width: 800px){
+		.point .point-con .point-left ul li{margin-bottom: 0;} 
+		.point-left-imgkj-title h3{line-height: 44px!important;color: #fff;margin-bottom: 0;}
+	.point-left-imgkj-title h3 a{color: #fff;}
+		
+	}
+</style>
+<section class="point">
+<div class="pageWrap">
+	<div class="point-con">
+		<div class="point-left">
+		
+			
+			<div class="section-title">
+							校园文化 <span> | </span> <span>Campus Life</span>
+				<a href="/?list/202.html" alt="">更多&gt;</a>
+			</div>
+			
+			<ul class="yinying">
+			
+				<li>
+				<div class="point-left-imgkj"><img src="/upload/news/1719816987542220.jpg" alt="" style="width: 100%;"/></div>
+				<div class="point-left-imgkj-title">
+					<h3><a href="/?news/2345.html">一“企”前行共筑未来</a></h3>
+				</div>
+				</li>
+				
+				<li>
+				<div class="point-left-imgkj"><img src="/upload/news/1717055688335213.png" alt="" style="width: 100%;"/></div>
+				<div class="point-left-imgkj-title">
+					<h3><a href="/?news/2274.html">创新生 启未来——数字媒体技术专业备...</a></h3>
+				</div>
+				</li>
+				
+			</ul>
+		</div>
+		<div class="point-right">
+			
+			<div class="section-title">
+							信息公开 <span> | </span> <span>Information</span>
+				<a href="/?list/203.html" alt="">更多&gt;</a>
+			</div>
+			
+			<ul>
+			
+				<li>
+					<h3><a href="/?news/2428.html"><span>1</span>大连装备制造职业技术学院专业评估自评报告 </a></h3>
+				<p>
+				</p>
+				</li>
+			
+				<li>
+					<h3><a href="/?news/2193.html"><span>2</span>大连装备制造职业技术学院办事不找关系指南 </a></h3>
+				<p>
+				</p>
+				</li>
+			
+				<li>
+					<h3><a href="/?news/2181.html"><span>3</span>大连装备制造职业技术学院学术委员会202... </a></h3>
+				<p>
+				</p>
+				</li>
+			
+				<li>
+					<h3><a href="/?news/2176.html"><span>4</span>全校开设课程总门数、实践教学学分占总学分... </a></h3>
+				<p>
+				</p>
+				</li>
+			
+				<li>
+					<h3><a href="/?news/2175.html"><span>5</span>2023-2024学年学院新增专业情况 </a></h3>
+				<p>
+				</p>
+				</li>
+			
+
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+<section class="research">
+<div class="pageWrap">
+	<div class="research-con">
+		<div class="research-left">
+		
+			<div class="section-title">
+							专题栏目 <span> | </span> <span>Features</span>
+				<a href="/?list/200.html" alt="">更多&gt;</a>
+			</div>
+		
+			<ul class="research-files">
+			
+				<li>
+				<a href="http://zsb.dlemcedu.cn/"target="_blank"" alt="">
+				<img src="/template/pc/cn2016/picture/file1.jpg" alt=""/>
+				<h3 sub-line="2">招生信息网</h3>
+				<h5 sub-line="2"></h5>
+				</a>
+				</li>
+			
+				<li>
+				<a href="/?list/210.html" alt="">
+				<img src="/template/pc/cn2016/picture/file2.jpg" alt=""/>
+				<h3 sub-line="2">党建专栏</h3>
+				<h5 sub-line="2"></h5>
+				</a>
+				</li>
+			
+				<li>
+				<a href="/?list/211.html" alt="">
+				<img src="/template/pc/cn2016/picture/file3.jpg" alt=""/>
+				<h3 sub-line="2">征兵专栏</h3>
+				<h5 sub-line="2"></h5>
+				</a>
+				</li>
+			
+				<li>
+				<a href="/?list/212.html" alt="">
+				<img src="/template/pc/cn2016/picture/file4.jpg" alt=""/>
+				<h3 sub-line="2">装备之星</h3>
+				<h5 sub-line="2"></h5>
+				</a>
+				</li>
+			
+				
+			</ul>
+		</div>
+		<div class="research-right">
+		
+		
+			<div class="section-title kuaijierulou">
+							快捷入口 <span> | </span> <span>Fast Entry</span>
+				<a href="/?list/219.html" alt="">更多&gt;</a>
+				
+			</div>
+		
+		
+			<ul class="research-right-icon">
+			
+				<li><a href="http://zsxt.yiwu2016.com/admin/login.php"target="_blank""><div class="esearch-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-kj1.png" alt=""></div><span>招生管理</span></a></li>
+			
+				<li><a href="http://59.46.137.138:8088/"target="_blank""><div class="esearch-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-kj2.png" alt=""></div><span>成绩查询</span></a></li>
+			
+				<li><a href="/?Mailto:595782246@qq.com.html"><div class="esearch-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-kj3.png" alt=""></div><span>院长信箱</span></a></li>
+			
+				<li><a href="/?list/223.html"><div class="esearch-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-kj4.png" alt=""></div><span>学校校历</span></a></li>
+			
+				<li><a href="/?list/7.html"><div class="esearch-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-kj5.png" alt=""></div><span>校园风光</span></a></li>
+			
+				<li><a href="/?about/230.html"><div class="esearch-right-icon-kj"><img src="/template/pc/cn2016/picture/icon-kj6.png" alt=""></div><span>学校位置</span></a></li>
+			
+			
+				<div style="clear: both;"></div>
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+
+<div id="wapper">
+	<a href="javascript:void(0)" id="toTop" style="display: block;"><i></i> </a>
+</div>
+
+
+<div class="nav_right" id="you">
+	<ul>
+	
+		<li><a href="http://zsxt.yiwu2016.com/login.php?act=login"target="_blank""><img src="/template/pc/cn2016/picture/icon-13.png" alt=""><h1>单招报名</h1></a></li>
+		
+		
+		<li><a href="/?list/45.html"><img src="/template/pc/cn2016/picture/icon-14.png" alt=""><h1>优秀毕业生</h1></a></li>
+		
+		
+		<li class="junren"><a href="https://degree.qingshuxuetang.com/dlzb/Home"target="_blank""><img src="/template/pc/cn2016/picture/icon-16.png" alt=""><h1 style="font-size: 12px;">退役军人网教平台</h1></a></li>
+		
+		<li><a href="http://zsb.dlemcedu.cn/" target="_blank"><img src="/template/pc/cn2016/picture/icon-15.png" alt=""><h1>招生官网</h1></a></li>
+	</ul>
+	<style>
+		@media (max-width: 800px){
+	.nav_right ul li.junren {
+    width: 70px;
+    height: 88px;
+		}
+		}
+	</style>
+	
+</div>
+
+<section class="about">
+<div class="pageWrap foot" >
+	
+	<div style="height:37px;">
+	</div>
+	
+	<form class="search-wapform"  method="post"  action="/search/">
+				<input type="hidden"   name='searchcol' value="C_Content,zauthor" />
+				<input class="ser-con1" type="text" name="keys" value="" placeholder="请输入搜索内容">
+				<input type='submit'  class="serbtn1" value="搜索"/>
+		</form>
+		
+	<br>	
+	<p align="center" style="color: #fff">
+		All Right Reserved © 大连装备制造职业技术学院 2019
+	</p>
+	<p align="center">
+		  <a href="http://www.miibeian.gov.cn" target="_blank"  style="color: #fff">辽ICP备14004983号</a> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21021302000107"  style="color: #fff"><img src="http://photo.dlemc.edu.cn/gongan.png">辽公网安备 21021302000107号</a>
+	</p>
+	<p align="center" style="color: #fff" class="pc">
+		联系电话：0411-39952542 39952539（传真） 39952599（传真）
+	</p>
+	<p align="center" style="color: #fff">
+		学院地址：大连金普新区大魏家街道魏兴路66号
+	</p>
+	<p align="center" style="color: #fff" class="pc">
+		邮政编码：116110
+	</p>
+	
+	<div style="height:55px;" class="foot-kuai">
+	</div>
+	<div class="about-con">
+		<div class="about-img">
+			<img src="/template/pc/cn2016/picture/20190104102410.jpg" alt=""/>
+			<p style="color: #fff;text-align: center;">
+				装备学院官微
+			</p>
+		</div>
+		<div class="about-img">
+			<img src="/template/pc/cn2016/picture/erweima-1.png" alt=""/>
+			<p style="color: #fff;text-align: center;">
+				大装院团委
+			</p>
+		</div>
+		
+	</div>
+</div>
+</section> 
+
+
+<div class="mask" style="display: none;">
+</div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,2402 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    
+    
+    
+<META charset="UTF-8">
+<META name="viewport" content="width=device-width, initial-scale=1">
+<META name="renderer" content="webkit">
+<META content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<META name="referrer" content="always">
+    
+    
+    
+    
+    
+    <title>三峡大学</title><META Name="keywords" Content="三峡大学" />
+
+    <link rel="stylesheet" href="xsy/css/base.css" />
+    <link rel="stylesheet" href="xsy/simg/slick.css" />
+    <link rel="stylesheet" href="xsy/css/style1.css?v1" />
+    <link rel="stylesheet" type="text/css" href="xsy/css/media.css" />
+
+    <script type="text/javascript" src="xsy/js/jquery.min.js"></script>
+    <script type="text/javascript" src="xsy/js/set.js"></script>
+    <script type="text/javascript" src="xsy/simg/slick.min.js"></script>
+    
+     <script type="text/javascript" src="xsy/simg/modernizr.custom.js"></script>
+        
+        <script type="text/javascript" src="xsy/simg/jquery.mousewheel.js"></script>
+        
+        <script type="text/javascript" src="xsy/simg/comcus.js"></script>
+        <script type="text/javascript" src="xsy/simg/jquery.flipster.js"></script>
+    <script type="text/javascript" src="xsy/simg/index.js"></script>
+<script type="text/javascript" src="xsy/simg/main.js"></script>
+    
+     <script type="text/javascript">
+    $(document).ready(function () {
+      
+        $("#message").html('');
+$("#message2").html('');
+
+       
+var xmlhttp;
+var txt,x,xx,i;
+if (window.XMLHttpRequest)
+ {// code for IE7+, Firefox, Chrome, Opera, Safari
+ xmlhttp=new XMLHttpRequest();
+ }
+else
+ {// code for IE6, IE5
+ xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ }
+xmlhttp.onreadystatechange=function()
+ {
+ if (xmlhttp.readyState==4 && xmlhttp.status==200)
+  {
+  // txt="<li><a href='https://www.ctgu.edu.cn/bak_nry.jsp?urltype=news.NewsContentUrl&wbtreeid=1212&wbnewsid=3398' target='_blank' >三峡大学中层领导干部空缺岗位选任工作方案 </a><p>2024-10-23</p></li>";
+  txt="<li><a href='http://www.ctgu.edu.cn/info/1212/4968.htm' target='_blank' >三峡大学中层领导干部空缺岗位选任工作方案 </a><p>2024-10-23</p></li>";
+  // txt="<li><a href='https://www.ctgu.edu.cn/bak_nry.jsp?urltype=news.NewsContentUrl&wbtreeid=1212&wbnewsid=3500' target='_blank' >公告</a><p>2023-04-19</p></li>";
+  x=xmlhttp.responseXML.documentElement.getElementsByTagName("item");
+  for (i=0;i<x.length;i++)
+   {
+   txt=txt + "";
+   xx=x[i].getElementsByTagName("title");
+    {
+    try
+     {
+var first=xx[0].firstChild.nodeValue;
+var first0= first.split('[');
+var time2=first0[1].split(']');
+var title= first0[0];
+var timeok=time2[0];
+
+var timefenkai=timeok.split('-');
+var nian=timefenkai[0];
+var yue=timefenkai[1];
+var ri=timefenkai[2];
+
+    
+     }
+    catch (er)
+     {
+     txt=txt + " ";
+     }
+    }
+   xx=x[i].getElementsByTagName("link");
+    {
+    try
+     {
+      var link = xx[0].firstChild.nodeValue;
+      //link=link.replace("http","https");
+      //link=decodeURIComponent(link.substr(link.indexOf("tourl")+6)).replace("http","https")
+     }
+    catch (er)
+     {
+     txt=txt + " ";
+     }
+    }
+    xx=x[i].getElementsByTagName("description");
+        {
+    try
+     {
+      var description = xx[0].firstChild.nodeValue;
+    
+     }
+    catch (er)
+     {
+     txt=txt + " ";
+     }
+    }
+  txt += "<li><a href="+ link +" target='_blank' >"+ title + "</a><p>" + nian+"-"+ yue+"-"+ ri+  "</p></li>";
+   }
+  txt=txt + "";
+  document.getElementById('message').innerHTML=txt;
+  }
+ }
+var url="https://oa.ctgu.edu.cn/oa/rssAction.do?method=campus_news&username=oa&columnID=52aaa33f23bcd7980123bd783be60001";
+//var url="https://xtbg.ctgu.edu.cn/oa/rssAction.do?method=campus_news&username=oa&columnID=52aaa33f23bcd7980123bd783be60001";
+xmlhttp.open("GET",url,true);
+xmlhttp.send();
+        
+           
+      
+      
+
+    });
+  </script>
+         <script type="text/javascript">
+    $(document).ready(function () {
+      
+        $("#message").html('');
+$("#message2").html('');
+       
+var xmlhttp;
+var txt,x,xx,i;
+if (window.XMLHttpRequest)
+ {// code for IE7+, Firefox, Chrome, Opera, Safari
+ xmlhttp=new XMLHttpRequest();
+ }
+else
+ {// code for IE6, IE5
+ xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ }
+xmlhttp.onreadystatechange=function()
+ {
+ if (xmlhttp.readyState==4 && xmlhttp.status==200)
+  {
+  txt="";
+  x=xmlhttp.responseXML.documentElement.getElementsByTagName("item");
+  for (i=0;i<x.length;i++)
+   {
+   txt=txt + "";
+   xx=x[i].getElementsByTagName("title");
+    {
+    try
+     {
+var first=xx[0].firstChild.nodeValue;
+var first0= first.split('[');
+var time2=first0[1].split(']');
+var title= first0[0];
+var timeok=time2[0];
+
+var timefenkai=timeok.split('-');
+var nian=timefenkai[0];
+var yue=timefenkai[1];
+var ri=timefenkai[2];
+
+    
+     }
+    catch (er)
+     {
+     txt=txt + " ";
+     }
+    }
+   xx=x[i].getElementsByTagName("link");
+    {
+    try
+     {
+      var link = xx[0].firstChild.nodeValue;
+      //link=link.replace("http","https");
+     // link=decodeURIComponent(link.substr(link.indexOf("tourl")+6)).replace("http","https")
+     }
+    catch (er)
+     {
+     txt=txt + " ";
+     }
+    }
+    xx=x[i].getElementsByTagName("description");
+        {
+    try
+     {
+      var description = xx[0].firstChild.nodeValue;
+    
+     }
+    catch (er)
+     {
+     txt=txt + " ";
+     }
+    }
+  txt += "<li><a href="+ link +" target='_blank' >"+ description + "</a><p>" + nian+"-"+ yue+"-"+ ri+  "</p></li>";
+   }
+  txt=txt + "";
+  document.getElementById('message2').innerHTML=txt;
+  }
+ }
+var url="https://oa.ctgu.edu.cn/oa/rssAction.do?method=campus_news&username=oa&columnID=52aaa33f8383a1e701838d8509e04934"; 
+//var url="https://xtbg.ctgu.edu.cn/oa/rssAction.do?method=campus_news&username=oa&columnID=52aaa33f8383a1e701838d8509e04934";
+// lga 20231123 换这个链接发现报跨域的问题，需要通过后端程序开发解决
+//var url="https://oa.ctgu.edu.cn/oa/application/oa/information/view/news_list_xwmh.jsp?colId=52aaa33f8383a1e701838d8509e04934";
+xmlhttp.open("GET",url,true);
+xmlhttp.send();
+        
+           
+      
+      
+
+    });
+  </script>
+    
+    <style>
+    #message2>li>a{white-space: normal !important;}
+    
+   
+    .xyewm li{float: left;
+    margin-top: 10px!important;
+    width: 50%;
+    text-align: center;}
+    .xyewm{margin-top: 25px;}
+    .xyewm li img{width:110px;height:110px;margin:0 auto;}
+    .xyewm h2{text-align: center;
+    font-size: 22px;
+   
+    color: #ffffff;
+    width: 160px;
+    height: 45px;
+    background: #1d5b74;
+    line-height: 45px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-weight: 400;}
+    .kkgg{
+    position: absolute;
+    top: 34px;
+    right: 10px;
+    color: #fff;
+    font-size: 16px;}
+    </style>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f465550515742000000024052 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1703996131)</script>
+</head>
+
+<body>
+
+
+
+ <div id="asideNav" class="">
+         
+          <span class="title2">首页快速导航<i class="iconfont iconjiantouzuo"></i></span>
+          <ul>
+            <li data-to="go1"><a href="#md1"> 学校要闻</a></li>
+            <li data-to="go2"><a href="#md2">校园公告</a></li>
+            <li data-to="go3"><a href="#md3">缤纷校园</a></li>
+       
+            <li data-to="go4"><a href="#md4">校园视频</a></li>
+            <li data-to="go5"><a href="#md5">校园专题</a></li>
+            <li data-to="go6"><a href="#md5">快速通道</a></li>
+            
+          </ul>
+          <i class="asideNavClose iconfont iconjiantouyou "></i>
+        </div>
+      <script>
+        navPosition();
+        
+        </script>
+    
+    
+    
+    
+    
+        <!-- 头部 -->
+        <div class="head s showdiv">
+
+            <div class="top">
+                <!--Start||head-->
+                <div class="wrapper header" id="header">
+                    <div class="inner">
+
+                        <!--logo开始-->
+                        <div class="sitelogo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="三峡大学"><img src="img/logo.png"></a></div>
+                        <!--//logo结束-->
+
+                        <div class="head-right clearfix fr">
+                            <div class="top_link1 clearfix">
+                                <ul class="clearfix fr">
+                                    <li><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+<a href="http://portal.ctgu.edu.cn" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 59730)">个人门户</a>
+
+</li>
+                                    <li class="toplink1"><a href="http://xyh.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 59733)">校友</a>
+                                        
+</li>
+                                    <li class="search" id="search">
+
+
+
+
+
+<form action="/system/resource/code/notemp.jsp?owner=1703996131&wbtreeid=1001&tempname=%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E9%A1%B5&notuse=notuse" method="post" name="a253543a" onsubmit="return subsearchdataa253543a()" style="display: inline;">
+  <input type="hidden" name="Find" value="find"><input type="hidden" name="entrymode" value="1"><input type="hidden" id="INTEXT2" name="INTEXT2" value=""><input type="hidden" name="news_search_code">
+
+                 
+                   <input type="hidden" name="condition" value="0"> 
+                <span id="intextspana253543a"></span>
+                <iframe id="intextframea253543a" src="#" scrolling="no" frameborder="0" style="position:absolute;top:0px;left:0px;display:none;"></iframe>
+                
+                                                            <input name="INTEXT" type="text" class="motion_1">
+                                            <input name="FindButton" type="hidden" value="utf8">
+                                            <button><i class="icon-search"></i></button>
+                
+                
+               
+</form>
+<i class="icon-search active"></i>
+<script>
+String.prototype.trim= function()       
+{              
+    var t = this.replace(/(^\s*)|(\s*$)/g, "");     
+    return t.replace(/(^　*)|(　*$)/g, "");     
+}  
+function subsearchdataa253543a()
+{ 
+    if(document.a253543a.INTEXT.value.trim()=="")
+    {
+        alert("请输入查询关键字！");
+        return false;
+    }
+    if(checkDataa253543a(document.a253543a))
+    {
+       return true;  
+    }
+    return false;
+}       
+</script>
+
+    <script language="JavaScript" src="_dwr/engine.js"></script>
+    <script language="JavaScript" src="_dwr/util.js"></script>
+    <script language="JavaScript" src="_dwr/interface/NewsSearchDWR.js"></script>
+    <script language="JavaScript" src="/system/resource/js/vsb_news_search.js"></script>
+    <script language="JavaScript" src="/system/resource/js/vsb_news_search_entry.js"></script>  
+    <script language="JavaScript" src="/system/resource/js/language.js"></script>
+    <script language="JavaScript" src="/system/resource/js/base64.js"></script>
+    <script language="JavaScript" src="/system/resource/js/formfunc.js"></script>    
+    
+    <script>    
+    news_searcha253543a = new vsb_news_search();
+    news_searcha253543a.isShowCode=false;
+    news_searcha253543a.tooltipid = 'tooltipa253543a';
+    news_searcha253543a.apptag = 'intextspana253543a';
+    news_searcha253543a.frametag = 'intextframea253543a';
+    news_search_entrya253543a = new vsb_news_search_entry();
+    news_search_entrya253543a.formname = "a253543a";
+    news_search_entrya253543a.news_search_obj = news_searcha253543a; 
+    news_search_entrya253543a.querytxtsize = 155
+    news_search_entrya253543a.yzmts ="您的查询过于频繁，请输入验证码后继续查询";
+    news_search_entrya253543a.qdstyle ="";
+    news_search_entrya253543a.qdname = "确定";
+    news_search_entrya253543a.qxstyle = "";
+    news_search_entrya253543a.qxname = "取消";
+    news_search_entrya253543a.showstr='请输入查询验证码！';    
+    function checkDataa253543a(formname)
+    {    
+        return news_search_entrya253543a.checkdata(formname)   
+    }
+    </script>
+<script language="javascript" src="/system/resource/js/base64.js"></script> 
+</li>
+                                    <li class="link_last">
+
+                                        <a href="http://eng.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 59735)">EN</a>
+                                    
+
+</li>
+                                </ul>
+                            </div>
+                            <div class="navs clearfix"><ul class="fr">
+
+                                    <li>
+                                        <a href="xxgk/xxjj.htm">学校概况</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#">组织机构</a>
+                                         <ol>
+
+                                            <li class="dh1">
+                                                <a href="#">党群部门</a>
+                                                <ul class="sjdh">
+
+                                                <li><a href="https://dzzf.ctgu.edu.cn/">党政办公室（保密办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="https://dzzf.ctgu.edu.cn">政策研究与法规室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://jwjc.ctgu.edu.cn/">纪委（监察专员办公室）、党委巡察工作办公室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://zzb.ctgu.edu.cn/">党委组织部（党校） 机关党委</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://syw.ctgu.edu.cn/">党委宣传部（党委教师工作部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://tzb.ctgu.edu.cn/">党委统战部（社会主义学院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://xgh.ctgu.edu.cn/">工  会</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sxdxxsc.ctgu.edu.cn/">学生处（学生工作部 研究生工作部 武装部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="#">团  委</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://bwc.ctgu.edu.cn/">保卫处（保卫部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://lgbc.ctgu.edu.cn/">老干部工作部（离退休工作处）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dh2">
+                                                <a href="#">行政部门</a>
+                                                <ul class="sjdh">
+
+                                                <li><a href="http://xkgh.ctgu.edu.cn/">发展规划与学科建设办公室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sxdxyjsy.ctgu.edu.cn/">研究生院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sxdxjwc.ctgu.edu.cn/">教务处（求索学院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://science.ctgu.edu.cn/">科技发展研究院（国防科技研究院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://skc.ctgu.edu.cn/">社会科学发展研究院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://rsc.ctgu.edu.cn/">人事处（人才工作办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://dir.ctgu.edu.cn/">国际合作与交流处（港澳台事务办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="https://zs.ctgu.edu.cn/ctgu">招生及就业指导处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="https://mp.weixin.qq.com/s?__biz=Mzg3NjE1NDUzNQ==&mid=2247495715&idx=1&sn=6f06366eea1bec5acf2914b12ac847ab&chksm=cf342bebf843a2fd0a7459b843d58f0883e8f671578122671f1ed34716e311e218b527964037&token=122809829&lang=zh_CN#rd">社会服务与对外合作办公室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://yxb.ctgu.edu.cn/">医学部</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://newcwc.ctgu.edu.cn/">财务处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sjc.ctgu.edu.cn/">审计处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="https://xjc.ctgu.edu.cn/">校园规划与建设处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://zcc.ctgu.edu.cn/">设备与资产管理处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dh3">
+                                                <a href="#">学院设置 </a>
+                                                <ul class="sjdh">
+
+                                                <li><a href="http://hee.ctgu.edu.cn/">水利与环境学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://tmyjz.ctgu.edu.cn/">土木与建筑学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://jxdl.ctgu.edu.cn/">机械与动力学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://clyhg.ctgu.edu.cn/">材料与化工学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://newee.ctgu.edu.cn/">电气与新能源学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://it.ctgu.edu.cn/">计算机与信息学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://jg.ctgu.edu.cn/">经济与管理学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://jcyxy.ctgu.edu.cn/">基础医学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="https://jkyxy.ctgu.edu.cn/">健康医学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://wxycm.ctgu.edu.cn/">文学与传媒学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://tjbjyxy.ctgu.edu.cn/">田家炳教育学院（高教所）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sxdxmkszyxy.ctgu.edu.cn/">马克思主义学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://fgxy.ctgu.edu.cn/">法学与公共管理学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://lxy.ctgu.edu.cn/">数理学院、核能科学与工程学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://syxy.ctgu.edu.cn/">生物与制药学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://wgyxy.ctgu.edu.cn/">外国语学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://ysxy.ctgu.edu.cn/">艺术学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://tyxy.ctgu.edu.cn/">体育学院（体育部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://cic.ctgu.edu.cn/">国际学院（与国际合作交流处合署办公）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://mzxy.ctgu.edu.cn/">民族学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://cxcy.ctgu.edu.cn">创新创业学院（大学生素质教育中心）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://jxjy.ctgu.edu.cn/">继续教育学院（职业技术学院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dh4">
+                                                <a href="#">科研机构</a>
+                                                <ul class="sjdh">
+
+                                                <li><a href="http://newtgls.ctgu.edu.cn/">湖北长江三峡滑坡国家野外科学观测研究站</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://geoh.ctgu.edu.cn/">三峡库区地质灾害教育部重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sthj.ctgu.edu.cn/">三峡库区生态环境教育部工程研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="https://cicge.ctgu.edu.cn">三峡地区地质灾害与生态环境湖北省协同创新中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sdjxsb.ctgu.edu.cn/">水电机械设计与维护省重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sdjc.ctgu.edu.cn/">湖北省水电工程智能视觉监测重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="#">湖北省建筑质量检测装备工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://tmai.ctgu.edu.cn/">肿瘤微环境与免疫治疗湖北省重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://npr.ctgu.edu.cn/">天然产物研究与利用重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://ymzx.ctgu.edu.cn/">水库移民研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://qyshgl.ctgu.edu.cn/">区域社会管理创新与发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sxwh.ctgu.edu.cn/">三峡文化与经济社会发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://bcys.ctgu.edu.cn/">巴楚艺术发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://nthjjc.ctgu.edu.cn/">湖北省农田环境监测工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://sxdxsec.ctgu.edu.cn">软件工程中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://alzsny.ctgu.edu.cn/">艾伦麦克德尔米德再生能源研究所</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="https://tjbjyxy.ctgu.edu.cn/gjyj/gjsjj.htm">高教研究</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://swzx.ctgu.edu.cn/">生物技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://swzx.ctgu.edu.cn">湖北省三峡特色植物繁育工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://dpm.ctgu.edu.cn/">防灾减灾湖北省重点实验室(三峡大学)</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://yszx.ctgu.edu.cn/">影视文化与产业发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://ssg.ctgu.edu.cn/">湖北省水电工程施工与管理重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://mathcenter.ctgu.edu.cn/">三峡数学研究中心 </a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://magtech.ctgu.edu.cn/">湖北省弱磁探测工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://zyyl.ctgu.edu.cn/">国家中医药管理局中药药理（肿瘤）科研三级实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://astro.ctgu.edu.cn/">天文与空间科学研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://nri.ctgu.edu.cn/">三峡大学尼泊尔研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://tges.ctgu.edu.cn/">三峡水库生态系统湖北省野外科学观测研究站</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="https://cxcy.ctgu.edu.cn/">大学生创新创业实践基地</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dh5">
+                                                <a href="#">其他单位</a>
+                                                <ul class="sjdh">
+
+                                                <li><a href="http://xswyh.ctgu.edu.cn/">学术委员会</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://lib.ctgu.edu.cn/">图书馆</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://itcenter.ctgu.edu.cn/">信息技术中心（智慧校园建设办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://zb.ctgu.edu.cn/">采购与招标中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://matc.ctgu.edu.cn/">分析测试中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://qks.ctgu.edu.cn/">期刊社</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://archives.ctgu.edu.cn/">档案馆</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://hq.ctgu.edu.cn">后勤保障服务部（资产经营公司）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://www.ycrh.com/">附属仁和医院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://kjxy.ctgu.edu.cn/">三峡大学科技学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="http://yywz.ctgu.edu.cn/">语言文字工作委员会</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                                <li><a href="https://jsfz.ctgu.edu.cn/index.htm">教师教学发展中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="http://rsc.ctgu.edu.cn/">人事师资</a>
+                                         <ol>
+
+                                            <li class="dh1">
+                                                <a href="http://rsc.ctgu.edu.cn/">人事处</a>
+                                            </li>
+
+                                            <li class="dh2">
+                                                <a href="http://rczp.ctgu.edu.cn/#/app/ctgu/epxing_recruit/zpwz">人才招聘</a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="http://sxdxjwc.ctgu.edu.cn/">人才培养</a>
+                                         <ol>
+
+                                            <li class="dh1">
+                                                <a href="https://sxdxjwc.ctgu.edu.cn/">本科教育</a>
+                                            </li>
+
+                                            <li class="dh2">
+                                                <a href="http://sxdxyjsy.ctgu.edu.cn/">研究生教育</a>
+                                            </li>
+
+                                            <li class="dh3">
+                                                <a href="http://jxjy.ctgu.edu.cn/">成人教育与培训</a>
+                                            </li>
+
+                                            <li class="dh4">
+                                                <a href="http://dir.ctgu.edu.cn/">留学生教育</a>
+                                            </li>
+
+                                            <li class="dh5">
+                                                <a href="https://tyxy.ctgu.edu.cn/">高水平运动队</a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="https://zs.ctgu.edu.cn">招生就业</a>
+                                         <ol>
+
+                                            <li class="dh1">
+                                                <a href="http://zs.ctgu.edu.cn/">本科招生</a>
+                                            </li>
+
+                                            <li class="dh2">
+                                                <a href="https://ctgu.91wllm.cn/">就业信息</a>
+                                            </li>
+
+                                            <li class="dh3">
+                                                <a href="http://sxdxyjsy.ctgu.edu.cn/">研究生招生</a>
+                                            </li>
+
+                                            <li class="dh4">
+                                                <a href="http://dir.ctgu.edu.cn/">留学生招生</a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="http://science.ctgu.edu.cn/">科学研究</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="xkjs/zdxk.htm">学科建设</a>
+                                         <ol>
+
+                                            <li class="dh1">
+                                                <a href="xkjs/gnylxkjsxk.htm">国内一流学科建设学科</a>
+                                            </li>
+
+                                            <li class="dh2">
+                                                <a href="xkjs/zdxk.htm">重点学科</a>
+                                            </li>
+
+                                            <li class="dh3">
+                                                <a href="xkjs/yjxkbsd.htm">一级学科博士点</a>
+                                            </li>
+
+                                            <li class="dh4">
+                                                <a href="xkjs/zyxwbsd.htm">专业学位博士点</a>
+                                            </li>
+
+                                            <li class="dh5">
+                                                <a href="xkjs/yjxkssd.htm">一级学科硕士点</a>
+                                            </li>
+
+                                            <li class="dh6">
+                                                <a href="xkjs/zyxwssd.htm">专业学位硕士点</a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="http://dir.ctgu.edu.cn">国际合作</a>
+                                    </li>
+                                    
+</ul>
+                                <div class="clear"></div>
+
+                                <div class="clear"></div></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--End||head-->
+                <!--Start||nav-->
+
+                
+
+
+
+                <!--End||nav-->
+            </div>
+            <!--Start||focus-->
+            <div class="wrapper mbanner" id="banner">
+                <div class="inner clearfix">
+                    <div>
+                        <div class="focus">    <ul>
+
+                                
+
+ <li class="slide">
+                                    <a target="_blank" class="slide_box">
+                                        <div class="slide_imgs">
+                                            <div class="news_bg" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58752)" style="background: url(images/20240923.jpg);"></div>
+                                        </div>
+                                        <div class="slide_title">
+                                            <div class="tit_con"></div>
+                                            <div class="title_bg"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+
+                                
+
+ <li class="slide">
+                                    <a target="_blank" class="slide_box">
+                                        <div class="slide_imgs">
+                                            <div class="news_bg" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58767)" style="background: url(images/haibao-minmeng.jpg);"></div>
+                                        </div>
+                                        <div class="slide_title">
+                                            <div class="tit_con"></div>
+                                            <div class="title_bg"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+
+                                
+
+ <li class="slide">
+                                    <a target="_blank" class="slide_box">
+                                        <div class="slide_imgs">
+                                            <div class="news_bg" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58766)" style="background: url(images/weixintupian_20241021115723_fuben_fuben.jpg);"></div>
+                                        </div>
+                                        <div class="slide_title">
+                                            <div class="tit_con"></div>
+                                            <div class="title_bg"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+
+                                
+</ul></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--End||focus-->
+            <div class="bb"></div>
+
+        </div>
+
+
+
+
+
+
+    <div class="body_b">
+<div class="flipster">
+        <!-- 头部 -->
+        <div class="headerx  flex-v-center ">    
+
+            <img src="xsy/img/logo.png" alt="">
+        
+
+
+        
+        
+         <div class="waveWrapper waveAnimation">
+
+  <div class="waveWrapperInner bgTop">
+
+    <div class="wave waveTop" style="background-image: url(xsy/simg/wave-tops.png)"></div>
+
+  </div>
+
+ 
+
+  <div class="waveWrapperInner bgBottom">
+
+    <div class="wave waveBottom" style="background-image: url(xsy/simg/wave-bots.png)"></div>
+
+  </div>
+
+</div>
+        
+        
+        </div>
+        <!--end-->
+
+        <div class="nav_wrap ">
+            <div class="inner2 flex">
+                <div class="nav">
+                    <ul><li class="v1 on first">
+                            <a href="xxgk/xxjj.htm">学校概况<i></i></a>
+                        </li>
+                        
+
+
+                        
+<li>
+                            <a href="#">组织机构<i></i></a>
+                            <div class="down">
+                                <dl>
+
+                                    <dd>
+                                        <a href="#">党群部门</a>
+                                        <ul class="sjdh">
+
+                                        <li><a href="https://dzzf.ctgu.edu.cn/">党政办公室（保密办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="https://dzzf.ctgu.edu.cn">政策研究与法规室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://jwjc.ctgu.edu.cn/">纪委（监察专员办公室）、党委巡察工作办公室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://zzb.ctgu.edu.cn/">党委组织部（党校） 机关党委</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://syw.ctgu.edu.cn/">党委宣传部（党委教师工作部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://tzb.ctgu.edu.cn/">党委统战部（社会主义学院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://xgh.ctgu.edu.cn/">工  会</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sxdxxsc.ctgu.edu.cn/">学生处（学生工作部 研究生工作部 武装部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="#">团  委</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://bwc.ctgu.edu.cn/">保卫处（保卫部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://lgbc.ctgu.edu.cn/">老干部工作部（离退休工作处）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                        </ul>
+                                    </dd>
+                                    <dd>
+                                        <a href="#">行政部门</a>
+                                        <ul class="sjdh">
+
+                                        <li><a href="http://xkgh.ctgu.edu.cn/">发展规划与学科建设办公室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sxdxyjsy.ctgu.edu.cn/">研究生院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sxdxjwc.ctgu.edu.cn/">教务处（求索学院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://science.ctgu.edu.cn/">科技发展研究院（国防科技研究院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://skc.ctgu.edu.cn/">社会科学发展研究院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://rsc.ctgu.edu.cn/">人事处（人才工作办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://dir.ctgu.edu.cn/">国际合作与交流处（港澳台事务办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="https://zs.ctgu.edu.cn/ctgu">招生及就业指导处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="https://mp.weixin.qq.com/s?__biz=Mzg3NjE1NDUzNQ==&mid=2247495715&idx=1&sn=6f06366eea1bec5acf2914b12ac847ab&chksm=cf342bebf843a2fd0a7459b843d58f0883e8f671578122671f1ed34716e311e218b527964037&token=122809829&lang=zh_CN#rd">社会服务与对外合作办公室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://yxb.ctgu.edu.cn/">医学部</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://newcwc.ctgu.edu.cn/">财务处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sjc.ctgu.edu.cn/">审计处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="https://xjc.ctgu.edu.cn/">校园规划与建设处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://zcc.ctgu.edu.cn/">设备与资产管理处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                        </ul>
+                                    </dd>
+                                    <dd>
+                                        <a href="#">学院设置 </a>
+                                        <ul class="sjdh">
+
+                                        <li><a href="http://hee.ctgu.edu.cn/">水利与环境学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://tmyjz.ctgu.edu.cn/">土木与建筑学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://jxdl.ctgu.edu.cn/">机械与动力学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://clyhg.ctgu.edu.cn/">材料与化工学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://newee.ctgu.edu.cn/">电气与新能源学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://it.ctgu.edu.cn/">计算机与信息学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://jg.ctgu.edu.cn/">经济与管理学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://jcyxy.ctgu.edu.cn/">基础医学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="https://jkyxy.ctgu.edu.cn/">健康医学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://wxycm.ctgu.edu.cn/">文学与传媒学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://tjbjyxy.ctgu.edu.cn/">田家炳教育学院（高教所）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sxdxmkszyxy.ctgu.edu.cn/">马克思主义学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://fgxy.ctgu.edu.cn/">法学与公共管理学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://lxy.ctgu.edu.cn/">数理学院、核能科学与工程学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://syxy.ctgu.edu.cn/">生物与制药学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://wgyxy.ctgu.edu.cn/">外国语学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://ysxy.ctgu.edu.cn/">艺术学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://tyxy.ctgu.edu.cn/">体育学院（体育部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://cic.ctgu.edu.cn/">国际学院（与国际合作交流处合署办公）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://mzxy.ctgu.edu.cn/">民族学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://cxcy.ctgu.edu.cn">创新创业学院（大学生素质教育中心）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://jxjy.ctgu.edu.cn/">继续教育学院（职业技术学院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                        </ul>
+                                    </dd>
+                                    <dd>
+                                        <a href="#">科研机构</a>
+                                        <ul class="sjdh">
+
+                                        <li><a href="http://newtgls.ctgu.edu.cn/">湖北长江三峡滑坡国家野外科学观测研究站</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://geoh.ctgu.edu.cn/">三峡库区地质灾害教育部重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sthj.ctgu.edu.cn/">三峡库区生态环境教育部工程研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="https://cicge.ctgu.edu.cn">三峡地区地质灾害与生态环境湖北省协同创新中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sdjxsb.ctgu.edu.cn/">水电机械设计与维护省重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sdjc.ctgu.edu.cn/">湖北省水电工程智能视觉监测重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="#">湖北省建筑质量检测装备工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://tmai.ctgu.edu.cn/">肿瘤微环境与免疫治疗湖北省重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://npr.ctgu.edu.cn/">天然产物研究与利用重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://ymzx.ctgu.edu.cn/">水库移民研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://qyshgl.ctgu.edu.cn/">区域社会管理创新与发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sxwh.ctgu.edu.cn/">三峡文化与经济社会发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://bcys.ctgu.edu.cn/">巴楚艺术发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://nthjjc.ctgu.edu.cn/">湖北省农田环境监测工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://sxdxsec.ctgu.edu.cn">软件工程中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://alzsny.ctgu.edu.cn/">艾伦麦克德尔米德再生能源研究所</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="https://tjbjyxy.ctgu.edu.cn/gjyj/gjsjj.htm">高教研究</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://swzx.ctgu.edu.cn/">生物技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://swzx.ctgu.edu.cn">湖北省三峡特色植物繁育工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://dpm.ctgu.edu.cn/">防灾减灾湖北省重点实验室(三峡大学)</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://yszx.ctgu.edu.cn/">影视文化与产业发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://ssg.ctgu.edu.cn/">湖北省水电工程施工与管理重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://mathcenter.ctgu.edu.cn/">三峡数学研究中心 </a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://magtech.ctgu.edu.cn/">湖北省弱磁探测工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://zyyl.ctgu.edu.cn/">国家中医药管理局中药药理（肿瘤）科研三级实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://astro.ctgu.edu.cn/">天文与空间科学研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://nri.ctgu.edu.cn/">三峡大学尼泊尔研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://tges.ctgu.edu.cn/">三峡水库生态系统湖北省野外科学观测研究站</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="https://cxcy.ctgu.edu.cn/">大学生创新创业实践基地</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                        </ul>
+                                    </dd>
+                                    <dd>
+                                        <a href="#">其他单位</a>
+                                        <ul class="sjdh">
+
+                                        <li><a href="http://xswyh.ctgu.edu.cn/">学术委员会</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://lib.ctgu.edu.cn/">图书馆</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://itcenter.ctgu.edu.cn/">信息技术中心（智慧校园建设办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://zb.ctgu.edu.cn/">采购与招标中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://matc.ctgu.edu.cn/">分析测试中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://qks.ctgu.edu.cn/">期刊社</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://archives.ctgu.edu.cn/">档案馆</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://hq.ctgu.edu.cn">后勤保障服务部（资产经营公司）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://www.ycrh.com/">附属仁和医院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://kjxy.ctgu.edu.cn/">三峡大学科技学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="http://yywz.ctgu.edu.cn/">语言文字工作委员会</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+
+                                        <li><a href="https://jsfz.ctgu.edu.cn/index.htm">教师教学发展中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em></li>
+                                        </ul>
+                                    </dd>
+                                    
+                                </dl>
+                            </div>
+                        </li>
+                        
+
+
+                        
+<li>
+                            <a href="http://rsc.ctgu.edu.cn/">人事师资<i></i></a>
+                            <div class="down">
+                                <dl>
+
+                                    <dd>
+                                        <a href="http://rsc.ctgu.edu.cn/">人事处</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="http://rczp.ctgu.edu.cn/#/app/ctgu/epxing_recruit/zpwz">人才招聘</a>
+                                    </dd>
+                                    
+                                </dl>
+                            </div>
+                        </li>
+                        
+
+
+                        
+<li>
+                            <a href="http://sxdxjwc.ctgu.edu.cn/">人才培养<i></i></a>
+                            <div class="down">
+                                <dl>
+
+                                    <dd>
+                                        <a href="https://sxdxjwc.ctgu.edu.cn/">本科教育</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="http://sxdxyjsy.ctgu.edu.cn/">研究生教育</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="http://jxjy.ctgu.edu.cn/">成人教育与培训</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="http://dir.ctgu.edu.cn/">留学生教育</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="https://tyxy.ctgu.edu.cn/">高水平运动队</a>
+                                    </dd>
+                                    
+                                </dl>
+                            </div>
+                        </li>
+                        
+
+
+                        
+<li>
+                            <a href="https://zs.ctgu.edu.cn">招生就业<i></i></a>
+                            <div class="down">
+                                <dl>
+
+                                    <dd>
+                                        <a href="http://zs.ctgu.edu.cn/">本科招生</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="https://ctgu.91wllm.cn/">就业信息</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="http://sxdxyjsy.ctgu.edu.cn/">研究生招生</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="http://dir.ctgu.edu.cn/">留学生招生</a>
+                                    </dd>
+                                    
+                                </dl>
+                            </div>
+                        </li>
+                        
+
+
+                        
+<li>
+                            <a href="http://science.ctgu.edu.cn/">科学研究<i></i></a>
+                        </li>
+                        
+
+
+                        
+<li>
+                            <a href="xkjs/zdxk.htm">学科建设<i></i></a>
+                            <div class="down">
+                                <dl>
+
+                                    <dd>
+                                        <a href="xkjs/gnylxkjsxk.htm">国内一流学科建设学科</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="xkjs/zdxk.htm">重点学科</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="xkjs/yjxkbsd.htm">一级学科博士点</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="xkjs/zyxwbsd.htm">专业学位博士点</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="xkjs/yjxkssd.htm">一级学科硕士点</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="xkjs/zyxwssd.htm">专业学位硕士点</a>
+                                    </dd>
+                                    
+                                </dl>
+                            </div>
+                        </li>
+                        
+
+
+                        
+<li>
+                            <a href="http://dir.ctgu.edu.cn">国际合作<i></i></a>
+                        </li>
+                        
+
+
+                        
+</ul>
+                </div>
+                <div class="top_link"><a href="https://portal.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 62020)">个人门户</a>
+|
+                    
+<a href="http://xyh.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 62021)">校友</a>
+|
+                    
+<a href="http://eng.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 62022)">EN</a>
+|
+                    
+<a href="http://lib.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 62030)">图书馆</a>
+
+                    
+</div>
+            </div>
+        </div>
+        </div>
+
+        <!-- 移动端头部s -->
+        <div class="headerm flex">
+            <div class="logo flex-v-center">    
+ <a href="" title="" target="_blank"><img src="xsy/img/dilogo.png" border="0" alt=""></a>
+
+            
+
+</div>
+            <div class="mobNavbtn flex">
+               
+                <div class="flex-v-center">
+                    <button class="menu-btn">
+                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span>MENU
+                    </button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="mobNav">
+        
+        <div class="toplink">
+<a href="https://portal.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 62020)">个人门户</a>
+
+
+<a href="http://xyh.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 62021)">校友</a>
+
+
+<a href="http://eng.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 62022)">EN</a>
+
+
+<a href="http://lib.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1703996131, 62030)">图书馆</a>
+
+</div>
+        
+          <ul>
+
+
+          
+             
+
+
+
+                <li>
+                    <div class="navp flex navp1"><a href="xxgk/xxjj.htm" title="学校概况">学校概况</a><i>+</i></div>
+                    <div class="subNavm subNavm1">
+                    
+                     
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xxgk/xxjj.htm" title="学校简介">学校简介</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xxgk/xrld.htm" title="现任领导">现任领导</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xxgk/dxzc.htm" title="大学章程">大学章程</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xxgk/xxbs.htm" title="形象标识">形象标识</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="http://syw.ctgu.edu.cn/bfxy.htm" title="校园风景">校园风景</a></div>
+
+
+
+
+                    </div>
+                </li>
+
+
+
+               
+           
+        
+
+
+
+          
+             
+
+
+
+                <li>
+                    <div class="navp flex navp1"><a href="#" title="组织机构">组织机构</a><i>+</i></div>
+                    <div class="subNavm subNavm1">
+                    
+                     
+
+
+                        <div class="navp navp2 flex">
+                            <a href="#" title="党群部门">党群部门</a><i>+</i></div>
+                        <div class="subNavm subNavm2">
+
+                            <a href="https://dzzf.ctgu.edu.cn/" title="党政办公室（保密办公室）">党政办公室（保密办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="https://dzzf.ctgu.edu.cn" title="政策研究与法规室">政策研究与法规室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://jwjc.ctgu.edu.cn/" title="纪委（监察专员办公室）、党委巡察工作办公室">纪委（监察专员办公室）、党委巡察工作办公室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://zzb.ctgu.edu.cn/" title="党委组织部（党校） 机关党委">党委组织部（党校） 机关党委</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://syw.ctgu.edu.cn/" title="党委宣传部（党委教师工作部）">党委宣传部（党委教师工作部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://tzb.ctgu.edu.cn/" title="党委统战部（社会主义学院）">党委统战部（社会主义学院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://xgh.ctgu.edu.cn/" title="工  会">工  会</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sxdxxsc.ctgu.edu.cn/" title="学生处（学生工作部 研究生工作部 武装部）">学生处（学生工作部 研究生工作部 武装部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="#" title="团  委">团  委</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://bwc.ctgu.edu.cn/" title="保卫处（保卫部）">保卫处（保卫部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://lgbc.ctgu.edu.cn/" title="老干部工作部（离退休工作处）">老干部工作部（离退休工作处）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+                            </div>
+
+
+                        <div class="navp navp2 flex">
+                            <a href="#" title="行政部门">行政部门</a><i>+</i></div>
+                        <div class="subNavm subNavm2">
+
+                            <a href="http://xkgh.ctgu.edu.cn/" title="发展规划与学科建设办公室">发展规划与学科建设办公室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sxdxyjsy.ctgu.edu.cn/" title="研究生院">研究生院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sxdxjwc.ctgu.edu.cn/" title="教务处（求索学院）">教务处（求索学院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://science.ctgu.edu.cn/" title="科技发展研究院（国防科技研究院）">科技发展研究院（国防科技研究院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://skc.ctgu.edu.cn/" title="社会科学发展研究院">社会科学发展研究院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://rsc.ctgu.edu.cn/" title="人事处（人才工作办公室）">人事处（人才工作办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://dir.ctgu.edu.cn/" title="国际合作与交流处（港澳台事务办公室）">国际合作与交流处（港澳台事务办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="https://zs.ctgu.edu.cn/ctgu" title="招生及就业指导处">招生及就业指导处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="https://mp.weixin.qq.com/s?__biz=Mzg3NjE1NDUzNQ==&mid=2247495715&idx=1&sn=6f06366eea1bec5acf2914b12ac847ab&chksm=cf342bebf843a2fd0a7459b843d58f0883e8f671578122671f1ed34716e311e218b527964037&token=122809829&lang=zh_CN#rd" title="社会服务与对外合作办公室">社会服务与对外合作办公室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://yxb.ctgu.edu.cn/" title="医学部">医学部</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://newcwc.ctgu.edu.cn/" title="财务处">财务处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sjc.ctgu.edu.cn/" title="审计处">审计处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="https://xjc.ctgu.edu.cn/" title="校园规划与建设处">校园规划与建设处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://zcc.ctgu.edu.cn/" title="设备与资产管理处">设备与资产管理处</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+                            </div>
+
+
+                        <div class="navp navp2 flex">
+                            <a href="#" title="学院设置 ">学院设置 </a><i>+</i></div>
+                        <div class="subNavm subNavm2">
+
+                            <a href="http://hee.ctgu.edu.cn/" title="水利与环境学院">水利与环境学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://tmyjz.ctgu.edu.cn/" title="土木与建筑学院">土木与建筑学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://jxdl.ctgu.edu.cn/" title="机械与动力学院">机械与动力学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://clyhg.ctgu.edu.cn/" title="材料与化工学院">材料与化工学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://newee.ctgu.edu.cn/" title="电气与新能源学院">电气与新能源学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://it.ctgu.edu.cn/" title="计算机与信息学院">计算机与信息学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://jg.ctgu.edu.cn/" title="经济与管理学院">经济与管理学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://jcyxy.ctgu.edu.cn/" title="基础医学院">基础医学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="https://jkyxy.ctgu.edu.cn/" title="健康医学院">健康医学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://wxycm.ctgu.edu.cn/" title="文学与传媒学院">文学与传媒学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://tjbjyxy.ctgu.edu.cn/" title="田家炳教育学院（高教所）">田家炳教育学院（高教所）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sxdxmkszyxy.ctgu.edu.cn/" title="马克思主义学院">马克思主义学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://fgxy.ctgu.edu.cn/" title="法学与公共管理学院">法学与公共管理学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://lxy.ctgu.edu.cn/" title="数理学院、核能科学与工程学院">数理学院、核能科学与工程学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://syxy.ctgu.edu.cn/" title="生物与制药学院">生物与制药学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://wgyxy.ctgu.edu.cn/" title="外国语学院">外国语学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://ysxy.ctgu.edu.cn/" title="艺术学院">艺术学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://tyxy.ctgu.edu.cn/" title="体育学院（体育部）">体育学院（体育部）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://cic.ctgu.edu.cn/" title="国际学院（与国际合作交流处合署办公）">国际学院（与国际合作交流处合署办公）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://mzxy.ctgu.edu.cn/" title="民族学院">民族学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://cxcy.ctgu.edu.cn" title="创新创业学院（大学生素质教育中心）">创新创业学院（大学生素质教育中心）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://jxjy.ctgu.edu.cn/" title="继续教育学院（职业技术学院）">继续教育学院（职业技术学院）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+                            </div>
+
+
+                        <div class="navp navp2 flex">
+                            <a href="#" title="科研机构">科研机构</a><i>+</i></div>
+                        <div class="subNavm subNavm2">
+
+                            <a href="http://newtgls.ctgu.edu.cn/" title="湖北长江三峡滑坡国家野外科学观测研究站">湖北长江三峡滑坡国家野外科学观测研究站</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://geoh.ctgu.edu.cn/" title="三峡库区地质灾害教育部重点实验室">三峡库区地质灾害教育部重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sthj.ctgu.edu.cn/" title="三峡库区生态环境教育部工程研究中心">三峡库区生态环境教育部工程研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="https://cicge.ctgu.edu.cn" title="三峡地区地质灾害与生态环境湖北省协同创新中心">三峡地区地质灾害与生态环境湖北省协同创新中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sdjxsb.ctgu.edu.cn/" title="水电机械设计与维护省重点实验室">水电机械设计与维护省重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sdjc.ctgu.edu.cn/" title="湖北省水电工程智能视觉监测重点实验室">湖北省水电工程智能视觉监测重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="#" title="湖北省建筑质量检测装备工程技术研究中心">湖北省建筑质量检测装备工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://tmai.ctgu.edu.cn/" title="肿瘤微环境与免疫治疗湖北省重点实验室">肿瘤微环境与免疫治疗湖北省重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://npr.ctgu.edu.cn/" title="天然产物研究与利用重点实验室">天然产物研究与利用重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://ymzx.ctgu.edu.cn/" title="水库移民研究中心">水库移民研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://qyshgl.ctgu.edu.cn/" title="区域社会管理创新与发展研究中心">区域社会管理创新与发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sxwh.ctgu.edu.cn/" title="三峡文化与经济社会发展研究中心">三峡文化与经济社会发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://bcys.ctgu.edu.cn/" title="巴楚艺术发展研究中心">巴楚艺术发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://nthjjc.ctgu.edu.cn/" title="湖北省农田环境监测工程技术研究中心">湖北省农田环境监测工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://sxdxsec.ctgu.edu.cn" title="软件工程中心">软件工程中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://alzsny.ctgu.edu.cn/" title="艾伦麦克德尔米德再生能源研究所">艾伦麦克德尔米德再生能源研究所</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="https://tjbjyxy.ctgu.edu.cn/gjyj/gjsjj.htm" title="高教研究">高教研究</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://swzx.ctgu.edu.cn/" title="生物技术研究中心">生物技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://swzx.ctgu.edu.cn" title="湖北省三峡特色植物繁育工程技术研究中心">湖北省三峡特色植物繁育工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://dpm.ctgu.edu.cn/" title="防灾减灾湖北省重点实验室(三峡大学)">防灾减灾湖北省重点实验室(三峡大学)</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://yszx.ctgu.edu.cn/" title="影视文化与产业发展研究中心">影视文化与产业发展研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://ssg.ctgu.edu.cn/" title="湖北省水电工程施工与管理重点实验室">湖北省水电工程施工与管理重点实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://mathcenter.ctgu.edu.cn/" title="三峡数学研究中心 ">三峡数学研究中心 </a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://magtech.ctgu.edu.cn/" title="湖北省弱磁探测工程技术研究中心">湖北省弱磁探测工程技术研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://zyyl.ctgu.edu.cn/" title="国家中医药管理局中药药理（肿瘤）科研三级实验室">国家中医药管理局中药药理（肿瘤）科研三级实验室</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://astro.ctgu.edu.cn/" title="天文与空间科学研究中心">天文与空间科学研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://nri.ctgu.edu.cn/" title="三峡大学尼泊尔研究中心">三峡大学尼泊尔研究中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://tges.ctgu.edu.cn/" title="三峡水库生态系统湖北省野外科学观测研究站">三峡水库生态系统湖北省野外科学观测研究站</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="https://cxcy.ctgu.edu.cn/" title="大学生创新创业实践基地">大学生创新创业实践基地</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+                            </div>
+
+
+                        <div class="navp navp2 flex">
+                            <a href="#" title="其他单位">其他单位</a><i>+</i></div>
+                        <div class="subNavm subNavm2">
+
+                            <a href="http://xswyh.ctgu.edu.cn/" title="学术委员会">学术委员会</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://lib.ctgu.edu.cn/" title="图书馆">图书馆</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://itcenter.ctgu.edu.cn/" title="信息技术中心（智慧校园建设办公室）">信息技术中心（智慧校园建设办公室）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://zb.ctgu.edu.cn/" title="采购与招标中心">采购与招标中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://matc.ctgu.edu.cn/" title="分析测试中心">分析测试中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://qks.ctgu.edu.cn/" title="期刊社">期刊社</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://archives.ctgu.edu.cn/" title="档案馆">档案馆</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://hq.ctgu.edu.cn" title="后勤保障服务部（资产经营公司）">后勤保障服务部（资产经营公司）</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://www.ycrh.com/" title="附属仁和医院">附属仁和医院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://kjxy.ctgu.edu.cn/" title="三峡大学科技学院">三峡大学科技学院</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="http://yywz.ctgu.edu.cn/" title="语言文字工作委员会">语言文字工作委员会</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+
+                            <a href="https://jsfz.ctgu.edu.cn/index.htm" title="教师教学发展中心">教师教学发展中心</a><em style="position: absolute;    top: 0px;left:140px;width:140px;"><a href="http://cxcy.ctgu.edu.cn/" style="display: contents;    width: auto;    padding-left: 0;"></a></em>
+                            </div>
+
+
+
+                    </div>
+                </li>
+
+
+
+               
+           
+        
+
+
+
+          
+             
+
+
+
+                <li>
+                    <div class="navp flex navp1"><a href="http://rsc.ctgu.edu.cn/" title="人事师资">人事师资</a><i>+</i></div>
+                    <div class="subNavm subNavm1">
+                    
+                     
+
+
+                        <div class="navp navp2 flex">
+                            <a href="http://rsc.ctgu.edu.cn/" title="人事处">人事处</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="http://rczp.ctgu.edu.cn/#/app/ctgu/epxing_recruit/zpwz" title="人才招聘">人才招聘</a></div>
+
+
+
+
+                    </div>
+                </li>
+
+
+
+               
+           
+        
+
+
+
+          
+             
+
+
+
+                <li>
+                    <div class="navp flex navp1"><a href="http://sxdxjwc.ctgu.edu.cn/" title="人才培养">人才培养</a><i>+</i></div>
+                    <div class="subNavm subNavm1">
+                    
+                     
+
+
+                        <div class="navp navp2 flex">
+                            <a href="https://sxdxjwc.ctgu.edu.cn/" title="本科教育">本科教育</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="http://sxdxyjsy.ctgu.edu.cn/" title="研究生教育">研究生教育</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="http://jxjy.ctgu.edu.cn/" title="成人教育与培训">成人教育与培训</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="http://dir.ctgu.edu.cn/" title="留学生教育">留学生教育</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="https://tyxy.ctgu.edu.cn/" title="高水平运动队">高水平运动队</a></div>
+
+
+
+
+                    </div>
+                </li>
+
+
+
+               
+           
+        
+
+
+
+          
+             
+
+
+
+                <li>
+                    <div class="navp flex navp1"><a href="https://zs.ctgu.edu.cn" title="招生就业">招生就业</a><i>+</i></div>
+                    <div class="subNavm subNavm1">
+                    
+                     
+
+
+                        <div class="navp navp2 flex">
+                            <a href="http://zs.ctgu.edu.cn/" title="本科招生">本科招生</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="https://ctgu.91wllm.cn/" title="就业信息">就业信息</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="http://sxdxyjsy.ctgu.edu.cn/" title="研究生招生">研究生招生</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="http://dir.ctgu.edu.cn/" title="留学生招生">留学生招生</a></div>
+
+
+
+
+                    </div>
+                </li>
+
+
+
+               
+           
+        
+
+
+
+          
+             
+
+
+
+                <li>
+                    <div class="navp flex navp1"><a href="http://science.ctgu.edu.cn/" title="科学研究">科学研究</a></div>
+                </li>
+
+
+
+               
+           
+        
+
+
+
+          
+             
+
+
+
+                <li>
+                    <div class="navp flex navp1"><a href="xkjs/zdxk.htm" title="学科建设">学科建设</a><i>+</i></div>
+                    <div class="subNavm subNavm1">
+                    
+                     
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xkjs/gnylxkjsxk.htm" title="国内一流学科建设学科">国内一流学科建设学科</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xkjs/zdxk.htm" title="重点学科">重点学科</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xkjs/yjxkbsd.htm" title="一级学科博士点">一级学科博士点</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xkjs/zyxwbsd.htm" title="专业学位博士点">专业学位博士点</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xkjs/yjxkssd.htm" title="一级学科硕士点">一级学科硕士点</a></div>
+
+
+
+                        <div class="navp navp2 flex">
+                            <a href="xkjs/zyxwssd.htm" title="专业学位硕士点">专业学位硕士点</a></div>
+
+
+
+
+                    </div>
+                </li>
+
+
+
+               
+           
+        
+
+
+
+          
+             
+
+
+
+                <li>
+                    <div class="navp flex navp1"><a href="http://dir.ctgu.edu.cn" title="国际合作">国际合作</a></div>
+                </li>
+
+
+
+               
+           
+        
+
+ </ul></div>
+        <!-- 移动端头部e -->
+
+        <!-- banner -->
+        <div class="banner_wrap" style="display:none">    <ul class="banner_list">
+                
+<li>
+
+                    <div class="pic"><a href="" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58752)"><img src="images/20240923.jpg"></a></div>
+
+                </li>
+                
+<li>
+
+                    <div class="pic"><a href="" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58767)"><img src="images/haibao-minmeng.jpg"></a></div>
+
+                </li>
+                
+<li>
+
+                    <div class="pic"><a href="" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58766)"><img src="images/weixintupian_20241021115723_fuben_fuben.jpg"></a></div>
+
+                </li>
+                
+</ul></div>
+        <!-- end -->
+
+        <!-- 要闻 -->
+        <div class="index-news">
+            <div class="inner flex">
+                <div class="news_left">
+                    <div class="new-title">
+                        <div>
+                            <h2>学校<em>要闻</em></h2><span>IMPORTANT NEWS</span>
+                        </div>
+                        <a href="https://syw.ctgu.edu.cn/" class="newsmore">点击进入新闻网</a>
+                    </div>
+                    <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="flex news-list">
+
+
+                        <div>
+                            <div class="news_img">
+                                <a href="http://syw.ctgu.edu.cn/info/1041/48852.htm" style="background-image: url(/__local/1/9A/9F/934F02435F14D55FEE0B38CC21B_C543619A_43EC71.jpg);"></a>
+                            </div>
+                            <div class="new-imgtitle">
+                                <a href="http://syw.ctgu.edu.cn/info/1041/48852.htm">
+                                    <h2>我校获批两个水利部野外科学观测研究站</h2>
+                                    <div class="date">2024-10-24</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="news_img">
+                                <a href="http://syw.ctgu.edu.cn/info/1041/48833.htm" style="background-image: url(/__local/2/20/A0/76D228D88351B59BA72DE00E72F_97A2F8A5_40941.jpg);"></a>
+                            </div>
+                            <div class="new-imgtitle">
+                                <a href="http://syw.ctgu.edu.cn/info/1041/48833.htm">
+                                    <h2>民盟中央参政议政调研基地在三峡大学揭牌</h2>
+                                    <div class="date">2024-10-23</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="news_img">
+                                <a href="http://syw.ctgu.edu.cn/info/1041/48819.htm" style="background-image: url(/__local/3/0F/9A/2A27801C54614E38CCD3011E34B_48BC3FC6_35DA92.jpg?e=.jpg);"></a>
+                            </div>
+                            <div class="new-imgtitle">
+                                <a href="http://syw.ctgu.edu.cn/info/1041/48819.htm">
+                                    <h2>学校召开首期天问科创实验班师生座谈会</h2>
+                                    <div class="date">2024-10-21</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div><script>_showDynClickBatch(['dynclicks_u14_4981','dynclicks_u14_4966','dynclicks_u14_4959'],[4981,4966,4959],"wbnews", 1703996131)</script>
+
+
+                    <div class="news_bottom flex">
+                        <!-- 学校公告 -->
+                        <div class="notice">
+                            <div class="tab-hd">
+                                <h2 class="active">
+                                    <p>学术要闻</p><span>ACADEMIC NEWS</span>
+                                </h2>
+                                <h2>
+                                    <p>学术动态</p><span>ACADEMIC DYNAMIC</span>
+                                </h2>
+                            </div>
+                            <div class="tab-bd">
+                                <div class="notice-list active">
+                                    
+                                    <a href="https://syw.ctgu.edu.cn/xsyw.htm" class="more">更多</a>
+                                       <ul><li>
+                                        <a href="info/1173/4973.htm" title="西南交通大学马光同教授应邀做客“三峡•天问大讲坛”" target="_blank">西南交通大学马光同教授应邀做客“三峡...</a>
+                                        <div class="date">2024-10-24</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1173/4974.htm" title="华中科技大学胡家兵教授应邀做客“三峡•天问大讲坛”" target="_blank">华中科技大学胡家兵教授应邀做客“三峡...</a>
+                                        <div class="date">2024-10-24</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1173/4975.htm" title="陈关荣教授应邀做客“三峡•天问大讲坛”" target="_blank">陈关荣教授应邀做客“三峡•天问大讲坛”</a>
+                                        <div class="date">2024-10-24</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1173/4976.htm" title="我校数理学院成功举办“第六届天文学科发展青年论坛”" target="_blank">我校数理学院成功举办“第六届天文学科...</a>
+                                        <div class="date">2024-10-24</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1173/4952.htm" title="我校青年教师参加“武创源”国际光化学及绿色制造技术创新大赛喜获“创新突破奖”" target="_blank">我校青年教师参加“武创源”国际光化学...</a>
+                                        <div class="date">2024-10-18</div>
+                                    </li>
+                                    
+<script>_showDynClickBatch(['dynclicks_u15_4973','dynclicks_u15_4974','dynclicks_u15_4975','dynclicks_u15_4976','dynclicks_u15_4952'],[4973,4974,4975,4976,4952],"wbnews", 1703996131)</script>
+</ul>
+                                   
+                                </div>
+                                <div class="notice-list ">
+                                    <a href="https://oa.ctgu.edu.cn/oa/application/oa/information/view/news_list_xwmh.jsp?colId=52aaa33f8383a1e701838d8509e04934" class="more">更多</a>
+                                    <ul id="message2">
+                                      
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 校园 -->
+                        <div class="school" style="position: relative;">
+                            <div class="school-title  school-title2 tab-hd">
+                                <h2 class="active">
+                                    <p>校园新闻</p><span>CAMPUS NEWS</span>
+                                </h2>
+                                 <h2>
+                                    <p>媒体关注</p><span>MEDIA ATTENTION</span>
+                                </h2>
+                               
+                            </div>
+                            <div class="tab-bd">
+                                <div class="notice-list  active ">
+                                 <a href="https://syw.ctgu.edu.cn/xxyw.htm" target="_blank" class="kkgg">更多</a>
+                                    <ul><li>
+                                        <a href="http://syw.ctgu.edu.cn/info/1041/48872.htm" title="国网湖北省电力有限公司宜昌供电公司来访我校" target="_blank">国网湖北省电力有限公司宜昌供电公司来...</a>
+                                        <div class="date">2024-10-25</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="http://syw.ctgu.edu.cn/info/1041/48871.htm" title="校领导带队赴北京走访行业单位" target="_blank">校领导带队赴北京走访行业单位</a>
+                                        <div class="date">2024-10-25</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="http://syw.ctgu.edu.cn/info/1041/48864.htm" title="学校举办2024年第二期青年教师沟通交流会" target="_blank">学校举办2024年第二期青年教师沟通交流...</a>
+                                        <div class="date">2024-10-25</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="http://syw.ctgu.edu.cn/info/1041/48859.htm" title="校领导到生物与制药学院调研" target="_blank">校领导到生物与制药学院调研</a>
+                                        <div class="date">2024-10-24</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="http://syw.ctgu.edu.cn/info/1041/48856.htm" title="我校联合承办的“知慧通”2024湖北省专利转化供需对接（长江流域城市专场）暨长江中上游城市跨域一体化保护运营签约活动成功举办" target="_blank">我校联合承办的“知慧通”2024湖北省专...</a>
+                                        <div class="date">2024-10-24</div>
+                                    </li>
+                                    
+<script>_showDynClickBatch(['dynclicks_u16_4993','dynclicks_u16_4994','dynclicks_u16_4984','dynclicks_u16_4983','dynclicks_u16_4982'],[4993,4994,4984,4983,4982],"wbnews", 1703996131)</script>
+</ul>
+                                </div>
+                                 <div class="notice-list " style="display: none;">
+                                 <a href="https://syw.ctgu.edu.cn/mtgz.htm" target="_blank" class="kkgg">更多</a>
+                                 
+                                 <ul><li>
+                                        <a href="https://h.xinhuaxmt.com/vh512/share/12251323?d=134da82&channel=weixin&time=1729946293351" title="【新华社】三峡大学获批两个水利部野外科学观测研究站" target="_blank">【新华社】三峡大学获批两个水利部野外...</a>
+                                        <div class="date">2024-10-26</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="https://news.hubeidaily.net/hbrbsharenew/news_detail/5/3260484/2936044/0?w=1729930378062&uik=ZZkQslB1&share_plat=wechat&sec=5453de1c" title="【湖北日报】三峡大学获批两个水利部野外科学观测研究站" target="_blank">【湖北日报】三峡大学获批两个水利部野...</a>
+                                        <div class="date">2024-10-26</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="https://epaper.gmw.cn/gmrb/html/2024-10/23/nbs.D110000gmrb_11.htm" title="【光明日报】新中国成立初期的手工业改造及其历史意义" target="_blank">【光明日报】新中国成立初期的手工业改...</a>
+                                        <div class="date">2024-10-24</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1371/4977.htm" title="【湖北日报】湖北省首个民盟中央参政议政调研基地在宜昌揭牌" target="_blank">【湖北日报】湖北省首个民盟中央参政议...</a>
+                                        <div class="date">2024-10-24</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="http://m.cnhubei.com/content/2024-10/23/content_18549362.html" title="【荆楚网】湖北首个民盟中央参政议政调研基地在三峡大学揭牌" target="_blank">【荆楚网】湖北首个民盟中央参政议政调...</a>
+                                        <div class="date">2024-10-24</div>
+                                    </li>
+                                    
+<script>_showDynClickBatch(['dynclicks_u17_5003','dynclicks_u17_5002','dynclicks_u17_5004','dynclicks_u17_4977','dynclicks_u17_4978'],[5003,5002,5004,4977,4978],"wbnews", 1703996131)</script>
+</ul></div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- 学术 -->
+                        <div class="school">
+                            <div class="school-title flex">
+                                <h2>
+                                   
+                                     <p>学校公告</p><span>CAMPUS BULLETIN</span>
+                                </h2>
+                               <a href="https://portal.ctgu.edu.cn/" target="_blank">更多</a>
+                            </div>
+                            <div class="notice-list ">                               
+                               <ul id="message">                                       
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="news_right">
+                    <div class="wxbox">
+                        <div><img src="xsy/img/wx.png" />三峡大学微信</div>
+                        <p class="wxbtn">欢迎关注    
+<img class="gzewm" src="xsy/img/ewm123.jpg">
+
+</p>
+                    </div>
+                    <div class="wxlist">
+                        <ul><li>
+                                <a href="https://mp.weixin.qq.com/s/mIGpe1BM3Bqa6NgekB4IAQ" title="三峡大学党委书记何伟军带队到云南电网、水电企业交流" target="_blank">
+                                    <div class="wximg">
+                                        <img src="/__local/4/92/9F/0FE6711880AD06D9586188E8CE1_9D7D20FD_476F4.png" alt="">
+                                    </div>
+                                    <div class="wxtitle">
+                                        <p>三峡大学党委书记何伟军带队到云南电网、水电企业交</p>
+                                        <div class="date">2024-10-12</div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="https://mp.weixin.qq.com/s/ucX5kfvnC40bQoJQ6q_1Yw" title="三峡大学牵头！这一国际标准正式发布！" target="_blank">
+                                    <div class="wximg">
+                                        <img src="/__local/6/8B/A2/1579924C7110FC6E2B7C7248552_D8B358D8_5B215.png" alt="">
+                                    </div>
+                                    <div class="wxtitle">
+                                        <p>三峡大学牵头！这一国际标准正式发布！</p>
+                                        <div class="date">2024-10-08</div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="https://mp.weixin.qq.com/s/HGgDqsh7Sp1JWlVMib6NNA" title="全球前2％顶尖科学家！三峡大学20位学者入选！" target="_blank">
+                                    <div class="wximg">
+                                        <img src="/__local/C/C1/DD/A468C64D4995D859C574BDE924D_022A6612_106D4.jpg" alt="">
+                                    </div>
+                                    <div class="wxtitle">
+                                        <p>全球前2％顶尖科学家！三峡大学20位学者入选！</p>
+                                        <div class="date">2024-09-24</div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+<script>_showDynClickBatch(['dynclicks_u19_4868','dynclicks_u19_4866','dynclicks_u19_4867'],[4868,4866,4867],"wbnews", 1703996131)</script>
+</ul>
+                    
+                    <ul class="xyewm">
+                    <li><img src="font/22233.png"><p>三峡大学本科招生官网<p></li>
+                    <li><img src="font/33344.png"><p>三峡大学本科招生视频号<p></li>
+                    <li><img src="font/sdxy.jpg"><p>三大校友<p></li>
+                    <li><img src="font/xyzj.jpg"><p>校友之家<p></li>
+                    <div class="clear"></div>
+                     <h2>欢迎校友关注</h2>
+                    </ul>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 校园视频 -->
+        <div class="index-video main1">
+            <div class="inner">
+                <div class="video-title clearfix">
+                        
+<img src="xsy/img/wen1.png">
+
+
+                    <a href="index/xysp.htm" target="_blank">更多</a>
+                </div>
+                <div class="video-list flex">       <div class="video_left">
+                        <a href="https://www.bilibili.com/video/BV1HH4y1Z79X/?spm_id_from=333.337.search-card.all.click">
+                            <img src="/__local/1/44/9C/B40F02E5BBB0115ABD1B3F76DAA_1E985808_FBDA7.png" />
+                        </a>
+                    </div>
+                    <div class="video_right flex">
+               
+        <a href="https://www.bilibili.com/video/BV1qh4y1K75R/?vd_source=7ada0979ef793213b3659f1df0cfaee4">
+                            <img src="/__local/3/65/6D/AC7665D60600078EC9B68B04ECF_4F290BE7_EF5D.png" />
+                        </a>
+       
+        <a href="https://www.bilibili.com/video/BV1Uo4y1N7oi/?spm_id_from=333.337.search-card.all.click">
+                            <img src="/__local/5/CF/33/9ED66BEF76E72B1CE461F9381E2_D2C0AB61_120C3.png" />
+                        </a>
+       
+        <a href="https://www.bilibili.com/video/BV1tu411T7RM/?vd_source=7ada0979ef793213b3659f1df0cfaee4">
+                            <img src="/__local/A/13/11/78EC2D09E9DC6AF65BCAE9B6564_944EB857_101E8.jpg" />
+                        </a>
+       
+        <a href="https://www.bilibili.com/video/BV1GL411z7dV/?spm_id_from=333.337.search-card.all.click">
+                            <img src="/__local/D/E0/2D/0CDFE795B2DEB3B10A947A226B0_9FCB3D01_7F87.png" />
+                        </a>
+       
+ </div><script>_showDynClickBatch(['dynclicks_u21_4083','dynclicks_u21_3127','dynclicks_u21_2996','dynclicks_u21_2997','dynclicks_u21_3759'],[4083,3127,2996,2997,3759],"wbnews", 1703996131)</script>
+</div>
+            </div>
+        </div>
+
+
+        <div class="adver">    
+
+            <a href="" title="" target="_blank"><img src="images/bytu.png"></a>
+        
+
+
+        
+        <div class="waveWrapper waveAnimation">
+
+  <div class="waveWrapperInner bgTop">
+
+    <div class="wave waveTop" style="background-image: url(xsy/simg/wave-top.png)"></div>
+
+  </div>
+
+ 
+
+  <div class="waveWrapperInner bgBottom">
+
+    <div class="wave waveBottom" style="background-image: url(xsy/simg/wave-bot.png)"></div>
+
+  </div>
+
+</div>
+        
+        </div>
+
+        <!-- 三峡故事 -->
+        <div class="index-story main2">
+            <div class="inner">
+                <div class="story-title ">
+                        
+<img src="xsy/img/wen3.png" alt="">
+
+
+                    <img src="xsy/img/qiusuo.png" alt="" class="qiusuo">
+                </div>
+                <script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<div class="story-nr">
+  三峡大学是经国家教育部批准，由原武汉水利电力大学（宜昌）和原湖北三峡学院于2000年5月25日合并组建。原武汉水利电力大学（宜昌）的前身是于1978年成立的葛洲坝水电工程学院，先后隶属于水利电力部、能源部、电力工业部、国家电力公司，1996年与原武汉水利电力大学合并组建新的武汉水利电力大学，成为“211工程”建设大学的重要组成部分。原湖北三峡学院是由原宜昌师范高等专科学校、宜昌医学高等专科学校、宜昌职业大学于1996年合并而成。 
+</div>
+
+                <div class="story-list flex"><div class="storyimg1"><a href="https://syw.ctgu.edu.cn/info/1007/48129.htm" title="三峡大学风景" target="_blank"><img src="/__local/E/58/43/4DD5CC04D9A0C4566F33F87D0B9_1A4027FD_2313E.jpg"></a>
+                        
+<a href="https://syw.ctgu.edu.cn/info/1007/48109.htm" title="三峡大学风景" target="_blank"><img src="/__local/3/E8/9B/BC37AF4CE8DE0C2EEA78BFBF969_B8E4F918_33285.jpg"></a>
+                        
+<script>_showDynClickBatch(['dynclicks_u25_2134','dynclicks_u25_1892'],[2134,1892],"wbnews", 1703996131)</script>
+</div>
+                    <div class="storyimg2 flex"><div class="img2-wrap1 flex">
+
+                        
+                            <a href="http://syw.ctgu.edu.cn/info/1007/42122.htm"><img src="/__local/8/AE/34/2E515117376947741AA7175F7DF_1FFC7E33_94903.jpeg"></a>
+                       
+                    
+
+                        
+                            <a href="http://syw.ctgu.edu.cn/info/1007/41844.htm"><img src="/__local/2/23/1C/8A096C0D94A5841E0643A2F4420_26D824EF_3E74F.jpeg"></a>
+                       
+                    
+
+                        
+                            <a href="http://syw.ctgu.edu.cn/info/1007/41669.htm"><img src="/__local/6/06/B4/6AC95E26E32FE1379128F352265_0B49F973_8DEF7.jpg"></a>
+                       
+                    
+
+                        
+                            <a href="http://syw.ctgu.edu.cn/info/1007/41182.htm"><img src="/__local/A/DF/9C/D2111FF133605779142E6B59CCF_EFBB59BA_377C2.jpg"></a>
+                        </div>
+                        <div class="img2-wrap2">
+                       
+                    
+
+                        
+                            <a href="https://syw.ctgu.edu.cn/info/1007/48019.htm"><img src="/__local/6/80/DE/03F0ACD6C3E5C8D216BA7AE914F_FE1FC622_38E02.jpg"></a>
+                        </div>
+                        <div class="img2-wrap3">
+                       
+                    
+
+                        
+                            <a href="http://syw.ctgu.edu.cn/info/1007/40983.htm"><img src="/__local/C/AE/5A/22621015B560688B2191FC17FC5_DBFC2CD1_5AB46.png"></a>
+                        </div>
+                        <div class="img2-wrap4">
+                       
+                    
+
+                        
+                            <a href="https://syw.ctgu.edu.cn/info/1007/24265.htm"><img src="/__local/8/6D/16/D778B56D539E1DC905FA4FC793E_41627208_1377C.jpg"></a>
+                        </div>
+                        <div class="img2-wrap5">
+                       
+                    
+
+                        
+                            <a href="http://syw.ctgu.edu.cn/info/1007/40600.htm"><img src="/__local/1/A5/31/4C6661D3FE54BD8234D7E51B0D8_DF977E38_249D1.jpg"></a>
+                       
+                    
+ </div><script>_showDynClickBatch(['dynclicks_u26_2134','dynclicks_u26_1892','dynclicks_u26_1763','dynclicks_u26_1596','dynclicks_u26_1531','dynclicks_u26_1314','dynclicks_u26_1254','dynclicks_u26_1240','dynclicks_u26_1119','dynclicks_u26_1116'],[2134,1892,1763,1596,1531,1314,1254,1240,1119,1116],"wbnews", 1703996131)</script>
+</div></div>
+                <a href="index/xygs.htm" class="more" target="_blank">更多</a>
+            </div>
+        </div>
+
+
+
+       <!-- 校友风采 -->
+        <div class="index-alumni main3">
+            <div class="inner">
+                <div class="alumni-title">
+                    <img src="xsy/img/wen4.png" alt="">
+                </div>
+                
+                <div class="index-alumnix">                    <ul class="clearfix">
+                                            <li><h2>王松鹤</h2><a href="info/1140/2877.htm" style="background-image: url(/__local/7/D8/50/54847E3B74415CCBEF8C8FF87B6_0559E9E4_278BD.png);"></a></li>
+                       
+                        
+                        <li><h2>史明君</h2><a href="info/1140/2646.htm" style="background-image: url(/__local/9/89/EB/1576218E8B399C9FC145C51F314_448358DD_30C73.png);"></a></li>
+                       
+                        
+                        <li><h2>陶娟</h2><a href="info/1140/2611.htm" style="background-image: url(/__local/E/AD/D7/5B5443180C45293A3A42D2DD071_0A8238EC_18A5F.png);"></a></li>
+                       
+                        
+                        <li><h2>李敏</h2><a href="info/1140/2600.htm" style="background-image: url(/__local/7/A5/89/62198654865A5B37C212DF8E84B_2C2FE8C0_2DF0F.png);"></a></li>
+                       
+                        
+                        <li><h2>庞秀岚</h2><a href="info/1140/2561.htm" style="background-image: url(/__local/1/B1/92/9B76503515C79138957114BC1BC_DCC3B78D_25DEF.png);"></a></li>
+                       
+                        
+                        <li><h2>侯静</h2><a href="info/1140/2559.htm" style="background-image: url(/__local/2/E8/3C/EC3B86CA9723577ABE50441DD8C_F088058C_2F33D.png);"></a></li>
+                       
+                        
+                    </ul>
+                    <a href="https://syw.ctgu.edu.cn/xyfc.htm" class="more">更多</a>
+                
+<script>_showDynClickBatch(['dynclicks_u27_2877','dynclicks_u27_2646','dynclicks_u27_2611','dynclicks_u27_2600','dynclicks_u27_2561','dynclicks_u27_2559'],[2877,2646,2611,2600,2561,2559],"wbnews", 1703996131)</script>
+</div>
+                
+                
+            </div>
+        </div>
+
+
+
+
+ <!-- 校园 -->
+                        <div class="school xyfc">
+                            <div class="school-title flex school-title2">
+                                <h2>
+                                    <p>校友传真</p><span>ALUMNI FAX</span>
+                                </h2>
+                                <a href="https://syw.ctgu.edu.cn/xyfc.htm" target="_blank">更多</a>
+                            </div>
+                            <div class="notice-list ">
+                                <ul><li>
+                                        <a href="info/1140/2877.htm" title="王松鹤：奋力书写黄河防汛工作出彩答卷" target="_blank">王松鹤：奋力书写黄河防汛工作出彩答卷</a>
+                                        <div class="date">2022-09-02</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1140/2646.htm" title="史明君：行走在80米特高压线路上的“女蜘蛛侠”" target="_blank">史明君：行走在80米特高压线路上的“女...</a>
+                                        <div class="date">2022-05-30</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1140/2611.htm" title="陶娟：临床教学先行者，学生心目中的好老师" target="_blank">陶娟：临床教学先行者，学生心目中的好老师</a>
+                                        <div class="date">2022-05-19</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1140/2600.htm" title="李敏：百炼成钢 勇夺竞技赛场“大满贯”" target="_blank">李敏：百炼成钢 勇夺竞技赛场“大满贯”</a>
+                                        <div class="date">2022-05-16</div>
+                                    </li>
+                                    
+<li>
+                                        <a href="info/1140/2561.htm" title="庞秀岚：秉持匠心 “秀”出不凡" target="_blank">庞秀岚：秉持匠心 “秀”出不凡</a>
+                                        <div class="date">2022-05-05</div>
+                                    </li>
+                                    
+<script>_showDynClickBatch(['dynclicks_u28_2877','dynclicks_u28_2646','dynclicks_u28_2611','dynclicks_u28_2600','dynclicks_u28_2561'],[2877,2646,2611,2600,2561],"wbnews", 1703996131)</script>
+</ul>
+                            </div>
+                        </div>
+
+
+
+
+
+
+        <div class="index-topic main4">
+            <div class="inner">
+                <div class="video-title">
+                        
+<img src="xsy/img/wen5.png" alt="">
+
+
+                </div>
+                <div class="topic-list flex">    <div>
+                        <a href="https://sxdxztjy.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58490)">
+                            <img src="images/zhuan1.png" alt="">
+                        </a>
+                    </div>
+                    
+<div>
+                        <a href="https://xczx.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58493)">
+                            <img src="images/zhuan2.png" alt="">
+                        </a>
+                    </div>
+                    
+<div>
+                        <a href="http://hee.ctgu.edu.cn/djzt.htm" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58492)">
+                            <img src="images/zhuan3.png" alt="">
+                        </a>
+                    </div>
+                    
+<div>
+                        <a href="http://sdsfztw.ctgu.edu.cn/" title="" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58491)">
+                            <img src="images/zhuan4.png" alt="">
+                        </a>
+                    </div>
+                    
+</div>
+
+                <div class="quicklist ">    <ul class="flex">
+                        
+<li>
+                            <a href="http://jjh.ctgu.edu.cn/" title="基金会" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58489)">
+                                <img src="xsy/img/quickicon1.png" alt="">
+                                <p>基金会</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="http://lib.ctgu.edu.cn/" title="图书馆" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58487)">
+                                <img src="xsy/img/quickicon2.png" alt="">
+                                <p>图书馆</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="https://youth.ctgu.edu.cn/" title="青年之声" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58486)">
+                                <img src="xsy/img/quickicon3.png" alt="">
+                                <p>青年之声</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="http://xxgk.ctgu.edu.cn/" title="信息公开" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58482)">
+                                <img src="xsy/img/quickicon4.png" alt="">
+                                <p>信息公开</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="https://ctgu.yuketang.cn/" title="雨课堂" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58483)">
+                                <img src="xsy/img/quickicon5.png" alt="">
+                                <p>雨课堂</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="http://sxdxxlzx.ctgu.edu.cn/index.htm" title="心理咨询" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58484)">
+                                <img src="xsy/img/quickicon6.png" alt="">
+                                <p>心理咨询</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="http://zb.ctgu.edu.cn/" title="招标信息" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58485)">
+                                <img src="xsy/img/quickicon7.png" alt="">
+                                <p>招标信息</p>
+                            </a>
+                        </li>
+                        
+<li>
+                            <a href="https://oa.ctgu.edu.cn/oa/xzxxAction.do?method=letterEntrance" title="领导信箱" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 58488)">
+                                <img src="xsy/img/quickicon8.png" alt="">
+                                <p>领导信箱</p>
+                            </a>
+                        </li>
+                        
+</ul></div>
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            <div class="inner flex">
+
+                <div class="dlogo">    
+
+
+                    <img src="img/dilogo.png">
+
+
+                
+
+</div>
+
+                <div class="bq">
+<ul> 
+ <li>地址：宜昌市大学路8号</li> 
+ <li>邮编：443002&nbsp; &nbsp; 接待/接访电话：0717-6390002</li> 
+ <li><a href="https://beian.miit.gov.cn/#/Integrated/index" style="color: rgb(255, 255, 255);">鄂ICP备05003329号</a></li> 
+ <li><img width="16" height="16" title="" alt="" src="/__local/1/F6/3D/4255E910146AB4EA66BE15523E5_B477C0E3_50A.png?e=.png" border="0" vspace="0" hspace="0" vwidth="16" vheight="16" vurl="/_vsl/1F63D4255E910146AB4EA66BE15523E5/B477C0E3/50A?e=.png" vsbhref="vurl" orisrc="/__local/1/F6/3D/4255E910146AB4EA66BE15523E5_B477C0E3_50A.png" class="img_vsb_content"> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42050202000133" style="color: rgb(255, 255, 255);">鄂公网安备 42050202000133号</a></li> 
+ <li>Copyright©2022 三峡大学版权所有</li> 
+</ul></div>
+
+                <div class="ewm">
+                    <ul>                        
+<li><a href="#" title="" target="_blank"><img src="img/dipic1.png" onclick="_addDynClicks(&#34;wbimage&#34;, 1703996131, 54287)"></a></li>
+<li><img src="img/dipic2.png"><p>官方微信</p></li>
+<li><img src="img/dipic3.png"><p>官方微博</p></li>
+<li><img src="img/dipic4.png"><p>抖音</p></li>
+</ul>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <!-- <script type="text/javascript" src="/xsy/js/TweenMax.min.js"></script> -->
+        <script type="text/javascript" src="xsy/js/lib.js"></script>
+
+        <script>
+            $(function () {
+
+                $('.banner_list').slick({
+                    dots: false, //点
+                    arrows: true, //箭头
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    fade: false,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+
+                });
+            });
+        </script>
+
+
+
+</body>
+
+</html>

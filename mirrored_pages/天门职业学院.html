@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang=zh-CN dropeffect=none class="js is-AppPromotionBarVisible cssanimations csstransforms csstransitions flexbox touchevents mobile"><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>统一身份认证平台</title><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=format-detection content="telephone=no"><link rel="shortcut icon" href=/assets/images/favicon.ico><script type=text/javascript src=/assets/js/locale.js></script><script type=text/javascript>//解决 IE8、IE9 不支持 console 问题
+        window.console = window.console || (function () {
+            var c = {}; c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile
+                = c.clear = c.exception = c.trace = c.assert = function () { };
+            return c;
+        })();
+        window.safeQuestion = 'https://172.16.10.25:4102/#/problem';
+        window.safePassWord = 'https://172.16.10.25:4102/#/password/passwordFound';
+        window.safeAppeal = '';
+        //移动端找回密码
+        window.mobileSafePassWord = 'https://172.16.10.25:4107/#/password';
+        //移动端账号申诉
+        window.mobileSafeAppeal = 'https://172.16.10.25:4107/#/complain/baseInfo';
+        //移动端常见问题
+        window.mobileSafeProblem = 'https://172.16.10.25:4107/#/question';
+        // document.body.addEventListener('touchstart', function () { });</script><link href=/assets/css/vendor.978f821b60f059bd544b95d65ce22456.css rel=stylesheet><link href=/assets/css/app.b6bfb01bb56269a252b37dfc94a832a4.css rel=stylesheet></head><body>
+    <link rel="stylesheet/less" type="text/css" href="/color.less" />
+    <script>
+      window.less = {
+        async: false,
+        env: 'production'
+      };
+    </script>
+    <script type="text/javascript" src="/assets/js/less.min.js"></script>
+        <script type=text/javascript>var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+      var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+      var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+      var isFF = userAgent.indexOf("Firefox") > -1; //判断是否Firefox浏览器
+      var isSafari = userAgent.indexOf("Safari") > -1; //判断是否Safari浏览器
+  
+      if (isIE) {
+          
+          var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+          reIE.test(userAgent);
+          var fIEVersion = parseFloat(RegExp["$1"]);
+          if (fIEVersion <= 9) {
+              var tipsPage = document.createElement('div');
+              tipsPage.setAttribute('style', 'position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #ddd;z-index: 999;');
+              tipsPage.innerHTML = 
+                  '<div style="' +
+                  '    width: 70%;' +
+                  '    max-width: 600px;' +
+                  '    height: 300px;' +
+                  '    background: #fff;' +
+                  '    margin: 0 auto;' +
+                  '    margin-top: 120px;' +
+                  '    color: #333;' +
+                  '    font-size: 24px;' +
+                  '    padding: 70px 30px;' +
+                  '    box-sizing: border-box;' +
+                  '">' +
+                  '    <p style="' +
+                  '    font-size: 30px;' +
+                  '    color: #d41414;' +
+                  '    font-weight: bold;' +
+                  '    text-align: center;' +
+                  '    padding-bottom: 15px;' +
+                  '">温馨提示</p>' +
+                  '    <p>您的IE浏览器版本过低，请升级到最新的IE浏览器版本，或下载<a href ="https://www.google.cn/chrome/">谷歌</a>、<a href ="http://www.firefox.com.cn/">火狐</a>浏览器打开。</p>' +
+                  '</div>';
+              document.body.appendChild(tipsPage);
+          }
+      }//isIE end</script><div id=root style=height:100%></div><div id=scrollDiv style="overflow: scroll;width: 100%;height: 100%;position: absolute;top: -9999px;z-index: -9999;"></div><script type=text/javascript src=/assets/js/vendor.4a8da1c531bab874bcf7.js></script><script type=text/javascript src=/assets/js/app.054b84910cb2ca086224.js></script></body></html>

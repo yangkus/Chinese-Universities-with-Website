@@ -1,0 +1,797 @@
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="/web/img/minlogo.png" type="image/x-icon" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+
+
+
+<link rel="stylesheet" type="text/css" href="/topui/css/topui.min.css" />
+<link rel="stylesheet" type="text/css" href="/topui/themes/oa/oa.css" />
+<link rel="stylesheet" type="text/css" href="/web/assets/css/web.css">
+<!-- <link id="setFontSize" rel="stylesheet" type="text/css" href="/topui/themes/oa/fontsize14.css" /> -->
+<style>
+/*导出样式定义*/
+.expCol{list-style: none; margin: 5px}
+.expCol li{vertical-align: middle;margin: 2px}
+.expCol li input{vertical-align: middle;}
+.expCol-highlight { height: 1.5em; line-height: 1.2em; background-color: #fefefe}
+</style>
+<script type="text/javascript" src="/topui/topui_min_without_webuploader.js"></script>
+<script type="text/javascript" src="/topui/js/jquery.webuploader.js"></script>
+
+
+    <script type="text/javascript" src="/topui/js/lhgdialog.min.js?skin=idialog"></script>
+
+
+<script type="text/javascript">
+
+ var rootBasePath = '/';
+//  fontSize('get');
+ //设置字号大小
+ function fontSize(action,dom){
+     var s, urlStr, size, nUrl;   
+     urlStr = $('#setFontSize').attr('href');
+     if(action == 'set'){
+          size =  dom.data('fsize');
+         dom.addClass('active').siblings().removeClass('active');
+         s = size||14;
+         nUrl = urlStr.substring(0,urlStr.length-6) + s +'.css';
+         $.cookie('fontSize',s,{expires : 10});  
+         //刷新
+         location.reload();
+     }else{
+         s = $.cookie('fontSize')||14;
+         if(Number(s) == 16){
+            //大号
+             $('.index-setfs').eq(0).addClass('active').siblings().removeClass('active');
+         }else if(Number(s) == 14){
+            //小号
+             $('.index-setfs').eq(2).addClass('active').siblings().removeClass('active');    
+         }else{
+            //中号
+             $('.index-setfs').eq(1).addClass('active').siblings().removeClass('active'); 
+         }
+         nUrl = urlStr.substring(0,urlStr.length-6) + s +'.css';
+         //设置大小
+         $('#setFontSize').attr('href',nUrl);
+     }        
+     // console.log(nUrl)
+ }
+</script>
+<input type="hidden" id="loginId" name ="loginId" value=""/>
+<input type="hidden" id="globalUserName" name ="loginId" value=""/>
+<input type="hidden" id="globalDeptId" name ="globalDeptId" value=""/>
+<input type="hidden" id="globalDeptName" name ="globalDeptName" value=""/>
+<input type="hidden" id="nonce" name ="nonce" value=""/>
+<input type="hidden" id="token" name ="token" value=""/>
+	 	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="keyword" content="广东云浮中医药职业学院">
+    	<meta name="description" content="广东云浮中医药职业学院">
+    	<meta name="baidu-site-verification" content="DrMAzhLOZb" />
+    	<meta name="renderer" content="webkit">
+		<title>广东云浮中医药职业学院</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="/web/js/bootstrap-4.6.0-dist/css/bootstrap.min.css?timestamp=1730092151602" />
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="/web/js/bootnavbar.css" />
+		<link rel="stylesheet" href="/web/js/bootstrap-submenu-3.0.1/dist/css/bootstrap-submenu.css" />
+		
+		<script src="/web/js/jquery/jquery.min.js?timestamp=1730092151602"></script>
+		<script src="/web/js/bootstrap-4.6.0-dist/js/bootstrap.min.js?timestamp=1730092151602"></script>
+		<script src="/web/medicineschool/page/header.js"></script>
+		<script src="/web/medicineschool/page/page-index.js?timestamp=1730092151602"></script>
+		<script src="/web/medicineschool/page/footer.js"></script>
+		<script src="/web/js/jquery.mousewheel.min.js?timestamp=1730092151602"></script>
+		<script src="/web/js/pictureViewer.js?timestamp=1730092151602"></script>
+		
+		
+		<link rel="stylesheet" href="/web/css/pictureViewer.css">
+		<link rel="stylesheet" type="text/css" href="/web/css/header.css" />
+		<link rel="stylesheet" type="text/css" href="/web/css/footer.css" />
+		<style>
+			
+			/*网站灰色--开始*/
+			/*html{
+			  -webkit-filter: grayscale(100%);
+			  -moz-filter: grayscale(100%);
+				-ms-filter: grayscale(100%);
+				-o-filter: grayscale(100%);
+				filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+				_filter: none;
+			}*/
+			/*网站灰色--结束*/
+
+			.allGray{
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				-ms-filter: grayscale(100%);
+				-o-filter: grayscale(100%);
+				filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+				_filter:none;
+			}
+		
+			.clear:after {
+				display: block;
+				clear: both;
+				content: "";
+				visibility: hidden;
+				height: 0;
+			}
+
+			.clear {
+				zoom: 1;
+			}
+
+			.left {
+				float: left;
+				display: block;
+			}
+
+			.right {
+				float: right;
+				display: block;
+			}
+			
+			body {
+				margin: 0px;
+				/* min-width: 1440px; */
+			}
+			
+			.tips{
+				text-align: center;
+			    line-height: 45px;
+			    margin-bottom: 10px;
+			}
+			
+			.tips img{
+			  width:100%;
+			}
+
+			.schoolNews {
+				width: 70%;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+
+			.schoolTitle {
+				line-height: 50px;
+				height: 50px;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #cdcdcd;
+			}
+
+			.schoolTitle .title {
+				font-size: 18px;
+				font-weight: bold;
+				color: #38AE4E;
+			}
+
+			.schoolTitle .english {
+				color: #cdcdcd;
+			}
+
+			.row {
+				width: 100%;
+				margin: 0px;
+			}
+
+			.carousel-item{
+				height:100%;
+			}
+
+			.carousel-item img {
+				width: 100%;
+				height:100%;
+			}
+			
+			#demo .carousel-item img{
+			  height:320px;
+			}
+			
+			.carousel-caption{
+			   display:block !important;
+			}
+
+			.titleOne {
+				background: #38AE4E;
+				color: #ffffff;
+				padding: 10px;
+				margin-bottom: 10px;
+				cursor: pointer;
+			}
+
+			.titleOne div:first-child {
+				font-size: 20px;
+			}
+
+			.titleOne div:nth-child(2) {
+				font-size: 14px;
+				line-height: 30px;
+			}
+
+			.newList p {
+				margin: 0px;
+			}
+
+			.newList ul li {
+				margin: 5px 0px;
+				cursor: pointer;
+				line-height:28px;
+			}
+
+			.newList ul li p:first-child {
+				font-size: 15px;
+				line-height: 28px;
+			}
+
+
+			.turnRight {
+				font-size: 12px;
+				color: #585858;
+				float: right;
+				margin-right: 5px;
+				cursor: pointer;
+				display:inline-block;
+				line-height:28px;
+			}
+
+			.threePark {
+				width: 70%;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+
+			.threePark .rowItem:first-child {
+				padding: 3px 8px 3px 0px;
+			}
+			
+			.threePark .rowItem:nth-child(2){
+				padding: 3px 4px;
+			}
+			
+			.threePark .rowItem:last-child{
+				padding:3px 0px 3px 8px;
+			}
+
+			.threePark .title {
+				border-bottom: 1px solid #cdcdcd;
+				height: 34px;
+			}
+
+			.threePark .title .smallTitle {
+				border-bottom: 3px solid #cdcdcd;
+				color: #38AE4E;
+				font-size: 18px;
+				font-weight: bold;
+				padding: 5px 0px;
+			}
+
+			.threePark .parkImg {
+				width: 100%;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
+			.threePark .parkImg img {
+				width: 100%;
+			}
+
+			.threePark p {
+				margin: 0px;
+			}
+
+			.threePark .date {
+				width: 50px;
+				text-align: center;
+				background: #38AE4E;
+				color: #ffffff;
+			}
+
+			.threePark .date .month {
+				font-size: 12px;
+			}
+
+			.threePark .contentBar .contentItem {
+				margin-bottom: 10px;
+				height: 40px;
+				cursor: pointer;
+			}
+
+			.threePark .content {
+				line-height: 42px;
+				font-size: 14px;
+				margin-left: 15px;
+				width: calc(100% - 65px);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				margin-top:0px !important;
+			}
+
+			.threePark .turnRight,
+			.schoolView .turnRight {
+				color: #38AE4E;
+				font-size: 15px;
+				padding-top: 5px;
+			}
+
+			.schoolView,
+			.link {
+				width: 70%;
+				margin: 0 auto;
+				display: block;
+			}
+			
+			.background{
+			width:100%;
+			padding-bottom:30px;
+			height:auto;
+			  background-image: url(web/img/linkback.png);
+				background-size:100%;
+				    background-repeat: no-repeat;
+			}
+
+			.schoolView .schoolTitle .title,
+			.link .schoolTitle .title {
+				border-bottom: 3px solid #cdcdcd;
+				padding: 9px 5px;
+			}
+
+			.schoolView .views {}
+
+			.schoolView .views .row .col-12 {
+				width: 100%;
+				text-align: center;
+				padding: 0px;
+				position: relative;
+			}
+
+			.schoolView .views .firstView img {
+				width:99%;
+				margin-left:-1%;
+				height: calc(100% - 10px) !important;
+			}
+
+			.schoolView .views img {
+				width: 98%;
+				height: calc(50% - 10px);
+				/* margin-left: 2.5%; */
+				margin-top: 10px;
+			}
+			
+			.firstView .viewWord{
+			  margin-left:5px;
+			  width:98%;
+			}
+			
+			.simg .viewsImg{
+			  text-align:right;
+			}
+
+			.viewWord {
+				position: absolute;
+				width: 98%;
+				background: rgba(0, 0, 0, 0.5);
+				color: #ffffff;
+				height: 30px;
+				bottom: 0px;
+				margin-left: 2%;
+				text-align: left;
+				padding: 0px 10px;
+			}
+
+			.link .linkItem {
+				padding: 10px 0px;
+				border-radius: 5px;
+				color: #ffffff;
+				width: 30%;
+				margin-right: 5%;
+				float: left;
+				text-align: center;
+				font-size: 20px;
+				cursor: pointer;
+
+			}
+			
+			.link a:last-child .linkItem{
+			  margin-right:0px;
+			}
+
+			.link .linkItem .lineImg{
+				width: 35px;
+				height: 35px;
+			}
+
+			.link .linkItem span {
+				position: relative;
+				top: 2px;
+			}
+
+			
+			.viewsImg{
+				width: 33.33%;
+				position: relative;
+			}
+			
+			.viewsImg1{
+				width: 66.66%;
+				position: relative;
+			}
+			
+			.viewsImg1 img{
+			  width:99% !important;
+			  margin-left:1%;
+			}
+			
+			.viewsImg1 .viewWord{
+			  width:99%;
+			  margin-left:1%;
+			}
+			
+			.titleOne div,
+			.newList ul li p{
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.newList ul li span:first-child{
+				display: inline-block;
+				    width: calc(100% - 75px);
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					line-height:28px;
+			}
+			
+			
+			/* 手机样式 */
+			
+			.liPhone{
+				width: 33% !important;
+				margin-top:0px !important;
+			}
+			
+		.viewsImgPhone,
+		.viewsImg1Phone{
+			width: 100%;
+		}
+		
+		/* 轮播图 */
+		.carousel-caption{
+		    width: 100%;
+		    position: absolute;
+		     right: 0%;
+		    bottom: -15px;
+    		line-height: 40px;
+		    left: 0%;
+		    z-index: 10;
+		    color: #fff;
+		    background:rgba(69,65,62,0.6);
+		    text-align: left;
+		    padding:0px 0px 0px 5px;
+		}
+		
+		.carousel-caption p{
+		    width:80%;
+		    font-size:14px;
+			overflow: hidden; /*溢出隐藏*/
+			text-overflow: ellipsis; /*以省略号...显示*/
+			white-space: nowrap; /*强制不换行*/
+		}
+		
+		.threePark .turnRight:hover, .schoolView .turnRight:hover{
+		  border-bottom:1px solid #CDCDCD;
+		}
+		
+		#demo .carousel-indicators{
+		  margin:0px;
+		  left:unset;
+		  bottom: 15px;
+    	  right: 15px;
+		}
+		
+		#demo .carousel-indicators li{
+		   height:8px;
+		   width:8px;
+		   border:1px solid transparent;
+		   border-radius: 10px;
+		}
+		
+		#demo .carousel-item img{
+			height:320px;
+		}
+		
+		.newscol7{
+			padding-left: 15px;
+		}
+		
+		
+		
+		@media screen and (max-width: 1000px) {
+				.carousel{
+					width:100% !important;
+					height: 300px !important;
+				}
+				
+				.carousel-inner{
+					height:100%;
+				}
+		
+		
+				.carousel-inner img{
+					height:100% !important;
+				}
+		
+				.schoolNews,.threePark,.schoolView{
+					width: 95%;
+				}
+				
+				.link{
+					/*display: none;*/
+					width: 95%;
+				}
+
+				.link a{
+					width: 100%;
+					margin-bottom: 10px;
+				}
+
+			.link a .linkItem{
+				width: 100%;
+			}
+
+			.link a:nth-child(1),
+			.link a:nth-child(3){
+				display: none;
+			}
+
+
+			.viewsImg,
+				.views1Img{
+					width: 100%;
+				}
+				
+				#demo .carousel-item img{
+					height:230px;
+				}
+				
+				.newscol7{
+					padding-left: 0px;
+				}
+
+		}
+		</style>
+	</head>
+	<body>
+	<input type="hidden" id="root" value="/"/>
+	<input type="hidden" id="rootPath" value="/web/medicineNews/"/>
+		<div class="index">
+			<script src="/web/medicineschool/page/header_public.js"></script>
+			
+			<div id='carouselExampleIndicators' class='carousel slide' data-ride='carousel' style="width:70%;margin: 0 auto;height:500px;">
+				<ol class='carousel-indicators'>
+				</ol>
+				<div class='carousel-inner' style="height:100%">
+				</div>
+			</div>
+			
+			<!-- 学校新闻 -->
+			<div class="schoolNews">
+				
+				
+			
+				<div class="schoolTitle news">
+					<div class="left">
+						<span class="title">学校新闻</span>
+					</div>
+					<!-- <div class="right">
+						<span class="english" style="cursor: pointer;">more+</span>
+					</div> -->
+				</div>
+				<div class="schoolCenter clear">
+					<div class="row">
+						<div class="col-12 col-sm-5" style="padding:0;">
+							<div id="demo" class="carousel slide" data-ride="carousel">
+								
+								<a class="carousel-control-prev" href="#demo" data-slide="prev">
+									<span class="carousel-control-prev-icon"></span>
+								</a>
+								<a class="carousel-control-next" href="#demo" data-slide="next">
+									<span class="carousel-control-next-icon"></span>
+								</a>
+							</div> 
+						</div>
+						<div class="col-12 col-sm-7 newscol7" style="padding-right:0;">
+							
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--三大模块-->
+			<div class="threePark">
+				<div class="row">
+					<div class="col-12 col-sm-4 rowItem">
+						<div class="title">
+							<span class="smallTitle">通知公告</span>
+							<span class="turnRight" onclick="more(1)">更多</span>
+						</div>
+						<div class="parkImg" id="parkImg1">
+
+						</div>
+						<div class="contentBar" id="center1">
+							
+						</div>
+					</div>
+					<div class="col-12 col-sm-4 rowItem">
+						<div class="title">
+							<span class="smallTitle">校务公开</span>
+							<span class="turnRight" onclick="more(2)">更多</span>
+						</div>
+						<div class="parkImg" id="parkImg2">
+
+						</div>
+						<div class="contentBar" id="center2">
+							
+						</div>
+					</div>
+					<div class="col-12 col-sm-4 rowItem">
+						<div class="title">
+							<span class="smallTitle">党务新闻</span>
+							<span class="turnRight" onclick="more(3)">更多</span>
+						</div>
+						<div class="parkImg" id="parkImg3">
+
+						</div>
+						<div class="contentBar" id="center3">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="background">
+			
+				<!-- 校园风光 -->
+				<div class="schoolView">
+					<div class="schoolTitle news">
+						<div class="left">
+							<span class="title">校园风光</span>
+						</div>
+						<div class="right">
+							<span class="turnRight" style="height: 43px;" onclick="viewMore()">更多</span>
+						</div>
+					</div>
+					<div class="views">
+						<div class="row image-list">
+							<div class="firstView col-12 col-sm-4 cover">
+								
+							</div>
+							
+							<div class="col-12 col-sm-8 simg">
+								
+							</div>
+							
+						</div>
+	
+					</div>
+				</div>
+				<!-- 链接专线 -->
+				<div class="link">
+				<!-- 尾部 -->
+				<div class="schoolTitle news">
+					<div class="left">
+						<span class="title">链接专线</span>
+					</div>
+				</div>
+				<div class="clear" style="height: 70px; margin-top: 20px;">
+					<a target="_blank">
+						<div class="linkItem" style="background-color: rgba(185,195,222,0.8);">
+							<img class="lineImg" src="/web/img/02.png" />
+							<span>信息中心</span>
+						</div>
+					</a>
+					<a href="http://open.mh.gdyfvccm.edu.cn:8008/frontend/center_portal/home/index.html#/" target="_blank">
+						<div class="linkItem" style="background-color: rgba(210,176,174,0.8);margin-right: 5%;">
+								<img class="lineImg" src="/web/img/07.png" />
+								<span>智慧校园</span>
+						</div>
+					</a>
+					<!-- 查询链接暂时屏蔽 -->
+					<!-- <a href="http://120.87.95.140:65480/Student_find/welcome.jsp" target="_blank"> -->
+					<a target="_blank">
+						<div class="linkItem" style="background-color: rgba(92,180,202,0.8);">
+							<img class="lineImg" src="/web/img/06.png" />
+							<span>录取查询</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			</div>
+			<script src="/web/medicineschool/page/footer_public.js"></script>
+		</div>
+	</body>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<!-- 引入JS -->
+		<script src="/web/js/bootnavbar.js"></script>
+		<script src="/web/js/bootstrap-submenu-3.0.1/dist/js/bootstrap-submenu.js"></script>
+	<script type="application/javascript">
+		/* $(function() {
+					window.addEventListener('load', function() {
+						alert("主体")
+						if(window.innerWidth <= 1440){
+							$(".lineImg").css("margin-right", "0px")
+							if(window.innerWidth <= 990){
+								change()
+							}
+							
+						}else{
+							$(".lineImg").css("margin-right", "20px")
+								noChange()
+							}
+
+						window.addEventListener('resize', function() {
+							alert("主体")
+							if(window.innerWidth <= 1440){
+								$(".lineImg").css("margin-right", "0px")
+								if(window.innerWidth <= 990){
+									change()
+								}
+								
+							}else{
+								$(".lineImg").css("margin-right", "20px")
+									noChange()
+								}
+						})
+					})
+					
+					
+				}); */
+				
+				/* function change(){
+					$(".schoolNews,.threePark,.schoolView").css("width","90%"),
+					$(".link").css("display","none"),
+					$(".viewsImg").addClass("viewsImgPhone"),
+					$(".viewsImg1").addClass("viewsImg1Phone")
+				}
+				
+				function noChange(){
+					$(".schoolNews,.threePark,.schoolView").css("width","70%"),
+					$(".link").css("display","block"),
+					$(".viewsImg").removeClass("viewsImgPhone"),
+					$(".viewsImg1").removeClass("viewsImg1Phone")
+				} */
+	</script>
+
+</html>

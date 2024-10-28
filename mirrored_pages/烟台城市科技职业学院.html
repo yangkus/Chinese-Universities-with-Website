@@ -1,0 +1,2278 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <title>烟台城市科技职业学院官网</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="烟台城市科技职业学院官网">
+<META Name="keywords" Content="烟台城市科技职业学院官网" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style/f.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+    <link rel="stylesheet" href="style/a_miso.css">
+    <link rel="stylesheet" href="style/a_animate.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/v.js"></script>
+    <script src="js/f.js"></script>
+    <script src="js/a_miso.js"></script>
+    <script src="js/a_animate.js"></script>
+    <script src="js/set.js"></script>
+    <script src="js/public.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b78475250545742000400004f54 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,2049307931)</script>
+</head>
+<body>
+
+<!--search-->
+<section class="search-dialog-box">
+    <div class="search-bg"></div>
+    <div class="search-dialog">
+        <div class="search-inner">
+            <div class="wrap-inner">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError"  class="search f-cb">
+        
+        <h3>请输入您搜索的信息！</h3>
+                    <div class="search-input f-cb clearfix">
+                        <input type="text" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                        <input type="submit" value="" v-on:click="onSubmit()">
+                        <a href="javascript:;" class="clear-btn"></a>
+                    </div>
+        
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2049307931";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+    </div>
+    <a href="javascript:;" class="pub-close">
+        <span class="bg"></span>
+        <i></i>
+    </a>
+</section>
+<!--search-->
+
+
+<!--wap-->
+<section class="wap-head ar_wap">
+    <div class="logo flex-v-center">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script> 
+          
+              
+                        <a href="index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011446)">
+                            <img src="images/logo-1.png">
+                        </a>  
+                   
+    
+</div>
+    <a href="javascript:;" class="navbtnm">
+        <i></i>
+    </a>
+</section>
+<section class="big-nav">
+    <div class="list_box0 "><script language="javascript" src="/system/resource/js/openlink.js"></script>
+
+<div class="li"><a href="https://im-web.oceghome.com/download" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99030)">OCEG APP</a></div>
+
+
+<div class="li"><a href="http://www.ytcc.edu.cn/en/" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99031)">EN</a></div>
+
+</div>
+    <div class="wap_search">
+
+
+<style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError" class="header-search">
+        
+        <input type="text" class="input" placeholder="请输入搜索关键词" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <button type="submit" class="btn_blue" value="" v-on:click="onSubmit()"></button>
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "2049307931";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    <ul class="list_box_nav_mobile">
+<li>
+            <div class="con">
+                <a class="a" href="xxgk/xxjj.htm">学校概况</a>
+                <i></i>
+            </div>
+            <div class="list">
+             <a href="xxgk/xxjj.htm">学校简介</a>
+             <a href="xxgk/xxld.htm">学校领导</a>
+             <a href="xxgk/xxwh.htm">学校文化</a>
+             <a href="xxgk/xxry.htm">学校荣誉</a>
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="jgsz.htm">机构设置</a>
+                <i></i>
+            </div>
+            <div class="list">
+             <a href="jgsz.htm#dzgljg">党政机构</a>
+             <a href="jgsz.htm#qtjs">群团机构</a>
+             <a href="jgsz.htm#jxjg">教学机构</a>
+             <a href="jgsz.htm#jfjg">教辅机构</a>
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="http://www.ytcc.edu.cn/djw/index.htm">党建思政</a>
+                <i></i>
+            </div>
+            <div class="list">
+             <a href="http://www.ytcc.edu.cn/djw/index.htm" target="_blank">党建工作</a>
+             <a href="https://www.12371.cn/" target="_blank">共产党员网</a>
+             <a href="https://www.sizhengwang.cn/" target="_blank">思政教育网</a>
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="xxxw/xxyw.htm">学校新闻</a>
+                <i></i>
+            </div>
+            <div class="list">
+             <a href="xxxw/xxyw.htm">学校要闻</a>
+             <a href="xxxw/ybdt.htm">院部动态</a>
+             <a href="xxxw/mtjj.htm">媒体聚焦</a>
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="jxky/zyjs.htm">教学科研</a>
+                <i></i>
+            </div>
+            <div class="list">
+             <a href="jxky/zyjs.htm">专业介绍</a>
+             <a href="jxky/szll.htm">师资力量</a>
+             <a href="http://www.ytcc.edu.cn/jwc" target="_blank">教务处</a>
+             <a href="http://www.ytcc.edu.cn/kyc" target="_blank">科研处</a>
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="http://www.ytcc.edu.cn/jyxxw">招生就业</a>
+                <i></i>
+            </div>
+            <div class="list">
+             <a href="http://www.ytcc.edu.cn/zsw" target="_blank">招生信息网</a>
+             <a href="http://www.ytcc.edu.cn/jyxxw" target="_blank">就业信息网</a>
+             <a href="http://www.ytcc.edu.cn/cxcyzx" target="_blank">创新创业网</a>
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="hzjl/gjhz.htm">合作交流</a>
+                <i></i>
+            </div>
+            <div class="list">
+             <a href="hzjl/gjhz.htm">国际合作</a>
+             <a href="hzjl/xqhz.htm">校企合作</a>
+             <a href="hzjl/xxjl.htm">校校交流</a>
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="xyhj/xygy.htm">校园环境</a>
+                <i></i>
+            </div>
+            <div class="list">
+             <a href="xyhj/xygy.htm">校园光影</a>
+             <a href="xyhj/xyws.htm">校园微视</a>
+             <a href="xyhj/xshd.htm">学生活动</a>
+             <a href="xyhj/ssfc.htm">师生风采</a>
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="#">校园服务</a>
+                <i></i>
+            </div>
+            <div class="list">
+             <a href="https://oa.oceghome.com/" target="_blank">OA办公</a>
+             <a href="http://jw.ytcc.edu.cn/jwapp/sys/homeapp/home/index.html?av=1724635626567&contextPath=/jwapp#/" target="_blank">教务系统</a>
+             <a href="http://www.ytcc.edu.cn/tsg/index.htm" target="_blank">馆藏检索</a>
+             <a href="http://www.ytcc.edu.cn/hqaqglc" target="_blank">后勤服务</a>
+             <a href="https://ytcc-support.oceghome.com/h5/index.html?vertifyIdCard=true#/login" target="_blank">故障报修</a>
+             <a href="xyfw/xxxl.htm">学校校历</a>
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="http://www.ytcc.edu.cn/rlzyc" target="_blank">人才招聘</a>
+                
+            </div>
+            
+        </li>
+ 
+
+<li>
+            <div class="con">
+                <a class="a" href="tzgg.htm">通知公告</a>
+                
+            </div>
+            
+        </li>
+ 
+</ul>
+
+</section>
+<!--wap-->
+
+
+<header class="header_box ar_web">
+    <div class="wp">
+        <div class="logo">
+<a href="index.htm">
+                <img src="images/logo-1.png" alt="">
+            </a></div>
+        <div class="header_right">
+            <div class="ll topl1">
+                <div class="top"><div class="list_box0">
+    <div class="li"><a href="https://im-web.oceghome.com/download" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99030)"><img src="images/h-ico-1.png" alt="">OCEG APP</a></div>
+    <div class="li">|</div>
+    <div class="li"><a href="http://www.ytcc.edu.cn/en/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99031)"><img src="images/h-ico-2.png" alt="">EN</a></div>
+    <div class="li">|</div>
+<div class="li"><a href="javascript:;" class="search_btn"><img src="images/search.png" alt="">搜索</a></div>
+ </div></div>
+                <div class="bot"><nav id="nav">
+<ul class="flex">
+
+<li>
+                                <h2><a href="xxgk/xxjj.htm">学校概况</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="xxgk/xxjj.htm">学校简介</a>
+                                <a href="xxgk/xxld.htm">学校领导</a>
+                                <a href="xxgk/xxwh.htm">学校文化</a>
+                                <a href="xxgk/xxry.htm">学校荣誉</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="jgsz.htm">机构设置</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="jgsz.htm#dzgljg">党政机构</a>
+                                <a href="jgsz.htm#qtjs">群团机构</a>
+                                <a href="jgsz.htm#jxjg">教学机构</a>
+                                <a href="jgsz.htm#jfjg">教辅机构</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="http://www.ytcc.edu.cn/djw/index.htm">党建思政</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="http://www.ytcc.edu.cn/djw/index.htm" target="_blank">党建工作</a>
+                                <a href="https://www.12371.cn/" target="_blank">共产党员网</a>
+                                <a href="https://www.sizhengwang.cn/" target="_blank">思政教育网</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="xxxw/xxyw.htm">学校新闻</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="xxxw/xxyw.htm">学校要闻</a>
+                                <a href="xxxw/ybdt.htm">院部动态</a>
+                                <a href="xxxw/mtjj.htm">媒体聚焦</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="jxky/zyjs.htm">教学科研</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="jxky/zyjs.htm">专业介绍</a>
+                                <a href="jxky/szll.htm">师资力量</a>
+                                <a href="http://www.ytcc.edu.cn/jwc" target="_blank">教务处</a>
+                                <a href="http://www.ytcc.edu.cn/kyc" target="_blank">科研处</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="http://www.ytcc.edu.cn/jyxxw">招生就业</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="http://www.ytcc.edu.cn/zsw" target="_blank">招生信息网</a>
+                                <a href="http://www.ytcc.edu.cn/jyxxw" target="_blank">就业信息网</a>
+                                <a href="http://www.ytcc.edu.cn/cxcyzx" target="_blank">创新创业网</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="hzjl/gjhz.htm">合作交流</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="hzjl/gjhz.htm">国际合作</a>
+                                <a href="hzjl/xqhz.htm">校企合作</a>
+                                <a href="hzjl/xxjl.htm">校校交流</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="xyhj/xygy.htm">校园环境</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="xyhj/xygy.htm">校园光影</a>
+                                <a href="xyhj/xyws.htm">校园微视</a>
+                                <a href="xyhj/xshd.htm">学生活动</a>
+                                <a href="xyhj/ssfc.htm">师生风采</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="#">校园服务</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="https://oa.oceghome.com/" target="_blank">OA办公</a>
+                                <a href="http://jw.ytcc.edu.cn/jwapp/sys/homeapp/home/index.html?av=1724635626567&contextPath=/jwapp#/" target="_blank">教务系统</a>
+                                <a href="http://www.ytcc.edu.cn/tsg/index.htm" target="_blank">馆藏检索</a>
+                                <a href="http://www.ytcc.edu.cn/hqaqglc" target="_blank">后勤服务</a>
+                                <a href="https://ytcc-support.oceghome.com/h5/index.html?vertifyIdCard=true#/login" target="_blank">故障报修</a>
+                                <a href="xyfw/xxxl.htm">学校校历</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="http://www.ytcc.edu.cn/rlzyc" target="_blank">人才招聘</a></h2>
+                                
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="tzgg.htm">通知公告</a></h2>
+                                
+                                 
+                            </li>
+ 
+
+ </ul>
+                    </nav></div>
+            </div>
+            <div class="ll topl2">
+                <div class="top"><div class="list_box0">
+    <div class="li"><a href="https://im-web.oceghome.com/download" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99030)"><img src="images/h-ico-1.png" alt="">OCEG APP</a></div>
+    <div class="li">|</div>
+    <div class="li"><a href="http://www.ytcc.edu.cn/en/" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99031)"><img src="images/h-ico-2.png" alt="">EN</a></div>
+    <div class="li">|</div>
+<div class="li"><a href="javascript:;" class="search_btn"><img src="images/search.png" alt="">搜索</a></div>
+ </div></div>
+            </div>
+            <div class="rr">
+                <div class="miso_btn1">
+                    <div id="openBtn" class="btn rd-navbar-toggle">
+                        <div class="lcbody">
+                            <div class="lcitem top">
+                                <div class="rect top"></div>
+                            </div>
+                            <div class="lcitem center hide">
+                                <div class="rect bottom"></div>
+                            </div>
+                            <div class="lcitem bottom">
+                                <div class="rect bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--slide_down_nav-->
+<section class="slide_down_nav">
+    <div class="slide_down_nav_content">
+        <div class="w1256"><ul class="miso_wzmap">
+
+<li>
+                    <h2><a href="xxgk/xxjj.htm">学校概况</a></h2>
+                    <dl>
+                    <dd><a href="xxgk/xxjj.htm">学校简介</a></dd>
+                    <dd><a href="xxgk/xxld.htm">学校领导</a></dd>
+                    <dd><a href="xxgk/xxwh.htm">学校文化</a></dd>
+                    <dd><a href="xxgk/xxry.htm">学校荣誉</a></dd>
+                     </dl>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="jgsz.htm">机构设置</a></h2>
+                    <dl>
+                    <dd><a href="jgsz.htm#dzgljg">党政机构</a></dd>
+                    <dd><a href="jgsz.htm#qtjs">群团机构</a></dd>
+                    <dd><a href="jgsz.htm#jxjg">教学机构</a></dd>
+                    <dd><a href="jgsz.htm#jfjg">教辅机构</a></dd>
+                     </dl>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="http://www.ytcc.edu.cn/djw/index.htm">党建思政</a></h2>
+                    <dl>
+                    <dd><a href="http://www.ytcc.edu.cn/djw/index.htm" target="_blank">党建工作</a></dd>
+                    <dd><a href="https://www.12371.cn/" target="_blank">共产党员网</a></dd>
+                    <dd><a href="https://www.sizhengwang.cn/" target="_blank">思政教育网</a></dd>
+                     </dl>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="xxxw/xxyw.htm">学校新闻</a></h2>
+                    <dl>
+                    <dd><a href="xxxw/xxyw.htm">学校要闻</a></dd>
+                    <dd><a href="xxxw/ybdt.htm">院部动态</a></dd>
+                    <dd><a href="xxxw/mtjj.htm">媒体聚焦</a></dd>
+                     </dl>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="jxky/zyjs.htm">教学科研</a></h2>
+                    <dl>
+                    <dd><a href="jxky/zyjs.htm">专业介绍</a></dd>
+                    <dd><a href="jxky/szll.htm">师资力量</a></dd>
+                    <dd><a href="http://www.ytcc.edu.cn/jwc" target="_blank">教务处</a></dd>
+                    <dd><a href="http://www.ytcc.edu.cn/kyc" target="_blank">科研处</a></dd>
+                     </dl>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="http://www.ytcc.edu.cn/jyxxw">招生就业</a></h2>
+                    <dl>
+                    <dd><a href="http://www.ytcc.edu.cn/zsw" target="_blank">招生信息网</a></dd>
+                    <dd><a href="http://www.ytcc.edu.cn/jyxxw" target="_blank">就业信息网</a></dd>
+                    <dd><a href="http://www.ytcc.edu.cn/cxcyzx" target="_blank">创新创业网</a></dd>
+                     </dl>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="hzjl/gjhz.htm">合作交流</a></h2>
+                    <dl>
+                    <dd><a href="hzjl/gjhz.htm">国际合作</a></dd>
+                    <dd><a href="hzjl/xqhz.htm">校企合作</a></dd>
+                    <dd><a href="hzjl/xxjl.htm">校校交流</a></dd>
+                     </dl>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="xyhj/xygy.htm">校园环境</a></h2>
+                    <dl>
+                    <dd><a href="xyhj/xygy.htm">校园光影</a></dd>
+                    <dd><a href="xyhj/xyws.htm">校园微视</a></dd>
+                    <dd><a href="xyhj/xshd.htm">学生活动</a></dd>
+                    <dd><a href="xyhj/ssfc.htm">师生风采</a></dd>
+                     </dl>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="#">校园服务</a></h2>
+                    <dl>
+                    <dd><a href="https://oa.oceghome.com/" target="_blank">OA办公</a></dd>
+                    <dd><a href="http://jw.ytcc.edu.cn/jwapp/sys/homeapp/home/index.html?av=1724635626567&contextPath=/jwapp#/" target="_blank">教务系统</a></dd>
+                    <dd><a href="http://www.ytcc.edu.cn/tsg/index.htm" target="_blank">馆藏检索</a></dd>
+                    <dd><a href="http://www.ytcc.edu.cn/hqaqglc" target="_blank">后勤服务</a></dd>
+                    <dd><a href="https://ytcc-support.oceghome.com/h5/index.html?vertifyIdCard=true#/login" target="_blank">故障报修</a></dd>
+                    <dd><a href="xyfw/xxxl.htm">学校校历</a></dd>
+                     </dl>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="http://www.ytcc.edu.cn/rlzyc" target="_blank">人才招聘</a></h2>
+                     
+                </li>
+
+ 
+
+<li>
+                    <h2><a href="tzgg.htm">通知公告</a></h2>
+                     
+                </li>
+
+ 
+</ul></div>
+    </div>
+    <div class="slide_down_nav_bg"></div>
+    <div class="slide_down_nav_line_shuxian"></div>
+</section>
+<!--slide_down_nav-->
+
+<!--miso_navs-->
+<section class="miso_navs ar_web">
+    <nav id="nav">
+        <div class="wp">
+            <div class="logos">    
+          
+              
+                        <a href="index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1010683)">
+                            <img src="images/logo-2.png">
+                        </a>  
+                  
+       
+</div>
+            <ul class="flex">
+
+<li>
+                                <h2><a href="xxgk/xxjj.htm">学校概况</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="xxgk/xxjj.htm">学校简介</a>
+                                <a href="xxgk/xxld.htm">学校领导</a>
+                                <a href="xxgk/xxwh.htm">学校文化</a>
+                                <a href="xxgk/xxry.htm">学校荣誉</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="jgsz.htm">机构设置</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="jgsz.htm#dzgljg">党政机构</a>
+                                <a href="jgsz.htm#qtjs">群团机构</a>
+                                <a href="jgsz.htm#jxjg">教学机构</a>
+                                <a href="jgsz.htm#jfjg">教辅机构</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="http://www.ytcc.edu.cn/djw/index.htm">党建思政</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="http://www.ytcc.edu.cn/djw/index.htm" target="_blank">党建工作</a>
+                                <a href="https://www.12371.cn/" target="_blank">共产党员网</a>
+                                <a href="https://www.sizhengwang.cn/" target="_blank">思政教育网</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="xxxw/xxyw.htm">学校新闻</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="xxxw/xxyw.htm">学校要闻</a>
+                                <a href="xxxw/ybdt.htm">院部动态</a>
+                                <a href="xxxw/mtjj.htm">媒体聚焦</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="jxky/zyjs.htm">教学科研</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="jxky/zyjs.htm">专业介绍</a>
+                                <a href="jxky/szll.htm">师资力量</a>
+                                <a href="http://www.ytcc.edu.cn/jwc" target="_blank">教务处</a>
+                                <a href="http://www.ytcc.edu.cn/kyc" target="_blank">科研处</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="http://www.ytcc.edu.cn/jyxxw">招生就业</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="http://www.ytcc.edu.cn/zsw" target="_blank">招生信息网</a>
+                                <a href="http://www.ytcc.edu.cn/jyxxw" target="_blank">就业信息网</a>
+                                <a href="http://www.ytcc.edu.cn/cxcyzx" target="_blank">创新创业网</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="hzjl/gjhz.htm">合作交流</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="hzjl/gjhz.htm">国际合作</a>
+                                <a href="hzjl/xqhz.htm">校企合作</a>
+                                <a href="hzjl/xxjl.htm">校校交流</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="xyhj/xygy.htm">校园环境</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="xyhj/xygy.htm">校园光影</a>
+                                <a href="xyhj/xyws.htm">校园微视</a>
+                                <a href="xyhj/xshd.htm">学生活动</a>
+                                <a href="xyhj/ssfc.htm">师生风采</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="#">校园服务</a></h2>
+                                
+                                <div class="sub">
+                                    <div class="box">
+                                <a href="https://oa.oceghome.com/" target="_blank">OA办公</a>
+                                <a href="http://jw.ytcc.edu.cn/jwapp/sys/homeapp/home/index.html?av=1724635626567&contextPath=/jwapp#/" target="_blank">教务系统</a>
+                                <a href="http://www.ytcc.edu.cn/tsg/index.htm" target="_blank">馆藏检索</a>
+                                <a href="http://www.ytcc.edu.cn/hqaqglc" target="_blank">后勤服务</a>
+                                <a href="https://ytcc-support.oceghome.com/h5/index.html?vertifyIdCard=true#/login" target="_blank">故障报修</a>
+                                <a href="xyfw/xxxl.htm">学校校历</a>
+                                </div>
+                                </div> 
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="http://www.ytcc.edu.cn/rlzyc" target="_blank">人才招聘</a></h2>
+                                
+                                 
+                            </li>
+ 
+
+<li>
+                                <h2><a href="tzgg.htm">通知公告</a></h2>
+                                
+                                 
+                            </li>
+ 
+
+ </ul>
+
+        </div>
+    </nav>
+</section>
+<!--miso_navs-->
+
+<section class="banner ">
+    <div class="slide-banner swiper-container">
+        <div class="swiper-wrapper">
+        
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script> 
+
+<div class="swiper-slide videoHero">
+                <div class="video">
+                    <video id="video" poster="" src="/__local/2/E4/7D/BEAE04202EC82BABF17631EA212_C344850E_A76FDF.mp4?e=.mp4" muted="" x5-video-player-type="h5" x5-video-player-fullscreen="true" x-webkit-airplay="true" webkit-playsinline="" playsinline=""></video>
+                </div>
+                <div class="txt-box">
+                    <h2>开放 创新 奋斗 活力</h2>
+                </div>
+            </div>
+
+ 
+<script>_showDynClickBatch(['dynclicks_u12_3891'],[3891],"wbnews", 2049307931)</script>
+
+             
+          
+            
+             <div class="swiper-slide txt">
+             <a href="info/1121/4111.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011450)" target="_blank">
+                <div class="img-box">
+                    <div class="bg" style="background-image: url(images/1.jpg)"></div>
+                </div>
+                <div class="txt-box2">
+    <div class="wp">
+        <h3 class="eclip">欢迎2024级新同学！</h3>
+    </div>
+</div>
+</a>
+                 
+            </div>
+                 
+            
+             <div class="swiper-slide txt">
+             <a href="xyhj/xshd.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011451)" target="_blank">
+                <div class="img-box">
+                    <div class="bg" style="background-image: url(images/banner22.png)"></div>
+                </div>
+                <div class="txt-box2">
+    <div class="wp">
+        <h3 class="eclip">让每一位学生获得创造美好生活的能力！</h3>
+    </div>
+</div>
+</a>
+                 
+            </div>
+                 
+            
+             <div class="swiper-slide txt">
+             <a href="xyhj/xygy.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011462)" target="_blank">
+                <div class="img-box">
+                    <div class="bg" style="background-image: url(images/banner33.png)"></div>
+                </div>
+                <div class="txt-box2">
+    <div class="wp">
+        <h3 class="eclip">用教育点亮未来！</h3>
+    </div>
+</div>
+</a>
+                 
+            </div>
+                 
+            
+             <div class="swiper-slide txt">
+             <a href="xxxw/xxyw.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011463)" target="_blank">
+                <div class="img-box">
+                    <div class="bg" style="background-image: url(images/banner44.png)"></div>
+                </div>
+                <div class="txt-box2">
+    <div class="wp">
+        <h3 class="eclip">新起点 新征程 新气象</h3>
+    </div>
+</div>
+</a>
+                 
+            </div>
+                 
+       
+
+        </div>
+        <div class="page swiper-pagination"></div>
+    </div>
+    <div class="miso_home">
+        <a href="#index-s1">
+            <div class="miso_scorll">
+                <div class="ico"><img src="images/miso_scorll_ico.png" alt=""></div>
+                <i></i>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section id="index-s1" style="position: relative; top:-.8rem"></section>
+<section class="index-page">
+    <section class="index-s1">
+        <div class="wp">
+            <div class="title001" data-aos="fade-up">
+                <div class="ll">
+                    <h2>学校要闻</h2>
+                    <h4>YTCC Highlights</h4>
+                </div>
+                <div class="rr">
+                    <a href="xxxw/xxyw.htm" class="more"></a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="left" data-aos="fade-up">
+
+<div class="list1w swiper-container">
+ <div class="swiper-wrapper">
+
+<div class="swiper-slide">
+                                <a href="info/1121/4861.htm" class="bg-mask" target="_blank">
+                                    <div class="pic">
+                                        <span class="a" style="background-image: url(/__local/1/FB/3C/72A10A55B06572841CB28A0CAF1_A3A44449_267B6.png)"></span>
+                                    </div>
+                                    <div class="txt">
+                                        <h3 class="eclip">访企拓岗进行时‖校领导带队赴济南舜耕诚心社区走访调研</h3>
+                                        <h5 class="eclip">为探索我校智慧康养学院学科专业发展新路径，拓宽学生实习就业渠道，深入了解优质企业的业务发展和用人需求。10月25日，学校校长刘翠兰、副校长王风玲、智慧康养学院资深专家赵青一行赴济南舜耕诚心社区走访调研。企业负责人介绍了“大家的家”——济南舜耕诚心社区的发展历程、服务理念、社区建设及未来规划。该社区目前已在全国布局17个城心医养社区、多个旅居疗养社区和居家安养照护中心及服务网点，为家庭提供从独立生活、协助生活到专业护理的一站式高品质养老服务。...</h5>
+                                    </div>
+                                </a>
+                            </div>
+ 
+
+<div class="swiper-slide">
+                                <a href="info/1121/4851.htm" class="bg-mask" target="_blank">
+                                    <div class="pic">
+                                        <span class="a" style="background-image: url(/__local/F/7C/A6/36D0543018B21E9DB791A69AB69_D2D99187_58677.jpg)"></span>
+                                    </div>
+                                    <div class="txt">
+                                        <h3 class="eclip">全国首届“王懿荣杯”文学作品大赛颁奖典礼在我校举行</h3>
+                                        <h5 class="eclip">10月26日，由烟台市福山区作家协会、烟台城市科技职业学院联合主办的庆祝新中国成立75周年暨全国首届“王懿荣杯”文学作品大赛颁奖典礼在我校学术报告厅举行。福山区委宣传部副部长徐福泽，山东城市服务职业学院纪委副书记耿宝银，福山区作家协会主席、《福山文学》杂志主编李树林，王懿荣纪念馆首任馆长、全国文物保护先进工作者、王懿荣研究终身荣誉奖获得者吕伟达，山东城市服务职业学院客座教授、福山区作家协会副秘书长于晓东，...</h5>
+                                    </div>
+                                </a>
+                            </div>
+ 
+
+<div class="swiper-slide">
+                                <a href="info/1121/4841.htm" class="bg-mask" target="_blank">
+                                    <div class="pic">
+                                        <span class="a" style="background-image: url(/__local/0/A7/AC/C2CDB29B38BD50E78323A510F10_7160D380_45030.jpg)"></span>
+                                    </div>
+                                    <div class="txt">
+                                        <h3 class="eclip">烟台城市科技职业学院体育文化节圆满落幕</h3>
+                                        <h5 class="eclip">“金阳暖赛场，盛会映秋光”。10月24日上午，烟台城市科技职业学院体育文化节在学校体育场举行。校长刘翠兰、党委书记车先礼，副校长徐诗琪、王风玲、刘相梅、宋子超、王庆新及全校师生参加活动，共同见证这一充满活力与激情的盛会。精彩的团操汇报表演过后，各二级学院、学生社团和教职工方队陆续入场。学生方队充满青春朝气，以独特的创意和嘹亮的口号，彰显出蓬勃向上的青春活力。教职工方队则步伐整齐，精神抖擞，以灵动的舞姿和饱满的热情，...</h5>
+                                    </div>
+                                </a>
+                            </div>
+ 
+ </div>
+ <div class="page swiper-pagination"></div>
+                    </div><script>_showDynClickBatch(['dynclicks_u14_4861','dynclicks_u14_4851','dynclicks_u14_4841'],[4861,4851,4841],"wbnews", 2049307931)</script>
+</div>
+                <div class="right" data-aos="fade-up">
+
+<ul class="list_box1">
+
+<li>
+                            <a href="info/1121/4861.htm" target="_blank">
+                                <time>
+                                    <span>27</span>
+                                    <em>2024.10</em>
+                                </time>
+                                <div class="txt">
+                                    <h3 class="l2">
+                                      访企拓岗进行时‖校领导带队赴济南舜耕诚心社区走访调研
+                                    </h3>
+                                </div>
+                            </a>
+                        </li>
+
+
+<li>
+                            <a href="info/1121/4851.htm" target="_blank">
+                                <time>
+                                    <span>26</span>
+                                    <em>2024.10</em>
+                                </time>
+                                <div class="txt">
+                                    <h3 class="l2">
+                                      全国首届“王懿荣杯”文学作品大赛颁奖典礼在我校举行
+                                    </h3>
+                                </div>
+                            </a>
+                        </li>
+
+
+<li>
+                            <a href="info/1121/4841.htm" target="_blank">
+                                <time>
+                                    <span>25</span>
+                                    <em>2024.10</em>
+                                </time>
+                                <div class="txt">
+                                    <h3 class="l2">
+                                      烟台城市科技职业学院体育文化节圆满落幕
+                                    </h3>
+                                </div>
+                            </a>
+                        </li>
+
+
+<li>
+                            <a href="info/1121/4821.htm" target="_blank">
+                                <time>
+                                    <span>23</span>
+                                    <em>2024.10</em>
+                                </time>
+                                <div class="txt">
+                                    <h3 class="l2">
+                                      我校党委理论学习中心组召开集体学习会议
+                                    </h3>
+                                </div>
+                            </a>
+                        </li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u15_4861','dynclicks_u15_4851','dynclicks_u15_4841','dynclicks_u15_4821'],[4861,4851,4841,4821],"wbnews", 2049307931)</script>
+</div>
+            </div>
+        </div>
+    </section>
+    <section class="index-s2">
+        <div class="wp">
+            <div class="title001" data-aos="fade-up">
+                <div class="ll">
+                    <div class="tab-tit">
+                        <div class="li active">院部动态</div>
+                        <div class="li">媒体聚焦</div>
+                        <div class="li">通知公告</div>
+                    </div>
+                </div>
+                <div class="rr">
+                    <a href="xxxw/ybdt.htm" class="more active"></a>
+                    <a href="xxxw/mtjj.htm" class="more"></a>
+                    <a href="tzgg.htm" class="more"></a>
+                </div>
+            </div>
+            <div class="tab-con" data-aos="fade-up">
+                <div class="child active">
+
+<div class="list_box2">
+<ul class="">
+
+<li>
+                                <a href="info/1131/4341.htm" target="_blank">
+                                    <div class="top">
+                                        <time>2024.09.18</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">喜讯！我校智能制造学院顺利入围2024年金砖国家职业技能大赛</h3>
+                                        <p class="l2">近日，烟台城市科技职业学院智能制造学院学生李硕磊、赵瑞康参加2024金砖国家职业技能大赛“智能视觉感知与控制应用技术”山东省选拔赛。经过近半年的努力备赛和一个暑期的强化训练。最终在参赛的六支队伍中位列第二位，从众多优秀的竞争者中脱颖而出，成功晋级下一轮比赛。智能制造学院高度重视竞赛工作，注重培养学生的创新创业能力、团队协作精神，加强学生实践能力的培养和工程实践的训练。充分发挥科技竞赛作为第二课堂的作用，...</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+
+<li>
+                                <a href="info/1131/4291.htm" target="_blank">
+                                    <div class="top">
+                                        <time>2024.09.15</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">我校智能制造学院举行校企合作单位捐赠仪式</h3>
+                                        <p class="l2">9月13日上午，校企合作单位爱心捐赠仪式在我校图书馆党员活动室举行。江苏威宝仕智能科技有限公司销售总监张国旺、学校校长刘翠兰、副校长徐诗琪、智能制造学院资深专家刘永利教授、工业机器人技术专业负责人胡晓梅出席仪式并座谈。捐赠仪式由智能制造学院院长谢楚雄主持。座谈会上，刘翠兰校长对我校的校园建设、办学定位、专业布局、人才培养等进行了介绍，并对企业的爱心捐赠表示感谢，她指出，此次捐赠不仅是物质上的支持，更是对我校教育理念的认同和对学子们的激励。...</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+
+<li>
+                                <a href="info/1131/4211.htm" target="_blank">
+                                    <div class="top">
+                                        <time>2024.09.05</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">马克思主义学院举办科研课题申报研讨会</h3>
+                                        <p class="l2">为积极推动学院科研课题申报工作，明确校级教科研创新平台建设任务，培育高层次科研课题和高水平科研成果，9月2日，马克思主义学院（通识教育学院）举办科研课题申报研讨会，会议邀请科研处处长张威就科研课题申报为教师做培训指导。会上，张威处长首先传达了学校的科研工作任务，鼓励大家要积极开展科研建设，提高申报质量。随后，张威处长结合各教师拟定的申报题目予以了具体分析，并为大家答疑解惑。他表示，科研课题选择要从可持续性、...</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+
+<li>
+                                <a href="info/1131/4191.htm" target="_blank">
+                                    <div class="top">
+                                        <time>2024.09.05</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">马克思主义学院思政教研室开展暑期研学经验分享会</h3>
+                                        <p class="l2">为深入贯彻党的二十大精神，落实全国高校思想政治工作会议和《关于加强新时代马克思主义学院建设的意见》《全面推进“大思政课”建设的工作方案》文件精神，做好马克思主义学院建设和思政教育课程建设。9月3日，马克思主义学院（通识教育学院）思政教研室开展暑期研学经验分享会暨第二次集体备课会。鼓励思政教研室教师骨干、学科负责人参与多层次的暑期思政课教师培训研修活动，推动我校“大思政课”课程建设，加强思政课教师队伍建设，...</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+</ul>
+                    </div>
+                    <div class="gd">
+                        <a href="xxxw/ybdt.htm">查看更多</a>
+                    </div><script>_showDynClickBatch(['dynclicks_u16_4341','dynclicks_u16_4291','dynclicks_u16_4211','dynclicks_u16_4191'],[4341,4291,4211,4191],"wbnews", 2049307931)</script>
+</div>
+                <div class="child">
+
+<div class="list_box2">
+<ul class="">
+
+<li>
+                                <a href="https://finance.sina.cn/2024-09-23/detail-incqctzq6823684.d.html" target="_blank">
+                                    <div class="top">
+                                        <time>2024.09.23</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">【渭南广播电视台】烟台城市科技职业学院宠物医疗技术专业方案获专家认可</h3>
+                                        <p class="l2">6月17日，烟台城市科技职业学院组织了一场关于宠物医疗技术专业人才培养方案与实训基地建设方案的专家论证会议。</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+
+<li>
+                                <a href="https://www.toutiao.com/article/7417745674415964722/?wid=1727143342911#ocr" target="_blank">
+                                    <div class="top">
+                                        <time>2024.09.23</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">【菏泽广电网】烟台城市科技职业学院全体教职工大会顺利召开</h3>
+                                        <p class="l2">9月2日下午，烟台城市科技职业学院在学术报告厅隆重举行全体教职工大会。东方剑桥教育集团董事长、烟台城市科技职业学院董事长于越博士亲临现场并发表讲话。</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+
+<li>
+                                <a href="https://yantai.dzwww.com/ytxw/fsq/202407/t20240722_14534306.htm" target="_blank">
+                                    <div class="top">
+                                        <time>2024.07.23</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">【大众网】烟台城市科技职业学院召开第一届教职工代表大会暨工会会员代表大会第一次会议</h3>
+                                        <p class="l2">7月11日，烟台城市科技职业学院第一届教职工代表大会暨工会会员代表大会第一次会议在学术报告厅召开。“双代会”代表齐聚一堂，审议学校相关工作报告，共商学校发展大计，为推动学校教育教学高质量发展凝聚思想共识，汇聚前行力量。</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+
+<li>
+                                <a href="https://baijiahao.baidu.com/s?id=1802363150994971586&wfr=spider&for=pc" target="_blank">
+                                    <div class="top">
+                                        <time>2024.06.21</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">【十堰晚报】乘势攀阳，1起长大，烟台城市科技职业学院校庆活动异彩纷呈</h3>
+                                        <p class="l2">近日，为庆祝烟台城市科技职业学院建校，烟台城市科技职业学院组织开展了“乘势攀阳，1起长大”校庆周系列活动。</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+</ul>
+                    </div>
+                    <div class="gd">
+                        <a href="xxxw/mtjj.htm">查看更多</a>
+                    </div><script>_showDynClickBatch(['dynclicks_u17_4531','dynclicks_u17_4521','dynclicks_u17_4401','dynclicks_u17_4391'],[4531,4521,4401,4391],"wbnews", 2049307931)</script>
+</div>
+                <div class="child">
+
+<div class="list_box2">
+<ul class="">
+
+<li>
+                                <a href="info/1401/4831.htm" target="_blank">
+                                    <div class="top">
+                                        <time>2024.10.25</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">烟台城市科技职业学院“接诉即办”平台正式上线！</h3>
+                                        <p class="l2">为深入贯彻落实党的二十大精神，更好地服务全体师生，切实回应学院师生关切、及时高效解决师生合理化诉求，不断增强育人实效和治理水平，推动学院高质量发展，烟台城市科技职业学院自即日起全面接入省教育厅“接诉即办”平台。</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+
+<li>
+                                <a href="info/1401/4221.htm" target="_blank">
+                                    <div class="top">
+                                        <time>2024.09.09</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">关于冒用我校名义发布虚假招聘信息的严正声明</h3>
+                                        <p class="l2">近期，我校发现个别人员或中介机构冒用“烟台城市科技职业学院”名义发布虚假招聘信息，恶意误导求职者，严重影响了我校声誉。现对人才招聘事宜声明如下：一、我校公开招聘信息，均以“烟台城市科技职业学院”为注册名称，并通过智联招聘、BOSS直聘、高校人才网、烟台城市科技职业学院官网、烟台城市科技职业学院官方公众号渠道发布；唯一指定招聘简历投递邮箱为：ytzhaopin@oceg.com。招聘工作由我校人力资源处负责组织实施，从未授权或委托任何机构和人员负责招聘及培训工作。...</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+
+<li>
+                                <a href="info/1401/4101.htm" target="_blank">
+                                    <div class="top">
+                                        <time>2024.08.23</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">严正声明</h3>
+                                        <p class="l2">近期，我校发现有人在微信、QQ、抖音、小红书、快手等网络平台上，开设未经我校授权的“烟台城市科技职业学院表白墙”“烟台城市科技职业学院万能墙”“烟城科表白墙”“烟城科大喇叭”“烟台城市科技职业学院xxx”等账号，...</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+
+<li>
+                                <a href="info/1401/2851.htm" target="_blank">
+                                    <div class="top">
+                                        <time>2024.04.03</time>
+                                        <div class="line"></div>
+                                        <h3 class="l2">烟台城市科技职业学院2024年单招综评招生拟录取结果查询通知</h3>
+                                        <p class="l2">各位考生：根据山东省教育厅《关于做好2024年高职(专科)单独考试招生和综合评价招生工作的通知》文件精神，按照《烟台城市科技职业学院2024年高职(专科)单独招生和综合评价招生章程》有关规定，现将我校2024年单独考试招生(...</p>
+                                    </div>
+                                    <div class="bot">
+                                        <img src="images/s2-img-1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+
+</ul>
+                    </div>
+                    <div class="gd">
+                        <a href="tzgg.htm">查看更多</a>
+                    </div><script>_showDynClickBatch(['dynclicks_u18_4831','dynclicks_u18_4221','dynclicks_u18_4101','dynclicks_u18_2851'],[4831,4221,4101,2851],"wbnews", 2049307931)</script>
+</div>
+            </div>
+        </div>
+    </section>
+    <section class="index-s3">
+        <div class="wp">
+            <div class="left">
+                <div class="title002" data-aos="fade-up">
+                    <h2>多彩校园</h2>
+                    <h4>
+                        <img src="images/s3-img-1.png" alt="">
+                    </h4>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box">
+                    <div class="ll">    <div class="items">
+<div class="item item1" data-aos="fade-down">
+           
+             <div class="top">
+                                    <a href="xyhj/xygy.htm" class="bg-mask" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011430)">
+                                        <div class="pic">
+                                            <span class="a" style="background-image: url(images/s3-img-2.jpg)"></span>
+                                        </div>
+                                        <div class="txt">
+                                            <i class="num">01</i>
+                                            <h3 class="eclip">校园光影</h3>
+                                        </div>
+                                    </a>
+                                </div>
+             <div class="bot">
+                                    <a href="xyhj/xyws.htm" class="bg-mask" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011431)">
+                                        <div class="pic">
+                                            <span class="a" style="background-image: url(images/s3-img-3.jpg)"></span>
+                                        </div>
+                                        <div class="txt">
+                                            <i class="num">02</i>
+                                            <h3 class="eclip">校园微视</h3>
+                                        </div>
+                                    </a>
+                                </div>
+       
+</div>
+
+<div class="item item2" data-aos="fade-up">
+       
+                                <a href="xyhj/xshd.htm" class="bg-mask" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011432)">
+                                    <div class="pic">
+                                        <span class="a" style="background-image: url(images/s3-img-4.jpg)"></span>
+                                    </div>
+                                    <div class="txt">
+                                        <i class="num">03</i>
+                                        <h3 class="eclip">学生活动</h3>
+                                    </div>
+                                </a>
+       
+    </div>
+  
+  <div class="item item3" data-aos="fade-up">
+       
+                                <a href="xyhj/ssfc.htm" class="bg-mask" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011433)">
+                                    <div class="pic">
+                                        <span class="a" style="background-image: url(images/s3-img-5.jpg)"></span>
+                                    </div>
+                                    <div class="txt">
+                                        <i class="num">04</i>
+                                        <h3 class="eclip">师生风采</h3>
+                                    </div>
+                                </a>
+       
+    </div>  
+    
+ </div>   
+    
+    
+    
+</div>
+                    <div class="rr" data-aos="fade-up" data-aos-delay="600">
+                        <span>yantai city college of science and technology</span>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-1"></div>
+        <div class="index-bg-2"></div>
+        <div class="index-bg-3"></div>
+    </section>
+    <section class="index-s4">
+        <div class="wp">
+            <div class="title001">
+                <div class="ll" data-aos="fade-up">
+                    <h2>招生动态 </h2>
+                    <h4>YTCC Enrollment</h4>
+                </div>
+                <div class="rr">
+                    <a href="zsdt.htm" class="more"></a>
+                </div>
+            </div>
+            <div class="content">
+                
+
+<div class="top">
+ <div class="top_l" data-aos="fade-up">
+                        <div class="list2w_hg swiper-container">
+                            <div class="swiper-wrapper">
+
+<div class="swiper-slide">
+                                    <a href="/__local/1/A3/3A/DBD4A26DA662BDAFDDAA2C6AD69_DEB38198_D0834C0.mp4?e=.mp4" class="bg-mask js-play" target="_blank">
+                                        <div class="img_zd">
+                                            <div class="img_hezi" style="background-image: url(/__local/2/46/EF/D6506E93D6E81DB4F8C2621273E_960E1886_7C54B.png)"></div>
+                                            <img src="/__local/2/46/EF/D6506E93D6E81DB4F8C2621273E_960E1886_7C54B.png" alt="" class="none">
+                                            <i class="play"></i>
+                                        </div>
+                                        <div class="txt">
+                                            <h3 class="eclip">烟台城市科技职业学院2024年招生宣传片</h3>
+                                            <p class="l2"></p>
+                                        </div>
+                                    </a>
+                                </div>
+ 
+
+<div class="swiper-slide">
+                                    <a href="https://www.ytcc.edu.cn/zsw/info/1035/2294.htm" class="bg-mask " target="_blank">
+                                        <div class="img_zd">
+                                            <div class="img_hezi" style="background-image: url(/__local/1/4E/D6/024260879651B35F4FB6AAF43E1_0F1D404F_839F9.jpg)"></div>
+                                            <img src="/__local/1/4E/D6/024260879651B35F4FB6AAF43E1_0F1D404F_839F9.jpg" alt="" class="none">
+                                            
+                                        </div>
+                                        <div class="txt">
+                                            <h3 class="eclip">烟台城市科技职业学院2024年夏季高考普通类注册入学招生计划</h3>
+                                            <p class="l2"></p>
+                                        </div>
+                                    </a>
+                                </div>
+ 
+
+<div class="swiper-slide">
+                                    <a href="https://www.ytcc.edu.cn/zsw/info/1035/2304.htm" class="bg-mask " target="_blank">
+                                        <div class="img_zd">
+                                            <div class="img_hezi" style="background-image: url(/__local/A/0A/3D/5726ABBE880E8345DFF6B0E19DC_4D992479_5FC09.jpg)"></div>
+                                            <img src="/__local/A/0A/3D/5726ABBE880E8345DFF6B0E19DC_4D992479_5FC09.jpg" alt="" class="none">
+                                            
+                                        </div>
+                                        <div class="txt">
+                                            <h3 class="eclip">烟台城市科技职业学院2024年春季高考注册入学招生计划</h3>
+                                            <p class="l2"></p>
+                                        </div>
+                                    </a>
+                                </div>
+ 
+
+<div class="swiper-slide">
+                                    <a href="info/1451/3921.htm" class="bg-mask " target="_blank">
+                                        <div class="img_zd">
+                                            <div class="img_hezi" style="background-image: url(/__local/0/A2/80/223B029936616B9E08768C5E2E7_F38784B0_128788.png?e=.png)"></div>
+                                            <img src="/__local/0/A2/80/223B029936616B9E08768C5E2E7_F38784B0_128788.png?e=.png" alt="" class="none">
+                                            
+                                        </div>
+                                        <div class="txt">
+                                            <h3 class="eclip">烟台城市科技职业学院2024年国际本科班（0.5+3.5）招生简章</h3>
+                                            <p class="l2"></p>
+                                        </div>
+                                    </a>
+                                </div>
+ 
+
+<div class="swiper-slide">
+                                    <a href="info/1451/3151.htm" class="bg-mask " target="_blank">
+                                        <div class="img_zd">
+                                            <div class="img_hezi" style="background-image: url(/__local/6/E9/3C/F8D07A26E879B8135F157EA5D06_FE06C823_B0DCE9.jpg?e=.jpg)"></div>
+                                            <img src="/__local/6/E9/3C/F8D07A26E879B8135F157EA5D06_FE06C823_B0DCE9.jpg?e=.jpg" alt="" class="none">
+                                            
+                                        </div>
+                                        <div class="txt">
+                                            <h3 class="eclip">2024年各省高考志愿填报时间及报考代码</h3>
+                                            <p class="l2"></p>
+                                        </div>
+                                    </a>
+                                </div>
+ 
+ </div>
+                        </div>
+                    </div>
+                    
+                    
+ <div class="top_r">
+                        <div class="span" data-aos="fade-left" data-aos-delay="600">
+                            <i></i>
+                            <span>yantai city college of science and technology</span>
+                        </div>
+                        <div class="list2w_hgg swiper-container" data-aos="fade-up">
+                            <div class="swiper-wrapper">                
+                    
+        <div class="swiper-slide">
+                                    <a href="info/1451/4011.htm" target="_blank">
+                                        <p class="l2">
+                                           在大学，认识更多同行的伙伴！
+在大学，成为理想的自己！
+你好，大学，请多多关照！
+——烟台城市科技职业学院2024年招生宣传片
+                                        </p>
+                                    </a>
+                                </div>
+            
+                    
+                    
+        <div class="swiper-slide">
+                                    <a href="https://www.ytcc.edu.cn/zsw/info/1035/2294.htm" target="_blank">
+                                        <p class="l2">
+                                           烟台城市科技职业学院2024年夏季高考普通类注册入学招生计划
+                                        </p>
+                                    </a>
+                                </div>
+            
+                    
+                    
+        <div class="swiper-slide">
+                                    <a href="https://www.ytcc.edu.cn/zsw/info/1035/2304.htm" target="_blank">
+                                        <p class="l2">
+                                           烟台城市科技职业学院2024年春季高考注册入学招生计划
+                                        </p>
+                                    </a>
+                                </div>
+            
+                    
+                    
+        <div class="swiper-slide">
+                                    <a href="info/1451/3921.htm" target="_blank">
+                                        <p class="l2">
+                                           烟台城市科技职业学院国际本、硕连读项目以烟台城市科技职业学院丰富的学习资源和兰帕潘尼皇家大学深厚的教学研究积淀为依托，设立0.5+3.5国际本科。
+                                        </p>
+                                    </a>
+                                </div>
+            
+                    
+                    
+        <div class="swiper-slide">
+                                    <a href="info/1451/3151.htm" target="_blank">
+                                        <p class="l2">
+                                           2024年各省普通类高职（专科批）和山东省春季高考专科批高考志愿填报时间及报考代码。
+                                        </p>
+                                    </a>
+                                </div>
+            
+                    
+                                </div>
+                        </div>
+                        <div class="btn-box" data-aos="fade-up">
+                            <div class="btn prev swiper-button-prev"></div>
+                            <div class="btn next swiper-button-next"></div>
+                        </div>
+                        <div class="bg-1" data-aos="fade-up"></div>
+                    </div>
+    </div>                <script>_showDynClickBatch(['dynclicks_u20_4011','dynclicks_u20_4491','dynclicks_u20_4481','dynclicks_u20_3921','dynclicks_u20_3151'],[4011,4491,4481,3921,3151],"wbnews", 2049307931)</script>
+ 
+                <div class="bot" data-aos="fade-up">
+                    <div class="list3w swiper-container"><div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+
+                                                .st1 {
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <path class="st0" d="M50.61,24.09l-20,36" />
+                                            <path class="st0" d="M42.61,19.09l-21,36" />
+                                            <path class="st0" d="M33.61,14.09l-20,36" />
+                                            <path class="st0" d="M60.23,54.69h4l0,0v6l0,0h-4l0,0V54.69L60.23,54.69z" />
+                                            <path class="st0" d="M53.23,48.69h4l0,0v12l0,0h-4l0,0V48.69L53.23,48.69z" />
+                                            <path class="st0" d="M45.23,39.69h4l0,0v21.16l0,0h-4l0,0V39.69L45.23,39.69z" />
+                                            <path class="st1" d="M42.61,56.79l-8.78,5.04L13.02,49.89V26.02l20.81-11.94l20.81,11.94v18.17" />
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">1028</span></h3>
+                                        <h4>学校占地（亩）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M54.82,23.24h13.21" />
+                                                <path class="st0" d="M52.62,14.43h17.61" />
+                                                <path class="st0" d="M51,51l13.73-18.96" />
+                                                <path class="st0" d="M52.62,59.57c0-10.94-8.87-19.82-19.82-19.82s-19.82,8.87-19.82,19.82c0,0,0,0,0,0L52.62,59.57   C52.62,59.57,52.62,59.57,52.62,59.57z" />
+                                                <path class="st0" d="M33.35,15.53c6.38,0,11.56,5.18,11.56,11.56s-5.18,11.56-11.56,11.56c-6.38,0-11.56-5.18-11.56-11.56   S26.97,15.53,33.35,15.53z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">300</span><i></i></h3>
+                                        <h4>教职工（人）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+
+                                                .st1 {
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M15.69,30.17V46.8c0,0,14.59,11.96,33.98,3.61" />
+                                                <path class="st1" d="M56.26,50.17c0.95,3.47,3.03,11.09,3.03,11.09h-6.99c0,0,2.11-7.71,3.05-11.15   C55.95,47.94,55.65,47.92,56.26,50.17z" />
+                                                <path class="st0" d="M53.46,41c1.74-1.23,4.15-0.81,5.37,0.93c1.23,1.74,0.81,4.15-0.93,5.37c-1.74,1.23-4.15,0.81-5.37-0.93   C51.3,44.63,51.72,42.22,53.46,41z" />
+                                                <path class="st0" d="M36.17,27.28l19.51,3.86l0.08,8.99" />
+                                                <path class="st0" d="M10.15,28l26.27-9.4L62.44,28l-26.27,8.92L10.15,28z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">15000</span></h3>
+                                        <h4>规划在校生（人）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M42.31,44.53l3.42,7h8.73l5.19-9h7.16v-7.51H59.2c-0.65-2.72-1.81-5.23-3.38-7.44l5.01-5.01l-5.31-5.31   l-5.04,5.04c-2.48-1.7-5.33-2.88-8.41-3.43v-7.6h-7.51v7.6c-3.08,0.54-5.93,1.73-8.41,3.43l-5.04-5.04l-5.31,5.31l5.01,5.01   c-1.57,2.21-2.73,4.72-3.38,7.44H9.81v7.51h7.16l5.19,9h8.73l3.42-7" />
+                                            </g>
+                                            <circle class="st0" cx="38.31" cy="39.53" r="7" />
+                                            <line class="st0" x1="38.31" y1="46.53" x2="38.31" y2="55.53" />
+                                            <circle class="st0" cx="38.31" cy="60.03" r="4.5" />
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">30</span></h3>
+                                        <h4>规划建设专业（个）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+
+                                                .st1 {
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <path class="st0" d="M50.61,24.09l-20,36" />
+                                            <path class="st0" d="M42.61,19.09l-21,36" />
+                                            <path class="st0" d="M33.61,14.09l-20,36" />
+                                            <path class="st0" d="M60.23,54.69h4l0,0v6l0,0h-4l0,0V54.69L60.23,54.69z" />
+                                            <path class="st0" d="M53.23,48.69h4l0,0v12l0,0h-4l0,0V48.69L53.23,48.69z" />
+                                            <path class="st0" d="M45.23,39.69h4l0,0v21.16l0,0h-4l0,0V39.69L45.23,39.69z" />
+                                            <path class="st1" d="M42.61,56.79l-8.78,5.04L13.02,49.89V26.02l20.81-11.94l20.81,11.94v18.17" />
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">1028</span></h3>
+                                        <h4>学校占地（亩）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M54.82,23.24h13.21" />
+                                                <path class="st0" d="M52.62,14.43h17.61" />
+                                                <path class="st0" d="M51,51l13.73-18.96" />
+                                                <path class="st0" d="M52.62,59.57c0-10.94-8.87-19.82-19.82-19.82s-19.82,8.87-19.82,19.82c0,0,0,0,0,0L52.62,59.57   C52.62,59.57,52.62,59.57,52.62,59.57z" />
+                                                <path class="st0" d="M33.35,15.53c6.38,0,11.56,5.18,11.56,11.56s-5.18,11.56-11.56,11.56c-6.38,0-11.56-5.18-11.56-11.56   S26.97,15.53,33.35,15.53z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">300</span><i></i></h3>
+                                        <h4>教职工（人）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+
+                                                .st1 {
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M15.69,30.17V46.8c0,0,14.59,11.96,33.98,3.61" />
+                                                <path class="st1" d="M56.26,50.17c0.95,3.47,3.03,11.09,3.03,11.09h-6.99c0,0,2.11-7.71,3.05-11.15   C55.95,47.94,55.65,47.92,56.26,50.17z" />
+                                                <path class="st0" d="M53.46,41c1.74-1.23,4.15-0.81,5.37,0.93c1.23,1.74,0.81,4.15-0.93,5.37c-1.74,1.23-4.15,0.81-5.37-0.93   C51.3,44.63,51.72,42.22,53.46,41z" />
+                                                <path class="st0" d="M36.17,27.28l19.51,3.86l0.08,8.99" />
+                                                <path class="st0" d="M10.15,28l26.27-9.4L62.44,28l-26.27,8.92L10.15,28z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">15000</span></h3>
+                                        <h4>规划在校生（人）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M42.31,44.53l3.42,7h8.73l5.19-9h7.16v-7.51H59.2c-0.65-2.72-1.81-5.23-3.38-7.44l5.01-5.01l-5.31-5.31   l-5.04,5.04c-2.48-1.7-5.33-2.88-8.41-3.43v-7.6h-7.51v7.6c-3.08,0.54-5.93,1.73-8.41,3.43l-5.04-5.04l-5.31,5.31l5.01,5.01   c-1.57,2.21-2.73,4.72-3.38,7.44H9.81v7.51h7.16l5.19,9h8.73l3.42-7" />
+                                            </g>
+                                            <circle class="st0" cx="38.31" cy="39.53" r="7" />
+                                            <line class="st0" x1="38.31" y1="46.53" x2="38.31" y2="55.53" />
+                                            <circle class="st0" cx="38.31" cy="60.03" r="4.5" />
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">30</span></h3>
+                                        <h4>规划建设专业（个）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+
+                                                .st1 {
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <path class="st0" d="M50.61,24.09l-20,36" />
+                                            <path class="st0" d="M42.61,19.09l-21,36" />
+                                            <path class="st0" d="M33.61,14.09l-20,36" />
+                                            <path class="st0" d="M60.23,54.69h4l0,0v6l0,0h-4l0,0V54.69L60.23,54.69z" />
+                                            <path class="st0" d="M53.23,48.69h4l0,0v12l0,0h-4l0,0V48.69L53.23,48.69z" />
+                                            <path class="st0" d="M45.23,39.69h4l0,0v21.16l0,0h-4l0,0V39.69L45.23,39.69z" />
+                                            <path class="st1" d="M42.61,56.79l-8.78,5.04L13.02,49.89V26.02l20.81-11.94l20.81,11.94v18.17" />
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">1028</span></h3>
+                                        <h4>学校占地（亩）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M54.82,23.24h13.21" />
+                                                <path class="st0" d="M52.62,14.43h17.61" />
+                                                <path class="st0" d="M51,51l13.73-18.96" />
+                                                <path class="st0" d="M52.62,59.57c0-10.94-8.87-19.82-19.82-19.82s-19.82,8.87-19.82,19.82c0,0,0,0,0,0L52.62,59.57   C52.62,59.57,52.62,59.57,52.62,59.57z" />
+                                                <path class="st0" d="M33.35,15.53c6.38,0,11.56,5.18,11.56,11.56s-5.18,11.56-11.56,11.56c-6.38,0-11.56-5.18-11.56-11.56   S26.97,15.53,33.35,15.53z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">300</span><i></i></h3>
+                                        <h4>教职工（人）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+
+                                                .st1 {
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M15.69,30.17V46.8c0,0,14.59,11.96,33.98,3.61" />
+                                                <path class="st1" d="M56.26,50.17c0.95,3.47,3.03,11.09,3.03,11.09h-6.99c0,0,2.11-7.71,3.05-11.15   C55.95,47.94,55.65,47.92,56.26,50.17z" />
+                                                <path class="st0" d="M53.46,41c1.74-1.23,4.15-0.81,5.37,0.93c1.23,1.74,0.81,4.15-0.93,5.37c-1.74,1.23-4.15,0.81-5.37-0.93   C51.3,44.63,51.72,42.22,53.46,41z" />
+                                                <path class="st0" d="M36.17,27.28l19.51,3.86l0.08,8.99" />
+                                                <path class="st0" d="M10.15,28l26.27-9.4L62.44,28l-26.27,8.92L10.15,28z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">15000</span></h3>
+                                        <h4>规划在校生（人）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a>
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewbox="0 0 75 75" xml:space="preserve" style="enable-background:new 0 0 75 75;">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill-rule: evenodd;
+                                                    clip-rule: evenodd;
+                                                    stroke-width: 2;
+                                                    stroke-miterlimit: 10;}
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M42.31,44.53l3.42,7h8.73l5.19-9h7.16v-7.51H59.2c-0.65-2.72-1.81-5.23-3.38-7.44l5.01-5.01l-5.31-5.31   l-5.04,5.04c-2.48-1.7-5.33-2.88-8.41-3.43v-7.6h-7.51v7.6c-3.08,0.54-5.93,1.73-8.41,3.43l-5.04-5.04l-5.31,5.31l5.01,5.01   c-1.57,2.21-2.73,4.72-3.38,7.44H9.81v7.51h7.16l5.19,9h8.73l3.42-7" />
+                                            </g>
+                                            <circle class="st0" cx="38.31" cy="39.53" r="7" />
+                                            <line class="st0" x1="38.31" y1="46.53" x2="38.31" y2="55.53" />
+                                            <circle class="st0" cx="38.31" cy="60.03" r="4.5" />
+                                        </svg>
+                                    </div>
+                                    <div class="txt">
+                                        <h3><span class="num">30</span></h3>
+                                        <h4>规划建设专业（个）</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="page swiper-pagination"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="index-bg-1"></div>
+    <div class="index-bg-4"></div>
+</section>
+
+<section class="index-s5">
+    <div class="wp">
+        <div class="left">
+            <div class="title001">
+                <div class="ll" data-aos="fade-up">
+                    <h2>校园专题</h2>
+                    <h4>Special Focus</h4>
+                </div>
+                <a href="xyzt.htm" class="more" data-aos="fade-left" data-aos-delay="1000"></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="ll" data-aos="fade-up" data-aos-delay="600">
+                <h3>
+                    <span>yantai city college of science and technology</span>
+                    <i></i>
+                </h3>
+            </div>
+            <div class="rr">    <div class="list_box3">
+    <ul>
+            
+                
+                <li data-aos="fade-down">
+                            <a href="http://www.ytcc.edu.cn/djw" class="bg-mask" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011434)" target="_blank">
+                                <div class="pic">
+                                    <span class="a" style="background-image: url(images/s5-img-1.jpg)"></span>
+                                </div>
+                            </a>
+                        </li>
+                 
+                
+                <li data-aos="fade-down">
+                            <a href="http://www.ytcc.edu.cn/jjjcw" class="bg-mask" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011435)" target="_blank">
+                                <div class="pic">
+                                    <span class="a" style="background-image: url(images/s5-img-2.jpg)"></span>
+                                </div>
+                            </a>
+                        </li>
+                 
+                
+                <li data-aos="fade-down">
+                            <a href="http://www.ytcc.edu.cn/zsw" class="bg-mask" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011436)" target="_blank">
+                                <div class="pic">
+                                    <span class="a" style="background-image: url(images/s5-img-3.jpg)"></span>
+                                </div>
+                            </a>
+                        </li>
+                 
+                
+                <li data-aos="fade-down">
+                            <a href="http://www.ytcc.edu.cn/hqaqglc" class="bg-mask" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011457)" target="_blank">
+                                <div class="pic">
+                                    <span class="a" style="background-image: url(images/s5-img-4.jpg)"></span>
+                                </div>
+                            </a>
+                        </li>
+                 
+      
+ </ul>
+                </div></div>
+        </div>
+    </div>
+    <div class="bg-1"></div>
+</section>
+
+<aside class="aside">    <ul>
+           
+              
+              <li>
+            <a href="https://oa.oceghome.com/" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011442)" target="_blank">
+                <div class="icon">
+                    <img src="images/as-img-1.png" alt="">
+                </div>
+
+            </a>
+            <p>OA办公</p>
+        </li>
+             
+       
+       
+              
+              <li>
+            <a href="http://jw.ytcc.edu.cn/jwapp/sys/homeapp/home/index.html?av=1724635626567&contextPath=/jwapp#/" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011443)" target="_blank">
+                <div class="icon">
+                    <img src="images/jiaowu.png" alt="">
+                </div>
+
+            </a>
+            <p>教务系统</p>
+        </li>
+             
+       
+       
+              
+              <li>
+            <a href="http://www.ytcc.edu.cn/tsg/index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011445)" target="_blank">
+                <div class="icon">
+                    <img src="images/as-img-4.png" alt="">
+                </div>
+
+            </a>
+            <p>馆藏检索</p>
+        </li>
+             
+       
+       
+              
+              <li>
+            <a href="https://ytcc-support.oceghome.com/h5/index.html?vertifyIdCard=true#/login" onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011461)" target="_blank">
+                <div class="icon">
+                    <img src="images/guzhangweihu.png" alt="">
+                </div>
+
+            </a>
+            <p>故障报修</p>
+        </li>
+             
+       
+</ul></aside>
+
+<footer class="foot">
+    <div class="wp">
+        <div class="ft-left">
+            <div class="ft-logo">    
+            
+          
+                            <img src="images/logo-2.png">
+                       
+     
+</div>
+            <div class="bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright © 2024.烟台城市科技职业学院 All rights reserved. <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">鲁ICP备2023020505号</a> <a href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank">鲁公网安备37061102001479号</a></p></div>
+        </div>
+        <div class="ft-center">
+            <h3><img src="images/ft-img-1.png" alt="">联系我们</h3>
+            <div class="ft-add"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<h5>地址：山东省烟台市福山区河滨南路99号</h5>
+<h5>邮编：265500</h5>
+<h5><span><span>邮箱：bgs@ytcc.edu.cn</span></span></h5>
+<h5><span><span>传真：0535-6361216</span></span></h5>
+<h5><span><span>学校办公室：0535-6600500</span></span></h5>
+<h5><span><span>招生电话：0535-6363777 6361999</span></span></h5></div>
+        </div>
+        <div class="ft-right">
+            <div class="ft-link">
+
+<div class="li"><a href="http://www.moe.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99035)"><img src="images/ft-img-1.png" alt="">国家教育部</a></div>
+
+
+<div class="li"><a href="http://edu.shandong.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99036)"><img src="images/ft-img-1.png" alt="">山东省教育厅</a></div>
+
+
+<div class="li"><a href="https://jyj.yantai.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99037)"><img src="images/ft-img-1.png" alt="">烟台市教育局</a></div>
+
+
+<div class="li"><a href="https://www.oceg.com/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2049307931, 99038)"><img src="images/ft-img-1.png" alt="">东方剑桥教育集团</a></div>
+
+</div>  
+                <div class="ft-ewm">
+        
+             
+             <div class="li">
+                    <a onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011438)">
+                        <img src="images/ft-ico-1.png" alt="">
+                    </a>
+                    <div class="ewm">
+                        <img src="images/ewm/1.guanfangweixin.png" alt="">
+                        <p>官方微信</p>
+                    </div>
+                </div>
+              
+             
+             <div class="li">
+                    <a onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011439)">
+                        <img src="images/ft-ico-2.png" alt="">
+                    </a>
+                    <div class="ewm">
+                        <img src="images/789.jpg" alt="">
+                        <p>官方抖音</p>
+                    </div>
+                </div>
+              
+             
+             <div class="li">
+                    <a onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011440)">
+                        <img src="images/ft-ico-3.png" alt="">
+                    </a>
+                    <div class="ewm">
+                        <img src="images/ewm/4.shipinhao.jpg" alt="">
+                        <p>视频号</p>
+                    </div>
+                </div>
+              
+             
+             <div class="li">
+                    <a onclick="_addDynClicks(&#34;wbimage&#34;, 2049307931, 1011441)">
+                        <img src="images/ft-ico-4.png" alt="">
+                    </a>
+                    <div class="ewm">
+                        <img src="images/ewm/3.xiaohongshu.jpg" alt="">
+                        <p>小红书</p>
+                    </div>
+                </div>
+              
+       
+  </div>  
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    $(window).scroll(function() {
+        var winH = $(window).innerHeight() - 300
+        var winHeight = $(this).scrollTop()
+        if (winHeight >= 170) {
+            $('.miso_navs').addClass('xg1');
+        } else {
+            $('.miso_navs').removeClass("xg1");
+        }
+    })
+    $(window).scroll(function () {
+        var bh = $('.banner').height() - 100
+        var wh = $(window).scrollTop()
+        if (wh >= bh) {
+            $('.aside').stop().addClass('hide')
+        }
+        else {
+            $('.aside').stop().removeClass('hide')
+        }
+    })
+</script>
+<script>
+    setTimeout(function () {
+        AOS.init({
+            duration: 1200,
+            disable: 'mobile'
+        });
+    }, 500);
+</script>
+<!--有视频-->
+<script src="js/index_sp.js"></script>
+<!--无视频-->
+<!--<script src="js/index.js"></script>-->
+</html>

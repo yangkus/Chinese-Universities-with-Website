@@ -1,0 +1,2003 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>云南艺术学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="云南艺术学院">
+<META Name="keywords" Content="云南艺术学院" />
+
+    <link rel="stylesheet" href="style/animate.min.css">
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/wow.min.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230797a4756535a5742000400014352 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,2027012982)</script>
+</head>
+
+<body>
+
+    <!-- pc 顶部 导航 -->
+    <div class="b-top">
+        <div class="t-search-zzc"></div>
+        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        
+         <div class="t-search">
+         <div>
+                <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <div class="search-btn">
+                    <input type="image" src="images/search.png" value="提交" v-on:click="onSubmit()">
+                </div>
+            </div>
+           </div>
+        
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2027012982";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    </div>
+    <div class="head pc">
+        <div class="head-top">
+            <div class="">
+                <div class="logo">
+<a href="index.htm"><img src="images/logo.png" alt=""></a></div>
+                <div class="nav">
+                    <ul class=""><li>
+                            <a href="xxgk/xxjj.htm">学校概况</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-06.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="xxgk/xxjj.htm">学校简介</a></li>                                  
+
+       <li><a href="xxgk/xrld.htm">现任领导</a></li>                                  
+
+       <li><a href="xxgk/lrld.htm">历任领导</a></li>                                  
+
+       <li><a href="xxgk/xxbs.htm">学校标识</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="jgsz.htm">机构设置</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-05.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="jgsz/dzgljg.htm">党政管理机构</a></li>                                  
+
+       <li><a href="jgsz/qt.htm">群团</a></li>                                  
+
+       <li><a href="jgsz/jfkyjg.htm">教辅科研机构</a></li>                                  
+
+       <li><a href="jgsz/jxdw.htm">教学单位</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="xkjs/ysxyjxk.htm">学科建设</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-07.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="xkjs/ysxyjxk.htm">艺术学一级学科</a></li>                                  
+
+       <li><a href="xkjs/sjxyjxk.htm">设计学一级学科</a></li>                                  
+
+       <li style=" width:100% "><a href="xkjs/msysfbsxwsqjsd.htm">美术与书法博士学位授权建设点</a></li>                                  
+
+       <li style=" width:100% "><a href="xkjs/xjyysbsxwsqjsd.htm">戏剧与影视博士学位授权建设点</a></li>                                  
+
+       <li><a href="xkjs/wdbsxwsqjsd.htm">舞蹈博士学位授权建设点</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="jyjx/bksjy.htm">教育教学</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-04.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="jyjx/bksjy.htm">本科生教育</a></li>                                  
+
+       <li><a href="jyjx/yjsjy.htm">研究生教育</a></li>                                  
+
+       <li><a href="jyjx/lxsjy.htm">留学生教育</a></li>                                  
+
+       <li><a href="jyjx/jxjy.htm">继续教育</a></li>                                  
+
+       <li><a href="jyjx/jlpx.htm">交流培训</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="kycz/jpjz.htm">科研创作</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-03.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="kycz/jpjz.htm">精品佳作</a></li>                                  
+
+       <li><a href="kycz/kydt.htm">科研动态</a></li>                                  
+
+       <li><a href="kycz/zydt.htm">展演动态</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="http://zs.ynart.edu.cn">招生就业</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-09.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="http://zs.ynart.edu.cn" target="_blank">招生</a></li>                                  
+
+       <li><a href="http://xsc.ynart.edu.cn/xsjy/jyxx.htm" target="_blank">就业</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="hzjl/gjjl.htm">合作交流</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-05.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="hzjl/gjjl.htm" target="_blank">国际交流</a></li>                                  
+
+       <li><a href="hzjl/xjhz.htm" target="_blank">校际合作</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="xyfw/xxdt.htm">校园服务</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-08.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="xyfw/xxdt.htm">学校地图</a></li>                                  
+
+       <li><a href="xyfw/xl.htm">校历</a></li>                                  
+
+       <li><a href="xyfw/dhhy.htm">电话黄页</a></li>                                  
+
+       <li><a href="xyfw/yzsssfw.htm">一站式师生服务</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+</ul>
+
+                    <div class="nav-use">
+                        <div>
+                            <a href="javascript:;" class="search-switch">
+                                <img src="images/head-icon-search.png" alt="">
+                            </a>
+                        </div>
+                        <div class="lang"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+
+<a href="https://english.ynart.edu.cn/">
+                                <img src="images/head-icon-lang.png" alt="">
+                                <span target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2027012982, 97164)">English</span>
+                            </a>
+
+   
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="head head2 pc">
+        <div class="head-top">
+            <div class="">
+                <div class="logo">
+<a href="index.htm"><img src="images/logo.png" alt=""></a></div>
+                <div class="nav">
+                    <ul class=""><li>
+                            <a href="xxgk/xxjj.htm">学校概况</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-06.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="xxgk/xxjj.htm">学校简介</a></li>                                  
+
+       <li><a href="xxgk/xrld.htm">现任领导</a></li>                                  
+
+       <li><a href="xxgk/lrld.htm">历任领导</a></li>                                  
+
+       <li><a href="xxgk/xxbs.htm">学校标识</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="jgsz.htm">机构设置</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-05.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="jgsz/dzgljg.htm">党政管理机构</a></li>                                  
+
+       <li><a href="jgsz/qt.htm">群团</a></li>                                  
+
+       <li><a href="jgsz/jfkyjg.htm">教辅科研机构</a></li>                                  
+
+       <li><a href="jgsz/jxdw.htm">教学单位</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="xkjs/ysxyjxk.htm">学科建设</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-07.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="xkjs/ysxyjxk.htm">艺术学一级学科</a></li>                                  
+
+       <li><a href="xkjs/sjxyjxk.htm">设计学一级学科</a></li>                                  
+
+       <li style=" width:100% "><a href="xkjs/msysfbsxwsqjsd.htm">美术与书法博士学位授权建设点</a></li>                                  
+
+       <li style=" width:100% "><a href="xkjs/xjyysbsxwsqjsd.htm">戏剧与影视博士学位授权建设点</a></li>                                  
+
+       <li><a href="xkjs/wdbsxwsqjsd.htm">舞蹈博士学位授权建设点</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="jyjx/bksjy.htm">教育教学</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-04.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="jyjx/bksjy.htm">本科生教育</a></li>                                  
+
+       <li><a href="jyjx/yjsjy.htm">研究生教育</a></li>                                  
+
+       <li><a href="jyjx/lxsjy.htm">留学生教育</a></li>                                  
+
+       <li><a href="jyjx/jxjy.htm">继续教育</a></li>                                  
+
+       <li><a href="jyjx/jlpx.htm">交流培训</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="kycz/jpjz.htm">科研创作</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-03.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="kycz/jpjz.htm">精品佳作</a></li>                                  
+
+       <li><a href="kycz/kydt.htm">科研动态</a></li>                                  
+
+       <li><a href="kycz/zydt.htm">展演动态</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="http://zs.ynart.edu.cn">招生就业</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-09.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="http://zs.ynart.edu.cn" target="_blank">招生</a></li>                                  
+
+       <li><a href="http://xsc.ynart.edu.cn/xsjy/jyxx.htm" target="_blank">就业</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="hzjl/gjjl.htm">合作交流</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-05.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="hzjl/gjjl.htm" target="_blank">国际交流</a></li>                                  
+
+       <li><a href="hzjl/xjhz.htm" target="_blank">校际合作</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+<li>
+                            <a href="xyfw/xxdt.htm">校园服务</a>
+                            <div class="ejnav">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="images/haiabo-08.jpg" alt="">
+                                    </div>
+                                </div>
+                                <ul>
+
+       <li><a href="xyfw/xxdt.htm">学校地图</a></li>                                  
+
+       <li><a href="xyfw/xl.htm">校历</a></li>                                  
+
+       <li><a href="xyfw/dhhy.htm">电话黄页</a></li>                                  
+
+       <li><a href="xyfw/yzsssfw.htm">一站式师生服务</a></li>                                  
+                                </ul>
+                            </div>
+                        </li>
+
+   
+</ul>
+
+                    <div class="nav-use">
+                        <div>
+                            <a href="javascript:;" class="search-switch">
+                                <img src="images/head-icon-search.png" alt="">
+                            </a>
+                        </div>
+                        <div class="lang">
+
+<a href="https://english.ynart.edu.cn/">
+                                <img src="images/head-icon-lang.png" alt="">
+                                <span target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2027012982, 97164)">English</span>
+                            </a>
+
+   
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">
+<a href="index.htm"><img src="images/logo.png" alt=""></a></div>
+        <div class="m-nav">
+            <div class="m-tlink">
+
+<a href="https://english.ynart.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2027012982, 97164)">English</a>
+
+  
+</div>
+            <div class="m-search">
+
+
+<div id="divu9"></div>
+<script type="text/html" id="htmlu9">
+    <div id="appu9">
+        <div v-if="!isError">
+        
+        <input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <input type="image" src="images/search.png" value="提交" v-on:click="onSubmit()">
+        
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu9").html($("#htmlu9").text());
+</script>
+<script>
+    var appOwner = "2027012982";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu9",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="">
+<li class="active">
+                    <a href="index.htm">首页</a>                </li>
+
+   
+
+<li>
+                    <a href="xxgk/xxjj.htm">学校概况</a><span></span>
+                    <ul>
+
+                        <li><a href="xxgk/xxjj.htm">学校简介</a></li>
+                    
+
+                        <li><a href="xxgk/xrld.htm">现任领导</a></li>
+                    
+
+                        <li><a href="xxgk/lrld.htm">历任领导</a></li>
+                    
+
+                        <li><a href="xxgk/xxbs.htm">学校标识</a></li>
+                    
+                    </ul>
+                </li>
+
+   
+
+<li>
+                    <a href="jgsz.htm">机构设置</a><span></span>
+                    <ul>
+
+                        <li><a href="jgsz/dzgljg.htm">党政管理机构</a></li>
+                    
+
+                        <li><a href="jgsz/qt.htm">群团</a></li>
+                    
+
+                        <li><a href="jgsz/jfkyjg.htm">教辅科研机构</a></li>
+                    
+
+                        <li><a href="jgsz/jxdw.htm">教学单位</a></li>
+                    
+                    </ul>
+                </li>
+
+   
+
+<li>
+                    <a href="xkjs/ysxyjxk.htm">学科建设</a><span></span>
+                    <ul>
+
+                        <li><a href="xkjs/ysxyjxk.htm">艺术学一级学科</a></li>
+                    
+
+                        <li><a href="xkjs/sjxyjxk.htm">设计学一级学科</a></li>
+                    
+
+                        <li><a href="xkjs/msysfbsxwsqjsd.htm">美术与书法博士学位授权建设点</a></li>
+                    
+
+                        <li><a href="xkjs/xjyysbsxwsqjsd.htm">戏剧与影视博士学位授权建设点</a></li>
+                    
+
+                        <li><a href="xkjs/wdbsxwsqjsd.htm">舞蹈博士学位授权建设点</a></li>
+                    
+                    </ul>
+                </li>
+
+   
+
+<li>
+                    <a href="jyjx/bksjy.htm">教育教学</a><span></span>
+                    <ul>
+
+                        <li><a href="jyjx/bksjy.htm">本科生教育</a></li>
+                    
+
+                        <li><a href="jyjx/yjsjy.htm">研究生教育</a></li>
+                    
+
+                        <li><a href="jyjx/lxsjy.htm">留学生教育</a></li>
+                    
+
+                        <li><a href="jyjx/jxjy.htm">继续教育</a></li>
+                    
+
+                        <li><a href="jyjx/jlpx.htm">交流培训</a></li>
+                    
+                    </ul>
+                </li>
+
+   
+
+<li>
+                    <a href="kycz/jpjz.htm">科研创作</a><span></span>
+                    <ul>
+
+                        <li><a href="kycz/jpjz.htm">精品佳作</a></li>
+                    
+
+                        <li><a href="kycz/kydt.htm">科研动态</a></li>
+                    
+
+                        <li><a href="kycz/zydt.htm">展演动态</a></li>
+                    
+                    </ul>
+                </li>
+
+   
+
+<li>
+                    <a href="http://zs.ynart.edu.cn">招生就业</a><span></span>
+                    <ul>
+
+                        <li><a href="http://zs.ynart.edu.cn" target="_blank">招生</a></li>
+                    
+
+                        <li><a href="http://xsc.ynart.edu.cn/xsjy/jyxx.htm" target="_blank">就业</a></li>
+                    
+                    </ul>
+                </li>
+
+   
+
+<li>
+                    <a href="hzjl/gjjl.htm">合作交流</a><span></span>
+                    <ul>
+
+                        <li><a href="hzjl/gjjl.htm" target="_blank">国际交流</a></li>
+                    
+
+                        <li><a href="hzjl/xjhz.htm" target="_blank">校际合作</a></li>
+                    
+                    </ul>
+                </li>
+
+   
+
+<li>
+                    <a href="xyfw/xxdt.htm">校园服务</a><span></span>
+                    <ul>
+
+                        <li><a href="xyfw/xxdt.htm">学校地图</a></li>
+                    
+
+                        <li><a href="xyfw/xl.htm">校历</a></li>
+                    
+
+                        <li><a href="xyfw/dhhy.htm">电话黄页</a></li>
+                    
+
+                        <li><a href="xyfw/yzsssfw.htm">一站式师生服务</a></li>
+                    
+                    </ul>
+                </li>
+
+   
+<div class="clear"></div></ul>
+        </div>
+    </div>
+
+        <div class="banner">
+<div class="slick">
+           
+               
+               <div>
+                <a href="http://ure.ynart.edu.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009516)">
+                    <img src="images/shenhepingguwang.jpg" alt="">
+                </a>
+            </div>
+               
+                   
+              
+               
+               <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009412)">
+                    <img src="images/banx1.png" alt="">
+                </a>
+            </div>
+               
+                   
+              
+               
+               <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009429)">
+                    <img src="images/banx2.png" alt="">
+                </a>
+            </div>
+               
+                   
+              
+               
+               <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009413)">
+                    <img src="images/banner08.jpg" alt="">
+                </a>
+            </div>
+               
+                   
+              
+               
+               <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009414)">
+                    <img src="images/banner09.jpg" alt="">
+                </a>
+            </div>
+               
+                   
+              
+               
+               <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009410)">
+                    <img src="images/banner05.jpg" alt="">
+                </a>
+            </div>
+               
+                   
+              
+               
+               <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009405)">
+                    <img src="images/banner2.jpg" alt="">
+                </a>
+            </div>
+               
+                   
+              
+               
+               <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009432)">
+                    <img src="images/banx3.png" alt="">
+                </a>
+            </div>
+               
+                   
+              
+               
+               <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009439)">
+                    <img src="images/banx4.png" alt="">
+                </a>
+            </div>
+               
+                   
+              
+       
+</div>
+        <div class="banner-next">
+            <div><img src="images/banner-next-arr.png" alt=""></div>
+        </div>
+        </div>
+
+    <div class="jianzhu">
+        <img src="images/index-jianz.png" alt="">
+    </div>
+    <div class="index">
+        <div class="section1">
+            <div class="w14">
+                <div class="s1-c">
+                    <div class="s1-l wow fadeInLeft">
+                        <div class="tit titmore">
+                            <h2>云艺新闻</h2>
+                            <div></div>
+                            <p>YAU News</p>
+                            <a href="index/yyxw.htm">more</a>
+                        </div>
+
+                        
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="s1-llist">
+<ul class="publist">
+
+<li>
+                                    <a href="https://mp.weixin.qq.com/s/C0dDaYL8xkzfefNlWBsXig">
+                                        <div class="pic">
+                                            <img src="/__local/F/63/8B/322FFA7355DF2A1934D0A8AE2D0_3E8CD61E_57B34.jpg" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h3>云南艺术学院举办学习贯彻习近平总书记给普洱民族团结誓词碑盟誓代表后代重要回信精神座谈会</h3>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </li>
+
+  
+
+<li>
+                                    <a href="info/1039/53841.htm">
+                                        <div class="pic">
+                                            <img src="/__local/9/47/12/ED567A39EA8FBF61E5835658055_22C2CE6C_493A3.jpg" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h3>云南数字文旅产业园到我校开展“访企拓岗”活动</h3>
+                                            <p>2024年10月22日上午，我校与云南数字文旅产业园在行政楼开展“访企拓岗”促就业交流座谈会。学校党委书记李建宇与云南数字文旅产业园运营商、昆明互创企业管理有限公司董事长张梅以及园区企业代表、新加坡电影导演孙立人作了交流座谈。座谈会上，李建宇书记简要介绍了我校办学历史、专业设置、办学特色、人才培养以及云南丰富的民族文化资源等情况。他强调，期望与云南数字文旅产业园深化合作，坚持共商、共建、共享、共赢的合作原则，...</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+  
+
+<li>
+                                    <a href="info/1039/53711.htm">
+                                        <div class="pic">
+                                            <img src="/__local/2/1F/9C/47E866E61584118AF7F2110DA06_D914D150_54B50.jpg" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h3>云南艺术学院师生参加“‘石榴花开·彩云南’——庆祝中华人民共和国成立75周年文艺汇演”</h3>
+                                            <p>2024年10月18日，由中共云南省委统战部、云南省民族宗教事务委员会、云南省教育厅主办，云南省民族团结进步促进会承办的“石榴花开·彩云南”——庆祝中华人民共和国成立75周年文艺汇演活动在云南文化艺术职业学院举行。本次文艺汇演以普洱民族团结誓词碑为创作灵感，回顾并展现了云南各民族共守祖国疆土、共建美好家园的光辉历程。作为云南省民族团结进步促进会理事单位，云南艺术学院发挥艺术院校优势，把服务我省“三个定位”和省委“...</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+  
+
+<li>
+                                    <a href="info/1039/53111.htm">
+                                        <div class="pic">
+                                            <img src="/__local/F/56/E4/304FE0699D1FF41958ECB936D02_F41BF45F_62E1E.jpg" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h3>云南艺术学院与北京舞蹈学院签订校际帮扶合作协议</h3>
+                                            <p>为贯彻落实全国教育大会精神，积极服务和融入云南“3815”战略发展目标，加快推进学校高质量发展三年行动计划。10月16日，云南艺术学院与北京舞蹈学院校际帮扶合作协议签约仪式在北京舞蹈学院举行。北京舞蹈学院党委书记巴图，党委常委、副院长惠彤，云南艺术学院党委副书记、院长欧阳俊虎，云南艺术学院舞蹈学院院长刘丽等出席签约仪式。欧阳俊虎院长向北京舞蹈学院长期以来对学校的帮助和支持表示衷心感谢，他简要介绍了学校发展的基本情况。...</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+  
+
+<li>
+                                    <a href="https://mp.weixin.qq.com/s/SxHC_dp1euFmkpTXUmNsDw">
+                                        <div class="pic">
+                                            <img src="/__local/6/1A/6B/BA16E1A3BC1C16E53C023EA7F60_C1C5EB24_1D6F4.jpg" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h3>昆明市对老挝（中老铁路沿线）友好村寨减贫示范培训班云艺专场圆满完成</h3>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </li>
+
+  
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u12_54031','dynclicks_u12_53841','dynclicks_u12_53711','dynclicks_u12_53111','dynclicks_u12_52841'],[54031,53841,53711,53111,52841],"wbnews", 2027012982)</script>
+
+                    </div>
+                    <div class="s1-r wow fadeInRight">
+                        <div class="tit titmore">
+                            <h2>媒体云艺</h2>
+                            <div></div>
+                            <p>YAU Mediaz</p>
+                            <a href="index/mtyy.htm">more</a>
+                        </div>
+
+                        <div class="s1-rlist">
+
+<ul>
+
+<li>
+                                    <a href="https://m.yunnan.cn/system/2024/09/15/033231435.shtml">
+                                        <h3>[云南网]</h3>
+                                        <p>为教育强国建设贡献力量！习近平总书记在全国教育大会上的重要讲话在云南高校书记校长中引发热烈反响（一）</p>
+                                    </a>
+                                </li>
+
+  
+
+<li>
+                                    <a href="https://www.peopleapp.com/column/30047123958-500005865438">
+                                        <h3>[人民日报]</h3>
+                                        <p>民族史诗话剧《澜沧水长》在昆明上演</p>
+                                    </a>
+                                </li>
+
+  
+
+<li>
+                                    <a href="https://app.gmdaily.cn/as/opened/n/aacd80014d2f41f8925e54432a643ef9">
+                                        <h3>[光明日报]</h3>
+                                        <p>好剧来了！再现民族团结誓词碑的故事</p>
+                                    </a>
+                                </li>
+
+  
+
+<li>
+                                    <a href="http://app.people.cn/h5/detail/normal/6019054218183680">
+                                        <h3>[人民网]</h3>
+                                        <p>云南艺术学院“亚洲国际纪录片研究中心”正式揭牌</p>
+                                    </a>
+                                </li>
+
+  
+
+<li>
+                                    <a href="https://m.yunnan.cn/system/2024/10/14/033266419.shtml">
+                                        <h3>[云南网]</h3>
+                                        <p>云南艺术学院戏剧学院院长杨军编剧的民族史诗话剧《澜沧水长》在昆热演</p>
+                                    </a>
+                                </li>
+
+  
+
+<li>
+                                    <a href="https://mp.weixin.qq.com/s/wxU1QZq23OyxgqQmcdt-Cg">
+                                        <h3>[云南省教育厅]</h3>
+                                        <p>“守望云心”进校园丨解忧又疗愈！“一人一故事剧场”走进云南财经大学</p>
+                                    </a>
+                                </li>
+
+  
+</ul><script>_showDynClickBatch(['dynclicks_u13_50861','dynclicks_u13_54221','dynclicks_u13_53551','dynclicks_u13_53631','dynclicks_u13_52581','dynclicks_u13_52481'],[50861,54221,53551,53631,52581,52481],"wbnews", 2027012982)</script>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section2">
+            <div class="w14">
+                <div class="tit titmore wow fadeInUp">
+                    <h2>校园动态</h2>
+                    <div></div>
+                    <p>YAU Events</p>
+                    <a href="index/xydt.htm">more</a>
+                </div>
+                <div class="s2-c">
+                    
+
+<div class="s2-l wow fadeInLeft">
+<ul class="publist">
+
+<li>
+                                <a href="info/1040/54201.htm">
+                                    <div class="pic">
+                                        <img src="/__local/F/42/64/EA01DC84E35DEE4C1055738C757_B3EBC734_11C67.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h3>我校举办铸牢中华民族共同体意识专题培训</h3>
+                                        <p>10月24日，云南艺术学院在图书馆报告厅举办铸牢中华民族共同体意识专题培训。此次培训是我校深入学习习近平总书记在民族团结表彰大会上的重要讲话和给普洱民族团结誓词碑盟誓后代回信精神，全面贯彻落实习近平总书记关于加强和改进民族工作的重要思想的重要举措。培训活动由党委统战部和校团委联合筹办。云南民族大学党委统战部副部长、铸牢中华民族共同体意识研究院专职副院长杨文顺教授以“铸牢中华民族共同体意识的理论与实践”为主题进行专题辅导。...</p>
+                                    </div>
+                                </a>
+                            </li>
+
+  
+
+<li>
+                                <a href="info/1040/54131.htm">
+                                    <div class="pic">
+                                        <img src="/__local/3/85/18/4A3780012D93C749FB185B858F7_C4BE8D70_A50D6.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h3>构建区域性国家视觉形象 ——云南艺术学院设计学院团队对中国第一列跨境旅游专列中老铁路“星光·澜湄号”进行艺术提升设计</h3>
+                                        <p>随着国家“一带一路”倡议的推广与实施，云南省各地区的发展迎来了新的机遇。中老铁路作为中老友谊标志性工程，作为连接中国与东南亚的重要通道，不仅促进了区域经济的发展，也为文化交流提供了广阔的平台。在此背景下，云南艺术学院积极发挥学科专业优势，由设计学院视觉传达系主任陈钧教授团队与环境设计系主任邹洲教授团队领衔，以“人与自然”—《生物多样性》为主题，针对中老铁路“星光·澜湄号”列车进行了整体艺术提升设计，...</p>
+                                    </div>
+                                </a>
+                            </li>
+
+  
+
+<li>
+                                <a href="info/1040/54141.htm">
+                                    <div class="pic">
+                                        <img src="/__local/A/4B/98/2FB70FA6A16E60DD337C6F430D5_66965733_4BF43.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h3>设计学院党委开展2024年第二期发展对象培训</h3>
+                                        <p>为进一步深化发展对象对党的认识，强化宗旨意识、政治纪律和规矩意识以及责任担当意识，做好新形势下党员发展工作，设计学院党委举办了2024年第二期发展对象培训。10月18日下午3:30，开班仪式在设计楼203会议室举行，设计学院党委余光荣书记出席开班仪式并作动员讲话，设计学院党委班子成员、党支部书记、发展对象等共计30余人参加了开班仪式。开班仪式由专职组织员张栩榛同志主持。余光荣从履行发展党员工作程序的明确要求；提高思想认识和党性觉悟的重要举措；...</p>
+                                    </div>
+                                </a>
+                            </li>
+
+  
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u14_54201','dynclicks_u14_54131','dynclicks_u14_54141'],[54201,54131,54141],"wbnews", 2027012982)</script>
+
+                    
+
+<div class="s6-r wow fadeInUp" data-wow-delay=".3s">
+<div class="s6-rt">
+<a href="info/1040/54021.htm">
+                                <div class="pic"><img src="/__local/B/70/B4/28D9A8EF148BE11805022400B7D_8450AADC_47B34.jpg" alt=""></div>
+                                <div class="info">
+                                    <h3 class="titline"><i>音乐学院举办2024年秋季学期消防安全知识讲座</i></h3>
+                                </div>
+                            </a>
+
+  
+</div>
+<div class="s6-rb">
+<ul>
+
+<li>
+                                    <a href="info/1040/53971.htm">
+                                        <div class="pic"><img src="/__local/D/6C/6D/29292D1DBA435725330DAEC9352_8D10F5B3_33E81.jpg" alt=""></div>
+                                        <div class="info">
+                                            <p>云艺学子与国际学者共探“可持续性与中国音乐”的学术前沿——音乐学院本科生岩进受邀参加第26届CHIME国际会议</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+<li>
+                                    <a href="info/1040/53951.htm">
+                                        <div class="pic"><img src="/__local/2/96/C3/EF94836DB178C58DB8F40D24E98_A04AB7F3_4AB85.jpg" alt=""></div>
+                                        <div class="info">
+                                            <p>音乐学院学生工作调研会顺利召开</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+<li>
+                                    <a href="info/1040/53721.htm">
+                                        <div class="pic"><img src="/__local/7/FA/41/F9AB843885DF9306AC867CB3BF0_26FA8A2C_36F70.jpg" alt=""></div>
+                                        <div class="info">
+                                            <p>舞蹈学院召开《傣族舞蹈系列教材》建设启动会</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+<li>
+                                    <a href="info/1040/53661.htm">
+                                        <div class="pic"><img src="/__local/F/5B/D8/9212032B86F3B38EF4C6CBEFD5F_13864873_50B34.jpg" alt=""></div>
+                                        <div class="info">
+                                            <p>音乐学院举办研究生学位点合格评估专家系列讲座（三）《艺术专业学位研究生培养工作实践与思考》</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+</ul>
+                        </div>
+                        </div><script>_showDynClickBatch(['dynclicks_u15_54201','dynclicks_u15_54131','dynclicks_u15_54141','dynclicks_u15_54021','dynclicks_u15_53971','dynclicks_u15_53951','dynclicks_u15_53721','dynclicks_u15_53661'],[54201,54131,54141,54021,53971,53951,53721,53661],"wbnews", 2027012982)</script>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="s3s4">
+            <div class="section3">
+                <div class="w14">
+                    <div class="s3-c">
+                        <div class="s3-l  wow fadeInUp">
+                            <div class="s3-tit">
+                                <ul>
+                                    <li class="on">
+                                        <a href="javascript:;">
+                                            <div>
+                                                <h3>通知公告</h3>
+                                                <p>Notification Bulletin</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div>
+                                                <h3>招投标公告</h3>
+                                                <p>Bidding and Tendering</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div>
+                                                <h3>预决算公开</h3>
+                                                <p>Budget and Final Accounts</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="s3-more">
+                                    <a href="index/tzgg.htm" class="on">more</a>
+                                    <a href="index/ztbgg.htm">more</a>
+                                    <a href="index/yjsgk.htm">more</a>
+                                </div>
+                            </div>
+                            <div class="s3-lbody">
+                                <div class="on">
+
+<ul>
+
+<li>
+                                            <a href="https://hrss.yn.gov.cn/NewsView.aspx?NewsID=60508&ClassID=602">
+                                                <div><span>通知</span><b>10-21</b></div>
+                                                <p>2024年下半年云南艺术学院公开招聘博士人员公告</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1041/53751.htm">
+                                                <div><span>通知</span><b>10-17</b></div>
+                                                <p>关于“一站式”学生社区面向学校师生开放的通知</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1041/52431.htm">
+                                                <div><span>通知</span><b>10-12</b></div>
+                                                <p>云南艺术学院2024年度职称评审通过资格复审人员名单及上会参评资格人员情况会前公示</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1041/52251.htm">
+                                                <div><span>通知</span><b>10-10</b></div>
+                                                <p>2024年云南艺术学院公开招聘博士106902024002岗位现场资格复审和面试安排公告</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1041/52111.htm">
+                                                <div><span>通知</span><b>09-30</b></div>
+                                                <p>关于云南艺术学院2024年下半年高等学校教师资格认定人员的公示</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1041/51831.htm">
+                                                <div><span>通知</span><b>09-29</b></div>
+                                                <p>2024年云南艺术学院公开招聘博士人员 面试成绩查询公告</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="https://hrss.yn.gov.cn/NewsView.aspx?NewsID=60256&ClassID=602">
+                                                <div><span>通知</span><b>09-14</b></div>
+                                                <p>2024年云南艺术学院公开招聘拟聘用人员公示</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+</ul><script>_showDynClickBatch(['dynclicks_u16_53681','dynclicks_u16_53751','dynclicks_u16_52431','dynclicks_u16_52251','dynclicks_u16_52111','dynclicks_u16_51831','dynclicks_u16_49661'],[53681,53751,52431,52251,52111,51831,49661],"wbnews", 2027012982)</script>
+</div>
+                                <div>
+
+<ul>
+
+<li>
+                                            <a href="info/1551/53991.htm">
+                                                <div><span>招投标</span><b>10-25</b></div>
+                                                <p>云南艺术学院呈贡校区消防日常维护维修耗材采购项目询价公告</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1551/52391.htm">
+                                                <div><span>招投标</span><b>10-12</b></div>
+                                                <p>云南艺术学院感烟、感温火灾探测器采购项目 成交公告</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1551/51621.htm">
+                                                <div><span>招投标</span><b>09-27</b></div>
+                                                <p>云南艺术学院呈贡校区感烟、感温火灾探测器采购项目询价公告</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1551/48291.htm">
+                                                <div><span>招投标</span><b>08-30</b></div>
+                                                <p>云南艺术学院2024-2027学年食堂大宗物资供应服务采购（二次）中标结果公告</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1551/48281.htm">
+                                                <div><span>招投标</span><b>08-30</b></div>
+                                                <p>云南艺术学院远程督导、听课、巡课系统建设中标结果公告</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1551/10681.htm">
+                                                <div><span>招投标</span><b>08-16</b></div>
+                                                <p>云南艺术学院呈贡校区一号食堂2024-2027学年经营管理服务项目中标结果公告</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1551/10641.htm">
+                                                <div><span>招投标</span><b>08-09</b></div>
+                                                <p>云南艺术学院2024-2027学年食堂大宗物资供应服务采购 （A、B、E、G、H标段）中标候选人公示</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+</ul><script>_showDynClickBatch(['dynclicks_u17_53991','dynclicks_u17_52391','dynclicks_u17_51621','dynclicks_u17_48291','dynclicks_u17_48281','dynclicks_u17_10681','dynclicks_u17_10641'],[53991,52391,51621,48291,48281,10681,10641],"wbnews", 2027012982)</script>
+</div>
+                                <div>
+
+<ul>
+
+<li>
+                                            <a href="info/1042/48561.htm">
+                                                <div><span>预决算</span><b>09-04</b></div>
+                                                <p>云南艺术学院2023年度部门决算公开</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="http://jcc.ynart.edu.cn/yusuanxinxigongkai-1.pdf">
+                                                <div><span>预决算</span><b>02-07</b></div>
+                                                <p>云南艺术学院2024年预算公开</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1042/47951.htm">
+                                                <div><span>预决算</span><b>08-23</b></div>
+                                                <p>云南艺术学院2022年度部门决算</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1042/47941.htm">
+                                                <div><span>预决算</span><b>02-07</b></div>
+                                                <p>云南艺术学院2023年部门预算公开</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1042/47881.htm">
+                                                <div><span>预决算</span><b>08-31</b></div>
+                                                <p>云南艺术学院2021年度决算公开</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1042/47911.htm">
+                                                <div><span>预决算</span><b>02-11</b></div>
+                                                <p>云南艺术学院2022年预算公开目录</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+
+<li>
+                                            <a href="info/1042/47901.htm">
+                                                <div><span>预决算</span><b>09-08</b></div>
+                                                <p>云南艺术学院2020年度部门决算</p>
+                                                
+                                            </a>
+                                        </li>
+
+  
+</ul><script>_showDynClickBatch(['dynclicks_u18_48561','dynclicks_u18_47961','dynclicks_u18_47951','dynclicks_u18_47941','dynclicks_u18_47881','dynclicks_u18_47911','dynclicks_u18_47901'],[48561,47961,47951,47941,47881,47911,47901],"wbnews", 2027012982)</script>
+</div>
+                            </div>
+                        </div>
+                        <div class="s3-r wow fadeInUp" data-wow-delay=".3s">
+                            <div class="s3-tit">
+                                <ul>
+                                    <li class="on" style="background: none;">
+                                        <a href="index/yygs.htm">
+                                            <div>
+                                                <h3>云艺故事</h3>
+                                                <p>YNA story</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="s3-zs"></div>
+                            </div>
+                            <div class="s3-rlist">
+
+<ul>
+
+<li>
+                                        <a href="info/1043/10201.htm">
+                                            <h3>云南艺术学院宣传片</h3>
+                                            <div></div>
+                                        </a>
+                                    </li>
+
+  
+
+<li>
+                                        <a href="https://mp.weixin.qq.com/s/k9YA0idfWbTlJMggO5JdlA">
+                                            <h3>云南艺术学院舞蹈学院：强化内涵建设，深入推进舞蹈学院高质量特色发展</h3>
+                                            <div></div>
+                                        </a>
+                                    </li>
+
+  
+
+<li>
+                                        <a href="https://mp.weixin.qq.com/s/lMTuN9MjWrgqOxv1HmqtnQ">
+                                            <h3>云南艺术学院设计学院：四十载坚守初心，全方位推动高质量发展</h3>
+                                            <div></div>
+                                        </a>
+                                    </li>
+
+  
+
+<li>
+                                        <a href="https://mp.weixin.qq.com/s/An5bft1hk_7D-UnhNSLz-w">
+                                            <h3>云南艺术学院艺术管理学院：立足云南 以艺铸魂 面向南亚东南亚</h3>
+                                            <div></div>
+                                        </a>
+                                    </li>
+
+  
+
+<li>
+                                        <a href="info/1043/50571.htm">
+                                            <h3>忠诚印寸心，浩然充两间        ——记李晴海先生</h3>
+                                            <div></div>
+                                        </a>
+                                    </li>
+
+  
+
+<li>
+                                        <a href="info/1043/48421.htm">
+                                            <h3>青砖楼的故事 ——献给云艺65 周年校庆</h3>
+                                            <div></div>
+                                        </a>
+                                    </li>
+
+  
+
+<li>
+                                        <a href="info/1043/10071.htm">
+                                            <h3>张元真教授向学校捐赠个人雕塑艺术作品</h3>
+                                            <div></div>
+                                        </a>
+                                    </li>
+
+  
+
+<li>
+                                        <a href="info/1043/10041.htm">
+                                            <h3>关于征集“云艺故事”的通知</h3>
+                                            <div></div>
+                                        </a>
+                                    </li>
+
+  
+</ul><script>_showDynClickBatch(['dynclicks_u19_10201','dynclicks_u19_54051','dynclicks_u19_54041','dynclicks_u19_53831','dynclicks_u19_50571','dynclicks_u19_48421','dynclicks_u19_10071','dynclicks_u19_10041'],[10201,54051,54041,53831,50571,48421,10071,10041],"wbnews", 2027012982)</script>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section4">
+                <div class="s4-huas  wow fadeIn"></div>
+                <div class="w14">
+                    <div class="tit titxc titfff  wow fadeInUp">
+                        <h2>焦点聚焦</h2>
+                        <p>Special focus</p>
+                    </div>
+                        <div class="s4-c wow fadeInUp">
+<ul>
+            
+            
+            <li>
+                                <a href="http://ure.ynart.edu.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 58971)" target="blank">
+                                    <div class="pic"><img src="images/shenhepingguwang.jpg" alt=""></div>
+                                    <b></b>
+                                </a>
+                            </li>
+              
+                   
+            
+            
+            <li>
+                                <a href="index/ztlm/gzlfzsnxd.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009441)" target="blank">
+                                    <div class="pic"><img src="images/GZLFASNXD.png" alt=""></div>
+                                    <b></b>
+                                </a>
+                            </li>
+              
+                   
+            
+            
+            <li>
+                                <a href="https://ztjy2023.ynart.edu.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009397)" target="blank">
+                                    <div class="pic"><img src="images/s4-pic1.jpg" alt=""></div>
+                                    <b></b>
+                                </a>
+                            </li>
+              
+                   
+            
+            
+            <li>
+                                <a href="https://ddesd.ynart.edu.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009398)" target="blank">
+                                    <div class="pic"><img src="images/s4-pic2.jpg" alt=""></div>
+                                    <b></b>
+                                </a>
+                            </li>
+              
+                   
+            
+            
+            <li>
+                                <a href="https://bwcx.ynart.edu.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009400)" target="blank">
+                                    <div class="pic"><img src="images/s4-pic4.jpg" alt=""></div>
+                                    <b></b>
+                                </a>
+                            </li>
+              
+                   
+            
+     
+</ul>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section5">
+            <div class="tit titxc titfff  wow fadeInUp">
+                <h2>数说云艺</h2>
+                <p>Critical Data</p>
+            </div>
+
+            <div class="s5-list  wow fadeInUp"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<div class="s5-c">
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon1.png" alt="">
+                                    </div>
+                                    <p class="cnum">794余亩</p>
+                                    <b></b>
+                                    <h3>占地面积</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon2.png" alt="">
+                                    </div>
+                                    <p class="cnum">12</p>
+                                    <b></b>
+                                    <h3>教学单位</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon3.png" alt="">
+                                    </div>
+                                    <p class="cnum">近10000</p>
+                                    <b></b>
+                                    <h3>全日制学生数</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon4.png" alt="">
+                                    </div>
+                                    <p class="cnum">877</p>
+                                    <b></b>
+                                    <h3>教职工数</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon5.png" alt="">
+                                    </div>
+                                    <p class="cnum">2</p>
+                                    <b></b>
+                                    <h3>校区</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon1.png" alt="">
+                                    </div>
+                                    <p class="cnum">25.89万平方米</p>
+                                    <b></b>
+                                    <h3>教学行政用房</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon2.png" alt="">
+                                    </div>
+                                    <p class="cnum">2.37亿元</p>
+                                    <b></b>
+                                    <h3>教学仪器设备资产</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon3.png" alt="">
+                                    </div>
+                                    <p class="cnum">102.06万册</p>
+                                    <b></b>
+                                    <h3>纸质图书</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon4.png" alt="">
+                                    </div>
+                                    <p class="cnum">50.85万册</p>
+                                    <b></b>
+                                    <h3>电子期刊、图书</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon5.png" alt="">
+                                    </div>
+                                    <p class="cnum">10Gbps</p>
+                                    <b></b>
+                                    <h3>校园主干网速率</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon1.png" alt="">
+                                    </div>
+                                    <p class="cnum">2</p>
+                                    <b></b>
+                                    <h3>省级优势特色重点学科</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon2.png" alt="">
+                                    </div>
+                                    <p class="cnum">3</p>
+                                    <b></b>
+                                    <h3>省级A类高原学科</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon3.png" alt="">
+                                    </div>
+                                    <p class="cnum">27</p>
+                                    <b></b>
+                                    <h3>本科招生专业数</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon4.png" alt="">
+                                    </div>
+                                    <p class="cnum">14</p>
+                                    <b></b>
+                                    <h3>国家级一流本科专业建设点</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <img src="images/s5-icon5.png" alt="">
+                                    </div>
+                                    <p class="cnum">11</p>
+                                    <b></b>
+                                    <h3>国家一流本科课程</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div></div>
+        </div>
+
+        <div class="section6">
+            <div class="w14">
+                <div class="tit titmore wow fadeInUp">
+                    <h2>点亮云艺</h2>
+                    <div></div>
+                    <p>Campus News</p>
+                    <a href="index/dlyy.htm">more</a>
+                </div>
+                <div class="s6-c">
+                    <div class="s6-l wow fadeInUp">
+
+<ul>
+
+<li>
+                                <a href="info/1044/53811.htm">
+                                    <div class="pic">
+                                        <img src="/__local/C/75/9D/A1F4820BBD7889C503C0BA1AAA7_8EFAE1F4_3477A.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h3 class="titline"><i>喜报｜舞蹈学院在第三届云南舞蹈原创作品展演终评中喜获佳绩</i></h3>
+                                    </div>
+                                </a>
+                            </li>
+
+   
+</ul><script>_showDynClickBatch(['dynclicks_u22_53811'],[53811],"wbnews", 2027012982)</script>
+</div>
+                    <div class="s6-r wow fadeInUp" data-wow-delay=".3s">
+
+<div class="s6-rt">
+<a href="info/1044/53791.htm">
+                                <div class="pic"><img src="/__local/D/62/35/AB9D9A0A303CF7AD86FB7D2BD1B_306D514B_35C22.png" alt=""></div>
+                                <div class="info">
+                                    <h3 class="titline"><i>电影电视学院课程思政案例《电视节目制作2：广告、MV、晚会编导》在新华网“新华思政”平台上线</i></h3>
+                                </div>
+                            </a>
+
+  
+</div>
+<div class="s6-rb">
+<ul>
+
+<li>
+                                    <a href="info/1044/53501.htm">
+                                        <div class="pic"><img src="/__local/A/3D/AA/631B2E27E894D3236A70B84126E_1ED0F30C_4DBFB.png" alt=""></div>
+                                        <div class="info">
+                                            <p>舞蹈学院研究生在第一届中国研究生“文化中国”两创大赛（舞蹈赛道）全国总决赛中喜获佳绩</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+<li>
+                                    <a href="info/1044/53131.htm">
+                                        <div class="pic"><img src="/__local/7/26/31/01AB59645D081B65F4BADD29884_A9E1442D_D4C4.jpg" alt=""></div>
+                                        <div class="info">
+                                            <p>云南艺术学院设计学学科在“2024软科中国最好学科排名” 中获得新突破</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+<li>
+                                    <a href="https://mp.weixin.qq.com/s/VxOWNSHJiuxWGl_P_GtjNA">
+                                        <div class="pic"><img src="/__local/A/39/C8/BE8B4A07B3833A3DEF81DC66CA7_AD178BE0_429BC.jpg" alt=""></div>
+                                        <div class="info">
+                                            <p>大力弘扬教育家精神，加快建设教育强国｜云南艺术学院优秀教师张磊</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+</ul>
+                        </div><script>_showDynClickBatch(['dynclicks_u23_53811','dynclicks_u23_53791','dynclicks_u23_53501','dynclicks_u23_53131','dynclicks_u23_52811'],[53811,53791,53501,53131,52811],"wbnews", 2027012982)</script>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section7"></div>
+
+
+        <div class="footer">
+            <div class="w16">
+                <div class="foot-c">
+                    <div class="foot-l">
+                        <div>
+                            
+<p>邮编：650500</p> 
+<p>地址：昆明市呈贡区雨花路1577号</p>
+                            <p><script language="javascript" src="_dwr/engine.js"></script><script language="javascript" src="_dwr/util.js"></script><script language="javascript" src="_dwr/interface/PageCounterDWR.js"></script>网站访问量：<span id="a1122772" name="a1122772"></span>   
+
+<script>
+function getvisittimea1122772()
+{       
+    PageCounterDWR.getVisittime('2027012982','1001','TOTAL_COUNTER','7412880','10',callbackdataa1122772)
+}
+function callbackdataa1122772(data)
+{
+    document.getElementById("a1122772").innerHTML = data; 
+}
+getvisittimea1122772();
+</script></p>
+                            <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><a href="https://beian.miit.gov.cn/#/Integrated/index" style="color:#fff;">滇ICP备05001258号</a></p><p>版权所有©云南艺术学院</p>
+                            
+                        </div>
+                    </div>
+                    <div class="foot-m">    
+        
+            
+            
+            <a href="index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009401)"><img src="images/foot-logo.png" alt=""></a>
+              
+                  
+            
+     
+</div>
+                    <div class="foot-r">
+                        <div class="foot-rt">    
+          
+            
+            <a href="index/sjxzxx.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2027012982, 1009402)">
+                                <div><img src="images/foot-icon1.png" alt=""></div>
+                                <p>书记校长信箱</p>
+                            </a>
+              
+                   
+              
+     
+</div>
+                        <div class="foot-rm"><ul>
+
+<li>
+                                    <a href="https://tsg.ynart.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2027012982, 97165)">
+                                        <p>图书馆</p>
+                                    </a>
+                                </li>
+
+    
+
+<li>
+                                    <a href="index/dzxb.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2027012982, 97227)">
+                                        <p>电子校报</p>
+                                    </a>
+                                </li>
+
+    
+
+<li>
+                                    <a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2027012982, 97237)">
+                                        <p>统一门户</p>
+                                    </a>
+                                </li>
+
+    
+</ul></div>
+                        <div class="foot-rb">    <ul class="fmeida">
+            
+            
+            <li>
+                                 <a href="javascript:;">
+                <div class=""><img src="images/foot-icon2.png" alt=""></div>
+                <div class="foot-ewm"><img src="images/foot-ewm2.jpg" alt=""></div>
+            </a>   
+                                </li>
+          
+                    
+           
+            
+            <li>
+                                 <a href="javascript:;">
+                <div class=""><img src="images/foot-icon3.png" alt=""></div>
+                <div class="foot-ewm"><img src="images/foot-ewm3.jpg" alt=""></div>
+            </a>   
+                                </li>
+          
+                    
+           
+            
+            <li>
+                                 <a href="javascript:;">
+                <div class=""><img src="images/foot-icon4.png" alt=""></div>
+                <div class="foot-ewm"><img src="images/foot-ewm4.jpg" alt=""></div>
+            </a>   
+                                </li>
+          
+                    
+           
+            
+            <li>
+                                 <a href="javascript:;">
+                <div class=""><img src="images/foot-icon5.png" alt=""></div>
+                <div class="foot-ewm"><img src="images/foot-ewm5.jpg" alt=""></div>
+            </a>   
+                                </li>
+          
+                    
+           
+      
+</ul></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/waypoints.js"></script>
+    <script type="text/javascript" src="js/countup.js"></script>
+    <script>
+        new WOW().init();
+        $('.cnum').countUp({ time: 2000 });
+    </script>
+
+</body>
+
+</html>
+
+
+
+

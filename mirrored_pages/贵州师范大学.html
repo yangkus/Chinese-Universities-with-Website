@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML><HEAD><TITLE>贵州师范大学</TITLE><meta name="pageType" content="1">
+<meta name="pageTitle" content="贵州师范大学">
+<META Name="keywords" Content="贵州师范大学" />
+
+
+
+
+
+<META content="SAMEORIGIN / DENY " http-equiv="X-Frame-Options">
+<META content="text/html; charset=UTF-8" http-equiv="Content-Type"><LINK rel="stylesheet" type="text/css" href="css/gznu.css">
+<link rel="shortcut icon" href="images/gznu_icon.png" type="image/x-icon" />
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230657a475650505742000300014f55 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1243566460)</script>
+</HEAD>
+<BODY target style="zoom: 1"><!--顶部--><A href="index/xzsjxx.htm"></A>
+<DIV class="header">
+<DIV class="header_content">
+<DIV class="logo"><A href="http://www.gznu.edu.cn"><IMG border="0" src="images/gznulogo.png"></A> </DIV>
+<DIV class="logo_attach">
+<DIV class="site_version"><A href="http://ehall.gznu.edu.cn">信息门户</A>·<A href="http://egjc.gznu.edu.cn" target="">ENGLISH</A></DIV>
+<DIV class="search_bg">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+
+    
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        
+         <table   align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+   <td align="right" width="1%" nowrap>
+  <input type="text" class="qwss" placeholder="" style="border-style:none;border:0;width:130px;display: inline;" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+     </td>
+     <td align="left">
+      <input  type="submit" value="" style="cursor: hand;width:30px;height:20px;border-style:none;border:0;background-color:transparent;" value="" v-on:click="onSubmit()"/>
+            
+    </td>
+  </tr>
+ </table>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1243566460";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://172.24.7.10:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></DIV>
+<DIV class="logo_role"><A href="index/teacher.htm">教师</A> <A href="index/student.htm">学生</A> <A href="index/kaoshen.htm">考生</A> <A href="http://xy.gznu.edu.cn/">校友</A></DIV></DIV></DIV></DIV><!--导航条-->
+<DIV class="nav"><div class="nav_menustyle_1_1">
+    <ul>
+            <li class="nav_home" style="background-image:url(images/index_05.png)"><a href="index.htm">首页</a></li>
+                <li><a href="xxgk.htm">学校概况</a> 
+                                        <!--如果有子导航--> 
+                        <ul>
+                        <!--2级导航列表-->
+                        <li><a href="xxgk/xxjj.htm">学校简介</a></li>
+<!--2级导航列表-->
+                        <li><a href="xxgk/xxbz.htm">校训标识</a></li>
+<!--2级导航列表-->
+                        <li><a href="xxgk/xxxg.htm">学校校歌</a></li>
+<!--2级导航列表-->
+                        <li><a href="xxgk/xrld.htm">现任领导</a></li>
+<!--2级导航列表-->
+                        <li><a href="xxgk/xydt.htm">校园地图</a></li>
+                        </ul> 
+                </li>
+                <li><a href="#">党建思政</a> 
+                                        <!--如果有子导航--> 
+                        <ul>
+                        <!--2级导航列表-->
+                        <li><a href="http://djw.gznu.edu.cn">党建网</a></li>
+<!--2级导航列表-->
+                        <li><a href="http://szw.gznu.edu.cn/">思政网</a></li>
+<!--2级导航列表-->
+                        <li><a href="http://xljk.gznu.edu.cn">心理健康</a></li>
+<!--2级导航列表-->
+                        <li><a href="https://jjjy.gznu.edu.cn">急救教育网</a></li>
+                        </ul> 
+                </li>
+                <li><a href="ybsz/xywz.htm">院部设置</a> 
+                                        <!--如果有子导航--> 
+                        <ul>
+                        <!--2级导航列表-->
+                        <li><a href="ybsz/xywz.htm">学院网站</a></li>
+                        </ul> 
+                </li>
+                <li><a href="glfw/dqbm.htm">管理服务</a> 
+                                        <!--如果有子导航--> 
+                        <ul>
+                        <!--2级导航列表-->
+                        <li><a href="glfw/dqbm.htm">党群部门</a></li>
+<!--2级导航列表-->
+                        <li><a href="glfw/xzbm.htm">行政部门</a></li>
+<!--2级导航列表-->
+                        <li><a href="glfw/jfdw.htm">教辅单位</a></li>
+<!--2级导航列表-->
+                        <li><a href="glfw/fsdw.htm">附属单位</a></li>
+                        </ul> 
+                </li>
+                <li><a href="xkjs/xkjszl.htm">学科建设</a> 
+                                        <!--如果有子导航--> 
+                        <ul>
+                        <!--2级导航列表-->
+                        <li><a href="xkjs/xkjszl.htm">学科建设总览</a></li>
+<!--2级导航列表-->
+                        <li><a href="xkjs/yljsxk.htm">一流建设学科</a></li>
+<!--2级导航列表-->
+                        <li><a href="xkjs/bsd.htm">博士点</a></li>
+<!--2级导航列表-->
+                        <li><a href="xkjs/ssd.htm">硕士点</a></li>
+<!--2级导航列表-->
+                        <li><a href="xkjs/zdxk.htm">重点学科</a></li>
+<!--2级导航列表-->
+                        <li><a href="xkjs/tszy_xm_.htm">特色专业（项目）</a></li>
+                        </ul> 
+                </li>
+                <li><a href="kxyj/zrkxyjzx.htm">科学研究</a> 
+                                        <!--如果有子导航--> 
+                        <ul>
+                        <!--2级导航列表-->
+                        <li><a href="kxyj/zrkxyjzx.htm">自然科学研究平台</a></li>
+<!--2级导航列表-->
+                        <li><a href="kxyj/rwskyjzx.htm">人文社科研究中心</a></li>
+<!--2级导航列表-->
+                        <li><a href="kxyj/cgtj.htm">成果统计</a></li>
+<!--2级导航列表-->
+                        <li><a href="http://xb.gznu.edu.cn/">学术期刊</a></li>
+                        </ul> 
+                </li>
+                <li><a href="szdw/szzl.htm">师资队伍</a> 
+                                        <!--如果有子导航--> 
+                        <ul>
+                        <!--2级导航列表-->
+                        <li><a href="szdw/szzl.htm">师资总览</a></li>
+                        </ul> 
+                </li>
+                <li><a href="">招生就业</a> 
+                                        <!--如果有子导航--> 
+                        <ul>
+                        <!--2级导航列表-->
+                        <li><a href="http://zjc.gznu.edu.cn/sdzs/">本科生招生</a></li>
+<!--2级导航列表-->
+                        <li><a href="http://yjsc.gznu.edu.cn/">研究生招生</a></li>
+<!--2级导航列表-->
+                        <li><a href="https://sie.gznu.edu.cn/gjxs/xzsd_Study_in_GZNU_.htm">国际学生招生</a></li>
+<!--2级导航列表-->
+                        <li><a href="http://gznu.jysd.com/">就业信息网</a></li>
+                        </ul> 
+                </li>
+    </ul>
+</div>
+</DIV><!--内容-->
+<TABLE class="content" cellspacing="0" cellpadding="0" border="0">
+<TBODY>
+<TR>
+<TD>
+<DIV class="flash-news"><style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u2_{
+    width:1002px;
+    height:380px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u2_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u2_ ul{
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u2_ ul li{
+    display:block;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u2_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,8000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,8000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,8000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tr><td><div id="flashBoxu_u2_"><img src="images/flashPicutre/2024chunjing11.JPG" border="0" width="1002" height="380" /><a href="https://www.gjwlaqxcz.cn/" target="_blank"><img src="images/17/360jietu20240905172409.png" border="0" width="1002" height="380" /></a><img src="images/flashPicutre/2024chunjing22.JPG" border="0" width="1002" height="380" /><img src="images/flashPicutre/2024chunjing33.JPG" border="0" width="1002" height="380" /><img src="images/flashPicutre/2024chunjing55.JPG" border="0" width="1002" height="380" /><img src="images/flashPicutre/123456111.jpg" border="0" width="1002" height="380" /><img src="images/flashPicutre/MF.jpg" border="0" width="1002" height="380" /><img src="images/flashPicutre/XIAOXUN.jpg" border="0" width="1002" height="380" /><img src="images/flashPicutre/1118877878.jpg" border="0" width="1002" height="380" /><img src="images/flashPicutre/_MFI8568.jpg" border="0" width="1002" height="380" /><a href="https://720yun.com/t/81vkbyqq0fq?scene_id=90445479#scene_id=90445479" target="_blank"><img src="images/flashPicutre/10558.jpg" border="0" width="1002" height="380" /></a><a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s7865/s8417/" target="_blank"><img src="images/20230503.jpg" border="0" width="1002" height="380" /></a><a href="https://gznuxb.ihwrm.com/index/article/oldrelease.html" target="_blank"><img src="images/flashPicutre/xiaobaogengxin.jpg" border="0" width="1002" height="380" /></a></div></td></tr></table><SCRIPT language="JavaScript">new flashBoxCtrl("flashBoxu_u2_");</SCRIPT></DIV>
+<DIV class="school-news">
+<TABLE cellspacing="0" cellpadding="0" border="0">
+<TBODY>
+<TR>
+<TD colspan="3">
+<DIV class="school-news-title"><IMG src="images/index__09.png"> </DIV>
+<DIV class="school-news-more"><A href="http://news.gznu.edu.cn"><IMG border="0" src="images/index__10.png"></A> </DIV></TD></TR>
+<TR>
+<TD valign="top" width="324"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><table cellpadding="2" cellspacing="0" border="0">
+      <tr>
+   <td width="50%" valign="top">
+            <a href="http://news.gznu.edu.cn/info/1002/100345.htm" target="_blank"><img src="/__local/9/07/9C/CDD1DDA07EFB161CE3FBE5A0CF6_C20DDEC4_A660F.jpg" align="left" width="320" height="210" border="0" style="padding:2px"></a>
+           </td></tr><tr><td>
+           <h1>
+            <a href="http://news.gznu.edu.cn/info/1002/100345.htm" target="_blank" title="学校举行2024级新生开学典礼暨军训动员大会">学校举行2024级新生开学典礼暨军训动员大会</a>
+            </h1>
+                      <p style="color:#777;">
+                      9月1日上午，学校2024级新生开学典礼暨军训动员大会在东区三号运动场举行。校党委书记肖远平宣布军训开训。校长张绍东致辞。校党委副书记路言莉主持。校纪委书记杨楠，副校长乙引、罗永祥、欧阳恩良、周良书、刘...&nbsp;<a href="http://news.gznu.edu.cn/info/1002/100345.htm" target="_blank">[详细]</a>
+                      </p>
+        </td> 
+        </tr>
+
+</table><script>_showDynClickBatch(['dynclicks_u3_93885'],[93885],"wbnews", 1243566460)</script>
+</TD>
+<TD width="50"></TD>
+<TD class="school-news-c" valign="top" width="289"><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+   <li><a href="https://www.gzstv.com/v/61ec3abff6de4727b228939d2da948b5" target="_blank" title="贵州新闻联播丨徐麟在贵州师范大学看望慰问教师并调研教育工作 向全省广大教师和教育工作者致以节日祝福">贵州新闻联播丨徐麟在贵州师范大学看望慰问教师并调研教育工作 向全省广大教师和教育工作者致以节日祝福</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1002/102285.htm" target="_blank" title="我校与西南大学签署战略合作协议">我校与西南大学签署战略合作协议</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1002/102465.htm" target="_blank" title="校长张绍东列席指导化学与材料科学学院党委理论学习中心组（扩大）专题学习研讨会">校长张绍东列席指导化学与材料科学学院党委理论学习中心组（扩大）专题学习研讨会</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1002/102445.htm" target="_blank" title="铜仁市碧江区区委副书记、区长张勇一行来校交流">铜仁市碧江区区委副书记、区长张勇一行来校交流</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1002/102405.htm" target="_blank" title="学校举行2024年新进人员培训开班仪式">学校举行2024年新进人员培训开班仪式</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1002/102335.htm" target="_blank" title="学校举办2024年第二期青年教师发展论坛">学校举办2024年第二期青年教师发展论坛</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1002/102415.htm" target="_blank" title="贵州师范大学数字人文学院揭牌">贵州师范大学数字人文学院揭牌</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1002/102455.htm" target="_blank" title="全校第五期党支部书记论坛举办">全校第五期党支部书记论坛举办</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1002/102315.htm" target="_blank" title="校长张绍东赴石阡调研指导驻村工作">校长张绍东赴石阡调研指导驻村工作</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1002/102265.htm" target="_blank" title="贵州省集成电路学会成立大会暨第一届会员代表大会在我校举行">贵州省集成电路学会成立大会暨第一届会员代表大会在我校举行</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u4_94095','dynclicks_u4_94845','dynclicks_u4_94925','dynclicks_u4_94905','dynclicks_u4_94875','dynclicks_u4_94865','dynclicks_u4_94885','dynclicks_u4_94915','dynclicks_u4_94855','dynclicks_u4_94825'],[94095,94845,94925,94905,94875,94865,94885,94915,94855,94825],"wbnews", 1243566460)</script>
+</TD></TR></TBODY></TABLE></DIV>
+<DIV class="adamic-news">
+<TABLE cellspacing="0" cellpadding="0" border="0">
+<TBODY>
+<TR>
+<TD>
+<DIV class="adamic-news-title"><IMG src="images/index__12.png"></DIV>
+<DIV class="adamic-news-more"><A href="xsdt/kydt.htm"><IMG border="0" src="images/index__13.png"></A></DIV></TD></TR>
+<TR>
+<TD class="school-news-c" valign="top"><ul>
+   <li><a href="https://mp.weixin.qq.com/s/wfWhGYwqzJoa9I_KSbyOKQ" target="_blank" title="贵州师范大学2024年引进高层次人才公告">贵州师范大学2024年引进高层次人才公告</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1013/102215.htm" target="_blank" title="我校地理与环境科学学院（喀斯特研究院）付茂博士在化工工程技术领域国际TOP期刊上发表综述论文">我校地理与环境科学学院（喀斯特研究院）付茂博士在化工工程技术领域国际TOP期刊上发表综述论文</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1013/102125.htm" target="_blank" title="我校2024年国家社科基金项目立项数创历史新高">我校2024年国家社科基金项目立项数创历史新高</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1013/101865.htm" target="_blank" title="我校历史地理团队作为学术主编的贵州省首部历史地图集《贵州历史地图集》出版">我校历史地理团队作为学术主编的贵州省首部历史地图集《贵州历史地图集》出版</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1013/101845.htm" target="_blank" title="我校张必胜教授主持的国家社科基金项目结项获“优秀”等级">我校张必胜教授主持的国家社科基金项目结项获“优秀”等级</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1013/101775.htm" target="_blank" title="我校李瑞研究员团队在地球科学领域1区TOP期刊发表研究论文">我校李瑞研究员团队在地球科学领域1区TOP期刊发表研究论文</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1013/101705.htm" target="_blank" title="我校地理与环境科学学院李森副研究员团队在化工工程技术领域国际TOP期刊上发表研究论文">我校地理与环境科学学院李森副研究员团队在化工工程技术领域国际TOP期刊上发表研究论文</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1013/101695.htm" target="_blank" title="我校熊康宁教授团队在人文科学领域国际TOP期刊上发表研究论文">我校熊康宁教授团队在人文科学领域国际TOP期刊上发表研究论文</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1013/101665.htm" target="_blank" title="我校获批5项2024年贵州省科学技术协会青年科技人才托举工程项目">我校获批5项2024年贵州省科学技术协会青年科技人才托举工程项目</a></li>
+   <li><a href="http://news.gznu.edu.cn/info/1013/101615.htm" target="_blank" title="中国心理学会婚姻家庭心理与咨询专业委员会暨贵州师范大学第九届思雅学术论坛在我校举办">中国心理学会婚姻家庭心理与咨询专业委员会暨贵州师范大学第九届思雅学术论坛在我校举办</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u5_90925','dynclicks_u5_94765','dynclicks_u5_94715','dynclicks_u5_94605','dynclicks_u5_94575','dynclicks_u5_94565','dynclicks_u5_94525','dynclicks_u5_94515','dynclicks_u5_94495','dynclicks_u5_94465'],[90925,94765,94715,94605,94575,94565,94525,94515,94495,94465],"wbnews", 1243566460)</script>
+</TD></TR></TBODY></TABLE></DIV>
+<DIV class="fast-channel"><A href="http://lib.gznu.edu.cn"><IMG src="images/index__19.png"> </A>
+<DIV class="fast-channel-a"><IMG src="images/index__20.png"> 
+<DIV><script language="javascript" src="/system/resource/js/openlink.js"></script><UL>
+    <LI><a title="教务系统" onclick="window.open('http://jwgl.gznu.edu.cn/jwglxt/xtgl/login_slogin.html')">本科生教务系统</a></li>
+    <LI><a title="" onclick="window.open('https://mis.gznu.edu.cn/gmis/home/login')">研究生教务系统</a></li>
+    <LI><a title="" onclick="window.open('https://shpg.gznu.edu.cn/index.htm')">本科审核评估网</a></li>
+    <LI><a title="新办公系统" onclick="window.open('http://oa2.gznu.edu.cn')">新办公系统</a></li>
+    <LI><a title="" onclick="window.open('http://gzsf.fanya.chaoxing.com/portal')">网络教学资源</a></li>
+    <LI><a title="" onclick="window.open('http://172.24.2.11/zcgl')">国有资产管理平台</a></li>
+    <LI><a title="邮件系统" onclick="window.open('http://mail.gznu.edu.cn')">邮件系统</a></li>
+    <LI><a title="VPN-校外访问校内资源通道" onclick="window.open('https://vpn.gznu.edu.cn:8443/portal/#!/login')">VPN通道</a></li>
+    <LI><a title="" onclick="window.open('http://wlsfs.gznu.edu.cn')">网络收发室</a></li>
+    <LI><a title="贵州师范电子校报" onclick="window.open('http://gznuxb.ihwrm.com/index/article/oldrelease.html')">电子校报</a></li>
+    <LI><a title="" onclick="window.open('https://news.gznu.edu.cn/sdds/sdxw.htm')">校园电视台</a></li>
+    <LI><a title="" onclick="window.open('http://172.24.2.52:8080/cas/index.do')">档案管理系统</a></li>
+</UL></DIV></DIV>
+<DIV class="fast-channel-b"><A href="index/tzgg/tzgg.htm"><IMG src="images/index__21.png"> </A>
+<DIV class="fast-channel-b-border">
+<DIV class="fast-channel-b-title">
+<DIV class="fast-channel-b-title-a">通知公告 </DIV>
+<DIV class="fast-channel-b-title-b"><A href="index/tzgg/tzgg.htm">更多&gt;&gt;</A></DIV></DIV><table width="100%" cellspacing="3" cellpadding="0">
+  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/94665.htm" class="c49824" title="贵州省2025年定向部分省属高校选调优秀毕业生公告" target="_blank">
+        贵州省2025年定向部分省属高校选调优秀毕业生公告
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/12605.htm" class="c49824" title="关于暂停2022年贵州师范大学高等教育自学考试助学招生和注册工作的公告" target="_blank">
+        关于暂停2022年贵州师范大学高等教育自学考试助学招生和...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/12599.htm" class="c49824" title="贵州师范大学档案馆关于征集名人档案资料的公告" target="_blank">
+        贵州师范大学档案馆关于征集名人档案资料的公告
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/7149.htm" class="c49824" title="贵州师范大学博物馆征集捐赠藏品公告" target="_blank">
+        贵州师范大学博物馆征集捐赠藏品公告
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/94385.htm" class="c49824" title="贵州师范大学附属中学招聘2025届公费师范生公告（二）" target="_blank">
+        贵州师范大学附属中学招聘2025届公费师范生公告（二）
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/94345.htm" class="c49824" title="贵州师范大学附属中学招聘2025届公费师范生试讲题目" target="_blank">
+        贵州师范大学附属中学招聘2025届公费师范生试讲题目
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/94235.htm" class="c49824" title="贵州师范大学附属中学招聘2025届公费师范生公告（一）" target="_blank">
+        贵州师范大学附属中学招聘2025届公费师范生公告（一）
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/93985.htm" class="c49824" title="2024“外研社·国才杯”“理解当代中国”全国大学生外语能力大赛通知" target="_blank">
+        2024“外研社·国才杯”“理解当代中国”全国大学生外语能...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/92825.htm" class="c49824" title="作废申明" target="_blank">
+        作废申明
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap><span class="leaderfont49824">·</span></td>
+<td valign="middle" align="left">
+    <a href="index/tzgg/tzgg.htm"><span class="columnstyle49824">[通知公告]</span></a>
+    
+        <a href="info/1068/92625.htm" class="c49824" title="关于转发《科技部关于发布国家重点研发计划“政府间国际科技创新合作”重点专项2024年度第三批项目申报指南的通知》等通知的通知" target="_blank">
+        关于转发《科技部关于发布国家重点研发计划“政府间国际...
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle49824" width="1%" nowrap></td></tr>
+</table></DIV></DIV><A href="yqlj/zfbm.htm"><IMG src="images/index__22.png" style="display:none;"> </A><A href="leader-email/email-list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1304"><IMG src="images/index__23.png"></A> </DIV>
+<DIV class="other-channel">
+<DIV class="other-channel-a"><A href="xywh/xyfj.htm">校园文化</A></DIV>
+<DIV class="other-channel-b"><A href="http://news.gznu.edu.cn/mtsd.htm">媒体师大</A></DIV>
+<DIV class="other-channel-c"><A href="http://www.gznu.edu.cn/xxgkw.htm">信息公开</A></DIV>
+<DIV class="other-channel-d"><A href="http://news.gznu.edu.cn/lwfc.htm" target="_blank">师大人物</A></DIV></DIV></TD></TR>
+<TR>
+<TD><IMG alt="" src="images/index__26.png" width="1002" height="156"> </TD></TR>
+<TR>
+<TD class="footer-split"></TD></TR>
+<TR>
+<TD class="footer">
+<DIV class="footer-icons">
+<DIV style="width: 496px; float: right; margin-right: 20px">
+<DIV style="width: 300px; float: left; padding-bottom: 20px; padding-top: 20px; padding-left: 0px; padding-right: 0px"><A href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52010302000423" target="_blank" style="text-decoration: none; height: 20px; display: inline-block; line-height: 20px"><IMG src="images/gabeian.png" style="height: 20px; width: 20px; float: left"> 
+<P style="height: 20px; float: left; color: #939393; margin: 0px 0px 0px 5px; line-height: 20px">贵公网安备 52010302000423号</P></A></DIV>
+<DIV style="width: 100px; float: left"><A href="http://bszs.conac.cn/sitename?method=show&amp;id=0808E09037CA1803E053012819AC6066" target="_blank"><IMG src="https://dcs.conac.cn/image/blue.png"></A> </DIV><A href="http://weibo.com/p/1002061855567811/home#!/p/1002061855567811/home?is_hot=1"><IMG src="images/weibo.png"></A> <A href="yqlj/weixin.htm"><IMG src="images/weixin.png"> </A></DIV></DIV>
+<DIV class="footer-counts">     
+<table width="1%" align="center">
+    <tr>
+
+        <td valign="middle" nowrap><span>网站访问量：</span></td>
+        
+        <td valign="middle" nowrap><img src="/system/_component/jsq/counter.jsp?wbtreeid=1001&owner=1243566460&len=8&style=15&basenum=0&countertype=TOTAL_COUNTER"></td>
+        
+    </tr>
+</table></DIV>
+<DIV class="footer-contacts"><p style="text-align: center">地址： 贵州省贵安新区花溪大学城&nbsp;&nbsp; 邮编：550025&nbsp;&nbsp; 电话：0851—83227222 <br />版权所有：贵州师范大学&nbsp;&nbsp;&nbsp;网站备案号：<a href="http://beian.miit.gov.cn" target="_self">黔ICP备13004003号-2</a>&nbsp;&nbsp; <a href="yssm.htm" target="_blank">隐私及版权</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 技术支持：gzsfdx@gznu.edu.cn</p></DIV></TD></TR></TBODY></TABLE><!--页脚-->
+<DIV class="footer-bottom"></DIV>
+
+</BODY></HTML>

@@ -1,0 +1,973 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <link rel="shortcut icon" href="nav.ico" type="image/x-icon" />
+  <meta name="viewport" content="height=device-width,width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>贵阳信息科技学院</title> <link href='/gyit/resource/css/ArticlesList.css' rel='stylesheet' type='text/css' /><link href='/gyit/resource/css/Navig.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/Page.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/ItemList.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/Search.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/Survey.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/SurveyList.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/guestBook.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/collect.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/InterviewList.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/information.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/css/weather.css' rel='stylesheet' type='text/css' /> <link href='/gyit/resource/dtree/dtree.css' rel='stylesheet' type='text/css' /> <script type='text/javascript' src='/gyit/resource/js1/lhgdialog/lhgcore.min.js'></script><script type='text/javascript' src='/gyit/resource/js1/lhgdialog/lhgdialog.min.js?s=default,chrome'></script> <script type='text/javascript' src='/gyit/resource/js/ContextMenu.js'></script><script type='text/javascript' src='/gyit/resource/js/template.js'></script> <script type='text/javascript' src='/gyit/resource/js/Navig.js'></script><script type='text/javascript' src='/gyit/resource/js/Page.js'></script><script type='text/javascript' src='/gyit/resource/js/Survey.js'></script><script type='text/javascript' src='/gyit/resource/js/Members.js'></script><script type='text/javascript' src='/gyit/resource/dtree/dtree.js'></script><script type='text/javascript' src='/gyit/resource/js/jquery.js'></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap/js/bootstrap.min.js"></script>
+  <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/bsjtabs.js"></script>
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <link href="js/pptbox2/pptBox.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/pptbox2/pptBox.js"></script>
+  <script type="text/javascript" src="js/ss.js"></script>
+  <script type="text/javascript" src="js/view.js"></script>
+ </head>
+ <body id="body_id">
+   
+ 
+ <script >
+	  var Sys = {};
+	  var ua = navigator.userAgent.toLowerCase();
+	  if (window.ActiveXObject){
+	  	Sys.ie = ua.match(/msie ([\d.]+)/)[1];
+	  	if (Sys.ie<=9){
+	  		location.href="low.jsp?version="+Sys.ie;
+	  	}
+	  }
+ </script>
+  <div class="top">
+	<div class="searching_box" id="searching_box">
+	 <div class="searching_close" onclick="closeSearch();">
+	 </div>
+	 <div class="searching_form">
+		 <form id="searchForm" name="searchForm" action="search.jsp" method="post">
+		   <input type="hidden" id="crsf" name="crsf" value="9b766dd6d9a7936a60587749c1d5e39b"/>
+		       <input type="hidden" name="page" value="0" id="page"/>
+		       <input name="kw" id="kw" type="text" class="txt01" value="关键字" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" />
+		       <div class="search_but">
+				<a href="javascript:;" onclick="Search()"></a>
+		       </div>
+		</form>
+	 </div>
+	</div>
+   <div class="top01">
+    <div calss="row">
+    <div class="col-xs-1 col-sm-1">
+    </div>
+    <div class="col-xs-10 col-sm-10">
+    <div class="top01_mid">
+     <span><a href="/en/">English</a></span>
+     
+     
+     <span>|<a href="quick.jsp?linkid=23">学生</a></span>
+     
+     <span>|<a href="quick.jsp?linkid=25">考生及访客</a></span>
+     
+     <span>|<a href="quick.jsp?linkid=26">校友</a></span>
+     
+     <span>|<a href="/public/consultletter/letterlist">校长书记信箱</a></span>
+     
+     <span>|<a href="list.jsp?cItemId=892&itemId=662">校务公开</a></span>
+     
+     <span>|<a href="list.jsp?cItemId=651&itemId=649">人才招聘</a></span>
+     
+     <span class="searching_bit" onclick="showSearch();"><img src="images/bit01.png" class="img-responsive" width="50%"></span>
+     <div class="clearfloat"></div>
+    </div>
+    </div>
+    <div class="col-xs-1 col-sm-1">
+    </div>
+   </div>
+  </div>
+  <div class="top02">
+    <div calss="row">
+     <div class="col-xs-1 col-sm-1">
+    </div>
+    <div class="col-xs-10 col-sm-10">
+    <div class="col-xs-4 col-sm-4 top-left">
+    	<img src="images/logo.png" class="img-responsive logo-class" >
+    </div>
+    <div class="col-xs-6 col-sm-8 top-right">
+    <div class="nav_cont" id="nav_ul">
+     <ul>
+      <li><a href="index.jsp">首页</a></li>
+      <li>
+          
+	      <div class="cnav_list" id="index1_box">
+	      <a href="list.jsp?cItemId=620&itemId=619">学校概况</a>
+	      
+	      <div id="index1_ul" class="cnav_ul" style="display:none;">
+	        <div class="nav_child_img"><img src="images/school.jpg" height="100%"/></div>
+	        <div class="nav_child_list">
+	        
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=620&itemId=619" class="cnav_titem" title="学校简介">学校简介</a>
+		         
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=621&itemId=619" class="cnav_titem" title="现任领导">现任领导</a>
+		         
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=628&itemId=619" class="cnav_titem" title="学校新闻">学校新闻</a>
+		         
+	         
+	        
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=624&itemId=619" class="cnav_titem" title="学校规章制度">学校规章制度</a>
+		         
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=625&itemId=619" class="cnav_titem" title="校园风光">校园风光</a>
+		         
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=626&itemId=619" class="cnav_titem" title="办事指南">办事指南</a>
+		         
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=686&itemId=619" class="cnav_titem" title="校训">校训</a>
+		         
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=687&itemId=619" class="cnav_titem" title="校徽">校徽</a>
+		         
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=654&itemId=619" class="cnav_titem" title="资料下载">资料下载</a>
+		         
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=630&itemId=619" class="cnav_titem" title="学校荣誉">学校荣誉</a>
+		         
+	         
+	        
+	         
+	        
+	         
+	        
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=847&itemId=619" class="cnav_titem" title="机构设置">机构设置</a>
+		         
+	         
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=629&itemId=619" class="cnav_titem" title="通知公告">通知公告</a>
+		         
+	         
+	        
+	        </div>
+	      </div>
+	     
+	      </div>
+      </li>
+      <li>
+        
+	    <div class="cnav_list" id="index2_box">
+	      <a>党建思政</a>
+	      
+	      <div id="index2_ul" class="cnav_ul" style="display:none;">
+	        <div class="nav_child_img"><img src="images/new.jpg" width="100%"/></div>
+	        <div class="nav_child_list">
+	        
+	         
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=632&itemId=631" class="cnav_titem" title="党建工作">党建工作</a>
+		      
+	        
+	         
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="subject_index.jsp?itemId=901" class="cnav_titem" title="思政工作">思政工作</a>
+		      
+	        
+	         
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="../xgb/" class="cnav_titem" title="学生工作">学生工作</a>
+		      
+	        
+	         
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=912&itemId=908" class="cnav_titem" title="网络党校">网络党校</a>
+		      
+	        
+	        </div>
+	      </div>
+	     
+        </div>
+
+      </li>
+       <li>
+       
+	      <div class="cnav_list" id="index3_box">
+	      <a>教学机构</a>
+	      
+	      <div id="index3_ul" class="cnav_ul" style="display:none;">
+	        <div class="nav_child_img"><img src="images/school.jpg" height="100%"/></div>
+	        <div class="nav_child_list">
+	        
+		       
+		         
+		         
+		          
+		         
+		       
+		        <a href="info/" class="cnav_titem" title="信息工程学院">信息工程学院</a>
+	        
+		       
+		         
+		         
+		          
+		         
+		       
+		        <a href="subject_index.jsp?itemId=817" class="cnav_titem" title="数字传媒学院">数字传媒学院</a>
+	        
+		       
+		         
+		         
+		          
+		         
+		       
+		        <a href="subject_index.jsp?itemId=727" class="cnav_titem" title="健康管理学院">健康管理学院</a>
+	        
+		       
+		         
+		         
+		          
+		         
+		       
+		        <a href="subject_index.jsp?itemId=737" class="cnav_titem" title="智能工程学院">智能工程学院</a>
+	        
+		       
+		         
+		         
+		          
+		         
+		       
+		        <a href="subject_index.jsp?itemId=765" class="cnav_titem" title="土木工程学院">土木工程学院</a>
+	        
+		       
+		         
+		         
+		          
+		         
+		       
+		        <a href="subject_index.jsp?itemId=747" class="cnav_titem" title="经济管理学院">经济管理学院</a>
+	        
+		       
+		         
+		         
+		          
+		         
+		       
+		        <a href="subject_index.jsp?itemId=774" class="cnav_titem" title="公共教学部">公共教学部</a>
+	        
+		       
+		         
+		         
+		          
+		         
+		       
+		        <a href="subject_index.jsp?itemId=901" class="cnav_titem" title="思政教学部">思政教学部</a>
+	        
+		       
+		         
+		         
+		          
+		         
+		       
+		        <a href="http://www.gyiist.edu.cn/xxgc/" class="cnav_titem" title="继续教育部">继续教育部</a>
+	        
+	        </div>
+	      </div>
+	     
+	      </div>
+     </li>
+      <li>
+          
+	    <div class="cnav_list" id="index4_box">
+	      <a href="list.jsp?cItemId=829&itemId=623">管理机构</a>
+	      
+	      <div id="index4_ul" class="cnav_ul" style="display:none;">
+	        <div class="nav_child_img"><img src="images/school.jpg" height="100%"/></div>
+	        <div class="nav_child_list">
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=879&itemId=829" class="cnav_titem" title="学校办公室">学校办公室</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=876&itemId=836" class="cnav_titem" title="党群工作部">党群工作部</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=962&itemId=830" class="cnav_titem" title="人力资源处">人力资源处</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=638&itemId=637" class="cnav_titem" title="教学科研处">教学科研处</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="/xgb" class="cnav_titem" title="学生工作处">学生工作处</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=834&itemId=623" class="cnav_titem" title="招生就业处">招生就业处</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=696&itemId=695" class="cnav_titem" title="团委工作">团委工作</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=709&itemId=844" class="cnav_titem" title="图书信息中心">图书信息中心</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		       
+		         <a href="list.jsp?cItemId=837&itemId=623" class="cnav_titem" title="保卫处">保卫处</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=848&itemId=843" class="cnav_titem" title="信息中心">信息中心</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=853&itemId=846" class="cnav_titem" title="后勤处">后勤处</a>
+		      
+	        
+		       
+		       
+		         
+		         
+		          
+		         
+		       
+		         <a href="list.jsp?cItemId=883&itemId=882" class="cnav_titem" title="实践实训中心">实践实训中心</a>
+		      
+	        
+	        </div>
+	      </div>
+	     
+        </div>
+      </li>
+      <li>
+	      <div class="cnav_list" id="index5_box">
+		      <a href="http://www.giist.cn/zs/" target="_blank">招生就业</a>
+		      
+		      <div id="index5_ul" class="cnav_ul" style="display:none;">
+		        <div class="nav_child_img"><img src="images/work.jpg" width="100%"/></div>
+	        <div class="nav_child_list">
+		         <a href="https://www.gyiist.edu.cn/zs/" target="_blank" class="cnav_titem" title="招生信息网">招生信息网</a>
+		         <a href="https://mdcgzu.jysd.com/" target="_blank" class="cnav_titem" title="就业信息网">就业信息网</a>
+		        </div>
+		      </div>
+		     
+	      </div>
+      </li>
+      <li>
+	      <li><a href="http://mdc.gzu.edu.cn/gj/index.jsp" target="_blank">合作交流</a></li>
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="subject_index.jsp?itemId=1004">合格评估</a></li>
+<li>
+      <li><a href="http://mdc.gzu.edu.cn/" target="_blank">旧版回顾</a></li>
+     </ul>
+    </div>
+    <div class="clearfloat"></div>
+    </div>
+    </div>
+    <div class="col-xs-1 col-sm-1">
+    </div>
+    </div>
+  </div>
+</div>
+  <script>
+  function navslip(nid,cid){
+	  $(nid).mouseover(function(){
+		  //alert(123);
+		  $(cid).css("display","block");
+	  });
+	  $(nid).mouseout(function(){
+		  $(cid).css("display","none");
+	  });
+  }
+  $(document).ready(function(){
+	  $(document).ready(function(){
+		 var liLenght = $("#nav_ul li").length;
+		 for(var j=1;j<liLenght;j++){
+	     	navslip("#index" + j + "_box","#index" + j + "_ul");
+		 }
+	  });
+  });
+  </script>
+  <div class="mid">
+   <div class=" ppt_box">
+    <div class="ppt_pic">
+        
+	    <div class="pic_flash">
+	     <script type="text/javascript">
+		   // 获取窗口宽度
+		   var winWidth=window.innerWidth || document.documentElement.scrollWidth || document.body.scrollWidth;
+		   var Bigbox =new PPTBox();
+		   if(winWidth<1440) Bigbox.width=1440;
+		   else Bigbox.width = winWidth; //宽度
+		   Bigbox.height = (Bigbox.width)*1/3;//高度
+		   Bigbox.autoplayer = 3;//自动播放间隔时间
+
+		   
+		   Bigbox.add({"url":"/ewebeditor/uploadimages/WebLink/20240419160206563-292.jpg","href":"","title":""})
+		   
+		   Bigbox.add({"url":"/ewebeditor/uploadimages/WebLink/20240424102315808-776.jpg","href":"","title":""})
+		   
+		   Bigbox.add({"url":"/ewebeditor/uploadimages/WebLink/20240520170032125-962.jpg","href":"","title":""})
+		   
+		   Bigbox.add({"url":"/ewebeditor/uploadimages/WebLink/20240930144859357-605.jpg","href":"","title":""})
+		   
+		   Bigbox.add({"url":"/ewebeditor/uploadimages/WebLink/20240930145047585-76.jpg","href":"","title":""})
+		   
+		   Bigbox.add({"url":"/ewebeditor/uploadimages/WebLink/20240930145159933-649.jpg","href":"","title":""})
+		   
+		   Bigbox.show();
+		   </script>
+	    </div>
+    </div>
+   </div>
+    <div class=" new_01">
+     <div calss="row">
+    <div class="col-xs-1 col-sm-1">
+    </div>
+    <div class="col-xs-10 col-sm-10">
+     <div class="new_list">
+     	<div class="new_list_title">
+     	 <div class="new_list_title_text">新闻&nbsp;.&nbsp;公告</div>
+     	</div>
+     	<div class="new_list_cont">
+     	  <div class="new_list_cont01 new_list_cont_left">
+     	    <div class="new_list_item_title">学校新闻</div>
+     	    <div class="new_list_item_list">
+     	    
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27968&itemId=628" class="new_art_list">
+     	        <div class="new_art_list_time">10.24</div>
+     	        <div class="new_art_list_title">[学校新闻]学风雅韵启新篇｜传承优良学风，强化正风肃纪</div>
+     	       </a>
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27946&itemId=628" class="new_art_list">
+     	        <div class="new_art_list_time">10.21</div>
+     	        <div class="new_art_list_title">[学校新闻]校长唐建荣深入一线课堂开讲《形势与政策》课程</div>
+     	       </a>
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27870&itemId=628" class="new_art_list">
+     	        <div class="new_art_list_time">10.12</div>
+     	        <div class="new_art_list_title">[学校新闻] 贵州省主要领导关注特批支持的“水书文化与祖国古文化渊源及嬗变研究”项目启动仪式在我校举行</div>
+     	       </a>
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27842&itemId=628" class="new_art_list">
+     	        <div class="new_art_list_time">09.27</div>
+     	        <div class="new_art_list_title">[学校新闻] 锚定目标 力求实效</div>
+     	       </a>
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27771&itemId=628" class="new_art_list">
+     	        <div class="new_art_list_time">09.18</div>
+     	        <div class="new_art_list_title">[学校新闻]喜报丨我校首获“中国国际大学生创新大赛”省金并晋级国赛</div>
+     	       </a>
+     	     
+     	    </div>
+     	    <div class="new_list_item_more"><a href="list.jsp?cItemId=628&itemId=627">阅读更多</a></div>
+     	  </div>
+     	  <div class="new_list_cont01">
+     	    <div class="new_list_item_title">党建新闻</div>
+     	    <div class="new_list_item_list">
+     	     
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27861&itemId=632" class="new_art_list">
+     	        <div class="new_art_list_time">09.16</div>
+     	        <div class="new_art_list_title">以学促进 传播“媒”好力量丨我校特聘教授喻健作新闻宣传专项培训</div>
+     	       </a>
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27731&itemId=632" class="new_art_list">
+     	        <div class="new_art_list_time">09.10</div>
+     	        <div class="new_art_list_title">省教育厅（省委教育工委）民办高校党组织书记、学校党委书记邓维实作党的二十届三中全会专题宣讲</div>
+     	       </a>
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27695&itemId=632" class="new_art_list">
+     	        <div class="new_art_list_time">08.30</div>
+     	        <div class="new_art_list_title">省教育厅（省委教育工委）民办高校党组织书记、我校党委书记邓维实主持召开相关单位、部门工作调研推进会</div>
+     	       </a>
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27594&itemId=632" class="new_art_list">
+     	        <div class="new_art_list_time">07.08</div>
+     	        <div class="new_art_list_title">党建协同聚合力 结队共建促发展丨邓维实主持召开部分民办高校党纪学习教育现场推进会</div>
+     	       </a>
+     	     
+     	       
+     	      
+     	       <a href="article.jsp?id=27558&itemId=891" class="new_art_list">
+     	        <div class="new_art_list_time">06.27</div>
+     	        <div class="new_art_list_title">中共贵阳信息科技学院委员会关于2023-2024学年度优秀共产党员、优秀党务工作者、先进基层党组织推荐评选名单的公示</div>
+     	       </a>
+     	     
+     	    </div>
+     	    <div class="new_list_item_more"><a href="list.jsp?cItemId=632&itemId=631">阅读更多</a></div>
+     	  </div>
+     	  <div class="new_list_cont01 new_list_cont_right">
+     	    <div class="new_list_item_title">通知公告</div>
+     	    <div class="new_list_item_list">
+     	     
+     	     
+     	      
+     	      
+     	       <a href="article.jsp?id=27625&itemId=629" class="new_art_list">
+     	        <div class="new_art_list_time">07.24</div>
+     	        <div class="new_art_list_title">贵阳信息科技学院2024年第二批教师招聘公告</div>
+     	       </a>
+     	     
+     	      
+     	      
+     	       <a href="article.jsp?id=27624&itemId=629" class="new_art_list">
+     	        <div class="new_art_list_time">07.23</div>
+     	        <div class="new_art_list_title">关于组织编写2024贵州企业发展报告的通知</div>
+     	       </a>
+     	     
+     	      
+     	      
+     	       <a href="article.jsp?id=27618&itemId=629" class="new_art_list">
+     	        <div class="new_art_list_time">07.11</div>
+     	        <div class="new_art_list_title">贵阳信息科技学院关于2024年招生录取咨询电话的公告</div>
+     	       </a>
+     	     
+     	      
+     	      
+     	       <a href="article.jsp?id=27581&itemId=629" class="new_art_list">
+     	        <div class="new_art_list_time">07.04</div>
+     	        <div class="new_art_list_title">贵阳信息科技学院2024年秋季学期收费标准公示</div>
+     	       </a>
+     	     
+     	      
+     	      
+     	       <a href="article.jsp?id=27541&itemId=629" class="new_art_list">
+     	        <div class="new_art_list_time">06.21</div>
+     	        <div class="new_art_list_title">贵阳信息科技学院多媒体教室改造项目中标公告</div>
+     	       </a>
+     	     
+     	    </div>
+     	    <div class="new_list_item_more"><a href="list.jsp?cItemId=629&itemId=627">阅读更多</a></div>
+     	  </div>
+     	</div>
+     </div>
+    </div>
+    <div class="col-xs-1 col-sm-1">
+    </div>
+   </div>
+    </div>
+     <div class="clearfloat"></div>
+    <div class=" web_link jschange">
+       <div calss="row">
+	    <div class="col-xs-1 col-sm-1">
+	    </div>
+	    <div class="col-xs-10 col-sm-10">
+	     <div class="link_list jschange">
+	     	<div class="new_list_title jschange">
+	     	 <div class="new_list_title_text jschange">快捷导航</div>
+	     	</div>
+	     	  
+	     	<div class="new_list_cont web_link_list jschange">
+	     	  
+	     	  	<a href="http://tmis.gyiist.edu.cn" target="_blank" style="" class="jschange">
+	     	  	  <span class="link_img"><img alt="教务系统" src="/ewebeditor/uploadimages/WebLink/20211116101104878-423.png"> </span>
+	     	  	  <span class="link_text">教务系统</span>
+	     	  	</a>
+	     	  
+	     	  	<a href="/xgb/list.jsp?itemId=335" target="_blank" style="" class="jschange">
+	     	  	  <span class="link_img"><img alt="奖助服务" src="/ewebeditor/uploadimages/WebLink/20211116101135673-745.png"> </span>
+	     	  	  <span class="link_text">奖助服务</span>
+	     	  	</a>
+	     	  
+	     	  	<a href="list.jsp?cItemId=651&itemId=649" target="_blank" style="" class="jschange">
+	     	  	  <span class="link_img"><img alt="人事聘用" src="/ewebeditor/uploadimages/WebLink/20211116101218261-988.png"> </span>
+	     	  	  <span class="link_text">人事聘用</span>
+	     	  	</a>
+	     	  
+	     	  	<a href="list.jsp?cItemId=654&itemId=670" target="_blank" style="" class="jschange">
+	     	  	  <span class="link_img"><img alt="资料下载" src="/ewebeditor/uploadimages/WebLink/20211213104326123-848.png"> </span>
+	     	  	  <span class="link_text">资料下载</span>
+	     	  	</a>
+	     	  
+	     	  	<a href="list.jsp?cItemId=640&itemId=637&page=1" target="_blank" style="" class="jschange">
+	     	  	  <span class="link_img"><img alt="校历" src="/ewebeditor/uploadimages/WebLink/20211116101302705-714.png"> </span>
+	     	  	  <span class="link_text">校历</span>
+	     	  	</a>
+	     	  
+	     	  	<a href="http://ehall.gyiist.edu.cn" target="_blank" style="" class="jschange">
+	     	  	  <span class="link_img"><img alt="网上办事" src="/ewebeditor/uploadimages/WebLink/20211116101324561-55.png"> </span>
+	     	  	  <span class="link_text">网上办事</span>
+	     	  	</a>
+	     	  
+	     	  	<a href="list.jsp?cItemId=847&itemId=619&page=1" target="_blank" style="" class="jschange">
+	     	  	  <span class="link_img"><img alt="电话查询" src="/ewebeditor/uploadimages/WebLink/20211116101347196-802.png"> </span>
+	     	  	  <span class="link_text">电话查询</span>
+	     	  	</a>
+	     	  
+	     	  	<a href="list.jsp?cItemId=855&itemId=846&page=1" target="_blank" style="margin-right:0;" class="jschange">
+	     	  	  <span class="link_img"><img alt="后勤资料" src="/ewebeditor/uploadimages/WebLink/20211116101408459-48.png"> </span>
+	     	  	  <span class="link_text">后勤资料</span>
+	     	  	</a>
+	     	  
+		     	<div class="clearfloat"></div>
+	     	</div>
+	     </div>
+	    </div>
+	    <div class="col-xs-1 col-sm-1">
+	    </div>
+	   </div>
+    </div>
+    <div class="clearfloat"></div>
+    <div class=" organization jschange">
+       <div calss="row">
+	    <div class="col-xs-12 col-sm-12">
+	     <div class="organization_list">
+	      
+	     	<div class="new_list_cont jschange">
+	     	  
+			       <a href="http://mdc.gzu.edu.cn/xgb/" target="" class="jschange">
+			       <span><img alt="学生工作网" src="/ewebeditor/uploadimages/WebLink/20211116101823489-477.jpg"></span>
+			       <span class="web_site_text" >学生工作网</span>
+			       <div class="clearfloat"></div>
+			       </a>
+			   
+			       <a href="https://mdcgzu.jysd.com/" target="" class="jschange">
+			       <span><img alt="就业信息网" src="/ewebeditor/uploadimages/WebLink/20211116101852411-384.jpg"></span>
+			       <span class="web_site_text" >就业信息网</span>
+			       <div class="clearfloat"></div>
+			       </a>
+			   
+			       <a href="http://mdc.gzu.edu.cn/pcenter/" target="" class="jschange">
+			       <span><img alt="心理健康网" src="/ewebeditor/uploadimages/WebLink/20211116101928260-230.jpg"></span>
+			       <span class="web_site_text" >心理健康网</span>
+			       <div class="clearfloat"></div>
+			       </a>
+			   
+			       <a href="http://www.giist.cn/zs/" target="" class="jschange">
+			       <span><img alt="招生信息网" src="/ewebeditor/uploadimages/WebLink/20211116101951098-988.jpg"></span>
+			       <span class="web_site_text" >招生信息网</span>
+			       <div class="clearfloat"></div>
+			       </a>
+			   
+			       <a href="http://mdc.gzu.edu.cn/gj/" target="" class="jschange">
+			       <span><img alt="国际合作与交流处" src="/ewebeditor/uploadimages/WebLink/20211116102025824-171.jpg"></span>
+			       <span class="web_site_text" >国际合作与交流处</span>
+			       <div class="clearfloat"></div>
+			       </a>
+			   
+	     	</div>
+	     </div>
+	    </div>
+	   </div>
+    </div>
+     <div class="clearfloat"></div>
+    <div class=" picture jschange">
+       <div calss="row">
+	    <div class="col-xs-1 col-sm-1">
+	    </div>
+	    <div class="col-xs-10 col-sm-10">
+	     <div class="picture_list_parent jschange">
+	     	<div class="new_list_title jschange">
+	     	 <div class="new_list_title_text jschange">光影贵科</div>
+	     	</div>
+	     	
+	     	<div class="picture_list">
+	     	  
+	     	   
+     	      
+     	       <a href="article.jsp?id=23234&itemId=896" class="new_pic_list01 ">
+     	        <div class="new_pic_list_time"><img src="/ewebeditor/uploadfile/Thumbnail/20211116103338659.jpg" class=""/></div>
+     	        <div class="new_pic_list_title"><span>阳明书院</span></div>
+     	       </a>
+     	     
+	     	   
+     	      
+     	       <a href="article.jsp?id=23237&itemId=896" class="new_pic_list ">
+     	        <div class="new_pic_list_time"><img src="/ewebeditor/uploadfile/Thumbnail/20211116104423226.jpg" class=""/></div>
+     	        <div class="new_pic_list_title"><span>春日贵科</span></div>
+     	       </a>
+     	     
+	     	   
+     	      
+     	       <a href="article.jsp?id=23238&itemId=896" class="new_pic_list no_right ">
+     	        <div class="new_pic_list_time"><img src="/ewebeditor/uploadfile/Thumbnail/20211116104453679.jpg" class=""/></div>
+     	        <div class="new_pic_list_title"><span>夏日贵科</span></div>
+     	       </a>
+     	     
+	     	   
+     	      
+     	       <a href="article.jsp?id=23239&itemId=896" class="new_pic_list  no_bottom">
+     	        <div class="new_pic_list_time"><img src="/ewebeditor/uploadfile/Thumbnail/20211116104514196.jpg" class=""/></div>
+     	        <div class="new_pic_list_title"><span>秋日贵科</span></div>
+     	       </a>
+     	     
+	     	   
+     	      
+     	       <a href="article.jsp?id=23240&itemId=896" class="new_pic_list no_right  no_bottom">
+     	        <div class="new_pic_list_time"><img src="/ewebeditor/uploadfile/Thumbnail/20211116104534698.jpg" class=""/></div>
+     	        <div class="new_pic_list_title"><span>冬日贵科</span></div>
+     	       </a>
+     	     
+	     	</div>
+	     </div>
+	    </div>
+	    <div class="col-xs-1 col-sm-1">
+	    </div>
+	   </div>
+    </div>
+  </div>
+  <div class="clearfloat"></div>
+   
+ <div class="bot">
+  <div calss="row">
+	    <div class="col-xs-1 col-sm-1">
+	    </div>
+	    <div class="col-xs-10 col-sm-10">
+			  <div class="bot_box">
+			  <div calss="row">
+			    <div class="col-xs-5 col-sm-5">
+			    	<img src="images/bot-logo.png" class="img-responsive bot_logo_class jschange" >
+			    </div>
+			    <div class="col-xs-4 col-sm-4">
+			    <div class="bot_01">
+			      <div class="bot_01_tit jschange">
+			       <span><a href="map.jsp" style="padding-left:0;">网站地图</a>|</span>
+			       <span><a href="list.jsp?cItemId=690&itemId=689">版权声明</a>|</span>
+			       <span><a href="list.jsp?cItemId=691&itemId=689">隐私说明</a> </span>
+			      </div>
+			      <div class="bot_01_cont jschange">
+			        地址：贵州省贵阳市贵安新区花溪大学城思雅路8号<br/>
+			       纳税人识别号：52520000090327188H<br/>
+                    <a href="http://beian.miit.gov.cn" target="_blank" style="color:#999999" id="beianStr">黔ICP备20002667号</a><br/>
+
+			      </div>
+			     </div>
+			    </div>
+			    <div class="col-xs-3 col-sm-3">
+			     <div class="bot_02 jschange">
+			      <ul>
+			       <li><a>
+			         <div>
+			          <img src="images/tu13.jpg" />
+			         </div>学校官微</a></li>
+			       <li><a>
+			         <div>
+			          <img src="images/tu14.jpg" />
+			         </div>学校官博</a></li>
+			      </ul>
+			     </div>
+			    </div>
+			   </div>
+			   </div>
+	    </div>
+	    <div class="col-xs-1 col-sm-1">
+	    </div>
+  </div>
+  </div>
+ <script type="text/javascript">
+ $(document).ready(function(){
+		$(document).bind("click", function(e) {
+			var target = $(e.target);
+			if (target.closest(".searching_box").length == 0 && target.closest(".searching_bit").length == 0 ) {
+				closeSearch();
+			}
+		});
+	});
+ </script>
+  <script type="text/javascript" src="js/index.js"></script>
+ 
+ </body>
+</html>

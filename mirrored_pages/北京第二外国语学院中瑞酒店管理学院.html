@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="ng-app" ng-app="app_bhi">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="baidu-site-verification" content="yV66ZPnNlC" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache">
+<meta name="keywords" content="中瑞酒店管理学院,中瑞,北京第二外国语学院中瑞酒店管理学院">
+<meta name="description" content="北京第二外国语学院中瑞酒店管理学院，其英译名为Alumni Association of Beijing Hospitality Institute，北京第二外国语学院中瑞酒店管理学院是2008年经教育部批准，实施本科层次学历教育的全日制普通高等学校。作为中国唯一获得瑞士洛桑酒店管理学院学术认证的大学，学院紧密围绕旅游酒店行业对人才的需求办学，以培养应用型高级专门人才为目标，以酒店管理专业为特色，不断探索应用型人才培养模式。">
+<title>中瑞酒店管理学院</title>
+<!--[if lte IE 8]>
+<script src="/js/es5-shim.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+document.createElement('pager');
+document.createElement('page');
+document.createElement('turn');
+document.createElement('breadline');
+document.createElement('bread');
+document.createElement('validcode');
+document.createElement('share');
+document.createElement('ng-include');
+</script>
+<![endif]-->
+<script type="text/javascript" src="/js/koala.min.1.5.js"></script>
+<!-- <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script> -->
+<script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/js/angular.min.js"></script>
+<script type="text/javascript" src="/js/boot.js?r=1729956741"></script> 
+<script type="text/javascript" src="/js/sidetool.js?r=1729956741"></script> 
+<script type="text/javascript" src="/js/placeholder.js?r=1729956741"></script> 
+
+<link href="/css/sy_style.css?r=1729956741" rel="stylesheet" type="text/css" />
+
+<link href="/css/tap_valid.css?r=1729956741" rel="stylesheet" type="text/css" />
+<style>
+/* body{filter: grayscale(100%);} */
+</style>
+</head>
+<body>
+<script type="text/javascript" src="/js/lib/head.js?r=1729956741"></script>
+<div id="header" ng-controller="navController">
+<div class="nav">
+<div class="nav_unit">
+<div class="unit_left">
+<img src="/images/logo.png" alt="中瑞酒店">
+</div>
+<div class="unit_right">
+<div class="ck_login">
+<div class="lgt"><a href="http://mail.bhi.edu.cn" target="_blank">教师邮箱</a></div>
+<div class="lgt"><a href="http://mail.student.bhi.edu.cn" target="_blank">学生邮箱</a></div>
+<div class="lgt"><a href="/167/nav_detail.html" target="_blank">联系我们</a></div>
+<div class="lgt"><a href="http://english.bhi.edu.cn/" target="_blank">English</a></div>
+<!-- <div class="lgt lgt_sop"><a href="http://old.bhi.edu.cn" target="_blank">旧版官网</a></div> -->
+<div class="lgt">丨</div>
+<div class="lgt" ng-show="!current_user"><a href="/regist.html">注册</a></div>
+<div class="lgt" ng-show="!current_user"><a href="/login.html">登录</a></div>
+<div class="lgt" ng-show="current_user"><a href="/me.html" ng-bind="current_user.user_nick | substr:0:10:2"></a></div>
+<div class="lgt" ng-show="current_user"><a href="" id="a_logout" ng-click="logout()">退出</a></div>
+<div class="clear">
+</div>
+</div>
+<div class="ck_login mop">
+<input type="text" id="searchKey" name="key" ng-model="query" class="dop" ng-keyup="myKeyup($event)">
+<a href="javascript:" ng-click="searchinfo()" id="searchBtn"><img src="/images/search.png" style="float:right;margin:0 7px;margin-top:5px"></a>
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+</div>
+<div class="nat_menu">
+<div class="nat">
+<div class="list" id="navlist">
+<ul id="navfouce">
+<li ng-repeat="nav in navslist">
+<a href="{{nav.url}}" class="lk" ng-class="{'sto_ts': nav.name=='本科招生', 'tp' : nav.list.length>0}" ng-bind="nav.name"></a>
+</li>
+<div class="clear">
+</div>
+</ul>
+</div>
+</div>
+<div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;">
+<div class="cont" style="display:none" ng-repeat="nav in navslist">
+<div class="cont_left" ng-show="nav.total>0">
+<img src="/images/nav1.jpg" ng-src="{{nav.image}}" />
+</div>
+<div class="cont_right" ng-show="nav.total>0">
+<ul>
+<li ng-repeat="pre in nav.list">
+<a href="{{pre.url}}" ng-bind="pre.name" ></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="/js/lib/index.js?r=1729956741"></script> 
+<script type="text/javascript" src="/js/lib/tw.js?r=1729956741"></script> 
+<script type="text/javascript" src="/js/lib/notice.js?r=1729956741"></script> 
+<script type="text/javascript" src="/js/lib/link.js?r=1729956741"></script> 
+<script type="text/javascript" src="/js/float_ad.js?r=1729956741"></script> 
+<turn navid='1' navtitle=""></turn>
+<div id="main">
+<div class="mains">
+<div class="main_one">
+<p class="main_one_p1"><a href="/159/table/tw.html">中瑞新闻</a><span class="main_one_p1_r"><a href="/159/table/tw.html" >更多</a></span><div class="clear"></div></p>
+<p class="main_one_p2"></p>
+<div class="main_one_news" ng-controller="twController">
+<div id="tw_table_div" style="display:none">159</div>
+<div class="fornews" ng-repeat="tw in twlist">
+<a ng-href="/{{tw.nav_id}}/{{tw.id}}/tw_detail.html?type=1" >
+<img ng-src="{{tw.tuwen_pic}}" alt="{{tw.tuwen_title}}" />
+<p class="newsp1" ng-bind="tw.tuwen_title| substr:0:34:2"></p>
+<p class="newsp2" ng-bind="(tw.tuwen_abstract || tw.tuwen_content) | substr:0:43:2"></p>
+</a>
+<p class="newsp2" ng-bind="tw.tuwen_date"></p>
+</div>
+<div class="clear">
+</div>
+</div>
+</div>
+<div class="main_one">
+<p class="main_two_p1">通知公告<span class="main_one_p1_r"><a href="/160/notice/tw.html" >更多</a></span><div class="clear"></div></p>
+<p class="main_one_p2"></p>
+<div class="main_one_news" ng-controller="noticeController">
+<div id="tw_notice_div" style="display:none">160</div>
+<ul>
+<li class="main_list_news" ng-repeat="notice in noticelist">
+<div class="list_pro_left">
+<div class="pro_left_one" ng-bind="notice.notice_date | substr:8:10:1 ">
+</div>
+<div class="pro_left_two" ng-bind="notice.notice_date | substr:0:7:1 ">
+</div>
+</div>
+<div class="list_pro_right">
+<a ng-href="/{{notice.nav_id}}/{{notice.id}}/tw_detail.html?type=2" ng-bind="notice.notice_name">
+</a>
+</div>
+<div class="clear">
+</div>
+</li>
+<div class="clear">
+</div>
+</ul>
+</div>
+</div>
+<div class="main_three" ng-controller="adController">
+<div class="{{ad.css}}" ng-repeat='ad in ads'>
+<a ng-href="{{ad.ad_url}}"><img ng-src="{{ad.ad_pic}}" /></a>
+</div>
+<div class="clear">
+</div>
+</div>
+</div>
+</div>
+<div class="main_four" ng-controller="indexController">
+<div class="mains">
+<ul class="gation">
+<li ng-repeat="nav in themenavlist">
+<a href="{{nav.url}}" target="_blank" title="{{nav.name}}">
+<img ng-src="{{nav.image}}" />
+</a>
+</li>
+<!--<li>
+<a href="/181/list/tw.html" target="_blank"><img src="images/sto_x8.jpg" /></a>
+</li>-->
+<li style="margin-right:0">
+<a href="https://jw.bhi.edu.cn" target="_blank">
+<img src="images/sto_x9.jpg" />
+</a>
+</li>
+<!--
+<li class="gation_tsli">
+<div class="gation_tsli_left">
+<a href="http://111.203.69.17/" target="_blank"><p class="gation_tsli_p1">教务系统登录</p></a>
+</div>
+<div class="clear">
+</div>
+</li>
+-->
+<div class="clear">
+</div>
+</ul>
+</div>
+</div>
+<div class="main_five" ng-controller="linkController">
+<div class="mains">
+<div class="link_fd fd_left">友情链接：</div>
+<div class="link_fd fd_right">
+<ul>
+<li ng-repeat="link in linklist"><a ng-href="{{link.link_url}}" target="_blank" ng-bind="link.link_name"></a></li>
+</ul>
+</div>
+<div class="clear">
+</div>
+</div>
+</div>
+<div id="floadAd" onmouseover="pause_resume(true)" onmouseout="pause_resume(false)" class="floadAD">
+<a class="float_close" href="javascript:float_close();">×关闭</a>
+<a class="item" title='本科招生' href="https://www.bhi.edu.cn/39/list/tw.html" target="_blank">
+<img src="/images/float_ad.png" alt="本科招生" width="160px" height="256px" style='object-fit: contain' /></a>
+</div>
+</div>
+
+<div id="footer" ng-controller="navController">
+<div class="foot">
+<div class="foot_a">
+<div class="foot_a_left" >
+<ul ng-repeat="nav in navslist">
+<li class="fd" ng-show="nav.total>0">
+<a href="{{nav.url}}" target="_blank" ng-bind="nav.name"></a>
+</li>
+<li ng-show="nav.total>0" ng-repeat="pre in nav.list">
+<a href="{{pre.url}}" target="_blank" ng-bind="pre.name"></a>
+</li>
+</ul>
+<div class="clear">
+</div>
+</div>
+</div>
+<div class="foot_b">
+<ul>
+<li class="fc" ng-repeat="theme in themelist">
+<a href="{{theme.url}}" target="_blank" ng-bind="theme.name"></a>
+</li>
+<li class="fc"><a href="/117/jxky_jwxt.html" target="_blank">教务系统</a></li>
+<div class="clear">
+</div>
+</ul>
+</div>
+</div>
+<div class="foot_c">
+Copyright © 北京第二外国语学院中瑞酒店管理学院 <a href="http://www.beian.miit.gov.cn" target="_blank" class="foot_c_a" title="查看备案">京ICP备16001129号-4</a> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011502002820" class="foot_c_a"> <img src="/images/gongbeian.png" /> 京公网安备 11011502002820号 </a> <a href="https://new.cnzz.com/v1/login.php?siteid=1281306694" target="_blank" class="foot_c_a">站长统计</a>
+</div>
+</div>
+<div style="display:none">
+<!--
+<script src="https://s4.cnzz.com/z_stat.php?id=1261036137&web_id=1261036137" language="JavaScript"></script>
+-->
+<script type="text/javascript" src="https://v1.cnzz.com/z.js?id=1281306694"></script>
+</div>
+
+<div id="navida1" class="navida2" style="display:none">
+<p class="navida2_p1"></p>
+<div class="mp_navida2">
+<p class="navida2_p2"><img src="/images/zrtc.png" /></p>
+</div>
+<p class="navida2_p2">
+<a href=""><span class="navida_sp1">确定</span></a>
+</p>
+<a href="javascript:void(0);" title="关闭" class="close_nda">×</a>
+</div>
+<div id="navida2" class="navida2" style="display:none">
+<p class="navida2_p1"></p>
+<div class="mp_navida2">
+<p class="navida2_p2"><img src="/images/zrtc.png" /></p>
+</div>
+<p class="navida2_p2">
+<a href=""><span class="navida2_sp1 ok">确定</span></a>
+<a href=""><span class="navida2_sp2 cancel">取消</span></a>
+</p>
+<a href="javascript:void(0);" title="关闭" class="close_nda">×</a>
+</div>
+
+<ng-include src="'/html/temp/sidetool.html'" ng-controller="sidetoolController"></ng-include>
+<script>
+(function(){
+var bp = document.createElement('script')
+var curProtocol = window.location.protocol.split(':')[0];
+if (curProtocol === 'https') {
+bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+}
+else {
+bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+}
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</body>
+</html>

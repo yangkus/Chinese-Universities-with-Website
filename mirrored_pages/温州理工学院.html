@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+<base href="/"/>
+<!--[if lte IE 9]>
+<script>var b = document.getElementsByTagName('base')[0];if(b) b.href=window.location.protocol+"//"+window.location.host;</script>
+<![endif]-->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<script type="text/javascript">
+var url = window.location.href;
+if (url.indexOf("https") < 0) {
+    url = url.replace("http:", "https:");
+    window.location.replace(url);
+}
+
+</script>
+</style>
+<title>温州理工学院官网</title>
+<!-- Bootstrap -->
+<link href="images/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="images/swiper3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="images/base.css">
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="images/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="images/bootstrap.min.js"></script>
+<script type="text/javascript" src="images/swiper3.4.2.jquery.min.js"></script>
+<link rel="stylesheet" href="images/layui/css/layui.css" media="all">
+<script src="images/layui/layui.js" charset="utf-8"></script>
+<script src="images/cnvp.js" charset="utf-8"></script>
+<script src="images/jquery.cookie.js"></script>
+<!-- <script src="images/dl.js"></script> -->
+
+<script>
+    var url = window.location.href;
+    var options = {
+        url: '/API/indexApi.aspx?Action=ISColumnAll',
+        type: 'POST',
+        async: false,
+        data: { GoToUrl: url},
+        dataType: 'json',
+        success: function (data) {
+            var dataobj = data.Data
+            if(dataobj != null){
+                window.location.href = dataobj
+            }
+        },
+        error: function () {
+            console.log("失败！");
+        }
+    }
+    $.ajax(options);
+</script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+	$(function(){
+		// if (window.ActiveXObject || "ActiveXObject" in window){
+		//     alert("您正在使用的是IE浏览器，使用如谷歌，火狐，搜狗高速模式，360极速模式浏览器浏览体验更加!");
+		// }
+		if (window.navigator.userAgent.indexOf("MSIE")>=1){
+			alert("您正在使用的是IE浏览器，使用如谷歌，火狐，搜狗高速模式，360极速模式浏览器浏览体验更加!");
+		}
+
+
+          
+	})
+</script>
+<script>
+    var jcmsUser = getCookie('JCms_User');
+    function getCookie(cookieName) {
+        //获取所有的cookie "psw=1234we; rememberme=true; user=Annie"
+        var totalCookie = document.cookie;
+        //获取参数所在的位置
+        var cookieStartAt = totalCookie.indexOf(cookieName + "=");
+        //判断参数是否存在 不存在直接返回
+        if (cookieStartAt == -1) {
+            return;
+        }
+        //获取参数值的开始位置
+        var valueStartAt = totalCookie.indexOf("=", cookieStartAt) + 1;
+        //以;来获取参数值的结束位置
+        var valueEndAt = totalCookie.indexOf(";", cookieStartAt);
+        //如果没有;则是最后一位
+        if (valueEndAt == -1) {
+            valueEndAt = totalCookie.length;
+        }
+        //截取参数值的字符串
+        var cookieValue = unescape(totalCookie.substring(valueStartAt, valueEndAt));
+        return cookieValue;
+    }
+</script>
+     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+</head>
+  </head>
+  <body>
+
+<div class="wrap-top">
+    <div class="container row">
+        <div class="top-left">
+            <a href="/Col/Col12/Index.html" class="top-xjz" target='_blank'>学生</a>
+            <a href="/Col/Col13/Index.html" class="top-xjz" target='_blank'>教师</a>
+            <a href="https://zs.wzut.edu.cn/" class="top-xjz" target='_blank'>招生网</a>
+
+            <a href="/Col/Col24/Index.html" class="top-xjz" target='_blank'>校务大厅</a>
+            <a href="https://en.wzut.edu.cn" class="top-xjz" target='_blank'>English</a>
+            <!--a href="https://i.wzut.edu.cn" class="top-xjz" target='_blank'>校务大厅(校内）</a>
+            <a href="https://webvpn.wzut.edu.cn:4430" class="top-xjz" target='_blank'>webVPN</a-->
+            <!--span onclick="GetWebVPNURL()" class="top-xjz" style="cursor: pointer;">校务大厅</span-->
+        </div>
+        <div class="top-right">
+            <a href="/" target='_blank'>首页</a>
+            <a href="https://bpm.wzut.edu.cn:5008/OpinionStation/Index"  target='_blank'>师生意见快递站</a>
+            <a href="/Col/Col185/Index.html" target='_blank'>信息公开</a>
+            <form id="form1" name="form1" method="get" onsubmit="return search();">
+            <input type="submit" value="" class="topbtn" />
+            <input type="text"  name="KW" class="srk" id="KW">
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    
+   function search(){
+        
+     var kw = $("#KW").val();
+        
+     var url = "/Col/Col210/Index.html?KW=" + kw;
+        
+     window.open(url,"_blank")
+    
+}
+
+</script>
+<script type="text/javascript">
+    var timer = setTimeout(function (){
+            $(".NewsPage").append("<input name='xuhao' width='50' size='4' id='xuhao'/><input name='GO' id='tijiao' type='submit' value='GO' onclick='putPages()' />");
+            clearTimeout(timer); // 清除定时器
+        }, 1000)
+    $(function(){
+        
+        
+    })
+    // $("#tijiao").on("click",function(){
+    //     var xuhao=$("#xuhao").val();
+    //     console.log(xuhao)
+    //     if(!isNaN(xuhao)){
+    //         var xx = window.location.href;
+    //         var index = xx.indexOf("Index");  
+    //         location.href = xx.substring(0,index)+"Index_"+xuhao+".aspx";
+    //     }
+    // })  
+
+    function putPages(){
+        var xuhao=$("#xuhao").val();
+        console.log(xuhao)
+        if(!isNaN(xuhao)){
+            var xx = window.location.href;
+            var index = xx.indexOf("html") + 4;  
+            location.href = xx.substring(0,index)+"?PageNo="+xuhao;
+        }
+    }
+
+    function GetWebVPNURL() {
+        $.ajax({
+            type: "get",
+            datatype: "json",
+            url: "/API/ClientSourceIPApi.aspx?action=getClientSourceIP",
+            success: function (data) {
+                console.log(data)
+                var data= JSON.parse(data);
+                if (data.State == 1) {
+                    //location.href = data.Data;
+                    window.open(data.Data);
+                }
+            }
+            , error: function (err) {
+                console.log(err)
+            }
+        })
+    }
+</script>
+
+    <nav class="navbar navbar-default searchopen with-bagview" id="ac-globalnav">
+    <div class="container">
+        <ul class="ac-gn-header">
+           <li class="ac-gn-item ac-gn-bag"></li>
+            <li class="ac-gn-item ac-gn-logo"><a href="/"></a></li>
+            
+             <li class="ac-gn-item ac-gn-menuicon" style="width: 25px;">
+                <label class="ac-gn-menuicon-label" aria-hidden="true">
+          <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+            <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+          </span>
+            <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+            <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+          </span>
+                </label>
+            </li>
+        </ul>
+        <ul class="ac-gn-list">
+            <li class='ac-gn-item ac-gn-logo'><a href='/' target='_blank'></a></li>            <li class='ac-gn-item ac-gn-li'>                <a href='/Col/Col25/Index.html' class='top-nav-wz' target='_blank'>学校概况</a>                <div class='nav-ejdh row'>                        <div class='col-lg-4 top-nav-left'>                            <div class='nav-left-lj row'>                                <a href='/Col/Col25/Index.html' class='col-lg-6' target='_blank'>学校简介</a>                                 <a href='/Col/Col345/Index.html' class='col-lg-6' target='_blank'>学校章程</a>                                 <a href='/Col/Col28/Index.html' class='col-lg-6' target='_blank'>现任领导</a>                                 <a href='/Col/Col29/Index.html' class='col-lg-6' target='_blank'>机构设置</a>                                 <a href='/Col/Col31/Index.html' class='col-lg-6' target='_blank'>校园风景</a>                                 <a href='/Col/Col235/Index.html' class='col-lg-6' target='_blank'>学校大事记</a>                                                           </div>                        </div>                        <div class='col-lg-8 top-nav-right'>                            <div class='nav-right-nr row'>                                <div class='col-lg-5'>                                    <img src='/Column/20230111015337810.jpg' width='100%' height='100%'>                                </div>                                <div class='col-lg-7'>                                    <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮”、“中国最具幸福感城市”等美誉的浙江省温州市。</p>                                    <a class='ljxx' href='/Col/Col25/Index.html' target='_blank'>了解详细>></a>                                </div>                            </div>                        </div>                    </div>            </li>            <li class='ac-gn-item ac-gn-li'>                <a href='/Col/Col2/Index.html' class='top-nav-wz' target='_blank'>新闻中心</a>                <div class='nav-ejdh row'>                        <div class='col-lg-4 top-nav-left'>                            <div class='nav-left-lj row'>                                <a href='/Col/Col34/Index.html' class='col-lg-6' target='_blank'>学校要闻</a>                                 <a href='/Col/Col35/Index.html' class='col-lg-6' target='_blank'>媒体报道</a>                                 <a href='/Col/Col36/Index.html' class='col-lg-6' target='_blank'>学院动态</a>                                 <a href='/Col/Col37/Index.html' class='col-lg-6' target='_blank'>部门资讯</a>                                                           </div>                        </div>                        <div class='col-lg-8 top-nav-right'>                            <div class='nav-right-nr row'>                                <div class='col-lg-5'>                                    <img src='/Column/20230111015337810.jpg' width='100%' height='100%'>                                </div>                                <div class='col-lg-7'>                                    <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮”、“中国最具幸福感城市”等美誉的浙江省温州市。</p>                                    <a class='ljxx' href='/Col/Col2/Index.html' target='_blank'>了解详细>></a>                                </div>                            </div>                        </div>                    </div>            </li>            <li class='ac-gn-item ac-gn-li'>                <a href='/Col/Col39/Index.html' class='top-nav-wz' target='_blank'>人才培养</a>                <div class='nav-ejdh row'>                        <div class='col-lg-4 top-nav-left'>                            <div class='nav-left-lj row'>                                <a href='/Col/Col39/Index.html' class='col-lg-6' target='_blank'>培养模式</a>                                 <a href='/Col/Col41/Index.html' class='col-lg-6' target='_blank'>专业设置</a>                                                           </div>                        </div>                        <div class='col-lg-8 top-nav-right'>                            <div class='nav-right-nr row'>                                <div class='col-lg-5'>                                    <img src='/Column/20230111015337810.jpg' width='100%' height='100%'>                                </div>                                <div class='col-lg-7'>                                    <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮”、“中国最具幸福感城市”等美誉的浙江省温州市。</p>                                    <a class='ljxx' href='/Col/Col39/Index.html' target='_blank'>了解详细>></a>                                </div>                            </div>                        </div>                    </div>            </li>            <li class='ac-gn-item ac-gn-li'>                <a href='/Col/Col43/Index.html' class='top-nav-wz' target='_blank'>教学科研</a>                <div class='nav-ejdh row'>                        <div class='col-lg-4 top-nav-left'>                            <div class='nav-left-lj row'>                                <a href='/Col/Col42/Index.html' class='col-lg-6' target='_blank'>科研项目</a>                                 <a href='/Col/Col43/Index.html' class='col-lg-6' target='_blank'>科研机构</a>                                                           </div>                        </div>                        <div class='col-lg-8 top-nav-right'>                            <div class='nav-right-nr row'>                                <div class='col-lg-5'>                                    <img src='/Column/20230111015337810.jpg' width='100%' height='100%'>                                </div>                                <div class='col-lg-7'>                                    <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮”、“中国最具幸福感城市”等美誉的浙江省温州市。</p>                                    <a class='ljxx' href='/Col/Col43/Index.html' target='_blank'>了解详细>></a>                                </div>                            </div>                        </div>                    </div>            </li>            <li class='ac-gn-item ac-gn-li'>                <a href='/Col/Col197/Index.html' class='top-nav-wz' target='_blank'>招生就业</a>                <div class='nav-ejdh row'>                        <div class='col-lg-4 top-nav-left'>                            <div class='nav-left-lj row'>                                <a href='http://zs.wzut.edu.cn' class='col-lg-6' target='_blank'>招生网</a>                                 <a href='https://jy.wzut.edu.cn/' class='col-lg-6' target='_blank'>就业网</a>                                                           </div>                        </div>                        <div class='col-lg-8 top-nav-right'>                            <div class='nav-right-nr row'>                                <div class='col-lg-5'>                                    <img src='/Column/20230111015337810.jpg' width='100%' height='100%'>                                </div>                                <div class='col-lg-7'>                                    <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮”、“中国最具幸福感城市”等美誉的浙江省温州市。</p>                                    <a class='ljxx' href='/Col/Col197/Index.html' target='_blank'>了解详细>></a>                                </div>                            </div>                        </div>                    </div>            </li>            <li class='ac-gn-item ac-gn-li'>                <a href='http://cyxy.wzut.edu.cn' class='top-nav-wz' target='_blank'>创新创业</a>                <div class='nav-ejdh row'>                        <div class='col-lg-4 top-nav-left'>                            <div class='nav-left-lj row'>                                <a href='http://cyxy.wzut.edu.cn' class='col-lg-6' target='_blank'>创业学院</a>                                                           </div>                        </div>                        <div class='col-lg-8 top-nav-right'>                            <div class='nav-right-nr row'>                                <div class='col-lg-5'>                                    <img src='/Column/20230111015337810.jpg' width='100%' height='100%'>                                </div>                                <div class='col-lg-7'>                                    <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮”、“中国最具幸福感城市”等美誉的浙江省温州市。</p>                                    <a class='ljxx' href='http://cyxy.wzut.edu.cn' target='_blank'>了解详细>></a>                                </div>                            </div>                        </div>                    </div>            </li>            <li class='ac-gn-item ac-gn-li'>                <a href='https://gh.wzut.edu.cn/' class='top-nav-wz' target='_blank'>国际交流</a>                <div class='nav-ejdh row'>                        <div class='col-lg-4 top-nav-left'>                            <div class='nav-left-lj row'>                                                          </div>                        </div>                        <div class='col-lg-8 top-nav-right'>                            <div class='nav-right-nr row'>                                <div class='col-lg-5'>                                    <img src='/Column/20230111015337810.jpg' width='100%' height='100%'>                                </div>                                <div class='col-lg-7'>                                    <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮”、“中国最具幸福感城市”等美誉的浙江省温州市。</p>                                    <a class='ljxx' href='https://gh.wzut.edu.cn/' target='_blank'>了解详细>></a>                                </div>                            </div>                        </div>                    </div>            </li>            <li class='ac-gn-item ac-gn-li'>                <a href='http://rczp.wzut.edu.cn/' class='top-nav-wz' target='_blank'>人才招聘</a>                <div class='nav-ejdh row'>                        <div class='col-lg-4 top-nav-left'>                            <div class='nav-left-lj row'>                                <a href='http://rczp.wzut.edu.cn/' target='_blank' class='col-lg-6' target='_blank'>招聘信息</a>                                                           </div>                        </div>                        <div class='col-lg-8 top-nav-right'>                            <div class='nav-right-nr row'>                                <div class='col-lg-5'>                                    <img src='/Column/20230111015337810.jpg' width='100%' height='100%'>                                </div>                                <div class='col-lg-7'>                                    <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮”、“中国最具幸福感城市”等美誉的浙江省温州市。</p>                                    <a class='ljxx' href='http://rczp.wzut.edu.cn/' target='_blank'>了解详细>></a>                                </div>                            </div>                        </div>                    </div>            </li>            <li class='ac-gn-item ac-gn-li'>                <a href='https://jxjy.wzut.edu.cn/' class='top-nav-wz' target='_blank'>继续教育</a>                <div class='nav-ejdh row'>                        <div class='col-lg-4 top-nav-left'>                            <div class='nav-left-lj row'>                                                          </div>                        </div>                        <div class='col-lg-8 top-nav-right'>                            <div class='nav-right-nr row'>                                <div class='col-lg-5'>                                    <img src='/Column/20230111015337810.jpg' width='100%' height='100%'>                                </div>                                <div class='col-lg-7'>                                    <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮”、“中国最具幸福感城市”等美誉的浙江省温州市。</p>                                    <a class='ljxx' href='https://jxjy.wzut.edu.cn/' target='_blank'>了解详细>></a>                                </div>                            </div>                        </div>                    </div>            </li>            <script>$(function(){                $('.container .ac-gn-list .ac-gn-li:eq(6)').find('.nav-ejdh').remove();                $('.container .ac-gn-list .ac-gn-li:last').find('.nav-ejdh').remove();                })</script>
+        </ul>
+        <ul class="ac-gn-list ac-gn-list-phone">
+                        <li class='ac-gn-item-phone'>                    <a href='javascript:;' class='yiji'>学校概况</a>                    <div class='sj-ejdh'>                        <a href='/Col/Col25/Index.html'>学校简介</a>          <a href='/Col/Col345/Index.html'>学校章程</a>          <a href='/Col/Col28/Index.html'>现任领导</a>          <a href='/Col/Col29/Index.html'>机构设置</a>          <a href='/Col/Col31/Index.html'>校园风景</a>          <a href='/Col/Col235/Index.html'>学校大事记</a>                                         </div>                </li>            <li class='ac-gn-item-phone'>                    <a href='javascript:;' class='yiji'>新闻中心</a>                    <div class='sj-ejdh'>                        <a href='/Col/Col34/Index.html'>学校要闻</a>          <a href='/Col/Col35/Index.html'>媒体报道</a>          <a href='/Col/Col36/Index.html'>学院动态</a>          <a href='/Col/Col37/Index.html'>部门资讯</a>                                         </div>                </li>            <li class='ac-gn-item-phone'>                    <a href='javascript:;' class='yiji'>人才培养</a>                    <div class='sj-ejdh'>                        <a href='/Col/Col39/Index.html'>培养模式</a>          <a href='/Col/Col41/Index.html'>专业设置</a>                                         </div>                </li>            <li class='ac-gn-item-phone'>                    <a href='javascript:;' class='yiji'>教学科研</a>                    <div class='sj-ejdh'>                        <a href='/Col/Col42/Index.html'>科研项目</a>          <a href='/Col/Col43/Index.html'>科研机构</a>                                         </div>                </li>            <li class='ac-gn-item-phone'>                    <a href='javascript:;' class='yiji'>招生就业</a>                    <div class='sj-ejdh'>                        <a href='http://zs.wzut.edu.cn'>招生网</a>          <a href='https://jy.wzut.edu.cn/'>就业网</a>                                         </div>                </li>            <li class='ac-gn-item-phone'>                    <a href='javascript:;' class='yiji'>创新创业</a>                    <div class='sj-ejdh'>                        <a href='http://cyxy.wzut.edu.cn'>创业学院</a>                                         </div>                </li>            <li class='ac-gn-item-phone'>                    <a href='javascript:;' class='yiji'>国际交流</a>                    <div class='sj-ejdh'>                                                       </div>                </li>            <li class='ac-gn-item-phone'>                    <a href='javascript:;' class='yiji'>人才招聘</a>                    <div class='sj-ejdh'>                        <a href='http://rczp.wzut.edu.cn/' target='_blank'>招聘信息</a>                                         </div>                </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="wrap-banner">
+    <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class='swiper-slide'><a href='https://www.wzut.edu.cn/Art/Art_182/Art_182_104568.html'><img src='/UploadFile/202409/20240930101814869.jpg' width='100%'></a></div><div class='swiper-slide'><a href='https://www.wzut.edu.cn/Col/Col3259/Index.html'><img src='/UploadFile/202408/20240808092356053.png' width='100%'></a></div><div class='swiper-slide'><a href='https://www.wzut.edu.cn/Art/Art_34/Art_34_113439.html'><img src='/UploadFile/202409/202409031409362134969412923.jpg' width='100%'></a></div><div class='swiper-slide'><a href='/Art/Art_11/Art_11_105433.html'><img src='/UploadFile/202402/20240227101644311.jpg' width='100%'></a></div><div class='swiper-slide'><a href='javascript:;'><img src='/UploadFile/202303/20230330105921253.jpg' width='100%'></a></div><div class='swiper-slide'><a href='javascript:;'><img src='/UploadFile/202112/20211231020614234.jpg' width='100%'></a></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+    <div class="fbox">
+        <div class="fimg"><img src="images/inicon03.png"></div>
+        <div class="ftitle">
+             <ul><li><a>招标信息</a></li><li style="display:none;"><a>减租信息</a></li><li><a>学术活动</a></li></ul>
+        </div>
+        <div class="flist">
+             <ul>
+                  <div id='TopNewsAjax6' style='display:none;'></div><script>$.ajax({url: 'https://api.wzut.edu.cn/webapi/',type: 'GET',dataType: 'jsonp',jsonp: 'newslistajax',data: { Papers: 'NewsAjax',UnitID: '6',TemplateID: '1'},}).done(function(data){$('#TopNewsAjax6').after(data.data)}).fail(function() {console.log("error");})</script>
+                  <li class="fmore"><a href="/Col/Col183/Index.html" target="_blank">查看更多>></a></li>
+             </ul>
+             <ul style="display:none;">
+                  <div id='TopNewsAjax7' style='display:none;'></div><script>$.ajax({url: 'https://api.wzut.edu.cn/webapi/',type: 'GET',dataType: 'jsonp',jsonp: 'newslistajax',data: { Papers: 'NewsAjax',UnitID: '7',TemplateID: '1'},}).done(function(data){$('#TopNewsAjax7').after(data.data)}).fail(function() {console.log("error");})</script>
+                  <li class="fmore"><a href="/Col/Col194/Index.html" target="_blank">查看更多>></a></li>
+             </ul>
+             <ul style="display:none;">
+                  <div id='TopNewsAjax8' style='display:none;'></div><script>$.ajax({url: 'https://api.wzut.edu.cn/webapi/',type: 'GET',dataType: 'jsonp',jsonp: 'newslistajax',data: { Papers: 'NewsAjax',UnitID: '8',TemplateID: '1'},}).done(function(data){$('#TopNewsAjax8').after(data.data)}).fail(function() {console.log("error");})</script>
+                  <li class="fmore"><a href="/Col/Col184/Index.html" target="_blank">查看更多>></a></li>
+             </ul>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+<div class="container2">
+    <div class="row oj-ywdt">
+        <div class="oj-yw col-lg-7 col-md-8 col-sm-7">
+            <div class="ywdt-bt">
+                <span class="sy-bt">学校要闻</span>
+                <a href="/Col/Col2/Index.html" class="sy-gd" target="_blank">更多新闻>></a>
+            </div>
+            <div class="swiper-container ojyw-sw">
+                <div class="swiper-wrapper" id="mobile">
+                    <div class='swiper-slide'>    <div class='sy-ywlb'>         <a href='/Art/Art_34/Art_34_114971.html' target='_blank'>             <div class='imgbox' style='width: 100%;height:260px;overflow: hidden;'>                <img src='/UploadFile/202410/202410221400402078.jpg' width='100%'>             </div>            <span class='ywlb-bt'>国际商务创新与发展：产业链、供应链与国...</span>            <p class='ywlb-jj'>&nbsp;10月21日，际商务创新与发展：产业链、供应链与国际商务人才培养国际论坛在温州理工学院成功举行。此次论坛汇聚众多国内外知名</p> <span class='ywlb-sj'>2024-10-22</span>        </a> </div></div><div class='swiper-slide'>    <div class='sy-ywlb'>         <a href='/Art/Art_34/Art_34_114552.html' target='_blank'>             <div class='imgbox' style='width: 100%;height:260px;overflow: hidden;'>                <img src='/UploadFile/202410/20241016090452107.jpg' width='100%'>             </div>            <span class='ywlb-bt'>我校与浙江安防职业技术学院签订合作协议</span>            <p class='ywlb-jj'>10月14日下午，我校与浙江安防职业技术学院举行合作协议签约仪式，为两校推进"职普融通"，加快服务新质生产力发展开启新篇章。</p> <span class='ywlb-sj'>2024-10-16</span>        </a> </div></div><script>$('.ywlb-bt font strong').css({ 'color': 'black', 'font-weight': 'normal' });</script>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-4 col-sm-5 col-xs-12 sy-ojdt-all">
+            <div class="rwo sy-ojdt" id="btn">
+                <span class="tit sy-tzgg sy-bt col-lg-4 col-md-4 col-sm-4 col-xs-4">学校动态</span>
+                <span class="tit sy-tzgg col-lg-5 col-md-5 col-sm-5 col-xs-5">通知公告</span>
+                <a  href="/Col/Col34/Index.html" class="sy-gd col-lg-3 col-md-3 col-sm-3 col-xs-3" target="_blank">更多动态>></a>
+                <a  href="/Col/Col182/Index.html" class="sy-gd col-lg-3 col-md-3 col-sm-3 col-xs-3" target="_blank" style='display:none;'>更多动态>></a>
+            </div>
+            <div class="sy-ojdt-lb">
+        <div class="box s">
+                <div class='ojdt-list row'>                       <a href='/Art/Art_34/Art_34_115501.html' target='_blank'>                       <div class='ojdt-sj'>                           25<br/>10月                      </div>                      <div class='ojdt-all col-lg-10 col-md-10 col-sm-10 col-xs-10'>                          <span class='ojdt-bt'><script>var TitleFocusImages='';if(TitleFocusImages!=''){document.write('<img src=\''+TitleFocusImages+'\'>')}</script> 我校召开数字教育发展水平指标推进会</span>                           <p class='ojdt-jj'>为深入贯彻落实我省关于数字教育发展的相关要求，全面推进学校数字教育工作...</p>                     </div>                      </a>                    </div><div class='ojdt-list row'>                       <a href='/Art/Art_34/Art_34_115253.html' target='_blank'>                       <div class='ojdt-sj'>                           24<br/>10月                      </div>                      <div class='ojdt-all col-lg-10 col-md-10 col-sm-10 col-xs-10'>                          <span class='ojdt-bt'><script>var TitleFocusImages='';if(TitleFocusImages!=''){document.write('<img src=\''+TitleFocusImages+'\'>')}</script> 我校首批“信息化体验官”亮相</span>                           <p class='ojdt-jj'>&nbsp;10月23日下午，我校在滨海校区图书馆多媒体影音室举行信息化体验官启...</p>                     </div>                      </a>                    </div><div class='ojdt-list row'>                       <a href='/Art/Art_34/Art_34_114971.html' target='_blank'>                       <div class='ojdt-sj'>                           22<br/>10月                      </div>                      <div class='ojdt-all col-lg-10 col-md-10 col-sm-10 col-xs-10'>                          <span class='ojdt-bt'><script>var TitleFocusImages='';if(TitleFocusImages!=''){document.write('<img src=\''+TitleFocusImages+'\'>')}</script> 国际商务创新与发展：产业链、供应链与国际...</span>                           <p class='ojdt-jj'>&nbsp;10月21日，际商务创新与发展：产业链、供应链与国际商务人才培养国际...</p>                     </div>                      </a>                    </div><div class='ojdt-list row'>                       <a href='/Art/Art_34/Art_34_114967.html' target='_blank'>                       <div class='ojdt-sj'>                           22<br/>10月                      </div>                      <div class='ojdt-all col-lg-10 col-md-10 col-sm-10 col-xs-10'>                          <span class='ojdt-bt'><script>var TitleFocusImages='';if(TitleFocusImages!=''){document.write('<img src=\''+TitleFocusImages+'\'>')}</script> 温州市退役军人事务局、温州海事局一行来校...</span>                           <p class='ojdt-jj'>10月21日下午，温州市退役军人事务局党组成员、副局长李志坚，温州海事...</p>                     </div>                      </a>                    </div><div class='ojdt-list row'>                       <a href='/Art/Art_34/Art_34_114597.html' target='_blank'>                       <div class='ojdt-sj'>                           16<br/>10月                      </div>                      <div class='ojdt-all col-lg-10 col-md-10 col-sm-10 col-xs-10'>                          <span class='ojdt-bt'><script>var TitleFocusImages='';if(TitleFocusImages!=''){document.write('<img src=\''+TitleFocusImages+'\'>')}</script> 我校召开2024年度图书情报工作委员会会...</span>                           <p class='ojdt-jj'>10月16日上午，我校图书情报工作委员会2024年度工作会议在滨海校区...</p>                     </div>                      </a>                    </div><div class='ojdt-list row'>                       <a href='/Art/Art_34/Art_34_114570.html' target='_blank'>                       <div class='ojdt-sj'>                           16<br/>10月                      </div>                      <div class='ojdt-all col-lg-10 col-md-10 col-sm-10 col-xs-10'>                          <span class='ojdt-bt'><script>var TitleFocusImages='';if(TitleFocusImages!=''){document.write('<img src=\''+TitleFocusImages+'\'>')}</script> 四校联动启新程，共绘“温慕西行”新篇章</span>                           <p class='ojdt-jj'>党的二十大和二十届三中全会明确提出加快推进西部大开发形成新格局。教育部...</p>                     </div>                      </a>                    </div><script>$('.ojdt-bt font strong').css({'color':'black','font-weight':'normal'});</script>
+        </div>
+        <div class="box">
+        <div id='TopNewsAjax17' style='display:none;'></div><script>$.ajax({url: 'https://api.wzut.edu.cn/webapi/',type: 'GET',dataType: 'jsonp',jsonp: 'newslistajax',data: { Papers: 'NewsAjax',UnitID: '17',TemplateID: '1'},}).done(function(data){$('#TopNewsAjax17').after(data.data)}).fail(function() {console.log("error");})</script>
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+  $("#btn .tit").each(function(j,dom){
+    $(this).hover(function(h,dom){
+      var d=$(this).index();
+      $(this).parent().find(".tit").removeClass("sy-bt");
+      $(this).addClass("sy-bt");
+      $(this).parent().parent().find(".box").removeClass("s");
+      $(this).parent().parent().find(".box").eq(d).addClass("s");
+      $(this).parent().find('.sy-gd').hide();
+      $(this).parent().find('.sy-gd').eq(d).show();
+    })
+    
+  })
+</script>
+<div class="wrap-zhyc">
+<div class="container2 mtjczt">
+    <div class="col-lg-7 col-md-6 col-sm-4 col-xs-12 mtoj-sw">
+        <div class="mtoj-bt">
+            <span class="sy-bt">媒体报道</span>
+            <a href="/Col/Col35/Index.html" class="sy-gd"  target="_blank">更多报道>></a>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="mobile">
+                <div class='swiper-slide'>    <div class='sy-ywlb'> <a href='/Art/Art_35/Art_35_115244.html' target='_blank'>             <div class='imgbox' style='width: 100%;height:260px;overflow: hidden;'>                <img src='/UploadFile/202410/202410241241041057.jpg' width='100%'>            </div>            <p class='ywlb-jj'>温度新闻：防诈骗考试成为大学新生开学“第一考”</p> <span class='ywlb-sj'>2024-10-21</span>        </a> </div></div><div class='swiper-slide'>    <div class='sy-ywlb'> <a href='/Art/Art_35/Art_35_114567.html' target='_blank'>             <div class='imgbox' style='width: 100%;height:260px;overflow: hidden;'>                <img src='/UploadFile/202410/202410161208484356.jpeg' width='100%'>            </div>            <p class='ywlb-jj'>潮新闻：校企合作又有新动作 万洋创业学院正式揭牌</p> <span class='ywlb-sj'>2024-10-15</span>        </a> </div></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 col-md-6 col-sm-8 col-xs-12 sy-jczt-top">
+        <div class="sy-jczt">
+            <span class="sy-bt">精彩专题</span>
+            <a href="/Col/Col159/Index.html" class="sy-gd"  target="_blank">更多报道>></a>
+        </div>
+        <div class="jczt-all row">
+                    <div class='col-lg-4 col-md-4 col-sm-4 col-xs-4' style='padding-bottom: 30px;'>                <a href='/Col/Col3259/Index.html'  target='_blank'>                    <div class='jczt-img'>                        <img src='/UploadFile/202408/20240806031042550.jpg' class='jczt-dt' style='width:100%;height:100%;'>                    </div>                </a>                 </div>             <div class='col-lg-4 col-md-4 col-sm-4 col-xs-4' style='padding-bottom: 30px;'>                <a href='/Col/Col3087/Index.html'  target='_blank'>                    <div class='jczt-img'>                        <img src='/UploadFile/202404/202404111445215398.jpg' class='jczt-dt' style='width:100%;height:100%;'>                    </div>                </a>                 </div>             <div class='col-lg-4 col-md-4 col-sm-4 col-xs-4' style='padding-bottom: 30px;'>                <a href='/Col/Col3242/Index.html'  target='_blank'>                    <div class='jczt-img'>                        <img src='/UploadFile/202405/202405221125489322.jpg' class='jczt-dt' style='width:100%;height:100%;'>                    </div>                </a>                 </div>             <div class='col-lg-4 col-md-4 col-sm-4 col-xs-4' style='padding-bottom: 30px;'>                <a href='/Col/Col161/Index.html'  target='_blank'>                    <div class='jczt-img'>                        <img src='/UploadFile/202309/202309121857337685.jpg' class='jczt-dt' style='width:100%;height:100%;'>                    </div>                </a>                 </div>             <div class='col-lg-4 col-md-4 col-sm-4 col-xs-4' style='padding-bottom: 30px;'>                <a href='/Col/Col52/Index.html'  target='_blank'>                    <div class='jczt-img'>                        <img src='/Column/20230111044759242.jpg' class='jczt-dt' style='width:100%;height:100%;'>                    </div>                </a>                 </div>             <div class='col-lg-4 col-md-4 col-sm-4 col-xs-4' style='padding-bottom: 30px;'>                <a href='https://zs.wzut.edu.cn/'  target='_blank'>                    <div class='jczt-img'>                        <img src='/Column/20230111045211873.jpg' class='jczt-dt' style='width:100%;height:100%;'>                    </div>                </a>                 </div> <style>.jczt-all>div:nth-child(4),.jczt-all>div:nth-child(5),.jczt-all>div:nth-child(6){padding-bottom:0px!important;}</style>
+        </div>
+    </div>
+</div>
+</div>
+<div class="wrap-footer">
+    <div class="footer">
+        <div class="footer-ggfw">
+                <span class='ggfw-span'>公共服务</span>           <a href='https://ef.wzut.edu.cn/' style='background:url(/Column/20230111050456385.png) left center no-repeat'>教育基金会</a><a href='https://bpm.wzut.edu.cn:5008/OpinionStation/Index' style='background:url(images/yzxx.png) left center no-repeat'>师生意见快递站</a><a href='https://lib.wzut.edu.cn/' style='background:url(images/tsg.png) left center no-repeat'>图书馆</a><a href='https://www.wzut.edu.cn/UploadFile/202306/20230612xiaoche20230621041512911.pdf' style='background:url(images/lb.png) left center no-repeat'>校车安排表</a><a href='https://jwxt.wzut.edu.cn/sso/ddlogin' style='background:url(images/pc.png) left center no-repeat'>教务系统</a><a href='https://account.chsi.com.cn/passport/login?service=https%3A%2F%2Fmy.chsi.com.cn%2Farchive%2Fj_spring' style='background:url(images/xjcx.png) left center no-repeat'>学籍查询</a><a href='https://xgxt.wzut.edu.cn/wzutXG/JC/OneLogin.aspx' style='background:url(/Column/20230111050804761.png) left center no-repeat'>学工系统</a><a href='/Col/Col180/Index.html' style='background:url(images/wechat.png) left center no-repeat'>官方微信</a>     
+        </div>
+    </div>
+    <div class="footer">
+      <div class="row qpd dbdh">
+        <div class="col-lg-10 qpd qdbhxt">
+          <div class="row qpd">
+              <div class="col-lg-3 qdbhxt footer-dh">
+                <div id='TopNewsAjax25' style='display:none;'></div><script>$.ajax({url: 'https://api.wzut.edu.cn/webapi/',type: 'GET',dataType: 'jsonp',jsonp: 'newslistajax',data: { Papers: 'NewsAjax',UnitID: '25',TemplateID: '1'},}).done(function(data){$('#TopNewsAjax25').after(data.data)}).fail(function() {console.log("error");})</script>                 
+              </div>
+              <div class="col-lg-3 qdbhxt footer-dh">
+                <script src="images/footerbmlj1.js"></script> 
+              </div>
+              <div class="col-lg-3 qdbhxt footer-dh item-kbbt">
+                <script src="images/footerbmlj2.js"></script>   
+              </div>
+              <div class="col-lg-3 qdbhxt footer-dh">
+                <script src="images/footerjxjg.js"></script>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-2 qdbhxt qpd footer-bk">
+                        <div class="item-title">联系学校</div>
+            <div class="item-list">
+                  <div class="lxoj-rx">
+                    <p class="lxoj-wz">欢迎拨打招生热线</p>
+                    <p class="lxoj-sz">0577-86689999</p>
+                  </div>
+                  <a style="margin-top: 15px;">滨海校区：温州龙湾经济技术开发区金海三道</a>
+                  <a>　　　　　337号</a>
+                  <a>茶山校区：温州茶山高教园区景观大道1号</a>
+                  <a>电话：0577-86680517</a>
+                  <a>传真：0577-86680517</a>
+
+            </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+<div class="container-two" style="background:#003c64;">
+  <div class="footer row">
+    <div class="col-lg-6 col-md-12 col-xs-12 footer-left">
+      <div>
+        <div class="db-all"><!-- 版权所有 温州大学瓯江学院 -->备案号：<a href="http://beian.miit.gov.cn" target="_blank" style="color:#7a99ae;">浙ICP备05014618号-4</a> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33030402000760" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;margin-left:10px;    color: #7a99ae;"><img src="/UploadFile/201907/201907161531583094.png" style="float:left;"/>浙公网安备 33030402000760号</a>  <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278551862'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1278551862%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div>
+      </div>  
+    </div>
+    <div class="col-lg-6 col-md-12 col-xs-12 footer-right">
+      <span>技术支持：<a href="http://www.cnvp.com.cn/" target="_blank" style="color:#7a99ae;">捷点科技</a></span>
+    </div>  
+  </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+var ztkd=$('.ac-gn-li').innerWidth()*9-1;
+$('.ejdh-all').width(ztkd);
+$('.nav-ejdh').width(ztkd);
+
+</script>
+<script type="text/javascript">
+$('.yiji').click(function(){
+    if($(this).hasClass('active')){
+        $(this).removeClass('active').next().slideUp();
+      }
+      else{
+        $(this).addClass('active').next().slideToggle().parent().siblings().children('.yiji').removeClass('active').next().slideUp();
+      }
+
+})
+</script>
+<script type="text/javascript">
+      $(".ac-gn-menuicon-bread ").click(function(){
+    var PhoneDom = $(".ac-gn-list-phone");
+    if(PhoneDom.is(":hidden")){
+        PhoneDom.slideDown();
+    }else{
+        PhoneDom.slideUp();
+    }
+      })
+      $(".ac-gn-menuicon").click(function(){
+          $(".ac-gn-menuicon").toggleClass('showMenuPhone');
+      });
+      $(".cwh-down-menu").click(function(){
+          var MenuDom = $(this).parent().find(".cwh-down-menu-category");
+          if(MenuDom.is(":hidden")){
+              MenuDom.slideDown();
+          }else {
+              MenuDom.slideUp();
+          }
+
+      });
+      $(".ac-gn-search").click(function(){
+    $(".ac-gn-list .ac-gn-item:not(:first)").fadeOut();
+    $(".ac-gn-searchview").fadeIn();
+});
+$(".ac-gn-searchview-close").click(function(){
+    $(".ac-gn-searchview").fadeOut();
+    $(".ac-gn-list .ac-gn-item:not(:first)").fadeIn();
+});
+if($('body').width()<1300){
+$(".item-title").click(function(){
+  $(this).siblings('.item-list').slideToggle();
+  if($(this).hasClass('active')){
+    $(this).removeClass('active')
+  }
+  else{
+    $(this).addClass('active')
+  }
+
+  if($(this).hasClass('item-wdtn')){
+    $('.item-kbbt').children('.item-list').slideToggle();
+  }
+})
+}
+    </script>
+   
+<script>
+    var swiper = new Swiper('.oj-yw .swiper-container', {
+        slidesPerView: 2,
+        paginationClickable: true,
+        spaceBetween: 1,
+        spaceBetween: 36,
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 50
+            },
+            1200: {
+                slidesPerView: 2,
+                spaceBetween: 50
+            },
+        }
+    });
+    </script>
+
+<script>
+    var swiper = new Swiper('.mtoj-sw .swiper-container', {
+        slidesPerView: 2,
+        paginationClickable: true,
+        spaceBetween: 1,
+        spaceBetween: 36,
+        breakpoints: {
+            996: {
+                slidesPerView: 1,
+                spaceBetween: 50
+            },
+        }
+    });
+    </script>
+    <script>
+var mySwiper = new Swiper('.wrap-banner .swiper-container', {
+  pagination: {
+        el: '.wrap-banner .swiper-pagination',
+        clickable: true,
+      },
+  effect : 'fade',
+   autoplay: {
+    delay: 8000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+    }, 
+});
+</script>
+
+<script type="text/javascript" src="images/AdMove.js"></script>
+
+<div id='AdMove'><a href='https://www.wzut.edu.cn/Art/Art_182/Art_182_104568.html'><img src='/UploadFile/202409/20240930085252978.jpg' style='margin-bottom:10px;'></a><br/><span class='close'>&nbsp;</span></div>
+
+<script type="text/javascript" language="javascript">
+    if ($('#AdMove a')[0]) {
+        var ad = new AdMove('AdMove', 0, 0);
+        ad.Run();
+        $('#AdMove .close').click(function() {
+            $('#AdMove').remove();
+            ad.Clear();
+        })
+    } else {
+        $('#AdMove').remove();
+    }
+</script>
+<style type="text/css">
+#AdMove{
+    padding-right:19px;
+    position:relative;
+    z-index:99999;
+}
+#AdMove .close{
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background: url(images/c1.jpg) no-repeat 0 0;
+    right: 0;
+    top:0;
+    cursor:pointer;
+}
+</style>
+<!--
+<script>
+$("#mobile>.swiper-slide").css("width","calc(50% - 36px)");
+window.onresize = function(){
+ $("#mobile>.swiper-slide").css("width","calc(50% - 36px)");
+}
+</script>-->
+<script type="text/javascript" language="javascript">
+$(".ftitle a").mouseover(function(){
+    $(".ftitle a").removeClass("light");
+    $(this).addClass("light");
+    var aa=$(this).parent().index();
+    $(".flist").find("ul").css("display","none");
+    $(".flist").find("ul").eq(aa).css("display","block");
+})
+//$(".fimg").click(function(){
+//    $(".fbox").toggleClass("ftoggle");
+//})
+var d=0;
+$(".fimg").click(function(){
+    d=d+1;
+    if(d%2==0){
+      $('.fbox').animate({bottom:'-230px'},300);
+      $(".fimg img").attr("src","images/inicon03.png");        
+    }else{
+      $('.fbox').animate({bottom:'0px'},300);
+      $(".fimg img").attr("src","images/inicon003.jpg");  
+    }  
+})
+</script>
+  </body>
+</html>
+<!--Publish By JCms2010 捷点科技(www.cnvp.com.cn) 2024-10-28 08:09:04-->

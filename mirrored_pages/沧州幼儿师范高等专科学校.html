@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>沧州幼儿师范高等专科学校</title>
+    <link rel="stylesheet" href="https://statics.czptc.edu.cn/statics/libs/bootstrap100withModal.min.css">
+    <link rel="stylesheet" href="https://statics.czptc.edu.cn/statics/libs/swiper_bundle.min.css">
+    <link rel="stylesheet" href="https://statics.czptc.edu.cn/statics/css/newindex.css">
+    <script src="https://statics.czptc.edu.cn/statics/libs/jquery.min.js"></script>
+    <script src="https://statics.czptc.edu.cn/statics/libs/swiper_bundle.min.js"></script>
+
+    <style>
+        /* 轮播图 */
+        .swiper-pagination-bullet{
+            width: 14px;
+            height: 14px;
+            background-color:white;
+        }
+            
+
+        .swiper-pagination-bullet-active{
+            background: #fff;
+        }        
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <div class="header container-fluid">
+        <!-- logo -->
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-sm-1"></div>
+            <div class="col-lg-80 col-md-80 col-sm-98">
+                <div class="row">
+                    <div class="col-lg-50 col-md-50 col-sm-50 logo">
+                        <img src="https://statics.czptc.edu.cn/statics/images/logo.jpg" height="125" />
+                    </div>
+                    <div class="col-lg-50 col-md-50 col-sm-50 logo_r">
+                        <div class="search pull-right">
+                            <p>
+                                 
+                                                                    <a href="https://oa.czptc.com.cn" target="_blank">办公OA</a>&nbsp;&nbsp; 
+                                                                    <a href="https://jw.czptc.com.cn:8680" target="_blank">教务系统</a>&nbsp;&nbsp; 
+                                                                                            </p>
+                            <form action="search.php" method="post" id="searchForm">
+                                <input type="text" class="keyword" id="keyword" name="keyword" placeholder="请输入你要检索的内容！" />
+                                <a class="btn btn-default submit" href="#" role="button" id="searchSubmit">
+                                    <img src="https://statics.czptc.edu.cn/statics/images/search_icon.png" width="70%" height="70%" alt="搜索">
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-1"></div>
+        </div>
+        <!-- menu -->
+        <div class="row menu">
+            <div class="col-lg-10 col-md-10 col-sm-1"></div>
+            <div class="col-lg-80 col-md-80 col-sm-98">
+                <div class="row menu_in">
+                    <div class="col-lg-10 col-md-10 col-sm-10 item">
+                        <a href="http://www.czptc.edu.cn/">学校首页</a>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 item">
+                        <a href="http://www.czptc.edu.cn/html/gaikuang/">学校概况</a>
+                        <div class="subitem"><a href="http://www.czptc.edu.cn/html/gaikuang/2906.html">学校领导</a></div>
+                        <div class="subitem"><a href="http://www.czptc.edu.cn/html/gaikuang/1840.html">学校简介</a></div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 item">
+                        <a style="display: block;" href="javascript:void(0)">学校机构</a>
+                        <div class="hsubitemBox">
+                            <div class="hsubitem"><a href="http://xueqianjiaoyuxi.czptc.edu.cn/">学前教育系</a></div>
+                            <div class="hsubitem"><a href="http://xiaoxuejiaoyuxi.czptc.edu.cn/">小学教育系</a></div>                        
+                            <div class="hsubitem"><a href="http://jixiesheji.czptc.edu.cn/">艺术系</a></div>                        
+                            <div class="hsubitem"><a href="http://jingguanxi.czptc.edu.cn/">经济管理系</a></div>                        
+                            <div class="hsubitem"><a href="http://dangzhengban.czptc.edu.cn/">党政办公室</a></div>                        
+                            <div class="hsubitem"><a href="http://xuanchuanbu.czptc.edu.cn/" title="组织宣传统战部">组织宣传统...</a></div>                        
+                            <div class="hsubitem"><a href="http://renshichu.czptc.edu.cn/">人事处</a></div>                        
+                            <div class="hsubitem"><a href="http://jiawuchu.czptc.edu.cn/">教务处</a></div>                        
+                            <div class="hsubitem"><a href="http://keyanchu.czptc.edu.cn/">科研处</a></div>
+                            <div class="hsubitem"><a href="http://mkszyyggjxb.czptc.edu.cn/">公共教学部</a></div>
+                            <div class="hsubitem"><a href="http://zhaoshengjiuye.czptc.edu.cn/">招生就业处</a></div>
+                            <div class="hsubitem"><a href="http://xueshengchu.czptc.edu.cn/" title="学生工作处（安全工作处）">学生工作处...</a></div>
+                            <div class="hsubitem"><a href="http://houqinchu.czptc.edu.cn/">后勤处</a></div>
+                            <div class="hsubitem"><a href="http://jxfwzx.czptc.edu.cn/">实训中心</a></div>
+                            <div class="hsubitem"><a href="http://shfwzx.czptc.edu.cn/">生活服务中心</a></div>
+                            <div class="hsubitem"><a href="http://duchashi.czptc.edu.cn/" title="质量监控与考核办公室">质量监控与</a></div>
+                            <div class="hsubitem"><a href="http://caiwuchu.czptc.edu.cn/">计财处</a></div>
+                            <div class="hsubitem"><a href="http://baoweike.czptc.edu.cn/" title="马克思主义学院">马克思主义...</a></div>
+                            <div class="hsubitem"><a href="http://tuanwei.czptc.edu.cn/">团委会</a></div>
+                            <div class="hsubitem"><a href="http://jjjcs.czptc.edu.cn/">纪检监察处</a></div>
+                            <div class="hsubitem"><a href="http://gonghui.czptc.edu.cn/">工会</a></div>
+							<div class="hsubitem"><a href="http://xinxizhongxin.czptc.edu.cn/">信息中心</a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 item"><a href="http://www.czptc.edu.cn/html/jiaoxuekeyan/">教学科研</a></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 item"><a href="http://www.czptc.edu.cn/html/notice_announcement/">通知公告</a></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 item"><a href="http://www.czptc.edu.cn/html/wenmingzaixian/">办学成果</a></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 item">
+                        <a href="http://zhaoshengjiuye.czptc.edu.cn/">招生就业</a>
+                        <div class="subitem"><a href="https://btzyxy.edu-cj.com/Index/Login">成教平台</a></div>
+                        <div class="subitem"><a href="">录取查询</a></div>
+                        <div class="subitem"><a href="">高职扩招成绩查询</a></div>                        
+                        <div class="subitem"><a href="https://btzyxy.jysd.com/">就业信息网</a></div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 item"><a href="http://www.czptc.edu.cn/html/xuexiyuandi/">学习园地</a></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 item"><a href="http://www.czptc.edu.cn/html/xiaoyuanwenhua/">校园文化</a></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 item">
+                        <a href="#">专栏区</a>
+                        <div class="subitem"><a href="http://yingpingcujian.czptc.edu.cn/" title="学前教育专业第二级认证">学前教育专业...</a></div>
+                        <div class="subitem"><a href="http://xuanchuanbu.czptc.edu.cn/html/bozhihuidangke/">党建风采</a></div>
+                        <div class="subitem"><a href="http://www.czptc.edu.cn/html/bumendongtai/">学校要闻</a></div>
+                        <div class="subitem"><a href="http://xueshengchu.czptc.edu.cn/html/anquanjiaoyu/">安全工作</a></div>
+                        <div class="subitem"><a href="http://dangzhengban.czptc.edu.cn/html/chushizhineng/">工作简报</a></div>
+                        <div class="subitem"><a href="http://www.czptc.edu.cn/html/ztjy/" title="党纪学习教育">党纪学习教育</a></div>
+                        <div class="subitem"><a href="http://qunzhongluxian.czptc.edu.cn/">校庆专栏</a></div>
+			<div class="subitem"><a href="http://shuanggao.czptc.edu.cn/">双高建设</a></div>
+			<div class="subitem"><a href="http://jiaoxuezhengai.czptc.edu.cn/">教学诊改</a></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-1"></div>
+        </div>
+        <!-- banner -->
+        <div class="row banner">
+            <div class="col-lg-10 col-md-10 col-sm-1"></div>
+            <div class="col-lg-80 col-md-80 col-sm-98 swiper-container" id="bannerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img class="indexlbtImg"  src="https://statics.czptc.edu.cn/statics/images/banner1.jpg"></a></div>
+                    <div class="swiper-slide"><a href="#"><img class="indexlbtImg"  src="https://statics.czptc.edu.cn/statics/images/banner2.jpg"></a></div>
+                    <div class="swiper-slide"><a href="#"><img class="indexlbtImg"  src="https://statics.czptc.edu.cn/statics/images/banner3.jpg"></a></div>
+                    <div class="swiper-slide"><a href="#"><img class="indexlbtImg"  src="https://statics.czptc.edu.cn/statics/images/banner4.jpg"></a></div>
+                    <div class="swiper-slide"><a href="#"><img class="indexlbtImg"  src="https://statics.czptc.edu.cn/statics/images/banner5.jpg"></a></div>
+                    <div class="swiper-slide"><a href="#"><img class="indexlbtImg"  src="https://statics.czptc.edu.cn/statics/images/banner6.jpg"></a></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-1"></div>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="main container-fluid">
+        <!-- 系部动态 -->
+        <div class="col-lg-10 col-md-10 col-sm-1"></div>
+        <div class="col-lg-80 col-md-80 col-sm-98 yaowen">
+            <div class="nav">
+                <a href="http://www.czptc.edu.cn/html/bumendongtai/">
+			<img class="pull-right" src="https://statics.czptc.edu.cn/statics/images/more.jpg" height="30" alt="更多">
+		</a>
+                <span class="title">学校要闻</span>
+            </div>
+            <div class="con">
+                <ul>
+                     
+                                            <li><a href="https://renshichu.czptc.edu.cn/html/tongzhigonggao/471.html">沧州幼儿师范高等专科学校2024年公开招聘工作人员面试通知</a><span>10-17</span></li>
+                                            <li><a href="https://renshichu.czptc.edu.cn/html/tongzhigonggao/470.html">沧州幼专2024年公开招聘工作人员笔试成绩、证件审核通知</a><span>10-11</span></li>
+                                            <li><a href="http://xueqianjiaoyuxi.czptc.edu.cn/html/xueqianfengcai/615.html">学前教育系组织“青春心向党 喜迎国庆节”活动</a><span>10-05</span></li>
+                                            <li><a href="http://xueqianjiaoyuxi.czptc.edu.cn/html/xueqianfengcai/612.html">学前教育系新生军训风采抢先看</a><span>10-05</span></li>
+                                            <li><a href="http://xueqianjiaoyuxi.czptc.edu.cn/html/jiaoxuekeyan/611.html">学前教育系组织召开教学交流会议</a><span>10-05</span></li>
+                                            <li><a href="http://xiaoxuejiaoyuxi.czptc.edu.cn/html/dangtuangongzuo/587.html">小学教育系校园国防知识竞赛圆满落幕</a><span>10-05</span></li>
+                                            <li><a href="http://xiaoxuejiaoyuxi.czptc.edu.cn/html/xueshenggongzuo/580.html">反诈第一课 护航开学季</a><span>10-05</span></li>
+                                            <li><a href="http://keyanchu.czptc.edu.cn/html/tongzhigonggao/282.html">沧州幼专61项2024年沧州市职业教育研究课题立项</a><span>10-05</span></li>
+                                            <li><a href="http://keyanchu.czptc.edu.cn/html/tongzhigonggao/281.html">沧州幼专获第十二届中国大学生创新方法大赛2项三等奖</a><span>10-05</span></li>
+                                            <li><a href="http://jjjcs.czptc.edu.cn/html/chushizhineng/331.html">重要节假日警惕“四风”不放松</a><span>10-05</span></li>
+                                                        </ul>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-1"></div>
+    </div>
+    <!-- footer -->
+    <div class="footer container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-sm-1"></div>            
+            <div class="col-lg-80 col-md-80 col-sm-98">
+                <p class="p1">依法治校、民主管理、以人为本、科学发展</p>
+                <p class="p2">电话：0317-8026001  招生电话:0317-8026002 传真:0317-8026003 邮编:062150 地址:河北省泊头市解放西路光明街150号</p>
+            </div>            
+            <div class="col-lg-10 col-md-10 col-sm-1"></div>            
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    //轮播图
+    var swiper = new Swiper('#bannerSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        autoplay:true,
+        speed:500,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+
+    //下拉菜单
+    $('.menu .menu_in .item').mouseover(function(){
+        $(this).css('background-color','#954e0c')
+        $(this).find('.subitem').show();
+        $(this).find('.hsubitemBox').show();
+    }).mouseout(function(){
+        $(this).css('background-color','transparent')
+        $(this).find('.subitem').hide();
+        $(this).find('.hsubitemBox').hide();
+    })
+
+    //提交搜索
+    $('#searchSubmit').click(function(e){
+        //阻止默认事件
+        e.preventDefault();
+
+        //非空判断
+        $keyword = $('#keyword').val();
+        if($keyword.length > 0){
+            //提交表单
+            $('#searchForm').submit();
+        }else{
+            alert('搜索关键词不能为空!');
+        }
+
+    
+    })
+</script>
+<script>
+    //禁用复制
+    document.addEventListener('copy', (e) => {
+        e.preventDefault();//禁用复制
+        alert('不允许复制')
+    })
+</script>

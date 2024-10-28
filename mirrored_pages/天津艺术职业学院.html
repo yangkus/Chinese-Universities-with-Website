@@ -1,0 +1,1593 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="description" content="�������ְҵѧԺ���� �������ְҵѧԺ ���������ѧУ �й���������ѧУ ����ѧУ �����У ����ѧУ �����У www.arttj.cn">
+<meta name="keywords" content="�������ְҵѧԺ���� �������ְҵѧԺ ���������ѧУ �й���������ѧУ ����ѧУ ����ѧУ �����У �����У www.arttj.cn">
+<meta name="360-site-verification" content="14f315955a19a1ee424e9fb9e4eb3828" />
+<title>�������ְҵѧԺ</title>
+<link href="CSS/index.css" rel="stylesheet" type="text/css">
+<link href="CSS/sub.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+<!--
+/*
+���ܣ�ͼƬ�ȱ�������
+Ŀ��:ImgTag
+ͼƬ����:FitWidth
+ͼƬ�߶�:FitHeight
+*/
+var FitWidth = 141;
+var FitHeight = 132;
+function ResizePic(ImgTag)
+{
+    var image = new Image();
+ image.src = ImgTag.src;
+ if(image.width>0 && image.height>0){
+  if(image.width/image.height >= FitWidth/FitHeight){
+   if(image.width > FitWidth){
+    ImgTag.width = FitWidth;
+    ImgTag.height = (image.height*FitWidth)/image.width;
+   }
+   else{ 
+    ImgTag.width = image.width;
+    ImgTag.height = image.height;
+   }
+  }
+  else{
+   if(image.height > FitHeight){
+    ImgTag.height = FitHeight;
+    ImgTag.width = (image.width*FitHeight)/image.height;
+   }
+   else{
+    ImgTag.width = image.width; 
+    ImgTag.height = image.height;
+   }
+  }
+ }
+}
+
+var FitWidth2 = 144;
+var FitHeight2 = 151;
+function ResizePic2(ImgTag)
+{
+    var image = new Image();
+ image.src = ImgTag.src;
+ if(image.width>0 && image.height>0){
+  if(image.width/image.height >= FitWidth2/FitHeight2){
+   if(image.width > FitWidth2){
+    ImgTag.width = FitWidth2;
+    ImgTag.height = (image.height*FitWidth2)/image.width;
+   }
+   else{ 
+    ImgTag.width = image.width;
+    ImgTag.height = image.height;
+   }
+  }
+  else{
+   if(image.height > FitHeight2){
+    ImgTag.height = FitHeight2;
+    ImgTag.width = (image.width*FitHeight2)/image.height;
+   }
+   else{
+    ImgTag.width = image.width; 
+    ImgTag.height = image.height;
+   }
+  }
+ }
+}
+
+
+//-->
+
+function addEvent(obj,evtType,func,cap){
+    cap=cap||false;
+	if(obj.addEventListener){
+	    obj.addEventListener(evtType,func,cap);
+		return true;
+	}else if(obj.attachEvent){
+        if(cap){
+	        obj.setCapture();
+	        return true;
+	    }else{
+		    return obj.attachEvent("on" + evtType,func);
+		}
+	}else{
+		return false;
+    }
+}
+function getPageScroll(){
+    var xScroll,yScroll;
+	if (self.pageXOffset) {
+		xScroll = self.pageXOffset;
+	} else if (document.documentElement && document.documentElement.scrollLeft){
+		xScroll = document.documentElement.scrollLeft;
+	} else if (document.body) {
+		xScroll = document.body.scrollLeft;
+	}
+	if (self.pageYOffset) {
+		yScroll = self.pageYOffset;
+	} else if (document.documentElement && document.documentElement.scrollTop){
+		yScroll = document.documentElement.scrollTop;
+	} else if (document.body) {
+		yScroll = document.body.scrollTop;
+	}
+	arrayPageScroll = new Array(xScroll,yScroll);
+	return arrayPageScroll;
+}
+function GetPageSize(){
+    var xScroll, yScroll;
+    if (window.innerHeight && window.scrollMaxY) {	
+        xScroll = document.body.scrollWidth;
+        yScroll = window.innerHeight + window.scrollMaxY;
+    } else if (document.body.scrollHeight > document.body.offsetHeight){
+        xScroll = document.body.scrollWidth;
+        yScroll = document.body.scrollHeight;
+    } else {
+        xScroll = document.body.offsetWidth;
+        yScroll = document.body.offsetHeight;
+    }
+    var windowWidth, windowHeight;
+    if (self.innerHeight) {
+        windowWidth = self.innerWidth;
+        windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) {
+        windowWidth = document.documentElement.clientWidth;
+        windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) {
+        windowWidth = document.body.clientWidth;
+        windowHeight = document.body.clientHeight;
+    }	
+    if(yScroll < windowHeight){
+        pageHeight = windowHeight;
+    } else { 
+        pageHeight = yScroll;
+    }
+    if(xScroll < windowWidth){	
+        pageWidth = windowWidth;
+    } else {
+        pageWidth = xScroll;
+    }
+    arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight) 
+    return arrayPageSize;
+}
+
+
+var AdMoveConfig=new Object();
+AdMoveConfig.IsInitialized=false;
+AdMoveConfig.ScrollX=0;
+AdMoveConfig.ScrollY=0;
+AdMoveConfig.MoveWidth=0;
+AdMoveConfig.MoveHeight=0;
+AdMoveConfig.Resize=function(){
+    var winsize=GetPageSize();
+    AdMoveConfig.MoveWidth=winsize[2];
+    AdMoveConfig.MoveHeight=winsize[3];
+    AdMoveConfig.Scroll();
+}
+AdMoveConfig.Scroll=function(){
+    var winscroll=getPageScroll();
+    AdMoveConfig.ScrollX=winscroll[0];
+    AdMoveConfig.ScrollY=winscroll[1];
+}
+addEvent(window,"resize",AdMoveConfig.Resize);
+addEvent(window,"scroll",AdMoveConfig.Scroll);
+function AdMove(id){
+    if(!AdMoveConfig.IsInitialized){
+        AdMoveConfig.Resize();
+        AdMoveConfig.IsInitialized=true;
+    }
+    var obj=document.getElementById(id);
+    obj.style.position="absolute";
+    var W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+    var H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+    var x = W*Math.random(),y = H*Math.random();
+    var rad=(Math.random()+1)*Math.PI/6;
+    var kx=Math.sin(rad),ky=Math.cos(rad);
+    var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1);
+    var step = 1;
+    var interval;
+    this.SetLocation=function(vx,vy){x=vx;y=vy;}
+    this.SetDirection=function(vx,vy){dirx=vx;diry=vy;}
+    obj.CustomMethod=function(){
+        obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+        obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+        rad=(Math.random()+1)*Math.PI/6;
+        W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+        H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+        x = x + step*kx*dirx;
+        if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+        if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);}
+        y = y + step*ky*diry;
+        if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+        if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);}
+    }
+    this.Run=function(){
+        var delay = 10;
+        interval=setInterval(obj.CustomMethod,delay);
+        obj.onmouseover=function(){clearInterval(interval);}
+        obj.onmouseout=function(){interval=setInterval(obj.CustomMethod, delay);}
+    }
+}
+
+
+
+</script>
+<script language="javascript" type="text/javascript">
+
+			var lastScrollY = 0;
+			function heartBeat(){ 
+			var diffY;
+			if (document.documentElement && document.documentElement.scrollTop)
+			 diffY = document.documentElement.scrollTop;
+			else if (document.body)
+			 diffY = document.body.scrollTop
+			else
+				 {/*Netscape stuff*/}
+			 
+			//alert(diffY);
+			percent=.1*(diffY-lastScrollY); 
+			if(percent>0)percent=Math.ceil(percent); 
+			else percent=Math.floor(percent); 
+			//document.getElementById("leftDiv").style.top = parseInt(document.getElementById("leftDiv").style.top)+percent+"px";
+			document.getElementById("rightDiv").style.top = parseInt(document.getElementById("rightDiv").style.top)+percent+"px";
+			
+			lastScrollY=lastScrollY+percent; 
+			//alert(lastScrollY);
+			}
+
+
+  function goZGJ()
+  {
+	  window.open("/page/default.asp?pageID=78");
+  }  
+  function goSD()
+  {
+	  window.open("/page/default.asp?pageID=83");
+  }
+  function goTK()
+  {
+	  window.open("/page/default.asp?pageID=79");
+  }
+  function goXZTJ()
+  {
+	  window.open("/page/default.asp?pageID=85");
+  }
+
+  function go20()
+  {
+	  window.open("/page/default.asp?pageID=82");
+  }
+  
+  function goMail()
+  
+  {
+  
+     alert("�뷢����Ϣ��Ժ�����䣺tjyszyxy_yuanzhang@163.com");
+     //var iwidth = 550
+	//	 var ihign = 550
+       //��ô��ڵĴ�ֱλ��
+    // var iTop = (window.screen.availHeight-30-iwidth)/2;
+     //��ô��ڵ�ˮƽλ��
+    // var iLeft = (window.screen.availWidth-10-ihign)/2;
+    //window.open("/mail/index.asp"); 
+	//  window.open("/mail/index.asp","Ժ������","toolbar=no,scrollbars=yes,resizable=no,top="+iTop+",left="+iLeft+", width="+iwidth+",height="+ihign+"");
+  }  
+  
+ var djimg = document.getElementById('djimg');
+ function bigger(){
+  djimg.style.width = '250px';
+  djimg.style.height = '250px';
+ }
+ 
+ function smaller(){
+  djimg.style.width = '100px';
+  djimg.style.height = '100px';
+ }  
+  
+  
+</script>
+
+</head>
+
+<body>
+
+<style type="text/css">
+.keyword {
+	width:160px;height:16px;
+	font-size:12px;
+	color:#727272;
+	margin-right:5px;
+	padding-left:6px;
+	line-height:16px;
+	border:1px solid #cccccc;
+	background-color:#FFF;
+	
+	
+	
+	
+}
+</style>
+<script language="javascript" type="text/javascript" src="/js/date.js"></script>
+<script language="javascript" type="text/javascript" src="/js/lastdate.js"></script>
+<script type="text/javascript" src="/js/functions.js"></script>
+<link href="/CSS/common.css" rel="stylesheet" type="text/css" />
+<head>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?84047f36c0aabffed56c2b9d69ed503c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body onload="clock();return true">
+
+
+ 
+
+
+
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" valign="top"><img src="/images/top_pic.jpg" width="1000" height="200" /></td>
+  </tr>
+  <tr>
+    <td height="1" align="left" valign="top"></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="3" height="38" align="left" valign="top"><img src="/images/nav_l_pic.jpg" width="3" height="38" /></td>
+        <td align="left" valign="top" height="38" background="/images/nav_bg.jpg"><table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+				<div id="wrapper">
+				
+				<!--head start-->
+				<div id="head">
+				
+				
+				
+				<!--nav start-->
+				<div id="NavLink">
+
+<div class="NavBG">			 
+<!--Head Menu Start-->
+<ul id='sddm'>
+  <li class='CurrentLi'><a href='/'>ѧԺ��ҳ</a></li>
+ 	
+ 
+  <li><a onmouseover=mopen('m1') onmouseout='mclosetime()'>ѧԺ�ſ�</a> 
+ 				 <div id='m1' onmouseover='mcancelclosetime()' onmouseout='mclosetime()'>
+ 
+				
+							 <a href='/page/Default.asp?pageID=19#Menu=ChildMenu1' target="_blank">ѧԺ���</a>
+						
+							 <a href='/page/Default.asp?pageID=20#Menu=ChildMenu1' target="_blank">ѧԺ�쵼</a>
+						
+							 <a href='/page/Default.asp?pageID=22#Menu=ChildMenu1' target="_blank">У԰��ò</a>
+						
+					 
+				</div>
+	</li> 
+	
+ 
+  <li><a onmouseover=mopen('m2') onmouseout='mclosetime()'>������ҵ</a> 
+ 				 <div id='m2' onmouseover='mcancelclosetime()' onmouseout='mclosetime()'>
+ 
+				
+							 <a href='/page/Default.asp?pageID=59#Menu=ChildMenu2' target="_blank">������Ϣ</a>
+						
+							 <a href='/page/Default.asp?pageID=60#Menu=ChildMenu2' target="_blank">��ҵָ��</a>
+						
+					 
+				</div>
+	</li> 
+	
+ 
+  <li><a onmouseover=mopen('m3') onmouseout='mclosetime()'>��֯����</a> 
+ 				 <div id='m3' onmouseover='mcancelclosetime()' onmouseout='mclosetime()'>
+ 
+				
+							 <a href='/page/Default.asp?pageID=25#Menu=ChildMenu3' target="_blank">��������</a>
+						
+							 <a href='/page/Default.asp?pageID=49#Menu=ChildMenu3' target="_blank">��ѧϵ��</a>
+						
+							 <a href='/page/Default.asp?pageID=75#Menu=ChildMenu3' target="_blank">�׶�԰</a>
+						
+					 
+				</div>
+	</li> 
+	
+ 
+  <li><a onmouseover=mopen('m4') onmouseout='mclosetime()'>����ר��</a> 
+ 				 <div id='m4' onmouseover='mcancelclosetime()' onmouseout='mclosetime()'>
+ 
+				
+							 <a href='/page/Default.asp?pageID=29#Menu=ChildMenu4' target="_blank">��Ա�</a>
+						
+							 <a href='/page/Default.asp?pageID=30#Menu=ChildMenu4' target="_blank">����</a>
+						
+							 <a href='/page/Default.asp?pageID=31#Menu=ChildMenu4' target="_blank">��Ա�</a>
+						
+							 <a href='/page/Default.asp?pageID=32#Menu=ChildMenu4' target="_blank">ר��ͼƬ</a>
+						
+							 <a href='/page/Default.asp?pageID=55#Menu=ChildMenu4' target="_blank">Ժ����Ϣ����</a>
+						
+					 
+				</div>
+	</li> 
+	
+ 
+  <li><a onmouseover=mopen('m5') onmouseout='mclosetime()'>��������</a> 
+ 				 <div id='m5' onmouseover='mcancelclosetime()' onmouseout='mclosetime()'>
+ 
+				
+							 <a href='/page/Default.asp?pageID=33#Menu=ChildMenu5' target="_blank">������ѧ</a>
+						
+							 <a href='/page/Default.asp?pageID=34#Menu=ChildMenu5' target="_blank">ʵ��Ӧ��</a>
+						
+							 <a href='/page/Default.asp?pageID=54#Menu=ChildMenu5' target="_blank">��ѧ��Ϣ</a>
+						
+							 <a href='/page/Default.asp?pageID=69#Menu=ChildMenu5' target="_blank">רҵ����</a>
+						
+					 
+				</div>
+	</li> 
+	
+ 
+  <li><a onmouseover=mopen('m6') onmouseout='mclosetime()'>���Ź���</a> 
+ 				 <div id='m6' onmouseover='mcancelclosetime()' onmouseout='mclosetime()'>
+ 
+				
+							 <a href='/page/Default.asp?pageID=37#Menu=ChildMenu6' target="_blank">���ű���</a>
+						
+							 <a href='/page/Default.asp?pageID=38#Menu=ChildMenu6' target="_blank">֪ͨ����</a>
+						
+							 <a href='/page/Default.asp?pageID=90#Menu=ChildMenu6' target="_blank">����Ԥ����</a>
+						
+					 
+				</div>
+	</li> 
+	
+ 
+  <li><a onmouseover=mopen('m7') onmouseout='mclosetime()'>��ѧϵ��</a> 
+ 				 <div id='m7' onmouseover='mcancelclosetime()' onmouseout='mclosetime()'>
+ 
+				
+							 <a href='/page/Default.asp?pageID=68#Menu=ChildMenu7' target="_blank">Ϸ��ϵ</a>
+						
+							 <a href='/page/Default.asp?pageID=40#Menu=ChildMenu7' target="_blank">����ϵ</a>
+						
+							 <a href='/page/Default.asp?pageID=41#Menu=ChildMenu7' target="_blank">����ϵ</a>
+						
+							 <a href='/page/Default.asp?pageID=42#Menu=ChildMenu7' target="_blank">�赸ϵ</a>
+						
+							 <a href='/page/Default.asp?pageID=66#Menu=ChildMenu7' target="_blank">��������ϵ</a>
+						
+							 <a href='/page/Default.asp?pageID=71#Menu=ChildMenu7' target="_blank">ѧǰ��������ϵ</a>
+						
+							 <a href='/page/Default.asp?pageID=86#Menu=ChildMenu7' target="_blank">�Ļ�����ϵ</a>
+						
+							 <a href='/page/Default.asp?pageID=87#Menu=ChildMenu7' target="_blank">˼�����ν�ѧ��</a>
+						
+					 
+				</div>
+	</li> 
+	
+ 
+  <li><a onmouseover=mopen('m8') onmouseout='mclosetime()'>У԰����</a> 
+ 				 <div id='m8' onmouseover='mcancelclosetime()' onmouseout='mclosetime()'>
+ 
+				
+							 <a href='/page/Default.asp?pageID=46#Menu=ChildMenu8' target="_blank">ѧԺ�</a>
+						
+							 <a href='/page/Default.asp?pageID=47#Menu=ChildMenu8' target="_blank">���Ż</a>
+						
+					 
+				</div>
+	</li> 
+
+</ul>
+<!--Head Menu End-->
+</div>
+</div>
+
+</div>
+</div>
+          </tr>
+        </table></td>
+        <td width="3" height="38" align="right" valign="top"><img src="/images/nav_r_pic.jpg" width="3" height="38" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="33" align="left" valign="middle" bgcolor="#e2e2e2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="18%" align="center" valign="middle"><script>showDate();</script></td>
+        <td width="54%" align="left" valign="middle"></td>
+        <td width="28%" align="left" valign="middle"><table align="right" border="0" cellspacing="0" cellpadding="0">
+          <form name="" action="/page/default.asp" method="post">
+            <tr>
+              <td width="45" height="28" align="right" valign="middle">&nbsp;</td>
+              <td align="left" valign="middle"><input type="text" value="������ؼ���..." name="keyword" class="keyword" onfocus="this.value=''" onblur="if(this.value=='')this.value='������ؼ���...';" /></td>
+              <td width="62" align="left" valign="middle"><input type="image" name="sousuo" src="/images/sousuo.jpg" onfocus="this.blur()"/></td>
+            </tr>
+          </form>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr></tr>
+
+</table>
+
+</body>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td height="256"   align="left" valign="middle" background="images/12da.jpg" class="title_font"  style=""; ></td><td height="10"></td>
+                  </tr>
+  <tr>
+    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="220" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;">
+              <tr>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="80" align="left" valign="middle" background="images/20da.jpg" class="title_font"  style="cursor:pointer"; onmouseover="bigger()" onClick="go20();" onmouseout="smaller()" ></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+
+                <td height="115" align="center" valign="top"><table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td colspan="2" height="5"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="https://article.xuexi.cn/articles/index.html?art_id=16940302185706059760&item_id=1694030218570605976" title="����ڵ�����" target="_blank" class="newlnk">����ڵ�����
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">09/28</td-->
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="https://article.xuexi.cn/articles/index.html?art_id=16612311648680364083&item_id=1661231164868036408" title="ϰ��ƽ���㽭����ʱǿ��ʼ�ո���ʵ������ǰ��������ͷ������д�й�ʽ�ִ����㽭��ƪ�·���;����ɽ����ׯ����" target="_blank" class="newlnk">ϰ��ƽ���㽭����ʱǿ...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">09/25</td-->
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="https://article.xuexi.cn/articles/index.html?art_id=10133002234765065984&item_id=1013300223476506598" title="ϰ��ƽ�����ٿ���ʱ���ƶ�����ȫ��������̸��ǿ�� ���ΰ��ն�������Ҫʹ��������д����ȫ��������ƪ��" target="_blank" class="newlnk">ϰ��ƽ�����ٿ���ʱ��...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">09/09</td-->
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="https://article.xuexi.cn/articles/index.html?art_id=1663763549277704360&item_id=1663763549277704360&" title="ϰ��ƽ���й�ʽ�ִ�����ǿ�����衢���帴�˵Ŀ�ׯ���" target="_blank" class="newlnk">ϰ��ƽ���й�ʽ�ִ���...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">08/15</td-->
+                  </tr>
+                  
+              </tr>				  
+				  
+                </table></td>
+
+              </tr>
+            </table></td>
+          </tr>
+
+          <tr>
+            <td height="8" align="left" valign="top"></td>
+          </tr>  
+
+
+		  
+		  
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;" >
+              <tr>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="80" align="left" valign="middle" background="images/xztj.jpg" class="title_font"  style="cursor:pointer"; onmouseover="bigger()" onmouseout="smaller()" onClick="goXZTJ();"></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="1" align="left" valign="top" bgcolor="#d7d7d7"></td>
+              </tr>
+				  
+              <tr>
+                <td height="130" align="center" valign="top"><table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td colspan="2" height="5"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="https://www.arttj.cn/page/default.asp?ID=6872405&PageID=37#Menu=ChildMenu6" title="�������ְҵѧԺ���ǻ�ɽ�������Ŀ�չ��̸����" target="_blank" class="newlnk">�������ְҵѧԺ���ǻ�...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">09/08</td-->
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="https://www.arttj.cn/page/default.asp?ID=6872404&PageID=37#Menu=ChildMenu6" title="����Ժ�����Ӹ���������ˮ����չ��̸����" target="_blank" class="newlnk">����Ժ�����Ӹ���������...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">09/08</td-->
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="https://www.arttj.cn/page/default.asp?ID=5913538&PageID=37#Menu=ChildMenu6" title="�������ְҵѧԺ�ٿ�2024���＾ѧ�ڿ�ѧ��������" target="_blank" class="newlnk">�������ְҵѧԺ�ٿ�2...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">08/30</td-->
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="https://www.arttj.cn/page/default.asp?ID=5913537&PageID=37#Menu=ChildMenu6" title="�������ְҵѧԺ�ٿ�ѧϰ�����᳹���Ķ�ʮ������ȫ�ᾫ�����������" target="_blank" class="newlnk">�������ְҵѧԺ�ٿ�ѧ...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">08/30</td-->
+
+                  </tr>
+                  
+              </tr>				  
+				  
+                </table></td>
+              </tr>
+				  
+            </table></td>
+          </tr>
+			
+          <tr>
+            <td height="8" align="left" valign="top"></td>
+          </tr>  
+		  
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;" >
+              <tr>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="80" align="left" valign="middle" background="images/wlzgj.jpg" class="title_font"  style="cursor:pointer"; onmouseover="bigger()" onmouseout="smaller()" onClick="goZGJ();"></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="1" align="left" valign="top" bgcolor="#d7d7d7"></td>
+              </tr>
+				  
+              <tr>
+                <td height="130" align="center" valign="top"><table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td colspan="2" height="5"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="/page/default.asp?pageID=78&ID=8304057#Menu=ChildMenu4" title="�����й��ڡ�����ح�ѽ����������žų����" target="_blank" class="newlnk">�����й��ڡ�����ح��...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">10/11</td-->
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="/page/default.asp?pageID=78&ID=8232040#Menu=ChildMenu4" title="�������й��ڡ����������ļҹ��黳" target="_blank" class="newlnk">�������й��ڡ����...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">09/14</td-->
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="/page/default.asp?pageID=78&ID=5913533#Menu=ChildMenu4" title="��Ϧʮ��ͳϰ�ף���֪��������" target="_blank" class="newlnk">��Ϧʮ��ͳϰ�ף���...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">08/08</td-->
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="/page/default.asp?pageID=78&ID=1772759#Menu=ChildMenu4" title="����ѽ� ����ϰ��ƽ�����Ļ��黳" target="_blank" class="newlnk">����ѽ� ����ϰ��ƽ...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">06/06</td-->
+
+                  </tr>
+                  
+              </tr>				  
+				  
+                </table></td>
+              </tr>
+				  
+            </table></td>
+          </tr>		  
+
+
+
+          <tr>
+            <td height="4" align="left" valign="top"></td>
+          </tr>
+          <tr>
+           <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;" >
+              <tr>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0">
+                    <td height="73" align="left" width="220" valign="middle" background="images/newshide.jpg"  onclick="return goSD();" style="cursor:pointer"></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+                <td height="110" align="center" valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="border:1px solid #d7d7d7;">
+                  <tr>
+                    <td colspan="2" height="5"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="http://cpc.people.com.cn/n1/2020/0914/c64387-31859907.html" title="ϰ��ƽ����������ҫ���й�����" target="_blank" class="newlnk">ϰ��ƽ����������ҫ���й���...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">10/10</td-->
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="http://cpc.people.com.cn/n1/2020/1025/c64094-31904957.html" title="ϰ��ƽ���й�Ϸ��ѧԺʦ���Ļ���" target="_blank" class="newlnk">ϰ��ƽ���й�Ϸ��ѧԺʦ����...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">10/10</td-->
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="http://cpc.people.com.cn/n1/2020/0708/c164113-31776033.html" title="2020�꣬ϰ��ƽ����Уѧ����������" target="_blank" class="newlnk">2020�꣬ϰ��ƽ����Уѧ...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">10/10</td-->
+                  </tr>
+                  
+              </tr>				  
+				  
+                </table></td>
+</tr>
+
+
+        </table></td>
+        <td width="8" align="left" valign="top"></td>
+        <td width="610" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="2" height="33" align="left" valign="top"><img src="images/title_l_pic.jpg" width="2" height="33" /></td>
+                <td align="left" valign="middle" background="images/title_bg.jpg" width="536"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="21%" height="33" align="center" valign="middle" background="images/title_bg2.jpg" class="title_font2">��<a href="/page/default.asp?pageID=37#Menu=ChildMenu6" target="_blank" >��&#160;��</a></td>
+                    <td width="70%" align="left" valign="middle"><img src="images/title_r_pic2.jpg" width="2" height="33" /></td>
+                    <td width="9%" align="left" valign="middle"><a href="/page/default.asp?pageID=37#Menu=ChildMenu6"  target="_blank" class="morelnk" style="color:#a90305;">����>></a></td>
+                  </tr>
+                </table></td>
+                <td width="2" height="33" align="right" valign="top"><img src="images/title_r_pic.jpg" width="2" height="33" /></td>
+              </tr>
+              <tr>
+                <td colspan="3" align="center" valign="top" style="border:1px solid #cfcfcf;border-top:none;" height="300"><table width="93%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td colspan="3" height="10"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=37&ID=8322338#Menu=ChildMenu6" title="�����׼��" target="_blank" class="newlnk">�����׼��
+                    </a></td>
+                    <td width="18%" align="right" valign="middle">2024/10/15</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=37&ID=8286711#Menu=ChildMenu6" title="�������ְҵѧԺ��֯��������Ӧ����ɢ����" target="_blank" class="newlnk">�������ְҵѧԺ��֯��������Ӧ����ɢ����
+                    </a></td>
+                    <td width="18%" align="right" valign="middle">2024/9/29</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=37&ID=8276396#Menu=ChildMenu6" title="�������ְҵѧԺ��չ��ȫ������ѵ��" target="_blank" class="newlnk">�������ְҵѧԺ��չ��ȫ������ѵ��
+                    </a></td>
+                    <td width="18%" align="right" valign="middle">2024/9/24</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="http://epaper.tianjinwe.com/tjrb/html/2024-09/13/content_143090_1285159.htm" title="ɽ������������ ���߽�̨��ʦ�ꡪ����ȫ�������ʦ������м�������һСѧ���߼���ʦ ������" target="_blank" class="newlnk">ɽ������������ ���߽�̨��ʦ�ꡪ����ȫ�������ʦ������м���...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle">2024/9/13</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="http://epaper.tianjinwe.com/tjrb/html/2024-09/13/content_143090_1285158.htm" title="�����ػ������� ��������ϸ��������������е�ʮ��������ʽ����Ԯ�ء���Ա������к���������ѧУ�߼���ʦ �� ϼ" target="_blank" class="newlnk">�����ػ������� ��������ϸ��������������е�ʮ��������ʽ����...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle">2024/9/13</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="http://epaper.tianjinwe.com/tjrb/html/2024-09/13/content_143090_1285157.htm" title="�԰����� ���м�ŵ������ȫ��ģ����ʦ��������Ͽ�������Сѧ�߼���ʦ ����" target="_blank" class="newlnk">�԰����� ���м�ŵ������ȫ��ģ����ʦ��������Ͽ�������Сѧ��...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle">2024/9/13</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="http://epaper.tianjinwe.com/tjrb/html/2024-09/13/content_143090_1285156.htm" title="��־����ǿ��Ը ʦ�Խ�����δ��������ȫ������ϵͳ�Ƚ������ߡ�����к�ƽ��������Сѧ���߼���ʦ �ž���" target="_blank" class="newlnk">��־����ǿ��Ը ʦ�Խ�����δ��������ȫ������ϵͳ�Ƚ������ߡ�...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle">2024/9/13</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="http://epaper.tianjinwe.com/tjrb/html/2024-09/12/content_143096_1280838.htm" title="�������� ����δ��������ȫ��ģ����ʦ������л��繤�ռ�ʦѧԺ��ʦ ������" target="_blank" class="newlnk">�������� ����δ��������ȫ��ģ����ʦ������л��繤�ռ�ʦѧԺ...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle">2024/9/12</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                </table></td>
+                </tr>
+            </table></td>
+          </tr>
+
+          <tr>
+
+          </tr>
+          <tr>
+            <td height="10" align="left" valign="top"></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="2" height="33" align="left" valign="top"><img src="images/title_l_pic.jpg" width="2" height="33" /></td>
+                <td align="left" valign="middle" background="images/title_bg.jpg" width="536"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="21%" height="33" align="center" valign="middle" background="images/title_bg2.jpg" class="title_font2">��<a href="/page/default.asp?pageID=38#Menu=ChildMenu6" target="_blank" >��&#160;��</a></td>
+                    <td width="70%" align="left" valign="middle"><img src="images/title_r_pic2.jpg" width="2" height="33" /></td>
+                    <td width="9%" align="left" valign="middle"><a href="/page/default.asp?pageID=38#Menu=ChildMenu6"  target="_blank" class="morelnk" style="color:#a90305;">����>></a></td>
+                  </tr>
+                </table></td>
+                <td width="2" height="33" align="right" valign="top"><img src="images/title_r_pic.jpg" width="2" height="33" /></td>
+              </tr>
+              <tr>
+                <td colspan="3" align="center" valign="top" style="border:1px solid #cfcfcf;border-top:none;" height="447"><table width="93%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td colspan="3" height="20"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=8322337#Menu=ChildMenu6" title="�������ְҵѧԺ2024�ꡰ�ƽ����� �˲�ǿ�С��Ͽ�У��ʵѵ�糡�ƹ��·����ά����Ŀ�ɹ�����" target="_blank" class="newlnk">�������ְҵѧԺ2024�ꡰ�ƽ����� �˲�ǿ�С��Ͽ�У��ʵѵ...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/10/15</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=8280624#Menu=ChildMenu6" title="2024���������ְҵѧԺ��ʦ��ϵ��רҵ����ְ�ơ��������󡱹���ʵʩ����" target="_blank" class="newlnk">2024���������ְҵѧԺ��ʦ��ϵ��רҵ����ְ�ơ���������...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/9/26</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=8280623#Menu=ChildMenu6" title="2024�����������ϵ��ְ�����󷽰�" target="_blank" class="newlnk">2024�����������ϵ��ְ�����󷽰�
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/9/26</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=5913532#Menu=ChildMenu6" title="�������ְҵѧԺ�Ͽ�У����Ů�����ᡢ��ѧ¥���ۺ�¥��������ά��ʩ����Ŀ����" target="_blank" class="newlnk">�������ְҵѧԺ�Ͽ�У����Ů�����ᡢ��ѧ¥���ۺ�¥��������ά...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/8/5</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=5909046#Menu=ChildMenu6" title="2024��У԰���������¸�����Ŀѯ��֪ͨ��" target="_blank" class="newlnk">2024��У԰���������¸�����Ŀѯ��֪ͨ��
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/7/29</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=1779138#Menu=ChildMenu6" title="������Ļ������ξ�2024��ֱ����ҵ��λ������Ƹ�߲�κͽ�ȱ�˲ŷ������ڶ�����" target="_blank" class="newlnk">������Ļ������ξ�2024��ֱ����ҵ��λ������Ƹ�߲�κͽ�ȱ...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/6/13</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=1669442#Menu=ChildMenu6" title="������Ļ������ξ�2024��ֱ����ҵ��λ������Ƹ�߲�κͽ�ȱ�˲żƻ���" target="_blank" class="newlnk">������Ļ������ξ�2024��ֱ����ҵ��λ������Ƹ�߲�κͽ�ȱ...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/5/6</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=1669441#Menu=ChildMenu6" title="������Ļ������ξ�2024��ֱ����ҵ��λ������Ƹ�߲�κͽ�ȱ�˲ŷ���" target="_blank" class="newlnk">������Ļ������ξ�2024��ֱ����ҵ��λ������Ƹ�߲�κͽ�ȱ...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/5/6</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=1669440#Menu=ChildMenu6" title="������Ļ������ξ�2024�깫����Ƹ��ҵ��λ������Ա�ƻ���" target="_blank" class="newlnk">������Ļ������ξ�2024�깫����Ƹ��ҵ��λ������Ա�ƻ���
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/5/6</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=1669439#Menu=ChildMenu6" title="������Ļ������ξ�2024��ֱ����ҵ��λ������Ƹ������Ա����" target="_blank" class="newlnk">������Ļ������ξ�2024��ֱ����ҵ��λ������Ƹ������Ա����
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/5/6</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=1658201#Menu=ChildMenu6" title="�������ְҵѧԺ��ְԱ�������Ŀ   (��Ŀ���:2024-XJ-003)��ֹ����" target="_blank" class="newlnk">�������ְҵѧԺ��ְԱ�������Ŀ   (��Ŀ���:2024-...
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/4/29</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="2%" height="32" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                    <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=38&ID=1654870#Menu=ChildMenu6" title="�������ְҵѧԺ��ְԱ�������Ŀѯ��֪ͨ��-��Ӧ�ļ�2" target="_blank" class="newlnk">�������ְҵѧԺ��ְԱ�������Ŀѯ��֪ͨ��-��Ӧ�ļ�2
+                    </a></td>
+                    <td width="18%" align="right" valign="middle" class="datestyle">2024/4/25</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+                  
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="8" align="left" valign="top"></td>
+        <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;">
+              <tr>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/title_bg3.jpg">
+                      <tr>
+                        <td height="27" align="left" valign="middle" class="title_font">��<a href="/page/default.asp?pageID=55#Menu=ChildMenu4"  target="_blank" >Ժ����Ϣ����</a></td>
+                        <td align="right" valign="middle"><a href="/page/default.asp?pageID=55#Menu=ChildMenu4"  target="_blank" class="morelnk" style="color:#a90305;">����>></a>&#160;</td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="1" align="left" valign="top" bgcolor="#d7d7d7"></td>
+              </tr>
+              <tr>
+                <td height="110" align="center" valign="top"><table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td colspan="2" height="5"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="30" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="/page/default.asp?pageID=55&ID=8361975#Menu=ChildMenu4" title="2023���ҵ����ҵ��������" target="_blank" class="newlnk">2023���ҵ����ҵ...
+                    </a></td>
+					<td width="10%" align="right" valign="middle">10/24</td>
+                  </tr>
+                  <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+                  
+                  <tr>
+                    <td width="7%" height="30" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="/uploadfile/file/2024cwgk/2024091409291276.Doc" title="1.�������ְҵѧԺ2023��Ȳ��ž���" target="_blank" class="newlnk">1.�������ְҵѧԺ...
+                    </a></td>
+					<td width="10%" align="right" valign="middle">09/14</td>
+                  </tr>
+                  <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+                  
+                  <tr>
+                    <td width="7%" height="30" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="/uploadfile/file/2024cwgk/2024091409271697.xls" title="2.�������ְҵѧԺ2023�������֧�������ܱ�" target="_blank" class="newlnk">2.�������ְҵѧԺ...
+                    </a></td>
+					<td width="10%" align="right" valign="middle">09/14</td>
+                  </tr>
+                  <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+                  
+                  <tr>
+                    <td width="7%" height="30" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="/uploadfile/file/2024cwgk/2024091409262923.xls" title="3.�������ְҵѧԺ2023�����������(�����ܷ�����ʾ)" target="_blank" class="newlnk">3.�������ְҵѧԺ...
+                    </a></td>
+					<td width="10%" align="right" valign="middle">09/14</td>
+                  </tr>
+                  <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+                  
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="8" align="left" valign="top"></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;">
+              <tr>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/title_bg3.jpg">
+                    <tr>
+                    <td width="74%" height="27" align="left" valign="middle" class="title_font">��<a href="/page/default.asp?pageID=59#Menu=ChildMenu2" target="_blank" >������ҵ��Ϣ</a></td>
+                    <td width="26%" align="right" valign="middle"><a href="/page/default.asp?pageID=59#Menu=ChildMenu2"  target="_blank" class="morelnk" style="color:#a90305;">����>></a>&#160;</td>
+                    </tr>
+                </table></td>
+              </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="1" align="left" valign="top" bgcolor="#d7d7d7"></td>
+              </tr>
+
+
+
+              <tr>
+                <td height="110" align="center" valign="top"><table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td colspan="2" height="5"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="/page/default.asp?pageID=59&ID=1846006#Menu=ChildMenu4" title="�������ְҵѧԺ2024��������ѧ��֪" target="_blank" class="newlnk">�������ְҵѧԺ202...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">07/03</td>
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="/page/default.asp?pageID=59&ID=1846005#Menu=ChildMenu4" title="�й���������ѧУ2024��������ѧ��֪" target="_blank" class="newlnk">�й���������ѧУ202...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">07/03</td>
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="83%" align="left" valign="middle"><a href="/page/default.asp?pageID=59&ID=1825205#Menu=ChildMenu4" title="�������ְҵѧԺ2024���ʡ��רҵ�����ƻ���" target="_blank" class="newlnk">�������ְҵѧԺ202...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">06/26</td>
+
+                  </tr>
+                  
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+
+          <tr>
+            <td height="8" align="left" valign="top"></td>
+          </tr>
+          <tr>
+            <td align="center" valign="top"><a href='/page/default.asp?pageID=13'  target='_blank'><img src=/uploadfile/image/shipin.jpg width='220' height='73' title='��ѧ����ҵһվʽ' border='0'/></a><!--<img src="images/shipin.jpg" width="220" height="73" />--></td>
+          </tr>
+          <tr>
+            <td height="8" align="left" valign="top"></td>
+          </tr>
+
+          <tr>
+            <td align="center" valign="top"><a href='' onclick='goMail();'><img src=/uploadfile/image/xinxiang.jpg width='220' height='73' title='Ժ������' border='0' /></a><!--<img src="images/xinxiang.jpg" width="220" height="73" />--></td>
+          </tr>
+          <tr>
+            <td height="8" align="left" valign="top"></td>
+          </tr>
+          <tr>
+            <td align="center" valign="top"><a href=''  target='_self'><img src='images/newjijianjb.jpg' width='220' height='73' title='�ͼ����ŷþٱ�' border='0'/></a></td>
+          </tr>
+          <tr>
+            <td height="8" align="left" valign="top"></td>
+          </tr>
+          <tr>
+            <td align="center" valign="top"><a href=''  target='_self'><img src='images/jijianxx.jpg' width='220' height='73'  border='0'/></a></td>
+          </tr>
+
+          <tr>
+            <td height="10" align="left" valign="top"></td>
+          </tr>
+		  
+
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;" >
+              <tr>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="80" align="left" valign="middle" background="images/tiankai.jpg" class="title_font"  style="cursor:pointer"; onmouseover="bigger()" onmouseout="smaller()" onClick="goTK();"></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="1" align="left" valign="top" bgcolor="#d7d7d7"></td>
+              </tr>
+				  
+              <tr>
+                <td height="100" align="center" valign="top"><table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td colspan="2" height="5"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="/page/default.asp?pageID=79&ID=1400315#Menu=ChildMenu4" title="ר�� | 151����Ŀ��ȼ�쿪԰���´�ҵ���桪������������д�ѧ�����´�ҵ�˲���ɹ�չǢ�������� | �쿪�߽̿ƴ�԰" target="_blank" class="newlnk">ר�� | 151����Ŀ��ȼ...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">06/12</td-->
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="/page/default.asp?pageID=79&ID=1400314#Menu=ChildMenu4" title="ר�� | ���쿪�������۽���ȫ����ѧ�����ܿƼ����´�ҵ��ս����ʽ���� | �쿪�߽̿ƴ�԰" target="_blank" class="newlnk">ר�� | ���쿪�������۽�...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">06/12</td-->
+
+                  </tr>
+                  
+                  <tr>
+                    <td width="7%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="93%" align="left" valign="middle"><a href="/page/default.asp?pageID=79&ID=1386118#Menu=ChildMenu4" title="������Ŀ����12��ҵ̬ ������Ӫ�Ƽ���ʮ�� �쿪԰��ҵ���׷����֡�������" target="_blank" class="newlnk">������Ŀ����12��ҵ̬ ��...
+                    </a></td>
+						        <!--td width="10%" align="right" valign="middle">06/07</td-->
+
+                  </tr>
+                  
+              </tr>				  
+				  
+                </table></td>
+              </tr>
+				  
+            </table></td>
+          </tr>
+
+
+          <!--tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;">
+              <tr>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0" background="images/title_bg3.jpg">
+                  <tr>
+                    <td width="74%" height="27" align="left" valign="middle"  class="title_font">��<a href="/page/default.asp?pageID=46#Menu=ChildMenu8" target="_blank" >ѧԺ�</a></td>
+						        <td width="26%" align="right" valign="middle"><a href="/page/default.asp?pageID=46#Menu=ChildMenu8"  target="_blank" class="morelnk" style="color:#a90305;">����>></a>&#160;</td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="1" align="left" valign="top" bgcolor="#d7d7d7"></td>
+              </tr>
+              <tr>
+                <td height="80" align="center" valign="top"><table width="91%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td colspan="2" height="5"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="6%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="84%" align="left" valign="middle"><a href="/page/default.asp?pageID=46&ID=297756#Menu=ChildMenu8" title="��̤Ѱ�ȱ��㼣�����ﰮ������          ������������ϵ�������ջ" target="_blank" class="newlnk">��̤Ѱ�ȱ��㼣������...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">05/20</td>
+
+                  </tr>
+
+                  
+                  <tr>
+                    <td width="6%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="84%" align="left" valign="middle"><a href="/page/default.asp?pageID=46&ID=297384#Menu=ChildMenu8" title="�������ഺ�� ʱ���µ������������ְҵѧԺ2021�����ı��ô��" target="_blank" class="newlnk">�������ഺ�� ʱ����...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">04/30</td>
+
+                  </tr>
+
+                  
+                  <tr>
+                    <td width="6%" height="29" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                    <td width="84%" align="left" valign="middle"><a href="/page/default.asp?pageID=46&ID=297382#Menu=ChildMenu8" title="��ѧ��ʷ ǿ���� �����ߡ��Ӷ��������������߽�����ְҵѧԺ�" target="_blank" class="newlnk">��ѧ��ʷ ǿ���� ��...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">04/27</td>
+
+                  </tr>
+
+                  
+                </table></td>
+              </tr>
+            </table></td>
+          </tr-->		  
+		  
+		  
+		  
+		  
+        </table></td>
+
+	
+		
+		</tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="8" align="left" valign="top"></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="220" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;">
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0" background="images/title_bg3.jpg">
+              <tr>
+                <td width="74%" height="27" align="left" valign="middle" class="title_font">��<a href="/page/default.asp?pageID=15" target="_blank" >��������</a></td>
+								<td width="26%" align="right" valign="middle" ><a href="/page/default.asp?pageID=15" target="_blank" class="morelnk" style="color:#a90305;">����>></a>&#160;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="1" align="left" valign="top" bgcolor="#d7d7d7"></td>
+          </tr>
+          <tr>
+            <td height="208" align="center" valign="top"><table width="78%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td colspan="2" height="12"></td>
+              </tr>
+              
+              <tr height="9">
+                <td width="6%" height="37" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                <td width="94%" align="left" valign="middle"><a href="" title="�й�Ϸ��ѧԺ" target="_blank" class="newlnk">
+                  �й�Ϸ��ѧԺ
+                </a></td>
+              </tr>
+              <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+              
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="8" align="left" valign="top"></td>
+        <td width="540" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="2" height="33" align="left" valign="top"><img src="images/title_l_pic.jpg" width="2" height="33" /></td>
+            <td align="left" valign="middle" background="images/title_bg.jpg" width="536"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="21%" height="33" align="center" valign="middle" background="images/title_bg2.jpg" class="title_font2">��<a href="/page/default.asp?pageID=54#Menu=ChildMenu5" target="_blank" >��ѧ��Ϣ</a></td>
+                <td width="70%" align="left" valign="middle"><img src="images/title_r_pic2.jpg" width="2" height="33" /></td>
+                <td width="9%" align="left" valign="middle"><a href="/page/default.asp?pageID=54#Menu=ChildMenu5"  target="_blank" class="morelnk" style="color:#a90305;">����>></a></td>
+              </tr>
+            </table></td>
+            <td width="2" height="33" align="right" valign="top"><img src="images/title_r_pic.jpg" width="2" height="33" /></td>
+          </tr>
+          <tr>
+            <td colspan="3" align="center" valign="top" style="border:1px solid #cfcfcf;border-top:none;" height="205"><table width="93%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td colspan="3" height="8"></td>
+              </tr>
+              
+              <tr>
+                <td width="2%" height="30" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=54&ID=1630105#Menu=ChildMenu5" title="��Ժ��ʦ��2023������д���Сѧ������˼���� ΢�δ����������ٻ���Ƚ�" target="_blank" class="newlnk">��Ժ��ʦ��2023������д���Сѧ������˼���� ΢�δ�������...
+                </a></td>
+                <td width="18%" align="right" valign="middle">2023/12/18</td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+              </tr>
+              
+              <tr>
+                <td width="2%" height="30" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=54&ID=1630104#Menu=ChildMenu5" title="��ԺϷ��ϵ��ʦ�ܺ��ٻ񽱽̽������μӽ��̽�䷢��ʽ�ͽ�ѧ����չʾ�" target="_blank" class="newlnk">��ԺϷ��ϵ��ʦ�ܺ��ٻ񽱽̽������μӽ��̽�䷢��ʽ�ͽ�ѧ��...
+                </a></td>
+                <td width="18%" align="right" valign="middle">2023/11/21</td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+              </tr>
+              
+              <tr>
+                <td width="2%" height="30" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=54&ID=1630106#Menu=ChildMenu5" title="ϲ��" target="_blank" class="newlnk">ϲ��
+                </a></td>
+                <td width="18%" align="right" valign="middle">2023/9/20</td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+              </tr>
+              
+              <tr>
+                <td width="2%" height="30" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=54&ID=188953#Menu=ChildMenu5" title="ϲ   �� ϲ   ��  2019��12�£���Ժ��ʦ�����μ���2019��������е�ְҵѧУ���ܴ�������ʦ�飩����ʦ���������ӹ������ࡢ��ͨ�����ࡢ�ƾ���ó�ࡢ˼���ε�3��רҵ���1�Ź����γ�7��" target="_blank" class="newlnk">ϲ   �� ϲ   ��  2019��12�£���Ժ��ʦ������...
+                </a></td>
+                <td width="18%" align="right" valign="middle">2020/5/28</td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+              </tr>
+              
+              <tr>
+                <td width="2%" height="30" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=54&ID=183468#Menu=ChildMenu5" title="2020�������ڷż�֪ͨ" target="_blank" class="newlnk">2020�������ڷż�֪ͨ
+                </a></td>
+                <td width="18%" align="right" valign="middle">2020/3/27</td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+              </tr>
+              
+              <tr>
+                <td width="2%" height="30" align="right" valign="middle"><img src="images/dian.jpg" style="margin-right:8px;margin-bottom:3px;" /></td>
+                <td width="80%" align="left" valign="middle"><a href="/page/default.asp?pageID=54&ID=163171#Menu=ChildMenu5" title="��   ��" target="_blank" class="newlnk">��   ��
+                </a></td>
+                <td width="18%" align="right" valign="middle">2019/12/18</td>
+              </tr>
+              <tr>
+                <td colspan="3" height="1" background="images/xuxian.jpg"></td>
+              </tr>
+              
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="8" align="left" valign="top"></td>
+        <td width="220" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #d7d7d7;">
+          <tr>
+            <td align="left" valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="0"  background="images/title_bg3.jpg" >
+              <tr>
+                <td height="27" width="74%" align="left" valign="middle" class="title_font">��<a href="/page/default.asp?pageID=31" target="_blank">��Ա�</a></td>
+					      <td width="26%" align="right" valign="middle"><a href="/page/default.asp?pageID=31"  target="_blank" class="morelnk" style="color:#a90305;">����>></a>&#160;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="1" align="left" valign="top" bgcolor="#d7d7d7"></td>
+          </tr>
+          <tr>
+            <td height="206" align="center" valign="top"><table width="91%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td colspan="2" height="12"></td>
+              </tr>
+              
+              <tr>
+                <td width="6%" height="28" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                <td width="84%" align="left" valign="middle">
+					         
+												   <a href="/page/default.asp?pageID=31&ID=297299#Menu=ChildMenu4" title="�������ְҵѧԺ��������֯˼����ʦ����Ա�ɲ�ѧϰʮ�Ž�����ȫ�ᾫ��" target="_blank" class="newlnk">
+									 �������ְҵѧԺ����...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">12/03</td>
+              </tr>
+              <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+              
+              <tr>
+                <td width="6%" height="28" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                <td width="84%" align="left" valign="middle">
+					         
+												   <a href="/page/default.asp?pageID=31&ID=297298#Menu=ChildMenu4" title="���ι�����֧����չѧϰʮ�Ž�����ȫ�ᾫ����������" target="_blank" class="newlnk">
+									 ���ι�����֧����չѧ...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">12/02</td>
+              </tr>
+              <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+              
+              <tr>
+                <td width="6%" height="28" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                <td width="84%" align="left" valign="middle">
+					         
+												   <a href="/page/default.asp?pageID=31&ID=297297#Menu=ChildMenu4" title="Ϸ��ϵ��֧���ٿ�ѧϰʮ�Ž�����ȫ�ᾫ���������ջ" target="_blank" class="newlnk">
+									 Ϸ��ϵ��֧���ٿ�ѧϰ...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">12/02</td>
+              </tr>
+              <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+              
+              <tr>
+                <td width="6%" height="28" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                <td width="84%" align="left" valign="middle">
+					         
+												   <a href="/page/default.asp?pageID=31&ID=297296#Menu=ChildMenu4" title="�赸ϵ����֧ѧϰ����ʮ�Ž�����ȫ�ᾫ���������ջ" target="_blank" class="newlnk">
+									 �赸ϵ����֧ѧϰ����...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">12/02</td>
+              </tr>
+              <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+              
+              <tr>
+                <td width="6%" height="28" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                <td width="84%" align="left" valign="middle">
+					         
+												   <a href="/page/default.asp?pageID=31&ID=297295#Menu=ChildMenu4" title="����ϵ����֧��չ��ѧϰʮ�Ž�����ȫ�ᾫ�񡱵������ſ�" target="_blank" class="newlnk">
+									 ����ϵ����֧��չ��ѧ...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">12/02</td>
+              </tr>
+              <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+              
+              <tr>
+                <td width="6%" height="28" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                <td width="84%" align="left" valign="middle">
+					         
+												   <a href="/page/default.asp?pageID=31&ID=297294#Menu=ChildMenu4" title="�������ְҵѧԺѧ����ѧϰ�����᳹����ʮ�Ž�����ȫ�ᾫ��ѧϰ���ֻ�" target="_blank" class="newlnk">
+									 �������ְҵѧԺѧ��...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">12/02</td>
+              </tr>
+              <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+              
+              <tr>
+                <td width="6%" height="28" align="center" valign="middle"><img src="images/dian.jpg" style="margin-bottom:3px;" /></td>
+                <td width="84%" align="left" valign="middle">
+					         
+												   <a href="/page/default.asp?pageID=31&ID=297293#Menu=ChildMenu4" title="��������ϵ����֧��չ��ѧϰʮ�Ž�����ȫ�ᾫ�񡱵������ſ�" target="_blank" class="newlnk">
+									 ��������ϵ����֧��չ...
+                </a></td>
+					      <td width="10%" align="right" valign="middle">11/30</td>
+              </tr>
+              <!--                  <tr>
+                    <td colspan="2" height="1" background="images/xuxian.jpg"></td>
+                  </tr>
+-->
+              
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<!-- ����ģ����Ʈ����ϵͳ  
+<div id="findPanel" onClick="javascript:window.open('/page/Default.asp?pageID=34#Menu=ChildMenu5');" style="CURSOR: hand;">
+  <div id="findPanelContent">
+  </div>
+</div>
+<script type="text/javascript" src="js/Find.js"></script>
+
+ 
+
+
+<div id="findPanel" onClick="javascript:window.open('page/default.asp?pageID=37&ID=151498#Menu=ChildMenu6');" style="CURSOR: hand;">
+  <div id="findPanelContent">
+  </div>
+</div>-->
+<script type="text/javascript" src="js/Find.js"></script>
+
+<SCRIPT LANGUAGE=JavaScript src="pv/Counter.asp"></SCRIPT>
+<table width="1000" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" height="32" background="/images/bot_nav_bg.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="104" height="32" align="left" valign="top"><img src="/images/bot_nav_pic.jpg" width="104" height="32" /></td>
+        <td align="center" valign="middle"><a href='/page/Default.asp?pageID=19#Menu=ChildMenu1' onclick=DoMenu('ChildMenu1') class='lnk1'>ѧԺ�ſ�</a>&nbsp;<span style='font-size:12px;color:#ffffff;'>|</span>&nbsp;<a href='/page/Default.asp?pageID=59#Menu=ChildMenu2' onclick=DoMenu('ChildMenu2') class='lnk1'>������ҵ</a>&nbsp;<span style='font-size:12px;color:#ffffff;'>|</span>&nbsp;<a href='/page/Default.asp?pageID=25#Menu=ChildMenu3' onclick=DoMenu('ChildMenu3') class='lnk1'>��֯����</a>&nbsp;<span style='font-size:12px;color:#ffffff;'>|</span>&nbsp;<a href='/page/Default.asp?pageID=29#Menu=ChildMenu4' onclick=DoMenu('ChildMenu4') class='lnk1'>����ר��</a>&nbsp;<span style='font-size:12px;color:#ffffff;'>|</span>&nbsp;<a href='/page/Default.asp?pageID=33#Menu=ChildMenu5' onclick=DoMenu('ChildMenu5') class='lnk1'>��������</a>&nbsp;<span style='font-size:12px;color:#ffffff;'>|</span>&nbsp;<a href='/page/Default.asp?pageID=37#Menu=ChildMenu6' onclick=DoMenu('ChildMenu6') class='lnk1'>���Ź���</a>&nbsp;<span style='font-size:12px;color:#ffffff;'>|</span>&nbsp;<a href='/page/Default.asp?pageID=46#Menu=ChildMenu8' onclick=DoMenu('ChildMenu8') class='lnk1'>У԰����</a></td>
+        <td width="148" align="right" valign="middle"><img src="/images/bot_nav_pic2.jpg" width="148" height="32" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="middle" class="footer">��ַ������кӶ���¦ɽ��27��&nbsp;&nbsp;&nbsp;�ʱࣺ300181&nbsp;&nbsp;&nbsp;�绰��022-24188607&nbsp;&nbsp;&nbsp;<br />
+        ��Ȩ���У�<a href="http://www.arttj.cn" target="_self">�������ְҵѧԺ</a>&nbsp;&nbsp;&nbsp;��ICP��17010434��-1&nbsp;&nbsp;&nbsp;��̱�0639��<br />
+        <a target="_blank" href="https://beian.mps.gov.cn/#/query/webSearch?code=12010202000840"  rel=��noreferrer��><img src="/images/beian.png" style="width: 20px;height:20px"  valign="top"/><span  valign="middle">&nbsp;�������� 12010202000840��</span></a>
+        </td>
+		</tr>
+    </table></td>
+  </tr>
+</table>
+<!--<script language="javascript" src="/qqonline.asp"></script>-->
+
+
+
+
+
+</body>
+</html>

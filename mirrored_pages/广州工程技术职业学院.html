@@ -1,0 +1,1949 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>广州工程技术职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="广州工程技术职业学院">
+<META Name="keywords" Content="广州工程技术职业学院" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/aos.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="css/news.css">
+    
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78475650575742000200014250 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1869578356)</script>
+</head>
+
+<body>
+
+    <!--pc头部-->
+    <div class="pc">
+        <div class="head">
+            <div class="clearfix">
+                <div class="head-l fl"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+    <a href="sjxx.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86397)">书记信箱</a>
+    |
+    <a href="xzxx.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86398)">校长信箱</a>
+    
+</div>
+                <div class="head-r fr">
+                    <div class="search-con fr">
+                        <button><img src="images/fdj.png" /></button>
+                        <div class="yc-search">
+                            <div class="yc-search-bg"></div>
+                            <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1"></div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text"  placeholder="全文搜索" class="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input  name="submit_button" type="button" class="button" value=" " v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1869578356";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.1.57:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                        </div>
+                    </div>
+                    <div class="head-rlj fr">
+                        <ul class="clearfix">
+                              <li> <a href="https://www.gzvtc.edu.cn/lib/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 76129)">图书馆</a></li>
+  <li> <a href="xl.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86399)">校历</a></li>
+ 
+                            <li class="gnan"><a>常用功能 <img src="images/downsj.png" alt=""></a>
+                                <div class="gn">
+                                    <dl>   <dd><a href="https://hall.gzvtc.edu.cn" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86827)">一网通办</a></dd>
+   <dd><a href="https://oa.gzvtc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86410)">数字化校园信息平台</a></dd>
+   <dd><a href="https://vpn.gzvtc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86411)">VPN登录</a></dd>
+   <dd><a href="https://mail.gzvtc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86412)">电子邮箱</a></dd>
+   <dd><a href="https://stmcrp.gzvtc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86414)">我的大学2.0</a></dd>
+   <dd><a href="https://gdgcwljx.mh.chaoxing.com/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86538)">智慧教学平台</a></dd>
+</dl>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="top">
+            <div class="clearfix">
+                <div class="logo fl">
+<a href="index.htm"><img src="images/logo-m.png" /></a></div>
+                <div class="top-r">
+                    <!--pc导航-->
+                    <div class="nav"><ul class="clearfix">
+
+  <li class="active">
+                                <a href="index.htm">首页</a>
+                                
+                                   
+                            </li>
+
+
+  <li>
+                                <a href="xxjj/xxgk.htm">学校简介</a>
+                                 <div>
+                                    <ul>
+                                 <li>
+                                            <a href="xxjj/hyc.htm">欢迎辞</a>
+                                        </li>
+                                 <li>
+                                            <a href="xxjj/xxgk.htm">学校概况</a>
+                                        </li>
+                                 <li>
+                                            <a href="xxjj/yh_yx.htm">院徽、院训</a>
+                                        </li>
+                                 <li>
+                                            <a href="xxjj/lrld.htm">历任领导</a>
+                                        </li>
+                                 <li>
+                                            <a href="xxjj/xrld.htm">现任领导</a>
+                                        </li>
+                                 <li>
+                                            <a href="xxjj/xqfb.htm">校区分布</a>
+                                        </li>
+                                 <li>
+                                            <a href="xxjj/xyfj.htm">校园风景</a>
+                                        </li>
+                                 <li>
+                                            <a href="xxjj/xxzc.htm">学校章程</a>
+                                        </li>
+                                 </ul>
+                                </div>
+                                
+                                   
+                            </li>
+
+
+  <li>
+                                <a href="zzjg.htm">组织机构</a>
+                                
+                                   
+                            </li>
+
+
+  <li>
+                                <a href="#">院系设置</a>
+                                 <div>
+                                    <ul>
+                                 <li>
+                                            <a href="https://www.gzvtc.edu.cn/jdgc" target="_blank">机电工程学院</a>
+                                        </li>
+                                 <li>
+                                            <a href="https://www.gzvtc.edu.cn/xxgc/" target="_blank">信息工程学院</a>
+                                        </li>
+                                 <li>
+                                            <a href="https://www.gzvtc.edu.cn/wysm/" target="_blank">外语商贸学院</a>
+                                        </li>
+                                 <li>
+                                            <a href="https://www.gzvtc.edu.cn/cjgl/" target="_blank">财经管理学院</a>
+                                        </li>
+                                 <li>
+                                            <a href="https://www.gzvtc.edu.cn/syhg" target="_blank">石油化工学院</a>
+                                        </li>
+                                 <li>
+                                            <a href="https://www.gzvtc.edu.cn/cylyxy" target="_blank">餐饮旅游学院</a>
+                                        </li>
+                                 <li>
+                                            <a href="https://www.gzvtc.edu.cn/ysxy/" target="_blank">艺术设计学院</a>
+                                        </li>
+                                 <li>
+                                            <a href="https://www.gzvtc.edu.cn/jxjyxy/" target="_blank">继续教育学院</a>
+                                        </li>
+                                 </ul>
+                                </div>
+                                
+                                   
+                            </li>
+
+
+  <li>
+                                <a href="https://zs.gzvtc.edu.cn/" target="_blank">招生信息</a>
+                                
+                                   
+                            </li>
+
+
+  <li>
+                                <a href="jyzx/bysjyzk.htm">就业资讯</a>
+                                 <div>
+                                    <ul>
+                                 <li>
+                                            <a href="http://gzvtc.jobsys.cn/unijob/index.php/web/Index/index">就业网</a>
+                                        </li>
+                                 <li>
+                                            <a href="jyzx/bysjyzk.htm">毕业生就业状况</a>
+                                        </li>
+                                 </ul>
+                                </div>
+                                
+                                   
+                            </li>
+
+
+  <li>
+                                <a href="rcpy/bxts.htm">人才培养</a>
+                                 <div>
+                                    <ul>
+                                 <li>
+                                            <a href="rcpy/bxts.htm">办学特色</a>
+                                        </li>
+                                 <li>
+                                            <a href="rcpy/jxyzx.htm">奖学与助学</a>
+                                        </li>
+                                 <li>
+                                            <a href="rcpy/rcpyfa.htm">人才培养方案</a>
+                                        </li>
+                                 </ul>
+                                </div>
+                                
+                                   
+                            </li>
+
+
+  <li>
+                                <a href="hzbx/zwhzbip.htm">合作办学</a>
+                                 <div>
+                                    <ul>
+                                 <li>
+                                            <a href="hzbx/zwhzbip.htm">中外合作办学</a>
+                                        </li>
+                                 </ul>
+                                </div>
+                                
+                                   
+                            </li>
+
+
+  <li>
+                                <a href="rczp/zpxx.htm">人才招聘</a>
+                                 <div>
+                                    <ul>
+                                 <li>
+                                            <a href="rczp/zpxx.htm">招聘信息</a>
+                                        </li>
+                                 </ul>
+                                </div>
+                                
+                                   
+                            </li>
+
+  <li>
+   <a href="xxgk.htm">信息公开</a>
+   </li>
+ </ul></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 移动端导�? -->
+    <div class="m-top">
+        <div class="wap wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">
+               
+        
+             
+                        <a href="index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74061)">
+                           
+                            <img src="images/logo.png">
+                        </a>  
+                   
+       
+
+        </div>
+        <div class="m-nav">
+            <div class="m-tlink">
+    <a href="sjxx.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86397)">书记信箱</a>
+    <a href="xzxx.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86398)">校长信箱</a>
+    <a href="https://www.gzvtc.edu.cn/lib/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 76129)">图书馆</a>
+</div>
+             <div class="m-search">
+
+
+<style>
+    #appu8 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu8 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu8"></div>
+<script type="text/html" id="htmlu8">
+    <div id="appu8">
+        <div v-if="!isError">
+            <input type="text"  placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input src="images/fdj.png" name="submit_button" type="image" value=" " v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu8").html($("#htmlu8").text());
+</script>
+<script>
+    var appOwner = "1869578356";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu8",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.1.57:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="clearfix">
+
+ <li>
+                    <a href="index.htm">首页</a>
+                    
+                     
+                </li>
+
+
+ <li>
+                    <a href="xxjj/xxgk.htm">学校简介</a>
+                    <span></span>
+                    <ul>
+                     <li>
+                            <a href="xxjj/hyc.htm">欢迎辞</a>
+                        </li>
+                     <li>
+                            <a href="xxjj/xxgk.htm">学校概况</a>
+                        </li>
+                     <li>
+                            <a href="xxjj/yh_yx.htm">院徽、院训</a>
+                        </li>
+                     <li>
+                            <a href="xxjj/lrld.htm">历任领导</a>
+                        </li>
+                     <li>
+                            <a href="xxjj/xrld.htm">现任领导</a>
+                        </li>
+                     <li>
+                            <a href="xxjj/xqfb.htm">校区分布</a>
+                        </li>
+                     <li>
+                            <a href="xxjj/xyfj.htm">校园风景</a>
+                        </li>
+                     <li>
+                            <a href="xxjj/xxzc.htm">学校章程</a>
+                        </li>
+                    </ul>
+                     
+                </li>
+
+
+ <li>
+                    <a href="zzjg.htm">组织机构</a>
+                    
+                     
+                </li>
+
+
+ <li>
+                    <a href="#">院系设置</a>
+                    <span></span>
+                    <ul>
+                     <li>
+                            <a href="https://www.gzvtc.edu.cn/jdgc">机电工程学院</a>
+                        </li>
+                     <li>
+                            <a href="https://www.gzvtc.edu.cn/xxgc/">信息工程学院</a>
+                        </li>
+                     <li>
+                            <a href="https://www.gzvtc.edu.cn/wysm/">外语商贸学院</a>
+                        </li>
+                     <li>
+                            <a href="https://www.gzvtc.edu.cn/cjgl/">财经管理学院</a>
+                        </li>
+                     <li>
+                            <a href="https://www.gzvtc.edu.cn/syhg">石油化工学院</a>
+                        </li>
+                     <li>
+                            <a href="https://www.gzvtc.edu.cn/cylyxy">餐饮旅游学院</a>
+                        </li>
+                     <li>
+                            <a href="https://www.gzvtc.edu.cn/ysxy/">艺术设计学院</a>
+                        </li>
+                     <li>
+                            <a href="https://www.gzvtc.edu.cn/jxjyxy/">继续教育学院</a>
+                        </li>
+                    </ul>
+                     
+                </li>
+
+
+ <li>
+                    <a href="https://zs.gzvtc.edu.cn/">招生信息</a>
+                    
+                     
+                </li>
+
+
+ <li>
+                    <a href="jyzx/bysjyzk.htm">就业资讯</a>
+                    <span></span>
+                    <ul>
+                     <li>
+                            <a href="http://gzvtc.jobsys.cn/unijob/index.php/web/Index/index">就业网</a>
+                        </li>
+                     <li>
+                            <a href="jyzx/bysjyzk.htm">毕业生就业状况</a>
+                        </li>
+                    </ul>
+                     
+                </li>
+
+
+ <li>
+                    <a href="rcpy/bxts.htm">人才培养</a>
+                    <span></span>
+                    <ul>
+                     <li>
+                            <a href="rcpy/bxts.htm">办学特色</a>
+                        </li>
+                     <li>
+                            <a href="rcpy/jxyzx.htm">奖学与助学</a>
+                        </li>
+                     <li>
+                            <a href="rcpy/rcpyfa.htm">人才培养方案</a>
+                        </li>
+                    </ul>
+                     
+                </li>
+
+
+ <li>
+                    <a href="hzbx/zwhzbip.htm">合作办学</a>
+                    <span></span>
+                    <ul>
+                     <li>
+                            <a href="hzbx/zwhzbip.htm">中外合作办学</a>
+                        </li>
+                    </ul>
+                     
+                </li>
+
+
+ <li>
+                    <a href="rczp/zpxx.htm">人才招聘</a>
+                    <span></span>
+                    <ul>
+                     <li>
+                            <a href="rczp/zpxx.htm">招聘信息</a>
+                        </li>
+                    </ul>
+                     
+                </li>
+
+<li>
+                    <a href="xxgk.htm">信息公开</a>
+                </li>
+ </ul>
+        </div>
+    </div>
+
+    <div class="banner">    <div class="slick">
+          
+             
+              <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74384)">
+                    <img src="images/1.jpg" />
+                </a>
+            </div>
+             
+              
+             
+              <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74379)">
+                    <img src="images/2.jpg" />
+                </a>
+            </div>
+             
+              
+             
+              <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74299)">
+                    <img src="images/3.jpg" />
+                </a>
+            </div>
+             
+              
+             
+              <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74363)">
+                    <img src="images/weibiaoti-2.jpg" />
+                </a>
+            </div>
+             
+              
+             
+              <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74164)">
+                    <img src="images/2023051703.jpg" />
+                </a>
+            </div>
+             
+              
+             
+              <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74162)">
+                    <img src="images/2023051701.jpg" />
+                </a>
+            </div>
+             
+              
+             
+              <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74163)">
+                    <img src="images/2023051702.jpg" />
+                </a>
+            </div>
+             
+              
+             
+              <div>
+                <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74040)">
+                    <img src="images/fj-001.jpg" />
+                </a>
+            </div>
+             
+              
+             
+              <div>
+                <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 65323)">
+                    <img src="images/b006.jpg" />
+                </a>
+            </div>
+             
+              
+             
+              <div>
+                <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74296)">
+                    <img src="images/0530-2.png" />
+                </a>
+            </div>
+             
+              
+        
+  </div>
+<div class="down-page">
+    <img src="images/down_page.png" alt="">
+</div></div>
+    
+
+    <div class="section2">
+        <div class="px1400 clearfix">
+            <div class="tit clearfix" data-aos="zoom-in">
+                <h3><img src="images/tit1.png" alt="">学校新闻</h3>
+                <div class="more fr">
+                    <a href="xwzx/xxxw.htm" target="_blank">查看更多+</a>
+                </div>
+            </div>
+            
+             <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>
+<div class="tout" data-aos="fade-up">
+        <div class="row">
+          <div class="tout-l ">
+            <div class="tout-d">
+              <div><span>22</span><br>
+                <p>2024-10</p>
+              </div>
+            </div>
+          </div>
+          <div class="tout-r">
+            <div class="tout-title"> <a href="https://guangdong.eol.cn/gdgd/202410/t20241021_2637994.shtml" target="_blank"> 广州工程技术职业学院庆祝建校60周年公告（第一号） </a></div>
+            <div class="tout-title-p hidden-xs1">　　岭南沃土，钟灵毓秀，珠水汤汤，滋溉绵长。斯土之上，兴启工程之黉堂。2024年12月，乃广州工程技术职业学院建校之六十华诞。于此盛事，谨向长...</div>
+          </div>
+        </div> 
+         </div>   
+
+<script>_showDynClickBatch(['dynclicks_u11_23661'],[23661],"wbnews", 1869578356)</script>
+
+            
+            <div class="s2-c" data-aos="fade-up"><ul class="clearfix">
+
+ <li>
+                        <a href="info/1002/23681.htm" target="_blank">
+                            <div class="pic"><img src="/__local/0/2C/BE/DF7E733871107BE8313C6C9231B_3565DC28_572A1.jpg" alt=""></div>
+                            <div class="s2-cinfo">
+                                <h3>村校结对共建  为“百千万工程”增添新动力</h3>
+                                <p> 为全面贯彻落实“百县千镇万村高质量发展工程”的部署要求，促进城乡区域协调发展，10月17日下午，我校财经管理学院、信息工程学院与广州市从化区太平镇格塘村、连塘村举行村校结对合作共建工作座谈会。太平镇党委委员曾晓义主持会议，我校团委书记、财经管理学院党总支书记陈苡、财经管理学院副院长骆淑芳，信息工程学院党总支副书记、副院长李晓出席会议，太平镇及结对双方相关工作人员参加。会上，曾晓义代表太平镇党委、政...</p>
+                                <span>2024-10-23</span>
+                            </div>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="info/1002/23581.htm" target="_blank">
+                            <div class="pic"><img src="/__local/4/61/01/40B1E30E7AB7D91F5F989B8AFF5_9B004000_643D6.jpg" alt=""></div>
+                            <div class="s2-cinfo">
+                                <h3>我校举办“岭南文化形象的历史演变”专题讲座</h3>
+                                <p>10月10日下午，图书馆和外语商贸学院联合主办的“文峰讲坛”线下专题讲座“岭南文化形象的历史演变”在从化校区综合楼101报告厅举行，本次讲座特别邀请了广东外语外贸大学中文学院院长陈恩维教授担任主讲嘉宾，图书馆馆长程大立、外语商贸学院院长吴寒、副院长吴筱明、张明辉及辅导员陈静聪、广东外语外贸大学中文学院老师吴肖丹、图书管理员以及250余名学生读者参加，讲座由程大立馆长主持。</p>
+                                <span>2024-10-18</span>
+                            </div>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="info/1002/23491.htm" target="_blank">
+                            <div class="pic"><img src="/__local/7/1A/D1/DEAC34EB5A87CD6F9B687FD3665_6F64780F_29D7D.jpg" alt=""></div>
+                            <div class="s2-cinfo">
+                                <h3>餐旅学子获2024年东莞市职业技能大赛咖啡师项目金奖</h3>
+                                <p>近日，在东莞市人力资源和社会保障局主办的2024年东莞市职业技能大赛咖啡师项目竞赛中，我校餐饮智能管理专业学生范锦辉荣获金奖。比赛依据国家咖啡师职业资格三级（高级）标准，结合行业实际，增加了新知识、新技术的相关内容。赛事包括理论考试、拿铁咖啡制作以及创意咖啡制作等环节，由专业评审专家命题。范锦辉通过激烈的竞争，从83名参赛选手中脱颖而出，以理论满分100分、实操200分的成绩斩获金奖。一直以来，餐饮旅游学...</p>
+                                <span>2024-10-10</span>
+                            </div>
+                        </a>
+                    </li>
+ 
+</ul><script>_showDynClickBatch(['dynclicks_u12_23681','dynclicks_u12_23581','dynclicks_u12_23491'],[23681,23581,23491],"wbnews", 1869578356)</script>
+</div>
+
+            <div class="section3 clearfix">
+                <div class="s3-c" data-aos="fade-up">
+<ul>
+
+ <li>
+                            <a href="https://guangdong.eol.cn/gdgd/202410/t20241021_2637994.shtml" target="_blank">
+                                <h3>广州工程技术职业学院庆祝建校60周年公告（第一号）</h3>
+                                <span>2024-10-22</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1002/23671.htm" target="_blank">
+                                <h3>学校领导开讲“思政第一课” 宣讲党的二十届三中全会精神</h3>
+                                <span>2024-10-23</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1002/23681.htm" target="_blank">
+                                <h3>村校结对共建  为“百千万工程”增添新动力</h3>
+                                <span>2024-10-23</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1002/23581.htm" target="_blank">
+                                <h3>我校举办“岭南文化形象的历史演变”专题讲座</h3>
+                                <span>2024-10-18</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1002/23491.htm" target="_blank">
+                                <h3>餐旅学子获2024年东莞市职业技能大赛咖啡师项目金奖</h3>
+                                <span>2024-10-10</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1002/23481.htm" target="_blank">
+                                <h3>学校获批院校职业技能等级认定评价机构</h3>
+                                <span>2024-10-10</span>
+                            </a>
+                        </li>
+
+ 
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u13_23661','dynclicks_u13_23671','dynclicks_u13_23681','dynclicks_u13_23581','dynclicks_u13_23491','dynclicks_u13_23481'],[23661,23671,23681,23581,23491,23481],"wbnews", 1869578356)</script>
+ 
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="section4">
+        <div class="px1400"><div class="tit clearfix" data-aos="zoom-in">
+                <h3>
+                    <img src="images/tit2.png" alt="">媒体看工程学院
+                </h3>
+                <div class="more fr">
+                    <a href="xwzx/mtkgcxy.htm" target="_blank">查看更多+</a>
+                </div>
+            </div>
+            <div class="s4-c" data-aos="fade-up">
+                <ul class="clearfix">
+
+  <li class="ts">
+                        <a href="https://www.toutiao.com/article/7429598860391088675/?app=news_article&timestamp=1729841810&use_new_style=1&req_id=202410251536498C2A3D50D6C62CACC1B0&group_id=7429598860391088675&share_token=A8A52381-76D4-4314-B66E-C54E67CF74CB&tt_from=weixin&utm_source=we" target="_blank">
+                            <div class="pic"><img src="/__local/0/2C/BE/DF7E733871107BE8313C6C9231B_3565DC28_572A1.jpg" alt=""></div>
+                            <div class="s4-cinfo">
+                             <span>2024-10-25</span>
+                              <em>今日头条</em>
+                             <p>村校结对共建 为“百千万工程”增添新动力</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+
+  <li>
+                        <a href="http://gd.news.cn/20241010/c428feffa97b41d8ae1bcd181f864774/c.html" target="_blank">
+                            <div class="pic"><img src="/__local/1/9C/7F/B4E3A8D4ABB0867FD0EACE48D43_594B34B0_11E24.jpg" alt=""></div>
+                            <div class="s4-cinfo">
+                             <span>2024-10-11</span>
+                              <em>新华网</em>
+                             <p>彩绘乡村文化墙 助推农文旅融合</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+
+  <li>
+                        <a href="https://caijing.chinadaily.com.cn/a/202410/09/WS6706405fa310b59111d9d1ab.html" target="_blank">
+                            <div class="pic"><img src="/__local/B/B8/20/C05950FE36C2216A77CAA4A038A_5123A822_17439.png" alt=""></div>
+                            <div class="s4-cinfo">
+                             <span>2024-10-11</span>
+                              <em>中国日报</em>
+                             <p>彩绘乡村文化墙 助推农文旅融合 ——广州工程职院特色墙绘助力“百千万工程”</p>
+                            </div>
+                        </a>
+                    </li>
+ <div class="clear"></div>
+ 
+
+  <li>
+                        <a href="https://static.nfnews.com/content/202410/10/c10153840.html?colID=0&firstColID=38&appversion=11700&from=weChatMessage&enterColumnId=" target="_blank">
+                            <div class="pic"><img src="/__local/0/DC/D4/8913CCB0C143EE8B0F37670F8FB_EE98211F_12A3D.jpg" alt=""></div>
+                            <div class="s4-cinfo">
+                             <span>2024-10-11</span>
+                              <em>南方+</em>
+                             <p>特色墙绘提振乡村精气神，广州工程职院助力“百千万工程”</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+
+  <li>
+                        <a href="https://3g.k.sohu.com/t/n827056603?serialId=f549ad2411b44b914ed23505faaf6fc4&showType=&shp1=NzIzNzMwODUwMTE0NjkzODYyNg%3D%3D__s1&sf_a=weixin" target="_blank">
+                            <div class="pic"><img src="/__local/B/0B/54/2C6C8820965F03628C56E5CDE16_CF3B61B4_7A50C.jpg" alt=""></div>
+                            <div class="s4-cinfo">
+                             <span>2024-10-11</span>
+                              <em>搜狐新闻</em>
+                             <p>从化区太平镇完成“粤菜师傅”中式面点师专项能力培训考证</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+
+  <li class="ts">
+                        <a href="https://article.xuexi.cn/articles/index.html?art_id=12463912150306634125&item_id=12463912150306634125&study_style_id=feeds_opaque&pid=&ptype=-1&source=share&share_to=wx_single" target="_blank">
+                            <div class="pic"><img src="/__local/E/83/6B/5A0B9E06E4D583A38A32A05D360_D9193941_7E4F7.jpg" alt=""></div>
+                            <div class="s4-cinfo">
+                             <span>2024-09-27</span>
+                              <em>学习强国</em>
+                             <p>广州工程技术职业学院校领导带队赴湛江吴川市覃巴镇推进驻镇帮镇扶村工作</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+ </ul>
+            </div><script>_showDynClickBatch(['dynclicks_u14_23711','dynclicks_u14_23531','dynclicks_u14_23561','dynclicks_u14_23521','dynclicks_u14_23511','dynclicks_u14_23401'],[23711,23531,23561,23521,23511,23401],"wbnews", 1869578356)</script>
+</div>
+    </div>
+
+     <div class="section5">
+        <div class="px1400"><div class="tit clearfix" data-aos="zoom-in">
+                <h3>
+                    <img src="images/tit3.png" alt="">公告公示
+                </h3>
+                <div class="more fr">
+                    <a href="gggs.htm" target="_blank">查看更多+</a>
+                </div>
+            </div>
+            <div class="s5-c" data-aos="fade-up">
+                <ul>
+
+ <li class="li_list">
+                        <a href="info/1821/23621.htm" target="_blank">
+                            <div class="date">
+                                <p>18</p>
+                                <span>2024-10</span>
+                                <em>党委宣传统战部</em>
+                            </div>
+                            <h3>广州工程技术职业学院庆祝建校六十周年公告（第一号）</h3>
+                            <div class="clear"></div>
+                            <p></p>
+                        </a>
+                    </li>
+
+ 
+
+ <li class="li_list">
+                        <a href="info/1821/23541.htm" target="_blank">
+                            <div class="date">
+                                <p>11</p>
+                                <span>2024-10</span>
+                                <em>国际交流合作中心</em>
+                            </div>
+                            <h3>关于徐立平等人赴斯堪尼亚（香港）有限公司开展交流活动的公示</h3>
+                            <div class="clear"></div>
+                            <p>应斯堪尼亚（香港）有限公司的邀请，我校拟选派徐立平为团长的4人代表团于2024年11月6日赴斯堪尼亚（香港）有限公司进行交流活动。根据中办发〔2013〕16号文有关要求，我校对该团组的有关情况予以公示。组团单位广州工程技术职业学院团长姓名和职务徐立平 机电工程学院教师出访国家（地区）香港出访时间2024年11月6日人数4天数1境外邀请单位斯堪尼亚（香港）有限公司出访主要目的赴斯堪尼亚（香港）有限公司进行交流活动经费金...</p>
+                        </a>
+                    </li>
+
+ 
+
+ <li class="li_list">
+                        <a href="info/1821/22781.htm" target="_blank">
+                            <div class="date">
+                                <p>22</p>
+                                <span>2024-07</span>
+                                <em>国际交流合作中心</em>
+                            </div>
+                            <h3>关于丘巴比等人赴香港饮食业职工总会开展交流活动的公示</h3>
+                            <div class="clear"></div>
+                            <p>应香港饮食业职工总会的邀请，我校拟选派丘巴比为团长的3人代表团于2024年9月26日至9月27日赴香港饮食业职工总会进行交流活动。根据中办发〔2013〕16号文有关要求，我校对该团组的有关情况予以公示。组团单位广州工程技术职业学院团长姓名和职务丘巴比 餐饮旅游学院院长出访国家（地区）香港出访时间2024年9月26-27日人数3天数2境外邀请单位香港饮食业职工总会出访主要目的赴香港饮食业职工总会进行交流活动经费金额、来源及财...</p>
+                        </a>
+                    </li>
+
+ 
+
+ <li class="li_list">
+                        <a href="info/1821/21921.htm" target="_blank">
+                            <div class="date">
+                                <p>14</p>
+                                <span>2024-06</span>
+                                <em>国际交流合作中心</em>
+                            </div>
+                            <h3>关于李善吉等人赴香港职业训练局开展研修活动的公示</h3>
+                            <div class="clear"></div>
+                            <p>应香港职业训练局的邀请，我校拟选派李善吉为团长的15人代表团于2024年7月14日至7月20日赴香港职业训练局参加研修活动。根据中办发〔2013〕16号文有关要求，我校对该团组的有关情况予以公示。组团单位广州工程技术职业学院团长姓名和职务李善吉 石油化工学院院长出访国家（地区）香港出访时间2024年7月14-20日人数15天数7境外邀请单位香港职业训练局出访主要目的参加专业建设和教育手段创新研修活动经费金额、来源及财政审核情...</p>
+                        </a>
+                    </li>
+
+ 
+
+ <li class="li_list">
+                        <a href="info/1821/21801.htm" target="_blank">
+                            <div class="date">
+                                <p>06</p>
+                                <span>2024-06</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院关于拟对方嘉玲等33名学生作退学处理的公示</h3>
+                            <div class="clear"></div>
+                            <p>方嘉玲（学号201828925131）等31名学生休学期满，在学校规定期限内未提出复学；程志鑫（学号211818920285）和张华光（学号211828920085）2名学生，本学年未按规定时间进行缴费注册，又未办理暂缓注册手续，根据《广州工程技术职业学院全日制普通高等教育学生学籍管理办法(2022年修订)》（穗工学院〔2022〕46号）第七章第三十一条第（二）款：“休学、保留学籍期满，在学校规定期限内未提出复学申请或者申请复学经复查不合格的”...</p>
+                        </a>
+                    </li>
+
+ 
+
+ <li class="li_list">
+                        <a href="info/1821/21071.htm" target="_blank">
+                            <div class="date">
+                                <p>06</p>
+                                <span>2024-05</span>
+                                <em>国际交流合作中心</em>
+                            </div>
+                            <h3>关于汤伟群等人赴国立新西兰理工学院-北方理工学院交流的公示</h3>
+                            <div class="clear"></div>
+                            <p>应国立新西兰理工学院-北方理工学院的邀请，我校拟选派汤伟群为团长的5人代表团于2024年7月22日至7月26日赴国立新西兰理工学院-北方理工学院进行交流活动。根据中办发〔2013〕16号文有关要求，我校对该团组的有关情况予以公示。组团单位广州工程技术职业学院团长姓名和职务汤伟群 副校长出访国家（地区）新西兰出访时间2024年7月22-26日人数5天数5境外邀请单位国立新西兰理工学院-北方理工学院出访主要目的赴国立新西兰理工学院...</p>
+                        </a>
+                    </li>
+
+ 
+
+ <li class="li_list">
+                        <a href="info/1821/20991.htm" target="_blank">
+                            <div class="date">
+                                <p>19</p>
+                                <span>2024-04</span>
+                                <em>国际交流合作中心</em>
+                            </div>
+                            <h3>关于李智伟等人赴马来西亚国际郑和研究院和马来西亚艺术学院交流的公示</h3>
+                            <div class="clear"></div>
+                            <p>应马来西亚国际郑和研究院和马来西亚艺术学院的邀请，我校拟选派李智伟为团长的5人代表团于2024年5月23日至5月27日赴西亚国际郑和研究院进行教育交流活动、赴马来西亚艺术学院进行教师交流研讨活动。根据中办发〔2013〕16号文有关要求，我校对该团组的有关情况予以公示。组团单位广州工程技术职业学院团长姓名和职务李智伟 艺术设计学院院长出访国家（地区）马来西亚出访时间2024年5月23-27日人数5天数5境外邀请单位马来西亚国...</p>
+                        </a>
+                    </li>
+
+ 
+
+ <li class="li_list">
+                        <a href="info/1821/20171.htm" target="_blank">
+                            <div class="date">
+                                <p>27</p>
+                                <span>2024-01</span>
+                                <em>广州工程技术职业学院</em>
+                            </div>
+                            <h3>星海音乐学院、广州工程技术职业学院、蕉岭县“双百行动”校县合作共建项目清单（第一批）公告</h3>
+                            <div class="clear"></div>
+                            <p>根据《广东省“百县千镇万村高质量发展工程”指挥部“双百行动”专班办公室关于做好〈“双百行动”校地合作共建项目清单（第一批）〉有关工作的通知》要求，现将星海音乐学院、广州工程技术职业学院、蕉岭县“双百行动”校县合作共建项目清单（第一批）向社会公开发布。附件：星海音乐学院、广州工程技术职业学院、蕉岭县“双百行动”校县合作共建项目清单（第一批）星海音乐学院、广州工程技术职业学院、蕉岭县校县合作领导小...</p>
+                        </a>
+                    </li>
+
+ 
+
+ <li class="li_list">
+                        <a href="info/1821/19911.htm" target="_blank">
+                            <div class="date">
+                                <p>03</p>
+                                <span>2024-01</span>
+                                <em>教务处（科研处）</em>
+                            </div>
+                            <h3>广州工程技术职业学院关于2023-2024学年拟转专业学生名单的公示</h3>
+                            <div class="clear"></div>
+                            <p>根据《广州工程技术职业学院全日制普通高等教育学生学籍管理办法(2022年修订)》和《广州工程技术职业学院学生转专业工作实施细则》文件要求，经学生本人申请、转出学院初审、转入学院考核、教务处复审和教学工作委员会审核，拟同意曾绮幸等19名学生转专业，具体名单见附件，现予以公示。若有异议，请在公示期内电话或书面向学校教务处反映，反映情况的材料要自报或签署（手写）真实姓名，不报或不签署真实姓名的，一律不予受理...</p>
+                        </a>
+                    </li>
+
+ 
+</ul>
+            </div><script>_showDynClickBatch(['dynclicks_u15_23621','dynclicks_u15_23541','dynclicks_u15_22781','dynclicks_u15_21921','dynclicks_u15_21801','dynclicks_u15_21071','dynclicks_u15_20991','dynclicks_u15_20171','dynclicks_u15_19911'],[23621,23541,22781,21921,21801,21071,20991,20171,19911],"wbnews", 1869578356)</script>
+</div>
+
+    </div>
+
+    <div class="section6">
+        <div class="px1400 clearfix">
+            <div class="s6-l fl" data-aos="fade-right"><div class="tit clearfix">
+                    <h3>
+                        <img src="images/tit4.png" alt="">招标信息
+                    </h3>
+                    <div class="more fr">
+                        <a href="zbxx.htm" target="_blank">查看更多+</a>
+                    </div>
+                </div>
+                <ul class="public-list">
+
+  <li><span>2024-10-25</span>
+                        <a href="info/1038/23691.htm" target="_blank"><em>›</em>广州工程技术职业学院公开征集招标代理机构合作意向公告</a>
+                    </li>
+
+ 
+
+  <li><span>2024-10-16</span>
+                        <a href="info/1038/23571.htm" target="_blank"><em>›</em>广州工程技术职业学院2024年第三批固定资产报废处置（子包一、子包二、子包三）项目询价公告</a>
+                    </li>
+
+ 
+
+  <li><span>2024-08-30</span>
+                        <a href="info/1038/22931.htm" target="_blank"><em>›</em>广州工程技术职业学院2024级成高学生线上教学平台服务项目采购失败公告</a>
+                    </li>
+
+ 
+
+  <li><span>2024-08-26</span>
+                        <a href="info/1038/22921.htm" target="_blank"><em>›</em>广州工程技术职业学院2024级成高学生线上教学平台服务项目采购公告</a>
+                    </li>
+
+ 
+
+  <li><span>2024-07-11</span>
+                        <a href="info/1038/22581.htm" target="_blank"><em>›</em>广州工程技术职业学院大数据与会计专业精品在线开放课程群资源制作项目成交公告</a>
+                    </li>
+
+ 
+
+  <li><span>2024-07-11</span>
+                        <a href="info/1038/22571.htm" target="_blank"><em>›</em>广州工程技术职业学院餐饮旅游学院实训室设备维修维护服务项目成交公告</a>
+                    </li>
+
+ 
+
+  <li><span>2024-07-09</span>
+                        <a href="info/1038/22531.htm" target="_blank"><em>›</em>2024年新生录取通知书寄递单一来源公示</a>
+                    </li>
+
+ 
+
+  <li><span>2024-07-05</span>
+                        <a href="info/1038/22481.htm" target="_blank"><em>›</em>广州工程技术职业学院2024年学生行李搬迁项目成交公告</a>
+                    </li>
+
+ 
+
+  <li><span>2024-07-05</span>
+                        <a href="info/1038/22471.htm" target="_blank"><em>›</em>广州工程技术职业学院2024-2025年学生保险项目成交公告</a>
+                    </li>
+
+ 
+</ul><script>_showDynClickBatch(['dynclicks_u16_23691','dynclicks_u16_23571','dynclicks_u16_22931','dynclicks_u16_22921','dynclicks_u16_22581','dynclicks_u16_22571','dynclicks_u16_22531','dynclicks_u16_22481','dynclicks_u16_22471'],[23691,23571,22931,22921,22581,22571,22531,22481,22471],"wbnews", 1869578356)</script>
+</div>
+            <div class="s6-r fr" data-aos="fade-left">
+<div class="tit clearfix">
+                    <h3>
+                        <img src="images/tit5.png" alt="">招聘信息
+                    </h3>
+                    <div class="more fr">
+                        <a href="rczp/zpxx.htm" target="_blank">查看更多+</a>
+                    </div>
+                </div>
+                <ul>
+
+ <li>
+                        <a href="info/1016/23651.htm" target="_blank">
+                            <div class="date">
+                                <p>21</p>
+                                <span>2024-10</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院2024年引进急需专业人才第二批开考岗位面试安排公告</h3>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="info/1016/23631.htm" target="_blank">
+                            <div class="date">
+                                <p>21</p>
+                                <span>2024-10</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院关于合同制辅导员招聘岗位需求调整及延长报名的通知</h3>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="info/1016/23461.htm" target="_blank">
+                            <div class="date">
+                                <p>30</p>
+                                <span>2024-09</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院2024年引进急需专业人才第二批开考岗位资格复审的公告</h3>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="info/1016/23341.htm" target="_blank">
+                            <div class="date">
+                                <p>19</p>
+                                <span>2024-09</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院公开招聘合同制辅导员公告</h3>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="http://rsj.gz.gov.cn/ywzt/rszdgg/sydwgkzp/sydwzpgg/content/post_9576966.html" target="_blank">
+                            <div class="date">
+                                <p>03</p>
+                                <span>2024-04</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院2024年引进急需专业人才公告</h3>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="info/1016/22801.htm" target="_blank">
+                            <div class="date">
+                                <p>31</p>
+                                <span>2024-07</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院2024年全省集中公开招聘高校毕业生拟聘用人员名单公示</h3>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="info/1016/22791.htm" target="_blank">
+                            <div class="date">
+                                <p>31</p>
+                                <span>2024-07</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院2024年引进急需专业人才第一批拟聘用人员名单公示</h3>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="info/1016/21871.htm" target="_blank">
+                            <div class="date">
+                                <p>14</p>
+                                <span>2024-06</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院2024年集中公开招聘高校毕业生综合成绩发布及体检安排的公告</h3>
+                        </a>
+                    </li>
+ 
+
+ <li>
+                        <a href="info/1016/21781.htm" target="_blank">
+                            <div class="date">
+                                <p>05</p>
+                                <span>2024-06</span>
+                                <em></em>
+                            </div>
+                            <h3>广州工程技术职业学院2024年集中公开招聘高校毕业生面试安排公告</h3>
+                        </a>
+                    </li>
+ 
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u17_23651','dynclicks_u17_23631','dynclicks_u17_23461','dynclicks_u17_23341','dynclicks_u17_20451','dynclicks_u17_22801','dynclicks_u17_22791','dynclicks_u17_21871','dynclicks_u17_21781'],[23651,23631,23461,23341,20451,22801,22791,21871,21781],"wbnews", 1869578356)</script>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="section11">
+        <div class="px1400 clearfix">
+            <div class="tit clearfix" data-aos="zoom-in">
+                <h3><img src="images/tit11.png" alt="">视频播放</h3>
+                <div class="more fr">
+                    <a href="spbf.htm" target="_blank">查看更多+</a>
+                </div>
+            </div>
+              <div class="clearfix"><div class="s11-c" data-aos="fade-up">
+<ul>
+
+ <li>
+                            <a href="info/1771/23451.htm" target="_blank">
+                            <p class="sp-video"><img src="images/video.png" alt=""></p>
+                                <p class="pic" style="width:100%;"><img src="/__local/A/22/34/E2EDE366A141676E04744A77DF2_00FC51A9_7F6E5.png" style="width:100%;"></p>
+                                <h3 style="margin-top:15px;height:30px;">国庆主题“感人瞬间”微视频——今日之中国</h3>
+                                <span style="margin-top:0px;">2024-09-30</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1771/23441.htm" target="_blank">
+                            <p class="sp-video"><img src="images/video.png" alt=""></p>
+                                <p class="pic" style="width:100%;"><img src="/__local/8/C2/06/51A37480EC7A03D11C21064D3CD_466716A0_2BE68.png" style="width:100%;"></p>
+                                <h3 style="margin-top:15px;height:30px;">国庆主题“感人瞬间”微视频——最深情的告白</h3>
+                                <span style="margin-top:0px;">2024-09-30</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1771/23431.htm" target="_blank">
+                            <p class="sp-video"><img src="images/video.png" alt=""></p>
+                                <p class="pic" style="width:100%;"><img src="/__local/D/A9/50/9C239B160E7A28A1249AC3C458C_08B51336_8DBE5.png" style="width:100%;"></p>
+                                <h3 style="margin-top:15px;height:30px;">国庆主题“感人瞬间”微视频——向前</h3>
+                                <span style="margin-top:0px;">2024-09-30</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1771/23051.htm" target="_blank">
+                            <p class="sp-video"><img src="images/video.png" alt=""></p>
+                                <p class="pic" style="width:100%;"><img src="/__local/9/39/6E/B64DBB9E34C5BE8370103E2D336_DB42EE23_12D90.jpg" style="width:100%;"></p>
+                                <h3 style="margin-top:15px;height:30px;">【视频】广州持续举行宣讲活动 深入学习贯彻党的二十届三中全会精神</h3>
+                                <span style="margin-top:0px;">2024-09-06</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1771/22411.htm" target="_blank">
+                            <p class="sp-video"><img src="images/video.png" alt=""></p>
+                                <p class="pic" style="width:100%;"><img src="/__local/D/94/5B/BE259B6F828DB5A4A96D1875B85_AE42BAB6_1C7C2.jpg" style="width:100%;"></p>
+                                <h3 style="margin-top:15px;height:30px;">“一引二融”创新模式 赋能职业教育高质量发展——广州工程技术职业学院信息工程学院</h3>
+                                <span style="margin-top:0px;">2024-07-05</span>
+                            </a>
+                        </li>
+
+ 
+
+ <li>
+                            <a href="info/1771/19811.htm" target="_blank">
+                            <p class="sp-video"><img src="images/video.png" alt=""></p>
+                                <p class="pic" style="width:100%;"><img src="/__local/8/C0/10/798BC8344AEACFCCC60AB65EEBA_771DF2D5_19D7D.jpg" style="width:100%;"></p>
+                                <h3 style="margin-top:15px;height:30px;">匠心传承 筑梦未来——“冯莉创新工作室”被命名为 2023 年广东省劳模和工匠人才创新工作室</h3>
+                                <span style="margin-top:0px;">2023-12-27</span>
+                            </a>
+                        </li>
+
+ 
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u18_23451','dynclicks_u18_23441','dynclicks_u18_23431','dynclicks_u18_23051','dynclicks_u18_22411','dynclicks_u18_19811'],[23451,23441,23431,23051,22411,19811],"wbnews", 1869578356)</script>
+</div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="section7">
+        <div class="px1400">
+            <div class="tit clearfix" data-aos="zoom-in">
+                <h3>
+                    <img src="images/tit6.png" alt="">数说工程
+                </h3>
+                <div class="more fr" style="display:none">
+                    <a href="#">查看更多+</a>
+                </div>
+            </div>
+            <div class="s7-c" data-aos="fade-up"><ul>
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-1.png" alt="">
+                                <img src="images/s7-1-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">1964</span>年</p>
+                            <p>创办</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-2.png" alt="">
+                                <img src="images/s7-2-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">23.8</span>万平方米</p>
+                            <p>占地面积</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-3.png" alt="">
+                                <img src="images/s7-3-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">15.5</span>万平方米</p>
+                            <p>建筑面积</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-4.png" alt="">
+                                <img src="images/s7-4-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">3.28</span>亿元</p>
+                            <p>固定资产总值</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-5.png" alt="">
+                                <img src="images/s7-5-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">5</span>个</p>
+                            <p>校区</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-6.png" alt="">
+                                <img src="images/s7-6-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">9</span>个</p>
+                            <p>学院</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-7.png" alt="">
+                                <img src="images/s7-7-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">27</span>个</p>
+                            <p>招生专业</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-8.png" alt="">
+                                <img src="images/s7-8-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">11000</span>余人</p>
+                            <p>全日制在校生</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-9.png" alt="">
+                                <img src="images/s7-9-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">4</span>个</p>
+                            <p>国家级骨干专业</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-10.png" alt="">
+                                <img src="images/s7-10-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">2</span>个</p>
+                            <p>中央财政支持专业</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-11.png" alt="">
+                                <img src="images/s7-11-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">9</span>个</p>
+                            <p>省级品牌专业</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-12.png" alt="">
+                                <img src="images/s7-12-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">3</span>个</p>
+                            <p>重点专业</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-13.png" alt="">
+                                <img src="images/s7-13-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">5</span>个</p>
+                            <p>立项建设省级高水平专业群</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-14.png" alt="">
+                                <img src="images/s7-14-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">422</span>人</p>
+                            <p>专任教师</p>
+                        </a>
+                    </li>
+
+ 
+
+<li>
+                        <a href="#">
+                            <div>
+                                <img src="images/s7-15.png" alt="">
+                                <img src="images/s7-15-1.png" alt="">
+                            </div>
+                            <p><span class="cnum">480</span>项</p>
+                            <p>学生专业技能竞赛奖</p>
+                        </a>
+                    </li>
+
+ 
+</ul><script>_showDynClickBatch(['dynclicks_u19_2098','dynclicks_u19_2097','dynclicks_u19_2096','dynclicks_u19_2095','dynclicks_u19_2094','dynclicks_u19_2093','dynclicks_u19_2092','dynclicks_u19_2091','dynclicks_u19_2090','dynclicks_u19_2089','dynclicks_u19_2088','dynclicks_u19_2087','dynclicks_u19_2086','dynclicks_u19_2085','dynclicks_u19_2084'],[2098,2097,2096,2095,2094,2093,2092,2091,2090,2089,2088,2087,2086,2085,2084],"wbnews", 1869578356)</script>
+</div>
+        </div>
+    </div>
+
+
+    <div class="section8">
+        <div class="tit px1400 clearfix" data-aos="zoom-in">
+            <h3>
+                <img src="images/tit7.png" alt="">专题特辑
+                <script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p><a href="zttj/ssw_syfzgh.htm" target="_blank">一图看懂：广州工程技术职业学院“十四五”事业发展规划</a></p>
+<p><br></p>
+            </h3>
+            <div class="more fr" style="margin-right: 200px;">
+                    <a href="zttj.htm" target="_blank">查看更多+</a>
+                </div>
+        </div>
+        <div class="s8-c" data-aos="fade-up">
+<ul>
+
+ <li>
+                    <a href="zttj/gzjyzlndbg.htm" target="_blank">
+                        <div class="pic"><img src="/__local/4/44/4C/024C079D9016CAAB3A8BD13712F_579A9548_60DA.jpg" /></div>
+                        <div class="s8-cinfo">
+                            <h3>广州工程技术职业学院高等职业教育质量年度报告（2023年度）</h3>
+                        </div>
+                    </a>
+                </li>
+ 
+
+ <li>
+                    <a href="jyzx/bysjyzk.htm" target="_blank">
+                        <div class="pic"><img src="/__local/5/9A/45/1FD1BB1AD4F1B9A80F4EFA5706D_FE38D5FB_72A4.jpg" /></div>
+                        <div class="s8-cinfo">
+                            <h3>2022年就业质量年度报告</h3>
+                        </div>
+                    </a>
+                </li>
+ 
+
+ <li>
+                    <a href="zttj/ssw_syfzgh.htm" target="_blank">
+                        <div class="pic"><img src="/__local/A/DF/D0/3CBD549557145C0D7F1EC5EACE9_101AD63E_7704.jpg" /></div>
+                        <div class="s8-cinfo">
+                            <h3>一图看懂：广州工程技术职业学院“十四五”事业发展规划</h3>
+                        </div>
+                    </a>
+                </li>
+ 
+
+ <li>
+                    <a href="http://dangshi.people.cn/?study_style_id=feeds_pure&pid=26665000862151345&ptype=70&source=share" target="_blank">
+                        <div class="pic"><img src="/__local/8/6C/42/E39E27C1348CC9327346BF304AF_24D6DA66_F489.jpg" /></div>
+                        <div class="s8-cinfo">
+                            <h3>党史学习教育</h3>
+                        </div>
+                    </a>
+                </li>
+ 
+
+ <li>
+                    <a href="zttj/m_sxywm.htm" target="_blank">
+                        <div class="pic"><img src="/__local/1/1E/A3/ECFE1C54D91D48B587BF8D6FDBF_EBFFFC8D_8547.jpg" /></div>
+                        <div class="s8-cinfo">
+                            <h3>“漫”说校园文明</h3>
+                        </div>
+                    </a>
+                </li>
+ 
+</ul>
+ <div class="s8-btnk">
+                <div class="s8-prev s8-btn"></div>
+                <div class="s8-next s8-btn"></div>
+            </div>
+  </div>          
+
+<script>_showDynClickBatch(['dynclicks_u21_14721','dynclicks_u21_14731','dynclicks_u21_14741','dynclicks_u21_15671','dynclicks_u21_14751'],[14721,14731,14741,15671,14751],"wbnews", 1869578356)</script>
+ 
+    </div>
+
+    <div class="section9">
+        <div class="px1400"><div class="tit clearfix" data-aos="zoom-in">
+                <h3>
+                    <img src="images/tit8.png" alt="">学生获奖
+                </h3>
+                <div class="more fr">
+                    <a href="xwzx/xshj.htm" target="_blank">查看更多+</a>
+                </div>
+            </div>
+            <div class="s9-c" data-aos="fade-up">
+                <ul>
+
+ <li>
+                        <a href="info/1041/23501.htm" target="_blank">
+                            <div class="pic">
+                                <img src="/__local/7/1A/D1/DEAC34EB5A87CD6F9B687FD3665_6F64780F_29D7D.jpg" alt="">
+                            </div>
+                            <div class="s9-cinfo">
+                                <div>
+                                    <img src="images/icon3q.png" alt=""><span>2024-10-10</span>
+                                </div>
+                                <h3>餐旅学子获2024年东莞市职业技能大赛咖啡师项目金奖</h3>
+                                <p>近日，在东莞市人力资源和社会保障局主办的2024年东莞市职业技能大赛咖啡师项目竞赛中，我校餐饮智能管理专业学生范锦辉荣获金奖。比赛依据国家咖啡师职业资格三级（高级）标准，结合行业实际，增加了新知识、新技术的相关内容。赛事包括理论考试、拿铁咖啡制作以及创意咖啡制作等环节，由专业评审专家命题。范锦辉通过激烈的竞争，从83名参赛选手中脱颖而出，以理论满分100分、实操200分的成绩斩获金奖。...</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+
+ <li>
+                        <a href="info/1041/23061.htm" target="_blank">
+                            <div class="pic">
+                                <img src="/__local/1/98/19/2C6D5B47E328BB9BE38C391FC1D_5A43C415_62546.jpg" alt="">
+                            </div>
+                            <div class="s9-cinfo">
+                                <div>
+                                    <img src="images/icon3q.png" alt=""><span>2024-09-06</span>
+                                </div>
+                                <h3>石化学子获“西门子杯”中国智能制造挑战赛总决赛二等奖</h3>
+                                <p>7月15-17日，第十八届CIMC“西门子杯”中国智能制造挑战赛国赛初赛在广西南宁举行，全国756所高校、5861支队伍、25000余名师生报名参加了九大赛项的比赛。石油化工学院化工自动化技术专业一队林俊杰和黄嘉伟，二队黎元庭和郁杨渊，三队张鸿辉、黄俊然和黄永添七名同学由李晓佳、黄卫东两位指导老师带队参加了智能制造工程设计与应用类赛项——流程行业自动化方向（高职组）的比赛，获一等奖1项，二等奖2项...</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+
+ <li>
+                        <a href="info/1041/21931.htm" target="_blank">
+                            <div class="pic">
+                                <img src="/__local/9/CF/BA/FC36BF21A1E1F65E75088996D0B_CA9EB331_41242.jpg" alt="">
+                            </div>
+                            <div class="s9-cinfo">
+                                <div>
+                                    <img src="images/icon3q.png" alt=""><span>2024-06-18</span>
+                                </div>
+                                <h3>我校学子在第四届“外教社·词达人杯”大学生英语词汇能力大赛广东省赛中荣获佳绩</h3>
+                                <p>为进一步提升我校学生英语词汇能力，激发学生学习英语的热情，同时达到“以赛促教、以赛促学”的目的，2024年3月，外语商贸学院积极组织我校学生参加了由中国外语战略研究中心、中国外语教材与教法研究中心和上海外语教育出版社共同举办的第四届“外教社·词达人杯”全国大学生英语词汇能力大赛。本次比赛吸引了我校各专业各年级662名学生报名。历经校赛、省赛的激烈角逐，共有12名学生在省赛中获奖，其中，...</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+
+ <li>
+                        <a href="info/1041/21511.htm" target="_blank">
+                            <div class="pic">
+                                <img src="/__local/8/E5/60/AB3A63EE5DC1C872FA914F13426_74358F03_2E8F1.jpg" alt="">
+                            </div>
+                            <div class="s9-cinfo">
+                                <div>
+                                    <img src="images/icon3q.png" alt=""><span>2024-05-24</span>
+                                </div>
+                                <h3>第十四届“挑战杯”广东大学生创业计划竞赛我校获5银6铜</h3>
+                                <p>5月19日，由团省委、省教育厅、省科技厅、省人力资源社会保障厅、省社科院、省科协、省学联等单位共同主办的第十四届“挑战杯”广东大学生创业计划竞赛终审决赛在华南农业大学落下帷幕，党委副书记纪晓辉率学校代表团参赛。在本届竞赛中，我校报送了14件参赛作品，获银奖5项、铜奖6项，获奖项目数量创历史新高。据悉，本届“挑战杯”省赛分设内地参赛项目、港澳台侨参赛项目两大赛道，作品类型涵盖科技创新...</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+
+ <li>
+                        <a href="info/1041/21401.htm" target="_blank">
+                            <div class="pic">
+                                <img src="/__local/E/71/0B/4ACDFF46D83862C3D51E37158ED_17B01888_8DBD0.jpg" alt="">
+                            </div>
+                            <div class="s9-cinfo">
+                                <div>
+                                    <img src="images/icon3q.png" alt=""><span>2024-05-16</span>
+                                </div>
+                                <h3>全国大学生职业规划大赛总决赛我校获高职组赛道两银一铜</h3>
+                                <p>5月12日，由教育部和上海市人民政府主办的首届全国大学生职业规划大赛总决赛落下帷幕。经过激烈角逐，我校参赛选手信息工程学院陈伟桂、石油化工学院郑睿分别获得就业赛道（高职组）及成长赛道（高职组）银奖、机电工程学院陈建颖获成长赛道（高职组）铜奖。本次大赛以“筑梦青春志在四方，规划启航职引未来”为主题，是国内首次以促进大学生高质量充分就业为目标设置的全国性专门赛事。大赛自启动以来，累...</p>
+                            </div>
+                        </a>
+                    </li>
+
+ 
+</ul>
+            </div><script>_showDynClickBatch(['dynclicks_u22_23501','dynclicks_u22_23061','dynclicks_u22_21931','dynclicks_u22_21511','dynclicks_u22_21401'],[23501,23061,21931,21511,21401],"wbnews", 1869578356)</script>
+</div>
+    </div>
+
+    <div class="section10">
+        <div class="px1400 clearfix">
+        <div class="tit clearfix" data-aos="zoom-in">
+                <h3><img src="images/tit10.png" alt="">专题专栏<span class="hidden-xs">
+<p><span style="color: rgb(255, 255, 255);">.</span><br></p></span></h3>
+                <div class="more fr">
+                    <a href="ztzl.htm" target="_blank">查看更多+</a>
+                </div>
+            </div>
+            <div class="s10-c" data-aos="fade-up">
+ <ul>
+<li>
+                        <a href="https://www.gzvtc.edu.cn/cxqx2024" target="_blank">
+                            <div class="pic"><img src="/__local/F/67/56/A6A2AC9984F1A86EC82FA4C712E_91A64EE4_5BCD.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1081/15691.htm" target="_blank">
+                            <div class="pic"><img src="/__local/B/BE/2C/B56AB944262653C310A068307BD_ADD1D268_2242.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="http://dangshi.people.cn/?study_style_id=feeds_pure&pid=26665000862151345&ptype=70&source=share" target="_blank">
+                            <div class="pic"><img src="/__local/9/17/F5/D2F356A4F590EF0B0351FED93CA_D7A76B98_625F.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u24_22621','dynclicks_u24_15691','dynclicks_u24_19641'],[22621,15691,19641],"wbnews", 1869578356)</script>
+ 
+        </div>
+    </div>
+
+
+
+    <div class="foot">
+        <div class="linkw">
+            <div class="link22  px1400 clearfix"><h3>常用链接</h3>
+                <p>
+   <a href="xxjj/xxgk.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86511)">学校概况</a>
+   <a href="https://zs.gzvtc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86513)">招生信息网</a>
+   <a href="http://gzvtc.jobsys.cn/unijob/index.php/web/Index/index" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86514)">就业工作网</a>
+   <a href="xxgk.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86515)">信息公开</a>
+   <a href="https://oa.gzvtc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86512)">数字校园信息平台</a>
+   <a href="https://vpn.gzvtc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86517)">VPN登录</a>
+   <a href="https://stmcrp.gzvtc.edu.cn/student/login" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86608)">我的大学2.0</a>
+   <a href="https://mail.gzvtc.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86610)">电子邮箱</a>
+   <a href="https://gdgcwljx.mh.chaoxing.com/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86609)">智慧教学平台</a>
+   <a href="xl.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86612)">校历</a>
+   <a href="https://www.gzvtc.edu.cn/lib/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86516)">图书馆</a>
+   <a href="http://218.20.227.37:8880/register/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86808)">新生报到注册</a>
+   <a href="https://hall.gzvtc.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86826)">一网通办</a>
+ </p></div>
+        </div>
+        <div class="px1400 clearfix">
+            <div class="foot-l fl clearfix">
+             
+                    
+<p><img src="/__local/9/98/92/49BC02A77F969C25F24CC93C918_72D14765_135.png?e=.png" vsbhref="vurl" vurl="/_vsl/9989249BC02A77F969C25F24CC93C918/72D14765/135?e=.png" vheight="" vwidth="" orisrc="/__local/9/98/92/49BC02A77F969C25F24CC93C918_72D14765_135.png?e=.png" class="img_vsb_content"> 电话：020-87610212　 020-37937663</p>
+<p><img src="/__local/6/C4/B8/AE419C5BFFCEE30874B8FA19975_625ADB36_104.png?e=.png" vsbhref="vurl" vurl="/_vsl/6C4B8AE419C5BFFCEE30874B8FA19975/625ADB36/104?e=.png" vheight="" vwidth="" orisrc="/__local/6/C4/B8/AE419C5BFFCEE30874B8FA19975_625ADB36_104.png?e=.png" class="img_vsb_content"> &nbsp;校本部：广州市环市东路465号　从化校区：广州市从化区沿江南路302号</p>
+          
+                 
+                 
+            </div>
+            <div class="foot-c fl">
+                <div class="link">
+                    <div><p>友情链接</p>
+                        <div>
+   <a href="http://www.moe.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86400)">中华人民共和国教育部</a>
+   <a href="http://www.tech.net.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86401)">中国高职高专教育网</a>
+   <a href="https://www.gx211.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86402)">中国高校之窗</a>
+   <a href="https://www.gz.gov.cn" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86403)">广州市人民政府</a>
+   <a href="http://edu.gd.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86404)">广东省教育厅</a>
+   <a href="https://jyj.gz.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86405)">广州市教育局</a>
+   <a href="http://www.gzgh.org.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86406)">广州市总工会</a>
+   <a href="http://www.ncss.org.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86407)">新职业</a>
+   <a href="http://www.gzpyp.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86408)">番禺职业技术学院</a>
+   <a href="https://www.szpu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1869578356, 86409)">深圳职业技术大学</a>
+  </div></div>
+                </div>
+            </div>
+            <div class="foot-r fr">     
+           
+                
+                            <img src="images/wx1.jpg">
+                         
+                
+                            <img src="images/wx2.png">
+                         
+        
+</div>
+        </div>
+        <div class="foot-bq ">
+             <div class="clearfix px1400">
+             <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="fl bq">
+<p>版权所有：广州工程技术职业学院　&nbsp;<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">粤ICP备09110481号-4</a></p>
+</div>
+               
+                <div class="fr sydw">
+                
+        
+                        <a href="https://bszs.conac.cn/sitename?method=show&id=36C9B51EE0DF4F82E053022819ACAE84" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74173)" target="_blank">
+                            <img src="img/blue.png" border="0">
+                        </a>  
+                        <a href="http://guangzhou.cyberpolice.cn/netalarm/netalarm/Welcome.jsp?bano=4401040100704" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1869578356, 74083)" target="_blank">
+                            <img src="img/waicon.gif" border="0">
+                        </a>  
+
+
+                 </div>
+             </div>    
+        </div>
+    </div>
+    
+    <div class="hide" id="gotop">
+    <svg t="1620981491725" class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14041" width="16" height="16"><path d="M825.568 555.328l-287.392-289.28C531.808 259.648 523.488 256.576 515.2 256.64 514.08 256.544 513.12 256 512 256c-4.672 0-9.024 1.088-13.024 2.88-4.032 1.536-7.872 3.872-11.136 7.136l-259.328 258.88c-12.512 12.48-12.544 32.736-0.032 45.248 6.24 6.272 14.432 9.408 22.656 9.408 8.192 0 16.352-3.136 22.624-9.344L480 364.288 480 928c0 17.696 14.336 32 32 32s32-14.304 32-32L544 362.72l236.192 237.728c6.24 6.272 14.496 9.44 22.688 9.44s16.32-3.104 22.56-9.312C838.016 588.128 838.048 567.84 825.568 555.328zM864 192 160 192C142.336 192 128 177.664 128 160s14.336-32 32-32l704 0c17.696 0 32 14.336 32 32S881.696 192 864 192z" p-id="14042"></path></svg>
+</div>
+<script>
+$(window).scroll(function() {
+    if ($(this).scrollTop()>100){
+        $("#gotop").removeClass("hide");
+    }else{
+        $("#gotop").addClass("hide");
+    };
+});
+$('#gotop').click(function () {
+    $('html,body').animate({
+        scrollTop : '0px'
+    }, 800);
+}); 
+</script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/waypoints.js"></script>
+    <script type="text/javascript" src="js/countup.js"></script>
+    <script type="text/javascript" src="js/aos.js"></script>
+    <script>
+        window.onload = function () {
+            $('.cnum').countUp({ time: 1000 });
+            AOS.init({
+                easing: 'ease-out-back',
+                duration: 1000,
+                disable: window.innerWidth < 1025
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,3285 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="renderer" content="webkit">
+    <title>兴伟学院</title>
+    <link rel="SHORTCUT ICON" href="/sites/www/images/logo.ico">
+    <link rel="stylesheet" href="/js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/sites/www/css/font-awesome/css/font-awesome.min.css"><!--图标-->
+    <link rel="stylesheet" href="/sites/www/css/reset.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/sites/www/css/animate.css">
+    <link rel="stylesheet" href="/css/swiper.min.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/sites/www/css/styles.css?t=44">
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/sites/www/js/wow.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <!--layui-->
+    <script src="/js/layui/layui.js"></script>
+    <script src="/js/layer/layer.js"></script>
+
+</head>
+<body>
+<style>
+    .header.fixed {
+        height: 120px!important;
+    }
+    .header .nav li>a{
+        line-height: 48px!important;
+    }
+
+    .header-main .left {
+        margin: 12px 0;
+    }
+    .nav_container {
+        margin: 10px 0!important;
+    }
+    /*.header .nav .menu2 li > a,.header .nav .menu1 li > a {*/
+    /*    font-size: 16px;*/
+    /*}*/
+    .header .nav .menu2 .subbox,.header .nav .subbox  {
+        top: 52px!important;
+    }
+
+    .switch {
+        position: absolute;
+        right: 6%;
+        top: 23px;
+        font-size: 16px;
+    }
+
+    .switch a {
+        color: #fff;
+    }
+
+    .new_sub {
+        display: none;
+        position: absolute;
+        right: -100%;
+        top: 0;
+        width: 110px;
+        background: #ED7418;
+        border-left: #ED7418;
+    }
+
+    .header .nav .subbox a {
+        position: relative;
+    }
+</style>
+<header class="header fixed new_bg_color">
+    <div class="header-border"></div>
+    <!--    <div class="headerEng"><a href="/en/"><img src="/sites/www/images/English.png" alt=""></a></div>-->
+    <div class="header-main">
+        <div class="switch">
+            <a href="/cn/">
+                中文
+            </a>｜
+            <a href="/en/">English</a>
+        </div>
+
+        <div class="left fl mt">
+            <a class="logo" href="/">
+                <!--                <img src="/sites/www/images/xingwei_logo.png" title="兴伟学院" height="90" id="logo" style="display: block">-->
+                <img src="/sites/www/images/logo_v3.png" title="兴伟学院" height="70" id="logo_slider" >
+            </a>
+        </div>
+        <div class="fr right nav_container">
+            <div class="nav f-cb" style="position: relative;height: 80px">
+                <div style="float: right">
+                    <ul class="menu1">
+                        <li></li>
+                        <li class="subli">
+                            <a href="/cn/schoolstolaw/display" target="_blank">依法治校</a>
+                        </li>
+                        <li class="subli">
+                            <a href="/cn/community/common/commonimg&id=45">党建之窗</a>
+                            <div class="subbox" style="display: none;">
+                                <a href="/cn/community/common/commonimg&id=476">党纪学习教育</a>
+                                <a href="/cn/community/common/commonimg&id=307">党的二十大学习专栏</a>
+                                <a href="/cn/community/common/commonimg&id=45">党建新闻</a>
+                                <a href="/cn/community/common/commonimg&id=46" class="sub_a">主题教育
+<!--                                    <div class="new_sub">-->
+<!--                                        <div class="link" data-link="/cn/community/common/commonimg&id=494">学习贯彻习近平新时代中国特色社会主义思想主题教育</div>-->
+<!--                                        <div class="link" data-link="/cn/community/common/enrollment&id=298">党史学习教育</div>-->
+<!--                                        <div class="link" data-link="/cn/community/common/commonimg&id=150">"四史"教育</div>-->
+<!--                                        <div class="link" data-link="/cn/community/common/commonimg&id=493">"不忘初心,牢记使命"主题教育</div>-->
+<!--                                    </div>-->
+                                </a>
+                                <a href="/cn/community/common&id=93">党建信息</a>
+                               <!-- <a href="/cn/community/common/commonimg&id=341">主题教育(2023)</a> -->
+                                <a href="/cn/community/common&id=295">安全稳定</a>
+                            </div>
+                        </li>
+                        <li class="subli">
+                            <a href="/cn/disclosure/display&id=58">信息公开</a>
+                        </li>
+                        <li class="subli">
+                            <a href="/cn/about/abouten/languages">语言文字网</a>
+                        </li>
+                        <li class="subli">
+                            <a href="/cn/library/libraryindex">图书馆</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul style="font-size: 18px" class="menu2">
+                        <li class="home" data-num="0"><a href="/">首页</a></li>
+                        <li class="subli">
+                            <a href="/cn/about/regarding/synopsis">关于兴伟</a>
+                            <div class="subbox" style="display: none">
+                                <a href="/cn/about/regarding/synopsis" class="sub_a">学院简介
+                                </a>
+                                <a href="/cn/community/common/zoujin&id=342">探索与创新</a>
+
+                                <a href="/cn/about/regarding/newsynopsis" class="sub_a">核心师资
+                                    <div class="new_sub">
+                                        <div class="link" data-link="/cn/default/index/teachers">师资团队</div>
+                                        <div class="link" data-link="https://www.xingwei.edu.cn/cn/default/index/teachers?id=344">行业导师</div>
+                                    </div>
+                                </a>
+                                <a href="/cn/community/details&id=2015">机构设置</a>
+                                <a href="/cn/about/regarding/newstwo" class="sub_a">新闻与媒体
+                                    <div class="new_sub">
+                                        <div class="link" data-link="/cn/community/common/commonimg&id=41">校园新闻</div>
+                                        <div class="link" data-link="/cn/community/common/commonimg&id=42">媒体报道</div>
+                                    </div>
+                                </a>
+                                <a href="/cn/community/common/vision&id=345">走进兴伟</a>
+                                <a href="/cn/about/regarding/landscape">校园风景</a>
+
+                                <!--<a href="/cn/about/regarding/education">教育创新
+                               </a>
+                               <a href="/cn/default/index/teachers">师资团队</a>
+                               <a href="/cn/about/regarding/residentSchool">驻校大师</a>
+                               <a href="/cn/student/student/growing">成长导师制</a>
+                               <a href="/cn/student/student/teacherStudent">师生住宿制</a>
+                               <a href="/cn/student/student/graduation">毕业去向</a>
+                               <a href="/cn/about/regarding/messages">师生寄语</a>
+                               <a href="/cn/about/regarding/landscape">校园风景</a>-->
+
+
+                            </div>
+                        </li>
+                        <li class="subli">
+                            <a href="/cn/education/educationindex">教育教学</a>
+                            <div class="subbox" style="display: none">
+                                <a href="/cn/education/educationindex/educationcmrlist&cateid=311" class="sub_a">博雅教育
+                                    <div class="new_sub">
+                                        <div class="link" data-link="/cn/education/educationindex/educationcmrlist&cateid=312">博雅课程</div>
+                                        <div class="link" data-link="/cn/default/index/teachers">师资团队</div>
+                                    </div>
+                                </a>
+                                <a href="/cn/science/scientific/common&id=87" class="sub_a">专业教育
+                                    <div class="new_sub">
+                                        <div class="link" data-link="/cn/science/scientific/common&id=87">专业方向</div>
+                                        <div class="link" data-link="/cn/science/scientific/credit">学分体系</div>
+                                        <div class="link" data-link="/cn/science/scientific/common&id=88">课程简介</div>
+                                        <div class="link" data-link="/cn/science/scientific/elective">选课系统</div>
+                                    </div>
+                                </a>
+                                <a href="/cn/education/educationindex/educationcmrlist&cateid=315">实践教育</a>
+                                <a href="/cn/education/educationindex/educationcmrlist&cateid=313">团创教育</a>
+                                <a href="/cn/education/educationindex/educationcmrlist&cateid=316">访学教育</a>
+                                <a href="/cn/education/educationindex/educationcmrlist&cateid=490">教学动态</a>
+
+
+
+
+
+
+                            </div>
+                        </li>
+
+
+
+                        <li class="subli">
+                            <a href="/cn/community/common/commonimg&id=479">学生成长</a>
+                            <div class="subbox" style="display: none">
+                                <a href="/cn/community/common/commonimg&id=479" class="sub_a">学生委员会
+                                    <div class="new_sub">
+                                        <div class="link" data-link="/cn/community/details&id=2012">委员会简介</div>
+                                        <div class="link" data-link="/cn/community/details&id=2013">教练团队</div>
+                                        <div class="link" data-link="/cn/community/details&id=2014">委员会制度</div>
+                                        <div class="link" data-link="/cn/community/common/commonimg&id=483">委员会动态</div>
+                                    </div>
+                                </a>
+                                <a href="/cn/community/common/commonimg&id=484">成长导师</a>
+                                <a href="/cn/community/common/commonimg&id=43">学生活动</a>
+                                <a href="/cn/community/common/commonimg&id=486">访学体验</a>
+                                <a href="/cn/community/common/commonimg&id=487">学生获奖</a>
+                                <a href="/cn/community/common/commonimg&id=488">学生寄语</a>
+                            </div>
+                        </li>
+
+                        <!--<li class="subli">-->
+                        <!--<a href="/cn/student/student/teacherStudent">学生发展</a>-->
+                        <!--<div class="subbox" style="display: none;">-->
+                        <!--<a href="/cn/student/student/teacherStudent">师生住宿制</a>-->
+                        <!--<a href="/cn/student/student/growing">成长导师制</a>-->
+                        <!--<a href="/cn/student/student/graduation">毕业去向</a>-->
+                        <!--</div>-->
+                        <!--</li>-->
+
+                        <li class="subli">
+                            <a href="/cn/community/common/commonimg&id=49">招生就业</a>
+                            <div class="subbox" style="display: none;">
+                                <a href="/cn/community/common/commonimg&id=49">招生简章</a>
+                                <a href="/cn/community/common&id=50">申请办法</a>
+                                <a href="/cn/community/common&id=51">招生咨询</a>
+                                <a href="/cn/community/common/commonimg&id=52">招生动态</a>
+                                <!--<a href="/cn/community/common&id=53">奖学金制度</a>-->
+                                <a href="/cn/community/common&id=54">国际学生</a>
+                                <a href="/cn/community/common/enrollment&id=55">春季招生</a>
+                                <a href="/cn/community/common/enrollment&id=56">秋季招生</a>
+                                <a href="/cn/community/common/commonimg&id=304">就业指南</a>
+                                <a href="/cn/community/common/commonimg&id=335">创新班招生</a>
+                                <!--<a href="http://www.xingweizhaosheng.com/">招生网站</a>-->
+                            </div>
+                        </li>
+                        <li class="subli">
+                            <a href="/cn/community/common/commonimg&id=74">校务信息</a>
+                            <div class="subbox" style="display: none;">
+                                <a href="/cn/community/common&id=47">通知公告</a>
+                                <a href="/cn/community/common&id=95">资源服务</a>
+                                <a href="/cn/community/common&id=94">兴伟校历</a>
+                                <a href="/cn/community/common&id=77">招聘信息</a>
+                                <a href="/cn/community/common/contact">联系我们</a>
+                                <a href="/cn/community/common/filesDownload">文档下载</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="borImg" style=""></div>-->
+            </div>
+        </div>
+        <!--<div class="clear"></div>-->
+    </div>
+</header>
+
+<div class="m-header">
+    <div class="m-header-main">
+        <div class="left fl">
+            <a class="logo" href="/"><img src="/sites/www/images/logo.png" title="兴伟学院" height="30" style="margin-top: 10px;"></a>
+        </div>
+        <div class="m-headerEng"><a href="/en/"><img src="/sites/www/images/English.png" alt=""></a></div>
+        <div class="fr">
+            <p><i class="fa fa-align-justify"></i></p>
+        </div>
+    </div>
+    <div class="m-head">
+        <ul>
+            <li><a href="javascript:;" class="return"><i class="fa fa-lg fa-angle-left"></i>  返回</a></li>
+            <li><a href="/">首页</a></li>
+            <li class="subli">
+                <a href="/cn/about/regarding/synopsis">关于兴伟</a>
+                <div class="subbox" style="display: none">
+                    <a href="/cn/about/regarding/synopsis" class="sub_a">学院简介
+                    </a>
+                    <a href="/cn/community/common/zoujin&id=342">探索与创新</a>
+
+                    <a href="" class="sub_a">核心师资
+                        <div class="new_sub">
+                            <div class="link" data-link="/cn/default/index/teachers">师资团队</div>
+                            <div class="link" data-link="https://www.xingwei.edu.cn/cn/default/index/teachers?id=344">行业导师</div>
+                        </div>
+                    </a>
+                    <a href="/cn/community/details&id=2015">机构设置</a>
+                    <a href="/cn/community/common/commonimg&id=41" class="sub_a">新闻与媒体
+                        <div class="new_sub">
+                            <div class="link" data-link="/cn/community/common/commonimg&id=41">校园新闻</div>
+                            <div class="link" data-link="/cn/community/common/commonimg&id=42">媒体报道</div>
+                        </div>
+                    </a>
+                    <a href="https://www.xingwei.edu.cn/cn/community/common/vision&id=345">走进兴伟</a>
+                    <a href="/cn/about/regarding/landscape">校园风景</a>
+
+                    <!--<a href="/cn/about/regarding/education">教育创新
+                   </a>
+                   <a href="/cn/default/index/teachers">师资团队</a>
+                   <a href="/cn/about/regarding/residentSchool">驻校大师</a>
+                   <a href="/cn/student/student/growing">成长导师制</a>
+                   <a href="/cn/student/student/teacherStudent">师生住宿制</a>
+                   <a href="/cn/student/student/graduation">毕业去向</a>
+                   <a href="/cn/about/regarding/messages">师生寄语</a>
+                   <a href="/cn/about/regarding/landscape">校园风景</a>-->
+
+
+                </div>
+            </li>
+            <li class="subli">
+                <a href="/cn/education/educationindex">教育教学</a>
+                <div class="subbox" style="display: none">
+                    <a href="/cn/education/educationindex/educationcmrlist&cateid=311" class="sub_a">博雅教育
+                        <!--                        <div class="new_sub">-->
+                        <!--                            <div class="link" data-link="/cn/education/educationindex/educationcmrlist&cateid=312">博雅课程</div>-->
+                        <!--                            <div class="link" data-link="/cn/default/index/teachers">师资团队</div>-->
+                        <!--                        </div>-->
+                    </a>
+                    <a href="/cn/science/scientific/common&id=87" class="sub_a">专业教育
+                        <div class="new_sub">
+                            <div class="link" data-link="/cn/science/scientific/common&id=87">专业方向</div>
+                            <div class="link" data-link="/cn/science/scientific/credit">学分体系</div>
+                            <div class="link" data-link="/cn/science/scientific/common&id=88">课程简介</div>
+                            <div class="link" data-link="/cn/science/scientific/elective">选课系统</div>
+                        </div>
+                    </a>
+                    <a href="/cn/education/educationindex/educationcmrlist&cateid=315">实践教育</a>
+                    <a href="/cn/education/educationindex/educationcmrlist&cateid=313">团创教育</a>
+                    <a href="/cn/education/educationindex/educationcmrlist&cateid=316">访学教育</a>
+                    <a href="/cn/education/educationindex/educationcmrlist&cateid=490">教学动态</a>
+                </div>
+            </li>
+
+
+
+            <li class="subli">
+                <a href="/cn/community/common/commonimg&id=479">学生成长</a>
+                <div class="subbox" style="display: none">
+                    <a href="/cn/community/common/commonimg&id=479" class="sub_a">学生委员会
+                        <div class="new_sub">
+                            <div class="new_sub">
+                                <div class="link" data-link="/cn/community/details&id=2012">委员会简介</div>
+                                <div class="link" data-link="/cn/community/details&id=2013">教练团队</div>
+                                <div class="link" data-link="/cn/community/details&id=2014">委员会制度</div>
+                                <div class="link" data-link="/cn/community/common/commonimg&id=483">委员会动态</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">成长导师</a>
+                    <a href="/cn/community/common/commonimg&id=43">学生活动</a>
+                    <a href="/cn/community/common/commonimg&id=486">访学体验</a>
+                    <a href="/cn/community/common/commonimg&id=487">学生获奖</a>
+                    <a href="/cn/community/common/commonimg&id=488">学生寄语</a>
+                </div>
+            </li>
+
+
+            <li>
+                <a href="javascript:;">招生专栏</a>
+                <div class="m-subbox" style="display: none;">
+                    <a href="/cn/community/common/commonimg&id=49">招生简章</a>
+                    <a href="/cn/community/common&id=50">申请办法</a>
+                    <a href="/cn/community/common&id=51">招生咨询</a>
+                    <a href="/cn/community/common/commonimg&id=52">招生动态</a>
+                    <!--<a href="/cn/community/common&id=53">奖学金制度</a>-->
+                    <a href="/cn/community/common&id=54">国际学生</a>
+                    <a href="/cn/community/common&id=55">春招招生</a>
+                    <a href="/cn/community/common&id=56">秋招招生</a>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:;">校务信息</a>
+                <div class="m-subbox" style="display: none;">
+                    <a href="/cn/community/common&id=47">通知公告</a>
+                    <a href="/cn/community/common&id=95">资源服务</a>
+                    <a href="/cn/community/common&id=94">兴伟校历</a>
+                    <a href="/cn/community/common&id=77">招聘信息</a>
+                    <a href="/cn/community/common/contact">联系我们</a>
+                    <a href="/cn/community/common/filesDownload">文档下载</a>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:;">信息公开</a>
+                <div class="m-subbox" style="display: none;">
+                    <a href="/cn/community/common&id=58">基本信息</a>
+                    <a href="/cn/community/common&id=59">招考信息</a>
+                    <a href="/cn/community/common&id=60">资财及收费</a>
+                    <a href="/cn/community/common&id=61">人事及师资</a>
+                    <a href="/cn/community/common&id=62">教学质量</a>
+                    <a href="/cn/community/common&id=63">学生事务管理</a>
+                    <a href="/cn/community/common&id=64">学风建设</a>
+                    <a href="/cn/community/common&id=65">学位及学科</a>
+                    <a href="/cn/community/common&id=66">对外交流与合作</a>
+                    <a href="/cn/community/common&id=67">后勤保障</a>
+                    <a href="/cn/community/common&id=68">总结报告</a>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:;">党建之窗</a>
+                <div class="m-subbox" style="display: none;">
+                    <a href="/cn/community/common/commonimg&id=45">党建新闻</a>
+                    <a href="/cn/community/common/commonimg&id=46">主题教育</a>
+                    <a href="/cn/community/common/commonimg&id=150">四史教育</a>
+                    <a href="/cn/community/common&id=93">党建信息</a>
+                    <a href="/cn/community/common&id=295">安全稳定</a>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="m-shelter">
+    </div>
+</div>
+<script>
+    $(".header li").mouseover(function () {
+        $(this).find(".subbox").show()
+    })
+    $(".header li").mouseout(function () {
+        $(this).find(".subbox").hide()
+    })
+
+    $(".menu1 .subli .subbox .sub_a").mouseover(function () {
+        console.log('in',$(this))
+        $(this).find(".new_sub").show()
+    })
+    $(".menu1 .subli .subbox .sub_a").mouseout(function () {
+        $(this).find(".new_sub").hide()
+        console.log('out',$(this))
+    })
+
+    $(".menu2 .subli .subbox .sub_a").mouseover(function () {
+        console.log('in',$(this))
+        $(this).find(".new_sub").show()
+    })
+    $(".menu2 .subli .subbox .sub_a").mouseout(function () {
+        $(this).find(".new_sub").hide()
+        console.log('out',$(this))
+    })
+    var v = window.location.pathname;
+    $(".header ul li").each(function (i) {
+        $(this).find("a").each(function (e) {
+            var vherf = $(this).attr("href");
+            if (v == vherf) {
+                $(".header ul li").eq(i).addClass("action")
+            }
+        })
+
+    })
+    $('.menu2 .subli .subbox').each(function (){
+        $(this).click(function (e){
+            const link = e.target.closest('.link')
+            if(link){
+                e.preventDefault()
+                window.location.href =  link.getAttribute('data-link')
+            }
+            console.log('link',link)
+        })
+    })
+    // 三级菜单点击函数
+    // $(".menu2 .subli .subbox .sub_a .new_sub").each(function (i){
+    //     $(this).find('.link').each(function(){
+    //         $(this).click(function(){
+    //             window.location.href =   $(this).data('link')
+    //         })
+    //     })
+    // })
+
+    $(".m-head li>a").click(function () {
+        if($(this).is(".return")){
+            $(".m-head").css({
+                "left":"-82%"
+            })
+            $(".m-shelter").hide()
+            $("html,body").css({
+                "overflow":"auto",
+                "height":"100%"
+            })
+        }else{
+            $(this).next(".m-subbox").toggle()
+        }
+    })
+    $(".m-header").find(".fr").click(function () {
+        $(".m-head").css({
+            "left":"0"
+        })
+        $(".m-shelter").show()
+        $("html,body").css({
+            "overflow":"hidden",
+            "height":"100%"
+        })
+    })
+
+</script>
+<style>
+
+    .student-text{
+        background: #293535;
+    }
+    .student-text:nth-of-type(3){
+        animation-delay:1s;
+        background: #202C2C !important;
+    }
+    .student-text:nth-of-type(4){
+        animation-delay:2s;
+        background: #1C2727 !important;
+    }
+    .student-text:nth-of-type(5){
+        animation-delay:3s;
+        background: #162121 !important;
+    }
+    .teacher-swi:nth-of-type(1){
+        animation-delay:.2s;
+    }
+    .teacher-swi:nth-of-type(2){
+        animation-delay:.4s;
+    }
+    .teacher-swi:nth-of-type(3){
+        animation-delay:.6s;
+    }
+    .teacher-swi:nth-of-type(4){
+        animation-delay:.8s;
+    }
+    .student-animate p{
+        color: #fff;
+        padding-top: 10px;
+        line-height: 28px;
+    }
+    .library_go{
+        background-image: url("/sites/www/images/golibraryindex.png");
+        background-size:coverc;
+        width: 100%;
+        height: 106px;
+        position: relative;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+    }
+    .library_go p{
+        position: absolute;
+        left: 18vw;
+        font-size: 42px;
+        color: white;
+    }
+    .library_go a{
+        display: inline-block;
+        width: 210px;
+        height:62px ;
+        line-height: 62px;
+        position: absolute;
+        right: 421px;
+        border-radius: 60px;
+        background-color: #ED7418;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .news_perser_container {
+        display: flex;
+        justify-content: space-between;
+        padding: 68px 10.5vw;
+        background: #f7f7f7;
+    }
+    .news_perser_container .module {
+        display: flex;
+        flex-direction: column;
+        width: 49%;
+    }
+    .news_perser_container .news .item_title {
+        color:#333333;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .news_perser_container .news .item_title .item_title_en{
+        color: #ED7418;
+        font-size: 22px;
+    }
+    .news_perser_container .news .news_item  {
+        padding: 22px 0;
+    }
+    .news_perser_container .news .bdt  {
+        display: flex;
+        justify-content: space-between;
+        height: 13em;
+    }
+    .news_perser_container .news .news_item .left {
+        position: relative;
+        width: 44%;
+    }
+    .news_perser_container .news .news_item .left .mask {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 55px;
+        height: auto;
+        transform: translate(-50%,-50%);
+    }
+    .news_perser_container .news .news_item .left img {
+        width: 100%;
+        height: 180px;
+    }
+    .news_perser_container .news .news_item .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 54%;
+        padding: 5px 0;
+
+    }
+    .news_perser_container .news .news_item .right h3 {
+        color: #333;
+        font-size: 18px;
+        /*margin-bottom: 15px;*/
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .news_perser_container .news .news_item .right p {
+        font-size: 16px;
+        color: #828282
+    }
+    .bdt {
+        border-bottom: 1px solid #EEEEEE;
+    }
+
+    .recruit {
+        position: relative;
+        height: 11.5vw;
+    }
+    .recruit img {
+        width: 100%;
+        height: 100%;
+    }
+    .recruit .recruit_link {
+        position: absolute;
+        top: 50%;
+        left: 16%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-50%);
+        font-size: 32px;
+        color:#fff;
+        padding: 10px 30px;
+        white-space: nowrap;
+        background-color: rgba(237, 116, 24, 0.9);
+
+    }
+
+    .recruit .recruit_link a{
+        display: flex;
+        align-items: center;
+        color: #fff
+    }
+
+    .recruit .recruit_link a img {
+        height: max-content
+    }
+    .title {
+        color:#333333;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .title_en {
+        color: #ED7418;
+        font-size: 22px;
+        margin-left: 10px;
+    }
+    .tac {
+        text-align: center;
+    }
+
+    .explore {
+        padding: 64px 10.5vw;
+    }
+
+    .mb40 {
+        margin-bottom: 40px;
+    }
+
+
+    .hv:hover .right h3 {
+        color:#ED7418!important;
+    }
+    .hv:hover .right p {
+        color:#333!important;
+    }
+    .hv:hover {
+
+        border-bottom: 1px solid #ED7418;
+    }
+    .explore{
+        padding-bottom: 64px 10.5vw;
+        background: #f7f7f7;
+    }
+    .patch{
+        padding-bottom: 150px;
+    }
+    .explore{
+        padding-bottom: 80px;
+    }
+    .explore-nav{
+        width: 100%px;
+        margin:auto;
+    }
+    .explore-top{
+        padding: 80px 0 60px 0;
+    }
+    .explore-top h2{
+        text-align: center;
+        font-size: 30px;
+        color: #333;
+        font-weight: 500;
+    }
+    .explore-top>p{
+        /* font-size: 14px; */
+        font-size: 16px;
+        text-align: center;
+    }
+    .explore-content{
+        overflow: hidden;
+    }
+    .explore-content ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .explore-content ul li{
+        width: 31%;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    .explore-content ul li:hover img{
+        transform: scale(1.2);
+    }
+
+    .explore-content ul li .img_container {
+        height: 240px;
+        overflow: hidden;
+    }
+    .explore-content ul li .img_container .news_img {
+        width: 100%;
+        height: fit-content;
+        transition: all 0.5s;
+    }
+
+    .explore-content ul li .news_title {
+        font-size: 18px;
+        padding: 20px 0;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background: #fff;
+
+    }
+
+    .explore-content:after,.student-content:after,.student-nav:after,.curriculum-nav:after{
+        content: ' ';
+        display:block;
+        height:0;
+        clear:both;
+        visibility:hidden;
+    }
+    .explore-left{
+        float: left;
+        /*只修改了下面一行*/
+        /* width: 40%;*/
+        height: 100%;
+    }
+    .explore-left img{
+        width: 100%;
+        height: 100%;
+    }
+    .explore-right{
+        float: right;
+        width: 56%;
+    }
+    .explore-right h3{
+        font-size: 24px;
+        color: #333;
+        font-weight: 500;
+    }
+    .explore-right .content{
+        font-size: 14px;
+        color: #999999;
+        padding-top: 10px;
+        line-height: 28px;
+        height: 234px;
+        overflow: hidden;
+    }
+    .explore-right a{
+        width: 128px;
+        height: 48px;
+        color: #fff;
+        background: #ED7418;
+        line-height: 48px;
+        display: inline-block;
+        text-align: center;
+        transition:all 0.5s
+    }
+    .explore-right a:hover{
+        background: #d26614;
+    }
+
+    .explore-right .content{
+        /* font-size: 14px; */
+        font-size: 16px;
+        color: #999999;
+        padding-top: 10px;
+        /* line-height: 28px; */
+        line-height: 26px;
+        height: 234px;
+        overflow: hidden;
+    }
+    .explore-right a{
+        width: 128px;
+        height: 48px;
+        color: #fff;
+        background: #ED7418;
+        line-height: 48px;
+        display: inline-block;
+        text-align: center;
+        transition:all 0.5s
+    }
+    .explore-right a:hover{
+        background: #d26614;
+    }
+    .explore-right h3{
+        font-size: 20px;
+    }
+    .explore-right .content{
+        padding: 0;
+        height: 224px;
+        margin-bottom: 10px;
+    }
+
+    .swiper-slide .teacher-swi {
+        width: 23.07%;
+        float: left;
+        margin-right: 2vw;
+        border: 0;
+        /*border: 2px solid #f2f2f2;*/
+    }
+    .teacher_nav {
+        width: 100%!important;
+    }
+    .swiper-slide .teacher-swi .teacher-img {
+        height: 17.5vw;
+        margin-bottom: 0;
+    }
+
+    /*.swiper-wrapper{*/
+    /*    transition-timing-function: linear;*/
+    /*}*/
+
+    .people_text {
+        text-align: center;
+        padding: 1.4vw 0;
+        background: #F6F6F6;
+    }
+
+    .people_text h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        color: #333333;
+        padding: 0 2vw 4px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .people_text p {
+        text-align: center;
+        font-size: 14px;
+        color: #ED7418;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .header.fixed {
+        height: 120px!important;
+    }
+    .header .nav li>a{
+        line-height: 48px!important;
+    }
+
+    .header-main .left {
+        margin: 12px 0;
+    }
+    .nav_container {
+        margin: 10px 0!important;
+    }
+    .header .nav .menu1 li > a {
+        font-size: 14px!important;
+    }
+    .header .nav .menu2 li > a {
+        font-size: 18px!important;
+    }
+
+    .header .nav .menu2 .subbox,.header .nav .subbox  {
+        top: 52px!important;
+    }
+
+    .swiper_slider_prew,.swiper_slider_next {
+        position: absolute;
+        top:14vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5vw;
+        height: 3.5vw;
+        z-index: 998;
+        background: rgba(237, 116, 24, .4);
+        cursor: pointer;
+    }
+    .swiper_slider_prew {
+        left: 0;
+    }
+    .swiper_slider_next {
+        right: 0;
+    }
+    .banner .swiper-button-prev, .swiper-button-next {
+        padding: 20px;
+        border-radius: 50%;
+        border: 1px solid #FFFFFF;
+        /*background: rgba(0, 0, 0, .9);*/
+    }
+    .banner .swiper-button-prev span i, .swiper-button-next span i {
+        font-size: 42px;
+    }
+    .swiper-button-prev{
+        left: 10.5vw
+    }
+    .swiper-button-next {
+        right: 10.5vw;
+    }
+    .swiper_slider_prew img , .swiper_slider_next img {
+        width: 0.8vw;
+    }
+    .swiper-slide .teacher-swi:last-child {
+        margin-right: 0;
+    }
+    .teacher-img {
+        height: 18.7vw;
+        margin-bottom: 0;
+    }
+    .banner .swiper-container .swiper-slide {
+        height: 78vh;
+    }
+    .curriculum {
+        height: auto!important;
+        background: #FFFFFF;
+    }
+    .curriculum-left {
+        position: static;
+        width: auto!important;
+        overflow: visible;
+    }
+
+    .curriculum-left img {
+        width: 100%;
+        height: 100%;
+    }
+    .curriculum-right {
+        float: none;
+        margin-left: 100px;
+        padding: 0;
+    }
+
+    .curriculum-right p a {
+        color: #ED7418;
+        margin-top: 0.3vw;
+        border: 1px solid #ED7418;
+        border-radius: 4px;
+        background: #fff;
+    }
+
+    .my-bullet {
+        width: 20px;
+        height: 4px;
+    }
+    .explore-content ul li .img_container {
+        height: 16vw;
+    }
+
+    .des {
+        color:#828282;
+        text-align: center;
+        padding: 20px 0 40px
+    }
+
+    .perspective {
+        background-image: url("../../../sites/www/images/perspective_xw.png");
+    }
+
+    .curriculum-right p a:hover {
+        color: #fff;
+        background-color: #ED7418;
+    }
+
+    .apply_scholarship {
+        /*position: absolute;z-index: 999900; display: none;*/
+        position: fixed;
+        right: 0;
+        top: 40%;
+        width: 140px;
+        text-align: center;
+        background: #ED7418;
+        border-radius: 4px;
+        z-index: 99999;
+        padding-bottom: 8px;
+    }
+    /*.floadAd { position: absolute;z-index: 999900; display: none; }*/
+    .apply_scholarship img {
+        width: 120px;
+        /*height: 26px;*/
+        margin: 8px auto 10px;
+        cursor: pointer;
+    }
+    .apply_scholarship .apply_text {
+
+        font-size: 14px;
+        color: #fff;
+    }
+    .explore {
+        position: relative;
+    }
+    .custome_border {
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 30%;
+        height: 15px;
+        background: #ED7418;
+    }
+
+    .contact {
+        position: relative;
+    }
+</style>
+<div class="banner i-ban">
+<div class="swiper-container" id="banner-one">
+    <div class="swiper-wrapper">
+                <div class="swiper-slide">
+            <img src="/uploads/2022/08/05/10110662ecd09a7672a.jpg"/>
+        </div>
+                <div class="swiper-slide">
+            <img src="/uploads/2023/05/22/053616646ae33041784.jpg"/>
+        </div>
+                <div class="swiper-slide">
+            <img src="/uploads/2023/05/22/054033646ae431d7bce.jpg"/>
+        </div>
+                <div class="swiper-slide">
+            <img src="/uploads/2024/01/18/04174465a898589d5f6.jpg"/>
+        </div>
+                <div class="swiper-slide">
+            <img src="/uploads/2024/01/18/04184265a898920a809.jpg"/>
+        </div>
+                <div class="swiper-slide">
+            <img src="/uploads/2024/01/19/04291665a9ec8c9aa33.jpg"/>
+        </div>
+                <div class="swiper-slide">
+            <img src="/uploads/2024/05/19/05191466496fb27dd83.jpg"/>
+        </div>
+                <div class="swiper-slide">
+            <img src="/uploads/2024/05/19/0542066649750ec9230.jpg"/>
+        </div>
+                <div class="swiper-slide">
+            <img src="/uploads/2024/05/19/06110966497bdd928ed.jpg"/>
+        </div>
+                <div class="swiper-slide">
+            <img src="/uploads/2024/09/27/07582766f64983720a5.jpg"/>
+        </div>
+            </div>
+    <div class="swiper-button-prev"><span><i class="fa fa-lg fa-angle-left"></i></span></div>
+    <div class="swiper-button-next"><span><i class="fa fa-lg fa-angle-right"></i></span></div>
+    <div class="swiper-pagination"></div>
+</div>
+</div>
+<script>
+var banner = new Swiper('#banner-one', {
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    bulletClass:'.my-bullet'
+    /*   on:{
+           init: function(){
+               swiperAnimateCache(this); //隐藏动画元素
+               swiperAnimate(this); //初始化完成开始动画
+           },
+           slideChangeTransitionEnd: function(){
+               swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+               //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+           }
+       }*/
+})
+</script>
+        <!--<div id="imgDiv" style="position:absolute;left:50px;top:60px;z-index: 9999;">
+            <div id="a" style="width:20px;height:20px;position:absolute;left:160px;background:salmon;text-align: center;">×</div>
+            <p style="font-size: 20px;color: #000;padding: 10px;background: red;">热烈庆祝中国共产党成立101周年！</p>
+        </div>-->
+
+        <!--<div id="imgDiv" style="position:absolute;left:50px;top:60px;z-index: 9999;">
+           <div id="a" style="width:20px;height:20px;position:absolute;left:160px;background:salmon;text-align: center;">×</div>
+           <p><img src="/uploads/54.jpg" width="20%"></p>
+        </div>-->
+<script>
+var xin = true,
+    yin = true;
+var step = 1;
+var delay = 10;
+var $obj;
+$(function() {
+
+   // $obj = $(".apply_scholarship");
+   // var time = window.setInterval("move()", delay);
+   // $obj.mouseover(function() {
+   //     clearInterval(time)
+   // });
+   // $obj.mouseout(function() {
+   //     time = window.setInterval("move()", delay)
+   // });
+});
+
+function move() {
+    var left = $obj.offset().left;
+    var top = $obj.offset().top;
+    var L = T = 0; //左边界和顶部边界
+    var R = $(window).width() - $obj.width(); // 右边界
+    var B = $(window).height() - $obj.height(); //下边界
+
+    //难点:怎样判断广告的4个边框有没有超出可视化范围!
+    if (left < L) {
+        xin = true; // 水平向右移动
+    }
+    if (left > R) {
+        xin = false;
+    }
+    if (top < T) {
+        yin = true;
+    }
+    if (top > B) {
+        yin = false;
+    }
+    //根据有没有超出范围来确定广告的移动方向
+    left += step * (xin == true ? 1 : -1);
+    top  += step * (yin == true ? 1 : -1) ;
+    // 给div 元素重新定位
+    $obj.offset({
+        top: top,
+        left: left
+    })
+}
+//关闭
+$(function() {
+    $("#a").click(function() {
+        var b = $("#a").parent();
+        $(b).remove();
+    })
+})
+</script>
+        <!--<div class="explore ">-->
+        <!--    <div class="explore-nav">-->
+        <!--        <div class="explore-top">-->
+        <!--            <h2>关于兴伟</h2>-->
+        <!--            <p>兴伟学院是一所小规模、高水平、非营利、“以能力培养”为特色的中国式博雅学院</p>-->
+        <!--        </div>-->
+        <!--        <div class="explore-content">-->
+        <!--            <div class="explore-left animated">-->
+        <!--                <img src="/sites/www/images/explore-left.jpg" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="explore-right animated">-->
+        <!--                <h3>学校简介</h3>-->
+        <!--                <p class="content">上海兴伟学院坐落于上海浦东新区临港自由贸易区，是一所非营利性全日制民办普通本科高等学校，由上海兴伟学院教育发展基金会举办。-->
+        <!--                    学校前身为“上海托普信息技术职业学院”，始建于2001年4月，是一所全日制民办普通高等专科学校；2010年12月，经上海市教育委员会批准，更名为“上海兴韦信息技术职业学院”；2014年2月，经上海市政府批准，改制为民办普通本科高校，更名为上海兴伟学院。-->
+        <!--                    学校占地23.10万平方米，总建筑面积10.32万平方米，教学科研及辅助用房3.83万平方米，教学设施齐全。建有现代化的教学楼、图书馆、田径场、体育馆、室内健身房、多媒体实验室、学生活动中心、数字化校园等，满足师生学习生活需要。-->
+        <!--                    现开设英语和国际商务两个本科专业。英语专业2014年开始招生，国际商务2017年开始招生。2020年6月和2021年6月，学校分别被增列为英语专业和国际商务专业学士学位授予单位。-->
+        <!--                    学校以“小规模，高水平、非营利”为办学定位，坚持立德树人根本要求，主动融入和服务社会经济发展。同时，秉承“自由、激情、致良知”的校训，坚持“德育为先、学生为本、能力为重”的办学理念，培养知行合一、有国家意识、社会责任、国际视野、创新创业精神、终身学习能力和德智体美劳全面发展的高素质人才。-->
+        <!--                    学校坚持以学生为本，注重学生责任意识和综合能力培养，坚持小班化教学、项目化教学和实践教学，激发学生的兴趣和感受，实施因材施教。注重学生个性化差异、注重学生不同阶段发展需求，通过具体的教学模块，搭建学生自我设计、自我教育、自我管理的发展平台。-->
+        <!--                    学校聘请国外知名大学教师、文化学者、社会贤达和企业管理者，组成学校的教学团队、教练员团队；与多所国内外著名的高校、教学机构、高新技术企业开展教育教学合作，实行跨校选课、课程共享、学分互认，共建实践类课程基地，深度推进博雅教育办学特色。-->
+        <!--                    学生来自不同家庭和社会，但都会有实现自己人生目标的梦想。兴伟正在努力打造年轻人追逐自己人生目标的教育环境，全体教师将和你们一起去试错、去尝试、去寻找。当你离开兴伟时，最大的收获就是对生活充满信心，成为更好的自己。兴伟也会给你留下一段与众不同而令人羡慕的大学生涯，这里的博雅教育将会使他/她终身受益。</p>-->
+        <!--                <p><a href="/cn/about/regarding/synopsis" style="margin-top: 6px;">查看更多</a></p>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</div>-->
+<!--<div class="apply_scholarship" id="modal_float">
+    <a style="display: block" href="/cn/community/details&id=1527">
+        <img src="/sites/www/images/scholarship.png"></img>
+        <div class="apply_text">奖学金申请</div>
+    </a>
+</div>-->
+<!--<div class="apply_scholarship" id="modal_float">
+<a style="display: block" href="http://xwc.sh01info.com/scholarship/">
+    <img src="/sites/www/images/2222.png"> </img>
+    <div class="apply_text">奖学金登记表</div>
+</a>
+</div>-->
+
+
+<script>
+var ggRoll={                                     //创建对象直接量
+    roll:document.getElementById("modal_float"),          //获取id属性为roll的对象
+    speed:20,                                      //飘动速度，即为定时器函数多长时间执行一次
+    statusX:1,                                     //规定每执行一次函数，left属性值变化的幅度
+    statusY:1,                                     //规定每执行一次函数，top属性值变化的幅度
+    x:100,                                         //规定初始状态下left属性的值
+    y:300,                                         //规定初始状态下top属性的值
+    //差值用来测算left属性值的极限
+    winW:document.documentElement.clientWidth-document.getElementById("modal_float").offsetWidth,
+    //差值用来测算top属性值的极限
+    winH:document.documentElement.clientHeight-document.getElementById("modal_float").offsetHeight,
+    //声明函数
+    Go: function () {
+        //设置div的left属性值
+        this.roll.style.left = this.x + 'px';
+        //设置div的top属性值
+        this.roll.style.top = this.y + 'px';
+        //如果statusX=1则每次减少1px,否则减少1px
+        this.x = this.x + (this.statusX ? -1 : 1)
+        //如果left属性值小于0，也就是div要超出左边界了，就将statusX设置为0
+        if (this.x < 0) { this.statusX = 0 }
+        //如果top属性值大于winW，也就是div要超出右边界了，就将statusX设置为1
+        if (this.x > this.winW) { this.statusX = 1 }
+
+        this.y = this.y + (this.statusY ? -1 : 1)
+        if (this.y < 0) { this.statusY = 0 }
+        if (this.y > this.winH) { this.statusY = 1 }
+    }
+};
+
+var interval=setInterval("ggRoll.Go()",ggRoll.speed);
+ggRoll.roll.onmouseover=function(){clearInterval(interval)};                     //onmouseover属性：鼠标移动到元素上时触发
+ggRoll.roll.onmouseout=function(){interval=setInterval("ggRoll.Go()",ggRoll.speed)};//onmouseout属性:鼠标离开元素时触发
+
+</script>
+<div class="news_perser_container">
+<ul class="module news">
+
+    <li class="news_item item_title">
+    <a href="/cn/community/common/commonimg&id=41">
+        要闻
+        <span class="item_title_en">/ News</span>
+        </a>
+    </li>
+    <li class="news_item bdt hv">
+<!--        <a style="display: flex;justify-content:space-between;width: 95%;height: 100%" href="/cn/community/details&id=2093">-->
+        <div class="left">
+            <img src="/uploads/2024/09/14/09133666e537a0dd36e.jpg"></img>
+        </div>
+        <div class="right">
+            <h3> 上海兴伟学院庆祝第40个教师节系列活动圆满举行</h3>
+            <p style="text-align: justify;line-height: 24px;">随着金秋九月的到来，我们迎来了第40个教师节。为大力弘扬教育家精神，展示兴伟学院广大教师立德树...</p>
+            <a href="/cn/community/details&id=2093" style="width:fit-content;padding:8px 10px;background: #ED7418;color:#fff;border-radius: 4px">查看详情</a>
+        </div>
+<!--        </a>-->
+    </li>
+    <li class="news_item bdt hv">
+<!--        <a style="display: flex;justify-content:space-between;width: 95%;height: 100%" href="/cn/community/details&id=2107">-->
+            <div class="left">
+                <img src="/uploads/2024/10/21/0509386715c5f2c12b4.jpg"></img>
+            </div>
+            <div class="right">
+                <h3> 新生体质健康测试圆满结束</h3>
+                <p style="text-align: justify;line-height: 24px;">10 月 16 日上午，我校全体新生体质健康测试分别在健身房和操场举行。</p>
+                <a href="/cn/education/educationindex/educationcmrlist&cateid=490" style="width:fit-content;padding:8px 10px;background: #ED7418;color:#fff;border-radius: 4px">查看详情</a>
+            </div>
+<!--        </a>-->
+    </li>
+    <li class="news_item bdt hv">
+<!--        <a style="display: flex;justify-content:space-between;width: 95%;height: 100%" href="/cn/community/details&id=2105">-->
+            <div class="left">
+                <img src="/uploads/2024/10/21/0457596715c337f17c6.jpg"></img>
+            </div>
+            <div class="right">
+                <h3> 学生篮球队参加浦东新区“无邪杯”高校反邪教联盟篮球赛</h3>
+                <p style="text-align: justify;line-height: 24px;">浦东新区“无邪杯”高校反邪教联盟篮球赛是一项具有重要意义的体育赛事。本次比赛旨在通过篮球运动这...</p>
+                <a href="/cn/community/details&id=2105" style="width:fit-content;padding:8px 10px;background: #ED7418;color:#fff;border-radius: 4px">查看详情</a>
+            </div>
+<!--        </a>-->
+    </li>
+</ul>
+<ul class="module news ">
+    <li class="news_item item_title">
+    <a href="/cn/community/common/vision&id=345">
+        视角
+        <span class="item_title_en">/ Vision</span>
+        </a>
+    </li>
+    <li class="news_item bdt hv">
+        <!--        <a style="display: flex;justify-content:space-between;width: 95%;height: 100%" href="/cn/community/details&id=1528">-->
+        <div class="left">
+            <img src="/uploads/2023/05/25/052225646ed4710b714.jpg"></img>
+            <img src="/sites/www/images/play_vedio.png" class="mask"></img>
+        </div>
+        <div class="right">
+            <h3> 博雅教育助力中国大学教育新探索</h3>
+            <p style="text-align: justify;line-height: 24px;">兴伟学院以其优越的教学条件、丰富的教育资源以及坚强的后盾支持，为中国学子呈现最具专业性的博雅教...</p>
+            <a href="/cn/community/details&id=1528" style="width:fit-content;padding:8px 10px;background: #ED7418;color:#fff;border-radius: 4px">查看详情</a>
+        </div>
+        <!--        </a>-->
+    </li>
+    <li class="news_item bdt hv">
+        <!--        <a style="display: flex;justify-content:space-between;width: 95%;height: 100%" href="/cn/community/details&id=1529">-->
+        <div class="left">
+            <img src="/uploads/2023/05/25/053120646ed68840163.jpg"></img>
+            <img src="/sites/www/images/play_vedio.png" class="mask"></img>
+
+        </div>
+        <div class="right">
+            <h3> 上海兴伟学院&西班牙蒙特拉贡大学国际Team Academy合作项目</h3>
+            <p style="text-align: justify;line-height: 24px;">选择我校国际商务专业的学生将在上海兴伟学院总校区完成一年的专业课程后前往位于上海市中心——由我...</p>
+            <a href="/cn/community/details&id=1529" style="width:fit-content;padding:8px 10px;background: #ED7418;color:#fff;border-radius: 4px">查看详情</a>
+        </div>
+        <!--        </a>-->
+    </li>
+    <li class="news_item bdt hv">
+<!--        <a style="display: flex;justify-content:space-between;width: 95%;height: 100%" href="/cn/community/details&id=1442">-->
+            <div class="left">
+                <img src="/uploads/2023/05/15/115633646201d170f17.jpg"></img>
+                <img src="/sites/www/images/play_vedio.png" class="mask"></img>
+            </div>
+            <div class="right">
+                <h3> 2023年春季学期海上游学项目</h3>
+                <p style="text-align: justify;line-height: 24px;">:总分96.单项:写作19.其他单项17 3.课程描述文件要求: 需要提供课程描述...</p>
+                <a href="/cn/community/details&id=1442" style="width:fit-content;padding:8px 10px;background: #ED7418;color:#fff;border-radius: 4px">查看详情</a>
+            </div>
+<!--        </a>-->
+    </li>
+
+</ul>
+</div>
+<div class="recruit">
+<img src="/sites/www/images/recruit.png?t=1"></img>
+<div class="recruit_link">
+    <!--    https://www.xingwei.edu.cn/cn/education/educationindex-->
+    <a href="/cn/community/common/commonimg&id=49">
+        招生专栏
+        <img src="/sites/www/images/go.png" style="margin-left: 10px"></img>
+    </a>
+</div>
+</div>
+<div class="explore ">
+<div class="explore_container">
+    <div class="title tac mb40">
+    <a href="/cn/community/common/zoujin&id=342">
+        探索 • 创新
+        <span class="title_en">/ Explore & Innovation</span>
+       </a>
+    </div>
+    <div class="explore-content">
+        <ul>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1490">
+                    <div class="img_container">
+                        <img src="/uploads/2023/05/27/1258156471e2474e905.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 教育理念</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1493">
+                    <div class="img_container">
+                        <img src="/uploads/2023/05/27/1259476471e2a39aa66.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 育人特色</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1494">
+                    <div class="img_container">
+                        <img src="/uploads/2023/05/27/1304496471e3d137c17.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 教学特色</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1492">
+                    <div class="img_container">
+                        <img src="/uploads/2023/05/27/1300246471e2c82b062.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 专业特色</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1491">
+                    <div class="img_container">
+                        <img src="/uploads/2023/05/27/1305506471e40e5543f.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 课程特色</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1495">
+                    <div class="img_container">
+                        <img src="/uploads/2023/05/27/1306166471e42833598.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 二三课堂</div>
+                </a>
+            </li>
+            
+
+        </ul>
+    </div>
+</div>
+</div>
+<div class="recruit">
+<img src="/sites/www/images/education.png?t=1"></img>
+<div class="recruit_link">
+<!--    https://www.xingwei.edu.cn/cn/education/educationindex-->
+    <a href="/cn/education/educationindex">
+        教育教学
+        <img src="/sites/www/images/go.png" style="margin-left: 10px"></img>
+    </a>
+</div>
+</div>
+
+<div class="teacher" style="padding: 68px 10.5vw;">
+<div class="teacher_nav" style="position:relative;padding-bottom: 0">
+    <div class="mb40">
+        <a href="/cn/default/index/teachers?id=30" style="display: flex;justify-content: center;align-items: baseline"><h2 class="title">师资团队</h2> <span class="title_en">/ Faculty</span></a>
+    </div>
+    <div class="swiper_slider_prew banner1_prew">
+        <img src="/sites/www/images/arrow_prew.png"></img>
+    </div>
+    <div class="swiper_slider_next banner1_next">
+        <img src="/sites/www/images/arrow_next.png"></img>
+    </div>
+    <div class="swiper new_Swiper1" style="overflow: hidden">
+        <div class="swiper-wrapper" >
+                        <div class="swiper-slide">
+<!--                18-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2019/12/04/191317uSuDONxLOs5J.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3>经济学博士，教授，博士生导师</h3>
+                    <p >Dr. Nongjian Wei </p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+<!--                96-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2019/12/09/173623QiwUfNdbm7BT.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3>王勇，教授</h3>
+                    <p >Prof. Yong Wang</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+<!--                16-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2019/12/04/191711k6BwGoI2ROZd.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3>副教授，加利福尼亚整合研究学院生物哲学人类学博士</h3>
+                    <p >Dr. John Wilkinson</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+<!--                1365-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2022/11/02/0359586361dd2e29f06.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3>Short Bio</h3>
+                    <p >Stacey Duff</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+<!--                362-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2019/12/23/1022550pUe8URa7OGs.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3>博士</h3>
+                    <p >Ryan C. McIlhenny</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+<!--                363-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2019/12/23/103102vzQXwJ5Lr6cB.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3>艺术家、跨学科的学者、表演者</h3>
+                    <p >Duskin Drum.</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+<!--                17-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2019/12/04/191439flHDQYkRXXg8.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3> 教授，弗罗里达大学心理学博士</h3>
+                    <p >Dr. David Stafford </p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+<!--                364-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2019/12/23/104242L4bJSI60GZ1o.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3>学士学位、生物学、马泰索和语言博士</h3>
+                    <p >Anna-Karin Roo</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+<!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2019/12/04/191954aJ5I9xsLScJh.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3>教授，美国罗德岛大学博士</h3>
+                    <p >Dr. Guanglan Jin </p>
+                </div>
+            </div>
+                    </div>
+    </div>
+<!--    <div class="teacher-content swiper-container" id="banner-two">-->
+<!--        <div class="swiper-wrapper">-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                18-->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=18">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2019/12/04/191317uSuDONxLOs5J.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>经济学博士，教授，博士生导师</h3>-->
+<!--                            <p >Dr. Nongjian Wei </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                96-->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=96">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2019/12/09/173623QiwUfNdbm7BT.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>王勇，教授</h3>-->
+<!--                            <p >Prof. Yong Wang</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                16-->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=16">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2019/12/04/191711k6BwGoI2ROZd.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>副教授，加利福尼亚整合研究学院生物哲学人类学博士</h3>-->
+<!--                            <p >Dr. John Wilkinson</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                1365-->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1365">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2022/11/02/0359586361dd2e29f06.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>Short Bio</h3>-->
+<!--                            <p >Stacey Duff</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                362-->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=362">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2019/12/23/1022550pUe8URa7OGs.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>博士</h3>-->
+<!--                            <p >Ryan C. McIlhenny</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                363-->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=363">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2019/12/23/103102vzQXwJ5Lr6cB.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>艺术家、跨学科的学者、表演者</h3>-->
+<!--                            <p >Duskin Drum.</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                17-->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=17">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2019/12/04/191439flHDQYkRXXg8.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3> 教授，弗罗里达大学心理学博士</h3>-->
+<!--                            <p >Dr. David Stafford </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                364-->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=364">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2019/12/23/104242L4bJSI60GZ1o.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>学士学位、生物学、马泰索和语言博士</h3>-->
+<!--                            <p >Anna-Karin Roo</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                22-->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=22">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2019/12/04/191954aJ5I9xsLScJh.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>教授，美国罗德岛大学博士</h3>-->
+<!--                            <p >Dr. Guanglan Jin </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            -->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+</div>
+<div class="teacher" style="padding: 0 10.5vw 68px;">
+<div class="teacher_nav" style="position:relative;padding-bottom: 0">
+    <div class="mb40">
+        <a href="/cn/default/index/teachers?id=344" style="display: flex;justify-content: center;align-items: baseline"><h2 class="title">行业导师</h2> <span class="title_en">/ Mentors</span></a>
+    </div>
+    <div class="swiper_slider_prew banner2_prew">
+        <img src="/sites/www/images/arrow_prew.png"></img>
+    </div>
+    <div class="swiper_slider_next banner2_next">
+        <img src="/sites/www/images/arrow_next.png"></img>
+    </div>
+    <div class="swiper new_Swiper2" style="overflow: hidden">
+        <div class="swiper-wrapper" >
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/sites/www/images/defaultpic.jpg" alt="">
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >张政</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2023/05/19/0816126467142caf9d4.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >陈韦明</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2023/05/19/0818036467149b1f0a0.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >文凌</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2023/05/19/081903646714d7bcac8.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >王滌</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2023/05/19/0820146467151e616a2.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >何塞</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2023/05/19/0820586467154a1ba62.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >夏钰姣</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2023/05/22/114602646b39daabb78.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >郑辉</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/sites/www/images/defaultpic.jpg" alt="">
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >俞明俍</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/sites/www/images/defaultpic.jpg" alt="">
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >孙伯宇</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2023/05/19/082719646716c7064aa.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >常智涛</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2023/05/19/082804646716f4e7a14.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >Amaia Garcia Fernandez</p>
+                </div>
+            </div>
+                        <div class="swiper-slide">
+                <!--                22-->
+                <div class="teacher-img">
+                                        <img src="/uploads/2023/05/19/0828476467171f1f1b2.jpg" alt="" >
+                                    </div>
+                <div class="people_text">
+                    <h3></h3>
+                    <p >王琳琳</p>
+                </div>
+            </div>
+                    </div>
+    </div>
+<!--    <div class="teacher-content swiper-container" id="banner-three">-->
+<!--        <div class="swiper-wrapper">-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=2">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>2</h3>-->
+<!--                            <p >2</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=2">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>2</h3>-->
+<!--                            <p >2</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=2">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>2</h3>-->
+<!--                            <p >2</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=2">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>2</h3>-->
+<!--                            <p >2</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=2">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>2</h3>-->
+<!--                            <p >2</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=2">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>2</h3>-->
+<!--                            <p >2</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=2">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>2</h3>-->
+<!--                            <p >2</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=A">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/A" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>A</h3>-->
+<!--                            <p >A</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=2">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>2</h3>-->
+<!--                            <p >2</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--               &lt;!&ndash;师资团队&ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=1">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/1" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>1</h3>-->
+<!--                            <p >1</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=�">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/�" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>�</h3>-->
+<!--                            <p >�</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/sites/www/images/defaultpic.jpg" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3></h3>-->
+<!--                            <p ></p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="teacher-swi animated">-->
+<!--                    <a href="/cn/default/index/teachersDetail&id=2">-->
+<!--                        <div class="teacher-img">-->
+<!--                            -->
+<!--                            <img src="/uploads/2" alt="">-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="people_text">-->
+<!--                            <h3>2</h3>-->
+<!--                            <p >2</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--            -->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+</div>
+
+<script>
+var banner1 = new Swiper(".new_Swiper1", {
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop:true,
+    direction: 'horizontal'
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
+});
+// var banner1 = new Swiper('#banner-two', {
+//     autoplay: {
+//         delay: 8000,
+//         disableOnInteraction: false,
+//     },
+//     slidesPerView:4,
+//     loop: true,
+//     effect : 'fade'
+// })
+var banner2 = new Swiper('.new_Swiper2', {
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop:true,
+    direction: 'horizontal'
+
+})
+$('.banner1_prew').click(function (){
+    banner1.slidePrev()
+})
+$('.banner1_next').click(function (){
+    banner1.slideNext()
+})
+$('.banner2_prew').click(function (){
+    banner2.slidePrev()
+})
+$('.banner2_next').click(function (){
+    banner2.slideNext()
+})
+</script>
+<div class="recruit">
+<img src="/sites/www/images/library_new.png?t=1"></img>
+<div class="recruit_link">
+    <!--    https://www.xingwei.edu.cn/cn/education/educationindex-->
+    <a href="/cn/library/libraryindex">
+        图书馆
+        <img src="/sites/www/images/go.png" style="margin-left: 10px"></img>
+    </a>
+</div>
+</div>
+<div class="curriculum" style="padding: 68px 10.5vw 68px;display: flex">
+<div class="curriculum-left">
+    <img src="/sites/www/images/tskec.jpg" alt="">
+</div>
+<div class="curriculum-nav">
+    <div class="curriculum-right">
+        <a href="/cn/group/creation/introduction">
+            <div style="display: flex;align-items: baseline">
+                <h3 class="title" style="color: #333;font-weight: 700;font-size: 32px">TA团创</h3>
+                <span class="title_en">/ Team Academy</span>
+            </div>
+            <p style="height: 180px;color: #333;font-size: 16px" >世界那么大，想去看看的，有你嘛？<br>曾经有过梦想，想要环游世界，有你嘛？<br>怀揣对大学的期许，下定决心要自我修炼，有你嘛？<br>会开始考虑以后的就业，希望大学里学到的可以学以致用，有你嘛？<br>在大学里，一千天学习+环游世界，你想加入吗？<br>一门新的课程体系——Team Academy团队创业<br></p>
+        </a>
+        <p><a href="/cn/group/creation/introduction">查看更多</a></p>
+    </div>
+</div>
+</div>
+<div class="explore perspective" >
+<div class="custome_border"></div>
+<div class="explore_container">
+    <div class="title tac mb40">
+    <a href="/cn/community/common/vision&id=345">
+        走进兴伟
+        <span class="title_en">/ Approach Xingwei</span>
+        </a>
+    </div>
+    <div class="explore-content">
+        <ul>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1375">
+                    <div class="img_container">
+                        <img src="/uploads/2023/05/26/12295964708a27e6372.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 参访社会公益组织(22级）</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1565">
+                    <div class="img_container">
+                        <img src="/uploads/2023/06/20/05205364911b15d47a6.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> Lauren Xu</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1569">
+                    <div class="img_container">
+                        <img src="/uploads/2023/06/20/05311764911d8588b53.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> Yu jiao Xia</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1538">
+                    <div class="img_container">
+                        <img src="/uploads/2023/05/26/122346647088b253d7d.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 吴佳同学</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1561">
+                    <div class="img_container">
+                        <img src="/uploads/2023/06/20/051024649118a091324.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 校园的春天</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1570">
+                    <div class="img_container">
+                        <img src="/uploads/2023/06/20/05335764911e2525a7f.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 周年庆</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1564">
+                    <div class="img_container">
+                        <img src="/uploads/2023/06/20/05172264911a42841de.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 兴伟学院</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=2088">
+                    <div class="img_container">
+                        <img src="/uploads/2024/09/10/03372666dfa2d6f2910.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> 曾经我们互不相识</div>
+                </a>
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li>
+                <a style="display: block;width: 100%;height: 100%" href="/cn/community/details&id=1588">
+                    <div class="img_container">
+                        <img src="/uploads/2023/07/06/11425764a68ca136c6c.jpg" class="news_img"></img>
+                    </div>
+                    <div class="news_title "> Ming</div>
+                </a>
+            </li>
+                    </ul>
+    </div>
+</div>
+</div>
+<div class="recruit">
+    <img src="/sites/www/images/lang_link.png"></img>
+<div class="recruit_link">
+    <!--    https://www.xingwei.edu.cn/cn/education/educationindex-->
+    <a href="/cn/about/abouten/languages">
+        语言文字网
+        <img src="/sites/www/images/go.png" style="margin-left: 10px"></img>
+    </a>
+</div>
+</div>
+<div class="explore ">
+<div class="explore_container">
+    <div class="title tac">
+        关注兴伟
+        <span class="title_en">/ Focus</span>
+    </div>
+    <div class="des">兴伟学院是一所小规模、高质量、非营利、“以能力培养”为特色的中国式博雅学院</div>
+    <div class="explore-content">
+        <ul>
+            <li style="display: flex;flex-direction: column">
+                <a style="display: block;width: 100%;height: 84%" href="/cn/about/regarding/synopsis">
+                    <div class="img_container">
+                        <img src="/uploads/2019/12/09/203551MNybvOcj8jTb.jpg" class="news_img"></img>
+                    </div>
+                </a>
+                <div class="news_title "><a href="/cn/community/common/commonimg&id=49">关于兴伟</a></div>
+
+            </li>
+                        <!--             href="/cn/community/details&id=1436"-->
+            <li style="display: flex;flex-direction: column">
+                <a style="display: block;width: 100%;height: 84%" href="/cn/community/common/commonimg&id=45">
+                    <div class="img_container">
+                                                <img src="/uploads/2024/09/05/11133866d97642433bd.jpg" alt=""  class="news_img">
+                                            </div>
+                </a>
+                <div class="news_title "><a href="/cn/community/common&id=45">教师和学生联合党支部开展主题党日活动</a></div>
+
+            </li>
+                                    <!--             href="/cn/community/details&id=1436"-->
+            <li style="display: flex;flex-direction: column">
+                <a style="display: block;width: 100%;height: 84%" href="/cn/community/details&id=2086">
+                    <div class="img_container">
+                                                <img src="/sites/www/images/defaultpic.jpg" alt="">
+                        <!--                        <img src="/uploads/" class="news_img"></img>-->
+                    </div>
+                </a>
+                <div class="news_title "><a href="/cn/community/common&id=47">关于2024年中秋节、国庆节放假安排的通知</a></div>
+
+            </li>
+                        <li style="display: flex;flex-direction: column">
+                <a style="display: block;width: 100%;height: 84%" href="/cn/schoolstolaw/display">
+                    <div class="img_container">
+                        <img src="/images/yfzxpic.jpg" class="news_img"></img>
+                    </div>
+                </a>
+                <div class="news_title "><a href="/cn/schoolstolaw/display">依法治校</a></div>
+            </li>
+            <li style="display: flex;flex-direction: column">
+                <a style="display: block;width: 100%;height: 84%" href="/cn/disclosure/catalogue/catalogue_details">
+                    <div class="img_container">
+                        <img src="/uploads/2019/12/09/2035068X2kbOS35GnT.jpg" class="news_img"></img>
+                    </div>
+                </a>
+                <div class="news_title "><a href="/cn/disclosure/catalogue/catalogue_details">信息公开</a></div>
+            </li>
+            <li style="display: flex;flex-direction: column">
+                <a style="display: block;width: 100%;height: 84%" href="/cn/community/common/commonimg&id=49">
+                    <div class="img_container">
+                        <img src="/uploads/2019/12/09/203551MNybvOcj8jTb.jpg" class="news_img"></img>
+                    </div>
+                </a>
+                <div class="news_title "><a href="/cn/community/common/commonimg&id=49">招生专栏</a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="contact">
+<div class="custome_border"></div>
+<div class="explore-top">
+    <h2>联系我们</h2>
+    <p>联系我们</p>
+</div>
+<div class="contact-content" style="height: auto">
+    <div id="allmap"></div>
+    <div class="contact-text">
+        <input type="hidden" name=”hash” value="d41d8cd98f00b204e9800998ecf8427e" class="hash"  placeholder="姓名">
+        <input type="text" class="name" placeholder="姓名">
+        <input type="text" class="mobile" placeholder="电话">
+        <input type="text" class="mail" placeholder="邮箱">
+        <textarea class="Cont" placeholder="请输入内容"></textarea>
+        <button class="submit">提交</button>
+    </div>
+
+    <div style="width: 100%;background: #ED7418;padding: 18px 20px;box-sizing: border-box;">
+        <p style=" color: #fff;text-align: center; font-size: 14px">相关链接：
+            <a style="padding: 0 10px;color: #fff" href="http://www.moe.gov.cn">教育部</a>|
+            <a style="padding: 0 10px;color: #fff" href="https://http://edu.sh.gov.cn/">上海市教育委员会</a>|
+            <a style="padding: 0 10px;color: #fff" href="https://24365.smartedu.cn">国家24365大学生就业服务平台</a>|
+            <a style="padding: 0 10px;color: #fff" href="http://www.edunet.org.cn/">中国教育科研信息网</a>
+        </p>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=2b866a6daac9014292432d81fe9b47e3"></script>
+<script type="text/javascript">
+var map = new BMap.Map("allmap");
+map.centerAndZoom(new BMap.Point(121.793274,31.049122), 18);
+map.addControl(new BMap.MapTypeControl({
+    mapTypes:[
+        BMAP_NORMAL_MAP,
+        BMAP_HYBRID_MAP
+    ]}));
+map.setCurrentCity("北京");
+map.enableScrollWheelZoom(true);
+</script>
+<script>
+$(".student-nav").each(function () {
+    $(this).find(".student-animate").eq(0).addClass("this")
+})
+console.log()
+var Stu = true;
+function animate() {
+    if($(document).width() > 1200){
+        if($(document).scrollTop() < 1100){
+            $(".explore-left").addClass("fadeInLeft")
+            $(".explore-right").addClass("fadeInRight")
+        }
+        if($(document).scrollTop() > 1500 && $(document).scrollTop() < 3000){
+            $(".teacher-swi").addClass("fadeInUp")
+        }
+        if($(document).scrollTop() > 2500 && $(document).scrollTop() < 3400){
+            $(".curriculum-right a").addClass("swing")
+            $(".curriculum-right a").addClass("animated")
+        }
+        if($(document).scrollTop() > 3000 && $(document).scrollTop() < 4100){
+            $(".focusing-nav>p a").addClass("fadeInRight")
+            $(".focusing-nav>p a").addClass("animated")
+        }
+        if($(document).scrollTop() > 3400 && $(document).scrollTop() < 5200){
+            $(".outstanding-content").addClass("fadeInUp")
+        }
+        if($(document).scrollTop() > 500 && $(document).scrollTop() < 2200){
+            $(".student-text").addClass("zoomIn")
+            if(Stu){
+                setInterval(function () {
+                    if($(".student-nav").eq(0).find(".student-animate").length ==2){
+                        $(".student-nav").eq(0).find(".student-animate").each(function () {
+                            if($(this).is(".this")){
+                                $(this).removeClass("this")
+                            }else{
+                                $(this).addClass("this")
+                            }
+                        })
+                    }
+                    //},12000)
+                },4000)
+                setTimeout(function () {
+                    setInterval(function () {
+                        if($(".student-nav").eq(1).find(".student-animate").length ==2) {
+                            $(".student-nav").eq(1).find(".student-animate").each(function () {
+                                if ($(this).is(".this")) {
+                                    $(this).removeClass("this")
+                                } else {
+                                    $(this).addClass("this")
+                                }
+                            })
+                        }
+                    },4000)
+                    //},3000)
+                },1000)
+                setTimeout(function () {
+                    setInterval(function () {
+                        if($(".student-nav").eq(2).find(".student-animate").length ==2) {
+                            $(".student-nav").eq(2).find(".student-animate").each(function () {
+                                if ($(this).is(".this")) {
+                                    $(this).removeClass("this")
+                                } else {
+                                    $(this).addClass("this")
+                                }
+                            })
+                        }
+                    },4000)
+                 },2000)
+                setTimeout(function () {
+                    setInterval(function () {
+                        if($(".student-nav").eq(3).find(".student-animate").length ==2) {
+                            $(".student-nav").eq(3).find(".student-animate").each(function () {
+                                if ($(this).is(".this")) {
+                                    $(this).removeClass("this")
+                                } else {
+                                    $(this).addClass("this")
+                                }
+                            })
+                        }
+                    },4000)
+                },3000)
+                Stu = false;
+            }
+        }
+    }
+    /*if($(document).width() <500){
+        if($(document).scrollTop() < 1000) {
+            $(".explore-left").addClass("fadeInLeft")
+            $(".explore-right").addClass("fadeInRight")
+        }
+        if($(document).scrollTop() > 460 && $(document).scrollTop() < 2500) {
+            $(".student-text").addClass("zoomIn")
+            if(Stu){
+                setInterval(function () {
+                    $(".student-nav").eq(0).find(".student-animate").each(function () {
+                        if($(this).is(".this")){
+                            $(this).removeClass("this")
+                        }else{
+                            $(this).addClass("this")
+                        }
+                    })
+                },12000)
+                setTimeout(function () {
+                    setInterval(function () {
+                        $(".student-nav").eq(1).find(".student-animate").each(function () {
+                            if($(this).is(".this")){
+                                $(this).removeClass("this")
+                            }else{
+                                $(this).addClass("this")
+                            }
+                        })
+                    },12000)
+                },3000)
+                setTimeout(function () {
+                    setInterval(function () {
+                        $(".student-nav").eq(2).find(".student-animate").each(function () {
+                            if($(this).is(".this")){
+                                $(this).removeClass("this")
+                            }else{
+                                $(this).addClass("this")
+                            }
+                        })
+                    },12000)
+                },6000)
+                setTimeout(function () {
+                    setInterval(function () {
+                        $(".student-nav").eq(3).find(".student-animate").each(function () {
+                            if($(this).is(".this")){
+                                $(this).removeClass("this")
+                            }else{
+                                $(this).addClass("this")
+                            }
+                        })
+                    },12000)
+                },9000)
+                Stu = false;
+            }
+        }
+
+        if($(document).scrollTop() > 1880 && $(document).scrollTop() < 3240){
+            $(".teacher-swi").addClass("fadeInUp")
+        }
+        if($(document).scrollTop() > 3000 && $(document).scrollTop() < 3800){
+            $(".curriculum-right a").addClass("swing")
+            $(".curriculum-right a").addClass("animated")
+        }
+        if($(document).scrollTop() > 3180 && $(document).scrollTop() < 4300){
+            $(".focusing-nav>p a").addClass("fadeInRight")
+            $(".focusing-nav>p a").addClass("animated")
+        }
+        if($(document).scrollTop() > 3600 && $(document).scrollTop() < 5200){
+            $(".outstanding-content").addClass("fadeInUp")
+        }
+    }*/
+}
+animate();
+$(document).scroll(function () {
+    /* console.log($(document).scrollTop());*/
+    animate();
+})
+
+/*提交*/
+$(".submit").click(function () {
+    var name = $(".name").val()
+    var mobile = $(".mobile").val()
+    var mail = $(".mail").val()
+    var content = $(".Cont").val()
+    var hash = $(".hash").val()
+
+    $.ajax({
+        url:'/cn/default/index/save',
+        type:'post',
+        data:{
+            name:name,
+            mobile:mobile,
+            mail:mail,
+            hash:hash,
+            content:content
+        },
+        dataType:'json',
+        success:function (res) {
+            if(res.code == 200){
+                alert(res.message);
+                window.location.reload()
+            }else{
+                alert(res.message);
+            }
+        }
+    })
+})
+
+</script>
+        <!--<div id="AD" loaded="true" style="overflow: visible;">-->
+        <!--    <script>-->
+        <!--        class Time {-->
+        <!--            constructor(time) {-->
+        <!--                this.vacationTime = new Date(time);-->
+        <!--                this.getTime();-->
+        <!--                this.floatMove();-->
+        <!--                this.timer = setInterval(() => {-->
+        <!--                    this.getTime();-->
+        <!--                }, 1000);-->
+        <!--                this.responseImg();-->
+        <!--            }-->
+
+        <!--            getTime() {-->
+        <!--                // 获取当前时间-->
+        <!--                let curTime = new Date();-->
+        <!--                let differTime = (this.vacationTime - curTime) / 1000;-->
+        <!--                let day = Math.floor(differTime / (60 * 60 * 24));-->
+        <!--                let hour = Math.floor(differTime / (60 * 60) % 24);-->
+        <!--                let minute = Math.floor(differTime / 60 % 60);-->
+        <!--                let second = Math.floor(differTime % 60);-->
+
+        <!--                if (parseInt(day) <= 0 && parseInt(hour) <= 0 && parseInt(minute) <= 0 && parseInt(second) <=-->
+        <!--                    0) {-->
+        <!--                    //  清除定时器-->
+        <!--                    clearInterval(this.timer);-->
+        <!--                    this.moveHtml();-->
+        <!--                } else {-->
+        <!--                    // 创建浮动框-->
+        <!--                    this.createDivf();-->
+        <!--                }-->
+        <!--            }-->
+
+        <!--            // 创建浮动框-->
+        <!--            createDivf() {-->
+        <!--                let hasDivf = document.getElementById('f-box');-->
+        <!--                // 查看页面中是否含有浮动框-->
+        <!--                if (!hasDivf) {-->
+        <!--                    // 关闭按钮部分-->
+        <!--                    let cloImg = document.createElement('div');-->
+        <!--                    cloImg.id = 'colse-icon';-->
+        <!--                    // 圆的 ://dfs.yun300.cn/group1/M00/19/5E/rBQBHF24AaiENsduAAAAANhHDTY717.png-->
+        <!--                    // 方的 : //dfs.yun300.cn/group1/M00/19/5E/rBQBHF24AjuEd-P9AAAAAGVYSmg124.png-->
+        <!--                    cloImg.style.backgroundImage =-->
+        <!--                        'url(//dfs.yun300.cn/group1/M00/19/5E/rBQBHF24AjuEd-P9AAAAAGVYSmg124.png)';-->
+        <!--                    cloImg.style.position = 'absolute';-->
+        <!--                    cloImg.style.top = '0';-->
+        <!--                    cloImg.style.right = '0';-->
+        <!--                    cloImg.style.width = '30px';-->
+        <!--                    cloImg.style.height = '30px';-->
+        <!--                    cloImg.style.backgroundPosition = 'center';-->
+        <!--                    cloImg.style.backgroundSize = '100%';-->
+        <!--                    cloImg.style.backgroundRepeat = 'no-repeat';-->
+        <!--                    // // 内容部分-->
+        <!--                    // // 图片-->
+        <!--                    let Img = document.createElement('img');-->
+        <!--                    Img.id = 'imgB';-->
+        <!--                    Img.src = '/images/qrads.png';-->
+        <!--                    Img.alt = '飘啊飘';-->
+        <!--                    // // 内容盒子-->
+        <!--                    let contents = document.createElement('a');-->
+        <!--                    contents.href = '/ad.htm';-->
+        <!--                    contents.style.display = 'block';-->
+        <!--                    contents.className = 'content';-->
+        <!--                    contents.appendChild(Img);-->
+        <!--                    // // 盒子部分-->
+        <!--                    let box = document.createElement('div');-->
+        <!--                    box.className = 'box';-->
+        <!--                    box.style.position = 'relative';-->
+        <!--                    box.appendChild(cloImg);-->
+        <!--                    box.appendChild(contents);-->
+        <!--                    // // 浮动盒子添加box-->
+        <!--                    let boxf = document.createElement('div');-->
+        <!--                    boxf.id = 'f-box';-->
+        <!--                    boxf.className = 'floatbox';-->
+        <!--                    // 样式部分-->
+        <!--                    boxf.style.position = 'fixed';-->
+        <!--                    boxf.style.cursor = 'pointer';-->
+        <!--                    boxf.style.zIndex = '10001';-->
+        <!--                    boxf.style.top = 0;-->
+        <!--                    boxf.appendChild(box);-->
+        <!--                    window.document.body.appendChild(boxf);-->
+        <!--                }-->
+        <!--            }-->
+
+        <!--            // 根据浏览器宽度改变图片宽度-->
+        <!--            responseImg() {-->
+        <!--                var imgB = document.getElementById('imgB');-->
+        <!--                if (imgB) {-->
+        <!--                    //获取图片-->
+        <!--                    var closeImg = document.getElementById('colse-icon');-->
+        <!--                    if (document.body.clientWidth < 769) {-->
+        <!--                        imgB.style.width = '100px';-->
+        <!--                        closeImg.style.width = '20px';-->
+        <!--                        closeImg.style.height = '20px';-->
+        <!--                    }else{-->
+        <!--                        imgB.style.width = '200px';-->
+        <!--                        closeImg.style.width = '20px';-->
+        <!--                        closeImg.style.height = '20px';-->
+        <!--                    }-->
+        <!--                    window.onresize = function () {-->
+        <!--                        if (document.body.clientWidth < 769) {-->
+        <!--                            imgB.style.width = '130px';-->
+        <!--                            closeImg.style.width = '20px';-->
+        <!--                            closeImg.style.height = '20px';-->
+        <!--                        } else {-->
+        <!--                            imgB.style.width = '200px';-->
+        <!--                            closeImg.style.width = '30px';-->
+        <!--                            closeImg.style.height = '30px';-->
+        <!--                        }-->
+        <!--                        ;-->
+        <!--                    }-->
+        <!--                }-->
+        <!--            }-->
+
+        <!--            // 删除浮动框-->
+        <!--            moveHtml() {-->
+        <!--                let divf = document.getElementById('f-box');-->
+        <!--                if (divf) {-->
+        <!--                    window.document.body.removeChild(divf);-->
+        <!--                }-->
+        <!--            }-->
+
+        <!--            floatMove() {-->
+        <!--                var hasDiv = document.getElementById('f-box');-->
+        <!--                if (hasDiv) {-->
+        <!--                    // 获取盒子-->
+        <!--                    let oneInner = document.getElementById('f-box');-->
+        <!--                    let oneButton = document.getElementById('colse-icon');-->
+        <!--                    // 添加事件-->
+        <!--                    //定时器-->
+        <!--                    var a1a = setInterval(moves, 30);-->
+        <!--                    //函数-->
+        <!--                    var a = 1;-->
+        <!--                    var b = 1;-->
+
+        <!--                    // 飘窗移动函数-->
+        <!--                    function moves() {-->
+        <!--                        // 距离顶部距离-->
+        <!--                        var tops = oneInner.offsetTop;-->
+        <!--                        // 距离左边距离-->
+        <!--                        var lefts = oneInner.offsetLeft;-->
+
+
+        <!--                        // 文档的宽度 - 盒子的宽度-->
+        <!--                        if (lefts + oneInner.offsetWidth >= document.documentElement.clientWidth || lefts < 0) {-->
+
+        <!--                            a = -a;-->
+        <!--                        }-->
+        <!--                        if (tops >= document.documentElement.clientHeight - oneInner.offsetHeight || tops < 0) {-->
+        <!--                            b = -b;-->
+        <!--                        }-->
+        <!--                        lefts += a;-->
+        <!--                        tops += b;-->
+        <!--                        oneInner.style.top = tops + "px";-->
+        <!--                        oneInner.style.left = lefts + "px";-->
+        <!--                    };-->
+        <!--                    //悬停停止-->
+        <!--                    oneInner.onmouseover = function () {-->
+        <!--                        clearInterval(a1a);-->
+        <!--                    };-->
+        <!--                    //放手继续运动-->
+        <!--                    oneInner.onmouseout = function () {-->
+        <!--                        a1a = setInterval(moves, 8);-->
+        <!--                    };-->
+        <!--                    //删除-->
+        <!--                    oneButton.onclick = function () {-->
+        <!--                        oneInner.style.display = 'none';-->
+        <!--                    };-->
+        <!--                }-->
+        <!--            }-->
+        <!--        };-->
+        <!--        let time = new Time('2100-11-12 00:00:00');-->
+        <!--        $("div[id^='AD']").attr("loaded", "true");-->
+
+        <!--    </script>-->
+        <!--</div>-->
+        <footer class="footer">
+	<div class="footer-nav">
+		<div class="footer-top">
+			<p>
+				<span>院办电话：021-68020772</span></br>
+				<span>招办电话：021-68020761，68021300</span>
+			</p>
+			<p>邮编：201300</p>
+			<p>地址：中国上海市浦东新区 惠南镇城南路（又名沪南公路）1635号(靠近观海路)</p>
+			<p class="footer-img"><img src="/sites/www/images/xwwxgzh.jpg" alt="" height="120"></p>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<p>+86-021-68020772 | ? Xingwei 2011-2014 | Legal Statement | All Rights Reserved.|Contact Us :
+			admissions@xingwei.edu.cn| <a style="color: #999" href="https://beian.miit.gov.cn"
+				target="_blank">沪ICP备17057385号-1</a>.| 沪公网安备31011502015825</p>
+	</div>
+</footer>
+<script>
+	$(document).scroll(function() {
+		var Hei = $(".ins-banner").height();
+		if ($(document).scrollTop() > Hei) {
+			$(".about-left").css({
+				"position": "fixed",
+				"top": "110px"
+			})
+		} else {
+			$(".about-left").css({
+				"position": "static",
+				"top": "110px"
+			})
+		}
+
+		if ($(document).scrollTop() > 300) {
+			$(".header.fixed").css({
+				// "background": "rgba(0,0,0,0.6)"
+			})
+			$(".header .nav .subbox").css({
+				// "background": "rgba(0,0,0,0.6)"
+			})
+			// $('#logo').hide()
+			// $('#logo_slider').show()
+		} else {
+			$(".header.fixed").css({
+				// "background": "rgba(0,0,0,0.6)"
+				// "background": "rgba(0,0,0,0.6)"
+
+			})
+			$(".header .nav .subbox").css({
+				// "background": "rgba(0,0,0,0.6)"
+			})
+			// $('#logo').show()
+			// $('#logo_slider').hide()
+		}
+	})
+</script>
+
+</body>
+</html>
+

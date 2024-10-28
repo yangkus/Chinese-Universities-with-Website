@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<title>中国音乐学院</title>
+		<link href="css/wp-content/themes/ccmusic/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/wp-content/themes/ccmusic/css/style1.css" media="screen" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/wp-content/themes/ccmusic/css/jquery.bxslider.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.liMarquee.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+		<script type="text/javascript" src="js/marquee.js"></script>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+<script src="/pub/ccmusic/js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$('.piaochuang span').click(function(e) {
+            $('.news').css('display','none');
+        });	
+		$('.piaochuang1 span').click(function(e) {
+            $('.piaochuang1').css('display','none');
+        });	
+	})
+</script>
+        <![endif]-->
+		<script>
+			$(function() {
+				//$("#audio").on('canplaythrough', function(){
+				$("#audio").trigger('play');
+				$("#index, .footer").removeClass('hidden');
+				$('.str4').liMarquee();
+				$('.str5').liMarquee();
+				$(window).scrollTop(0);
+				$('.news_title ul li a').on('mouseover', function() {
+					var index = $(this).parent().addClass('active').index();
+					$(this).parent().siblings('li').removeClass('active');
+					$(".tab_con").eq(index).addClass('block-active').siblings('.tab_con').removeClass('block-active');
+				});
+				$('.perform_title ul li a').on('mouseover', function() {
+					var index = $(this).parent().addClass('active').index();
+					$(this).parent().siblings('li').removeClass('active');
+					$(".perform_list").eq(index).addClass('block-active').siblings('.perform_list').removeClass('block-active');
+				});
+				$('.classic_title ul li a').on('mouseover', function() {
+					var index = $(this).parent().addClass('active').index();
+					$(this).parent().siblings('li').removeClass('active');
+					$(".classic_list").eq(index).addClass('block-active').siblings('.classic_list').removeClass('block-active');
+				});
+				$(window).scroll(function() {
+					if(document.documentElement.scrollTop > 310 || document.body.scrollTop > 310) {
+						$('.fixed_header').show();
+						$('.header').hide();
+						$('.fixed_header').css("position", "fixed");
+						$('.fixed_header').css("backgroundColor", "#fff");
+					} else {
+						$('.header').show();
+						$('.fixed_header').hide();
+					}
+				});
+				$('.search').on('mouseover', function() {
+					$('.search_input').show();
+					$(this).parent().css('background', '#4f4437');
+					$(this).children().css('color', '#fff');
+				});
+				$('#bxSlider').bxSlider({
+					mode: 'horizontal', //默认的是水平   
+					captions: true, //自动控制 
+					auto: true,
+					autoHover: true,
+					controls: true, //隐藏左右按钮 
+					pager: true,
+					prevText: '&lt',
+					nextText: '&gt',
+				});
+				$('#wrap4').marquee({
+					auto: false,
+					speed: 1000,
+					showNum: 5,
+					stepLen: 4,
+					prevElement: $('#prev4'),
+					nextElement: $('#next4')
+				});
+				$('#wrap5').marquee({
+					auto: false,
+					speed: 1000,
+					showNum: 5,
+					stepLen: 4,
+					prevElement: $('#prev5'),
+					nextElement: $('#next5')
+				});
+				//});   
+			});
+		</script>
+		<style>
+			.fixed-box {
+				position: absolute;
+				right: 0;
+				background: red;
+				height: 60px;
+				width: 60px;
+				top: 200px;
+				z-index: 1000;
+			}
+			
+			.fixed-box img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#pf
+            {
+                /*background: red;*/
+                position: absolute;
+                z-index: 10000;
+                animation: mymove 20s infinite linear alternate;
+                -webkit-animation:mymove 20s infinite linear alternate; /*Safari and Chrome*/
+            }
+
+            @keyframes mymove
+            {
+                from {left: 0; top: 0}
+                to {left: 90%; top: 90%;}
+            }
+
+            @-webkit-keyframes mymove /*Safari and Chrome*/
+            {
+                from {left: 0; top: 0 }
+                to {left: 90%; top: 90%;}
+            }
+		</style>
+
+<!-- <style type="text/css">
+    body{
+        filter: grayscale(100%);/*火狐*/
+        -webkit-filter:grayscale(100%);/*chrome*/
+        filter:gray; /*IE7-9*/
+    }
+ </style> -->
+
+
+<!-- <style>
+html {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: url(desaturate.svg#grayscale);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(1);
+}
+</style> -->
+	</head>
+
+	<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>喜庆二十大奋进新征程</title>
+    </head>
+
+    <body>
+
+
+        <DIV id=img1 style='Z-INDEX: 9999; LEFT:2px; WIDTH:425px; POSITION: absolute; TOP: 43px; HEIGHT: 172px; visibility: visible;'>
+            <a href="http://60th.ccmusic.edu.cn/" target='_blank'>
+                <img src='images/60thpc.png' width='160' height='163' />
+            </a>
+        </DIV>
+        <script type="text/javascript">
+            var xPos = 300;
+            var yPos = 200;
+            var step = 1;
+            var delay = 30;
+            var height = 0;
+            var Hoffset = 0;
+            var Woffset = 0;
+            var yon = 0;
+            var xon = 0;
+            var pause = true;
+            var interval;
+            img1.style.top = yPos;
+
+            function changePos() {
+
+                width = document.documentElement.clientWidth;
+                height = document.documentElement.clientHeight;
+                Hoffset = img1.offsetHeight;
+                Woffset = img1.offsetWidth;
+                img1.style.left = xPos + document.documentElement.scrollLeft + 'px';
+                img1.style.top = yPos + document.documentElement.scrollTop + 'px';
+                if (yon) {
+                    yPos = yPos + step;
+                } else {
+                    yPos = yPos - step;
+                }
+                if (yPos < 0) {
+                    yon = 1;
+                    yPos = 0;
+                }
+                if (yPos >= (height - Hoffset)) {
+                    yon = 0;
+                    yPos = (height - Hoffset);
+                }
+                if (xon) {
+                    xPos = xPos + step;
+                } else {
+                    xPos = xPos - step;
+                }
+                if (xPos < 0) {
+                    xon = 1;
+                    xPos = 0;
+                }
+                if (xPos >= (width - Woffset)) {
+                    xon = 0;
+                    xPos = (width - Woffset);
+                }
+            }
+
+            function start()
+
+            {
+                document.body.style.overflow = "";
+                img1.visibility = "visible";
+                interval = setInterval('changePos()', delay);
+            }
+
+            function pause_resume() {
+                if (pause) {
+                    clearInterval(interval);
+                    pause = false;
+                } else {
+                    interval = setInterval('changePos()', delay);
+                    pause = true;
+                }
+            }
+            start();
+        </script>
+
+
+    </body>
+
+    </html>
+    <!-- <a href="http://bwcx.ccmusic.edu.cn/">
+        <img src="images/piaochuang.jpg" id='pf'>
+    </a> -->
+    <div class="tlink">
+        <a href="http://esdzt.ccmusic.edu.cn/" target="_blank">
+            <img src="images/tlink.png" alt="">
+        </a>
+    </div>
+
+		<div class="fixed-box visible-xs">
+			<a target="_blank" href="#"><img src="images/mob-right.jpg"></a>
+		</div>
+		<audio id="audio" src="audio/dx2.wav" autostart="0">
+			Your browser does not support the audio element.
+		</audio>
+		<div class="allwrapper" id="index">
+			<div class="header">
+				<div class="container hidden-xs hidden-sm" id="pc_header">
+					<div class="row">
+						<p>
+							<a href="http://en.ccmusic.edu.cn/"><span>English Version</span></a>
+							<!--<a target="_blank" href="http://oldweb.ccmusic.edu.cn"><span>旧版网站</span></a>-->
+							<a target="_blank" href="http://i.ccmusic.edu.cn"><span>信息门户</span></a>
+							<a target="_blank" href="http://mail.ccmusic.edu.cn"><span>Email</span></a>
+							<a target="_blank" href="http://lib.ccmusic.edu.cn/"><span>图书馆</span></a>
+						</p>
+						<ul class="nav_list">
+															<li>
+									<a target="_blank" href="gygk/index.htm">
+										国音概况
+									</a>
+									<div class="list_group">
+																					<a target="_blank" href="gygk/xxjs/index.htm" target="_blank">
+												学校介绍
+											</a>
+																					<a target="_blank" href="gygk/xrld/index.htm" target="_blank">
+												现任领导
+											</a>
+																					<a target="_blank" href="gygk/lrld/index.htm" target="_blank">
+												历任领导
+											</a>
+																					<a target="_blank" href="gygk/lsyg/index.htm" target="_blank">
+												历史沿革
+											</a>
+																			</div>
+								</li>
+															<li>
+									<a target="_blank" href="jgsz/index.htm">
+										机构设置
+									</a>
+									<div class="list_group">
+																					<a target="_blank" href="jgsz/jxyx/index.htm" target="_blank">
+												教学院系
+											</a>
+																					<a target="_blank" href="jgsz/dwbm/index.htm" target="_blank">
+												党务部门
+											</a>
+																					<a target="_blank" href="jgsz/xzbm/index.htm" target="_blank">
+												行政部门
+											</a>
+																					<a target="_blank" href="jgsz/yjjg/index.htm" target="_blank">
+												研究机构
+											</a>
+																					<a target="_blank" href="jgsz/qt/index.htm" target="_blank">
+												其他
+											</a>
+																			</div>
+								</li>
+							<li>
+									<a target="_blank">
+										招生就业
+									</a>
+									<div class="list_group">
+																					<a target="_blank" href="http://bkzs.ccmusic.edu.cn" target="_blank">
+												本科生招生
+											</a>
+																					<a target="_blank" href="http://yjsy.ccmusic.edu.cn/zsgz/ssyjszs/index.htm" target="_blank">
+												硕士研究生招生
+											</a>
+																					<a target="_blank" href="http://yjsy.ccmusic.edu.cn/zsgz/bsyjszs/index.htm" target="_blank">
+												博士研究生招生
+											</a>
+																					<a target="_blank" href="http://gjjl.ccmusic.edu.cn" target="_blank">
+												留学生招生
+											</a>
+																					<a target="_blank" href="http://www.msccmusic.com/" target="_blank">
+												附中招生
+											</a>
+																					<a target="_blank" href="http://kjzx.ccmusic.edu.cn" target="_blank">
+												考级
+											</a>
+																					<a target="_blank" href="http://jyxx.ccmusic.edu.cn/" target="_blank">
+												就业信息网
+											</a>
+																			</div>
+								</li>
+															<li>
+									<a target="_blank" href="gysz/index.htm">
+										国音师资
+									</a>
+									<div class="list_group">
+																					<a target="_blank" href="gysz/szgk/index.htm" target="_blank">
+												师资概况
+											</a>
+																					<a target="_blank" href="gysz/jxms/index.htm" target="_blank">
+												教学名师
+											</a>
+																					<a target="_blank" href="gysz/bssds/index.htm" target="_blank">
+												博士生导师
+											</a>
+																					<a target="_blank" href="gysz/tpjs/index.htm" target="_blank">
+												特聘教授
+											</a>
+																					<a target="_blank" href="gysz/szdw/index.htm" target="_blank">
+												师资队伍
+											</a>
+																			</div>
+								</li>
+															<li>
+									<a target="_blank" href="hzjl/index.htm">
+										合作交流
+									</a>
+									<div class="list_group">
+																					<a target="_blank" href="hzjl/gnjl/index.htm" target="_blank">
+												国内交流
+											</a>
+																					<a target="_blank" href="hzjl/gwjl/index.htm" target="_blank">
+												国外交流
+											</a>
+																			</div>
+								</li>
+															<li>
+									<a target="_blank" href="xyfw/index.htm">
+										校园服务
+									</a>
+									<div class="list_group">
+																					<a target="_blank" href="xyfw/gyxl/index.htm" target="_blank">
+												国音校历
+											</a>
+																					<a target="_blank" href="xyfw/xydt/index.htm" target="_blank">
+												校园地图
+											</a>
+																					<a target="_blank" href="xyfw/szgy/index.htm" target="_blank">
+												数字国音
+											</a>
+																					<a target="_blank" href="http://mail.ccmusic.edu.cn/" target="_blank">
+												国音邮箱
+											</a>
+																					<a target="_blank" href="xyfw/lxwm/index.html" target="_blank">
+												联系我们
+											</a>
+																			</div>
+								</li>
+													</ul>
+					</div>
+				</div>
+				<div class="visible-xs">
+					<div>
+						<nav class="navbar navbar-default" role="navigation">
+
+							<div class="navbar-header">
+								<a target="_blank" href="javascript:void(0);"><span id="E">E</span></a>
+								<button class="navbar-toggle right-menu-button">
+                                <span class="sr-only">
+                                    切换导航
+                                </span>
+                                <span class="icon-bar">
+                                </span>
+                                <span class="icon-bar short">
+                                </span>
+                                <span class="icon-bar">
+                                </span>
+                            </button>
+
+							</div>
+							<div class="collapse navbar-collapse" id="example-navbar-collapse">
+								<div class="search-sm right-menu-button">
+									<div>
+										<span class="icon-bar">
+                                    </span>
+										<span class="icon-bar short">
+                                    </span>
+										<span class="icon-bar">
+                                    </span>
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="right-menu">
+						<div class="close-menu text-right">
+							<a target="_blank" class="icon-icon_menu" href="javascript:void(0);">
+							</a>
+						</div>
+						<ul>
+															<li>
+									<a target="_blank" href="javascript:void(0);">国音概况</a>
+									<ul class="sub">
+																					<li>
+												<a target="_blank" href="gygk/xxjs/index.htm">学校介绍</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gygk/xrld/index.htm">现任领导</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gygk/lrld/index.htm">历任领导</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gygk/lsyg/index.htm">历史沿革</a>
+											</li>
+																			</ul>
+								</li>
+															<li>
+									<a target="_blank" href="javascript:void(0);">机构设置</a>
+									<ul class="sub">
+																					<li>
+												<a target="_blank" href="jgsz/jxyx/index.htm">教学院系</a>
+											</li>
+																					<li>
+												<a target="_blank" href="jgsz/dwbm/index.htm">党务部门</a>
+											</li>
+																					<li>
+												<a target="_blank" href="jgsz/xzbm/index.htm">行政部门</a>
+											</li>
+																					<li>
+												<a target="_blank" href="jgsz/yjjg/index.htm">研究机构</a>
+											</li>
+																					<li>
+												<a target="_blank" href="jgsz/qt/index.htm">其他</a>
+											</li>
+																			</ul>
+								</li>
+															<li>
+									<a target="_blank" href="javascript:void(0);">招生就业</a>
+									<ul class="sub">
+																					<li>
+												<a target="_blank" href="http://bkzs.ccmusic.edu.cn">本科生招生</a>
+											</li>
+																					<li>
+												<a target="_blank" href="http://yjsy.ccmusic.edu.cn/zsgz/ssyjszs/index.htm">硕士研究生招生</a>
+											</li>
+																					<li>
+												<a target="_blank" href="http://yjsy.ccmusic.edu.cn/zsgz/bsyjszs/index.htm">博士研究生招生</a>
+											</li>
+																					<li>
+												<a target="_blank" href="http://gjjl.ccmusic.edu.cn">留学生招生</a>
+											</li>
+																					<li>
+												<a target="_blank" href="http://www.msccmusic.com/">附中招生</a>
+											</li>
+																					<li>
+												<a target="_blank" href="http://kjzx.ccmusic.edu.cn">考级</a>
+											</li>
+																					<li>
+												<a target="_blank" href="http://jyxx.ccmusic.edu.cn/">就业信息网</a>
+											</li>
+																			</ul>
+								</li>
+															<li>
+									<a target="_blank" href="javascript:void(0);">国音师资</a>
+									<ul class="sub">
+																					<li>
+												<a target="_blank" href="gysz/szgk/index.htm">师资概况</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gysz/jxms/index.htm">教学名师</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gysz/bssds/index.htm">博士生导师</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gysz/tpjs/index.htm">特聘教授</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gysz/szdw/index.htm">师资队伍</a>
+											</li>
+																			</ul>
+								</li>
+															<li>
+									<a target="_blank" href="javascript:void(0);">合作交流</a>
+									<ul class="sub">
+																					<li>
+												<a target="_blank" href="hzjl/gnjl/index.htm">国内交流</a>
+											</li>
+																					<li>
+												<a target="_blank" href="hzjl/gwjl/index.htm">国外交流</a>
+											</li>
+																			</ul>
+								</li>
+															<li>
+									<a target="_blank" href="javascript:void(0);">校园服务</a>
+									<ul class="sub">
+																					<li>
+												<a target="_blank" href="xyfw/gyxl/index.htm">国音校历</a>
+											</li>
+																					<li>
+												<a target="_blank" href="xyfw/xydt/index.htm">校园地图</a>
+											</li>
+																					<li>
+												<a target="_blank" href="xyfw/szgy/index.htm">数字国音</a>
+											</li>
+																					<li>
+												<a target="_blank" href="http://mail.ccmusic.edu.cn/">国音邮箱</a>
+											</li>
+																					<li>
+												<a target="_blank" href="xyfw/lxwm/index.html">联系我们</a>
+											</li>
+																			</ul>
+								</li>
+														
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="fixed_header hidden-xs">
+				<div class="p_top">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<p>
+									
+                                                                        <a target="_blank" href="http://i.ccmusic.edu.cn"><span>信息门户</span></a>
+								
+									<a target="_blank" href="http://mail.ccmusic.edu.cn"><span>Email</span></a>
+									<a target="_blank" href="http://lib.ccmusic.edu.cn/"><span>图书馆</span></a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="logo2">
+								<a target="_blank" href="index.htm"><img src="images/logo2.png"></a>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="nav_con">
+								<ul>
+																			<li>
+											<p>国音概况</p>
+											<p>													Introduction
+												</p>
+											<div class="list_group">
+																								<a target="_blank" href="gygk/xxjs/index.htm" target="_blank">
+													学校介绍
+												</a>
+																								<a target="_blank" href="gygk/xrld/index.htm" target="_blank">
+													现任领导
+												</a>
+																								<a target="_blank" href="gygk/lrld/index.htm" target="_blank">
+													历任领导
+												</a>
+																								<a target="_blank" href="gygk/lsyg/index.htm" target="_blank">
+													历史沿革
+												</a>
+																							</div>
+										</li>
+																			<li>
+											<p>机构设置</p>
+											<p>													Department
+												</p>
+											<div class="list_group">
+																								<a target="_blank" href="jgsz/jxyx/index.htm" target="_blank">
+													教学院系
+												</a>
+																								<a target="_blank" href="jgsz/dwbm/index.htm" target="_blank">
+													党务部门
+												</a>
+																								<a target="_blank" href="jgsz/xzbm/index.htm" target="_blank">
+													行政部门
+												</a>
+																								<a target="_blank" href="jgsz/yjjg/index.htm" target="_blank">
+													研究机构
+												</a>
+																								<a target="_blank" href="jgsz/qt/index.htm" target="_blank">
+													其他
+												</a>
+																							</div>
+										</li>
+																			<li>
+											<p>招生就业</p>
+											<p>													Enrollment&</br>employment
+												</p>
+											<div class="list_group">
+																								<a target="_blank" href="http://bkzs.ccmusic.edu.cn" target="_blank">
+													本科生招生
+												</a>
+																								<a target="_blank" href="http://yjsy.ccmusic.edu.cn/zsgz/ssyjszs/index.htm" target="_blank">
+													硕士研究生招生
+												</a>
+																								<a target="_blank" href="http://yjsy.ccmusic.edu.cn/zsgz/bsyjszs/index.htm" target="_blank">
+													博士研究生招生
+												</a>
+																								<a target="_blank" href="http://gjjl.ccmusic.edu.cn" target="_blank">
+													留学生招生
+												</a>
+																								<a target="_blank" href="http://www.msccmusic.com/" target="_blank">
+													附中招生
+												</a>
+																								<a target="_blank" href="http://kjzx.ccmusic.edu.cn" target="_blank">
+													考级
+												</a>
+																								<a target="_blank" href="http://jyxx.ccmusic.edu.cn/" target="_blank">
+													就业信息网
+												</a>
+																							</div>
+										</li>
+																			<li>
+											<p>国音师资</p>
+											<p>													Faculty
+												</p>
+											<div class="list_group">
+																								<a target="_blank" href="gysz/szgk/index.htm" target="_blank">
+													师资概况
+												</a>
+																								<a target="_blank" href="gysz/jxms/index.htm" target="_blank">
+													教学名师
+												</a>
+																								<a target="_blank" href="gysz/bssds/index.htm" target="_blank">
+													博士生导师
+												</a>
+																								<a target="_blank" href="gysz/tpjs/index.htm" target="_blank">
+													特聘教授
+												</a>
+																								<a target="_blank" href="gysz/szdw/index.htm" target="_blank">
+													师资队伍
+												</a>
+																							</div>
+										</li>
+																			<li>
+											<p>合作交流</p>
+											<p>													Cooperation
+												</p>
+											<div class="list_group">
+																								<a target="_blank" href="hzjl/gnjl/index.htm" target="_blank">
+													国内交流
+												</a>
+																								<a target="_blank" href="hzjl/gwjl/index.htm" target="_blank">
+													国外交流
+												</a>
+																							</div>
+										</li>
+																			<li>
+											<p>校园服务</p>
+											<p>													Service
+												</p>
+											<div class="list_group">
+																								<a target="_blank" href="xyfw/gyxl/index.htm" target="_blank">
+													国音校历
+												</a>
+																								<a target="_blank" href="xyfw/xydt/index.htm" target="_blank">
+													校园地图
+												</a>
+																								<a target="_blank" href="xyfw/szgy/index.htm" target="_blank">
+													数字国音
+												</a>
+																								<a target="_blank" href="http://mail.ccmusic.edu.cn/" target="_blank">
+													国音邮箱
+												</a>
+																								<a target="_blank" href="xyfw/lxwm/index.html" target="_blank">
+													联系我们
+												</a>
+																							</div>
+										</li>
+									
+									<li>
+										<div class="search">
+											<span class="icon-search4"></span>
+										</div>
+									</li>
+								</ul>
+								<div class="search_input">
+									<form action="/cms/web/search/index.jsp" method="get">
+										<input type="text" id="s" name="query" placeholder="搜索关键词" />
+										<input name="siteID" value="12decbadb29b48f8a36bd84c886f1341" type="hidden">
+										<input type="hidden" name="searchScope" value="0" />	
+									</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banner">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-4">
+							<div class="logo">
+								<img src="images/logo.png" alt="">
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-8 col-md-8">
+							<div class='hidden-sm hidden-xs hidden-md' style="margin-top: 65px;"><!-- <img src="images/home2.png" alt=""> --></div>
+							<div class="motto">
+								<ul>
+									<li><img src="images/title11.png" style="margin-top:-32px;"></li>
+									<li><img src="images/title2.png" style="margin-top:-32px;">
+									</li>
+									<li><img src="images/title3.png" style="margin-top:-32px;">
+									</li>
+									<li><img src="images/title4.png" style="margin-top:-11px;">
+									</li>
+								</ul>
+								<div class="note1">
+									<img src="images/Fill1.png">
+								</div>
+								<div class="note2">
+									<img src="images/Fill2.png">
+								</div>
+								<div class="note3">
+									<img src="images/Fill3.png">
+								</div>
+								<div class="note4">
+									<img src="images/Fill4.png">
+								</div>
+								<div class="note5">
+									<img src="images/Fill5.png">
+								</div>
+								<div class="note6">
+									<img src="images/Fill1.png">
+								</div>
+								<div class="note7">
+									<img src="images/Fill2.png">
+								</div>
+								<div class="note8">
+									<img src="images/Fill3.png">
+								</div>
+								<div class="note9">
+									<img src="images/Fill4.png">
+								</div>
+								<div class="note10">
+									<img src="images/Fill5.png">
+								</div>
+								<div class="note11">
+									<img src="images/Fill2.png">
+								</div>
+							</div>
+						</div>
+						<div class="m_intr visible-xs">
+							<a target="_blank" href="fw/xs/index.htm"><span>学生</span></a><span>|</span>
+							<a target="_blank" href="fw/jzg/index.htm"><span>教职工</span></a><span>|</span>
+							<a target="_blank" href="fw/fk/index.htm"><span>访客</span></a>
+						</div>
+
+					</div>
+					<div class="fixed hidden-xs">
+						<ul>
+							<li>
+								<a target="_blank" href="fw/xs/index.htm"><img src="images/student.png" alt="">
+									<p>学生</p>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="fw/jzg/index.htm"><img src="images/staff.png" alt="">
+									<p>教职工</p>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="fw/fk/index.htm"><img src="images/visitor.png" alt="">
+									<p>访客</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="figure hidden-xs">
+						<div class="container">
+							<div class="figure_list">
+								<div class="str4 str_wrap">
+																			<a target="_blank" href="gyrw/5f186044e93641f39be8a44513bacc80.htm"><img src="images/2019-04/bca22fda69d64dfea4292835d16548ce.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>安波</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/da95c30d039d4d47a7e1a43a956e9ddd.htm"><img src="images/2019-04/7de84e5135af440abd7b62f788a971f8.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>马可</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/dc33cfe98f8f48b19b45bfd03be2d03b.htm"><img src="images/2019-04/e780c39c33404c4cb0d7a35d9c104b6c.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>李凌</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/8d55c5bada50449fb329647e5174f832.htm"><img src="images/2019-04/7be55031c2c04740b2617bdc48e0c639.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>李西安</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/3d53d5c615f94000a7b96a6a900b2eb5.htm"><img src="images/2019-04/b93d4d9f2cab4b3ebd23aabb90e9770a.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>刘雪庵</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/5a45a17902744446a84e0b7a13861a97.htm"><img src="images/2019-04/604384b35d1141e78600bd931bb7e09b.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>蒋风之</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/95d573d3c0ac48898a301c4d63be1429.htm"><img src="images/2021-08/85927f5633614975bf7afc4a49e439b6.jpg" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>张权</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/0924dc054ad5471d891d3823ff4bf7de.htm"><img src="images/2019-04/6cd936a0e99146d9bf6cf929949eeb85.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>黎英海</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/06676f593b7c404d8fa9de5aa5578506.htm"><img src="images/2019-04/82f4caa66b264decb6b14f3704fbea36.jpg" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>金铁霖</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/04d29ee674dc48c7bfa62687d543368b.htm"><img src="images/2019-04/1f600ee79d194ed9beaf8d3738e7f2a0.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>刘德海</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/cd09cbe76cb34ebf9db887303c6f5744.htm"><img src="images/2019-04/0f562563464a47f59aa72d67c6bae185.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>王玉珍</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/ed7c1a40f74d46b3821e576429a85661.htm"><img src="images/2019-04/be022173d74d45bb97a4e74d5b8dbd54.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>樊祖荫</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/1b3b96f8aec2404db471a85ef4b072f8.htm"><img src="images/2019-04/4718fd16a96743909d3bc113072815ce.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>罗忠镕</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/4b18e74835ab4dc5b02ddd559a5b03ef.htm"><img src="images/2019-04/04b9c902571147e595adcb68dc20571c.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>王范地</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/fb5a09d0ea0f408d899ea9e567f6f477.htm"><img src="images/2019-04/8aa20985abb2460589cd17ca27cf1904.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>施万春</p>
+												<p></p>
+											</div>
+										</a>
+																			<a target="_blank" href="gyrw/ec7581f9d41e4e1fa6c1fad1c3725f3d.htm"><img src="images/2019-04/72d561d58e3645dbb5ddd08461f4d54d.png" style="width:96px;height:120px;">
+											<div class="figure_intr">
+												<p>刘明源</p>
+												<p></p>
+											</div>
+										</a>
+																	</div>
+								<!-- <button class="more">查看更多<br>国音人物</button> -->
+							</div>
+							<p>
+								<a target="_blank" href="gyrw/index.htm">查看更多国音人物</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="news">
+
+<!-- <div class="piaochuang">
+                	<span><img src="images/shut.png" width="37" height="37"></span>
+                	<a href="http://xsgzb.ccmusic.edu.cn/tzgg/index.htm">
+                   	<img src="images/w1.jpg" width="190" height="300"> 
+                    </a>
+                </div> -->
+				<div class="container">
+					<div class="row news_title">
+						<div class="col-xs-12">
+							<ul>
+								<li class="focus active" id="focus">
+									<a target="_blank" href="javascript:void(0);">
+										<div class="_img">
+											<img src="images/Focus1.png">
+										</div>
+										<div class="_hover">
+											<img src="images/Focus_hover.png">
+										</div>
+									</a>
+								</li>
+								<li class="news_media" id="news_media">
+									<a target="_blank" href="javascript:void(0);">
+										<div class="_img">
+											<img src="images/Media1.png">
+										</div>
+										<div class="_hover">
+											<img src="images/Media_hover.png">
+										</div>
+									</a>
+								</li>
+								<li class="vision" id="vision">
+									<a target="_blank" href="javascript:void(0);">
+										<div class="_img">
+											<img src="images/Vision1.png">
+										</div>
+										<div class="_hover">
+											<img src="images/Vision_hover.png">
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tab_con block-active tab1">
+						<div class="news_content">
+																						<div class="col-xs-6 col-sm-6 col-md-3">
+									<a target="_blank" href="gyxw/gyyw/165ecc94894d40c59192a053f3411fa4.htm">
+										<div class="news_img">
+											<img src="images/2019-09/3522a544a9c24b76a32af31781d85627.jpg">
+										</div>
+										<p>美国茱莉亚学院授予彭丽媛教授名誉博士学位仪式在我校举行</p>
+									</a>
+								</div>
+															<div class="col-xs-6 col-sm-6 col-md-3">
+									<a target="_blank" href="gyxw/gyyw/90415418863f4cf4a11962858dcadf68.htm">
+										<div class="news_img">
+											<img src="images/2024-09/a4ca61a96e2d473390b313b223527611.jpg">
+										</div>
+										<p>中国音乐学院建校60周年之际，尹力来到学校调研，要求奋力谱写中国特色世界一流高等音乐学府的新篇章</p>
+									</a>
+								</div>
+															<div class="col-xs-6 col-sm-6 col-md-3">
+									<a target="_blank" href="gyxw/gyyw/f8e8cb58b413488fb9c0de2586183c6d.htm">
+										<div class="news_img">
+											<img src="images/2024-03/8b7fcfb47923440195403dfcbb54f2b7.jpeg">
+										</div>
+										<p>市委常委、教育工委书记，市政府党组成员于英杰到中国音乐学院调研</p>
+									</a>
+								</div>
+															<div class="col-xs-6 col-sm-6 col-md-3">
+									<a target="_blank" href="gyxw/gyyw/7470d198c873497bb5dbc9f0c1efd2d0.htm">
+										<div class="news_img">
+											<img src="images/2024-09/2b32189b7d554a20ad6c48335e167f09.png">
+										</div>
+										<p>甲子华章 | 庆祝中国音乐学院建校60周年大会隆重举行</p>
+									</a>
+								</div>
+														<div style="clear:both"></div>	
+                                 <!-- <div class="piaochuang1">
+                                    <span><img src="images/shut.png" width="37" height="37"></span>
+                                    <a href="http://xsgzb.ccmusic.edu.cn/tzgg/index.htm">
+                                    <img src="images/phone.jpg"> 
+                                    </a>
+                                </div>  -->
+							<div class="row news_list">
+								<div class="col-xs-12 col-sm-12 col-md-6">
+									<ul>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/90415418863f4cf4a11962858dcadf68.htm">
+													<p><span>09-20</span>中国音乐学院建校60周年之际，尹力来到学校调研，要求奋力谱写中国特色世界一流高等音乐学府的新篇章</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/002d7c3c0eb54f1ebcde251fb7ae0089.htm">
+													<p><span>10-16</span>学校召开学习贯彻落实习近平总书记文艺工作座谈会讲话精神座谈会</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/bd0cfbc4cc91489d87b046115a496222.htm">
+													<p><span>10-25</span>院长李心草会见北京日报社一行</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/8420278802f0426993c5b2a0c061b0f1.htm">
+													<p><span>10-28</span>铁血铸军魂，青春献祖国！中国音乐学院 2024年学生军训圆满闭营</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/07fbed094e1f4a429d316823ae1ed93b.htm">
+													<p><span>10-28</span>甲子华章｜“ 弦歌六十今又始”中国音乐学院声乐新作品专场音乐会精彩上演</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/718b49c1d3c04702b86d373e0e2a5f9c.htm">
+													<p><span>10-28</span>声乐歌剧系本科教育教学审核评估动员会召开</p>
+												</a>
+											</li>
+										
+									</ul>
+								</div>
+
+								<div class="col-xs-12 col-sm-12 col-md-6">
+									<ul>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/5da53e1512cf455b9a638636b9ca67a6.htm">
+													<p><span>10-25</span>中国音乐家协会音乐评论学会第十届年会暨中国音乐评论推优活动圆满举行</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/9c0ef454906545858b536093d39f1b4b.htm">
+													<p><span>10-24</span>党委常委、副院长王小艺到国际交流合作处（港澳台事务办公室）调研指导工作</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/07cc98d2e5004554ba19e37f9bd78de2.htm">
+													<p><span>10-24</span>我校赴首都师范大学开展第4期党务工作者线下培训</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/24e947c50ab04e41b137b09644cc880f.htm">
+													<p><span>10-24</span>中国音乐学院与陕西延安干部学院签订战略合作协议</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/5e92803fb96946b9ba5218bf56a38974.htm">
+													<p><span>10-23</span>中国音乐学院党务工作者前往中央民族大学进行第3期党务工作者培训</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyxw/gyyw/dfdc3bfdb7014abca3c6e03f6b238223.htm">
+													<p><span>10-22</span>院长李心草一行赴沈阳参加 “专业艺术教育高质量发展”系列活动</p>
+												</a>
+											</li>
+																			</ul>
+								</div>
+							</div>
+						</div>
+						<div class="row more_news">
+							<div class="col-xs-12">
+								<p>
+									<a target="_blank" href="gyxw/gyyw/index.htm">查看更多</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="tab_con tab2">
+						<div class="row">
+							
+															<div class="col-md-6">
+									<div class="row">
+										<div class="col-md-2 col-xs-3">
+											<div class="date_left">
+												<span>27</span>
+												<span>2024.09</span>
+											</div>
+										</div>
+										<div class="col-md-10 col-xs-9">
+											<div class="content_right">
+												<a target="_blank" href="gyxw/mtsj/cad5782c18c34652999e14983c9c00cc.htm">
+													<h4>新华社：中国音乐学院举办60周年校庆系列活动</h4>
+													<p></p>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+															<div class="col-md-6">
+									<div class="row">
+										<div class="col-md-2 col-xs-3">
+											<div class="date_left">
+												<span>24</span>
+												<span>2024.09</span>
+											</div>
+										</div>
+										<div class="col-md-10 col-xs-9">
+											<div class="content_right">
+												<a target="_blank" href="gyxw/mtsj/0cd606c2d9ab4d26bfe5eafe98c8eb82.htm">
+													<h4>人民网：中国音乐学院庆祝建校60周年大会举行</h4>
+													<p></p>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+														<hr class="hidden-xs">
+						</div>
+						<div class="row news_list">
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<ul>
+																			<li>
+											<a target="_blank" href="gyxw/mtsj/df7fe2bd63284272aa087947660e33a8.htm">
+												<p><span>10-16</span>学习强国：育见热点 | 中国音乐学院召开学习贯彻落实习近平总书记文艺工作座谈会讲话精神座谈会</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyxw/mtsj/3505b3afdd6247b78b3a383254a94423.htm">
+												<p><span>10-28</span>中国教育报专访我校党委书记王旭东：走一条饱含文化自信的美育道路</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyxw/mtsj/79bb77c6756f4ef2a99f254a8ce7a789.htm">
+												<p><span>10-21</span>音乐周报：桃李馥郁一甲子“金铁霖先生学生音乐会”  用歌声纪念恩师</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyxw/mtsj/ced215c6052448ffaeab280e990583dc.htm">
+												<p><span>10-18</span>音乐周报：中国音乐学院喜迎甲子华诞</p>
+											</a>
+										</li>
+																	</ul>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<ul>
+																			<li>
+											<a target="_blank" href="gyxw/mtsj/926d79038cd6421199f8f5da328f1ee0.htm">
+												<p><span>10-18</span>音乐周报：六十岁华，又从今起新花甲——评中国音乐学院建院六十周年庆典音乐会 | 乐评</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyxw/mtsj/6f16093e955e4d7fbce12b2ef2a52fdb.htm">
+												<p><span>10-17</span>中国艺术报:中国音乐学院大型原创合唱剧《聂耳的歌》上演——传承红色基因，赓续红色血脉</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyxw/mtsj/83f34afbd2b547218cd3900e2fa77364.htm">
+												<p><span>10-16</span>中国音乐学院原创合唱剧《聂耳的歌》在京上文旅中国：中国音乐学院原创合唱剧《聂耳的歌》在京上演</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyxw/mtsj/65d826583d6a47a685b9343b006a3847.htm">
+												<p><span>10-11</span>北京日报：“甲子回眸 风华正茂”中国音乐学院建校60周年专场音乐会在国家大剧院隆重上演</p>
+											</a>
+										</li>
+																	</ul>
+							</div>
+						</div>
+						<div class="row more_news">
+							<div class="col-xs-12">
+								<p>
+									<a target="_blank" href="gyxw/mtsj/index.htm">查看更多</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="tab_con tab3">
+						<div class="row">
+							<div class="col-md-6">
+								<video src="video/20240930.mp4" controls id="video" controlsList="nodownload" poster="images/241010.png">
+									您的浏览器版本过低。
+								</video>
+
+							</div>
+							<div class="col-md-6">
+								<ul>
+<!--
+									<li>
+										<a target="_blank" href="/pub/ccmusic/gyxw/gysj/gyxc/02cc6068225441a086daca2e9054e788.htm">
+											<img src="images/ssfc.png">
+										</a>
+										<p>师生采风</p>
+									</li>
+									<li>
+										<a target="_blank" href="/pub/ccmusic/gyxw/gysj/gyxc/77f1eef483be4e7690bd0c78584e5770.htm">
+											<img src="images/xwjl.jpg">
+										</a>
+										<p>学术交流</p>
+									</li>
+									<li>
+										<a target="_blank" href="/pub/ccmusic/gyxw/gysj/gyxc/494400fb962549ae83a265ae61e5d5c8.htm">
+											<img src="images/xyjg.jpg">
+										</a>
+										<p>校园景观</p>
+									</li>
+									<li>
+										<a target="_blank" href="/pub/ccmusic/gyxw/gysj/gyxc/451bf19a108d4b2eb07e5381a4446d14.htm">
+											<img src="images/ysyc.jpg">
+										</a>
+										<p>艺术演出</p>
+									</li>
+-->
+       	<li>
+										<a target="_blank" href="gyxw/gysj/gyxc/77f1eef483be4e7690bd0c78584e5770.htm">
+											<img src="images/2023-09/36b516e6d5674d089aeb95d8673b31ad.jpg" style="width: 226px;height: auto;">
+										</a>
+										<p>学术交流</p>
+									</li>
+       	<li>
+										<a target="_blank" href="gyxw/gysj/gyxc/451bf19a108d4b2eb07e5381a4446d14.htm">
+											<img src="images/2024-03/dd187f0e4d624e698c39d43e6ccce2b7.jpg" style="width: 226px;height: auto;">
+										</a>
+										<p>艺术演出</p>
+									</li>
+       	<li>
+										<a target="_blank" href="gyxw/gysj/gyxc/02cc6068225441a086daca2e9054e788.htm">
+											<img src="images/2024-03/ba37925bb66d435b9e76a4ca63df4b25.jpg" style="width: 226px;height: auto;">
+										</a>
+										<p>师生风采</p>
+									</li>
+       	<li>
+										<a target="_blank" href="gyxw/gysj/gyxc/494400fb962549ae83a265ae61e5d5c8.htm">
+											<img src="images/2024-05/141fbd2fcf1549abaeeef6237a3a5e69.jpg" style="width: 226px;height: auto;">
+										</a>
+										<p>校园景观</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row more_news">
+							<div class="col-xs-12">
+								<p>
+									<a target="_blank" href="gyxw/gysj/index.htm">查看更多</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="perform">
+				<div class="container">
+					<div class="row perform_title">
+						<div class="col-xs-12">
+							<ul>
+								<li class="lecture">
+									<a target="_blank" href="http://www.ccmusic.edu.cn/gyzx/gysx/index.htm">
+										<div class="_img">
+											<img src="images/guoyinshixun2022.png">
+										</div>
+										<div class="_hover">
+											<img src="images/guoyinshixunditu2022.png">
+										</div>
+									</a>
+								</li>
+								<li class="concert active">
+									<a target="_blank" href="http://www.ccmusic.edu.cn/ycjt/ysyc/index.htm">
+										<div class="_img">
+											<img src="images/yanchujiangtang.png">
+										</div>
+										<div class="_hover">
+											<img src="images/yanchujiangtang_alt.png">
+										</div>
+									</a>
+								</li>
+
+<li class="lecture">
+									<a target="_blank" href="http://www.ccmusic.edu.cn/sdsf/index.htm">
+										<div class="_img">
+											<img src="images/shifeng.png">
+										</div>
+										<div class="_hover">
+											<img src="images/shifeng_hover.png">
+										</div>
+									</a>
+								</li>
+								
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="perform_list tab2 tab_con">
+						<div class="row">
+							<hr class="hidden-xs">
+						</div>
+						<div class="row news_list">
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<ul>
+																			<li>
+											<a target="_blank" href="gyzx/gysx/01d0c50a106945e09f0b5a9af073b595.htm">
+												<p><span>10-24 </span>教育学院学子入选学校国旗护卫队，做红旗下的追光者</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyzx/gysx/32cd69c7519043c0a51eac0198dc20f8.htm">
+												<p><span>10-24 </span>声乐歌剧系成功举办“青春华章”声乐歌剧系优秀学子音乐会（美声专场）</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyzx/gysx/a0bc943d716840cf835cf314cb36d9f7.htm">
+												<p><span>10-24 </span>声乐歌剧系成功举办“青春华章”声乐歌剧系优秀学子音乐会（民族专场）</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyzx/gysx/177e230cdf834333a8ba86ece0f3454a.htm">
+												<p><span>10-23 </span>学校举办2024年新生“宿舍公约大赛”</p>
+											</a>
+										</li>
+																	</ul>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<ul>
+																			<li>
+											<a target="_blank" href="gyzx/gysx/9499db2a20284f47b5b218aace539e71.htm">
+												<p><span>10-23</span>党委宣传部召开本科教育教学审核评估工作部署会</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyzx/gysx/5e92803fb96946b9ba5218bf56a38974.htm">
+												<p><span>10-23</span>中国音乐学院党务工作者前往中央民族大学进行第3期党务工作者培训</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyzx/gysx/3bbf116abc7748149ea4f9d39ca9ed52.htm">
+												<p><span>10-21</span>艺术管理系党总支“心随党行，艺扬国韵”党日活动</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyzx/gysx/a0154379175b4b1097655912f126c1a1.htm">
+												<p><span>10-21</span>思想政治理论教学部扎实开展党纪学习教育将党纪学习教育融入思政课教学</p>
+											</a>
+										</li>
+																	</ul>
+							</div>
+						</div>
+						<div class="row more_news">
+							<div class="col-xs-12">
+								<p>
+									<a target="_blank" href="gyzx/gysx/index.htm">查看更多</a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="perform_list block-active">
+						<div class="row perform_content hidden-lg ">
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/4eee215acb3a406b8ee695dc2643ef96.htm">
+											<img src="images/2024-10/e4145dee997a4149b37bc362e41803de.jpg" style="width:145px;height:192px" alt="键盘上的红色之旅">
+											<div class="perform_date">
+												<h4>14</h4>
+												<p>2024/10-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/0086cf22e3614e8088c8a743c82fc322.htm">
+											<img src="images/2024-10/c185c10cbd044d16bf2b37037fa35653.jpg" style="width:145px;height:192px" alt="聂耳的歌">
+											<div class="perform_date">
+												<h4>15</h4>
+												<p>2024/10-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/a0e3cff2c11a4cce978bdfacf7a0b031.htm">
+											<img src="images/2024-10/e08138abd79c4c02bbd436b0e325a184.jpg" style="width:145px;height:192px" alt="弦歌">
+											<div class="perform_date">
+												<h4>23</h4>
+												<p>2024/10-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/e8e30c3a26f04c92b56c3b3c7e0e1288.htm">
+											<img src="images/2024-10/97866d915c8448a9ac8a7bd089acff3b.jpg" style="width:145px;height:192px" alt="一场音乐的盛宴">
+											<div class="perform_date">
+												<h4>16</h4>
+												<p>2024/10-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/d238d275ff074eb1b25c3bd636ef1d32.htm">
+											<img src="images/2024-09/db854ed443134db5b7369ac82e865b87.jpg" style="width:145px;height:192px" alt="中国音乐学院建校六十周年专场音乐会">
+											<div class="perform_date">
+												<h4>23</h4>
+												<p>2024/09-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/63efd6742898428f9c74ebbf36397adb.htm">
+											<img src="images/2024-09/d5ee0c3fa0cf49a89e2fa059324c06b5.jpg" style="width:145px;height:192px" alt="国乐初心">
+											<div class="perform_date">
+												<h4>30</h4>
+												<p>2024/09-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/92552dc0b0fa4d60b487dc62cc1ae77e.htm">
+											<img src="images/2024-09/4df055e9f7a940d6b318ca16b08e2446.jpg" style="width:145px;height:192px" alt="巍巍井冈山  燎原中国红  2024井冈山红色文化音乐周">
+											<div class="perform_date">
+												<h4>30</h4>
+												<p>2024/09-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/770795b12fd14881b50f0c0a3a1a2e4b.htm">
+											<img src="images/2024-09/5c47646c42f044e1b8833d4f136d7016.png" style="width:145px;height:192px" alt="弦歌六秩 桃李芬芳   中国青年爱乐乐团专场音乐会">
+											<div class="perform_date">
+												<h4>30</h4>
+												<p>2024/09-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/0f30034d2c494d7e8d0de03fb0f857c4.htm">
+											<img src="images/2024-09/87b7f247445c42c58f17af2bad73f462.jpg" style="width:145px;height:192px" alt="金铁霖先生学生音乐会">
+											<div class="perform_date">
+												<h4>24</h4>
+												<p>2024/09-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+															<div class="col-xs-6 col-sm-4 col-md-2 ">
+									<div class="perform_img">
+										<a target="_blank" href="ycjt/ysyc/76ca378c4c744e8289e56575ae7d6545.htm">
+											<img src="images/2024-09/52942019d05b4539aea59fc6081b6b94.jpg" style="width:145px;height:192px" alt="中国经典民族歌剧荟萃">
+											<div class="perform_date">
+												<h4>23</h4>
+												<p>2024/09-</p>
+											</div>
+										</a>
+									</div>
+								</div>
+														
+						</div>
+						<div class="row perform_content visible-lg ">
+							<a target="_blank" href="javascript:void(0);" id="next4">
+								<div class="icon_left hidden-xs hidden-sm ">
+									<span class="icon-arrow_carrot-left">
+                                </span>
+								</div>
+							</a>
+							<div id="wrap4" style="position: relative; width: 1000px; height: 290px; overflow: hidden;">
+								<ul class="list">
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/4eee215acb3a406b8ee695dc2643ef96.htm">
+													<img src="images/2024-10/e4145dee997a4149b37bc362e41803de.jpg" alt="键盘上的红色之旅">
+													<div class="perform_date">
+														<h4>14</h4>
+														<p>2024/10</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">键盘上的红色之旅</div>
+										</li>
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/0086cf22e3614e8088c8a743c82fc322.htm">
+													<img src="images/2024-10/c185c10cbd044d16bf2b37037fa35653.jpg" alt="聂耳的歌">
+													<div class="perform_date">
+														<h4>15</h4>
+														<p>2024/10</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">聂耳的歌</div>
+										</li>
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/a0e3cff2c11a4cce978bdfacf7a0b031.htm">
+													<img src="images/2024-10/e08138abd79c4c02bbd436b0e325a184.jpg" alt="弦歌">
+													<div class="perform_date">
+														<h4>23</h4>
+														<p>2024/10</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">弦歌</div>
+										</li>
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/e8e30c3a26f04c92b56c3b3c7e0e1288.htm">
+													<img src="images/2024-10/97866d915c8448a9ac8a7bd089acff3b.jpg" alt="一场音乐的盛宴">
+													<div class="perform_date">
+														<h4>16</h4>
+														<p>2024/10</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">一场音乐的盛宴</div>
+										</li>
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/d238d275ff074eb1b25c3bd636ef1d32.htm">
+													<img src="images/2024-09/db854ed443134db5b7369ac82e865b87.jpg" alt="中国音乐学院建校六十周年专场音乐会">
+													<div class="perform_date">
+														<h4>23</h4>
+														<p>2024/09</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">中国音乐学院建校六十周年专场音乐会</div>
+										</li>
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/63efd6742898428f9c74ebbf36397adb.htm">
+													<img src="images/2024-09/d5ee0c3fa0cf49a89e2fa059324c06b5.jpg" alt="国乐初心">
+													<div class="perform_date">
+														<h4>30</h4>
+														<p>2024/09</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">国乐初心</div>
+										</li>
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/92552dc0b0fa4d60b487dc62cc1ae77e.htm">
+													<img src="images/2024-09/4df055e9f7a940d6b318ca16b08e2446.jpg" alt="巍巍井冈山  燎原中国红  2024井冈山红色文化音乐周">
+													<div class="perform_date">
+														<h4>30</h4>
+														<p>2024/09</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">巍巍井冈山  燎原中国红  2024井冈山红色文化音乐周</div>
+										</li>
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/770795b12fd14881b50f0c0a3a1a2e4b.htm">
+													<img src="images/2024-09/5c47646c42f044e1b8833d4f136d7016.png" alt="弦歌六秩 桃李芬芳   中国青年爱乐乐团专场音乐会">
+													<div class="perform_date">
+														<h4>30</h4>
+														<p>2024/09</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">弦歌六秩 桃李芬芳   中国青年爱乐乐团专场音乐会</div>
+										</li>
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/0f30034d2c494d7e8d0de03fb0f857c4.htm">
+													<img src="images/2024-09/87b7f247445c42c58f17af2bad73f462.jpg" alt="金铁霖先生学生音乐会">
+													<div class="perform_date">
+														<h4>24</h4>
+														<p>2024/09</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">金铁霖先生学生音乐会</div>
+										</li>
+																			<li class="icon_panel" style="float: left;">
+											<div class="perform_img">
+												<a target="_blank" href="ycjt/ysyc/76ca378c4c744e8289e56575ae7d6545.htm">
+													<img src="images/2024-09/52942019d05b4539aea59fc6081b6b94.jpg" alt="中国经典民族歌剧荟萃">
+													<div class="perform_date">
+														<h4>23</h4>
+														<p>2024/09</p>
+													</div>
+												</a>
+											</div>
+											<div class="perform_con">中国经典民族歌剧荟萃</div>
+										</li>
+																	</ul>
+							</div>
+							<a target="_blank" href="javascript:viod(0);" id="prev4">
+								<div class="icon_right hidden-xs hidden-sm">
+									<span class="icon-arrow_carrot-right">          </span>
+								</div>
+							</a>
+						</div>
+						<div class="row more_news">
+							<div class="col-xs-12">
+								<p>
+									<a target="_blank" href="ycjt/index.htm">查看更多</a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="perform_list tab2 tab_con">
+
+						<div class="row news_list">
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<ul>
+																			<li>
+											<a target="_blank" href="sdsf/63a4599098a24d149b83e43050c004fd.htm">
+												<p><span>05-10</span>国乐系扬琴专业教授李玲玲接受新华社国际部采访</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="sdsf/0c41fdcc453047c5badb9abfd1a5bd1a.htm">
+												<p><span>03-20</span>学校召开师德建设委员会会议</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="sdsf/4711710614fd47b6a031ea9a0c9e822a.htm">
+												<p><span>09-21</span>附中召开师德师风建设大会</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="sdsf/0040467a0ba14b92a0290d4ecc2ab439.htm">
+												<p><span>09-12</span>学校召开2023年庆祝教师节大会暨“我的育人故事”宣讲会</p>
+											</a>
+										</li>
+																	</ul>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<ul>
+																			<li>
+											<a target="_blank" href="sdsf/80bdbd90a9dd4766b09fd31860b7e51d.htm">
+												<p><span>07-21</span>《丝路回响》中国音乐学院“敦煌”主题作品音乐会——西洋管弦乐兰州专场精彩上演</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="gyxw/gyyw/ebc1ef306d974433a281462c6d3edc4f.htm">
+												<p><span>07-04</span>学校召开“为党育人、为国育才——国音教师讲述我（我们）的三全育人故事”校内宣讲评审会</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="sdsf/a0c75a0d5375424ba0fbfeb6415b229d.htm">
+												<p><span>05-12</span>党委教师工作部开展与近两年新入职教师师德宣讲暨“面对面”座谈</p>
+											</a>
+										</li>
+																			<li>
+											<a target="_blank" href="sdsf/bb2ed4a1b9084276b37e09230d999191.htm">
+												<p><span>04-13</span>我校钢琴系教授樊禾心从教三十年师生钢琴音乐会成功举办</p>
+											</a>
+										</li>
+																	</ul>
+							</div>
+						</div>
+						<div class="row more_news">
+							<div class="col-xs-12">
+								<p>
+									<a target="_blank" href="sdsf/index.htm">查看更多</a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="notice">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-xs-12 col-md-4 col-sm-6">
+							<div class="notice_content">
+								<div class="nc_header">
+									<img src="images/academic.png" alt="">
+									<p>
+										<a target="_blank" href="gyzx/xskj/xsdt/index.htm">查看更多</a>
+									</p>
+								</div>
+								<div class="nc_list">
+									<ul>
+																					<li>
+												<a target="_blank" href="gyzx/xskj/xsdt/3c3d3801ff7c4896a9abc081e28c454d.htm">
+													<p><span>07-10</span>管弦系举办“课程思政”专题讲座——《却是归鸿不能语》巴松中国作品解析</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyzx/xskj/xsdt/b19fb70ab1194094be063fb166f9776d.htm">
+													<p><span>07-01</span>作曲系举办作曲家讲坛第94期主题讲座</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyzx/xskj/xsdt/127d750e02c74e7eb2d831207f8857bd.htm">
+													<p><span>07-01</span>管弦系举办第4期教师学术系列讲座《“琴弦间的红色之旅”竖琴中国作品赏析与教学》</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyzx/xskj/xsdt/7adf1b26827d4b7ca454caa27fef8d29.htm">
+													<p><span>05-27</span>管弦系举办第3期教师学术系列讲座《瓦尔德马尔·冯·保斯纳尔恩 德国浪漫主义作品的演奏与教学》</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="gyzx/xskj/xsdt/edb2c61a0ec546b287bbc6886446b8b2.htm">
+													<p><span>05-23</span>国际交流合作处、作曲系联合举办意大利科莫学院作曲家系列讲座</p>
+												</a>
+											</li>
+																			</ul>
+								</div>
+							</div>
+						</div>
+<div class="col-xs-12 col-md-4 col-sm-6">
+							<div class="notice_content">
+								<div class="nc_header">
+									<img src="images/jicengfengcai2022.png" alt="">
+									<p>
+										<a target="_blank" href="jcfc/index.htm">查看更多</a>
+									</p>
+								</div>
+								<div class="nc_list">
+									<ul>
+																					<li>
+												<a target="_blank" href="jcfc/3bbf116abc7748149ea4f9d39ca9ed52.htm">
+													<p><span>10-21</span>艺术管理系党总支“心随党行，艺扬国韵”党日活动</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="jcfc/4ff10c8b23904c7faf83a84106860e37.htm">
+													<p><span>10-21</span>思政部、基础部（直属）党支部开展  “传承红色基因，勇担时代使命”主题党日活动</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="jcfc/d98823e5ccb1458dbe192f77ffab03f5.htm">
+													<p><span>10-21</span>离退休党总支开展“厚植爱国情怀，增强银发担当”主题党日活动</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="jcfc/a8af57d6bae241e9979fb304cf3da42e.htm">
+													<p><span>10-21</span>党院办党支部召开支部理论学习会议</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="jcfc/e56d021b8b594c689becec77f895ac8c.htm">
+													<p><span>10-17</span>组织部党支部深入学习贯彻习近平文化思想重温习近平总书记在文艺工作座谈会上的重要讲话精神</p>
+												</a>
+											</li>
+																			</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-4 col-sm-6">
+							<div class="notice_content">
+								<div class="nc_header">
+									<img src="images/xinxigongkai.png" alt="">
+									<p>
+										<a target="_blank" href="xxgk/xxgg/index.htm">查看更多</a>
+									</p>
+								</div>
+								<div class="nc_list">
+									<ul>
+																					<li>
+												<a target="_blank" href="http://yjsy.ccmusic.edu.cn/zsgz/ssyjszs/526d45bbe43d475288958146b36298ef.htm">
+													<p><span>10-08</span>中国音乐学院2025年硕士研究生招生简章</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="xxgk/xxgg/1ce96665afc5460791736099dbc8ce4d.htm">
+													<p><span>09-12</span>中国音乐学院2023年度部门决算公开</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="xxgk/xxgg/2c044f304b554ebc9b862cd09c112a49.htm">
+													<p><span>07-18</span>中国音乐学院2024年度博士后招收简章</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="xxgk/xxgg/f307101497a0415c850248f4d302a08a.htm">
+													<p><span>04-19</span>中国音乐学院2024年第一批岗位招聘公告</p>
+												</a>
+											</li>
+																					<li>
+												<a target="_blank" href="xxgk/xxgg/5a37cc5161594298aa8627f9eaef9d2e.htm">
+													<p><span>04-12</span>中国音乐学院2024年高层次人才、海外高层次人才招聘公告</p>
+												</a>
+											</li>
+																			</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 hidden-md hidden-lg img_list">
+							<ul>
+																	<li>
+										<a target="_blank" href="http://www.ccmusic.edu.cn/sjdzt/index.htm"><img src="images/2023-04/1bd4b5960b9b4c10bb1818dbdfdcb1ce.jpg" alt=""></a>
+									</li>
+																	<li>
+										<a target="_blank" href="https://esdzt.ccmusic.edu.cn/"><img src="images/2023-04/f47c252a07e0408185bd5e0fc09ce490.jpg" alt=""></a>
+									</li>
+																	<li>
+										<a target="_blank" href="https://60th.ccmusic.edu.cn/"><img src="images/2024-08/54386e627ada4b849bb55662e51e7822.jpg" alt=""></a>
+									</li>
+																	<li>
+										<a target="_blank" href="https://bkjxpg.ccmusic.edu.cn"><img src="images/2024-06/722c8c17324e482799a08a28995ac917.jpg" alt=""></a>
+									</li>
+																	<li>
+										<a target="_blank" href="http://jkjyzl.ccmusic.edu.cn/"><img src="images/2024-05/631e60dd1d194973beaf0a88f2e208d5.png" alt=""></a>
+									</li>
+															</ul>
+						</div>
+					</div>
+					<div class="row visible-md visible-lg">
+													<div class="col-md-3">
+								<div class="pc_img">
+									<a target="_blank" href="http://www.ccmusic.edu.cn/sjdzt/index.htm">
+										<img src="images/2023-04/1bd4b5960b9b4c10bb1818dbdfdcb1ce.jpg" alt="">
+									</a>
+								</div>
+							</div>
+													<div class="col-md-3">
+								<div class="pc_img">
+									<a target="_blank" href="https://esdzt.ccmusic.edu.cn/">
+										<img src="images/2023-04/f47c252a07e0408185bd5e0fc09ce490.jpg" alt="">
+									</a>
+								</div>
+							</div>
+													<div class="col-md-3">
+								<div class="pc_img">
+									<a target="_blank" href="https://60th.ccmusic.edu.cn/">
+										<img src="images/2024-08/54386e627ada4b849bb55662e51e7822.jpg" alt="">
+									</a>
+								</div>
+							</div>
+													<div class="col-md-3">
+								<div class="pc_img">
+									<a target="_blank" href="https://bkjxpg.ccmusic.edu.cn">
+										<img src="images/2024-06/722c8c17324e482799a08a28995ac917.jpg" alt="">
+									</a>
+								</div>
+							</div>
+													<div class="col-md-3">
+								<div class="pc_img">
+									<a target="_blank" href="http://jkjyzl.ccmusic.edu.cn/">
+										<img src="images/2024-05/631e60dd1d194973beaf0a88f2e208d5.png" alt="">
+									</a>
+								</div>
+							</div>
+											</div>
+				</div>
+			</div>
+			<div class="classic">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 player hidden-xs">
+							<a target="_blank" href="javascript:void(0);" class="jiaopian">
+								<img src="images/jiaopian.png" id="jiaopian" alt="">
+							</a>
+							<a target="_blank" href="javascript:void(0);" class="changzhen">
+								<img src="images/changzhen.png" id="changzhen" alt="">
+							</a>
+						</div>
+						<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-12 classic_title">
+									<ul>
+										<li class="guoyin active" id="guoyin">
+											<a target="_blank" href="zpxs/gyjd/czqm_gyjd/index.htm">
+												<div class="_img">
+													<img src="images/guoyin.png">
+												</div>
+												<div class="_hover">
+													<img src="images/guoyin_hover.png">
+												</div>
+											</a>
+										</li>
+										<li class="feature" id="feature">
+											<a target="_blank" href="zpxs/gyzs/czqm/index.htm">
+												<div class="_img">
+													<img src="images/feature.png">
+												</div>
+												<div class="_hover">
+													<img src="images/feature_hover.png">
+												</div>
+											</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+                                                <audio id="audioTag" src="" >
+							Your browser does not support the audio element.
+						</audio>
+							<div class="classic_list block-active">
+								<ul>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/0f408f77aad240298544a33d856cb5c9.mp3" />
+									
+							
+									<div class="player_logo" music_id="e4f99e1470834d89b7e20971b4c09b89">
+									</div>
+									<div class="player_con">
+												<h4>《啊！我的虎子哥》</h4>
+												<p>															<span>作曲：金湘</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/64a35375acf745c7933b2a5c723e8384.mp3" />
+									
+							
+									<div class="player_logo" music_id="8d0be51a11d04f7ca5f1265ede6f38c7">
+									</div>
+									<div class="player_con">
+												<h4>管弦乐曲《节日序曲》</h4>
+												<p>															<span>作曲：施万春</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/2f802f22be254abb9fc3ff13c6cfb936.mp3" />
+									
+							
+									<div class="player_logo" music_id="82002d8587ca46629aaa308155eab825">
+									</div>
+									<div class="player_con">
+												<h4>《枫桥夜泊》</h4>
+												<p>															<span>作曲：黎英海</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/bcbfacbe4b6b486fb14b5fa95fc12dbe.mp3" />
+									
+							
+									<div class="player_logo" music_id="b8186abfbda0469196142321fe1f2b9e">
+									</div>
+									<div class="player_con">
+												<h4>《长城谣》</h4>
+												<p>															<span>作曲：刘雪庵</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/3a4c6fdcb59f434e9c191474b43e24a7.mp3" />
+									
+							
+									<div class="player_logo" music_id="a52763ce9be744678acf4e9d0b0e6cb4">
+									</div>
+									<div class="player_con">
+												<h4>《拥军花鼓》</h4>
+												<p>															<span>作曲：安波</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/d1436f771cd648bd8d96a2b868f882b8.mp3" />
+									
+							
+									<div class="player_logo" music_id="1f1b8e72ca774854a3b759b5468be9a4">
+									</div>
+									<div class="player_con">
+												<h4>《南泥湾》</h4>
+												<p>															<span>作曲：马可</span>
+														</p>
+											</div>
+								</li>
+																	</ul>
+								<div class="col-xs-12 more_news">
+									<p>
+										<a target="_blank" href="zpxs/gyjd/czqm_gyjd/index.htm">查看全部国音经典</a>
+									</p>
+								</div>
+							</div>
+							<div class="classic_list">
+								<ul>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/6bec1338aae642019b676c5f361b0866.mp3" />
+									
+							
+									<div class="player_logo" music_id="d5b52cb7f6b849c7a2368a8c25cf9060">
+									</div>
+									<div class="player_con">
+												<h4>管弦乐《兵马俑》</h4>
+												<p>															<span>作曲：阮昆申</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/d9bcffba41ca46a3b6b7ea4ee7ff8851.mp3" />
+									
+							
+									<div class="player_logo" music_id="efc802cebd234b73b5e3c8328e9073c1">
+									</div>
+									<div class="player_con">
+												<h4>小提琴独奏《远方的记忆》</h4>
+												<p>															<span>作曲：高松华</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/ec1fffee4eaa4ca9bad21b5419876655.mp3" />
+									
+							
+									<div class="player_logo" music_id="6c2df8957a8347cab200761f5c390cc6">
+									</div>
+									<div class="player_con">
+												<h4>交响曲《妈祖》</h4>
+												<p>															<span>作曲：刘青</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/12aff8f094ef457b9deb490229aa8fcc.mp3" />
+									
+							
+									<div class="player_logo" music_id="92b2ec9b4d6b41c096f2d09469d2f7c4">
+									</div>
+									<div class="player_con">
+												<h4>管弦乐《舞之光影》</h4>
+												<p>															<span>作曲：朱琳</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/24359ce090484583b790e36348aeea55.mp3" />
+									
+							
+									<div class="player_logo" music_id="4c687d0ddcc342b392e0105049e8ea21">
+									</div>
+									<div class="player_con">
+												<h4>《春天的芭蕾》</h4>
+												<p>															<span>作曲：胡廷江</span>
+														</p>
+											</div>
+								</li>
+																			<li>
+									<input type="hidden" name="" value="docs/2019-04/222a1c0cb1e9439f88b396ba06395931.mp3" />
+									
+							
+									<div class="player_logo" music_id="5edf63c5e6df4e8b8b132960fc86cb56">
+									</div>
+									<div class="player_con">
+												<h4>管弦乐《一缕阳光》</h4>
+												<p>															<span>作曲：谢文辉</span>
+														</p>
+											</div>
+								</li>
+									
+								</ul>
+								<div class="col-xs-12 more_news">
+									<p>
+										<a target="_blank" href="zpxs/gyzs/czqm/index.htm">查看全部国音之声</a>
+									</p>
+								</div>
+							</div>
+							<div class="classic_list">
+								<ul>
+																			<li>
+											<audio class="playmusic_dc2507131c344174977f05b826ca57b8" src="docs/2019-04/895256ee8e8143bda6623bf3ad6a9346.mp3" autostart="0">
+												Your browser does not support the audio element.
+											</audio>
+											<div class="player_logo" music_id="dc2507131c344174977f05b826ca57b8">
+											</div>
+											<div class="player_con">
+												<h4>歌曲演唱《吉祥中国》</h4>
+												<p>															<span>演唱：黄训国</span>
+														</p>
+											</div>
+										</li>
+																			<li>
+											<audio class="playmusic_c75f8b6d8c3840fa94a1dc60382b72b3" src="docs/2019-04/280cd08ea54e4e428886a0fbb73f38a6.mp3" autostart="0">
+												Your browser does not support the audio element.
+											</audio>
+											<div class="player_logo" music_id="c75f8b6d8c3840fa94a1dc60382b72b3">
+											</div>
+											<div class="player_con">
+												<h4>歌曲演唱《鄱阳湖》</h4>
+												<p>															<span>演唱：黄训国</span>
+														</p>
+											</div>
+										</li>
+																			<li>
+											<audio class="playmusic_95018e54630845a68442d4e951bd7c80" src="docs/2019-04/b7174af54cb84a67bfe54eaa8bf568e1.mp3" autostart="0">
+												Your browser does not support the audio element.
+											</audio>
+											<div class="player_logo" music_id="95018e54630845a68442d4e951bd7c80">
+											</div>
+											<div class="player_con">
+												<h4>歌曲演唱《今夜无人入睡》</h4>
+												<p>															<span>演唱：薛皓垠</span>
+														</p>
+											</div>
+										</li>
+																			<li>
+											<audio class="playmusic_66df557c5b0b462eba400d1f397814b1" src="docs/2019-04/14936a94e3eb48b38023492d70af87fa.mp3" autostart="0">
+												Your browser does not support the audio element.
+											</audio>
+											<div class="player_logo" music_id="66df557c5b0b462eba400d1f397814b1">
+											</div>
+											<div class="player_con">
+												<h4>歌曲演唱《冰凉的小手》</h4>
+												<p>															<span>演唱：薛皓垠</span>
+														</p>
+											</div>
+										</li>
+																			<li>
+											<audio class="playmusic_dd55b3fb73ef4717b10b79a80c042b59" src="docs/2019-04/baed818bb8ae40438f6bdc6b7e398e31.flac" autostart="0">
+												Your browser does not support the audio element.
+											</audio>
+											<div class="player_logo" music_id="dd55b3fb73ef4717b10b79a80c042b59">
+											</div>
+											<div class="player_con">
+												<h4>歌曲演唱《我的祖国妈妈》</h4>
+												<p>															<span>演唱：张英席</span>
+														</p>
+											</div>
+										</li>
+																			<li>
+											<audio class="playmusic_0faebc577a604959ac41d9a1161dfad8" src="docs/2019-04/17dceba100384e01b9faa936425fca6e.mp3" autostart="0">
+												Your browser does not support the audio element.
+											</audio>
+											<div class="player_logo" music_id="0faebc577a604959ac41d9a1161dfad8">
+											</div>
+											<div class="player_con">
+												<h4>歌曲演唱《我爱你中国》</h4>
+												<p>															<span>演唱：张英席</span>
+														</p>
+											</div>
+										</li>
+																	</ul>
+								<div class="col-xs-12 more_news">
+									<p>
+										<a target="_blank" href="zpxs/xyfc/index.htm">查看全部国音经典</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<!-- 弹窗 -->
+
+
+			
+	
+
+
+		<script type="text/javascript">
+			$(".close-img").on("click", function() {
+				$(".public-box").hide();
+			})
+		</script>
+		<div class="footer">
+			<div class="container">
+            <div class="row hidden-xs hidden-sm ">
+                <div class="col-md-9 footer_left">
+                    <div class="footer_img">
+                        <img src="images/footer_imgindex.png" alt="">                 
+                    </div>
+                    <span>Copyright © 中国音乐学院  京公网安备：110402430091 | <a href="https://beian.miit.gov.cn" target="_blank">京ICP备：13044071号-4号,</a> &nbsp; <br>地址：北京朝阳区安翔路一号 邮编：100101  电话：010-64887561 传真：010-64874646  </span>
+                </div>
+                <div class="col-md-3 footer_right">
+                    <div class="weibo">
+                        <div class="weibo_img">
+                            <a target="_blank" href="http://weibo.com/u/3120439203"><img src="images/weibo.png" alt=""></a>
+                        </div>
+                        <span>新浪<br>微博</span>
+                    </div>
+                    <div class="wechat">
+                        <div class="wechat_img">
+                            <img src="images/wechat.png" alt="">
+                        </div>
+                        <span>官方<br>微信</span>
+                        <div class="wechat_code">
+                            <img src="images/qrcode.png">
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="row visible-xs visible-sm footer_bg">
+                <div class="col-md-12 footer_right">
+                    <div class="weibo">
+                        <div class="weibo_img">
+                            <a target="_blank" href="http://weibo.com/u/3120439203"><img src="images/weibo.png" alt=""></a>
+                        </div>
+                        <span>新浪<br>微博</span>
+                    </div>
+                    <div class="wechat">
+                        <div class="wechat_img">
+                            <img src="images/wechat.png" alt="">
+                        </div>
+                        <span>官方<br>微信</span>
+                    </div>  
+                </div>
+                <p>Copyright © 中国音乐学院</p>  <p>京公网安备：110402430091 </p><p> 京ICP备：13044071号-4号</p>
+            </div>
+        </div>
+		</div>
+
+<style type="text/css">
+	#index .classic .classic_list ul li .player_logo{background: url(css/wp-content/themes/ccmusic/images/play.png);}
+	#index .classic .classic_list ul li.off .player_logo{background: url(css/wp-content/themes/ccmusic/images/pause.png);}
+</style>
+<script>
+		$('.right-menu > ul > li').on('click', function () {
+			var sub = $(this).find('ul.sub');
+
+			$('.right-menu ul.sub').not(sub).hide();
+			if (sub.is(':visible')) {
+				sub.hide();
+			} else {
+				sub.show();
+			}
+		});
+		// 右侧菜单关闭
+		$('.close-menu a').on('click', function () {
+			$('.right-menu').hide();
+		});
+		// 右侧菜单展开
+		$('.right-menu-button').on('click', function () {
+			$('.right-menu').show();
+		});
+		// 播放歌曲
+	    var audio2 = $('#audioTag').get(0);
+			$('#audioTag').attr('src','');
+		$('.player_logo').on('click', function () {
+			// var music_id = $(this).attr('music_id');
+			// if (!$('.player').hasClass('play')) { // 播放
+			// 	$(this).css('background', 'url(images/pause.png)');
+			// 	$('.player').addClass('play');
+			// 	$('.player').attr('play_id', music_id);
+			// 	// $('.playmusic_' + music_id).trigger('play');
+			// 	$('.playmusic_' + music_id).get(0).play();
+			// } else if (music_id == $('.player').attr('play_id')) { // 暂停
+			// 	$('.player').removeClass('play');
+			// 	$(this)..css('background', 'url(images/play.png)');
+			// 	// $('.playmusic_' + music_id).trigger('pause');
+			// 	$('.playmusic_' + music_id).get(0).pause();
+			// 	$('.player').attr('play_id', '');
+			// }
+			var music_id = $(this).attr('music_id')
+			var liSrc = $(this).parents('li').find('input').get(0).value;
+			var audioSrc = $('#audioTag').attr('src');
+			
+			$('.player').addClass('play');
+			$('.player').attr('play_id', music_id);
+			$(this).parents('li').toggleClass('off')
+			$(this).parents('li').siblings().removeClass('off')
+			
+			if(liSrc == audioSrc){
+				if(audio2.paused){
+					audio2.play();
+				}else{
+					audio2.pause();
+				}
+			}else{
+				$('#audioTag').attr('src',liSrc);
+				audio2.play();
+			}
+
+
+		});
+		
+	</script>
+
+<script type="text/javascript">
+		jQuery.ajax({
+			url: '/wm/api/visit/write/site',
+			type: 'get',
+			data: {
+				siteID: 'fb79463958094633920f5b89b8f3284f'
+			}
+		})
+	</script>
+</body></html>

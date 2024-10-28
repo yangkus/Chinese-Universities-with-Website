@@ -1,0 +1,1007 @@
+<html>
+<head>
+
+<meta charset="gb2312">
+<title>��������ְҵѧԺ</title>
+<meta name="keywords" content="��������ְҵѧԺ,��������ѧԺ,ӡˢͼ����Ϣ����,��װ���������,ӡˢ����,ӡˢ�豸�빤��" />
+<meta name="description" content="��������ְҵѧԺλ����ʷ�Ļ���������������������������30���ӳ��̡��Ǿ�����ʡ����������׼��ͨ�����������������ж����䷢���Ҵ�ר��ƾ�ʸ��ȫ������ͨ�ߵ�ԺУ��" />
+<link rel="stylesheet" href='https://www.zzlg.org/css/style.css'>
+<script src='https://www.zzlg.org/js/jquery3.5.1.js'></script>
+<script src='https://www.zzlg.org/js/jquery.SuperSlide.2.1.js'></script>
+
+<script type="text/javascript">
+    //ƽ̨���豸�Ͳ���ϵͳ
+    var system ={
+        win : false,
+        mac : false,
+        xll : false,
+	ipad:false
+    };
+    //���ƽ̨
+    var p = navigator.platform;
+    system.win = p.indexOf("Win") == 0;
+    system.mac = p.indexOf("Mac") == 0;
+    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+    //��ת���
+if(system.win||system.mac||system.xll||system.ipad){
+    }else{
+		//��ת�ֻ�վ
+        window.location.href="https://www.zzlg.org/wap/index.asp";
+    }
+</script>
+<script  type="text/javascript">
+ //��Ϊ��ҳ
+function SetHome(obj,url){
+     try{
+         obj.style.behavior='url(#default#homepage)';
+         obj.setHomePage(url);
+     }catch(e){
+         if(window.netscape){
+             try{
+                 netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch(e){
+                 alert("��Ǹ���˲�����������ܾ���\n\n�����������ַ������"about:config"���س�Ȼ��[signed.applets.codebase_principal_support]����Ϊ'true'");
+             }
+         }else{
+             alert("��Ǹ������ʹ�õ�������޷���ɴ˲�����\n\n����Ҫ�ֶ�����"+url+"������Ϊ��ҳ��");
+         }
+     }
+ }
+ //�ղر�վ
+function AddFavorite(title, url) {
+     try {
+         window.external.addFavorite(url, title);
+     }
+     catch (e) {
+         try {
+             window.sidebar.addPanel(title, url, "");
+         }
+         catch (e) {
+             alert("��Ǹ������ʹ�õ�������޷���ɴ˲�����\n\n�����ղ�ʧ�ܣ���ʹ��Ctrl+D��������");
+         }
+     }
+ }
+ //���浽����
+function toDesktop(sUrl,sName){
+ try {
+     var WshShell = new ActiveXObject("WScript.Shell");
+     var oUrlLink =          WshShell.CreateShortcut(WshShell.SpecialFolders("Desktop")     + "\\" + sName + ".url");
+     oUrlLink.TargetPath = sUrl;
+     oUrlLink.Save();
+     }  
+ catch(e)  {  
+           alert("��ǰIE��ȫ��������������");  
+ }
+ }    
+ </script>
+
+
+</head>
+<body onLoad="getTime()">
+
+<!--	����--><script  type="text/javascript">
+ //��Ϊ��ҳ
+function SetHome(obj,url){
+     try{
+         obj.style.behavior='url(#default#homepage)';
+         obj.setHomePage(url);
+     }catch(e){
+         if(window.netscape){
+             try{
+                 netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch(e){
+                 alert("��Ǹ���˲�����������ܾ���\n\n�����������ַ������"about:config"���س�Ȼ��[signed.applets.codebase_principal_support]����Ϊ'true'");
+             }
+         }else{
+             alert("��Ǹ������ʹ�õ�������޷���ɴ˲�����\n\n����Ҫ�ֶ�����"+url+"������Ϊ��ҳ��");
+         }
+     }
+ }
+ //�ղر�վ
+function AddFavorite(title, url) {
+     try {
+         window.external.addFavorite(url, title);
+     }
+     catch (e) {
+         try {
+             window.sidebar.addPanel(title, url, "");
+         }
+         catch (e) {
+             alert("��Ǹ������ʹ�õ�������޷���ɴ˲�����\n\n�����ղ�ʧ�ܣ���ʹ��Ctrl+D��������");
+         }
+     }
+ }
+ //���浽����
+function toDesktop(sUrl,sName){
+ try {
+     var WshShell = new ActiveXObject("WScript.Shell");
+     var oUrlLink =          WshShell.CreateShortcut(WshShell.SpecialFolders("Desktop")     + "\\" + sName + ".url");
+     oUrlLink.TargetPath = sUrl;
+     oUrlLink.Save();
+     }  
+ catch(e)  {  
+           alert("��ǰIE��ȫ��������������");  
+ }
+ }    
+ </script>
+<!--	����-->
+<div id="top" class="clearfloat">
+	<div class="container">
+		<p class="lf">��ӭ������������ְҵѧԺ</p>
+		<p class="rt"><a href="javascript:void(0);" onclick="SetHome(this,'http://www.zzlg.org');">��Ϊ��ҳ</a> | 
+ <a href="javascript:void(0);" onclick="AddFavorite('��������ְҵѧԺ',location.href)">�ղر�վ</a></p>
+	</div>
+</div>
+<!--logo��������-->
+<div id="header" class="clearfloat">
+	<div class="container">
+		<h1 class="lf"><img src="UpLoadFile/2024042410052315301.png" width="365" height="71" alt=""></h1>
+		<h2 class="lf"><img src="images/index1.jpg" width="363" height="75" alt=""></h2>
+		<div class="rt">
+			<h3><img src="images/index2.png" width="166" height="25" alt=""></h3>
+			<form action="serch.asp" name="form1" method="post">
+				<input type="text" placeholder="" name="note" id="search">
+				<input type="submit" value="����">
+			</form>
+		</div>
+	</div>
+</div>
+<!--������-->
+<div id="nav" class="nav-side">
+	<div class="container">
+  	<div id="nav-div">
+     	<ul class="clearfloat">
+         <li  class="on" ><a href="index.asp" >��ҳ</a></li>
+		 
+		 
+		 		
+	
+		 
+<li  ><a href="news.asp?nid=1">ѧԺ�ſ�</a>
+				
+					
+					
+					<ul class="nav-box">
+					
+					<li><a href="news.asp?districtid=16">Уѵ</a></li>
+					
+					<li><a href="news.asp?districtid=15">ѧԺ���</a></li>
+					
+					<li><a href="news.asp?districtid=64">ѧԺ����</a></li>
+					
+					<li><a href="news.asp?districtid=10">ʦ�ʶ���</a></li>
+					
+					<li><a href="news.asp?districtid=69">ѧԺ����</a></li>
+					
+					<li><a href="news.asp?districtid=70">��ʦ��չ����</a></li>
+					
+					<li><a href="news.asp?districtid=74">ѧԺ�쵼</a></li>
+					
+					</ul>
+					
+
+
+</li>
+
+
+
+
+	
+	
+		 
+<li  ><a href="news.asp?nid=2">��������</a>
+				
+					
+					
+					<ul class="nav-box">
+					
+					<li><a href="news.asp?districtid=1">ѧԺ����</a></li>
+					
+					<li><a href="news.asp?districtid=2">��ѧ����</a></li>
+					
+					<li><a href="news.asp?districtid=3">ѧ���</a></li>
+					
+					<li><a href="news.asp?districtid=4">֪ͨ����</a></li>
+					
+					<li><a href="news.asp?districtid=5">���¼�</a></li>
+					
+					<li><a href="news.asp?districtid=63">ƽ��У԰</a></li>
+					
+					</ul>
+					
+
+
+</li>
+
+
+
+
+	<li ><a href="student.asp" >������Ϣ</a></li>
+	
+		 
+<li  ><a href="news.asp?nid=3">����֮��</a>
+				
+					
+					
+					<ul class="nav-box">
+					
+					<li><a href="news.asp?districtid=61">����֮��</a></li>
+					
+					</ul>
+					
+
+
+</li>
+
+
+
+
+	
+	
+		 
+<li  ><a href="news.asp?nid=31">��ҵ��ҵ</a>
+				
+					
+					
+					<ul class="nav-box">
+					
+					<li><a href="news.asp?districtid=12">��ҵ��Ϣ</a></li>
+					
+					<li><a href="news.asp?districtid=11">��ҵ��Ϣ</a></li>
+					
+					<li><a href="news.asp?districtid=75">24365��У��վ���</a></li>
+					
+					</ul>
+					
+
+
+</li>
+
+
+
+
+	
+	
+		 
+<li  ><a href="/news.asp?nid=72">Introduction</a>
+				
+					
+					
+					<ul class="nav-box">
+					
+					<li><a href="/news.asp?districtid=65">Introduction</a></li>
+					
+					</ul>
+					
+
+
+</li>
+
+
+
+
+		
+		
+		
+		
+				
+				
+				
+				
+      </ul>       
+     </div>
+   </div>
+ </div>
+<!--banner-->
+<div id="banner">
+	<div class="bd">
+		<ul>
+		
+		
+	<li style="background:url(UpLoadFile/2024042410235137435.jpg) center 0 no-repeat;"><a href="" target="_blank"></a></li>
+
+	<li style="background:url(UpLoadFile/2023102616574736012.jpg) center 0 no-repeat;"><a href="" target="_blank"></a></li>
+
+	<li style="background:url(UpLoadFile/2018061311135266969.jpg) center 0 no-repeat;"><a href="#" target="_blank"></a></li>
+
+	<li style="background:url(UpLoadFile/2018061311133049522.jpg) center 0 no-repeat;"><a href="#" target="_blank"></a></li>
+
+	<li style="background:url(UpLoadFile/2021031611181447399.jpg) center 0 no-repeat;"><a href="#" target="_blank"></a></li>
+
+
+		
+			
+		</ul>
+	</div>
+	<div class="container">
+		<div class="hd">
+			<ul  class="clearfloat">
+			
+			
+<li></li>
+
+<li></li>
+
+<li></li>
+
+<li></li>
+
+<li></li>
+
+
+
+				
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	jQuery("#banner").slide({ titCell:".hd li", mainCell:".bd ul", effect:"fold",  autoPlay:true, delayTime:600,interTime:6000 });
+</script>
+<div class="clearfloat"></div>
+
+
+
+<!--֪ͨ����-->
+<div id="notice">
+	<div class="container">
+		<div  class="lf">�����ǣ�2024��10��28��&nbsp;&nbsp;����һ</div>
+		<div class="txtMarquee-left rt">
+			<div class="bd">
+				<div class="tempWrap" style="overflow:hidden; position:relative; width:198px"><ul style="width: 594px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -343px;"><li>
+					<span>	<a>��������ְҵѧԺ��ӭ����</a></span>
+
+
+			
+						
+						
+					</li>
+					
+			
+				</ul></div>
+			</div>
+		</div>
+		<script>
+			jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",interTime:50,pnLoop:false});
+		</script>
+		<div class="clearfloat"></div>
+	</div>
+</div>
+<!--��Ҫ��������-->
+<div id="main">
+	<div class="container">
+		<!-- ��һ��-->
+		<div class="m1 clearfloat">
+			<!-- ǰ������-->
+			<div class="m1-left lf">
+				<!-- �ֲ�ͼ-->
+				<div id="m1-banner" class="lf">
+					<div class="bd">
+						<ul>
+							
+							
+
+
+
+<li style="background:url(UpLoadFile/2021032217100079151.JPG) center 0 no-repeat;"><a href="page-detail.asp?newid=2550"></a></li>
+
+
+
+<li style="background:url(UpLoadFile/2021032217193742348.JPG) center 0 no-repeat;"><a href="page-detail.asp?newid=2548"></a></li>
+
+
+
+<li style="background:url(UpLoadFile/2021020416382061282.jpg) center 0 no-repeat;"><a href="page-detail.asp?newid=2227"></a></li>
+
+
+
+<li style="background:url(UpLoadFile/2021020416481674689.jpg) center 0 no-repeat;"><a href="page-detail.asp?newid=2225"></a></li>
+
+
+
+<li style="background:url(UpLoadFile/2021020417121695952.jpg) center 0 no-repeat;"><a href="page-detail.asp?newid=2222"></a></li>
+
+		
+							
+							
+						</ul>
+					</div>
+					<div class="hd">
+						<ul>
+
+
+<li></li>
+
+<li></li>
+
+<li></li>
+
+<li></li>
+
+<li></li>
+	
+
+							
+							
+							
+						</ul>
+					</div>
+				</div>
+				<script type="text/javascript">
+					jQuery("#m1-banner").slide({ titCell:".hd li", mainCell:".bd ul", effect:"fold",  autoPlay:true, delayTime:600,interTime:6000 });
+				</script>
+				<!-- ��������-->
+				<div class="m1-news lf">
+					<div class="tab">
+						<ul class="hd">
+						
+				
+				
+			
+				
+							<li>ѧԺ����</li>
+						
+					
+						
+				
+				
+			
+				
+							<li>��ѧ����</li>
+						
+					
+						
+				
+				
+			
+				
+							<li>ѧ���</li>
+						
+					
+						
+				
+				
+			
+				
+							<li>֪ͨ����</li>
+						
+					
+						
+				
+				
+			
+				
+							<li>���¼�</li>
+						
+					
+						
+							
+							
+						</ul>
+						<div class="bd">
+						
+							
+				
+							<ul>
+							
+														
+							
+								<li class="tab1"><a href="page-detail.asp?newid=4159">ϰ��ƽ����ǿ��츣��������ʦ�����������ҷ���
+								</a></li>
+								
+						
+
+								<li><a href="page-detail.asp?newid=4172"><b></b><span>�۽��������� ���׽�����ƪ|��У�ٿ���ѧ��������</span><i>2024/10/28</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=4170"><b></b><span>У԰��ȫ���������ж�|��У�Ͼ�У�����Ὺչ����...</span><i>2024/10/25</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=4168"><b></b><span>ϲ��+4</span><i>2024/10/24</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=4167"><b></b><span>���к�ɫ���� ����ʱ������|��У��ýѧԺ��չ��...</span><i>2024/10/24</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=4165"><b></b><span>��ѧԺ����ѧ�罨�裺��Ϊ��һ�Ŵ���</span><i>2024/10/22</i></a></li>
+								
+						
+						
+						
+								
+								
+								
+								
+								
+								
+							</ul>
+							
+								
+				
+							<ul>
+							
+														
+
+								<li><a href="page-detail.asp?newid=4033"><b></b><span>��������ְҵѧԺ��רҵ�˲���������</span><i>2024/8/12</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=3856"><b></b><span>��������ְҵѧԺ�����������</span><i>2024/1/11</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=3892"><b></b><span>��������ְҵѧԺ2023����רҵ�˲���������</span><i>2023/11/9</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=3548"><b></b><span>2023�긣��ʡְҵԺУ���ܴ�����ѧ����������...</span><i>2023/4/24</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=3550"><b></b><span>����רҵ2022���˲���������</span><i>2023/4/23</i></a></li>
+								
+						
+						
+						
+								
+								
+								
+								
+								
+								
+							</ul>
+							
+								
+				
+							<ul>
+							
+														
+
+								<li><a href="page-detail.asp?newid=4169"><b></b><span>����ѧϰ֮�ǣ�һ) | ����ѧ�����ؾ�����Ҳ��...</span><i>2024/10/25</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=4166"><b></b><span>������|����ů��Ϧ������������Ժ������Ժο�ʻ</span><i>2024/10/22</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=4153"><b></b><span>�����ഺ ���ﾫ�� | ��У��ѧ����֯���¹���...</span><i>2024/10/16</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=4148"><b></b><span>ϲӭ���й�75���껪��|���ഺ֮�����������ף�</span><i>2024/10/8</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=4145"><b></b><span>������ҳɳ�|�����Ķ�֮�Ƿ��չʾ������</span><i>2024/9/28</i></a></li>
+								
+						
+						
+						
+								
+								
+								
+								
+								
+								
+							</ul>
+							
+								
+				
+							<ul>
+							
+														
+
+								<li><a href="page-detail.asp?newid=4112"><b></b><span> ��������ְҵѧԺ �����Ƽ��걨2024��ʡ��...</span><i>2024/8/30</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=4044"><b></b><span>��������ְҵѧԺ �����Ƽ��걨2024��ְҵ��...</span><i>2024/6/17</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=3995"><b></b><span>��������ְҵѧԺ �����Ƽ��걨2024��ʡ����...</span><i>2024/5/15</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=3782"><b></b><span>����2024��3�����۴�ѧ��ʿ��������ͨ��Уר...</span><i>2023/12/8</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=3781"><b></b><span>����2024��ר�������Ա���������֪ͨ</span><i>2023/12/6</i></a></li>
+								
+						
+						
+						
+								
+								
+								
+								
+								
+								
+							</ul>
+							
+								
+				
+							<ul>
+							
+														
+
+								<li><a href="page-detail.asp?newid=4024"><b></b><span>2023��ѧԺ���¼�</span><i>2024/2/13</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=3867"><b></b><span>2022��ѧԺ���¼�</span><i>2023/2/20</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=3866"><b></b><span>2021��ѧԺ���¼�</span><i>2022/2/16</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=2707"><b></b><span>2020��ѧԺ���¼�</span><i>2021/2/20</i></a></li>
+								
+						
+		
+
+								<li><a href="page-detail.asp?newid=2545"><b></b><span>2019��ѧԺ���¼�</span><i>2020/1/1</i></a></li>
+								
+						
+						
+						
+								
+								
+								
+								
+								
+								
+							</ul>
+							
+								
+							
+							
+							
+						</div>
+					</div>
+					<script type="text/javascript">jQuery(".tab").slide({trigger:"click"});</script>
+				</div>
+				<div class="clearfloat"></div>
+				<!--ͼƬ-->
+				<div class="m1-img">
+				
+									
+		
+					<a href="" target="_blank">
+						<img src="UpLoadFile/2023112210444199819.png" width="957"  alt=""/>
+					</a>
+								
+				</div>
+			</div>
+			<div class="m1-right rt">
+				<ul>
+		
+			
+					<li><a href="lqcx.asp"><img src="UpLoadFile/2017080810093791975.png"width="216" height="80" alt=""/></a></li>
+				
+			
+					<li><a href="news.asp?nid=71"><img src="UpLoadFile/2018052916090456676.jpg"width="216" height="80" alt=""/></a></li>
+				
+			
+					<li><a href="funding.asp"><img src="UpLoadFile/2018052916301744938.jpg"width="216" height="80" alt=""/></a></li>
+				
+			
+					<li><a href="https://www.zzlg.org/page-detail.asp?newid=4033"><img src="UpLoadFile/2024070411071711143.png"width="216" height="80" alt=""/></a></li>
+					
+<!--					<li><a href=""><img src="images/index11.jpg" width="216" height="141" alt=""/></a></li>
+-->				</ul>
+			</div>
+		</div>
+		<div class="m4 clearfloat">
+			<!--������Ϣ-->
+			<div id="zsxx" class="lf new-list">
+				<div class="lf tit">
+					<div class="img"><img src="images/index21.png" alt=""></div>
+					<div class="title">������Ϣ</div>
+				</div>
+				<div class="text rt">
+					<ul>
+		
+						<li><a href="page-detail.asp?newid=4055" class="clearfloat"><span class="lf">��������ְҵѧԺ2024����ͨ�߿������³�</span><i class="rt">2024/6/21</i></a></li>
+
+						<li><a href="page-detail.asp?newid=4051" class="clearfloat"><span class="lf">����ʡ�ߵ�ѧУ����ίԱ�� ����ʡ����������ӡ...
+</span><i class="rt">2024/6/20</i></a></li>
+
+						<li><a href="page-detail.asp?newid=3966" class="clearfloat"><span class="lf">2024�긣��ʡ�ڸ�������������ʦ��ϵ��ʽ</span><i class="rt">2024/4/24</i></a></li>
+
+						<li><a href="page-detail.asp?newid=2714" class="clearfloat"><span class="lf">2023�긣��ʡ�ڸ�������������ʦ��ϵ��ʽ</span><i class="rt">2023/6/1</i></a></li>
+
+						<li><a href="page-detail.asp?newid=3600" class="clearfloat"><span class="lf">��������ְҵѧԺ2023����ͨ�߿������³�</span><i class="rt">2023/5/25</i></a></li>
+
+					</ul>
+				</div>
+			</div>
+			<!--ѧ���-->
+			<div id="xshd" class="rt new-list">
+				<div class="lf tit">
+					<div class="img"><img src="images/index23.png" alt=""></div>
+					<div class="title">ѧ���</div>
+				</div>
+				<div class="text rt">
+					<ul>
+
+							
+						<li><a href="page-detail.asp?newid=4169" class="clearfloat"><span class="lf">����ѧϰ֮�ǣ�һ) | ����ѧ�����ؾ�����Ҳ...
+</span><i class="rt">2024/10/25</i></a></li>
+							
+						<li><a href="page-detail.asp?newid=4166" class="clearfloat"><span class="lf">������|����ů��Ϧ������������Ժ������Ժο��...
+</span><i class="rt">2024/10/22</i></a></li>
+							
+						<li><a href="page-detail.asp?newid=4153" class="clearfloat"><span class="lf">�����ഺ ���ﾫ�� | ��У��ѧ����֯���¹�...
+</span><i class="rt">2024/10/16</i></a></li>
+							
+						<li><a href="page-detail.asp?newid=4148" class="clearfloat"><span class="lf">ϲӭ���й�75���껪��|���ഺ֮�����������...
+</span><i class="rt">2024/10/8</i></a></li>
+							
+						<li><a href="page-detail.asp?newid=4145" class="clearfloat"><span class="lf">������ҳɳ�|�����Ķ�֮�Ƿ��չʾ������</span><i class="rt">2024/9/28</i></a></li>
+											
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- �ڶ���-->
+		<div class="m2">
+			<div class="lf tit">
+					<div class="img"><img src="images/index24.png" alt=""></div>
+					<div class="title">У԰���</div>
+				</div>
+			<div class="m2-tab">
+				<div class="bd">
+					<ul class="school">
+						<li class="cont">
+							<ul>
+							
+							
+							
+							<li><a href="page-detail.asp?newid=2116" target="_blank"><img src="UpLoadFile/2018061609000123402.jpg" alt=""/><p>����У԰</p></a></li>
+							
+							<li><a href="page-detail.asp?newid=2058" target="_blank"><img src="UpLoadFile/2018061609180879489.jpg" alt=""/><p>ͼ���</p></a></li>
+							
+							<li><a href="page-detail.asp?newid=2053" target="_blank"><img src="UpLoadFile/2018061609060937804.png" alt=""/><p>������ʵѵ��</p></a></li>
+							
+							<li><a href="page-detail.asp?newid=1179" target="_blank"><img src="UpLoadFile/2018061609203061363.jpg" alt=""/><p>�ۺ�ʵѵ¥</p></a></li>
+							
+							<li><a href="page-detail.asp?newid=1174" target="_blank"><img src="UpLoadFile/2018061609200575195.jpg" alt=""/><p>����</p></a></li>
+							
+							<li><a href="page-detail.asp?newid=1171" target="_blank"><img src="UpLoadFile/2018061609084797998.jpg" alt=""/><p>������ƽ��</p></a></li>
+							
+							<li><a href="page-detail.asp?newid=1170" target="_blank"><img src="UpLoadFile/2018061609094254311.jpg" alt=""/><p>�ɻ���</p></a></li>
+							
+							<li><a href="page-detail.asp?newid=1169" target="_blank"><img src="UpLoadFile/2018061609173774639.jpg" alt=""/><p>�˶���</p></a></li>
+											
+							</ul>
+						</li>
+						<script type="text/javascript">jQuery(".school").slide({mainCell:".cont ul",effect:"leftMarquee",autoPlay:true,vis:6,interTime:50});</script>
+					</ul>
+		
+				</div>
+			</div>
+		</div>
+		<!-- ������-->
+		<div class="m3">
+			<ul class="m3-ul">
+				
+				
+		 		
+			
+<li>
+					<h6>������� <img src="images/index16.png" width="10" height="9" alt=""/></h6>
+					
+					
+					<ul class="m3-box">
+						
+					<li><a href="news.asp?districtid=27&nid=55" target="_blank">ʮ������</a></li>
+						
+					<li><a href="http://www.zzlg.org/news.asp?districtid=25&nid=55" target="_blank">��Ƹ��Ϣ</a></li>
+						
+		
+					</ul>
+					
+				</li>
+	
+										
+		
+	
+			
+<li>
+					<h6>���簲ȫר�� <img src="images/index16.png" width="10" height="9" alt=""/></h6>
+					
+					
+					<ul class="m3-box">
+						
+					<li><a href="http://www.zzlg.org/news.asp?districtid=66&nid=55" target="_blank">���ɷ���</a></li>
+						
+					<li><a href="http://www.zzlg.org/news.asp?districtid=67&nid=55" target="_blank">���簲ȫ֪ʶ</a></li>
+						
+					<li><a href="http://www.zzlg.org/news.asp?districtid=68&nid=55" target="_blank">Ԥ��ͨ��</a></li>
+						
+		
+					</ul>
+					
+				</li>
+	
+										
+		
+		
+				
+				
+				
+				
+				
+			</ul>
+		</div>
+	</div>
+</div>
+<!--�ײ�-->
+
+
+<div id="footer">
+	<div class="container">
+		<div class="lf f1">
+			<img src="images/index18.png" width="70" height="70" alt=""/>
+		</div>
+		<div class="lf f2">
+			<p><div style="text-align: left;"><div>����������:35060302000132</div><div><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">��ICP��11001562��-1</a></div></div></p>
+		</div>
+
+
+		<div class="lf f3">
+			<img src="images/db1.jpg" width="70" height="70" alt=""/>
+			<p>ѧԺ��΢</p>
+		</div>
+		<div class="lf f3">
+			<img src="images/db2.jpg" width="70" height="70" alt=""/>
+			<p>ѧ������</p>
+		</div>
+		<div class="lf f3">
+			<img src="images/db3.jpg" width="70" height="70" alt=""/>
+			<p>ѧͨ��</p>
+		</div>
+
+
+		<div class="clearfloat"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--��������--> 
+
+	
+		
+
+ <div id="img" style="position:absolute;z-index=99;"
+         onmouseover="pause_resume();"
+         onmouseout="pause_resume();">
+        
+	
+
+		<a href=""><img src="UpLoadFile/2024011218090871204.jpg"
+             border="0"            style="cursor:pointer;"/></a>
+		
+<b id="close" style="width:15px; line-height:15px; position:absolute; right:0;top:0; background:rgba(0,0,0,.5); cursor:pointer; font-size:18px;color:#fff;text-align:center;">��</b>
+    </div>
+<SCRIPT LANGUAGE="JavaScript">
+$("#close").click(function(){
+$("#img").hide();
+});
+
+var xPos = document.body.clientWidth-20;
+var yPos = document.body.clientHeight/2;
+var step = 1;
+var delay = 20;
+var height = 0;
+var Hoffset = 0;
+var Woffset = 0;
+var yon = 0;
+var xon = 0;
+var pause = true;
+var interval;
+img.style.top = yPos;
+function changePos() {
+width = document.body.clientWidth;
+height = document.body.clientHeight;
+Hoffset = img.offsetHeight;
+Woffset = img.offsetWidth;
+img.style.left = xPos + document.body.scrollLeft;
+img.style.top = yPos + document.body.scrollTop;
+if (yon) {
+yPos = yPos + step;
+}else {
+yPos = yPos - step;
+}
+if (yPos < 0) {
+yon = 1;
+yPos = 0;
+}
+if (yPos >= (height - Hoffset)) {
+yon = 0;
+yPos = (height - Hoffset);
+}
+if (xon) {
+xPos = xPos + step;
+}else {
+xPos = xPos - step;
+}
+if (xPos < 0) {
+xon = 1;
+xPos = 0;
+}
+if (xPos >= (width - Woffset)) {
+xon = 0;
+xPos = (width - Woffset);
+}
+}
+function start() {
+img.visibility = "visible";
+interval = setInterval('changePos()', delay);
+}
+function pause_resume() {
+if(pause) {
+clearInterval(interval);
+pause = false;
+}else {
+interval = setInterval('changePos()',delay);
+pause = true;
+}
+}
+start();
+</script>
+
+	 
+
+<!--��������--> 
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1056 @@
+﻿<!DOCTYPE html>
+<html><head>
+
+
+
+    
+        <meta charset="utf-8">
+        <link href="css/css.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/bdtxt.min.js"></script>
+        <script type="text/javascript" src="js/bdtxt.js"></script>
+ 
+        <title>九江学院校园网</title><META Name="keywords" Content="九江学院校园网,首页" />
+
+        <style>
+
+
+.main{width:200px;position:fixed;bottom:160px;border:1px solid #ccc;z-index:999;}
+*html .main{position:absolute;top:expression(eval(document.documentElement.scrollTop));margin-top:320px;}
+.main2{width:180px;position:relative;padding:10px;background:#fff;}
+.main2 ul li{width:100%;height:30px;line-height:30px;text-align:left;border-bottom: 1px dotted #ccc;}
+.main2 ul li a{color:#444;text-decoration:none;    font-size: 15px;}
+.main2 ul li a:hover{text-decoration:underline;color:#000;}
+.bar{width:37px;height:146px;position:absolute;left:-37px;top:-1px;background:url(img/minni.png) no-repeat;display:block;}
+.xwbg{    background: #fff;}
+
+
+        </style>
+
+
+<script type="text/javascript">
+    function addEvent(obj, evtType, func, cap) {
+        cap = cap || false;
+        if (obj.addEventListener) {
+            obj.addEventListener(evtType, func, cap);
+            return true;
+        } else if (obj.attachEvent) {
+            if (cap) {
+                obj.setCapture();
+                return true;
+            } else {
+                return obj.attachEvent("on" + evtType, func);
+            }
+        } else {
+            return false;
+        }
+    }
+    function getPageScroll() {
+        var xScroll, yScroll;
+        if (self.pageXOffset) {
+            xScroll = self.pageXOffset;
+        } else if (document.documentElement && document.documentElement.scrollLeft) {
+            xScroll = document.documentElement.scrollLeft;
+        } else if (document.body) {
+            xScroll = document.body.scrollLeft;
+        }
+        if (self.pageYOffset) {
+            yScroll = self.pageYOffset;
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+            yScroll = document.documentElement.scrollTop;
+        } else if (document.body) {
+            yScroll = document.body.scrollTop;
+        }
+        arrayPageScroll = new Array(xScroll, yScroll);
+        return arrayPageScroll;
+    }
+    function GetPageSize() {
+        var xScroll, yScroll;
+        if (window.innerHeight && window.scrollMaxY) {
+            xScroll = document.body.scrollWidth;
+            yScroll = window.innerHeight + window.scrollMaxY;
+        } else if (document.body.scrollHeight > document.body.offsetHeight) {
+            xScroll = document.body.scrollWidth;
+            yScroll = document.body.scrollHeight;
+        } else {
+            xScroll = document.body.offsetWidth;
+            yScroll = document.body.offsetHeight;
+        }
+        var windowWidth, windowHeight;
+        if (self.innerHeight) {
+            windowWidth = self.innerWidth;
+            windowHeight = self.innerHeight;
+        } else if (document.documentElement && document.documentElement.clientHeight) {
+            windowWidth = document.documentElement.clientWidth;
+            windowHeight = document.documentElement.clientHeight;
+        } else if (document.body) {
+            windowWidth = document.body.clientWidth;
+            windowHeight = document.body.clientHeight;
+        }
+        if (yScroll < windowHeight) {
+            pageHeight = windowHeight;
+        } else {
+            pageHeight = yScroll;
+        }
+        if (xScroll < windowWidth) {
+            pageWidth = windowWidth;
+        } else {
+            pageWidth = xScroll;
+        }
+        arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+        return arrayPageSize;
+    }
+ 
+ 
+    var AdMoveConfig = new Object();
+    AdMoveConfig.IsInitialized = false;
+    AdMoveConfig.ScrollX = 0;
+    AdMoveConfig.ScrollY = 0;
+    AdMoveConfig.MoveWidth = 0;
+    AdMoveConfig.MoveHeight = 0;
+    AdMoveConfig.Resize = function () {
+        var winsize = GetPageSize();
+        AdMoveConfig.MoveWidth = winsize[2];
+        AdMoveConfig.MoveHeight = winsize[3];
+        AdMoveConfig.Scroll();
+    }
+    AdMoveConfig.Scroll = function () {
+        var winscroll = getPageScroll();
+        AdMoveConfig.ScrollX = winscroll[0];
+        AdMoveConfig.ScrollY = winscroll[1];
+    }
+    addEvent(window, "resize", AdMoveConfig.Resize);
+    addEvent(window, "scroll", AdMoveConfig.Scroll);
+    function AdMove(id) {
+        if (!AdMoveConfig.IsInitialized) {
+            AdMoveConfig.Resize();
+            AdMoveConfig.IsInitialized = true;
+        }
+        var obj = document.getElementById(id);
+        obj.style.position = "absolute";
+        var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+        var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+        var x = W * Math.random(), y = H * Math.random();
+        var rad = (Math.random() + 1) * Math.PI / 6;
+        var kx = Math.sin(rad), ky = Math.cos(rad);
+        var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
+        var step = 1;
+        var interval;
+        this.SetLocation = function (vx, vy) { x = vx; y = vy; }
+        this.SetDirection = function (vx, vy) { dirx = vx; diry = vy; }
+        obj.CustomMethod = function () {
+            obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+            obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+            rad = (Math.random() + 1) * Math.PI / 6;
+            W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+            H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+            x = x + step * kx * dirx;
+            if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+            if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
+            y = y + step * ky * diry;
+            if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+            if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
+        }
+        this.Run = function () {
+            var delay = 20;
+            interval = setInterval(obj.CustomMethod, delay);
+            obj.onmouseover = function () { clearInterval(interval); }
+            obj.onmouseout = function () { interval = setInterval(obj.CustomMethod, delay); }
+        }
+    }
+    </script>
+    <div id="ad1" style="z-index: 5;border:0; border-style:dotted;">
+        <!--首页漂浮：开始-->
+        <a id="divclose" onclick="setUnVisible();" title="关闭" style=" position:absolute;left:5px;top:5px; cursor:pointer;">[ 关闭 ]</a>
+        <a href="https://www.jju.edu.cn/info/1044/88927.htm"><img id="adImg" src="http://www.jju.edu.cn/images/ysxyyjs.png" width="300" alt="" onload="return imgzoom(this,600);" style="cursor: pointer;" /></a>
+        <!--首页漂浮：结束-->
+    </div>
+ 
+ 
+    <script type="text/javascript"><!--
+        var ad1 = new AdMove("ad1");
+        ad1.Run();
+        //可兼容多组漂浮
+        //var ad1=new AdMove("ad2");
+        //ad2.Run();
+        //-->
+        function setUnVisible() {
+            document.getElementById("ad1").style.display = "none";
+        }
+    </script>        
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:776562626572323077754655525a5742000200034e53 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1603933233)</script>
+</head>
+    <body>
+        <div class="pagetop">
+            <div class="top">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm"><img src="img/logo1.png" width="275" height="78" border="0" alt="九江学院主站（新）" title="九江学院主站（新）"></a></div>
+                <div class="r_box">
+                    <div class="kj"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="kj1">
+                            <a title="" href="ksdh/zxsdh.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58734)"><img src="img/kj1.png">学生</a>
+                        </div>
+                        
+<div class="kj1">
+                            <a title="" href="ksdh/jzgdh.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58735)"><img src="img/kj2.png">教工</a>
+                        </div>
+                        
+<div class="kj1">
+                            <a title="" href="ksdh/xydh.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58736)"><img src="img/kj3.png">校友</a>
+                        </div>
+                        
+<div class="kj1">
+                            <a title="" href="ksdh/ksdh.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58737)"><img src="img/kj4.png">考生</a>
+                        </div>
+                        
+<div class="kj1">
+                            <a title="" href="ksdh/fkdh.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58738)"><img src="img/kj5.png">访客</a>
+                        </div>
+                        
+<div class="clear"></div></div>
+                    <div class="ss">
+                        <div class="seach">
+                        
+                        
+          
+
+               
+<script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode1013825').value;
+        if(keyword==null||keyword==""||keyword=="请输入关键字"){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkey1013825").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkey1013825").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkey1013825").value = base64.encode(document.getElementById("lucenenewssearchkey1013825").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode1013825"));
+        return true;
+    } 
+</script>
+<form action="seach.jsp?wbtreeid=1001" method="post" id="au2a" name="au2a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkey1013825" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype1013825" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope1013825" name="searchScope" value="1">
+
+ 
+ <input name="showkeycode" id="showkeycode1013825" type="text" value="请输入关键字" onfocus="this.style.color='#bbd3d9';if (value =='请输入关键字'){value =''}" onblur="this.style.color='bbd3d9';if (value ==''){value='请输入关键字'}" class="search-txt">
+ <input name="" type="submit" class="search-btn" value="">
+ <div class="clear"></div>
+ 
+ 
+</form><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+
+
+</div>
+                                        
+                                        
+                                        
+                        <div class="english">
+<a title="" href="https://fis.jju.edu.cn/" target="_blank">English</a>
+
+</div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="pagemenu">
+            <ul class="nav clearfix" id="nav">                        
+
+<li class="nLi on"> <h3>
+<a href="index.htm" target="_blank">首页</a></h3> 
+</li>
+
+<li class="nLi ">
+                                <h3><a href="xxgk.htm" target="_blank">学校概况</a></h3>
+                                <ul class="sub">
+                                    <li><a href="xxgk/xxjj.htm">学校简介</a></li>
+                                    <li><a href="xxgk/xrld.htm">现任领导</a></li>
+                                    <li><a href="xxgk/xyfj.htm">校园风景</a></li>
+                                    <li><a href="xxgk/xydt.htm">校园地图</a></li>
+                                    <li><a href="xxgk/xx1.htm">校训'校徽'校歌</a></li>
+                                    <li><a href="xxgk/xqjsp_p.htm">九江学院宣传片</a></li>
+                                    <li><a href="xxgk/jjxyzc.htm">九江学院章程</a></li>
+                                </ul>
+                        </li>
+
+<li class="nLi ">
+                                <h3><a href="xxgk/zzjg.htm" target="_blank">机构设置</a></h3>
+                                <ul class="sub">
+                                    <li><a href="jgsz1/dzgljg.htm">党政管理机构</a></li>
+                                    <li><a href="jgsz1/jxjg.htm">教学机构</a></li>
+                                    <li><a href="jgsz1/jfjg.htm">教辅机构</a></li>
+                                    <li><a href="jgsz1/kyjg2.htm">科研机构</a></li>
+                                    <li><a href="jgsz1/fsjg2.htm">附属机构</a></li>
+                                </ul>
+                        </li>
+
+<li class="nLi ">
+                                <h3><a href="jyjx.htm" target="_blank">教育教学</a></h3>
+                                <ul class="sub">
+                                    <li><a href="http://jwc.jju.edu.cn/">本专科教育</a></li>
+                                    <li><a href="https://gjjlxy.jju.edu.cn/">国际教育</a></li>
+                                    <li><a href="http://jjxy.jju.edu.cn/">继续教育</a></li>
+                                    <li><a href="http://jsjxfzzx.jju.edu.cn/">教师教学发展中心</a></li>
+                                </ul>
+                        </li>
+
+<li class="nLi ">
+                                <h3><a href="kxyj.htm" target="_blank">科学研究</a></h3>
+                                <ul class="sub">
+                                    <li><a href="https://kyc.jju.edu.cn/">科研管理</a></li>
+                                    <li><a href="https://xbbjb.jju.edu.cn/">学报编辑部</a></li>
+                                    <li><a href="https://kjy.jju.edu.cn/">大学科技园管理办公室</a></li>
+                                </ul>
+                        </li>
+
+<li class="nLi ">
+                                <h3><a href="zsjy2.htm" target="_blank">招生就业</a></h3>
+                                <ul class="sub">
+                                    <li><a href="https://zjc.jju.edu.cn/">招生信息</a></li>
+                                    <li><a href="http://zjc.jju.edu.cn/">就业信息</a></li>
+                                    <li><a href="http://jjxy.jju.edu.cn/">继续教育</a></li>
+                                    <li><a href="zsjy2/dexw.htm">第二学位</a></li>
+                                    <li><a href="zsjy2/zsb.htm">专升本</a></li>
+                                </ul>
+                        </li>
+
+<li class="nLi ">
+                                <h3><a href="xysh.htm" target="_blank">校园生活</a></h3>
+                                <ul class="sub">
+                                    <li><a href="http://xsc.jju.edu.cn/">学生工作</a></li>
+                                    <li><a href="http://youth.jju.edu.cn/">向学青年</a></li>
+                                    <li><a href="http://zzzx.jju.edu.cn">学生资助</a></li>
+                                    <li><a href="http://xlyz.jju.edu.cn/">心灵驿站</a></li>
+                                    <li><a href="http://xyy.jju.edu.cn">师生医疗</a></li>
+                                </ul>
+                        </li>
+
+<li class="nLi ">
+                                <h3><a href="ggfw.htm" target="_blank">公共服务</a></h3>
+                                <ul class="sub">
+                                    <li><a href="http://lib.jju.edu.cn/">图书馆</a></li>
+                                    <li><a href="http://jjuitc.jju.edu.cn/">网络服务</a></li>
+                                    <li><a href="https://xxgk.jju.edu.cn/">信息公开</a></li>
+                                    <li><a href="http://jwc.jju.edu.cn/index/jxrl.htm">校历</a></li>
+                                    <li><a href="http://www.jju.edu.cn/xxgk/xxjj1.htm">办公电话</a></li>
+                                    <li><a href="http://jj.fanya.chaoxing.com/portal">网络教学平台</a></li>
+                                </ul>
+                        </li>
+
+<li class="nLi ">
+                                <h3><a href="rczp.htm" target="_blank">人才招聘</a></h3>
+                                <ul class="sub">
+                                    <li><a href="https://rsc.jju.edu.cn/">人事处网站</a></li>
+                                    <li><a href="rczp/gccrczp1.htm">高层次人才招聘</a></li>
+                                    <li><a href="rczp/yjgrczp.htm">有机硅人才招聘</a></li>
+                                    <li><a href="rczp/xqrczp.htm">校企人才招聘</a></li>
+                                </ul>
+                        </li>
+
+<li class="nLi ">
+                                <h3><a href="English_.htm" target="_blank">English </a></h3>
+                                <ul class="sub">
+                                    <li><a href="https://fis.jju.edu.cn/">Faculty of International Studies</a></li>
+                                </ul>
+                        </li>
+<div class="clear"></div></ul>
+            
+            
+                    
+            
+                    <script id="jsID" type="text/javascript">
+                        
+                        jQuery("#nav").slide({ 
+                            type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+                            titCell:".nLi", //鼠标触发对象
+                            targetCell:".sub", //titCell里面包含的要显示/消失的对象
+                            effect:"slideDown", //targetCell下拉效果
+                            delayTime:300 , //效果时间
+                            triggerTime:0, //鼠标延迟触发时间（默认150）
+                            returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+                        });
+                    </script>
+        </div>
+        
+        
+                
+    <div class="pageconter">
+  <div class="slider">
+    <div class="bd">
+                <ul>
+                                    <li><a title="" href="" target="_self" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 1009867)"><img src="images/banner20241001.jpg"></a></li>
+                    <li><a title="" href="" target="_self" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 71098)"><img src="images/banner20240409.jpg"></a></li>
+                    <li><a title="" href="" target="_self" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 70671)"><img src="images/banner2_20221122a.jpg"></a></li>
+                    <li><a title="" href="" target="_self" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 61735)"><img src="images/banner_tsg.jpg"></a></li>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul>
+                <li></li><li></li><li></li><li></li>
+                
+                </ul>
+            </div>
+
+<div class="pnBtn prev">
+                <span class="blackBg"></span>
+                <a class="arrow" href="javascript:void(0)"></a>
+            </div>
+            <div class="pnBtn next">
+                <span class="blackBg"></span>
+                <a class="arrow" href="javascript:void(0)"></a>
+            </div>
+        </div>
+
+        
+                <script type="text/javascript">
+            $(document).ready(function() {
+
+                /* 设置第一张图片 */
+                $(".slider .bd li").first().before($(".slider .bd li").last());
+
+                /* 鼠标悬停箭头按钮显示 */
+                $(".slider").hover(function() {
+                    $(this).find(".arrow").stop(true, true).fadeIn(300)
+                }, function() {
+                    $(this).find(".arrow").fadeOut(300)
+                });
+
+$(".slider").hover(function() {
+
+$("img").css("filter","blur(0px)");
+
+ });
+                /* 滚动切换 */
+                $(".slider").slide({
+                    titCell: ".hd ul",
+                    mainCell: ".bd ul",
+                    effect: "leftLoop",
+                    autoPlay: true,
+                    vis: 3,
+                    autoPage: true,
+                    trigger: "click",
+                    interTime:8000,
+
+                });
+
+            });
+        </script>
+
+               
+               
+               
+               
+               
+               
+               
+               
+            <div class="xwbg">   
+        <div class="box1">
+            <div class="xydt w370 fl">
+                   <div class="title">
+                        <h1><strong>&nbsp;图片新闻</strong></h1>
+                        <a class="More" href="xwzx/xyyw.htm" target="">更多+</a>
+                    </div>
+
+                    <div class="focusBox fl"><script language="javascript" src="/system/resource/js/ajax.js"></script><ul class="pic">
+<li><a href="info/1047/89012.htm" title="九江学院第二十三届田径运动会开幕" target="_blank"><img src="/__local/9/F2/61/E705BB5B946504A53F7DE6CD233_60689D5A_1D012.jpg"></a></li>
+                
+<li><a href="info/1047/88832.htm" title="我校举行庆祝中华人民共和国成立75周年升国旗仪式" target="_blank"><img src="/__local/5/71/27/1008B5D5EAB1505C0E1C9A2E558_F85CA865_31204.jpg"></a></li>
+                
+<li><a href="info/1047/88805.htm" title="绘蓝图，击征鼓，启新程——中国共产党九江学院第二次党员代表大会隆重开幕" target="_blank"><img src="/__local/4/4E/F1/DC066A0E5F010303C9E3046B752_320EDF84_63506.jpg"></a></li>
+                
+<li><a href="info/1047/88784.htm" title="为推进中国式现代化挺膺担当 九江学院新生第一课开讲" target="_blank"><img src="/__local/0/F1/EE/1FFEBF809EB552118E80556FDAD_C6A923E9_4F182.png"></a></li>
+                
+</ul>
+<div class="num">
+<ul>
+<li>
+<h1>23</h1><p>2024-10</p>
+</li>
+<li>
+<h1>01</h1><p>2024-10</p>
+</li>
+<li>
+<h1>27</h1><p>2024-09</p>
+</li>
+<li>
+<h1>24</h1><p>2024-09</p>
+</li>
+</ul>
+</div>
+
+
+            <div class="tit-bg"></div>
+            <div class="txt">
+                <ul>
+
+                    <li><a href="info/1047/89012.htm" target="_blank">九江学院第二十三届田径运动会开幕</a></li>
+
+                    <li><a href="info/1047/88832.htm" target="_blank">我校举行庆祝中华人民共和国成立75周年升国旗仪式</a></li>
+
+                    <li><a href="info/1047/88805.htm" target="_blank">绘蓝图，击征鼓，启新程——中国共产党九江学院第二...</a></li>
+
+                    <li><a href="info/1047/88784.htm" target="_blank">为推进中国式现代化挺膺担当 九江学院新生第一课开讲</a></li>
+                </ul>
+            </div>
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>
+            <div class="clear"></div>
+            
+            <script type="text/javascript">
+            jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",
+            //下面startFun代码用于控制文字上下切换
+            startFun:function(i){
+            jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-36});
+            }
+            });
+        </script><script>_showDynClickBatch(['dynclicks_u6_89012','dynclicks_u6_88832','dynclicks_u6_88805','dynclicks_u6_88784'],[89012,88832,88805,88784],"wbnews", 1603933233)</script>
+</div>                   
+
+            </div>
+            <div class="xsjl w400 fl">
+                  <div class="title">
+                        <h1><strong>校园要闻</strong></h1>
+                        <a class="More" href="xwzx/xyyw.htm">更多+</a>
+                    </div>
+                    <ul class="tzlist"><li><span>10-14</span><a href="http://epaper.jxxw.com.cn/html/2024-10/13/content_144395_1380484.htm" title="江西日报：九江学院实施“3353”战略努力建设特色鲜明高水平应用型大学" target="_blank">江西日报：九江学院实施“3353”战略努力建设特色鲜明…</a></li>
+                            
+<li><span>10-27</span><a href="info/1047/89039.htm" title="九江学院第十三届校友企业专场招聘会圆满举行" target="_blank">九江学院第十三届校友企业专场招聘会圆满举行</a></li>
+                            
+<li><span>10-27</span><a href="info/1047/89038.htm" title="九江学院第五届“厚生杯”校友足球、篮球总决赛圆满收官" target="_blank">九江学院第五届“厚生杯”校友足球、篮球总决赛圆满收官</a></li>
+                            
+<li><span>10-27</span><a href="info/1047/89037.htm" title="九江学院舞龙舞狮队喜获全国锦标赛冠军" target="_blank">九江学院舞龙舞狮队喜获全国锦标赛冠军</a></li>
+                            
+<li><span>10-25</span><a href="https://mp.weixin.qq.com/s/h8zfZ6CfSniNop3urnWsSA" title="拼搏之光，点亮未来！校运会圆满收官" target="_blank">拼搏之光，点亮未来！校运会圆满收官</a></li>
+                            
+<li><span>10-25</span><a href="info/1047/89034.htm" title="学校与九江市人民检察院签订“检校共建”合作协议" target="_blank">学校与九江市人民检察院签订“检校共建”合作协议</a></li>
+                            
+<li><span>10-24</span><a href="info/1047/89026.htm" title="校党委书记李明斌深入旅游与地理学院调研" target="_blank">校党委书记李明斌深入旅游与地理学院调研</a></li>
+                            
+<li><span>10-23</span><a href="info/1047/89012.htm" title="九江学院第二十三届田径运动会开幕" target="_blank">九江学院第二十三届田径运动会开幕</a></li>
+                            
+<script>_showDynClickBatch(['dynclicks_u7_88924','dynclicks_u7_89039','dynclicks_u7_89038','dynclicks_u7_89037','dynclicks_u7_89035','dynclicks_u7_89034','dynclicks_u7_89026','dynclicks_u7_89012'],[88924,89039,89038,89037,89035,89034,89026,89012],"wbnews", 1603933233)</script>
+</ul>
+
+            </div>
+            <div class="mtbd w340 fl">
+                  
+                  <div class="hd">
+                <ul>
+                    <li><a href="https://www.jju.edu.cn/xwzx/xydt.htm" target="_blank">校园动态</a></li>
+                    <li><a href="https://www.jju.edu.cn/xwzx/gfwx.htm" target="_blank">官方微信</a></li>
+                    <li><a href="https://www.jju.edu.cn/xwzx/mtbd.htm" target="_blank">媒体报道</a></li>
+                </ul>
+                <span class="more1">
+                    <a href="xwzx/xydt.htm" target="">更多+</a>
+                    <a href="xwzx/gfwx.htm" target="">更多+</a>
+                    <a href="xwzx/mtbd.htm" target="">更多+</a>
+                </span> 
+            </div>
+            <div class="bd">
+                <ul><li><span class="date">10-28</span><a href="info/1048/89040.htm" title="我校教师指导九江代表队在江西省第七届全民健身运动会获佳绩" target="_blank">我校教师指导九江代表队在江西省第七届全民健...</a></li>
+                    
+<li><span class="date">10-25</span><a href="info/1048/89031.htm" title="机械与智能制造学院推出“红匠师”教育沙龙" target="_blank">机械与智能制造学院推出“红匠师”教育沙龙</a></li>
+                    
+<li><span class="date">10-25</span><a href="info/1048/89030.htm" title="【校运会精彩回顾】 一场“动感”十足的运动会" target="_blank">【校运会精彩回顾】 一场“动感”十足的运动会</a></li>
+                    
+<li><span class="date">10-25</span><a href="info/1048/89027.htm" title="校纪委委员会2024年第三次会议召开" target="_blank">校纪委委员会2024年第三次会议召开</a></li>
+                    
+<li><span class="date">10-24</span><a href="info/1048/89025.htm" title="九江市群众体育先进单位和先进个人表彰大会举行，我校体育学院获先进单位称号" target="_blank">九江市群众体育先进单位和先进个人表彰大会举...</a></li>
+                    
+<li><span class="date">10-24</span><a href="info/1048/89020.htm" title="我校举办江西高校“马克思主义基本原理”问题式专题化团队教学改革集体备课会" target="_blank">我校举办江西高校“马克思主义基本原理”问题...</a></li>
+                    
+<li><span class="date">10-24</span><a href="info/1048/89019.htm" title="学校召开省市级现代产业学院申报及建设论证会" target="_blank">学校召开省市级现代产业学院申报及建设论证会</a></li>
+                    
+<li><span class="date">10-24</span><a href="https://tt.jxnews.com.cn/news/2578325?app=jxttn&uid=156350" title="建筑工程与规划学院与九江市第一人民医院共建产学研融合实践基地" target="_blank">建筑工程与规划学院与九江市第一人民医院共建...</a></li>
+                    
+<script>_showDynClickBatch(['dynclicks_u8_89040','dynclicks_u8_89031','dynclicks_u8_89030','dynclicks_u8_89027','dynclicks_u8_89025','dynclicks_u8_89020','dynclicks_u8_89019','dynclicks_u8_89016'],[89040,89031,89030,89027,89025,89020,89019,89016],"wbnews", 1603933233)</script>
+</ul>
+                <ul><li><span class="date">10-08</span><a href="https://mp.weixin.qq.com/s/hrJtGmSWUAJ8XbPPwzLlcQ" title="跨越万里 只为同一个梦" target="_blank">跨越万里 只为同一个梦</a></li>
+                    
+<li><span class="date">10-07</span><a href="https://mp.weixin.qq.com/s/TQWJKGR60ZJto1HjbD8CsA" title="他，复试逆袭上岸！" target="_blank">他，复试逆袭上岸！</a></li>
+                    
+<li><span class="date">10-06</span><a href="https://mp.weixin.qq.com/s/hp1PcGq1QvyY9z1OdTbtgg" title="“照”见 “我”的九院初体验" target="_blank">“照”见 “我”的九院初体验</a></li>
+                    
+<li><span class="date">10-05</span><a href="https://mp.weixin.qq.com/s/psLlH8ojYqxJZe7EiaqTJQ" title="赞！我校团队修改起草的这一条例获省人大常委会通过" target="_blank">赞！我校团队修改起草的这一条例获省人大常委...</a></li>
+                    
+<li><span class="date">10-04</span><a href="https://mp.weixin.qq.com/s/keMwVNr-849HXQgXvi7OAQ" title="九院宝藏打卡点，看这里！" target="_blank">九院宝藏打卡点，看这里！</a></li>
+                    
+<li><span class="date">10-03</span><a href="https://mp.weixin.qq.com/s/W9LW5KsGK9M9s_lQRZiaXw" title="赞！又一波喜报来袭！" target="_blank">赞！又一波喜报来袭！</a></li>
+                    
+<li><span class="date">10-02</span><a href="https://mp.weixin.qq.com/s/cJwzL1qsRF7CzjTvjj_qxw" title="欢迎报考！九江学院2025年硕士研究生招生简章" target="_blank">欢迎报考！九江学院2025年硕士研究生招生简章</a></li>
+                    
+<li><span class="date">10-01</span><a href="https://mp.weixin.qq.com/s/y5J-zCvKBf1eV20y3BgDtA" title="祝福您，我的中国！" target="_blank">祝福您，我的中国！</a></li>
+                    
+<script>_showDynClickBatch(['dynclicks_u9_88950','dynclicks_u9_88949','dynclicks_u9_88948','dynclicks_u9_88947','dynclicks_u9_88946','dynclicks_u9_88945','dynclicks_u9_88944','dynclicks_u9_88845'],[88950,88949,88948,88947,88946,88945,88944,88845],"wbnews", 1603933233)</script>
+</ul>
+            <ul><li><span class="date">10-28</span><a href="https://m.chinanews.com/wap/detail/chs/zw/345992.shtml" title="中新网：九江学院第二十三届田径运动会开幕" target="_blank">中新网：九江学院第二十三届田径运动会开幕</a></li>
+                    
+<li><span class="date">10-24</span><a href="https://tt.jxnews.com.cn/news/2578325?app=jxttn&uid=156350" title="大江网：九江学院建筑工程与规划学院与九江市第一人民医院共建产学研融合实践基地" target="_blank">大江网：九江学院建筑工程与规划学院与九江市...</a></li>
+                    
+<li><span class="date">10-24</span><a href="http://www.jx.chinanews.com.cn/news/2024/1023/104936.html" title="中新网江西：九江学院：心手相连共筑梦，校长有约话团结" target="_blank">中新网江西：九江学院：心手相连共筑梦，校长...</a></li>
+                    
+<li><span class="date">10-22</span><a href="http://jyt.jiangxi.gov.cn/art/2024/10/22/art_81663_5038785.html" title="江西省教育厅：九江学院：锐意进取开启新程 奋力推进学校创新创业教育再上新台阶" target="_blank">江西省教育厅：九江学院：锐意进取开启新程 奋...</a></li>
+                    
+<li><span class="date">10-22</span><a href="https://jx.cri.cn/2024-10-21/c961164c-bce0-e5bd-7fde-f0d5174a2214.html" title="中央广电总台国际在线 ：九江学院继教学院：重温讲话精神 牢记殷殷嘱托 推动校地校企共建联建" target="_blank">中央广电总台国际在线 ：九江学院继教学院：重...</a></li>
+                    
+<li><span class="date">10-18</span><a href="http://szjj.china.com.cn/2024-10/16/content_42938683.html" title="中国网：九江学院：构建“一特三融多维”模式，提升党建引领育人成效" target="_blank">中国网：九江学院：构建“一特三融多维”模式...</a></li>
+                    
+<li><span class="date">10-18</span><a href="https://app.xinhuanet.com/news/article.html?articleId=1ff0ff25b8720861d7bf0690cc9fa3d5&timestamp=69045" title="新华网：九江学院：构建“一特三融多维”模式，提升党建引领育人成效" target="_blank">新华网：九江学院：构建“一特三融多维”模式...</a></li>
+                    
+<li><span class="date">10-18</span><a href="https://jx.cri.cn/2024-10-17/9a2c2008-28ef-27cc-5920-62dcef05d5cd.html" title="中央广电总台国际在线：九江学院：身心健康双护航 为新生成长撑起“健康保护伞”" target="_blank">中央广电总台国际在线：九江学院：身心健康双...</a></li>
+                    
+<script>_showDynClickBatch(['dynclicks_u10_89041','dynclicks_u10_89015','dynclicks_u10_89014','dynclicks_u10_88998','dynclicks_u10_88995','dynclicks_u10_88962','dynclicks_u10_88961','dynclicks_u10_88960'],[89041,89015,89014,88998,88995,88962,88961,88960],"wbnews", 1603933233)</script>
+</ul>
+            </div>
+
+                  
+             <script type="text/javascript">    
+            var ary = location.href.split("&");
+            jQuery(".mtbd").slide({ effect:"fold",titCell:".hd li",maincell:"bd",targetCell:".more1 a"});
+        </script>
+     
+                  
+                  
+                  
+
+             
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+        
+        </div> 
+        
+        <div class="box2">
+            <div class="slideTxtBox">
+                        <div class="hd">
+                           <!--<div class="bt">通知公告</div>-->
+                            <ul>
+                            <li class="on"><div class="title1"><h1><strong><a href="https://www.jju.edu.cn/tzgg_g/tzgg.htm" target="_blank">通知公告</a></strong></h1></div></li>
+                            <li><a href="https://www.jju.edu.cn/zbcg/zbdt.htm" target="_blank">招标公告</a></li>                            
+                            </ul>
+                        </div>
+                        
+                        
+                        <div class="bd">
+                            <ul><a href="info/1044/88861.htm" target="_blank" title="九江学院2024年10月学术（科学）研究、教学研究活动预告">
+                                <div class="tz">
+                                    <div class="rq">10-08</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">九江学院2024年10月学术（...</div>
+                                        <div class="zy"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1044/88901.htm" target="_blank" title="关于做好本科教育教学审核评估人才培养评价第三方调查工作的通知">
+                                <div class="tz">
+                                    <div class="rq">10-12</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">关于做好本科教育教学审核...</div>
+                                        <div class="zy">亲爱的我校教师、在校生、校友及毕业生用人单位：你们好！为不断改进学...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1044/89024.htm" target="_blank" title="关于对党的二十届三中全会精神学习宣传贯彻情况进行监督检查的通知">
+                                <div class="tz" style="margin-right: 0px;">
+                                    <div class="rq">10-24</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">关于对党的二十届三中全会...</div>
+                                        <div class="zy">各二级学院党委：为进一步抓好党的二十届三中全会精神的学习宣传贯彻工...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1044/89021.htm" target="_blank" title="关于举办九江学院第十三届校友企业专场双选会的通知">
+                                <div class="tz">
+                                    <div class="rq">10-24</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">关于举办九江学院第十三届...</div>
+                                        <div class="zy">各二级学院并2025届毕业生：九江学院第十三届校友企业专场双选会将于10...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1044/89018.htm" target="_blank" title="关于组织申报2024年度江西省高等教育学会课题的通知">
+                                <div class="tz">
+                                    <div class="rq">10-24</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">关于组织申报2024年度江西...</div>
+                                        <div class="zy">各学院、研究机构：江西省高等教育学会发布了《江西省高等教育学会关于...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1044/89011.htm" target="_blank" title="关于组织申报教育部哲学社会科学研究专项(全国教育大会精神研究)的通知">
+                                <div class="tz" style="margin-right: 0px;">
+                                    <div class="rq">10-23</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">关于组织申报教育部哲学社...</div>
+                                        <div class="zy">各学院、研究机构：教育部办公厅发布了《关于教育部哲学社会科学研究专...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<div class="clear"></div>
+                                <div class="more"><a href="tzgg_g/tzgg.htm">更多+</a></div><script>_showDynClickBatch(['dynclicks_u11_88861','dynclicks_u11_88901','dynclicks_u11_89024','dynclicks_u11_89021','dynclicks_u11_89018','dynclicks_u11_89011'],[88861,88901,89024,89021,89018,89011],"wbnews", 1603933233)</script>
+</ul>
+                             <ul><a href="info/1227/89017.htm" target="_blank" title="江西首信招标咨询有限公司关于九江学院后勤管理处饮食部2024下学期-2025上学期便民超市物资采购项目【项目编号：JXSX2024-JJ-G4140第二次】公开招标公告">
+                                <div class="tz">
+                                    <div class="rq">10-22</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">江西首信招标咨询有限公司...</div>
+                                        <div class="zy">项目概况九江学院后勤管理处饮食部2024下学期-2025上学期便民超市物资采...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1227/88899.htm" target="_blank" title="江西兆宏工程项目管理有限公司关于九江学院临床检验与血液学实验室教学设备采购项目（招标编号：JXZH2024-JJZB-T006）竞争性谈判结果公示">
+                                <div class="tz">
+                                    <div class="rq">10-11</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">江西兆宏工程项目管理有限...</div>
+                                        <div class="zy">一、项目编号：JXZH2024-JJZB-T006二、项目名称：   九江学院临床检验与...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1227/88898.htm" target="_blank" title="江西兆宏工程项目管理有限公司关于九江学院危化品储存间改造项目（招标编号：JXZH2024-JJZB-T007）竞争性谈判结果公示">
+                                <div class="tz" style="margin-right: 0px;">
+                                    <div class="rq">10-11</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">江西兆宏工程项目管理有限...</div>
+                                        <div class="zy">一、项目编号：JXZH2024-JJZB-T007二、项目名称：   九江学院危化品储存...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1227/88874.htm" target="_blank" title="九江学院智能制造项目需求公示">
+                                <div class="tz">
+                                    <div class="rq">10-10</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">九江学院智能制造项目需求公示</div>
+                                        <div class="zy">我校拟采购设备一批，现将采购项目有关情况向潜在供应商征求意见（采购...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1227/88829.htm" target="_blank" title="关于九江学院丹枫园校区2025年-2028年(2025年1月15日~2028年1月14日)物业服务采购项目预算价格公开市场询价的公告">
+                                <div class="tz">
+                                    <div class="rq">09-30</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">关于九江学院丹枫园校区202...</div>
+                                        <div class="zy">根据《中华人民共和国政府采购法》等有关法律法规，现对九江学院丹枫园...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<a href="info/1227/88803.htm" target="_blank" title="关于九江学院2024年图书馆中文纸质图书采购项目预算价格公开市场询价的公告">
+                                <div class="tz" style="margin-right: 0px;">
+                                    <div class="rq">09-26</div>
+                                    <div class="tz_tit">
+                                        <div class="tit">关于九江学院2024年图书馆...</div>
+                                        <div class="zy">根据《中华人民共和国政府采购法》等有关规定，现对九江学院2024年图书...</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                </a>
+                                
+                                
+<div class="clear"></div>
+                                <div class="more"><a href="zbcg/zbdt.htm">更多+</a></div><script>_showDynClickBatch(['dynclicks_u12_89017','dynclicks_u12_88899','dynclicks_u12_88898','dynclicks_u12_88874','dynclicks_u12_88829','dynclicks_u12_88803'],[89017,88899,88898,88874,88829,88803],"wbnews", 1603933233)</script>
+</ul>                            
+                            <ul><div class="clear"></div>
+                                <div class="more"><a href="">更多+</a></div>
+</ul>
+
+                        </div>
+                        
+                     
+                        
+                    </div>
+                    <script type="text/javascript">jQuery(".slideTxtBox").slide({ effect:"fold",titCell:".hd li",maincell:"bd",autoPlay:true,delayTime:200,interTime:8000});</script>
+        </div>
+        
+        <div class="box3">
+            <div class="picScroll-left">
+                <div class="zt_tit">
+                    <div class="bt">专题网站</div>
+                    <div class="more"></div>
+                </div>
+                        <div class="hd">
+                            <a class="next"></a>
+                            <a class="prev"></a>
+                        </div>
+                        <div class="bd">    <ul class="picList">
+                                
+<li>
+                                    <div class="pic"><a title="" href="https://www.jju.edu.cn/xwzx/djxxjyzl.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 71107)"><img src="images/djxx.jpg"></a></div>
+
+                                </li>
+                                
+<li>
+                                    <div class="pic"><a title="" href="https://ddh.jju.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 70910)"><img src="images/ddh.jpg"></a></div>
+
+                                </li>
+                                
+<li>
+                                    <div class="pic"><a title="" href="https://xjptsshzysx.jju.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 70797)"><img src="images/banner2_20230423.jpg"></a></div>
+
+                                </li>
+                                
+<li>
+                                    <div class="pic"><a title="" href="https://bkpg.jju.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 53565)"><img src="images/bkpg.jpg"></a></div>
+
+                                </li>
+                                
+<li>
+                                    <div class="pic"><a title="" href="https://yywz.jju.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 71130)"><img src="images/yywz1.jpg"></a></div>
+
+                                </li>
+                                
+<li>
+                                    <div class="pic"><a title="" href="https://xttz.jju.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 71127)"><img src="images/xttz.jpg"></a></div>
+
+                                </li>
+                                
+<li>
+                                    <div class="pic"><a title="" href="http://dzxb.ihwrm.com/" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 53802)"><img src="images/jjxyb.jpg"></a></div>
+
+                                </li>
+                                
+<li>
+                                    <div class="pic"><a title="" href="https://rsc.jju.edu.cn/info/1093/1305.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 70661)"><img src="images/sdsf.jpg"></a></div>
+
+                                </li>
+                                
+</ul></div>
+                    </div>
+            
+                    <script type="text/javascript">
+                    jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4,trigger:"click"});
+                    </script>
+        </div>
+        
+        
+        
+        
+        
+            <div class="kjrk">
+            <ul><li><img src="img/kjtd1.png"><a href="http://ehall.jju.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 67702)" target="_blank">融合门户</a></li>
+<li><img src="img/kjtd2.png"><a href="http://oa.jju.edu.cn/oa/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 67703)" target="_blank">办公系统</a></li>
+<li><img src="img/kjtd3.png"><a href="https://zhjw1.jju.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 67704)" target="_blank">教务系统</a></li>
+<li><img src="img/kjtd4.png"><a href="https://mail.jju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 67705)" target="_blank">邮件系统</a></li>
+<li><img src="img/kjtd5.png"><a href="xxgk/xxjj1.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 67707)" target="_blank">办公电话</a></li>
+<li><img src="img/kjtd6.png"><a href="ldxx.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 67706)" target="_blank">领导信箱</a></li>
+<div class="clear"></div></ul>
+        </div>
+        
+        
+    </div>
+    
+    
+    <div class="main">
+    <div class="main2"><a class="bar" href="javascript:"></a>
+        <ul><li><a href="http://lib.jju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 67740)" target="_blank">图书馆</a></li>
+            
+<li><a href="http://ehall.jju.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 66028)" target="_blank">融合门户</a></li>
+            
+<li><a href="http://oa.jju.edu.cn/oa/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 66029)" target="_blank">办公系统</a></li>
+            
+<li><a href="https://zhjw1.jju.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 66030)" target="_blank">教务系统</a></li>
+            
+<li><a href="https://mail.jju.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 66032)" target="_blank">邮件系统</a></li>
+            
+</ul>
+    </div>
+</div>
+
+
+ <script type="text/javascript">
+$(function(){
+    
+    $('.main').css('right','-202px');
+    
+    var expanded = true;
+    
+    $('.bar').click(function(){
+        if(expanded){
+            $('.main').animate({right:'0'},500);
+            $('.bar').css('background-position','-37px 0px');
+        }else{
+            $('.main').animate({right:'-202px'},500);
+            $('.bar').css('background-position','0px 0px');
+        }
+        expanded = !expanded;
+    });
+
+});
+
+
+
+
+</script>
+
+
+   
+
+
+<script>
+$(document).ready(function(){
+
+
+  $("img#wx").hover(function(){
+
+          $("img.wx").css("display","block");
+    },function(){
+
+      
+      
+          $("img.wx").css("display","none");
+  });
+  
+    $("img#wb").hover(function(){
+
+          $("img.wb").css("display","block");
+    },function(){
+
+      
+      
+          $("img.wb").css("display","none");
+  });
+  
+});
+</script>
+    
+    
+    <div class="box4">
+        <div class="box4_con">
+            <div class="us">
+                <div class="us_tit">联系我们</div>
+                <div class="us_con"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p>学校地址：江西省九江市前进东路551号&nbsp; &nbsp; <br>Email：jjuxb@jju.edu.cn&nbsp; &nbsp; &nbsp;邮政编码：332005&nbsp; &nbsp;<br> 招生电话：0792-8310030 8310031&nbsp; &nbsp;&nbsp;</p></div>
+            </div>
+            <div class="links">
+                <div class="links_tit">友情链接</div>
+                <ul><li><a title="" href="http://www.moe.gov.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58740)">中华人民共和国教育部</a></li>
+                    
+<li><a title="" href="http://www.cernet.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58741)">中国教育与科研网</a></li>
+                    
+<li><a title="" href="http://www.jxcn.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58742)">中 国 江 西 网</a></li>
+                    
+<li><a title="" href="http://jyt.jiangxi.gov.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58743)">江 西 教 育 网</a></li>
+                    
+<li><a title="" href="http://www.jiujiang.gov.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1603933233, 58745)">中 国 九 江 网</a></li>
+                    
+<div class="clear"></div></ul>
+            </div>
+            <div class="tb">    
+
+                <div class="t1"><a href="https://www.12377.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 58068)"><img src="images/wl110.gif" style="margin-top:55px;"></a></div>
+               
+               
+               
+               
+            
+
+
+
+               
+                <div class="t2"><a href="http://bszs.conac.cn/sitename?method=show&id=132EB45FB62D775CE053022819AC622C" onclick="_addDynClicks(&#34;wbimage&#34;, 1603933233, 53800)"><img src="images/blue.png" style="margin-top:55px;width:56px;"></a></div>
+               
+               
+               
+            
+
+
+
+               
+               
+               <div class="t3"><img id="wx" src="img/wx.png" style="margin-top:55px;"><img class="wx" src="img/wxjj.jpg"></div>
+               
+               
+            
+
+
+
+               
+               
+               
+                <div class="t4"><img id="wb" src="img/wb.png" style="margin-top:55px;"><img class="wb" src="img/wbjj.png"></div>
+               
+            
+
+<div class="clear"></div>
+
+
+</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+<div class="clear"></div>
+    
+<div class="pagebottom">
+    <div class="foot"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright © 2020 九江学院版权所有 &nbsp;备案序号：<a title="赣ICP备10004574号" href="http://beian.miit.gov.cn/publish/query/indexFirst.action" target="_blank" style="color: rgb(36, 159, 177);">赣ICP备10004574号</a> &nbsp;<img src="/__local/1/F6/3D/4255E910146AB4EA66BE15523E5_B477C0E3_50A.png?e=.png" /><a href="https://beian.mps.gov.cn/#/query/webSearch?code=36040202000313" target="_blank" rel="noreferrer" style="color: rgb(36, 159, 177);">赣公网安备36040202000313</a></p>
+    
+    <div><script language="javascript" src="_dwr/engine.js"></script><script language="javascript" src="_dwr/util.js"></script>访问统计：您是第<span id="a261754" name="a261754"></span>位访问者
+
+<script>
+function getvisittimea261754()
+{       
+    PageCounterDWR.getVisittime('1603933233','1001','TOTAL_COUNTER','0','10',callbackdataa261754)
+}
+function callbackdataa261754(data)
+{
+    document.getElementById("a261754").innerHTML = data; 
+}
+getvisittimea261754();
+</script></div>
+    
+    </div>
+</div>
+    
+
+
+
+
+</body></html>

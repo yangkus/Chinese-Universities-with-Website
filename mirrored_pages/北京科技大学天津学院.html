@@ -1,0 +1,404 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"> 
+<title>北京科技大学天津学院</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<script src="jslib/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="jslib/jquery.cycle.js" type="text/javascript"></script>
+<script src="jslib/jcarousellite_1.0.1.min.js" type="text/javascript"></script>
+<script src="jslib/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<style>
+.hnlist div{ display:none}
+div.mydiv{ display:block; position:relative}
+.nsm{ position:absolute; top:-39px; right:10px}
+.nst div{ font:16px/26px microsoft yahei; height:26px; margin:0 5px 8px 0; float:left; width:82px; text-align:center; cursor:pointer}
+div.hnt{ font:16px/26px microsoft yahei; color:#fff; background:#670d0d; width:82px; text-align:center;}
+
+</style>
+</head>
+
+<body>
+<style>
+.nav ul li dl.sn8{ width:518px; margin:auto; height:28px; padding:16px 0 0 454px;}
+</style>
+<div class="topbar">
+  <div class="intopbar">
+    <div class="search">
+      <form id="searchform" name="searchform" runat="server" action="/search.aspx" method="post" target="_blank">
+        <input id="searchText" type="text" name="searchText" class="inputtxt" />
+        <input type="image" src="/images/search_btn.gif" class="inputbtn"  />
+      </form>
+    </div>
+  </div>
+</div>
+<div class="header"><img src="/UploadedFiles/header_index.jpg" width="1000" height="123" /></div>
+<div class="nav">
+  <ul>
+    <li><a href="/">首页</a></li>
+    <li><a href="javascript:;">学院概况</a>
+      <div>
+      <dl class="sn1">
+        <dd><a href="/News/201504/201504181813561.htm">学院简介</a></dd>
+        <dd><a href="/News/201505/201505131748361.htm">学院领导</a></dd>
+        <dd><a href="/class/zhmxzh">知名学者</a></dd>
+        <dd><a href="/class/xyxl">校园导游</a></dd>
+        <dd><a href="/class/xyny">校园掠影</a></dd>
+      </dl>
+      </div>
+    </li>
+    <li><a href="javascript:;">机构设置</a>
+      <div>
+      <dl class="sn2">
+        <dd><a href="/class/dzhbm">党政部门</a></dd>
+        <dd><a href="/class/jxjb">教学系部</a></dd>
+        <dd><a href="/class/jfjg">教辅机构</a></dd>
+      </dl>
+      </div>
+    </li>
+    <li><a href="javascript:;">教育教学</a>
+      <div>
+      <dl class="sn3">
+        <dd><a href="/News/202212/202212041142591.htm">师资队伍</a></dd>
+        <dd><a href="/class/kchshzh">课程设置</a></dd>
+        <dd><a href="/class/bmyw">部门要闻</a></dd>
+        <dd><a href="/class/zhcfg">政策法规</a></dd>
+      </dl>
+      </div>
+    </li>
+    <li><a href="javascript:;">招生就业</a>
+      <div>
+      <dl class="sn4">
+        <dd><a href="/class/zhshjy">招生专栏</a></dd>
+        <dd><a href="http://tj-ustb.bysjy.com.cn/" target="_blank">就业专栏</a></dd>
+      </dl>
+      </div>
+    </li>
+    <li><a href="javascript:;">人才引进</a>
+      <div>
+      <dl class="sn5">
+        <dd><a href="/class/zhpxx">招聘信息</a></dd>
+        <dd><a href="/class/rczhchfg">政策法规</a></dd>
+        <dd><a href="/class/zxtzh">最新通知</a></dd>
+        <dd><a href="/class/bshzhn">办事指南</a></dd>
+      </dl>
+      </div>
+    </li>
+    <li><a href="/class/xwzx">新闻中心</a>
+      <div>
+      <dl class="sn6">
+        <dd><a href="/class/xyxw">学院新闻</a></dd>
+        <dd><a href="/class/tpxw">图片新闻</a></dd>
+        <dd><a href="/class/hzjl">合作交流</a></dd>
+        <dd><a href="/class/mtgz">媒体关注</a></dd>
+      </dl>
+      </div>
+    </li>
+    <li><a href="/class/xywh">校园文化</a>
+      <div>
+      <dl class="sn7">
+        <dd><a href="/class/tyqn">天院青年</a></dd>
+        <dd><a href="/class/xdwh">孝道文化</a></dd>
+        <dd><a href="/class/xrwhgch">夏日文化广场</a></dd>
+        <dd><a href="/class/yshzhy">艺术展演</a></dd>
+        <dd><a href="/class/tyjj">体育竞技</a></dd>
+      </dl>
+      </div>
+    </li>
+    <li><a href="javascript:;">公共服务</a>
+      <div>
+      <dl class="sn8">
+        <dd><a href="http://jw.bkty.top:89/jsxsd/sso.jsp" target="_blank">教务</a></dd>
+        <dd><a href="http://10.1.254.101/" target="_blank">图书馆</a></dd>
+        <dd><a href="http://www.tjoa.ustb/" target="_blank">校园OA</a></dd>
+        <dd><a href="/class/xxgk/">信息公开</a></dd>
+        <dd><a href="/class/lxwm/">联系我们</a></dd>
+      </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+<SCRIPT type=text/javascript> 
+	$(".nav ul li").hover(function(){
+		$(this).children("div").slideDown(600);
+		$(this).addClass("onnav");
+	}, function(){
+		$(this).children("div").slideUp(200);
+		$(this).removeClass("onnav");
+	});
+	$(document).ready(function()
+	{
+		$('<table width="100%" cellpadding="0" cellspacing="0"></table>').append($("#trpage")).appendTo("#listpage");
+	});
+</SCRIPT>
+<div class="banner">
+  <div id="bimg">
+    <script src=/js/JsFile/index_trpics.js></script>
+  </div>
+  <DIV id="bpage"></DIV>
+  <SCRIPT type=text/javascript> 
+    $(document).ready(function() {
+	  $("#bimg script").remove();
+      $('#bimg div').cycle({
+        fx: 'fade',
+        timeout: 4000,
+        pager: '#bpage'
+      });
+    });
+  </SCRIPT>
+</div>
+<div class="headnews">
+  <div class="wrap">
+    <div class="hnmain">
+      <div class="title">
+        <div>新闻中心</div>
+      </div>
+      <div class="lside">
+        <div class="newspic">
+          <div id="npimg"><script src=/js/JsFile/index_ncrpics.js></script></div>
+          <div class="npnav">
+            <div id="npprev">&lt;</div>
+            <div id="npnext">&gt;</div>
+          </div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $("#npimg script").remove();
+              $('#npimg div').cycle({
+                fx: 'fade',
+                timeout: 6000,
+                prev: '#npprev',
+				next: '#npnext',
+                pause:1
+              });
+            });
+          </script> 
+        </div>       
+      </div>
+      <div class="hnc">
+        <div class="nst">
+          <div class="hnt">学院新闻</div>
+          <div>系部动态</div>
+          <div>学术活动</div>
+        </div>
+        <div class="clear"></div>
+        <div class="hnlist">
+          <div class="mydiv">
+            <ul><li><a href= /News/202410/202410241900221.htm target=_blank>学院开展学习贯彻党的二十届三中全会精神专题报告会</a></li><li><a href= /News/202410/202410231018061.htm target=_blank>我院邀请英国外教Mark Buck教授做学术讲座</a></li><li><a href= /News/202410/202410211136351.htm target=_blank>学院成功举办烟气治理与数值模拟前沿探索交流会</a></li><li><a href= /News/202410/202410211042511.htm target=_blank>北京科技大学天津学院成功举办第九期《思想道德与法治》示范课</a></li><li><a href= /News/202410/202410181438351.htm target=_blank>学院成功举办2024年新入职教职工岗前培训启动暨2024-2025学年青年教师导</a></li><li><a href= /News/202410/202410181125171.htm target=_blank>院长书记带队赴石家庄学院考察交流</a></li></ul>
+            <p class="hnmore nsm"><a href="/class/xyxw">MORE+</a></p>
+          </div>
+          <div>
+            <ul><li><a href= /News/202410/202410221728291.htm target=_blank>艺术学院学生党支部开展“敬老慰老暖重阳”主题党日活动</a></li><li><a href= /News/202410/202410181059421.htm target=_blank>经济学院“贝壳经济大讲堂”系列讲座2024年第三讲圆满举行——带你了解中国区域经</a></li><li><a href= /News/202410/202410151744171.htm target=_blank>“环”聚一堂，“境”展芳华 ｜环境工程系新生见面会顺利展开</a></li><li><a href= /News/202409/202409261344031.htm target=_blank>外国语学院与水木三乡宝坻工作站签约合作设立教学实践实习基地</a></li><li><a href= /News/202409/202409241234171.htm target=_blank>走进企业，了解实践，产教融合，共促发展 ——管理学院2021级学生赴天津养乐多工</a></li><li><a href= /News/202409/202409231808311.htm target=_blank>管理学院2025届本科毕业论文开题答辩顺利举行</a></li></ul>
+            <p class="hnmore nsm"><a href="/class/xbdt">MORE+</a></p>
+          </div>
+          <div>
+            <ul><li><a href= /News/202410/202410231137221.htm target=_blank>关于举办“环境工程名师系列讲座（第十讲）”的通知</a></li><li><a href= /News/202405/202405231042431.htm target=_blank>关于举办“环境工程名师系列讲座（第九讲）”的通知</a></li><li><a href= /News/202312/202312071604331.htm target=_blank>图书馆联合信息工程学院举办“习近平总书记关于科技创新的重要论述”读书分享会</a></li><li><a href= /News/202008/202008191411441.htm target=_blank>关于举办《企业家进课堂》系列讲座的通知</a></li><li><a href= /News/202007/202007051316271.htm target=_blank>关于投资研究院举行线上讲座的通知</a></li><li><a href= /News/201911/201911280940021.htm target=_blank>环境工程名师系列讲座（八）</a></li></ul>
+            <p class="hnmore nsm"><a href="/class/xshhd">MORE+</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+<script>
+  var timeId;
+  $(document).ready(function() {
+      $(".nst div").each(function(index) {
+          $(this).mouseover(function() {
+              var liNode = $(this);
+              timeId = setTimeout(function() {
+                  $("div.mydiv").removeClass("mydiv");
+                  $("div.hnt").removeClass("hnt");
+                  $(".hnlist div").eq(index).addClass("mydiv");
+                  liNode.addClass("hnt");
+              }, 50);
+          }).mouseout(function() {
+              clearTimeout(timeId);
+          });
+      });
+  });
+</script>   
+    <div class="rside">
+      <div class="hnnotice">
+        <div class="hnnt" style="position:relative">通知公告
+          <a href="/class/tzgg/" target="_blank" class="cmore" style="right:10px">MORE+</a>
+        </div>
+        <div id="demo" style="height:320px; overflow:hidden">
+          <div class="hnnlist"><ul><li><a href= /News/202410/202410171255551.htm target=_blank>招标公告：无人机航测教学设备</a></li><li><a href= /News/202410/202410151157521.htm target=_blank>招标公告：中文图书招标项目</a></li><li><a href= /News/202409/202409281907551.htm target=_blank>招标公告：大数据财务分析实验云平台招标项目</a></li><li><a href= /News/202409/202409281905231.htm target=_blank>招标公告：管理会计理实一体化教学云平台招标项目</a></li><li><a href= /News/202409/202409281902171.htm target=_blank>招标公告：通信工程实验室教学设备</a></li><li><a href= /News/202409/202409281148471.htm target=_blank>招标公告：会计实习平台</a></li><li><a href= /News/202409/202409241557021.htm target=_blank>北京科技大学天津学院无人机系招聘启事</a></li><li><a href= /News/202409/202409201023161.htm target=_blank>招标公告：人工智能实验教学平台招标项目</a></li></ul></div>
+        </div>
+<script>
+jQuery("#demo").slide({mainCell:".hnnlist ul",autoPlay:true,effect:"topMarquee",vis:6,interTime:50});
+</script>    
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="lside">
+    <div class="title" style="margin:0 0 12px">
+      <div style="background:#fff">招生就业</div>
+    </div>
+    <div class="hnlist">    
+      <ul><li><a href= /News/202407/202407261510301.htm target=_blank>《学生自购、自带床上用品情况备案表》</a></li><li><a href= /News/202407/202407241621451.htm target=_blank>北京科技大学天津学院2024年录取结果查询</a></li><li><a href= http://tj.ustb.edu.cn//News/202307/202307231653111.htm target=_blank>2023级新生入学须知</a></li><li><a href= /News/202307/202307131227521.htm target=_blank>北京科技大学天津学院2024年录取查询办法公告</a></li><li><a href= http://tj.ustb.edu.cn/News/202306/202306051828501.htm target=_blank>北京科技大学天津学院2023年艺术类招生简章</a></li><li><a href= http://tj.ustb.edu.cn//News/202305/202305222142381.htm target=_blank>北京科技大学天津学院2023年普通本科招生章程</a></li></ul>    
+    </div>
+    <div class="hnmore"><a href="/class/zhshjy">MORE+</a></div>
+    <div class="btns">
+      <a href="http://tj.ustb.edu.cn//News/202307/202307131227521.htm"><img src="images/btn1.png" /></a>
+      <a href="/class/lnfsh/"><img src="images/btn4.png" /></a>
+      <a href="http://oldtjzs.ustb.edu.cn/consult/index_consult.asp"><img src="images/btn3.png" /></a> 
+      <div class="clear"></div>
+    </div>
+    <div class="ztt">专题报道
+      <a href="/class/ztbd" target="_blank" class="cmore" style="top:10px">MORE+</a>
+    </div>
+    <div class="ztimg"><script src=/js/JsFile/index_ztpic.js></script></div>
+    <div class="ztlist">
+      <!--<script src=/js/JsFile/index_ztlist.js></script>-->
+<ul><li><font>·</font><a href= /News/202408/202408301543011.htm target=_blank>深刻认识党的二十届三中全会的历史意义</a></li><li><font>·</font><a href= /News/202408/202408301541411.htm target=_blank>习近平就中央和国家机关学习贯彻党的二十届三中全会精神 推动机关党建高质量发展作出</a></li><li><font>·</font><a href= /News/202408/202408301539371.htm target=_blank>受权发布｜中国共产党第二十届中央委员会第三次全体会议公报</a></li></ul>
+    </div>
+  </div>
+  <div class="cmain">
+    <div class="ctitle">
+      教育教学
+      <a href="/class/bmyw/" target="_blank" class="cmore">MORE+</a>
+    </div>
+    <div class="cpicnews">
+      <script src=/js/JsFile/index_jyjxpic.js></script> 
+    </div>
+    <div class="cnlist margin">
+      <ul><li><a href= /News/202408/202408301446091.htm target=_blank>学院开展2024-2025学年第一学期新入职教师院级试讲</a></li><li><a href= http://tj.ustb.edu.cn/News/202405/202405091120491.htm target=_blank>喜报|我院师生在SCI一区Top期刊发表学术论文</a></li><li><a href= http://tj.ustb.edu.cn//News/202405/202405101754501.htm target=_blank>喜报！我院教师参加第四届全国教师教学创新大赛 天津赛区比赛再获新突破</a></li></ul> 
+    </div>
+    <div class="ctitle">
+      校园文化
+      <a href="/class/xywh" target="_blank" class="cmore">MORE+</a>
+    </div>
+    <div class="cpicnews">
+      <script src=/js/JsFile/index_xywhpic.js></script>  
+    </div>
+    <div class="cnlist margin">
+      <ul><li><a href= /News/202405/202405221133351.htm target=_blank>学院成功开展2024年下半年征兵宣传活动</a></li><li><a href= /News/202405/202405142005151.htm target=_blank>主打“潮文化” 助力“新文旅”—学院团委助力宝坻区潮白河第二届四季欢乐旅游节</a></li><li><a href= /News/202405/202405091041051.htm target=_blank>学生艺术团街舞社参加宝坻区第二届潮白河四季欢乐旅游节</a></li></ul> 
+    </div>
+  </div>
+  <div class="rside">
+    <div id="firstpane" class="menu_list">      
+      <p class="menu_head">机构设置</p>
+      <div style="display:none" class="menu_body mlink">
+        <div class="xnlj mCustomScrollbar" style="width:218px">
+          <ul>
+            <li><a href="/class/dzhbm/">党政部门</a></li>
+            <li><a href="/class/jxjb/">教学系部</a></li>
+            <li><a href="/class/jfjg/">教辅机构</a></li>
+          </ul>  
+        </div>
+      </div>
+      <p class="menu_head current">校内链接</p>
+      <div style="display:block" class="menu_body mlink">
+        <div class="xnlj mCustomScrollbar" style="width:218px">
+          <script src=/js/JsFile/index_xnlj.js></script> 
+        </div>
+      </div>
+      <p class="menu_head">友情链接</p>
+      <div style="display:none" class="menu_body mlink">
+        <div class="xnlj mCustomScrollbar">
+          <script src=/js/JsFile/index_yqlj.js></script>
+        </div>
+      </div>
+    </div>
+<script type=text/javascript>
+$(document).ready(function(){
+	$("#firstpane .menu_body:eq(1)").show();
+	$("#firstpane p.menu_head").click(function(){
+		$(this).addClass("current").next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+		$(this).siblings().removeClass("current");
+	});
+	$("#secondpane .menu_body:eq(1)").show();
+	$("#secondpane p.menu_head").mouseover(function(){
+		$(this).addClass("current").next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+		$(this).siblings().removeClass("current");
+	});
+	
+});
+</script>
+
+    <div class="margin"><a href="http://tj.ustb.edu.cn/Class/LDJD/index.htm"><img src="http://tj.ustb.edu.cn/uploadedfiles/image/LDJD1.jpg" width="250" height="90" /></a></div>
+<div class="margin"><a href="http://xxgk.bkty.top"><img src="images/xxgk_2.jpg" width="250" height="90" /></a></div>
+    <div class="margin"><a href="/class/xyh"><img src="images/xyh2.jpg" width="250" height="90" /></a></div>
+    <div class="margin">
+      <div id="zjdx">
+        <a href="/class/mtgz/"><img src="images/gg_mtgz.jpg" width="250" height="90" /></a>
+        <a href="http://www.022net.com/channel/bkdty10/"><img src="images/gg_yzxx.jpg" width="250" height="90" /></a>
+      </div>
+      <script type="text/javascript">
+            $(document).ready(function() {
+              $('#zjdx').cycle({
+                fx: 'fade',
+                timeout: 4000,
+                pause:1
+              });
+            });
+          </script> 
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="footer">
+  <div class="wrap">
+    <div class="flogo">
+      <div><img src="/images/flogo.jpg" width="253" height="41" /></div>
+      <div class="flogot fw">欢迎进入学院网站 <br /><span class="count">您是访问本网站的第<script type="text/javascript" src="/click.aspx"></script>位访客</span></div>
+    </div>
+    <div class="fhz fw">
+      <div class="ft">合作方专题</div>
+      北京科技大学<br />
+      广东珠江投资有限公司
+      </div>
+    <div class="fcon fw">
+      <div class="ft">联系我们</div>
+      地址：天津市宝坻区京津新城珠江北环东路1号<br />
+      招办联系电话：022－22410969 022－22410960<br />
+      院长信箱：<a href="mailto:ustbtjxy@ustb.edu.cn">ustbtjxy@ustb.edu.cn</a><br />
+董事长邮箱：<a href="mailto:dsz@gdpr.com">dsz@gdpr.com</a><br />
+邮编：301830 </div>
+    <div class="fqrcode">
+        
+        <div class="fw qrimg"><img name="" src="/images/wbqr.jpg" width="70" height="70" alt="" /><br />
+      新浪微博</div>
+        <div class="fw qrimg"><img name="" src="/images/wxqr.jpg" width="70" height="70" alt="" /><br />
+      微信公众号</div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="fline"></div>
+  <div class="fw fcopy">
+    
+    版权所有 &copy; 北京科技大学天津学院<br />京ICP备：13030111
+  </div>
+</div>
+<script>window.jQuery || document.write('<script src="jslib/jquery-1.11.1.min.js"><\/script>')</script>
+	<script src="jslib/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+	<script>
+		(function($){
+			$(window).load(function(){
+				
+				$("a[rel='load-content']").click(function(e){
+					e.preventDefault();
+					var url=$(this).attr("href");
+					$.get(url,function(data){
+						$(".xnlj .mCSB_container").append(data); //load new content inside .mCSB_container
+						//scroll-to appended content 
+						$(".xnlj").mCustomScrollbar("scrollTo","h2:last");
+					});
+				});
+				
+				$(".xnlj").delegate("a[href='top']","click",function(e){
+					e.preventDefault();
+					$(".xnlj").mCustomScrollbar("scrollTo",$(this).attr("href"));
+				});
+				
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>

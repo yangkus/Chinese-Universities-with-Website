@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+<head>
+    <title>石家庄医学高等专科学校</title>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="石家庄医专,石家庄医学高等专科学校">
+    <meta name="description" content="石家庄医学高等专科学校，是国家教育部批准、省教育厅主管的全日制普通高校，面向全国统一招生，国家承认学历。学校地处京昆高速正定西口，交通便利，风景如画，建有校内水系、亭台、园林，以及标准跑道、足球场、游泳馆、体育馆等高标准的运动、休闲场所。教学楼、实验楼、实训楼、人体生命科学馆图文中心等教学场所设施齐全，师资力量雄厚，是一所功能齐备、环境优美的现代化高等学校。">
+    <link href="/lib/element-ui/theme-chalk/index.css" rel="stylesheet" type="text/css">
+    <link href="/lib/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <link href="/lib/videojs/video-js.min.css" rel="stylesheet">
+    <link href="/css/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    
+    <style type="text/css">
+            
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+
+        <div class="fixed-box">
+
+            <!--主页面头部.开始-->
+
+            <div class="index-header">
+                <div class="wrapper">
+                    <div class="logo">
+                        <img src="/images/logo.png">
+                    </div>
+                
+                    <div class="search-box">
+                        
+                        <div class="input-box">
+                            <span class="icon iconfont icon-search"></span>
+                            <input v-model="common.param.keyword" type="text" class="input" placeholder="输入关健字" @keyup.enter="common.doSearch()">
+                        </div>
+                        <div class="btn" @click="common.doSearch()">搜索</div>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <site-navigation-menu :site="1">
+            </site-navigation-menu>
+            <!--主页面头部.结束-->
+
+        </div>
+
+        
+    <!--轮播图.开始-->
+    <div class="index-full-banner">
+        <div class="banner">
+            <div class="full-index-container swiper-container">
+                <div class="swiper-wrapper">
+                    <a v-for="(item,index) in bannerList" :key="index" class="swiper-slide" :href="item.linkUrl">
+                        <div class="img-box">
+                            <img :src="common.loadFile(item.filePath, '/default.jpg')">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <!--轮播图.结束-->
+
+    <div class="wrapper" style="margin-top:20px;">
+        <a href="/xxgcxjp/home/index" target="_blank">
+            <img src="/images/ztjy.jpg" style="max-width:100%;width:100%;" />    
+        </a>
+    </div>
+
+    <!--医专要闻.开始-->
+    <div class="news-focus wrapper">
+        <div class="banner">
+            <div class="news-index-container swiper-container">
+                <div class="swiper-wrapper">
+                    <a v-for="(item,index) in focusList" :key="index" class="swiper-slide" :href="'/default/article/yzdt/show/'+item.id">
+                        <div class="img-box">
+                            <img :src="common.loadFile(item.imgUrl, '/default.jpg')">
+                        </div>
+                        <div class="txt-box">
+                            <span>{{item.title}}</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="txt-list">
+            <div class="ftitle">
+                <span class="h5">医专要闻</span>
+                <a href="/default/article/yzdt" class="more link">
+                    <span class="icon iconfont icon-right-arrow"></span>
+                </a>
+            </div>
+            <a v-for="(item,index) in newsList" :key="index" class="list-box" :href="'/default/article/yzdt/show/'+item.id">
+                <div class="title"><span class="label"></span>{{item.title}}</div>
+                <div class="info">
+                    <span>{{item.addTime}}</span>
+                    <span class="line">{{item.source}}</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--医专要闻.结束-->
+
+    <!--栏目列表.开始-->
+    <div class="wrapper" v-if="channelList!=null && channelList.length>0">
+        <div class="content-box">
+            <div class="box-590" v-for="(channel, index) in channelList">
+                <div class="slider-box">
+                    <div class="ftitle">
+                    <span class="h5">{{channel.title}}</span>
+                        <div class="more link">
+                            <a :href="'/default/article/'+channel.name"><span class="icon iconfont icon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                    <div class="news-hot">
+                        <a v-for="(item,index) in channel.articles" :key="index" class="list-box" :href="'/default/article/'+channel.name+'/show/'+item.id">
+                            <div class="index">{{index<9?'0'+(index+1):(index+1)}}</div>
+                            <div v-if="index<2" class="img-box">
+                                <el-image :src="common.loadFile(item.imgUrl, '/default.jpg')"></el-image>
+                            </div>
+                            <div v-if="index<2" class="txt-box">
+                                <span class="title">{{item.title}}</span>
+                                <span class="text">{{item.zhaiyao}}</span>
+                                <div class="info">
+                                    <span class="icon iconfont icon-date">{{item.addTime}}</span>
+                                    <span class="icon iconfont icon-view">{{item.click}}</span>
+                                </div>
+                            </div>
+                            <div v-else class="txt-box">
+                                <span class="title">{{item.title}}</span>
+                            </div>
+                            <span v-if="index>=2" class="view iconfont icon-view">{{item.click}}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--栏目列表.结束-->
+
+    <div class="wrapper" v-if="zhuantiList!=null && zhuantiList.length>0">
+        <div class="ntitle">
+            <div class="h3">专题活动</div>
+            <a href="/default/article/ztwz/list" class="more">
+                <span>更多</span>
+                <span class="icon iconfont icon-right-arrow"></span>
+            </a>
+        </div>
+        <div class="zhuanti-list">
+            <a v-if="index<6" v-for="(item,index) in zhuantiList" :key="index" class="zhuanti-item" :href="item.linkUrl" target="_blank">
+                <img :src="'https://www.sjzmc.cn/prod-api'+item.imgUrl" />
+            </a>
+        </div>
+    </div>
+
+    <!--二级网站.开始-->
+    <div class="wrapper">
+        <div class="slider-box">
+            <div class="ftitle">
+                <span class="h5">二级网站</span>
+            </div>
+            <div class="site-list">
+                <a v-if="item.id>1" v-for="(item,index) in siteList" :key="index" class="site-link" :href="'/'+item.name+'/home/index'" target="_blank">
+                    {{item.title}}
+                </a>
+                <a class="site-link" href="http://www.sjzcjxy.com/index.asp" target="_blank">
+                    继续教育学院
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--二级网站.结束-->
+
+    <div class="wrapper" v-if="linkList!=null && linkList.length>0">
+        <div class="ntitle">
+            <div class="h3">友情链接</div>
+        </div>
+        <div class="links-box">
+            <div class="links">
+                <a v-for="item in linkList" :href="item.siteUrl" target="_blank">{{item.title}}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-links" v-if="showFloatCode">
+        <div class="title">
+            <span>扫描下方二维码</span>
+            <span style="float:right;margin-right:10px;display:inline-block;cursor:pointer;font-size:18px;" @click="showFloatCode=false">×</span>
+        </div>
+        <div class="links">
+            <img src="/images/qcode.png?v=6" />
+        </div>
+    </div>
+
+
+
+<!--页面底部.开始-->
+<div class="footer">
+    <div class="wrapper">
+        <ul class="delivery-box">
+            <li class="list-box">
+                <span class="icon iconfont icon-service"></span>
+                <span class="text">精博立业 高尚做人</span>
+            </li>
+            <li class="list-box">
+                <span class="icon iconfont icon-service"></span>
+                <span class="text">团结奋进 求实创新</span>
+            </li>
+            <li class="list-box">
+                <span class="icon iconfont icon-service"></span>
+                <span class="text">博学笃志 知行合一</span>
+            </li>
+            <li class="list-box">
+                <span class="icon iconfont icon-service"></span>
+                <span class="text">明智进取 笃学践行</span>
+            </li>
+        </ul>
+        <div class="link-box">
+            <div class="list-box">
+                <div class="title" style="display:none;">联系方式</div>
+                <div class="list">
+                    <span>联系电话：0311-82517317</span>
+                    <span>招生热线：0311-82517600 82517700 82517800 82517900</span>
+                    <span style="display:none;">电子邮箱：</span>
+                    <span>学校地址：河北省石家庄市灵寿县同新路1号</span>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="title" style="display:none;">联系电话：82517317</div>
+                <div class="list">
+                    <span>书记校长信箱：sjz_medicalcollege@sjzmc.cn</span>
+                    <span><a href="/zsxxw/home/index" target="_blank">招生信息网：https://www.sjzmc.cn/zsxxw</a></span>
+                </div>
+            </div>
+            <div class="list-box" style="display:flex;">
+                <div class="code">
+                    <img src="/images/ewm.jpg">
+                    <div class="text">
+                        <span class="icon iconfont icon-weixin"></span>
+                        学校官微
+                    </div>
+                </div>
+                <div class="code" style="display:none;">
+                    <img src="/images/ducha.png">
+                    <div class="text">
+                        <span class="icon iconfont icon-weixin"></span>
+                        教学反馈
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>版权所有 © 2009-2023 石家庄医学高等专科学校 All Rights Reserved.</span>
+            <a href="https://beian.miit.gov.cn">冀ICP备13002951号-1</a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13012602000486">
+                <img src="https://www.beian.gov.cn/img/new/gongan.png">
+                冀公网安备 13012602000486号
+            </a>
+        </div>
+    </div>
+</div>
+<!--页面底部.结束-->
+        <div id="unibotbox" class="unibot-links" style="display:none;">
+            <div class="title">
+                <span>招生咨询</span>
+                <span style="float:right;margin-right:10px;display:inline-block;cursor:pointer;font-size:18px;display:none;">×</span>
+            </div>
+            <div class="links">
+                <a href="http://unibot.sjzmc.cn/chat/unibot" target="unibot">
+                    <img src="/images/unibot.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="/lib/vue/vue.js"></script>
+    <script src="/lib/babel-polyfill/polyfill.min.js"></script>
+    <script src="/lib/element-ui/index.js"></script>
+    <script src="/lib/axios/axios.min.js"></script>
+    <script src="/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="/lib/videojs/video.min.js"></script>
+    <script src="/lib/cropper/index.js"></script>
+    <script src="/js/axios.config.js?v=1"></script>
+    <script src="/js/vue.common.js"></script>
+    <script src="/js/page.component.js"></script>
+    <script src="/js/upload.component.js"></script>
+    
+    <script>
+        //初始化VUE
+        var ve = new Vue({
+            el: '#app',
+            data: {
+                showFloatCode: true,
+                searchType: 0,
+                bannerList: [], //首页宽屏轮播图
+                focusList: [], //新闻幻灯
+                newsList: [], //新闻列表
+                channelList: [], //首页显示的频道列表
+                linkList: [],//友情链接
+                siteList: [],//二级网站列表
+                zhuantiList: [], //专题网站
+            },
+            methods: {
+                //初始化数据
+                async initData() {
+                    let _this = this;
+                    //首页宽屏轮播图
+                    AxiosAjax({
+                        url: `/client/advert/indexFullBanner?siteId=1`,
+                        success: function (res) {
+                            _this.bannerList = res.data.banner;
+                            _this.$nextTick(() => {
+                                _this.initSwiper('.full-index-container');
+                            });
+                        }
+                    });
+                    //新闻幻灯片
+                    AxiosAjax({
+                        url: `/client/article/view/site/5?labelId=2&siteId=1`,
+                        success: function (res) {
+                            _this.focusList = res.data;
+                            _this.$nextTick(() => {
+                                _this.initSwiper('.news-index-container');
+                            });
+                        }
+                    });
+                    //新闻列表
+                    AxiosAjax({
+                        url: `/client/article/view/channel/yzdt/5?siteId=1`,
+                        success: function (res) {
+                            _this.newsList = res.data;
+                        }
+                    });
+
+                    //首页显示的频道列表
+                    AxiosAjax({
+                        url: `/client/channel/showinhomepage/0?siteId=1`,
+                        success: function (res) {
+                            _this.channelList = res.data;
+
+                            for(var i = 0; i < _this.channelList.length; i++){
+
+                                _this.loadChannelArticles(_this.channelList[i]);
+                            }
+                        }
+                    });
+                    
+                    //友情链接
+                    AxiosAjax({
+                        url: `/client/link/view/10?siteId=1`,
+                        success: function (res) {
+                            _this.linkList = res.data;
+                        }
+                    });
+
+                    //专题列表
+                    AxiosAjax({
+                        url: `/client/article/ztwz/category?siteId=1`,
+                        success: function (res) {
+                            _this.zhuantiList = res.data;
+                        }
+                    });
+
+                    //二级网站
+                    AxiosAjax({
+                        url: `/client/site/view/0?status=0`,
+                        success: function (res) {
+                            _this.siteList = res.data;
+                        }
+                    });
+                },
+                //加载频道下的文章列表
+                loadChannelArticles(channel) {
+                    let _this = this;
+                    //新闻列表
+                    AxiosAjax({
+                        url: `/client/article/view/channel/` + channel.name + `/5?siteId=1`,
+                        success: function (res) {
+                            //_channel.articles = res.data;
+                            for (var i = 0; i < _this.channelList.length; i++) {
+                                if (_this.channelList[i].id == channel.id) {
+                                    _this.channelList[i].articles = res.data;
+                                    _this.$forceUpdate();
+                                }
+                            }
+                        }
+                    });
+                },
+                //初始化幻灯片
+                initSwiper(className) {
+                    new Swiper(className, {
+                        autoplay: true,//可选选项，自动滑动
+                        loop: true, //循环模式选项
+                        observer: true, //检测变化
+                        //如果需要分页器
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+                    });
+                },
+                //文章点赞
+                updateLike(item) {
+                    AxiosAjax({
+                        url: `/client/article/like/${item.id}`,
+                        method: "put",
+                        success: function (res) {
+                            item.likeCount = res.data;
+                        }
+                    });
+                },
+            },
+            created() {
+                this.initData();
+
+            },
+            mounted() {
+
+            },
+        })
+    </script>
+
+    <script type="text/javascript">
+
+        function watchUnibotScroll() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            console.log('scrolling...' + scrollTop);
+            //  当滚动超过 50px 时，实现吸顶效果(滚动条高度当前设置为：50px)
+            if (scrollTop > 800) {
+                document.getElementById("unibotbox").style = "position:fixed;top:400px;";
+            } else {
+                document.getElementById("unibotbox").style = "position:absolute;top:1010px;";
+            }
+        }
+
+    
+        //window.addEventListener('scroll', this.watchUnibotScroll);
+    </script>
+</body>
+</html>

@@ -1,0 +1,716 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重庆电子科技职业大学</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="重庆电子科技职业大学">
+<META Name="keywords" Content="重庆电子科技职业大学，重庆电子工程，重庆电子科技职业" />
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307478475d50575742000300034454 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1792739362)</script>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="w1600 clearfix">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="fl link_top">
+            <a href="zydh/xs.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36408)">学生</a>
+        <a href="zydh/js.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36409)">教师</a>
+        <a href="https://cqcetsie.at0086.cn/StuApplication/Login.aspx" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36412)">国际学生</a>
+        <a href="http://ossc.cqcet.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36410)">智慧校园</a>
+        <a href="https://xbbjb.cqcet.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 60339)">期刊投稿</a>
+</div>
+            <div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="重庆电子科技职业大学官网"><img src="img/logo.png" alt=""></a></div>
+            <div class="fr searchbox clearfix">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><a href="#/system/go.jsp?treeid=1057&apptype=treetemp&urltype=tree.TreeTempUrl">ENGLISH</a>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" placeholder="请输入关键字" class="text">
+    <input type="submit" name="" class="submit" value="" name="submit_button"  v-on:click="onSubmit()">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1792739362";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.150.9.87:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+        <nav><ul class="w1600 clearfix">
+                    <li class="hover">
+                    <a href="index.htm" title="网站首页">网站首页</a>
+                </li>
+                <li class="">
+                    <a href="xxgk.htm" title="学校概况">学校概况</a>
+                        <ol class="sub">
+                                <li><a href="xxgk/xxjj.htm" title="学校简介">学校简介</a></li>
+                                <li><a href="xxgk/xshg.htm" title="校史回顾">校史回顾</a></li>
+                                <li><a href="xxgk/xxzc.htm" title="学校章程">学校章程</a></li>
+                                <li><a href="xxgk/xrld.htm" title="现任领导">现任领导</a></li>
+                                <li><a href="xxgk/xxbs.htm" title="学校标识">学校标识</a></li>
+                                <li><a href="xxgk/bmtxl.htm" title="部门通讯录">部门通讯录</a></li>
+                        </ol>
+                </li>
+                <li class="">
+                    <a href="jgsz/jxdw.htm" title="机构设置">机构设置</a>
+                        <ol class="sub">
+                                <li><a href="jgsz/jxdw.htm" title="教学单位">教学单位</a></li>
+                                <li><a href="jgsz/dzfw.htm" title="党政服务">党政服务</a></li>
+                        </ol>
+                </li>
+                <li class="">
+                    <a href="https://oacd.cqcet.edu.cn/" title="招生就业">招生就业</a>
+                        <ol class="sub">
+                                <li><a href="https://oacd.cqcet.edu.cn/zhaosheng.htm" title="招生信息网">招生信息网</a></li>
+                                <li><a href="https://oacd.cqcet.edu.cn/jy.htm" title="就业信息网">就业信息网</a></li>
+                        </ol>
+                </li>
+                <li class="">
+                    <a href="https://oaa.cqcet.edu.cn/" title="人才培养">人才培养</a>
+                        <ol class="sub">
+                                <li><a href="rcpy/szdw.htm" title="师资队伍">师资队伍</a></li>
+                                <li><a href="rcpy/zyykc.htm" title="专业与课程">专业与课程</a></li>
+                                <li><a href="https://msgec.cqcet.edu.cn/" title="通识教育">通识教育</a></li>
+                                <li><a href="rcpy/hzpy.htm" title="合作培养">合作培养</a></li>
+                                <li><a href="https://tfec.cqcet.edu.cn/" title="继续教育">继续教育</a></li>
+                                <li><a href="rcpy/dshj.htm" title="大赛获奖">大赛获奖</a></li>
+                                <li><a href="rcpy/sxjd.htm" title="实训基地">实训基地</a></li>
+                        </ol>
+                </li>
+                <li class="">
+                    <a href="https://oradp.cqcet.edu.cn/" title="科学研究">科学研究</a>
+                        <ol class="sub">
+                                <li><a href="https://oradp.cqcet.edu.cn/" title="科研管理">科研管理</a></li>
+                                <li><a href="kxyj/kyptjtd.htm" title="科研平台及团队">科研平台及团队</a></li>
+                                <li><a href="kxyj/xskw.htm" title="学术刊物">学术刊物</a></li>
+                        </ol>
+                </li>
+                <li class="">
+                    <a href="https://onicd.cqcet.edu.cn/" title="合作发展">合作发展</a>
+                </li>
+                <li class="">
+                    <a href="https://lib.cqcet.edu.cn/" title="图书馆">图书馆</a>
+                </li>
+                <li class="">
+                    <a href="xywh.htm" title="校园文化">校园文化</a>
+                        <ol class="sub">
+                                <li><a href="xywh/xyfg.htm" title="校园风光">校园风光</a></li>
+                                <li><a href="xywh/xyhd.htm" title="校园活动">校园活动</a></li>
+                        </ol>
+                </li>
+                <li class="">
+                    <a href="xxgk1/xxgkml.htm" title="信息公开">信息公开</a>
+                        <ol class="sub">
+                                <li><a href="xxgk1/xxgkgz.htm" title="信息公开规章">信息公开规章</a></li>
+                                <li><a href="xxgk1/xxgkzn.htm" title="信息公开指南">信息公开指南</a></li>
+                                <li><a href="xxgk1/xxgkml.htm" title="信息公开目录">信息公开目录</a></li>
+                                <li><a href="xxgk1/zxfb.htm" title="最新发布">最新发布</a></li>
+                                <li><a href="xxgk1/ysqgk.htm" title="依申请公开">依申请公开</a></li>
+                                <li><a href="xxgk1/gkndbg.htm" title="公开年度报告">公开年度报告</a></li>
+                        </ol>
+                </li>
+</ul></nav>
+    </header>
+    <!-- 头部end -->
+    <!-- banner -->
+        <div class="banner">
+                <div>
+                <div>        
+                        <a href="javascript:;">
+                            <img src="img/2024gq.jpg" border="0">
+                        </a>
+                </div>
+            </div>            
+            <div>
+                <div>        
+                        <a href="javascript:;">
+                            <img src="img/cqpuet.jpg" border="0">
+                        </a>
+                </div>
+            </div>            
+            <div>
+                <div>        
+                        <a href="javascript:;">
+                            <img src="img/2024wlaq.jpg" border="0">
+                        </a>
+                </div>
+            </div>            
+</div>
+    <!-- 快速通道 -->
+        <div class="kstd">
+            <div class="w1400 clearfix"><ul>
+    <li><a href="https://ossc.cqcet.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36413)"><p>智慧校园</p></a></li>
+    <li><a href="https://zbh.cqcet.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36414)"><p>正版软件</p></a></li>
+    <li><a href="https://vpn.cqcet.edu.cn/portal/#!/login" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36415)"><p>VPN专网</p></a></li>
+    <li><a href="https://sec.cqcet.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36417)"><p>Webvpn</p></a></li>
+    <li><a href="https://zbb.cqcet.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36416)"><p>招采系统</p></a></li>
+</ul>
+</div>
+        </div>
+    
+    <!-- 重电新闻 -->
+    <div class="cdxw">
+        <div class="w1400">
+            <div class="tab">
+                <ul class="xwdtTab clearfix">
+                    <li class="xwdtNav_in">重电新闻<a href="index/xwdt.htm" class="more">更多新闻 >></a></li>
+                    <li>部门动态<a href="index/bmdt.htm" class="more">更多动态 >></a></li>
+                </ul>
+            </div>
+            <div class="xwdtBox">
+                <div class="cdxw_sub xwdtCon clearfix">
+                    <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="new_img fl">
+           <div>
+            <a href="info/1037/25216.htm" target="_blank" title="【理论宣讲】校党委常委、副校长黄爱明宣讲党的二十届三中全会精神">
+                <img src="/__local/F/09/6E/03714881DAAAF0CF145935B5D1F_BABA26E7_24C66.jpeg">
+                <p>【理论宣讲】校党委常委、副校长黄爱明...<font>2024-10-25</font></p>
+            </a>
+        </div>
+       <div>
+            <a href="info/1037/25166.htm" target="_blank" title="【综合新闻】学校开展2024年“重庆辟谣进校园”及“网络安全普法教育”主题活动">
+                <img src="/__local/8/82/93/E101534BF07E4416A556743EE09_1A2621AE_3F3B4.jpg">
+                <p>【综合新闻】学校开展2024年“重庆辟谣...<font>2024-10-23</font></p>
+            </a>
+        </div>
+       <div>
+            <a href="info/1037/25106.htm" target="_blank" title="【合作交流】重庆市电子学会职业教育发展专委会成立大会暨电子信息产业链研讨会在我校举行">
+                <img src="/__local/D/13/54/71900691BF0C9978CF59CCD0EF7_C91F1383_6FE62.png">
+                <p>【合作交流】重庆市电子学会职业教育发...<font>2024-10-21</font></p>
+            </a>
+        </div>
+       <div>
+            <a href="info/1037/24976.htm" target="_blank" title="【综合新闻】学校召开2024年第三次360°校长现场办公会">
+                <img src="/__local/7/00/9F/613D887B8E4F22DD202DFE7DCAC_4DC73CF0_1C9A7.png">
+                <p>【综合新闻】学校召开2024年第三次360°...<font>2024-10-17</font></p>
+            </a>
+        </div>
+       <div>
+            <a href="info/1037/24946.htm" target="_blank" title="【荣誉墙】我校入选全国高校“双带头人”教师党支部书记“强国行”专项行动">
+                <img src="/__local/2/3E/A8/CFA77D937C6550E7E96BF5A6432_93C4F12C_5599.png">
+                <p>【荣誉墙】我校入选全国高校“双带头人...<font>2024-10-15</font></p>
+            </a>
+        </div>
+</div>
+
+<script>_showDynClickBatch(['dynclicks_u6_25216','dynclicks_u6_25166','dynclicks_u6_25106','dynclicks_u6_24976','dynclicks_u6_24946'],[25216,25166,25106,24976,24946],"wbnews", 1792739362)</script>
+
+                    <div class="new_list fl"><ul class="clearfix">
+            <li>
+            <a class="clearfix" href="info/1037/25216.htm" target="_blank" title="【理论宣讲】校党委常委、副校长黄爱明宣讲党的二十届三中全会精神">
+                <p class="time fl"><span>25</span>2024-10</p>
+                <p class="txt fl">【理论宣讲】校党委常委、副校长黄爱明宣讲党的二十届三中全会精神</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1037/25246.htm" target="_blank" title="【合作交流】重庆市高职院校“五金·五讲”系列研讨展示活动在我校顺利举行">
+                <p class="time fl"><span>25</span>2024-10</p>
+                <p class="txt fl">【合作交流】重庆市高职院校“五金·五讲”系列研讨展示活动在我校顺利举行</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1037/25186.htm" target="_blank" title="【社会服务】学校积极推进“百门课程进社区”行动">
+                <p class="time fl"><span>24</span>2024-10</p>
+                <p class="txt fl">【社会服务】学校积极推进“百门课程进社区”行动</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1037/25166.htm" target="_blank" title="【综合新闻】学校开展2024年“重庆辟谣进校园”及“网络安全普法教育”主题活动">
+                <p class="time fl"><span>23</span>2024-10</p>
+                <p class="txt fl">【综合新闻】学校开展2024年“重庆辟谣进校园”及“网络安全普法教育”主题活动</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1037/25146.htm" target="_blank" title="【荣誉墙】我校轮滑运动代表队在2024全国大学生轮滑锦标赛喜获佳绩">
+                <p class="time fl"><span>22</span>2024-10</p>
+                <p class="txt fl">【荣誉墙】我校轮滑运动代表队在2024全国大学生轮滑锦标赛喜获佳绩</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1037/25106.htm" target="_blank" title="【合作交流】重庆市电子学会职业教育发展专委会成立大会暨电子信息产业链研讨会在我校举行">
+                <p class="time fl"><span>21</span>2024-10</p>
+                <p class="txt fl">【合作交流】重庆市电子学会职业教育发展专委会成立大会暨电子信息产业链研讨会在我校举行</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1037/25066.htm" target="_blank" title="【理论宣讲】党委书记张伟讲授党的二十届三中全会精神专题党课">
+                <p class="time fl"><span>18</span>2024-10</p>
+                <p class="txt fl">【理论宣讲】党委书记张伟讲授党的二十届三中全会精神专题党课</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1037/25046.htm" target="_blank" title="【课程思政】2024年全国职业教育电子与信息专业大类课程思政集体备课活动成功举行">
+                <p class="time fl"><span>17</span>2024-10</p>
+                <p class="txt fl">【课程思政】2024年全国职业教育电子与信息专业大类课程思政集体备课活动成功举行</p>
+            </a>
+        </li>                       
+</ul><script>_showDynClickBatch(['dynclicks_u7_25216','dynclicks_u7_25246','dynclicks_u7_25186','dynclicks_u7_25166','dynclicks_u7_25146','dynclicks_u7_25106','dynclicks_u7_25066','dynclicks_u7_25046'],[25216,25246,25186,25166,25146,25106,25066,25046],"wbnews", 1792739362)</script>
+</div>
+                    
+                </div>
+                <div class="cdxw_sub clearfix">
+                    <div class="new_img fl">
+           <div>
+            <a href="info/1040/25266.htm" target="_blank" title="我校通信工程学院教师获评“德技双馨之星”称号">
+                <img src="/__local/7/19/D0/6B701707C5BB56C5A606323A9F1_573A11D2_3EE5.jpg">
+                <p>我校通信工程学院教师获评“德技双馨之...<font>2024-10-27</font></p>
+            </a>
+        </div>
+       <div>
+            <a href="info/1040/25226.htm" target="_blank" title="我校职工乒乓球代表队参加重庆市教科文卫体系统职工乒乓球比赛">
+                <img src="/__local/E/EF/44/E3BC94959F769F997571B452FA8_9D69A1CA_63822.png">
+                <p>我校职工乒乓球代表队参加重庆市教科文...<font>2024-10-25</font></p>
+            </a>
+        </div>
+       <div>
+            <a href="info/1040/25236.htm" target="_blank" title="我校组织召开重庆市职业教育教学改革研究项目结题验收评审会">
+                <img src="/__local/C/4D/0A/5278C5A096666612395C7878E70_6FE0754D_19A10.png">
+                <p>我校组织召开重庆市职业教育教学改革研...<font>2024-10-25</font></p>
+            </a>
+        </div>
+       <div>
+            <a href="info/1040/25116.htm" target="_blank" title="电子与物联网学院接待广东水利电力职业技术学院考察交流">
+                <img src="/__local/F/B2/30/B04338737B74409E23F5F5D2163_59CBF705_9BC0A.jpg">
+                <p>电子与物联网学院接待广东水利电力职业...<font>2024-10-21</font></p>
+            </a>
+        </div>
+       <div>
+            <a href="info/1040/25096.htm" target="_blank" title="我校开展第九届“健康基层行”第二期健康讲座活动">
+                <img src="/__local/0/B2/73/4A8F2B19FEC49836CAE46692A3E_81CB462C_40560.png">
+                <p>我校开展第九届“健康基层行”第二期健...<font>2024-10-21</font></p>
+            </a>
+        </div>
+</div>
+<script>_showDynClickBatch(['dynclicks_u8_25266','dynclicks_u8_25226','dynclicks_u8_25236','dynclicks_u8_25116','dynclicks_u8_25096'],[25266,25226,25236,25116,25096],"wbnews", 1792739362)</script>
+
+                   <div class="new_list fl"><ul class="clearfix">
+            <li>
+            <a class="clearfix" href="info/1040/25266.htm" target="_blank" title="我校通信工程学院教师获评“德技双馨之星”称号">
+                <p class="time fl"><span>27</span>2024-10</p>
+                <p class="txt fl">我校通信工程学院教师获评“德技双馨之星”称号</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1040/25226.htm" target="_blank" title="我校职工乒乓球代表队参加重庆市教科文卫体系统职工乒乓球比赛">
+                <p class="time fl"><span>25</span>2024-10</p>
+                <p class="txt fl">我校职工乒乓球代表队参加重庆市教科文卫体系统职工乒乓球比赛</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1040/25236.htm" target="_blank" title="我校组织召开重庆市职业教育教学改革研究项目结题验收评审会">
+                <p class="time fl"><span>25</span>2024-10</p>
+                <p class="txt fl">我校组织召开重庆市职业教育教学改革研究项目结题验收评审会</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1040/25206.htm" target="_blank" title="沙坪坝区委组织部、区人社局领导来校调研交流">
+                <p class="time fl"><span>24</span>2024-10</p>
+                <p class="txt fl">沙坪坝区委组织部、区人社局领导来校调研交流</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1040/25196.htm" target="_blank" title="学校开展食品安全培训 筑牢校园食品安全防线">
+                <p class="time fl"><span>24</span>2024-10</p>
+                <p class="txt fl">学校开展食品安全培训 筑牢校园食品安全防线</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1040/25136.htm" target="_blank" title="智慧健康学院党总支开展学习贯彻党的二十届三中全会精神专题宣讲">
+                <p class="time fl"><span>22</span>2024-10</p>
+                <p class="txt fl">智慧健康学院党总支开展学习贯彻党的二十届三中全会精神专题宣讲</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1040/25116.htm" target="_blank" title="电子与物联网学院接待广东水利电力职业技术学院考察交流">
+                <p class="time fl"><span>21</span>2024-10</p>
+                <p class="txt fl">电子与物联网学院接待广东水利电力职业技术学院考察交流</p>
+            </a>
+        </li>                       
+        <li>
+            <a class="clearfix" href="info/1040/25096.htm" target="_blank" title="我校开展第九届“健康基层行”第二期健康讲座活动">
+                <p class="time fl"><span>21</span>2024-10</p>
+                <p class="txt fl">我校开展第九届“健康基层行”第二期健康讲座活动</p>
+            </a>
+        </li>                       
+</ul><script>_showDynClickBatch(['dynclicks_u9_25266','dynclicks_u9_25226','dynclicks_u9_25236','dynclicks_u9_25206','dynclicks_u9_25196','dynclicks_u9_25136','dynclicks_u9_25116','dynclicks_u9_25096'],[25266,25226,25236,25206,25196,25136,25116,25096],"wbnews", 1792739362)</script>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 通知公告 -->
+    <div class="notice">
+        <div class="w1400 clearfix"><div class="notice_tit fl">
+    <h2>
+        <img src="img/tzgg.png" alt="">
+        <a href="index/ggtz.htm">查看更多 >></a>
+    </h2>
+</div>
+<div class="notice_con fl">
+        <div>
+            <a href="info/1038/24116.htm" target="_blank" title="第40个教师节慰问信">
+                <p class="title">◆  第40个教师节慰问信</p>
+                <p class="txt">桃红流丹，秋菊逸彩。在这写满收获的季节，我们满怀喜悦迎来了第四十个教师节，值此盛时佳节。我们谨代表学校党委和行政，向努力耕耘在教学、科研、管理和服务岗位的全体教职员工，致以诚挚的问候和崇高的敬意！向关心、支持学校建设和发展的离退休老同志致以诚挚的祝福！</p>
+                <p class="time">2024-09-10</p>
+            </a>
+        </div>
+        <div>
+            <a href="info/1038/22756.htm" target="_blank" title="关于我校推荐参加第十四届“挑战杯”中国大学生创业计划竞赛国赛作品的名单公示">
+                <p class="title">◆  关于我校推荐参加第十四届“挑战杯”中国大学生创业计划竞赛国赛作品...</p>
+                <p class="txt">根据团中央、团市委关于开展第十四届“挑战杯”中国大学生创业计划竞赛作品申报工作的有关通知及安排，结合我校在第十四届“挑战杯”竞赛重庆市选拔赛获奖情况，团重庆市委拟推报我校3件市赛金奖作品参加国赛，现在我校范围内予以公示。序号项目类别项目名称项目成员指导教师1科技创新与未来产业智心相伴何凌枫、周盛、陈琳、马杰、胡镇南、李佳彤、陈冠东、张晓慧、徐浩雯、舒文强黄志平、向红梅、胡敏2乡村振兴和农业农村现代化热力烘透章孝奇、...</p>
+                <p class="time">2024-07-15</p>
+            </a>
+        </div>
+        <div>
+            <a href="info/1038/21146.htm" target="_blank" title="关于重庆电子科技职业大学  校名、标识系统发布及使用说明的通知" style="color:#fc051a;">
+                <p class="title">◆  关于重庆电子科技职业大学  校名、标识系统发布及使用说明的通知</p>
+                <p class="txt">校属各单位：为确保校名、校徽等学校文化标识的权威性、统一性和识别性，经学校校长办公会审议、党委会会议审定，现将重庆电子科技职业大学校名、标识系统予以发布。一、学校名称学校全称：重庆电子科技职业大学两字缩写：重电四字缩写：重电科大六字缩写：重庆电子科大英文名称： Chongqing Polytechnic University of Electronic Technology英文缩写：CQUET二、学校校徽校徽是学校视觉形象识别系统的核心，也是学校办学理念、办学特色和学校文化的重要组成部分，...</p>
+                <p class="time">2024-06-07</p>
+            </a>
+        </div>
+        <div>
+            <a href="info/1038/10296.htm" target="_blank" title="2023年教师节慰问信">
+                <p class="title">◆  2023年教师节慰问信</p>
+                <p class="txt">尊敬的全校教职员工、离退休老同志：金秋九月，硕果盈枝。在繁忙而有序的开学工作中，我们满怀喜悦迎来了第39个教师节。值此佳节之际，我们谨代表学校党委、行政，向耕耘奉献在教学、科研、管理和服务岗位的全体教职员工，致以诚挚的问候和崇高的敬意！向为学校发展做出贡献的离退休老同志致以亲切的慰问和美好的祝福！风雨砥砺，脚步铿锵。过去的一年，学校坚持以习近平新时代中国特色社会主义思想为指导，深入贯彻落实党的二十大和全国职业教育大会精神，...</p>
+                <p class="time">2023-09-08</p>
+            </a>
+        </div>
+        <div>
+            <a href="info/1038/9755.htm" target="_blank" title="关于我校推荐参加第十八届“挑战杯”全国大学生课外学术  科技作品竞赛国赛作品的名单公示">
+                <p class="title">◆  关于我校推荐参加第十八届“挑战杯”全国大学生课外学术  科技作品竞...</p>
+                <p class="txt">根据团中央、团市委关于开展第十八届“挑战杯”全国大学生课外学术作品竞赛作品申报工作的有关通知及安排，结合我校在第十八届“挑战杯”竞赛重庆市选拔赛获奖情况，拟推报2件市赛特等奖作品参加国赛，现予以公示。项目名称项目类别团队成员指导老师“凭芯净气”——国内新款多场所空气消杀净化装置科技发明制作杨顺波、文茂、赵西、陈奕博、马超钟佐彬、郑栋之、刘兰芳基于多信息特征的电力变压器绕组变形智能在线监测设备科技...</p>
+                <p class="time">2023-06-10</p>
+            </a>
+        </div>
+        <div>
+            <a href="info/1038/9217.htm" target="_blank" title="2023~2024学年第一学期校历">
+                <p class="title">◆  2023~2024学年第一学期校历</p>
+                <p class="txt">​</p>
+                <p class="time">2023-04-10</p>
+            </a>
+        </div>
+        <div>
+            <a href="info/1038/8971.htm" target="_blank" title="中华人民共和国第二届职业技能大赛重庆市选拔赛光电技术项目报名通知">
+                <p class="title">◆  中华人民共和国第二届职业技能大赛重庆市选拔赛光电技术项目报名通知</p>
+                <p class="txt">各院校、企业、行业组织：按照《重庆市人力资源和社会保障局关于组织开展中华人民共和国第二届职业技能大赛重庆市选拔集训工作的通知》（渝人社〔2023〕51号）安排，决定举办世赛选拔项目光电技术的重庆市选拔赛，现将有关事项通知如下：一、竞赛时间和地点时间：2023年3月27日至28日地点：世赛光电技术项目重庆市集训基地（重庆电子工程职业学院12-606）二、报名工作（一）参赛人员1.选手：凡2002年1月1日以后出生的中国大陆公...</p>
+                <p class="time">2023-03-10</p>
+            </a>
+        </div>
+        <div>
+            <a href="info/1038/8810.htm" target="_blank" title="关于学生公寓全面启用集中供热系统的通知">
+                <p class="title">◆  关于学生公寓全面启用集中供热系统的通知</p>
+                <p class="txt">关于学生公寓全面启用集中供热系统的通知全体同学：为保证学生公寓热水使用的安全、节能、环保、卫生,积极响应国家节约型和绿色学校建设，南北校区学生公寓热水集中供热系统已建设完成，即日起将全面启动。学生公寓原燃气热水器将全部停止使用，天然气费用余额将安排登记确认后做全额退费或转入新的集中供热系统处理。新的热水供热系统使用如有问题请反应到各楼栋宿管老师处或拨打系统报修服务电话。后勤保障处​2023年2月16</p>
+                <p class="time">2023-02-16</p>
+            </a>
+        </div>
+        <div>
+            <a href="info/1038/8803.htm" target="_blank" title="重庆电子工程职业学院学生2023年春季开学返校通知">
+                <p class="title">◆  重庆电子工程职业学院学生2023年春季开学返校通知</p>
+                <p class="txt">​亲爱的同学们： 根据国家卫健委《新型冠状病毒感染疫情防控操作指南》，以及重庆市教委有关要求，为进一步做好新型冠状病毒感染疫情防控工作，最大限度地保障我校师生的身体健康和生命安全，经学校研究现将报到相关要求通知如下：一、报到时间学生报到时间为：2023年2月18、19日，20日正式行课。二、开学前工作（一）健康管理开学前7天，需居家每日开展测量体温和新型冠状病毒感染相关临床症状观察等健康自测，出现发热、干咳...</p>
+                <p class="time">2023-02-08</p>
+            </a>
+        </div>
+</div><script>_showDynClickBatch(['dynclicks_u10_24116','dynclicks_u10_22756','dynclicks_u10_21146','dynclicks_u10_10296','dynclicks_u10_9755','dynclicks_u10_9217','dynclicks_u10_8971','dynclicks_u10_8810','dynclicks_u10_8803'],[24116,22756,21146,10296,9755,9217,8971,8810,8803],"wbnews", 1792739362)</script>
+</div>
+    </div>
+    <div style="background:url(img/bg2.png);">
+        <!-- 活动预告 -->
+        <div class="hdyg">
+            <div class="w1400"><div class="tit">
+    <h2 class="clearfix">
+        <p>活动预告<font>Activity forecast</font></p>
+        <a href="index/hdyg.htm" class="fr">更多新闻 &gt;&gt;</a>
+    </h2>
+</div>
+<div class="hdyg_sub">
+    <ul class="clearfix">               
+            <li>
+                <a href="info/1041/24766.htm" target="_blank" title="【讲座预告】AI在工程领域的发展与应用">
+                    <p class="title">【讲座预告】AI在工程领域的发展与应用</p>
+                    <p class="xx clearfix">
+                        <span class="hdrq">2024年10月11日（周五）  下午14：00</span>
+                        <span class="xy">建筑与材料学院</span><span class="js">授课教师：廖小烽  </span>
+                    </p>
+                </a>
+            </li>             
+            <li>
+                <a href="info/1041/21276.htm" target="_blank" title="【讲座预告】数字经济情境下的管理专题研究暨项目申报及论文发表经验分享">
+                    <p class="title">【讲座预告】数字经济情境下的管理专题...</p>
+                    <p class="xx clearfix">
+                        <span class="hdrq">2024年6月13日  周四下午14:00</span>
+                        <span class="xy">财经管理学院</span><span class="js">授课教师：黄俊</span>
+                    </p>
+                </a>
+            </li>             
+            <li>
+                <a href="info/1041/20066.htm" target="_blank" title="【讲座预告】辅导员素质能力提升">
+                    <p class="title">【讲座预告】辅导员素质能力提升</p>
+                    <p class="xx clearfix">
+                        <span class="hdrq">2024年5月20日  周一上午9:00</span>
+                        <span class="xy">党委学生工作部</span><span class="js">授课教师：简敏</span>
+                    </p>
+                </a>
+            </li>             
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u11_24766','dynclicks_u11_21276','dynclicks_u11_20066'],[24766,21276,20066],"wbnews", 1792739362)</script>
+</div>
+        </div>
+        <!-- 媒体重电 部门动态 -->
+        <div class="mt_dt">
+            <div class="md_sub w1400">
+                <div class="tab">
+                    <ul class="mdTab clearfix">
+                        <li class="mdNav_in">媒体重电<font>Chongdian media</font></li>
+                    </ul>
+                </div>
+                <div class="mdBox">
+                    <div class="mtcd mdCon clearfix">
+                             <div class="fl">
+        <a href="https://share.app3.jyb.cn/news_d/4a4714edd668daf771b4934dbfe7e923?from=UC92azc3djZYbnBlb2NaNkRvdVR4YnA0cVFlbm1nVGhwWVIrZ1dmNUo0SEVzVHJqN0Y0WmMyVk41Nmw4SUU5cw==" target="_blank" title="中国教育报：重庆电子科技职业大学正式获批设立" style="font-weight:bold;color:#f70723;"><img src="/__local/5/89/C8/D4788A94CF244C3AC8EDD3ACAB3_0133643D_98C8.png" alt=""></a>
+    </div>
+<ul class="fl">
+            <li>
+                <a href="https://share.app3.jyb.cn/news_d/4a4714edd668daf771b4934dbfe7e923?from=UC92azc3djZYbnBlb2NaNkRvdVR4YnA0cVFlbm1nVGhwWVIrZ1dmNUo0SEVzVHJqN0Y0WmMyVk41Nmw4SUU5cw==" target="_blank" title="中国教育报：重庆电子科技职业大学正式获批设立" style="font-weight:bold;color:#f70723;">
+                    <h2>◆  中国教育报：重庆电子科技职业大学正式获批设立</h2>
+                    <p></p>
+                </a>
+            </li>
+            <li><a href="http://m.cetv.cn/p/516492.html" target="_blank" title="中国教育电视台:深挖高等教育内涵式发展 促进高校毕业生高质量充分就业"><span class="fr">2024-07-04</span>中国教育电视台:深挖高等教育内涵式发展 促进高校毕业生高质量充分就业</a></li>
+            <li><a href="https://app.xinhuanet.com/news/article.html?articleId=0aee379c873ad38d37434d5b67481170&timestamp=90220" target="_blank" title="新华网客户端：第二届“一带一路”国际技能大赛|三国参赛队伍走进重庆电子科技职业大学交流"><span class="fr">2024-06-28</span>新华网客户端：第二届“一带一路”国际技能大赛|三国参赛队伍走进重庆电子科技...</a></li>
+            <li><a href="https://gongyi.cctv.com/2024/06/25/VIDEQNsWconIVWdYe1Mh8IcP240625.shtml" target="_blank" title="央视网:精彩回看：第二届“一带一路”国际技能大赛——智创新"><span class="fr">2024-06-26</span>央视网:精彩回看：第二届“一带一路”国际技能大赛——智创新</a></li>
+            <li><a href="http://m.jyb.cn/rmtzcg/xwy/wzxw/202406/t20240621_2111212897_wap.html" target="_blank" title="中国教育新闻网：全国职业院校“网信安全”人才培养研讨会在渝举行"><span class="fr">2024-06-22</span>中国教育新闻网：全国职业院校“网信安全”人才培养研讨会在渝举行</a></li>
+            <li><a href="http://m.jyb.cn/rmtzcg/xwy/tpxw/202406/t20240621_2111213064_wap.html" target="_blank" title="中国教育新闻网：智能网联车路云一体化校园"><span class="fr">2024-06-21</span>中国教育新闻网：智能网联车路云一体化校园</a></li>
+            <li><a href="http://paper.people.com.cn/rmrbhwb/html/2024-06/07/content_26062334.htm" target="_blank" title="人民日报海外版:2024年全民数字素养与技能提升月启动—— 强化教育培训 共享数字红利"><span class="fr">2024-06-10</span>人民日报海外版:2024年全民数字素养与技能提升月启动—— 强化教育培训 共享数...</a></li>
+</ul>
+<a href="index/mtzd.htm" class="more">更多动态 >></a><script>_showDynClickBatch(['dynclicks_u12_21186','dynclicks_u12_22676','dynclicks_u12_22656','dynclicks_u12_22686','dynclicks_u12_21666','dynclicks_u12_22636','dynclicks_u12_22666'],[21186,22676,22656,22686,21666,22636,22666],"wbnews", 1792739362)</script>
+
+                    </div>
+                </div> 
+            </div>   
+        </div>
+    </div>
+    <!-- 校园风光 -->
+    <div class="xyfg">
+        <div class="w1400 clearfix"><div class="tit">
+    <h2 class="clearfix">
+        <p>校园风光<font>Campus style</font></p>
+    </h2>
+</div>
+<div class="xyfg_sub">
+    <ul>     
+                    <li>
+                <a href="info/1051/7970.htm">
+                    <img src="/__local/D/FB/26/90A960CC3513F1A7B2618F2C80A_F34FFFCB_134DB.jpg" alt="">
+                    <p>◆  实训大楼</p>
+                </a>
+            </li>              
+            <li>
+                <a href="info/1051/7968.htm">
+                    <img src="/__local/1/6B/0D/E27ED0EBB15CBA7F0780438479C_28720DBD_1B5AB.jpg" alt="">
+                    <p>◆  教学楼</p>
+                </a>
+            </li>              
+            <li>
+                <a href="info/1051/7967.htm">
+                    <img src="/__local/F/35/BE/2757A5BE8EEDA2F313B93D62AFF_877EBBC0_D90D.jpg" alt="">
+                    <p>◆  桂苑广场</p>
+                </a>
+            </li>              
+            <li>
+                <a href="info/1051/7966.htm">
+                    <img src="/__local/4/31/0E/5ED93D360EC61E0D090A96B3FB6_E2A5BDC0_14C41.jpg" alt="">
+                    <p>◆  学子广场</p>
+                </a>
+            </li>              
+            <li>
+                <a href="info/1051/7964.htm">
+                    <img src="/__local/4/30/43/04334C02A649CBD5FEA5DACC26B_621B1CF1_19457.jpg" alt="">
+                    <p>◆  实训大楼</p>
+                </a>
+            </li>              
+            <li>
+                <a href="info/1051/7963.htm">
+                    <img src="/__local/8/B0/3F/256052077A7657B59300590C5F1_A3597F2F_1DDD0.jpg" alt="">
+                    <p>◆  弈辉运动中心</p>
+                </a>
+            </li>              
+            <li>
+                <a href="info/1051/7015.htm">
+                    <img src="/__local/D/D6/E4/2FF77CB6E445B2446A51DDD0C61_1A8865B8_4E0CE.jpg" alt="">
+                    <p>◆  校园雕塑—“魔方”</p>
+                </a>
+            </li>              
+            <li>
+                <a href="info/1051/7014.htm">
+                    <img src="/__local/3/F5/51/48F95F22A3ECF58E9AA43673029_65F92B1F_203BC.jpg" alt="">
+                    <p>◆  蓝天绿树网球场</p>
+                </a>
+            </li>              
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u13_7970','dynclicks_u13_7968','dynclicks_u13_7967','dynclicks_u13_7966','dynclicks_u13_7964','dynclicks_u13_7963','dynclicks_u13_7015','dynclicks_u13_7014'],[7970,7968,7967,7966,7964,7963,7015,7014],"wbnews", 1792739362)</script>
+</div>
+    </div>
+    <div style="background:url(img/bg3.png);">
+        <div class="zt">
+            <div class="w1400 clearfix">    <div class="tit">
+    <h2 class="clearfix">
+        <p>专题栏目<font>Special Column</font></p>
+    </h2>
+</div>
+<div class="zt_sub">
+    <ul>     
+                        <li>
+                    <a href="https://zhuanti.cqcet.edu.cn/yfzxzt.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1792739362, 53447)" target="_blank">
+                        <img src="img/2024yfzx.jpg" alt="">
+                    </a>
+                </li> 
+                <li>
+                    <a href="https://www.xuexi.cn/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1792739362, 32165)" target="_blank">
+                        <img src="images/zt2.png" alt="">
+                    </a>
+                </li> 
+                <li>
+                    <a href="http://jhsjk.people.cn/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1792739362, 32164)" target="_blank">
+                        <img src="images/zt1.png" alt="">
+                    </a>
+                </li> 
+                <li>
+                    <a href="https://zhuanti.cqcet.edu.cn/ztjy2023.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1792739362, 36399)" target="_blank">
+                        <img src="images/xjpztjy.jpg" alt="">
+                    </a>
+                </li> 
+    </ul>
+</div></div>
+        </div>
+        
+        <!-- 友情链接 -->
+        <div class="link">
+            <div class="w1400">
+                <p>快速链接：
+    <a href="info/1048/6976.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36418)">书记信箱</a>   
+    <a href="info/1048/6975.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36531)">校长信箱</a>   
+    <a href="xxgk1/xxgkml.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36532)">信息公开</a>   
+    <a href="https://onicd.cqcet.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36533)">合作发展</a>   
+    <a href="https://ohr.cqcet.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36534)">人事招聘</a>   
+    <a href="https://tuwen.cqcet.edu.cn/wlaq.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36535)">网络安全</a>   
+    <a href="https://zbb.cqcet.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36537)">招标公告</a>   
+    <a href="xxgk/xxjj.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36538)">重电印象</a>   
+    <a href="http://cqcet.fy.chaoxing.com/portal/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36540)">在线学习</a>   
+    <a href="http://cqcet.kcszedu.com/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36544)">课程思政</a>   
+    <a href="https://sg.cqcet.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36545)">双高建设专题网</a>   
+    <a href="https://vr.cqcet.edu.cn/?scene_id=61118093" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36546)">重电校园VR</a>   
+    <a href="https://zbh.cqcet.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36548)">正版化软件</a>   
+    <a href="https://cqdzwyh.cqcet.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36568)">重庆电子信息行指委</a>   
+    <a href="http://cqzj.kcsz.ulearning.cn/#/index" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1792739362, 36569)">重庆职教思政课程教指委</a>   
+</p>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer>
+        <div class="w1400 clearfix"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p class="fr"><a href="javascript:;"><img src="/__local/F/23/1D/A8D0CFA6B8D335847F519932552_FA3A70D6_2E7C.png?e=.png" vsbhref="vurl" vurl="/_vsl/F231DA8D0CFA6B8D335847F519932552/FA3A70D6/2E7C?e=.png" vheight="" vwidth="" orisrc="/__local/F/23/1D/A8D0CFA6B8D335847F519932552_FA3A70D6_2E7C.png" class="img_vsb_content"></a> <a href="javascript:;"><img src="/__local/8/84/14/DF2F60D01C447AB46D15B824153_67DBE155_123F.png?e=.png" vsbhref="vurl" vurl="/_vsl/88414DF2F60D01C447AB46D15B824153/67DBE155/123F?e=.png" vheight="" vwidth="" orisrc="/__local/8/84/14/DF2F60D01C447AB46D15B824153_67DBE155_123F.png" class="img_vsb_content"></a><a href="http://www.beian.gov.cn/portal/registerSystemInfo"><img src="/__local/C/45/AE/06E59BC5042748FC4220BDCBF3A_44321D99_190F.png?e=.png" vsbhref="vurl" vurl="/_vsl/C45AE06E59BC5042748FC4220BDCBF3A/44321D99/190F?e=.png" vheight="" vwidth="" orisrc="/__local/C/45/AE/06E59BC5042748FC4220BDCBF3A_44321D99_190F.png" class="img_vsb_content"></a></p>
+<p class="fr clearfix"><span>地址：重庆市沙坪坝区大学城东路76号</span> <span>邮编：401331</span> <span>招生咨询: 023-65928125/27/28/30/31/32/33</span>&nbsp; <span>校办电话：023-65926593 </span> <span>传真：023-65927000</span></p>
+<p class="fl"><img src="img/logo.png" alt="" vsbhref="vurl" vurl="/img/logo.png" vheight="" vwidth="" orisrc="img/logo.png" class="img_vsb_content"></p>
+<p><a href="https://xyt.xcc.cn/getpcInfo?sn=1523953371021520896&language=CN&certType=8&url=*.cqcet.edu.cn" target="_blank" style="position: relative;"></a></p>
+<div style="left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;"></div>
+<p><a href="https://xyt.xcc.cn/getpcInfo?sn=1523953371021520896&language=CN&certType=8&url=*.cqcet.edu.cn" target="_blank" style="position: relative;"><embed width="103" height="38" pluginspage="//www.adobe.com/svg/viewer/install/" src="https://program.xinchacha.com/web/1523953371021520896=*.cqcet.edu.cn.svg" type="image/svg+xml"></a></p>
+<p><br></p>
+<p><br></p></div>
+        <p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权：重庆电子科技职业大学｜ <a href="https://beian.miit.gov.cn/">渝ICP备20003499号-1</a> <a href="https://beian.miit.gov.cn/">公安备案号：50010602500133</a></p></p>
+    </footer>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

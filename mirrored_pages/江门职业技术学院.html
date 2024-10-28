@@ -1,0 +1,1388 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江门职业技术学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="江门职业技术学院">
+<META Name="keywords" Content="江门职业技术学院" />
+
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/animate.min.css">
+   
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78475c5057574200030003415d -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1968877004)</script>
+</head>
+
+<body>
+    <div class="search-dialog-box">
+        <div class="search-bg"></div>
+        <div class="search-dialog">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        <div class="search-inner">
+                <div class="wrap-inner"><div class="search">
+            <input type="text" placeholder="请输入关键词搜索内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+           <span> <input type="image" src="images/search.png" value="" v-on:click="onSubmit()"/></span></div>
+                </div>
+            </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1968877004";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        <a href="javascript:;" class="pub-close"><i></i></a>
+    </div>
+    <!-- pc端头部 -->
+    <div class="main-top">
+        <div class="header">
+            <div class="head-top wp"><a href="javascript:;" class="sousuo"><img src="images/search.png" alt="">搜索</a><span>|</span><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+
+   <a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1968877004, 93749)">学生</a>
+
+              <span>|</span>
+   <a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1968877004, 93750)">教职工</a>
+
+              <span>|</span>
+   <a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1968877004, 93751)">访客</a>
+
+              <span>|</span>
+   <a href="http://10.4.2.7/viscms/jmpt/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1968877004, 93739)">旧版入口</a>
+</div>
+            <div class="head wp">
+                <div class="head-l">
+                    <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="江门职业技术学院"><img src="images/ft-logo.png" alt="" class="big"></a></div>
+                    <div class="link"><ul>
+                            <li> <a href="">全国职业院校“魅力校园” </a><a href="" style="margin-left:55px;">全国品牌影响力高职院校</a>
+                            </li>
+                            <li> <a href="">广东省域高水平高职院校建设单位 </a>
+                                <a href="">广东省示范性高职院校</a></li>
+                        </ul></div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div id="nav">
+            <div class="nav wp"><ul>
+
+     <li>  <a href="index.htm" title="首页"><img src="images/nav-icon.png" alt=""></a>  </li>   
+    <li> <a href="xxgk/xxjj.htm" title="学校概况">学校概况</a>
+        <ul>
+        
+        
+          <li> <a href="xxgk/xxjj.htm" title="学校简介">学校简介</a></li>
+
+        
+        
+          <li> <a href="xxgk/xrld.htm" title="现任领导">现任领导</a></li>
+
+        
+        
+          <li> <a href="xxgk/xhxx.htm" title="校徽校训">校徽校训</a></li>
+
+        
+        
+          <li> <a href="xxgk/xqxg.htm" title="校旗校歌">校旗校歌</a></li>
+
+        
+        
+          <li> <a href="xxgk/xywh.htm" title="校园文化">校园文化</a></li>
+
+        
+        
+          <li> <a href="xxgk/xxfj.htm" title="学校风景">学校风景</a></li>
+
+        
+        
+          <li> <a href="http://jmzy.ihwrm.com/index/index/index.html" title="校报在线">校报在线</a></li>
+
+</ul>
+    </li>
+
+    <li> <a href="xwzx/jzyw.htm" title="新闻中心">新闻中心</a>
+        <ul>
+        
+        
+          <li> <a href="xwzx/jzyw.htm" title="江职要闻">江职要闻</a></li>
+
+        
+        
+          <li> <a href="xwzx/xycz.htm" title="校园传真">校园传真</a></li>
+
+        
+        
+          <li> <a href="xwzx/mtjz.htm" title="媒体江职">媒体江职</a></li>
+
+        
+        
+          <li> <a href="xwzx/gwtw.htm" title="官微推文">官微推文</a></li>
+
+</ul>
+    </li>
+
+    <li> <a href="jgsz.htm" title="机构设置">机构设置</a>
+    </li>
+
+    <li> <a href="http://www.jmpt.edu.cn/zsxx" target="_blank" title="招生就业">招生就业</a>
+        <ul>
+        
+        
+          <li> <a href="http://www.jmpt.edu.cn/zsxx" target="_blank" title="招生信息">招生信息</a></li>
+
+        
+        
+          <li> <a href="https://jmpt.bysjy.com.cn/" target="_blank" title="就业信息">就业信息</a></li>
+
+</ul>
+    </li>
+
+    <li> <a href="http://www.jmpt.edu.cn/jwb" target="_blank" title="教学科研">教学科研</a>
+        <ul>
+        
+        
+          <li> <a href="http://www.jmpt.edu.cn/jwb" target="_blank" title="教学管理">教学管理</a></li>
+
+        
+        
+          <li> <a href="javascript:;" title="教学研究">教学研究</a></li>
+
+        
+        
+          <li> <a href="https://2263dks.mh.chaoxing.com/" target="_blank" title="智慧教学平台">智慧教学平台</a></li>
+
+        
+        
+          <li> <a href="https://jpkc.jmpt.cn/suite" target="_blank" title="精品课程">精品课程</a></li>
+
+</ul>
+    </li>
+
+    <li> <a href="xxgk1/xyjbxx.htm" target="_blank" title="信息公开">信息公开</a>
+        <ul>
+        
+        
+          <li> <a href="xxgk1/xyjbxx.htm" title="学院基本信息">学院基本信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/zsksxx.htm" title="招生考试信息">招生考试信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/cw_zcjsfxx.htm" title="财务、资产及收费信息">财务、资产及收费信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/jxzlxx.htm" title="教学质量信息">教学质量信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/xsglfwxx.htm" title="学生管理服务信息">学生管理服务信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/xfjsxx.htm" title="学风建设信息">学风建设信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/dwjlyhzxx.htm" title="对外交流与合作信息">对外交流与合作信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/qtxx.htm" title="其他信息">其他信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/gzzdgk.htm" title="规章制度公开">规章制度公开</a></li>
+
+        
+        
+          <li> <a href="xxgk1/xydt.htm" title="学院动态">学院动态</a></li>
+
+</ul>
+    </li>
+
+    <li> <a href="ztzl.htm" title="专题专栏">专题专栏</a>
+    </li>
+
+    <li> <a href="https://www.jmpt.edu.cn/info/1991/166771.htm" target="_blank" title="巡察公告">巡察公告</a>
+    </li>
+
+   <div class="clear"></div>
+            </ul></div>
+        </div>
+    </div>
+  <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">        
+       
+            
+                        <a href="index.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79508)" target="_blank">
+                        <img src="images/ft-logo.png" alt="">
+                        </a>  
+                 
+     
+</div>
+        <div class="m-nav">
+            <div class="m-tlink">
+<script language="javascript">
+function dosuba1094319a()
+{
+    try{
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf("msie 8")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE8
+        }else if(ua.toLowerCase().indexOf("rv:")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE11+
+        }else{
+            if (document.all) 
+            {
+                window.external.addFavorite(document.location.href, document.title);
+            }else if(window.sidebar)
+            {
+                window.sidebar.addPanel( document.title, document.location.href, "");//firefox
+            }
+            else
+            {
+                alert(hotKeysa1094319a());
+            }
+        }
+
+    }
+    catch (e){alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");}
+}
+function hotKeysa1094319a() 
+{
+    var ua = navigator.userAgent.toLowerCase(); 
+    var str = "";    
+    var isWebkit = (ua.indexOf('webkit') != - 1); 
+    var isMac = (ua.indexOf('mac') != - 1);     
+    if (ua.indexOf('konqueror') != - 1) 
+    {  
+        str = 'CTRL + B'; // Konqueror   
+    } 
+    else if (window.home || isWebkit || isMac) 
+    {        
+        str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac   
+    }
+    return ((str) ? '无法自动添加到收藏夹，请使用' + str + '手动添加' : str);
+}
+function setHomepagea1094319a()
+{
+    var url = document.location.href;
+    if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+        document.body.setHomePage(url);
+    }
+    else if (window.sidebar)
+    {
+        if(window.netscape)
+        {
+             try{
+                  netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch (e){
+                   alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+             }
+        }
+    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage',url);
+    }
+    else
+    {
+        alert("浏览器不支持自动设为首页，请手动设置");
+    }
+}
+</script>
+    
+        <a href="">联系我们</a>   <a href="javascript:setHomepagea1094319a()">设为首页</a><a href="javascript:dosuba1094319a();">加入收藏</a>
+</div>
+           
+
+
+<div id="divu7"></div>
+<script type="text/html" id="htmlu7">
+    <div id="appu7">
+        <div v-if="!isError"> <div class="m-search">
+            <input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input type="image" src="images/search.png" value="" v-on:click="onSubmit()"/>
+        </div> </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu7").html($("#htmlu7").text());
+</script>
+<script>
+    var appOwner = "1968877004";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu7",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+           <ul>
+
+     <li>  <a href="index.htm" title="首页">首页</a>
+     
+         </li>
+     <li>  <a href="xxgk/xxjj.htm" title="学校概况">学校概况</a>
+     
+     <span></span>
+        <ul>
+        
+        
+          <li> <a href="xxgk/xxjj.htm" title="学校简介">学校简介</a></li>
+
+        
+        
+          <li> <a href="xxgk/xrld.htm" title="现任领导">现任领导</a></li>
+
+        
+        
+          <li> <a href="xxgk/xhxx.htm" title="校徽校训">校徽校训</a></li>
+
+        
+        
+          <li> <a href="xxgk/xqxg.htm" title="校旗校歌">校旗校歌</a></li>
+
+        
+        
+          <li> <a href="xxgk/xywh.htm" title="校园文化">校园文化</a></li>
+
+        
+        
+          <li> <a href="xxgk/xxfj.htm" title="学校风景">学校风景</a></li>
+
+        
+        
+          <li> <a href="http://jmzy.ihwrm.com/index/index/index.html" title="校报在线">校报在线</a></li>
+ </ul>
+    </li>
+     <li>  <a href="xwzx/jzyw.htm" title="新闻中心">新闻中心</a>
+     
+     <span></span>
+        <ul>
+        
+        
+          <li> <a href="xwzx/jzyw.htm" title="江职要闻">江职要闻</a></li>
+
+        
+        
+          <li> <a href="xwzx/xycz.htm" title="校园传真">校园传真</a></li>
+
+        
+        
+          <li> <a href="xwzx/mtjz.htm" title="媒体江职">媒体江职</a></li>
+
+        
+        
+          <li> <a href="xwzx/gwtw.htm" title="官微推文">官微推文</a></li>
+ </ul>
+    </li>
+     <li>  <a href="jgsz.htm" title="机构设置">机构设置</a>
+     
+         </li>
+     <li>  <a href="http://www.jmpt.edu.cn/zsxx" target="_blank" title="招生就业">招生就业</a>
+     
+     <span></span>
+        <ul>
+        
+        
+          <li> <a href="http://www.jmpt.edu.cn/zsxx" target="_blank" title="招生信息">招生信息</a></li>
+
+        
+        
+          <li> <a href="https://jmpt.bysjy.com.cn/" target="_blank" title="就业信息">就业信息</a></li>
+ </ul>
+    </li>
+     <li>  <a href="http://www.jmpt.edu.cn/jwb" target="_blank" title="教学科研">教学科研</a>
+     
+     <span></span>
+        <ul>
+        
+        
+          <li> <a href="http://www.jmpt.edu.cn/jwb" target="_blank" title="教学管理">教学管理</a></li>
+
+        
+        
+          <li> <a href="javascript:;" title="教学研究">教学研究</a></li>
+
+        
+        
+          <li> <a href="https://2263dks.mh.chaoxing.com/" target="_blank" title="智慧教学平台">智慧教学平台</a></li>
+
+        
+        
+          <li> <a href="https://jpkc.jmpt.cn/suite" target="_blank" title="精品课程">精品课程</a></li>
+ </ul>
+    </li>
+     <li>  <a href="xxgk1/xyjbxx.htm" target="_blank" title="信息公开">信息公开</a>
+     
+     <span></span>
+        <ul>
+        
+        
+          <li> <a href="xxgk1/xyjbxx.htm" title="学院基本信息">学院基本信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/zsksxx.htm" title="招生考试信息">招生考试信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/cw_zcjsfxx.htm" title="财务、资产及收费信息">财务、资产及收费信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/jxzlxx.htm" title="教学质量信息">教学质量信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/xsglfwxx.htm" title="学生管理服务信息">学生管理服务信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/xfjsxx.htm" title="学风建设信息">学风建设信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/dwjlyhzxx.htm" title="对外交流与合作信息">对外交流与合作信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/qtxx.htm" title="其他信息">其他信息</a></li>
+
+        
+        
+          <li> <a href="xxgk1/gzzdgk.htm" title="规章制度公开">规章制度公开</a></li>
+
+        
+        
+          <li> <a href="xxgk1/xydt.htm" title="学院动态">学院动态</a></li>
+ </ul>
+    </li>
+     <li>  <a href="ztzl.htm" title="专题专栏">专题专栏</a>
+     
+         </li>
+     <li>  <a href="https://www.jmpt.edu.cn/info/1991/166771.htm" target="_blank" title="巡察公告">巡察公告</a>
+     
+         </li>
+
+   <div class="clear"></div>
+            </ul>
+
+        </div>
+    </div>
+        <div class="banner">    
+       
+             <div>
+                        <a href="http://www.jmpt.edu.cn/zsxx" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79560)" target="_blank">
+                          <img src="images/banner/banner1.jpg" alt="">
+                        </a>  
+                 </div> 
+     
+
+       
+             <div>
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79562)" target="_blank">
+                          <img src="images/banner/banner3.jpg" alt="">
+                        </a>  
+                 </div> 
+     
+
+       
+             <div>
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79563)" target="_blank">
+                          <img src="images/banner/banner4.jpg" alt="">
+                        </a>  
+                 </div> 
+     
+
+       
+             <div>
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79564)" target="_blank">
+                          <img src="images/banner/banner5.jpg" alt="">
+                        </a>  
+                 </div> 
+     
+
+       
+             <div>
+                        <a href="http://www.jmpt.edu.cn/zsxx" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79565)" target="_blank">
+                          <img src="images/banner/banner6.jpg" alt="">
+                        </a>  
+                 </div> 
+     
+
+       
+             <div>
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79566)" target="_blank">
+                          <img src="images/banner/banner7.jpg" alt="">
+                        </a>  
+                 </div> 
+     
+
+       
+             <div>
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79567)" target="_blank">
+                          <img src="images/banner/banner8.jpg" alt="">
+                        </a>  
+                 </div> 
+     
+
+       
+             <div>
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79568)" target="_blank">
+                          <img src="images/banner/banner9.jpg" alt="">
+                        </a>  
+                 </div> 
+     
+
+       
+             <div>
+                        <a href="#" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79569)" target="_blank">
+                          <img src="images/banner/banner10.jpg" alt="">
+                        </a>  
+                 </div> 
+     
+ </div> 
+    <div class="section1">
+        <div class="sect1 wp">
+            <div class="title wow fadeInUp">
+                <h2>
+                    <div class="icon"><img src="images/tit-icon1.png" alt=""></div><span>江职要闻</span>
+                    <p>HEADLINES</p>
+                </h2>
+                <div class="more"><a href="xwzx/jzyw.htm">更多+
+                
+                 <p>more</p>
+                </a></div>
+            </div>
+            <div class="s1">
+               <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script> <div class="s1-l">
+  <div><a href="info/1081/166841.htm" target="_blank" title="学校举办2025届毕业生首场校园招聘会"><img src="/__local/A/26/64/C35C53951093F4065E61B709FD2_36067B7E_845E7.jpg" alt=""> <p>学校举办2025届毕业生首场校园招聘会</p></a> </div>
+  <div><a href="info/1081/166691.htm" target="_blank" title="学校举办2024年开平市农村职业经理人培训班"><img src="/__local/1/5F/B3/DDAD1ADB596C6F01E5D8ACCDF48_21B58F7C_46322.jpg" alt=""> <p>学校举办2024年开平市农村职业经理人培训班</p></a> </div>
+  <div><a href="info/1081/166621.htm" target="_blank" title="学校组织召开10月份教务教学工作例会"><img src="/__local/3/3F/C4/5A5C59478C568F462586C06861A_E52B0DBE_1A6E6.png" alt=""> <p>学校组织召开10月份教务教学工作例会</p></a> </div>
+  <div><a href="info/1081/166561.htm" target="_blank" title="国培盛事启江职 电商精英创未来——学校2024年电子商务骨干教师课程实施与实战技能提升研修班国家级培训正式启动"><img src="/__local/E/12/59/AA715182C804AD89FEEC1BF37E4_3D58D69A_4F121.png" alt=""> <p>国培盛事启江职 电商精英创未来——学校2024年电子商务骨干教师课程实施与实战技能提升研修班国家级培训正式启动</p></a> </div>
+  <div><a href="info/1081/166221.htm" target="_blank" title="学校召开数字校园建设顶层设计方案编制工作推进会"><img src="/__local/E/F6/59/3C0716BA85679005F9712ED561D_0F95FC1C_1F747.jpg" alt=""> <p>学校召开数字校园建设顶层设计方案编制工作推进会</p></a> </div>
+  <div><a href="info/1081/166081.htm" target="_blank" title="工程造价专业在2024年“卓衡杯”第四届装配式建筑职业技能竞赛(学生组)暨第六届全国装配式建筑职业技能竞赛取得佳绩"><img src="/__local/6/52/A4/F63A3CDC316E5D51B6AC56D54F1_9A10C3C2_FCC3.jpg" alt=""> <p>工程造价专业在2024年“卓衡杯”第四届装配式建筑职业技能竞赛(学生组)暨第六届全国装配式建筑职业技能竞赛取得佳绩</p></a> </div>
+  </div><script>_showDynClickBatch(['dynclicks_u10_166841','dynclicks_u10_166691','dynclicks_u10_166621','dynclicks_u10_166561','dynclicks_u10_166221','dynclicks_u10_166081'],[166841,166691,166621,166561,166221,166081],"wbnews", 1968877004)</script>
+
+                <div class="s1-r">  <ul>
+   <li class="on"><a href="info/1081/166841.htm" target="_blank" title="学校举办2025届毕业生首场校园招聘会">
+    <div class="text">
+                                    <p>学校举办2025届毕业生首场校园招聘会</p><span>2024-10-25</span></div>
+                                <div class="text-date">
+                                    <div class="date">
+                                        <p>25</p><span>十月</span></div>
+                                    <div class="nr">
+                                        <h2>学校举办2025届毕业生首场校园招聘会</h2>
+                                        <p> 江职新闻网讯 为进一步做好学校2025届毕业生就业服务工作，促进毕业生高质量充分就业，10月23日下午，学校在知行广场成功举办了2025届毕业生首场校园招聘会。学校副校长蔡勇、陈中坚，学生工作部、各二级学院负责人和毕业班、就业辅导员等深入招聘会现场，与用人单位和毕业生亲切交流，了解用人单位招聘需求和毕业生求职情况。本次招聘会共吸引了200余家企业参与，提供了涵盖机械制造、金融保险、商贸物流、文体教育、电子信息等多个领域近700个优质岗位，...</p>
+                                        <div class="more"><span></span></div>
+                                    </div>
+
+
+                                </div></a></li>
+   <li><a href="info/1081/166791.htm" target="_blank" title="学校获批专利快速预审受理备案主体单位">
+    <div class="text">
+                                    <p>学校获批专利快速预审受理备案主体单位</p><span>2024-10-24</span></div>
+                                <div class="text-date">
+                                    <div class="date">
+                                        <p>24</p><span>十月</span></div>
+                                    <div class="nr">
+                                        <h2>学校获批专利快速预审受理备案主体单位</h2>
+                                        <p> 江职新闻网讯 近日，经国家知识产权局审核，学校正式获批广东省知识产权保护中心专利快速预审服务的备案主体单位资格。这是学校在知识产权服务与管理方面取得了显著进展，为新一代信息技术、生物医药产业领域的专利申请开辟一条高效快捷的通道。自省域高水平高职院校建设以来，学校高度重视科技创新，建立起知识产权培育、申请、服务、转化的全方位、链条式管理体系。学校的专利授权数持续增长，专利转化数量稳步提升，为增强学校的社会服务能力奠定了坚实的基础。...</p>
+                                        <div class="more"><span></span></div>
+                                    </div>
+
+
+                                </div></a></li>
+   <li><a href="info/1081/166691.htm" target="_blank" title="学校举办2024年开平市农村职业经理人培训班">
+    <div class="text">
+                                    <p>学校举办2024年开平市农村职业经理人培训班</p><span>2024-10-24</span></div>
+                                <div class="text-date">
+                                    <div class="date">
+                                        <p>24</p><span>十月</span></div>
+                                    <div class="nr">
+                                        <h2>学校举办2024年开平市农村职业经理人培训班</h2>
+                                        <p> 江职新闻网讯 为落实广东省委“百县千镇万村高质量发展工程”，促进城乡区域协调发展，大力实施富民兴村行动，发展壮大农村集体经济，增强村级集体经济持续发展能力，配强农村经济发展人才，助力乡村振兴。结合学校与开平市2024年“双百行动”的工作部署，10月23日，由江门职业技术学院主办，开平市农业农村局协办的2024年开平市农村职业经理人培训班在开平市举行。江门职业技术学院继续教育学院院长郑健明、开平市农业农村局党组成员杨国威出席了开班仪式。...</p>
+                                        <div class="more"><span></span></div>
+                                    </div>
+
+
+                                </div></a></li>
+   <li><a href="info/1081/166621.htm" target="_blank" title="学校组织召开10月份教务教学工作例会">
+    <div class="text">
+                                    <p>学校组织召开10月份教务教学工作例会</p><span>2024-10-23</span></div>
+                                <div class="text-date">
+                                    <div class="date">
+                                        <p>23</p><span>十月</span></div>
+                                    <div class="nr">
+                                        <h2>学校组织召开10月份教务教学工作例会</h2>
+                                        <p> 江职新闻网讯 10月22日下午，学校在厚德楼915会议室召开2024年10月份教务教学工作例会。会议由教务部部长主持，副校长孙宁出席会议，各二级学院院长、副院长，学生工作部、现代教育技术中心、督导室以及教务部相关人员参会。 会上，各二级学院对日常教学、教研教改、“双高建设”等工作进展情况分别做了汇报。督导室对一个月以来“督教、督学、督管”的相关情况做了集中反馈。教务部分别就教学、教研、高建三大方面相关工作进行了情况通报并对下一步工作进行了安排。...</p>
+                                        <div class="more"><span></span></div>
+                                    </div>
+
+
+                                </div></a></li>
+   <li><a href="info/1081/166561.htm" target="_blank" title="国培盛事启江职 电商精英创未来——学校2024年电子商务骨干教师课程实施与实战技能提升研修班国家级培训正式启动">
+    <div class="text">
+                                    <p>国培盛事启江职 电商精英创未来——学校2024年电子商务骨干教师课程实施与实战技能提升研修班国家级培训正式启动</p><span>2024-10-19</span></div>
+                                <div class="text-date">
+                                    <div class="date">
+                                        <p>19</p><span>十月</span></div>
+                                    <div class="nr">
+                                        <h2>国培盛事启江职 电商精英创未来——学校2024年电子商务骨干教师课程实施与实战技能提升研修班国家级培训正式启动</h2>
+                                        <p> 江职新闻网讯 金秋十月，丹桂飘香，江门职业技术学院在这片创新与智慧的热土上，迎来了国家级培训盛事的璀璨启幕——“电子商务骨干教师课程实施与实战技能提升研修班”。此次研修班的举办，不仅是对江门职业技术学院教学实力的一次展示，更是对电子商务教育领域精英教师能力提升的一次重要推动。通过此次研修，教师们将有机会深入学习电子商务的前沿知识，掌握最新的实务操作技能，从而更好地适应电子商务行业的快速发展和职业院校教学改革的需求，...</p>
+                                        <div class="more"><span></span></div>
+                                    </div>
+
+
+                                </div></a></li>
+   <li><a href="info/1081/166221.htm" target="_blank" title="学校召开数字校园建设顶层设计方案编制工作推进会">
+    <div class="text">
+                                    <p>学校召开数字校园建设顶层设计方案编制工作推进会</p><span>2024-10-16</span></div>
+                                <div class="text-date">
+                                    <div class="date">
+                                        <p>16</p><span>十月</span></div>
+                                    <div class="nr">
+                                        <h2>学校召开数字校园建设顶层设计方案编制工作推进会</h2>
+                                        <p> 江职新闻网讯 为进一步推进学校数字校园建设，10月14日下午，在厚德楼707会议室召开数字校园建设顶层设计方案编制工作推进会。学校副校长蔡勇出席会议，各职能部门、马克思主义学院、继续教育学院主要负责人参加会议。会上，现代教育技术中心负责人详细介绍了数字校园建设工作的重点建设内容，涵盖师生发展、数字资源、教育教学、管理服务、支撑条件、网络安全、组织体系7个方面，并结合职业院校数字基座数据采集工作，指出数据共建共享对推动学校管理、...</p>
+                                        <div class="more"><span></span></div>
+                                    </div>
+
+
+                                </div></a></li>
+   <li><a href="info/1081/166081.htm" target="_blank" title="工程造价专业在2024年“卓衡杯”第四届装配式建筑职业技能竞赛(学生组)暨第六届全国装配式建筑职业技能竞赛取得佳绩">
+    <div class="text">
+                                    <p>工程造价专业在2024年“卓衡杯”第四届装配式建筑职业技能竞赛(学生组)暨第六届全国装配式建筑职业技能竞赛取得佳绩</p><span>2024-10-15</span></div>
+                                <div class="text-date">
+                                    <div class="date">
+                                        <p>15</p><span>十月</span></div>
+                                    <div class="nr">
+                                        <h2>工程造价专业在2024年“卓衡杯”第四届装配式建筑职业技能竞赛(学生组)暨第六届全国装配式建筑职业技能竞赛取得佳绩</h2>
+                                        <p> 江职新闻网讯 近期，由广东省土木建筑学会和广东省建设教育协会联合主办广东省第四届“卓衡杯”装配式建筑职业技能竞赛完美落幕，本次竞赛共有来自省内31所院校58支队伍174名选手参与。我校经管学院工程造价专业参赛学生黄俊熙、李思婷、刘佳欣组成的团队总成绩排名第13名，取得二等奖佳绩，并推荐至国赛。据了解，竞赛内容涵盖了装配式建筑的设计、生产、施工、管理等各个环节，分为“构件深化设计”“构件制作与安装”和“智能建造应用与管理”...</p>
+                                        <div class="more"><span></span></div>
+                                    </div>
+
+
+                                </div></a></li>
+
+  </ul>
+ <div class="clear"></div>
+               </div><script>_showDynClickBatch(['dynclicks_u11_166841','dynclicks_u11_166791','dynclicks_u11_166691','dynclicks_u11_166621','dynclicks_u11_166561','dynclicks_u11_166221','dynclicks_u11_166081'],[166841,166791,166691,166621,166561,166221,166081],"wbnews", 1968877004)</script>
+
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="sect2 wp">
+            <div class="sect2-l wow fadeInLeft"><div class="title wow fadeInUp">
+                    <h2>
+                        <div class="icon"><img src="images/tit-icon2.png" alt=""></div><span>校园传真</span>
+                        <p>EVENTS</p>
+                    </h2>
+                    <div class="more"><a href="xwzx/xycz.htm">更多+  <p>more</p></a></div>
+                </div>
+                <ul>
+   <li class="on"><a href="info/1411/166851.htm" target="_blank" title="智能制造与装备学院召开学风建设专题班主任工作会议">
+   <div class="s2l-top">
+
+                                <div class="text"><span>2024-10-27</span>
+                                    <h2>智能制造与装备学院召开学风建设专题班主任工作会议</h2>
+                                    <p>江职新闻网讯 10月23日，智能制造与装备学院在笃学楼104召开学风建设专题班主任工作会议，旨在明确班主任在学风管理中的职责和作用，提升班级管理水平与育人质量。会议由学工办主任冯丽丹主持，学风工作负责辅导员许俊杰主讲，学院党总支书记谭喜庆、副书记张媛及全体班主任老师参加会议。会议伊始，学风工作负责辅导员许俊杰回顾了上一学年的学风建设成果，包括国家奖学金和国家励志奖学金的拟推荐名单，通报表扬了上一学年表现突出的学生和班级。...
+                                    </p>
+                                </div>
+                                <div class="tpp">
+                                    <div class="pic">
+    <img src="/__local/5/B8/10/19BFBB3088FCB8B172555644B9A_22B31400_54EBE.png" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="s2l-down">
+
+                                <span>2024-10-27</span>智能制造与装备学院召开学风建设专题班主任工作会议
+
+
+                            </div>
+   
+   </a></li>
+   <li><a href="info/1411/166831.htm" target="_blank" title="学校举办第三期学生就业能力提升工作坊">
+   <div class="s2l-top">
+
+                                <div class="text"><span>2024-10-25</span>
+                                    <h2>学校举办第三期学生就业能力提升工作坊</h2>
+                                    <p>江职新闻网讯 10月15日至17日，学校在笃学楼416成功开展了第三期学生就业能力提升工作坊，通过一系列精心设计的培训课程，帮助学生提升创业能力、职场沟通技巧以及求职材料制作能力，为未来职业生涯奠定坚实基础。培训导师张璐斯开讲“创业模拟经营实践体验”，通过模拟经营企业，学生们不仅亲身体验了创业的全过程，从市场调研、产品设计到营销推广、财务规划，理解了团队合作、风险管理和创新思维的重要性。张老师通过生动的案例分析和互动讨论，...
+                                    </p>
+                                </div>
+                                <div class="tpp">
+                                    <div class="pic">
+    <img src="/__local/6/B8/C9/84DFAAEB9EA921DFD7F9241FA10_6D21DF72_83F25.jpeg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="s2l-down">
+
+                                <span>2024-10-25</span>学校举办第三期学生就业能力提升工作坊
+
+
+                            </div>
+   
+   </a></li>
+   <li><a href="info/1411/166731.htm" target="_blank" title="材料学院企业技术骨干返校 共育调色技术人才">
+   <div class="s2l-top">
+
+                                <div class="text"><span>2024-10-24</span>
+                                    <h2>材料学院企业技术骨干返校 共育调色技术人才</h2>
+                                    <p>江职新闻网讯 在深化产教融合、校企合作的大背景下，材料与食品学院数字化染整技术专业携手明新弹性织物（中国）有限公司，共同为在校生展开一场技术交流会。此次活动邀请了该企业中染纱部门主要负责人、10级染整技术专业毕业生曹少朋先生作为校企合作企业的代表，重返校园为在校生带来了一场关于纺织品调色技术的深度讲解、实战经验传授以及提升技术的方法分享。此次活动旨在打破传统教学的局限，通过引入行业前沿技术和实战经验，...
+                                    </p>
+                                </div>
+                                <div class="tpp">
+                                    <div class="pic">
+    <img src="/__local/3/6F/D4/D1380EA14E06F914732C77074EC_60B6B4DA_BB60.jpg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="s2l-down">
+
+                                <span>2024-10-24</span>材料学院企业技术骨干返校 共育调色技术人才
+
+
+                            </div>
+   
+   </a></li>
+   <li><a href="info/1411/166721.htm" target="_blank" title="材料学院召开24级新生班干部素质能力培训活动">
+   <div class="s2l-top">
+
+                                <div class="text"><span>2024-10-24</span>
+                                    <h2>材料学院召开24级新生班干部素质能力培训活动</h2>
+                                    <p>江职新闻网讯 为加强学院班级建设，提高班干部管理水平，使班级工作有条不紊地进行，2024年10月，材料学院团学组织在笃学楼113召开24级新生班干素质能力培训活动，材料学院24级班长、副班长、新生辅导员参与本次会议。会上，新生辅导员针对班干部的职责和综合素质等方面进行培训，新生辅导员指出了作为班干部对一个班集体的重要性，班干部作为班集体的带头人，如何更好地行使权力，履行义务，为全体同学树立榜样，是非常重要的。随后，...
+                                    </p>
+                                </div>
+                                <div class="tpp">
+                                    <div class="pic">
+    <img src="/__local/6/BB/D7/8B42FB3E2DE10891F2B47C084A3_A024177D_6052E.jpg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="s2l-down">
+
+                                <span>2024-10-24</span>材料学院召开24级新生班干部素质能力培训活动
+
+
+                            </div>
+   
+   </a></li>
+   <li><a href="info/1411/166711.htm" target="_blank" title="材料学院召开团学干部素质能力培训会议">
+   <div class="s2l-top">
+
+                                <div class="text"><span>2024-10-24</span>
+                                    <h2>材料学院召开团学干部素质能力培训会议</h2>
+                                    <p>江职新闻网讯 10月23日下午，材料学院团学组织在厚德楼422室召开团学干部素质能力培训会议，材料学院团委书记、学生会指导老师、全体团学负责人参与本次会议。会上，材料学院团委书记、学生会指导老师、团学主席团、部门负责人做自我介绍，其次各部门负责人互相交流；老师针对学生干部的职责和综合素质等方面进行培训。并提出要求和希望：一是履职尽责，落实做好团学部门工作；二是不忘初心，全心全意为同学服务，落实做好模范带头作用；...
+                                    </p>
+                                </div>
+                                <div class="tpp">
+                                    <div class="pic">
+    <img src="/__local/0/D0/5A/A9A959F054CA4C367E60009A8A2_4FF00D8E_3FD75.jpg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="s2l-down">
+
+                                <span>2024-10-24</span>材料学院召开团学干部素质能力培训会议
+
+
+                            </div>
+   
+   </a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u12_166851','dynclicks_u12_166831','dynclicks_u12_166731','dynclicks_u12_166721','dynclicks_u12_166711'],[166851,166831,166731,166721,166711],"wbnews", 1968877004)</script>
+</div>
+            <div class="sect2-r wow fadeInRight">
+                <div class="title wow fadeInUp">
+                    <div class="bt">
+                        <h2 class="on">
+                           
+                            <div class="icon"><img src="images/tit-icon3.png" alt=""></div><span>采购信息</span>
+                            <p>PURCHASE</p>
+                        </h2>
+                        <h2>
+                            <div class="icon"><img src="images/tit-icon3.png" alt=""></div><span>人才招聘</span>
+                            <p>RECRUITMENT</p>
+                        </h2>
+                    </div>
+
+                    <div class="more"><a href="cgxx.htm" class="on">更多+  <p>more</p></a><a href="rczp.htm">更多+   <p>more</p></a></div>
+                </div>
+                <div class="s2-lb wow fadeInUp">
+                    <ul class="on">   <li><a href="info/1441/166781.htm" target="_blank" title="校园自助打印设备及学生宿舍自助智能吹风机项目（包组1）（第二次）招标公告">
+   
+   
+   <div class="date">
+            <p>10-24</p><span>2024</span></div>
+        <div class="news ">new</div>
+        <h2 class="l3">校园自助打印设备及学生宿舍自助智能吹风机项目（包组1）（第二次）招标公告</h2>
+        <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+        
+        </a></li>    
+   <li><a href="info/1441/166651.htm" target="_blank" title="校园自助打印设备及学生宿舍自助智能吹风机项目中标公告">
+   
+   
+   <div class="date">
+            <p>10-24</p><span>2024</span></div>
+        <div class="news ">new</div>
+        <h2 class="l3">校园自助打印设备及学生宿舍自助智能吹风机项目中标公告</h2>
+        <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+        
+        </a></li>    
+   <li><a href="info/1441/166291.htm" target="_blank" title="智能制造与装备学院2024-2025第（一）学期耗材采购项目（第二次）竞价结果公告">
+   
+   
+   <div class="date">
+            <p>10-16</p><span>2024</span></div>
+        <div class="news ">new</div>
+        <h2 class="l3">智能制造与装备学院2024-2025第（一）学期耗材采购项目（第二次）竞价结果公告</h2>
+        <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+        
+        </a></li>    
+   <li><a href="info/1441/166281.htm" target="_blank" title="经济管理学院2024-2025第（一）学期耗材采购项目竞价结果公告">
+   
+   
+   <div class="date">
+            <p>10-16</p><span>2024</span></div>
+        <div class="news ">new</div>
+        <h2 class="l3">经济管理学院2024-2025第（一）学期耗材采购项目竞价结果公告</h2>
+        <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+        
+        </a></li>    
+   <li><a href="info/1441/166191.htm" target="_blank" title="2024年学校建设项目专项审计服务采购项目采购公告">
+   
+   
+   <div class="date">
+            <p>10-16</p><span>2024</span></div>
+        <div class="news ">new</div>
+        <h2 class="l3">2024年学校建设项目专项审计服务采购项目采购公告</h2>
+        <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+        
+        </a></li>    
+   <li><a href="info/1441/166121.htm" target="_blank" title="信息工程学院2024-2025第（一）学期耗材采购项目竞价结果公告">
+   
+   
+   <div class="date">
+            <p>10-15</p><span>2024</span></div>
+        <div class="news ">new</div>
+        <h2 class="l3">信息工程学院2024-2025第（一）学期耗材采购项目竞价结果公告</h2>
+        <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+        
+        </a></li>    
+<script>_showDynClickBatch(['dynclicks_u13_166781','dynclicks_u13_166651','dynclicks_u13_166291','dynclicks_u13_166281','dynclicks_u13_166191','dynclicks_u13_166121'],[166781,166651,166291,166281,166191,166121],"wbnews", 1968877004)</script>
+</ul>
+                    <ul>   <li><a href="info/1431/164421.htm" target="_blank" title="江门职业技术学院教师招聘启事">
+   
+   
+   <div class="date">
+                                    <p>09-12</p><span>2024</span></div>
+                                <div class="news ">new</div>
+                                <h2 class="l3">江门职业技术学院教师招聘启事</h2>
+                                <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+                                
+                                </a></li>
+   <li><a href="info/1431/160341.htm" target="_blank" title="江门职业技术学院教师招聘启事">
+   
+   
+   <div class="date">
+                                    <p>06-18</p><span>2024</span></div>
+                                <div class="news ">new</div>
+                                <h2 class="l3">江门职业技术学院教师招聘启事</h2>
+                                <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+                                
+                                </a></li>
+   <li><a href="info/1431/157531.htm" target="_blank" title="关于公布2024年4月辅导员、管理岗招聘考试成绩的通知">
+   
+   
+   <div class="date">
+                                    <p>05-15</p><span>2024</span></div>
+                                <div class="news ">new</div>
+                                <h2 class="l3">关于公布2024年4月辅导员、管理岗招聘考试成绩的通知</h2>
+                                <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+                                
+                                </a></li>
+   <li><a href="info/1431/156471.htm" target="_blank" title="关于公布2024年4月辅导员、管理岗招聘笔试成绩及入围第二阶段考试名单的通知">
+   
+   
+   <div class="date">
+                                    <p>04-28</p><span>2024</span></div>
+                                <div class="news ">new</div>
+                                <h2 class="l3">关于公布2024年4月辅导员、管理岗招聘笔试成绩及入围第二阶段考试名单的通知</h2>
+                                <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+                                
+                                </a></li>
+   <li><a href="info/1431/155711.htm" target="_blank" title="江门职业技术学院招聘考试通知">
+   
+   
+   <div class="date">
+                                    <p>04-24</p><span>2024</span></div>
+                                <div class="news ">new</div>
+                                <h2 class="l3">江门职业技术学院招聘考试通知</h2>
+                                <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+                                
+                                </a></li>
+   <li><a href="info/1431/154571.htm" target="_blank" title="江门职业技术学院管理岗位招聘启事">
+   
+   
+   <div class="date">
+                                    <p>04-17</p><span>2024</span></div>
+                                <div class="news ">new</div>
+                                <h2 class="l3">江门职业技术学院管理岗位招聘启事</h2>
+                                <div class="more"><img src="images/s2-r-more.png" alt=""></div>
+                                
+                                </a></li>
+<script>_showDynClickBatch(['dynclicks_u14_164421','dynclicks_u14_160341','dynclicks_u14_157531','dynclicks_u14_156471','dynclicks_u14_155711','dynclicks_u14_154571'],[164421,160341,157531,156471,155711,154571],"wbnews", 1968877004)</script>
+</ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="sect3 wp">
+            <div class="sect3-l wow fadeInLeft">
+                <div class="title wow fadeInUp">
+                    <h2>
+                        <div class="icon"><img src="images/tit-icon4.png" alt=""></div><span>媒体江职</span>
+                        <p> IN THE MEDIA</p>
+                    </h2>
+                    <div class="more"><a href="xwzx/mtjz.htm">更多+  <p>more</p></a></div>
+                </div>
+                <div class="s3-ll ">
+                    <div class="s3-ll-l"><ul>
+   <li><a href="http://www.jmtv.cn/web/jmnews/20241027/1730016758719.shtml" target="_blank" title="江门电视台：全国智能产品行业产教融合共同体成立大会在江门职业技术学院举行">
+       <div class="pic"><img src="/__local/0/F2/B3/535429CFFA3722730C69DCA2491_01CF5CD0_54B83.jpg" alt=""></div>
+                                    <div class="text">
+                                        <p>【媒体江职】<span>2024-10-28</span></p>
+                                        <p>江门电视台：全国智能产品行业产教融合共同体成立大会在江门职业技术学院举行</p>
+                                    </div>
+   </a></li>
+   <li><a href="https://static.nfnews.com/content/202410/24/c10192471.html?colID=0&firstColID=29091&appversion=11700&from=weChatMessage&enterColumnId=" target="_blank" title="南方+：江职首个国家级培训项目开班，大力培养电商教育人才">
+       <div class="pic"><img src="/__local/9/2C/C2/A5C4F38E31D079E4B685E1F7405_6235D4F6_583E4.jpg" alt=""></div>
+                                    <div class="text">
+                                        <p>【媒体江职】<span>2024-10-24</span></p>
+                                        <p>南方+：江职首个国家级培训项目开班，大力培养电商教育人才</p>
+                                    </div>
+   </a></li>
+</ul></div><script>_showDynClickBatch(['dynclicks_u15_166881','dynclicks_u15_166821'],[166881,166821],"wbnews", 1968877004)</script>
+
+                    <div class="s3-ll-r"><ul>
+   <li><a href="http://www.jmtv.cn/web/jmnews/20241027/1730016758719.shtml" target="_blank" title="江门电视台：全国智能产品行业产教融合共同体成立大会在江门职业技术学院举行">
+       <span>【媒体江职】</span><p class="l2">江门电视台：全国智能产品行业产教融合共同体成立大会在江门职业技术学院举行</p>
+   </a></li>
+   <li><a href="https://static.nfnews.com/content/202410/27/c10198969.html?colID=0&firstColID=29091&appversion=11700&from=weChatMessage&enterColumnId=" target="_blank" title="南方+：全国智能产品行业产教融合共同体在江职成立">
+       <span>【媒体江职】</span><p class="l2">南方+：全国智能产品行业产教融合共同体在江职成立</p>
+   </a></li>
+   <li><a href="https://static.nfnews.com/content/202410/24/c10192471.html?colID=0&firstColID=29091&appversion=11700&from=weChatMessage&enterColumnId=" target="_blank" title="南方+：江职首个国家级培训项目开班，大力培养电商教育人才">
+       <span>【媒体江职】</span><p class="l2">南方+：江职首个国家级培训项目开班，大力培养电商教育人才</p>
+   </a></li>
+   <li><a href="https://guangdong.eol.cn/gdgd/202410/t20241024_2638452.shtml" target="_blank" title="中国教育在线：江门职业技术学院：首个国家级培训项目助力电商教育">
+       <span>【媒体江职】</span><p class="l2">中国教育在线：江门职业技术学院：首个国家级培训项目助力电商教育</p>
+   </a></li>
+</ul></div><script>_showDynClickBatch(['dynclicks_u16_166881','dynclicks_u16_166871','dynclicks_u16_166821','dynclicks_u16_166811'],[166881,166871,166821,166811],"wbnews", 1968877004)</script>
+
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+            <div class="sect3-r wow fadeInRight"><div class="title wow fadeInUp">
+                    <h2>
+                        <div class="icon"><img src="images/tit-icon5.png" alt=""></div><span>官微推文</span>
+                        <p>WECHAT ARTICLES </p>
+                    </h2>
+                    <div class="more"><a href="xwzx/gwtw.htm">更多+  <p>more</p></a></div>
+                </div>
+                <div class="s3-rr ">
+    <div><a href="https://mp.weixin.qq.com/s?__biz=MzA4OTAyNzY2MA==&mid=2650957415&idx=1&sn=9f2ede07886205294889f50f9f206f8d&chksm=8bd7e344bca06a5209c8637e8c6b1589337d176522ef94ee76c7c9924d344c7408edd541d774&token=1244316848&lang=zh_CN#rd" target="_blank" title="江职张又文老师，带班“有一手”！">
+      <div class="pic"><img src="/__local/4/F2/93/1A7EAB0BAAEFE2FE5F1B64B56CB_7D5C48CB_1D5F5.jpg" alt="">
+                                <div class="bf"><img src="images/bf.png" alt=""></div>
+                            </div>
+                            <div class="text">
+                                <p><span><img src="images/wx.png" alt="">微信</span>江职张又文老师，带班“有一手”！</p>
+                            </div>
+    
+    </a>  </div>
+    <div><a href="https://mp.weixin.qq.com/s?__biz=MzA4OTAyNzY2MA==&mid=2650957257&idx=1&sn=b5da1c1053c5324df7b1a706a670750f&chksm=8bd7e0eabca069fcbefbcd3d4242dc22db63fecb25eb3e7bacec1ebf4b2fec87c8d4a19cc4e0&token=1244316848&lang=zh_CN#rd" target="_blank" title="哇！江职“西江月”月饼！新鲜出炉啦！">
+      <div class="pic"><img src="/__local/6/D0/D1/95D39171BBF3583011A6F11204E_C37DC7DD_17DA3.jpg" alt="">
+                                <div class="bf"><img src="images/bf.png" alt=""></div>
+                            </div>
+                            <div class="text">
+                                <p><span><img src="images/wx.png" alt="">微信</span>哇！江职“西江月”月饼！新鲜出炉啦！</p>
+                            </div>
+    
+    </a>  </div>
+    <div><a href="https://mp.weixin.qq.com/s?__biz=MzA4OTAyNzY2MA==&mid=2650956970&idx=1&sn=9b7a3cc160f6ba74f7c9fe6f5d8dc94c&chksm=8bd7e189bca0689fbf1dbcccc1537ce07205a474bc60460ea350ec7c2b9920ecec0f1ebde4b3&token=1244316848&lang=zh_CN#rd" target="_blank" title="今日军训结营：热血澎湃！全程高燃！">
+      <div class="pic"><img src="/__local/B/D9/1A/B5B4658DFA30FE52BA8D7A29318_0E2ABE00_1F840.jpg" alt="">
+                                <div class="bf"><img src="images/bf.png" alt=""></div>
+                            </div>
+                            <div class="text">
+                                <p><span><img src="images/wx.png" alt="">微信</span>今日军训结营：热血澎湃！全程高燃！</p>
+                            </div>
+    
+    </a>  </div>
+  </div><script>_showDynClickBatch(['dynclicks_u17_32211','dynclicks_u17_32201','dynclicks_u17_32271'],[32211,32201,32271],"wbnews", 1968877004)</script>
+</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section4">
+        <div class="sect4 wp">            <div class="title wow fadeInUp">
+                <h2>
+                    <div class="icon"><img src="images/tit-icon6.png" alt=""></div><span>专题专栏</span>
+                    <p>TOPICS</p>
+                </h2>
+                <div class="more"><a href="ztzl.htm">更多+  <p>more</p></a></div>
+            </div>
+            <div class="s4 wow fadeInUp"> 
+         <ul>
+                    <li>
+                        <a href="#" target="_blank">
+                            <div class="pic"><img src="/__local/B/E8/A3/5965459B7EFC01E6C1C9889EC9B_95925236_3BA2.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.jmpt.edu.cn/ztzl/cxqxgckh2024/zy.htm" target="_blank">
+                            <div class="pic"><img src="/__local/9/1B/C5/8CCB768C359E3D72D20F1E32C5D_6AB5FD5B_40A0.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <div class="pic"><img src="/__local/F/AA/37/CCEBC1B6DB99546D6126376F3C6_5DD9E81E_359D.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <div class="pic"><img src="/__local/0/1D/46/D710BA3FB89AB374CDD9121FA60_A2BEEB3D_43B3.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.jmpt.edu.cn/ztzl/nzyjygjjxwjjczl2024/xxbsgw.htm" target="_blank">
+                            <div class="pic"><img src="/__local/5/F1/FB/C53B781A12FDA8CE6FDF6868C35_4B921CF5_3357.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <div class="pic"><img src="/__local/B/1F/5E/63613B519CEEDB2D7D83D8FF595_44221FE0_3D01.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://10.4.2.61/highlevel-portal/" target="_blank">
+                            <div class="pic"><img src="/__local/E/B5/45/6C5D369A1BE84418D17BA9E8E5E_732A28D6_3028.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://jpkc.jmpt.cn/suite/solver/classView.do?feature=blockItem&action=browse&blockKey=33288136&siteKey=33288102&key=33288140&courseKey=33288094&cleanSession=true&menuNavKey=33288146" target="_blank">
+                            <div class="pic"><img src="/__local/B/C0/97/08471C394205D5C44A66B912FB0_5FB0D576_4C48.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.jmpt.edu.cn/xcb/" target="_blank">
+                            <div class="pic"><img src="/__local/9/39/28/471FE810A2CF5A0FB9F53642936_47735454_3B56.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://cxqx.jmpt.cn/qe2023/" target="_blank">
+                            <div class="pic"><img src="/__local/2/43/C5/2DA0B96542872CF5A774ABB22BD_AA04A06F_3AC4.jpg" alt=""></div>
+                        </a>
+                    </li>
+                </ul>
+            </div><script>_showDynClickBatch(['dynclicks_u18_164181','dynclicks_u18_160311','dynclicks_u18_158961','dynclicks_u18_157381','dynclicks_u18_156611','dynclicks_u18_152021','dynclicks_u18_150921','dynclicks_u18_142931','dynclicks_u18_142911','dynclicks_u18_142881'],[164181,160311,158961,157381,156611,152021,150921,142931,142911,142881],"wbnews", 1968877004)</script>
+</div>
+    </div>
+    <div class="section5">
+        <div class="sect5 wp">    <div class="title wow fadeInUp">
+                <h2>
+                    <div class="icon"><img src="images/tit-icon7.png" alt=""></div><span>智慧江职</span>
+                    <p>SMART CAMPUS</p>
+                </h2>
+                <div class="more"></div>
+            </div>
+            <ul class="wow fadeInUp">
+                    
+             <li>
+                        <a href="index/ldxx.htm" title="领导信箱" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79493)" target="_blank">
+                           <div class="icon"><img src="images/s5-icon1.png" alt=""></div>
+                        <p>领导信箱</p>
+                        </a>  
+                 </li>
+     
+       
+             <li>
+                        <a href="https://183.237.134.183" title="零信任登录" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79497)" target="_blank">
+                           <div class="icon"><img src="images/s5-icon5.png" alt=""></div>
+                        <p>零信任登录</p>
+                        </a>  
+                 </li>
+     
+       
+             <li>
+                        <a href="http://newoa.jmpt.edu.cn/" title="OA系统" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79495)" target="_blank">
+                           <div class="icon"><img src="images/s5-icon3.png" alt=""></div>
+                        <p>OA系统</p>
+                        </a>  
+                 </li>
+     
+       
+             <li>
+                        <a href="https://2263dks.mh.chaoxing.com/" title="智慧教学平台" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79496)" target="_blank">
+                           <div class="icon"><img src="images/s5-icon8.png" alt=""></div>
+                        <p>智慧教学平台</p>
+                        </a>  
+                 </li>
+     
+       
+             <li>
+                        <a href="http://www.jmpt.edu.cn/jwb" title="教务系统" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79498)" target="_blank">
+                           <div class="icon"><img src="images/s5-icon6.png" alt=""></div>
+                        <p>教务系统</p>
+                        </a>  
+                 </li>
+     
+       
+             <li>
+                        <a href="http://10.4.2.61/#/login?redirect=%2Fhome%2FhomeIndex" title="省域高水平高职院校建设管理平台" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79582)" target="_blank">
+                           <div class="icon"><img src="images/s5-icon4.png" alt=""></div>
+                        <p>省域高水平高职院校建设管理平台</p>
+                        </a>  
+                 </li>
+     
+       
+             <li>
+                        <a href="https://www.yiban.cn/school/index/id/18105" title="江职易班" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79499)" target="_blank">
+                           <div class="icon"><img src="images/s5-icon7.png" alt=""></div>
+                        <p>江职易班</p>
+                        </a>  
+                 </li>
+     
+   <div class="clear"></div>
+            </ul></div>
+    </div>
+    <div id="footer">
+        <div class="footer">
+            <div class="foot wp">
+                <div class="ft-top">
+                    <div class="ft-l">        
+       
+            
+                        <a href="index.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1968877004, 79507)" target="_blank">
+                        <img src="images/ft-logo.png" alt="">
+                        </a>  
+                 
+     
+</div>
+                    <div class="ft-m"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<h2>联系方式</h2>
+<p><img src="/__local/B/EE/D1/81C616C962725BF87562C86AAC1_5F79F395_1C4.png?e=.png" vsbhref="vurl" vurl="/_vsl/BEED181C616C962725BF87562C86AAC1/5F79F395/1C4?e=.png" vheight="" vwidth="" orisrc="/__local/B/EE/D1/81C616C962725BF87562C86AAC1_5F79F395_1C4.png" class="img_vsb_content">地址：广东省江门市潮连大道6号</p>
+<p><img src="/__local/0/C6/96/3F21288710AE19683B3B065F0E0_5F4E2AF5_182.png?e=.png" vsbhref="vurl" vurl="/_vsl/0C6963F21288710AE19683B3B065F0E0/5F4E2AF5/182?e=.png" vheight="" vwidth="" orisrc="/__local/0/C6/96/3F21288710AE19683B3B065F0E0_5F4E2AF5_182.png" class="img_vsb_content">0750-3725555(校办)&nbsp; 0750-3725908/3725289(招生)</p></div>
+                    <div class="ft-r">      <h2>扫码关注我们新媒体</h2>
+                        <ul>
+                                 
+                       <li>
+                                <div class="icon"><img src="images/wx-icon.png" alt=""></div>
+                                <div class="ewm"><img src="images/guanwei.jpg" alt=""></div>
+                            </li>
+                            
+                              
+                      
+                            
+                               <li>
+                                <div class="icon"><img src="images/dy-icon.png" alt=""></div>
+                                <div class="ewm"><img src="images/ewm.jpg" alt=""></div>
+                            </li>
+     
+    </ul></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="ft-down"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span>版权所有 © 江门职业技术学院</span><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_self"><span>粤ICP备05065345号</span></a><span><img src="images/jw.png" alt="" />粤公安备05065345号</span><a href="https://bszs.conac.cn/sitename?method=show&id=1B6D559260430B36E053012819AC39FC" target="_self"><span><img src="images/jg.png" alt="" /></span></a></p></div>
+
+            </div>
+        </div>
+    </div>
+ <script src="js/jquery.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

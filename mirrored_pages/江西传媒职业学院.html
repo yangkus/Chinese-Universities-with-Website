@@ -1,0 +1,2500 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="shortcut icon" href="/favicon.ico" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<link href="/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF8" />
+<link href="/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="/tipswindown.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/tipswindown.js"></script>
+   <script type="text/javascript">
+ 
+function openwindow(url,name,iWidth,iHeight)
+ {
+  var url;                            //转向网页的地址;
+  var name;                           //网页名称，可为空;
+  var iWidth;                         //弹出窗口的宽度;
+  var iHeight;                        //弹出窗口的高度;
+  //window.screen.height获得屏幕的高，window.screen.width获得屏幕的宽
+  var iTop = (window.screen.height-30-iHeight)/2;       //获得窗口的垂直位置;
+  var iLeft = (window.screen.width-10-iWidth)/2;        //获得窗口的水平位置;
+  window.open(url,name,'height='+iHeight+',,innerHeight='+iHeight+',width='+iWidth+',innerWidth='+iWidth+',top='+iTop+',left='+iLeft+',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
+ }
+ 
+</script>   
+<DIV id=img1 style="Z-INDEX: 100; LEFT: 2px; WIDTH: 159px; POSITION: absolute; TOP: 43px; HEIGHT: 161px;
+ visibility: visible;">
+    
+  <li  style="list-style: none"><a href="http://jxdxsjy.jx.edu.cn/user/student?referer=/jyjb/index
+" target="_blank"><img src="/images/2024.png"  border="0" width="260"></a></li>
+
+
+     <li  style="list-style: none"><a href="https://www.jxcmzyxy.com/html/202407031633098rQBS.html
+" target="_blank"><img src="/images/2024zsjz.jpg"  border="0" width="260"></a></li>
+    
+      
+
+</DIV>
+ 
+
+
+
+<SCRIPT>
+var xPos = 300;
+var yPos = 200; 
+var step = 1;
+var delay = 30; 
+var height = 0;
+var Hoffset = 0;
+var Woffset = 0;
+var yon = 0;
+var xon = 0;
+var pause = true;
+var interval;
+img1.style.top = yPos;
+function changePos() 
+{
+	width = document.body.clientWidth;
+	height = document.body.clientHeight;
+	Hoffset = img1.offsetHeight;
+	Woffset = img1.offsetWidth;
+	img1.style.left = xPos + document.body.scrollLeft;
+	img1.style.top = yPos + document.body.scrollTop;
+	if (yon) 
+		{yPos = yPos + step;}
+	else 
+		{yPos = yPos - step;}
+	if (yPos < 0) 
+		{yon = 1;yPos = 0;}
+	if (yPos >= (height - Hoffset)) 
+		{yon = 0;yPos = (height - Hoffset);}
+	if (xon) 
+		{xPos = xPos + step;}
+	else 
+		{xPos = xPos - step;}
+	if (xPos < 0) 
+		{xon = 1;xPos = 0;}
+	if (xPos >= (width - Woffset)) 
+		{xon = 0;xPos = (width - Woffset);   }
+	}
+	
+	function start()
+	 {
+	 	img1.visibility = "visible";
+		interval = setInterval('changePos()', delay);
+	}
+	function pause_resume() 
+	{
+		if(pause) 
+		{
+			clearInterval(interval);
+			pause = false;}
+		else 
+		{
+			interval = setInterval('changePos()',delay);
+			pause = true; 
+			}
+		}
+	start();
+</SCRIPT>
+<style>
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+    
+
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #FF0000;
+}
+a:active {
+	text-decoration: none;
+	color: #FF0000;
+}
+.tiao
+{
+	width:100%;
+	background:#A40202;
+	height:30px;
+	line-height:30px;
+	margin:0 auto;
+	}
+	.tiao_z
+{
+	width:1200px;
+	margin:0 auto;
+	}
+	.tiao_z li
+{
+	width:600px;
+	color:#FFF;
+	font-size:12px;
+	list-style:none;
+	}
+	.baise12
+	{
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		color:#FFF;}
+			
+.zhong
+{
+	width:100%;
+	background:#C80303;
+
+	height:120px;
+	line-height:120px;
+	margin:0 auto;
+	}
+	.bgbg
+	{
+		
+		background-image:url(/images/bgbg.png);background-repeat: no-repeat;
+		margin:0 auto;
+		width:1200px;
+		height:120px;
+		line-height:120px;
+		}
+	.zhong li
+{
+	height:120px;
+	line-height:120px;
+	list-style:none;
+	}
+	
+	.menu
+{
+	width:100%;
+	background:#A40202;
+	height:38px;
+	line-height:38px;
+	margin:0 auto;
+float:left;
+margin-top:-37px;
+box-shadow:2px 5px 5px #CCCCCC;
+}
+	.menu_z
+{
+	width:1200px;
+	margin:0 auto;
+	}
+	
+	.flash
+{
+	width:1200px;
+	height:343px;
+
+	margin:0 auto;
+	margin-top:10px;
+}
+
+.content
+{
+	width:1200px;
+	height:420px;
+    margin:0 auto;
+	
+}
+.diyi
+{
+	width:582px;
+	height:420px;
+    margin:0 auto;
+	margin-top:20px;
+	float:left;
+}
+.menu18_hei
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:20px;
+	color:#000000;
+	font-weight:bold;
+	}
+	.dier
+{
+	width:300px;
+	height:420px;
+    margin:0 auto;
+	margin-top:21px;
+	float:left;
+	margin-left:29px;
+	
+}
+.disan
+{
+	width:260px;
+	height:420px;
+    margin:0 auto;
+	margin-top:21px;
+	float:right;
+	margin-left:29px;
+
+
+}
+.menu10_hei
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#000;
+	font-weight:normal;
+	}
+.foot
+{
+	width:100%; height:180px;background:#A40202; margin-top:50px; margin:0 auto; text-align:center; color:#FFF; font-size:12px;
+}
+
+		.riqizi{ font-size:40px; font-weight:bold; color:#A3A3A3;}
+.riqizi_xiao{ font-size:14px; font-weight:normal; color:#A3A3A3;}
+.dazi{ font-size:16px; font-weight:bold; color:#000000;}
+.dazi_12{ font-size:13px; font-weight:normal;color: #7A7A7A;font-family:Arial, Helvetica, sans-serif}
+
+
+
+/*选项卡*/
+.xuanxiangka
+{
+	margin:0 auto}
+	.xuanxiangka li
+	{
+		list-style:none;
+		font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+color:#000000;
+	
+
+	}
+.xuanxiangka li:hover
+{
+	cursor:pointer; color:#FF0000;
+}
+/*选项卡*/
+
+
+
+/*九宫格*/
+.jiu
+{
+	margin:0 auto}
+	.jiu li
+	{
+		list-style:none;
+		font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#000000;
+	font-weight:normal;
+	}
+.jiu li:hover
+{
+	cursor:pointer;color:#FF0000;-webkit-transform:scale(1.1);-moz-transform:scale(1.1);transform:scale(1.1);-webkit-transition:all 0.5s ease 0s;-moz-transition:all 0.5s ease 0s;transition:all 0.5s ease 0s;
+}
+/*九宫格*/
+
+/*导航*/
+.daohang
+{
+	margin:0 auto}
+	.daohang li
+	{
+		list-style:none;
+		font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#000000;
+	font-weight:normal;
+	background:#F5F6F8;-moz-border-radius: 12px; -webkit-border-radius: 12px;
+	width:223px;
+	}
+.daohang li:hover
+{
+	cursor:pointer;color:#ffffff; background:#C80303;-webkit-transform:scale(1.1);-moz-transform:scale(1.1);transform:scale(1.1);-webkit-transition:all 0.5s ease 0s;-moz-transition:all 0.5s ease 0s;transition:all 0.5s ease 0s;
+}
+/*导航*/
+
+
+/*通知公告*/
+.tongzhi
+{
+	margin:0 auto}
+	.tongzhi li
+	{
+		list-style:none;
+		font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+color:#000000;
+	font-weight:normal;
+	 float:left; text-align:left;border-bottom: 1px solid #E1E1E1; height:46px; line-height:46px; width:315px;
+
+	}
+.tongzhi li:hover
+{
+	cursor:pointer; color:#FF0000;
+}
+/*通知公告*/
+
+
+/*热点荐读*/
+.jiandu
+{
+	margin:0 auto}
+	.jiandu li
+	{
+		list-style:none;
+		font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+
+	
+
+	}
+.jiandu li:hover
+{
+	cursor:pointer; color:#FF0000;
+}
+/*热点荐读*/
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>江西传媒职业学院</title>
+<link href="/jxcmzyxy.css" rel="stylesheet" type="text/css" />
+<link type="text/css" href="css/xuanxiangka.css" rel="stylesheet" />
+<meta name="keywords" content="江西传媒职业学院，江西传媒，江西传媒学院，江西传媒职业学院" />
+<meta name="description" content="江西传媒职业学院是经江西省人民政府批准成立的公办全日制普通高等院校，隶属江西省广播电视局。建校30多年来，为国家和江西新闻出版广电传媒行业输送了数以万计的专业人才，是目前全国培养新闻出版及广播影视专门人才的主要基地之一。" />
+<script type="text/javascript">
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
+</head>
+
+<body>
+
+<div class="tiao" style="background:#000000">
+<div class="tiao_z" >
+<li style="float:left; width:700px; margin-left:20px;">您好，欢迎来到江西传媒职业学院！ </li>
+<li style="float:right; width:400px; text-align:right"><a href="" onmouseover="toolTip('/images/erweima.png',330,389)" onmouseout="toolTip()" title="扫码进入移动端微官网" class="baise12"><i class="fa fa-link" aria-hidden="true" style="color:#FFF"></i>&nbsp;&nbsp;手机官网</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://220.177.253.72:4430/portal/#!/login" target="_blank" class="baise12"><i class="fa fa-wifi" aria-hidden="true" tyle="color:#FFF"></i>&nbsp;&nbsp;VPN入口</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about/359.html" target="_blank" class="baise12"><i class="fa fa-whatsapp" aria-hidden="true"style="color:#FFF"></i>&nbsp;&nbsp;联系我们</a></li>
+</div>
+</div>
+
+
+<div class="zhong">
+<div class="bgbg">
+<div class="tiao_z">
+<li style="float:left;"><img src="/images/2022logo.png" width="350" style="margin-top:16px;"/></li>
+<li style="float:left; margin-top:15px;"><img src="/images/zi.png" width="353"  /></li>
+<li style="float:right; margin-top:36px;"><form name="form1" method="post" action="/news/search.php">
+
+
+<div style="height:30px; line-height:30px; width:305px; border:1px solid #DEDEDE; background:#FFF;margin-left:83px; margin-top:10px;">
+<input type="text" name="key" id="key"  style="width:260px; height:30px; border:none;outline: none; margin-left:10px;"value="   请输入要搜索的内容" onblur=if(!value){value=defaultValue;} onFocus="this.value=''" />
+
+<button style="border:none; color:#FFF; background:#FFF; cursor:pointer"><i  class="fa fa-search" aria-hidden="true" style="color:#000; font-size:16px;" name="submit"></i></button>
+
+
+</div>
+
+
+</form></li>
+</div>
+</div>
+</div>
+
+
+<div class="menu">
+<div class="menu_z"><style>
+/* 全局定义 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td,img { padding: 0; margin: 0; }
+
+fieldset,img { border: 0; }
+address,caption,cite,code,dfn,em,th,var,i {}
+ol,ul,li { list-style:none; }
+div,dl,dt,dd,ol,ul,li{ zoom:1; }
+h1,h2,h3,h4,h5,h6 { font-weight: normal; font-size:100%; }
+q:before, q:after {
+    content: '';
+}
+abbr, acronym {
+    border: 0;
+}
+
+
+/* 公共样式 */
+
+a{color:#333;text-decoration:none; outline:none;}
+a:hover {color:#0066C5;text-decoration:none; }
+.clearbox { border:none; clear:both;font-size:0; height:0; overflow:hidden;}
+.blank { height:30px;font-size:0px;  overflow:hidden;*height:29px; }
+.nodata{color:#f60;}
+.fl{float:left; }
+.fr{float:right; }
+.siteWidth{width: 1200px; margin: 0 auto;}
+
+
+
+
+/*导航 */
+.navBar { height: 38px;  position: relative; z-index: 1; color: #fff; }
+.mainNav a { color: #fff; }
+.mainNav a:hover { text-decoration: none }
+.mainNav { font-size: 16px; position: relative; zoom: 1; }
+.mainNav:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.mainNav a { color: #fff; }
+.mainNav .li1 { text-align: center; float: left; position: relative; }
+.mainNav .a1 { float: left; display: block; zoom: 1; padding: 0 29px;  }
+.mainNav .a1:hover { text-decoration: none; color: #fff }
+.mainNav .on1 .a1 { background: #C80303;}
+.mainNav .ul1 { overflow: hidden; position: absolute; left: 0; top: 38px; width: 100%; display: none; background: #C80303; background: #C80303}
+.mainNav .li2 { vertical-align: top; }
+.mainNav .a2 { font-size: 14px; display: block; border-top:0px solid #FFFFFF; line-height: 20px; padding: 8px; }
+.mainNav .a2:hover { background: #A40202; color: #fff; text-decoration: none; }
+</style>
+
+ 
+ 
+ 
+ 
+ 
+
+<div class="wrap">
+
+
+
+
+
+<!-- headerS -->
+
+		<!-- top -->
+	  
+        <!-- logobar -->
+        <!--网站导航S-->
+            <div class="navBar siteWidth">
+            
+
+<ul id="mainNav" class="mainNav">
+    <li  class="li1 hasUl1" >
+        <h3 class="h1">
+         
+                <a class="a1" href="https://www.jxcmzyxy.com/">首页</a>
+             
+        </h3>
+    </li>
+
+      <li class="li1 hasUl1" >
+            <h3 class="h1">
+             
+                <a class="a1" href="/about/25.html">学校概况</a></h3>
+            
+                <ul class="ul1" style="display: none;">
+                    
+
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/25.html">学院简介</a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/26.html">现任领导</a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/27.html">学院章程</a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/news/28_0.html">领导关怀</a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/29.html">校训</a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/31.html">学院标示 </a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/32.html">校园风景</a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/33.html">主要荣誉</a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/34.html">教学成果</a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/35.html">办学理念</a></h3>
+          
+    </li>
+    
+  <li class="li2">
+
+          <h3 class="h2"><a class="a2" href="/about/359.html">联系我们</a></h3>
+          
+    </li>
+    
+
+                </ul>
+        </li>
+      <li class="li1 hasUl1" >
+            <h3 class="h1">
+               
+         
+                <a class="a1" href="/news/dangqun.html">职能部门</a></h3>
+               
+                <ul class="ul1" style="display: none;">
+                    
+
+
+
+      <li class="li2">
+         
+        <h3 class="h2"><a class="a2" href="/news/22_0.html">党政机构</a></h3>
+      
+    </li>  <li class="li2">
+         
+        <h3 class="h2"><a class="a2" href="/news/24_0.html">教学系(部)</a></h3>
+      
+    </li>  <li class="li2">
+         
+        <h3 class="h2"><a class="a2" href="/news/361_0.html">教辅机构</a></h3>
+      
+    </li>
+
+                </ul>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+   <li class="li1 hasUl1" >
+            <h3 class="h1">
+               
+         
+                <a class="a1" href="/news/217_0.html">新闻中心</a></h3>
+               
+                <ul class="ul1" style="display: none;">
+                    
+
+
+
+      <li class="li2">
+         
+        <h3 class="h2"><a class="a2" href="/news/360_0.html">时政要闻</a></h3>
+      
+    </li>  <li class="li2">
+         
+        <h3 class="h2"><a class="a2" href="/news/217_0.html">学院要闻</a></h3>
+      
+    </li>  <li class="li2">
+         
+        <h3 class="h2"><a class="a2" href="/news/216_0.html">部门动态</a></h3>
+      
+    </li>  <li class="li2">
+         
+        <h3 class="h2"><a class="a2" href="/news/215_0.html">媒体江传</a></h3>
+      
+    </li>  <li class="li2">
+         
+        <h3 class="h2"><a class="a2" href="/news/214_0.html">通知公告</a></h3>
+      
+    </li>  <li class="li2">
+         
+        <h3 class="h2"><a class="a2" href="/news/213_0.html">热点荐读</a></h3>
+      
+    </li>
+
+                </ul>
+        </li>       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="li1 hasUl1" id="li-xxgk">
+            <h3 class="h1">
+               
+                <a class="a1" href="/jiaoyujiaoxue.html">教育教学</a></h3>
+              
+                <ul class="ul1" style="display: none;">
+                    
+
+
+     <li class="li2 first2">
+  
+         <h3 class="h2"><a class="a2" href="http://jiaowu.jxcmzyxy.com" target="_blank">教务处</a></h3>
+      
+    </li>
+  <li class="li2 first2">
+  
+         <h3 class="h2"><a class="a2" href="http://keyan.jxcmzyxy.com" target="_blank">科研处</a></h3>
+      
+    </li>
+ 
+                </ul>
+        </li>
+        <li class="li1 hasUl1" id="li-xxgk">
+            <h3 class="h1">
+            
+              
+                <a class="a1" href="/yuanxi.html" >教学机构</a></h3>
+               
+                <ul class="ul1" style="display: none;">
+                    
+
+
+    
+    <li class="li2 first2">
+    
+         <h3 class="h2"><a class="a2"  href="http://yinshu.jxcmzyxy.com" target="_blank">出版印刷系</a></h3>
+      
+    </li>
+    <li class="li2 first2">
+    
+         <h3 class="h2"><a class="a2"  href="http://chuanmei.jxcmzyxy.com" target="_blank">传媒影视系</a></h3>
+      
+    </li>
+    <li class="li2 first2">
+    
+         <h3 class="h2"><a class="a2"  href="http://design.jxcmzyxy.com" target="_blank">艺术设计系</a></h3>
+      
+    </li>
+    <li class="li2 first2">
+    
+         <h3 class="h2"><a class="a2"  href="http://xinxi.jxcmzyxy.com" target="_blank">信息管理系</a></h3>
+      
+    </li>
+    <li class="li2 first2">
+    
+         <h3 class="h2"><a class="a2"  href="http://jixiao.jxcmzyxy.com" target="_blank">技校教学部</a></h3>
+      
+    </li>
+    <li class="li2 first2">
+    
+         <h3 class="h2"><a class="a2"  href="http://sizheng.jxcmzyxy.com" target="_blank">思政课教学部</a></h3>
+      
+    </li>
+    <li class="li2 first2">
+    
+         <h3 class="h2"><a class="a2"  href="http://gonggong.jxcmzyxy.com" target="_blank">公共课教学部</a></h3>
+      
+    </li>
+
+                </ul>
+        </li>
+        <li class="li1 hasUl1" id="li-xxgk">
+            <h3 class="h1">
+                
+          
+                <a class="a1" href="/jiuye.html" >招生就业</a></h3>
+             
+                <ul class="ul1" style="display: none;">
+                    
+
+   
+    <li class="li2 first2">
+                <h3 class="h2"><a class="a2"href="http://jiuye.jxcmzyxy.com/" target="_blank">就业信息</a></h3>
+             </li>
+    <li class="li2 first2">
+                <h3 class="h2"><a class="a2"href="http://zsw.jxcmzyxy.com" target="_blank">招生信息网</a></h3>
+             </li>
+
+                </ul>
+        </li>
+       <li class="li1 hasUl1" id="li-xxgk">
+            <h3 class="h1">
+                
+                 
+                <a class="a1" href="/xuegong.html">学工团委</a></h3>
+              
+                <ul class="ul1" style="display: none;">
+                    
+
+
+   
+    <li class="li2 last2">
+     
+         <h3 class="h2"><a class="a2"  href="http://tw.jxcmzyxy.com" target="_blank">团委</a></h3>
+     
+    </li>
+
+    <li class="li2 last2">
+     
+         <h3 class="h2"><a class="a2"  href="http://xuesheng.jxcmzyxy.com" target="_blank">学生工作处</a></h3>
+     
+    </li>
+
+                </ul>
+        </li>
+         <li class="li1 hasUl1" id="li-xxgk">
+            <h3 class="h1">
+                
+              
+               
+                 <a class="a1" href="#">智慧校园</a></h3>
+              
+               
+                      <ul class="ul1" style="display: none;">
+                    
+
+
+   
+
+    
+         <li class="li2">
+
+        
+                 <h3 class="h2"><a class="a2" href="https://220.177.253.72:4430/portal/#!/login" target="_blank">VPN入口</a></h3>
+                
+        
+
+    </li>
+
+
+    
+         <li class="li2">
+
+        
+                 <h3 class="h2"><a class="a2" href="https://www.jxcmzyxy.com/jiaowuxitong.html" target="_blank">教务管理系统</a></h3>
+                
+        
+
+    </li>
+
+
+    
+         <li class="li2">
+
+        
+                 <h3 class="h2"><a class="a2" href="http://220.177.253.72:8001/Login/Index" target="_blank">人事管理系统</a></h3>
+                
+        
+
+    </li>
+
+
+    
+         <li class="li2">
+
+        
+                 <h3 class="h2"><a class="a2" href="http://172.16.99.234/psy/Login.aspx" target="_blank">心理系统</a></h3>
+                
+        
+
+    </li>
+
+
+    
+         <li class="li2">
+
+        
+                 <h3 class="h2"><a class="a2" href="https://p3.gongxueyun.com/login" target="_blank">工学云实习服务平台</a></h3>
+                
+        
+
+    </li>
+
+
+    
+         <li class="li2">
+
+        
+                 <h3 class="h2"><a class="a2" href="http://10.0.0.62:9400/#/login" target="_blank">诊改平台</a></h3>
+                
+        
+
+    </li>
+
+
+    
+         <li class="li2">
+
+        
+                 <h3 class="h2"><a class="a2" href="https://cas.jxcmzyxy.com" target="_blank">智慧校园</a></h3>
+                
+        
+
+    </li>
+
+                </ul>
+        </li>
+      <li class="li1 hasUl1" id="li-xxgk">
+            <h3 class="h1">
+              
+                 
+                     <a class="a1" href="/news/1_0.html">信息服务</a></h3>
+                
+                <ul class="ul1" style="display: none;">
+                    
+
+
+       
+    
+    <li class="li2 last2">
+     
+         <h3 class="h2"><a class="a2"  href="/news/1_0.html" >领导信箱</a></h3>
+     
+    </li>
+        
+    
+    <li class="li2 last2">
+     
+         <h3 class="h2"><a class="a2"  href="/news/2_0.html" >公网资源</a></h3>
+     
+    </li>
+        
+    
+    <li class="li2 last2">
+     
+         <h3 class="h2"><a class="a2"  href="/news/3_0.html" >内网服务</a></h3>
+     
+    </li>
+        
+    
+    <li class="li2 last2">
+     
+         <h3 class="h2"><a class="a2"  href="/news/4_0.html" >电话查询</a></h3>
+     
+    </li>
+        
+    
+    <li class="li2 last2">
+     
+         <h3 class="h2"><a class="a2"  href="/news/5_0.html" >校历查询</a></h3>
+     
+    </li>
+        
+    
+    <li class="li2 last2">
+     
+         <h3 class="h2"><a class="a2"  href="/news/385_0.html" >软件下载</a></h3>
+     
+    </li>
+        
+
+
+                </ul>
+        </li>
+   
+</ul>
+
+    <script type="text/javascript">
+        (function () {
+            var navST;
+            var navST1;
+            var name = 'mainNav';
+            var t = 200;
+            var type = 2;
+            var removeOn = 'False';
+            var effect = 'fade';
+            var appendItem = '#';
+            var li = "#" + name + " li";
+            var index = 0;
+
+            if (!$("#" + name + " .li1").hasClass("on1")) {
+                $("#" + name + " .li1").first().addClass("on1");
+            } //默认第一个加.on1类
+            index = $("#" + name + " .li1").index($("#" + name + " .on1"));
+
+            //鼠标离开导航后，回复默认.on1类位置
+            $("#" + name)
+                .hover(
+                    function () {
+                        if (navST1 != null) {
+                            clearTimeout(navST1);
+                        }
+                    },
+                    function () {
+                        navST1 = setTimeout(function () {
+                                $("#" + name + " .li1").removeClass("on1").eq(index).addClass("on1");
+                            },
+                            500);
+                    }
+                );
+
+         
+
+            $(li)
+                .hover(function () {
+                        var curItem = $(this);
+                        var onNum = (curItem.attr("class").split(" "))[0].replace("li", "");
+                        $(li).removeClass("on" + onNum);
+                        curItem.addClass("on" + onNum);
+                        navST = setTimeout(function () { //延时触发
+
+                                if ($("ul:first", curItem).css("display") != "block") {
+                                    $(li + " .ul" + onNum).hide();
+                                    if (effect == 'fade') {
+                                        $("ul:first", curItem).fadeIn(t);
+                                    } else {
+                                        $("ul:first", curItem).slideDown(t);
+                                    }
+                                };
+                                navST = null;
+                            },
+                            t);
+                    },
+                    function () {
+                        if (navST != null) {
+                            clearTimeout(navST);
+                        }
+                        if (type == '1' || type == '2') {
+                            if (effect == 'fade') {
+                                $(this).find("ul").first().fadeOut(t);
+                            } else {
+                                $(this).find("ul").first().slideUp(t);
+                            }
+                        }
+                        if (removeOn == 'True') {
+                            $(this).removeClass("on1");
+                        }
+                    },
+                    t); //end hover
+        })()
+    </script>
+
+      </div>       
+            <!--网站导航E-->
+	
+</div>
+</div>
+	
+
+<div class="flash">
+<style type="text/css">
+*{padding:0;list-style-type:none; }
+
+.swipe #pagenavi{position:absolute;left:0;bottom:30px;text-align:center; width:1150px;;
+
+}
+.swipe #pagenavi a{width:8px;height:8px;line-height:99em;background:#AD9E87;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;overflow:hidden;cursor:pointer;display:inline-block;*display:inline;*zoom:1;}
+.swipe #pagenavi a.active{background:#FFFFFF;}
+</style>
+<div class="swipe" style="width:1200px;box-shadow:1px 5px 5px #CCCCCC; "><ul id="slider" style="padding:0; margin:0">
+				<li style="display:block">
+				
+						<a href="https://www.jxcmzyxy.com/html/20240719110708FiTpM.html" target="_blank"><img src="Website_appreciate/20220601/20220601.jpg" alt="" width="100%" /></a></li>
+				<li style="display:block">
+				
+						<a href="https://www.jxcmzyxy.com/html/2024041016040906YbW.html" target="_blank"><img src="Website_appreciate/20220601/20220605.jpg" alt="江西传媒职业学院2024年全民国家安全教育日活动方案" width="100%" /></a></li>
+				<li style="display:block">
+				
+				<a href="/html/flash_5.html" target="_blank"><img src="Website_appreciate/20220601/20220604.jpg" alt=""  width="100%" /></a></li>
+				<li style="display:block">
+				
+						<a href="http://zhuanti.jxcmzyxy.com/" target="_blank"><img src="Website_appreciate/20220601/20220603.jpg" alt="" width="100%" /></a></li>
+				<li style="display:block">
+				
+				<a href="/html/flash_2.html" target="_blank"><img src="Website_appreciate/20220601/20220602.jpg" alt=""  width="100%" /></a></li>
+					
+				
+				</ul>
+				<div id="pagenavi">
+
+					<a href="javascript:void(0);" class="active">1</a>
+					<a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    
+			
+			
+				</div>
+		<!--swipe end-->
+		
+</div>
+<script type="text/javascript" src="js/touchScroll.js"></script>
+<script type="text/javascript" src="js/touchslider.dev.js"></script>
+<script type="text/javascript">
+var active=0,
+	as=document.getElementById('pagenavi').getElementsByTagName('a');
+	
+for(var i=0;i<as.length;i++){
+	(function(){
+		var j=i;
+		as[i].onclick=function(){
+			t2.slide(j);
+			return false;
+		}
+	})();
+}
+
+var t1=new TouchScroll({id:'wrapper','width':5,'opacity':0.7,color:'#555',minLength:20});
+
+var t2=new TouchSlider({id:'slider', speed:1200, timeout:6000, before:function(index){
+		as[active].className='';
+		active=index;
+		as[active].className='active';
+	}});
+</script></div>
+
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="435" height="60"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="10"></td>
+      </tr>
+    </table><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="6%" height="40"><font style="font-size:20px; font-weight:bold"><i class="fa fa-file-image-o" aria-hidden="true"></i></font></td>
+        <td width="61%" height="40" align="left"><font style="font-size:20px; font-weight:bold">图片新闻</font></td>
+        <td width="33%" height="40" align="right"><a href="/news/217_0.html"  target="_blank"><font style="font-size:12px; font-weight:normal">+ 更多</font></a></td>
+      </tr>
+      <tr>
+        <td height="1" colspan="3" bgcolor="#E2E2E2"></td>
+        </tr>
+    </table></td>
+    <td width="27" rowspan="2" align="right" valign="top">&nbsp;</td>
+    <td width="738" rowspan="2" align="right" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="27"></td>
+      </tr>
+    </table><div class="mt-tabpage" js-tab="6" style="margin-left:15px; width:736px;  margin-top:-16px;">
+	<div class="mt-tabpage-title" style="margin-left:0px; width:736px;">
+ 
+    <a href="/news/217_0.html" class="mt-tabpage-item mt-tabpage-item-cur" style="width:25%" target="_blank" title="点击查看全部"><font style="font-family:Arial, Helvetica, sans-serif"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;学院要闻</font></a>
+    		<a href="/news/360_0.html" class="mt-tabpage-item mt-tabpage-item-cur" style="width:25%" target="_blank" title="点击查看全部"><font style="font-family:Arial, Helvetica, sans-serif"><i class="fa fa-history" aria-hidden="true"></i>&nbsp;时政要闻</font></a>
+		<a href="/news/216_0.html" class="mt-tabpage-item mt-tabpage-item-cur" style="width:25%" target="_blank" title="点击查看全部"><font style="font-family:Arial, Helvetica, sans-serif"><i class="fa fa-flag" aria-hidden="true"></i>&nbsp;部门动态</font></a>
+		<a href="/news/215_0.html" class="mt-tabpage-item" style="width:25%" target="_blank" title="点击查看全部"><font style="font-family:Arial, Helvetica, sans-serif"><i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;媒体江传</font></a>
+  
+ 
+	</div>
+	<div class="mt-tabpage-count" style="margin-left:-15px; width:736px; height:360px; ">
+		<ul class="mt-tabpage-cont__wrap">
+<li class="mt-tabpage-item">
+
+                              
+                              
+   <div style="height:15px;"></div>
+                              
+                          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  23                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-10                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20241028102002Hv5Nt.html"   title=" 学院举办“正风明纪强党性 廉润赣教守初心”家风故事分享会" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       学院举办“正风明纪强党性 廉润赣教守初心”家风故事分享会...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-10-23</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">10月22日，“正风明纪强党性 廉润赣教守初心”家风故事分享会在学院红色书屋举行，学院各党支部共计派出16名代表在现场作了分享，四十多位党员同志参加了分享会，学院党委书...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  11                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-10                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20241014155119spG6S.html"   title=" 周溪镇马山村农特产品展销馆在学院揭牌" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       周溪镇马山村农特产品展销馆在学院揭牌...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-10-11</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">10月10日，学院乡村振兴驻村点都昌县周溪镇马山村农特产品展销馆揭牌仪式举行。学院党委书记熊耀龙、周溪镇党委书记李超出席仪式并致辞。展销馆位于校园学生食堂内，主要为...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  09                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-10                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/202410091508536aRj5.html"   title=" 我院召开2023-2024学年度国家奖学金评审会议" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       我院召开2023-2024学年度国家奖学金评审会议...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-10-09</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">10月9日上午，我院资助中心在图文楼三楼会议室召开2023-2024学年度国家奖学金评审会议，党委书记熊耀龙、副院长朱建明、副院长宋君华等出席，各系部党支部书记、纪检监察室...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  29                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-09                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20240929154651UYvRw.html"   title=" “铭记英烈事迹 传承不朽精神”——江西传媒职业学院组织师生赴南昌市革命烈士陵园开展烈士纪念活动" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       “铭记英烈事迹 传承不朽精神”——江西传媒职业学院组织师生赴南昌市革命烈士陵园开展烈士纪念活动...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-09-29</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">为引导广大青少年缅怀先烈，学习感悟革命精神，不断增强青少年继承和发扬革命优良传统的自觉性和主动性，在全社会营造缅怀英烈，崇尚英烈的浓厚氛围，充分发挥学校“大思政...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+            
+                              
+                              
+</li>
+
+
+
+        
+        
+        
+        
+        
+        
+			<li class="mt-tabpage-item"> 
+    <div style="height:15px;"></div>
+                              
+                          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  15                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-10                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20241023111049W0qtk.html"   title=" 在文艺工作座谈会上的讲话" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       在文艺工作座谈会上的讲话&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-10-15</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">习近平今天，这里群英荟萃、少长咸集，既有德高望重的老作家、老艺术家，也有崭露头角的文艺新秀，有些同志过去就很熟悉，有些是初次见面。见到大家很高兴。文艺事业是党和...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  11                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-10                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/202410151039021P4aI.html"   title=" 在会见出席中国国际友好大会暨中国人民对外友好协会成立70周年纪念活动外方嘉宾时的讲话" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       在会见出席中国国际友好大会暨中国人民对外友好协会成立70周年纪念活动外方嘉宾时的讲话...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-10-11</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">（2024年10月11日，北京）中华人民共和国主席 习近平首先，我谨代表中国政府和中国人民，对各位朋友来华出席中国国际友好大会暨中国人民对外友好协会成立70周年纪念活动表示...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  30                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-09                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/2024101010472795rfi.html"   title=" 庆祝中华人民共和国成立75周年招待会在京隆重举行 习近平发表重要讲话" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       庆祝中华人民共和国成立75周年招待会在京隆重举行 习近平发表重要讲话...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-09-30</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">庆祝中华人民共和国成立75周年招待会在京隆重举行习近平发表重要讲话李强主持赵乐际王沪宁蔡奇丁薛祥李希韩正出席　　新华社北京9月30日电庆祝中华人民共和国成立75周年招待...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  30                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-09                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20241010105056ri4mn.html"   title=" 习近平：在庆祝中华人民共和国成立75周年招待会上的讲话" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       习近平：在庆祝中华人民共和国成立75周年招待会上的讲话...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-09-30</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">新华社北京9月30日电在庆祝中华人民共和国成立75周年招待会上的讲话（2024年9月30日，下午）习近平女士们，先生们，同志们，朋友们：　　今天，我们欢聚一堂，共同庆祝中华...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+            
+</li>
+
+
+
+
+
+
+			<li class="mt-tabpage-item">   <div style="height:15px;"></div>
+                              
+                          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  14                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-10                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20241014150647PZ7aO.html"   title=" 数字媒体系组织开展“树敬老之风 助强国复兴”重阳节敬老院爱心慰问活动" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       数字媒体系组织开展“树敬老之风 助强国复兴”重阳节敬老院爱心慰问活动...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-10-14</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">金秋十月爽，九九话重阳。为进一步弘扬中华民族传统优秀美德，营造“尊老、爱老、敬老、助老”的良好氛围，提高数字媒体系广大青年团员对社会公益事业的关注度和参与度，10...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  29                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-09                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20240929111854J0T8v.html"   title=" 数字媒体系组织开展“强国复兴有我 青春告白祖国”庆祝中华人民共和国成立75周年主题教育实践活动" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       数字媒体系组织开展“强国复兴有我 青春告白祖国”庆祝中华人民共和国成立75周年主题教育实践活动...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-09-29</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">为庆祝中华人民共和国成立75周年，赓续红色基因、发扬红色精神，激发数字媒体系广大团员青年的爱国热情与使命感，9月28日上午，数字媒体系组织2023级、2024级学生代表赴南昌...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  26                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-09                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20240926092419DviGl.html"   title=" 我院举行教师资格认定教育教学基本素质和能力测试" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       我院举行教师资格认定教育教学基本素质和能力测试...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-09-26</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">为贯彻落实省教育厅《关于做好2024年下半年全省普通高等专科学校和成人高等学校教师资格认定工作的通知》（赣教资函〔2024〕3号）文件精神，开展好学院2024年下半年高等学校...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  19                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2024-09                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20240919162135zODAv.html"   title=" 我院举办党的二十届三中全会精神融入思政课集体备课会" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       我院举办党的二十届三中全会精神融入思政课集体备课会...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2024-09-19</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">为深入学习贯彻习近平新时代中国特色社会主义思想和党的二十届三中全会精神，进一步落实习近平总书记关于思政课建设的重要论述精神、重要指示精神，坚持用党的创新理论推动...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+            
+</li>
+
+
+
+
+
+	<li class="mt-tabpage-item">   <div style="height:15px;"></div>
+                              
+                          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  21                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2020-02                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20220624203324XxpLA.html"   title=" 【江西教育网】“卸下戎装志不改 铁血军魂战疫敌”——江西传媒职业学院学生勇担当" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       【江西教育网】“卸下戎装志不改 铁血军魂战疫敌”——江...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2020-02-21</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">当新冠肺炎疫情严重威胁人民群众身体健康和生命安全时，江西传媒职业学院有这样一群学生，戎装虽换、初心不改，勇于争先、积极作为，以不同的方式投身到这场疫情防控的斗争...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  21                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2020-02                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20220624203343bHkEd.html"   title=" 【江西教育网】以声驰援 用爱助力——江西传媒职业学院艺术设计系组织开展抗“疫”献“声”活动" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       【江西教育网】以声驰援 用爱助力——江西传媒职业学院艺...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2020-02-21</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">新冠肺炎疫情爆发以来，每天的确诊人数牵动着亿万人民群众的心。2月12日，江西传媒职业学院艺术设计系黄璐老师组织开展抗“疫”献“声”活动。短短12个小时播音专业学生踊跃...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  21                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2020-02                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20220624203357U9Mhm.html"   title=" 【江西教育网】江西传媒职业学院开展春季学期学生返校疫情防控处置演练" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       【江西教育网】江西传媒职业学院开展春季学期学生返校疫...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2020-02-21</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">为进一步贯彻落实中央和省、市疫情防控工作部署，做好校园疫情防控工作，扎实做好开学前的各项准备工作，保障广大师生的生命健康和校园稳定，按照《江西省高等学校和中等职...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60" class="xiahuxian" >
+        <tr>
+          <td width="12%" align="left"><table width="80" height="60" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" bgcolor="#F5F6F8"><div style="height:40px; width:100%; margin:0 auto; text-align:center">
+                <li style="float:left; text-align:center; margin-top:-3px;width:100%; background:#C80303; height:47px; line-height:47px;" class="riqizi"><font style="color:#FFFFFF">
+                  21                </font></li>
+                <li style="float:left; text-align:center; margin-top:2px;width:100%; height:20px; line-height:20px;" ><font style="color:#000000; font-size:12px;">2020-02                </font></li>
+              </div></td>
+            </tr>
+          </table></td>
+          <td width="1%">&nbsp;</td>
+          <td width="87%"><div class="jiandu"><a href="/html/20220624203441TBUvb.html"   title=" 【中国青年网】打卡玩出新温度！江西一高校这样迎接新生报到，家长表示很放心" class="menu12_hei" target="_blank">
+            <li>
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" height="60">
+                <tr>
+                  <td colspan="2"><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;"><font  style="font-family:Arial, Helvetica, sans-serif; font-size:17px;"><strong>
+                       【中国青年网】打卡玩出新温度！江西一高校这样迎接新生...&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-weight:normal"><i class="fa fa-clock-o" aria-hidden="true"></i> 2020-02-21</font>
+                      </strong></font></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td width="99%" align="left" ><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top" style="line-height:18px;" ><font  style="font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#888">中国青年网北京10月14日电（记者 左橙 通讯员 朱奕洋）近日，江西传媒职业学院迎来开学季。根据疫情防控要求，新生家长和私家车不能进入校园，学校特地在校内布置了许多模拟...</font></td>
+                    </tr>
+                  </table></td>
+                  <td width="1%" align="left" class="dazi_12">&nbsp;</td>
+                </tr>
+              </table>
+            </li>
+          </a></div></td>
+        </tr>
+        <tr>
+          <td height="10" colspan="3" align="center"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="1" bgcolor="#E1E1E1"></td>
+        </tr>
+        <tr>
+          <td height="10" ></td>
+        </tr>
+      </table>
+            
+</li>
+
+
+
+
+
+		</ul>
+	</div>
+    
+    
+</div>
+</td>
+  </tr>
+  <tr>
+    <td width="435" height="350" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="3"></td>
+      </tr>
+    </table><link href="css/jiaodian.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/koala.min.1.5.js"></script>
+<!-- 代码 开始 -->
+<div id="fsD1" class="focus">  
+    <div id="D1pic1" class="fPic">  
+    
+    
+    
+               <div class="fcon" style="display: none;">
+            <a target="_blank" href="/html/20241028102002Hv5Nt.html"><img src="/ueditor/php/upload/image/20241028/1730081226740785.jpg" style="opacity: 1; "></a>
+            <span class="shadow"><a target="_blank" href="/html/20241028102002Hv5Nt.html">学院举办“正风明纪强党性 廉润赣教守初心”家风...</a></span>
+        </div>
+        
+                <div class="fcon" style="display: none;">
+            <a target="_blank" href="/html/20241014155119spG6S.html"><img src="/ueditor/php/upload/image/20241014/1728892000792530.png" style="opacity: 1; "></a>
+            <span class="shadow"><a target="_blank" href="/html/20241014155119spG6S.html">周溪镇马山村农特产品展销馆在学院揭牌...</a></span>
+        </div>
+        
+                <div class="fcon" style="display: none;">
+            <a target="_blank" href="/html/202410091508536aRj5.html"><img src="https://www.jxcmzyxy.com/ueditor/php/upload/image/20241009/1728457605166588.png" style="opacity: 1; "></a>
+            <span class="shadow"><a target="_blank" href="/html/202410091508536aRj5.html">我院召开2023-2024学年度国家奖学金评审会议...</a></span>
+        </div>
+        
+                <div class="fcon" style="display: none;">
+            <a target="_blank" href="/html/20240929154651UYvRw.html"><img src="/ueditor/php/upload/image/20240929/1727595891442971.png" style="opacity: 1; "></a>
+            <span class="shadow"><a target="_blank" href="/html/20240929154651UYvRw.html">“铭记英烈事迹 传承不朽精神”——江西传媒职业...</a></span>
+        </div>
+        
+                
+
+        
+        
+        
+    </div>
+    <div class="fbg">  
+    <div class="D1fBt" id="D1fBt">  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>1</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>3</i></a>  
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>  
+    </div>  
+    </div>  
+    <span class="prev"></span>   
+    <span class="next"></span>    
+</div>  
+<script type="text/javascript">
+	Qfast.add('widgets', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+	Qfast(false, 'widgets', function () {
+		K.tabs({
+			id: 'fsD1',   //焦点图包裹id  
+			conId: "D1pic1",  //** 大图域包裹id  
+			tabId:"D1fBt",  
+			tabTn:"a",
+			conCn: '.fcon', //** 大图域配置class       
+			auto: 1,   //自动播放 1或0
+			effect: 'fade',   //效果配置
+			eType: 'click', //** 鼠标事件
+			pageBt:true,//是否有按钮切换页码
+			bns: ['.prev', '.next'],//** 前后按钮配置class                          
+			interval: 3000  //** 停顿时间  
+		}) 
+	})  
+</script>
+</td>
+  </tr>
+</table>
+
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="2%" height="40"><font style="font-size:20px; font-weight:bold"><i class="fa fa-file-audio-o" aria-hidden="true"></i></font></td>
+    <td width="65%" height="40" align="left"><font style="font-size:20px; font-weight:bold">通知公告</font></td>
+    <td width="33%" height="40" align="right"><a href="/news/214_0.html"  target="_blank"><font style="font-size:12px; font-weight:normal">+ 更多</font></a></td>
+  </tr>
+  <tr>
+    <td height="1" colspan="3" bgcolor="#E2E2E2"></td>
+  </tr>
+</table>
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="0" height="130">
+  <tr>
+    <td>
+		<link rel="stylesheet" type="text/css" href="/css/wenzi.css">
+	
+		
+		
+		<div class="focus-img" id="focus-img">
+			
+			<div class="focus-img-con" id="focus-img-con" >
+				<ul style=" right: auto; left: 0px;">
+					
+					
+					
+					        					
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;10月23日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/20241023222154WUIoa.html"   title=" 江西传媒职业学院公开招聘长聘人员及劳务派遣人员公告"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 江西传媒职业学院公开招聘长聘人员及劳务派遣人员公告...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+								
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;10月18日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/20241018102814WA9Lz.html"   title=" 江西传媒职业学院2024年9月公开招聘长聘人员第二批拟录用人员公示"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 江西传媒职业学院2024年9月公开招聘长聘人员第二批拟录用人员公示...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+								
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;10月15日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/20241015110059SE1ZK.html"   title=" 江西传媒职业学院2024年度下半年高等学校教师资格证认定 初审通过人员名单公示"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 江西传媒职业学院2024年度下半年高等学校教师资格证认定 初审通过人员名...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+								
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;10月14日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/20241014153609ZHBCg.html"   title=" 江西传媒职业学院关于开展2024年度职称评审和认定工作的通知"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 江西传媒职业学院关于开展2024年度职称评审和认定工作的通知...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+								
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;10月10日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/20241011143110Fm3hV.html"   title=" 关于举办2024年度第十三期（202410面向师生）普通话等级测试的通知"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 关于举办2024年度第十三期（202410面向师生）普通话等级测试的通知...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+								
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;10月09日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/20241009121743qHC74.html"   title=" 江西传媒职业学院2024年9月公开招聘长聘人员第一批拟录用人员公示"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 江西传媒职业学院2024年9月公开招聘长聘人员第一批拟录用人员公示...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+								
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;09月27日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/20240927090353F7n9Y.html"   title=" 江西省传媒高级技工学校2024年公开招聘劳务派遣人员拟录用人员公示"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 江西省传媒高级技工学校2024年公开招聘劳务派遣人员拟录用人员公示...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+								
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;09月25日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/20240925153217r1lq8.html"   title=" 江西传媒职业学院2024 年度双师型教师认定初审通过名单公示"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 江西传媒职业学院2024 年度双师型教师认定初审通过名单公示...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+								
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;09月21日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/20240921180826xlUTd.html"   title=" 关于公布江西传媒职业学院2024年9月公开招聘长聘人员入闱人员名单的通知"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 关于公布江西传媒职业学院2024年9月公开招聘长聘人员入闱人员名单的通知...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+								
+		           		<li>
+                    
+         <div>
+               <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td align="left" height="40"><font style="font-size:15px; font-weight:bold; color:#C80303"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;09月19日</font></td>
+  </tr>
+  <tr>
+    <td align="left"><a href="/html/202409191943077Wer2.html"   title=" 关于公布江西传媒职业学院2024年9月公开招聘长聘人员入闱试讲人员名单的通知"  target="_blank"><font style="font-size:16px; font-weight:normal; color:#888; "> 关于公布江西传媒职业学院2024年9月公开招聘长聘人员入闱试讲人员名单的...&nbsp;&nbsp;<img src="/images/news.gif" width="22" height="14" /></font></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+                    </div>
+                    
+                    </li>
+			                    
+                    
+                    
+                    </ul>
+			</div>
+			
+			
+			
+	
+		
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/wenzi.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				$("#focus-img").changeImg({
+					'boxWidth':1095,
+					'changeLen':1,
+					'changeSpend':200,
+					'autoChange':true,
+					'changeHandle':true
+				});
+			});
+		</script>
+	</td>
+  </tr>
+</table>
+
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="2%" height="40"><font style="font-size:20px; font-weight:bold"><i class="fa fa-star" aria-hidden="true"></i></font></td>
+    <td width="65%" height="40" align="left"><font style="font-size:20px; font-weight:bold">专题专栏</font></td>
+    <td width="33%" height="40" align="right"><font style="font-size:12px; font-weight:normal">+ 更多</font></td>
+  </tr>
+  <tr>
+    <td height="1" colspan="3" bgcolor="#E2E2E2"></td>
+  </tr>
+</table>
+<div style="width:1200px; margin:0 auto; height:105px;"><div id=demo style="overflow:hidden;width:1200; z-index:999999999" align=center>
+	<table border=0 align=center cellpadding=1 cellspacing=1 cellspace=0 >
+		<tr><td valign=top bgcolor=ffffff id=marquePic1>
+	<table width='100%' border='0' cellspacing='0'><tr>
+                <td align=center><a href='https://jjjcs.jxcmzyxy.com/' target="_blank"><img src="Website_appreciate/2022070901/20230712011.jpg" width=189  border=0 style="margin:10px;"></a></td>
+     <td align=center><a href='https://www.ccdi.gov.cn/special/lxyz/' target="_blank"><img src="Website_appreciate/2022070901/2022071207.jpg" width=189  border=0 style="margin:10px;"></a></td>
+     <td align=center><a href='http://dangshi.people.com.cn/' target="_blank"><img src="Website_appreciate/2022070901/2022071201.jpg" width=189  border=0 style="margin:10px;"></a></td>
+     <td align=center><a href='http://www.wenming.cn/sbhr_pd/zghrb/' target="_blank"><img src="Website_appreciate/2022070901/2022071208.jpg" width=189  border=0 style="margin:10px;"></a></td>
+     <td align=center><a href='https://djsz.zjiet.edu.cn/' target="_blank"><img src="Website_appreciate/2022070901/2022071202.jpg" width=189  border=0 style="margin:10px;"></a></td>
+     <td align=center><a href='http://xcb.ruc.edu.cn/' target="_blank"><img src="Website_appreciate/2022070901/2022071203.jpg" width=189  border=0 style="margin:10px;"></a></td>
+     <td align=center><a href='http://www.xinhuanet.com/politics/bwcxljsm/' target="_blank"><img src="Website_appreciate/2022070901/2022071206.jpg" width=189  border=0 style="margin:10px;"></a></td>
+    
+    
+    </tr></table>
+		</td><td id=marquePic2 valign=top></td></tr>
+	</table></div>
+<script type="text/javascript">
+var speed=50 
+marquePic2.innerHTML=marquePic1.innerHTML 
+function Marquee(){ 
+if(demo.scrollLeft>=marquePic1.scrollWidth){ 
+demo.scrollLeft=0 
+}else{ 
+demo.scrollLeft++ 
+} 
+} 
+var MyMar=setInterval(Marquee,speed) 
+demo.onmouseover=function() {clearInterval(MyMar)} 
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+</script>
+</div>    
+
+<style>
+.biaot12
+{
+	font-size:13px;
+	}
+</style>
+
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="11%" height="60" align="center" valign="bottom"><a href="http://220.177.253.72:8088/default2.aspx" target="_blank"><img src="/images/tubiao/2.png" width="36"></a></td>
+    <td width="11%" height="60" align="center" valign="bottom"><a href="http://172.16.99.3:8020/xgxt" target="_blank"><img src="/images/tubiao/3.png" width="36"></a></td>
+    <td width="11%" align="center" valign="bottom"><a href="http://220.177.253.72:8001/Login/Index" target="_blank"><img src="/images/tubiao/1.png" width="36" /></a></td>
+    <td width="11%" height="60" align="center" valign="bottom"><a href="https://www.jxcmzyxy.com/html/20220625220956ezQj3.html" target="_blank"><img src="/images/tubiao/4.png" width="36"></a></td>
+    <td width="11%" height="60" align="center" valign="bottom"><a href="http://172.16.99.234/psy/Login.aspx" target="_blank"><img src="/images/tubiao/5.png" width="36"></a></td>
+    <td width="11%" align="center" valign="bottom"><a href="https://220.177.253.72:4430/portal/#!/login" target="_blank"><img src="/images/tubiao/10.png" width="36" /></a></td>
+    <td width="11%" height="60" align="center" valign="bottom"><a href="http://220.177.253.72:8080" target="_blank"><img src="/images/tubiao/6.png" width="36"></a></td>
+    <td width="11%" height="60" align="center" valign="bottom"><a href="https://tushu.jxcmzyxy.com/news/369_0.html" target="_blank"><img src="/images/tubiao/7.png" width="36"></a></td>
+    <td width="11%" height="60" align="center" valign="bottom"><a href="/news/170_0.html" target="_blank"><img src="/images/tubiao/8.png" width="36"></a></td>
+  </tr>
+  <tr>
+    <td width="11%" height="30" align="center" valign="middle"><a href="http://220.177.253.72:8088/default2.aspx" target="_blank" class="biaot12">教务系统</a></td>
+    <td width="11%" height="30" align="center" valign="middle"><a href="http://172.16.99.3:8020/xgxt" target="_blank" class="biaot12">学工系统</a></td>
+    <td width="11%" height="30" align="center" valign="middle"><a href="http://220.177.253.72:8001/Login/Index" target="_blank"  class="biaot12">人事系统</a></td>
+    <td width="11%" height="30" align="center" valign="middle"><a href="https://www.jxcmzyxy.com/html/20220625220956ezQj3.html" target="_blank" class="biaot12">学费查询</a></td>
+    <td width="11%" height="30" align="center" valign="middle"><a href="http://172.16.99.234/psy/Login.aspx" target="_blank" class="biaot12">心理咨询</a></td>
+    <td width="11%" height="30" align="center" valign="middle"><a href="https://220.177.253.72:4430/portal/#!/login" target="_blank"class="biaot12">VPN入口</a></td>
+    <td width="11%" height="30" align="center" valign="middle"><a href="http://220.177.253.72:8080" target="_blank" class="biaot12">精品课程</a></td>
+    <td width="11%" height="30" align="center" valign="middle"><a href="https://tushu.jxcmzyxy.com/news/369_0.html" target="_blank" class="biaot12">图书咨询</a></td>
+    <td width="11%" height="30" align="center" valign="middle"><a href="/news/170_0.html" target="_blank" class="biaot12">信息公开</a></td>
+  </tr>
+</table>
+
+
+
+
+<form name="form" id="form"><table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10" colspan="3"></td>
+  </tr>
+  <tr>
+    <td width="33%" height="50" align="center" bgcolor="#F3F3F3">
+
+      
+      <select onchange="javascript:window.open(this.options[this.selectedIndex].value)" name="select" id=""  style="height:30px;outline: none;">
+	              	<option selected="selected">-----------------&nbsp;党群组织链接&nbsp;-----------------</option>
+                                              <option value="http://dzbgs.jxcmzyxy.com/">党政办公室</option>
+                           <option value="http://dw.jxcmzyxy.com/">党委组织部(党委教师工作部、人事处)</option>
+                           <option value="http://dwtzb.jxcmzyxy.com">党委宣传统战部</option>
+                           <option value="http://jjjcs.jxcmzyxy.com/">纪检监察室</option>
+                           <option value="http://gh.jxcmzyxy.com/">工会</option>
+                           <option value="http://tw.jxcmzyxy.com/">团委</option>
+       	            </select>
+ </td>
+    <td width="33%" align="center" bgcolor="#F3F3F3"><select onchange="javascript:window.open(this.options[this.selectedIndex].value)" name="select2" id="select" style="height:30px;outline: none;">
+      <option selected="selected">-----------------&nbsp;行政管理链接&nbsp;-----------------</option>
+            <option value="http://jiaowu.jxcmzyxy.com/">
+        教务处        </option>
+            <option value="http://caiwuchu.jxcmzyxy.com/">
+        计划财务处        </option>
+            <option value="http://keyan.jxcmzyxy.com/">
+        科研处        </option>
+            <option value="http://xuesheng.jxcmzyxy.com/">
+        学生工作处(党委学生工作部、人民武装部)        </option>
+            <option value="http://zsw.jxcmzyxy.com/">
+        招生就业处        </option>
+            <option value="http://houqin.jxcmzyxy.com/">
+        后勤保障保卫处        </option>
+            <option value="http://jjw.jxcmzyxy.com/">
+        基建处        </option>
+            <option value="http://jixu.jxcmzyxy.com/">
+        继续教育学院        </option>
+          </select></td>
+    <td width="33%" align="center" bgcolor="#F3F3F3"><select onchange="javascript:window.open(this.options[this.selectedIndex].value)" name="select3" id="select2" style="height:30px;outline: none;">
+      <option selected="selected">-----------------&nbsp;教学系(部)链接&nbsp;-----------------</option>
+            <option value="http://yinshu.jxcmzyxy.com/">
+        出版印刷系        </option>
+            <option value="http://chuanmei.jxcmzyxy.com">
+        广播影视系        </option>
+            <option value="http://design.jxcmzyxy.com/">
+        艺术设计系        </option>
+            <option value="http://xinxi.jxcmzyxy.com/">
+        公共管理系        </option>
+            <option value="http://jixiao.jxcmzyxy.com/">
+        数字媒体系        </option>
+            <option value="http://sizheng.jxcmzyxy.com/">
+        思政课教学部        </option>
+            <option value="http://gonggong.jxcmzyxy.com/">
+        公共课教学部        </option>
+            <option value="http://jigong.jxcmzyxy.com/">
+        江西省传媒高级技工学校        </option>
+          </select></td>
+  </tr>
+</table>   
+</form>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="20">
+  <tr>
+    <td></td>
+  </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#950404">
+  <tr>
+    <td height="30">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="13" align="center" class="baise12">CopyRight 2022 © 江西传媒职业学院 All Right Reserved</td>
+      </tr>
+      <tr>
+        <td height="13" align="center"class="baise12" style="line-height: 20px;">地址：南昌市蒋巷西大道266号(蒋巷校区)    学院联系电话：0791-88264777    招生咨询电话：0791-88264288    传真：0791-88264666    邮编:330224<br>
+地址：南昌市青山湖区江大南路193号(青山湖校区) 电话：0791-88264500 传真：0791-88264500</td>
+      </tr>
+      <tr>
+        <td height="13" align="center"class="baise12">江西传媒职业学院版权所有&nbsp;&nbsp;&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" class="baise12">赣ICP备20004142号-2</a></td>
+      </tr>
+        <tr>
+        <td height="13" align="center"class="baise12"></td>
+      </tr>
+        <tr>
+        <td height="13" align="center"class="baise12"><img src="/images/gongzhonghao.jpg" width="130"alt="" /></td>
+      </tr>
+          <tr>
+        <td height="13" align="center"class="baise12"></td>
+      </tr>
+      <tr>
+        <td height="13" align="center"class="baise12"><a href="https://bszs.conac.cn/sitename?method=show&amp;id=2DBBC5DFB0BC5C9EE053022819AC9D15" target="_blank"><img src="/images/shiye.png" width="40"/></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="50">&nbsp;</td>
+  </tr>
+</table>
+    <style>
+.fudong{width:60px; height:50px; margin:0 auto; background:#C80303; height:250px;right:0px; position:fixed; top:30%;}
+.fudong li{float:left; text-align:center; width:100%; height:50px; line-height:50px;list-style:none;border-bottom:1px solid #FFF;}
+.fudong li:hover { background:#A40202;}
+    </style>
+
+<div class="fudong">
+<a href="" onmouseover="toolTip('/images/weixin.png',330,389)" onmouseout="toolTip()" title="扫码加入查看公众号微信"><li ><i class="fa fa-weixin" aria-hidden="true" style="color:#FFF; font-size:26px; margin-top:12px;"></i></li></a>
+<a href="https://weibo.com/5072170038?refer_flag=1001030103_"  target="_blank" title="进入官方微博"><li><i class="fa fa-weibo" aria-hidden="true"  style="color:#FFF; font-size:26px; margin-top:12px;"></i></li></a>
+<a href="" onmouseover="toolTip('/images/erweima.png',330,389)" onmouseout="toolTip()" title="扫码进入移动端微官网" ><li ><i class="fa fa-mobile" aria-hidden="true" style="color:#FFF; font-size:38px; margin-top:7px;"></i></li></a>
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2984256096&site=qq&menu=yes" itle="查看QQ客服"><li ><i class="fa fa-qq" aria-hidden="true" style="color:#FFF; font-size:26px; margin-top:12px;"></i></li></a>
+<a href="https://map.baidu.com/search/%E5%8D%97%E6%98%8C%E5%B8%82%E8%92%8B%E5%B7%B7%E8%A5%BF%E5%A4%A7%E9%81%93266%E5%8F%B7/@12909174.125,3323231,19z?querytype=s&da_src=shareurl&wd=%E5%8D%97%E6%98%8C%E5%B8%82%E8%92%8B%E5%B7%B7%E8%A5%BF%E5%A4%A7%E9%81%93266%E5%8F%B7&c=163&src=0&pn=0&sug=0&l=12&b=(12844360.55,3272599.29;12951880.55,3357911.29)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&device_ratio=2"  title="点击查看地图" target="_blank" ><li style="border-bottom:none;"><i class="fa fa-map-marker" aria-hidden="true" style="color:#FFF; font-size:26px; margin-top:12px;"></i></li></a>
+
+</div>
+<script language="javascript" src="/js/ToolTip.js"></script>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/xuanxiangka.js"></script>
+<script type="text/javascript">
+$(function () {
+
+	
+
+	$('[js-tab=6]').tab({
+		mouse: 'over',   //切换方式：over，click
+		autoPlay: false,  //播放方式：false，true
+		curDisplay: 1,     //当前第一个打开
+		changeMethod: 'horizontal'  //切换选项：默认default，horizontal，vertical，opacity这4种方式
+	});
+	
+	$('[js-tab=7]').tab({
+		mouse: 'over',   //切换方式：over，click
+		autoPlay: false,  //播放方式：false，true
+		curDisplay: 1,     //当前第一个打开
+		changeMethod: 'horizontal'  //切换选项：默认default，horizontal，vertical，opacity这4种方式
+	});
+	
+});
+</script>
+
+
+</body>
+</html>

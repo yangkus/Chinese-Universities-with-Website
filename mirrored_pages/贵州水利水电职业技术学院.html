@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="user-scalable=no,width=750" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="">
+  <meta name="format-detection" content="telephone=no">
+<title>贵州水利水电职业技术学院</title>
+<meta name="keywords" content="贵州水利水电职业技术学院">
+<meta name="description" content="贵州水利水电职业技术学院">
+<link rel="shortcut icon" href="https://www.gzsdzy.cn/images/favicon.ico" type="image/x-icon" />
+<link href="https://www.gzsdzy.cn/css/Reset.css" rel="stylesheet" />
+<link href="https://www.gzsdzy.cn/css/Site.css" rel="stylesheet" />
+<script src="https://www.gzsdzy.cn/js/jquery.min.js"></script>
+<script src="https://www.gzsdzy.cn/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="https://www.gzsdzy.cn/js/navSlider.js"></script>
+<script src="https://www.gzsdzy.cn/js/menu.js"></script>
+<!--2022-05-30 添加-->
+<link rel="stylesheet" href="https://www.gzsdzy.cn/css/canvi.css">
+<link rel="stylesheet" href="https://www.gzsdzy.cn/css/swiper.min.css">
+<link rel="stylesheet" href="https://www.gzsdzy.cn/css/2022.05.23.css">  
+</head>
+  <!--
+    <style>
+   body{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    filter: gray;
+    _filter: none;
+}
+  </style>
+-->
+<body class="manibody">
+   <!--beginblock id=漂浮广告 -->
+  <script language="javascript">
+   //公共脚本文件 main.js   
+        function addEvent(obj, evtType, func, cap) {
+            cap = cap || false;
+            if (obj.addEventListener) {
+                obj.addEventListener(evtType, func, cap);
+                return true;
+            } else if (obj.attachEvent) {
+                if (cap) {
+                    obj.setCapture();
+                    return true;
+                } else {
+                    return obj.attachEvent("on" + evtType, func);
+                }
+            } else {
+                return false;
+            }
+        }
+        function getPageScroll() {
+            var xScroll, yScroll;
+            if (self.pageXOffset) {
+                xScroll = self.pageXOffset;
+            } else if (document.documentElement && document.documentElement.scrollLeft) {
+                xScroll = document.documentElement.scrollLeft;
+            } else if (document.body) {
+                xScroll = document.body.scrollLeft;
+            }
+            if (self.pageYOffset) {
+                yScroll = self.pageYOffset;
+            } else if (document.documentElement && document.documentElement.scrollTop) {
+                yScroll = document.documentElement.scrollTop;
+            } else if (document.body) {
+                yScroll = document.body.scrollTop;
+            }
+            arrayPageScroll = new Array(xScroll, yScroll);
+            return arrayPageScroll;
+        }
+        function GetPageSize() {
+            var xScroll, yScroll;
+            if (window.innerHeight && window.scrollMaxY) {
+                xScroll = document.body.scrollWidth;
+                yScroll = window.innerHeight + window.scrollMaxY;
+            } else if (document.body.scrollHeight > document.body.offsetHeight) {
+                xScroll = document.body.scrollWidth;
+                yScroll = document.body.scrollHeight;
+            } else {
+                xScroll = document.body.offsetWidth;
+                yScroll = document.body.offsetHeight;
+            }
+            var windowWidth, windowHeight;
+            if (self.innerHeight) {
+                windowWidth = self.innerWidth;
+                windowHeight = self.innerHeight;
+            } else if (document.documentElement && document.documentElement.clientHeight) {
+                windowWidth = document.documentElement.clientWidth;
+                windowHeight = document.documentElement.clientHeight;
+            } else if (document.body) {
+                windowWidth = document.body.clientWidth;
+                windowHeight = document.body.clientHeight;
+            }
+            if (yScroll < windowHeight) {
+                pageHeight = windowHeight;
+            } else {
+                pageHeight = yScroll;
+            }
+            if (xScroll < windowWidth) {
+                pageWidth = windowWidth;
+            } else {
+                pageWidth = xScroll;
+            }
+            arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+            return arrayPageSize;
+        }
+        //广告脚本文件 AdMove.js   
+        /*  
+        例子  
+        <div id="Div2">  
+        ***** content ******  
+        </div>  
+        var ad=new AdMove("Div2");  
+        ad.Run();  
+        */
+        ////////////////////////////////////////////////////////   
+        var AdMoveConfig = new Object();
+        AdMoveConfig.IsInitialized = false;
+        AdMoveConfig.ScrollX = 0;
+        AdMoveConfig.ScrollY = 0;
+        AdMoveConfig.MoveWidth = 0;
+        AdMoveConfig.MoveHeight = 0;
+        AdMoveConfig.Resize = function() {
+            var winsize = GetPageSize();
+            AdMoveConfig.MoveWidth = winsize[2];
+            AdMoveConfig.MoveHeight = winsize[3];
+            AdMoveConfig.Scroll();
+        }
+        AdMoveConfig.Scroll = function() {
+            var winscroll = getPageScroll();
+            AdMoveConfig.ScrollX = winscroll[0];
+            AdMoveConfig.ScrollY = winscroll[1];
+        }
+        addEvent(window, "resize", AdMoveConfig.Resize);
+        addEvent(window, "scroll", AdMoveConfig.Scroll);
+        function AdMove(id) {
+            if (!AdMoveConfig.IsInitialized) {
+                AdMoveConfig.Resize();
+                AdMoveConfig.IsInitialized = true;
+            }
+            var obj = document.getElementById(id);
+            obj.style.position = "absolute";
+            var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+            var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+            var x = W * Math.random(), y = H * Math.random();
+            var rad = (Math.random() + 1) * Math.PI / 6;
+            var kx = Math.sin(rad), ky = Math.cos(rad);
+            var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
+            var step = 1;
+            var interval;
+            this.SetLocation = function(vx, vy) { x = vx; y = vy; }
+            this.SetDirection = function(vx, vy) { dirx = vx; diry = vy; }
+            obj.CustomMethod = function() {
+                obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+                obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+                rad = (Math.random() + 1) * Math.PI / 6;
+                W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+                H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+                x = x + step * kx * dirx;
+                if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+                if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
+                y = y + step * ky * diry;
+                if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+                if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
+            }
+            this.Run = function() {
+                var delay = 25; //移动速度   
+                interval = setInterval(obj.CustomMethod, delay);
+                obj.onmouseover = function() { clearInterval(interval); }
+                obj.onmouseout = function() { interval = setInterval(obj.CustomMethod, delay); }
+            }
+        }   
+</script>
+
+
+<!--侧边栏-->
+<div class="canvi-navbar js-canvi-navbar--right">
+    <ul id="nav1" class="mobileNav">
+        <li class="nav-item nav-book">
+            <a href="https://www.gzsdzy.cn/n1/index.html">
+           学院概况
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n17/index.html" class="menuurl">学院简介</a></li>
+                <li><a href="https://www.gzsdzy.cn/n19/index.html" class="menuurl">校训校徽校歌</a></li>
+                <li><a href="https://www.gzsdzy.cn/n20/index.html" class="menuurl">学院荣誉</a></li>
+                <li><a href="https://www.gzsdzy.cn/n21/index.html" class="menuurl">校园风采</a></li>
+                <li><a href="https://www.gzsdzy.cn/n139/index.html" class="menuurl">现任领导</a></li>
+                <li><a href="https://www.gzsdzy.cn/n835/index.html" class="menuurl">师生风采</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-house">
+            <a href="https://www.gzsdzy.cn/n2/index.html">
+           机构设置
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n3/index.html" class="menuurl">党政机构</a></li>
+                <li><a href="https://www.gzsdzy.cn/n5/index.html" class="menuurl">教学机构</a></li>
+                <li><a href="https://www.gzsdzy.cn/n187/index.html" class="menuurl">教学辅助机构</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-magazine">
+            <a href="https://www.gzsdzy.cn/n6/index.html">
+           校园资讯
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n123/index.html" class="menuurl">校园新闻</a></li>
+                <li><a href="https://www.gzsdzy.cn/n25/index.html" class="menuurl">媒体看水院</a></li>
+                <li><a href="https://www.gzsdzy.cn/n24/index.html" class="menuurl">宣传视频</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-paper">
+            <a href="https://www.gzsdzy.cn/n7/index.html">
+           校园公开
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n30/index.html" class="menuurl">规章制度</a></li>
+                <li><a href="https://www.gzsdzy.cn/n23/index.html" class="menuurl">通知公告</a></li>
+                <li><a href="https://www.gzsdzy.cn/n32/index.html" class="menuurl">采购招标</a></li>
+                <li><a href="https://www.gzsdzy.cn/n33/index.html" class="menuurl">经费管理</a></li>
+                <li><a href="https://www.gzsdzy.cn/n35/index.html" class="menuurl">依申请公开</a></li>
+                <li><a href="https://www.gzsdzy.cn/n555/index.html" class="menuurl">国有资产处置公示</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-emblem">
+            <a href="https://www.gzsdzy.cn/n8/index.html">
+           党建思政
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n36/index.html" class="menuurl">党的建设</a></li>
+                <li><a href="https://www.gzsdzy.cn/n37/index.html" class="menuurl">廉洁校园</a></li>
+                <li><a href="https://www.gzsdzy.cn/n38/index.html" class="menuurl">思政工作</a></li>
+                <li><a href="https://www.gzsdzy.cn/n639/index.html" class="menuurl">基层党建</a></li>
+                <li><a href="https://www.gzsdzy.cn/n788/index.html" class="menuurl">师德师风建设</a></li>
+                <li><a href="https://www.gzsdzy.cn/n415/index.html" class="menuurl">共青团工作</a></li>
+                <li><a href="https://www.gzsdzy.cn/n827/index.html" class="menuurl">党纪学习教育</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-heart">
+            <a href="https://www.gzsdzy.cn/n9/index.html">
+           服务发展
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n45/index.html" class="menuurl">人事评聘</a></li>
+                <li><a href="https://www.gzsdzy.cn/n57/index.html" class="menuurl">信息化建设</a></li>
+                <li><a href="https://www.gzsdzy.cn/n799/index.html" class="menuurl">继续教育</a></li>
+                <li><a href="https://www.gzsdzy.cn/n50/index.html" class="menuurl">工会动态</a></li>
+                <li><a href="https://www.gzsdzy.cn/n407/index.html" class="menuurl">乡村振兴</a></li>
+                <li><a href="https://www.gzsdzy.cn/n836/index.html" class="menuurl">产教融合</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-tech">
+            <a href="https://www.gzsdzy.cn/n10/index.html">
+           教学科研
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n52/index.html" class="menuurl">教学服务</a></li>
+                <li><a href="https://www.gzsdzy.cn/n53/index.html" class="menuurl">科研工作</a></li>
+                <li><a href="https://www.gzsdzy.cn/n54/index.html" class="menuurl">教务信息</a></li>
+                <li><a href="https://www.gzsdzy.cn/n498/index.html" class="menuurl">专业建设</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-people">
+            <a href="https://www.gzsdzy.cn/n11/index.html">
+           学生工作
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n805/index.html" class="menuurl">学生教育</a></li>
+                <li><a href="https://www.gzsdzy.cn/n69/index.html" class="menuurl">学生管理</a></li>
+                <li><a href="https://www.gzsdzy.cn/n523/index.html" class="menuurl">学生服务</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-gjjl">
+            <a href="https://www.gzsdzy.cn/n473/index.html">
+           国际合作
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n417/index.html" class="menuurl">对外交流合作处</a></li>
+                <li><a href="https://www.gzsdzy.cn/site7/" class="menuurl">国际教育学院</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-channel">
+            <a href="https://www.gzsdzy.cn/n316/index.html">
+           分院频道
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/site2/" class="menuurl">水利工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site3/" class="menuurl">电力工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site5/" class="menuurl">管理工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site4/" class="menuurl">土木工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site9/" class="menuurl">智能工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site12/" class="menuurl">马克思主义教学部</a></li>
+                <li><a href="https://www.gzsdzy.cn/site8/" class="menuurl">公共基础教学部</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-student">
+            <a href="https://zs.gzsdzy.cn/zsmh/jyweb/webIndex.zf">
+           招生就业
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n86/index.html" class="menuurl">招生服务</a></li>
+                <li><a href="https://www.gzsdzy.cn/n93/index.html" class="menuurl">就业服务</a></li>
+                <li><a href="https://www.gzsdzy.cn/n806/index.html" class="menuurl">实习服务</a></li>
+                <li><a href="https://zs.gzsdzy.cn/jyweb/webIndex.zf" class="menuurl">招生信息网</a></li>
+                <li><a href="http://job.gzsdzy.cn/jyxt/jyweb/webIndex.zf" class="menuurl">就业信息网</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item last nav-shield">
+            <a href="https://www.gzsdzy.cn/n14/index.html">
+           校园安全
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n524/index.html" class="menuurl">后勤保障</a></li>
+                <li><a href="https://www.gzsdzy.cn/n106/index.html" class="menuurl">安全保卫</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--页面内容-->
+<div class="canvi-content">
+<div class="main">
+	<!-- header start-->
+	<div class="screenbg">
+		<ul>              
+			<li><a href="javascript:;" style="background:url(https://www.gzsdzy.cn/resource/info/logo/2019/09/27/d7a9da2a-cc9c-46cb-a4e5-6ab5f3062cdb.jpg) top no-repeat;background-size:cover;"></a></li>              
+			<li><a href="javascript:;" style="background:url(https://www.gzsdzy.cn/resource/info/logo/2019/09/27/1e6c2fea-7a68-4f83-a9d5-b342e6d960b1.jpg) top no-repeat;background-size:cover;"></a></li>               
+		</ul>
+	</div>      
+     
+    <div class="logo">
+      <img src="https://www.gzsdzy.cn/images/logo_2022.png" alt="">
+      <img src="https://www.gzsdzy.cn/images/motto_2022.png" alt="">
+  	</div>
+    
+    <div id="bigbox">
+    <div class="nav" id="main_nav">
+    <ul id="nav">
+        <li class="nav-item nav-book">
+            <a href="https://www.gzsdzy.cn/n1/index.html">
+           学院概况
+           </a>
+            <ul class="first">
+                <li><a href="https://www.gzsdzy.cn/n17/index.html" class="menuurl">学院简介</a></li>
+                <li><a href="https://www.gzsdzy.cn/n19/index.html" class="menuurl">校训校徽校歌</a></li>
+                <li><a href="https://www.gzsdzy.cn/n20/index.html" class="menuurl">学院荣誉</a></li>
+                <li><a href="https://www.gzsdzy.cn/n21/index.html" class="menuurl">校园风采</a></li>
+                <li><a href="https://www.gzsdzy.cn/n139/index.html" class="menuurl">现任领导</a></li>
+                <li><a href="https://www.gzsdzy.cn/n835/index.html" class="menuurl">师生风采</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-house">
+            <a href="https://www.gzsdzy.cn/n2/index.html">
+           机构设置
+           </a>
+            <ul class="first">
+                <li><a href="https://www.gzsdzy.cn/n3/index.html" class="menuurl">党政机构</a></li>
+                <li><a href="https://www.gzsdzy.cn/n5/index.html" class="menuurl">教学机构</a></li>
+                <li><a href="https://www.gzsdzy.cn/n187/index.html" class="menuurl">教学辅助机构</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-magazine">
+            <a href="https://www.gzsdzy.cn/n6/index.html">
+           校园资讯
+           </a>
+            <ul class="first">
+                <li><a href="https://www.gzsdzy.cn/n123/index.html" class="menuurl">校园新闻</a></li>
+                <li><a href="https://www.gzsdzy.cn/n25/index.html" class="menuurl">媒体看水院</a></li>
+                <li><a href="https://www.gzsdzy.cn/n24/index.html" class="menuurl">宣传视频</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-paper">
+            <a href="https://www.gzsdzy.cn/n7/index.html">
+           校园公开
+           </a>
+            <ul class="first">
+                <li><a href="https://www.gzsdzy.cn/n30/index.html" class="menuurl">规章制度</a></li>
+                <li><a href="https://www.gzsdzy.cn/n23/index.html" class="menuurl">通知公告</a></li>
+                <li><a href="https://www.gzsdzy.cn/n32/index.html" class="menuurl">采购招标</a></li>
+                <li><a href="https://www.gzsdzy.cn/n33/index.html" class="menuurl">经费管理</a></li>
+                <li><a href="https://www.gzsdzy.cn/n35/index.html" class="menuurl">依申请公开</a></li>
+                <li><a href="https://www.gzsdzy.cn/n555/index.html" class="menuurl">国有资产处置公示</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-emblem">
+            <a href="https://www.gzsdzy.cn/n8/index.html">
+           党建思政
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n36/index.html" class="menuurl">党的建设</a></li>
+                <li><a href="https://www.gzsdzy.cn/n37/index.html" class="menuurl">廉洁校园</a></li>
+                <li><a href="https://www.gzsdzy.cn/n38/index.html" class="menuurl">思政工作</a></li>
+                <li><a href="https://www.gzsdzy.cn/n639/index.html" class="menuurl">基层党建</a></li>
+                <li><a href="https://www.gzsdzy.cn/n788/index.html" class="menuurl">师德师风建设</a></li>
+                <li><a href="https://www.gzsdzy.cn/n415/index.html" class="menuurl">共青团工作</a></li>
+                <li><a href="https://www.gzsdzy.cn/n827/index.html" class="menuurl">党纪学习教育</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-heart">
+            <a href="https://www.gzsdzy.cn/n9/index.html">
+           服务发展
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n45/index.html" class="menuurl">人事评聘</a></li>
+                <li><a href="https://www.gzsdzy.cn/n57/index.html" class="menuurl">信息化建设</a></li>
+                <li><a href="https://www.gzsdzy.cn/n799/index.html" class="menuurl">继续教育</a></li>
+                <li><a href="https://www.gzsdzy.cn/n50/index.html" class="menuurl">工会动态</a></li>
+                <li><a href="https://www.gzsdzy.cn/n407/index.html" class="menuurl">乡村振兴</a></li>
+                <li><a href="https://www.gzsdzy.cn/n836/index.html" class="menuurl">产教融合</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-tech">
+            <a href="https://www.gzsdzy.cn/n10/index.html">
+           教学科研
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n52/index.html" class="menuurl">教学服务</a></li>
+                <li><a href="https://www.gzsdzy.cn/n53/index.html" class="menuurl">科研工作</a></li>
+                <li><a href="https://www.gzsdzy.cn/n54/index.html" class="menuurl">教务信息</a></li>
+                <li><a href="https://www.gzsdzy.cn/n498/index.html" class="menuurl">专业建设</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-people">
+            <a href="https://www.gzsdzy.cn/n11/index.html">
+           学生工作
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n805/index.html" class="menuurl">学生教育</a></li>
+                <li><a href="https://www.gzsdzy.cn/n69/index.html" class="menuurl">学生管理</a></li>
+                <li><a href="https://www.gzsdzy.cn/n523/index.html" class="menuurl">学生服务</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-gjjl">
+            <a href="https://www.gzsdzy.cn/n473/index.html">
+           国际合作
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n417/index.html" class="menuurl">对外交流合作处</a></li>
+                <li><a href="https://www.gzsdzy.cn/site7/" class="menuurl">国际教育学院</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-channel">
+            <a href="https://www.gzsdzy.cn/n316/index.html">
+           分院频道
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/site2/" class="menuurl">水利工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site3/" class="menuurl">电力工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site5/" class="menuurl">管理工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site4/" class="menuurl">土木工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site9/" class="menuurl">智能工程分院</a></li>
+                <li><a href="https://www.gzsdzy.cn/site12/" class="menuurl">马克思主义教学部</a></li>
+                <li><a href="https://www.gzsdzy.cn/site8/" class="menuurl">公共基础教学部</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item nav-student">
+            <a href="https://zs.gzsdzy.cn/zsmh/jyweb/webIndex.zf">
+           招生就业
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n86/index.html" class="menuurl">招生服务</a></li>
+                <li><a href="https://www.gzsdzy.cn/n93/index.html" class="menuurl">就业服务</a></li>
+                <li><a href="https://www.gzsdzy.cn/n806/index.html" class="menuurl">实习服务</a></li>
+                <li><a href="https://zs.gzsdzy.cn/jyweb/webIndex.zf" class="menuurl">招生信息网</a></li>
+                <li><a href="http://job.gzsdzy.cn/jyxt/jyweb/webIndex.zf" class="menuurl">就业信息网</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item last nav-shield">
+            <a href="https://www.gzsdzy.cn/n14/index.html">
+           校园安全
+           </a>
+            <ul class="first" style="display: none;">
+                <li><a href="https://www.gzsdzy.cn/n524/index.html" class="menuurl">后勤保障</a></li>
+                <li><a href="https://www.gzsdzy.cn/n106/index.html" class="menuurl">安全保卫</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+
+<div class="search">
+    <div class="search-left">
+        <span class="search-text"><a href="https://www.gzsdzy.cn">返回首页</a></span>
+
+        <div class="center-sky-ifram" style="margin-top:10px;">
+            
+        </div>
+        <div class="center-sky-date" style="width:auto;font-size:12px;">
+            <script language=JavaScript>
+                var enabled = 0;
+                today = new Date();
+                var day;
+                var date;
+                if (today.getDay() == 0) day = " 星期日 "
+                if (today.getDay() == 1) day = " 星期一 "
+                if (today.getDay() == 2) day = " 星期二 "
+                if (today.getDay() == 3) day = " 星期三 "
+                if (today.getDay() == 4) day = " 星期四 "
+                if (today.getDay() == 5) day = " 星期五 "
+                if (today.getDay() == 6) day = " 星期六 "
+                document.fgColor = "808080";
+                date = "今天是:" + today.getFullYear() + "年" + (today.getMonth() + 1) + "月" + today.getDate() + "日" + day;
+                document.write(date);
+            </script>
+        </div>
+
+        <div style="float:right;padding-left:20px;margin-right:20px;color:#ED1C24;">
+            <a href="https://www.gzsdzy.cn/n305/index.html" style="color:#ED1C24;font-size:13px;" target="_parent">校历</a>
+        </div>
+
+        <div style="float:right;padding-left:20px;color:#ED1C24;">
+            <a href="https://www.gzsdzy.cn/site6/" style="color:#ED1C24;font-size:13px;" target="_blank">English</a>
+        </div>
+
+    </div>
+
+    <div class="search-right">
+        <span class="search-box">
+               <input class="search-input" id="wd" name="wd" type="text" placeholder="请输入搜索内容"  />                       
+               <span class="search-button" onclick="Search()"></span>
+        </span>
+       <div class="showButton js-canvi-open-button--right">
+           导航 <img src="https://www.gzsdzy.cn/images/daohang2022.png" alt="">
+       </div>
+        <script type="text/javascript">
+            $(function() {
+                $("#wd").keypress(function(e) {
+                    if (e.keyCode == 13) {
+                        Search();
+                    }
+                })
+            })
+
+            function Search() {
+                var keyWords = $("#wd").val();
+                if (keyWords == "") {
+                    alert("请输入搜索内容");
+                    return false;
+                } else {
+                    window.location.href = "https://www.gzsdzy.cn/search.html?siteId=1&searchTxt=" + encodeURI($.trim(keyWords)) + "&searchTime=0";
+                }
+            }
+        </script>
+    </div>
+
+</div>
+
+		</div>   
+	<!-- header end-->
+      
+        <!-- special start-->
+        <div class="special">
+			<div class="wy-mod-banner">
+				<div id="_banners" class="banners">
+					<div class="banner"><a  title="学习贯彻习近平新时代中国特色社会主义思想主题教育" href="" target="_blank"><img src="https://www.gzsdzy.cn/resource/info/logo/2023/04/26/11b4db81-27be-416d-9e14-53e0649ef791.png" /></a></div>
+                 
+					<div id="_focus" class="focus">                    
+						<a href="javascript:void(0);" data-index="0" class="on"></a>
+					</div>
+		<script type="text/javascript">
+        var glume = function (banners_id, focus_id) {
+            this.$ctn = $('#' + banners_id);
+            this.$focus = $('#' + focus_id);
+            this.$adLis = null;
+            this.$btns = null;
+            this.switchSpeed = 5; //自动播放间隔(s)
+            this.defOpacity = 1;
+            this.crtIndex = 0;
+            this.adLength = 0;
+            this.timerSwitch = null;
+            this.init();
+        };
+        glume.prototype = {
+            fnNextIndex: function () {
+                return (this.crtIndex >= this.adLength - 1) ? 0 : this.crtIndex + 1;
+            },
+            //动画切换
+            fnSwitch: function (toIndex) {
+                if (this.crtIndex == toIndex) { return; }
+                this.$adLis.css('zIndex', 0);
+                this.$adLis.filter(':eq(' + this.crtIndex + ')').css('zIndex', 2);
+                this.$adLis.filter(':eq(' + toIndex + ')').css('zIndex', 1);
+                this.$btns.removeClass('on');
+                this.$btns.filter(':eq(' + toIndex + ')').addClass('on');
+                var me = this;
+
+                $(this.$adLis[this.crtIndex]).animate({
+                    opacity: 0
+                }, 1000, function () {
+                    me.crtIndex = toIndex;
+                    $(this).css({
+                        opacity: me.defOpacity,
+                        zIndex: 0
+                    });
+                });
+            },
+            fnAutoPlay: function () {
+                this.fnSwitch(this.fnNextIndex());
+            },
+            fnPlay: function () {
+                var me = this;
+                me.timerSwitch = window.setInterval(function () {
+                    me.fnAutoPlay();
+                }, me.switchSpeed * 1000);
+            },
+            fnStopPlay: function () {
+                window.clearTimeout(this.timerSwitch);
+                this.timerSwitch = null;
+            },
+
+            init: function () {
+                this.$adLis = this.$ctn.children();
+                this.$btns = this.$focus.children();
+                this.adLength = this.$adLis.length;
+
+                var me = this;
+                //点击切换
+                this.$focus.on('click', 'a', function (e) {
+                    e.preventDefault();
+                    var index = parseInt($(this).attr('data-index'), 10)
+                    me.fnSwitch(index);
+                });
+                this.$adLis.filter(':eq(' + this.crtIndex + ')').css('zIndex', 2);
+                this.fnPlay();
+
+                //hover时暂停动画
+                this.$ctn.hover(function () {
+                    me.fnStopPlay();
+                }, function () {
+                    me.fnPlay();
+                });
+
+                if ($.browser.msie && $.browser.version < 7) {
+                    this.$btns.hover(function () {
+                        $(this).addClass('hover');
+                    }, function () {
+                        $(this).removeClass('hover');
+                    });
+                }
+            }
+        };
+       //var numpic = $('#_banners .banner').size();
+                   var numpic = $('#_banners .banner').length;
+                   if(numpic!=1){//只有一张图片时不切换
+                     var player1 = new glume('_banners', '_focus');
+                   }
+		</script>
+              </div>
+             </div>
+        </div>
+        <!-- special end-->
+        <!-- middle start-->
+        <div class="middle">
+            <div class="middle-col1 floatLeft">
+                <div class="magazine-col1-header">                    
+					<div class="mleft">通知公告</div>
+					<div class="mright"><a href="https://www.gzsdzy.cn/n23/index.html">更多 >></a></div>
+                </div>
+                <div class="magazine-col1-ul">
+                    <ul>                       
+						<li class="col1-ul-item">
+							<a href="https://www.gzsdzy.cn/n23/20241023/i32071.html" title="贵州水利水电职业技术学院2024年高层次人才引进工作方案">贵州水利水电职业技术学院2024...</a>
+						</li>                       
+						<li class="col1-ul-item">
+							<a href="https://www.gzsdzy.cn/n23/20240802/i31425.html" title="贵州水利水电职业技术学院2024年优秀技能人才引进工作方案">贵州水利水电职业技术学院2024...</a>
+						</li>                       
+						<li class="col1-ul-item">
+							<a href="https://www.gzsdzy.cn/n23/20240802/i31424.html" title="关于2024年招聘科研助理拟聘用人员的公示">关于2024年招聘科研助理拟聘用...</a>
+						</li>                       
+						<li class="col1-ul-item">
+							<a href="https://www.gzsdzy.cn/n23/20240723/i31408.html" title="关于拟推报第十四届“挑战杯”中国大学生创业计划竞赛项目的公示">关于拟推报第十四届“挑战杯”中国...</a>
+						</li>                       
+						<li class="col1-ul-item">
+							<a href="https://www.gzsdzy.cn/n23/20240713/i31356.html" title="贵州水利水电职业技术学院关于2024年招聘科研助理面试成绩公告">贵州水利水电职业技术学院关于20...</a>
+						</li>                       
+						<li class="col1-ul-item">
+							<a href="https://www.gzsdzy.cn/n23/20240709/i31319.html" title="贵州水利水电职业技术学院2024年招聘科研助理面试公告">贵州水利水电职业技术学院2024...</a>
+						</li>                       
+						<li class="col1-ul-item">
+							<a href="https://www.gzsdzy.cn/n23/20240705/i31310.html" title="贵州水利水电职业技术学院2024年面向学院招聘科研助理工作方案">贵州水利水电职业技术学院2024...</a>
+						</li>                       
+						<li class="col1-ul-item">
+							<a href="https://www.gzsdzy.cn/n23/20240329/i30052.html" title="贵州水利水电职业技术学院2024上半年公开招聘编制外聘用人员拟聘用人员公示">贵州水利水电职业技术学院2024...</a>
+						</li>                           
+                    </ul>
+                </div>
+            </div>
+          	 <div class="clearfloat1"></div>
+            <div class="middle-col2 floatLeft">
+                <div class="magazine-col1-header">
+					<div class="mleft">校园新闻</div>
+					<div class="mright"><a href="https://www.gzsdzy.cn/n123/index.html">更多 >></a></div>
+                </div>
+                <div class="magazine-col1-ul">
+                    <ul>                        
+						<li class="col1-ul-item-img">
+							<div class="main-Img">
+								<a href="https://www.gzsdzy.cn/n123/20241024/i32079.html">
+									<img src="https://www.gzsdzy.cn/resource/info/logo/2024/10/24/1729752339994028874.jpeg" />
+								</a>
+							</div>
+							<div class="main-content">
+								<h1><a href="https://www.gzsdzy.cn/n123/20241024/i32079.html" title="学院与美国贝佛大学成功举办新生见面会暨答疑会">学院与美国贝佛大学成功举办新生见面会暨答疑会</a> </h1>
+								<div class="content-intro">
+									<a href="https://www.gzsdzy.cn/n123/20241024/i32079.html">为加强学院与美国贝佛大学之间的交流与合作，帮助24级中外合作办学班新生更好地了解两校合作办学项目，10月...</a>
+								</div>
+								<div class="content-bottom">
+									<span class="more"><a href="https://www.gzsdzy.cn/n123/20241024/i32079.html">详情 >></a></span>
+									<span class="content-bottom-time">2024-10-24</span>
+								</div>
+							</div>
+						</li>
+                      
+                         <li class="col1-ul-item">
+						<a href="https://www.gzsdzy.cn/n123/20241024/i32078.html" title="喜报！我院11名志愿者荣获2023-2024年度大学生志愿服务西部计划考核等次优秀">喜报！我院11名志愿者荣获2023-2024年度大学生...</a>
+						2024-10-24
+						</li>
+                      
+                         <li class="col1-ul-item">
+						<a href="https://www.gzsdzy.cn/n123/20241024/i32077.html" title="水院快讯：2024年10月24日">水院快讯：2024年10月24日</a>
+						2024-10-24
+						</li>
+                      
+                         <li class="col1-ul-item">
+						<a href="https://www.gzsdzy.cn/n123/20241022/i32070.html" title="学院开展2024级新生入党启蒙教育讲座">学院开展2024级新生入党启蒙教育讲座</a>
+						2024-10-22
+						</li>
+                      
+                         <li class="col1-ul-item">
+						<a href="https://www.gzsdzy.cn/n123/20241021/i32061.html" title="【学工动态】奋楫扬帆 笃行致远——学院开展2024年省级先进班集体评选推荐会">【学工动态】奋楫扬帆 笃行致远——学院开展2024年省...</a>
+						2024-10-21
+						</li>            
+                      </ul>
+                   
+                </div>
+            </div>
+            <div class="middle-col3 floatLeft">
+                <div class="middle-col3-temp">
+                    <div class="magazine-col1-header">
+                        <div class="mleft">快速链接</div>
+                        <div class="mright">   </div>
+                    </div>
+                    <div class="middle-col3-bottom clear2NMargin">
+                        <ul>
+						<li class="middle-col3-bottom2"><a href="https://www.gzsdzy.cn/n108/index.html">书记信箱</a></li>
+						<li class="middle-col3-bottom1"><a href="https://www.gzsdzy.cn/n140/index.html">院长信箱</a></li>
+						<li class="middle-col3-bottom3"><a href="https://www.gzsdzy.cn/n109/index.html">网上咨询</a></li>
+						<li class="middle-col3-bottom4"><a href="https://www.gzsdzy.cn/n110/index.html">调查征集</a></li>
+						<li class="middle-col3-bottom5"><a href="https://www.gzsdzy.cn/n111/index.html">学院微信</a></li>
+						<li class="middle-col3-bottom6"><a href="https://tsg.gzsdzy.cn/">图书馆</a></li>
+						<li class="middle-col3-bottom7"><a href="https://zs.gzsdzy.cn:82/zsxt/web/xsLogin/login.zf">中职报名</a></li>
+						<li class="middle-col3-bottom8"><a href="https://www.gzsdzy.cn/n60/index.html">在线学习</a></li>                                
+                        </ul>
+                    </div>
+                </div>
+                <div class="middle-col3-qlinks" style="padding-top: 35px;">
+					<a href="https://one.gzsdzy.cn"><img src="https://www.gzsdzy.cn/images/benz9_1.png" /></a>
+				
+                </div>
+
+            </div>
+            <!-- advertise start-->
+            <div class="clearfloat"></div>
+            <div class="guanggao">
+              <!-- <div class="in-ztzlinfo">
+				 <a class="prev"></a>
+				<a class="next"></a>
+				<div class="bd">
+					<ul class="picList">
+                       <li th:each="info:${#temp.infoList(136,0,0,0,1)}" style="margin-left: 0;"><a th:href="${info.infoUrl}" target="_blank"><img th:src="${info.logo}" style="margin: 0 10px;" /></a></li>           
+                      </ul>
+				</div> 
+			</div>
+			<script type="text/javascript">
+				jQuery(".in-ztzlinfo").slide({
+					mainCell: ".bd ul",
+					autoPage: true,
+					effect: "left",
+                    pnLoop:true,
+					autoPlay: true,
+					vis:4,
+					trigger: "click"
+				});
+			</script> -->
+              <div class="swiper-container swiperAd">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="https://www.gzsdzy.cn/n788/index.html" target="_blank"><img src="https://www.gzsdzy.cn/resource/info/logo/2023/07/28/6085b80e-5e88-4f82-bad4-df81a2235675.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="https://www.gzsdzy.cn/n724/index.html" target="_blank"><img src="https://www.gzsdzy.cn/resource/info/logo/2022/11/14/37007b97-3e57-4b5d-9436-133b4d9ee0cd.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="https://www.gzsdzy.cn/n586/index.html" target="_blank"><img src="https://www.gzsdzy.cn/resource/info/logo/2021/04/19/3adbb608-e5fb-4287-b5f2-b68f050937b3.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="https://www.gzsdzy.cn/n59/index.html" target="_blank"><img src="https://www.gzsdzy.cn/resource/info/logo/2020/05/24/38de4e70-cd25-42fe-a23c-b3002c7c4b10.png" /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- advertise end-->
+        </div>
+        <!-- middle end-->
+        <!-- footer start-->
+ <div class="footer" style="font-size:12px;">
+    <div class="footer-first">
+        <a href="https://www.gzsdzy.cn/n161/index.html">网站地图 | </a>
+        <a href="https://www.gzsdzy.cn/n155/index.html">版权说明 | </a>
+        <a href="https://www.gzsdzy.cn/n156/index.html">隐私说明 | </a>
+        <a href="https://www.gzsdzy.cn/n157/index.html">联系我们 | </a>
+        <a href="https://www.gzsdzy.cn/n158/index.html">辅助信息</a>
+    </div>
+    <div class="footer-second">
+        <a href="http://www.mwr.gov.cn/" target="_blank">水利部 | </a><a href="http://www.moe.gov.cn/" target="_blank">教育部 | </a><a href="https://mwr.guizhou.gov.cn/" target="_blank">贵州省水利厅 | </a><a href="https://jyt.guizhou.gov.cn/" target="_blank">贵州省教育厅 | </a><a href="https://www.chsi.com.cn/" target="_blank">学信网 | </a>
+        <br />
+           
+        <br />
+    </div>
+    <br />
+    <div style="clear:left;"></div>
+    <div class="footer-second">
+      地址：贵州省贵阳市清镇市职教城西区龙井路1号</br>邮政编码：551416</br>电话传真：0851-85938823、0851-85925622</br><a target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index">黔ICP备08001160号-1</a></br>
+        版权所有：贵州水利水电职业技术学院</br>技术支持：<a href="https://www.zzdsj.com.cn/" target="_blank" style="color:#fe0000;">智政科技</a></br>
+        <div style="width: 300px; margin: 0 auto; padding: 5px 0;">
+            <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52018102008139" style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px;">
+                <img src="https://www.gzsdzy.cn/images/beian.png" style="float: left;" />
+                <p style="float: left; height: 20px; line-height: 20px; margin: 0px 0px 0px 5px; color: #939393;">贵公网安备 52018102008139号</p>
+            </a>
+        </div>
+    </div>
+    <div class="footer-third">
+        <a href="https://bszs.conac.cn/sitename?method=show&amp;id=0848AC023EE9758DE053022819ACBA5B" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="https://www.gzsdzy.cn/images/blue.png" data-bd-imgshare-binded="1"></a>
+    </div>
+</div>
+
+        <!-- footer end-->
+    </div>
+  </div>
+	<script type="text/javascript">
+    //校园公开
+    jQuery(".paper-col2").slide({titOnClassName: "paper-on"});
+    //党建思政
+    jQuery(".emblem-col2").slide({titOnClassName: "emblem-on"});
+    //学校服务
+    jQuery(".heart-col3-ul").slide({titOnClassName: "heart-on"});
+    //教学服务
+    jQuery(".tech-col1").slide({titOnClassName: "tech-on"});
+    //招生服务
+    jQuery("#people-ul-1").slide({titOnClassName: "people-on"});
+    jQuery("#people-ul-2").slide({titOnClassName: "people-on"});
+    jQuery("#people-ul-3").slide({titOnClassName: "people-on"});
+
+    //招生就业
+    jQuery(".student-col1").slide({titOnClassName: "emblem-on"});
+    jQuery(".student-col2").slide({titOnClassName: "emblem-on"});    
+    </script>
+              
+<script type="text/javascript">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script type="text/javascript">
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?d7235a0eb270ced0efe2c35b662f6b27":"https://jspassport.ssl.qhimg.com/11.0.1.js?d7235a0eb270ced0efe2c35b662f6b27";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+<script id="eda_bar_script" src="https://answer.eol.cn/school/pc/school3599.js"></script>
+ <!--2022-05-23 新增-->
+<script src="https://www.gzsdzy.cn/js/canvi.js"></script>
+<script src="https://www.gzsdzy.cn/js/swiper.min.js"></script>
+<script src="https://www.gzsdzy.cn/js/2022.05.23.js"></script>
+<script>
+    var swiperAd = new Swiper('.swiperAd', {
+        autoplay: true,
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpointsBase: 'container',
+        breakpoints: {
+            //当swiper宽度大于等于768
+            768: {
+                slidesPerView: 1,
+            }
+        }
+    })
+</script>
+  <script>
+       var serverUrl = "https:\/\/cms.gzsdzy.cn\/";
+        $.ajax({
+            url: serverUrl+'/external/interface/getArticleViews',
+            data: {
+                type: 0,
+                siteId: 1
+            },
+            dataType: 'json',
+            type: "GET",
+            dataType: "json",
+            contentType: 'application/x-www-form-urlencoded',
+            cache: false,
+            success: function(data) {
+              console.log(data.info); 
+            }
+        }); 
+	</script>
+</body>
+</html>

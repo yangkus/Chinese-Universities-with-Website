@@ -1,0 +1,515 @@
+﻿<!DOCTYPE html><HTML lang="zh-CN"><HEAD><TITLE>学院概况-广东机电职业技术学院</TITLE><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院概况">
+<META Name="keywords" Content="国家“双高”计划建设单位、国家优质高职院校-广东机电职业技术学院" />
+
+
+
+<META charset="UTF-8">
+
+<META name="description" content="国家优质高职院校-广东机电职业技术学院">
+<META name="wap-font-scale" content="no">
+<META name="format-detection" content="telephone=no">
+<META name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<META content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<LINK rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" mce_href="/images/favicon.ico">
+<LINK rel="stylesheet" href="../css/cui.css"><LINK rel="stylesheet" href="../css/lib.css"><LINK rel="stylesheet" href="../css/style.css"><LINK rel="stylesheet" href="../css/less.css">
+<script src="../js/jquery.js" type="text/javascript">
+        </script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css" />
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78475050515742000300004451 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1015,'/jjy.jsp',-1,1402762039)</script>
+</HEAD>
+<BODY><!-- 顶部 -->
+<DIV id="top">
+<DIV class="wp">
+<DIV class="top-l"><SPAN>院校代码：</SPAN><SPAN class="yxdm">12743</SPAN></DIV>
+<DIV class="top-r">
+<UL class="ul-list1"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>    <li><a href="../info/1309/49604.htm" target="_blank" class="v1" onclick="_addDynClicks(&#34;wburl&#34;, 1402762039, 37154)"><i>· </i>综合服务中心（数字校园）</a></li>
+    <li><a href="../info/1309/49599.htm" target="_blank" class="v1" onclick="_addDynClicks(&#34;wburl&#34;, 1402762039, 37155)"><i>· </i>VPN入口</a></li>
+    <li><a href="../info/1309/49602.htm" target="_blank" class="v1" onclick="_addDynClicks(&#34;wburl&#34;, 1402762039, 37156)"><i>· </i>电子邮件</a></li>
+    <li><a href="https://en.gdmec.edu.cn" target="_blank" class="v1" onclick="_addDynClicks(&#34;wburl&#34;, 1402762039, 38225)"><i>· </i>English</a></li>
+</UL>
+<DIV class="sel-lan">
+<DL>
+<DT>| </DT></DL></DIV>
+<DIV class="m-search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1"></div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1" class="m-soBox">
+    <a class="searcha" href=""></a>
+        <div v-if="!isError">
+            <input type="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" class="input">
+            <input class="search" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1402762039";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></DIV></DIV><BR class="clear"></DIV></DIV><!-- 顶部 end-->
+<DIV class="m-ss">
+<DIV class="m-ss-l">    <a href="https://en.gdmec.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1402762039, 37381)">English</a>
+</DIV>
+<DIV class="m-ss-r">
+
+
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="ss-btn" name="submit_button" type="submit" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1402762039";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></DIV></DIV><!-- 头部 -->
+<DIV id="hd">
+<DIV class="wp">
+<DIV class="logocon">
+<DIV class="logol">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="校园网主站"><img src="../images/logo.png" width="421" height="80" border="0" alt="校园网主站" title="校园网主站"></a></DIV>
+<DIV class="logoright">
+<P>国家“双高”计划建设单位</P>
+<P>国家优质高职院校</P>
+<P>国家示范性职业教育集团培育单位牵头单位</P>
+<P>省一流高职院校建设单位</P>
+<P>省示范性高职院校</P></DIV>
+<DIV class="logofont">    	<img src="../images/logofont.png">
+</DIV><BR class="clear"></DIV>      <a href="../index.htm" class="m-logo" onclick="_addDynClicks(&#34;wbimage&#34;, 1402762039, 36048)"><img src="../images/phonelogonew.png" alt=""></a>
+<SPAN class="menuBtn"></SPAN></DIV>
+<DIV id="nv">
+<DIV class="wp">
+<UL class="nav">    
+                    <li>
+                        <a href="../index.htm" class="v1">首页</a>
+                    </li>
+                   
+    
+                    <li class="on">
+                        <a href="xygk.htm" class="v1">学院概况</a>
+
+
+                        <div class="subBox ' subBox1 '">
+                            <dl>
+                 <a href="xygk.htm">学院概况</a>
+                 <a href="xrld.htm">现任领导</a>
+                 <a href="xysp.htm">学院视频</a>
+                 <a href="xyfg/nxq.htm">校园风光</a>
+                 <a href="msgj/msxl.htm">名师工匠</a>
+
+                                <br class="clear">
+                            </dl>
+                        </div>
+                    </li>
+                   
+    
+                    <li>
+                        <a href="../gljg.htm" class="v1">管理机构</a>
+
+
+                        <div class="subBox ' subBox1 '">
+                            <dl>
+                 <a href="https://dzb.gdmec.edu.cn" target="_blank">党政办公室</a>
+                 <a href="https://zxb.gdmec.edu.cn/" target="_blank">组织宣传统战部</a>
+                 <a href="https://jj.gdmec.edu.cn/" target="_blank">纪检室</a>
+                 <a href="https://rsc.gdmec.edu.cn/" target="_blank">人力资源部</a>
+                 <a href="https://jw.gdmec.edu.cn/" target="_blank">教务部</a>
+                 <a href="https://jcc.gdmec.edu.cn/" target="_blank">财务部</a>
+                 <a href="https://xsc.gdmec.edu.cn/" target="_blank">学生工作部</a>
+                 <a href="https://sjc.gdmec.edu.cn/" target="_blank">审计工作部</a>
+                 <a href="https://kjc.gdmec.edu.cn/" target="_blank">科学技术部</a>
+                 <a href="https://zwc.gdmec.edu.cn/" target="_blank">总务后勤部</a>
+                 <a href="https://zcc.gdmec.edu.cn/" target="_blank">资产设备管理部</a>
+                 <a href="https://jjc.gdmec.edu.cn/" target="_blank">基础建设部</a>
+                 <a href="https://bwc.gdmec.edu.cn" target="_blank">保卫部</a>
+                 <a href="https://xq.gdmec.edu.cn" target="_blank">校企合作中心</a>
+                 <a href="https://zlglb.gdmec.edu.cn/" target="_blank">质量监测与评估中心</a>
+                 <a href="https://gh.gdmec.edu.cn/" target="_blank">工会</a>
+                 <a href="https://tsg.gdmec.edu.cn/" target="_blank">图书馆</a>
+                 <a href="https://jsfzzx.gdmec.edu.cn/" target="_blank">教师发展中心</a>
+                 <a href="https://wxzx.gdmec.edu.cn" target="_blank">网络与信息技术中心</a>
+                 <a href="../zsjy.htm" target="_blank">招生就业办</a>
+                 <a href="https://xlzx.gdmec.edu.cn" target="_blank">心理健康教育部</a>
+                 <a href="https://xtw.gdmec.edu.cn/" target="_blank">校团委</a>
+
+                                <br class="clear">
+                            </dl>
+                        </div>
+                    </li>
+                   
+    
+                    <li>
+                        <a href="../jxdw.htm" class="v1">教学单位</a>
+
+
+                        <div class="subBox ' subBox1 '">
+                            <dl>
+                 <a href="https://xjzz.gdmec.edu.cn/" target="_blank">先进制造技术学院</a>
+                 <a href="https://dianqi.gdmec.edu.cn/" target="_blank">电气技术学院</a>
+                 <a href="https://qc.gdmec.edu.cn/" target="_blank">汽车学院</a>
+                 <a href="https://rgzn.gdmec.edu.cn" target="_blank">人工智能学院</a>
+                 <a href="https://dzytx.gdmec.edu.cn/" target="_blank">电子与通信学院</a>
+                 <a href="https://jsjyy.gdmec.edu.cn" target="_blank">计算机应用学院</a>
+                 <a href="https://jm.gdmec.edu.cn" target="_blank">经济贸易学院</a>
+                 <a href="https://wl.gdmec.edu.cn" target="_blank">物流学院</a>
+                 <a href="https://wysw.gdmec.edu.cn/" target="_blank">外语商务学院</a>
+                 <a href="https://sj.gdmec.edu.cn" target="_blank">设计学院</a>
+                 <a href="https://gggl.gdmec.edu.cn" target="_blank">公共管理学院</a>
+                 <a href="https://mks.gdmec.edu.cn/" target="_blank">马克思主义学院</a>
+                 <a href="https://jxjy.gdmec.edu.cn/" target="_blank">继续教育学院</a>
+                 <a href="https://tyb.gdmec.edu.cn/" target="_blank">体育工作部</a>
+                 <a href="https://cxcy.gdmec.edu.cn" target="_blank">创新创业学院</a>
+
+                                <br class="clear">
+                            </dl>
+                        </div>
+                    </li>
+                   
+    
+                    <li>
+                        <a href="../xwzx/xxyw.htm" class="v1">新闻中心</a>
+
+
+                        <div class="subBox ''">
+                            <dl>
+                 <a href="../xwzx/xxyw.htm">学校要闻</a>
+                 <a href="../xwzx/xykx.htm">校园快讯</a>
+                 <a href="../xwzx/djfc.htm">党建风采</a>
+                 <a href="../xwzx/mtgz.htm">媒体关注</a>
+                 <a href="../xwzx/tzgg.htm">通知公告</a>
+                 <a href="../xwzx/kydt.htm">科研动态</a>
+
+                                <br class="clear">
+                            </dl>
+                        </div>
+                    </li>
+                   
+    
+                    <li>
+                        <a target="_blank" href="../info/1309/49753.htm" class="v1">职教集团</a>
+                    </li>
+                   
+    
+                    <li>
+                        <a href="../zsjy.htm" class="v1">招生就业</a>
+
+
+                        <div class="subBox ''">
+                            <dl>
+                 <a href="../info/1309/49754.htm" target="_blank">招生信息</a>
+                 <a href="../info/1309/49755.htm" target="_blank">就业信息</a>
+
+                                <br class="clear">
+                            </dl>
+                        </div>
+                    </li>
+                   
+    
+                    <li>
+                        <a target="_blank" href="../info/1309/49756.htm" class="v1">人才招聘</a>
+                    </li>
+                   
+    
+                    <li>
+                        <a href="../jxgl.htm" class="v1">教学管理</a>
+
+
+                        <div class="subBox ''">
+                            <dl>
+                 <a href="../info/1309/49757.htm" target="_blank">教务管理系统</a>
+                 <a href="../info/1309/49758.htm" target="_blank">顶岗实习平台</a>
+
+                                <br class="clear">
+                            </dl>
+                        </div>
+                    </li>
+                   
+    
+                    <li>
+                        <a href="../jxzy/jxzy.htm" class="v1">教学资源</a>
+
+
+                        <div class="subBox ''">
+                            <dl>
+                 <a href="../jxzy/jxzy.htm">教学资源</a>
+                 <a href="../jxzy/pszl.htm">评审专栏</a>
+
+                                <br class="clear">
+                            </dl>
+                        </div>
+                    </li>
+                   
+    
+                    <li>
+                        <a target="_blank" href="https://cgxx.gdmec.edu.cn/" class="v1">招标信息</a>
+                    </li>
+                   
+    
+                    <li>
+                        <a target="_blank" href="https://tsg.gdmec.edu.cn/" class="v1">图书馆</a>
+                    </li>
+                   
+    
+                    <li>
+                        <a target="_blank" href="https://xyh.gdmec.edu.cn/" class="v1">机电校友</a>
+                    </li>
+                   
+    
+                    <li>
+                        <a href="../xxzc.htm" class="v1">学校章程</a>
+                    </li>
+                   
+</UL></DIV></DIV></DIV><!-- 头部 end--><!--ban--><!--ban end--><!-- 主内容 -->
+<DIV id="bd"><div id="ban" style="background-image:url(../images/gban1.jpg);"></div>
+<div class="m-n">
+<div class="m-nav-title">
+学院概况</div></div>
+<DIV class="wp hxx">
+<DIV class="row">
+<DIV class="side-col">
+<DIV class="m-column">
+<DIV class="g-title1">
+<H3>
+学院概况</H3></DIV>
+<UL class="snav">    <li class="on"><a class="s1" href="xygk.htm">学院概况</a></li>
+    <li><a class="s1" href="xrld.htm">现任领导</a></li>
+    <li><a class="s1" href="xysp.htm">学院视频</a></li>
+    <li><a class="s1" href="xyfg/nxq.htm">校园风光</a></li>
+    <li><a class="s1" href="msgj/msxl.htm">名师工匠</a></li>
+</UL></DIV></DIV>
+<DIV class="main-col">
+<DIV class="m-cur">     
+                        <a href="../index.htm">首页</a>
+                >
+                <a href="xygk.htm">学院概况</a>
+                >
+                <a href="xygk.htm">学院概况</a>
+</DIV>
+<DIV class="m-cur_a">
+<DIV class="m-cur_a_w">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1402762039,'wbnews','u13')</script>
+<link rel="stylesheet" Content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta13(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta13('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1402762039,1305)</script>
+<p style="line-height:24px;">
+    <div id="vsb_content_2_1305_u131"><div id="vsb_content_2"><p class="vsbcontent_img"><img width="500" src="/__local/2/E1/E6/065568D499807C3DF4192E602BD_AF772169_F184CD.jpg" vsbhref="vurl" vurl="/_vsl/2E1E6065568D499807C3DF4192E602BD/AF772169/F184CD" vheight="" vwidth="500" orisrc="/__local/2/E1/E6/065568D499807C3DF4192E602BD_AF772169_F184CD.jpg" class="img_vsb_content"></p><p class="vsbcontent_img"><img width="500" src="/__local/E/9F/B6/13CBA2E916138695522F64DE1B2_0FC51E39_1E40C.jpg" vsbhref="vurl" vurl="/_vsl/E9FB613CBA2E916138695522F64DE1B2/0FC51E39/1E40C" vheight="" vwidth="500" orisrc="/__local/A/FE/DA/9B136B0FDEDF0EC661400C220F0_4691F8D3_2675C6.jpg" class="img_vsb_content"></p><p class="vsbcontent_img"><img width="500" src="/__local/A/21/96/1288DDEF3AA1EEA67A4091E128C_16F6C059_36753.jpg" vsbhref="vurl" vurl="/_vsl/A21961288DDEF3AA1EEA67A4091E128C/16F6C059/36753" vheight="" vwidth="500" orisrc="/__local/A/21/96/1288DDEF3AA1EEA67A4091E128C_16F6C059_36753.jpg" class="img_vsb_content"></p><p class="vsbcontent_img"><img width="500" src="/__local/E/C6/44/A828FE0063D8E066A293AB705DE_9553906E_1FBBB.jpg" vsbhref="vurl" vurl="/_vsl/EC644A828FE0063D8E066A293AB705DE/9553906E/1FBBB" vheight="" vwidth="500" orisrc="/__local/B/3F/5E/41ACA7EE260F2C7740FADC4524F_4BE5C124_262E91.jpg" class="img_vsb_content"></p><p class="vsbcontent_img"><br></p><p>广东机电职业技术学院坐落在广州市白云区，是一所隶属于广东省教育厅的公办全日制工科类普通高等职业院校。学院办学历史悠久，前身为创建于1956年的广东省农业机械化学校，历经“广东省农业机械化技工学校”“广东省农业机械技术学校”“广东省农业机电学校”“广东省机电学校”等发展阶段。2001年，经广东省人民政府批准，学校升格为高等职业院校，翻开了高质量发展的崭新篇章。</p><p>学院是国家“双高”计划建设单位、国家优质高职院校、广东省一流高职院校建设单位、广东省示范性高职院校、教育部第一批示范性职业教育集团（联盟）培育单位(牵头单位)、“全省党建工作示范高校”培育创建单位、广东省依法治校示范校、全国第三批职业院校数字校园建设实验校、教育部第一批职业院校数字校园建设试点校、广东省高等职业教育数字化标杆学校、广东省安全文明校园、广东省节能型示范高校；广东省深化新时代教育评价改革试点校。获评全国高职院校“育人成效50强”“服务贡献50强”“国际影响力50强”“学生管理50强”“资源建设优势学校60强”“教师发展指数优秀院校100强单位”“学生发展指数优秀院校100强单位”。</p><p>学院现有在校生2.5万人，辖有南、北、西三个校区，南校区坐落于风景秀丽的白云山畔，交通便利；北校区位于职业教育气息浓厚的广州钟落潭高职园区；西校区地处嘉禾望岗。校园总面积1037亩，校舍建筑面积43.82万平方米，固定资产总值超10亿元。</p><p>学院设有先进制造技术学院、电气技术学院、汽车学院、人工智能学院、设计学院、计算机应用学院、电子与通信学院、经济贸易学院、物流学院、外语商务学院、马克思主义学院、公共管理学院、创新创业学院、继续教育学院、中职教育部和体育部等十四院两部，主动适应地方经济社会发展需要，开设专业53个，形成了以“先进制造业专业群为主体，电子信息业和现代服务业专业群为两翼”的专业格局。学院建有国家级高水平专业群1个、省级高水平专业群8个；拥有国家级示范专业点1个，中央财政支持建设专业2个，国家骨干专业10个；省级示范专业3个，省级重点专业8个，省级一类品牌专业2个、二类品牌专业11个；省级以上优质专业占比达83%；拥有国家级精品在线开放课程1门、省级精品资源共享课和精品课程24门。</p><p>学院在职教职工1000余人，其中博士学位百余人。专任教师中具备“双师”素质比例超过90%，具有副高以上职称比例超过38%，具有硕士以上学位比例超过78%，具有3年以上行业企业经历比例超过53%。近年来教师获省级以上荣誉289项，拥有全国优秀教师1人、全国先进工作者1人、国务院政府特殊津贴专家1人、国家“万人计划”教学名师1人、国家级名师培养对象1人、全国技术能手4人、全国青年岗位能手2人，国家级职业教育教师（教学）创新团队3个、国家级技能大师工作室1个；省级教学名师4人、省级专业领军人才6人、南粤优秀教师（教育工作者）12人、省级技术能手17人、珠江学者讲座教授1人、省五一劳动奖章获得者2人、省五四青年奖章获得者3人、省级优秀青年教师4人、省级优秀教学团队11个、省级技能大师（名师）工作室5个、省级高层次技能型兼职教师65人、广州市“珠江科技新星”1人，省级及以上名师人才（团队）总数达145人次；学院“双师型”教师队伍建设实践案例入选首批全国职业院校“双师型”教师队伍建设典型案例；学院高水平双师队伍建设实践课程《螺旋培养增值赋能，打造一流“工匠之师”——广东机电职业技术学院高水平双师队伍建设的探索》上线中国教育干部网络学院平台，面向全国职业院校推广宣传。</p><p>学院坚持走质量、规模、效益协调发展之路，以教师为主导，以学生为主体，积极探索教学改革，着力提高教育教学质量和办学综合效益。教师获国家级教学成果奖8项，省级教学成果奖22项；在国家技能大赛教学能力比赛中获得二等奖3项、三等奖1项，2021年获奖数并列全国第2。学生参加校级技能竞赛覆盖率达100%。近五年（2019-2023年），省级和国家级技能竞赛成绩突出，共获得国家一等奖4项，国家二等奖10项，国家三等奖8项，省一等奖123项，省二等奖231项，省三等奖222项。学院在“创新强校”工程建设近五年考核中排名始终稳居前六。</p><p>学院重视培养学生创新创业能力，通过绘制双创人才成长地图，帮助学生“开发个人潜能、实现自我价值、让自己更出彩”。近五年，学生获得创新创业类比赛国家级、省级奖励237项。学院获“攀登计划”广东大学生科技创新培育专项资金立项项目19项，资助经费达44万元，2017年资助经费总额排名全省第1，2018年排名全省第2。近三年，学生创业成功案例40余个，创新创业项目成功孵化，成立公司的有16项。</p><p>学院以素质教育为核心，坚持培养具有自我管理、自主学习、自励成长能力的生产、建设、管理、服务第一线需要的高素质技术技能人才，大批“实践能力强、行业品质优、岗位适应快”的优秀毕业生被国内知名企业录用，就业网络主要辐射珠三角，毕业生初次就业率始终稳定在98%以上，基本实现学生有尊严更体面高质量就业。学院坚持以“工匠精神”为引领，依托国家职业技能鉴定站，积极推行“双证书”制度，毕业生双证书获取率100%。</p><p>学院是国家职业技能鉴定所、国家首批“1+X证书制度试点”院校、全国信息技术水平考试站、广东省首批职业技能等级认定社会培训评价组织、广东省“养老护理”职业技能培训机构和广州市特种作业培训考试单位，可开展97个工种的职业资格鉴定。学院拥有国家级“双师型”教师培养培训基地2个，是教育部、财政部“优质省级职教师资培养培训基地”、广东省职业院校“双师型”教师培训基地。2004年开展职业院校教师培训工作以来，至今已面向广东省内外300多所中、高等职业院校开展了国家级省级培训项目近300个，累计到账额5849万元，培训7924名职校教师。学院获批国家级省级职教师资培训项目和到账额连续5年排全省高职院校前2，2022年11项获广东省教育厅绩效评估优秀，受到《中国教育报》《中国网》《羊城晚报》等知名媒体报道。学院获省级以上继续教育质量提升工程48项，项目数量居全省高职第一。获省示范性职工培训基地4个、省示范性继续教育基地2个和省级社区教育示范基地10个。7门“智慧助老”课程资源入选教育部推介榜，获推介数量排全国高职第一；2项社区教育创新项目获得教育部立项，获国家级终身学习品牌项目和百姓学习之星，成为全国“职业院校服务全民终身学习项目”实验校。</p><p>学院瞄准广东“双十”产业集群建设高水平专业群，深化科产教融合，精准推动校企合作。依托国家示范职教集团-广东机电职教集团和校友会等平台，汇聚地、行、校、企、研、创、投等各方资源，与“美的、广汽、华为、TCL、白云电器、祥鑫、顺丰冷链”等知名企业实现了深度校企合作，建有725个校外实训基地，建设“美的威灵电机产业学院”“银宝山新精密模具产业学院”等4个省级现代产业学院，与中山迈雷特数控等国家专精特新“小巨人”企业深度合作，共建工信部高档数控机床“专精特新产业学院”；培育产教融合型企业165家，其中省级以上产教融合型企业112家，广州白云电器设备股份有限公司被推荐为首批国家级产教融合型企业；建有358个实训基地，教学科研仪器设备值达2.46亿元，拥有国家级实训基地5个，国家级虚拟仿真实训基地2个，国家级协同创新中心3个，国家级技能大师工作室1个，国家级仿真实训中心1个，国家级公共实训中心1个，广东省首批省级协同创新发展中心1个，首批省级协同育人平台1个，省级以上校外大学生实践教育基地23个。学院是全国首批“现代学徒制”试点院校，并以优秀成绩通过验收。连续两年年被评为“产教融合50强”，2023年中国高等职业院校产教融合活力排行榜第9，学院和合作企业白云电器均入选2023年国家发改委发布50个职业教育产教融合典型案例。</p><p>学院通过搭平台、建团队、创机制、强服务、树典型，以专业群科研绩效、科研社会服务贡献度为评价，构建了“152”有组织科研转型发展新模式，大胆探索培育“新质人才”的机电方案。学院以市场技术需求为导向，建设了4个省部级协同创新中心、1个省级政策咨询研究中心、与企业共建或独建3个省级工程技术研究中心、1个省级科普基地，立项建设省教育厅新型智库和产教融合平台各1个、科技创新团队6支，建成了逾2500平方米的科技创新走廊、乡村振兴研究院，形成了11个面向冷链物流、机器视觉识别、手术机器人等产业关键技术的科研实验室，组建了35个科技创新团队。近年来，学院发表56篇SCI论文，授权92件国家发明专利、转化率达22.8%，国家级科研项目立项数位居全国高职院校第13名，发明专利授权量位居全国高职院校第22名，通过技术研发服务粤港澳大湾区中小企业539家/次，为企业创造经济效益4.02亿元，多次上榜“全国高职院校服务贡献典型院校”“全国高等职业院校服务贡献50强”。中央电视台《新闻联播》头条报道了我院科研团队研制的石墨烯散热膜技术赋能大湾区“专精特新”企业以技术创新为牵引、提升产品性能、服务广东“制造业当家”的显著成效。</p><p>学院坚持“立足大湾区、深耕东南亚、开拓非洲”的国际化路线，引进来与走出去相结合，打造机电特色的国际合作模式。2005年与澳大利亚新南威尔士州TAFE学院合作办学旅游管理专业，打造海外升学平台，培养中澳双学籍国际型人才1300余人和国际教学资质教师21人，合作项目成效获时任澳大利亚新南威尔士州总督赞扬；数控技术专业开展中德先进职业教育合作（SGAVE）项目，汽车电子技术专业试点教育部“TÜV莱茵数字创新赋能计划”，提升专业国际化建设水平。与马来西亚华文院校和泰国企业、职业院校共建鲁班工坊和海外分校，面向当地院校师生和中外企业员工开展技能培训与技术服务近700人次，共建共享15个职业教育标准，深化国际产能合作，助力打造中国-东盟职教合作共同体。2017年起举办短期培养与学制教育结合的来华留学生教育，八年办学已注册500余人次短期培训生和近250名全日制国际生，是省内首个来华留学生学历教育规模招生的高职院校，来华留学教育师生团队取得多项国家级和省级办学成果，在省内高职院校具有示范引领作用。与德国柏林应用科技大学、澳大利亚新南威尔士州TAFE学院、马来西亚新纪元大学学院、香港科技大学霍英东研究院、澳门科技大学、台湾修平科技大学等境外组织机构建立教育交流与合作关系，50名教师在境外担任职务和组织学生160余人次赴境外实习，积极拓展与“一带一路”沿线国家教育交流合作。学校2019年荣膺全国高职院校“国际影响力50强”、获评中国（西安）世界职业教育大会优秀案例，2020年入选教育部中外人文交流中心智能制造领域中外人文交流人才培养基地项目，2021年入选教育部第四批“中国-东盟高职院校特色合作项目”，2022年入选教育部中外人文交流中心《中外青少年人文交流成果案例汇编》、2022 Educationplus国际职业教育大会优秀案例和国际合作与交流典型院校。</p><p>学院加强党的建设，以增强党委领导核心作用为立足点，以提高基层党组织“政治引导力、思想引领力、群众组织力、社会号召力”为着力点，以构建全员参与、全过程对接、全方位介入的“立体化”大思政育人体系为统筹，提出构建“15610”新时代高质量党建工作体系，以“三全育人”育人为主线，构筑“五大”制度体系，打造“六大”工作平台，实施“十大”育人工程，在推进学院中心工作中充分发挥出了基层党组织的战斗堡垒作用和党员的先锋模范作用，基层党建工作、德育工作均取得了显著的发展成绩：学院获评广东省“三全育人”体制机制建设试点高校和“八个相统一”高校思政课建设示范点培育单位立项；立项全国党建双创样板支部3个；立项全省党建双创标杆院系3个，全省党建双创样板支部5个，实现省级党建双创“大满贯”；立项全省高校“双带头人”教师党支部书记工作室1个、广东省高校三型党支部2个。</p><p class="vsbcontent_end">弦歌不缀，薪火相传。学院始终坚持发扬“修德强能，崇实鼎新”的校训精神，与时俱进，开拓进取，实现了自身的快速发展和办学水平的不断提高。进入新时代，学院用雄鹰般锐利的改革目光，果断有力地抡起新一轮改革发展的大斧，凝心聚力、锐意创新，为广东在全面建设社会主义现代化国家新征程中走在全国前列、创造新的辉煌提供全方位的人才支持和智力支撑。(更新至2024年4月17日)</p><p class="vsbcontent_end"><br></p><p class="vsbcontent_end"><br></p><p class="vsbcontent_end"><br></p><p class="vsbcontent_end"><br></p></div></div>
+    <span id="vsb_content_2_1305_u13" name="vsb_content_2_1305_u13"></span><br /><br />
+    
+</p>
+</DIV></DIV></DIV></DIV></DIV></DIV><!-- 主内容 end--><!--底部内容及版权-->
+<DIV id="mcz">
+<DIV class="lianxi">
+<DIV class="lianxi1">    <a href="http://bszs.conac.cn/sitename?method=show&id=1B49C06AAD5C4D63E053022819AC072A" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1402762039, 35880)"><img src="../images/sydw_03.png" /></a>
+
+<ul class=" list-paddingleft-2">
+ <li><p>招生电话：020-61362250、61362251、61362252 &nbsp; &nbsp; &nbsp; &nbsp;</p><p>收费咨询：020-36559846&nbsp;&nbsp;招生监督电话：020-36552375 &nbsp; &nbsp; &nbsp; &nbsp;</p><p>就业电话：020-61362189 &nbsp; &nbsp; &nbsp; &nbsp;</p><p>校企合作（职教集团）电话：020-36552355、36552356&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p></li>
+ <li><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; E-Mail：zsjyb007@163.com</p></li>
+ <li><p>南校区：广州市白云区同和蟾蜍石东路2号<a href="https://www.gdmec.edu.cn/index/jtsyt.htm#a1" target="_blank" style="color: #ffba00">[交通图]</a>&nbsp;邮编：510515</p></li>
+ <li><p>北校区：广州市白云区钟落潭镇高校园区<a href="https://www.gdmec.edu.cn/index/jtsyt.htm#a2" target="_blank" style="color: #ffba00">[交通图]</a>&nbsp;邮编：510550</p></li>
+</ul>
+<DIV class="clear"></DIV></DIV>
+<DIV class="lianxi2">
+<UL>	<li><a href="../index.htm" target="_blank">>&nbsp;首页</a></li>
+	<li><a href="xygk.htm" target="_blank">>&nbsp;学院概况</a></li>
+	<li><a href="../gljg.htm" target="_blank">>&nbsp;管理机构</a></li>
+	<li><a href="../jxdw.htm" target="_blank">>&nbsp;教学单位</a></li>
+	<li><a href="../xwzx/xxyw.htm" target="_blank">>&nbsp;新闻中心</a></li>
+	<li><a href="../info/1309/49753.htm" target="_blank">>&nbsp;职教集团</a></li>
+	<li><a href="../zsjy.htm" target="_blank">>&nbsp;招生就业</a></li>
+	<li><a href="../info/1309/49756.htm" target="_blank">>&nbsp;人才招聘</a></li>
+	<li><a href="../jxgl.htm" target="_blank">>&nbsp;教学管理</a></li>
+	<li><a href="../jxzy/jxzy.htm" target="_blank">>&nbsp;教学资源</a></li>
+	<li><a href="https://cgxx.gdmec.edu.cn/" target="_blank">>&nbsp;招标信息</a></li>
+	<li><a href="https://tsg.gdmec.edu.cn/" target="_blank">>&nbsp;图书馆</a></li>
+	<li><a href="https://xyh.gdmec.edu.cn/" target="_blank">>&nbsp;机电校友</a></li>
+	<li><a href="../xxzc.htm" target="_blank">>&nbsp;学校章程</a></li>
+<BR class="clear"></UL></DIV>
+<DIV class="lianxi3">             <a> <img src="../images/xy-gzh-76.png"><span>学校公众号</span></a>
+    
+<a href="../images/ydjd-gzh-400.jpg" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1402762039, 35876)"><img src="../images/ydjd-gzh-76.jpg"><span>移动机电(点击放大)</span></a>
+         <a> <img src="../images/xyh-gzh-76.png"><span>机电校友</span></a>
+</DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="banquan"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright&nbsp;<span class="copyright">©</span> 2024 广东机电职业技术学院 All Rights Reserved. <a href="https://beian.miit.gov.cn" target="_blank"><span style="color: #fff">粤ICP备05076335</span></a> 本网站支持IPv6访问</p></DIV></DIV><!--END 底部内容及版权--><!-- 返回顶部 --><A class="topBtn" href="javascript:void(0);"></A><!-- 返回顶部 end-->
+<script type="text/javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../js/lib.js"></script>
+
+</BODY></HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

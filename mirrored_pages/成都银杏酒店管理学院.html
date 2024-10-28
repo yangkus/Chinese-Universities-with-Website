@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+            <title>成都银杏酒店管理学院</title>
+    <link rel="stylesheet" href="/Public/Home/css/main.css"/>
+    <link rel="stylesheet" href="/Public/Home/css/style.css"/>
+    <script type="text/javascript" src="/Public/static/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/Home/js/Comm.js"></script>
+    <script type="text/javascript" src="/Public/static/checkForm.js"></script>
+    <link rel="stylesheet" href="/Public/static/animate/animate.min.css"/>
+    <script type="text/javascript" src="/Public/static/wow/wow.min.js"></script>
+    <link rel="stylesheet" href="/Public/static/Swiper/swiper.css"/>
+    <script type="text/javascript" src="/Public/static/Swiper/swiper.js"></script>
+    <script type="text/javascript" src="/Public/static/layer/layer.js"></script>
+    <style>
+        body{background: #fffcdb;}
+    </style></head>
+<body>
+
+<div id="top2" class="wow fadeInUp">
+    <div class="c">
+        <div class="a1"><a href="/"><img src="Upload/2021-01-07/1055558952.png" alt="" class="b1"><img src="Upload/2021-02-03/1053147938.png" alt="" class="b2"></a></div>
+        <div class="a2">
+            <dl>
+                <dd><a href="http://20th.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank" class="b1"><img src="Upload/20.png" style="height: 30px;" align="absmiddle" alt=""> &nbsp;校庆网</a></dd>
+                <dd class="comm"><a class="b1 " href="javascript:;">招生就业</a>
+                </dd>
+                <dd class="comm"><a class="b1 " href="/news-lists-id-3.html">教学科研</a>
+                </dd>
+
+                <dd class="comm"><a class="b1 " href="/news-lists-id-19.html">教学单位</a>
+                </dd>
+
+                <dd class="s6 comm"><a class="b1 " href="/news-lists-id-55.html">学生发展</a>
+                </dd>
+                <dd class="comm"><a class="b1 " href="/news-lists-id-10.html">关于我们</a>
+                </dd>
+
+            </dl>
+
+        </div>
+
+        <div class="a3">
+            <div class="b1">
+                <input type="text" class="c1" id="newstxt" placeholder="搜索">
+                <img src="/t/1.png" alt="" class="c2" id="newsbtn">
+            </div>
+            <div class="b2">
+                <a href="https://www.gingkoc.edu.cn/dj">党团建设</a> 　
+                <a href="/news-lists-id-77.html">平安校园</a> 　
+				<a href="http://gxlz.scedu.net/" rel="noopener noreferrer" target="_blank">网络理政</a>　
+                <a href="/news-lists-id-8.html">信息公开</a> 　
+                <a href="/news-lists-id-9.html">加入我们</a> 　
+                <a href="https://en.gingkoc.edu.cn">EN</a>
+            </div>
+
+        </div>
+
+        <div class="a4">
+            <a href="https://zs.gingkoc.edu.cn">考生</a>&nbsp;
+            |&nbsp;
+            <a href="http://xyw.gingkoc.edu.cn">校友</a>&nbsp;
+            |&nbsp;
+            <a href="News-lists-id-10.html">访客</a>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#newsbtn").click(function(){
+            var o=$("#newstxt");
+            var v= o.val();
+            if(/^\s*$/.test(v)){
+                alert("请输入关键字！");
+                return false;
+            }
+            location.href="/news-search-txt-searchvalue.html".replace('searchvalue',v);
+        });
+
+        $("#newstxt").keydown(function(e){
+            if(e.keyCode==13){
+                $("#newsbtn").click();
+            }
+        });
+        //二级下拉
+        $("#top2 .a2 dl .comm").hover(function(){
+            // var index=$(this).index();
+            var index=$("#top2 .a2 dl .comm").index($(this));
+            // console.log(index)
+            $("#topnav").show();
+            $("#topnav .box").hide();
+            $("#topnav .box").eq(index).css("display","flex");
+        }, function () {
+            // var index=$(this).index($("#top2 .a2 dl .comm"));
+
+        })
+        $("#topnav").hover(function () {
+
+        }, function () {
+            $("#topnav").hide()
+        })
+
+    })
+</script>
+
+<style>
+    #topnav{position: absolute;top: 115px;left: 0;width: 100%;min-height: 205px;z-index: 88;background-color: rgba(70,52,22,0.5);box-shadow:0 0 20px #333;display: none;}
+    #topnav .c{max-width: 1520px;margin: 0 auto;}
+    #topnav .box{padding : 60px 0;display: none;align-items: center;}
+    #topnav .box .a1{flex:0 0 616px;font-size: 24px;color: #f08300;text-indent: 80px;line-height: 56px;}
+    #topnav .box .a2{flex:0 1 904px;display: flex;}
+    #topnav .box .a2 a{flex:0 1 210px;text-align: center;line-height: 25px;padding: 15px 10px;font-size: 16px;color: #ffffff;border-left: 1px solid #916d5b;}
+    #topnav .box .a2 a:first-child{border: none;}
+    #topnav .box .a2 a:hover{color: #f08300;}
+    #topnav .box .a3{flex:0 1 904px;display: flex;}
+    #topnav .box .a3 .b1{flex:1 1 210px;text-align: center;line-height: 32px;padding: 0px 10px;font-size: 16px;color: #ffffff;border-left: 1px solid #916d5b;}
+    #topnav .box .a3 .b1:first-child{border: none;}
+    #topnav .box .a3 .b1 a{display: block;color: #ffffff;}
+    #topnav .box .a3 .b1 a:hover{color: #f08300;}
+</style>
+<div id="topnav">
+    <div class="c">
+
+        <div class="box">
+            <div class="a1">招生就业</div>
+            <div class="a2">
+                                <a class="b1" href="http://zs.gingkoc.edu.cn/"  rel="noopener noreferrer" target="_blank">招生网</a>
+                <a class="b1" href="http://jy.gingkoc.edu.cn/"  rel="noopener noreferrer" target="_blank">就业网</a>
+                <a class="b1" href="http://zkzj.gingkoc.edu.cn/"  rel="noopener noreferrer" target="_blank">自考招生网</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="a1">教学科研</div>
+            <div class="a2">
+                <a class="b2" href="/news-lists-id-3.html">人才培养</a>
+                <a class="b2" href="/news-lists-id-4.html">学术研究</a>
+                <a class="b2" href="/news-lists-id-5.html">银杏国际化</a>
+            </div>
+        </div>
+
+        <div class="box" style="padding-bottom: 50px;">
+            <div class="a1">教学单位</div>
+            <div class="a3">
+                                <div class="b1">
+                    <a  href="http://jdx.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank">现代酒店管理学院</a><a  href="http://lygl.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank">文化和旅游学院</a><a  href="http://cgx.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank">财务管理学院</a><a  href="http://gsx.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank">工商管理学院</a>                </div>
+                                <div class="b1">
+                    <a  href="http://xgx.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank">信息工程管理学院</a><a  href="http://xxyd.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank">休闲与运动学院</a><a  href="http://ysx.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank">设计艺术学院</a><a  href="http://wyx.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank">外国语学院</a>                </div>
+                                <div class="b1">
+                    <a  href="http://jcb.gingkoc.edu.cn" rel="noopener noreferrer" target="_blank">马克思主义学院</a><a  href="" rel="noopener noreferrer" target="_blank">通识教育学院</a>                </div>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="a1">学生发展</div>
+            <div class="a2">
+                                <a class="b1" href="/news-lists-id-93.html">学工在线</a><a class="b1" href="/news-lists-id-99.html">银杏青年</a><a class="b1" href="/news-lists-id-59.html">成长路径</a>            </div>
+        </div>
+
+        <div class="box">
+            <div class="a1">关于我们</div>
+            <div class="a2">
+                                <a class="b1" href="/news-lists-id-10.html">学校概况</a><a class="b1" href="/news-lists-id-11.html">愿景使命</a><a class="b1" href="/news-lists-id-88.html">学校领导</a><a class="b1" href="/news-lists-id-14.html">联系方式</a>            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+#slide .swiper-slide .box .c .b2 {margin-top: 33px;display: block;width: 116px;height: 40px;line-height: 40px;overflow: hidden;text-align: center;background: #e99924;color: #ffffff;}
+</style>
+<div class="wow fadeInUp">
+    <!-- Swiper -->
+    <div class="swiper-container" id="slide">
+        <div class="swiper-wrapper">
+                        <div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-09-30/1756366789.jpg) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://mp.weixin.qq.com/s/MMeeMK2cRs7D6c9QjN0D9w" class="b1"></a>
+                            <a href="https://mp.weixin.qq.com/s/MMeeMK2cRs7D6c9QjN0D9w" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-09-04/0834202907.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-6034.html" class="b1"></a>
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-6034.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-08-30/1455138757.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://mp.weixin.qq.com/s/rua3g9y5GhRH_i9fzrPIPg" class="b1"></a>
+                            <a href="https://mp.weixin.qq.com/s/rua3g9y5GhRH_i9fzrPIPg" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-04-30/0915215781.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5827.html" class="b1"></a>
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5827.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-06-11/0041013789.jpg) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://zs.gingkoc.edu.cn/about-recruitStudents-id-1118.html" class="b1"></a>
+                            <a href="https://zs.gingkoc.edu.cn/about-recruitStudents-id-1118.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-06-24/1739568871.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="" class="b1"></a>
+                            <a href="" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-07-11/0837163627.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5994.html" class="b1"></a>
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5994.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-06-20/1725362714.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5953.html" class="b1"></a>
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5953.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-05-31/0557546445.jpg) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5908.html" class="b1"></a>
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5908.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-05-09/0710458667.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5837.html" class="b1"></a>
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5837.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-04-22/0911447931.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="http://www.sc.chinanews.com.cn/kjws/2024-04-22/208104.html" class="b1"></a>
+                            <a href="http://www.sc.chinanews.com.cn/kjws/2024-04-22/208104.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-04-22/1017514233.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5810.html" class="b1"></a>
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5810.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-04-01/1026514377.jpg) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://h.xinhuaxmt.com/vh512/share/11957893?d=134d814&channel=weixin" class="b1"></a>
+                            <a href="https://h.xinhuaxmt.com/vh512/share/11957893?d=134d814&channel=weixin" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2024-03-26/1258424148.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5741.html" class="b1"></a>
+                            <a href="https://www.gingkoc.edu.cn/news-info-id-5741.html" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="a1" style="background: url(Upload/2023-10-26/1531438503.png) top center no-repeat;background-size: cover;"></div>
+                    <div class="box">
+                        <div class="c">
+                            <a href="https://mp.weixin.qq.com/s/7KOez-khL3G_pHJaH457Mg" class="b1"></a>
+                            <a href="https://mp.weixin.qq.com/s/7KOez-khL3G_pHJaH457Mg" class="b2">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+</div>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('#slide.swiper-container', {
+        pagination: '#slide .swiper-pagination',
+        loop: true,
+        autoplay: 10000,
+        autoplayDisableOnInteraction: false,
+        paginationClickable: true,
+        // preventClicks:false,
+        // prevButton:'.swiper-button-prev',
+        // nextButton:'.swiper-button-next',
+    });
+</script>
+
+<div id="index1" class="wow fadeInUp">
+    <div class="c">
+        <dl>
+                        <dd><a href="http://yx.gingkoc.edu.cn/Web/#/InfoShow?nodeNum=11&OtherNum=06&clickTab=navTab">
+                        <div class="a1"><img src="Upload/2024-07-11/1454392477.png" alt=""></div>
+                        <div class="a2">网上报到系统</div>
+                    </a>
+                </dd><dd><a href="http://jwxt.gingkoc.edu.cn">
+                        <div class="a1"><img src="Upload/2021-01-06/5ff550e7aac68.png" alt=""></div>
+                        <div class="a2">教务系统</div>
+                    </a>
+                </dd><dd><a href="http://mail.gingkoc.edu.cn">
+                        <div class="a1"><img src="Upload/2021-01-06/5ff550ebf271f.png" alt=""></div>
+                        <div class="a2">教师邮件系统</div>
+                    </a>
+                </dd><dd><a href="http://chcedu.fanya.chaoxing.com">
+                        <div class="a1"><img src="Upload/2021-01-06/5ff550f3f25fa.png" alt=""></div>
+                        <div class="a2">网络教学平台</div>
+                    </a>
+                </dd><dd><a href="http://zs.gingkoc.edu.cn/admission-query.html">
+                        <div class="a1"><img src="Upload/2021-01-06/5ff550f9ec8e0.png" alt=""></div>
+                        <div class="a2">录取查询</div>
+                    </a>
+                </dd><dd><a href="http://tsg.gingkoc.edu.cn">
+                        <div class="a1"><img src="Upload/2021-01-06/5ff551005c520.png" alt=""></div>
+                        <div class="a2">图书馆</div>
+                    </a>
+                </dd>        </dl>
+    </div>
+
+</div>
+
+<div class="indextitle" style="padding-top: 80px;padding-bottom: 38px;text-align: right;">
+    <div class="a1">初识银杏</div>
+    <div class="a2">ABOUT<br>
+        GINGKO.C</div>
+</div>
+
+<style>
+    :root {
+        --myheight: -220px;
+    }
+    @keyframes dhabout {
+        0%{
+            opacity: 0;
+        }
+        10%{
+            opacity: 1;
+        }
+        60%{
+            opacity: 1;
+        }
+        65%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+            /*transform: translateY(var(--myheight));*/
+        }
+    }
+    @keyframes dhaboutleft {
+        0%{
+            transform: translateX(-250px);opacity: 0;
+        }
+        60%{
+            transform: translateX(-250px);opacity: 0;
+        }
+        65%{
+            transform: translateX(0px);opacity: 1;
+        }
+        100%{
+            transform: translateX(0px);opacity: 1;
+        }
+    }
+    @keyframes dhaboutright {
+        0%{
+            transform: translateX(250px);opacity: 0;
+        }
+        60%{
+            transform: translateX(250px);opacity: 0;
+        }
+        70%{
+            transform: translateX(0px);opacity: 1;
+        }
+        100%{
+            transform: translateX(0px);opacity: 1;
+        }
+    }
+    #indexabout .box{}
+    #indexabout .box2{position: relative;;overflow: hidden;}
+    #indexabout .a2:hover .box2{animation-play-state: paused;}
+    #indexabout .box2 img{height: 40px;position: absolute;}
+    #indexabout .box2 .b0{animation: 10s dhabout infinite linear;}
+    #indexabout .box2 .b1{bottom: 70px;left: 0;animation:10s dhaboutleft infinite;}
+    #indexabout .box2 .b2{bottom: 0;right:20px;animation: 10s  dhaboutright infinite;}
+</style>
+<div id="indexabout" class="wow fadeInUp">
+    <video class="a1" src="Upload/2024-01-18/1658208079.mp4" poster="t/4.jpg" style="overflow: hidden;object-fit:cover;background: #000 center no-repeat;" controls></video>
+    <div class="a2" style="background: url(t/5.jpg) center no-repeat;">
+        <div class="box">
+            <div class="box2">
+                <div class="b0">‘成就学生 服务社会’的办学理念一如既往，从未改变！<br />
+回首过往，我们遭遇困难，坦然面对，由浅至深；<br />
+正视当下，我们脱胎换骨，笃定前行，甘苦自知；<br />
+着眼未来，发扬银杏精神，潜心耕耘，潜力无限......<br />
+我们努力走过十年，又是一个十年，就这样我们走向百年。</div>
+                <img src="t/19.png" class="b1"  alt="">
+                <img src="t/20.png" class="b2" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    #indexrongyu{min-height: 320px;padding-top: 1px;background: url(t/21.jpg) top center no-repeat;background-size: cover;margin-top: 60px;}
+    #indexrongyu .c{max-width: 1520px;margin: 0 auto;position: relative;padding: 0 20px;}
+    #indexrongyu .c .a1{margin-top: 42px;padding-top: 1px;max-width: 620px;height: 238px;overflow: hidden;color: #eeeeee;line-height: 34px;font-size: 16px;}
+    @keyframes gundong1 {
+        from{
+            transform: translateY(0);
+        }
+        to{
+            transform: translateY(-50%);
+        }
+    }
+    #indexrongyu .c .a1 .b1{
+        animation: gundong1 30s linear infinite;
+    }
+    #indexrongyu .c .a1:hover .b1{
+        animation-play-state: paused;
+    }
+</style>
+<div id="indexrongyu" class="wow fadeInUp">
+    <div class="c">
+        <div class="a1">
+            <div class="b1">
+                <div class="box">
+                    ·国家级一流酒店管理本科专业建设院校<br />
+·四川省新增硕士学位授予立项建设单位<br />
+·工商管理学入选四川省“双一流”建设贡嘎计划培育学科<br />
+·世界金钥匙酒店联盟(中国区)人力资源基地 <br />
+·世界中餐业联合会“天府杯”川菜烹饪教育优秀奖 <br />
+·最佳东方高峰论坛暨第七届旅游服务业最佳雇主颁奖盛典“产教融合先锋奖” <br />
+·央广网“中国标杆型民办高校” <br />
+·央广网教育年度峰会“综合竞争力品牌高校” <br />
+·央视教育盛典“品牌影响力民办高校” <br />
+·新华网“魅力高校优秀案例” <br />
+·腾讯教育年度盛典“全国创业就业典范高校” <br />
+·亚太(中国)最佳行业人才培养贡献奖 <br />
+·中国旅游服务业应用型人才培养院校 <br />
+·中国服务示范院校 <br />
+·全国社会科学普及基地 <br />
+·国家级众创空间 <br />
+·创业飞地服务站<br />
+·亚太酒店、餐饮与旅游教育协会（APacCHRIE）会员单位 <br />
+·国际酒店、餐饮和旅游教育理事会（I-CHRIE）会员单位 <br />
+·酒店及泛服务业中外人文交流研究院暨人才培养基地理事单位<br />
+·国家西部宾馆饭店经营管理人才培训示范单位 <br />
+·希尔顿集团最佳合作院校 <br />
+·首旅如家酒店集团校企合作杰出贡献奖、最佳合作院校 <br />
+·中国酒店门墩儿奖“中国最受欢迎酒店专业院校” <br />
+·成渝地区双城经济圈高校就业创业协同发展联盟副理事长单位 <br />
+·成渝地区双城经济圈智慧新零售产教融合发展共同体副理事长单位 <br />
+·四川省酒店与饮食文化普及基地 <br />
+·省级大学生创新创业园区（孵化基地） <br />
+·四川省大学生创新创业俱乐部 <br />
+·四川省旅游与酒店管理实验教学中心 <br />
+·四川省国际标准酒店综合实验教学中心 <br />
+·四川省旅游局（现省文旅厅）酒店管理研究基地 <br />
+·四川省高等教育学会招生考试研究工作先进集体<br />
+·四川省高等教育教学成果一等奖、二等奖（2021）<br />
+·四川省民办高校“教学成果奖”三等奖（2020）<br />
+·四川省高等教育学会优秀教学成果特等奖、一等奖、二等奖（2021）<br />
+·四川省民办高校“优秀科研成果奖”一等奖、二等奖、三等奖（2020-2021）<br />
+·四川省民办高校文化传承优秀成果一等奖、三等奖（2023）<br />
+·四川省民办教育优秀论文评选二等奖、三等奖、优秀奖（2022）<br />
+·四川省民办高校产教协同育人成果二等奖、三等奖（2021）<br />
+·职业技能竞赛酒店接待项目成都集训基地（2022-2024）<br />
+·成都市高技能人才培训基地(2022-2024)<br />
+·宜宾市市级职业技能培训定点机构（2020-2023）<br />
+·宜宾市市本级创业培训定点机构（2022-2025）<br />
+·宜宾市高等教育产教融合实训基地                </div>
+                <div class="box">
+                    ·国家级一流酒店管理本科专业建设院校<br />
+·四川省新增硕士学位授予立项建设单位<br />
+·工商管理学入选四川省“双一流”建设贡嘎计划培育学科<br />
+·世界金钥匙酒店联盟(中国区)人力资源基地 <br />
+·世界中餐业联合会“天府杯”川菜烹饪教育优秀奖 <br />
+·最佳东方高峰论坛暨第七届旅游服务业最佳雇主颁奖盛典“产教融合先锋奖” <br />
+·央广网“中国标杆型民办高校” <br />
+·央广网教育年度峰会“综合竞争力品牌高校” <br />
+·央视教育盛典“品牌影响力民办高校” <br />
+·新华网“魅力高校优秀案例” <br />
+·腾讯教育年度盛典“全国创业就业典范高校” <br />
+·亚太(中国)最佳行业人才培养贡献奖 <br />
+·中国旅游服务业应用型人才培养院校 <br />
+·中国服务示范院校 <br />
+·全国社会科学普及基地 <br />
+·国家级众创空间 <br />
+·创业飞地服务站<br />
+·亚太酒店、餐饮与旅游教育协会（APacCHRIE）会员单位 <br />
+·国际酒店、餐饮和旅游教育理事会（I-CHRIE）会员单位 <br />
+·酒店及泛服务业中外人文交流研究院暨人才培养基地理事单位<br />
+·国家西部宾馆饭店经营管理人才培训示范单位 <br />
+·希尔顿集团最佳合作院校 <br />
+·首旅如家酒店集团校企合作杰出贡献奖、最佳合作院校 <br />
+·中国酒店门墩儿奖“中国最受欢迎酒店专业院校” <br />
+·成渝地区双城经济圈高校就业创业协同发展联盟副理事长单位 <br />
+·成渝地区双城经济圈智慧新零售产教融合发展共同体副理事长单位 <br />
+·四川省酒店与饮食文化普及基地 <br />
+·省级大学生创新创业园区（孵化基地） <br />
+·四川省大学生创新创业俱乐部 <br />
+·四川省旅游与酒店管理实验教学中心 <br />
+·四川省国际标准酒店综合实验教学中心 <br />
+·四川省旅游局（现省文旅厅）酒店管理研究基地 <br />
+·四川省高等教育学会招生考试研究工作先进集体<br />
+·四川省高等教育教学成果一等奖、二等奖（2021）<br />
+·四川省民办高校“教学成果奖”三等奖（2020）<br />
+·四川省高等教育学会优秀教学成果特等奖、一等奖、二等奖（2021）<br />
+·四川省民办高校“优秀科研成果奖”一等奖、二等奖、三等奖（2020-2021）<br />
+·四川省民办高校文化传承优秀成果一等奖、三等奖（2023）<br />
+·四川省民办教育优秀论文评选二等奖、三等奖、优秀奖（2022）<br />
+·四川省民办高校产教协同育人成果二等奖、三等奖（2021）<br />
+·职业技能竞赛酒店接待项目成都集训基地（2022-2024）<br />
+·成都市高技能人才培训基地(2022-2024)<br />
+·宜宾市市级职业技能培训定点机构（2020-2023）<br />
+·宜宾市市本级创业培训定点机构（2022-2025）<br />
+·宜宾市高等教育产教融合实训基地                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        return;
+        var t=0;
+        var h=$("#indexrongyu .a1 .box").height();
+        // $("#indexrongyu .a1").append($("#indexrongyu .a1").html())
+        function pre(){
+            t++;
+            if(t>h){
+                t=0;
+            }
+            $("#indexrongyu .a1 .box").eq(0).css({marginTop:-t})
+        }
+        var timmer = setInterval(pre, 30);
+        $("#indexrongyu .a1").hover(function () {
+            clearInterval(timmer);
+        }, function () {
+            timmer = setInterval(pre, 30);
+        });
+    })
+</script>
+
+<div class="indextitle" style="padding-top: 85px;padding-bottom: 38px;">
+    <div class="a1">资讯</div>
+    <div class="a2">NEWS</div>
+    <a href='/news-lists-id-2.html' class="a3" style="position: absolute;top: 108px;right: 0;color: #feca0a;">
+        <div class="b1" style="font-size: 22px;padding-bottom: 18px;">更多</div>
+        <div class="b2" style="font-size: 16px;font-family: Arial;">MORE+</div>
+    </a>
+</div>
+
+<style>
+    #index2 .swiper-button-prev{opacity: 1;background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23f9bc3f'%2F%3E%3C%2Fsvg%3E");}
+    #index2 .swiper-button-next{opacity: 1;background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23f9bc3f'%2F%3E%3C%2Fsvg%3E");}
+</style>
+
+<div id="index2" class="wow fadeInUp">
+    <!-- Swiper -->
+    <div class="swiper-container" id="index2slide">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6106.html"><img src="Upload/2024-10-21/1036544028.png" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>10-20</b> 2024</div>
+                            <a href="/news-info-id-6106.html" class="b1">三个参与迎新晚会的年轻人，正在「过把瘾」</a>
+
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6103.html"><img src="Upload/2024-10-21/1022006945.jpg" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>10-18</b> 2024</div>
+                            <a href="/news-info-id-6103.html" class="b1">迎新晚会丨前夜澎湃，今朝依旧！</a>
+
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6085.html"><img src="Upload/2024-10-10/0933516921.png" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>10-10</b> 2024</div>
+                            <a href="/news-info-id-6085.html" class="b1">赴泰→当我成为对外汉语老师后……</a>
+
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6070.html"><img src="Upload/2024-09-26/0945282537.jpg" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>09-26</b> 2024</div>
+                            <a href="/news-info-id-6070.html" class="b1">“乡”约一夏 遇“践”梦想</a>
+
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6066.html"><img src="Upload/2024-09-23/0924093350.jpg" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>09-22</b> 2024</div>
+                            <a href="/news-info-id-6066.html" class="b1">2024级新生军训结训+开学典礼，高燃！</a>
+
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6065.html"><img src="Upload/2024-09-20/0908424248.jpg" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>09-20</b> 2024</div>
+                            <a href="/news-info-id-6065.html" class="b1">团圆与坚持，共此时</a>
+
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6049.html"><img src="Upload/2024-09-12/0919503925.jpg" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>09-12</b> 2024</div>
+                            <a href="/news-info-id-6049.html" class="b1">当“婚礼”邂逅教师节</a>
+
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6038.html"><img src="Upload/2024-09-09/0910552778.png" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>09-06</b> 2024</div>
+                            <a href="/news-info-id-6038.html" class="b1">实习心历程，育见新自己 ——23级酒店管理专业实习成长记</a>
+
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6031.html"><img src="Upload/2024-09-02/2104257437.jpg" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>09-02</b> 2024</div>
+                            <a href="/news-info-id-6031.html" class="b1">上好“开学第一课” ，走好“成长每一步”</a>
+
+                        </div>
+                    </div>
+                </div><div class="swiper-slide" >
+                    <div class="box">
+                        <div class="a1"><a href="/news-info-id-6028.html"><img src="Upload/2024-08-29/1142101926.jpg" alt=""></a></div>
+                        <div class="a2">
+                            <div class="b0"><b>08-29</b> 2024</div>
+                            <a href="/news-info-id-6028.html" class="b1">新学期新开始，银杏新片速递！快来打卡~</a>
+
+                        </div>
+                    </div>
+                </div>        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+    <div class="left swiper-button-prev swiper-button-black"></div>
+    <div class="right swiper-button-next swiper-button-black"></div>
+</div>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('#index2slide', {
+        // pagination: '#index2 .swiper-pagination',
+        loop: true,
+        slidesPerView : 3,
+        // slidesPerColumn : 2
+        autoplay: 5000,
+        spaceBetween : 36,
+        autoplayDisableOnInteraction: false,
+        paginationClickable: true,
+        // preventClicks:false,
+        prevButton:'#index2 .swiper-button-prev',
+        nextButton:'#index2 .swiper-button-next',
+    });
+</script>
+
+<div id="indextese" class="wow fadeInUp">
+    <div class="indextitle" style="padding-top: 63px;padding-bottom: 6px;text-align: right;">
+        <div class="a1">链接银杏</div>
+        <div class="a2" style="color: #463416;" >GINGKO<br>
+            LINK</div>
+    </div>
+    <div class="c">
+        <a href="http://zs.gingkoc.edu.cn/">
+            <div class="a1" style="background: #fff url(t/8.jpg) top center no-repeat;background-size: cover;"></div>
+            <div class="a2">考生服务</div>
+        </a>
+        <a href="/news-lists-id-54.html">
+            <div class="a1" style="background: #fff url(t/9.jpg) top center no-repeat;background-size: cover;"></div>
+            <div class="a2">学子风采</div>
+        </a>
+        <a href="/news-lists-id-105.html">
+        <div class="a1" style="background: #fff url(t/10.jpg) top center no-repeat;background-size: cover;"></div>
+        <div class="a2">就业资讯</div>
+        </a>
+        <a href="/news-lists-id-100.html">
+            <div class="a1" style="background: #fff url(t/11.jpg) top center no-repeat;background-size: cover;"></div>
+            <div class="a2">多姿校园</div>
+        </a>
+    </div>
+</div>
+
+<div class="indextitle" style="padding-top: 76px;padding-bottom: 10px;">
+    <div class="a1">聚焦银杏</div>
+    <div class="a2">GINGKO <br>
+        FOCUS</div>
+</div>
+
+<div id="index6" class="wow fadeInUp">
+    <div class="c">
+        <div id="index6a">
+            <div class="title">
+                <a href="/news-lists-id-61.html"><div class="a1">荣誉</div></a>
+                <div class="a2"></div>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper-container" id="index6slide">
+                <div class="swiper-wrapper">
+                                        <div class="swiper-slide"  style="background-image: url(Upload/2024-10-10/0912308644.png);">
+                            <a href="/news-info-id-6084.html">
+                            <div class="box">
+                                <div class="a1">
+                                    志愿服务 | 我校荣获“2023年度四川省高校无偿献血工作成效显著单位”称号                                </div>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide"  style="background-image: url(Upload/2024-08-02/1752503104.jpg);">
+                            <a href="/news-info-id-6013.html">
+                            <div class="box">
+                                <div class="a1">
+                                    喜讯｜我校学子在第十四届全国大学生电子商务“三创赛”中斩获佳绩                                </div>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide"  style="background-image: url(Upload/2024-07-09/0923566921.jpg);">
+                            <a href="/news-info-id-5990.html">
+                            <div class="box">
+                                <div class="a1">
+                                    银杏喜讯丨我校学子在第十四届“三创赛”四川省赛中获佳绩                                </div>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide"  style="background-image: url(Upload/2024-06-14/1643557003.jpg);">
+                            <a href="/news-info-id-5945.html">
+                            <div class="box">
+                                <div class="a1">
+                                    全国一等奖+1，全国二等奖+1！                                </div>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide"  style="background-image: url(Upload/2024-06-14/1022389400.jpg);">
+                            <a href="/news-info-id-5940.html">
+                            <div class="box">
+                                <div class="a1">
+                                    银杏学子在“2024年学创杯大学生创业综合模拟大赛”中获佳绩                                </div>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide"  style="background-image: url(Upload/2024-06-13/0334588544.jpg);">
+                            <a href="/news-info-id-5928.html">
+                            <div class="box">
+                                <div class="a1">
+                                    银杏学子在第十四届全国大学生红色旅游创意策划大赛中再创佳绩                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
+
+        <div id="index6b">
+            <div class="title">
+                <a href="/news-lists-id-62.html"><div class="a1">媒体</div></a>
+                <div class="a2"></div>
+            </div>
+            <dl>
+                                <dd>
+                        <div class="a1"><a href="/news-info-id-6098.html"><img src="Upload/2024-10-15/1511461460.jpg" alt=""></a></div>
+                        <a href="/news-info-id-6098.html" class="a2">【中国新闻网】四川省商务酒店协会赴成都银杏酒店管理学院宜宾校区考察交流</a>
+                        <div class="a3">新闻链接：https://h.xinhuaxmt.com/vh512/share/11674724?d=134b2fe&amp;channel=weixin&amp;time=1728549514316</div>
+                        <div class="a4"><i>08-19</i> 2024</div>
+                    </dd><dd>
+                        <div class="a1"><a href="/news-info-id-6097.html"><img src="Upload/2024-10-15/1508116999.jpg" alt=""></a></div>
+                        <a href="/news-info-id-6097.html" class="a2">【新华社】四川省商务酒店协会赴成都银杏酒店管理学院宜宾校区考察交流</a>
+                        <div class="a3">新闻链接：https://h.xinhuaxmt.com/vh512/share/11674724?d=134b2fe&amp;channel=weixin&amp;time=1728549514316</div>
+                        <div class="a4"><i>08-19</i> 2024</div>
+                    </dd><dd>
+                        <div class="a1"><a href="/news-info-id-6096.html"><img src="Upload/2024-10-15/1457338231.png" alt=""></a></div>
+                        <a href="/news-info-id-6096.html" class="a2">【新华财经】多方联动共育行业菁英 银杏教育扩大职业培训“朋友圈”</a>
+                        <div class="a3">新闻链接：https://bm.cnfic.com.cn/sharing/share/articleDetail/214248073/1</div>
+                        <div class="a4"><i>08-16</i> 2024</div>
+                    </dd>
+            </dl>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('#index6slide', {
+        pagination: '#index6 .swiper-pagination',
+        loop: true,
+        // slidesPerView : 3,
+        // slidesPerColumn : 2
+        autoplay: 5000,
+        // spaceBetween : 36,
+        autoplayDisableOnInteraction: false,
+        paginationClickable: true,
+        // preventClicks:false,
+        // prevButton:'#index6 .swiper-button-prev',
+        // nextButton:'#index6 .swiper-button-next',
+    });
+</script>
+
+<a href="/news-lists-id-26.html">
+    <div class="indextitle" style="padding-top: 74px;padding-bottom: 36px;text-align: right;">
+        <div class="a1" style="font-size: 46px;">学术报告</div>
+        <div class="a2">GINGKO<br>
+            LECTURE</div>
+    </div>
+</a>
+
+<div id="indexbaogao" class="wow fadeInUp">
+    <dl>
+                <dd>
+                <a href="/news-info-id-6090.html" title="探索新文旅·启航新职业:文旅专业学生的行业认知与生涯规划">
+                <div class="a1">
+                    <div class="b1">
+                        <img class="c1" src="Upload/2024-10-11/1721043964.png" alt="">
+
+                        <div class="c2">
+                            <div class="d1">
+                                <div class="e1">探索新文旅·启航新职业:文旅专业学生的行业认知与生涯规划</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </a>
+            </dd><dd>
+                <a href="/news-info-id-6088.html" title="体育类考研专业选择及备考复习计划讲座">
+                <div class="a1">
+                    <div class="b1">
+                        <img class="c1" src="Upload/2024-10-24/1456113263.png" alt="">
+
+                        <div class="c2">
+                            <div class="d1">
+                                <div class="e1">体育类考研专业选择及备考复习计划讲座</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </a>
+            </dd><dd>
+                <a href="/news-info-id-6087.html" title="探索艺术与设计">
+                <div class="a1">
+                    <div class="b1">
+                        <img class="c1" src="Upload/2024-10-10/1622137536.png" alt="">
+
+                        <div class="c2">
+                            <div class="d1">
+                                <div class="e1">探索艺术与设计</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </a>
+            </dd>    </dl>
+</div>
+
+<a href="/news-lists-id-58.html">
+<div class="indextitle" style="padding-top: 80px;padding-bottom: 36px;">
+    <div class="a1">乐活银杏</div>
+    <div class="a2">GINGKO <br>
+        HIGHLIGHT</div>
+</div>
+</a>
+
+<div id="indexlehuo" class="wow fadeInUp">
+        <a href='News-lists-id-101.html' style="background: #fff url(t/12.jpg) center no-repeat;background-size: cover;"></a><a href='News-lists-id-102.html' style="background: #fff url(t/13.jpg) center no-repeat;background-size: cover;"></a><a href='News-lists-id-103.html' style="background: #fff url(t/14.jpg) center no-repeat;background-size: cover;"></a><a href='News-lists-id-104.html' style="background: #fff url(t/15.jpg) center no-repeat;background-size: cover;"></a></div>
+
+
+
+<div id="index8" style="background:url(t/16.jpg) top center no-repeat;background-size:cover; height: 520px;margin-top: 54px;" class="wow fadeInUp">
+    <a href="https://www.720yun.com/vr/8cajOs4kzO8" rel="noopener noreferrer" target="_blank">
+        <div class="indextitle" style="padding-top: 62px;">
+            <div class="a1">游览校园</div>
+            <div class="a2" style="color: #ffffff;">GINGKO <br>TOUR</div>
+            <div style="color: #463416;padding-top: 54px;font-size: 18px;">
+                参观校园 <i style="color: #ffffff;">&gt;</i>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<div id="bottom1">
+</div>
+
+<div id="bottom2" class="wow fadeInUp">
+    <div class="c index">
+        <div class="a1">
+            <img src="/Public/Home/images/1.png" alt="" class="b1">
+            <div class="b2">
+                <p>招生咨询：028-87979220 87979300 87979000</p><p>学校网址：http://www.gingkoc.edu.cn/</p><p>学校邮箱：yxxy﹫gingkoc.edu.cn</p><p>成都校区 地址：成都市郫都区红光街道广场路北二段60号&nbsp;&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;联系电话：028-87979222</p><p>宜宾校区 地址：宜宾市南溪区凤凰大道18号&nbsp;&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;联系电话：0831-3306222</p><p><img src="Upload/2021-05-24/1621843967683430.png" title="1621843967683430.png" alt="图片1.png"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012402000532" rel="noopener noreferrer" target="_blank">川公网安备 51012402000532号</a> <a href="https://beian.miit.gov.cn/#/Integrated/recordQuery" rel="noopener noreferrer" target="_blank">蜀ICP备05022230号-3</a></p>            </div>
+        </div>
+        <div class="a2">
+            <a href="https://www.sc.gov.cn/" rel="noopener noreferrer" rel="noopener noreferrer" target="_blank"><img src="Upload/gov.jpg" class="b1" alt=""></a>
+            <div class="b2">
+                                <a href="">校友网</a><a href="http://www.yxcypx.com/">银杏餐饮培训学校</a><a href="http://www.moe.gov.cn/">中华人民共和国教育部</a><a href="http://www.scedu.net/">四川教育网</a><a href="https://www.sceea.cn/">四川省教育考试院</a><a href="http://gjxh.scedu.net/">四川省高等教育学会</a><a href="http://www.scmbjy.net">四川省民办教育协会</a><a href="http://rst.sc.gov.cn/">四川省人力资源和社会保障厅</a><a href="http://wlt.sc.gov.cn/">四川省文化和旅游厅</a><a href="http://www.yinxing.com">银杏餐饮</a>            </div>
+        </div>
+        <div class="a3">
+            <p>
+                <img src="Upload/2023-09-26/1223487407.png" alt="">
+                <i>官方微信号</i>
+            </p>
+            <p>
+                <img src="Upload/2023-09-26/1224119324.png" alt="">
+                <i>官方微博</i>
+            </p>
+            <p>
+                <img src="Upload/2023-09-26/1224008645.png" alt="">
+                <i>官方抖音</i>
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<!--第三方插件-->
+
+
+
+
+<script>
+//重新处理图片
+    function resize_img(o) {
+        var img=$(o);
+        if(img.attr("_load")) return;
+        var w=img.parents("div").first().width();
+        if (img.width()>w) {
+            img.attr("_load",1);
+            img.css({width:w,height:"auto"});
+        }
+    }
+
+    //图片加载
+    $(".resizeimg img").on('load',function () {
+        resize_img(this);
+    });
+
+    //上来就每个图片处理
+    $(".resizeimg img").each(function () {
+        resize_img(this);
+    });
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        new WOW().init();
+    };
+</script>
+
+
+
+</body>
+</html>

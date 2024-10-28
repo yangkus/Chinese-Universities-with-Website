@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff; " />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8;  X-XSS-Protection: 1;mode=block" />
+<meta http-equiv="X-Frame-Options" content="deny">
+    <meta name="keywords" content="民职院首页" />
+    <title>宁夏民族职业技术学院</title>
+    <link rel="stylesheet" href="./images/common.css" />
+    <link rel="stylesheet" href="./images/style.css" />
+    <script src="./images/jquery.min.js"></script>
+    <script src="./images/common.js"></script>
+    <script src="./images/tool.js"></script>
+    <script src="./images/xhy.js"></script>
+	<script>
+$(function(){
+		//一级栏目驻留
+		var one1="";
+		$(".navul li").each(function(index, element) {
+		if(one1==$(this).children("a").text()){
+			$(".navul li a:first").removeClass(" cur");
+			$(this).children("a").addClass(" cur");
+		}
+		});
+        var chnl="";
+		$(".xhy-gllb a").each(function(index, element) {
+		//alert($(this).children("a").text().replace(/\s+/g, ""));
+		if(chnl==$(this).text().replace(/\s+/g, "")){
+			$(this).addClass(" cur");
+		}
+		});
+
+
+	});
+
+</script>
+  </head>
+<body>
+<!--<div class="red_bg">
+    <img src="https://www.kanwz.net/themes/default/images/wuzhongPH.png" />
+  </div>-->
+  <!--<body style="filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);">
+-->
+<style>
+	.xhy-c4item li{margin-bottom: 18px;}
+	.xhy-c3b a{width: 157px;
+    height: 200px;
+margin-left: 24px;}
+  .xhy-c3b a img{width: 157px;
+    height: 165px;}
+</style>
+<div style="width: auto;background: #2662bb;position: fixed;z-index: 2008;top: 200px;padding: 10px;color: #fff;">
+  <div id="szf_pic_02">
+
+<p style="font-size: 15px;">学生诉求反映电话<br>0953-2668520<br>学生诉求邮箱<br>nmzyyzyx@163.com</p>
+  
+  </div>
+  <script>
+  //setTimeout(function() { $("#szf_pic_02").hide(); }, 15000);
+  </script>
+</div>
+    <!--<script type="text/javascript">try {var urlhash = window.location.hash;
+if (!urlhash.match("fromapp")){if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)))
+{window.location='http://www.nxmzy.com.cn/wxmzy/';}}}catch(err){}</script>-->
+  </head>
+<script>
+	//检索
+	function submitsearch(){
+
+		var result = $("#textfield").val(); //获取检索词
+		result = $.trim(result); //去掉空格
+		
+		//判断检索词
+		var reg = /[`~!@#$%^&*_+<>{}\/'[\]]/im;
+		if (reg.test(result)) {
+			alert('您输入的信息包含非法字符!');
+			return false;
+		}
+		if (result == "请输入关键字" || result == "" || result == null) {
+			alert("请输入检索条件!");
+			return false;
+		} else {
+			result = result.replace("-", "\-");
+			result = result.replace("(", "\(");
+			result = result.replace(")", "\)");
+		}
+
+		//获取当前地址信息
+		originSearch = null;
+		if (typeof location.origin === 'undefined') {
+			originSearch = location.protocol + '\/\/' + location.host;
+		} else {
+			originSearch = location.origin;
+		}
+
+		//跳转搜索页面
+		window.location.href = "http://www.nxmzy.com.cn/qwjs/index.html?channelid=235528&searchword=" + encodeURI(result);
+	}
+</script>
+<!-- header -->
+<div class="xhy-h clearfix centerWidth">
+	  <a class="logo lf" href="http://www.nxmzy.com.cn/"><img title="logo" src="http://www.nxmzy.com.cn/images/logo.png" />"  /></a>
+      <div class="xhy-search rt">
+		<input type="text" class="lf" id="textfield" placeholder="请输入搜索关键字" onkeydown="if(event.keyCode==13){submitsearch();}" value="请输入搜索关键字" onfocus="if(this.value=='请输入搜索关键字'){this.value='';}" onblur="if(this.value==''){this.value='请输入搜索关键字';}" /></input>
+         <a onclick="submitsearch()" class="db"></a>
+      </div>
+</div>
+<!--header end-->
+
+<!-- 导航条 -->
+<style>.navul li a{width:132px}</style>
+<div class="nav">
+	<ul class="navul centerWidth clearfix">
+		<li><a class='cur' href="http://www.nxmzy.com.cn/" >首页</a></li>
+		<li class="xzlia"><a href="http://www.nxmzy.com.cn/xygk/">学院概况</a></li>
+		<li class="xzlia"><a href="http://www.nxmzy.com.cn/jgsz_259/">机构设置</a></li>
+		<li class="xzlia"><a href="http://www.nxmzy.com.cn/jxky/">教学科研</a></li>
+		<li class="xzlia"><a href="http://www.nxmzy.com.cn/zsjy_12018/">招生就业</a></li>
+		<li class="xzlia"><a href="http://www.nxmzy.com.cn/xbdh/">系部导航</a></li>
+		<li class="xzlia"><a href="http://www.nxmzy.com.cn/kfbx/">开放办学</a></li>
+		<li class="xzlia"><a href="http://www.nxmzy.com.cn/djsz_12071/">党建思政</a></li>
+<li class="xzlia"><a href="http://www.nxmzy.com.cn/yfzx/">依法治校</a></li>
+    </ul>
+			<div class="hidediv"  style="display: none;background:none">
+              <div class="hidedivn centerWidth">
+              </div>
+          </div>
+            <div class="hidediv"  style="display: none;">
+              <div class="hidedivn centerWidth">
+					
+					<a href="http://www.nxmzy.com.cn/xygk/xyjj/" target="_self">学院简介</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xygk/xrld/" target="_self">现任领导</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xygk/fzjlsyg/" target="_self">发展及历史沿革</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xygk/xxxfxh/" target="_self">校训校风校徽</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xygk/xyfm/" target="_self">校园风貌</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xygk/dsj/" target="_self">大事记</a>
+                
+              </div>
+          </div>
+          <div class="hidediv" style="display: none;">
+            <div class="hidedivn centerWidth">
+					
+					<a href="http://www.nxmzy.com.cn/jgsz_259/nsjg/" target="_self">内设机构</a>
+                	
+					<a href="http://www.nxmzy.com.cn/jgsz_259/jxjg/" target="_self">教学机构</a>
+                	
+					<a href="http://www.nxmzy.com.cn/jgsz_259/jfjg/" target="_self">教辅机构</a>
+                
+            </div>
+        </div>
+        <div class="hidediv" style="display: none;">
+          <div class="hidedivn centerWidth">
+					
+					<a href="http://www.nxmzy.com.cn/jxky/rcpx/" target="_self">人才培养</a>
+                	
+					<a href="http://www.nxmzy.com.cn/jxky/gzzd/" target="_self">规章制度</a>
+                	
+					<a href="http://www.nxmzy.com.cn/jxky/szdw/" target="_self">师资队伍</a>
+                	
+					<a href="http://www.nxmzy.com.cn/jxky/kyxm/" target="_self">科研项目</a>
+                	
+					<a href="http://www.nxmzy.com.cn/jxky/jxap/" target="_self">教学安排</a>
+                	
+					<a href="http://www.nxmzy.com.cn/jxky/zyjs/" target="_self">专业建设</a>
+                	
+					<a href="http://www.nxmzy.com.cn/jxky/sxjd/" target="_self">实训基地</a>
+                
+          </div>
+        </div> 
+        <div class="hidediv" style="display: none;">
+        <div class="hidedivn centerWidth">
+					
+					<a href="http://www.nxmzy.com.cn/zsjy_12018/zyjs/" target="_self">专业介绍</a>
+                	
+					<a href="http://www.nxmzy.com.cn/zsjy_12018/zsxx/" target="_self">招生信息</a>
+                	
+					<a href="http://www.nxmzy.com.cn/zsjy_12018/jyxx/" target="_self">就业信息</a>
+                	
+					<a href="http://www.nxmzy.com.cn/zsjy_12018/zpxx/" target="_self">招聘信息</a>
+                	
+					<a href="http://www.nxmzy.com.cn/zsjy_12018/sxxx/" target="_self">实习信息</a>
+                
+        </div>
+        </div> 
+        <div class="hidediv" style="display: none;">
+        <div class="hidedivn centerWidth">
+					
+					<a href="http://www.nxmzy.com.cn/xbdh/nmkjx/" target="_self">农牧科技系</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xbdh/jdgcx_40532/" target="_self">机电工程系</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xbdh/kfhlx_15093/" target="_self">康复与护理系</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xbdh/jyx_40511/" target="_self">教育系</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xbdh/jjglx_40525/" target="_self">经济管理系</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xbdh/yssjx_40539/" target="_self">艺术设计系</a>
+                	
+					<a href="http://www.nxmzy.com.cn/xbdh/yejyx_40518/" target="_self">幼儿教育系</a>
+                
+        </div>
+        </div> 
+        <div class="hidediv" style="display: none;">
+        <div class="hidedivn centerWidth">
+					
+					<a href="http://www.nxmzy.com.cn/kfbx/gk/" target="_self">概况</a>
+                	
+					<a href="http://www.nxmzy.com.cn/kfbx/dwhz/" target="_self">对外合作</a>
+                	
+					<a href="http://www.nxmzy.com.cn/kfbx/wsjl/" target="_self">外事交流</a>
+                
+        </div>
+        </div>
+        <div class="hidediv" style="display: none;">
+        <div class="hidedivn centerWidth">
+					
+					<a href="http://www.nxmzy.com.cn/djsz_12071/djdt/" target="_self">党建动态</a>
+                	
+					<a href="http://www.nxmzy.com.cn/djsz_12071/zzgz/" target="_self">组织工作</a>
+                	
+					<a href="http://www.nxmzy.com.cn/djsz_12071/dflz/" target="_self">党风廉政建设工作</a>
+                	
+					<a href="http://www.nxmzy.com.cn/djsz_12071/rsgz/" target="_self">人事工作</a>
+                	
+					<a href="http://www.nxmzy.com.cn/djsz_12071/wsdx/" target="_self">网上党校</a>
+                	
+					<a href="http://www.nxmzy.com.cn/djsz_12071/jswm/" target="_self">精神文明</a>
+                	
+					<a href="http://www.nxmzy.com.cn/djsz_12071/szgz/" target="_self">思政工作</a>
+                	
+					<a href="http://www.nxmzy.com.cn/djsz_12071/pfgz/" target="_self">普法工作</a>
+                	
+					<a href="http://www.nxmzy.com.cn/djsz_12071/xsgz_40564/" target="_self">学生工作</a>
+                
+        </div>
+        </div>
+     
+</div>
+<!-- 导航条 end -->
+<!--轮播图-->
+	 <div class="carsoul" style="margin: 0 auto">
+	  <ul>
+			
+			<li><a target="_blank" href="http://www.nxmzy.com.cn/ggbf_259/lbt/202309/t20230908_771409.html"><img width="1903" height="450" src="./ggbf_259/lbt/202309/W020231017331681955949.jpg" alt="" /></a></li>
+		
+			<li><a target="_blank" href="http://www.nxmzy.com.cn/ggbf_259/lbt/202007/t20200726_195981.html"><img width="1903" height="450" src="./ggbf_259/lbt/202007/W020230908373802450441.jpg" alt="" /></a></li>
+		
+			<li><a target="_blank" href="http://www.nxmzy.com.cn/ggbf_259/lbt/202007/t20200726_195978.html"><img width="1903" height="450" src="./ggbf_259/lbt/202007/W020230908373333054161.jpg" alt="" /></a></li>
+		
+			<li><a target="_blank" href="http://www.nxmzy.com.cn/ggbf_259/lbt/202007/t20200726_195977.html"><img width="1903" height="450" src="./ggbf_259/lbt/202007/W020230908372928580685.jpg" alt="" /></a></li>
+		
+	  </ul>
+	  <div class="centerWidth dotw clearfix">
+		<div class="dot rt ">
+		  	
+				<span></span>
+				
+				<span></span>
+				
+				<span></span>
+				
+				<span></span>
+			
+		</div>
+	  </div>
+	</div>
+
+<!--轮播图结束-->
+    <div class="xhy-c centerWidth clearfix">
+      <div class="xhy-c1 clearfix mt30">
+        	<div class="xhy-c1l lf" style="width:580px">
+          <div class="xhy-c1l-items hovers">
+		    
+				<a target="_blank" href="http://www.nxmzy.com.cn/ggbf_259/jdt/202305/t20230510_724062.html">
+					<img src="./ggbf_259/jdt/202305/W020230908601628691965.jpg" />
+				</a>
+			
+			 
+              <a target="_blank" href="http://www.nxmzy.com.cn/ggbf_259/jdt/202112/t20211229_490530.html" style="display: none;"><img src="./ggbf_259/jdt/202112/W020240315332959691800.jpg" /></a>
+			
+			 
+              <a target="_blank" href="http://www.nxmzy.com.cn/ggbf_259/jdt/202010/t20201019_233525.html" style="display: none;"><img src="./ggbf_259/jdt/202010/W020240315330369104587.jpg" /></a>
+			
+			 
+              <a target="_blank" href="http://www.nxmzy.com.cn/ggbf_259/jdt/202010/t20201019_233526.html" style="display: none;"><img src="./ggbf_259/jdt/202010/W020230510309404760444.jpg" /></a>
+			
+          </div>
+<div class="dotw2 clearfix">
+            <div class="dot2 rt ">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="xhy-c1las clearfix">
+            <div class="xhy-c1lasr rt">
+				<a href="./xygk/xyjj/" target="_blank">学院简介</a>
+				<!---->
+				<a href="./xygk/xrld/" target="_blank">现任领导</a>
+				<a href="./xygk/dsj/" target="_blank">大事记</a>
+            </div>
+          </div>
+        </div>
+	
+		<div class="xhy-c2br rt" style="padding: 20px 30px 7px 30px;box-shadow: 0 3px 3px #eeeeee;">
+            <div class="xhy-c2britem" style="display: block;">
+                <div class="xhy-c2bras">
+					<a href="./xwzx/xxxw/" target="_blank" class="cur">学校新闻</a>
+					<a href="./xwzx/tzgg/" target="_blank">通知公告</a>
+                  </div>
+                  <div class="xhy-c2bruls overflows">
+					<ul class="xhy-c2brul" style="/* display: none; */border-bottom: 0;margin-bottom: 0px;">
+                           
+                            <li class="clearfix"><a target="_blank" href="./xwzx/xxxw/202410/t20241024_935997.html">学院党委会召开会议</a>
+							<span class="rt">2024-10-24</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/xxxw/202410/t20241018_933537.html">学院党委召开理论学习中心组学习会</a>
+							<span class="rt">2024-10-17</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/xxxw/202410/t20241018_933536.html">学院召开院长办公会议</a>
+							<span class="rt">2024-10-15</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/xxxw/202410/t20241018_933530.html">学院党委会召开会议</a>
+							<span class="rt">2024-10-09</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/xxxw/202410/t20241008_928570.html">学院邀请白述礼教授作铸牢中华民族共同体意识专题报告</a>
+							<span class="rt">2024-09-28</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/xxxw/202410/t20241008_928567.html">我院承办全区高职院校铸牢中华民族共同体意识教育课程集体备课会暨举行宁夏民族职业技术学院马克思主义学院揭牌仪式</a>
+							<span class="rt">2024-09-27</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/xxxw/202410/t20241008_928561.html">璀璨星光下的庆典 宁夏民族职业技术院师生共贺新中国75周年华诞</a>
+							<span class="rt">2024-09-28</span></li>
+					
+						
+                    </ul>
+                    <ul class="xhy-c2brul" style="border-bottom: 0;margin-bottom: 0px;display: none;">
+                            
+                            <li class="clearfix"><a target="_blank" href="./xwzx/tzgg/202410/t20241020_933775.html">宁夏民族职业技术学院2024年自主公开招聘急需紧缺高层次人才面试公告</a>
+							<span class="rt">2024-10-20</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/tzgg/202410/t20241016_932637.html">2024年自主公开招聘急需紧缺高层次人才<br />资格复审结果公示名单</a>
+							<span class="rt">2024-10-16</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/tzgg/202410/t20241008_928789.html">宁夏民族职业技术学院2024年自主公开招聘急需紧缺高层次人才资格复审的通知</a>
+							<span class="rt">2024-10-08</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/tzgg/202409/t20240914_922239.html">宁夏民族职业技术学院2024年自主公开招聘急需紧缺高层次人才公告</a>
+							<span class="rt">2024-09-14</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/tzgg/202407/t20240702_890294.html">宁夏民族职业技术学院2024年面向社会公开招聘编外工作人员考试成绩公告</a>
+							<span class="rt">2024-07-01</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/tzgg/202404/t20240428_864734.html">宁夏民族职业技术学院公布线上、线下防治校园欺凌工作受理举报电话、邮箱</a>
+							<span class="rt">2024-04-28</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./xwzx/tzgg/202308/t20230809_759209.html">宁夏民族职业技术学院2023年面向社会公开招聘编外聘用教师拟录用人员公示</a>
+							<span class="rt">2023-08-08</span></li>
+					
+						
+                    </ul>
+                  </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="xhy-c2 mt30">
+      <div class="xhy-c2tbg">
+        <div class="xhy-c2t centerWidth clearfix">
+          <div class="xhy-c2tl lf clearfix">
+            <span>党建思政</span>
+            <ul class="xhy-c2tlul clearfix rt">
+				
+					<li>
+						<a href="./djsz_12071/djdt/" target="_blank">党建动态</a>	    
+					</li>
+			    
+					<li>
+						<a href="./djsz_12071/zzgz/" target="_blank">组织工作</a>	    
+					</li>
+			    
+				<li><a href="./djsz_12071/dflz/" target="_blank">党风廉政</a></li>
+            </ul>
+          </div>
+          <div class="xhy-c2tr rt">
+		    <a target="_blank" href="./jxky/" class="ca">教学科研</a>
+			<a target="_blank" href="./zsjy_12018/" class="ca">招生就业</a>
+			<a target="_blank" href="./kfbx/" class="ca">开放办学</a>
+          </div>
+        </div>
+      </div>
+      <div class="xhy-c2b ">
+        <div class="centerWidth clearfix">
+          <div class="xhy-c2bl lf">
+            <ul>
+			  
+			<li>
+				<span>1</span>
+				<a target="_blank" href="./djsz_12071/djdt/202307/t20230706_745531.html">			  
+				 <p class="xhy-c2blp1 overflow">宁夏民族职业技术学院2022年度先进基层党支部展播-教育系党支部</p>
+				 <p class="xhy-c2blp2">
+　　宁夏民族职业技术学院2022年度先进基层党支部展播-教育系党支部</p>
+				 </a>
+			 </li>
+   			  
+			<li>
+				<span>2</span>
+				<a target="_blank" href="./djsz_12071/djdt/202307/t20230706_745529.html">			  
+				 <p class="xhy-c2blp1 overflow">宁夏民族职业技术学院2022年度优秀共产党员视频展播</p>
+				 <p class="xhy-c2blp2">
+　　宁夏民族职业技术学院2022年度优秀共产党员视频展播
+　　</p>
+				 </a>
+			 </li>
+   			  
+			<li>
+				<span>3</span>
+				<a target="_blank" href="./djsz_12071/djdt/202007/t20200728_196442.html">			  
+				 <p class="xhy-c2blp1 overflow">中国共产党支部工作条例（试行）</p>
+				 <p class="xhy-c2blp2">
+　　第一章　总则
+　　第一条　为了坚持和加强党的全面领导，弘扬...</p>
+				 </a>
+			 </li>
+   			  		   
+            </ul>
+            <ul style="display: none;">
+			
+			  	
+			  <li>
+			<span>1</span>
+			  <a target="_blank" href="./djsz_12071/zzgz/202007/t20200728_196398.html">
+				 <p class="xhy-c2blp1 overflow">2020-2023年学院党员教育培训工作规划</p>
+				 <p class="xhy-c2blp2">
+　　为深入学习贯彻习近平新时代中国特色社会主义思想和党的十九大...</p>
+				 </a>
+			</li>
+   			  	
+			  <li>
+			<span>2</span>
+			  <a target="_blank" href="./djsz_12071/zzgz/202007/t20200728_196399.html">
+				 <p class="xhy-c2blp1 overflow">中共宁夏民族职业技术学院委员会<br />发展党员工作细则</p>
+				 <p class="xhy-c2blp2">
+　　第一章  总则
+　　第一条 为规范发展党员工作，保证新发展的党...</p>
+				 </a>
+			</li>
+   			  	
+			  <li>
+			<span>3</span>
+			  <a target="_blank" href="./djsz_12071/zzgz/202007/t20200728_196403.html">
+				 <p class="xhy-c2blp1 overflow">关于成立疫情防控党员先锋志愿服务队的通知</p>
+				 <p class="xhy-c2blp2">
+　　为贯彻落实党中央和自治区、市委决策部署，扎实有序做好开学后...</p>
+				 </a>
+			</li>
+   			  			  
+			    
+            </ul>
+            <ul style="display: none;">
+			
+			  	
+			  <li>
+			<span>1</span>
+			  <a target="_blank" href="./djsz_12071/dflz/202011/t20201109_241500.html">
+				 <p class="xhy-c2blp1 overflow">关于印发《宁夏民族职业技术学院党风廉政建设工作联席会议制度（试行）》的通知</p>
+				 <p class="xhy-c2blp2">
+　　宁民职党规发〔2020〕8号
+　　关于印发《宁夏民族职业技术学院...</p>
+				  </a>
+			</li>
+   			  	
+			  <li>
+			<span>2</span>
+			  <a target="_blank" href="./djsz_12071/dflz/202010/t20201027_238619.html">
+				 <p class="xhy-c2blp1 overflow">关于廉政教育活动的通知</p>
+				 <p class="xhy-c2blp2">
+　　各党总支（支部）：
+　　经学院党委同意，定于10月10日（星期...</p>
+				  </a>
+			</li>
+   			  	
+			  <li>
+			<span>3</span>
+			  <a target="_blank" href="./djsz_12071/dflz/202010/t20201027_238618.html">
+				 <p class="xhy-c2blp1 overflow">宁夏民族职业技术学院领导干部家属助廉承诺书</p>
+				 <p class="xhy-c2blp2">
+　　“国无廉则不安，家无廉则不宁”。家庭是社会的细胞，是反腐倡...</p>
+				  </a>
+			</li>
+   			  		  
+			 
+            </ul>
+          </div>
+          <div class="xhy-c2br rt">
+            <div class="xhy-c2britem">
+                <div class="xhy-c2bras">
+				    <a href="./jxky/kyxm/" class="cur">科研项目</a>
+                    <a href="./jxky/rcpx/">精品课程</a>
+                    <a href="./jxky/jxap/">教学安排</a>
+                    <a href="./jxky/gzzd/">规章制度</a>
+                    <a href="./jxky/szdw/" class="sa1 sa2">师资队伍</a>
+                    <a href="./jxky/zyjs/" class="sa1">专业建设</a>
+                    <a href="./jxky/sxjd/" class="sa1">实训基地</a>
+                </div>
+                <div class="xhy-c2bruls overflows">
+                    <ul class="xhy-c2brul">
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/kyxm/202312/t20231206_808305.html">2023年下半年科研成果统计通知</a>
+							<span class="rt">2023-12-06</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/kyxm/202312/t20231206_807875.html">2023年院级科研项目结题验收材料提交通知</a>
+							<span class="rt">2023-12-06</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/kyxm/202312/t20231206_807865.html">关于做好2023-2024学年第一学期评教 工作的通知</a>
+							<span class="rt">2023-12-06</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/kyxm/202107/t20210708_413550.html">关于做好2020-2021学年第二学期评教工作的通知</a>
+							<span class="rt">2021-07-08</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/kyxm/202107/t20210708_413549.html">关于组织申报2021年度科研项目的通知</a>
+							<span class="rt">2021-07-08</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/kyxm/202107/t20210708_413548.html">关于2020-2021学年第一学期评教情况的通报</a>
+							<span class="rt">2021-07-08</span></li>
+						
+                    </ul>
+                    <ul class="xhy-c2brul" style="display: none;">
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/rcpx/202406/t20240605_880480.html">专业人才培养方案</a>
+							<span class="rt">2024-06-05</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/rcpx/202401/t20240115_825005.html">宁夏民族职业技术学院2023年高等职业教育质量年度报告</a>
+							<span class="rt">2024-01-15</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/rcpx/202306/t20230613_737223.html">宁夏民族职业技术学院人才培养方案</a>
+							<span class="rt">2023-06-13</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/rcpx/202209/t20220923_598200.html">五年一贯制学前教育专业人才培养方案</a>
+							<span class="rt">2022-09-23</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/rcpx/202209/t20220923_598151.html">三年制高职护理专业人才培养方案</a>
+							<span class="rt">2022-09-23</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/rcpx/202209/t20220923_598150.html">老年保健与管理专业人才培养方案</a>
+							<span class="rt">2022-09-23</span></li>
+						
+                    </ul>
+                    <ul  class="xhy-c2brul" style="display: none;">
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/jxap/202109/t20210922_440879.html">宁夏民族职业技术学院2021年“职业教育活动周”实施方案</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/jxap/202109/t20210922_440881.html">关于2021年春季教材征订的通知</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/jxap/202109/t20210922_440885.html">关于做好2020-2021学年第二学期选修课的通知</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/jxap/202109/t20210922_440886.html">2020-2021年第二学期期末考务工作安排</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/jxap/202109/t20210922_440887.html">关于2021-2022学年第一学期补考的通知</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/jxap/202109/t20210922_440888.html">2021年职业院校教学能力比赛成绩公示</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                    </ul>
+                    <ul class="xhy-c2brul" style="display: none;">
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/gzzd/202109/t20210923_441053.html">关于印发《宁夏民族职业技术学院加强和改进新时代师德师风建设实施方案》的通知</a>
+							<span class="rt">2021-09-23</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./jxky/gzzd/202109/t20210923_441052.html">关于印发《宁夏民族职业技术学院课堂教学管理办法》的通知</a>
+							<span class="rt">2021-09-23</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./jxky/gzzd/202109/t20210923_441051.html">关于印发《宁夏民族职业技术学院深化新时代课程思政建设实施方案》的通知</a>
+							<span class="rt">2021-09-23</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./jxky/gzzd/202109/t20210923_441049.html">关于印发《宁夏民族职业技术学院教学成果评审与奖励办法（试行）》的通知</a>
+							<span class="rt">2021-09-23</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./jxky/gzzd/202109/t20210923_441048.html">关于印发《宁夏民族职业技术学院教材管理办法》的通知</a>
+							<span class="rt">2021-09-23</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./jxky/gzzd/202109/t20210923_441047.html">关于印发《宁夏民族职业技术学院骨干教师、专业带头人、教学名师评选与<br />管理办法（暂行）》的通知</a>
+							<span class="rt">2021-09-23</span></li>
+					
+                    </ul>
+                    <ul class="xhy-c2brul" style="display: none;">
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/szdw/202109/t20210926_444405.html">关于开展院级“教改实验课”“校本教材”项目结题验收的通知</a>
+							<span class="rt">2021-09-26</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/szdw/202109/t20210923_441171.html">关于做好2021年院级教学成果奖申报工作的通知</a>
+							<span class="rt">2021-09-23</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/szdw/202109/t20210923_441168.html">关于遴选院级教师教学创新团队的通知</a>
+							<span class="rt">2021-09-23</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/szdw/202109/t20210923_441167.html">关于聘任骨干教师、专业带头人、教学名师的决定</a>
+							<span class="rt">2021-09-23</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/szdw/202109/t20210922_440893.html">关于组织我院教师参加《全国职业院校教学能力比赛解析暨2021 备赛训练营》线上培训的通知</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/szdw/202109/t20210922_440895.html">关于组织我院教师参加《全国职业院校专业群建设及教法改革与教师发展 策略实战研修班》培训的通知</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                    </ul>
+                    <ul class="xhy-c2brul" style="display: none;">
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/zyjs/202109/t20210922_440883.html">关于2020-2021学年各系教学用具、实训耗材采购预算的通知</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/zyjs/202109/t20210922_440882.html">关于做好学院2021年高职拟招生新增专业申报工作的通知</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                    </ul>
+                    <ul class="xhy-c2brul" style="display: none;">
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/sxjd/202109/t20210922_440875.html">关于做好2021年学生实习实训工作的通知</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./jxky/sxjd/202109/t20210922_440870.html">关于开展2021年实习检查工作的通知</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                    </ul>
+                  </div>
+            </div>
+            <div class="xhy-c2britem" style="display: none;">
+                <div class="xhy-c2bras">
+				    <a href="" class="cur">专业介绍</a>
+					<a href="">招生信息</a>
+                    <a href="">就业信息</a>
+                    <a href="">招聘信息</a>
+                    <a href="" class="sa1 sa2">实习信息</a>
+                  </div>
+                  <div class="xhy-c2bruls overflows">
+					<ul class="xhy-c2brul">
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zyjs/202012/t20201218_258877.html">康复与护理系专业简介</a>
+							<span class="rt">2020-12-18</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zyjs/202012/t20201218_258867.html">经济管理系专业简介</a>
+							<span class="rt">2020-12-18</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zyjs/202010/t20201030_239619.html">教育系专业介绍</a>
+							<span class="rt">2020-10-30</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zyjs/202008/t20200807_197823.html">机电工程系专业简介</a>
+							<span class="rt">2020-08-07</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zyjs/202008/t20200806_197432.html">艺术设计系专业简介</a>
+							<span class="rt">2020-08-06</span></li>
+						
+                    </ul>
+                    <ul class="xhy-c2brul" style="display: none;">
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zsxx/202406/t20240625_887233.html">宁夏民族职业技术学院2024年招生简章</a>
+							<span class="rt">2024-06-25</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zsxx/202307/t20230706_745517.html">宁夏民族职业技术学院2023年高职招生简章</a>
+							<span class="rt">2023-07-06</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zsxx/202307/t20230706_745515.html">宁夏民族职业技术学院2023年高职招生章程</a>
+							<span class="rt">2023-07-06</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zsxx/202304/t20230420_714348.html">宁夏民族职业技术学院2023年学费标准调整公示</a>
+							<span class="rt">2023-04-20</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zsxx/202203/t20220322_523586.html">宁夏民族职业技术学院2022年自主招生简章</a>
+							<span class="rt">2022-03-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zsxx/202106/t20210624_409838.html">宁夏民族职业技术学院2021年招生简章</a>
+							<span class="rt">2021-06-24</span></li>
+						
+                    </ul>
+                    <ul  class="xhy-c2brul" style="display: none;">
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/jyxx/202304/t20230406_708804.html">宁夏民族职业技术学院 2022 届毕业生毕业去向质量年度报告</a>
+							<span class="rt">2023-04-06</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/jyxx/202203/t20220315_520869.html">宁夏民族职业技术学院2021届毕业生就业质量年度报告</a>
+							<span class="rt">2022-03-15</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/jyxx/202109/t20210922_440661.html">2021年新疆巴州若羌县面向社会公开招聘地方财政聘用人员的公告</a>
+							<span class="rt">2021-09-22</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/jyxx/202107/t20210707_413300.html">宁夏鼎盛阳光环保科技有限公司<br />招 聘 简 章</a>
+							<span class="rt">2021-07-07</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/jyxx/202107/t20210707_413296.html">招聘启事</a>
+							<span class="rt">2021-07-07</span></li>
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/jyxx/202106/t20210611_405698.html">百瑞源枸杞股份有限公司招聘简章</a>
+							<span class="rt">2021-06-11</span></li>
+						
+                    </ul>
+                    <ul class="xhy-c2brul" style="display: none;">
+						
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zpxx/202011/t20201109_241542.html">立鸿文化教育培训学校有限公司招聘信息</a>
+							<span class="rt">2020-11-09</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zpxx/202011/t20201109_241532.html">锦荣（宁夏）汽贸有限公司招聘信息</a>
+							<span class="rt">2020-11-09</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zpxx/202011/t20201109_241513.html">银川隆基光伏科技有限公司招聘简章</a>
+							<span class="rt">2020-11-09</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zpxx/202008/t20200807_201177.html">宁夏建设投资集团有限公司招聘公告</a>
+							<span class="rt">2020-08-07</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zpxx/202008/t20200806_197413.html">宁夏佳运房地产经纪服务有限责任公司</a>
+							<span class="rt">2020-08-06</span></li>
+					
+                            <li class="clearfix"><a target="_blank" href="./zsjy_12018/zpxx/202008/t20200806_197415.html">2020年新疆克州阿图什市教育局教师招聘简章</a>
+							<span class="rt">2020-08-06</span></li>
+					
+                    </ul>
+                    <ul class="xhy-c2brul" style="display: none;">
+						
+                    </ul>
+                  </div>
+            </div>
+            <div class="xhy-c2britem" style="display: none;">
+                <div class="xhy-c2bras">
+					<a href="" class="cur">概况</a>
+					<a href="">对外合作</a>
+                    <a href="">外事交流</a>
+                  </div>
+                  <div class="xhy-c2bruls overflows">
+					<ul class="xhy-c2brul">
+						
+                    </ul>
+                    <ul class="xhy-c2brul" style="display: none;">
+						
+                    </ul>
+                    <ul  class="xhy-c2brul" style="display: none;">
+						
+                    </ul>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="xhy-c3">
+      <div class="xhy-c3t centerWidth">
+        <p class="cp1">Department navigation</p>
+        <p class="cp2">系部导航 </p>
+        <p class="cp3"></p>
+      </div>
+      <div class="xhy-c3b hovers">
+			
+              <a target="_blank" href="./xbdh/nmkjx/">
+			 
+			  	
+			  <img src="./ggbf_259/xbdht/202403/W020240312799600266337.jpg" />
+			  <p class="overflow">农牧科技系</p></a>
+		
+		
+              <a target="_blank" href="./xbdh/jdgcx_40532/">
+			 
+			  	
+			  <img src="./ggbf_259/xbdht/201912/W020191224776489059256.png" />
+			  <p class="overflow">机电工程系</p></a>
+		
+		
+              <a target="_blank" href="./xbdh/kfhlx_15093/">
+			 
+			  	
+			  <img src="./ggbf_259/xbdht/201912/W020191224776890524735.png" />
+			  <p class="overflow">康复与护理系</p></a>
+		
+		
+              <a target="_blank" href="./xbdh/jyx_40511/">
+			 
+			  	
+			  <img src="./ggbf_259/xbdht/201912/W020191224775872208084.png" />
+			  <p class="overflow">教育系</p></a>
+		
+		
+              <a target="_blank" href="./xbdh/jjglx_40525/">
+			 
+			  	
+			  <img src="./ggbf_259/xbdht/201912/W020191224776317284872.png" />
+			  <p class="overflow">经济管理系</p></a>
+		
+		
+              <a target="_blank" href="./xbdh/yssjx_40539/">
+			 
+			  	
+			  <img src="./ggbf_259/xbdht/201912/W020191224776670035317.png" />
+			  <p class="overflow">艺术设计系</p></a>
+		
+		
+              <a target="_blank" href="./xbdh/yejyx_40518/">
+			 
+			  	
+			  <img src="./ggbf_259/xbdht/201912/W020191224776090510647.png" />
+			  <p class="overflow">幼儿教育系</p></a>
+		
+      </div>
+    </div>
+    <div class="xhy-c4">
+      <div class="xhy-c4n centerWidth clearfix">
+        <span class="xhy-c4span lf">机构设置</span>
+        <div class="xhy-c4as lf">
+		
+			<a href="./jgsz_259/nsjg/">内设机构</a>	
+		
+			<a href="./jgsz_259/jxjg/">教学机构</a>	
+		
+			<a href="./jgsz_259/jfjg/">教辅机构</a>	
+		
+        </div>
+        <div class="xhy-c4items lf">
+			<ul class="xhy-c4item clearfix overflows">
+				
+					<li>
+						<a href="./jgsz_259/nsjg/dzbgs/" target="_blank">党政办公室</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/zzrsb/" target="_blank">组织人事处</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/xctzc/" target="_blank">宣传统战处</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/jjjcs/" target="_blank">纪委办公室</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/jwc/" target="_blank">教务处</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/kyc/" target="_blank">科研处</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/xsc/" target="_blank">学生处</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/zwc/" target="_blank">总务处</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/jhcwc/" target="_blank">计划财务处</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/bwc/" target="_blank">保卫处</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/zlgl_15108/" target="_blank">招生就业处</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/gh/" target="_blank">工会</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/nsjg/tw/" target="_blank">团委</a>    
+					</li>
+				 
+            </ul>
+            <ul class="xhy-c4item clearfix overflows" style="display: none;">
+				
+					<li>
+						<a href="./jgsz_259/jxjg/nmkj/" target="_blank">农牧科技系</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jxjg/jdgcx/" target="_blank">机电工程系</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jxjg/kfyhlx/" target="_blank">康复与护理系</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jxjg/jyx/" target="_blank">教育系</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jxjg/jjglx/" target="_blank">经济管理系</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jxjg/yssjx/" target="_blank">艺术设计系</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jxjg/yejyx/" target="_blank">幼儿教育系</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jxjg/mkszyjxkyb/" target="_blank">马克思主义教学科研部</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jxjg/jkytyjxb/" target="_blank">健康与体育教学部</a>    
+					</li>
+				 
+            </ul>
+            <ul class="xhy-c4item clearfix overflows" style="display: none;">
+				
+					<li>
+						<a href="./jgsz_259/jfjg/jxjyzx/" target="_blank">继续教育中心</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jfjg/sbglyxxzx/" target="_blank">设备管理与信息中心</a>    
+					</li>
+				
+					<li>
+						<a href="./jgsz_259/jfjg/tsg/" target="_blank">图书馆</a>    
+					</li>
+				 
+            </ul>
+        </div>
+      </div>
+    </div>
+   <div class="xhy-f" style="height:120px;text-align: center;">
+      <div class="xhy-fn centerWidth clearfix">
+        <a href="./" class="xhy-fa" style="float: left;">宁夏民族职业技术学院</a>
+        <span >邮编：751100&nbsp; &nbsp; 党政办公室电话：0953-2122984 &nbsp; &nbsp; 招生就业处电话：0953-2122789&nbsp; &nbsp;</span>
+        <span class="rt">
+          <a href="javascript:;" class="db">
+			<img src="../../images/hui.png" />
+          </a>
+          宁公网安备64030202000029</span>
+          <p style="text-align: center;"><a href="https://beian.miit.gov.cn/" target="_blank" style="color: #9db1da">宁ICP备19000668号-1</a>&nbsp; &nbsp;  Copyright © 宁夏民族职业技术学院 &nbsp; &nbsp;</p>
+          <p style="text-align: center;">违法和不良信息举报电话 0951-5029811&nbsp; &nbsp;</p>
+      </div>
+    </div>
+  </body>
+</html>

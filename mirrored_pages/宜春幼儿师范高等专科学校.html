@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>宜春幼儿师范高等专科学校</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=0" >
+<meta name="keywords" content="宜春幼儿师范高等专科学校，宜春幼师，宜春幼专">
+    <meta name="description" content="宜春幼儿师范高等专科学校是以宜春学院高安校区为基础，经江西省人民政府（赣府字〔2014〕12号）批准设立的一所普通高等专科学校。
+    学校可追溯到创办于1906年的高安师范传习所；1946年，改为江西省省立高安师范学校；1949年，江西省教育结构调整时更名为江西省高安师范学校；2005年，江西省人民政府决定高安师范成建制并入宜春学院，设立宜春学院高安校区；2014年，经江西省人民政府批准设立为宜春幼儿师范高等专科学校。">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!-- <script src="./js/browser-polyfill.js"></script>
+ -->
+<link rel ="shortcut icon" href="#"></link>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script  src="js/polyfill.min.js"></script>
+<script  src="js/jquery-3.5.1.min.js"></script>
+
+<!-- <script src="./js/browser.min.js"></script> -->
+<script  src="js/lunbo.js"></script>
+<script  src="js/nav/SuperSlide.2.1.js"></script>
+<script  src="js/tab.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script  src="./js/main.js"></script>
+<script src="./js/jquery.bay-window.js"></script>
+<script>
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth()+1;
+let d = date.getDate();
+if((year == 2022 && month == 12 && d ==7)){
+    $('html').css({webkitFilter:'grayscale(100%)'});
+}
+</script>
+
+<style>
+/*html{
+	    -webkit-filter: grayscale(100%);
+}*/
+	/* body{
+		width: 1920px;
+	} */
+	.warpper2 .swiper-slide{
+		display: flex;
+		flex-direction: column;
+		/* align-items: center; */
+		justify-content: center;
+	}
+	.warpper2 .swiper-slide:hover{
+		text-decoration:underline;
+	}
+	.close_float{
+		position: fixed;
+		z-index: 999999999;
+		background: red;
+	}
+</style>
+
+</head>
+
+
+
+<style>
+
+	        /* 视频蒙版 */
+		.mengban{
+            background-color: rgba(0, 0, 0, 0.8);
+            height: 100%;
+            width: 100%;
+            position: absolute;z-index: 99999;
+            position: fixed;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        .mengban-kuan{
+            width: 765px;
+            /* height: 540px; */
+            background-color: #ffffff;
+            margin: 0 60px;
+        }
+        .mengban-title{
+            height: 55px;
+			padding: 0 30px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+        }
+        .mengban-content{
+            width: 100%;
+            /* height: 485px; */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+            padding-bottom: 20px;
+        }
+        .mengban-video{
+            height: 100%;
+            width: 100%;
+        }
+        .quxiao{
+            transition: all 0.5s;
+        }
+        .quxiao:hover{
+            transform: rotate(90deg);
+		}
+
+
+		@keyframes myfirst_animate
+		{
+			0%{
+				opacity: 0;
+
+			}
+			10%{
+				opacity: 0;
+				transform: scale(1.09);
+			}
+			10%{
+				opacity: 0.1;
+				transform: scale(1.08);
+			}
+			20%{
+				opacity: 0.2;
+				transform: scale(1.07);
+			}
+			30%{
+				opacity: 0.4;
+				transform: scale(1.06);
+			}
+			50%{
+				opacity: 0.5;
+				transform: scale(1.05);
+			}
+			60%{
+				opacity: 0.6;
+				transform: scale(1.04);
+			}
+			70%{
+				opacity: 0.7;
+				transform: scale(1.03);
+			}
+			80%{
+				opacity: 0.8;
+				transform: scale(1.02);
+			}
+			90%{
+				opacity: 0.9;
+				transform: scale(1.01);
+			}
+
+			100%{
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+    .active_animate{
+        animation:myfirst_animate 2s linear;
+
+    }
+		.swiper-container3{
+			overflow: hidden;
+
+
+		}
+		.swiper-container3 .swiper-button-prev3{
+			position: absolute;
+			right:30px;
+			top: 320px;
+			background: rgba(255, 255, 255, 0.9);
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+			font-size: 30px;
+			cursor: pointer;
+		}
+		.swiper-container3 .swiper-button-next3{
+			position: absolute;
+			left: 30px;
+			top: 320px;
+			background: rgba(255, 255, 255, 0.9);
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+			font-size: 30px;
+			cursor: pointer;
+		}
+		.warpper3{
+			position: relative;
+			z-index: -1;
+			height:100vh ;
+
+
+		}
+		.all-nav{
+			display: flex;
+			padding-right: 50px;
+			align-items: center;
+
+
+		}
+		.all-nav>li{
+			width:120px;
+
+
+		}
+		.all-nav>li>a{
+			text-align: center;
+			font-weight: bold;
+		}
+		.all-nav>li:hover{
+			transform: scale(1.3);
+			transition: 0.5s;
+		}
+		.gonggao-wraper{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 10px;
+			padding-left: 15px;
+		}
+		.gonggao-wraper a{
+			color: #333333;
+			font-size: 16px;
+		}
+		.float_img{
+			cursor: pointer;
+		}
+
+</style>
+<body>
+<!--页头-->
+<div id="head-top"></div>
+<!--页头-->
+<div>
+	<div class="mengban">
+		<div class="mengban-kuan">
+			<div class="mengban-title">
+				<p></p>
+				<p style="font-size: 16px;font-weight: bolder;padding-top: 5px;text-align:center" id="video_title"></p>
+				<p onclick="yincan()"><img src="./img/cha.png" class="quxiao"  alt=""></p>
+			</div>
+			<div class="mengban-content">
+				<video class=""  controls id="video1" src="" style="width:90%">
+
+				</video>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!--上导航+banner-->
+<div class="banner-all">
+	<div class="swiper-container3">
+		<div class="swiper-wrapper warpper3">
+
+		</div>
+		<div class="swiper-button-prev3">&gt;</div><!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+		<div class="swiper-button-next3">&lt;</div><!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+	</div>
+
+	<div class="index-nav">
+		<div id="header"></div>
+
+	</div>
+</div>
+
+<!--上导航+banner-->
+
+<!--通知公告-->
+<style>
+
+</style>
+<div class="gonggao-all">
+	<div>
+		<div >
+			<ul class="all-nav">
+				<li><a href="#d1">学校新闻</a></li>
+				<li><a href="/news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=ac24e4fa52a740e6a4ae4e46f4cf6481">通知公告</a></li>
+				<li><a href="#d3">影音幼专</a></li>
+				<li><a href="#d4">校报</a></li>
+				<li><a href="#d5">系列专题</a></li>
+			</ul>
+		</div>
+		<div class="gonggao-wraper">
+			<img src="img/toutiao-icon.png" alt="">
+			<div class="gonggao_box">
+				<div class="swiper-container2">
+					<div class="swiper-wrapper  warpper2" style="height: 57px;">
+
+					</div>
+				</div>
+			</div>
+			<img src="img/arrow-left.png" alt="" height="20">
+		</div>
+	</div>
+
+</div>
+<!--通知公告-->
+
+<!--新闻-->
+<div class="news-bg" id="d1">
+	<div>
+		<div class="biaoti">
+			<span>学校新闻</span>
+			<div><div></div></div>
+		</div>
+	</div>
+	<div class="news-all" >
+		<div class="yx1200">
+			<div class="container">
+				<div class="top_menu">
+					<div class="common liactive">党的二十届三中全会</div>
+					<div class="common">幼专要闻</div>
+					<div class="common">媒体幼专</div>
+					<div class="common">新媒体</div>
+					<div class="common">主题教育</div>
+					<div class="common">党史学习教育</div>
+
+				</div>
+
+				<div class="ul">
+					<div class="bottom_content">
+						<div class="body_1">
+							<ul class="list_six_ul">
+
+
+
+							</ul>
+							<a href="./news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=41396ab5781a49ddadf513eb21ec9c90" class="more">更多</a>
+						</div>
+						<div class="body_1">
+							<ul class="list_one_ul">
+
+
+
+							</ul>
+							<a href="./news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=5a41655f910f42bf816b1b8e4085c50a" class="more">更多</a>
+						</div>
+						<div class="body_1">
+							<ul class="list_two_ul">
+
+							</ul>
+							<a href="./news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=d1c21b491dd249bca5e0c6a4a9275ab4" class="more">更多</a>
+						</div>
+						<div class="body_1">
+							<ul class="list_three_ul">
+
+							</ul>
+							<a href="./news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=407f0eda205745e0afcd4a72b70f5dfa" class="more">更多</a>
+						</div>
+						<div class="body_1">
+							<ul class="list_four_ul">
+
+							</ul>
+							<a href="./news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=407f0eda205745e0afcd4a72b70f5dfa" class="more">更多</a>
+						</div>
+						<div class="body_1">
+							<ul class="list_five_ul">
+
+							</ul>
+							<a href="./news.html?aid=0&pid=f01ea864b8274ce6a820dea248fe1bdb&id=5abc8bfd5cc14f7f955ca856044927d5" class="more">更多</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--新闻-->
+
+<!--公告-->
+<div class="gonggao-bg" id="d2">
+	<div>
+		<div class="biaoti">
+			<span>时政新闻</span>
+			<div><div></div></div>
+		</div>
+	</div>
+	<ul class="yx1200 gonggao_list">
+
+
+	</ul>
+	<a href="/news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=b39f5e8f3caf4a26b404dd1ce1857ade" class="more">更多</a>
+</div>
+<!--公告-->
+
+<!--影音幼专-->
+<style>
+
+</style>
+<div class="video-all" id="d3">
+	<div>
+		<div>
+			<div class="biaoti">
+				<span>影音幼专</span>
+				<div><div></div></div>
+			</div>
+		</div>
+		<ul class="yx1200 video_list">
+
+			</li> -->
+
+		</ul>
+		<a href="./news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=296a325d7ac14c2e88eb11040dbde889" class="more">更多</a>
+	</div>
+</div>
+<!--影音幼专-->
+
+<!--校报-->
+<!--<div id="d4">
+	<div class="biaoti">
+		<span>校报</span>
+		<div><div></div></div>
+	</div>
+</div>
+
+ <ul class="school-book yx1200" style="margin-top: 55px;margin-bottom: 55px;">
+ 	<li>
+ 		<div style="background-image: url(img/school-book1.jpg)">
+ 			<div>
+				<a href="">在线阅读</a>
+				<a href="">下载pdf</a>
+ 			</div>
+ 		</div>
+ 		<span>校园期刊第一期</span>
+ 	</li>
+ </ul>
+ <a href="./news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=dc74e52aa9754d8eb1c69da13b3105be" class="more">更多</a>-->
+<!--校报-->
+
+<!--专题-->
+<div class="zhuanti-all" id="d5">
+	<div>
+		<div class="biaoti">
+			<span>系列专题</span>
+			<div><div></div></div>
+		</div>
+	</div>
+	<div style="position: relative;width: 100%;">
+		<div class="swiper-container yx1200">
+			<div class="swiper-wrapper my_wrapper">
+
+
+			</div>
+		</div>
+		<div class="swiper-button-prev"></div><!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+		<div class="swiper-button-next"></div><!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+	</div>
+	<a href="./news.html?aid=0&pid=fc83d9365e1e448b8f7b60ce5b348884&id=aafbc01f28d64eafb9931f4c95a3a3ab" class="bai-more">更多</a>
+</div>
+
+
+<!--专题-->
+
+
+<style>
+	.fixed-button {background:linear-gradient(to bottom right, #bd1c2e,#f15b4a);width: 50px;height: 50px;border-radius: 50%;;position: fixed;right: 20px;top: 600px;z-index: 1111111111;display: flex;align-items: center;justify-content: center;}
+	.fixed-button>img {width: 50%}
+	.fixed-button:hover>div {transform: scale(1)}
+	.fixed-button>div {width: 260px;height: 260px;background-color: rgba(189,28,46,.7);border-radius: 50%;position: absolute;top: -106px;left: -100px;transform: scale(0.0001);transition-duration: .3s;display: flex;align-items: center}
+	.fixed-button>div ul li:first-child {margin-left: 88px;}
+	.fixed-button>div ul li:last-child {margin-left: 88px;}
+	.fixed-button>div ul li {margin: 10px 0}
+	.fixed-button>div ul {margin-left: -16px;}
+	.fixed-button>div ul li span {color: #fff;font-size: 12px;}
+	.fixed-button>div ul a {display: flex;flex-direction: column;align-items: center}
+
+	.float_nav2{
+            position: fixed;
+            right: 10px;
+			top:200px;
+			z-index: 50;
+
+        }
+	#_ideConac a{
+	   height:0px;
+	   overflow: hidden;
+	}
+</style>
+<!--<script src="js/index.js"></script>-->
+
+<div id="footer"></div>
+<!--页底-->
+<img id="bay" class="float_img"style="z-index: 9999999;">
+
+<img id="bay2" class="float_img" style="z-index: 9999999;">
+
+<!--右侧悬浮-->
+<!-- <div class="fixed-button">
+	<img src="img/index-fied-icon.png" alt="">
+	<div>
+		<ul class="float_nav">
+
+		</ul>
+	</div>
+</div> -->
+<!--右侧悬浮-->
+<script src="js/index.js"></script>
+<!--<script>
+$("#head-top").load("./head-top.html");
+$("#header").load("./header.html");
+$("#footer").load("./footer.html");
+</script>-->
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/15/232/0000/41215633/CA152320000412156330001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

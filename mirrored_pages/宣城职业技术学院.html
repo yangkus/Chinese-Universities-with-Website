@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>宣城职业技术学院</title>
+
+    <script type="text/javascript">
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="/r/cms/www/default/Css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/r/cms/www/default/Css/bgstretcher.css" />
+
+    <link rel="stylesheet" type="text/css" href="/r/cms/www/default/Css/style-1.css" />
+    <script src="/r/cms/jquery.js" type="text/javascript"></script>
+    <script src="/r/cms/jquery-migrate-3.4.0.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="/r/cms/www/default/Scripts/jquery-1.9.1.min.js"></script>-->
+    <script type="text/javascript" src="/r/cms/www/default/Scripts/bgstretcher.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var storage = window.localStorage;
+            var winHeight = jQuery(window).height();
+            //var navPosition = $('#tipimg').position();
+
+            $('.slide-arrow').css('top', winHeight * 0.50);
+            //$('#nav').css('top',winHeight*0.32);
+            //$('#nav').css('left',navPosition.left-36);
+            //测试远程开发
+            jQuery(window).bind("resize", changeSAposition);
+
+            function changeSAposition(e) {
+                var winHeight = jQuery(window).height();
+                var navPosition = $('#tipimg').position();
+                $('.slide-arrow').css('top', winHeight * 0.50);
+            };
+            let images = [
+                            '/u/cms/www/202209/28183409vwnp.png',
+            ]
+              //Initialize Backgound Stretcher
+            $('body').bgStretcher({
+                images: images,
+                imageWidth: 1920,
+                imageHeight: 1082,
+                transitionEffect: 'fade',
+                sequenceMode: 'normal',
+                buttonPrev: '#cclb-btn-prev',
+                buttonNext: '#cclb-btn-next',
+                nextSlideDelay: '4000',
+                preloadImg: true
+                //pagination: '#nav'
+            });
+            $('#cclb-btn-pause').click(function () {
+                if ($(this).html() == "Pause") {
+                    $(this).html("Resume");
+                    $(this).attr('class', 'cclb-btn-start');
+                    $('BODY').bgStretcher.pause();
+                } else {
+                    $(this).html("Pause");
+                    $(this).attr('class', 'cclb-btn-pause');
+                    $('BODY').bgStretcher.play();
+                }
+            })
+
+        });
+
+    </script>
+<style type="text/css">
+    .gq_banner2020 {
+        width: 100%;
+        height: 280px;
+        position: relative;
+        overflow: hidden;
+    }
+    /*html {-webkit-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(graysale=1);} */<!--    可以是整个网站变成灰色的     -->
+</style>
+
+</head>
+
+<body>
+<script type="text/javascript">
+
+    function dropMenu(obj) {
+
+        $(obj).each(function () {
+
+            var theSpan = $(this);
+            var theMenu = theSpan.find(".submenu");
+            var tarHeight = theMenu.height();
+
+            theMenu.css({ height: 0, opacity: 0 });
+
+            theSpan.hover(
+
+                function () {
+                    if (tarHeight > 0) {
+                        $(this).addClass("menusel");
+                        $(this).css("background-color", "#114b7f");
+                        $(this).find("a").css("color", "#ffffff");
+                        theMenu.stop().show().animate({ height: tarHeight, opacity: 1 }, 400);
+                    } else {
+                        $(this).addClass("menusel");
+                        $(this).css("background-color", "#114b7f");
+                        $(this).find("a").css("color", "#ffffff");
+                    }
+
+
+                },
+
+                function () {
+
+                    $(this).removeClass("menusel");
+                    $(this).css("background-color", "");
+                    $(this).find("a").css("color", "");
+                    theMenu.stop().animate({ height: 0, opacity: 0 }, 400, function () {
+
+                        $(this).css({ display: "none" });
+
+                    });
+
+                }
+
+            );
+
+        });
+
+    }
+
+</script>
+
+<div id="homepage">
+    <div class="top">
+        <div id="home-top">
+            <!--菜单-->
+
+            <div id="menunav">
+
+                <div class="menu_li">
+                    <ul>
+                        <li style="padding-top: 8px;padding-left: 12px; width: 313px;padding-right: 0px;"><img
+                                src="/r/cms/www/default/Picture/xcvtclogo.png"></li>
+                        <li class="menusel"><a href="/">首页</a></li>
+
+                        <li  class="menusel"><a href="/xxjj/19772.jhtml" >学校概况</a>
+                            <ul class="submenu">
+                                <li><a href="/xxjj/19772.jhtml"  target="_blank"  class="productclass_dolphin">学校简介</a></li>
+                                <li><a href="/xyld.jhtml"  class="productclass_dolphin">学校领导</a></li>
+                                <li><a href="/xxzc/56251.jhtml"  class="productclass_dolphin">学校章程</a></li>
+                                <li><a href="/pic.jhtml"  class="productclass_dolphin">校园风光</a></li>
+                            </ul>
+                        </li>
+                        <li  class="menusel"><a href="/news.jhtml" >新闻中心</a>
+                            <ul class="submenu">
+                                <li><a href="/zndt.jhtml"  class="productclass_dolphin">学院动态</a></li>
+                                <li><a href="/bmdt.jhtml"  class="productclass_dolphin">部门动态</a></li>
+                                <li><a href="/dzgg.jhtml"  class="productclass_dolphin">电子校务</a></li>
+                            </ul>
+                        </li>
+                        <li  class="menusel"><a href="/jgsz/62208.jhtml" >机构设置</a>
+                            <ul class="submenu">
+                            </ul>
+                        </li>
+                        <li  class="menusel"><a href="https://www.xcvtc.edu.cn/bysxx/62928.jhtml"  target="_blank" >招生就业</a>
+                            <ul class="submenu">
+                                <li><a href="https://zs.xcvtc.edu.cn"  target="_blank"  class="productclass_dolphin">招生信息网</a></li>
+                                <li><a href="https://jy.xcvtc.edu.cn"  target="_blank"  class="productclass_dolphin">就业指导网</a></li>
+                            </ul>
+                        </li>
+                        <li  class="menusel"><a href="https://www.xcvtc.edu.cn/zddh/56241.jhtml" >网络导航</a>
+                            <ul class="submenu">
+                                <li><a href="/zddh/56241.jhtml"  class="productclass_dolphin">站点导航</a></li>
+                                <li><a href="https://nav.xcvtc.edu.cn/"  target="_blank"  class="productclass_dolphin">服务导航</a></li>
+                            </ul>
+                        </li>
+                        <li style="width: 110px;" onclick="showsearch();"><img style="width: 112px;height: 80px;" src="/r/cms/www/default/Picture/menu_search.png"></li>
+                        <ul class="searchsubmenu" id="searchstatus" style="display:none;height: 32px;">
+                            <li style="height: 32px;line-height: 32px;"><input type="text" id="keyword" name="keyword" style="width: 145px;height: 32px;" value=""/></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <SCRIPT type=text/javascript>
+        $(document).ready(function(){
+            dropMenu(".menusel");
+            $("#keyword").on("keyup",function(event){
+                if(event.keyCode==13){
+                    var keyword=$("#keyword").val();
+                    var keyWords = keyword?encodeURI(keyword):''
+                    window.open('/search.htm?q=' + keyWords);
+                }
+            })
+        })
+        function showsearch(){
+            if($("#searchstatus").is(":hidden")){
+                $("#searchstatus").show();
+            }else{
+                $("#searchstatus").hide();
+            }
+
+        }
+
+    </SCRIPT>
+    <div class="content">
+        <div id="home-content">
+            <div class="cc-long">
+
+                <!-- home toggolebox -->
+                <div id="togobox" class="mb-left m-con1">
+                    <article>
+                        <div class="m-top">
+                            <div class="m-top_l" style="width: 100%;">
+                                <!-- <div class="u-tubiao"></div> -->
+                                <div class="item selitem" dataid="item01" style="text-align: center;"><a
+                                        href="/zndt.jhtml">学院动态</a></div>
+                                <div class="item unselitem" dataid="item02"><a href="/dzgg.jhtml">电子校务</a></div>
+                                <div class="item unselitem" dataid="item03"><a href="/bmdt.jhtml">部门动态</a></div>
+                                <div style="position: absolute;right: 0px;">
+                                    <h3 style="color:#fff;">&#x2190; 点击标题查看更多</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <ul id="item01">
+                            <li style="float: left;"><a style="float: left;" href="/zndt/63283.jhtml" target="_blank"
+                                                        class="u-gk">省委第二十一巡视组巡视公告</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-18</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/zndt/63328.jhtml" target="_blank"
+                                                        class="u-gk">学校召开“专创融合”金课及有关高水平项目团队建设
+培育工作推进会</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-19</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/zndt/63330.jhtml" target="_blank"
+                                                        class="u-gk">宣城职业技术学院召开2024年辅导员业务实操培训</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-24</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/zndt/63317.jhtml" target="_blank"
+                                                        class="u-gk">传承红色基因 赓续红色血脉|宣城职业技术学院组织收看“中国共产党人精神谱系”安徽省示范宣讲直播</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-23</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/zndt/63320.jhtml" target="_blank"
+                                                        class="u-gk">宣城市公安局来我校调研交流</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-24</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/zndt/63304.jhtml" target="_blank"
+                                                        class="u-gk">党委书记李斌以普通党员身份参加学生处党支部集中学习</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-22</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/zndt/63286.jhtml" target="_blank"
+                                                        class="u-gk">学院召开2024年度第3次职业培训工作推进会</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-21</span></li>
+                        </ul>
+                        <ul id="item02" style="display: none;">
+                            <li style="float: left;"><a style="float: left;" href="/dzgg/63342.jhtml" target="_blank"
+                                                        class="u-gk">关于举办宣城市第八届“赢在宣城”
+创新创业大赛的通知</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-26</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/dzgg/63326.jhtml" target="_blank"
+                                                        class="u-gk">通知</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-24</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/dzgg/63325.jhtml" target="_blank"
+                                                        class="u-gk">关于开展实验实训室安全检查的通知</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-24</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/dzgg/63324.jhtml" target="_blank"
+                                                        class="u-gk">关于2024年10月至2025年2月路段
+巡查安排的通知</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-24</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/dzgg/63297.jhtml" target="_blank"
+                                                        class="u-gk">关于做好2025年度高校思想政治工作质量提升综合改革与精品建设项目申报工作的通知</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-21</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/dzgg/63295.jhtml" target="_blank"
+                                                        class="u-gk">公示</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-21</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/dzgg/63291.jhtml" target="_blank"
+                                                        class="u-gk">关于开展2024年下半年思政班主任宣讲工作的通知</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-21</span></li>
+                        </ul>
+                        <ul id="item03" style="display: none;">
+                            <li style="float: left;"><a style="float: left;" href="/bmdt/63338.jhtml" target="_blank"
+                                                        class="u-gk"> 建筑艺术系团总支学生会召开学生干部培训会</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-25</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/bmdt/63337.jhtml" target="_blank"
+                                                        class="u-gk">驿站建设我来说 ——护理系第三党支部召开师生座谈会</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-25</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/bmdt/63336.jhtml" target="_blank"
+                                                        class="u-gk">教育与管理学院：23级现代物流管理和市场营销班赴宣酒集团开展实践教学活动</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-25</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/bmdt/63318.jhtml" target="_blank"
+                                                        class="u-gk">信息工程系党总支第三党支部开展党的二十届三中全会精神宣讲活动</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-24</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/bmdt/63307.jhtml" target="_blank"
+                                                        class="u-gk">技工教育管理处召开部门工作例会</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-22</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/bmdt/63294.jhtml" target="_blank"
+                                                        class="u-gk">党建引领 技术筑基--建筑艺术系党总支第一党支部组织开展主题党日活动
+</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-21</span></li>
+                            <li style="float: left;"><a style="float: left;" href="/bmdt/63290.jhtml" target="_blank"
+                                                        class="u-gk">建筑艺术系开展访企拓岗行动</a><span
+                                    style="float: right;height: 32px;line-height: 32px;">2024-10-21</span></li>
+                        </ul>
+                    </article>
+
+
+                </div>
+                <!-- home toggolebox end -->
+            </div>
+
+
+
+
+
+
+
+
+            <div class="cc-right">
+                <div id="togobox" class="m-con1" style="background: transparent url(/r/cms/www/default/Images/news_bg02.png) 0 0 no-repeat;">
+                    <article>
+                        <div class="m-top">
+                            <div class="m-top_l">
+                                <div class="u-tubiao"></div>
+                                <h3>专题网站</h3>
+                            </div>
+                        </div>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compaible" content="ie=edge" />
+    <title>上下轮播</title>
+    <script src="/r/cms/www/default/js/vue.min.js"></script>
+</head>
+
+<body class="carousel">
+    <div id="app">
+        <ul class="box">
+            <li v-for="(item, index) in pngList" :key="index">
+                <a :href="item.href" :title="item.title"> <img :src="item.url" target=_blank></a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                pngList: [
+        { url: '/u/cms/www/202112/23123306xugu.png', title: "学院党委", href: 'https://dw.xcvtc.edu.cn' },
+        { url: '/u/cms/www/202112/2312333162wt.png', title: "学院纪委", href: 'https://jw.xcvtc.edu.cn' },
+        { url: '/u/cms/www/202211/11131053tsdt.png', title: "学习宣传贯彻党的二十大精神", href: 'https://esd.xcvtc.edu.cn' },
+        { url: '/u/cms/www/202301/06151414a943.jpg', title: "信息公开", href: 'https://xxgk.xcvtc.edu.cn/' },
+                ]
+            },
+            mounted() {
+                setInterval(this.showLbt, 2000)
+            },
+            methods: {
+                showLbt() {
+                    this.animate = true
+                    setTimeout(() => {
+                        if(this.pngList.length>4){
+                            this.pngList.push(this.pngList[0])
+                            this.pngList.push(this.pngList[1])
+                            this.pngList.push(this.pngList[2])
+                            this.pngList.push(this.pngList[3])
+                            this.pngList.shift()
+                            this.pngList.shift()
+                            this.pngList.shift()
+                            this.pngList.shift()
+                        }
+                        this.animate = false
+                    }, 500)
+
+                }
+            }
+        })
+    </script>
+</body>
+<style scoped>
+    .carousel {
+        margin: 0;
+    }
+
+    .box {
+        margin: 0;
+        padding: 6px 12px 4px 12px;
+        width: 368px;
+        height: 220px;
+        overflow: hidden;
+    }
+
+    .box li {
+        list-style: none;
+        margin-top: 1px;
+    }
+</style>
+
+</html>
+
+                        <!-- <ul style="padding-top: 5px;">
+                            <li
+                                style="margin-left: 5px;margin-right: 5px;padding-top: 1px;padding-bottom: 1px;padding-bottom: 1px;">
+                                <a href="https://www.dw.xcvtc.edu.cn" target=_blank class="linkbg" title="学院党委">
+                                    <img src="Picture/23123306xugu.png">
+                                </a>
+                            </li>
+                            <li
+                                style="margin-left: 5px;margin-right: 5px;padding-top: 1px;padding-bottom: 1px;padding-bottom: 1px;">
+                                <a href="https://www.jw.xcvtc.edu.cn" target=_blank class="linkbg" title="学院纪委">
+                                    <img src="Picture/2312333162wt.png">
+                                </a>
+                            </li>
+                            <li
+                                style="margin-left: 5px;margin-right: 5px;padding-top: 1px;padding-bottom: 1px;padding-bottom: 1px;">
+                                <a href="https://www.xxgk.xcvtc.edu.cn/cwyjsgk/index.jhtml" target=_blank
+                                    class="linkbg" title="预决算公开">
+                                    <img src="Picture/23123402tuih.png">
+                                </a>
+                            </li>
+                            <li
+                                style="margin-left: 5px;margin-right: 5px;padding-top: 1px;padding-bottom: 1px;padding-bottom: 1px;">
+                                <a href="https://www.sz.xcvtc.edu.cn/" target=_blank class="linkbg"
+                                    title="思政教育扫黑除恶">
+                                    <img src="Picture/23123442q942.png">
+                                </a>
+                            </li>
+                            <li
+                                style="margin-left: 5px;margin-right: 5px;padding-top: 1px;padding-bottom: 1px;padding-bottom: 1px;">
+                                <a href="https://www.xljkjy.xcvtc.edu.cn/" target=_blank class="linkbg"
+                                    title="心理咨询">
+                                    <img src="Picture/23123556wufk.png">
+                                </a>
+                            </li>
+                        </ul> -->
+                    </article>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div id="home-bottom">
+
+            <div class="bc-line-2">
+                <div class="bc-left-2">电话：0563-3023305 传真：0563-3023305 <a style="color: #FFFFFF;underline: none;" href="https://beian.miit.gov.cn"> 皖ICP备05011801号-1</a>&nbsp&nbsp
+<a style="color: #FFFFFF;underline: none;" href= "https://www.beian.gov.cn/portal/recordQuery?token=26c5a710-d8a8-4780-8348-7b4ae617f778">皖公网安备34180202000003号</a>&nbsp&nbsp
+                    宣城职业技术学院 版本所有 © 2007-2022 www.xcvtc.edu.cn, All Rights Reserved</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="slide-arrow-box"><a id="cclb-btn-prev" class="slide-arrow slide-arrow-prev"></a><a id="cclb-btn-next"
+                                                                                            class="slide-arrow slide-arrow-next"></a></div>
+<!--漂浮广告 on-->
+<script type="text/javascript" src="/r/cms/www/default/js/pf.js"></script>
+<script language="javascript">
+    var floatCode ='';
+    var focus_width=410;
+	//floatCode +='<br/><br/><a href="#" target="_blank"><img src="/u/cms/www/202208/31090013lk0s.png" alt="" width="400" height="194"></a><br/><a target="_blank" href="https://jdydt.ccdi.gov.cn/"><img width="400"  src="/u/cms/www/202307/08154505euyw.jpg"/></a>';  
+	
+	//floatCode +='<br/><br/><a href="https://jdyqcxy.xcvtc.edu.cn/jnds.jhtml" target="_blank"><img src="/r/cms/www/default/Images/DAF0284EC388A40862B2DFCAB0A14770.png" alt="" width="450" height="auto"></a>';
+    floatCode +='<br/><br/><a href="https://www.xcvtc.edu.cn/zndt/63283.jhtml" target="_blank"><img src="u/cms/www/202410/19073544oe27.jpg" alt="" width="300" height="auto"></a>';
+    if(floatCode){
+        ShowAd();
+    }
+</script>
+<!--漂浮广告 end-->
+
+<!-- 书记院长信箱start -->
+<div id="floating-image">  
+  <a href="https://www.xcvtc.edu.cn/sjxzxx/62072.jhtml" target="_blank">  
+    <img src="/r/cms/www/default/Picture/sjxzxx.jpg" alt="" width="150" height="300">  
+  </a>
+  <button class="close-btn" onclick="closeFloatingImage()">关闭</button>
+</div>
+<script>  
+function closeFloatingImage() {  
+  // 隐藏浮动图片  
+  document.getElementById('floating-image').style.display = 'none';  
+}  
+</script>  
+<style>  
+/* 设置浮动图片链接的样式 */  
+#floating-image {  
+  position: fixed; /* 固定位置 */  
+  right: 0; /* 贴紧右侧 */  
+  top: 30%; /* 顶部距离窗口高度的50% */  
+  transform: translateY(-50%); /* 向上移动自身高度的50%，以实现垂直居中 */  
+  width: 150px; /* 设定图片宽度 */  
+  height: 300px; /* 设定图片高度（如果图片尺寸不同，可能需要调整或删除） */  
+  display: flex; /* 使用Flexbox布局以垂直居中图片 */  
+  align-items: center; /* 垂直居中 */  
+  justify-content: center; /* 水平居中 */  
+  background-color: rgba(255, 255, 255, 0.7); /* 可选：设置背景色以提高可见性 */  
+  border: 1px solid #ccc; /* 可选：添加边框 */  
+  padding: 0px; /* 可选：内边距 */  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */  
+  z-index: 1000; /* 设置较高的z-index以确保它显示在页面内容之上 */  
+}  
+  
+#floating-image img {  
+  max-width: 100%; /* 确保图片不会超出容器宽度 */  
+  height: auto; /* 保持图片的原始宽高比 */  
+}  
+  
+/* 可选：设置链接样式 */  
+#floating-image a {  
+  text-decoration: none; /* 移除下划线 */  
+  color: #333; /* 文本颜色 */  
+  display: block; /* 使整个容器都可点击 */  
+}  
+/* 关闭按钮的样式 */  
+#floating-image .close-btn {  
+  position: absolute;  
+  top: 0;  
+  right: 0;  
+  padding: 5px 10px;  
+  background-color: #ccc;  
+  color: #fff;  
+  border: none;  
+  cursor: pointer;  
+  z-index: 1001; /* 确保按钮在图片之上 */  
+  font-size: 8px;  
+}  
+  
+/* 隐藏关闭按钮的文本（可选） */  
+#floating-image .close-btn::before {  
+  content: '×';  
+  font-size: 8px;  
+}  
+</style>  
+<!-- 书记院长信箱end -->
+
+<script type="text/javascript">
+    $(".item").on("mousemove", function () {
+        $(".item").removeClass("selitem");
+        $(".item").addClass("unselitem");
+        $(this).removeClass("unselitem");
+        $(this).addClass("selitem");
+        $("[id^='item']").hide();
+        //console.info("dataid",$(this).attr("dataid"));
+        $("#" + $(this).attr("dataid")).show();
+    })
+</script>
+
+</body>
+
+</html>
+

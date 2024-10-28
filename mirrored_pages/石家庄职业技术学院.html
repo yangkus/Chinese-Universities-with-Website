@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML><HEAD><TITLE>石家庄职业技术学院_石家庄职业技术学院</TITLE><META Name="keywords" Content="石家庄职业技术学院_石家庄职业技术学院" />
+
+
+
+
+
+<META content="text/html; charset=UTF-8" http-equiv="Content-Type"><LINK rel="stylesheet" type="text/css" href="css/css22.css"><LINK rel="stylesheet" type="text/css" href="css/css2.css"><script type="text/javascript" src="js/jquery.pack.js"></script><script type="text/javascript" src="js/jQuery.blockUI.js"></script><script type="text/javascript" src="js/jquery.SuperSlide.js"></script><!--登录--><script type="text/javascript">
+   var imgjishuqi=0;
+    $(function(){
+resetform();
+$('form:eq(1)').attr('action','http://oa.sjzpt.edu.cn:8088/login/VerifyLogin.jsp?logintype=1');
+$('form:eq(1) :text').eq(0).attr('name','loginid');
+$('form:eq(1) :password').eq(0).attr('name','userpassword');
+$('form:eq(1) :submit').click(checktext);
+setInterval(switchimage,3000);
+setInterval(switchimage1,4000);
+setInterval(switchimage2,3000);
+});
+function switchimage(){
+/*$('#simage a').each(function(){
+if($(this).is(':visible')){
+$(this).fadeOut();
+}else{
+$(this).fadeIn();
+}
+})*/
+                $('#simage a').each(function(){
+                     $(this).fadeOut();
+           })
+               $('#simage a').eq(imgjishuqi).fadeIn();
+                if(imgjishuqi<$('#simage a').length-1)
+                {
+                  imgjishuqi++;
+                 }
+               else{
+                  imgjishuqi=0;                 
+                 }
+}
+function switchimage2(){
+$('#simage2 a').each(function(){
+if($(this).is(':visible')){
+$(this).fadeOut();
+}else{
+$(this).fadeIn();
+}
+})
+}
+function switchimage1(){
+$('#simage1 a').each(function(){
+if($(this).is(':visible')){
+$(this).fadeOut();
+}else{
+$(this).fadeIn();
+}
+})
+}
+    function AddDomain() {
+var _value=$('form:eq(1) :text').eq(0).val();
+$('form:eq(1) :text').eq(0).val(_value+'@sjzpt.edu.cn');
+if(checktext()){
+return true;
+}else{
+return false;
+}
+}
+function checktext(){
+if($('form:eq(1) :text').eq(0).val()==''){
+alert('用户名不能为空');
+return false;
+}
+if($('form:eq(1) :password').eq(0).val()==''){
+alert('密码不能为空');
+return false;
+}
+return true;
+}
+function resetform(){
+$('form:eq(1) :submit').unbind('click');
+$('form:eq(1) :text').eq(0).attr('name','');
+$('form:eq(1) :password').eq(0).attr('name','');
+$('form:eq(1)').eq(0).attr('action','');
+}
+function myfunc(obj){
+resetform();
+if(obj.value==1){
+
+//$('form:eq(1)').attr('action','http://mail.sjzpt.edu.cn/login.php?for_web=1');
+//$('form:eq(1) :text').eq(0).attr('name','F_email');
+//$('form:eq(1) :password').eq(0).attr('name','F_password');
+
+// http://mail.sjzpt.edu.cn/coremail/login.jsp?uid=xxx&domain=xxx&password=xxx
+
+$('form:eq(1)').attr('action','http://mail.sjzpt.edu.cn/coremail/login.jsp');
+$('form:eq(1) :text').eq(0).attr('name','uid');
+$('form:eq(1) :password').eq(0).attr('name','password');
+$('form:eq(1) :submit').eq(0).attr('name','action');
+}
+if(obj.value==2){
+$('form:eq(1)').attr('action','http://oa.sjzpt.edu.cn:8088/login/VerifyLogin.jsp?logintype=1');
+$('form:eq(1) :text').eq(0).attr('name','loginid');
+$('form:eq(1) :password').eq(0).attr('name','userpassword');
+$('form:eq(1) :submit').click(checktext);
+}
+if(obj.value==3){
+          window.location.href="http://www.hebxxt.com/";
+}
+}
+function changetab1(){
+
+  $('#tab').css("backgroundImage","url(images/topbg1.jpg)");
+  $('#mytab2').css('color','#666666');
+   $('#mytab1').css('color','#ffffff');
+   $('#tabcontent1').show();
+   $('#tabcontent2').hide();
+}
+function changetab2(){
+
+   $('#tab').css("backgroundImage","url(images/topbg2.jpg)");
+   $('#mytab1').css('color','#666666');
+   $('#mytab2').css('color','#ffffff');
+   $('#tabcontent2').show();
+   $('#tabcontent1').hide();
+}
+
+
+function checkvalue(){
+    
+var textfield = document.getElementById("textfield").value;
+    
+if(textfield == "")
+{
+    alert("用户不能为空");
+    
+    return false;
+}
+    
+    
+    
+}
+</script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7f465753565742000100044654 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1422732669)</script>
+</HEAD>
+<BODY><!--头部-->
+<DIV id="header" 360chrome_form_autofill="2">
+<DIV id="top" 360chrome_form_autofill="2">
+<DIV id="logo" 360chrome_form_autofill="2">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="石家庄职业技术学院"><img src="images/logo20230908.png" alt="石家庄职业技术学院" /></a></DIV>
+<DIV class="flash" 360chrome_form_autofill="2"><IMG src="images/banner.gif" 360chrome_form_autofill="2"></DIV>
+<DIV class="text" 360chrome_form_autofill="2"></DIV></DIV>
+<DIV id="nav" 360chrome_form_autofill="2"><ul id="gbjx_daohang">
+     <li><a href="index.htm" target="_blank">首页 </a></li>
+    <li><a href="xygk/xyjj.htm" target="_blank">学院概况 </a>
+   <dl class="a">
+
+    <dd><a href="xygk/xyjj.htm" target="_blank" style="font-size:14px;padding:0px;">学院简介</a></dd>
+
+    <dd><a href="xygk/xrld.htm" target="_blank" style="font-size:14px;padding:0px;">现任领导</a></dd>
+
+    <dd><a href="xygk/bxln_xh_xx.htm" target="_blank" style="font-size:14px;padding:0px;">办学理念、校徽、校训</a></dd>
+
+    <dd><a href="xygk/mtgz.htm" target="_blank" style="font-size:14px;padding:0px;">媒体关注</a></dd>
+
+    <dd><a href="xygk/xxry.htm" target="_blank" style="font-size:14px;padding:0px;">学校荣誉</a></dd>
+
+    <dd><a href="xygk/gjjl.htm" target="_blank" style="font-size:14px;padding:0px;">国际交流</a></dd>
+
+    <dd><a href="xygk/xypmt.htm" target="_blank" style="font-size:14px;padding:0px;">学院平面图</a></dd>
+
+    <dd><a href="xygk/cpyc.htm" target="_blank" style="font-size:14px;padding:0px;">诚聘英才</a></dd>
+   </dl>
+      </li>
+    <li><a href="zzjg/gljg.htm" target="_blank">组织机构 </a>
+   <dl class="a">
+
+    <dd><a href="zzjg/gljg.htm" target="_blank" style="font-size:14px;padding:0px;">管理机构</a></dd>
+
+    <dd><a href="zzjg/jxxb.htm" target="_blank" style="font-size:14px;padding:0px;">教学系部</a></dd>
+   </dl>
+      </li>
+    <li><a href="rcpy/gs.htm" target="_blank">人才培养 </a>
+   <dl class="a">
+
+    <dd><a href="rcpy/ptgzjy.htm" target="_blank" style="font-size:14px;padding:0px;">普通高职教育</a></dd>
+
+    <dd><a href="rcpy/crjy.htm" target="_blank" style="font-size:14px;padding:0px;">成人教育</a></dd>
+
+    <dd><a href="rcpy/jpkc.htm" target="_blank" style="font-size:14px;padding:0px;">精品课程</a></dd>
+
+    <dd><a href="rcpy/jnjd.htm" target="_blank" style="font-size:14px;padding:0px;">技能鉴定</a></dd>
+
+    <dd><a href="rcpy/zyqsz.htm" target="_blank" style="font-size:14px;padding:0px;">专业群设置</a></dd>
+
+    <dd><a href="rcpy/sjsfzy.htm" target="_blank" style="font-size:14px;padding:0px;">省级示范专业</a></dd>
+   </dl>
+      </li>
+    <li><a href="szdw/gs.htm" target="_blank">师资队伍 </a>
+   <dl class="a">
+
+    <dd><a href="szdw/zydtr.htm" target="_blank" style="font-size:14px;padding:0px;">专业带头人</a></dd>
+
+    <dd><a href="szdw/gjjms.htm" target="_blank" style="font-size:14px;padding:0px;">国家级名师</a></dd>
+
+    <dd><a href="szdw/sjms.htm" target="_blank" style="font-size:14px;padding:0px;">省级名师</a></dd>
+
+    <dd><a href="szdw/sjjxtd.htm" target="_blank" style="font-size:14px;padding:0px;">省级教学团队</a></dd>
+
+    <dd><a href="szdw/ggjs.htm" target="_blank" style="font-size:14px;padding:0px;">骨干教师</a></dd>
+
+    <dd><a href="szdw/szyj.htm" target="_blank" style="font-size:14px;padding:0px;">师资引进</a></dd>
+   </dl>
+      </li>
+    <li><a href="sxjd/gs.htm" target="_blank">实训基地 </a>
+   <dl class="a">
+
+    <dd><a href="sxjd/zyczzcsxjd.htm" target="_blank" style="font-size:14px;padding:0px;">中央财政支持实训基地</a></dd>
+
+    <dd><a href="sxjd/szyjysxjd.htm" target="_blank" style="font-size:14px;padding:0px;">省职业教育实训基地</a></dd>
+
+    <dd><a href="sxjd/xnsxjd.htm" target="_blank" style="font-size:14px;padding:0px;">校内实训基地</a></dd>
+
+    <dd><a href="sxjd/xwsxjd.htm" target="_blank" style="font-size:14px;padding:0px;">校外实训基地</a></dd>
+
+    <dd><a href="sxjd/jnjd.htm" target="_blank" style="font-size:14px;padding:0px;">技能鉴定</a></dd>
+   </dl>
+      </li>
+    <li><a href="xywh/xsst.htm" target="_blank">校园文化 </a>
+   <dl class="a">
+
+    <dd><a href="xywh/xsst.htm" target="_blank" style="font-size:14px;padding:0px;">学生社团</a></dd>
+
+    <dd><a href="xywh/qnzyzfw.htm" target="_blank" style="font-size:14px;padding:0px;">青年志愿者服务</a></dd>
+
+    <dd><a href="xywh/xyfg.htm" target="_blank" style="font-size:14px;padding:0px;">校园风光</a></dd>
+
+    <dd><a href="xywh/jghd.htm" target="_blank" style="font-size:14px;padding:0px;">教工活动</a></dd>
+   </dl>
+      </li>
+    <li><a href="http://sjzdd.sjzpt.edu.cn/" target="_blank">石家庄开放大学 </a>
+      </li>
+    <li><a href="http://sqxy.sjzpt.edu.cn/" target="_blank">石家庄社区学院 </a>
+      </li>
+    <li><a href="" target="_blank">职教集团 </a>
+   <dl class="a">
+
+    <dd><a href="https://hbwczjjt.sjzpt.edu.cn/" target="_blank" style="font-size:14px;padding:0px;">河北文化创意职教集团</a></dd>
+
+    <dd><a href="https://hbfwwb.sjzpt.edu.cn/" target="_blank" style="font-size:14px;padding:0px;">河北软件与服务外包职教集团</a></dd>
+   </dl>
+      </li>
+</ul><script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode204202').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkey204202").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkey204202").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkey204202").value = base64.encode(document.getElementById("lucenenewssearchkey204202").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode204202"));
+        return true;
+    } 
+</script>
+<form action="ssjgy.jsp?wbtreeid=1001" method="post" id="au2a" name="au2a" onsubmit="return _nl_ys_check()" class="search">
+ <input type="hidden" id="lucenenewssearchkey204202" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype204202" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope204202" name="searchScope" value="0"><input type="hidden" name="csrf_token" value="VBQ68v4fx8WUmt8k">
+<input name="showkeycode" id="showkeycode204202" class="input">
+ <input type="image" src="images/search.png" class="btn">
+</form><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script></DIV></DIV><!--头部 end--><!--主体-->
+<DIV id="main" 360chrome_form_autofill="2"><!--焦点图--><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div id="slideBox" class="slideBox">
+    <div class="hd">
+      <ul>
+              <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="bd">
+     <ul>
+   <li><a href="info/1052/9236.htm" title="我院举办2024年新入职教师岗前培训" target="_blank"><img src="/__local/0/0E/E8/8F2BCEB8D4752DAB95A11B3B85E_08C9864D_1F0F1.jpg" width="435" height="300" style="border:2px solid #004EA2" /> 
+   <p style="text-align:center;margin-top:10px;">我院举办2024年新入职教师岗前培训</p></a>
+      </li>
+   <li><a href="info/1052/9213.htm" title="传承红色基因 赓续红色血脉  “省会关心下一代大讲堂”开讲活动在我院举办" target="_blank"><img src="/__local/2/D1/05/92D0394F2A6174E08AD670E37D5_68302601_1625C.jpg" width="435" height="300" style="border:2px solid #004EA2" /> 
+   <p style="text-align:center;margin-top:10px;">传承红色基因 赓续红色血脉  “省会关心下一代大讲...</p></a>
+      </li>
+   <li><a href="info/1052/9153.htm" title="我院举行2024级新生开学典礼" target="_blank"><img src="/__local/9/B4/F0/C73E65DE7AB6A8123CF332C99E4_FD691E7F_194E4.jpg" width="435" height="300" style="border:2px solid #004EA2" /> 
+   <p style="text-align:center;margin-top:10px;">我院举行2024级新生开学典礼</p></a>
+      </li>
+   <li><a href="info/1052/9130.htm" title="学院召开2024年秋季学期中层干部会" target="_blank"><img src="/__local/F/38/C1/CD7441BD29EE356CA2FB683CC40_0AB29E0A_1946A.jpg" width="435" height="300" style="border:2px solid #004EA2" /> 
+   <p style="text-align:center;margin-top:10px;">学院召开2024年秋季学期中层干部会</p></a>
+      </li>
+</ul>
+ </div>
+   </div><script>_showDynClickBatch(['dynclicks_u3_9236','dynclicks_u3_9213','dynclicks_u3_9153','dynclicks_u3_9130'],[9236,9213,9153,9130],"wbnews", 1422732669)</script>
+<script type="text/javascript">jQuery(".slideBox").slide( { mainCell:".bd ul",effect:"left",autoPlay:true} );</script><!--焦点图 end--><div class="index_sum1"><div class="index_sum1">
+    <h1><strong>学</strong>院新闻<span>news</span>
+      <div><a href="index/xyxw.htm" class="xymore" target="_blank">更多+</a></div>
+    </h1>
+
+<ul>
+
+    <li><a href="info/1049/9252.htm" target="_blank">学院召开警示教育暨中层干部集体廉政谈...</a><span>2024-10-28</span></li>
+
+
+    <li><a href="info/1049/9251.htm" target="_blank">我院召开“本科层次职业教育内涵建设与...</a><span>2024-10-26</span></li>
+
+
+    <li><a href="info/1049/9245.htm" target="_blank">我院举办2024年新入职专兼职辅导员培训</a><span>2024-10-25</span></li>
+
+
+    <li><a href="info/1049/9227.htm" target="_blank">我院迅速掀起学习习近平同志《论教育》...</a><span>2024-10-20</span></li>
+
+
+    <li><a href="info/1049/9225.htm" target="_blank">我院举办2024年新入职教师岗前培训</a><span>2024-10-18</span></li>
+
+
+    <li><a href="info/1049/9219.htm" target="_blank">我院召开外出调研总结交流会</a><span>2024-10-16</span></li>
+
+
+    <li><a href="info/1049/9212.htm" target="_blank">传承红色基因 赓续红色血脉  “省会关心...</a><span>2024-10-14</span></li>
+
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u4_9252','dynclicks_u4_9251','dynclicks_u4_9245','dynclicks_u4_9227','dynclicks_u4_9225','dynclicks_u4_9219','dynclicks_u4_9212'],[9252,9251,9245,9227,9225,9219,9212],"wbnews", 1422732669)</script>
+</div><div class="index_sum2">
+    <h2><span class="h2_ico1"></span>通知公告<span class="more"><a href="index/tzgg.htm">更多+</a></span></h2>
+    <ul class="index_sum2_ul1">
+   <li style="height:40px;line-height:40px;background:url(images/ico5.png) no-repeat left 15px;"><a href="info/1051/9218.htm" title="石家庄职业技术学院“金秋相聚 ‘职’等你来”2025届毕业生线上校园双选会邀请函">石家庄职业技术学院“金秋相聚 ‘职’等...</a></li>
+   <li style="height:40px;line-height:40px;background:url(images/ico5.png) no-repeat left 15px;"><a href="info/1051/9253.htm" title="石家庄职业技术学院正定校区消防设施器材采购项目">石家庄职业技术学院正定校区消防设施器...</a></li>
+   <li style="height:40px;line-height:40px;background:url(images/ico5.png) no-repeat left 15px;"><a href="info/1051/9249.htm" title="石家庄职业技术学院高等教育应用多媒体资源服务平台项目招标公告">石家庄职业技术学院高等教育应用多媒体...</a></li>
+   <li style="height:40px;line-height:40px;background:url(images/ico5.png) no-repeat left 15px;"><a href="info/1051/9248.htm" title="石家庄职业技术学院课程思政与教学改革课程资源开发项目竞争性磋商公告">石家庄职业技术学院课程思政与教学改革...</a></li>
+   <li style="height:40px;line-height:40px;background:url(images/ico5.png) no-repeat left 15px;"><a href="info/1051/9247.htm" title="正定校区学生公寓憩园1栋、2栋第三期管理服务外包项目竞争性磋商招标公告">正定校区学生公寓憩园1栋、2栋第三期管...</a></li>
+   <li style="height:40px;line-height:40px;background:url(images/ico5.png) no-repeat left 15px;"><a href="info/1051/9243.htm" title="石家庄职业技术学院长兴校区生活垃圾及树枝、树叶清运服务中标结果公告">石家庄职业技术学院长兴校区生活垃圾及...</a></li>
+   <li style="height:40px;line-height:40px;background:url(images/ico5.png) no-repeat left 15px;"><a href="info/1051/9235.htm" title="石家庄职业技术学院正定校区北区消防设施检测项目中标公告">石家庄职业技术学院正定校区北区消防设...</a></li>
+   <li style="height:40px;line-height:40px;background:url(images/ico5.png) no-repeat left 15px;"><a href="info/1051/9234.htm" title="石家庄职业技术学院舆情监测、网媒管理等服务项目询价公告">石家庄职业技术学院舆情监测、网媒管理...</a></li>
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u5_9218','dynclicks_u5_9253','dynclicks_u5_9249','dynclicks_u5_9248','dynclicks_u5_9247','dynclicks_u5_9243','dynclicks_u5_9235','dynclicks_u5_9234'],[9218,9253,9249,9248,9247,9243,9235,9234],"wbnews", 1422732669)</script>
+
+<DIV class="index_sum3" 360chrome_form_autofill="2" style="margin-top: -5px">
+<DIV 360chrome_form_autofill="2" style="border-top: #d9d9d9 1px solid; border-right: #d9d9d9 1px solid; width: 415px; border-bottom: #d9d9d9 1px solid; padding-bottom: 3px; padding-top: 0px; padding-left: 5px; border-left: #d9d9d9 1px solid; padding-right: 5px">
+<FORM class="login" method="post" action="http://oa.sjzpt.edu.cn:8088/wui/theme/ecology8/page/login.jsp" 360chrome_form_autofill="2" onsubmit="return checkvalue()"><INPUT type="hidden" value="XXT915036" name="corpAccount" 360chrome_form_autofill="2"> 
+<TABLE width="457" border="0" style="text-align: center">
+<TBODY>
+<TR style="text-align: right"><INPUT type="hidden" align="middle" value="Richfit_Portal-45" name="PortalLogin" 360chrome_form_autofill="2"> 
+<TD height="35" width="100" style="font-size: 16px; text-align: left; padding-left: 16px"><INPUT id="radio" type="radio" value="1" name="radio" 360chrome_form_autofill="2" onclick="javascript:myfunc(this)"> <LABEL for="radio">邮箱</LABEL></TD>
+<TD height="35" style="font-size: 16px; text-align: left"><LABEL>用 户：</LABEL></TD>
+<TD height="35" style="text-align: left"><INPUT id="UserNmame" class="input" name="UserNmame" 360chrome_form_autofill="2" style="height: 26px; width: 191px"></TD></TR>
+<TR>
+<TD height="35" width="100" style="font-size: 16px; text-align: left; padding-left: 16px"><INPUT id="radio2" checked type="radio" value="2" name="radio" 360chrome_form_autofill="2" onclick="javascript:myfunc(this)"> <LABEL for="radio2">办公系统</LABEL></TD><INPUT type="hidden" value="sjzpt.edu.cn" name="F_domain" 360chrome_form_autofill="2"> 
+<TD height="35" style="font-size: 16px; text-align: left"><LABEL>密 码：</LABEL></TD>
+<TD height="35" style="text-align: left"><INPUT id="Pwd" class="input" type="password" value="" name="Pwd" 360chrome_form_autofill="2" style="height: 26px; width: 191px"></TD><INPUT type="hidden" value="sjzpt.edu.cn" name="domain_name" 360chrome_form_autofill="2"> <INPUT type="hidden" value="http://mail.sjzpt.edu.cn/?q=base" name="go" 360chrome_form_autofill="2"> <INPUT type="hidden" value="http://mail.sjzpt.edu.cn/" name="referer" 360chrome_form_autofill="2"> 
+<TR>
+<TD height="35" width="100" style="font-size: 16px; text-align: left; padding-left: 16px"><INPUT id="radio3" type="radio" value="3" name="radio" 360chrome_form_autofill="2" onclick="javascript:myfunc(this)"> <LABEL for="radio3">高校通</LABEL></TD>
+<TD height="35" colspan="2" style="padding-top: 2px; padding-left: 5px"><INPUT id="button" class="btn" type="submit" value="提交登录" name="button" 360chrome_form_autofill="2"></TD></TR></TR></TBODY></TABLE></FORM></DIV>    <h2 style="margin-bottom:5px;margin-top:17px;"><span class="h2_ico2"></span>媒体关注<span class="more"><a href="xygk/mtgz.htm">更多+</a></span></h2>
+   <div class="index_sum3_blcok">
+      <dl>
+        <dt><a href="info/1006/9045.htm">
+<img src="images/tsg.jpg" width="120" height="80" />
+</a>
+</dt>
+        <dd><span><a href="info/1006/9045.htm">2024/6/25-无线石家庄-石家庄职业技...</a></span>
+          <p>媒体报道链接【<a href="info/1006/9045.htm">详情</a>】</p>
+        </dd>
+      </dl>
+    </div>
+
+<div class="clear"></div>
+<script>_showDynClickBatch(['dynclicks_u6_9045'],[9045],"wbnews", 1422732669)</script>
+</DIV>
+
+
+<div class="index_sum1" style="margin-left:20px;">
+    <h1><strong>系</strong>部动态<span>dynamic</span>
+      <div><a href="index/xbdt.htm" class="xymore" target="_blank">更多+</a></div>
+    </h1>
+<ul>
+
+    <li><a href="info/1128/9250.htm">机电工程系与经济贸易系联合举办“新星...</a><span>2024-10-25</span></li>
+
+
+    <li><a href="info/1128/9246.htm">艺术设计系非遗文创大师工作室师生作品...</a><span>2024-10-25</span></li>
+
+
+    <li><a href="info/1128/9244.htm">马克思主义学院开展第三期“原著之光·照...</a><span>2024-10-25</span></li>
+
+
+    <li><a href="info/1128/9238.htm">艺术设计系在2024年世界职业院校技能大...</a><span>2024-10-23</span></li>
+
+
+    <li><a href="info/1128/9237.htm">我院成功举行“教育部供需对接就业育人...</a><span>2024-10-23</span></li>
+
+
+    <li><a href="info/1128/9233.htm">马克思主义学院赴正定国家乒乓球训练基...</a><span>2024-10-21</span></li>
+
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u7_9250','dynclicks_u7_9246','dynclicks_u7_9244','dynclicks_u7_9238','dynclicks_u7_9237','dynclicks_u7_9233'],[9250,9246,9244,9238,9237,9233],"wbnews", 1422732669)</script>
+
+
+<DIV class="index_sum2 bg" 360chrome_form_autofill="2">
+<H3>专栏入口</H3><script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="index_sum2_ul2">
+   <LI><a href="http://zhaosheng.sjzpt.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42052)">招生信息</a></li>
+    
+   <LI class="li2"><a href="http://sjzptzy.bysjy.com.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42053)">就业指导</a></li>
+    
+   <LI class="li3"><a href="info/1061/3956.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42054)">数字校园</a></li>
+    
+   <LI class="li4"><a href="info/1062/3957.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42055)">服务指南</a></li>
+    
+   <LI class="li5"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42056)">精品课程</a></li>
+    
+   <LI class="li6"><a href="http://xqhz.sjzpt.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42057)">校企合作</a></li>
+    
+   <LI class="li7"><a href="http://zlb.sjzpt.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42058)">内部质量</a></li>
+    
+   <LI class="li8"><a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42059)">专业建设</a></li>
+    
+</UL></DIV>
+<DIV class="clear" 360chrome_form_autofill="2"></DIV></DIV><!--主体 end-->
+<DIV class="content" 360chrome_form_autofill="2" style="margin-top: 15px">
+<DIV class="content_sum" 360chrome_form_autofill="2"><!--图片滚动-->
+<DIV class="piclist" 360chrome_form_autofill="2">
+<H2><SPAN class="h2_ico3"></SPAN>专题网站<SPAN class="more"><A href="index/ztwz.htm" 360chrome_form_autofill="2">更多+</A></SPAN></H2>    <div class="leftLoop">
+        <div class="hd">
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul class="picList">
+            
+                <li>
+                        <a href="shijiazhuangzhiyejishuxueyuangaodengzhiyejiaoyuzhiliangniandubaogao.pdf" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1422732669, 72420)" target="_blank">
+                            <img src="images/2023zlbg.jpg" width="200" height="65">
+                        </a>  
+                </li>
+                <li>
+                        <a href="shijiazhuangzhiyejishuxueyuan2023jiejiuyezhiliangbaogao-shangchuanwangzhanban.pdf" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1422732669, 58155)" target="_blank">
+                            <img src="style/weixinjietu_20231229180644.png" width="200" height="65">
+                        </a>  
+                </li>
+                <li>
+                        <a href="http://dwywgkztw.sjzpt.edu.cn" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1422732669, 53222)" target="_blank">
+                            <img src="images/dangwu.jpg" width="200" height="65">
+                        </a>  
+                </li>
+        
+</ul>
+        </div>
+      </div><script type="text/javascript">jQuery(".leftLoop").slide({ mainCell:".bd ul",effect:"leftLoop",vis:5,scroll:1,autoPlay:true});</script></DIV>
+<DIV class="clear" 360chrome_form_autofill="2"></DIV></DIV></DIV><!--底部-->
+<DIV id="footer" 360chrome_form_autofill="2"><div class="footext"><p>
+    <a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42060)">中华人民共和国教育部</a>|
+    <a href="http://www.chinaedu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42061)">中国教育信息网</a>|
+    <a href="http://www.tech.net.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42062)">中国高职高专教育网</a>|
+    <a href="http://jyt.hebei.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42063)">河北省教育厅</a>|
+    <a href="http://www.gx211.com/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1422732669, 42065)">中国高校之窗</a>
+</p></div>
+<DIV class="footsum" 360chrome_form_autofill="2">
+<DIV class="foot_logo" 360chrome_form_autofill="2">        
+        
+               
+                        <img src="images/foot202309181.png" style="width:359px;">
+              
+        
+</DIV><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span style="font-size: 14px;">学院地址：石家庄市正定新区天宁路226号、227号</span></p><p><span style="font-size: 14px;">电话：0311-85333824，0311-85333755（传真）</span></p><p><span style="font-size: 14px;"><span style="font-size: 14px;">邮编：050800&nbsp;&nbsp;&nbsp; </span></span></p><p><span style="font-size: 14px;">招生热线：0311-85333630，0311-68092994</span></p><p><span style="font-size: 14px;">备案号：&nbsp;&nbsp;</span><span style="font-family: arial, helvetica, sans-serif; font-size: 14px;"><a href="http://beian.miit.gov.cn" target="_self">冀ICP备14001874号-1</a></span></p>
+<P><ul>
+		<li><a href="javascript:void(0);" title="手机版" onclick="_vsb_multiscreen.setDevice('mobile')">手机版</a></li>
+</ul></P>    <div class="foot_wx" style="right:285px;top:65px;width:80px;">
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript  src='https://dcs.conac.cn/js/05/102/0000/41028462/CA051020000410284620001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+
+<div class="foot_wx">
+            
+                
+                        <a href="#" title="石家庄职业技术学院" onclick="_addDynClicks(&#34;wbimage&#34;, 1422732669, 42282)">
+                            <img src="images/wx.png">
+                        </a>  
+                     <p style="font-size:13px;">石家庄职业技术学院</p>
+                
+        
+</div></DIV>   
+   
+   
+   
+   
+</SCRIPT>   
+   
+   
+   
+   
+</SCRIPT></DIV><!--底部 end-->
+
+</BODY></HTML>

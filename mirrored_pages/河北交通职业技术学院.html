@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="河北交通-官网"/>
+    <meta name="description" content="智慧门户平台提供在线自助建站服务。平台易用，用户使用拖拽方式、所见即所得，搭建过程轻松、零代码；具有丰富的模板体现不同行业的特征与风格；布局模块搭配样式模板，满足用户的各类样式需求；添加内容多方式，可本地添加和外接数据；持续统计分析数据，用户随时掌握网站概况。"/>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>河北交通-官网</title>
+
+</head>
+<style>
+    #nprogress {
+        pointer-events: none;
+    }
+
+    #nprogress .bar {
+        background: #5188FF;
+        position: fixed;
+        z-index: 1031;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+    }
+
+    #nprogress .peg {
+        display: block;
+        position: absolute;
+        right: 0px;
+        width: 100px;
+        height: 100%;
+        box-shadow: 0 0 10px #5188FF, 0 0 5px #5188FF;
+        opacity: 1;
+        -webkit-transform: rotate(3deg) translate(0px, -4px);
+        -ms-transform: rotate(3deg) translate(0px, -4px);
+        transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    .nprogress-custom-parent {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .bar {
+        position: absolute;
+    }
+</style>
+<body class="grid-bottom-spacer" style="background-color: #F7F8FA">
+<div id="htContainer" style="height:100%" >
+</div>
+
+
+<script src="/assets/js/v2.js?v=20240223"></script>
+
+<script type="text/javascript">
+    var rqIp = '113.57.80.83';
+    var pagePubId = 'd645b51b6b367111ee1bdb81b18a8ceb7d26';
+    // 二级页面参数
+    var previewUrl = '/mhssr2/?p=d645b51b6b367111ee1bdb81b18a8ceb7d26&v=02292483e8ee74cf4cb24761ad954728177';
+    var engineId = '';
+    var webPubId = 'd814f7bf5b367311ee2a2620cfb906adea0c';
+    var typeId = '';
+    var dataId = '';
+    var aid = '';
+    var hp = '';
+    var isWebIndex = 1;
+    var p_wfwfid = 210561;
+    if (previewUrl){
+        if (window.location.href.indexOf('mh-v2-iframe=1') > -1 || isV2Mobile){
+            previewUrl = replaceUrlParam(previewUrl,'a','1')
+        }
+    }
+    jq("#htContainer").load(previewUrl)
+    function replaceUrlParam(url, param, value) {
+        if (url) {
+            var re = new RegExp("[?&](" + param + "=[^&]*)", "gi");
+            var replaceStr = param + "=" + value;
+            return re.test(url) ? url.replace(RegExp.$1, replaceStr) : url.indexOf('?') > -1 ? url + "&" + replaceStr : url + "?" + replaceStr;
+        } else {
+            return "";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2690 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <title>伊犁师范大学</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="伊犁师范大学">
+<META Name="keywords" Content="伊犁师范大学" />
+
+    <link rel="stylesheet" href="style/swiper.min.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/bfindex.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/set.js"></script>
+    <script src="js/public.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307876465452535742000200024356 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1896056163)</script>
+</head>
+<body>
+<div class="searchBox-zzc"></div>
+<div class="searchBox">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input  name="submit_button" type="image" src="images/search-2.png" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1896056163";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://115.155.203.98:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+<div class="head pc">
+    <div class="d1">
+        <div class="wrap flex-right">
+            <div class="h-link f0"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71176)">教职员工</a>
+<a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71177)">在校学生</a>
+<a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71178)">校友会</a>
+<a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71179)">来访客人</a>
+<a href="xxgk/jbxx.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71180)">信息公开</a>
+<a href="mail_sjlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1112" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71181)">书记信箱</a>
+<a href="mail_yzlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1113" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71182)">校长信箱</a>
+<a href="https://ehall.ylnu.edu.cn/index.html#/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71183)">一站式办事大厅</a>
+<a href="https://manage.ylnu.edu.cn/system/_owners/ylu/_webprj/index.jsp?r=23C83A38-893E-43AA-8360-92FC4250C404" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71191)">旧版回顾</a>
+</div>
+            <div class="search"><img src="images/search.png" alt=""></div>
+        </div>
+    </div>
+    <div class="d2">
+        <div class="wrap flex">
+            <div class="logo flex-v-center">
+
+<a href="index.htm" title="主站新"><img src="images/logo.png" alt=""></a></div>
+            <div class="nav"><ul class="flex">
+<li class="">
+                  <a href="index.htm" title="首页">首页</a>  
+                </li>             
+<li class="">
+                  <a href="xygk/dxjj.htm" title="大学概况">大学概况</a>  
+                   <div class="sub-nav">
+                            <div>
+
+                       <a href="xygk/dxjj.htm" title="大学简介">大学简介</a>
+
+                       <a href="xygk/dxgl.htm" title="大学概览">大学概览</a>
+
+                       <a href="xygk/xrld.htm" title="现任领导">现任领导</a>
+
+                       <a href="xygk/xfxx.htm" title="校风校训">校风校训</a>
+                           </div>
+                   </div>
+                </li>             
+<li class="">
+                  <a href="jgsz/jxdw.htm" title="机构设置">机构设置</a>  
+                   <div class="sub-nav">
+                            <div>
+
+                       <a href="jgsz/dqjg.htm" title="党群机构">党群机构</a>
+
+                       <a href="jgsz/jxdw.htm" title="教学单位">教学单位</a>
+
+                       <a href="jgsz/xz_jf.htm" title="行政、教辅">行政、教辅</a>
+                           </div>
+                   </div>
+                </li>             
+<li class="">
+                  <a href="javaScript:;" title="教育教学">教育教学</a>  
+                   <div class="sub-nav">
+                            <div>
+
+                       <a href="https://jwc.ylnu.edu.cn" target="_blank" title="本专科生培养">本专科生培养</a>
+
+                       <a href="https://yjsc.ylnu.edu.cn" target="_blank" title="研究生培养">研究生培养</a>
+
+                       <a href="https://cjy.ylnu.edu.cn" target="_blank" title="成人教育">成人教育</a>
+                           </div>
+                   </div>
+                </li>             
+<li class="">
+                  <a href="javaScript:;" title="科学研究">科学研究</a>  
+                   <div class="sub-nav">
+                            <div>
+
+                       <a href="https://kyc.ylnu.edu.cn" target="_blank" title="科研处">科研处</a>
+
+                       <a href="https://xbbj.ylnu.edu.cn" target="_blank" title="学报编辑部">学报编辑部</a>
+
+                       <a href="https://ydyl.ylnu.edu.cn" target="_blank" title="一带一路发展研究中心">一带一路发展研究中心</a>
+
+                       <a href="https://bjws.ylnu.edu.cn" target="_blank" title="边疆中华文史研究中心">边疆中华文史研究中心</a>
+                           </div>
+                   </div>
+                </li>             
+<li class="">
+                  <a href="javaScript:;" title="招生就业">招生就业</a>  
+                   <div class="sub-nav">
+                            <div>
+
+                       <a href="https://zsw.ylnu.edu.cn" target="_blank" title="本专科招生">本专科招生</a>
+
+                       <a href="https://yjsc.ylnu.edu.cn/" target="_blank" title="研究生招生">研究生招生</a>
+
+                       <a href="https://cjy.ylnu.edu.cn" target="_blank" title="成人招生">成人招生</a>
+
+                       <a href="zsjy/lxszs.htm" title="留学生招生">留学生招生</a>
+
+                       <a href="https://jyw.ylnu.edu.cn" target="_blank" title="就业服务">就业服务</a>
+                           </div>
+                   </div>
+                </li>             
+<li class="">
+                  <a href="https://zzb.ylnu.edu.cn/" title="人事人才">人事人才</a>  
+                </li>             
+<li class="">
+                  <a href="javaScript:;" title="校园生活">校园生活</a>  
+                   <div class="sub-nav">
+                            <div>
+
+                       <a href="xysh/bgdh.htm" title="办公电话">办公电话</a>
+
+                       <a href="xysh/wlfw.htm" title="网络服务">网络服务</a>
+
+                       <a href="xysh/yxsy.htm" title="影像师院">影像师院</a>
+
+                       <a href="xysh/xydt.htm" title="校园地图">校园地图</a>
+                           </div>
+                   </div>
+                </li>             
+</ul></div>
+        </div>
+    </div>
+</div>
+<!--wap-->
+<div class="wap-header phone">
+    <div class="m-logo">
+
+<a href="index.htm" title="主站新"><img src="images/logo.png" alt=""></a></div>
+    <div class="top">
+        <div class="phone wap-menu"><img src="images/menu.png" class="menu" alt="">
+<img src="images/close-menu.png" class="close-menu" alt=""></div>
+    </div>
+    <div class="m-nav">
+        <div class="m-tlink"><a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71176)">教职员工</a>
+<a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71177)">在校学生</a>
+<a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71178)">校友会</a>
+<a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71179)">来访客人</a>
+<a href="xxgk/jbxx.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71180)">信息公开</a>
+<a href="mail_sjlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1112" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71181)">书记信箱</a>
+<a href="mail_yzlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1113" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71182)">校长信箱</a>
+<a href="https://ehall.ylnu.edu.cn/index.html#/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71183)">一站式办事大厅</a>
+<a href="https://manage.ylnu.edu.cn/system/_owners/ylu/_webprj/index.jsp?r=23C83A38-893E-43AA-8360-92FC4250C404" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71191)">旧版回顾</a>
+</div>
+        <div class="m-search">
+
+
+<div id="divu8"></div>
+<script type="text/html" id="htmlu8">
+    <div id="appu8">
+        <div v-if="!isError">
+            <input type="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input  name="submit_button" type="image" src="images/search.png" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu8").html($("#htmlu8").text());
+</script>
+<script>
+    var appOwner = "1896056163";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu8",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://115.155.203.98:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        <ul><li class="active">
+                  <a href="index.htm" title="首页">首页</a>  
+                </li>             
+<li>
+                  <a href="xygk/dxjj.htm" title="大学概况">大学概况</a>  
+                  <span></span>
+                   <ul>
+
+                       <a href="xygk/dxjj.htm" title="大学简介">大学简介</a>
+
+                       <a href="xygk/dxgl.htm" title="大学概览">大学概览</a>
+
+                       <a href="xygk/xrld.htm" title="现任领导">现任领导</a>
+
+                       <a href="xygk/xfxx.htm" title="校风校训">校风校训</a>
+                  </ul>
+                </li>             
+<li>
+                  <a href="jgsz/jxdw.htm" title="机构设置">机构设置</a>  
+                  <span></span>
+                   <ul>
+
+                       <a href="jgsz/dqjg.htm" title="党群机构">党群机构</a>
+
+                       <a href="jgsz/jxdw.htm" title="教学单位">教学单位</a>
+
+                       <a href="jgsz/xz_jf.htm" title="行政、教辅">行政、教辅</a>
+                  </ul>
+                </li>             
+<li>
+                  <a href="javaScript:;" title="教育教学">教育教学</a>  
+                  <span></span>
+                   <ul>
+
+                       <a href="https://jwc.ylnu.edu.cn" target="_blank" title="本专科生培养">本专科生培养</a>
+
+                       <a href="https://yjsc.ylnu.edu.cn" target="_blank" title="研究生培养">研究生培养</a>
+
+                       <a href="https://cjy.ylnu.edu.cn" target="_blank" title="成人教育">成人教育</a>
+                  </ul>
+                </li>             
+<li>
+                  <a href="javaScript:;" title="科学研究">科学研究</a>  
+                  <span></span>
+                   <ul>
+
+                       <a href="https://kyc.ylnu.edu.cn" target="_blank" title="科研处">科研处</a>
+
+                       <a href="https://xbbj.ylnu.edu.cn" target="_blank" title="学报编辑部">学报编辑部</a>
+
+                       <a href="https://ydyl.ylnu.edu.cn" target="_blank" title="一带一路发展研究中心">一带一路发展研究中心</a>
+
+                       <a href="https://bjws.ylnu.edu.cn" target="_blank" title="边疆中华文史研究中心">边疆中华文史研究中心</a>
+                  </ul>
+                </li>             
+<li>
+                  <a href="javaScript:;" title="招生就业">招生就业</a>  
+                  <span></span>
+                   <ul>
+
+                       <a href="https://zsw.ylnu.edu.cn" target="_blank" title="本专科招生">本专科招生</a>
+
+                       <a href="https://yjsc.ylnu.edu.cn/" target="_blank" title="研究生招生">研究生招生</a>
+
+                       <a href="https://cjy.ylnu.edu.cn" target="_blank" title="成人招生">成人招生</a>
+
+                       <a href="zsjy/lxszs.htm" title="留学生招生">留学生招生</a>
+
+                       <a href="https://jyw.ylnu.edu.cn" target="_blank" title="就业服务">就业服务</a>
+                  </ul>
+                </li>             
+<li>
+                  <a href="https://zzb.ylnu.edu.cn/" title="人事人才">人事人才</a>  
+                </li>             
+<li>
+                  <a href="javaScript:;" title="校园生活">校园生活</a>  
+                  <span></span>
+                   <ul>
+
+                       <a href="xysh/bgdh.htm" title="办公电话">办公电话</a>
+
+                       <a href="xysh/wlfw.htm" title="网络服务">网络服务</a>
+
+                       <a href="xysh/yxsy.htm" title="影像师院">影像师院</a>
+
+                       <a href="xysh/xydt.htm" title="校园地图">校园地图</a>
+                  </ul>
+                </li>             
+</ul>
+    </div>
+</div>
+<!--wap-->
+
+
+<div class="banner">
+    <div class="swiper-container">    <div class="swiper-wrapper">
+       
+               <div class="swiper-slide">
+                        <a href="info/1059/130083.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 65679)" target="_blank">
+                            <img src="images/1860b9703c452f4a200a9e19a7784cb.jpg" border="0">
+                        </a>  
+               </div>
+       
+       
+               <div class="swiper-slide">
+                        <a href="info/1059/129443.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 65562)" target="_blank">
+                            <img src="images/54d0d9ce711c35fc14d3de3bb4e988d.jpg" border="0">
+                        </a>  
+               </div>
+       
+       
+               <div class="swiper-slide">
+                        <a href="https://jwc.ylnu.edu.cn/shpg.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 65585)" target="_blank">
+                            <img src="images/baec217e5e85d9241cebe84d7d0c11a.jpg" border="0">
+                        </a>  
+               </div>
+       
+       
+               <div class="swiper-slide">
+                        <a> <img src="images/0c5ff439512ddbc19f710a6d15a970d.jpg" border="0"></a> 
+               </div>
+       
+       
+               <div class="swiper-slide">
+                        <a href="info/1059/131133.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 65661)" target="_blank">
+                            <img src="images/0c43676c87ed32e3a9bc53217bc2849.png" border="0">
+                        </a>  
+               </div>
+       
+</div>
+        <div class="prev swiper-button-prev"></div>
+        <div class="next swiper-button-next"></div>
+        <div class="btn swiper-pagination"></div></div>
+</div>
+<div class="s1">
+    <div class="wrap"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="gg-tit c">
+            <h4>师大要闻</h4>
+            <div class="mores">
+                <a href="index/xxxw.htm">阅读更多</a>
+            </div>
+        </div>
+        <div class="block flex">
+            
+<div class="s1-item">
+                <div class="pt-box">
+                    <a href="info/1059/132023.htm" title="我校举办2024年大学生暑期“三下乡”社会实践活动总结分享暨表彰会" target="_blank">
+                        <div class="pic">
+                            <img src="/__local/7/D3/F4/C097D3A3C7C51B0FD18E5AE1C6E_F6A2FB97_596D6.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <span><i>10-27  /</i> 2024</span>
+                            <p class="eclip">我校举办2024年大学生暑期“三下乡”社会实践活动总结分享暨表彰会</p>
+                        </div>
+                    </a>
+                </div>
+           </div>
+             
+<div class="s1-item">
+                <div class="pt-box">
+                    <a href="info/1059/132013.htm" title="中国科学院院士徐星来我校宣讲" target="_blank">
+                        <div class="pic">
+                            <img src="/__local/9/31/18/25BD9E07F4AA475EC50C82DA217_E3B84B4B_19598.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <span><i>10-26  /</i> 2024</span>
+                            <p class="eclip">中国科学院院士徐星来我校宣讲</p>
+                        </div>
+                    </a>
+                </div>
+           </div>
+             
+<div class="s1-item">
+                <div class="pt-box">
+                    <a href="info/1059/131603.htm" title="自治区教育厅专家组到我校实地考察拟新增专业" target="_blank">
+                        <div class="pic">
+                            <img src="/__local/C/B4/13/08DF6914697CCE1320B8DFE5570_67227B93_1BF74.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <span><i>10-21  /</i> 2024</span>
+                            <p class="eclip">自治区教育厅专家组到我校实地考察拟新增专业</p>
+                        </div>
+                    </a>
+                </div>
+           </div>
+             
+          
+          
+          
+          
+          
+          
+</div>
+        <div class="s1-list flex">
+            <a href="info/1059/131843.htm" title="我校召开2025年中央支持地方高校改革发展专项资金项目论证会" target="_blank">
+                <div>
+                    <p class="l2">我校召开2025年中央支持地方高校改革发展专项资金项目论证会</p>
+                    <span>2024-10-25</span>
+                </div>
+            </a>
+            <a href="info/1059/131813.htm" title="以“演”筑防，以“练”护航  党委学生工作部“一站式”学生社区全覆盖开展应急疏散演练活动" target="_blank">
+                <div>
+                    <p class="l2">以“演”筑防，以“练”护航  党委学生工作部“一站式”学生社区全覆盖开展应急疏散演练活动</p>
+                    <span>2024-10-25</span>
+                </div>
+            </a>
+            <a href="info/1059/131723.htm" title="我校“国培计划（2024）”——县级骨干教师学科育人能力提升研修项目班开班" target="_blank">
+                <div>
+                    <p class="l2">我校“国培计划（2024）”——县级骨干教师学科育人能力提升研修项目班开班</p>
+                    <span>2024-10-24</span>
+                </div>
+            </a>
+            <a href="info/1059/132003.htm" title="我校学生一心一“译”助力首届霍尔果斯国际进出口商品交易会，收获满满" target="_blank">
+                <div>
+                    <p class="l2">我校学生一心一“译”助力首届霍尔果斯国际进出口商品交易会，收获满满</p>
+                    <span>2024-10-24</span>
+                </div>
+            </a>
+            <a href="info/1059/131693.htm" title="伊师大佳讯 我校学生作品入选2024年全国大学生陶艺作品展" target="_blank">
+                <div>
+                    <p class="l2">伊师大佳讯 我校学生作品入选2024年全国大学生陶艺作品展</p>
+                    <span>2024-10-22</span>
+                </div>
+            </a>
+            <a href="info/1059/131553.htm" title="我校党委常委、纪委书记张献忠一行在西南大学召开在读博士教职工座谈会" target="_blank">
+                <div>
+                    <p class="l2">我校党委常委、纪委书记张献忠一行在西南大学召开在读博士教职工座谈会</p>
+                    <span>2024-10-22</span>
+                </div>
+            </a>
+        </div><script>_showDynClickBatch(['dynclicks_u11_132023','dynclicks_u11_132013','dynclicks_u11_131603','dynclicks_u11_131843','dynclicks_u11_131813','dynclicks_u11_131723','dynclicks_u11_132003','dynclicks_u11_131693','dynclicks_u11_131553'],[132023,132013,131603,131843,131813,131723,132003,131693,131553],"wbnews", 1896056163)</script>
+</div>
+</div>
+<div class="s2">
+    <div class="wrap flex">
+        <div class="s2-left"><div class="gg-tit">
+                <h4>通知公告</h4>
+                <div class="mores">
+                    <a href="index/tzgg.htm">阅读更多</a>
+                </div>
+            </div>
+            <div class="s2-hg2 swiper-container">
+                <div class="swiper-wrapper">
+                    
+<div class="swiper-slide">
+                        <div class="s2-list">
+
+                        
+                            <a href="info/1058/122143.htm" title="伊犁师范大学2024年面向社会引进高层次人才公告">
+                                <time>
+                                    <span>21</span>
+                                    <em>2024-05</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年面向社会引进高层次人才公告</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/131613.htm" title="招租公告">
+                                <time>
+                                    <span>22</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">招租公告</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/131593.htm" title="伊犁师范大学2024年面向社会公开招聘非事业编制专业技术人员（第一批）递补公告">
+                                <time>
+                                    <span>22</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年面向社会公开招聘非事业编制专业技术人员（第一批）递补公告</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/131413.htm" title="关于2024年财务年终工作安排的通知">
+                                <time>
+                                    <span>21</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">关于2024年财务年终工作安排的通知</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/131273.htm" title="伊犁师范大学2024年引进高层次人才人员公示（十二）">
+                                <time>
+                                    <span>19</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年引进高层次人才人员公示（十二）</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/131263.htm" title="伊犁师范大学2024年面向社会公开招聘非事业编制专业技术人员（第二批）拟聘用公示">
+                                <time>
+                                    <span>19</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年面向社会公开招聘非事业编制专业技术人员（第二批）拟聘用公示</em>
+                                <i></i>
+                            </a>
+</div>
+                    </div>
+                       
+                        
+                        
+                    
+<div class="swiper-slide">
+                        <div class="s2-list">
+
+                        
+                            <a href="info/1058/129753.htm" title="伊犁师范大学2024年招聘非事业编制专业技术人员（第二批）面试、体检结果及考察相关事项公告">
+                                <time>
+                                    <span>30</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年招聘非事业编制专业技术人员（第二批）面试、体检结果及考察相关事项公告</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/129543.htm" title="招租公告">
+                                <time>
+                                    <span>30</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">招租公告</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/129533.htm" title="伊犁师范大学2024年引进高层次人才人员公示（十一）">
+                                <time>
+                                    <span>29</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年引进高层次人才人员公示（十一）</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/128683.htm" title="伊犁师范大学2024年面向社会公开招聘非事业编制专业技术人员（第一批）拟聘用公示">
+                                <time>
+                                    <span>20</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年面向社会公开招聘非事业编制专业技术人员（第一批）拟聘用公示</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/128663.htm" title="招租公告">
+                                <time>
+                                    <span>20</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">招租公告</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/128503.htm" title="伊犁师范大学2024年面向社会公开招聘事业单位工作人员（专任教师岗位）拟聘用公示">
+                                <time>
+                                    <span>19</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年面向社会公开招聘事业单位工作人员（专任教师岗位）拟聘用公示</em>
+                                <i></i>
+                            </a>
+</div>
+                    </div>
+                       
+                        
+                        
+                    
+<div class="swiper-slide">
+                        <div class="s2-list">
+
+                        
+                            <a href="info/1058/127983.htm" title="伊犁师范大学2024年面向社会公开招聘事业单位工作人员（辅导员岗位）拟聘用公示">
+                                <time>
+                                    <span>12</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年面向社会公开招聘事业单位工作人员（辅导员岗位）拟聘用公示</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/127953.htm" title="伊犁师范大学关于2024年招聘非事业编制专业技术人员（第一批）面试、体检结果及考察相关事项公告">
+                                <time>
+                                    <span>12</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学关于2024年招聘非事业编制专业技术人员（第一批）面试、体检结果及考察相关事项公告</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/127543.htm" title="伊犁师范大学2024年面向社会公开招聘非事业编制专业技术人员（第二批）资格审查通过人员名单及面试体检事宜公告">
+                                <time>
+                                    <span>06</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年面向社会公开招聘非事业编制专业技术人员（第二批）资格审查通过人员名单及面试体检...</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/127273.htm" title="伊犁师范大学2024年面向社会公开招聘事业单位工作人员（专任教师岗位）拟聘用公示">
+                                <time>
+                                    <span>04</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年面向社会公开招聘事业单位工作人员（专任教师岗位）拟聘用公示</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/127233.htm" title="伊犁师范大学2024年引进高层次人才人员公示（十）">
+                                <time>
+                                    <span>03</span>
+                                    <em>2024-09</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2024年引进高层次人才人员公示（十）</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/1058/126763.htm" title="伊犁师范大学2023年度部门决算公开">
+                                <time>
+                                    <span>28</span>
+                                    <em>2024-08</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学2023年度部门决算公开</em>
+                                <i></i>
+                            </a>
+</div>
+                    </div>
+                       
+                        
+                        
+                    
+</div>
+                <div class="btn swiper-pagination"></div>
+            </div><script>_showDynClickBatch(['dynclicks_u12_122143','dynclicks_u12_131613','dynclicks_u12_131593','dynclicks_u12_131413','dynclicks_u12_131273','dynclicks_u12_131263','dynclicks_u12_129753','dynclicks_u12_129543','dynclicks_u12_129533','dynclicks_u12_128683','dynclicks_u12_128663','dynclicks_u12_128503','dynclicks_u12_127983','dynclicks_u12_127953','dynclicks_u12_127543','dynclicks_u12_127273','dynclicks_u12_127233','dynclicks_u12_126763'],[122143,131613,131593,131413,131273,131263,129753,129543,129533,128683,128663,128503,127983,127953,127543,127273,127233,126763],"wbnews", 1896056163)</script>
+</div>
+        <div class="s2-right"><div class="gg-tit">
+                <h4>综合新闻</h4>
+                <div class="mores">
+                    <a href="index/zhxw.htm">阅读更多</a>
+                </div>
+            </div>
+            <div class="s2-hg2 swiper-container">
+                <div class="swiper-wrapper">
+                    
+<div class="swiper-slide">
+                        <div class="s2-list">
+
+                        
+                            <a href="info/2381/131993.htm" title="伊犁师范大学首届“学实杯”器乐大赛决赛圆满落幕">
+                                <time>
+                                    <span>27</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">伊犁师范大学首届“学实杯”器乐大赛决赛圆满落幕</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131963.htm" title="马克思主义学院开展“一站式”学生社区文明宿舍评比活动">
+                                <time>
+                                    <span>26</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">马克思主义学院开展“一站式”学生社区文明宿舍评比活动</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131943.htm" title="我们一起看电影——党委统战部铸牢中华民族共同体意识教育月系列活动">
+                                <time>
+                                    <span>26</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">我们一起看电影——党委统战部铸牢中华民族共同体意识教育月系列活动</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131913.htm" title="我校与哈尔滨师范大学共同推进教学资源案例库建设">
+                                <time>
+                                    <span>26</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">我校与哈尔滨师范大学共同推进教学资源案例库建设</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131883.htm" title="中国政法大学夏宁教授应邀在霍尔果斯商学院开展交流研讨">
+                                <time>
+                                    <span>26</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">中国政法大学夏宁教授应邀在霍尔果斯商学院开展交流研讨</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131983.htm" title="“漫谈新闻传播学论文写作与投稿”——融媒体学院举办研本学术沙龙系列活动">
+                                <time>
+                                    <span>26</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">“漫谈新闻传播学论文写作与投稿”——融媒体学院举办研本学术沙龙系列活动</em>
+                                <i></i>
+                            </a>
+</div>
+                    </div>
+                       
+                        
+                        
+                    
+<div class="swiper-slide">
+                        <div class="s2-list">
+
+                        
+                            <a href="info/2381/131803.htm" title="教育科学学院开展“一站式”学生社区  “文明宿舍”“优秀宿舍长”表彰大会">
+                                <time>
+                                    <span>25</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">教育科学学院开展“一站式”学生社区  “文明宿舍”“优秀宿舍长”表彰大会</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131753.htm" title="化学化工学院与都来提巴格街道  化学仪器赠予仪式圆满举行">
+                                <time>
+                                    <span>25</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">化学化工学院与都来提巴格街道  化学仪器赠予仪式圆满举行</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131923.htm" title="以考促学，学以致用  ——后勤管理处举行食品安全知识考试">
+                                <time>
+                                    <span>25</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">以考促学，学以致用  ——后勤管理处举行食品安全知识考试</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131873.htm" title="秋日序曲·叙写华章  化学化工学院“三进两联一交友”进食堂活动">
+                                <time>
+                                    <span>25</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">秋日序曲·叙写华章  化学化工学院“三进两联一交友”进食堂活动</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131863.htm" title="“铭记历史·铸牢中华民族共同体意识”——物理科学与技术学院开展新生入学教育主题研学暨“三进两联一交友”活动">
+                                <time>
+                                    <span>25</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">“铭记历史·铸牢中华民族共同体意识”——物理科学与技术学院开展新生入学教育主题研学暨“三进两联一交...</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131823.htm" title="网络安全与信息技术学院与伊犁技师培训学院举行实习实训基地签约授牌仪式">
+                                <time>
+                                    <span>25</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">网络安全与信息技术学院与伊犁技师培训学院举行实习实训基地签约授牌仪式</em>
+                                <i></i>
+                            </a>
+</div>
+                    </div>
+                       
+                        
+                        
+                    
+<div class="swiper-slide">
+                        <div class="s2-list">
+
+                        
+                            <a href="info/2381/131773.htm" title="“法毓华章，逐梦起航”---法学院举办2024级迎新晚会暨“三进两联一交友”联谊会">
+                                <time>
+                                    <span>24</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">“法毓华章，逐梦起航”---法学院举办2024级迎新晚会暨“三进两联一交友”联谊会</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131743.htm" title="马克思主义学院开展“三进两联一交友”暨“一舍两点四文明”推进活动">
+                                <time>
+                                    <span>24</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">马克思主义学院开展“三进两联一交友”暨“一舍两点四文明”推进活动</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131733.htm" title="伊师大与哈师大携手共话师范生教学技能竞赛">
+                                <time>
+                                    <span>24</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">伊师大与哈师大携手共话师范生教学技能竞赛</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131933.htm" title="书香传递，点亮未来——冯之力、孟锦慧老师图书捐赠暨答谢仪式">
+                                <time>
+                                    <span>24</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">书香传递，点亮未来——冯之力、孟锦慧老师图书捐赠暨答谢仪式</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131833.htm" title="生物科学与技术学院开展“三进两联一交友”进食堂活动">
+                                <time>
+                                    <span>24</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">生物科学与技术学院开展“三进两联一交友”进食堂活动</em>
+                                <i></i>
+                            </a>
+                        
+                    
+
+                        
+                            <a href="info/2381/131793.htm" title="霍尔果斯商学院开展“石榴愿圆”师生见面会暨“三进两联一交友”活动">
+                                <time>
+                                    <span>24</span>
+                                    <em>2024-10</em>
+                                </time>
+                                <em class="eclip">霍尔果斯商学院开展“石榴愿圆”师生见面会暨“三进两联一交友”活动</em>
+                                <i></i>
+                            </a>
+</div>
+                    </div>
+                       
+                        
+                        
+                    
+</div>
+                <div class="btn swiper-pagination"></div>
+            </div><script>_showDynClickBatch(['dynclicks_u13_131993','dynclicks_u13_131963','dynclicks_u13_131943','dynclicks_u13_131913','dynclicks_u13_131883','dynclicks_u13_131983','dynclicks_u13_131803','dynclicks_u13_131753','dynclicks_u13_131923','dynclicks_u13_131873','dynclicks_u13_131863','dynclicks_u13_131823','dynclicks_u13_131773','dynclicks_u13_131743','dynclicks_u13_131733','dynclicks_u13_131933','dynclicks_u13_131833','dynclicks_u13_131793'],[131993,131963,131943,131913,131883,131983,131803,131753,131923,131873,131863,131823,131773,131743,131733,131933,131833,131793],"wbnews", 1896056163)</script>
+</div>
+    </div>
+</div>
+
+<div class="s3">
+    <div class="wrap flex">
+        <!--2023-04-07 -->
+        <div class="s3-ll">
+            <div class="ll">
+                <div class="gg-tit">
+                    <h4>学术活动通知</h4>
+                    <div class="mores">
+                        <a href="index/xshdtz.htm">阅读更多</a>
+                    </div>
+                </div>
+                <div class="list1w list-l">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                             <div class="swiper-slide">
+      <a href="info/2561/131103.htm" target="_blank" title="法学院韩宏伟院长学术讲座">
+        <div class="cover_img">
+           <div style="background-image: url(/__local/0/B5/41/4B815CFF143C3CF5397AB1C07AE_E80AA67C_1C825.png)"></div>
+        </div>
+      </a>
+  </div>
+  <div class="swiper-slide">
+      <a href="info/2561/131113.htm" target="_blank" title="融媒体学院邀请伊犁融媒体中心融媒创作部蔡立鹏主任来校讲座">
+        <div class="cover_img">
+           <div style="background-image: url(/__local/6/0C/20/46CA98DFC68F19842EA5D854F79_063E42A4_6F628.jpg)"></div>
+        </div>
+      </a>
+  </div>
+  <div class="swiper-slide">
+      <a href="info/2561/131093.htm" target="_blank" title="法学院邀请周安平教授来校讲座">
+        <div class="cover_img">
+           <div style="background-image: url(/__local/C/B7/88/61828D76854B0F0A07B033489D7_6C17303B_26969.png)"></div>
+        </div>
+      </a>
+  </div>
+  <div class="swiper-slide">
+      <a href="info/2561/130623.htm" target="_blank" title="融媒体学院邀请[ONE物皆可]市集的主理人王秋秋来校讲座">
+        <div class="cover_img">
+           <div style="background-image: url(/__local/E/3A/F7/22D27BE53BE609AED47C37C5B7B_6F2CC5C6_3F2EB.png)"></div>
+        </div>
+      </a>
+  </div>
+  <div class="swiper-slide">
+      <a href="info/2561/130593.htm" target="_blank" title="生物科学与技术学院邀请刘全儒教授来校讲座">
+        <div class="cover_img">
+           <div style="background-image: url(/__local/9/B5/06/12E7A6D3BCD63CD5E21A752CAB3_05264B93_D0B8A.png)"></div>
+        </div>
+      </a>
+  </div>
+<script>_showDynClickBatch(['dynclicks_u14_131103','dynclicks_u14_131113','dynclicks_u14_131093','dynclicks_u14_130623','dynclicks_u14_130593'],[131103,131113,131093,130623,130593],"wbnews", 1896056163)</script>
+
+                        </div>
+                        <div class="prev swiper-button-prev"></div>
+                        <div class="next swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="s3-rr">
+            <div class="gg-tit s3-tit">
+                <h4>学术交流</h4>
+                <div class="mores">
+                    <a href="">阅读更多</a>
+                    <a href="">阅读更多</a>
+                </div>
+            </div>
+            <div class="block">
+                <div class="s3-hd f0">
+                    <span class="active">人文社会科学</span>
+                    <span>自然科学</span>
+                </div>
+               <div class="s3-bd swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><div class="s3-item swiper-container s3-item01">
+                                <div class="swiper-wrapper">
+                                    
+<div class="swiper-slide">
+                                        <div class="s3-list s3-left s3-list1">
+
+
+
+                                            <a href="info/2391/131893.htm" title="中国政法大学夏宁教授应邀在伊犁师范大学  霍尔果斯商学院开展讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-26  /</i>2024</span>
+                                                    <h4 class="eclip">中国政法大学夏宁教授应邀在伊犁师范大学  霍尔果斯商学院开展讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">中国政法大学夏宁教授应邀在伊犁师范大学  霍尔果斯商学院开展讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-26</p>
+                                                                <p>点击 : <span id="dynclicks_u15_131893" name="dynclicks_u15_131893"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月25日，中国政法大学商学院财务会计系主任夏宁教授应邀在伊犁师范大学霍尔果斯商学院座谈交流，为会计学专业的师生开展了一场题为“创新思维与工具运用”的讲座。讲座在东校区学术报告厅举行，由霍尔果斯商学院副院长孟繁敏主持。夏教授凭借其深厚的专业知识和丰富的实践经验，以通俗易懂的方式解析了创新思维中的奇思妙想，并列举了26个创新思维与实践案例，与在场的老师和同学们展开了趣味探讨。在讲座中，夏教授分享了名人事迹，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/131643.htm" title="融媒体学院邀请伊犁融媒体中心专家蔡立鹏开展讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-22  /</i>2024</span>
+                                                    <h4 class="eclip">融媒体学院邀请伊犁融媒体中心专家蔡立鹏开展讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">融媒体学院邀请伊犁融媒体中心专家蔡立鹏开展讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-22</p>
+                                                                <p>点击 : <span id="dynclicks_u15_131643" name="dynclicks_u15_131643"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月21日，融媒体学院特邀伊犁融媒体中心融媒创作部副主任蔡立鹏开展了一场主题为“融媒体时代下的新闻学学习”的讲座，讲座于东校区学术报告厅举行。该讲座为融媒体学院“媒体精英面对面”系列讲座之一，该系列讲座以学院特色课程《媒体参观与调研》为载体，搭建传媒学子与媒体行业精英面对面交流的平台，建立传媒专业学生的职业认知。融媒体学院党委委员、副院长王月、视听传播系主任古那尔·艾则孜、课程主讲教师团队及学院全体大二年级学生参加了此次讲座。...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/131483.htm" title="霍尔果斯商学院特邀中国政法大学胡继晔教授开展学术讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-19  /</i>2024</span>
+                                                    <h4 class="eclip">霍尔果斯商学院特邀中国政法大学胡继晔教授开展学术讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">霍尔果斯商学院特邀中国政法大学胡继晔教授开展学术讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-19</p>
+                                                                <p>点击 : <span id="dynclicks_u15_131483" name="dynclicks_u15_131483"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月18日下午4点，霍尔果斯商学院特邀中国政法大学商学院资本金融系教授、博士生导师胡继晔教授在东校区学术交流中心开展“养老金融：政策、投资与未来发展”为主题的学术讲座。商学院各专业学生积极参加，讲座由学院副院长徐浩主持。讲座中，胡教授以人口老龄化面临的严峻挑战为背景，介绍了我国养老金管理模式及其影响、养老金体系的三大支柱及国家面对的关键问题与挑战，并提出未来的发展走向与政策调整方向，让同学们了解养老金融政策变化大趋势的同时，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/131313.htm" title="法学院举办“论文写作的灵魂”学术大讲堂活动" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-19  /</i>2024</span>
+                                                    <h4 class="eclip">法学院举办“论文写作的灵魂”学术大讲堂活动</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">法学院举办“论文写作的灵魂”学术大讲堂活动</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-19</p>
+                                                                <p>点击 : <span id="dynclicks_u15_131313" name="dynclicks_u15_131313"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月18日下午，法学院举办了主题为“论文写作的灵魂”的学术大讲堂活动。讲座由南京大学法学院教授、博士生导师，兼任中国法理学研究会常务理事，江苏省法理学与宪法学会副会长周安平主讲，法学院党委委员、副院长韩宏伟主持。法学院部分专任老师及全体研究生参与了本次讲座。周安平以论文写作目的为切入点，从论文写作具体操作层面切入，阐述了如何从更小的层面捕捉到更多的内容。他指出，关于论文写作需要注意的两个问题：“论文的问题到底是什么问题”...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/131703.htm" title="中国语言文学学院开展“做自己的国王”个人职业生涯规划讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-18  /</i>2024</span>
+                                                    <h4 class="eclip">中国语言文学学院开展“做自己的国王”个人职业生涯规划讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">中国语言文学学院开展“做自己的国王”个人职业生涯规划讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-18</p>
+                                                                <p>点击 : <span id="dynclicks_u15_131703" name="dynclicks_u15_131703"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月17日下午，中国语言文学学院特邀请就业指导老师王智群在东校区学术报告厅面向2024级新生开展了“做自己的国王”个人职业生涯规划讲座。学院党委副书记、纪委书记王建明，全体辅导员和2024级新生参与了此次讲座。讲座上，王建明首先对王智群老师进行介绍，并发表动员致辞。随后，王智群老师从“大学干什么”“在大学学习什么”“学习为了什么”三方面来启示学生领悟大学生涯的意义并明确自己的目标。同时，王老师还以专业的角度分别就“...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+</div>
+                    </div>
+                                    
+<div class="swiper-slide">
+                                        <div class="s3-list s3-left s3-list1">
+
+
+
+                                            <a href="info/2391/130933.htm" title="资源与环境学院联合萨依布依街道开展“铸牢中华民族共同体意识”专题讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-16  /</i>2024</span>
+                                                    <h4 class="eclip">资源与环境学院联合萨依布依街道开展“铸牢中华民族共同体意识”专题讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">资源与环境学院联合萨依布依街道开展“铸牢中华民族共同体意识”专题讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-16</p>
+                                                                <p>点击 : <span id="dynclicks_u15_130933" name="dynclicks_u15_130933"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月15日，资源与环境学院联合萨依布依街道邀请马克思主义学院宗永平教授开展“铸牢中华民族共同体意识”专题讲座。学院党委副书记、纪委书记阿扎提·沙拉瓦提，学院教师代表，萨依布依街道领导班子成员及14个社区两委班子成员共计60余人参加活动。宗永平以清晰的思路、深厚的理论功底和生动的方式，围绕“铸牢中华民族共同体意识的重要意义、把握中华民族共同体的主要内容、铸牢中华民族共同体意识的实践路径”三个方面，对铸牢中华民族共同体意识的重大意义、...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/130843.htm" title="融媒体学院邀请文化产业资深人士王秋秋开展“文旅经济新趋势”讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-15  /</i>2024</span>
+                                                    <h4 class="eclip">融媒体学院邀请文化产业资深人士王秋秋开展“文旅经济新趋势”讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">融媒体学院邀请文化产业资深人士王秋秋开展“文旅经济新趋势”讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-15</p>
+                                                                <p>点击 : <span id="dynclicks_u15_130843" name="dynclicks_u15_130843"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月14日，融媒体学院特邀南京万物灵感文化科技有限公司合伙人王秋秋老师，开展了一场主题为“文旅经济新趋势”的线上讲座。该讲座为融媒体学院“媒体精英面对面”系列讲座之一，该系列讲座以学院特色课程《媒体参观与调研》为载体，旨在“引进来，走出去”，建立传媒专业学生的职业认知。讲座在东校区2号教学楼310教室举行，融媒体学院党委委员、副院长王月，学院全体大二学生及研究生参加了此次讲座。王秋秋凭借其在广告和传媒领域的丰富经验，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/130813.htm" title="教育科学学院成功举办 “教师共情研究：弘扬教育家精神”学术讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-13  /</i>2024</span>
+                                                    <h4 class="eclip">教育科学学院成功举办 “教师共情研究：弘扬教育家精神”学术讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">教育科学学院成功举办 “教师共情研究：弘扬教育家精神”学术讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-13</p>
+                                                                <p>点击 : <span id="dynclicks_u15_130813" name="dynclicks_u15_130813"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月12日，教育科学学院有幸邀请到浙江师范大学心理学院院长孙炳海教授，为我院学生带来了一场精彩纷呈的学术讲座——“教师共情研究：弘扬教育家精神”。此次讲座吸引了众多师生的参与，现场气氛热烈。讲座开场环节，教育科学学院院长马永全发表讲话。马永全对孙炳海的到来表示热烈欢迎，并强调本次讲座对于学院师生在学术研究和教育实践方面的重要意义，呼吁同学们认真聆听，积极思考，为今后的学习和研究打下坚实基础。讲座正式开始。...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/130713.htm" title="融媒体学院邀请清华大学李彬教授开展“新闻与读书”讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-12  /</i>2024</span>
+                                                    <h4 class="eclip">融媒体学院邀请清华大学李彬教授开展“新闻与读书”讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">融媒体学院邀请清华大学李彬教授开展“新闻与读书”讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-12</p>
+                                                                <p>点击 : <span id="dynclicks_u15_130713" name="dynclicks_u15_130713"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月11日下午，融媒体学院特邀中国人民大学新闻学院博士、清华大学新闻学院教授李彬举办了“新闻与读书”专题讲座，讲座在东校区2号教学楼308教室举行。融媒体学院党委书记路玉、学院教师代表、研究生以及本科生代表共同参加本次活动，活动由融媒体学院党委委员、副院长、融媒体发展研究中心主任王月主持。李彬在开篇时讲到，“可以无师自通，不可无书自通”。讲座围绕“为何读、读什么、怎么读”三个方面来进行。李彬教授以其丰富的专业经验，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/130953.htm" title="清华大学陈扬博士来网络安全与信息技术学院分享大语言模型技术最新进展" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-11  /</i>2024</span>
+                                                    <h4 class="eclip">清华大学陈扬博士来网络安全与信息技术学院分享大语言模型技术最新进展</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">清华大学陈扬博士来网络安全与信息技术学院分享大语言模型技术最新进展</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-11</p>
+                                                                <p>点击 : <span id="dynclicks_u15_130953" name="dynclicks_u15_130953"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月11日，清华大学控制工程专业博士陈扬来到伊犁师范大学网络安全与信息技术学院开展了主题为“大语言模型的原理及应用”的学术讲座。学院党委委员、副院长綦小龙，学院党委委员、副院长林玲以及教师代表参加。讲座由綦小龙主持。会议伊始，介绍了大语言模型的起源与发展，讲解了 GPT 和Transformer 模型的核心原理、回顾了 GPT 发展路径并分析了关键技术。接着，重点介绍了架构优化方法，强调多模态应用前景及文生图、图生文，分享该模型在医疗和安防领域应用成果，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+</div>
+                    </div>
+                                    
+<div class="swiper-slide">
+                                        <div class="s3-list s3-left s3-list1">
+
+
+
+                                            <a href="info/2391/130793.htm" title="清华大学李彬教授莅临融媒体学院展开学术交流" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-11  /</i>2024</span>
+                                                    <h4 class="eclip">清华大学李彬教授莅临融媒体学院展开学术交流</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">清华大学李彬教授莅临融媒体学院展开学术交流</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-11</p>
+                                                                <p>点击 : <span id="dynclicks_u15_130793" name="dynclicks_u15_130793"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月10日下午，清华大学知名学者李彬教授受邀来到融媒体学院开展学术交流，在东校区信息楼907会议室为全体教师以及23级研究生带来了一场题为《学术何为，前沿安在——“三言两语一句话”》的精彩讲座。本次讲座由学院党委委员、副院长王月主持，党委书记路玉、全体教师、23级新闻与传播专业研究生，共同感受了这场学术盛宴。讲座伊始，李彬教授以深入浅出的方式，向在座的师生们阐述了他对于学术研究的独特见解。他首先提出了“三言”...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/130153.htm" title="融媒体学院邀请高级记者刘冰开展“媒体精英面对面”讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>09-30  /</i>2024</span>
+                                                    <h4 class="eclip">融媒体学院邀请高级记者刘冰开展“媒体精英面对面”讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">融媒体学院邀请高级记者刘冰开展“媒体精英面对面”讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-09-30</p>
+                                                                <p>点击 : <span id="dynclicks_u15_130153" name="dynclicks_u15_130153"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">9月30日，融媒体学院特邀伊犁融媒体中心党委委员、副主任、高级记者刘冰举办了以“如何制作一个好标题”为主题的讲座，该讲座为融媒体学院“媒体精英面对面”系列讲座之一，该系列讲座已举办多场，以学院特色课程《媒体参观与调研》为载体，旨在“引进来，走出去”，建立传媒专业学生的职业认知。融媒体学院党委委员、副院长王月，视听传播系主任古那尔·艾则孜，课程主讲教师仝翔宇、陈琳琳、巴燕·巴哈提、学院全体大二学生及研究生参加了此次讲座。...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/127453.htm" title="教育科学学院邀请华南师范大学卢晓中教授做学术讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>09-03  /</i>2024</span>
+                                                    <h4 class="eclip">教育科学学院邀请华南师范大学卢晓中教授做学术讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">教育科学学院邀请华南师范大学卢晓中教授做学术讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-09-03</p>
+                                                                <p>点击 : <span id="dynclicks_u15_127453" name="dynclicks_u15_127453"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">9月2日上午，教育科学学院特邀教育部国家级高层次人才计划“特聘教授”、华南师范大学卢晓中教授在尚德楼501学术报告厅为我院师生带来一场题为《教育强国建设背景下教师教育高质量发展与师范院校改革》的讲座，讲座由副院长裴昌根主持。卢教授从基于教育强国“基点”的师范院校、作为教育强国“龙头”的师范院校和以学位点建设为抓手提升师范院校发展水平三个方面论述了教育强国建设背景下教师教育的高质量发展与师范院校改革。他强调从“...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/127463.htm" title="教育科学学院邀请山西大学侯怀银教授做学术讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>09-03  /</i>2024</span>
+                                                    <h4 class="eclip">教育科学学院邀请山西大学侯怀银教授做学术讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">教育科学学院邀请山西大学侯怀银教授做学术讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-09-03</p>
+                                                                <p>点击 : <span id="dynclicks_u15_127463" name="dynclicks_u15_127463"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">为进一步学习贯彻《中共中央 国务院关于弘扬教育家精神加强新时代高素质专业化教师队伍建设的意见》精神，9月2日上午在尚德楼501学术报告厅，教育科学学院特邀教育部国家级高层次人才计划“特聘教授”、山西大学教育科学学院二级教授侯怀银，为我院师生开展题为“在新时代，我们如何做中国教育学”的专题讲座。此次讲座由学院副院长裴昌根主持。讲座中侯教授提出新时代我们做中国教育学应该围绕“六做”展开，即“爱好教育学，理解教育学，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2391/126713.htm" title="马克思主义学院邀请首都师范大学程广云教授开展学术讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>08-22  /</i>2024</span>
+                                                    <h4 class="eclip">马克思主义学院邀请首都师范大学程广云教授开展学术讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">马克思主义学院邀请首都师范大学程广云教授开展学术讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-08-22</p>
+                                                                <p>点击 : <span id="dynclicks_u15_126713" name="dynclicks_u15_126713"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">8月21日，马克思主义学院邀请首都师范大学博士生导师程广云教授，在致远楼308开展题为《试探学术复调写作的原则与方法》学术讲座。讲座由马克思主义学院院长张应平主持，学院全体教师参加。会议伊始，张应平代表学院对程广云教授的到来表示诚挚欢迎，并为学院教师介绍了程广云教授简介，强调此次讲座对于伊犁师范大学马克思主义学院教师如何进行学术写作，尤其是高水平学术写作具有重大意义。随后，程广云教授从“我写故我在”：复数性存在与复调性写作、...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+</div>
+                    </div>
+                                    
+</div>
+                                <div class="btn f0">
+                                    <div class="prev swiper-button-prev"></div>
+                                    <div class="swiper-pagination fy"></div>
+                                    <div class="next swiper-button-next"></div>
+                                </div>
+                            </div><script>_showDynClickBatch(['dynclicks_u15_131893','dynclicks_u15_131643','dynclicks_u15_131483','dynclicks_u15_131313','dynclicks_u15_131703','dynclicks_u15_130933','dynclicks_u15_130843','dynclicks_u15_130813','dynclicks_u15_130713','dynclicks_u15_130953','dynclicks_u15_130793','dynclicks_u15_130153','dynclicks_u15_127453','dynclicks_u15_127463','dynclicks_u15_126713'],[131893,131643,131483,131313,131703,130933,130843,130813,130713,130953,130793,130153,127453,127463,126713],"wbnews", 1896056163)</script>
+</div>
+                        <div class="swiper-slide"><div class="s3-item swiper-container s3-item01">
+                                <div class="swiper-wrapper">
+                                    
+<div class="swiper-slide">
+                                        <div class="s3-list s3-left s3-list1">
+
+
+
+                                            <a href="info/2401/131633.htm" title="新疆大学张辉国副教授来我校开展学术报告" class="show">
+                                                <div class="riqi">
+                                                    <span><i>10-22  /</i>2024</span>
+                                                    <h4 class="eclip">新疆大学张辉国副教授来我校开展学术报告</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">新疆大学张辉国副教授来我校开展学术报告</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-10-22</p>
+                                                                <p>点击 : <span id="dynclicks_u16_131633" name="dynclicks_u16_131633"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">10月21日上午，新疆大学数学与系统科学学院教师张辉国副教授在尚德楼五楼学术报告厅，开展了题为“流行病报告发病率影响因素及其时空特征识别的机器学习方法”的学术报告。报告由数学与统计学院院长辛巧主持，学院部分教师及全体研究生参加。张辉国老师以中国大陆结核病分析为例，从社会经济、气象和环境三个因素对其进行了研究。并且在数据指标选取方面提出了三个核心点，分别指向变量选择、时间结构识别和空间结构识别。分析从2017到2021年中国大陆结核病发病率的时空分布特征及筛选重要影响因素。...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/129863.htm" title="西北师范大学陈鹏玉教授应邀来我校作报告" class="show">
+                                                <div class="riqi">
+                                                    <span><i>09-30  /</i>2024</span>
+                                                    <h4 class="eclip">西北师范大学陈鹏玉教授应邀来我校作报告</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">西北师范大学陈鹏玉教授应邀来我校作报告</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-09-30</p>
+                                                                <p>点击 : <span id="dynclicks_u16_129863" name="dynclicks_u16_129863"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">9月29日下午，数学与统计学院邀请西北师范大学数学与统计学院副院长陈鹏玉作题为“Random dynamics of BBM equations driven by nonlinear colored noise”的学术报告。报告由数学与统计学院院长辛巧主持，学院各专业任课教师及研究生到场聆听。在本次报告中，陈鹏玉教授详细介绍了三维无界区域上一类由非线性色噪音驱动的描述长波传播的非自治Benjamin-Bona- Mahony方程解的长时间动力学行为的研究。该项研究是近年来随机BBM方程研究方面的重要突破，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/129663.htm" title="西安理工大学计算机科学与工程学院王一川教授一行来我院开展学术交流活动" class="show">
+                                                <div class="riqi">
+                                                    <span><i>09-26  /</i>2024</span>
+                                                    <h4 class="eclip">西安理工大学计算机科学与工程学院王一川教授一行来我院开展学术交流活动</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">西安理工大学计算机科学与工程学院王一川教授一行来我院开展学术交流活动</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-09-26</p>
+                                                                <p>点击 : <span id="dynclicks_u16_129663" name="dynclicks_u16_129663"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">9月25日下午，西安理工大学计算机科学与工程学院王一川教授的科研团队来我院开展了以“网络安全”为主题的博士生学术报告会。西安理工大学计算机科学与工程学院王一川教授及其团队成员，网络安全与信息技术学院党委委员、副院长綦小龙，党委委员、副院长林玲以及全体教师、研究生和部分本科生参加此次活动。在报告交流中，围绕网络安全中的漏洞分析与安全隐患防范，各位博士分享了自己的研究成果。邓茜基于Petri网的漏洞利用形式化建模与分析，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/129223.htm" title="南京信息工程大学李春彪教授莅临伊犁师范大学分享混沌的分布调控相关研究" class="show">
+                                                <div class="riqi">
+                                                    <span><i>09-21  /</i>2024</span>
+                                                    <h4 class="eclip">南京信息工程大学李春彪教授莅临伊犁师范大学分享混沌的分布调控相关研究</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">南京信息工程大学李春彪教授莅临伊犁师范大学分享混沌的分布调控相关研究</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-09-21</p>
+                                                                <p>点击 : <span id="dynclicks_u16_129223" name="dynclicks_u16_129223"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">9月20日，南京信息工程大学人工智能学院院长李春彪教授，应邀在伊犁师范大学网络安全与信息技术学院进行了主题为“混沌的分布调控”的学术交流活动。学院党委委员、副院长綦小龙，党委委员、副院长林玲以及全体教师参加。讲座伊始，学院领导对李春彪教授的到来表示热烈欢迎。李春彪教授以其深厚的学术功底和对科研的激情，为在场师生带来了一场精彩的学术盛宴。李春彪教授首先对混沌系统的基本理论进行了简明扼要地介绍，并重点讲解了“...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/126813.htm" title="著名数学家张益唐教授来我校开展学术讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>08-21  /</i>2024</span>
+                                                    <h4 class="eclip">著名数学家张益唐教授来我校开展学术讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">著名数学家张益唐教授来我校开展学术讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-08-21</p>
+                                                                <p>点击 : <span id="dynclicks_u16_126813" name="dynclicks_u16_126813"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">8月20日，著名华裔数学家、美国加州大学圣塔芭芭拉分校终身教授、北京大学闵嗣鹤数论研究中心名誉主任张益唐应邀来我校，在尚德楼501教室开展了题为“我对数学的思考”学术讲座。讲座由数学与统计学院党委副书记、院长辛巧主持，慕名而来的我校教师、研究生、本科生及伊宁市第八中学教师共140余人聆听了讲座。讲座中，张益唐教授从自身的求学经历讲起，向与会师生分享其研究数学的坎坷历程及执着精神，并详细讲述了其关于“孪生素数猜想的弱形式”...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+</div>
+                    </div>
+                                    
+<div class="swiper-slide">
+                                        <div class="s3-list s3-left s3-list1">
+
+
+
+                                            <a href="info/2401/126823.htm" title="东北师范大学陈良云教授来我校做学术报告" class="show">
+                                                <div class="riqi">
+                                                    <span><i>08-03  /</i>2024</span>
+                                                    <h4 class="eclip">东北师范大学陈良云教授来我校做学术报告</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">东北师范大学陈良云教授来我校做学术报告</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-08-03</p>
+                                                                <p>点击 : <span id="dynclicks_u16_126823" name="dynclicks_u16_126823"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">8月2日上午，数学与统计学院在明德楼309会议室举办了一场由东北师范大学陈良云教授主讲的学术报告，报告的主题是《On hom-groups and related topics》。此次讲座由数学与统计学院院长辛巧主持，学院教师和研究生代表参加了此次学术报告。首先，陈良云教授介绍了-李型代数的重要性，-李型代数在20世纪90年代的物理学文献中首次出现，因其与离散和变形向量场、微分的紧密联系，引发了学术界的广泛关注，相关研究日益增多。在报告中，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/126833.htm" title="上海交通大学李方园教授应邀来我校开展学术讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>08-01  /</i>2024</span>
+                                                    <h4 class="eclip">上海交通大学李方园教授应邀来我校开展学术讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">上海交通大学李方园教授应邀来我校开展学术讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-08-01</p>
+                                                                <p>点击 : <span id="dynclicks_u16_126833" name="dynclicks_u16_126833"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">7月31日，上海交通大学李方园教授应伊犁师范大学化学化工学院邀请，在明德楼会议厅作了题为《铈基纳米酶的设计及疾病治疗》的学术报告。本次报告会由我院刘伟副院长亲自主持，学院党委书记何晓燕及众多师生代表参加了会议。在报告中，李方园教授详尽地阐述了她们团队独立研发的一系列多功能生物纳米材料。介绍了通过化学合成优化铈基、锰基、铁基等纳米酶的催化中心结构和催化性能，用于替代内源性酶的功能，实现疾病治疗的科研成果。...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/126843.htm" title="上海交通大学凌代舜教授应邀来我校开展学术讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>07-29  /</i>2024</span>
+                                                    <h4 class="eclip">上海交通大学凌代舜教授应邀来我校开展学术讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">上海交通大学凌代舜教授应邀来我校开展学术讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-07-29</p>
+                                                                <p>点击 : <span id="dynclicks_u16_126843" name="dynclicks_u16_126843"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">7月28日，上海交通大学凌代舜教授应化学化工学院邀请，在崇德楼会议厅作了题为《自组装生命感知与调控探针》的学术报告。本次报告会由化学化工学院副院长刘伟主持，学院党委书记何晓燕及众多师生代表参加会议。在报告中，凌代舜教授详尽地阐述了他及其团队独立研发的一系列创新性动态变构生命感知探针。这些探针具备离子特异性和高灵敏度，广泛应用于神经系统疾病和恶性肿瘤的早期诊断与实时监测。凌教授特别介绍了根据高场磁共振技术设计的高性能磁性探针，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/125833.htm" title="林文伟、王奕倩、李铁香三位教授应邀来我校作学术报告" class="show">
+                                                <div class="riqi">
+                                                    <span><i>07-23  /</i>2024</span>
+                                                    <h4 class="eclip">林文伟、王奕倩、李铁香三位教授应邀来我校作学术报告</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">林文伟、王奕倩、李铁香三位教授应邀来我校作学术报告</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-07-23</p>
+                                                                <p>点击 : <span id="dynclicks_u16_125833" name="dynclicks_u16_125833"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">7月7日，应数学与统计学院邀请，南京应用数学中心副主任林文伟教授、南京大学王奕倩教授和东南大学李铁香教授在明德楼307教室，分别作了题为“回文式二次特征值问题的保结构算法及应用”“一维拟周期薛定谔算子的动力学方法”和 “基于保积计算几何的医学图像处理”的学术报告。林文伟教授报告的内容集中于回文式二次特征值问题的保结构倍密法（Structured Doubling Algorithm SDA）及应用。SDA是一种高效能、高精度的普適性数值方法。...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/125843.htm" title="数学与统计学院暑期数学系列学术讲座月 正式开讲" class="show">
+                                                <div class="riqi">
+                                                    <span><i>07-22  /</i>2024</span>
+                                                    <h4 class="eclip">数学与统计学院暑期数学系列学术讲座月 正式开讲</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">数学与统计学院暑期数学系列学术讲座月 正式开讲</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-07-22</p>
+                                                                <p>点击 : <span id="dynclicks_u16_125843" name="dynclicks_u16_125843"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">7月15日，数学与统计学院为期一个月的暑期系列学术讲座正式开讲，主讲嘉宾为南京师范大学的尹会成教授、扬州大学的刘祖汉教授以及南京大学的王伟教授，在校教师及研究生参加本次学术讲座。尹会成教授讲授的主要内容为《特殊函数与偏微分方程求解》。尹会成教授首先讲述了求解线性偏微分方程的历史，接下来介绍了斯图姆-刘维尔定理及其应用，然后引入特殊函数，例如贝塞尔函数、勒让德函数以及超几何函数。最后举了大量的例子来展示这些特殊函数的重要应用，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+</div>
+                    </div>
+                                    
+<div class="swiper-slide">
+                                        <div class="s3-list s3-left s3-list1">
+
+
+
+                                            <a href="info/2401/125623.htm" title="CCF信息系统专委走进伊犁师范大学" class="show">
+                                                <div class="riqi">
+                                                    <span><i>07-16  /</i>2024</span>
+                                                    <h4 class="eclip">CCF信息系统专委走进伊犁师范大学</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">CCF信息系统专委走进伊犁师范大学</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-07-16</p>
+                                                                <p>点击 : <span id="dynclicks_u16_125623" name="dynclicks_u16_125623"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">近日，由中国计算机学会（CCF）主办，CCF信息系统专委、伊犁师范大学承办的CCF@U第1115场，CCF信息系统专委走进伊犁师范大学活动在勤学楼三楼会议室成功举办。本次活动邀请了CCF会士、CCF信息系统专委会荣誉主任、南京大学徐宝文教授，CCF专业会员、CCF信息系统专委委员、天津大学智能与计算机学部副主任喻梅教授，CCF高级会员、CCF信息系统专委委员、南京大学陶先平教授，CCF高级会员、CCF信息系统专委委员、河南大学王冬教授进行报告分享。...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/125223.htm" title="网络安全与信息技术学院与南京大学智能科学与技术学院、计算机科学与技术系、中国移动伊犁分公司开展学术报告交流会" class="show">
+                                                <div class="riqi">
+                                                    <span><i>07-10  /</i>2024</span>
+                                                    <h4 class="eclip">网络安全与信息技术学院与南京大学智能科学与技术学院、计算机科学与技术系、中国移动伊犁分公司开展学...</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">网络安全与信息技术学院与南京大学智能科学与技术学院、计算机科学与技术系、中国移动伊犁分公司开展学...</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-07-10</p>
+                                                                <p>点击 : <span id="dynclicks_u16_125223" name="dynclicks_u16_125223"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">7月9日，网络安全与信息技术学院邀请南京大学智能科学与技术学院、计算机科学与技术系的专家教授作《以应用为导向的网络系统研究》为专题的学术报告。学院领导班子成员，南京大学智能科学与技术学院、计算机科学与技术系天池特聘教授高阳一行4人，中国移动伊犁分公司努尔兰一行3人以及学院全体教师参加。由学院党委委员、副院长綦小龙主持。交流会初，南京大学教授、博士生导师、中国人工智能学会会士、南京大学智能科学与技术学院书记、...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/125023.htm" title="中国科学院新疆生态与地理研究所研究员陈亚宁教授作专题讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>07-05  /</i>2024</span>
+                                                    <h4 class="eclip">中国科学院新疆生态与地理研究所研究员陈亚宁教授作专题讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">中国科学院新疆生态与地理研究所研究员陈亚宁教授作专题讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-07-05</p>
+                                                                <p>点击 : <span id="dynclicks_u16_125023" name="dynclicks_u16_125023"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">7月4日，中国科学院新疆生态与地理研究所研究员、博导，荒漠与绿洲生态国家重点实验室主任，国家重大科学研究计划项目首席科学家陈亚宁教授应邀来我校进行了一场精彩的学术讲座。陈亚宁教授长期致力于干旱区水资源与生态环境保护研究，是国际水文科学协会（IAHS）中国遥感分委会主席，自治区党委水资源管理专家委员会成员，自治区林草局三北工程攻坚战专家组组长，自治区专家顾问团顾问。他入选新世纪首批“国家级百千万人才工程”和新疆首批天山领军人才，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/124523.htm" title="我校智力援疆创新拓展人才计划“小组团”援疆团队——绿色有机果蔬种植及产品开发团队举办系列报告会并与我院座谈交流" class="show">
+                                                <div class="riqi">
+                                                    <span><i>06-24  /</i>2024</span>
+                                                    <h4 class="eclip">我校智力援疆创新拓展人才计划“小组团”援疆团队——绿色有机果蔬种植及产品开发团队举办系列报告会并...</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">我校智力援疆创新拓展人才计划“小组团”援疆团队——绿色有机果蔬种植及产品开发团队举办系列报告会并...</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-06-24</p>
+                                                                <p>点击 : <span id="dynclicks_u16_124523" name="dynclicks_u16_124523"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">6月23日至24日，伊犁师范大学智力援疆创新拓展人才计划“小组团”援疆团队——绿色有机果蔬种植及产品开发团队为我校师生进行系列报告，并与生物科学与技术学院领导教师开展座谈交流。参与此次报告交流的专家学者有中国农业大学教授、博士生导师孟凡乔、乔玉辉、郭岩彬、赵桂慎，中国科学院研究员、博士生导师吴迪，中国农业大学副教授、博士生导师杜章留、魏雨泉，博士后徐巧林，生物科学与技术学院焦子伟、牛克昌、陈晓露、相吉山、...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+                                    
+
+
+
+                                            <a href="info/2401/124623.htm" title="数学与统计学院邀请江西师范大学丁惠生、袁达明教授开展学术讲座" class="show">
+                                                <div class="riqi">
+                                                    <span><i>06-22  /</i>2024</span>
+                                                    <h4 class="eclip">数学与统计学院邀请江西师范大学丁惠生、袁达明教授开展学术讲座</h4>
+                                                </div>
+                                                <div class="s3-txt">
+                                                    <div class="b1 f0">
+                                                        <div class="cover_img">
+                                                            <div style="background-image: url()"></div>
+                                                        </div>
+                                                        <div class="txt">
+                                                            <h4 class="l2">数学与统计学院邀请江西师范大学丁惠生、袁达明教授开展学术讲座</h4>
+                                                            <div>
+                                                                <p>供稿 : </p>
+                                                                <p>发布日期 : 2024-06-22</p>
+                                                                <p>点击 : <span id="dynclicks_u16_124623" name="dynclicks_u16_124623"></span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b2">
+                                                        <p class="l3">6月21日，数学与统计学院下午在尚德楼501学术报告厅举办了两场学术报告，主讲嘉宾是江西师范大学丁惠生教授和袁达明副教授。此次讲座由学院书记陈展衡教授主持，学院教师和研究生代表参加了此次学术报告。首先，丁惠生教授做了《两个Loomis型定理》的学术报告。报告会上，丁教授详细阐述了“盖周期函数”和“渐进盖周期函数”这两个重要概念，并通过生动的例子和直观的图像展示，使师生们对这两个概念有了深刻地理解。他提到，虽然这些函数从严格意义上讲并不是周期函数，...</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                           
+</div>
+                    </div>
+                                    
+</div>
+                                <div class="btn f0">
+                                    <div class="prev swiper-button-prev"></div>
+                                    <div class="swiper-pagination fy"></div>
+                                    <div class="next swiper-button-next"></div>
+                                </div>
+                            </div><script>_showDynClickBatch(['dynclicks_u16_131633','dynclicks_u16_129863','dynclicks_u16_129663','dynclicks_u16_129223','dynclicks_u16_126813','dynclicks_u16_126823','dynclicks_u16_126833','dynclicks_u16_126843','dynclicks_u16_125833','dynclicks_u16_125843','dynclicks_u16_125623','dynclicks_u16_125223','dynclicks_u16_125023','dynclicks_u16_124523','dynclicks_u16_124623'],[131633,129863,129663,129223,126813,126823,126833,126843,125833,125843,125623,125223,125023,124523,124623],"wbnews", 1896056163)</script>
+</div>
+                    </div>
+            </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+<div class="s4">
+    <div class="s4-left fl"><div class="s4-l fr">
+            <div class="gg-tit w">
+                <h4>媒体报道</h4>
+                <div class="mores">
+                    <a href="index/mtbd.htm">阅读更多</a>
+                </div>
+            </div>
+            <div class="s4-list">
+                
+<a href="info/2411/126803.htm" title="【媒体伊师大】新视野丨暑期这堂大思政课 新疆师生上得火热">
+                    <div class="t1 f0">
+                        <i>2024年08月28日</i>
+                        <span>【】</span>
+                    </div>
+                    <div class="t2 flex">
+                        <h4 class="l2">【媒体伊师大】新视野丨暑期这堂大思政课 新疆师生上得火热</h4>
+                    </div>
+                </a>
+                
+<a href="info/2411/124543.htm" title="【媒体伊师大】融媒体学院学生多篇新闻评论作品被主流媒体收录实践教学成效显著">
+                    <div class="t1 f0">
+                        <i>2024年06月26日</i>
+                        <span>【】</span>
+                    </div>
+                    <div class="t2 flex">
+                        <h4 class="l2">【媒体伊师大】融媒体学院学生多篇新闻评论作品被主流媒体收录实践教学成效显著</h4>
+                    </div>
+                </a>
+                
+<a href="info/2411/124343.htm" title="【媒体伊师大】央视网、光明网、中国社会科学网、中国新闻网、环球网等多家媒体多维度报道第三届“一带一路”建设学术研讨会">
+                    <div class="t1 f0">
+                        <i>2024年06月23日</i>
+                        <span>【】</span>
+                    </div>
+                    <div class="t2 flex">
+                        <h4 class="l2">【媒体伊师大】央视网、光明网、中国社会科学网、中国新闻网、环球网等多家媒体多维度报道第三届“一带...</h4>
+                    </div>
+                </a>
+                
+<a href="info/2411/123423.htm" title="【媒体伊师大】萨依布依街道：街校“牵手”谋发展 为基层治理注入青春动能">
+                    <div class="t1 f0">
+                        <i>2024年06月05日</i>
+                        <span>【】</span>
+                    </div>
+                    <div class="t2 flex">
+                        <h4 class="l2">【媒体伊师大】萨依布依街道：街校“牵手”谋发展 为基层治理注入青春动能</h4>
+                    </div>
+                </a>
+                
+<a href="info/2411/122353.htm" title="【媒体伊师大】铸牢中华民族共同体意识丨行走的思政课上回响年轻的声音">
+                    <div class="t1 f0">
+                        <i>2024年05月21日</i>
+                        <span>【】</span>
+                    </div>
+                    <div class="t2 flex">
+                        <h4 class="l2">【媒体伊师大】铸牢中华民族共同体意识丨行走的思政课上回响年轻的声音</h4>
+                    </div>
+                </a>
+                
+</div>
+        </div><script>_showDynClickBatch(['dynclicks_u17_126803','dynclicks_u17_124543','dynclicks_u17_124343','dynclicks_u17_123423','dynclicks_u17_122353'],[126803,124543,124343,123423,122353],"wbnews", 1896056163)</script>
+</div>
+    <div class="s4-right fr">
+        <div class="video">
+ <a href="info/2451/89053.htm" title="宣传视频一">
+<div class="cover_img">
+                    <div style="background-image: url(/__local/3/83/08/0DBD2E7F05F5FD0406FBD716FD8_02C49228_1E51C.jpg)"></div>
+                </div>
+                <p>
+                    <img src="images/s4-img06.png" alt="">
+                    <span>宣传视频一</span>
+                </p>
+                <i class="play"></i>
+ </a>
+<script>_showDynClickBatch(['dynclicks_u18_89053'],[89053],"wbnews", 1896056163)</script>
+</div>
+        <div class="s4-block flex">
+            <div class="s4-hd">
+                <span>学校影像</span>
+                <span>伊师大报</span>
+            </div>
+            <div class="s4-bd">
+                <div class="s4-item"><div class="s4-list2">
+<a href="info/2421/89163.htm" title="学校党委书记蒋海军一行赴学校驻村工作点开展调研慰问" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;学校党委书记蒋海军一行赴学校驻村工作点开展调研慰问</a>
+<a href="info/2421/89173.htm" title="我校召开2022年基层党组织书记抓党建述职评议考核会议" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;我校召开2022年基层党组织书记抓党建述职评议考核会议</a>
+<a href="info/2421/89183.htm" title="学校党委召开处级干部会议" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;学校党委召开处级干部会议</a>
+<a href="info/2421/89193.htm" title="学校开展慰问活动" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;学校开展慰问活动</a>
+<a href="info/2421/89203.htm" title="我校召开干部大会宣布学校主要领导任职决定" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;我校召开干部大会宣布学校主要领导任职决定</a>
+</div><script>_showDynClickBatch(['dynclicks_u19_89163','dynclicks_u19_89173','dynclicks_u19_89183','dynclicks_u19_89193','dynclicks_u19_89203'],[89163,89173,89183,89193,89203],"wbnews", 1896056163)</script>
+</div>
+                <div class="s4-item"><div class="s4-list2">
+<a href="info/2431/89113.htm" title="学校党委书记蒋海军一行赴学校驻村工作点开展调研慰问" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;学校党委书记蒋海军一行赴学校驻村工作点开展调研慰问</a>
+<a href="info/2431/89123.htm" title="我校召开2022年基层党组织书记抓党建述职评议考核会议" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;我校召开2022年基层党组织书记抓党建述职评议考核会议</a>
+<a href="info/2431/89133.htm" title="学校党委召开处级干部会议" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;学校党委召开处级干部会议</a>
+<a href="info/2431/89143.htm" title="学校开展慰问活动" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;学校开展慰问活动</a>
+<a href="info/2431/89153.htm" title="我校召开干部大会宣布学校主要领导任职决定" class="eclip">&nbsp;·&nbsp;伊犁师范大学&nbsp;|&nbsp;我校召开干部大会宣布学校主要领导任职决定</a>
+</div><script>_showDynClickBatch(['dynclicks_u20_89113','dynclicks_u20_89123','dynclicks_u20_89133','dynclicks_u20_89143','dynclicks_u20_89153'],[89113,89123,89133,89143,89153],"wbnews", 1896056163)</script>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="s5">
+    <div class="wrap">
+        <div class="s5-list flex-center"><a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;">
+                <div>
+                    <span><i>数据伊师</i></span>  
+                </div>
+            </a>
+            <a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;">
+                <div>
+                    <span><i>1948 </i>年</span>
+                    <p class="l2">学校前身是1948年成立的新疆省立伊犁专科学校</p>
+                </div>
+            </a>
+            <a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;">
+                <div>
+                    <span><i>2018</i>年</span>
+                    <p class="l2">2018年12月，经教育部批准更名为伊犁师范大学。</p>
+                </div>
+            </a>
+            <a href="javaScript:;">
+                <div>
+                    <span><i>18</i>个</span>
+                    <p class="l2">现有18个教学单位</p>
+                </div>
+            </a>
+            <a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;">
+                <div>
+                    <span><i>37</i>个</span>
+                    <p class="l2">建有各级各类科研平台37个，其中省部级以上科研平台（含培育）9个</p>
+                </div>
+            </a>
+            <a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;">
+                <div>
+                    <span><i>85.20 </i>万平方米</span>
+                    <p class="l2">学校占地总面积85.20万平方米，教学及辅助用房18.12万平方米，宿舍19.42万平方米</p>
+                </div>
+            </a>
+            <a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;" class="kb"></a>
+            <a href="javaScript:;">
+                <div>
+                    <span><i>64</i>个</span>
+                    <p class="l2">64个本科专业，涉及10个学科门类</p>
+                </div>
+            </a>
+            <a href="javaScript:;">
+                <div>
+                    <span><i>8</i>个</span>
+                    <p class="l2">8个一级学科硕士授权点</p>
+                </div>
+            </a></div>
+    </div>
+</div>
+<div class="sec1">
+    <div class="s6">
+        <div class="wrap"><div class="gg-tit c">
+                <h4>遇见伊师</h4>
+                <div class="mores">
+                    <a href="index/yjys.htm">阅读更多</a>
+                </div>
+            </div>
+            <div class="s6-banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/104953.htm" title="万里援疆路，一生伊师情——伊犁师范大学第十批援疆干部援疆工作纪实">
+                                <div class="pic">
+                                    <img src="/__local/F/A9/D7/FEFABA6910401E59FDF0724F7F0_95D69645_B6F0.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-07-11</span>
+                                    <h4 class="eclip">万里援疆路，一生伊师情——伊犁师范大学第十批援疆干部援疆工作纪实</h4>
+                                    <p class="l2">“感谢，感谢，感谢……”在我校第十批援疆干部人才欢送会上，校党委书记蒋海军紧紧握住援疆干部们的手，不住地说着。时光荏苒，三年如电光石火般转瞬即逝。昨天仿若还在眼前，而今我们挥手告别。2020年，中组部...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/102853.htm" title="跨越万里援疆路，一生无悔援疆情——周光明援疆工作纪实">
+                                <div class="pic">
+                                    <img src="/__local/7/E6/AB/7AA332A74B0178A35304D19C820_D6DB151C_F018.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-06-10</span>
+                                    <h4 class="eclip">跨越万里援疆路，一生无悔援疆情——周光明援疆工作纪实</h4>
+                                    <p class="l2">从缙云山麓嘉陵江畔，到“塞外江南”伊犁河畔；从“含弘光大，继往开来”的西南大学，到“品正学实”的伊犁师范大学，一南一北，山水阻隔，因为对口援疆，让巴山连着天山，让两座相距3000多公里的城市紧紧相连、...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/102843.htm" title="有形、有感和有效 上好思政课——记第六届全国高校青年教师思想政治课二等奖获得者杨栋艳">
+                                <div class="pic">
+                                    <img src="/__local/6/F7/CC/C9EC54A637B65B48181571CF2AC_A6BB3C87_44495.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-06-09</span>
+                                    <h4 class="eclip">有形、有感和有效 上好思政课——记第六届全国高校青年教师思想政治课二等奖获得者杨栋艳</h4>
+                                    <p class="l2">敢于尝试，突破自我自2023年1月份接到通知到4月份比赛结束，杨栋艳准备了将近三个多月。但是，这三个多月仅仅只是准备国赛的时间，这场“拉锯战”要从院级选拔开始讲起，经历校赛再到区赛，最后走进国赛的赛道横...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/105323.htm" title="激情满怀悠悠援疆路，担当奉献浓浓伊师情——钱大益援疆工作纪实">
+                                <div class="pic">
+                                    <img src="/__local/2/32/46/8A43063DD1CEE961CF4F16271D6_E2218574_F09BC.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-07-20</span>
+                                    <h4 class="eclip">激情满怀悠悠援疆路，担当奉献浓浓伊师情——钱大益援疆工作纪实</h4>
+                                    <p class="l2">2020年10月，钱大益带着在北京科技大学经年累月的工作积淀以及过硬的专业能力，来到伊犁师范大学，开始了三年的援疆工作。他内心满怀坚定的理想，扎根伊师这片沃土，用实际行动践行一名共产党人的信念、使命与担...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/105223.htm" title="三载功名，彰显初心使命，八千里路，书写大爱担当——岳清唐教授援疆工作纪实">
+                                <div class="pic">
+                                    <img src="/__local/0/86/D7/EE90BACE7AF3FCC37B725756B01_A047788D_2D8AA.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-07-17</span>
+                                    <h4 class="eclip">三载功名，彰显初心使命，八千里路，书写大爱担当——岳清唐教授援疆工作纪实</h4>
+                                    <p class="l2">“儒雅谦逊有风度，简朴低调显清廉；工作上件件抓落实，专业上处处传帮带；日常事务毕躬亲，每遇大事有担当。”这是中组部第十批援疆干部、霍尔果斯商学院院长岳清唐给霍尔果斯商学院教职工留下的深刻印象。2020...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/104723.htm" title="曹中南，好样的！">
+                                <div class="pic">
+                                    <img src="/__local/7/16/7F/C10E066097C4737AEF9D6398B98_67849267_1C3BC.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-07-06</span>
+                                    <h4 class="eclip">曹中南，好样的！</h4>
+                                    <p class="l2">近日，教育部、中国教育发展基金会公布了2022年“全国高校毕业生基层就业卓越奖”获奖名单，我校推荐2017届毕业生曹中南入选。一路走来，曹中南同学用实际行动诠释了新时代中国青年应该有的“实事求是、联系群众...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/103083.htm" title="用诗人的情怀履行援疆使命，用人格的魅力留下援疆身影——黄理兵教授援疆工作纪实">
+                                <div class="pic">
+                                    <img src="/__local/F/31/1E/9FFFDF1D1BD1C03D1EED98F3883_98553D7F_1483A9.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-06-12</span>
+                                    <h4 class="eclip">用诗人的情怀履行援疆使命，用人格的魅力留下援疆身影——黄理兵教授援疆工作纪实</h4>
+                                    <p class="l2">2022年，时任北京语言大学国际学生教育政策与评价研究院副教授，质量总监黄理兵作为第十批援疆干部来到伊犁师范大学，这位朴素、可亲、可爱的诗人怀揣着对西部疆土的好奇、向往，一身素装从2000多公里外的北京踏...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/103073.htm" title="不忘教育初心 牢记援疆使命——梁健援疆工作纪实">
+                                <div class="pic">
+                                    <img src="/__local/A/36/05/93C243DBC809FCECF3840B7BCCA_035661FB_7709D.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-05-25</span>
+                                    <h4 class="eclip">不忘教育初心 牢记援疆使命——梁健援疆工作纪实</h4>
+                                    <p class="l2">2022年4月，作为中组部第十批援疆干部，陕西师范大学梁健同志来到伊犁师范大学开展援疆工作，担任生物与地理科学学院副院长。学院全体教师合影勇挑重担，营造良好的科研环境。他主要协助学院院长做好学科建设、科...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/102643.htm" title="致敬幕后｜记精彩背后不为人知、默默奉献的幕后工作者">
+                                <div class="pic">
+                                    <img src="/__local/F/67/19/387C894F4ACE22949190A6381CB_8CEF2F30_51886.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-05-20</span>
+                                    <h4 class="eclip">致敬幕后｜记精彩背后不为人知、默默奉献的幕后工作者</h4>
+                                    <p class="l2">5月18日至19日，我校在校本部田径场举行第四十三届运动会。全校师生欢聚一堂，以饱满的激情、昂扬的斗志、勇于拼搏的信念、团结向上的精神投入到运动会中，大家在运动场上尽享体育运动带来的快乐，彰显了伊师大风...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/93013.htm" title="非遗传承人范铁山：用版画讲述伊犁故事">
+                                <div class="pic">
+                                    <img src="/__local/9/75/8C/D0A3AF02E1D29FA305908256140_F70870C7_61FFB.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-03-06</span>
+                                    <h4 class="eclip">非遗传承人范铁山：用版画讲述伊犁故事</h4>
+                                    <p class="l2">如果时间穿越到50年前，伊犁人会有另一份骄傲：伊犁版画在全国出名。“西北版画看新疆，新疆版画看伊犁”，许多老一辈艺术家都还记得这句话。伊犁独特的生态环境和多元的人文景观成就了版画内容的多元；上个世纪7...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/92463.htm" title="我校学子青育如入选第五届“闪亮的日子——青春该有的模样”大学生就业创业典型人物">
+                                <div class="pic">
+                                    <img src="/__local/5/9A/37/AFD2E1197D5B905FD034E378593_9466536D_22B54.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-03-02</span>
+                                    <h4 class="eclip">我校学子青育如入选第五届“闪亮的日子——青春该有的模样”大学生就业创业典型人物</h4>
+                                    <p class="l2">2022年初，教育部学生服务与素质发展中心为宣传大学生就业创业典型人物事迹，开展第五届“闪亮的日子——青春该有的模样”为主题的大学生就业创业人物事迹征集活动，本次活动收到29个省市436位毕业生的就业创业事...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+<div class="swiper-slide">
+                            <a href="info/2441/92413.htm" title="三八红旗手——范学新">
+                                <div class="pic">
+                                    <img src="/__local/7/3E/AC/BCDA2B58C5FCE3E7CB924B8132B_33187257_137AC.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span>2023-03-01</span>
+                                    <h4 class="eclip">三八红旗手——范学新</h4>
+                                    <p class="l2">范学新，女，汉，1972年11月生，文学博士，教授，硕导，伊犁师范大学党委委员。1994年7月参加工作，先后任人文学院副院长、研究生处处长、教务处处长，发展规划与合作交流处处长等职，现任旅游与历史文化学院副书...</p>
+                                    <b></b>
+                                </div>
+                            </a>
+                        </div>
+                        
+</div>
+                </div>
+            </div><script>_showDynClickBatch(['dynclicks_u22_104953','dynclicks_u22_102853','dynclicks_u22_102843','dynclicks_u22_105323','dynclicks_u22_105223','dynclicks_u22_104723','dynclicks_u22_103083','dynclicks_u22_103073','dynclicks_u22_102643','dynclicks_u22_93013','dynclicks_u22_92463','dynclicks_u22_92413'],[104953,102853,102843,105323,105223,104723,103083,103073,102643,93013,92463,92413],"wbnews", 1896056163)</script>
+</div>
+    </div>
+    <div class="s7">
+        <div class="wrap">    <div class="gg-tit c">
+                <h4>校园专题</h4>
+               
+            </div>
+            <div class="s7-banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        
+       
+               <div class="swiper-slide">
+                        <a href="ztzl/xsx_qdx_zsj_jxg.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 65375)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/878cd964d20fbe1f8437838347ae1c1.jpg" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="ztzl/zggcdylsfdxdycdydbdh.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 58995)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/fengmian.jpg" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1314" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54201)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/s7-img06.jpg" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="ztzl/djxxjy.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 65575)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/dj.jpg" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="ztzl/dsxxjy.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54197)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/s7-img02.jpg" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="https://www.ylnu.edu.cn/ztzl/xlf.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 65331)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/xueleifengrileifengjingshenhongjingongzhonghaoshoutu.png" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="https://www.ylnu.edu.cn/ztzl/xxq_xqx_xzc.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 65330)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/chushujieqizhufushijingtiankongqiujihengbanhaibao.png" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="https://www.ylnu.edu.cn/info/1059/94863.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 65332)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/yiliaobaojianxinwenzixunjianyuegongzhonghaoshoutu.png" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="ztzl/wlaqxcz.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54196)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/s7-img01.jpg" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="http://xgc.ylnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54198)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/s7-img03.jpg" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+               <div class="swiper-slide">
+                        <a href="ztzl/xzczxhd.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54199)" target="_blank">
+                            <div class="pic">
+                                     <img src="images/s7-img04.jpg" border="0">
+                                </div>
+                                <p></p>
+                                
+                           
+                        </a>  
+               </div>
+       
+    
+    
+</div>
+                </div>
+                <div class="prev swiper-button-prev"></div>
+                <div class="next swiper-button-next"></div>
+            </div></div>
+    </div>
+</div>
+
+
+
+<div class="tips ">    <ul>
+        
+       
+               <li>
+                        <a class="flex" href="xxgk/jbxx.htm" title="信息公开" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54203)">
+                            <div class="icon"><img src="images/tips-img01.png" border="0"></div>
+                             <div class="tit">信息公开</div>
+                        </a>  
+             </li>
+       
+       
+               <li>
+                        <a class="flex" href="https://ehall.ylnu.edu.cn/" title="办公系统" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 58988)">
+                            <div class="icon"><img src="images/tips-img02.png" border="0"></div>
+                             <div class="tit">办公系统</div>
+                        </a>  
+             </li>
+       
+       
+               <li>
+                        <a class="flex" href="http://lib.ylnu.edu.cn/zyjs/sjk.htm" title="数据库" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54205)">
+                            <div class="icon"><img src="images/tips-img03.png" border="0"></div>
+                             <div class="tit">数据库</div>
+                        </a>  
+             </li>
+       
+       
+               <li>
+                        <a class="flex" href="https://ehall.ylnu.edu.cn" title="办事大厅" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54206)">
+                            <div class="icon"><img src="images/tips-img04.png" border="0"></div>
+                             <div class="tit">办事大厅</div>
+                        </a>  
+             </li>
+       
+       
+               <li>
+                        <a class="flex" href="index/xxxw.htm" title="学校新闻" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54207)">
+                            <div class="icon"><img src="images/tips-img05.png" border="0"></div>
+                             <div class="tit">学校新闻</div>
+                        </a>  
+             </li>
+       
+       
+               <li>
+                        <a class="flex" href="https://mail.ylnu.edu.cn/" title="邮件系统" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54208)">
+                            <div class="icon"><img src="images/tips-img06.png" border="0"></div>
+                             <div class="tit">邮件系统</div>
+                        </a>  
+             </li>
+       
+       
+               <li>
+                        <a class="flex" href="https://lib.ylnu.edu.cn" title="图书馆" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 54209)">
+                            <div class="icon"><img src="images/tips-img07.png" border="0"></div>
+                             <div class="tit">图书馆</div>
+                        </a>  
+             </li>
+       
+       
+               <li>
+                        <a class="flex" href="https://49.115.186.58:4443/vpn/theme/auth_home.html" title="VPN 登陆" onclick="_addDynClicks(&#34;wbimage&#34;, 1896056163, 58989)">
+                            <div class="icon"><img src="images/tips-img08.png" border="0"></div>
+                             <div class="tit">VPN 登陆</div>
+                        </a>  
+             </li>
+       
+</ul></div>
+<div class="foot">
+    <div class="f-link">
+        <div class="wrap flex-center"><a href="images/11111.jpg" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71184)">校历</a>
+<a href="#" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71185)">校车时刻表</a>
+<a href="https://lib.ylnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71186)">图书馆</a>
+<a href="https://mail.ylnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1896056163, 71187)">师大邮箱</a>
+</div>
+    </div>
+    <div class="f-c">
+        <div class="wrap flex">
+            <div class="f-logo">
+                
+
+<a href="index.htm" title="主站新"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="f-txt">
+                <div><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<h4>校区：</h4>
+<p>校本部地址：伊宁市解放西路448号(解放路) <span>邮编：835000</span></p>
+<p>东校区地址：伊宁市学府街666号&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span>邮编：835000</span><br></p></div>
+
+            </div>
+            <div class="f-ewm">    <ul class="flex">
+       
+                 <li>
+                        
+                        <a> 
+                        <span class="code">
+                            <img src="images/tc_wx.jpg" border="0">
+                        </span>
+                        <img src="images/f-wx.png" alt="">
+                        <p>师大微信</p>
+                        </a> 
+              </li>
+                 <li>
+                        
+                        <a> 
+                        <span class="code">
+                            <img src="images/tc_wb.jpg" border="0">
+                        </span>
+                        <img src="images/f-wx.png" alt="">
+                        <p>青春伊师微信号</p>
+                        </a> 
+              </li>
+                 <li>
+                        
+                        <a> 
+                        <span class="code">
+                            <img src="images/tc_wx.jpg" border="0">
+                        </span>
+                        <img src="images/f-wx2.png" alt="">
+                        <p>师大视频号</p>
+                        </a> 
+              </li>
+       
+</ul></div>
+        </div>
+    </div>
+    <div class="bq">
+<p>Copyright © 2022 伊犁师范大学版权所<a href="mail_xxzxlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=2501" target="_self">有</a> &nbsp;<a target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index">新ICP备10002209号-2</a></p></div>
+</div>
+</body>
+<script>
+
+</script>
+<script src="js/index.js"></script>
+</html>

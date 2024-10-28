@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>甘孜职业学院</title>
+    <link rel="stylesheet" type="text/css" href="./res/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="./res/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./res/css/datouwang1.css" />
+    <link rel="stylesheet" type="text/css" href="./res/css/index.css" />
+    <style>
+        .noImgSpecial .imgShow {
+            display: none;
+        }
+    </style>
+</head>
+
+<!-- 主体 -->
+<div class="content">
+    <div class="mainContent">
+        <div class="wraper news">
+            <div class="head clearfix">
+                <span class="title fl">学院新闻</span>
+                <a class="more fr" href="list.html?id=16" target="_blank">更多>></a>
+            </div>
+            <div class="contBox">
+                <div class="lump fl">
+                    <div id="fsD1" class="focus">
+                        <div id="D1pic1" class="fPic">
+                            <!-- <div class="fcon">
+                                <a href="http://www.jqcool.net/">
+                                    <img src="./res/img/test/lb1.jpg">
+                                </a>
+                                <span class="shadow">
+                                    <a href="#">红三代叶明子太庙办盛典 </a>
+                                </span>
+                            </div> -->
+                        </div>
+                        <div class="fbg">
+                            <div class="D1fBt" id="D1fBt">
+                                <!-- <a href="javascript:void(0)" hidefocus="true" target="_self" class="current">
+                                    <i>1</i>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="topnews" class="newsList fr">
+                    <ul>
+                        <!-- <li class="newTop">
+                            <a href="" target="_blank">乐山市公安局勇夺乐山市第三届“双拥杯”安局勇夺乐山市第三届“双拥杯”篮篮第三届“双拥双拥体...</a>
+                        </li> -->
+                        <!-- <li>
+                            <a href="" target="_blank">乐山市公安局勇夺乐山市第三届“双拥杯”安局勇夺乐山市第三届“双拥杯”篮篮第三届“双拥双拥体...</a>
+                            <span>[2022-12-20]</span>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wraper2">
+            <div class="dynamic fl">
+                <div class="head clearfix">
+                    <ul class="menu fl">
+                        <li class="on" data-id="28">系部动态</li>
+                        <li data-id="51">专题报道</li>
+                    </ul>
+                    <a class="more fr" href="" target="_blank">更多>></a>
+                </div>
+                <div data-showid="28"></div>
+                <div data-showid="51"></div>
+            </div>
+            <div class="notice fr">
+                <div class="head clearfix">
+                    <ul class="menu fl">
+                        <li class="on" data-id="37">招生信息</li>
+                        <li data-id="52">通知公告</li>
+                    </ul>
+                    <a class="more fr" href="" target="_blank">更多>></a>
+                </div>
+                <ul class="noticeList" data-showid="37">
+                    <li></li>
+                </ul>
+                <ul class="noticeList" data-showid="52">
+                    <li>
+                        <a href="" target="_blank">2022年春节期间安全提醒2022年春节期间安全提醒安全提醒安全提醒</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- 热点专题 -->
+        <div class="wraper3" style="display: none;">
+            <div class="head2 fl">
+                <img src="./res/img/hotIcon.png" alt="" class="">
+                <p>热点专题</p>
+            </div>
+            <div class="hotTopics fr">
+                <ul>
+                    <li><a href="" target="_blank"><img src="./res/img/test/hot.png" alt="" class=""></a></li>
+                    <li><a href="" target="_blank"><img src="./res/img/test/hot.png" alt="" class=""></a></li>
+                    <li><a href="" target="_blank"><img src="./res/img/test/hot.png" alt="" class=""></a></li>
+                    <li><a href="" target="_blank"><img src="./res/img/test/hot.png" alt="" class=""></a></li>
+                    <li><a href="" target="_blank"><img src="./res/img/test/hot.png" alt="" class=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="imgShow">
+            <img src="./res/img/imgShow.jpg" alt="" srcset="">
+        </div>
+    </div>
+</div>
+<!-- 飘窗 -->
+<div class="advertLayer" id="advertLayer">
+    <div class="close"><img src="res/img/layer-close.png" alt="" class=""></div>
+    <div class="imgShow">
+    </div>
+</div>
+
+<script src="./res/js/utils/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./res/js/utils/koala.min.1.5.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="./res/js/utils/wfscroll.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="./res/js/utils/FloatWindow.js" type="text/javascript"></script>
+<script src="./layuiadmin/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="./res/js/utils/jquery.cxscroll.min.js"></script>
+<script src="./res/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/html" id="temp111"><div class="imgSpecialBox">
+        <div class="imgSpecial noImgSpecial fl">
+        <div class="imgShow">
+           <a href="{3}"> <img src="{2}" alt=""></a>
+        </div>
+        <dl>
+            <dt><a href="{3}">{0}</a> </dt>
+            <dd><a href="{3}">{1}</a></dd>
+        </dl>
+        </div> 
+        <div class="imgSpecial noImgSpecial fr">
+            <div class="imgShow">
+                <a href="{7}"><img src="{6}" alt=""></a>
+            </div>
+            <dl>
+                <dt><a href="{7}">{4}</a> </dt>
+                <dd><a href="{7}">{5}</a></dd>
+            </dl>
+        </div>
+    </div>
+    <ul class="specialBox">
+        {8}
+        <!-- <li>
+            <a href="" target="_blank">乐山市公安局勇夺乐山市第三届“双拥杯”篮第三届“双拥双拥体...</a>
+            <span>[2022-12-20]</span>
+        </li> -->
+    </ul>
+</script>
+<script>
+    // 关闭浮窗
+    $(".advertLayer .close").bind("click", function () {
+        $("#advertLayer").hide();
+    })
+    //查询浮窗
+    getAjax('post', '/api/Web/QueryFloatwindow', JSON.stringify({}), function (res) {
+        if (res.code != 1) {
+            // return error(res.msg);
+            return;
+        }
+        if (!res.data.length) {
+            return false;
+        }
+        $("#advertLayer").show();
+        var img = $.map(res.data, function (j, i) {
+            return '<a href="{1}" target="{2}"><img src="{0}" alt=""></a>'.format(j.img, j.link ? j.link : 'javascript:;', j.link ? '_blank' : '_self');
+        }).join('');
+        $("#advertLayer .imgShow").html(img);
+        var interval = setInterval("ggRoll.Go()", ggRoll.speed);
+        ggRoll.roll.onmouseenter = function () { clearInterval(interval) };                     //onmouseover属性：鼠标移动到元素上时触发
+        ggRoll.roll.onmouseleave = function () { interval = setInterval("ggRoll.Go()", ggRoll.speed) };//onmouseout属性:鼠标离开元素时触发
+    });
+
+    // 热点专题
+    // $(".hotTopics").imgscroll({
+    //     speed: 40, //图片滚动速度
+    //     amount: 0, //图片滚动过渡时间
+    //     width: 1, //图片滚动步数
+    //     dir: "left" // "left" 或 "up" 向左或向上滚动
+    // });
+
+
+    //头图新闻
+    getAjax('post', '/api/Web/ImgNewsPageList', JSON.stringify({ columnid: 0, page: 1, pageSize: 6 }), function (res) {
+        if (res.code != 1) {
+            // return error(res.msg);
+            return;
+        }
+        var nav = $.map(res.data, function (j, i) {
+            return ' <div class="fcon"> <a href="{1}"  target="blank"><img src="{2}"></a><span class="shadow"><a href="{1}"  target="blank">{0}</a> </span></div>'.format(j.newsTitle, getdetailhref(j), j.newsHeadImg);
+        }).join('');
+
+        $("#D1pic1").html(nav)
+        var nav1 = $.map(res.data, function (j, i) {
+            return '<a href="javascript:void(0)" hidefocus="true" class="current"><i>{0}</i></a>'.format(i + 1);
+        })
+        $('#D1fBt').html(nav1);
+
+        //焦点图
+        Qfast.add('widgets', {
+            path: "./res/js/utils/terminator2.2.min.js",
+            type: "js",
+            requires: ['fx']
+        });
+        Qfast(false, 'widgets', function () {
+            K.tabs({
+                id: 'fsD1', //焦点图包裹id  
+                conId: "D1pic1", //** 大图域包裹id  
+                tabId: "D1fBt",
+                tabTn: "a",
+                conCn: '.fcon', //** 大图域配置class       
+                auto: 1, //自动播放 1或0
+                effect: 'fade', //效果配置
+                eType: 'click', //** 鼠标事件
+                pageBt: true, //是否有按钮切换页码
+                bns: ['.prev', '.next'], //** 前后按钮配置class                          
+                interval: 3000 //** 停顿时间  
+            })
+        })
+    });
+    //置顶新闻+学院新闻
+    getAjax('post', '/api/Web/TopNewsPageList', JSON.stringify({ columnid: 0, page: 1, pageSize: 1 }), function (res) {
+        if (res.code != 1) {
+            // return error(res.msg);
+            return;
+        }
+        var nav = $.map(res.data, function (j, i) {
+            return '<li> <a href="{1}" target="_blank">{0}</a><span>{2}</span></li>'.format(j.newsTitle, getdetailhref(j), j.newsAddtime.substr(0, 10));
+        }).join('');
+
+        getAjax('post', '/api/Web/ColNewsPageList', JSON.stringify({ columnid: 16, page: 1, pageSize: 10 }), function (res) {
+            if (res.code != 1) {
+                // return error(res.msg);
+                return;
+            }
+            var nav1 = $.map(res.data, function (j, i) {
+                return '<li> <a href="{1}" target="_blank">{0}</a><span>{2}</span></li>'.format(j.newsTitle, getdetailhref(j), j.newsAddtime.substr(0, 10));
+            }).join('');
+
+            var hastop = !!nav;
+            nav = nav + nav1;
+            var $nav = $(nav);
+            if (hastop) {
+                $nav.eq(0).addClass('newTop').find('span').remove();
+            }
+            $("#topnews ul").append($nav)
+        })
+
+
+    })
+
+    //学院新闻
+
+
+
+    //学院动态 系部动态 专题报道
+    var xxx1 = function (id) {
+        getAjax('post', '/api/Web/ColNewsPageList', JSON.stringify({ columnid: id, page: 1, pageSize: 10 }), function (res) {
+            if (res.code != 1) {
+                // return error(res.msg);
+                return;
+            }
+            var p8 = $.map(res.data, function (j, i) {
+                if (i > 1) {
+                    return '<li class="{3}"><a href="{1}" target="_blank">{0}</a><span>[{2}]</span></li>'.format(j.newsTitle, getdetailhref(j), j.newsAddtime.substr(0, 10), i % 2 == 1 ? "item2" : '');
+                }
+            }).join('');
+            var n1 = res.data[0] || {};
+            var n2 = res.data[1] || {};
+            var nav = $('#temp111').html().format(n1.newsTitle, n1.newsAbstract || n1.newsContent, n1.newsHeadImg || '#', getdetailhref(n1),
+                n2.newsTitle, n2.newsAbstract || n2.newsContent, n2.newsHeadImg || '#', getdetailhref(n2),
+                p8);
+
+
+            var $nav = $(nav);
+            if (n1.newsHeadImg) {
+                $nav.find('.imgSpecial.fl').removeClass('noImgSpecial');
+            }
+            if (n2.newsHeadImg) {
+                $nav.find('.imgSpecial.fr').removeClass('noImgSpecial');
+            }
+            $("[data-showid='" + id + "']").html('').append($nav)
+        })
+    }
+   
+    xxx1(28);
+    xxx1(51);
+    //通知公告 招标公告
+    var xxx2 = function (id) {
+        getAjax('post', '/api/Web/ColNewsPageList', JSON.stringify({ columnid: id, page: 1, pageSize: 10 }), function (res) {
+            if (res.code != 1) {
+                // return error(res.msg);
+                return;
+            }
+            var nav = $.map(res.data, function (j, i) {
+                return '<li><a href="{1}" target="_blank">{0}</a></li>'.format(j.newsTitle, getdetailhref(j), j.newsAddtime);
+            }).join('');
+            $("[data-showid='" + id + "']").html(nav)
+        })
+    }
+
+    xxx2(37);
+    xxx2(52);
+    $('.menu').on('mouseover', 'li', function () {
+        $(this).addClass('on').siblings().removeClass('on');
+        $(this).parent().next('a').attr('href', 'list.html?id=' + $(this).data('id'));
+        $('[data-showid]').hide();
+        $('.menu li.on').each(function () {
+            $('[data-showid="' + $(this).data('id') + '"]').show();
+        });
+    });
+    $('.menu li.on').eq(0).mouseover();
+
+
+</script>
+</body>
+
+</html>

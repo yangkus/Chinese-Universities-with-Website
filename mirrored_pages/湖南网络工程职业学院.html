@@ -1,0 +1,965 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="湖南广播电视大学,湖南开放大学,湖南网络工程职业学院,湖南电大,电大,开大,学历,开放教育" />
+<meta name="description" content="湖南开放大学" />
+<title>湖南开放大学</title>
+<link href="/skin/sites/common/css/bootstrap2.min.css" type="text/css"  rel="stylesheet" >
+<link href="/skin/sites/common/css/global.css" type="text/css"  rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="/skin/school790/cms/../core/header/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/school790/cms/../core/header/header.css?v=2" />
+<link rel="stylesheet" type="text/css" href="/skin/label/label.css" />
+<link rel="stylesheet" type="text/css" href="/skin/label/slick.css">
+<!--[if lt IE 9]>
+<script src="/html5shiv.min.js"></script>
+<script src="/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/guowei.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/breakpoints.min.js"></script>
+<script type="text/javascript" src="/skin/sites/common/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/js/viewer.min.js"></script>
+<script type="text/javascript" src="/js/jquery.touchSlider.js"></script>
+<script type="text/javascript" src="/js/jquery.iosslider.js"></script>
+<script type="text/javascript" src="/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/js/lang/core/zh-cn.js"></script>
+<script type="text/javascript" src="/js/lang/cms/zh-cn.js"></script>
+<script type="text/javascript">
+P8CONFIG.RESOURCE = '';
+var SYSTEM = 'cms',
+MODULE = '',
+ACTION = 'main',
+LABEL_URL = '/index.php/cms-main?',
+$this_router = P8CONFIG.URI[SYSTEM][MODULE].U_controller,
+$this_url = $this_router +'-'+ ACTION,
+SKIN = '/skin/school790/cms/',
+TEMPLATE = 'school790';
+mobile_status= '0',
+mobile_auto_jump='0',
+mobile_url = 'http://172.19.2.31/m';
+if(mobile_status=='1' && SYSTEM!='sites'){
+if(browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+if(mobile_auto_jump=='1' && mobile_url!=P8CONFIG.RESOURCE){
+var this_url = location.href,_pul=P8CONFIG.RESOURCE;
+if(this_url.indexOf(mobile_url)==-1 && this_url.indexOf('s.php')==-1 && this_url.indexOf('u.php')==-1 && this_url.indexOf('admin.php')==-1 && SYSTEM!='sites'){
+if(this_url.indexOf(P8CONFIG.RESOURCE+'/html')!=-1)_pul+='/html';
+if(P8CONFIG.RESOURCE==''){
+this_url = mobile_url.indexOf('http')==-1 ? this_url.mobile_url : mobile_url;
+}else{
+this_url = this_url.replace(_pul, mobile_url);
+}
+location.href = this_url;
+}
+}
+}
+}
+
+</script> 
+</head>
+<body>
+<div class="topbar hidden-sm hidden-xs">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-sm-3 col-xs-12">
+<div class="topfl pull-left">
+<div class="tophy">
+<!--欢迎访问本站！ 今天是：-->
+<script language=JavaScript>        
+today=new Date();
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]}
+var d=new initArray(
+"星期日",
+"星期一",
+"星期二",
+"星期三",
+"星期四",
+"星期五",
+"星期六");
+document.write(     
+today.getFullYear(),"年",
+today.getMonth()+1,"月",
+today.getDate(),"日   ",
+d[today.getDay()+1]);
+</script>
+</div>
+</div>
+</div>
+<div class="col-md-9 col-sm-9 col-xs-12">
+<div class="topfr pull-right" id="header_t">
+<div class="topnav fl" style="padding-right:15px;">
+<a href="http://one.ouchn.cn" target="_blank">国开学习网</a> | <a href="http://hnnmdxs.ouchn.cn" target="_blank">湖南农民大学生学习网</a> | <a href="https://www.hnou.edu.cn/sites/html/jcrc/" target="_blank">湖南基层人才学习网</a> <!--|<a href="#">教工</a>-->
+</div>
+<div class="topen pull-left">
+站内搜索
+</div>
+<div class="topsearch pull-left">
+<div class="searchform">
+<form action="/search/" target="_blank" method="get" name="form1" id="form1">
+<input type="text" value="请输入关键字" onfocus="javascript:if(this.value='请输入关键字'){this.value='';}" class="keyword" id="keyword" name="word"> 
+<input type="submit" class="submitbtn" value="" id="button" name="button">
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navbar main-nav">
+<div class="headbar">
+<div class="container">
+<div class="header clearfix">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/" class="navbar-brand navbar-logo"><img src="/skin/school790/cms/../core/header/images/logo.png"/></a>
+</div>
+</div>
+</div>
+</div>
+<div class="navbar-collapse navbar-collapse-toolbar collapse navbar-main" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+<div class="container">
+<ul class="nav navbar-nav navlist">
+<li class="dropdown">
+<a class="dropdown-toggle on1" data-hover="dropdown" href="https://www.hnou.edu.cn/index.html"  aria-expanded="false" role="button" target="">首页</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on2" data-toggle="dropdown" data-hover="dropdown" href="/html/781/"  aria-expanded="false" role="button" target="">学校概况</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="/html/781/" target="">学校简介</a></li>
+<li class="menu2"><a href="/html/827/" target="">现任领导</a></li>
+<li class="menu3"><a href="/html/820/" target="">组织机构</a></li>
+<li class="menu4"><a href="https://www.hnou.edu.cn/sites/html/xxgk/17276/" target="_blank">信息公开</a></li>
+<li class="menu5"><a href="/html/824/" target="">校园风景</a></li>
+<li class="menu6"><a href="/html/825/" target="">学校位置</a></li>
+<li class="menu7"><a href="/html/783/" target="">联系我们</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on3" data-toggle="dropdown" data-hover="dropdown" href="/"  aria-expanded="false" role="button" target="">学历教育</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://www.hnou.edu.cn/sites/html/wljs" target="_blank">智能制造学院</a></li>
+<li class="menu2"><a href="https://www.hnou.edu.cn/sites/html/xinxi" target="_blank">信息工程学院</a></li>
+<li class="menu3"><a href="https://www.hnou.edu.cn/sites/html/jg" target="_blank">经济管理学院</a></li>
+<li class="menu4"><a href="https://www.hnou.edu.cn/sites/html/rw" target="_blank">文法学院</a></li>
+<li class="menu5"><a href="https://www.hnou.edu.cn/sites/html/yyjs" target="_blank">应用技术学院</a></li>
+<li class="menu6"><a href="https://www.hnou.edu.cn/sites/html/my" target="_blank">马克思主义学院</a></li>
+<li class="menu7"><a href="https://www.hnou.edu.cn/sites/html/zsxy" target="_blank">开放教育实验学院</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on4" data-toggle="dropdown" data-hover="dropdown" href="/"  aria-expanded="false" role="button" target="">非学历教育</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://www.hngbjy.com/" target="_blank">干部在线学习</a></li>
+<li class="menu2"><a href="http://www.hnsydwpx.cn/" target="_blank">湖南省事业单位工作人员培训网</a></li>
+<li class="menu3"><a href="http://www.hnzjpx.net/" target="_blank">湖南省专业技术人员继续教育网</a></li>
+<li class="menu4"><a href="http://www.hnlgonline.com/" target="_blank">老干部（老年）开放大学</a></li>
+<li class="menu5"><a href="http://www.hnasst.com" target="_blank">湖南老科协大讲堂</a></li>
+<li class="menu6"><a href="http://www.17el.cn/" target="_blank">湖湘学习广场</a></li>
+<li class="menu7"><a href="http://hnqmgc.17el.cn/" target="_blank">湖南省青年马克思主义者培养网络学院</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle link on5" data-toggle="dropdown" data-hover="dropdown" href="/"  aria-expanded="false" role="button" target="">招生就业</a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="https://www.hnou.edu.cn/sites/html/zjc/17144/" target="_blank">开大招生</a></li>
+<li class="menu2"><a href="https://www.hnou.edu.cn/sites/html/wyzs" target="_blank">高职招生</a></li>
+<li class="menu3"><a href="http://hnwlgczy.bysjy.com.cn/" target="_blank">高职就业</a></li>
+</ul>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on6" data-hover="dropdown" href="https://www.hnou.edu.cn/sites/html/library"  aria-expanded="false" role="button" target="_blank">图书馆</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on7" data-hover="dropdown" href="https://www.hnou.edu.cn/sites/html/kyc"  aria-expanded="false" role="button" target="_blank">科学研究</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on8" data-hover="dropdown" href="https://www.hnou.edu.cn/html/939"  aria-expanded="false" role="button" target="_blank">分校导航</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on9" data-hover="dropdown" href="https://e.hnou.cn"  aria-expanded="false" role="button" target="_blank">网上办事大厅</a>		
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle on10" data-hover="dropdown" href="https://www.hnou.edu.cn/sites/html/pxxy/"  aria-expanded="false" role="button" target="_blank">培训学院</a>		
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var USERNAME = get_username();
+$(document).ready(function(){
+//**show_edit**//					   
+init_labelshows('header_t');
+$(".searchform .submitbtn").bind("mouseenter", function() {
+$(".searchform").addClass("search");
+});
+})
+</script>
+<div id="content">
+
+<link rel="stylesheet" type="text/css" href="/skin/school790/cms/index/index.css?v=5" />
+<div class="slidebanner">
+<style type="text/css">
+#slide29972{width:100%;height:496px;position: relative; height: 496px; overflow: hidden; background: url(/skin/label/slide15/loading.gif) 50% no-repeat;}
+#slide29972 img{margin:0;padding:0;width:100%;	height: 100%;object-fit: cover;}
+#slide29972 li { list-style-type: none; }
+#slide29972 .slides { position: relative; z-index: 1; }
+#slide29972 .slides li { width:100%; height: 496px; position:absolute;	top:0px;	left:0px;	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";	-moz-opacity:0;	filter:alpha(opacity=0);	opacity:0}
+#slide29972 .flex-control-nav { position: absolute; bottom: 35px; z-index: 2; width: 100%; text-align: center; }
+#slide29972 .flex-control-nav li { display: inline-block; width: 14px; height: 14px; margin: 0 5px; *display:inline;zoom: 1; }
+#slide29972 .flex-control-nav a { display: inline-block; width: 14px; height: 14px; line-height: 40px; overflow: hidden; background: url(/skin/label/slide15/dot.png) right 0 no-repeat; cursor: pointer; }
+#slide29972 .flex-control-nav .active { background-position: 2px 0; }
+#slide29972 .flex-direction-nav { position: absolute; z-index: 3; width: 100%; top: 45%; }
+#slide29972 .flex-direction-nav li a { display: block; width: 50px; height: 50px; overflow: hidden; cursor: pointer; position: absolute; }
+#slide29972 .flex-direction-nav li a.prev { left: 40px; background: url(/skin/label/left_btnOUT.png) center center no-repeat; }
+#slide29972 .flex-direction-nav li a.next { right: 40px; background: url(/skin/label/right_btnOUT.png) center center no-repeat; }
+</style>
+<div id="slide29972" class="flexslider" style="max-width:1920px; margin:0 auto; overflow:hidden;">
+<ul class="slides">
+<li><a href="" target="_blank" title=""><img src="/attachment/core/label/2024_04/01_10/ffd89e6a1b22ff47.jpg" alt=""/></a></li>
+<li><a href="" target="_blank" title=""><img src="/attachment/core/label/2024_04/01_16/83eff0fb22929fe3.jpg" alt=""/></a></li>
+<li><a href="" target="_blank" title=""><img src="/attachment/core/label/2024_04/01_17/536423904f53daa8.jpg" alt=""/></a></li>
+<li><a href="" target="_blank" title=""><img src="/attachment/core/label/2024_04/01_16/f91984dffe41972a.jpg" alt=""/></a></li>
+</ul>
+<ol class="flex-control-nav">
+<li><a class="">0</a></li>
+<li><a class="">1</a></li>
+<li><a class="">2</a></li>
+<li><a class="">3</a></li>
+</ol>
+<ul class="flex-direction-nav">
+<li><a class="prev" alt="prev" href="#"></a>
+<li><a class="next" alt="next" href="#"></a>
+</ul>
+</div>
+<script type="text/javascript">
+(function () {
+var num = $("#slide29972 .slides li").length,	now = 0;	$('#slide29972 .slides li:first').css({"z-index":"2","opacity":"1"});	$("#slide29972 .flex-control-nav li:first a").addClass("active");
+function next() {	now = (++now) % num;	return now;	}
+function callback() {		$("#slide29972 .flex-control-nav li").find('a').removeClass('active');		$("#slide29972 .slides").find('li').css('z-index', '1');		$("#slide29972 .flex-control-nav").find('li:eq(' + now + ')').find('a').addClass('active');$("#slide29972 .slides").find('li:eq(' + now + ')').css('z-index', '2');};
+function animagea() {		$("#slide29972 .slides").find('li:eq(' + now + ')').animate({opacity : 0}, 1500);		$("#slide29972 .slides").find('li:eq(' + next() + ')').animate({	opacity : 1	}, 1500, callback);}
+var timer =  setInterval(animagea, 5000);
+$("#slide29972 .flex-direction-nav li").find('a').click(function(){ clearInterval(timer);		if($(this).attr('alt')=='prev'){			$("#slide29972 .slides").find('li:eq(' + now + ')').animate({opacity : 0}, 500);			now = now-2;			if(now<0){				now = num+now;			}			$("#slide29972 .slides").find('li:eq(' + next() + ')').animate({	opacity : 1	}, 500, callback);}else{			$("#slide29972 .slides").find('li:eq(' + now + ')').animate({opacity : 0}, 100);			$("#slide29972 .slides").find('li:eq(' + next() + ')').animate({	opacity : 1	}, 500, callback);} timer =  setInterval(animagea, 5000);});
+})()
+</script></div><!---->
+<div class="section">
+<div class="container">
+<div class="plane">
+<div class="row">
+<div class="col-md-8 col-sm-8 col-xs-12">
+<div class="ntab">
+<div class="hd clearfix">
+<ul>
+<li>学校要闻<span>|</span></li>
+<li>系统动态</li>
+</ul>
+</div>
+<div class="bd">
+<div class="tablist" style="display:block;">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="focus mt15">
+
+<style type="text/css">
+.focus29979{ width: 100%; height: 303px; overflow:hidden; position:relative;}
+.focus29979 .hds{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:10px; z-index:1; }
+.focus29979 .hds ul{ overflow:hidden; zoom:1; float:left;  }
+.focus29979 .hds ul li{width:9px; height:11px;float:left;margin-left:6px;background: url(/skin/label/icon_yq.png) no-repeat -54px 0;cursor: pointer;text-indent: -9999px;}
+.focus29979 .hds ul li.on{width:12px; height:12px;background-position:-68px 0;} 
+.focus29979 .bds{ position:relative; height:100%; z-index:0;   }
+.focus29979 .bds li{ zoom:1; vertical-align:middle;}
+.focus29979 .bds .pic img{width: 100%; height: 303px;display:block; }
+.focus29979 .bds .con{width: 100%; float: left; position: absolute; z-index:1; left: 0; bottom: 0; height:37px; line-height:37px; text-align:left; color: white; }
+.focus29979 .bds .con .title{position: absolute; z-index: 2; left: 0; top: 0; display: block; padding: 0 20px 0 12px; font-size: 14px; color: white;overflow: hidden;}
+.focus29979 .bds .con .title a{color: white;}
+.focus29979 .bds .bg{display: block; height: 37px; line-height: 37px; width: 100%; float: left; position: absolute; z-index: 1; left: 0; bottom: 0; background-color: #000; opacity:0.5 ; filter: alpha(opacity=50); }
+</style>
+<div class="focus29979">
+<div class="hds">
+<ul>
+<li>0</li>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+</div>
+<div class="bds">
+<ul>
+<li>
+<div class="pic"><a href="https://hnrtu.rednet.cn/content/646854/58/14358105.html" target="_blank" title="党委书记龙献忠为2024级新生讲授“开学第一课”"><img src="/attachment/store/common/18061653e38b9519.jpg" alt="党委书记龙献忠为2024级新生讲授“开学第一课”" /></a></div>
+<div class="con">
+<div class="title"><a href="https://hnrtu.rednet.cn/content/646854/58/14358105.html" target="_blank" title="党委书记龙献忠为2024级新生讲授“开学第一课”">党委书记龙献忠为2024级新生讲授“开学第一课”</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="https://hnrtu.rednet.cn/content/646854/56/14354149.html" target="_blank" title="《中国教育发展与乡村振兴2024》（湖南高校卷）蓝皮书撰写工作正式启动"><img src="/attachment/store/common/6a3e711e5e89ccd3.jpg" alt="《中国教育发展与乡村振兴2024》（湖南高校卷）蓝皮书撰写工作正式启动" /></a></div>
+<div class="con">
+<div class="title"><a href="https://hnrtu.rednet.cn/content/646854/56/14354149.html" target="_blank" title="《中国教育发展与乡村振兴2024》（湖南高校卷）蓝皮书撰写工作正式启动">《中国教育发展与乡村振兴2024》（湖南高校卷）蓝皮书撰写工作正式启动</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="https://hnrtu.rednet.cn/content/646854/90/14339692.html" target="_blank" title="学校举行2024级新生开学典礼暨军训动员大会"><img src="/attachment/cms/item/2024_10/09_16/82ba1d9485c77379.jpg.thumb.jpg" alt="学校举行2024级新生开学典礼暨军训动员大会" /></a></div>
+<div class="con">
+<div class="title"><a href="https://hnrtu.rednet.cn/content/646854/90/14339692.html" target="_blank" title="学校举行2024级新生开学典礼暨军训动员大会">学校举行2024级新生开学典礼暨军训动员大会</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href=" https://hnrtu.rednet.cn/content/646843/74/14325600.html" target="_blank" title="学校党委理论学习中心组专题学习全国教育大会精神和习近平同志《论教育》"><img src="/attachment/store/common/827631b9bedebe48.png" alt="学校党委理论学习中心组专题学习全国教育大会精神和习近平同志《论教育》" /></a></div>
+<div class="con">
+<div class="title"><a href=" https://hnrtu.rednet.cn/content/646843/74/14325600.html" target="_blank" title="学校党委理论学习中心组专题学习全国教育大会精神和习近平同志《论教育》">学校党委理论学习中心组专题学习全国教育大会精神和习近平同志《论教育》</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="https://hnrtu.rednet.cn/content/646843/63/14320713.html" target="_blank" title="学校举行学习贯彻党的二十届三中全会精神宣讲报告会"><img src="/attachment/store/common/72550cf49f57af6d.png" alt="学校举行学习贯彻党的二十届三中全会精神宣讲报告会" /></a></div>
+<div class="con">
+<div class="title"><a href="https://hnrtu.rednet.cn/content/646843/63/14320713.html" target="_blank" title="学校举行学习贯彻党的二十届三中全会精神宣讲报告会">学校举行学习贯彻党的二十届三中全会精神宣讲报告会</a></div>
+<div class="bg"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(".focus29979").slide({titCell:".hds li",mainCell:".bds ul",autoPlay:true});
+</script>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="nlist"><ul class="sidelist105_2">
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-27</span><a href="https://hnrtu.rednet.cn/content/646854/61/14397397.html" target="_blank" title="党委书记龙献忠到常德、怀化、湘西、津市四所分校调研，提出七大希望助推开放大学转型">党委书记龙献忠到常德、怀化、湘西、津市四所分校调研，提出七大</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-26</span><a href="https://hnrtu.rednet.cn/content/646854/61/14397382.html" target="_blank" title="党委书记龙献忠一行赴野柘村调研乡村振兴工作">党委书记龙献忠一行赴野柘村调研乡村振兴工作</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-25</span><a href="https://hnrtu.rednet.cn/content/646854/68/14389578.html" target="_blank" title="湖南分部勇夺国开“一村一名大学生计划”系列征集活动奖项36个">湖南分部勇夺国开“一村一名大学生计划”系列征集活动奖项36个</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-24</span><a href="https://hnrtu.rednet.cn/content/646854/69/14392845.html" target="_blank" title="岁岁重阳喜 浓浓敬老情——湖南开放大学开展欢度重阳节活动">岁岁重阳喜 浓浓敬老情——湖南开放大学开展欢度重阳节活动</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-24</span><a href="https://hnrtu.rednet.cn/content/646854/68/14389489.html" target="_blank" title="党委书记龙献忠带队赴湖南文理学院考察交流">党委书记龙献忠带队赴湖南文理学院考察交流</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-24</span><a href="https://hnrtu.rednet.cn/content/646854/67/14386041.html" target="_blank" title="学校2025届毕业生秋季双选会成功举办">学校2025届毕业生秋季双选会成功举办</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-22</span><a href="https://hnrtu.rednet.cn/content/646854/66/14382962.html" target="_blank" title="学校举行党委理论学习中心组第九次集中学习">学校举行党委理论学习中心组第九次集中学习</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-22</span><a href="https://hnrtu.rednet.cn/content/646854/65/14379635.html" target="_blank" title="学校召开2024年综合教学检查工作部署会">学校召开2024年综合教学检查工作部署会</a>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="more"><a href="/html/780/" target="_blank">更多>></a></div>
+</div>
+<div class="tablist" style="display:none;">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="focus mt15">
+
+<style type="text/css">
+.focus29981{ width: 398px; height: 303px; overflow:hidden; position:relative;}
+.focus29981 .hds{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:10px; z-index:1; }
+.focus29981 .hds ul{ overflow:hidden; zoom:1; float:left;  }
+.focus29981 .hds ul li{width:9px; height:11px;float:left;margin-left:6px;background: url(/skin/label/icon_yq.png) no-repeat -54px 0;cursor: pointer;text-indent: -9999px;}
+.focus29981 .hds ul li.on{width:12px; height:12px;background-position:-68px 0;} 
+.focus29981 .bds{ position:relative; height:100%; z-index:0;   }
+.focus29981 .bds li{ zoom:1; vertical-align:middle;}
+.focus29981 .bds .pic img{width: 398px; height: 303px;display:block; }
+.focus29981 .bds .con{width: 100%; float: left; position: absolute; z-index:1; left: 0; bottom: 0; height:37px; line-height:37px; text-align:left; color: white; }
+.focus29981 .bds .con .title{position: absolute; z-index: 2; left: 0; top: 0; display: block; padding: 0 20px 0 12px; font-size: 14px; color: white;overflow: hidden;}
+.focus29981 .bds .con .title a{color: white;}
+.focus29981 .bds .bg{display: block; height: 37px; line-height: 37px; width: 100%; float: left; position: absolute; z-index: 1; left: 0; bottom: 0; background-color: #000; opacity:0.5 ; filter: alpha(opacity=50); }
+</style>
+<div class="focus29981">
+<div class="hds">
+<ul>
+<li>0</li>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+</div>
+<div class="bds">
+<ul>
+<li>
+<div class="pic"><a href="https://hnrtu.rednet.cn/content/646843/69/14303241.html" target="_blank" title="绽放梦想，开启新程——郴州开放大学举行2024届开放教育毕业典礼"><img src="/attachment/store/common/2df13eb0b4c2699b.jpg" alt="绽放梦想，开启新程——郴州开放大学举行2024届开放教育毕业典礼" /></a></div>
+<div class="con">
+<div class="title"><a href="https://hnrtu.rednet.cn/content/646843/69/14303241.html" target="_blank" title="绽放梦想，开启新程——郴州开放大学举行2024届开放教育毕业典礼">绽放梦想，开启新程——郴州开放大学举行2024届开放教育毕业典礼</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="https://hnrtu.rednet.cn/content/646843/67/14297308.html" target="_blank" title="以教学环节落实促教学质量提升——衡阳开放大学开展开放教育直播课听课评课活动"><img src="/attachment/store/common/0d15ef7b5ce6fea3.png" alt="以教学环节落实促教学质量提升——衡阳开放大学开展开放教育直播课听课评课活动" /></a></div>
+<div class="con">
+<div class="title"><a href="https://hnrtu.rednet.cn/content/646843/67/14297308.html" target="_blank" title="以教学环节落实促教学质量提升——衡阳开放大学开展开放教育直播课听课评课活动">以教学环节落实促教学质量提升——衡阳开放大学开展开放教育直播课听课评课活动</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="https://hnrtu.rednet.cn/content/646843/95/14233496.html" target="_blank" title="常德市人大常委会副主任呙滨辰带队调研常德开放大学“爱晚”老年学校建设"><img src="/attachment/store/common/a89e31cb26f12ea4.jpg" alt="常德市人大常委会副主任呙滨辰带队调研常德开放大学“爱晚”老年学校建设" /></a></div>
+<div class="con">
+<div class="title"><a href="https://hnrtu.rednet.cn/content/646843/95/14233496.html" target="_blank" title="常德市人大常委会副主任呙滨辰带队调研常德开放大学“爱晚”老年学校建设">常德市人大常委会副主任呙滨辰带队调研常德开放大学“爱晚”老年学校建设</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="https://hnrtu.rednet.cn/content/646842/74/14222043.html" target="_blank" title="衡阳开放大学组织教职工参加省校暑期线上专题培训"><img src="/attachment/cms/item/2024_08/30_17/0c05d48e96372437.png.thumb.jpg" alt="衡阳开放大学组织教职工参加省校暑期线上专题培训" /></a></div>
+<div class="con">
+<div class="title"><a href="https://hnrtu.rednet.cn/content/646842/74/14222043.html" target="_blank" title="衡阳开放大学组织教职工参加省校暑期线上专题培训">衡阳开放大学组织教职工参加省校暑期线上专题培训</a></div>
+<div class="bg"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(".focus29981").slide({titCell:".hds li",mainCell:".bds ul",autoPlay:true});
+</script>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="nlist"><ul class="sidelist105_2">
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-25</span><a href="https://hnrtu.rednet.cn/content/646854/69/14393130.html" target="_blank" title="益阳开放大学丹枫合唱团公益专场音乐会成功举行">益阳开放大学丹枫合唱团公益专场音乐会成功举行</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-25</span><a href="https://hnrtu.rednet.cn/content/646854/68/14390050.html" target="_blank" title="让学习与健康同行 ——衡阳开放大学开展全民终身学习进市直机关活动">让学习与健康同行 ——衡阳开放大学开展全民终身学习进市直机关</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-24</span><a href="https://hnrtu.rednet.cn/content/646854/68/14389698.html" target="_blank" title="做推进全民终身学习的忠实践行者——记益阳开放大学教师唐箭">做推进全民终身学习的忠实践行者——记益阳开放大学教师唐箭</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-23</span><a href="https://hnrtu.rednet.cn/content/646854/68/14389840.html" target="_blank" title="衡阳开大“爱晚”老年学校开展 “迎旅发盛会，展银发风采”游学活动">衡阳开大“爱晚”老年学校开展 “迎旅发盛会，展银发风采”游学</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-22</span><a href="https://hnrtu.rednet.cn/content/646854/67/14386626.html" target="_blank" title="湘潭开放大学举行2024年秋季开放教育新生开学典礼暨“开学第一课”">湘潭开放大学举行2024年秋季开放教育新生开学典礼暨“开学第一课</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-21</span><a href="https://hnrtu.rednet.cn/content/646854/68/14390749.html" target="_blank" title="常德开大：多元化培育为乡村振兴注入人才力量">常德开大：多元化培育为乡村振兴注入人才力量</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-17</span><a href="https://hnrtu.rednet.cn/content/646854/51/14365891.html" target="_blank" title="2024年永州市全民终身学习活动周开幕式暨永州市“爱晚”老年教育优秀成果展演圆满结束">2024年永州市全民终身学习活动周开幕式暨永州市“爱晚”老年教育</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-15</span><a href="https://hnrtu.rednet.cn/content/646854/59/14359865.html" target="_blank" title="以优质培训促高效军地转型——益阳市2024年转业军官、市直政府安排工作退役士兵岗前适应性培训圆满收官">以优质培训促高效军地转型——益阳市2024年转业军官、市直政府安</a>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="more"><a href="/html/904/" target="_blank">更多>></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="nbox video">
+<div class="hd">
+<div class="tit t4">媒体聚焦</div>
+<div class="more"><a href="/html/903/" target="_blank">更多>></a></div>
+</div>
+<div class="bd mt15">
+<div class="vpic">
+<style type="text/css">
+.focus29998{ width: 100%; height: 174px; overflow:hidden; position:relative;}
+.focus29998 .hds{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:10px; z-index:1; }
+.focus29998 .hds ul{ overflow:hidden; zoom:1; float:left;  }
+.focus29998 .hds ul li{width:9px; height:11px;float:left;margin-left:6px;background: url(/skin/label/icon_yq.png) no-repeat -54px 0;cursor: pointer;text-indent: -9999px;}
+.focus29998 .hds ul li.on{width:12px; height:12px;background-position:-68px 0;} 
+.focus29998 .bds{ position:relative; height:100%; z-index:0;   }
+.focus29998 .bds li{ zoom:1; vertical-align:middle;}
+.focus29998 .bds .pic img{width: 100%; height: 174px;display:block; }
+.focus29998 .bds .con{width: 100%; float: left; position: absolute; z-index:1; left: 0; bottom: 0; height:37px; line-height:37px; text-align:left; color: white; }
+.focus29998 .bds .con .title{position: absolute; z-index: 2; left: 0; top: 0; display: block; padding: 0 20px 0 12px; font-size: 14px; color: white;overflow: hidden;}
+.focus29998 .bds .con .title a{color: white;}
+.focus29998 .bds .bg{display: block; height: 37px; line-height: 37px; width: 100%; float: left; position: absolute; z-index: 1; left: 0; bottom: 0; background-color: #000; opacity:0.5 ; filter: alpha(opacity=50); }
+</style>
+<div class="focus29998">
+<div class="hds">
+<ul>
+<li>0</li>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+</div>
+<div class="bds">
+<ul>
+<li>
+<div class="pic"><a href="https://moment.rednet.cn/pc/content/646854/57/14354822.html" target="_blank" title="【红网时刻】《中国教育发展与乡村振兴2024》（湖南高校卷）蓝皮书撰写工作正式启动"><img src="/attachment/store/common/ef560bb4c66538b5.png" alt="【红网时刻】《中国教育发展与乡村振兴2024》（湖南高校卷）蓝皮书撰写工作正式启动" /></a></div>
+<div class="con">
+<div class="title"><a href="https://moment.rednet.cn/pc/content/646854/57/14354822.html" target="_blank" title="【红网时刻】《中国教育发展与乡村振兴2024》（湖南高校卷）蓝皮书撰写工作正式启动">【红网时刻】《中国教育发展与乡村振兴2024》（湖南高校卷）蓝皮书撰写工作正式启动</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="https://m.voc.com.cn/xhn/news/202409/20638497.html" target="_blank" title="【新湖南】湖南开放大学“师德标兵”——刘颖：唯有热爱，方可抵岁月漫长"><img src="/attachment/store/common/ca5d2654312ec552.png" alt="【新湖南】湖南开放大学“师德标兵”——刘颖：唯有热爱，方可抵岁月漫长" /></a></div>
+<div class="con">
+<div class="title"><a href="https://m.voc.com.cn/xhn/news/202409/20638497.html" target="_blank" title="【新湖南】湖南开放大学“师德标兵”——刘颖：唯有热爱，方可抵岁月漫长">【新湖南】湖南开放大学“师德标兵”——刘颖：唯有热爱，方可抵岁月漫长</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="https://m.voc.com.cn/xhn/news/202409/20638587.html" target="_blank" title="【新湖南】湖南开放大学“师德标兵”——聂艳平：磨砺匠心，培塑匠人"><img src="/attachment/store/common/b1c8a755053ac3f5.png" alt="【新湖南】湖南开放大学“师德标兵”——聂艳平：磨砺匠心，培塑匠人" /></a></div>
+<div class="con">
+<div class="title"><a href="https://m.voc.com.cn/xhn/news/202409/20638587.html" target="_blank" title="【新湖南】湖南开放大学“师德标兵”——聂艳平：磨砺匠心，培塑匠人">【新湖南】湖南开放大学“师德标兵”——聂艳平：磨砺匠心，培塑匠人</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="https://m.voc.com.cn/xhn/news/202409/20650792.html" target="_blank" title="【新湖南】湖南开放大学：传承与弘扬教育家精神 奋力谱写开放大学全面深化改革新篇章"><img src="/attachment/store/common/e7ed1f434d2bed54.jpeg" alt="【新湖南】湖南开放大学：传承与弘扬教育家精神 奋力谱写开放大学全面深化改革新篇章" /></a></div>
+<div class="con">
+<div class="title"><a href="https://m.voc.com.cn/xhn/news/202409/20650792.html" target="_blank" title="【新湖南】湖南开放大学：传承与弘扬教育家精神 奋力谱写开放大学全面深化改革新篇章">【新湖南】湖南开放大学：传承与弘扬教育家精神 奋力谱写开放大学全面深化改革新篇章</a></div>
+<div class="bg"></div>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://hn.people.com.cn/n2/2024/0614/c371273-40878508.html" target="_blank" title="【人民网】第二届全视觉老视健康科普行动走进长沙"><img src="/attachment/store/common/ec560977c4152964.jpg" alt="【人民网】第二届全视觉老视健康科普行动走进长沙" /></a></div>
+<div class="con">
+<div class="title"><a href="http://hn.people.com.cn/n2/2024/0614/c371273-40878508.html" target="_blank" title="【人民网】第二届全视觉老视健康科普行动走进长沙">【人民网】第二届全视觉老视健康科普行动走进长沙</a></div>
+<div class="bg"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(".focus29998").slide({titCell:".hds li",mainCell:".bds ul",autoPlay:true});
+</script></div>
+<div class="nlist"><ul class="label_ul_b sidelist104" style="color:#4f6b72;font-size:14px;">
+<li style=";">
+<span class="label_datatime" style="color:#666666;font-size:12px;">10-25</span><a href="https://m-xhncloud.voc.com.cn/portal/news/show?id=11996825" target="_blank" title="【湖南教育发布】身边的好老师 | 杨芹：躬耕特教三十载，乐教爱生学不辍">【湖南教育发布】身边的好老师 | 杨芹：躬耕特教三十载，乐教爱</a>
+</li>
+<li style=";">
+<span class="label_datatime" style="color:#666666;font-size:12px;">10-18</span><a href="https://moment.rednet.cn/pc/nograb/646854/52/14371266.html" target="_blank" title="【红网时刻】躬耕特教三十载 乐教爱生学不辍">【红网时刻】躬耕特教三十载 乐教爱生学不辍</a>
+</li>
+<li style=";">
+<span class="label_datatime" style="color:#666666;font-size:12px;">10-16</span><a href="https://moment.rednet.cn/pc/nograb/646854/59/14361538.html" target="_blank" title="【红网时刻】纸短情长，一封家书的回信">【红网时刻】纸短情长，一封家书的回信</a>
+</li>
+<li class="clear"></li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+<div class="plane2">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="nbox">
+<div class="hd">
+<div class="tit t2"><p><img src="/attachment/cms/item/2024_04/25_12/eeed850371a77a5d.png" /></p></div>
+<div class="more"><a href="/html/909/" target="_blank">更多>></a></div>
+</div>
+<div class="bd mt15">
+<div class="slist"><ul class="sidelist106">
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">09-30</span><a href="/html/909/2024-09-30/content-15399.html" target="_blank" title="【第546期】学校举行学习贯彻党的二十届三中全会精神宣讲报告会">【第546期】学校举行学习贯彻党的二十届三中全会精神宣讲报告会</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">08-30</span><a href="/html/909/2024-08-30/content-15398.html" target="_blank" title="【第545期】学校党委理论学习中心组（扩大）专题学习党的二十届三中全会精神">【第545期】学校党委理论学习中心组（扩大）专题学习党的二十届</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">06-28</span><a href="/html/909/2024-06-28/content-15236.html" target="_blank" title="【第544期】学校举行党委理论学习中心组6月集中学习">【第544期】学校举行党委理论学习中心组6月集中学习</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">05-29</span><a href="/html/909/2024-05-29/content-15231.html" target="_blank" title="【第543期】原原本本学条例 逐字逐句悟精神">【第543期】原原本本学条例 逐字逐句悟精神</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">04-29</span><a href="/html/909/2024-04-29/content-15237.html" target="_blank" title="【第542期】学校召开党委（扩大）会暨党纪学习教育部署会">【第542期】学校召开党委（扩大）会暨党纪学习教育部署会</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">03-29</span><a href="/html/909/2024-03-29/content-15068.html" target="_blank" title="【第541期】坚持高质量发展，为谱写中国式现代化湖南新篇章贡献开大力量">【第541期】坚持高质量发展，为谱写中国式现代化湖南新篇章贡献</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">02-29</span><a href="/html/909/2024-02-29/content-14903.html" target="_blank" title="【第540期】解放思想 大抓落实">【第540期】解放思想 大抓落实</a>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="nbox">
+<div class="hd">
+<div class="tit t3">科研动态</div>
+<div class="more"><a href="/html/902/" target="_blank">更多>></a></div>
+</div>
+<div class="bd mt15">
+<div class="slist"><ul class="sidelist106" style="font-size:14px;color:#454545;">
+<li style=";">
+<span class="datatime" style="font-size:14px;">10-21</span><a href="/html/902/2024-10-21/content-15393.html" target="_blank" title="湖南开放大学党委科学技术委员会召开第一次会议">湖南开放大学党委科学技术委员会召开第一次会议</a>
+</li>
+<li style=";">
+<span class="datatime" style="font-size:14px;">10-11</span><a href="/html/902/2024-10-11/content-15364.html" target="_blank" title="喜报  我校获首批“湖南省老龄科研基地”授牌">喜报  我校获首批“湖南省老龄科研基地”授牌</a>
+</li>
+<li style=";">
+<span class="datatime" style="font-size:14px;">09-20</span><a href="/html/902/2024-09-20/content-15308.html" target="_blank" title="英国巴斯斯巴大学副校长John Strachan 教授做客湖南开放大学讲坛">英国巴斯斯巴大学副校长John Strachan 教授做客湖南开放大学讲坛</a>
+</li>
+<li style=";">
+<span class="datatime" style="font-size:14px;">09-14</span><a href="/html/902/2024-09-14/content-15290.html" target="_blank" title="湖南开放大学讲坛：高等教育的发展与未来">湖南开放大学讲坛：高等教育的发展与未来</a>
+</li>
+<li style=";">
+<span class="datatime" style="font-size:14px;">06-13</span><a href="/html/902/2024-06-13/content-15089.html" target="_blank" title="关于做好2024年度湖南省社会科学成果鉴定申报工作的通知">关于做好2024年度湖南省社会科学成果鉴定申报工作的通知</a>
+</li>
+<li style=";">
+<span class="datatime" style="font-size:14px;">06-06</span><a href="/html/902/2024-06-06/content-15063.html" target="_blank" title="关于征集2024年校级重点课题选题的通知">关于征集2024年校级重点课题选题的通知</a>
+</li>
+<li style=";">
+<span class="datatime" style="font-size:14px;">05-10</span><a href="/html/902/2024-05-10/content-14956.html" target="_blank" title="《天津体育学院学报》副主编赵晶教授应邀来校讲学">《天津体育学院学报》副主编赵晶教授应邀来校讲学</a>
+</li>
+<li class="clear"></li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="nbox">
+<div class="hd clearfix">
+<div class="tit t1">通知公告</div>
+<div class="more"><a href="/html/840/" target="_blank">更多>></a></div>
+</div>
+<div class="bd mt15">
+<div class="slist"><ul class="sidelist106">
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-25</span><a href="/html/840/2024-10-25/content-15410.html" target="_blank" title="关于开展2024年湖南开放大学“阅读之星”评选活动通知">关于开展2024年湖南开放大学“阅读之星”评选活动通知</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-22</span><a href="/html/840/2024-10-22/content-15400.html" target="_blank" title="关于批准2024年度校级课题立项并下达课题经费的通知">关于批准2024年度校级课题立项并下达课题经费的通知</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-22</span><a href="/html/840/2024-10-22/content-15394.html" target="_blank" title="关于举办开放教育网页设计大赛的通知">关于举办开放教育网页设计大赛的通知</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-21</span><a href="/html/840/2024-10-21/content-15392.html" target="_blank" title="关于推荐湖南省职业教育与成人教育学会终身教育分会会员单位的通知">关于推荐湖南省职业教育与成人教育学会终身教育分会会员单位的通</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-18</span><a href="/html/840/2024-10-18/content-15387.html" target="_blank" title="关于开展湖南开放大学2024年综合教学检查的通知">关于开展湖南开放大学2024年综合教学检查的通知</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-15</span><a href="/html/840/2024-10-15/content-15377.html" target="_blank" title="关于开展2024年全省社区教育优秀工作者评选通知">关于开展2024年全省社区教育优秀工作者评选通知</a>
+</li>
+<li style="">
+<span class="datatime" style="color:#969696;font-size:14px;">10-14</span><a href="/html/840/2024-10-14/content-15375.html" target="_blank" title="关于举办招生宣传微视频大赛的通知">关于举办招生宣传微视频大赛的通知</a>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+<div class="plane3">
+<div class="row">
+<div class="col-md-4 col-sm-12 col-xs-12">
+<div class="quick">
+<div class="nbox">
+<div class="hd">
+<div class="tit t5">快捷入口</div>
+</div>
+<div class="bd">
+<div class="qlist clearfix"><ul class="quick-list row">
+<li class="col-md-6 col-sm-6 col-xs-12"><a href="http://oa.hnou.edu.cn" target="_blank">OA办公系统</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12"><a href="https://e.hnou.cn" target="_blank">网上办事大厅</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12"><a href="/html/896/" target="_blank">采购招标</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12"><a href="https://www.hnou.edu.cn/sites/html/xxgk/17276/" target="_blank">信息公开</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12"><a href="https://www.hnou.edu.cn/sites/html/jwc/16597/" target="_blank">高职毕业设计</a></li>
+<li class="col-md-6 col-sm-6 col-xs-12"><a href="https://www.hnou.edu.cn/sites/html/jwc/16700/" target="_blank" >高职培养方案</a></li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-8 col-sm-12 col-xs-12">
+<div class="special">
+<div class="nbox">
+<div class="hd">
+<div class="tit t6">学校专题</div>
+</div>
+<div class="bd clearfix">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="spic"><a href="https://www.hnou.edu.cn/sites/html/xsd/" target="_blank" title="学习贯彻习近平新时代中国特色社会主义思想主题教育" style="text-decoration:none;"><img width="250" height="118" border="none" alt="学习贯彻习近平新时代中国特色社会主义思想主题教育" src="/attachment/store/common/125b30417849f116.jpg" /></a></div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="spic"><a href="https://www.hnou.edu.cn/sites/html/esd" target="_blank" title="学党史 助发展 开新局" style="text-decoration:none;"><img width="250" height="118" border="none" alt="学党史 助发展 开新局" src="/attachment/core/label/2022_12/20_15/cdf4cf3323d22956.png" /></a></div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="spic"><a href="http://hnevc.hnou.cn/pxb/wlaqweb/index.aspx" target="_blank" title="2024国家网络安全宣传周" style="text-decoration:none;"><img width="250" height="118" border="none" alt="2024国家网络安全宣传周" src="/attachment/core/label/2024_09/09_14/4917cfcde57da7e8.png" /></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section gray">
+<div class="container">
+<div class="plane4">
+<div class="row">
+<div class="col-md-9 col-sm-9 col-xs-12">
+<div class="bottomnav clearfix">
+<ul>
+<li>
+<h4>友情链接</h4>
+<a href="http://www.ouchn.edu.cn" target="_blank">国家开放大学</a> <a href="http://www.17el.cn" target="_blank">湖湘学习广场</a></li>
+<li>
+<h4>招生就业</h4>
+<a href="https://www.hnou.edu.cn/sites/html/zjc/17144/"  target="_blank">开大招生</a> 
+<a href="https://www.hnou.edu.cn/sites/html/wyzs/" target="_blank">高职招生</a>
+<a href="http://hnwlgczy.bysjy.com.cn/"  target="_blank">高职就业</a></li>
+<li>
+<h4>公共服务</h4>
+<!--a href="http://www2.hnrtu.edu.cn/crp/crp.html" target="_blank">CRP系统</a--> 
+<a href="https://www.hnou.edu.cn/sites/html/library/" target="_blank">图书馆</a>
+<a href="http://sun.hnou.cn/"  target="_blank">阳光服务</a></li>
+<li>
+<h4>公共信息</h4>
+<a href="http://jyt.hunan.gov.cn"  target="_blank">湖南教育政务网</a> <a href="http://www.hnedu.cn/"  target="_blank">湖南教育网</a> <a href="http://www.hnzjpx.net"  target="_blank">湖南专技网</a></li>
+<li>
+<h4>联系我们</h4>
+<a href="/html/783/"  target="_blank">联系电话</a> <a href="/html/825/"  target="_blank">地址（地图）</a></li>
+</ul>
+
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-12">
+<div class="code">
+<ul class="row">
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="pic"><img width="94" height="94" border="none" alt="" src="/attachment/core/label/2023_04/14_19/a0144e683746182c.jpg" /></div>
+<div class="text">湖南开大公众号</div>
+</li>
+<li class="col-md-6 col-sm-6 col-xs-6">
+<div class="pic"><img width="94" height="94" border="none" alt="" src="/attachment/core/label/2019_01/17_18/f59338053764869b.png" /></div>
+<div class="text">湖南教育政务网</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">jQuery(".ntab").slide({});</script></div>
+<div class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-3 col-xs-12">
+<div class="footblue">
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/19/000/0000/60632361/CA190000000606323610002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<a id="_xinchacharenzheng_cert_vip_ssl" style="text-decoration:none;" target="_blank" href="https://xyt.xinchacha.com/getpcInfo?sn=1537630147924951040&certType=8&url=*.hnou.edu.cn">
+<img src="https://xyt.xinchacha.com/img/icon/icon8.png" style="height:50px;width:164px;">
+</a>
+</div>
+</div>
+<div class="col-md-8 col-sm-9 col-xs-12">
+<div class="copyright">
+<p>联系地址: 湖南省长沙市芙蓉南路一段371号　邮编: 410004<br>Copyright©2019 湖南开放大学 版权所有　www.hnou.edu.cn All rights reserved<br><a href="https://beian.miit.gov.cn/" target="_blank" style="color:#fff;text-decoration:none;">湘ICP备09005180号-3</a>　<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43010302000938" style="color:#fff;text-decoration:none;"><img src="https://file.hnou.edu.cn/uploadfile/images/2019/01/20190102180756179.png" align="absmiddle"> 湘公网安备 43010302000938号</a>　&nbsp;&nbsp;&nbsp;&nbsp;技术负责：曹老师&nbsp;&nbsp; caoshoufu@hnou.edu.cn
+
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(function(){
+//设置标杆
+var _line=parseInt($(window).height()/3);
+$(window).scroll(function(){
+//滚动730px，左侧导航固定定位
+if ($(window).scrollTop()>430) {
+$('.conlt').css({'position':'fixed','top':10})
+}else{
+$('.conlt').css({'position':'','top':''})
+};
+});
+});
+</script>
+
+<div></div>
+</body>
+</html><!--  主题教育邮箱 
+<div id="flying_15c" style="width:240px;height:85px;position: absolute;overflow:hidden;z-index:999999">-->
+<div id="flying_15c" style="width:230px;height:80px;position: absolute;overflow:hidden;z-index:999990;background:#990000;">
+
+<p style="margin:20px 10px 0px 10px; line-height:28px;font-size:16px;text-align:center;">
+<!-- <img src="https://www.hnou.edu.cn/float1.jpg" width="240" height="85" border="0"> -->
+<a style="color:#ffffff;" href="https://hnrtu.rednet.cn/content/646848/51/13739681.html" target="_blank">致全体校友的一封家书</a>
+</p>
+<span style="top:6px;right:6px;cursor:pointer;position: absolute;width: 18px; height: 18px; background: url(/images/close.gif) no-repeat 0 -18px;" onclick="$('#flying_15c').hide();">
+
+</span></div>
+
+</div>
+<script type="text/javascript">
+(function(){
+var height_15c = $(window).height(); 
+var width_15c = $(window).width();
+var randheightc = Math.random() < 0.5 ? -30*Math.ceil(Math.random()*10) : 30*Math.ceil(Math.random()*10);
+var Hoffset_15c = $('#flying_15c').height(); 
+var Woffset_15c = $('#flying_15c').width(); 
+var xPos_15c = (width_15c-Woffset_15c)/2 + randheightc; 
+var yPos_15c = (height_15c-Hoffset_15c)/2 - randheightc; 
+var step_15c = 1; 
+var delay_15c = Math.ceil(25+Math.random()*10*(Math.random() < 0.5?-1:1));
+var yon_15c = 0;
+var xon_15c = 0;
+var pause_15c = true; 
+var interval_15c; 
+var interval_15c = setInterval(changePos_15c, delay_15c);
+$('#flying_15c').hover(function(){ clearInterval(interval_15c); },function(){ interval_15c = setInterval(changePos_15c, delay_15c);});
+function changePos_15c() {
+$('#flying_15c').css({left:xPos_15c+$(window).scrollLeft(),top:yPos_15c+$(window).scrollTop()});																																																								
+if (yon_15c) {yPos_15c = yPos_15c + step_15c; } 
+else {yPos_15c = yPos_15c - step_15c; } 
+if (yPos_15c < 0) { yon_15c = 1;yPos_15c = 0; } 
+if (yPos_15c >= (height_15c - Hoffset_15c)) { yon_15c = 0;yPos_15c = (height_15c - Hoffset_15c);}																																																																	
+if (xon_15c) {xPos_15c = xPos_15c + step_15c; } 
+else {xPos_15c = xPos_15c - step_15c; } 
+if (xPos_15c < 0) { xon_15c = 1;xPos_15c = 0; } 
+if (xPos_15c >= (width_15c - Woffset_15c-20)) { xon_15c = 0;xPos_15c = (width_15c - Woffset_15c-20); }
+}
+})()
+</script>
+<!-- 主题教育邮箱 -->
+<!-- 关于开展2024年职业技能 
+
+<div id="flying_15b" style="width:230px;height:80px;position: absolute;overflow:hidden;z-index:999990;background:#990000;">
+
+<p style="margin:20px 10px 0px 10px; line-height:28px;font-size:16px;text-align:center;">
+
+<a style="color:#ffffff;" href="https://www.hnou.edu.cn/sites/html/pxxy/2024_08/20_10/content-25973.html" target="_blank">关于开展2024年职业技能<br/>等级认定工作的通知</a>
+</p>
+
+<span style="top:2px;right:2px;cursor:pointer;position: absolute;width: 18px; height: 18px; background: url(/images/close.gif) no-repeat 0 -18px;" onclick="$('#flying_15b').hide();"></span></div>
+
+</div> 
+
+<script type="text/javascript">
+(function(){
+var height_15b = $(window).height(); 
+var width_15b = $(window).width();
+var randheightb = Math.random() < 0.5 ? -30*Math.ceil(Math.random()*10) : 30*Math.ceil(Math.random()*10);
+var Hoffset_15b = $('#flying_15b').height(); 
+var Woffset_15b = $('#flying_15b').width(); 
+var xPos_15b = (width_15b-Woffset_15b)/2 + randheightb; 
+var yPos_15b = (height_15b-Hoffset_15b)/2 - randheightb; 
+var step_15b = 1; 
+var delay_15b = Math.ceil(25+Math.random()*10*(Math.random() < 0.5?-1:1));
+var yon_15b = 0;
+var xon_15b = 0;
+var pause_15b = true; 
+var interval_15b; 
+var interval_15b = setInterval(changePos_15b, delay_15b);
+$('#flying_15b').hover(function(){ clearInterval(interval_15b); },function(){ interval_15b = setInterval(changePos_15b, delay_15b);});
+function changePos_15b() {
+$('#flying_15b').css({left:xPos_15b+$(window).scrollLeft(),top:yPos_15b+$(window).scrollTop()});																																																								
+if (yon_15b) {yPos_15b = yPos_15b + step_15b; } 
+else {yPos_15b = yPos_15b - step_15b; } 
+if (yPos_15b < 0) { yon_15b = 1;yPos_15b = 0; } 
+if (yPos_15b >= (height_15b - Hoffset_15b)) { yon_15b = 0;yPos_15b = (height_15b - Hoffset_15b);}																																																																	
+if (xon_15b) {xPos_15b = xPos_15b + step_15b; } 
+else {xPos_15b = xPos_15b - step_15b; } 
+if (xPos_15b < 0) { xon_15b = 1;xPos_15b = 0; } 
+if (xPos_15b >= (width_15b - Woffset_15b-20)) { xon_15b = 0;xPos_15b = (width_15b - Woffset_15b-20); }
+}
+})()
+</script> 
+关于开展2024年职业技能 -->
+
+
+
+<!-- 开大考试飘窗Start    
+<div id="flying_15b" style="width:310px;height:170px;position: absolute;overflow:hidden;z-index:999990;background:#990000;">
+
+<p style="margin:20px 10px 0px 10px; line-height:16px;">
+<a style="color:#ffffff;" href="https://www.hnou.edu.cn/sites/html/jwc/2024_07/05_16/content-25922.html" target="_blank">国家开放大学致全体考生的一封信</a></p>
+<p style="margin:10px 10px 0px 10px;line-height:16px;">
+<a style="color:#ffffff;" href="https://www.hnou.edu.cn/sites/html/jwc/2024_07/05_16/content-25921.html" target="_blank">国家开放大学学生考试纪律与违规处理办法</a></p>
+<div style="background:#FC3; height:2px; width:100%; margin:10px 0px;" ></div>
+<p style="margin:0px 10px;color:#ffffff;" >考务期间值班电话：0731-82821032<br />
+考试安全工作举报电话：0731-82821555<br />
+考试安全工作举报邮箱：39368739@qq.com
+</p> 
+<span style="top:2px;right:2px;cursor:pointer;position: absolute;width: 18px; height: 18px; background: url(/images/close.gif) no-repeat 0 -18px;" onclick="$('#flying_15b').hide();"></span></div>
+
+</div> 
+
+<script type="text/javascript">
+(function(){
+var height_15b = $(window).height(); 
+var width_15b = $(window).width();
+var randheightb = Math.random() < 0.5 ? -30*Math.ceil(Math.random()*10) : 30*Math.ceil(Math.random()*10);
+var Hoffset_15b = $('#flying_15b').height(); 
+var Woffset_15b = $('#flying_15b').width(); 
+var xPos_15b = (width_15b-Woffset_15b)/2 + randheightb; 
+var yPos_15b = (height_15b-Hoffset_15b)/2 - randheightb; 
+var step_15b = 1; 
+var delay_15b = Math.ceil(25+Math.random()*10*(Math.random() < 0.5?-1:1));
+var yon_15b = 0;
+var xon_15b = 0;
+var pause_15b = true; 
+var interval_15b; 
+var interval_15b = setInterval(changePos_15b, delay_15b);
+$('#flying_15b').hover(function(){ clearInterval(interval_15b); },function(){ interval_15b = setInterval(changePos_15b, delay_15b);});
+function changePos_15b() {
+$('#flying_15b').css({left:xPos_15b+$(window).scrollLeft(),top:yPos_15b+$(window).scrollTop()});																																																								
+if (yon_15b) {yPos_15b = yPos_15b + step_15b; } 
+else {yPos_15b = yPos_15b - step_15b; } 
+if (yPos_15b < 0) { yon_15b = 1;yPos_15b = 0; } 
+if (yPos_15b >= (height_15b - Hoffset_15b)) { yon_15b = 0;yPos_15b = (height_15b - Hoffset_15b);}																																																																	
+if (xon_15b) {xPos_15b = xPos_15b + step_15b; } 
+else {xPos_15b = xPos_15b - step_15b; } 
+if (xPos_15b < 0) { xon_15b = 1;xPos_15b = 0; } 
+if (xPos_15b >= (width_15b - Woffset_15b-20)) { xon_15b = 0;xPos_15b = (width_15b - Woffset_15b-20); }
+}
+})()
+</script> 
+开大考试飘窗End -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?3d67b4ddc5fd57251699fb4ba2949fec";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+

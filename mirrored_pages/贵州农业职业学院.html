@@ -1,0 +1,1402 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>贵州农业职业学院</title>
+    <meta name="keywords" content="贵州农业职业学院">
+    <meta name="description" content="贵州农业职业学院">
+    <link rel="stylesheet" href="https://www.gznyzyxy.cn/materialpub/css/index.css">
+    <link rel="stylesheet" href="https://www.gznyzyxy.cn/materialpub/layui/css/layui.css">
+</head>
+<style>
+  /* 首页左侧飘窗css  */
+  .floatwindow {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 9999;
+  }
+  .floatwindow a{ 
+    display:block;
+    padding-top:8px;
+  }
+  .floatwindow_ntb {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .floatwindow_ntb:hover {
+    color: red;
+  }
+
+  .floatwindow_img {
+    width: 235px;
+    height: 160px;
+  }
+/* 首页左侧飘窗css end */
+</style>
+<body>
+  <!-- 首页左侧飘窗 -->
+  <!--  <div class="floatwindow">
+    <span class="floatwindow_ntb">关闭X</span>
+    <a th:each="info:${#temp.infoList(634,0,5,0,1)}" th:href="${info.infoUrl}" target="_blank">
+      <img class="floatwindow_img" th:src="${info.logo}" alt="">
+    </a>
+    
+  	</div>--> 
+  <!-- 首页左侧飘窗end -->
+    <!--header-->
+    <header id="header" class="header-container">
+        <!--swiper-->
+        <div class="header-banner">
+            <div class="swiper-container header-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://www.gznyzyxy.cn/materialpub/images/l_1080.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <video id="video" src="https://file.gznyzyxy.cn/uploadsfile/info/1/632/4965/8b2023f2-efb7-4b9e-b57d-fbcaac62e7e7.mp4" muted="" x5-video-player-type="h5" x5-video-player-fullscreen="true" x-webkit-airplay="true" webkit-playsinline="" playsinline="" style="object-fit: cover;width: 100%;height: 100%;">
+                        您的浏览器不支持播放，请更换浏览器
+                       </video>
+                    </div>
+                </div>
+                <div class="swiper-pagination header-pagination"></div>
+            </div>
+        </div>
+        <!--swiper end-->
+        <!--header-wrapper-->
+        <div class="header-wrapper">
+            <div class="header-layout">
+                <!--logo-->
+                <a href="/" class="header-logo">
+                    <img src="https://www.gznyzyxy.cn/materialpub/images/news-logo.png" alt="">
+                </a>
+                <!--logo end-->
+                <!--nav-->
+                <ul class="header-nav">
+                    <li>
+                        <a href="https://www.gznyzyxy.cn/n8/index.html">学院概况</a>
+                        <div class="nav-sub">
+                            <div class="nav-sub-layout">
+                                <div class="nav-sub-left">
+                                    <img src="https://www.gznyzyxy.cn/materialpub/images/logo-r1.png" alt="">
+                                </div>
+                                <div class="nav-sub-right">
+                                    <ul class="nav-sub-list">
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n58/index.html">学校简介</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n59/index.html">学院章程</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n60/index.html">领导介绍</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n61/index.html">校徽校训校歌</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.gznyzyxy.cn/n9/index.html">党群工作</a>
+                        <div class="nav-sub">
+                            <div class="nav-sub-layout">
+                                <div class="nav-sub-left">
+                                    <img src="https://www.gznyzyxy.cn/materialpub/images/logo-r1.png" alt="">
+                                </div>
+                                <div class="nav-sub-right">
+                                    <ul class="nav-sub-list">
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n52/index.html">党建工作</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n53/index.html">成人教育</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n54/index.html">团建工作</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n55/index.html">工会工作</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n56/index.html">统战工作</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n57/index.html">纪检监察</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.gznyzyxy.cn/n10/index.html">机构设置</a>
+                        <div class="nav-sub">
+                            <div class="nav-sub-layout">
+                                <div class="nav-sub-left">
+                                    <img src="https://www.gznyzyxy.cn/materialpub/images/logo-r1.png" alt="">
+                                </div>
+                                <div class="nav-sub-right">
+                                    <ul class="nav-sub-list">
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n46/index.html">党群机构</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n47/index.html">行政管理机构</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n48/index.html">教学机构</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n49/index.html">教学辅导机构</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n50/index.html">附属机构</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n51/index.html">职教集团</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.gznyzyxy.cn/n11/index.html">学校管理</a>
+                        <div class="nav-sub">
+                            <div class="nav-sub-layout">
+                                <div class="nav-sub-left">
+                                    <img src="https://www.gznyzyxy.cn/materialpub/images/logo-r1.png" alt="">
+                                </div>
+                                <div class="nav-sub-right">
+                                    <ul class="nav-sub-list">
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n39/index.html">科研管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n40/index.html">学生管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n41/index.html">后勤管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n42/index.html">安全管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n43/index.html">实训管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n44/index.html">图书管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n45/index.html">学报管理</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.gznyzyxy.cn/n12/index.html">招生就业</a>
+                        <div class="nav-sub">
+                            <div class="nav-sub-layout">
+                                <div class="nav-sub-left">
+                                    <img src="https://www.gznyzyxy.cn/materialpub/images/logo-r1.png" alt="">
+                                </div>
+                                <div class="nav-sub-right">
+                                    <ul class="nav-sub-list">
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n35/index.html">招生信息</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n36/index.html">就业信息</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n37/index.html">就业指导</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n38/index.html">创业教育</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.gznyzyxy.cn/n13/index.html">合作交流</a>
+                        <div class="nav-sub">
+                            <div class="nav-sub-layout">
+                                <div class="nav-sub-left">
+                                    <img src="https://www.gznyzyxy.cn/materialpub/images/logo-r1.png" alt="">
+                                </div>
+                                <div class="nav-sub-right">
+                                    <ul class="nav-sub-list">
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n31/index.html">国际交流合作</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n32/index.html">校企合作</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n33/index.html">校校合作</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n34/index.html">校地合作</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.gznyzyxy.cn/n14/index.html">信息公开</a>
+                        <div class="nav-sub">
+                            <div class="nav-sub-layout">
+                                <div class="nav-sub-left">
+                                    <img src="https://www.gznyzyxy.cn/materialpub/images/logo-r1.png" alt="">
+                                </div>
+                                <div class="nav-sub-right">
+                                    <ul class="nav-sub-list">
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n29/index.html">主动公开</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n30/index.html">年度信息公开</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.gznyzyxy.cn/n15/index.html">学校服务</a>
+                        <div class="nav-sub">
+                            <div class="nav-sub-layout">
+                                <div class="nav-sub-left">
+                                    <img src="https://www.gznyzyxy.cn/materialpub/images/logo-r1.png" alt="">
+                                </div>
+                                <div class="nav-sub-right">
+                                    <ul class="nav-sub-list">
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n23/index.html">助学服务</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n24/index.html">教学服务</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n25/index.html">心理健康</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n26/index.html">风采展示</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n27/index.html">资源库建设</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.gznyzyxy.cn/n28/index.html">网上查询</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.gznyzyxy.cn/n16/index.html">种子期刊</a>
+                        <div class="nav-sub">
+                            <div class="nav-sub-layout">
+                                <div class="nav-sub-left">
+                                    <img src="https://www.gznyzyxy.cn/materialpub/images/logo-r1.png" alt="">
+                                </div>
+                                <div class="nav-sub-right">
+                                    <ul class="nav-sub-list">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!--nav end-->
+            </div>
+<link rel="stylesheet" href="https://www.gznyzyxy.cn/css/grey.css">
+
+            <!--mobile-nav-->
+            <div class="mobile-btn">
+                <i class="iconfont icon-menu"></i>
+            </div>
+            <div class="mobile-cont">
+                <ul class="mobileNavList">
+                    <li>
+    <a href="https://www.gznyzyxy.cn/n8/index.html">学院概况</a>
+    <ul class="mobileSubNav">
+        <li>
+            <a href="https://www.gznyzyxy.cn/n58/index.html">学校简介</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n59/index.html">学院章程</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n60/index.html">领导介绍</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n61/index.html">校徽校训校歌</a>
+        </li>
+    </ul>
+</li><li>
+    <a href="https://www.gznyzyxy.cn/n9/index.html">党群工作</a>
+    <ul class="mobileSubNav">
+        <li>
+            <a href="https://www.gznyzyxy.cn/n52/index.html">党建工作</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n53/index.html">成人教育</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n54/index.html">团建工作</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n55/index.html">工会工作</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n56/index.html">统战工作</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n57/index.html">纪检监察</a>
+        </li>
+    </ul>
+</li><li>
+    <a href="https://www.gznyzyxy.cn/n10/index.html">机构设置</a>
+    <ul class="mobileSubNav">
+        <li>
+            <a href="https://www.gznyzyxy.cn/n46/index.html">党群机构</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n47/index.html">行政管理机构</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n48/index.html">教学机构</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n49/index.html">教学辅导机构</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n50/index.html">附属机构</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n51/index.html">职教集团</a>
+        </li>
+    </ul>
+</li><li>
+    <a href="https://www.gznyzyxy.cn/n11/index.html">学校管理</a>
+    <ul class="mobileSubNav">
+        <li>
+            <a href="https://www.gznyzyxy.cn/n39/index.html">科研管理</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n40/index.html">学生管理</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n41/index.html">后勤管理</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n42/index.html">安全管理</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n43/index.html">实训管理</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n44/index.html">图书管理</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n45/index.html">学报管理</a>
+        </li>
+    </ul>
+</li><li>
+    <a href="https://www.gznyzyxy.cn/n12/index.html">招生就业</a>
+    <ul class="mobileSubNav">
+        <li>
+            <a href="https://www.gznyzyxy.cn/n35/index.html">招生信息</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n36/index.html">就业信息</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n37/index.html">就业指导</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n38/index.html">创业教育</a>
+        </li>
+    </ul>
+</li><li>
+    <a href="https://www.gznyzyxy.cn/n13/index.html">合作交流</a>
+    <ul class="mobileSubNav">
+        <li>
+            <a href="https://www.gznyzyxy.cn/n31/index.html">国际交流合作</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n32/index.html">校企合作</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n33/index.html">校校合作</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n34/index.html">校地合作</a>
+        </li>
+    </ul>
+</li><li>
+    <a href="https://www.gznyzyxy.cn/n14/index.html">信息公开</a>
+    <ul class="mobileSubNav">
+        <li>
+            <a href="https://www.gznyzyxy.cn/n29/index.html">主动公开</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n30/index.html">年度信息公开</a>
+        </li>
+    </ul>
+</li><li>
+    <a href="https://www.gznyzyxy.cn/n15/index.html">学校服务</a>
+    <ul class="mobileSubNav">
+        <li>
+            <a href="https://www.gznyzyxy.cn/n23/index.html">助学服务</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n24/index.html">教学服务</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n25/index.html">心理健康</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n26/index.html">风采展示</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n27/index.html">资源库建设</a>
+        </li>
+        <li>
+            <a href="https://www.gznyzyxy.cn/n28/index.html">网上查询</a>
+        </li>
+    </ul>
+</li><li>
+    <a href="https://www.gznyzyxy.cn/n16/index.html">种子期刊</a>
+    <ul class="mobileSubNav">
+        
+    </ul>
+</li>
+
+                </ul>
+            </div>
+            <!--mobile-nav end-->
+        </div>
+        <!--header-wrapper end-->
+        <!--notice-->
+        <div class="notice-container w1440">
+            <div class="header-search">
+                <button onclick="Search();">
+                 <i class="iconfont icon-search"></i>
+                </button>
+
+                <input type="text" id="keyWords" onkeydown="entersearch()" placeholder="请输入您要搜索的内容">
+            </div>
+            <div class="notice-cont">
+                <h4><i class="iconfont icon-notice"></i>通知公告</h4>
+                <div class="swiper-container notice-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="https://www.gznyzyxy.cn/n78/20241028/i12856.html" target="_blank">贵州农业职业学院机电系智慧教室装修竞争性谈判公告</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.gznyzyxy.cn/n7/20241022/i12823.html" target="_blank">贵州农业职业学院2024年引进优秀技能人才体检合格进入考察环节人员名单公示</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.gznyzyxy.cn/n78/20241019/i12810.html" target="_blank">贵州农业职业学院思政课实践教学基地竣工验收招标工程结算代理机构竞争性磋商比选结果公示</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice-btn">
+                    <div class="swiper-button-prev notice-button-prev"></div>
+                    <div class="swiper-button-next notice-button-next"></div>
+                </div>
+                <a href="https://www.gznyzyxy.cn/n78/index.html" class="more_fr">
+                    <i class="iconfont icon-more"></i>
+                </a>
+            </div>
+        </div>
+        <!--notice end-->
+    </header>
+    <!--header end-->
+    <!--main-->
+    <main id="main" class="main-container">
+        <!--news-center-->
+        <div class="news-container">
+            <div class="news-layout w1440">
+                <!--news-swiper-->
+                <div class="news-left">
+                    <h4><a href="https://www.gznyzyxy.cn/n1/index.html" target="_blank">新闻中心</a></h4>
+                    <div class="swiper-container news-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="http://mp.weixin.qq.com/s/0RGu4T4a6l9B1YdtYLpshw" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/10/22/c0013d64-7790-49f3-822f-42017216b435.png" alt="">
+                                    <p>
+                                        <span>贵州农业职业学院开展2024年体育教师教学能力提升专题培训</span>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="http://mp.weixin.qq.com/s/eaxVnzvaFORVrv9PeRdKWw" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/10/22/78d72d0a-f974-48f9-b414-7f4a834a562d.jpg" alt="">
+                                    <p>
+                                        <span>毕业季｜“咔嚓” 定格在农职院度过的青春</span>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n127/20240619/i12336.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/06/19/33953f3d-b685-4ffc-bd63-c5eed8271b66.jpg" alt="">
+                                    <p>
+                                        <span>喜报 | 贵州农业职业学院成功入选第二批农业涉外培训合作交流点</span>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="http://mp.weixin.qq.com/s/Q5fBrwEJGBC1bVXmrXXQIA" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/05/29/572b9856-b58d-4559-8010-433a0931a054.png" alt="">
+                                    <p>
+                                        <span>贵州农业职业学院召开纪检干部工作会议</span>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="http://mp.weixin.qq.com/s/HGZiKyvN44ruI-hGC4r3Mw" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/05/09/c2e851cb-4799-4edd-a299-0e6607cbea49.jpg" alt="">
+                                    <p>
+                                        <span>贵州农业职业学院召开2024年统战工作领导小组全体（扩大）会议</span>
+                                    </p>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-pagination news-pagination"></div>
+                </div>
+                <!--news-swiper-->
+                <!--news-tabs + content-->
+                <div class="news-right">
+                    <ul class="news-tabs">
+                        <li><a href="https://www.gznyzyxy.cn/n77/index.html">学校新闻</a></li>
+                        <li><a href="https://www.gznyzyxy.cn/n2/index.html">系部动态</a></li>
+                        <li><a href="https://www.gznyzyxy.cn/n83/index.html">媒体聚集</a></li>
+                        <li><a href="https://www.gznyzyxy.cn/n79/index.html">图片新闻</a></li>
+                        <li><a href="https://www.gznyzyxy.cn/n82/index.html">视频速递</a></li>
+                    </ul>
+                    <div class="news-cont">
+                        <ul class="news-list active">
+                            <li>
+                                <a href="http://mp.weixin.qq.com/s/64yb4uK8MnXQLbOYzd2vjQ" target="_blank">
+                                    <div class="list-text">
+                                        <h4>贵州农业职业学院第六次学生代表大会开幕</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-06-17
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://mp.weixin.qq.com/s/0RGu4T4a6l9B1YdtYLpshw" target="_blank">
+                                    <div class="list-text">
+                                        <h4>贵州农业职业学院开展2024年体育教师教学能力提升专题培训</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-06-17
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/10/22/c0013d64-7790-49f3-822f-42017216b435.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://mp.weixin.qq.com/s/eaxVnzvaFORVrv9PeRdKWw" target="_blank">
+                                    <div class="list-text">
+                                        <h4>毕业季｜“咔嚓” 定格在农职院度过的青春</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-06-16
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/10/22/78d72d0a-f974-48f9-b414-7f4a834a562d.jpg" alt="">
+                                </a>
+                            </li>
+
+                        </ul>
+                        <ul class="news-list">
+                            <li>
+                                <a href="https://www.gznyzyxy.cn/n2/20241024/i12853.html" target="_blank">
+                                    <div class="list-text">
+                                        <h4>集思广益，凝聚教学智慧  ——  机电与城建系开展教师集体备课研讨活动</h4>
+                                        <p>机电与城建系一场旨在提升教学质量和促进教师间交流合作的专业课教师集体备课研讨活动于10月顺利举行。此次活动涵盖了本系四个教研室82人次教师参与，共同探讨如何通过集体智慧提升教学效果。</p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-10-24
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/10/24/1729768579784065088.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gznyzyxy.cn/n2/20241012/i12789.html" target="_blank">
+                                    <div class="list-text">
+                                        <h4>机电与城建系开展新生专业教育讲座</h4>
+                                        <p>​为帮助2024级新生更好地了解所学专业，明确学习方向，提高学习兴趣和动力，机电与城建系机电一体化技术、汽车检测与维修技术、现代农业装备应用技术、村镇建设与管理等4个专业进行分专业开展本次专业教育系列讲座。通过邀请各专业骨干教师主讲，旨在为新生提供一个全面、深入的专业认知平台。</p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-10-12
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/10/12/1728695048423055503.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gznyzyxy.cn/n2/20240927/i12761.html" target="_blank">
+                                    <div class="list-text">
+                                        <h4>倾听心声，助力成长 | 机电与城建系开展新生座谈会</h4>
+                                        <p>为深入贯彻落实“立德树人”教育理念，加强与新生的沟通交流，全方位了解新生的学习和生活情况，增强师生之间的情感与友谊，促进新生更快地适应大学生活，9月23日，机电与城建系组织新生代表在崇技楼2509会议室召开新生座谈会。机电与城建系主任杨光龙、学生科负责人邹妤鹃、学生科老师及 19 名新生代表参加座谈会。</p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-09-27
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/09/27/1727404443899062796.jpeg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="news-list">
+                            <li>
+                                <a href="http://share.eyesnews.cn/news/news-news_detail-news_id-11515116558231.html" target="_blank">
+                                    <div class="list-text">
+                                        <h4>2024年全国优秀教师 | 王唯薇：躬身教育，潜心育人</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-10-22
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://share.eyesnews.cn/news/news-news_detail-news_id-11515116582287.html" target="_blank">
+                                    <div class="list-text">
+                                        <h4>厚植爱国情怀 强国复兴有我！贵州农业职业学院易班开展喜迎国庆系列活动</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-10-02
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://site.gog.cn/650003/20240930/10643885702893055" target="_blank">
+                                    <div class="list-text">
+                                        <h4>贵州农职院2024年秋季学期“开学第一课”开讲</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-09-30
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="news-list">
+                            <li>
+                                <a href="https://www.gznyzyxy.cn/n79/20240801/i12513.html" target="_blank">
+                                    <div class="list-text">
+                                        <h4>喜报！贵州农业职业学院田径队在2024年贵州省大中学生田径锦标赛中勇夺佳绩</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-08-01
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/08/01/1722519917365011130.JPEG" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://mp.weixin.qq.com/s/5PqKcBJShXFwecXpMOtw2g" target="_blank">
+                                    <div class="list-text">
+                                        <h4>职教活动周 | 小学生研学农职院，体验智慧农业，感受科技与自然交融！</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-05-18
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/05/29/35723f6a-85a9-406d-8f7b-6a08fa9efce5.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://mp.weixin.qq.com/s/KnZkmqjgX1h4s2p1u292ag" target="_blank">
+                                    <div class="list-text">
+                                        <h4>精准对接企业需求 精心做好就业保障——韩昌权率队赴广东调研部分企业</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2024-05-16
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2024/05/20/e1959f71-7b9e-4ed8-9ec0-c255391d25a1.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="news-list">
+                            <li>
+                                <a href="https://www.gznyzyxy.cn/n82/20210408/i2878.html" target="_blank">
+                                    <div class="list-text">
+                                        <h4>2020年水果技能大赛</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2021-04-08
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2021/04/08/0cbb9656-1605-43b5-8bb2-9d3c3bf49623.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gznyzyxy.cn/n82/20201119/i2877.html" target="_blank">
+                                    <div class="list-text">
+                                        <h4>清镇职教城：为乡村振兴培育“永久牌”本土人才</h4>
+                                        <p>.职业教育一头连着产业，一头连着教育，在脱贫攻坚中有着重要意义。贵州（清镇）职教城采用对口、订单、定向等培养模式，让教学围着生产走，专业围着产业办，以培养长期高效为本土服务的人才为目标，为全省脱贫攻坚、乡村振兴战略提供有力的人才支撑。</p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2020-11-19
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2020/11/19/nopic.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gznyzyxy.cn/n82/20190924/i2886.html" target="_blank">
+                                    <div class="list-text">
+                                        <h4>贵州农业职业学院快闪献礼新中国成立70周年</h4>
+                                        <p></p>
+                                        <span>
+                                        <i class="iconfont icon-bud"></i>
+                                        2019-09-24
+                                        <i class="iconfont icon-jt-r"></i>
+                                    </span>
+                                    </div>
+                                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2019/09/24/s20190925120204.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--news-tabs + content end-->
+            </div>
+        </div>
+        <!--news-center end-->
+        <!--talk-->
+        <div class="talk-container">
+            <h4><a href="https://www.gznyzyxy.cn/n58/index.html">学院概况</a></h4>
+            <p class="talk-brief">贵州农业职业学院是2015年经贵州省人民政府批准成立，国家教育部备案，由贵州省畜牧兽医学校、</br>
+                贵州省农业机电学校、贵州省机电学校合并组建的公办全日制普通高等学校，是贵州</br>
+                省唯一一所农业类高职院校。</p>
+            <div class="talk-wrapper">
+                <div class="swiper-container talk-swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <a>
+                                <div class="talk-box">
+                                    <div>
+                                        <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/05/18/269816c1-12fe-4b80-8f44-ab5446709d3c.png" alt="">
+                                        <span>94+</span>
+                                    </div>
+                                </div>
+                                <p>专利授权</p>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a>
+                                <div class="talk-box">
+                                    <div>
+                                        <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/05/18/b58730d5-f417-4206-a6db-f0d946ad0eca.png" alt="">
+                                        <span>600+</span>
+                                    </div>
+                                </div>
+                                <p>教职工</p>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a>
+                                <div class="talk-box">
+                                    <div>
+                                        <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/05/18/7c8ab217-45f1-4a6c-a92d-91977b208991.png" alt="">
+                                        <span>15000+</span>
+                                    </div>
+                                </div>
+                                <p>高职学生规模</p>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a>
+                                <div class="talk-box">
+                                    <div>
+                                        <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/05/18/6f32ac1d-7b38-45ce-8f73-c36b68165423.png" alt="">
+                                        <span>25+</span>
+                                    </div>
+                                </div>
+                                <p>专业方向</p>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a>
+                                <div class="talk-box">
+                                    <div>
+                                        <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/05/18/e62b97b6-02a5-48fc-b931-407e83ddf0d9.png" alt="">
+                                        <span>120+</span>
+                                    </div>
+                                </div>
+                                <p>行业奖项</p>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a>
+                                <div class="talk-box">
+                                    <div>
+                                        <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/05/18/1e80bc10-16f3-4469-9a4d-9a17683faa62.png" alt="">
+                                        <span>600+</span>
+                                    </div>
+                                </div>
+                                <p>专任教师</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--talk end-->
+        <!--char-->
+        <div class="char-container">
+            <div class="char-wrapper w1440">
+                <div class="char-top">
+                    <h4><a href="https://www.gznyzyxy.cn/n3/index.html">农职特色</a></h4>
+                    <ul class="char-tabs">
+                        <li class="active"><a href="https://www.gznyzyxy.cn/n73/index.html" target="_blank">乡村振兴</a></li>
+                        <li><a href="https://www.gznyzyxy.cn/n74/index.html" target="_blank">农技培训</a></li>
+                        <li><a href="https://www.gznyzyxy.cn/n67/index.html" target="_blank">种子杂志</a></li>
+                    </ul>
+                </div>
+                <div class="char-layout">
+                    <div class="char-left active">
+                        <a href="https://www.gznyzyxy.cn/n73/20230602/i7934.html" class="char-cont">
+                            <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/06/02/20230602113920497001.png" alt="">
+                            <div class="char_fr_info">
+                                <h4>学院蔬菜产业服务专家团受邀赴贵蔬集团赫章公司开展产业培训</h4>
+                                <p>5月31日，学院蔬菜产业服务专家团受邀赴贵蔬集团赫章公司开展产业培训，本次培训主要重点学习和拆解赫章基地香葱、豆苗产品培育苗技术要点；详细讲解两种产品的病虫害防治和采摘技术。同时通过田间实训操作，帮助学员更加深刻理解技术要点。</p>
+                                <div class="fr_info">
+                                    <span>
+                                    <i class="iconfont icon-shijian1"></i>
+                                    2023-06-02
+                                </span>
+                                    <i class="iconfont icon-jiantou2"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="char-cont">
+                            <ul class="char-list">
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n73/20230406/i7933.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 06</p>
+                                            <span> 2023-04</span>
+                                        </div>
+                                        <p class="char-title">辣椒体系黔中试验站赴开阳、乌当开展调研及技术服务工作</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n73/20230330/i7931.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 30</p>
+                                            <span> 2023-03</span>
+                                        </div>
+                                        <p class="char-title">深入调研，积极探索能复制可推广的产业振兴模式 上好党课，努力培养能干事干成事的组织振兴核心</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n73/20221209/i7953.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 09</p>
+                                            <span> 2022-12</span>
+                                        </div>
+                                        <p class="char-title">贵州农业职业学院党委委员、副院长马林一行到台江县中等职业学校开展座谈暨专业培训会</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n73/20221209/i7952.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 09</p>
+                                            <span> 2022-12</span>
+                                        </div>
+                                        <p class="char-title">食品与药品系党总支开展“双联双促”活动</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="char-left">
+                        <a href="https://www.gznyzyxy.cn/n74/20210427/i7744.html" class="char-cont">
+                            <img src="http://file.gznyzyxy.cn/uploads/data/1/74/b6609129fbf0a0c3a31003ef4c8609e738dff369/20210427145531159001.png" alt="">
+                            <div class="char_fr_info">
+                                <h4>继续教育部开展贵州省首届农业经理人活动指导与调研工作</h4>
+                                <p></p>
+                                <div class="fr_info">
+                                    <span>
+                                    <i class="iconfont icon-shijian1"></i>
+                                    2021-04-27
+                                </span>
+                                    <i class="iconfont icon-jiantou2"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="char-cont">
+                            <ul class="char-list">
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n74/20210426/i7743.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 26</p>
+                                            <span> 2021-04</span>
+                                        </div>
+                                        <p class="char-title">2021 年贵州省食用菌产业干部培训铜仁班在印江县成功举办</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n74/20210414/i7745.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 14</p>
+                                            <span> 2021-04</span>
+                                        </div>
+                                        <p class="char-title">巩固脱贫攻坚成果  助力乡村振兴</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n74/20190911/i7741.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 11</p>
+                                            <span> 2019-09</span>
+                                        </div>
+                                        <p class="char-title">贵州省基层农技推广特色产业骨干技术人才省外培训班在江苏顺利举行</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n74/20190911/i7740.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 11</p>
+                                            <span> 2019-09</span>
+                                        </div>
+                                        <p class="char-title">我院承办的“贵州省基层农技推广特色产业骨干技术人才省内培训班”开班仪式在贵阳花溪顺利举行</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="char-left">
+                        <a href="https://www.gznyzyxy.cn/n67/20231010/i11122.html" class="char-cont">
+                            <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/10/10/2f5211d1-73ed-43a2-971c-fee861148950.png" alt="">
+                            <div class="char_fr_info">
+                                <h4>《种子》2023年第八期定稿会议召开</h4>
+                                <p>2023年8月24日，种子编辑部召开了《种子》期刊2023年第八期定稿会议，会议在贵州农业职业学院学报编辑部期刊陈列馆进行，编辑部期刊科全体教师参加。</p>
+                                <div class="fr_info">
+                                    <span>
+                                    <i class="iconfont icon-shijian1"></i>
+                                    2023-08-24
+                                </span>
+                                    <i class="iconfont icon-jiantou2"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="char-cont">
+                            <ul class="char-list">
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n67/20231010/i11121.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 22</p>
+                                            <span> 2023-07</span>
+                                        </div>
+                                        <p class="char-title">《种子》2023年第七期定稿会议召开</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n67/20231010/i11123.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 25</p>
+                                            <span> 2023-06</span>
+                                        </div>
+                                        <p class="char-title">《种子》2023年第六期定稿会议召开</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n67/20231010/i11124.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 24</p>
+                                            <span> 2023-05</span>
+                                        </div>
+                                        <p class="char-title">《种子》2023年第五期定稿会议召开</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gznyzyxy.cn/n67/20231010/i11125.html" target="_blank">
+                                        <div class="char-time">
+                                            <p> 24</p>
+                                            <span> 2023-04</span>
+                                        </div>
+                                        <p class="char-title">《种子》2023年第四期定稿会议召开</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="char-right">
+                        <div class="char-tabs-cont">
+                            <div>
+                                <a href="https://www.gznyzyxy.cn/n75/index.html" target="_blank">
+                                    <i class="iconfont icon-sizhengjianshe"></i>
+                                    <h1>思政建设</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--char end-->
+        <!--school-->
+        <div class="school-container">
+            <div class="school-left">
+                <div class="swiper-container school-swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <a href="https://www.gznyzyxy.cn/n80/20230703/i10078.html" target="_blank">
+                                <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/07/03/5f6c87c4-ae8d-4b50-b8e3-55131e44169b.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="https://www.gznyzyxy.cn/n80/20230703/i10077.html" target="_blank">
+                                <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/07/03/3581bf46-7b98-49c0-9754-f5211abd412b.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="https://www.gznyzyxy.cn/n80/20230703/i10076.html" target="_blank">
+                                <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/07/03/b7da76fa-45ea-4794-b17a-8a88b1aae414.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="https://www.gznyzyxy.cn/n80/20230703/i10075.html" target="_blank">
+                                <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/07/03/83bd02de-ac1f-42b6-b428-c852e05dd0dc.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="https://www.gznyzyxy.cn/n80/20230703/i10074.html" target="_blank">
+                                <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/07/03/90eb018e-9e67-4b52-82d5-6edb7ae6c281.jpg" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="thumbs">
+                    <!--这里默认现实轮播图第一张-->
+                    <img src="https://www.gznyzyxy.cn/resource/info/logo/2023/07/03/5f6c87c4-ae8d-4b50-b8e3-55131e44169b.jpg" alt="">
+
+                    <div class="school-btn">
+                        <div class="swiper-button-prev school-button-prev"></div>
+                        <i class="line-dashed"></i>
+                        <div class="swiper-button-next school-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="school-right">
+                <a href="https://www.gznyzyxy.cn/n80/index.html" target="_blank" class="school-brief">
+                    <h2>COLLEGE SCENERY</h2>
+                    <h1>学院风光</h1>
+                    <i class="iconfont icon-jt_r"></i>
+                </a>
+                <div class="school-right-layout">
+                    <img src="https://www.gznyzyxy.cn/materialpub/images/scenery-img3-1.png" alt="">
+                    <img src="https://www.gznyzyxy.cn/materialpub/images/school-right-img2-1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!--school end-->
+        <!--special-->
+        <div class="special-container">
+            <div class="special-wrapper w1440">
+                <div class="special-top">
+                    <h4>专题专栏</h4>
+                    <div class="special-btn">
+                        <div class="swiper-button-prev special-button-prev"><i class="iconfont icon-jt-r"></i></div>
+                        <div class="swiper-button-next special-button-next"><i class="iconfont icon-jt-r"></i></div>
+                    </div>
+                    <a href="https://www.gznyzyxy.cn/n4/index.html" target="_blank">更多</a>
+                </div>
+                <div class="special-cont">
+                    <div class="swiper-container special-swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n638/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/638/logo/7e604154-b7c6-4ae8-b16d-f6627028562c.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n639/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/639/logo/605f050c-cec3-41a3-941d-0efcbe2579d4.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n640/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/640/logo/283248cf-ba23-42ea-b2ac-1fc70e0667ae.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n636/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/636/logo/7a272ce3-aaab-422c-b941-4bb0e219e2c8.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n70/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/70/logo/d4820b89-3f75-4425-8bfa-33d672bca30d.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n64/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/64/logo/8ebbbcf6-9536-4718-83d9-deee39c1bec2.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n508/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/508/logo/9c05a33f-f553-4626-9f04-aaaf98f7899f.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n65/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/65/logo/d5bdc80b-eb32-4474-8f99-fdcf8452aa79.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n66/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/66/logo/040a7188-f5ab-446d-8fcb-1e818b68d111.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n67/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/67/logo/98d76e9a-788d-4e60-9182-d3b8c9b591e0.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n68/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/68/logo/59c0380b-028d-4058-aed8-5781aaa78710.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n69/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/69/logo/f95ee72d-0091-4d27-aee0-285e82df2016.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n71/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/71/logo/a3e18947-422f-4356-9b62-b74bcb721258.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n72/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/72/logo/94085548-365c-471e-be50-21ddc5b4ef5a.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="https://www.gznyzyxy.cn/n633/index.html" target="_blank">
+                                    <img src="https://www.gznyzyxy.cn/images/node/633/logo/935a3c3c-3384-40f1-9c21-f050a6403833.png" alt="">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--special end-->
+    </main>
+    <!--main end-->
+    <!--footer-->
+    <footer id="footer" class="footer-container">
+        <div class="footer-wrapper w1440">
+            <!--footer-list-->
+            <ul class="footer-list">
+                <li><a href="https://cas.gznyzyxy.cn:9122/lyuapServer/login?service=https%3A%2F%2Fportal.gznyzyxy.cn%3A9121%2Fc%2Fportal%2Flogin%3Fredirect%3D%252F%26p_l_id%3D119742" target="_blank"><i class="iconfont icon-office"></i><span>网上办公</span></a></li>
+                <li><a href="/ldxx.html" target="_blank"><i class="iconfont icon-letter"></i><span>领导信箱</span></a></li>
+                <li><a href="/n10/index.html"><i class="iconfont icon-webit"></i><span>院系网站</span></a></li>
+                <li><a href="/n7/index.html" target="_blank"><i class="iconfont icon-rs-add"></i><span>人事评聘</span></a></li>
+                <li><a href="https://my.chsi.com.cn/archive/index.jsp" target="_blank"><i class="iconfont icon-xj-inst"></i><span>学籍查询</span></a></li>
+                <li><a href="http://lib.gznyzyxy.cn:8888/" target="_blank"><i class="iconfont icon-nav_tsg"></i><span>图书馆</span></a></li>
+                <li><a href="/cjcx.html"><i class="iconfont icon-chengji-"></i><span>成绩查询</span></a></li>
+                <li><a href="/n6/index.html" target="_blank"><i class="iconfont icon-zl-download"></i><span>资料下载</span></a></li>
+                <li><a href="/n4/index.html" target="_blank"><i class="iconfont icon-zt-web"></i><span>专题网页</span></a></li>
+                <li><a href="https://www.gzzjzhy.com/portal/home" target="_blank"><i class="iconfont icon-xinxigongkai"></i><span>教学平台</span></a></li>
+            </ul>
+            <!--footer-layout-->
+            <div class="footer-layout">
+                <div class="footer-left">
+                    <div class="footer-school">
+                        <a href="/">
+                            <img src="https://www.gznyzyxy.cn/materialpub/images/footer-logo.png" alt="" class="footer-logo">
+                        </a>
+                        <div class="sc_info">
+                            <p class="explain">
+                                <a href="https://www.gznyzyxy.cn/n20/index.html" target="_blank">版权声明</a><span>|</span><a href="https://www.gznyzyxy.cn/n21/index.html" target="_blank">隐私说明</a>
+                            </p>
+                            <p>
+                                联系方式：
+                                <span>0851-82513132</span>
+                            </p>
+                            <p>
+                                学院地址：
+                                <span>贵州（清镇）职教城乡愁校区黄柿路3号</span>
+                            </p>
+                        </div>
+                        <a href="http://bszs.conac.cn/sitename?method=show&id=377EF88F2A3F2D66E053012819AC5D49" target="_blank">
+                            <img src="https://www.gznyzyxy.cn/materialpub/images/pic.png" alt="">
+                        </a>
+                    </div>
+                    <div class="footer-info">
+                        <span>Copyright © 版权所有 贵州农业职业学院</span>
+                        <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">备案号：黔ICP备16001811号</a>
+                        <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52018102008151" target="_blank">
+                            <img src="https://www.gznyzyxy.cn/materialpub/images/gaba.png" alt=""> 贵公网安备 52018102008151号
+                        </a>
+                        <a href="https://www.zzdsj.com.cn/" target="_blank">技术支持：智政科技</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <img src="https://www.gznyzyxy.cn/materialpub/images/schoolQRCode.png" alt="">
+                </div>
+            </div>
+            <!--footer-layout end-->
+        </div>
+    </footer>
+    <!--footer end-->
+    <script src="https://www.gznyzyxy.cn/materialpub/js/jquery.min.js"></script>
+    <script src="https://www.gznyzyxy.cn/materialpub/layui/layui.js"></script>
+    <script src="https://www.gznyzyxy.cn/materialpub/js/pulic.js"></script>
+    <script src="https://www.gznyzyxy.cn/materialpub/js/swiper.min.js"></script>
+    <script src="https://www.gznyzyxy.cn/materialpub/js/global.js"></script>
+    <script src="https://www.gznyzyxy.cn/materialpub/js/index.js"></script>
+<script>
+       var serverUrl = "https:\/\/cms.gznyzyxy.cn\/";
+        $.ajax({
+            url: serverUrl+'/external/interface/getArticleViews',
+            data: {
+                type: 0,
+                siteId: 1
+            },
+            dataType: 'json',
+            type: "GET",
+            dataType: "json",
+            contentType: 'application/x-www-form-urlencoded',
+            cache: false,
+            success: function(data) {
+              console.log(data.info); 
+            }
+        }); 
+	</script>
+
+  <script>
+    // 首页飘窗关闭
+    function close() {
+      $('.floatwindow').hide();
+    }
+    //飘窗显示
+    function open() {
+      $('.floatwindow').show();
+    }
+    //飘窗默认隐藏
+    close();
+    //点击关闭飘窗
+    $('.floatwindow_ntb').click(function (){
+      close();
+    })
+    //根据滚动条位置显示和关闭飘窗
+    $(document).scroll(function () {
+      var top = $(window).scrollTop();
+      if ($(window).width() > 515) {
+        if (top >= 700) {
+          open();
+        } else {
+          close();
+        };
+      }
+      //手机端滚动条位置显示飘窗
+      if ($(window).width() < 515) {
+        if (top >= 100) {
+          open();
+        } else {
+          close();
+        };
+      }
+    })
+   
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>中国美术学院</title>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="keywords" content="中国美院,中国美术学院" />
+    <meta
+      name="description"
+      content="中国美术学院的前身是国立艺术院。1928年，时任大学院院长的蔡元培先生择址杭州西子湖畔，创立了第一所综合性的国立高等艺术学府——国立艺术院，设国画、西画、雕塑、图案四个系及预科和研究部，开始了“美育代宗教”的实践，揭开了中国高等美术教育的篇章。"
+    />
+    <meta property="og:image" content="http://www.caa.edu.cn/images/caa.bmp" />
+    <!-- <script src="/js/uaredirect.js" type="text/javascript"></script>
+    <script type="text/javascript">uaredirect("http://m.caa.edu.cn");</script> -->
+    <script>
+      (function() {
+        // 动态font-size
+        function resize() {
+          var screenWidth =
+            window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth;
+          if (screenWidth < 769) {
+            // 手机端
+            //window.location = 'https://m.caa.edu.cn' ;
+          } else {
+            // pc端
+            //window.location = 'https://www.caa.edu.cn';
+          }
+        }
+        resize();
+        // 防抖
+        var timer;
+        window.addEventListener("resize", function() {
+          timer && clearTimeout(timer);
+          timer = setTimeout(function() {
+            resize();
+          }, 200);
+        });
+      })();
+    </script>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    img,
+    a {
+      border: none;
+    }
+    .art-home-page {
+      width: 482px;
+      height: 276px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      /* margin-left: -241px;
+      margin-top: -138px;
+      text-align: center; */
+    }
+    .art-home-nav{
+        width: fit-content;
+        float: left;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+    }
+    .art-home-nav a {
+      width: 105px;
+      height: 35px;
+      display: block;
+      float: left;
+      background: url(/images/home_nav.png) no-repeat 0 0;
+      margin: 0 25px;
+      text-align: left;
+      text-indent: -9999em;
+    }
+    .art-home-nav a.nav-2 {
+      background-position: -156px 0;
+    }
+
+    .art-home-nav a.nav-3 {
+      background-position: -310px 0;
+    }
+
+    .art-home-nav a.nav-1:hover {
+      background-position: 0 -37px;
+    }
+
+    .art-home-nav a.nav-2:hover {
+      background-position: -156px -37px;
+    }
+
+    .art-home-nav a.nav-3:hover {
+      background-position: -310px -37px;
+    }
+    @media screen and (max-width: 960px) {
+      .art-home-page {
+        width: 90%;
+        height: auto;
+      }
+      .art-home-page img {
+        width: 100%;
+      }
+      .art-home-page .art-home-nav {
+        overflow: hidden;
+      }
+      .art-home-page .art-home-nav.art-home-nav a {
+        /*width: 48%;*/
+        height: auto;
+        background: transparent;
+        margin: 0 0;
+        text-align: left;
+        text-indent: 0;
+        font-size: 18px;
+        color: #000;
+        text-decoration: none;
+        text-align: center;
+        /*padding: 0 1%;*/
+      }
+    }
+    .beian{
+  position: absolute;
+  bottom:10px;
+  left:50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  color:#939393;
+  font-size:12px;
+      text-decoration: none;
+}
+
+  </style>
+  <body>
+    <div class="art-home-page">
+      <img src="/images/home_logo.png" alt="中国美术学院" />
+      <p class="art-home-nav">
+        <a href="/index.html" class="nav-1">国美日新</a
+        ><a href="http://en.caa.edu.cn" class="nav-3">ENGLISH</a>
+      </p>
+    </div>
+    <a target="_blank" href="https://beian.miit.gov.cn/" class="beian">浙ICP备05014581号-1</a>
+  </body>
+</html>

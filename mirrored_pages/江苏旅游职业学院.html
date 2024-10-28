@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" type="text/css" href="dfiles/11284/css/style.css?v=20240830" />
+<title>江苏旅游职业学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="江苏旅游职业学院">
+<META Name="keywords" Content="江苏旅游职业学院" />
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307764465750545742000300054654 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,2014353248)</script>
+</head>
+
+<body>
+<div id="floatAd" style="position:absolute; z-index:1000;">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script></div>
+
+<div class="container">
+    <div class="topWrap">
+        <div class="top">
+            <span><script language="javascript" src="/system/resource/js/openlink.js"></script>   <a href="http://pmail.jstc.edu.cn:88/guest/default.aspx" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96328)">党委书记信箱</a>  | 
+   <a href="http://pmail.jstc.edu.cn:89/guest/default.aspx" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96329)">院长信箱</a>  | 
+   <a href="mailto:jiabin@jstc.edu.cn" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96330)">纪委书记信箱</a>  | 
+   <a href="https://oa.jstc.edu.cn" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96331)">办公内网</a>    
+</span>
+            <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <a href="javascript:void(0)" title="全站搜索"><img src="dfiles/11284/images/searchbtn.jpg" height="34" v-on:click="onSubmit()" /></a>
+           <input type="text"  placeholder="标题搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+        
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "2014353248";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>       
+        </div>    
+    </div>
+    
+    <div class="menuWrap"><nav id="nav">
+    <ul>
+                <li class="on"><a href="index.htm" title="首页"><h3>首页</h3></a></li>
+        <li>
+            <a href="JavaScript:;" title="学院概况"><h3>学院概况</h3></a>
+            <div class="sub">
+                <div class="box">
+                    <a href="xygk/xxjj.htm" title="学校简介">学校简介</a>
+                    <a href="xygk/xrld.htm" title="现任领导">现任领导</a>
+                    <a href="xygk/gljg.htm" title="管理机构">管理机构</a>
+                    <a href="xygk/xysz.htm" title="学院设置">学院设置</a>
+                    <a href="xygk/xyfg.htm" title="校园风光">校园风光</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="JavaScript:;" title="学院新闻"><h3>学院新闻</h3></a>
+            <div class="sub">
+                <div class="box">
+                    <a href="xyxw/lyyw.htm" title="旅院要闻">旅院要闻</a>
+                    <a href="xyxw/xyxw.htm" title="校园新闻">校园新闻</a>
+                    <a href="xyxw/szzb.htm" title="思政展播">思政展播</a>
+                    <a href="xyxw/mtjj.htm" title="媒体聚集">媒体聚集</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="JavaScript:;" title="招生就业"><h3>招生就业</h3></a>
+            <div class="sub">
+                <div class="box">
+                    <a href="http://www.jstc.edu.cn/zs/" title="招生信息网">招生信息网</a>
+                    <a href="https://jstc.91job.org.cn/sub-station/home/14604" title="就业服务网">就业服务网</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="JavaScript:;" title="教育教学"><h3>教育教学</h3></a>
+            <div class="sub">
+                <div class="box">
+                    <a href="http://www.jstc.edu.cn/rsc/" title="师资队伍">师资队伍</a>
+                    <a href="http://www.jstc.edu.cn/jwc/" title="教学管理">教学管理</a>
+                    <a href="http://www.jstc.edu.cn/xgc/" title="学生管理">学生管理</a>
+                    <a href="http://www.jstc.edu.cn/sfc/" title="社会培训">社会培训</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="http://old.jstc.edu.cn/kyc/ " title="学科科研"><h3>学科科研</h3></a>
+        </li>
+        <li>
+            <a href="JavaScript:;" title="合作交流"><h3>合作交流</h3></a>
+            <div class="sub">
+                <div class="box">
+                    <a href="http://www.jstc.edu.cn/sfc/" title="社会合作">社会合作</a>
+                    <a href="http://www.jstc.edu.cn/international/" title="国际交流">国际交流</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="JavaScript:;" title="公共服务"><h3>公共服务</h3></a>
+            <div class="sub">
+                <div class="box">
+                    <a href="http://www.jstc.edu.cn/lib/" title="图书馆">图书馆</a>
+                    <a href="ggfw/bgdh.htm" title="办公电话">办公电话</a>
+                    <a href="ggfw/xyxl.htm" title="学院校历">学院校历</a>
+                    <a href="ggfw/zxsj.htm" title="作息时间">作息时间</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="https://www.jstc.edu.cn/xxgk/" title="信息公开"><h3>信息公开</h3></a>
+        </li>
+    </ul>
+</nav></div>
+
+    <div class="banner">    <div class="marqueeWrap" id="marqueeWrap">
+                <div class="marqueeDiv" id="marqueeDiv">
+                    <div id="marqueenBox">
+                        
+                                
+<a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1009827)"><img src="2024nianguoqing.jpg" width="1200" height="418"></a>
+                            
+                                
+<a href="http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/2024/2024_zt16/" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1009828)"><img src="images/2024nianquanguojiaoyudahui.jpg" width="1200" height="418"></a>
+                            
+                                
+<a href="https://www.jstc.edu.cn/info/1015/90632.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1009815)"><img src="images/weixintupian_20240921222022.jpg" width="1200" height="418"></a>
+                            
+                                
+<a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1009790)"><img src="images/huanying2024nianxinshengnew.jpg" width="1200" height="418"></a>
+                            
+                                
+<a href="http://www.jstc.edu.cn/show/13/12891/index.html" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008470)"><img src="dfiles/11284/uploadfile/20230921170410202.jpg" width="1200" height="418"></a>
+                            
+                                
+<a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1009786)"><img src="images/lvyoulei2024jiangsushengsaiyidengjiang.jpg" width="1200" height="418"></a>
+                            
+                                
+<a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1009785)"><img src="images/gongyilei2024jiangsushengsaiyidengjiang.jpg" width="1200" height="418"></a>
+                            
+                                
+</div>
+                </div>
+                <img src="dfiles/11284/images/toleft.jpg" class="toLeft" id="toLeft">
+                <img src="dfiles/11284/images/toright.jpg" class="toRight" id="toRight">
+            </div></div>
+
+    <div class="indexCon">
+        <div class="indexCon01">
+            <!--旅院要闻-->
+            <div class="lyyw">
+                <h3>
+                    <div>
+                        <a href="xyxw/lyyw.htm" class="indexMore"><img src="dfiles/11284/images/more.jpg" /></a>
+                        <img src="dfiles/11284/images/title01a.jpg" />
+                    </div>
+                </h3>
+                <div class="tpxw"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="tpxw_bd">
+                            <ul>
+                                
+                                        
+<li><a href="info/1015/90632.htm" title="2024首届全国餐旅类院校发展会议在我校成功举办" target="_blank">
+                                            <img src="/__local/2/0E/E9/3EC9C068A75F2ABEF3B66A9A7FD_BEC417A2_34834.jpeg">
+                                            <p>
+                                            </p>
+                                            <span>
+                                                2024首届全国餐旅类院校发展会议在我校...</span> </a></li>
+                                    
+                                        
+<li><a href="info/1015/91342.htm" title="学校举行2024级新生开学典礼暨军训会操" target="_blank">
+                                            <img src="/__local/1/4E/E9/22B1F16F49A6C88AE61C099CD07_8C9561C3_39284.jpeg">
+                                            <p>
+                                            </p>
+                                            <span>
+                                                学校举行2024级新生开学典礼暨军训会操</span> </a></li>
+                                    
+                                        
+<li><a href="info/1015/91332.htm" title="学校举行“砥砺笃行逢盛世 迎新逐梦向未来”庆祝中华人民共和国成立75周年暨2024年迎新晚会" target="_blank">
+                                            <img src="/__local/3/7C/3F/467C539864B7EB2313DE61E0213_D20C057F_260A8.jpeg">
+                                            <p>
+                                            </p>
+                                            <span>
+                                                学校举行“砥砺笃行逢盛世 迎新逐梦向未...</span> </a></li>
+                                    
+                                        
+<li><a href="info/1015/91202.htm" title="学校举行“铸牢中华民族共同体意识”理论宣讲" target="_blank">
+                                            <img src="/__local/B/FD/8D/1DBD3075F0BDC157509957DD027_C37084DF_23C63.jpeg">
+                                            <p>
+                                            </p>
+                                            <span>
+                                                学校举行“铸牢中华民族共同体意识”理...</span> </a></li>
+                                    
+                                        
+<li><a href="info/1015/90962.htm" title="学校召开纪检监察工作例会暨校纪委理论学习中心组（扩大）学习会" target="_blank">
+                                            <img src="/__local/C/54/58/D9207DF09AE6F83E8C2248591D8_2A9FA833_15340.jpeg">
+                                            <p>
+                                            </p>
+                                            <span>
+                                                学校召开纪检监察工作例会暨校纪委理论...</span> </a></li>
+                                    
+                                        
+<li><a href="info/1015/89852.htm" title="相见欢 | 江苏旅游职业学院喜迎2024级新同学" target="_blank">
+                                            <img src="/__local/1/C1/CB/C4A08D1E38319C129A3CB68330B_2DB8AC35_36007.jpeg">
+                                            <p>
+                                            </p>
+                                            <span>
+                                                相见欢 | 江苏旅游职业学院喜迎2024级新...</span> </a></li>
+                                    
+                                        
+</ul>
+                        </div>
+                        <div class="tpxw_hd">
+                            <ul>
+                            </ul>
+                        </div><script>_showDynClickBatch(['dynclicks_u5_90632','dynclicks_u5_91342','dynclicks_u5_91332','dynclicks_u5_91202','dynclicks_u5_90962','dynclicks_u5_89852'],[90632,91342,91332,91202,90962,89852],"wbnews", 2014353248)</script>
+</div>
+                <div class="newsListWrap">
+<div class="newsFirst">
+
+    <div class="newsFirsttitle">
+        <a href="info/1015/90632.htm" target="_blank" title="2024首届全国餐旅类院校发展会议在我校成功举办">
+            2024首届全国餐旅类院校发展会议在我校成功举办</a>
+    </div>
+    <div class="newsFirstSummary">
+        <a href="info/1015/90632.htm" target="_blank" title="2024首届全国餐旅类院校发展会议在我校成功举办">
+           2024年9月20日至22日，2024首届全国餐旅类院校发展会议在江苏省扬州市花园国际大酒...</a>
+    </div>
+
+</div>
+
+<ul class="newsList">
+
+    <li><span>
+            10.25</span><a href="info/1015/92193.htm" target="_blank" title="学校组织开展2024年秋季学期党委书记“思政第一课”">学校组织开展2024年秋季学期党委书记“思政第一...</a></li>
+
+
+    <li><span>
+            10.24</span><a href="info/1015/92153.htm" target="_blank" title="学校举行2024级来华留学生开学典礼">学校举行2024级来华留学生开学典礼</a></li>
+
+
+    <li><span>
+            10.23</span><a href="info/1015/92103.htm" target="_blank" title="党委副书记黄兴海率团出访法国、意大利">党委副书记黄兴海率团出访法国、意大利</a></li>
+
+
+    <li><span>
+            10.22</span><a href="info/1015/92053.htm" target="_blank" title="学校师生赴澳门参加第十四届苏港澳青年发展论坛">学校师生赴澳门参加第十四届苏港澳青年发展论坛</a></li>
+
+
+    <li><span>
+            10.21</span><a href="info/1015/91943.htm" target="_blank" title="江苏省高校后勤系统第二届职业技能竞赛在江苏旅游职业学院开幕">江苏省高校后勤系统第二届职业技能竞赛在江苏旅...</a></li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u6_90632','dynclicks_u6_92193','dynclicks_u6_92153','dynclicks_u6_92103','dynclicks_u6_92053','dynclicks_u6_91943'],[90632,92193,92153,92103,92053,91943],"wbnews", 2014353248)</script>
+</div>
+                 <div style="display:none;">
+
+
+
+
+<a href="/system/resource/code/rss/rssfeed.jsp?type=list&treeid=1001&viewid=1107397&mode=10&dbname=vsb&owner=2014353248&ownername=jstc&contentid=1116996&number=20&httproot=http%3A%2F%2F192.168.6.72%2Fjstc%2F" target="_blank"><img src="/system/resource/images/rss/rss.gif" border="0" align="absmiddle"></a></div>
+            </div>
+            
+            <!--校园新闻-->
+            <div class="xyxw"><h3>
+                        <div>
+                            <a href="xyxw/xyxw.htm" class="indexMore">
+                                <img src="dfiles/11284/images/more.jpg"></a>
+                            <img src="dfiles/11284/images/title02a.jpg">
+                        </div>
+                    </h3>
+                    <ul>
+                        
+                                
+<li><span>10.26</span><a href="info/1016/92253.htm" title="经济管理学院举办2024年师徒结对仪式" target="_blank">
+                                        经济管理学院举办2024年师徒结对仪式</a></li>
+                            
+                                
+<li><span>10.25</span><a href="info/1016/92233.htm" title="国际商务学院赴南京集中实习单位看望实习生暨开展访企拓岗工作" target="_blank">
+                                        国际商务学院赴南京集中实习单位看望实习生...</a></li>
+                            
+                                
+<li><span>10.25</span><a href="info/1016/92203.htm" title="我校作为教育反诈联盟代表应邀参加全省防范电信网络诈骗犯罪宣传月启动仪式" target="_blank">
+                                        我校作为教育反诈联盟代表应邀参加全省防范...</a></li>
+                            
+                                
+<li><span>10.25</span><a href="info/1016/92243.htm" title="经济管理学院赴扬州工业职业技术学院商学院调研交流" target="_blank">
+                                        经济管理学院赴扬州工业职业技术学院商学院...</a></li>
+                            
+                                
+<li><span>10.24</span><a href="info/1016/92183.htm" title="旅游管理学院举办2024年师徒结对仪式" target="_blank">
+                                        旅游管理学院举办2024年师徒结对仪式</a></li>
+                            
+                                
+<li><span>10.24</span><a href="info/1016/92173.htm" title="体育部深化校地合作,助力乡村振兴" target="_blank">
+                                        体育部深化校地合作,助力乡村振兴</a></li>
+                            
+                                
+<li><span>10.24</span><a href="info/1016/92163.htm" title="经济管理学院开展团干部思政技能大比武经验分享交流会暨团干部培训" target="_blank">
+                                        经济管理学院开展团干部思政技能大比武经验...</a></li>
+                            
+                                
+</ul><script>_showDynClickBatch(['dynclicks_u8_92253','dynclicks_u8_92233','dynclicks_u8_92203','dynclicks_u8_92243','dynclicks_u8_92183','dynclicks_u8_92173','dynclicks_u8_92163'],[92253,92233,92203,92243,92183,92173,92163],"wbnews", 2014353248)</script>
+</div>
+        </div>
+        <!--  indexCon01 end -->
+        
+        <div class="indexCon02">
+            <div class="indlist tzgg">
+<h3>
+                        <div>
+                            <a href="index/xxgg.htm" class="indexMore">
+                                <img src="dfiles/11284/images/more.jpg"></a>
+                            <img src="dfiles/11284/images/title03a.jpg">
+                        </div>
+                    </h3>
+                    <ul>
+                        
+                                
+<li><span>03.06</span><a href="info/1041/5906.htm" title="江苏旅游职业学院2024年长期公开招聘高层次人才公告" target="_blank">
+                                        江苏旅游职业学院2024年长期公开招聘高层次人才公...</a></li>
+                            
+                                
+<li><span>09.13</span><a href="info/1041/90162.htm" title="江苏旅游职业学院校史馆史料、文物和藏品征集公告" target="_blank">
+                                        江苏旅游职业学院校史馆史料、文物和藏品征集公告</a></li>
+                            
+                                
+<li><span>06.19</span><a href="info/1041/86012.htm" title="体检递补公告" target="_blank">
+                                        体检递补公告</a></li>
+                            
+                                
+<li><span>04.30</span><a href="info/1041/69122.htm" title="江苏旅游职业学院2024年公开招聘工作人员体检公告" target="_blank">
+                                        江苏旅游职业学院2024年公开招聘工作人员体检公告</a></li>
+                            
+                                
+<li><span>04.20</span><a href="info/1041/69102.htm" title="2024年公开招聘工作人员专任教师岗位进入面试人员的通知" target="_blank">
+                                        2024年公开招聘工作人员专任教师岗位进入面试人员...</a></li>
+                            
+                                
+<li><span>04.15</span><a href="info/1041/69092.htm" title="2024年公开招聘工作人员的考核通知（二）" target="_blank">
+                                        2024年公开招聘工作人员的考核通知（二）</a></li>
+                            
+                                
+</ul><script>_showDynClickBatch(['dynclicks_u9_5906','dynclicks_u9_90162','dynclicks_u9_86012','dynclicks_u9_69122','dynclicks_u9_69102','dynclicks_u9_69092'],[5906,90162,86012,69122,69102,69092],"wbnews", 2014353248)</script>
+</div>
+            <div class="indlist fydt"><h3>
+                        <div>
+                            <a href="xyxw/szzb.htm" class="indexMore">
+                                <img src="dfiles/11284/images/more.jpg"></a>
+                            <img src="dfiles/11284/images/title06a.jpg">
+                        </div>
+                    </h3>
+                    <ul>
+                        
+                                
+<li><span>10.17</span><a href="info/1017/92033.htm" title="习近平给中国国际大学生创新大赛参赛学生代表的回信" target="_blank">
+                                        习近平给中国国际大学生创新大赛参赛学生代表的回信</a></li>
+                            
+                                
+<li><span>10.17</span><a href="info/1017/92023.htm" title="习近平回信勉励中国国际大学生创新大赛参赛学生代表" target="_blank">
+                                        习近平回信勉励中国国际大学生创新大赛参赛学生代表</a></li>
+                            
+                                
+<li><span>10.17</span><a href="info/1017/92013.htm" title="习近平在福建考察时强调 扭住目标不放松 一张蓝图绘到底 在中国式现代化建设中奋勇争先" target="_blank">
+                                        习近平在福建考察时强调 扭住目标不放松 一张蓝图...</a></li>
+                            
+                                
+<li><span>10.16</span><a href="info/1017/91993.htm" title="中国国际大学生创新大赛（2024）总决赛举行" target="_blank">
+                                        中国国际大学生创新大赛（2024）总决赛举行</a></li>
+                            
+                                
+<li><span>10.16</span><a href="info/1017/91983.htm" title="中共教育部党组：奋力书写新时代新征程教育强国建设崭新篇章" target="_blank">
+                                        中共教育部党组：奋力书写新时代新征程教育强国建...</a></li>
+                            
+                                
+<li><span>10.07</span><a href="info/1017/92003.htm" title="为强国建设、民族复兴注入强大精神力量——以习近平文化思想引领宣传思想文化事业发展一年间" target="_blank">
+                                        为强国建设、民族复兴注入强大精神力量——以习近...</a></li>
+                            
+                                
+</ul>
+
+
+<script>_showDynClickBatch(['dynclicks_u10_92033','dynclicks_u10_92023','dynclicks_u10_92013','dynclicks_u10_91993','dynclicks_u10_91983','dynclicks_u10_92003'],[92033,92023,92013,91993,91983,92003],"wbnews", 2014353248)</script>
+</div>
+            <div class="indlist mtjj"><h3>
+                        <div>
+                            <a href="xyxw/mtjj.htm" class="indexMore">
+                                <img src="dfiles/11284/images/more.jpg"></a>
+                            <img src="dfiles/11284/images/title05a.jpg">
+                        </div>
+                    </h3>
+                    <ul>
+                        
+                                
+<li><span>10.21</span><a href="info/1018/91893.htm" title="紫牛新闻：点赞青春正能量！江苏旅游职业学院近日收到一封感谢信" target="_blank">
+                                        紫牛新闻：点赞青春正能量！江苏旅游职业学院近日...</a></li>
+                            
+                                
+<li><span>10.20</span><a href="info/1018/91913.htm" title="交汇点：这场比赛太香了！江苏全省高校食堂“厨艺大比拼”来啦" target="_blank">
+                                        交汇点：这场比赛太香了！江苏全省高校食堂“厨艺...</a></li>
+                            
+                                
+<li><span>10.18</span><a href="info/1018/91903.htm" title="环球网：“萌新” 与大师初遇记——记江苏旅游职业学院工艺美术学院新生入学教育之首次职业体验" target="_blank">
+                                        环球网：“萌新” 与大师初遇记——记江苏旅游职业...</a></li>
+                            
+                                
+<li><span>10.14</span><a href="info/1018/92113.htm" title="扬帆：‌校协合作，共创互赢－晗韵志愿者协会与江苏旅游职业学院举行交流座谈会" target="_blank">
+                                        扬帆：‌校协合作，共创互赢－晗韵志愿者协会与江...</a></li>
+                            
+                                
+<li><span>10.03</span><a href="info/1018/91382.htm" title="江苏教育发布：泱泱75载，风雨兼程" target="_blank">
+                                        江苏教育发布：泱泱75载，风雨兼程</a></li>
+                            
+                                
+<li><span>10.02</span><a href="info/1018/91412.htm" title="学习强国：学习正当时，强国有你我！“学习强国”进高校活动走进江苏旅游职业学院" target="_blank">
+                                        学习强国：学习正当时，强国有你我！“学习强国”...</a></li>
+                            
+                                
+</ul>
+
+
+
+
+<script>_showDynClickBatch(['dynclicks_u11_91893','dynclicks_u11_91913','dynclicks_u11_91903','dynclicks_u11_92113','dynclicks_u11_91382','dynclicks_u11_91412'],[91893,91913,91903,92113,91382,91412],"wbnews", 2014353248)</script>
+</div>
+        </div>
+        <!-- indexCon02 end -->
+    </div>
+    <!--indexCon end-->
+    
+    <div class="botIconLinkWrap">
+        <div class="iconLinkAndWx">
+            <div class="theme">    
+  <a href="http://www.jstc.edu.cn/zjc/" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008367)" target="_blank"><img src="images/zlbg20240830.jpg" /></a>
+</div>
+            <div class="iconLink">    <table border="0" cellpadding="0" cellspacing="0" class="iconLinkTable">
+    <!-- pic link -->
+    
+        <tr>
+        <td><a href="http://www.jstc.edu.cn/dwzzb/" title="党建专题" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008368)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20171221180035513.jpg" width="166" height="52" /></a></td>
+                            
+        <td><a href="https://oa.jstc.edu.cn/" title="办公系统" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008369)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20171221180021877.jpg" width="166" height="52" /></a></td>
+                            
+        <td><a href="https://www.cnki.net" title="数字资源" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008370)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20210421151000411.jpg" width="166" height="52" /></a></td>
+                            
+        <td><a href="index/zbzt.htm" title="采购招标" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008371)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20171221175941972.jpg" width="166" height="52" /></a></td>
+                            
+        <td><a href="https://ehall.jstc.edu.cn/" title="办事大厅" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008372)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20211124081254564.jpg" width="166" height="52" /></a></td>
+                            
+    </tr>
+    <tr>
+        <td><a href="http://cas.jstc.edu.cn/cas/login?service=http%3A%2F%2Fjwxt.jstc.edu.cn%2Fmanager%2Fsso%2Flogin" title="教学管理" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008373)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20171221171612304.jpg" width="166" height="52" /></a></td>
+                            
+        <td><a href="http://www.jstc.edu.cn/xgc/" title="学工管理" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008374)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20201029113214220.jpg" width="166" height="52" /></a></td>
+                            
+        <td><a href="http://www.jstc.edu.cn/rsc/" title="人才招聘" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008375)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20171221171442630.jpg" width="166" height="52" /></a></td>
+                            
+        <td><a href="http://mail.jstc.edu.cn/" title="邮件系统" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008376)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20171221171430855.jpg" width="166" height="52" /></a></td>
+                            
+        <td><a href="https://vpn.jstc.edu.cn:55555" title="远程接入" onclick="_addDynClicks(&#34;wbimage&#34;, 2014353248, 1008377)" target="_blank">
+                         
+                            <img src="dfiles/11284/uploadfile/20180315112956886.jpg" width="166" height="52" /></a></td>
+                            
+    </tr>
+    
+</table></div>
+        </div>
+    </div>
+    
+    <div class="botTxtLinkWrap">
+        <ul id="txtLinkMenu" class="txtLinkMenu">
+            <li>党政部门</li>
+            <li>教学单位</li>
+            <li>直属单位</li>
+            <li>专题网站</li>
+        </ul>
+        <div id="txtLinkSubmenu" class="txtLinkSubmenu">
+            <div>
+   <a href="http://www.jstc.edu.cn/jw/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95267)">纪律检查委员会</a>
+   <a href="http://www.jstc.edu.cn/dwzzb/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95268)">党委组织部</a>
+   <a href="http://www.jstc.edu.cn/xcb/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95269)">党委宣传部</a>
+   <a href="http://www.jstc.edu.cn/rsc/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95270)">人事处</a>
+   <a href="http://www.jstc.edu.cn/jwc/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95271)">教务处</a>
+   <a href="http://www.jstc.edu.cn/zjc/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95272)">质量监控处</a>
+   <a href="http://www.jstc.edu.cn/xgc/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95273)">学生工作处</a>
+   <a href="http://www.jstc.edu.cn/zs/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95274)">招生就业处</a>
+   <a href="http://www.jstc.edu.cn/cwc/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95275)">财务处</a>
+   <a href="http://www.jstc.edu.cn/lib/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 95276)">图书信息馆</a>
+   <a href="http://www.jstc.edu.cn/sfc/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96312)">社会合作与服务处</a>
+   <a href="http://www.jstc.edu.cn/gh/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96313)">工会</a>
+   <a href="http://www.jstc.edu.cn/tw/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96314)">团委</a>
+</div>
+            <div>   <a href="http://www.jstc.edu.cn/prxy/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96315)">烹饪科技学院</a>
+   <a href="http://www.jstc.edu.cn/glxy/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96316)">旅游管理学院</a>
+   <a href="http://www.jstc.edu.cn/xxxy/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96317)">信息工程学院</a>
+   <a href="http://www.jstc.edu.cn/swxy/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96318)">国际商务学院</a>
+   <a href="http://www.jstc.edu.cn/gy/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96319)">工艺美术学院</a>
+   <a href="http://www.jstc.edu.cn/jjxy/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96320)">经济管理学院</a>
+</div>
+            <div>   <a href="https://www.jstc.edu.cn/tyb/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96321)">体育部</a>
+   <a href="http://www.jstc.edu.cn/jcb/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96322)">基础部</a>
+   <a href="http://www.jstc.edu.cn/marx/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96323)">马克思主义学院</a>
+</div>
+            <div>   <a href="http://www.jstc.edu.cn/rcpypg" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96324)">江苏省新建高等职业院校人才培养评估工作专题网站</a>
+   <a href="http://www.jstc.edu.cn/gh/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96325)">旅院关工委</a>
+   <a href="http://www.jstc.edu.cn/xgc/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96326)">魅力德育工作室</a>
+   <a href="http://www.jstc.edu.cn/dwzzb/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 2014353248, 96327)">旅院党建网</a>
+</div>
+        </div>
+    </div>
+    <div class="bottom"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="bottomCon"><img src="dfiles/11284/images/bei.png" />&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32100102010135" target="_blank">苏公网安备 32100102010135</a> 号<br />地址：江苏省扬州市毓秀路88号&nbsp;&nbsp;邮编：225000&nbsp;&nbsp; 电话：0514-87431881&nbsp;&nbsp;传真：0514-87431883&nbsp;&nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 邮箱：<a href="http://pmail.jstc.edu.cn:89/default.aspx" target="_blank">service@jstc.edu.cn</a>&nbsp;&nbsp;<br />&nbsp;版权所有：江苏旅游职业学院 @2017&nbsp;&nbsp; 学院官网：www.jstc.edu.cn&nbsp;&nbsp; 网站备案：<a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备11034729号-1</a>&nbsp;<label id="showVisitCount"></label></div></div>
+</div>
+<script type="text/javascript" src="dfiles/11284/js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="dfiles/11284/js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="dfiles/11284/js/jquery.superslide.js"></script>
+<script type="text/javascript" src="dfiles/11284/js/msclass.js"></script>
+<script type="text/javascript" src="dfiles/11284/js/default.js"></script>
+<script type="text/javascript" src="dfiles/11284/js/search.js"></script>
+<script type="text/javascript">
+$().ready(function(e) {
+    var startX = 0;
+    var startY = 0;
+    $("#floatAdC a").each(function(index, element) {
+        var floatDiv = $("<div id='floatAd" + index.toString() + "' style='position: absolute; z-index: 9990;'><div>");
+        floatDiv.append(this);
+        $("#form1").prepend(floatDiv);
+        //startX += 30;
+        //startY += 130;
+        startX = parseInt(Math.random() * 300);
+        startY = parseInt(Math.random() * 50 + index * 150);
+        divFloat("floatAd" + index.toString(), startX, startY);
+    });
+
+    var iMarquee;
+    iMarquee = new Marquee({
+        MSClass: ["marqueeDiv", "marqueenBox"],
+        Direction: 2,
+        Step: 4,
+        ScrollStep: 1,
+        Width: 1200,
+        Height: 418,
+        DelayTime: 3000,
+        WaitTime: 5000,
+        SwitchType: 2,
+        AutoStart: 1
+    });
+
+    $("#marqueeWrap").hover(function() {
+       $("#toLeft,#toRight").show();
+    },
+    function() {
+       $("#toLeft,#toRight").hide();
+    });
+
+    $("#toLeft").click(function(e) {
+        iMarquee.Run(1);
+    });
+
+    $("#toRight").click(function(e) {
+        iMarquee.Run(2);
+    });
+});
+</script>
+</body>
+<style type="text/css">
+#browser-modal{width:100%;height:100%;top:0;left:0;text-align:center;color:#303233;position:fixed;z-index:9999999999;display: none;}
+#browser-modal .browser-modal-cover{position:fixed;left:0;top:0;height:100%;width:100%;background-color:#111;opacity:.9;z-index:-1;}
+#browser-modal .browser-content{width:700px;margin-top:120px;margin-left:auto;margin-right:auto;padding-bottom:80px;padding-top:30px;background-color:#fff;border-radius:5px;}
+#browser-modal .browser-content .browser-dpc-logo img{height:62px;margin:45px auto 30px;}
+#browser-modal .browser-content .browser-text-title{text-transform:uppercase;font-size:24px;}
+#browser-modal .browser-content .browser-text-desc{margin-top:30px;margin-bottom:40px;font-size:14px;}
+#browser-modal .browser-content .browser-list{width:600px;margin:40px auto;height:130px;}
+#browser-modal .browser-content .browser-item{float:left;width:150px;padding-top:20px;padding-bottom:20px;margin-left:auto;margin-right:auto;}
+#browser-modal .browser-content .browser-item .iconfont{width:100px;height:100px;margin:0 auto;font-size:80px;line-height:80px;margin-bottom:30px;}
+#browser-modal .browser-content .browser-item a{color:#921041;cursor:pointer;display:block;}
+#browser-modal .browser-content .browser-item a img{display:block;margin:0 auto;max-width:100px;width:100px;height:100px;}
+#browser-modal .browser-content .browser-item a h4{text-align:center;margin-top:20px;font-size:18px;font-weight:700;}
+#browser-modal .browser-content .browser-item .iconchrome{background:url(images/bro.png) no-repeat 0 0;}
+#browser-modal .browser-content .browser-item .iconfirefox{background:url(images/bro.png) no-repeat 0 -100px;}
+#browser-modal .browser-content .browser-item .iconopera{background:url(images/bro.png) no-repeat 0 -200px;}
+#browser-modal .browser-content .browser-item .iconEdge{background:url(images/bro.png) no-repeat 0 -300px;}
+.fixedok .banner {opacity:0;}
+</style>
+<div id="browser-modal">
+    <div class="browser-modal-cover"></div>
+    <div class="browser-content">
+        <div class="browser-text">
+            <h3 class="browser-text-title">请升级浏览器版本</h3>
+            <p class="browser-text-desc">你正在使用旧版本浏览器。请升级浏览器以获得更好的体验。</p>
+        </div>
+        <div class="browser-list">
+            <div class="browser-item">
+                <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">
+                    <div class="iconfont iconchrome"></div>
+                    <h4>Chrome</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="http://www.firefox.com.cn/" target="_blank">
+                    <div class="iconfont iconfirefox"></div>
+                    <h4>Firefox</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="https://www.opera.com/zh-cn" target="_blank">
+                    <div class="iconfont iconopera"></div>
+                    <h4>Opera</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">
+                    <div class="iconfont iconEdge"></div>
+                    <h4>Edge</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+    if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE","")) < 10){
+        document.getElementById('browser-modal').style.display='block';
+        console.log("您的浏览器版本过低，请使用IE10以上版本");
+    }
+    </script>
+</div>
+</html>

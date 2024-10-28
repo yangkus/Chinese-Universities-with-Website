@@ -1,0 +1,535 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>北京戏曲艺术职业学院</title>
+	<link type="text/css" rel="stylesheet" href="/css/r_style.css" />
+	<link type="text/css" rel="stylesheet" href="/css/wxq.css" />
+ <!-- <script type="text/javascript" src="${prefix("js/jquery.js")}"></script>-->
+	<script type="text/javascript">
+		window.onload = function(){
+			var oSelect = document.getElementById("select");
+			var oSpan = oSelect.getElementsByTagName("span")[0];
+			var oSub = document.getElementById("set");
+			var aLi = oSub.getElementsByTagName("li");
+			oSelect.onclick = function (e){
+				var oEvent = e || event;
+				var style = oSub.style;
+				style.display = style.display == "block" ? "none" : "block";
+				//阻止事件冒泡
+				oEvent.cancelBubble = true
+			};
+			for (var len=aLi.length,i=0;i<len;i++){
+				//鼠标划过
+				aLi[i].onmouseover = function (){
+					this.className = "hover"
+				};
+				//鼠标离开
+				aLi[i].onmouseout = function (){
+					this.className = "";
+				};
+				//鼠标点击
+				aLi[i].onclick = function (){
+					oSpan.innerHTML = this.innerHTML	
+				}
+			}
+			document.onclick = function (){
+				oSub.style.display = "none";	
+			};
+		};
+	</script>
+  <script type="text/javascript">
+//js无缝滚动代码
+function marquee(i, direction){
+	var obj = document.getElementById("marquee" + i);
+	var obj1 = document.getElementById("marquee" + i + "_1");
+	var obj2 = document.getElementById("marquee" + i + "_2");
+	if (direction == "up"){
+		if (obj2.offsetTop - obj.scrollTop <= 0){
+			obj.scrollTop -= (obj1.offsetHeight + 20);
+		}else{
+			var tmp = obj.scrollTop;
+			obj.scrollTop++;
+			if (obj.scrollTop == tmp){
+				obj.scrollTop = 1;
+			}
+		}
+	}else{
+		if (obj2.offsetWidth - obj.scrollLeft <= 0){
+			obj.scrollLeft -= obj1.offsetWidth;
+		}else{
+			obj.scrollLeft++;
+		}
+	}
+}
+
+function marqueeStart(i, direction){
+	var obj = document.getElementById("marquee" + i);
+	var obj1 = document.getElementById("marquee" + i + "_1");
+	var obj2 = document.getElementById("marquee" + i + "_2");
+
+	obj2.innerHTML = obj1.innerHTML;
+	var marqueeVar = window.setInterval("marquee("+ i +", '"+ direction +"')", 20);
+	obj.onmouseover = function(){
+		window.clearInterval(marqueeVar);
+	}
+	obj.onmouseout = function(){
+		marqueeVar = window.setInterval("marquee("+ i +", '"+ direction +"')", 20);
+	}
+}
+</script>
+	
+</head>
+  <body>
+	<div class="center clearself">
+		<div class="bottombg clearself">
+				<!--头部开始-->
+				
+
+<!-- 页头开始 -->
+<div id="header">
+	<div class="header">
+		<div class="top">
+			<div class="logo"><a href="https://www.bjxx.com.cn/"></a></div>
+		 </div>
+	</div>
+	<div class="mainNavbg"></div>
+	 <div class="mainNav">
+		<ul id="nav" style="height:43px;width:684px; line-height:43px; clear:both;">
+				<li class="first" id="indexpage"><a href="https://www.bjxx.com.cn/">首页</a></li>
+				
+				
+				<li id="000281"><a href="/c/2013-05-13/382363.shtml">学院概况</a>
+					  <ul>
+						
+							
+								<li><a href="/c/2013-05-13/382363.shtml">学校简介</a> </li>
+								<li><a href="/c/2013-05-15/73834.shtml">学院领导</a> </li>
+								<li><a href="/c/2013-05-15/382390.shtml">历任校长</a> </li>
+								<li><a href="/c/2013-05-15/73835.shtml">领导关怀</a> </li>
+								<li><a href="/c/2013-05-15/382394.shtml">历史沿革</a> </li>
+								<li><a href="/c/2013-05-17/382395.shtml">校园环境</a> </li>
+						
+						<li class="libottombg"><a></a></li>
+					  </ul>  
+				</li>
+				
+				
+				
+				<li id="000282"><a href="/c/2013-05-17/382396.shtml">专业系部</a>
+					<ul>
+						
+						
+						<li><a href="/c/2013-05-17/382396.shtml">京剧系</a>
+							<ul>
+								
+									
+										<li><a href="/c/2013-05-16/382397.shtml">专业介绍</a> </li>
+										<li><a href="/c/2013-05-20/382398.shtml">教师队伍</a> </li>
+										<li><a href="/c/2013-05-20/382399.shtml">课程设置</a> </li>
+										<li><a href="/c/2013-05-20/382400.shtml">艺术实践</a> </li>
+								
+								<li class="libottombg"><a></a></li>
+							</ul>
+						</li>
+						
+						
+						<li><a href="/c/2013-05-17/382401.shtml">舞蹈系</a>
+							<ul>
+								
+									
+										<li><a href="/c/2013-05-21/382402.shtml">专业介绍</a> </li>
+										<li><a href="/c/2013-05-21/382403.shtml">教师队伍</a> </li>
+										<li><a href="/c/2013-05-21/382404.shtml">课程设置</a> </li>
+										<li><a href="/c/2013-05-21/382405.shtml">艺术实践</a> </li>
+								
+								<li class="libottombg"><a href="#;"></a></li>
+							</ul>
+						</li>
+						
+						
+						
+						<li><a href="/c/2013-05-17/382416.shtml">音乐系</a>
+							<ul>
+								
+									
+										<li><a href="/c/2013-05-27/382458.shtml">专业介绍</a> </li>
+										<li><a href="/c/2013-05-27/382457.shtml">教师队伍</a> </li>
+										<li><a href="/c/2013-05-27/382455.shtml">课程设置</a> </li>
+										<li><a href="/c/2013-05-27/382456.shtml">艺术实践</a> </li>
+								
+								<li class="libottombg"><a></a></li>
+							</ul>
+						</li>
+						
+						
+						
+						<li><a href="/c/2013-05-17/382417.shtml">舞美系</a>
+							<ul>
+								
+									
+										<li><a href="/c/2013-05-27/382460.shtml">专业介绍</a> </li>
+										<li><a href="/c/2013-05-27/382462.shtml">教师队伍</a> </li>
+										<li><a href="/c/2013-05-27/382461.shtml">课程设置</a> </li>
+										<li><a href="/c/2013-05-27/382463.shtml">艺术实践</a> </li>
+								
+								<li class="libottombg"><a href="#;"></a></li>
+							</ul>
+						</li>
+						
+						
+						
+						<li><a href="/c/2013-05-17/382418.shtml">影视表演系</a>
+							<ul>
+								
+									
+										<li><a href="/c/2013-10-16/382660.shtml">专业介绍</a> </li>
+										<li><a href="/c/2013-10-16/382661.shtml">教师队伍</a> </li>
+										<li><a href="/c/2013-10-16/382662.shtml">课程设置</a> </li>
+										<li><a href="/c/2013-10-16/382663.shtml">艺术实践</a> </li>
+								
+								<li class="libottombg"><a></a></li>
+							</ul>
+						</li>
+						
+						
+						
+						<li><a href="/c/2013-05-17/382419.shtml">地方戏曲系</a>
+							<ul>
+								
+									
+										<li><a href="/c/2013-10-16/382664.shtml">专业介绍</a> </li>
+										<li><a href="/c/2013-10-16/382665.shtml">教师队伍</a> </li>
+										<li><a href="/c/2013-05-27/382459.shtml">课程设置</a> </li>
+										<li><a href="/c/2013-10-16/382666.shtml">艺术实践</a> </li>
+								
+								<li class="libottombg"><a href="#;"></a></li>
+							</ul>
+						</li>
+						
+             
+						
+						<li><a href="/c/2017-11-08/386264.shtml">曲艺系</a>
+							<ul>
+								
+									
+										<li><a href="/c/2017-11-24/386433.shtml">专业介绍</a> </li>
+										<li><a href="/c/2017-11-08/386290.shtml">教师队伍</a> </li>
+										<li><a href="/c/2017-11-24/386436.shtml">课程设置</a> </li>
+										<li><a href="/c/2017-11-24/386439.shtml">艺术实践</a> </li>
+								
+								<li class="libottombg"><a href="#;"></a></li>
+							</ul>
+						</li>
+						
+                      
+						
+						<li><a href="/c/2013-06-08/382533.shtml">公共教学部</a>
+							<ul>
+								
+									
+										<li><a href="/c/2016-04-21/384465.shtml">教师队伍</a> </li>
+								
+								<li class="libottombg"><a href="#;"></a></li>
+							</ul>
+						</li>
+						
+						<li class="libottombg"><a href="#;"></a></li>
+					</ul>
+				</li>
+				
+          
+			
+            
+			
+			<li id="000295"><a href="https://zs.bjxx.com.cn/">招生就业</a>
+					<ul>
+						
+									
+										<li><a href="https://zs.bjxx.com.cn/">招生</a> </li>
+										<li><a href="https://bjxx.jysd.com/">就业</a> </li>
+						
+						<li class="libottombg"><a href="#;"></a></li>
+					</ul>
+			</li>
+                       
+            
+          
+			
+			
+			<li id="000284"><a href="/czjl/ycjm/">创作交流</a>
+					<ul>
+						
+									
+										<li><a href="/czjl/ycjm/">原创剧目</a> </li>
+										<li><a href="/czjl/qrpxjh/">千人培训计划</a> </li>
+										<li><a href="/czjl/fwyc/">赴外演出</a> </li>
+										<li><a href="/czjl/xjjl/">校际交流</a> </li>
+										<li><a href="/czjl/sqyxy/">暑期研习营</a> </li>
+										<li><a href="/czjl/hwhyxgzl/">华裔寻根之旅</a> </li>
+						
+						<li class="libottombg"><a href="#;"></a></li>
+					</ul>
+			</li>
+			
+			
+			
+			<li id="000285"><a href="/djgz/dwgk/">党建工作</a>
+					<ul>
+						
+									
+										<li><a href="/djgz/dwgk/">党务公开</a> </li>
+										<li><a href="/djgz/djdt/">党建动态</a> </li>
+										<li><a href="/djgz/xxyd/">学习园地</a> </li>
+										<li><a href="/djgz/cxzy/">主题教育活动</a> </li>
+										<li><a href="/ggw/">关工委工作</a> </li>
+						
+						<li class="libottombg"><a href="#;"></a></li>
+					</ul>
+			</li>
+			
+			
+			
+			<li id="000286"><a href="/xspd/xshd/">学生频道</a>
+				<ul>
+					
+									
+										<li><a href="/xspd/xshd/">学生活动</a> </li>
+										<li><a href="/xspd/xszz/">学生组织</a> </li>
+										<li><a href="/xspd/bzjl/">表彰奖励</a> </li>
+										<li><a href="/xspd/gzzd/">规章制度</a> </li>
+										<li><a href="/xspd/xljk/">心理健康</a> </li>
+						
+					<li class="libottombg"><a href="#;"></a></li>
+				</ul>
+			</li>
+			
+			<li style="clear:both; width:0px; background:none; height:0px; line-height:0px; font-size:0px;"></li>
+		 </ul>
+	 </div>
+</div>
+				<!--头部结束-->
+				<!--身体开始-->
+				<div class="main">
+           <span id='apjs_172'></span><script language='javascript' src='/upload/js/2015nzs/172.js'></script>
+					<div class="maincenter clearself">
+						<!--身体左边导航开始-->
+						   
+   
+   <!--身体左边导航开始-->
+	<div class="mainleft">
+		<div class="mainLf fl">
+		  <ul>
+            <li id="000312"><a href="/tgxmjscgzszl/" >特高项目建设成果展示专栏</a></li>
+			<li id="000287"><a href="/lgygc/">六个一工程</a></li>
+			<li id="000288"><a href="/sexjc/">少儿戏剧场</a></li>
+			<li id="000289"><a href="/bxms/">北戏名师</a></li>
+			<li id="000290"><a href="/bxsp/">预决算及收费标准公开</a></li>
+      <!--cms:catalog alias="bxsp_ydb" count="1"><li id="${Catalog.InnerCode}"><a href="${catalog.link}">${catalog.name}</a></li></cms:catalog-->
+			<li id="000291"><a href="/bxtp/">北戏图片</a></li>
+			<li id="000292"><a href="/xyfc/">职业院校技能大赛</a></li>
+      <!--<cms:catalog alias="gzyjs" count="1"><li id="${Catalog.InnerCode}"><a href="${catalog.link}">${catalog.name}</a></li></cms:catalog>-->
+            
+			<li id="000293"><a href="https://jw.bjxx.com.cn">教务管理系统</a></li>
+			<li id="000294"><a href="/c/2013-05-30/382505.shtml">北戏生源基地</a></li>
+      <li id="000283"><a href="/c/2014-01-04/382856.shtml">教学科研</a></li>  
+             <li id="000307000001"><a href="/c/2024-04-08/391653.shtml">北戏图书馆</a></li>  
+		<!--<cms:catalog alias="sztsg" count="1"><li id="${Catalog.InnerCode}"><a href="${catalog.link}">${catalog.name}</a></li></cms:catalog>-->
+		  </ul>
+		</div>
+	</div>
+
+						<!--身体左边导航结束-->
+						<!--身体右边开始-->
+						<div class="mainright clearself">
+							<div class="bg1"></div>
+							<div class="mainbg clearself" style="padding-left:15px;">
+								<div class="mainline1">
+									<div class="grayList fl">
+									  <div class="grayList_nav"><img src="/images/w_schoolNav.gif"></div>
+									  <div class="grayList_con">
+										<ul>
+										 
+										  
+											<li><span class="fr">2024-10-14</span>·<a href="/c/2024-10-14/392438.shtml" title="学院举行内蒙古艺术剧院委培班开班仪式" target="_blank">学院举行内蒙古艺术剧院委培班开班仪式</a></li>
+											<li><span class="fr">2024-10-09</span>·<a href="/c/2024-10-09/392441.shtml" title="喜报" target="_blank">喜报学院教师在北京市职业院校技能大赛&#32;教学能力比赛中再获佳绩</a></li>
+											<li><span class="fr">2024-10-09</span>·<a href="/c/2024-10-09/392437.shtml" title="学院组织老干部重阳节活动" target="_blank">学院组织老干部重阳节活动</a></li>
+											<li><span class="fr">2024-10-08</span>·<a href="/c/2024-10-08/392436.shtml" title="新编京剧《心愿》精彩片段惊艳亮相北京站" target="_blank">新编京剧《心愿》精彩片段惊艳亮相北京</a></li>
+											<li><span class="fr">2024-10-07</span>·<a href="/c/2024-10-07/392435.shtml" title="青春逢盛世&#32;奋进正当时" target="_blank">青春逢盛世&#32;奋进正当时学院团委组织开展2024年秋季入团积极分子开班仪式暨观影活动</a></li>
+											<li><span class="fr">2024-09-30</span>·<a href="/c/2024-09-30/392439.shtml" title="我院师生作品入围第六届中华经典诵写讲大赛国赛" target="_blank">我院师生作品入围第六届中华经典诵写讲</a></li>
+											<li><span class="fr">2024-09-23</span>·<a href="/c/2024-09-23/392433.shtml" title="团促就业" target="_blank">团促就业学院团委组织团员青年赴小东各庄村开展职场体验活动</a></li>
+											<li><span class="fr">2024-09-20</span>·<a href="/c/2024-09-20/392431.shtml" title="青春献礼&#32;实践筑梦" target="_blank">青春献礼&#32;实践筑梦院大学生暑期社会实践风采展示</a></li>
+										   
+										</ul>
+									  </div>
+									  <div class="more"><a href="/xyxw/"><img src="/images/w_more.gif"></a></div>
+									</div>
+									<div class="gang fl"></div>
+									<div class="grayList fl">
+									  <div class="grayList_nav"><img src="/images/w_tsbx.gif"></div>
+									  <div class="grayList_con">
+										<ul>
+										 
+										  
+											<li><span class="fr">2023-05-22</span>·<a href="/c/2023-05-22/391057.shtml" title="演出回顾｜《中华美德故事汇》" target="_blank">演出回顾｜《中华美德故事汇》</a></li>
+											<li><span class="fr">2023-05-22</span>·<a href="/c/2023-05-22/391056.shtml" title="演出回顾｜《中华美德故事汇》" target="_blank">演出回顾｜《中华美德故事汇》</a></li>
+											<li><span class="fr">2023-05-17</span>·<a href="/c/2023-05-17/391034.shtml" title="演出回顾｜“曲苑新苗·承继精粹”" target="_blank">演出回顾｜“曲苑新苗·承继精粹”</a></li>
+											<li><span class="fr">2023-05-17</span>·<a href="/c/2023-05-17/391033.shtml" title="演出回顾｜“曲苑新苗·承继精粹”" target="_blank">演出回顾｜“曲苑新苗·承继精粹”</a></li>
+											<li><span class="fr">2023-05-09</span>·<a href="/c/2023-05-09/390930.shtml" title="演出回顾｜弦歌不辍&#32;芳华待灼——" target="_blank">演出回顾｜弦歌不辍&#32;芳华待灼——</a></li>
+											<li><span class="fr">2023-05-09</span>·<a href="/c/2023-05-09/390929.shtml" title="演出回顾｜京剧折子戏专场（九）" target="_blank">演出回顾｜京剧折子戏专场（九）</a></li>
+											<li><span class="fr">2023-05-09</span>·<a href="/c/2023-05-09/390872.shtml" title="演出回顾｜京剧折子戏专场（八）" target="_blank">演出回顾｜京剧折子戏专场（八）</a></li>
+											<li><span class="fr">2023-05-09</span>·<a href="/c/2023-05-09/390871.shtml" title="演出回顾｜京剧折子戏专场（七）" target="_blank">演出回顾｜京剧折子戏专场（七）</a></li>
+										   
+										</ul>
+									  </div>
+									  <div class="more"><a href="/tsbx/"><img src="/images/w_more.gif"></a></div>
+									</div>
+									<div class="clear"></div>
+								  </div>
+								  <div id="marquee1" class="marqueeleft">
+									<div style="width:8000px;">
+									 <ul id="marquee1_1">
+									  
+										  
+                                            <li>
+                                                <a class="pic" href="/c/2024-10-09/392441.shtml" target="_blank"><img width="225" height="150" src="/upload/resources/image/2024/10/25/25185_225x150c.png"></a>
+                                            </li>
+                                            <li>
+                                                <a class="pic" href="/c/2024-09-30/392439.shtml" target="_blank"><img width="225" height="150" src="/upload/resources/image/2024/10/25/25180_225x150c.jpg"></a>
+                                            </li>
+                                            <li>
+                                                <a class="pic" href="/c/2024-10-14/392438.shtml" target="_blank"><img width="225" height="150" src="/upload/resources/image/2024/10/25/25174_225x150c.jpg"></a>
+                                            </li>
+                                            <li>
+                                                <a class="pic" href="/c/2024-10-09/392437.shtml" target="_blank"><img width="225" height="150" src="/upload/resources/image/2024/10/25/25162_225x150c.jpg"></a>
+                                            </li>
+                                            <li>
+                                                <a class="pic" href="/c/2024-10-08/392436.shtml" target="_blank"><img width="225" height="150" src="/upload/resources/image/2024/10/25/25153_225x150c.jpg"></a>
+                                            </li>
+									   
+									 </ul>
+									 <ul id="marquee1_2"></ul>
+									</div>
+								  </div><!--marqueeleft end-->
+								  <script type="text/javascript">marqueeStart(1, "left");</script>
+								  <div class="mainLine3">
+									<div class="messagePic"><span id='apjs_169'></span><script language='javascript' src='/upload/js/syggw/169.js'></script> <!--a href="${Image.Link}"><img src="${prefix("images/w_messagePic.jpg")}"></a--></div>
+									<div class="message">
+									  <div class="messageNav"><a href="/yczx/"><img src="/images/w_yczx.gif"></a></div>
+									  <div class="messageCon">
+										<ul>
+										 
+										  
+											<li>·<a href="/c/2023-11-22/391557.shtml" title="演出回顾|京剧演唱会——北戏展演圆满收官" target="_blank">演出回顾|京剧演唱会——北戏展演圆满收官</a></li>
+											<li>·<a href="/c/2023-11-22/391556.shtml" title="演出回顾|京剧《少年马连良》" target="_blank">演出回顾|京剧《少年马连良》</a></li>
+											<li>·<a href="/c/2023-11-22/391555.shtml" title="演出回顾|京剧教师折子戏专场" target="_blank">演出回顾|京剧教师折子戏专场</a></li>
+											<li>·<a href="/c/2023-11-21/391554.shtml" title="演出回顾|京剧《雏凤凌空》" target="_blank">演出回顾|京剧《雏凤凌空》</a></li>
+											<li>·<a href="/c/2023-11-21/391552.shtml" title="演出回顾|京剧《四郎探母》" target="_blank">演出回顾|京剧《四郎探母》</a></li>
+										 
+		                                </ul>
+									  </div>
+									</div>
+								  </div>
+							</div>
+							<div class="bg2"></div>
+						</div>
+						<!--身体右边结束-->
+					</div>
+					<div class="people"></div>
+	                <div class="conUs"><a href="/c/2013-05-20/382451.shtml"><img src="/images/w_conUs.gif"></a></div>
+					<div class="home"></div>
+				</div>
+				<!--身体结束-->
+				<!-- 页脚 -->
+				     
+	 
+	 <!-- 尾部 -->
+	 <div class="footer">
+       <div style="float:left;margin-top:10px;">
+            <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/01/000/0000/60623048/CA010000000606230480002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+       </div>
+		<div class="footName fl" style="margin-top: 11px;width: 214px;">Copyright 2013 北京戏曲艺术职业学院<br/>All Rights Reserved<br/><a href="https://beian.miit.gov.cn" target="_blank">京ICP备18020556号-1</a><br/>京公网安备11010602103921号</div>
+		<div class="friendLink fl">
+		   <table>
+			<tr>
+			 <td>友情链接</td>
+			 <td>
+			 <div class="search fl">
+			  <div class="select" id="select"><span>请选择友情链接</span></div>        
+			   <ul class="sub" id="set">
+               
+					<li><a href="http://www.baidu.com" target="_blank">百度</a></li>
+			   
+			  </ul>
+			 </div>
+			 </td>
+			</tr>
+			</table>	  
+		</div>
+		<div class="clear"></div>
+	 </div>
+
+
+		</div>
+	</div>
+<script type="text/javascript">
+var catalogElement=document.getElementById("indexpage");//直接获取id为index的对象
+catalogElement.className+=" current"; //给这个对象赋予对应的样式名称
+</script>
+
+
+<!--div id="ad" style="position:absolute;left:0px;top:0px;z-index:666"><a target="_blank" href="http://117.114.161.150/ZhongZhao/NewsInfo.aspx?id=2711&catid=725"><img src="${prefix("../images/zhaoshen.png")}" /></a></div-->
+
+<!--script type="text/javascript">
+
+//通过ID获取img
+ad=document.getElementById("ad");
+//定义横纵坐标
+x=0;
+y=0;
+//设置初始速度
+xv=3;
+yv=3;
+  
+//根据img横纵坐标位置，设置反方向速度
+function fun(){
+  if(x<0 || x>document.body.clientWidth-ad.offsetWidth || x>window.innerWidth-ad.offsetWidth) { //ad.offsetWidth){
+    xv=-xv;
+  }
+  if(y<0 || y>document.body.clientHeight-ad.offsetHeight || y>window.innerHeight-ad.offsetHeight) { //ad.offsetHeight){
+    yv=-yv;
+  }
+
+  x+=xv;
+  y+=yv;
+  
+  //将xy坐标值赋予img css样式中的left与top
+  ad.style.left=x+"px";
+  ad.style.top=y+"px";
+}
+
+//定时器调用
+mytime=setInterval(fun,100);
+
+//ad绑定鼠标悬停事件
+ad.onmouseover=function(){
+  //清除定时器
+  clearInterval(mytime);
+}
+
+//鼠标离开，重新触发定时器
+ad.onmouseout=function(){
+  mytime=setInterval(fun,100);
+}
+
+</script>-->
+
+<script src="https://www.bjxx.com.cn/zcms/stat/front/stat.js" type="text/javascript"></script>
+<script>
+if(window._zcms_stat)_zcms_stat("SiteID=21&Dest=https://www.bjxx.com.cn/zcms/stat/dealer");
+</script>
+
+<!-- App=北京戏曲艺术职业学院(北京戏曲艺术职业学院) 2.4.27543,CostTime=205,PublishDate=2024-10-25 11:19:17 -->
+</body>
+</html>

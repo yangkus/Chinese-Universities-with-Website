@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,user-scalable=yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <link rel="icon" href="favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <meta name="keywords" content="四川体育职业学院,四川体育,四川体育学院,体育职业学院,四川体育职业学院官网" />
+    <meta name="description" content="四川体育职业学院,四川体育,四川体育学院,体育职业学院,四川体育职业学院官网" />
+    <!--底部-->
+    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/below_move.js" type="text/javascript"></script>
+    <!--右侧挂图-->
+    <!--<script src="js/ad.js" type="text/javascript"></script>-->
+    
+    <title>四川体育职业学院</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/style.css?v=20221208" />
+    <link rel="stylesheet" href="css/index.css?v=20221208">
+    <link rel="stylesheet" href="css/myiconfont.css">
+     <style>
+          .filter-list {
+    width: 210px;
+    max-height: 300px;
+    margin-top:-40px;
+    margin-left:72%;
+    z-index: 99;
+    border: 1px solid #999999;
+    overflow:hidden;
+    position: absolute;
+}  .filter-list li {  font-size:13px; width:210px;height:35px; line-height:35px; padding: 3px 0; }
+    </style>
+</head>
+<body>
+   
+    <!--header开始-->
+    <header class="bjtu-header clearFix">
+    <div class="bjtu-top clear">
+        <div>
+            <div class="bjtu-logo"><a href="/index.html"><img src="/images/logo.png"></a></div>
+            
+
+            <div class="bjtu-topNav">
+                <div style="margin-top:1px;margin-left:10px;"><img src="/images/xxlogo2.png" alt=""></div>
+                <div id="ser" class="open" style="margin:0px 0px 10px 120px">
+                    <div class="bjtu-ser">
+                        <div name="dataForm" class="search">
+                            <input class="notxt" placeholder="请输入关键词" name="query" type="text" id="serachtxt">
+                            <input class="notxt1" name="Submit" id="serach" type="submit" value="">
+                        </div>
+                        <script type="text/javascript">
+                            $("#serach").click(function () {
+                                var v = $("#serachtxt").val();
+                                if (v == "" || $.trim(v) == "") {
+                                    alert("请输入关键字");
+                                    return;
+                                }
+                                location.href = "https://search.scsc.edu.cn/Search.aspx?zd=5&page=1&kw=" + encodeURI(deleteHtmlTag(v));
+                            });
+                            function deleteHtmlTag(str) {
+                                str = str.replace(/<[^>]+>|&[^>]+;/g, "").trim();
+                                return str;
+                            }
+                            $("#serachtxt").keydown(function (e) {
+                                var ev = document.all ? window.event : e;
+                                if (ev.keyCode == 13) {
+                                    $("#serach").click();
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <nav class="bjtu-nav" id="nav">
+        <ul>
+            <li><a href="/index.html">首页</a></li>
+            <li>
+                <a href="javascript:void(0);">学院概况</a>
+                <dl class="bjtu-subNav">
+                     <dd><a  href="/page/51001_01.html" target="_blank">学院简介</a></dd><dd><a href="/page/xrld.html" target="_blank">学院领导</a></dd><dd><a href="/Page/51003_01.html" target="_blank">荣誉殿堂</a></dd><dd><a href="/Page/51004_01.html" target="_blank">校园图片</a></dd> <dd><a  href="/page/51006_01.html" target="_blank">交通信息</a></dd>
+                </dl>
+            </li>
+            <li>
+                <a href="javascript:void(0);">组织机构</a>
+                 <dl class="bjtu-subNav">
+                    <dd><a href="/page/jgsz01.html" target="_blank">职能部门</a></dd>
+                    <dd><a href="/page/jgsz03.html" target="_blank">运动管理中心</a></dd>
+                    <dd><a href="/page/jgsz02.html" target="_blank">教学机构</a></dd>
+                    <dd><a href="/page/jgsz04.html" target="_blank">校区基地</a></dd>
+                </dl>
+            </li>
+
+            <li>
+                <a href="javascript:void(0);">信息公开</a>
+                <dl class="bjtu-subNav">
+                     <dd><a href="/newlist/530020001.html" target="_blank">综合新闻</a></dd> <dd><a href="/newlist/530010001.html" target="_blank">通知公告</a></dd> <dd><a href="/newlist/530030001.html" target="_blank">人事信息</a></dd> <dd><a href="/newlist/530040001.html" target="_blank">媒体聚焦</a></dd> <dd><a href="/newlist/530050001.html" target="_blank">下载专区</a></dd>
+                </dl>
+            </li>
+            <li>
+                <a href="javascript:void(0);">党建文化</a>
+                <dl class="bjtu-subNav">
+                     <dd><a href="/newlist/580010001.html" target="_blank">思政建设</a></dd> <dd><a href="/newlist/580020001.html" target="_blank">基层党建</a></dd> <dd><a href="/newlist/580030001.html" target="_blank">廉政建设</a></dd> <dd><a href="/newlist/580040001.html" target="_blank">政策法规</a></dd>
+                </dl>
+            </li>
+
+            <li>
+                <a href="javascript:void(0);">竞赛训练</a>
+                <dl class="bjtu-subNav">
+                     <dd><a href="/newlist/550060001.html" target="_blank">竞训管理</a></dd> <dd><a href="/newlist/550010001.html" target="_blank">中心动态</a></dd> <dd><a href="/newlist/550020001.html" target="_blank">赛事动态</a></dd> <dd><a href="/newlist/550050001.html" target="_blank">运动医科</a></dd>
+                </dl>
+            </li>
+            <li>
+                <a href="javascript:void(0);">教学科研</a>
+                <dl class="bjtu-subNav">
+                     <dd><a href="/newlist/540010001.html" target="_blank">教学动态</a></dd> <dd><a href="/newlist/540020001.html" target="_blank">学科建设</a></dd> <dd><a href="/newlist/540030001.html" target="_blank">师资力量</a></dd> <dd><a href="/newlist/540040001.html" target="_blank">学术动态</a></dd> <dd><a href="/newlist/540050001.html" target="_blank">教学成果</a></dd>
+                </dl>
+            </li>
+
+            <li>
+                <a href="javascript:void(0);">校园文化</a>
+                <dl class="bjtu-subNav">
+                     <dd><a href="/newlist/560020001.html" target="_blank">团青之家</a></dd> <dd><a href="/newlist/560030001.html" target="_blank">学生天地</a></dd> <dd><a href="/newlist/560040001.html" target="_blank">教工活动</a></dd> <dd><a href="/newlist/560050001.html" target="_blank">平安校园</a></dd> <dd><a href="/newlist/560060001.html" target="_blank">校友之家</a></dd>
+                </dl>
+            </li>
+            <li>
+                <a href="javascript:void(0);">招生就业</a>
+                <dl class="bjtu-subNav">
+                    <!--$divzsjy$-->
+                    <dd><a href="https://zsw.scsc.edu.cn" target="_blank">招生信息网</a></dd>
+                    <dd><a href="https://jyw.scsc.edu.cn" target="_blank">就业信息网</a></dd>
+                </dl>
+            </li>
+
+
+        </ul>
+    </nav>
+    <span class="black_bg01"></span>
+    <div class="bjtu-wrapNav">
+    </div>
+    <span class="mobile_bg02"></span>
+    <!-- 移动端主导航 -->
+    <section class="mobile">
+        <div class="mobile-inner-header">
+            <div class="mobile-inner-header-icon mobile-inner-header-icon-out">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="mobile-inner-nav">
+
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li>
+                    <a href="javascript:void(0);">学院概况</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+                         <dd><a  href="/page/51001_01.html" target="_blank">学院简介</a></dd><dd><a href="/page/xrld.html" target="_blank">学院领导</a></dd><dd><a href="/Page/51003_01.html" target="_blank">荣誉殿堂</a></dd><dd><a href="/Page/51004_01.html" target="_blank">校园图片</a></dd> <dd><a  href="/page/51006_01.html" target="_blank">交通信息</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">组织机构</a><strong>+</strong>
+                     <dl class="mobile_subNav">
+                        <dd><a href="/page/jgsz01.html" target="_blank">职能部门</a></dd>
+                        <dd><a href="/page/jgsz03.html" target="_blank">运动管理中心</a></dd>
+                        <dd><a href="/page/jgsz02.html" target="_blank">教学机构</a></dd>
+                        <dd><a href="/page/jgsz04.html" target="_blank">校区基地</a></dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">信息公开</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+                         <dd><a href="/newlist/530020001.html" target="_blank">综合新闻</a></dd> <dd><a href="/newlist/530010001.html" target="_blank">通知公告</a></dd> <dd><a href="/newlist/530030001.html" target="_blank">人事信息</a></dd> <dd><a href="/newlist/530040001.html" target="_blank">媒体聚焦</a></dd> <dd><a href="/newlist/530050001.html" target="_blank">下载专区</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">党建文化</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+                         <dd><a href="/newlist/580010001.html" target="_blank">思政建设</a></dd> <dd><a href="/newlist/580020001.html" target="_blank">基层党建</a></dd> <dd><a href="/newlist/580030001.html" target="_blank">廉政建设</a></dd> <dd><a href="/newlist/580040001.html" target="_blank">政策法规</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">竞赛训练</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+                         <dd><a href="/newlist/550060001.html" target="_blank">竞训管理</a></dd> <dd><a href="/newlist/550010001.html" target="_blank">中心动态</a></dd> <dd><a href="/newlist/550020001.html" target="_blank">赛事动态</a></dd> <dd><a href="/newlist/550050001.html" target="_blank">运动医科</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">教学科研</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+                         <dd><a href="/newlist/540010001.html" target="_blank">教学动态</a></dd> <dd><a href="/newlist/540020001.html" target="_blank">学科建设</a></dd> <dd><a href="/newlist/540030001.html" target="_blank">师资力量</a></dd> <dd><a href="/newlist/540040001.html" target="_blank">学术动态</a></dd> <dd><a href="/newlist/540050001.html" target="_blank">教学成果</a></dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);">校园文化</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+                         <dd><a href="/newlist/560020001.html" target="_blank">团青之家</a></dd> <dd><a href="/newlist/560030001.html" target="_blank">学生天地</a></dd> <dd><a href="/newlist/560040001.html" target="_blank">教工活动</a></dd> <dd><a href="/newlist/560050001.html" target="_blank">平安校园</a></dd> <dd><a href="/newlist/560060001.html" target="_blank">校友之家</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">招生就业</a><strong>+</strong>
+                    <dl class="mobile_subNav">
+                        <!--$divzsjy1$-->
+                       <dd><a href="https://zsw.scsc.edu.cn" target="_blank">招生信息网</a></dd>
+                       <dd><a href="https://jyw.scsc.edu.cn" target="_blank">就业信息网</a></dd>
+                    </dl>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+</header>
+    <!--header结束 -->
+    <!--修改banner开始-->
+    <div class="Banner">
+        <div class="flexslider">
+            <ul class="slides">
+                 <li><span class="slide-img"> <a href="" alt=""><img src="https://image.scsc.edu.cn//upfiles/Video/20241023/20241023100554687.jpg" >  </a> </span> </li> <li><span class="slide-img"> <a href="" alt="备战篮球联赛"><img src="https://image.scsc.edu.cn//upfiles/Tpz/20240104/20240104105426676.jpg" >  </a> </span> </li> <li><span class="slide-img"> <a href="" alt="学院党代会"><img src="https://image.scsc.edu.cn//upfiles/Tpz/20240104/20240104103045908.jpg" >  </a> </span> </li> <li><span class="slide-img"> <a href="" alt="二十大"><img src="https://image.scsc.edu.cn//upfiles/Tpz/20240104/20240104105419136.jpg" >  </a> </span> </li>
+            </ul>
+        </div>
+    </div>
+    <!--修改banner结束-->
+    <!--content开始-->
+    <div class="content clearFix">
+        <div class="row mode01 clearFix">
+
+            <div class="bjtu-news clearFix">
+                <ul class="bjtu-list01">
+                    <div class="listTitle01 clear">
+                        <div style="float:left; ">
+                            <h2><a href="/newlist/530020001.html">新闻动态<span>NEWS</span></a></h2>
+                        </div>
+                        <div style="float:right;width:15%; ">
+                            <span class="readMore"><a href="/newlist/530020001.html" target="_blank">更多<i class="iconfont iconmore"></i></a></span>
+                        </div>
+                    </div>
+                    <li>  <a href="/news/53002/15056.html" target="_blank">  <div class="list-date01"><strong>10-16</strong><span>2024</span></div>  <h3 title="四川女子冰球队全胜夺冠！成功卫冕全国青年女子冰球锦标赛（U18）冠军">四川女子冰球队全胜夺冠！成功卫冕全国青年…</h3><p title="在这个秋风萧瑟、激情四溢的季节里，2024年10月11日，一场冰上盛宴在黑龙江省哈尔滨体育学院冰球馆璀璨上演。经过6天紧张激烈的角逐，最终，四川女子冰球队以全胜战绩，成功卫冕全国青年女子冰球锦标赛（U"> 在这个秋风萧瑟、激情四溢的季节里，2024年10月11日，一场冰上盛宴在黑龙江省哈尔滨体育学院冰球馆璀璨上演。经过6天紧… </p>   <span class="item-img01 imgResponsive"><img src="https://image.scsc.edu.cn//upfiles/new/20241017/202410171610557207419.png"  style="width: 334px; height: 197px; "></span></a></li><li>  <a href="/news/53002/15041.html" target="_blank">  <div class="list-date01"><strong>10-09</strong><span>2024</span></div>  <h3 title="学院组织召开9月重点工作月例会">学院组织召开9月重点工作月例会</h3><p title="10月8日下午，四川体育职业学院9月重点工作例会在图书馆二楼召开，学院党委副书记、院长刘汉权主持会议。会上，各项目中心、各教学系、附属学校、奥校等部门重点就10月重点工作计划与亟需学院解决的问题进行了"> 10月8日下午，四川体育职业学院9月重点工作例会在图书馆二楼召开，学院党委副书记、院长刘汉权主持会议。会上，各项目中心、… </p>   <span class="item-img01 imgResponsive"><img src="https://image.scsc.edu.cn//upfiles/new/20241009/202410091126592551873.png"  style="width: 334px; height: 197px; "></span></a></li>
+                </ul>
+
+                <ul class="bjtu-list02">
+
+                    <div class="listTitle01 clear">
+                        <div style="float:left; ">
+                            <h2>
+                                <a href="/newlist/530010001.html">通知公告<span>NOTICE</span></a>
+                            </h2>
+                        </div>
+                        <div style="float:right;width:20%;">
+                            <span class="readMore"><a href="/newlist/530010001.html" target="_blank">更多<i class="iconfont iconmore"></i></a></span>
+                        </div>
+                    </div>
+                    <li>  <a href="/news/53001/15069.html" target="_blank">    <span title="四川体育职业学院2024-2026年度常年法律顾问服务采购项目比选公告">     <h3> <div class="newsdivL">   四川体育职业学院2024-2026年度常…</div>  <div class="newsdivR"> 2024-10-25</div></h3></span></a></li><li>  <a href="/news/53001/15066.html" target="_blank">    <span title="四川体育职业学院花样游泳运动中心集体自由自选、集体技巧比赛泳衣定制采购项目比选公告">     <h3> <div class="newsdivL">   四川体育职业学院花样游泳运动中心集体…</div>  <div class="newsdivR"> 2024-10-24</div></h3></span></a></li><li>  <a href="/news/53001/15062.html" target="_blank">    <span title="四川体育职业学院关于采购办理单位产权证中介服务公司项目比选公告">     <h3> <div class="newsdivL">   四川体育职业学院关于采购办理单位产权…</div>  <div class="newsdivR"> 2024-10-22</div></h3></span></a></li><li>  <a href="/news/53001/15061.html" target="_blank">    <span title="四川体育职业学院购买雪上项目全国年度赛事参赛运动员滑雪板打蜡服务项目比选公告">     <h3> <div class="newsdivL">   四川体育职业学院购买雪上项目全国年度…</div>  <div class="newsdivR"> 2024-10-22</div></h3></span></a></li><li>  <a href="/news/53001/15060.html" target="_blank">    <span title="四川体育职业学院太平寺校区教学综合楼建设项目竣工财务决算审计服务采购项目的比选公告">     <h3> <div class="newsdivL">   四川体育职业学院太平寺校区教学综合楼…</div>  <div class="newsdivR"> 2024-10-21</div></h3></span></a></li><li>  <a href="/news/53001/15059.html" target="_blank">    <span title="四川体育职业学院 综合档案室密集架及档案搬迁项目 比选公告">     <h3> <div class="newsdivL">   四川体育职业学院 综合档案室密集架及…</div>  <div class="newsdivR"> 2024-10-21</div></h3></span></a></li><li>  <a href="/news/53001/15058.html" target="_blank">    <span title="四川体育职业学院综合档案室新增智能电动密集架采购项目比选公告">     <h3> <div class="newsdivL">   四川体育职业学院综合档案室新增智能电…</div>  <div class="newsdivR"> 2024-10-21</div></h3></span></a></li><li>  <a href="/news/53001/15055.html" target="_blank">    <span title="四川体育职业学院 四川香港马会奥林匹克运动学校办公用品、办公耗材采购项目比选结果公告">     <h3> <div class="newsdivL">   四川体育职业学院 四川香港马会奥林匹…</div>  <div class="newsdivR"> 2024-10-16</div></h3></span></a></li><li>  <a href="/news/53001/15054.html" target="_blank">    <span title="四川体育职业学院异训点位择优选取结果补充名单公示">     <h3> <div class="newsdivL">   四川体育职业学院异训点位择优选取结果…</div>  <div class="newsdivR"> 2024-10-16</div></h3></span></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="wrap_mode04 clearFix">
+            <div class="row mode04 clearFix">
+                <div class="listTitle01 listTitle03 clear">
+                    <h2><a href="javascript:void(0);">专题专栏</a> <span>Thematic Column</span></h2>
+                </div>
+                <ul class="bjtu-list06">
+                      <li class="li1">   <a href="/ztlist/500200001.html" target="_blank" >  <span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn//upfiles/zhuanti/20221026/202210261551594070489.jpg" width="338px" height="211px"></span> <i class="item-bg03"></i> <h3 class="item-txt03">学习宣传贯彻党的二十大精神</h3> </a></li>  <li class="li1">   <a href="/ztlist/500220001.html" target="_blank" >  <span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn//upfiles/zhuanti/20230818/202308181804577417229.jpg" width="338px" height="211px"></span> <i class="item-bg03"></i> <h3 class="item-txt03">聚焦党代会</h3> </a></li><li class="li2"><a href="/ztlist/500050001.html" target="_blank" ><span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn/../../upfiles/zhuanti/20191108/201911081034279415245.jpg" width="161px" height="98px" ></span><i class="item-bg03"></i><h3 class="item-txt03">青春告白祖国</h3></a></li><li class="li3"><a href="https://www.scsc.edu.cn/newlist/540040001.html" target="_blank" ><span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn//upfiles/zhuanti/20230406/202304061541005999525.jpg" width="161px" height="98px" ></span><i class="item-bg03"></i><h3 class="item-txt03">学术动态</h3></a></li><li class="li4"><a href="/ztlist/500080001.html" target="_blank" ><span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn/../../upfiles/zhuanti/20191108/201911081330243169356.jpg" width="161px" height="98px" ></span><i class="item-bg03"></i><h3 class="item-txt03">课程教学</h3></a></li>  <li class="lil5">   <a href="/ztlist/500120001.html" target="_blank" >  <span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn//upfiles/zhuanti/20201010/202010101228474287295.jpg" width="161px" height="98px"></span> <i class="item-bg03"></i> <h3 class="item-txt03">文明校园</h3> </a></li><li class="li6"><a href="/ztlist/500130001.html" target="_blank" ><span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn//upfiles/zhuanti/20201012/202010121535232304752.jpg" width="161px" height="98px" ></span><i class="item-bg03"></i><h3 class="item-txt03">反兴防兴</h3></a></li><li class="li7"><a href="/ztlist/500070001.html" target="_blank" ><span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn/../../upfiles/zhuanti/20191108/201911081321278922546.jpg" width="161px" height="98px" ></span><i class="item-bg03"></i><h3 class="item-txt03">校际交流</h3></a></li>
+                </ul>
+                <!--<div><a href="https://www.sc.gov.cn/" target="_blank"><img src="images/szf.png" style="width:100%;height:100px;"></a></div>-->
+
+                <ul class="bjtu-list06">
+                    <li class="li9"><a href="https://www.sc.gov.cn/" target="_blank"><span class="item-img03 imgResponsive"><img src="images/szf.png" width="161px" height="98px"></span><i class="item-bg03"></i><h3 class="item-txt03">四川省人民政府网站</h3></a></li>
+                    <li class="li9"><a href="https://hgpg.scsc.edu.cn/" target="_blank"><span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn//upfiles/zhuanti/20220121/202201211832187052929.jpg" width="161px" height="98px"></span><i class="item-bg03"></i><h3 class="item-txt03">高等职业院校人才培养合格评估评建工作</h3></a></li>
+                    <li class="li9"><a href="#" target="_blank"><span class="item-img03 imgResponsive"><img src="https://image.scsc.edu.cn//upfiles/zhuanti/20220516/202205161649559148114.jpg" width="161px" height="98px"></span><i class="item-bg03"></i><h3 class="item-txt03">职业教育活动周</h3></a></li>
+                    <li class="li9"> <a href="https://ly.scsc.edu.cn/index.aspx?zd=5&lx=59004" target="_blank">  <span class="item-img03 imgResponsive"><img src="images/tcwt.jpg" width="161px" height="98px"></span> <i class="item-bg03"></i> <h3 class="item-txt03">办学突出问题</h3> </a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="wrap_mode05 clearFix">
+            <div class="row mode05 clearFix">
+                <ul class="bjtu-list07">
+                    <li class="li6"><a href="https://oa.scsc.edu.cn" target="_blank"> <i class="iconfont"><img src="images/oa.png" /></i><span>OA办公系统</span> </a>  </li>
+                    <li class="li6"><a href="https://sctyzy.mh.chaoxing.com" target="_blank"><i class="iconfont"><img src="images/book.png" /></i><span>数字资源平台</span></a></li>
+                    <li class="li6"><a href="https://jwxt.scsc.edu.cn/xtgl/login_slogin.html" target="_blank"><i class="iconfont"><img src="images/jiaowu.png" /></i><span>教务系统</span></a></li>
+                    <li class="li6"><a href="https://www.scsc.edu.cn/xiaoyuanjz/index.html" target="_blank"><i class="iconfont"><img src="images/yyjz.png" /></i><span>应用矩阵</span></a></li>
+                    <li class="li6"><a href="http://gxlz.scedu.net" target="_blank"><i class="iconfont"><img src="images/wllz.png" /></i><span>网络理政</span></a></li>
+                    <li class="li6"><a href="https://ly.scsc.edu.cn/index.aspx?zd=5&lx=59003" target="_blank"><i class="iconfont"><img src="images/email.png" /></i><span>书记信箱</span></a></li>
+                    <li class="li6"><a href="https://ly.scsc.edu.cn/index.aspx?zd=5&lx=59004" target="_blank"><i class="iconfont"><img src="images/email.png" /></i><span>院长信箱</span></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--content结束-->
+    <!-- footer开始 -->
+    
+
+<footer class="bjtu-wrapFooter clearFix">
+    <div class="bjtu-footer clearFix">
+        <div class="bjtu-footerLogo"><img src="/images/footer_logo.png" alt=""></div>
+        <div class="bjtu-footerLf">
+            <span>地址：成都市武侯区太平寺路8号　</span>
+            <span>邮箱：scscedu@163.com　</span>
+            <span>电话：028-85110036</span>
+            <span>
+                <script type="text/javascript">
+                    var date = new Date;
+                    document.write(date.getFullYear());
+                </script> Copyright © 四川体育职业学院
+            </span>
+        </div>
+
+
+
+        <div class="bjtu-footerRt">
+            <div>
+                <select name="pageselect1" onchange="self.location.href=options[selectedIndex].value" style="font-size:15px; height:25px;width:100px;">
+                    <option>---校内链接---</option>
+                      <option value="https://zsw.scsc.edu.cn">招生信息网</option>   <option value="https://jyw.scsc.edu.cn">就业信息网</option>   <option value="https://jwc.scsc.edu.cn">教务处</option>   <option value="https://xsc.scsc.edu.cn">学生处</option>   <option value="https://cwc.scsc.edu.cn">财务处</option>   <option value="https://fx.scsc.edu.cn">附属学校</option>   <option value="https://ax.scsc.edu.cn">四川香港马会奥林匹克运动学校</option>   <option value="https://hgpg.scsc.edu.cn">评建工作网</option>
+                </select>
+                <select name="pageselect2" onchange="self.location.href=options[selectedIndex].value" style="font-size:15px; height:25px;width:100px;">
+                    <option>---校外链接---</option>
+                    <option value="http://www.sport.gov.cn/">国家体育总局</option>
+                    <option value="http://www.moe.gov.cn/">教育部</option>
+                    <option value="https://www.sc.gov.cn/">四川省人民政府</option>
+                    <option value="http://tyj.sc.gov.cn/">四川省体育局</option>
+                    <option value="http://edu.sc.gov.cn/">四川省教育厅</option>
+                    <option value="http://scgqt.gov.cn/home/">四川青年网</option>
+                    <option value="https://www.chsi.com.cn/">学信网</option>
+
+                </select>
+            </div>
+
+            <div class="footer_add">
+                <div class="add-weixin"><a href="javascript:void(0);"><span class="wx1"></span><img src="/images/show-wb.png" /></a></div>
+                <div class="add-weixin"><a href="javascript:void(0);"><span class="wx2"></span><img src="/images/show-wx.png" /></a></div>
+                <div class="add-weixin"><a href="javascript:void(0);"><span class="wx3"></span><img src="/images/show-dy.png" /></a></div>
+                <div class="add-weixin"><a href="javascript:void(0);"><span class="wx4"></span><img src="/images/show-bl.png" /></a></div>
+            </div>
+
+
+                 <div style="width:300px;margin:0 auto; padding:5px 0;">
+                     <div style="width:300px;margin:0 auto; padding:5px 0;">
+                         <div style="width:210px;margin:0 auto;float:left;">
+                             <a href="http://beian.miit.gov.cn" target="_blank"><p style="float:left;margin: 0px 0px 0px 5px; color:#ffffff;"> 蜀ICP备19035161号-2</p></a><br />
+                         </div>
+
+                         <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702001657" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/gab.png" style="float:left;" /><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#ffffff;">川公网安备 51010702001657号</p></a>
+                     </div>
+
+                 </div>
+    </div>
+</footer>
+    <!-- footer结束 -->
+    <a href="#" class="goTop iconfont iconzhiding"></a>
+    <!-- 通用JS -->
+
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- FlexSlider -->
+    <script type="text/javascript">
+        $(function () {
+            //头图
+            $(".Banner .flexslider").flexslider({
+                animation: 'fade',
+                slideshowSpeed: 5000, //展示时间间隔ms
+                animationSpeed: 1000, //滚动时间ms
+                // pausePlay:true,
+                touch: true //是否支持触屏滑动
+            });
+            $('.Banner .flex-direction-nav a').each(function (e) {
+                var $this = $(this)
+                $this.addClass('iconfont');
+                $this.text('');
+                // $(this).addClass('iconzuo')
+                if ($this.hasClass('flex-prev')) {
+                    $(this).addClass('iconzuo1')
+                } else if ($this.hasClass('flex-next')) {
+                    $(this).addClass('iconyou')
+                }
+            })
+            $('.Banner .flex-control-nav a').each(function (e) {
+                var $this = $(this)
+                $this.addClass('iconfont');
+                $this.text('');
+                $(this).addClass('icontixing')
+            })
+            flexsliderSlide() //新闻热点轮播
+            weChat() //二维码
+            //新闻热点
+            function flexsliderSlide() {
+                var iWSon = document.documentElement.clientWidth;
+                if (iWSon <= 480) {
+                    x = 260;
+                } else if (iWSon <= 1480) {
+                    x = 180;
+                } else {
+                    x = 285;
+                }
+                //校园热点
+                $(".mode03 .flexslider").flexslider({
+                    animation: "slide",
+                    animationLoop: true,
+                    itemWidth: x,
+                    itemMargin: 12,
+                    minItems: 1,
+                    maxItems: 3
+                    // pausePlay: true
+                });
+            }
+            $(window).resize(function () {
+                flexsliderSlide() //新闻热点轮播
+                weChat() //二维码
+            })
+        });
+    </script>
+
+    <!--底部-->
+
+
+</body>
+</html>

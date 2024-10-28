@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/Public/website/js/jquery-1.8.3.min.js"></script>
+
+    <script>
+        // 头部变换
+        $(document).ready(function(){
+            var mobile_flag = isMobile();
+            // if(mobile_flag){
+   
+            //     $('body').empty();
+            //     $('body').html('<h1 style="font-size:4rem;text-align:center;margin-top:30%;">首页有动态效果，请复制链接，前往电脑浏览器预览</h1>');
+            //     return false;
+            // }
+        },$(window).scroll(function () {
+                var _top = $(window).scrollTop();
+                // console.log(_top);
+                if (_top > 0) {
+                    $(".top").addClass("nav_bg");
+                    $(".logo").addClass("img_bg");
+                } else {
+                    $(".top").removeClass("nav_bg");
+                    $(".logo").removeClass("img_bg");
+                }
+            })
+        );
+        function isMobile() {
+            var userAgentInfo = navigator.userAgent;
+ 
+            var mobileAgents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad","iPod"];
+ 
+            var mobile_flag = false;
+ 
+            //根据userAgent判断是否是手机
+            for (var v = 0; v < mobileAgents.length; v++) {
+                if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+                    mobile_flag = true;
+                    break;
+                }
+            }
+            var screen_width = window.screen.width;
+            var screen_height = window.screen.height;
+ 
+            //根据屏幕分辨率判断是否是手机
+            if(screen_width < 500 && screen_height < 800){
+                mobile_flag = true;
+            }
+            return mobile_flag;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=0, user-scalable=yes,shrink-to-fit=no">
+
+    <title>焦作新材料职业学院</title>
+    <link rel="stylesheet" href="/Public/website/css/base.css">
+    <link rel="stylesheet" href="/Public/website/css/style.css?v=1.0">
+    <link href="/Public/website/css/jdt.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/Public/website/css/swiper.css">
+    <link rel="stylesheet" href="/Public/website/testfont/iconfont.css">
+    
+</head>
+<body>
+    <div class="top">
+        <div class="box flex">
+            <div class="logo">
+                <a href="/">
+                  
+                    <img class="logof" src="/Public/website/img/logof.png" alt="">
+                </a>
+            </div>
+            <div class="nav">
+                <ul class="main_menu">
+                    <li class="zoomin">
+                             
+                                <a href="javascript:void(0)">
+                                    学校概况                                </a><div> </div> 
+                            <ul class="menu">
+                                    <a   href="/index.php/website/index/category_content/category_id/12.html">
+                                        <li >
+                                            
+                                                学校简介                                            
+                                        </li>
+                                    </a><a   href="/index.php/Website/Teacher/index/category_id/13.html">
+                                        <li >
+                                            
+                                                学校领导                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/86.html">
+                                        <li >
+                                            
+                                                领导关怀                                            
+                                        </li>
+                                    </a><a   href="/index.php/Website/Video/index/category_id/15.html">
+                                        <li >
+                                            
+                                                学校视频                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/category_content/category_id/89.html">
+                                        <li >
+                                            
+                                                焦材院映像                                            
+                                        </li>
+                                    </a><a  target="_blank" href="https://mp.weixin.qq.com/s/dMcUzxSKZxE8vXXnmV_rHg">
+                                        <li >
+                                            
+                                                标识系统                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/category_content/category_id/82.html">
+                                        <li >
+                                            
+                                                校园导览                                            
+                                        </li>
+                                    </a>                                    
+                                    
+                                </ul>                        </li><li class="zoomin">
+                             
+                                <a href="javascript:void(0)">
+                                    学校部门                                </a><div> </div> 
+                            <ul class="menu">
+                                    <a   href="/index.php/website/index/category_content/category_id/87.html">
+                                        <li >
+                                            
+                                                组织架构                                            
+                                        </li>
+                                    </a><a   href="/index.php/Website/class/index/category_id/21.html">
+                                        <li >
+                                            
+                                                职能部室                                            
+                                        </li>
+                                    </a><a   href="/index.php/Website/class/index/category_id/20.html">
+                                        <li >
+                                            
+                                                二级学院                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/category_content/category_id/88.html">
+                                        <li >
+                                            
+                                                师资队伍                                            
+                                        </li>
+                                    </a>                                    
+                                    
+                                </ul>                        </li><li class="zoomin">
+                             
+                                <a href="javascript:void(0)">
+                                    党建工作                                </a><div> </div> 
+                            <ul class="menu">
+                                    <a   href="/index.php/website/index/article_list/category_id/39.html">
+                                        <li >
+                                            
+                                                党员大会专栏                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/78.html">
+                                        <li >
+                                            
+                                                党建实讯                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/84.html">
+                                        <li >
+                                            
+                                                思政教育                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/85.html">
+                                        <li >
+                                            
+                                                学习园地                                            
+                                        </li>
+                                    </a>                                    
+                                    
+                                </ul>                        </li><li class="zoomin">
+                             
+                                <a href="javascript:void(0)">
+                                    新闻中心                                </a><div> </div> 
+                            <ul class="menu">
+                                    <a   href="/index.php/website/index/article_list/category_id/6.html">
+                                        <li >
+                                            
+                                                学校要闻                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/7.html">
+                                        <li >
+                                            
+                                                综合时讯                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/18.html">
+                                        <li >
+                                            
+                                                校报                                            
+                                        </li>
+                                    </a>                                    
+                                    
+                                </ul>                        </li><li class="zoomin">
+                             
+                                <a href="javascript:void(0)">
+                                    学生工作                                </a><div> </div> 
+                            <ul class="menu">
+                                    <a   href="/index.php/website/index/article_list/category_id/77.html">
+                                        <li >
+                                            
+                                                青春榜样                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/96.html">
+                                        <li >
+                                            
+                                                通知公告                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/97.html">
+                                        <li >
+                                            
+                                                常用下载                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/98.html">
+                                        <li >
+                                            
+                                                学生资助中心                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/91.html">
+                                        <li >
+                                            
+                                                校团委                                            
+                                        </li>
+                                    </a>                                    
+                                    
+                                </ul>                        </li><li class="zoomin">
+                             
+                                <a href="javascript:void(0)">
+                                    教学科研                                </a><div> </div> 
+                            <ul class="menu">
+                                    <a   href="/index.php/website/index/article_list/category_id/22.html">
+                                        <li >
+                                            
+                                                教学工作                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/23.html">
+                                        <li >
+                                            
+                                                专业设置                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/24.html">
+                                        <li >
+                                            
+                                                培养方案                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/27.html">
+                                        <li >
+                                            
+                                                实习实训                                            
+                                        </li>
+                                    </a>                                    
+                                    
+                                </ul>                        </li><li class="zoomin">
+                             
+                                <a href="javascript:void(0)">
+                                    招生就业                                </a><div> </div> 
+                            <ul class="menu">
+                                    <a   href="/index.php/Zhaosheng/Index/article_list/category_id/50.html">
+                                        <li >
+                                            
+                                                招生简章                                            
+                                        </li>
+                                    </a><a   href="/index.php/Zhaosheng/Index/article_list/category_id/55.html">
+                                        <li >
+                                            
+                                                招生计划                                            
+                                        </li>
+                                    </a><a   href="/index.php/Zhaosheng/Index/index.html">
+                                        <li >
+                                            
+                                                招生网                                            
+                                        </li>
+                                    </a>                                    
+                                    
+                                </ul>                        </li><li class="zoomin">
+                             
+                                <a href="javascript:void(0)">
+                                    信息公开                                </a><div> </div> 
+                            <ul class="menu">
+                                    <a   href="/index.php/website/index/category_content/category_id/17.html">
+                                        <li >
+                                            
+                                                学校章程                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/72.html">
+                                        <li >
+                                            
+                                                规章制度                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/category_content/category_id/81.html">
+                                        <li >
+                                            
+                                                校长信箱                                            
+                                        </li>
+                                    </a><a   href="/index.php/website/index/article_list/category_id/90.html">
+                                        <li >
+                                            
+                                                校历                                            
+                                        </li>
+                                    </a>                                    
+                                    
+                                </ul>                        </li><li class="zoomin">
+                             
+                                <a href="javascript:void(0)">
+                                    通知公告                                </a><div> </div> 
+                            <ul class="menu">
+                                    <a   href="/index.php/website/index/article_list/category_id/8.html">
+                                        <li >
+                                            
+                                                通知公告                                            
+                                        </li>
+                                    </a>                                    
+                                    
+                                </ul>                        </li>
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div id="search">
+                <input  id="sous_input" type="text">
+                <img id="sous" src="/Public/website/img/search.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    
+    
+    
+ 
+    <!-- 大图轮播 -->
+    <div class="lbt" style="overflow: hidden;">
+        <!-- <img src="/Public/website/img/banner.jpg" alt=""> -->
+        <div id="fsD2" class="focus">  
+            <div id="D2pic2" class="fPic">  
+                <div class="fcon">
+                        <div class="focus_img1">
+                            <a href="javascript:void(0)">
+                                                       
+                                <img src="/Public/Uploads/2024/10/12/6709ec7cdac1f.jpg">
+                            </a>
+                        </div>
+                    </div><div class="fcon">
+                        <div class="focus_img1">
+                            <a href="javascript:void(0)">
+                                                       
+                                <img src="/Public/Uploads/2024/08/21/66c548c2c3997.png">
+                            </a>
+                        </div>
+                    </div><div class="fcon">
+                        <div class="focus_img1">
+                            <a href="javascript:void(0)">
+                                                       
+                                <img src="/Public/Uploads/2024/10/12/6709e895e50cf.jpg">
+                            </a>
+                        </div>
+                    </div><div class="fcon">
+                        <div class="focus_img1">
+                            <a href="javascript:void(0)">
+                                                       
+                                <img src="/Public/Uploads/2024/07/08/668ba79104e27.jpg">
+                            </a>
+                        </div>
+                    </div><div class="fcon">
+                        <div class="focus_img1">
+                            <a href="javascript:void(0)">
+                                                       
+                                <img src="/Public/Uploads/2024/10/12/6709e81139292.png">
+                            </a>
+                        </div>
+                    </div><div class="fcon">
+                        <div class="focus_img1">
+                            <a href="javascript:void(0)">
+                                                       
+                                <img src="/Public/Uploads/2024/10/08/67048027f309f.jpg">
+                            </a>
+                        </div>
+                    </div>                
+            </div>
+            <div class="fbg">  
+                <div class="D1fBt" id="D2fBt">  
+                    <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>1</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>2</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>3</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>4</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>5</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>6</i></a>                    
+                </div>  
+            </div>  
+            <span class="prev"></span>   
+            <span class="next"></span>    
+        </div> 
+    </div>
+    <!-- 内容 -->
+
+    <div class="hh">
+        <div class="content">
+            <div class="box flex">
+                <div class="b_tit clearfloat">
+                    <span class="con_tit">校园要闻</span>
+                    <div class="more"><p><a href="/index.php/website/index/article_list/category_id/6.html">进入校园要闻</a></p></div>
+                </div>
+            </div>
+            <!-- <div class="clear"></div> -->
+            <div class="content_list">
+                <div class="box flex">
+                    <div class="left_img">
+                        <!-- 代码 开始 -->
+                        <div id="fsD1" class="focus">  
+                            <div id="D1pic1" class="fPic">  
+                                <div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/487.html">                                            <img src="/Public/Uploads/2024/10/24/6719a1ef1daf8.jpg" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/487.html">                                            
+                                                焦作新材料职业学院举办 学习贯彻党的二十届三中全会精神 专题研讨班                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/484.html">                                            <img src="/Public/Uploads/2024/10/19/6713025438773.jpg" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/484.html">                                            
+                                                中原内配集团股份有限公司莅临我校考察交流                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/483.html">                                            <img src="/Public/Uploads/2024/10/15/670e0b5e95f21.jpg" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/483.html">                                            
+                                                【焦材院要闻】河南能源集团、河南能源人力集团莅临我校考察交流                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/471.html">                                            <img src="/Public/Uploads/2024/10/03/66fe0756d3b7c.jpg" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/471.html">                                            
+                                                心系留校学子  情暖国庆佳节——我校领导看望慰问留校学生                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/470.html">                                            <img src="/Public/Uploads/2024/09/30/66f9f8b756d58.jpg" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/470.html">                                            
+                                                沙场点兵砺青春  强国复兴勇担当 ——焦作新材料职业学院举行2024 级新生军训总结表彰大会暨开学典礼                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/463.html">                                            <img src="/Public/Uploads/2024/09/18/66ea1bf29e0fb.JPG" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/463.html">                                            
+                                                『2024迎新特辑 』| 集团领导、学校领导深入一线检查指导2024年迎新工作                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/459.html">                                            <img src="/Public/Uploads/2024/09/11/66e162f256a5f.jpg" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/459.html">                                            
+                                                弘扬教育家精神 勇担教育强国使命——焦作新材料职业学院隆重召开庆祝第40个教师节暨表彰大会                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/454.html">                                            <img src="/Public/Uploads/2024/08/15/66bde5083728f.JPG" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/454.html">                                            
+                                                焦作新材料职业学院成功举办 2024年暑期教职工培训                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/453.html">                                            <img src="/Public/Uploads/2024/08/06/66b1f87bd5d32.jpg" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/453.html">                                            
+                                                我校召开党委理论学习中心组集中学习研讨会（扩大）会议                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/429.html">                                            <img src="/Public/Uploads/2024/07/15/6694f460ac688.png" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/429.html">                                            
+                                                “述”说工作实绩，“职”面责任担当——2024年上半年学生工作述职总结会                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/411.html">                                            <img src="/Public/Uploads/2024/07/05/6687a27b404a4.jpg" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/411.html">                                            
+                                                【焦材院要闻】我校顺利举办第一届教师教学能力大赛                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/424.html">                                            <img src="/Public/Uploads/2024/07/09/668c9553d72e3.png" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/424.html">                                            
+                                                以检促建、以检促改——省教育厅专家组莅临我校开展2024年度高等学校实验室安全检查工作                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/419.html">                                            <img src="/Public/Uploads/2024/07/08/668b9b5f64aa6.png" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/419.html">                                            
+                                                【焦材院要闻】凝心聚力以检促建 强化规范赋能发展——省教育厅专家组莅临我校开展2023年度年检工作                                            </a>
+                                        </span>
+                                    </div><div class="fcon" style="display: none;">
+                                                                                            <a  href="/index.php/website/index/article_content/article_id/360.html">                                            <img src="/upload/20240509/202405090808047979.png" style="opacity: 1; ">
+                                        </a>
+                                        <span class="shadow">
+                                                                                                    <a  href="/index.php/website/index/article_content/article_id/360.html">                                            
+                                                【焦材院要闻】我校召开民办教育规范提升年暨规范民办学校办学行为专项行动动员部署会                                            </a>
+                                        </span>
+                                    </div>                            </div>
+                            <div class="fbg">  
+                            <div class="D1fBt" id="D1fBt">  
+                                <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>1</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>2</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>3</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>4</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>5</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>6</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>7</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>8</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>9</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>10</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>11</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>12</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>13</i></a><a href="javascript:void(0)" hidefocus="true" target="_self" ><i>14</i></a>                                
+                             
+                            </div>  
+                            </div>  
+                            <span class="prev"></span>   
+                            <span class="next"></span>    
+                        </div>  
+                    </div>
+
+                    <div class="right_list">
+                        <div class="new_container">
+                            
+                            <div class="in_list">
+                                    <div class="in_list_time">
+                                        <div class="day">24</div>
+                                        <div class="month">2024-10</div>
+                                    </div>
+                                    <div class="in_list_new">
+                                        <h5>
+                                                                                            <a href="/index.php/website/index/article_content/article_id/489.html">                                            
+
+                                            刘冰到焦作新材料职业学院宣讲党的二十届三中全会精神并讲授思政课                                            </a>
+                                        </h5>
+                                        <p> &nbsp; &nbsp; &nbsp;&nbsp;10月23日下午，市委副书记、市长刘冰到焦作新材料职业学院宣讲党的二十届三中全会精神，并向师生代表讲授思政课，强调广大师生要深入学习贯彻党的二十届三中全会精神，坚定理想信念，提升能力素养，扛起时代重任，努力为加快打造中国式现代化建设河南实践先行区、奋力谱写新时代新征程中原更加出彩焦作新篇章贡献青春力量。思政课上，刘冰和学校师生一起回顾历史进程，并结合我市近年来取得的发展成效，生动阐述了改革开放带来的伟大成就；从政治、历史、理论、实践维度，深刻阐 </p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div><div class="in_list">
+                                    <div class="in_list_time">
+                                        <div class="day">24</div>
+                                        <div class="month">2024-10</div>
+                                    </div>
+                                    <div class="in_list_new">
+                                        <h5>
+                                                                                            <a href="/index.php/website/index/article_content/article_id/487.html">                                            
+
+                                            焦作新材料职业学院举办 学习贯彻党的二十届三中全会精神 专题研讨班                                            </a>
+                                        </h5>
+                                        <p> &nbsp; &nbsp; &nbsp; &nbsp;为深入学习领会党的二十届三中全会精神，使党的创新理论成果融入学校思想政治工作、贯穿教育教学全过程，引导广大党员干部和教职工切实把思想和行动统一到党中央的决策部署上来，10月22日至29日，学校党委举办全体党员及中层以上干部学习贯彻党的二十届三中全会精神专题培训班。开班仪式&nbsp; &nbsp; &nbsp; &nbsp;10月22日下午，学习贯彻党的二十届三中全会精神专题培训班在慧思楼101举行开班仪式。校领导李龙星、李瑞宾、康俊伟、秦海 </p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div><div class="in_list">
+                                    <div class="in_list_time">
+                                        <div class="day">24</div>
+                                        <div class="month">2024-10</div>
+                                    </div>
+                                    <div class="in_list_new">
+                                        <h5>
+                                                                                            <a href="/index.php/website/index/article_content/article_id/488.html">                                            
+
+                                            【焦材院要闻】校企共建研发中心 助推产学研深度融合                                            </a>
+                                        </h5>
+                                        <p> &nbsp; &nbsp; &nbsp; &nbsp; 根据《河南省教育厅河南省科技厅河南省工信厅关于推动高校与规上工业企业共建研发中心（平台）高质量发展的意见》（教科技〔2023〕259号）《河南省教育厅关于加快推进校企研发中心建设及推荐河南省示范性校企研发中心工作的通知》（教办科技〔2024〕112号）文件要求，为加快推进我校校企共建研发中心建设，10月18日下午我校“钛基新材料共建研发中心”签约挂牌仪式在龙佰集团公司研究院举行，集团公司研发副总裁陈建立、钛基新材料产业研究院项目负责人张海文 </p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div><div class="in_list">
+                                    <div class="in_list_time">
+                                        <div class="day">19</div>
+                                        <div class="month">2024-10</div>
+                                    </div>
+                                    <div class="in_list_new">
+                                        <h5>
+                                                                                            <a href="/index.php/website/index/article_content/article_id/484.html">                                            
+
+                                            中原内配集团股份有限公司莅临我校考察交流                                            </a>
+                                        </h5>
+                                        <p> 10月18日下午，中原内配集团股份有限公司董事长薛德龙、总裁张冬梅等领导一行莅临我校考察交流，学校理事长张刚，党委副书记、副校长李瑞宾，副校长康俊伟等领导热情接待。中原内配集团领导一行先后参观了我校的工伤预防宣传基地和特色建筑景贤书院，随后，双方在学校第二会议室进行座谈交流。理事长张刚首先对薛德龙董事长一行的到来表示热烈欢迎，并简要介绍了学校的办学情况，希望双方能在专业建设、人才培养、学生就业、技能培训等方面加强合作。中原内配集团董事长薛德龙对我校的办学理念和办学环境给予高度评价，期待双方立足企 </p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div><div class="in_list">
+                                    <div class="in_list_time">
+                                        <div class="day">18</div>
+                                        <div class="month">2024-10</div>
+                                    </div>
+                                    <div class="in_list_new">
+                                        <h5>
+                                                                                            <a href="/index.php/website/index/article_content/article_id/483.html">                                            
+
+                                            【焦材院要闻】河南能源集团、河南能源人力集团莅临我校考察交流                                            </a>
+                                        </h5>
+                                        <p> 参观工伤预防宣传基地10月9日下午，河南能源集团纪委常委、人力资源部总经理，河南能源人力集团党委书记、董事长周建峰等领导一行莅临我校考察交流，学校理事长张刚，党委副书记、副校长李瑞宾等领导热情接待。座谈会参观景贤书院河南能源集团纪委常委、人力资源部总经理，河南能源人力集团党委书记、董事长周建峰河南能源集团、河南能源人力集团领导一行先后参观了我校特色建筑景贤书院和工伤预防宣传基地，对我校的办学环境、办学定位、办学前景给予高度评价。随后，双方在学校第二会议室进行座谈交流。周建峰详细介绍河南能源集团、 </p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="h30"></div>
+    
+        
+        <div class="testfadein2 testfadein">
+            <div class="box flex">
+                <div class="left_list">
+                    <div class="b_tit clearfloat">
+                        <span class="con_tit">通知公告</span>
+                        <div class="more1"><p><a href="/index.php/website/index/article_list/category_id/8.html">查看更多</a><i class="icon iconfont icon-gengduo"></i></p></div>
+                    </div>
+                    <div class="new_container">
+                        <div class="in_list">
+                                <div class="in_list_new">
+                                    <h5>
+                                                                                    <a href="/index.php/website/index/article_content/article_id/460.html">                                       
+                                            关于 2024 年中秋节和国庆节假期安排的通知                                        </a>
+                                    </h5>
+                                    <p> </p>
+                                    <h3>2024-09-11</h3>
+                                </div>
+                                <div class="clear"></div>
+                            </div><div class="in_list">
+                                <div class="in_list_new">
+                                    <h5>
+                                        <a href="https://mp.weixin.qq.com/s?__biz=Mzk0MzU5MTA2NQ==&amp;mid=2247489673&amp;idx=1&amp;sn=3e676d9339aa3293b1a6878573e60523&amp;chksm=c330c37ff4474a69b774b6af901bc6079b13bb0c85d1f68f85aba502e7f32b46e9d9f183d57f&amp;token=391688237&amp;lang=zh_CN#rd" >
+                                                                               
+                                            【暑期安全警示】自贡“7·17火灾”事故致16人遇难！暑期出行消防安全提示                                        </a>
+                                    </h5>
+                                    <p> </p>
+                                    <h3>2024-07-23</h3>
+                                </div>
+                                <div class="clear"></div>
+                            </div><div class="in_list">
+                                <div class="in_list_new">
+                                    <h5>
+                                        <a href="https://mp.weixin.qq.com/s?__biz=Mzk0MzU5MTA2NQ==&amp;mid=2247489612&amp;idx=1&amp;sn=90e6570d1226677dea9146776ee7b903&amp;chksm=c330c3baf4474aac7d72a7d025d71601643378f6d6279612401a44b4ca345f1b5e5225f3a2a3&amp;token=391688237&amp;lang=zh_CN#rd" >
+                                                                               
+                                            夏季多雨时节，安全防范必知→                                        </a>
+                                    </h5>
+                                    <p> </p>
+                                    <h3>2024-07-23</h3>
+                                </div>
+                                <div class="clear"></div>
+                            </div>                    </div>
+                </div>
+
+
+                <div class="right_list1">
+                    <div class="b_tit clearfloat">
+                        <span class="con_tit">学校宣传</span>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="video_bg">
+                        <div class="v_left">
+                            <div class="v_mp4">
+                                <video id="videoPlayer" ishivideo="true"  isrotate="true" autoHide="true" controls="controls" src="/Public/Uploads/mp4/20241015/GUID018e2eb9-428d-a909-90f2-586ec8686211.mp4"></video>
+                            </div>
+                        </div>
+                        <div class="v_right">
+                            <div class="xc_p_bob">
+                                 <a href="javascript:void(0)">
+                                                                        <div class="xc_p_img">
+                                            <img src="/Public/Uploads/2024/05/29/6656dc5862b88.jpg">
+                                        </div>
+                                        
+                                        <p>宣传图2</p>
+                                </a>
+                            </div>
+                            <div class="xc_p_bob">
+                                 <a href="javascript:void(0)">
+                                                                <div class="xc_p_img">
+                                    <img src="/Public/Uploads/2024/05/29/6656dc4e13213.jpg">
+                                </div>
+                                <p>宣传图1</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blue_bg"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="h30"></div>
+
+        <div class="testfadein3 testfadein">
+            <div class="box">
+                <div class="b_tit clearfloat">
+                    <span class="tit_logo"></span><div class="con_tit">校园风光</div>
+                
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="box">
+                <div class="mySwiper xyfg">
+                    <div class="swiper-wrapper" id="swiper_lb">
+                        
+                        <div class="swiper-slide xyfg_b">
+                                <div class="xyfg_img a_iscale">
+                                    <!-- <a href="###"> -->
+                                        <img src="/Public/website/img/donghua.jpg" alt="">
+                                    <!-- </a> -->
+                                </div>
+                                <div class="xyfg_t">致远楼</div>
+                            </div><div class="swiper-slide xyfg_b">
+                                <div class="xyfg_img a_iscale">
+                                    <!-- <a href="###"> -->
+                                        <img src="/Public/Uploads/2024/10/15/670db935ba79a.png" alt="">
+                                    <!-- </a> -->
+                                </div>
+                                <div class="xyfg_t">鸟瞰图</div>
+                            </div><div class="swiper-slide xyfg_b">
+                                <div class="xyfg_img a_iscale">
+                                    <!-- <a href="###"> -->
+                                        <img src="/Public/Uploads/2024/09/24/66f2071192b99.jpg" alt="">
+                                    <!-- </a> -->
+                                </div>
+                                <div class="xyfg_t">学校大门</div>
+                            </div><div class="swiper-slide xyfg_b">
+                                <div class="xyfg_img a_iscale">
+                                    <!-- <a href="###"> -->
+                                        <img src="/Public/Uploads/2024/09/24/66f20786128fa.jpg" alt="">
+                                    <!-- </a> -->
+                                </div>
+                                <div class="xyfg_t">校园风光</div>
+                            </div>                       
+                        
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+        </div>
+            
+        <div class="h30"></div>
+
+
+        <div class="list_bottom">
+            <img src="/Public/website/img/list_bottom.png">
+        </div>
+      
+        <!-- 底部 -->
+        <div class="footer_nav">
+	<div class="box1">
+		<ul class="f_menu1">
+			<li class="zoomin">常用网站<i class="icon iconfont icon-shangjiantou"></i>
+				<ul class="f_menu2">
+					
+					<a href="/index.php/Zhaosheng/Index/index.html"><li>招生信息网</li></a>
+				</ul>
+			</li><li class="zoomin">常用系统<i class="icon iconfont icon-shangjiantou"></i>
+				<ul class="f_menu2">
+					
+					<a href="http://172.21.210.125"><li>教务系统</li></a><a href="http://117.160.34.42:18083/login"><li>学工系统</li></a><a href="https://jf.jzxcl.edu.cn/#/login?redirect=%2Fdashboard"><li>缴费系统</li></a>
+				</ul>
+			</li><li class="zoomin">常用信息<i class="icon iconfont icon-shangjiantou"></i>
+				<ul class="f_menu2">
+					
+					<a href="https://www.xuexi.cn/"><li>学习强国</li></a><a href="https://www.12371.cn/dsxx/"><li>党史教育</li></a><a href="/index.php/Website/index/article_list/category_id/69.html"><li>招标采购</li></a><a href="/index.php/Website/index/article_list/category_id/70.html"><li>招商公告</li></a><a href="/index.php/Website/index/article_list/category_id/71.html"><li>招聘信息</li></a>
+				</ul>
+			</li><li class="zoomin">常用链接<i class="icon iconfont icon-shangjiantou"></i>
+				<ul class="f_menu2">
+					
+					<a href="https://www.cnki.net/"><li>知网</li></a><a href="http://www.moe.gov.cn/"><li>教育部</li></a><a href="https://jyt.henan.gov.cn/"><li>河南省教育厅</li></a><a href="https://www.eol.cn/"><li>中国教育在线</li></a>
+				</ul>
+			</li>			
+		</ul>
+	</div>
+</div>
+<div class="footer">
+	<div class="box1">
+			<div class="footer_img">
+				<img src="/Public/website/img/logof.png"  style="height:80px;">
+			</div>
+			<div class="address_tel">
+				<p>地址：焦作市博爱县人民路与海华路交叉口东南角焦作新材料职业学院</p>
+				<p>招生电话：0391-8663222 0391-8663666</p>
+			</div>
+			<div class="footer_right">
+				<ul class="wchat">
+					<li class="zoomin"><img src="/Public/website/img/icon-sharedy.png" alt="">
+						<ul class="wchat_ewm">
+							<li><img src="/Public/website/img/douyin.jpg?v=1.0" alt=""></li>
+						</ul>
+					</li>
+					<li class="zoomin"><img src="/Public/website/img/icon-share2.png" alt="">
+						<ul class="wchat_ewm">
+							<li><img src="/Public/website/img/qrcode.jpg?v=1.0" alt=""></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+	</div>
+	<div class="ftb">
+		<p>Copyright © 焦作市新材料职业学院 All rights reserved</p>
+	</div>
+</div>
+</div>                
+		
+
+
+
+<!-- 底部 --> 
+<script src="/Public/website/js/jquery.min.js"></script>
+<script src="/Public/website/js/koala.min.1.5.js"></script>
+<script src="/Public/website/js/swiper.js"></script>
+<script src="/Public/website/js/style.js"></script>
+
+
+
+
+
+<script>
+$(document).click(function(e){
+var target = $(e.target);
+var specificElement = $('#search'); // 替换为你想要判断的特定元素的选择器
+if (target.closest(specificElement).length) {
+	console.log('点击的元素在特定元素内');
+	$('#search').css({'width':'210px'})
+	$('#search').find('input').css({'width':'78%'})
+} else {
+	console.log('点击的元素不在特定元素内');
+	$('#search').css({'width':'40px'})
+	$('#search').find('input').css({'width':'0%'})
+}
+})
+
+$('#sous').click(function(){
+	$sous_input = $('#sous_input').val();
+		if($sous_input != '')
+		{
+			
+			window.location.href='/index.php/website/index/search.html?keyword='+$sous_input;
+		}
+
+
+	})
+</script>
+
+
+        <script type="text/javascript">
+            Qfast.add('widgets', { path: "/Public/website/js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+            Qfast(false, 'widgets', function () {
+                K.tabs({
+                    loop: true,
+                    id: 'fsD1',   //焦点图包裹id  
+                    conId: "D1pic1",  //** 大图域包裹id  
+                    tabId:"D1fBt",  
+                    tabTn:"a",
+                    conCn: '.fcon', //** 大图域配置class       
+                    auto: 1,   //自动播放 1或0
+                    effect: 'fade',   //效果配置
+                    eType: 'click', //** 鼠标事件
+                    pageBt:true,//是否有按钮切换页码
+                    bns: ['.prev', '.next'],//** 前后按钮配置class                          
+                    interval: 3000,  //** 停顿时间  
+                    autoplay: {
+                    delay: 2000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                }) 
+            })  
+            </script>
+            
+            <script type="text/javascript">
+            Qfast.add('widgets', { path: "/Public/website/js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+            Qfast(false, 'widgets', function () {
+            K.tabs({
+                loop: true,
+                id: 'fsD2',   //焦点图包裹id  
+                conId: "D2pic2",  //** 大图域包裹id  
+                tabId:"D2fBt",  
+                tabTn:"a",
+                conCn: '.fcon', //** 大图域配置class       
+                auto: 1,   //自动播放 1或0
+                effect: 'fade',   //效果配置
+                eType: 'click', //** 鼠标事件
+                pageBt:true,//是否有按钮切换页码
+                bns: ['.prev', '.next'],//** 前后按钮配置class                          
+                interval: 3000,  //** 停顿时间 
+                autoplay: {
+                delay: 2000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            }) 
+            })  
+            </script>
+            
+            <script>
+            var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            slidesPerView: 4,
+            spaceBetween: 15,
+            autoplay: {
+                delay: 2000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            });
+            </script>
+            
+            <script>
+            $(function () {
+                var mobile_flag = isMobile();
+                
+                // 获取垂直滚动条位置
+                var t = null;
+                var temp = 1;
+                var scrollTopPosition = $(window).scrollTop();
+                if(scrollTopPosition != 0){
+                    $('.testfadein').addClass('listshow')
+                }
+                // console.log("垂直滚动条位置：" + scrollTopPosition + "px");
+            
+                $(window).resize(function (e) {
+                    yn();
+                })
+            
+                yn();
+            
+                function yn() {
+                    var w = $('body,html').width();
+                    if ( w < 992 ) {
+                        $('.hh').css('height', 'auto');
+                    } else {
+                        $('.hh').css('height', '100vh');
+                        $('body,html').height($('.lbt').height() + 1);
+                    }
+                }
+                if(mobile_flag == true){
+                $('.hh').css("top", '33%');
+                            $('body,html').height($('.hh').height());
+                            $('.hh').css({
+                                position: 'absolute',
+                                "background-position-y": 'top',
+                                height: 'auto'
+                            });
+                    }else{
+
+                        $(document).on('scroll', function () {
+                    
+                        var h = $(window).scrollTop()
+                        console.log(h);
+                        if (h > 0) {
+                            if(temp){
+                                temp = 0;
+                                $('.hh').css("top", 0);
+                                t = setTimeout(function () {
+                                    $('body,html').height($('.hh').height());
+                                    $('.hh').css({
+                                        position: 'absolute',
+                                        "background-position-y": 'top',
+                                        height: 'auto'
+                                    });
+                                }, 1000);
+                            }
+                        }else{
+                            temp = 1;
+                            $('.hh').css({
+                                top: '100%',
+                                "background-position-y": '100vh',
+                                height: '100vh'
+                            });
+                            clearTimeout(t);
+                            $('body,html').height($('.lbt').height() + 1);
+                            $('.hh').css('position', 'fixed');
+                
+                            return false
+                        }
+                        if(h > 80){
+                            $('.testfadein2').addClass('listshow')
+                        }
+                        if(h > 600){
+                            $('.testfadein3').addClass('listshow')
+                        }
+                    
+
+                    
+                })
+                    }
+                
+            })
+            </script>
+            <script>
+                 $(document).ready(function() {
+                    var video = document.getElementById('videoPlayer');
+                    var isPlaying = false; // 用于跟踪视频当前的播放状态
+                
+                    // 初始检查视频状态
+                    checkVideo();
+                
+                    // 当页面滚动时检查视频状态
+                    $(window).scroll(function() {
+                        checkVideo();
+                    });
+                
+                    // 监听页面是否失去焦点
+                    document.addEventListener("visibilitychange", function() {
+                        if (document.hidden) {
+                            // 页面失去焦点时暂停视频播放
+                            if (!video.paused) {
+                                video.pause();
+                                isPlaying = false;
+                            }
+                        } else {
+                            // 页面获得焦点时检查视频状态
+                            checkVideo();
+                        }
+                    });
+                
+                    function checkVideo() {
+                        let targetElement = document.getElementById('videoPlayer');
+                        let bounding = targetElement.getBoundingClientRect();
+
+                        if (
+                             bounding.top >= 0 &&
+                            bounding.left >= 0 &&
+                            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                            bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+                        ) {
+                            if (!isPlaying) {
+                                video.play();
+                                isPlaying = true;
+                            }
+                        } else {
+                            // 如果视频不可见
+                            if (isPlaying) {
+                                video.pause();
+                                isPlaying = false;
+                            }
+                        }
+
+                        // var videoTop = $('.v_mp4').offset().top;
+                        // var videoBottom = videoTop + $('.v_mp4').outerHeight();
+                        // var viewportTop = $(window).scrollTop();
+                        // var viewportBottom = viewportTop + $(window).height();
+                
+                        // // 如果视频可见
+                        // if (videoBottom > viewportTop && videoTop < viewportBottom) {
+                        //     if (!isPlaying) {
+                        //         video.play();
+                        //         isPlaying = true;
+                        //     }
+                        // } else {
+                        //     // 如果视频不可见
+                        //     if (isPlaying) {
+                        //         video.pause();
+                        //         isPlaying = false;
+                        //     }
+                        // }
+                    }
+                });
+                </script>
+</body>
+</html>

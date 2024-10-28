@@ -1,0 +1,1183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>玉溪师范学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="玉溪师范学院">
+<META Name="keywords" Content="玉溪师范学院" />
+
+<link rel="stylesheet" type="text/css" href="css/index1.css">
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230797a4750525a5742000400014f57 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1658930428)</script>
+</head>
+ 
+<body>
+
+
+
+
+<div id="wrap">
+  <div class="head">
+    <ul class="headm">
+      <li class="times"><script language="javascript" src="/system/resource/js/calendar/simple.js"></script>
+<script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<script language="JavaScript">
+    //阳历
+    var c_Calendar1013182EnDateString;
+    //
+    var c_Calendar1013182WeekDayString;
+    //阴历
+    var c_Calendar1013182CnDateString;
+    //节气
+    var c_Calendar1013182JQString;
+    //年
+    var c_Calendar1013182YearString;
+    //月
+    var c_Calendar1013182MonthString;
+    //日
+    var c_Calendar1013182DayString;
+    //周
+    var c_Calendar1013182WeekString;
+    //显示
+    var c_Calendar1013182ShowString;
+
+    function RunGLNL1013182() {
+        var sc = new Simple_Calendar();
+        sc.init();
+        c_Calendar1013182CnDateString = sc.getCnDateString();
+        c_Calendar1013182WeekDayString = sc.getCalendarWeekString();
+        c_Calendar1013182JQString = sc.getJQString();
+        c_Calendar1013182EnDateString = sc.getEnDateString();
+        c_Calendar1013182YearString = sc.getYearString();
+        c_Calendar1013182MonthString = sc.getMonthString();
+        c_Calendar1013182DayString = sc.getDayString();
+        c_Calendar1013182ShowString= "";
+    }
+
+    RunGLNL1013182();
+
+    function update() {
+        $.ajax({
+            type: "post",
+            data: {
+                "sdate": "2024-08-26",
+                "edate": "2025-01-10",
+                "showtext": "第",
+                "isNotStart": "学期未开始",
+                "isEnd": "学期已结束",
+            },
+            dataType: "json",
+            async: false,
+            url: "/system/resource/calendar/getCurrentWeekMap.jsp",
+            success: function (result) {
+                if(result.code==200){
+                    c_Calendar1013182WeekString = result.data;
+                }
+            },
+            error: function () {
+                console.log("出错了")
+            }
+        });
+    }
+    update();
+
+    c_Calendar1013182ShowString+=c_Calendar1013182EnDateString;
+    c_Calendar1013182ShowString+="&nbsp;&nbsp;"+c_Calendar1013182WeekDayString;
+    c_Calendar1013182ShowString+="&nbsp;&nbsp;"+c_Calendar1013182WeekString;
+</script>
+<div id="c_lunar1013182" class="fontstyle1013182"></div>
+<script>
+    document.getElementById("c_lunar1013182").innerHTML = c_Calendar1013182ShowString;
+</script>
+</li>
+      <li class="rig"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><p><a href="https://i.yxnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68642)">数字校园 </a></p>
+        
+<p><a href="http://news.yxnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68654)">新  闻  网 </a></p>
+        
+<p><a href="http://webmail.yxnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68655)">邮件系统 </a></p>
+        
+
+        <p>        <a href="javascript:void(0);" title="手机版" onclick="_vsb_multiscreen.setDevice('mobile')" style="letter-spacing:4px;">手机版</a>
+</p>
+      </li>
+      
+      
+      <li class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+            <input id="keywords" class="guan" name="keywords" type="text" placeholder="输入关键字"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+           <input class="anniu" name="tijiao" type="submit" value=""  v-on:click="onSubmit()"/>
+           <div class="clear"></div>
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1658930428";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></li>
+      
+      <div class="clear"></div>
+    </ul>
+  </div>
+  
+  
+    
+  <div class="navs">
+        <div class="logo"><a href="index.htm" title="玉溪师范学院"><img src="images/yuxilogo1.png"> </a></div>
+        <ul>
+          <li class="on1 lanmu">
+        <a href="index.htm">学校首页</a>
+          </li>
+          <li class="on2 lanmu"><a href="xxzl/xxjj.htm" title="学校总览">学校总览</a>
+            <ul>
+                <li><a href="xxzl/xxjj.htm" title="学校简介">学校简介</a></li>
+                <li><a href="xxzl/xxld.htm" title="学校领导">学校领导</a></li>
+                <li><a href="xxzl/xyfg.htm" title="校园风光">校园风光</a></li>
+                <li><a href="http://xuebao.yxnu.edu.cn/" title="学术刊物">学术刊物</a></li>
+                <li><a href="http://yxsypaper.ihwrm.com/" title="电子校报">电子校报</a></li>
+                <li><a href="xxzl/xxUIS.htm" title="学校UIS">学校UIS</a></li>
+             </ul>
+          </li>
+          <li class="on3 lanmu"><a href="jgsz.htm" title="机构设置">机构设置</a>
+            <ul>
+                <li><a href="jgsz/jxkydw.htm" title="教学科研单位">教学科研单位</a></li>
+                <li><a href="jgsz/glfwdw.htm" title="管理服务单位">管理服务单位</a></li>
+                <li><a href="jgsz/zsfsdw.htm" title="直属附属单位">直属附属单位</a></li>
+             </ul>
+          </li>
+          <li class="on4 lanmu"><a href="http://jw.yxnu.edu.cn/" title="教学工作">教学工作</a>
+            <ul>
+                <li><a href="http://jw.yxnu.edu.cn/" title="教务处">教务处</a></li>
+                <li><a href="http://zljp.yxnu.edu.cn/" title="教学评估">教学评估</a></li>
+             </ul>
+          </li>
+          <li class="on5 lanmu"><a href="kxjsc.htm" title="科研工作">科研工作</a>
+            <ul>
+                <li><a href="kxjsc.htm" title="科学技术处">科学技术处</a></li>
+                <li><a href="http://xuebao.yxnu.edu.cn/" title="学报编辑部">学报编辑部</a></li>
+                <li><a href="kygz/xnkys.htm" title="校内科研所">校内科研所</a></li>
+             </ul>
+          </li>
+          <li class="on6 lanmu"><a href="http://ysqn.yxnu.edu.cn/" title="团学工作">团学工作</a>
+            <ul>
+                <li><a href="http://ysqn.yxnu.edu.cn/" title="团委">团委</a></li>
+                <li><a href="xsgzb_c_.htm" title="学生处">学生处</a></li>
+             </ul>
+          </li>
+          <li class="on7 lanmu"><a href="http://zb.yxnu.edu.cn/" title="招生工作">招生工作</a>
+            <ul>
+                <li><a href="http://zb.yxnu.edu.cn/ssyjszs.htm" title="研究生招生">研究生招生</a></li>
+                <li><a href="http://zb.yxnu.edu.cn" title="本科生招生">本科生招生</a></li>
+             </ul>
+          </li>
+          <li class=" lanmu"><a href="http://jy.yxnu.net/" title="就业工作">就业工作</a>
+          </li>
+          <li class="on9 lanmu"><a href="dwhzjlc.htm" title="对外合作">对外合作</a>
+            <ul>
+                <li><a href="dwhzjlc.htm" title="对外合作交流处">对外合作交流处</a></li>
+             </ul>
+          </li>
+ </ul>
+        
+        <div class="clear"></div>
+  </div>
+  <div class="banner">    <div class="fullSlide">
+      <div class="bd">
+        <ul class="kuang">
+       
+                
+                       <li _src="url(images/chuolifenfaqiangguofangyongyiqianxingxiangfuxing.jpg)"> <a></a> </li>
+                
+                
+                       <li _src="url(images/dalihongyangjiaoyujiajingshenjiakuaijianshejiaoyuqiangguo.jpg)"> <a></a> </li>
+                
+   
+                
+                       <li _src="url(images/0.jpg)"> <a></a> </li>
+                
+                
+                       <li _src="url(images/weixintupian_20230928095300.jpg)"> <a href="http://pgw.yxnu.edu.cn" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1658930428, 59714)" target="_blank">
+                        </a>  </li>
+                
+</ul>
+      </div>
+     <!--<div class="hd"><ul></ul></div>
+      <span class="prev"></span>
+      <span class="next"></span>-->
+    </div></div>
+  <!--<div id="wrapper" style="font-size: 18px;    font-weight: bold;    position: absolute;    top: 310px;    z-index: 100;    left: 40%;    background: #faee2a;    padding: 10px;    border-radius: 15px;">
+     <span class="center">距本科教育教学审核评估进校考察还有：</span>
+     <span id="clock-c" class="clock"></span>
+  </div>
+  <script type="text/javascript">
+        $(function(){
+            $('#wrapper').countdown('2023/11/14', function(event) {
+              
+              $('#clock-c').html(event.strftime('%D 天'));
+            });
+        })
+    </script>-->
+  
+  
+  
+  <div class="xunfir">
+    <div class="xunfirm">
+    
+<div class="biao">
+            <h3><a href="xwkx.htm">新闻快讯</a></h3>
+          <span><a href="xwkx.htm">MORE</a></span>
+          <div class="clear"></div>
+        </div>
+    
+    
+      <div class="guan">
+            <div class="c1">
+                <div class="slide" id="slide1">
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="hd">
+    <ul></ul>
+</div>
+<div class="bd">
+    <ul class="clearfix">    
+<li>
+    <a href="info/1026/38213.htm" target="_blank" title="校长段红云到云南省智慧城市网络空间安全重点实验室调研指导工作">
+        <div class="pic"><img src="/__local/5/DA/2C/05C9E9A1B966B918E2B60FBD9BB_50497A47_6BCC0.jpg" alt=""></div>
+        <div class="text">校长段红云到云南省智慧城市网络空间安全重点实验室调研指导工作</div>
+    </a>
+</li>                              
+<li>
+    <a href="info/1026/38113.htm" target="_blank" title="玉溪职业技术学院到玉溪师范学院交流座谈">
+        <div class="pic"><img src="/__local/0/D2/31/CFBEC2D36164CB15376A0A47895_38721BB2_4E47B.jpg" alt=""></div>
+        <div class="text">玉溪职业技术学院到玉溪师范学院交流座谈</div>
+    </a>
+</li>                              
+<li>
+    <a href="info/1026/38083.htm" target="_blank" title="共青团云南省委副书记郑茗戈到玉溪师范学院调研指导共青团工作">
+        <div class="pic"><img src="/__local/3/9E/83/2F46FEE9E2D68FDDC68C7445048_FC57AAA1_120868.png" alt=""></div>
+        <div class="text">共青团云南省委副书记郑茗戈到玉溪师范学院调研指导共青团工作</div>
+    </a>
+</li>                              
+<li>
+    <a href="info/1026/38033.htm" target="_blank" title="玉溪师范学院召开贯彻落实全省学校安全工作视频会议精神专项部署会">
+        <div class="pic"><img src="/__local/0/15/93/5C203774A67CD01427E3C643B97_9DF54860_4E5CE.jpg" alt=""></div>
+        <div class="text">玉溪师范学院召开贯彻落实全省学校安全工作视频会议精神专项...</div>
+    </a>
+</li>                              
+<li>
+    <a href="info/1026/38013.htm" target="_blank" title="玉溪师范学院党委书记姜家雄到图书（档案）馆调研工作">
+        <div class="pic"><img src="/__local/B/BE/D3/D2A6E309BCFB08E513349361B90_BDCE3F13_50071.png" alt=""></div>
+        <div class="text">玉溪师范学院党委书记姜家雄到图书（档案）馆调研工作</div>
+    </a>
+</li>                              
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u6_38213','dynclicks_u6_38113','dynclicks_u6_38083','dynclicks_u6_38033','dynclicks_u6_38013'],[38213,38113,38083,38033,38013],"wbnews", 1658930428)</script>
+</div>
+            </div>
+      </div>
+      <div class="news">
+
+ <div class="biao1">
+          
+        </div>
+        <ul>
+          
+          <li class="fir">
+            <p class="numsfir">1</p>
+            <p class="wen"><a href="info/1026/38213.htm" target="_blank" title="校长段红云到云南省智慧城市网络空间安全重点实验室调研指导工作">校长段红云到云南省智慧城市网络空间安全重点实验室调研指导工作</a></p>
+            <div class="clear"></div>
+            <p class="xiang">10月25日下午，玉溪师范学院校长段红云，副校长章新、李明、杨伟，以及科技处、教务处、财务处、审计处、资产经营有限公司等单位负责人到云南省智慧城市网络空间安全重点实验室调研指导工作。工学院领导班子成员、重点实验室全体成员参加调研会议。</p>
+          </li>
+
+          
+<li>
+            <p class="numsfir">2</p>
+            <p class="wen"><a href="info/1026/38113.htm" target="_blank" title="玉溪职业技术学院到玉溪师范学院交流座谈">玉溪职业技术学院到玉溪师范学院交流座谈</a></p>
+            <p class="dates">10-25</p>
+            <div class="clear"></div>
+          </li>
+
+          
+<li>
+            <p class="numsfir">3</p>
+            <p class="wen"><a href="info/1026/38083.htm" target="_blank" title="共青团云南省委副书记郑茗戈到玉溪师范学院调研指导共青团工作">共青团云南省委副书记郑茗戈到玉溪师范学院调研指导共青团工作</a></p>
+            <p class="dates">10-25</p>
+            <div class="clear"></div>
+          </li>
+
+          
+<li>
+            <p class="numsfir">4</p>
+            <p class="wen"><a href="info/1026/38033.htm" target="_blank" title="玉溪师范学院召开贯彻落实全省学校安全工作视频会议精神专项部署会">玉溪师范学院召开贯彻落实全省学校安全工作视频会议精神专项部署会</a></p>
+            <p class="dates">10-25</p>
+            <div class="clear"></div>
+          </li>
+
+          
+<li>
+            <p class="numsfir">5</p>
+            <p class="wen"><a href="info/1026/38013.htm" target="_blank" title="玉溪师范学院党委书记姜家雄到图书（档案）馆调研工作">玉溪师范学院党委书记姜家雄到图书（档案）馆调研工作</a></p>
+            <p class="dates">10-25</p>
+            <div class="clear"></div>
+          </li>
+
+          
+<li>
+            <p class="numsfir">6</p>
+            <p class="wen"><a href="info/1026/37983.htm" target="_blank" title="玉溪师范学院党委书记姜家雄到后勤服务中心调研指导工作">玉溪师范学院党委书记姜家雄到后勤服务中心调研指导工作</a></p>
+            <p class="dates">10-25</p>
+            <div class="clear"></div>
+          </li>
+
+          
+<li>
+            <p class="numsfir">7</p>
+            <p class="wen"><a href="info/1026/37933.htm" target="_blank" title="美术学院＂国歌唱响边境线＂美育浸润系列培训活动三——书法培训开班仪式在勐腊县第二小学举行">美术学院＂国歌唱响边境线＂美育浸润系列培训活动三——书法培训...</a></p>
+            <p class="dates">10-24</p>
+            <div class="clear"></div>
+          </li>
+
+          
+</ul><script>_showDynClickBatch(['dynclicks_u7_38213','dynclicks_u7_38113','dynclicks_u7_38083','dynclicks_u7_38033','dynclicks_u7_38013','dynclicks_u7_37983','dynclicks_u7_37933'],[38213,38113,38083,38033,38013,37983,37933],"wbnews", 1658930428)</script>
+</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="xunsec">
+    <div class="xunsecm">
+      <div class="notices scientific">
+        <div class="biao">
+          <ul>
+            <li class="sec" style="font-size: 24px;text-align: center;line-height: 36px">教学科研</li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+        <ul class="liss">
+
+<span class="geng"><a href="jxky.htm" target="_blank">MORE</a></span>
+          
+<li>
+            <p><a href="info/1612/38073.htm" target="_blank" title="西北师范大学韩晓玲教授做客玉溪师范学院“红塔讲坛”">西北师范大学韩晓玲教授做客玉溪师范学院“红塔讲坛”</a></p>
+            <span>10-25</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1612/38063.htm" target="_blank" title="西北师范大学肖鸿民教授做客玉溪师范学院“红塔讲坛”">西北师范大学肖鸿民教授做客玉溪师范学院“红塔讲坛”</a></p>
+            <span>10-25</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1612/38053.htm" target="_blank" title="玉溪师范学院美术学院到首都师范大学美术学院学习交流">玉溪师范学院美术学院到首都师范大学美术学院学习交流</a></p>
+            <span>10-25</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1612/37693.htm" target="_blank" title="玉溪聂耳小学与玉溪师范学院工学院联合召开“人工智能赋能教育”专题工作会">玉溪聂耳小学与玉溪师范学院工学院联合召开“人工智能赋能教...</a></p>
+            <span>10-19</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1612/37463.htm" target="_blank" title="玉溪师范学院2024年国家社会科学基金项目立项取得新突破">玉溪师范学院2024年国家社会科学基金项目立项取得新突破</a></p>
+            <span>10-17</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1612/37283.htm" target="_blank" title="第五届全国高校教师教学创新大赛玉溪师范学院校内选拔赛暨观摩课比赛举行">第五届全国高校教师教学创新大赛玉溪师范学院校内选拔赛暨观...</a></p>
+            <span>10-14</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1612/37103.htm" target="_blank" title="厦门大学李未明教授做客玉溪师范学院“红塔讲坛”">厦门大学李未明教授做客玉溪师范学院“红塔讲坛”</a></p>
+            <span>10-12</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1612/37073.htm" target="_blank" title="开展校政企交流合作 推动工学院融入玉溪产业发展">开展校政企交流合作 推动工学院融入玉溪产业发展</a></p>
+            <span>10-11</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1612/36983.htm" target="_blank" title="法国雕塑家菲利普·安德烈先生到我校美术学院进行艺术交流">法国雕塑家菲利普·安德烈先生到我校美术学院进行艺术交流</a></p>
+            <span>10-09</span>
+            <div class="clear"></div>
+          </li>
+          
+<script>_showDynClickBatch(['dynclicks_u8_38073','dynclicks_u8_38063','dynclicks_u8_38053','dynclicks_u8_37693','dynclicks_u8_37463','dynclicks_u8_37283','dynclicks_u8_37103','dynclicks_u8_37073','dynclicks_u8_36983'],[38073,38063,38053,37693,37463,37283,37103,37073,36983],"wbnews", 1658930428)</script>
+</ul>
+       
+      </div>
+      <div class="notices teacher">
+        <div class="biao">
+          <ul>
+           
+            <li class="sec" style="font-size: 24px;text-align: center;line-height: 36px">师生风采</li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+       
+        <ul class="liss">
+
+<span class="geng"><a href="ssfc.htm" target="_blank">MORE</a></span>
+  <li>       
+      
+         
+          <div class="pic_article ">
+             <a href="info/1613/37763.htm" target="_blank" title="工学院网络安全科普宣讲团到玉溪两所小学开展网络安全科普活动">
+                <div class="pic"><img alt="" src="/__local/3/C2/58/039BF507FD663566001EC399991_1F83889A_121E6.jpg"></div>
+                <div class="text">工学院网络安全科普宣讲团到玉溪两所小学开展网络安全科普活动</div>
+            </a>
+          </div>
+      
+         
+          <div class="pic_article teacher">
+             <a href="info/1613/37343.htm" target="_blank" title="玉溪师范学院在2024年云南省高等学校体育教育专业学生基本功大赛中获好成绩">
+                <div class="pic"><img alt="" src="/__local/2/63/B7/63E4D11A81E4AD653403A5A8A26_4FD2422F_35416.jpg"></div>
+                <div class="text">玉溪师范学院在2024年云南省高等学校体育教育专业学生基本功...</div>
+            </a>
+          </div>
+      
+      
+      
+      
+  </li>
+      
+      
+        <li> 
+          <p><a href="info/1613/37313.htm" target="_blank" title="温暖重阳节——玉溪师范学院法学院志愿者在行动">温暖重阳节——玉溪师范学院法学院志愿者在行动</a></p>
+          <span>10-11</span>
+          <div class="clear"></div>
+        </li> 
+      
+        <li> 
+          <p><a href="info/1613/37023.htm" target="_blank" title="玉溪师范学院举行“玉师先锋”2024年国家奖学金候选人展示活动">玉溪师范学院举行“玉师先锋”2024年国家奖学金候选人展示活...</a></p>
+          <span>10-11</span>
+          <div class="clear"></div>
+        </li> 
+      
+        <li> 
+          <p><a href="info/1613/36963.htm" target="_blank" title="玉溪师范学院500余名青年志愿者助力2024玉溪马拉松">玉溪师范学院500余名青年志愿者助力2024玉溪马拉松</a></p>
+          <span>10-09</span>
+          <div class="clear"></div>
+        </li> 
+      
+        <li> 
+          <p><a href="info/1613/36973.htm" target="_blank" title="大学生民族歌舞协会举办“民族团结一家亲，同心共筑中国梦”活动">大学生民族歌舞协会举办“民族团结一家亲，同心共筑中国梦”活动</a></p>
+          <span>10-09</span>
+          <div class="clear"></div>
+        </li> 
+      
+       
+        
+        
+        
+        
+   
+          
+<script>_showDynClickBatch(['dynclicks_u9_37763','dynclicks_u9_37343','dynclicks_u9_37313','dynclicks_u9_37023','dynclicks_u9_36963','dynclicks_u9_36973'],[37763,37343,37313,37023,36963,36973],"wbnews", 1658930428)</script>
+</ul>
+      </div>
+      
+      
+      
+      <div class="notices dumpling">
+        <div class="biao">
+          <ul>
+           
+            <li class="sec" style="font-size: 24px;text-align: center;line-height: 36px">影像校园</li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+       
+        <ul class="liss">
+
+<span class="geng"><a href="xwkx/yxxy.htm" target="_blank">MORE</a></span>
+          
+<li>
+            <p><a href="info/1101/37803.htm" target="_blank" title="【视频】奥运冠军刘浩走进玉溪师范学院">【视频】奥运冠军刘浩走进玉溪师范学院</a></p>
+            <span>10-21</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1101/37673.htm" target="_blank" title="玉师周刊｜新闻速览（10月13日—10月18日）">玉师周刊｜新闻速览（10月13日—10月18日）</a></p>
+            <span>10-18</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1101/37543.htm" target="_blank" title="玉师周刊｜新闻速览（9月28日—10月12日）">玉师周刊｜新闻速览（9月28日—10月12日）</a></p>
+            <span>10-12</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1101/37063.htm" target="_blank" title="【人文玉师】在玉师定格美好时光！">【人文玉师】在玉师定格美好时光！</a></p>
+            <span>10-12</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1101/37053.htm" target="_blank" title="【考研之声】全力备考 青春逐梦">【考研之声】全力备考 青春逐梦</a></p>
+            <span>10-11</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1101/36923.htm" target="_blank" title="【视频】聂耳故乡：玉溪师范学院师生同升国旗共唱国歌祝福祖国">【视频】聂耳故乡：玉溪师范学院师生同升国旗共唱国歌祝福祖国</a></p>
+            <span>10-08</span>
+            <div class="clear"></div>
+          </li>
+          
+<script>_showDynClickBatch(['dynclicks_u10_37803','dynclicks_u10_37673','dynclicks_u10_37543','dynclicks_u10_37063','dynclicks_u10_37053','dynclicks_u10_36923'],[37803,37673,37543,37063,37053,36923],"wbnews", 1658930428)</script>
+</ul>
+      </div>
+      <div class="notices medium">
+        <div class="biao">
+          <ul>
+           
+            <li class="sec" style="font-size: 24px;text-align: center;line-height: 36px">媒体玉师</li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+       
+        <ul class="liss">
+
+<span class="geng"><a href="xwkx/mtys.htm" target="_blank">MORE</a></span>
+          
+<li>
+            <p><a href="info/1083/38133.htm" target="_blank" title="【云南网】“求职面对面”主题沙龙活动举行 为高校毕业生提供精准就业服务">【云南网】“求职面对面”主题沙龙活动举行 为高校毕业生提供...</a></p>
+            <span>10-28</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1083/38123.htm" target="_blank" title="【云南网】玉溪师院网络安全知识科普活动走进小学校园">【云南网】玉溪师院网络安全知识科普活动走进小学校园</a></p>
+            <span>10-28</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1083/37963.htm" target="_blank" title="【春城晚报】玉溪师范学院驻校作家工作站诗歌小辑">【春城晚报】玉溪师范学院驻校作家工作站诗歌小辑</a></p>
+            <span>10-25</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1083/37903.htm" target="_blank" title="【云南网】昆明电信绿色低碳牧场项目获全国一等奖" style="color:#000000;">【云南网】昆明电信绿色低碳牧场项目获全国一等奖</a></p>
+            <span>10-23</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1083/37653.htm" target="_blank" title="【云南网】萌娃参观传习馆 体验传统文化魅力">【云南网】萌娃参观传习馆 体验传统文化魅力</a></p>
+            <span>10-18</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1083/37663.htm" target="_blank" title="【云南网】玉溪市全面深化改革·推动高质量发展系列新闻发布会·开放型经济专场举行">【云南网】玉溪市全面深化改革·推动高质量发展系列新闻发布会...</a></p>
+            <span>10-18</span>
+            <div class="clear"></div>
+          </li>
+          
+<script>_showDynClickBatch(['dynclicks_u11_38133','dynclicks_u11_38123','dynclicks_u11_37963','dynclicks_u11_37903','dynclicks_u11_37653','dynclicks_u11_37663'],[38133,38123,37963,37903,37653,37663],"wbnews", 1658930428)</script>
+</ul>
+      </div>
+      
+      
+      
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="zhuanti">
+    <div class="zhuantif">
+     <div class="zhuantim">
+      <div class="biao">
+          <h3><a href="rdzt.htm">热点专题</a></h3>
+        <span><a href="rdzt.htm" style="color:#fff">MORE+</a></span>
+        <div class="clear"></div>
+      </div>
+      <ul id="FS_Cont_01" class="wu" data-client="focus">        
+        
+               
+            <li> <a href="http://pgw.yxnu.edu.cn" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1658930428, 59734)" target="_blank">
+                            <img src="images/shenhepingguxiaotu.jpg" border="0">
+                        </a>  </li>
+               
+               
+            <li> <a href="https://www.smartedu.cn/" title="国家智慧教育公共平台" onclick="_addDynClicks(&#34;wbimage&#34;, 1658930428, 59433)" target="_blank">
+                            <img src="images/1.png" border="0">
+                        </a>  </li>
+               
+       
+
+        
+               
+            <li> <a href="http://yxwmxy.yxnu.edu.cn" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1658930428, 59659)" target="_blank">
+                            <img src="images/wenmingxiaoyuan.jpg" border="0">
+                        </a>  </li>
+               
+               
+            <li> <a href="http://www.yxnu.edu.cn/ztw" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1658930428, 59670)" target="_blank">
+                            <img src="images/01zhutijiaoyu1.jpg" border="0">
+                        </a>  </li>
+               
+       
+
+        
+               
+            <li> <a href="http://ddjt.yxnu.edu.cn" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1658930428, 59661)" target="_blank">
+                            <img src="images/wenmingjiangtan.jpg" border="0">
+                        </a>  </li>
+               
+               
+            <li> <a href="https://yxtc.ncss.cn/student/index.html" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1658930428, 59663)" target="_blank">
+                            <img src="images/24365.jpg" border="0">
+                        </a>  </li>
+               
+       
+
+        
+               
+            <li> <a href="http://ddh.yxnu.edu.cn" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1658930428, 59671)" target="_blank">
+                            <img src="images/02xuexiaodangdaihui.jpg" border="0">
+                        </a>  </li>
+               
+       
+<div class="clear"></div>
+</ul>
+      <div class="an">
+        <span id="FS_arr_left_01" class="fir"><img src="images/anniu_49.jpg" alt="右"></span>
+        <span id="FS_arr_right_01"><img src="images/anniu_52.jpg" alt="左"></span>
+      </div>
+      <div id="FS_numList_01" class="scroll_num"></div>
+      <div class="clear"></div>
+      
+    </div> 
+    <div class="notice">
+        <div class="biao">
+           <h3><a href="gsgg/hdtz.htm">公示公告</a></h3>
+           <span><a href="gsgg/hdtz.htm" style="color:#fff">MORE+</a></span>
+           <div class="clear"></div>
+        </div>
+        <ul class="liss">
+        
+
+<li>
+            <p><a href="info/1078/38103.htm" target="_blank" title="2024年玉溪师范学院第二批公开招聘硕士及以上人员准考证打印网址">2024年玉溪师范学院第二批公开招聘硕士及以上人员准考证打印...</a></p>
+            <span>10-25</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1078/38003.htm" target="_blank" title="玉溪师范学院专家公寓101室及树蕙园小区配套管理用房103室公开招租项目（第2包）终止公告">玉溪师范学院专家公寓101室及树蕙园小区配套管理用房103室公...</a></p>
+            <span>10-25</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1078/37993.htm" target="_blank" title="玉溪师范学院专家公寓101室及树蕙园小区配套管理用房103室公开招租项目（第1包）招租结果公告">玉溪师范学院专家公寓101室及树蕙园小区配套管理用房103室公...</a></p>
+            <span>10-25</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1078/37913.htm" target="_blank" title="星云湖湖泊生态系统野外观测研究站招标公示">星云湖湖泊生态系统野外观测研究站招标公示</a></p>
+            <span>10-23</span>
+            <div class="clear"></div>
+          </li>
+          
+<li>
+            <p><a href="info/1073/37733.htm" target="_blank" title="玉溪师范学院智慧体质测试管理平台中标公示">玉溪师范学院智慧体质测试管理平台中标公示</a></p>
+            <span>10-21</span>
+            <div class="clear"></div>
+          </li>
+          
+<script>_showDynClickBatch(['dynclicks_u13_38103','dynclicks_u13_38003','dynclicks_u13_37993','dynclicks_u13_37913','dynclicks_u13_37733'],[38103,38003,37993,37913,37733],"wbnews", 1658930428)</script>
+
+        </ul>
+    
+    
+    </div>
+    <div class="clear"></div> 
+   </div>
+  </div>
+  <div class="fuwu">
+    <div class="fuwum">
+      <div class="biao">  <h3><a>公共服务</a></h3>
+<!--
+     
+        <span ><a href="http://nbw.yxnu.edu.cn/sj.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1028"  title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68598)">书记信箱</a></span>
+    
+
+     
+        <span class="las"><a href="http://nbw.yxnu.edu.cn/yx.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1029"  title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68599)">校长信箱</a></span>
+    
+-->
+<div class="clear"></div></div>
+      <ul class="fir">
+    <li class="fir"><a href="http://xxgk.yxnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68590)">信息公开网</a></li>
+
+
+    <li><a href="http://jyfz.yxnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68591)">教育基金会</a></li>
+
+
+    <li><a href="http://xxgk.yxnu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68592)">预决算公开</a></li>
+
+
+    <li><a href="https://www.sizhengwang.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68593)">高校思政网</a></li>
+
+
+    <li><a href="rsc/rczp.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68594)">人才招聘</a></li>
+
+
+    <li><a href="http://xuebao.yxnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68595)">学术刊物</a></li>
+
+
+    <li class="las"><a href="https://webvpn.yxnu.edu.cn/login" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68596)">校内资源</a></li>
+ <div class="clear"></div></ul> 
+<ul class="fir">
+    <li class="fir"><a href="https://i.yxnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68597)">数字校园</a></li>
+
+
+    <li><a href="http://202.203.84.7/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68600)">计费系统</a></li>
+
+
+    <li><a href="info/1476/31682.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68601)">VPN连接</a></li>
+
+
+    <li><a href="http://yxsypaper.ihwrm.com/" title="电子校报" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68704)">电子校报</a></li>
+
+
+    <li><a href="http://elearn.yxnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68657)">网络教学</a></li>
+
+
+    <li><a href="http://jxgg.yxnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68658)">教学工程</a></li>
+
+
+    <li class="las"><a href="http://www.yuxicloud.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68674)">玉溪教育云</a></li>
+ <div class="clear"></div></ul> 
+<ul class="fir">
+    <li class="fir"><a href="http://gkzx1.yxnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68656)">中小学教师资格证考试中心</a></li>
+
+
+    <li><a href="https://software.yxnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 69014)">软件正版化</a></li>
+
+
+    <li style="width:429px;"><a href="http://wztgjd.yxnu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68976)">国家语言文字推广基地（玉溪师范学院）</a></li>
+
+
+    <li><a href="http://xlzx.yxnu.edu.cn/psy/Login.aspx" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 69015)">心理健康</a></li>
+ <div class="clear"></div></ul> 
+
+    </div>
+    <div class="link">
+      <div class="biao">
+         <h3><a>常用链接</a></h3>
+         <div class="clear"></div>
+      </div>
+      <ul class="fir">
+    <li><a href="https://www.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68954)">中国政府网</a></li>
+
+
+    <li><a href="http://www.moe.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68955)">教育部</a></li>
+
+
+    <li><a href="https://jyt.yn.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68956)">云南省教育厅</a></li>
+
+
+    <li><a href="https://www.xuexi.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68957)">学习强国</a></li>
+
+
+    <li><a href="http://www.people.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68958)">人民网</a></li>
+
+
+    <li><a href="http://www.xinhuanet.com/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68959)">新华网</a></li>
+
+
+    <li class="las"><a href="https://www.gmw.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68960)">光明网</a></li>
+ <div class="clear"></div></ul> 
+<ul class="fir">
+    <li><a href="http://www.dangjian.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68961)">党建网</a></li>
+
+
+    <li><a href="http://www.yunnan.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68962)">云南网</a></li>
+
+
+    <li><a href="http://www.yuxinet.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1658930428, 68963)">玉溪网</a></li>
+ <div class="clear"></div></ul> 
+
+    </div>
+  </div>
+  <div class="di">
+    <div class="dim">
+      <ul class="erwei">        
+      
+       
+            <li>
+              <img src="images/erweima_45.jpg">
+              <p>企业微信号</p>
+            </li>
+            
+       
+            <li>
+              <img src="images/erweima_47.jpg">
+              <p>学校公众号</p>
+            </li>
+            
+       
+            <li>
+              <img src="images/shipinhao.jpg">
+              <p>学校视频号</p>
+            </li>
+            
+  
+<div class="clear"></div></ul>
+      <ul class="conban"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<ul>
+    <li>
+        学校地址：玉溪市凤凰路134号　邮编：653100
+    </li>
+    <li>
+        联系电话：0877-2052835&nbsp;<span style="text-wrap: wrap;">（传真）0877-2052896</span>
+    </li>
+    <li class="thi">
+        <p>
+            <a href="https://beian.miit.gov.cn/" target="_self" style="color: rgb(255, 255, 255); text-decoration: underline;"><span style="color: rgb(255, 255, 255);">滇ICP备05001251号</span></a>&nbsp; &nbsp;<span class="sec">|</span> &nbsp;<span class="thir">云教ICP备1009013号</span>&nbsp;&nbsp;
+        </p>
+    </li>
+    <li class="thi">
+        <div class="clear">
+            <img src="images/111.png" style="top: -1px; right: 4px; position: relative;" /><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53040202000030" target="_blank" style="display: inline-block;"><span style="color: rgb(255, 255, 255);">滇公网安备：53040202000030号</span></a>
+        </div>
+    </li>
+    <li class="thi">
+        <div class="clear">
+            <p style="float:left;">
+                本站技术支持：
+            </p><a href="xxjszx.htm" target="_self" style="color: rgb(255, 255, 255); text-decoration: underline;display: inline-block;"><span style="color: rgb(255, 255, 255);">玉溪师范学院信息技术中心&nbsp;</span></a><span style="color: rgb(0, 0, 0);"> &nbsp;</span><span style="color: rgb(255, 255, 255);">&nbsp;</span>
+        </div>
+    </li>
+</ul></ul>
+      <ul class="douico">
+        <li class="fir">
+          <img src="images/shiyeicon_50.png" alt="事业单位">
+        </li>
+        <li>
+          <img src="images/yunicon_50.png" alt="网警">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.migrate.min.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superslide.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/qie.js"></script>
+<script type="text/javascript" src="js/ScrollPic.js?v=2.2"></script>
+
+<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+
+        $('#slide1').slide({
+            trigger: "click",
+            autoPlay: true,
+            autoPage: '<li></li>',
+            titCell: '.hd ul',
+            mainCell: '.bd ul',
+        });
+
+    })
+</script>
+  <script language="javascript" type="text/javascript">
+      <!--//--><![CDaTa[//><!--
+      var sp = new ScrollPic();
+      sp.scrollContId   = "FS_Cont_01"; //内容容器ID
+      sp.arrLeftId      = "FS_arr_left_01";//左箭头ID
+      sp.arrRightId     = "FS_arr_right_01"; //右箭头ID
+      sp.dotListId      = "FS_numList_01";//点列表ID
+      sp.dotClassName   = "";//点className
+      sp.dotOnClassName = "current";//当前点className
+      sp.listType       = "";//列表类型(number:数字，其它为空)
+      sp.listEvent      = "onmouseover"; //切换事件
+      sp.frameWidth     = 605;//显示框宽度
+      sp.pageWidth      = 1; //翻页宽度
+      sp.upright        = false; //垂直滚动
+      sp.speed          = 1; //移动速度(单位毫秒，越小越快)
+      sp.space          = 13; //每次移动像素(单位px，越大越快)
+      sp.autoPlay       = true; //自动播放
+      sp.autoPlayTime   = 0.05; //自动播放间隔时间(秒)
+      sp.circularly     = true;
+      sp.initialize(); //初始化    
+      //--><!]]>
+</script>
+<script type="text/javascript">
+$(".fullSlide").hover(function(){
+    $(this).find(".prev,.next").stop(true, true).fadeTo("show", 1.5)
+},
+function(){
+    $(this).find(".prev,.next").fadeOut()
+});
+$(".fullSlide").slide({
+    titCell: ".hd ul",
+    mainCell: ".bd ul",
+    effect: "fold",
+    autoPlay: true,
+    autoPage: true,
+    trigger: "click",
+    startFun: function(i) {
+        var curLi = jQuery(".fullSlide .bd li").eq(i);
+        if ( !! curLi.attr("_src")) {
+            curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+        }
+    }
+});
+</script>
+<div><a href="http://xlzx.yxnu.edu.cn/psy/Login.aspx" target="_blank"> 
+<script language="javascript" src="_dwr/engine.js"></script>
+<script language="javascript" src="_dwr/util.js"></script>
+<script language="javascript" src="_dwr/interface/FestivalHelperDWR.js"></script>
+<div id="ad1012091" style="Z-INDEX:2;left:10px;POSITION:absolute;TOP:20px;display:none;">   
+</div>
+<SCRIPT>   
+function imageClose1012091()   
+{   
+    var obj1012091=document.getElementById("ad1012091");   
+    obj1012091.style.display = 'none';   
+}; 
+   
+var x1012091 = 0;y1012091 = 0;   
+   
+var xin1012091 = true; yin1012091 = true;   
+var step1012091 = 1;   
+   
+var delay1012091 = 88;   
+ 
+var obj1012091=document.getElementById("ad1012091");
+var bdy1012091 = document.body;  
+    if (document.compatMode && document.compatMode != "BackCompat")
+        bdy1012091 = document.documentElement;
+    else
+        bdy1012091 = document.body;
+function floatAD1012091()
+{
+    var L1012091=T1012091=0;   
+    var R1012091= bdy1012091.clientWidth-obj1012091.offsetWidth;  
+    var B1012091 = bdy1012091.clientHeight-obj1012091.offsetHeight; 
+    obj1012091.style.left = x1012091 + bdy1012091.scrollLeft+"px";   
+    obj1012091.style.top = y1012091 + bdy1012091.scrollTop+"px";   
+    x1012091 = x1012091 + step1012091*(xin1012091?1:-1);    
+    if(x1012091 < L1012091) 
+    { 
+        xin1012091 = true;
+        x1012091 = L1012091;
+    }  
+    if(x1012091 > R1012091)
+    { 
+        xin1012091 = false; 
+        x1012091 = R1012091;
+    }  
+    y1012091 = y1012091 + step1012091*(yin1012091?1:-1);    
+    if(y1012091 < T1012091) 
+    { 
+        yin1012091 = true; 
+        y1012091 = T1012091; 
+    }
+    if(y1012091 > B1012091) 
+    { 
+        yin1012091 = false; 
+        y1012091 = B1012091; 
+    }
+}
+function create1012091(pic,width,height) {
+
+	var inhtml="<table border='0' cellpadding='0' cellspacing='0'>";
+    inhtml=inhtml+"<tr><td align='right'>";
+
+    inhtml=inhtml+"<a href='javascript:imageClose1012091();'><img src='/system/resource/images/component/close.gif' align='right' border='0'></a></td></tr><tr><td align='right'>";
+
+    if(pic.indexOf('.swf')>0||pic.indexOf('.SWF')>0)
+    {
+    	inhtml=inhtml+getFlashStr(pic,width,height);
+    }else{
+    	inhtml=inhtml+"<img src='"+pic+"' width='"+width+"' height='"+height+"' border='0'>";
+    }
+    inhtml=inhtml+"</td></tr></table>";
+
+    document.getElementById('ad1012091').innerHTML = inhtml;
+    document.getElementById('ad1012091').style.display = '';
+}
+
+var itl1012091;
+try{
+	FestivalHelperDWR.getFloat(1658930428,1012091,'vsb',showFestivalAd1012091);
+}catch(er){
+}
+function showFestivalAd1012091(data)
+{
+    var json = eval('(' +data+ ')');
+    if('ok'==json.result)
+    {
+    	var pic_url = json.pic;
+    	var pic_width = json.width;
+    	var pic_height = json.height;
+        if(pic_width=='0'||pic_height=='0')
+    	{
+        	pic_width = 200;
+        	pic_height = 100;
+        }
+        create1012091(pic_url,pic_width,pic_height);
+		if(typeof grayscale != 'undefined' && grayscale instanceof Function)
+		{
+        	grayscale(document.getElementById('ad1012091'));
+		}
+        adft1012091();
+    }else{
+    	
+    }
+}
+function adft1012091()
+{
+    itl1012091 = setInterval("floatAD1012091()", delay1012091);   
+}
+function getFlashStr(pic,width,height)
+{
+	var str = '<embed src="'+pic+'" wmode="opaque" menu="false" quality="high" width="'+width+'" height="'+height+'" name="mymovie1012091" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />';
+	return str;
+}
+obj1012091.onmouseover=function(){clearInterval(itl1012091);};   
+obj1012091.onmouseout=function(){itl1012091=setInterval("floatAD1012091()", delay1012091)};
+
+	setTimeout("document.getElementById('ad1012091').style.display = 'none';",20000);
+ 
+</SCRIPT></a></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

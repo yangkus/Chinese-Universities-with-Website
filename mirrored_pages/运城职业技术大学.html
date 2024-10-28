@@ -1,0 +1,1356 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="360-site-verification" content="d7bd102401d368cc190afd5e838e80d0" />
+    <title>运城职业技术大学</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="运城职业技术大学">
+<META Name="keywords" Content="运城职业技术大学" />
+
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/mousewheel.js"></script>
+    <script src="js/set.js"></script>
+    <script src="js/public.js"></script>
+    <style>
+    </style>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b75475d50575742000200034456 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/index.jsp',-1,1868823629)</script>
+</head>
+<body>
+<div class="fdpic01"><script language="javascript" src="/system/resource/js/dynclicks.js"></script>   
+</SCRIPT></div>
+<div class="body_home">
+    <div class="head pc">
+        <div class="h-center">
+            <div class="logo">
+                
+<a href="index.htm">
+    <img src="images/logo.png" alt="">
+</a>
+            </div>
+            <div class="h-right">
+                <div class="h-link">
+                    <div>
+                        <script language="javascript" src="/system/resource/js/openlink.js"></script>
+                    </div>
+                    <div>
+                            <a href="index/xzxx.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 76843)"><img src="images/icotop04.png" border="0">校长信箱</a>
+<a href="index/sjxx.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 76842)"><img src="images/icotop04.png" border="0">书记信箱</a>
+<a href="http://xxgk.ycptu.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 76841)"><img src="images/icotop03.png" border="0">信息公开</a>
+<a href="https://rsc.ycptu.edu.cn/zpxx.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 77516)"><img src="images/icotop02.png" border="0">人才招聘</a>
+<a href="https://cas.ycptu.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 77636)"><img src="images/icotop06.png" border="0">一站式服务大厅</a>
+
+                        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu4"></div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+        
+            <div class="search">
+                <div class="input">
+                    <input type="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                </div>
+                <div class="p-ico">
+                    <input type="image" src="images/search.png" class="search1" name="submit_button" v-on:click="onSubmit()"/>
+                    <input type="image" src="images/search_on.png" class="search2" name="submit_button" v-on:click="onSubmit()"/>
+                </div>
+            </div>
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1868823629";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                    </div>
+                </div>
+                <div class="g-nav">
+                    <ul>
+        <li>
+        <a href="index.htm">网站首页</a>
+    </li>
+    <li>
+        <a href="xxgkk/xxjj.htm">学校概况</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="xxgkk/xxjj.htm">学校简介</a></li>
+                <li><a href="xxgkk/xxld.htm">学校领导</a></li>
+                <li><a href="xxgkk/whxy.htm" target="_blank">文化校园</a></li>
+                <li><a href="xxgkk/xyfg.htm">校园风光</a></li>
+                <li><a href="xxgkk/xxry.htm">学校荣誉</a></li>
+                <li><a href="xxgkk/ldgh.htm">领导关怀</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="zzjg.htm">组织机构</a>
+    </li>
+    <li>
+        <a href="http://jwc.ycptu.edu.cn/" target="_blank">教育教学</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="http://jwc.ycptu.edu.cn/jxyx.htm">教学运行</a></li>
+                <li><a href="http://jwc.ycptu.edu.cn/jxjs/zyjs.htm">教学建设</a></li>
+                <li><a href="http://jxzlb.ycptu.edu.cn">教学质量管理</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="http://kjcyc.ycptu.edu.cn" target="_blank">科技产业</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="http://kjcyc.ycptu.edu.cn/kydt.htm">科研动态</a></li>
+                <li><a href="http://kjcyc.ycptu.edu.cn/kyfw.htm">科研服务</a></li>
+                <li><a href="http://kjcyc.ycptu.edu.cn/cgfw.htm">成果服务</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="http://xsc.ycptu.edu.cn/" target="_blank">学生工作</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="http://xsc.ycptu.edu.cn/xgdt.htm">学工动态</a></li>
+                <li><a href="http://xsc.ycptu.edu.cn/xszz/xszq.htm">学生资助</a></li>
+                <li><a href="http://xsc.ycptu.edu.cn/xsgl/ztjy.htm">学生管理</a></li>
+                <li><a href="http://xsc.ycptu.edu.cn/dwjs.htm">队伍建设</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="zsjy1.htm">招生就业</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="http://zs.ycptu.edu.cn" target="_blank">招生信息网</a></li>
+                <li><a href="https://ycptu.bysjy.com.cn/" target="_blank">就业信息网</a></li>
+                <li><a href="http://cxcyw.ycptu.edu.cn" target="_blank">创新创业信息网</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="http://djw.ycptu.edu.cn" target="_blank">党建工作</a>
+    </li>
+</ul>
+                </div>
+            </div>
+            <a href="javascript:;" class="navA"></a>
+        </div>
+    </div>
+    <div class="g-nav2">
+        <div class="scroll">
+            
+
+
+<div id="divu6"></div>
+<script type="text/html" id="htmlu6">
+    <div id="appu6">
+        <div v-if="!isError">
+        
+            <div class="m-search">
+                <input type="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <input type="image" src="images/search_on.png" name="submit_button" v-on:click="onSubmit()"/>
+            </div>
+
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu6").html($("#htmlu6").text());
+</script>
+<script>
+    var appOwner = "1868823629";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu6",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.220.219:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            <ul>
+        <li>
+        <h2><a href="index.htm">网站首页</a></h2>
+        <div class="ej">
+            <ul>
+                <li>
+                    <a href="index/xzxx.htm">校长信箱</a>
+                </li>
+                <li>
+                    <a href="index/sjxx.htm">书记信箱</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <h2><a href="xxgkk/xxjj.htm">学校概况</a></h2>
+        <div class="ej">
+            <ul>
+                <li>
+                    <a href="xxgkk/xxjj.htm">学校简介</a>
+                </li>
+                <li>
+                    <a href="xxgkk/xxld.htm">学校领导</a>
+                </li>
+                <li>
+                    <a href="xxgkk/whxy.htm" target="_blank">文化校园</a>
+                </li>
+                <li>
+                    <a href="xxgkk/xyfg.htm">校园风光</a>
+                </li>
+                <li>
+                    <a href="xxgkk/xxry.htm">学校荣誉</a>
+                </li>
+                <li>
+                    <a href="xxgkk/ldgh.htm">领导关怀</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="nosub">
+        <h2><a href="zzjg.htm">组织机构</a></h2>
+    </li>
+    <li>
+        <h2><a href="http://jwc.ycptu.edu.cn/" target="_blank">教育教学</a></h2>
+        <div class="ej">
+            <ul>
+                <li>
+                    <a href="http://jwc.ycptu.edu.cn/jxyx.htm">教学运行</a>
+                </li>
+                <li>
+                    <a href="http://jwc.ycptu.edu.cn/jxjs/zyjs.htm">教学建设</a>
+                </li>
+                <li>
+                    <a href="http://jxzlb.ycptu.edu.cn">教学质量管理</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <h2><a href="http://kjcyc.ycptu.edu.cn" target="_blank">科技产业</a></h2>
+        <div class="ej">
+            <ul>
+                <li>
+                    <a href="http://kjcyc.ycptu.edu.cn/kydt.htm">科研动态</a>
+                </li>
+                <li>
+                    <a href="http://kjcyc.ycptu.edu.cn/kyfw.htm">科研服务</a>
+                </li>
+                <li>
+                    <a href="http://kjcyc.ycptu.edu.cn/cgfw.htm">成果服务</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <h2><a href="http://xsc.ycptu.edu.cn/" target="_blank">学生工作</a></h2>
+        <div class="ej">
+            <ul>
+                <li>
+                    <a href="http://xsc.ycptu.edu.cn/xgdt.htm">学工动态</a>
+                </li>
+                <li>
+                    <a href="http://xsc.ycptu.edu.cn/xszz/xszq.htm">学生资助</a>
+                </li>
+                <li>
+                    <a href="http://xsc.ycptu.edu.cn/xsgl/ztjy.htm">学生管理</a>
+                </li>
+                <li>
+                    <a href="http://xsc.ycptu.edu.cn/dwjs.htm">队伍建设</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <h2><a href="zsjy1.htm">招生就业</a></h2>
+        <div class="ej">
+            <ul>
+                <li>
+                    <a href="http://zs.ycptu.edu.cn" target="_blank">招生信息网</a>
+                </li>
+                <li>
+                    <a href="https://ycptu.bysjy.com.cn/" target="_blank">就业信息网</a>
+                </li>
+                <li>
+                    <a href="http://cxcyw.ycptu.edu.cn" target="_blank">创新创业信息网</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="nosub">
+        <h2><a href="http://djw.ycptu.edu.cn" target="_blank">党建工作</a></h2>
+    </li>
+</ul>
+        </div>
+    </div>
+
+    <div class="banner">
+            <div class="lb">
+        <div>
+        <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 71066)" target="_blank"><img src="images/banner2.jpg" border="0"></a>
+    </div>
+    <div>
+        <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 71037)" target="_blank"><img src="images/rigui.jpg" border="0"></a>
+    </div>
+    <div>
+        <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 77496)" target="_blank"><img src="images/banner3.jpg" border="0"></a>
+    </div>
+</div>
+    </div>
+    <div class="bb"></div>
+</div>
+
+<div class="body_b">
+    <div class="head2 pc">
+        <div class="h-center">
+            <div class="logo">
+                
+<a href="index.htm">
+    <img src="images/logo.png" alt="">
+</a>
+            </div>
+            <div class="h-right">
+                <div class="h-link">
+                    <div>
+                        
+                    </div>
+                    <div>
+                            <a href="index/xzxx.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 76843)"><img src="images/icotop04.png" border="0">校长信箱</a>
+<a href="index/sjxx.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 76842)"><img src="images/icotop04.png" border="0">书记信箱</a>
+<a href="http://xxgk.ycptu.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 76841)"><img src="images/icotop03.png" border="0">信息公开</a>
+<a href="https://rsc.ycptu.edu.cn/zpxx.htm" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 77516)"><img src="images/icotop02.png" border="0">人才招聘</a>
+<a href="https://cas.ycptu.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 77636)"><img src="images/icotop06.png" border="0">一站式服务大厅</a>
+
+                        
+                        
+
+
+<div id="divu12"></div>
+<script type="text/html" id="htmlu12">
+    <div id="appu12">
+        <div v-if="!isError">
+        
+            <div class="search">
+                <div class="input">
+                    <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                </div>
+                <div class="p-ico">
+                    <input type="image" src="images/search.png" class="search1" name="submit_button" v-on:click="onSubmit()">
+                    <input type="image" src="images/search_on.png" class="search2" name="submit_button" v-on:click="onSubmit()">
+                </div>
+            </div>
+
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu12").html($("#htmlu12").text());
+</script>
+<script>
+    var appOwner = "1868823629";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu12",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://192.168.220.219:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                    </div>
+                </div>
+                <div class="g-nav">
+                    <ul>
+        <li>
+        <a href="index.htm">网站首页</a>
+    </li>
+    <li>
+        <a href="xxgkk/xxjj.htm">学校概况</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="xxgkk/xxjj.htm">学校简介</a></li>
+                <li><a href="xxgkk/xxld.htm">学校领导</a></li>
+                <li><a href="xxgkk/whxy.htm" target="_blank">文化校园</a></li>
+                <li><a href="xxgkk/xyfg.htm">校园风光</a></li>
+                <li><a href="xxgkk/xxry.htm">学校荣誉</a></li>
+                <li><a href="xxgkk/ldgh.htm">领导关怀</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="zzjg.htm">组织机构</a>
+    </li>
+    <li>
+        <a href="http://jwc.ycptu.edu.cn/" target="_blank">教育教学</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="http://jwc.ycptu.edu.cn/jxyx.htm">教学运行</a></li>
+                <li><a href="http://jwc.ycptu.edu.cn/jxjs/zyjs.htm">教学建设</a></li>
+                <li><a href="http://jxzlb.ycptu.edu.cn">教学质量管理</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="http://kjcyc.ycptu.edu.cn" target="_blank">科技产业</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="http://kjcyc.ycptu.edu.cn/kydt.htm">科研动态</a></li>
+                <li><a href="http://kjcyc.ycptu.edu.cn/kyfw.htm">科研服务</a></li>
+                <li><a href="http://kjcyc.ycptu.edu.cn/cgfw.htm">成果服务</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="http://xsc.ycptu.edu.cn/" target="_blank">学生工作</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="http://xsc.ycptu.edu.cn/xgdt.htm">学工动态</a></li>
+                <li><a href="http://xsc.ycptu.edu.cn/xszz/xszq.htm">学生资助</a></li>
+                <li><a href="http://xsc.ycptu.edu.cn/xsgl/ztjy.htm">学生管理</a></li>
+                <li><a href="http://xsc.ycptu.edu.cn/dwjs.htm">队伍建设</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="zsjy1.htm">招生就业</a>
+        <em></em>
+        <div>
+            <ul>
+                <li><a href="http://zs.ycptu.edu.cn" target="_blank">招生信息网</a></li>
+                <li><a href="https://ycptu.bysjy.com.cn/" target="_blank">就业信息网</a></li>
+                <li><a href="http://cxcyw.ycptu.edu.cn" target="_blank">创新创业信息网</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="http://djw.ycptu.edu.cn" target="_blank">党建工作</a>
+    </li>
+</ul>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="scroll">
+        <div class="section1">
+            <div class="wrap">
+                <div class="gg-tit gg-tit-posfix">
+                    <h4>学校新闻<span>NEWS</span></h4>
+                    
+                </div>
+                <div class="s1-main">
+                    <div class="s1-left">
+                        <div class="s1-l fr">
+                        <script language="javascript" src="/system/resource/js/centerCutImg.js"></script>
+                        <script language="javascript" src="/system/resource/js/ajax.js"></script>
+                            <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="s1-banner">
+        <div>
+        <a href="info/1042/36212.htm" target="_blank">
+            <div class="pic">
+                <img src="/__local/4/28/E6/A073AFF4BAA6A066D36C7FC29AD_FC7B1090_EFD0.jpg" alt="">
+                <div class="date">
+                    <span>11</span>
+                    <span>2024-09</span>
+                </div>
+            </div>
+            <div class="s1-text">
+                <h4>运城职业技术大学庆祝第40个教师节暨表彰大会隆重举行</h4>
+                <p>9月10日，我校隆重举行庆祝第40个教师节暨表彰大会。校长马长江出席大会并讲话。党委书记闫顺茂致贺词，副校长畅明宣读表彰文件，副校长许明欣主持会议，教职工代表和学生代表参加会...</p>
+            </div>
+        </a>
+    </div>
+    <div>
+        <a href="info/1042/35642.htm" target="_blank">
+            <div class="pic">
+                <img src="/__local/C/AA/EE/BC0196A7F28F6C4575B939695C6_88AABAD5_1732A.jpg" alt="">
+                <div class="date">
+                    <span>28</span>
+                    <span>2024-06</span>
+                </div>
+            </div>
+            <div class="s1-text">
+                <h4>运城职业技术大学隆重举行2024届毕业典礼暨学位授予仪式</h4>
+                <p>6月28日，运城职业技术大学2024届毕业典礼暨学位授予仪式在图书大楼西广场隆重举行。董事长马长江博士出席典礼并为毕业生颁发毕业证书和致辞。宏源集团总裁曹耀丰博士出席典礼并为毕...</p>
+            </div>
+        </a>
+    </div>
+    <div>
+        <a href="info/1042/35652.htm" target="_blank">
+            <div class="pic">
+                <img src="/__local/0/02/CD/D12AA6F8A91826A896BA25253B2_F0F047D3_C60C.jpg" alt="">
+                <div class="date">
+                    <span>06</span>
+                    <span>2024-06</span>
+                </div>
+            </div>
+            <div class="s1-text">
+                <h4>国家矿山安全监察局江苏局和山西局专家领导一行来校考察交流</h4>
+                <p>6月5日，国家矿山安全监察局江苏局党组成员、副局长王晓峰，国家矿山监察局山西局十处处长李京文等一行15人来我校考察交流。运城职业技术大学副校长陈伟出席座谈会，继续教育学院院...</p>
+            </div>
+        </a>
+    </div>
+    <div>
+        <a href="info/1042/32122.htm" target="_blank">
+            <div class="pic">
+                <img src="/__local/1/53/F7/6A1B58FA0EDC22AA052347ECBB8_F7706207_10207.jpg" alt="">
+                <div class="date">
+                    <span>31</span>
+                    <span>2023-05</span>
+                </div>
+            </div>
+            <div class="s1-text">
+                <h4>中国共产党运城职业技术大学第一次代表大会胜利召开</h4>
+                <p>5月31日，中国共产党运城职业技术大学第一次代表大会在图书馆融媒体中心胜利召开。省委教育工委副书记、省教育厅党组成员何林有到会祝贺并发表讲话。省委教育工委组织部二级主任科员...</p>
+            </div>
+        </a>
+    </div>
+    <div>
+        <a href="info/1042/3623.htm" target="_blank">
+            <div class="pic">
+                <img src="/__local/C/B9/4D/C33F598072D5A7EC59AB2E75C1D_54D96BD4_A259D.png?e=.png" alt="">
+                <div class="date">
+                    <span>05</span>
+                    <span>2021-12</span>
+                </div>
+            </div>
+            <div class="s1-text">
+                <h4>北京邮电大学与运城职业技术大学签署战略合作协议 大数据及应急管理工程研究中心正式启动</h4>
+                <p>12月3日，北京邮电大学与我校战略合作协议签约暨大数据及应急管理工程研究中心启动仪式在图书馆一楼报告厅隆重举行。出席本次仪式的有北京邮电大学副校长王文博，北京邮电大学应急管...</p>
+            </div>
+        </a>
+    </div>
+</div><script>_showDynClickBatch(['dynclicks_u14_36212','dynclicks_u14_35642','dynclicks_u14_35652','dynclicks_u14_32122','dynclicks_u14_3623'],[36212,35642,35652,32122,3623],"wbnews", 1868823629)</script>
+
+                        </div>
+                        <div class="s1-r fl">
+                            <ul>
+        <li>
+        <a href="info/1041/37862.htm" target="_blank">
+            <div class="pic">
+                <img src="/__local/3/7A/12/EB3CD5EB405BCDECDCE9E79D466_D5AE43B1_A17E.jpg" alt="">
+            </div>
+            <div class="s1-pic-txt">
+                <span><em>27</em>/2024-10</span>
+                <p>职引未来，就业起航 | 运城市盐湖区2024年大中城市联合招聘会暨运城职业技术大学高校毕...</p>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="info/1041/37842.htm" target="_blank">
+            <div class="s1-pic-txt">
+                <span><em>25</em>/2024-10</span>
+                <p>8项！</p>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="info/1041/37812.htm" target="_blank">
+            <div class="s1-pic-txt">
+                <span><em>22</em>/2024-10</span>
+                <p>“百人百场报告会”进基层宣讲活动走进运城职业技术大学</p>
+            </div>
+        </a>
+    </li>
+</ul><script>_showDynClickBatch(['dynclicks_u15_37862','dynclicks_u15_37852','dynclicks_u15_37842','dynclicks_u15_37822','dynclicks_u15_37812','dynclicks_u15_37782'],[37862,37852,37842,37822,37812,37782],"wbnews", 1868823629)</script>
+
+                        </div>
+                    </div>
+                    <div class="s1-right fr">
+                        <ul>
+        <li>
+        <a href="info/1041/37852.htm" target="_blank">
+            <div class="pic">
+                <img src="/__local/E/D8/FB/31FE6674CB0C6A593B34B991CB3_05C523D0_F265.jpg" alt="">
+            </div>
+            <div class="s1-pic-txt">
+                <span><em>25</em>/2024-10</span>
+                <p>运城职业技术大学在全省高校专题培训会上作大会发言</p>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="info/1041/37822.htm" target="_blank">
+            <div class="s1-pic-txt">
+                <span><em>24</em>/2024-10</span>
+                <p>我校5名教师受聘为中国矿业大学（北京）校外导师</p>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="info/1041/37782.htm" target="_blank">
+            <div class="s1-pic-txt">
+                <span><em>17</em>/2024-10</span>
+                <p>运城职业技术大学召开民主党派和无党派人士代表座谈会</p>
+            </div>
+        </a>
+    </li>
+</ul><script>_showDynClickBatch(['dynclicks_u16_37862','dynclicks_u16_37852','dynclicks_u16_37842','dynclicks_u16_37822','dynclicks_u16_37812','dynclicks_u16_37782'],[37862,37852,37842,37822,37812,37782],"wbnews", 1868823629)</script>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <a class="mores" href="zwzx/zxdt.htm">查看更多</a>
+            </div>
+        </div>
+        
+        
+       
+            <div class="section22">
+                <div class="wrap">
+                    <div class="s22-l fl">
+                        <div class="gg-tit gg-tit-posfix">
+                            <h4>
+                                媒体聚焦
+                                <span>MEDIUM</span>
+                            </h4>
+                        </div>
+                        <ul>  <li>
+     <a href="http://yc.sxrb.com/GB/318610/10232908.html" target="_blank" title="运城职业技术大学参加第四届职业院校党委书记论坛">
+         <div class="date"><p>10</p><span>2024-18</span></div>
+         <h3>[山西新闻网] 运城职业技术大学参加第四届职业院校党委书记论坛</h3>
+         <p style="color: #a2c6e9;font-size:14px;">10月12——13日，2024年中国职业技术教育学会党建工作委员会年会暨第四届职业...</p>
+     </a>
+  </li>
+  <li>
+     <a href="https://h5.newaircloud.com/detailArticle/25042516_10347_ycxw.html?source=1&xkyTimestamp=1728985046662" target="_blank" title="运城职业技术大学文旅学院获评“全国教育系统先进集体”">
+         <div class="date"><p>10</p><span>2024-16</span></div>
+         <h3>[运城新闻网] 运城职业技术大学文旅学院获评“全国教育系统先进集体”</h3>
+         <p style="color: #a2c6e9;font-size:14px;">近日，2024年全国教育系统先进集体和先进个人表彰对象名单正式发布，运城职业...</p>
+     </a>
+  </li>
+  <li>
+     <a href="http://yc.sxrb.com/GB/318610/10229843.html" target="_blank" title="运城职业技术大学科研项目喜获山西省基础研究计划立项">
+         <div class="date"><p>10</p><span>2024-11</span></div>
+         <h3>[山西新闻网] 运城职业技术大学科研项目喜获山西省基础研究计划立项</h3>
+         <p style="color: #a2c6e9;font-size:14px;">近日，山西省科技厅发布《关于2024年山西省基础研究计划（自由探索类）第一批...</p>
+     </a>
+  </li>
+  <li>
+     <a href="http://yc.sxrb.com/GB/318610/10224954.html" target="_blank" title="运城职业技术大学旅游管理专业学生赴宏源文旅开展轮岗实践">
+         <div class="date"><p>09</p><span>2024-27</span></div>
+         <h3>[山西新闻网] 运城职业技术大学旅游管理专业学生赴宏源文旅开展轮岗实践</h3>
+         <p style="color: #a2c6e9;font-size:14px;">9月12日，运城职业技术大学—山西宏源沿黄文化旅游发展有限公司学生联合培养宣...</p>
+     </a>
+  </li>
+  <li>
+     <a href="http://yc.sxrb.com/GB/318610/10224953.html" target="_blank" title="运城职业技术大学举行“菜鸟鸿鹄计划”订单班成立仪式">
+         <div class="date"><p>09</p><span>2024-27</span></div>
+         <h3>[山西新闻网] 运城职业技术大学举行“菜鸟鸿鹄计划”订单班成立仪式</h3>
+         <p style="color: #a2c6e9;font-size:14px;">9月24日，运城职业技术大学——浙江菜鸟供应链管理有限公司菜鸟鸿鹄计划订单班...</p>
+     </a>
+  </li>
+<script>_showDynClickBatch(['dynclicks_u17_37792','dynclicks_u17_37772','dynclicks_u17_37742','dynclicks_u17_37682','dynclicks_u17_37672'],[37792,37772,37742,37682,37672],"wbnews", 1868823629)</script>
+</ul>
+                        <a class="mores" href="zwzx/mtjj.htm">查看更多</a>
+                    </div>
+                    <div class="s22-r fr">
+                        <div class="gg-tit gg-tit-posfix">
+                            <h4>
+                                通知公告
+                                <span>NOTICE</span>
+                            </h4>
+                        </div>
+
+                        <ul>  <li class="on">
+    <div class="s22-show">
+       <span>| 09-23</span>
+       <a href="info/1044/37602.htm" target="_blank" title="国庆节放假通知！">国庆节放假通知！</a>
+    </div>
+    <div class="s22-rt">
+        <a href="info/1044/37602.htm" target="_blank" title="国庆节放假通知！"><h3>国庆节放假通知！</h3>
+          <div class="s22-rtd">
+            <div class="date-k">
+              <div class="date">
+                <p>23</p><span>2024/09</span>
+              </div>
+            </div>
+            <p>各单位、各部门：    根据国家法定节假日的规定，结合我校实际情况，现将2024年国庆节放假安排通知如下：    一、放假时间    2024年10月1日至10月7日，共计7天。10月8号收假。    二、补课安排    1.9月29日（星期日）上10月2日（星期三）的课，全体师生正常上班上课。    2.10月12日（星期六）上10月3日（星期四）的课，全体师生正常上班上课。    三、注意事项    1.请各位教师提前做好教学安排，确保教学任务的顺利完成。    2....</p>
+         </div>
+       </a>
+    </div>
+  </li>
+  <li>
+    <div class="s22-show">
+       <span>| 04-23</span>
+       <a href="info/1044/35032.htm" target="_blank" title="2023-2024学年五一放假时间通知">2023-2024学年五一放假时间通知</a>
+    </div>
+    <div class="s22-rt">
+        <a href="info/1044/35032.htm" target="_blank" title="2023-2024学年五一放假时间通知"><h3>2023-2024学年五一放假时间通知</h3>
+          <div class="s22-rtd">
+            <div class="date-k">
+              <div class="date">
+                <p>23</p><span>2024/04</span>
+              </div>
+            </div>
+            <p>2023-2024学年五一放假时间通知各学院、各部门：根据校历安排，经校长办公会研究决定，现将学校五一放假时间通知如下：学校于2024年5月1日（星期三）至2024年5月5日（星期日）放假，共5天，5月6日（星期一）收假。放假补课安排：4月28日按4月26日（星期五）课表执行，5月11日按5月2日（星期四）课表执行，因重修、周六正常授课课程存在冲突的课程由各教学单位自行安排，报教务处备案。请各部门安排好节假日值班人员，所有办公室和教室请关闭电器电源及门窗，...</p>
+         </div>
+       </a>
+    </div>
+  </li>
+  <li>
+    <div class="s22-show">
+       <span>| 03-27</span>
+       <a href="info/1044/34752.htm" target="_blank" title="关于2023-2024学年清明放假时间的通知">关于2023-2024学年清明放假时间的通知</a>
+    </div>
+    <div class="s22-rt">
+        <a href="info/1044/34752.htm" target="_blank" title="关于2023-2024学年清明放假时间的通知"><h3>关于2023-2024学年清明放假时间的通知</h3>
+          <div class="s22-rtd">
+            <div class="date-k">
+              <div class="date">
+                <p>27</p><span>2024/03</span>
+              </div>
+            </div>
+            <p>关于2023-2024学年清明放假时间的通知各单位、各部门：根据校历安排，经校长办公会研究决定，现将学校清明放假时间通知如下：一、学校于2024年4月4日（星期四）至6日（星期六）放假，共3天，4月7日（星期日）收假。二、4月7日（周日）教学安排按4月5日（周五）的课表执行。请各部门安排好节假日值班人员，所有办公室和教室请关闭电器电源及门窗，检查本部门安全、消防工作，并协助保卫处做好放假期间的安全保障工作。特此通知。学校办公室 ...</p>
+         </div>
+       </a>
+    </div>
+  </li>
+  <li>
+    <div class="s22-show">
+       <span>| 12-06</span>
+       <a href="info/1044/33912.htm" target="_blank" title="2023-2024学年寒假放假时间通知">2023-2024学年寒假放假时间通知</a>
+    </div>
+    <div class="s22-rt">
+        <a href="info/1044/33912.htm" target="_blank" title="2023-2024学年寒假放假时间通知"><h3>2023-2024学年寒假放假时间通知</h3>
+          <div class="s22-rtd">
+            <div class="date-k">
+              <div class="date">
+                <p>06</p><span>2023/12</span>
+              </div>
+            </div>
+            <p>各学院、各部门：根据校历安排，经校长办公会研究决定，现将学校寒假放假时间通知如下：1.学生从1月15日开始放假，学生2月24-25日返校报到，2月26日正式上课（学生原则上考完即可离校，详情以《考试通知》为准）。2.教职工从1月20日开始放假，2月19日返校报到。特此通知。学校办公室2023年12月6日</p>
+         </div>
+       </a>
+    </div>
+  </li>
+  <li>
+    <div class="s22-show">
+       <span>| 11-07</span>
+       <a href="info/1044/33632.htm" target="_blank" title="入馆必读，图书馆规章制度知多少？">入馆必读，图书馆规章制度知多少？</a>
+    </div>
+    <div class="s22-rt">
+        <a href="info/1044/33632.htm" target="_blank" title="入馆必读，图书馆规章制度知多少？"><h3>入馆必读，图书馆规章制度知多少？</h3>
+          <div class="s22-rtd">
+            <div class="date-k">
+              <div class="date">
+                <p>07</p><span>2023/11</span>
+              </div>
+            </div>
+            <p>最近收到很多小萌新的留言“请问怎样借书呀?”“一次能借多少本?”“借阅时长多久啊?”......安排!图书馆为大家悉心整理了各项规章制度牢记入馆规则做文明读书人入馆须知1.凭本人读者卡入馆，自觉接受工作人员查验。不得使用他人读者卡入馆。2.馆内严禁吸烟和使用明火，勿带易燃、易爆品入馆。3.读者借阅图书应按规定办理借阅手续，不得私自带出馆外；应在借阅期限办理还书手续或续借手续，否则，均按《违章处罚条例》处理。4.衣着整齐，...</p>
+         </div>
+       </a>
+    </div>
+  </li>
+  <li>
+    <div class="s22-show">
+       <span>| 10-16</span>
+       <a href="info/1044/33432.htm" target="_blank" title="运城职业技术大学2024届毕业生校园招聘双选会邀请函">运城职业技术大学2024届毕业生校园招聘双选会邀请函</a>
+    </div>
+    <div class="s22-rt">
+        <a href="info/1044/33432.htm" target="_blank" title="运城职业技术大学2024届毕业生校园招聘双选会邀请函"><h3>运城职业技术大学2024届毕业生校园招聘双选会邀请函</h3>
+          <div class="s22-rtd">
+            <div class="date-k">
+              <div class="date">
+                <p>16</p><span>2023/10</span>
+              </div>
+            </div>
+            <p>尊敬的用人单位：为深入贯彻落实党的二十大精神，严格落实党中央、国务院关于“稳就业”、“保就业”决策部署，积极搭建用人单位与毕业生双向选择精准对接平台，推动2024届毕业生更高质量更加充分就业，我校决定2023年10月28日与运城市盐湖区人力资源和社会保障局联合举办2024届毕业生线下大型招聘双选会，真诚邀请各用人单位来校选聘我校优秀毕业生，现将2024届毕业生校园招聘活动安排及注意事项通知如下：一、招聘活动安排我校2024届毕业生秋季校园招聘活动采取“...</p>
+         </div>
+       </a>
+    </div>
+  </li>
+<script>_showDynClickBatch(['dynclicks_u18_37602','dynclicks_u18_35032','dynclicks_u18_34752','dynclicks_u18_33912','dynclicks_u18_33632','dynclicks_u18_33432'],[37602,35032,34752,33912,33632,33432],"wbnews", 1868823629)</script>
+</ul>
+                        <a class="mores" href="zwzx/tzgg.htm">查看更多</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function () {
+                $(".s22-r ul li").mouseenter(function () {
+                    $(this).addClass("on").siblings().removeClass("on");
+                });
+            })
+        </script>
+        
+        
+        <div class="section3" style="display:none;">
+            <div class="wrap">
+                <div class="s3-left fl">
+                    <div class="gg-tit w">
+                        <h4>学术会议</h4>
+                        <a class="mores" href="zwzx/xshy.htm">查看更多</a>
+                    </div>
+                    <div class="s3-tx">
+    </div>
+
+<div class="s3-list">
+    <ul>
+    </ul>
+</div>
+
+                </div>
+                <div class="s3-right fr">
+                    <div class="gg-tit w">
+                        <h4>教育教学</h4>
+                        <a class="mores" href="<span style='color:red;font-size:9pt'>转换链接错误</span>">查看更多</a>
+                    </div>
+                    <div class="s3-list2">
+                        <ul>
+    </ul>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="section4" style="display:none;">
+            <div class="wrap">
+                <div class="gg-tit gg-tit-posfix">
+                    <h4>科学研究</h4>
+                    <a class="mores" href="<span style='color:red;font-size:9pt'>转换链接错误</span>">查看更多</a>
+                </div>
+                <div class="s4-main">
+                    <div class="s4-left fl">
+                        <div class="s4-l fl">
+                                <img src="images/s4-img.jpg" border="0">
+
+                        </div>
+                        <div class="s4-r fl">
+                            
+
+                        </div>
+                    </div>
+                    <div class="s4-right fr">
+                        
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section5" style="display:none;">
+            <div class="wrap">
+                <div class="gg-tit w2">
+                    <h4>媒体聚焦</h4>
+                    <a class="mores" href="zwzx/mtjj.htm">查看更多</a>
+                </div>
+                <div class="s5-main">
+                    <div class="s5-left fl">
+                        <div class="s5-item1">
+    </div>
+<div class="s5-item2">
+</div>
+
+                    </div>
+                    <div class="s5-left fl">
+                        <div class="s5-item2">
+    </div>
+<div class="s5-item1">
+</div>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section6">
+            <div class="wrap">
+                <div class="gg-tit">
+                    <h4>文化校园<span>CULTURAL CAMPUS</span></h4>
+                </div>
+                <div class="s6-main">
+                    <div class="s6-top">
+    <div class="s6-l fl">
+                <a href="info/1015/37802.htm" target="_blank">
+            <div class="pic">
+                <img src="/__local/6/07/E8/FDA0606B569D80CA2820888DD18_26FB9A81_2E3BE.jpg" alt="">
+                <p>夜色中的运大，你心动了吗!</p>
+            </div>
+            <div class="date">
+                <span>21</span>
+                <span>2024-10</span>
+            </div>
+        </a>
+    </div>
+    <div class="s6-r fr">
+        <div>
+            <a href="info/1015/37692.htm" target="_blank">
+                <div class="pic">
+                    <img src="/__local/7/29/23/1F0055D3D68EC4CC5152E63F044_5C0BE445_CFC2.jpg" alt="">
+                </div>
+                <div class="s6-tx">
+                    <span><em>29</em>/2024-09</span>
+                    <h4>嗨翻！运城职业技术大学2024年迎新晚会精彩瞬间</h4>
+                </div>
+                <div class="s6-tx s6-tx2 ">
+                    <span><em>29</em>/2024-09</span>
+                    <h4>嗨翻！运城职业技术大学2024年迎新晚会精彩瞬间</h4>
+                    <p>金秋九月，丹桂飘香9月27日我校在体育场隆重举行“青春逢盛世 奋进正当时”2024年迎新晚会这场晚会不仅是新同学大学生活的精彩开篇更是我校培育人文素养的生动展现彰显出独特的校园文化魅力一同回顾晚会精彩瞬间开场舞《绽放》歌曲串烧《唱响运大》女生独唱歌伴舞《阳光路上》晋南民间舞《盛世花鞭》古筝二胡重奏《白马》男生独唱《归来的星光》舞蹈串烧《舞彩缤纷》小提琴独奏《如愿》女声独唱歌伴舞《人说山西好风光》蒲剧《忠义关公》...</p>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="info/1015/37622.htm" target="_blank">
+                <div class="pic">
+                    <img src="/__local/B/6D/7C/A5AD4B6208863D0232BE5B9AF52_596F9907_FFAC.jpg" alt="">
+                </div>
+                <div class="s6-tx">
+                    <span><em>25</em>/2024-09</span>
+                    <h4>飒！热血青春，军训铸魂</h4>
+                </div>
+                <div class="s6-tx s6-tx2 ">
+                    <span><em>25</em>/2024-09</span>
+                    <h4>飒！热血青春，军训铸魂</h4>
+                    <p>秋风起，军号响在这个充满挑战与收获的季节里运大2024级的新生们书写着属于自己的青春篇章运大的军训日记在炎炎烈日里训练场上的他们挺直脊梁汗水滑落在脸颊他们的目光依旧坚定用坚挺的身姿诠释着运大学子的风采从青涩到坚韧镜头定格了大家的朝气蓬勃留下了青春最美好的剪影挥洒的是汗水燃烧的是青春奏响的是军歌呐喊的是热血与青春的作伴军训不仅是体能的锻炼更是心灵的洗礼塑造不屈的精神与青春共勉</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="s6-list">
+    <ul>
+        <li>
+            <a href="info/1015/37612.htm" target="_blank">
+                <div class="pic">
+                    <img src="/__local/B/21/34/BBB18078C44D6607FF7FAECF679_39E3845C_10FCD.jpg" alt="">
+                </div>
+                <div class="s6-txt">
+                    <span><em>21</em>/2024-09</span>
+                    <p>这样的图书馆，city不city</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="info/1015/37572.htm" target="_blank">
+                <div class="pic">
+                    <img src="/__local/2/82/C9/5934565F177CF6C8EA308947A90_CF2E1F6E_38C73.jpg" alt="">
+                </div>
+                <div class="s6-txt">
+                    <span><em>20</em>/2024-09</span>
+                    <p>直击运大火热军训现场</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="info/1015/37562.htm" target="_blank">
+                <div class="pic">
+                    <img src="/__local/3/55/02/4D9DACF0765B814FCA0D836CEE4_EE15007F_5F660.jpg" alt="">
+                </div>
+                <div class="s6-txt">
+                    <span><em>19</em>/2024-09</span>
+                    <p>“三晋中医康养”科普工作 | 我校学生在《中医健康养生》发表科普论文</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="info/1015/37532.htm" target="_blank">
+                <div class="pic">
+                    <img src="/__local/9/5F/0A/D5E3C028A46B3BA2C2E16380ADC_AB8B0731_637A.jpg" alt="">
+                </div>
+                <div class="s6-txt">
+                    <span><em>18</em>/2024-09</span>
+                    <p>明月映运大，情浓中秋夜</p>
+                </div>
+            </a>
+        </li>
+        <div class="clear"></div>
+    </ul>
+</div><script>_showDynClickBatch(['dynclicks_u26_37802','dynclicks_u26_37692','dynclicks_u26_37622','dynclicks_u26_37612','dynclicks_u26_37572','dynclicks_u26_37562','dynclicks_u26_37532'],[37802,37692,37622,37612,37572,37562,37532],"wbnews", 1868823629)</script>
+
+                </div>
+                <a class="mores" href="xxgkk/whxy.htm">查看更多</a>
+            </div>
+        </div>
+        <div class="section7">
+            <div class="wrap">
+                <div class="gg-tit">
+                    <h4>专题专栏<span>SPECIAL SUBJECT</span></h4>
+                </div>
+                <div class="s7-list">
+                        <ul>
+        <li>
+        <a href="http://wlaq.ycptu.edu.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 1003)" target="_blank">
+            <div class="pic">
+                <img src="images/zt_002.png" border="0">
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://huodong.sxlll.cn/home" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 77617)" target="_blank">
+            <div class="pic">
+                <img src="images/qmzjyhd.jpg" border="0">
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="http://djw.ycptu.edu.cn/djxxjy.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 77616)" target="_blank">
+            <div class="pic">
+                <img src="images/djxxjy.jpg" border="0">
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://zlzx.ycptu.edu.cn/zsjy/zlnb.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 71096)" target="_blank">
+            <div class="pic">
+                <img src="images/ndzlbg.jpg" border="0">
+            </div>
+        </a>
+    </li>
+    <div class="clear"></div>
+</ul>
+                </div>
+               <a class="mores" href="ztzl.htm">查看更多</a>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="wrap">
+                <div class="f-t">
+                    <div class="f-link fl">
+                        <a href="http://192.168.220.206/jwglxt/xtgl/login_slogin.html" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1868823629, 86593)">教务管理系统内网</a>
+<a href="http://jwxt.ycptu.edu.cn/jwglxt/xtgl/login_slogin.html" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1868823629, 86594)">教务管理系统外网</a>
+<a href="https://cas.ycptu.edu.cn/lyuapServer/login?service=https://xgxt.ycptu.edu.cn/nuo4/index/cas.html" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1868823629, 86597)">智慧学生服务平台</a>
+<a href="http://192.168.118.11:90/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1868823629, 86599)">收费管理系统</a>
+<a href="http://192.168.220.41/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1868823629, 87232)">档案管理平台</a>
+<a href="http://xxpt.ycptu.edu.cn:50000/system/login.jsp" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1868823629, 86601)">网站管理</a>
+
+                    </div>
+                    <div class="lxwm fr">
+                        <h4>联系我们</h4>
+<div class="p">
+ <p>地址：山西省运城市学苑北路2555号</p>
+ <p>网址：http://www.ycptu.edu.cn</p>
+ <p>招生电话：0359-2439999</p>
+ <p>微信：ycptu2367999</p>
+ <p>QQ：483018420</p>
+</div>
+                        <div class="qr">
+                                <a onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 70924)">
+    <span class="code">
+        <img src="images/erweima.png" border="0">
+    </span>
+    <img src="images/wx.png" alt="">
+</a>
+<a href="https://weibo.com/u/7510463918" onclick="_addDynClicks(&#34;wbimage&#34;, 1868823629, 70923)">
+    <img src="images/wb.png" alt="">
+</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bq">
+                <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span style="font-size: 14px;">版权所有：运城职业技术大学　 </span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14080202000311" target="_blank"><img src="/__local/D/02/89/DC0A46FC5B15B3363FFA78CF6C7_C267B386_4B38.png?e=.png" style="margin-top: 3px; margin-right: 5px;" /><span style="font-size: 14px; text-decoration: none;">晋公网安备 14080202000311号</span></a><span style="font-size: 14px;">　</span><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" se_prerender_url="complete" style="font-size: 14px; text-decoration: none"><span style="font-size: 14px">晋ICP备2021005503号-1</span></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/index.js"></script>
+<script>
+    $(function(){
+        $(".body_home").addClass("showdiv");
+        setTimeout(function(){
+            $(".body_home").addClass("s");
+            $(".home1").removeClass("showdiv");
+        },500);
+    });
+
+
+    $(".bb").click(function(){
+        $(".body_b").addClass("showdiv");
+        $(".header").addClass("mobile");
+        /*if ($('body').hasClass('navShow')) {
+            $('body').removeClass('navShow')
+        }*/
+        setTimeout(function(){
+            $(".body_home").removeClass("showdiv");
+            $(".home5").addClass("showdiv");
+
+        },500);
+    })
+    $(".body_home").mousewheel(function(event, delta, deltaX, deltaY){
+        if(delta<0){
+            $(".bb").click();
+        }
+      /*if ($(window).innerWidth > 1024){
+          $('body').removeClass('navShow')
+      }*/
+
+
+    });
+    var sw_k=1;
+    document.onkeydown=function(event){
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if((e.keyCode==40 || e.keyCode==32 || e.keyCode==34) && $(".body_home").hasClass("showdiv")){
+            sw_k=0;
+            $(".bb").click();
+            $(".body_b").animate({scrollTop:0},10);
+            $(".body_b").focus();
+            setTimeout(function(){sw_k=1;},1000);
+        }
+        if((e.keyCode==38 || e.keyCode==33) && $(".body_b").hasClass("showdiv") && $(".body_b").scrollTop()==0){
+            sw_k=0;
+            $(".body_home").addClass("showdiv").focus();
+            setTimeout(function(){
+                $(".banner .slick-active .a1").focus();
+            },500);
+            $(".body_b").removeClass("showdiv");
+
+            if($(".body_b").css("position")=="fixed")$(".header").removeClass("mobile");
+            setTimeout(function(){sw_k=1;},1000);
+        }
+
+    }
+    $(".body_b").mousewheel(function(event, delta, deltaX, deltaY){
+        if(delta>0 && $(".body_b").scrollTop()==0){
+
+            $(".body_home").addClass("showdiv");
+            setTimeout(function(){
+                if($(window).width()>850){$(".banner .slick-active .a1").focus();}
+
+            },500);
+            $(".body_b").removeClass("showdiv");
+
+            $(".home5").removeClass("showdiv");
+            if($(".body_b").css("position")=="fixed")$(".header").removeClass("mobile");
+
+
+        }
+
+        if(deltaY<0 && $(".body_b").scrollTop()+$(window).height()>=$(".body_b .scroll").height()){
+
+        }
+
+    });
+
+
+
+</script>
+</html>

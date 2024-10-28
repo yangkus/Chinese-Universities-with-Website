@@ -1,0 +1,1695 @@
+﻿<!DOCTYPE html><html><head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<!-- <meta name="renderer" content="webkit"> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>吉林工商学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="吉林工商学院">
+<META Name="keywords" Content="吉林工商学院" />
+<meta name="pageType" content="1">
+<meta name="pageTitle" content="吉林工商学院">
+<meta name="pageType" content="1">
+<meta name="pageTitle" content="吉林工商学院">
+<meta name="pageType" content="1">
+<meta name="pageTitle" content="吉林工商学院">
+<meta name="pageType" content="1">
+<meta name="pageTitle" content="吉林工商学院">
+<meta name="pageType" content="1">
+<meta name="pageTitle" content="吉林工商学院">
+<meta name="pageType" content="1">
+<meta name="pageTitle" content="吉林工商学院">
+<meta name="pageType" content="1">
+<meta name="pageTitle" content="吉林工商学院">
+
+<link href="dfiles/9810/css/animate.css" rel="stylesheet">
+<link href="dfiles/9810/css/style.css?v20" rel="stylesheet">
+<link href="dfiles/9810/css/banner.css?v10" rel="stylesheet">
+<link href="dfiles/9810/css/animate.css?v10" rel="stylesheet">
+<link href="dfiles/9810/css/index.css" rel="stylesheet">
+<link href="images/favicon.ico" rel="shortcut icon">
+<link href="css/swiper-bundle.min.css?v10" rel="stylesheet">
+<link href="css/btt.css?v10" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="dfiles/9810/js/html5.js" type="text/javascript"></script>
+
+<!--[endif]---->
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475d53535742000200034653 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1768628782)</script>
+</head>
+<body>
+
+<!--header开始-->
+
+<header class="header">
+  <div class="serWrap">
+    <div id="ser">
+      <div class="ser"> 
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1768628782";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://125.223.225.176:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script> </div>
+    </div>
+  </div>
+  <div class="topWrap">
+    <div class="top">
+      <div class="top_lf"> <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+
+
+ <a href="http://yzxx.jlbtc.edu.cn/">联系校领导</a><span>|</span> 
+
+
+
+
+
+
+
+
+
+
+
+ <a href="info/1090/3993.htm">综合服务</a><span>|</span> 
+
+
+
+
+
+
+
+
+
+
+
+ <a href="http://mail.jlbtc.edu.cn/">校园邮箱</a><span>|</span> 
+
+
+
+
+
+
+
+
+
+
+
+ <a href="https://xyh.jlbtc.edu.cn/#/">校友会</a>
+
+
+
+
+
+
+</div>
+      <div class="top_rt"> 
+
+
+
+ <a href="http://xxgk.jlbtc.edu.cn/">信息公开</a><span>|</span> 
+
+
+
+
+
+
+
+
+
+
+
+ <a href="yjsxx.htm">预决算信息</a><span>|</span> 
+
+
+
+
+
+
+
+
+
+
+
+ <a href="https://tysfrz.jlbtc.edu.cn/index.html">统一身份认证入口</a>
+
+
+
+
+
+
+ <a class="serBtn" href="javascript:void(0)">&nbsp;</a> </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="nav-wrapper">
+    <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm"><img src="images/logo1.png" alt=""></a></div>
+    <div class="nav" id="nav">
+      <ul class="nav_lf">
+        
+
+  <li><a href="#">学校概况</a>
+          <dl class="subNav  ">
+<dd><a href="xxgk/xyjj.htm">学院简介</a></dd>
+<dd><a href="xxgk/ldjg.htm">领导机构</a></dd>
+<dd><a href="xxgk/xydw.htm">学院定位</a></dd>
+<dd><a href="xxgk/xhxbxx.htm">校徽校标校训</a></dd>
+<dd><a href="xxgk/xfjfxf.htm">校风教风学风</a></dd>
+<dd><a href="xxgk/xg.htm">校歌</a></dd>
+<dd><a href="xxgk/xydt.htm">校园地图</a></dd>
+  </dl>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <li><a href="info/1131/25190.htm">组织机构</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="#">教育教学</a>
+          <dl class="subNav  ">
+<dd><a href="http://jwc1.jlbtc.edu.cn">本科生教育</a></dd>
+<dd><a href="https://jxjyxy.jlbtc.edu.cn/">继续教育</a></dd>
+  </dl>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="#">科学研究</a>
+          <dl class="subNav  ">
+<dd><a href="http://gjs.jlbtc.edu.cn/">高教研究</a></dd>
+<dd><a href="http://kyc.jlbtc.edu.cn">科研管理</a></dd>
+<dd><a href="kxy/kyji_gou.htm">科研机构</a></dd>
+  </dl>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="#">招生就业</a>
+          <dl class="subNav  ">
+<dd><a href="http://zsxxw.jlbtc.edu.cn/">招生信息网</a></dd>
+<dd><a href="https://jyxx.jlbtc.edu.cn/">就业信息网</a></dd>
+  </dl>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</SCRIPT>
+      </ul>
+      <ul class="nav_rt">
+        
+
+
+
+
+
+
+
+   <li><a href="http://rsc.jlbtc.edu.cn/zpxx.htm">人才招聘</a></li>
+
+
+
+
+
+
+  <li><a href="#">图书档案</a>
+          <dl class="subNav  ">
+<dd><a href="https://library.jlbtc.edu.cn/">图书馆</a></dd>
+<dd><a href="http://dag.jlbtc.edu.cn">档案馆</a></dd>
+  </dl>
+        </li>
+
+
+
+
+
+
+
+
+   <li><a href="https://hzjl.jlbtc.edu.cn/">国际交流</a></li>
+
+
+
+
+
+
+  <li><a href="xywh.htm">校园文化</a>
+          <dl class="subNav  ">
+<dd><a href="xywh/gyxy.htm">光影校园</a></dd>
+<dd><a href="http://yywzw.jlbtc.edu.cn/">语言文字网</a></dd>
+<dd><a href="xywh/xyfg.htm">校园风光</a></dd>
+  </dl>
+        </li>
+
+
+
+
+
+
+
+
+   <li><a href="http://shpg.jlbtc.edu.cn/">审核评估</a></li>
+
+
+
+
+
+      </ul>
+    </div>
+  </div>
+  <span class="black_bg01"></span> 
+  <!-- 移动端主导航 -->
+  <section class="mobile">
+    <div class="mobile-inner-header">
+      <h3 class="mobile_title"> <ul style="    margin-left: 70px;">
+
+
+<li><a href="http://yzxx.jlbtc.edu.cn/">联系校领导</a></li>
+
+
+
+
+
+
+
+<li><a href="http://www.jlbtc.edu.cn/zhfw.htm">综合服务</a></li>
+
+
+
+
+
+
+
+<li><a href="http://mail.jlbtc.edu.cn/">教师邮箱</a></li>
+
+
+
+
+
+
+
+<li><a href="http://mail.jlbtc.edu.cn/">学生邮箱</a></li>
+
+
+
+
+
+</ul></h3>
+      <!-- 0331开始 --> 
+      <!-- <div class="mobile-inner-header-icon mobile-inner-header-icon-out">
+            <span></span><span></span><span></span></div> -->
+      <div class="mobile-inner-header-icon mobile-inner-header-icon-out"> <span class="mobile_home">导航</span></div>
+      <!-- 0331结束 --> 
+    </div>
+    <div class="mobile-inner-nav">
+      <ul>
+           
+
+ <li><a href="#">学校概况</a><strong>+</strong>
+          <dl class="mobile_subNav">
+
+            <dd><a href="xxgk/xyjj.htm">学院简介</a></dd>
+
+
+
+            <dd><a href="xxgk/ldjg.htm">领导机构</a></dd>
+
+
+
+            <dd><a href="xxgk/xydw.htm">学院定位</a></dd>
+
+
+
+            <dd><a href="xxgk/xhxbxx.htm">校徽校标校训</a></dd>
+
+
+
+            <dd><a href="xxgk/xfjfxf.htm">校风教风学风</a></dd>
+
+
+
+            <dd><a href="xxgk/xg.htm">校歌</a></dd>
+
+
+
+            <dd><a href="xxgk/xydt.htm">校园地图</a></dd>
+
+
+
+
+  </dl>
+        </li>
+
+
+
+
+   
+
+   <li><a href="info/1131/25190.htm">组织机构</a></li>
+
+
+
+
+   
+
+ <li><a href="#">教育教学</a><strong>+</strong>
+          <dl class="mobile_subNav">
+
+            <dd><a href="http://jwc1.jlbtc.edu.cn">本科生教育</a></dd>
+
+
+
+            <dd><a href="https://jxjyxy.jlbtc.edu.cn/">继续教育</a></dd>
+
+
+
+
+  </dl>
+        </li>
+
+
+
+
+   
+
+ <li><a href="#">科学研究</a><strong>+</strong>
+          <dl class="mobile_subNav">
+
+            <dd><a href="http://gjs.jlbtc.edu.cn/">高教研究</a></dd>
+
+
+
+            <dd><a href="http://kyc.jlbtc.edu.cn">科研管理</a></dd>
+
+
+
+            <dd><a href="kxy/kyji_gou.htm">科研机构</a></dd>
+
+
+
+
+  </dl>
+        </li>
+
+
+
+
+   
+
+ <li><a href="#">招生就业</a><strong>+</strong>
+          <dl class="mobile_subNav">
+
+            <dd><a href="http://zsxxw.jlbtc.edu.cn/">招生信息网</a></dd>
+
+
+
+            <dd><a href="https://jyxx.jlbtc.edu.cn/">就业信息网</a></dd>
+
+
+
+
+  </dl>
+        </li>
+
+
+
+
+   
+
+   <li><a href="http://rsc.jlbtc.edu.cn/zpxx.htm">人才招聘</a></li>
+
+
+
+
+   
+
+ <li><a href="#">图书档案</a><strong>+</strong>
+          <dl class="mobile_subNav">
+
+            <dd><a href="https://library.jlbtc.edu.cn/">图书馆</a></dd>
+
+
+
+            <dd><a href="http://dag.jlbtc.edu.cn">档案馆</a></dd>
+
+
+
+
+  </dl>
+        </li>
+
+
+
+
+   
+
+   <li><a href="https://hzjl.jlbtc.edu.cn/">国际交流</a></li>
+
+
+
+
+   
+
+ <li><a href="xywh.htm">校园文化</a><strong>+</strong>
+          <dl class="mobile_subNav">
+
+            <dd><a href="xywh/gyxy.htm">光影校园</a></dd>
+
+
+
+            <dd><a href="http://yywzw.jlbtc.edu.cn/">语言文字网</a></dd>
+
+
+
+            <dd><a href="xywh/xyfg.htm">校园风光</a></dd>
+
+
+
+
+  </dl>
+        </li>
+
+
+
+
+   
+
+   <li><a href="http://shpg.jlbtc.edu.cn/">审核评估</a></li>
+
+
+
+
+
+      </ul>
+      <div class="mobile-links"> 
+ <span><a href="http://xxgk.jlbtc.edu.cn/">信息公开</a></span>
+ <span><a href="http://www.jlbtc.edu.cn/yjsxx.htm">预决算信息</a></span>
+ <span><a href="https://tysfrz.jlbtc.edu.cn/index.html">统一身份认证入口</a></span>
+ </div>
+      <!-- <div class="mobile_links">
+                <a href="#"></a><span></span><a href="#"></a>
+            </div> -->
+      <div class="mobile_search"> 
+
+
+<style>
+    #appu10 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu10 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu10"></div>
+<script type="text/html" id="htmlu10">
+    <div id="appu10">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu10").html($("#htmlu10").text());
+</script>
+<script>
+    var appOwner = "1768628782";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu10",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://125.223.225.176:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script> </div>
+    </div>
+  </section>
+</header>
+<!--header结束 --> 
+
+<!--修改banner开始-->
+<div class="banner">
+  <div class="flexslider">       <ul class="slides">
+      <li><a href=""><img src="images/68ca01f530980257d220b4ed3c7ac1a.png" /> <span class="bannerTitle"></span> </a></li>
+
+      <li><a href="https://ddesd.jlbtc.edu.cn/"><img src="banner/xuexi.png" /> <span class="bannerTitle"></span> </a></li>
+
+ </ul> </div>
+  
+  <span class="Banner_bg"></span> <span class="Banner_line"></span> </div>
+<!--修改banner结束--> 
+<!--content开始-->
+<section class="content"> <span class="gz_bg"></span>
+  <section class="modeWrap01">
+    <div class="section wow fadeInUpSmall" data-wow-delay="0.6s">
+      <div class="listTitle01"> <a href="sylm/gstt.htm" target="">
+        <h3><img alt="" src="images/title01.png"></h3>
+        </a> </div>
+      <!--视频新闻--> 
+      
+      <!---->
+      <ul class="list01">
+        <li class="liBg3" style="height: 285px;">
+          <div class="swiper-container"> <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>    <div class="swiper-wrapper">
+ 
+ <div class="swiper-slide">
+               
+               <!--
+                <video controls style="width: 100%;height: 172px; top: 0px;position: absolute; object-fit:fill">
+                  <source src= type="video/mp4" />
+                </video>
+                -->
+               <img src="/__local/D/6A/3A/F522FB7202BC83C6DB3AA180BE7_81306BF4_6E367.jpg" style="width: 100%;height: 172px; top: 0px;position: absolute; object-fit:fill">
+                <div class="detail">
+                  <div class="item-txt01">
+                    <h3><a href="info/1046/29320.htm">【视频】吉林工商学院举行2024级新生开学典礼暨军训结业式</a> </h3>
+                    <span class="more01"><a href="info/1046/29320.htm"><img src="images/more3.png" alt=""></a></span> </div>
+                </div>
+              </div>
+              
+
+ <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+    
+             
+
+ 
+ <div class="swiper-slide">
+               
+               <!--
+                <video controls style="width: 100%;height: 172px; top: 0px;position: absolute; object-fit:fill">
+                  <source src= type="video/mp4" />
+                </video>
+                -->
+               <img src="/__local/1/68/36/313107CEF204B38364286E8AEF9_F9272A2A_4FED6.jpg" style="width: 100%;height: 172px; top: 0px;position: absolute; object-fit:fill">
+                <div class="detail">
+                  <div class="item-txt01">
+                    <h3><a href="info/1046/29310.htm">【视频】吉林工商学院举行第七届师生秋季运动会</a> </h3>
+                    <span class="more01"><a href="info/1046/29310.htm"><img src="images/more3.png" alt=""></a></span> </div>
+                </div>
+              </div>
+              
+
+ <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+    
+             
+
+ 
+ <div class="swiper-slide">
+               
+               <!--
+                <video controls style="width: 100%;height: 172px; top: 0px;position: absolute; object-fit:fill">
+                  <source src= type="video/mp4" />
+                </video>
+                -->
+               <img src="/__local/4/F3/0D/9C3FF2CF65559D51B7D3B752DDC_217769CB_5F33D.jpg" style="width: 100%;height: 172px; top: 0px;position: absolute; object-fit:fill">
+                <div class="detail">
+                  <div class="item-txt01">
+                    <h3><a href="info/1046/27090.htm">【视频】吉林工商学院举行2024届学生毕业典礼暨学位授予仪式</a> </h3>
+                    <span class="more01"><a href="info/1046/27090.htm"><img src="images/more3.png" alt=""></a></span> </div>
+                </div>
+              </div>
+              
+
+ <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+    
+             
+
+ 
+ <div class="swiper-slide">
+               
+               <!--
+                <video controls style="width: 100%;height: 172px; top: 0px;position: absolute; object-fit:fill">
+                  <source src= type="video/mp4" />
+                </video>
+                -->
+               <img src="/__local/8/CF/50/362859CFD61AC561733991F0001_5C537D71_602C1.jpg" style="width: 100%;height: 172px; top: 0px;position: absolute; object-fit:fill">
+                <div class="detail">
+                  <div class="item-txt01">
+                    <h3><a href="info/1046/25410.htm">【视频】吉林工商学院举行第十五届田径运动会</a> </h3>
+                    <span class="more01"><a href="info/1046/25410.htm"><img src="images/more3.png" alt=""></a></span> </div>
+                </div>
+              </div>
+              
+
+ <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+    
+             
+
+
+    </div>
+<script>_showDynClickBatch(['dynclicks_u12_29320','dynclicks_u12_29310','dynclicks_u12_27090','dynclicks_u12_25410'],[29320,29310,27090,25410],"wbnews", 1768628782)</script>
+ 
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows --> 
+            
+          </div>
+        </li>
+        
+
+
+
+<li class="liBg4"><a href="info/1047/12200.htm"> <span class="item-img01"><img src="/__local/7/83/B2/15AA417347C7023902E31A728D8_7A3639D2_5C637.jpg" alt=""></span>
+          <div class="item-txt01">
+            <h3>吉林工商学院学习贯彻习近平新时代中国特色社会主义思想主题教育动员部署会议召开</h3>
+            <span class="more01"><img src="images/more3.png" alt=""></span> </div>
+          </a></li>
+
+
+
+
+
+
+
+<li class="liBg4"><a href="info/1047/29870.htm"> <span class="item-img01"><img src="/__local/1/21/20/FE58C4599267D609E953DDFC4D9_ACBE4DDC_5ADE3.jpg" alt=""></span>
+          <div class="item-txt01">
+            <h3>吉林工商学院本科教育教学审核评估启动会召开</h3>
+            <span class="more01"><img src="images/more3.png" alt=""></span> </div>
+          </a></li>
+
+
+
+
+
+
+
+<li class="liBg4"><a href="info/1047/29420.htm"> <span class="item-img01"><img src="/__local/A/3D/85/85D3870FF5F3436C56F5A2D1E9F_6DDD861B_6F447.jpg" alt=""></span>
+          <div class="item-txt01">
+            <h3>学校举办《中国吉菜大典》发布暨全国烹饪大师进校园活动启动仪式</h3>
+            <span class="more01"><img src="images/more3.png" alt=""></span> </div>
+          </a></li>
+
+
+
+
+<script>_showDynClickBatch(['dynclicks_u13_12200','dynclicks_u13_29870','dynclicks_u13_29420'],[12200,29870,29420],"wbnews", 1768628782)</script>
+
+      </ul>
+    </div>
+  </section>
+  <section class="modeWrap02">
+    <div class="section wow fadeInUpSmall" data-wow-delay="0.3s">
+      <div class="listTitle01 listTitle02"> <a href="#">
+        <h3><img alt="" src="images/t/title01.png"></h3>
+        </a> </div>
+      <ul class="list02 clear">
+        <li>
+          <div>
+            <div class="zhxw_li_title"> <a>综合新闻</a> </div>
+           
+ 
+
+ <a class="item-info2" href="info/1042/29850.htm" target="_blank"> <span class="item-img02"> <img src="/__local/1/21/20/FE58C4599267D609E953DDFC4D9_ACBE4DDC_5ADE3.jpg" alt=""> </span>
+            <h3>吉林工商学院本科教育教学...</h3>
+            </a>
+
+
+
+
+
+<script>_showDynClickBatch(['dynclicks_u14_29850'],[29850],"wbnews", 1768628782)</script>
+
+            
+            <div class="item-txt02">
+              <ul class="zhxw_li_ul">
+                   <li><a href="info/1042/30450.htm" target="_blank" title="九台区武装部政委张鹏宇一行到校指导工作">九台区武装部政委张鹏宇一行...</a><span>10-27</span></li>
+
+
+   <li><a href="info/1042/30440.htm" target="_blank" title="我校助力雷锋小学开启思政教育新篇章">我校助力雷锋小学开启思政教...</a><span>10-26</span></li>
+
+
+   <li><a href="info/1042/30430.htm" target="_blank" title="学校继续教育学院组织召开成人教育工作会议">学校继续教育学院组织召开成...</a><span>10-26</span></li>
+
+
+   <li><a href="info/1042/30420.htm" target="_blank" title="我校入选全国高校“双带头人”教师党支部书记“强国行”专项行动团队">我校入选全国高校“双带头人...</a><span>10-25</span></li>
+
+
+   <li><a href="info/1042/29970.htm" target="_blank" title="学校举办特聘教授聘任仪式">学校举办特聘教授聘任仪式</a><span>10-24</span></li>
+
+
+<script>_showDynClickBatch(['dynclicks_u15_30450','dynclicks_u15_30440','dynclicks_u15_30430','dynclicks_u15_30420','dynclicks_u15_29970'],[30450,30440,30430,30420,29970],"wbnews", 1768628782)</script>
+
+              </ul>
+              <span class="more02"><a href="sylm/gsdt/zhxw.htm" target=""><img alt="" src="images/more2.png"></a></span> </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="zhxw_li_title"> <a>通知公告</a> </div>
+               
+
+
+ <a class="item-info2" href="info/1043/4091.htm" target="_blank"> <span class="item-img02"> <img src="images/tzgg.jpg" alt=""> </span>
+            <h3>声明</h3>
+            </a>
+
+
+            <div class="item-txt02">
+              <ul class="zhxw_li_ul">
+                   <li><a href="info/1043/29950.htm" target="_blank" title="关于开展2025年党报党刊和专业业务报刊征订工作的通知">关于开展2025年党报党刊和专业...</a><span>10-23</span></li>
+
+
+   <li><a href="info/1043/29940.htm" target="_blank" title="转发吉林省哲学社会科学规划基金办公室关于做好吉林省社科基金“研究阐释党的二十届三中全会精神，推动吉林全面振兴”研究专项申报工作的通知">转发吉林省哲学社会科学规划基...</a><span>10-23</span></li>
+
+
+   <li><a href="info/1043/29930.htm" target="_blank" title="关于组织开展2024年度教育部产学合作协同育人项目结题验收工作的通知">关于组织开展2024年度教育部产...</a><span>10-23</span></li>
+
+
+   <li><a href="info/1043/29890.htm" target="_blank" title="转发吉林省科学技术厅 中国工程科技发展战略吉林研究院关于发布2025年中国工程科技发展战略吉林研究院咨询研究项目招标指南的通知">转发吉林省科学技术厅 中国工程...</a><span>10-18</span></li>
+
+
+   <li><a href="info/1043/29800.htm" target="_blank" title="关于开展吉林省教育科研基地年度评估验收工作的通知">关于开展吉林省教育科研基地年...</a><span>10-17</span></li>
+
+
+<script>_showDynClickBatch(['dynclicks_u17_29950','dynclicks_u17_29940','dynclicks_u17_29930','dynclicks_u17_29890','dynclicks_u17_29800'],[29950,29940,29930,29890,29800],"wbnews", 1768628782)</script>
+
+              </ul>
+              <span class="more02"><a href="sylm/gsdt/tzgg.htm" target=""><img alt="" src="images/more2.png"></a></span> </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="zhxw_li_title"> <a>招生就业</a> </div>
+               
+
+
+ <a class="item-info2" href="info/1044/16470.htm" target="_blank"> <span class="item-img02"> <img src="images/zsjy.jpg" alt=""> </span>
+            <h3>吉林工商学院2025届毕业生...</h3>
+            </a>
+
+
+            <div class="item-txt02">
+              <ul class="zhxw_li_ul">
+                   <li><a href="info/1044/29900.htm" target="_blank" title="商学院专场 | 吉林工商学院2025届毕业生秋季专场招聘会">商学院专场 | 吉林工商学院2025...</a><span>10-21</span></li>
+
+
+   <li><a href="info/1044/29710.htm" target="_blank" title="工学院专场 | 吉林工商学院2025届毕业生秋季专场招聘会">工学院专场 | 吉林工商学院2025...</a><span>10-14</span></li>
+
+
+   <li><a href="info/1044/29620.htm" target="_blank" title="会计学院专场 | 吉林工商学院2025届毕业生秋季专场招聘会">会计学院专场 | 吉林工商学院20...</a><span>10-10</span></li>
+
+
+   <li><a href="info/1044/29610.htm" target="_blank" title="吉林工商学院10月专场空中双选会（第5场）">吉林工商学院10月专场空中双选...</a><span>10-10</span></li>
+
+
+   <li><a href="info/1044/29570.htm" target="_blank" title="10月招聘专场|吉林工商学院2025届毕业生系列招聘活动（第4场）">10月招聘专场|吉林工商学院2025...</a><span>10-09</span></li>
+
+
+<script>_showDynClickBatch(['dynclicks_u19_29900','dynclicks_u19_29710','dynclicks_u19_29620','dynclicks_u19_29610','dynclicks_u19_29570'],[29900,29710,29620,29610,29570],"wbnews", 1768628782)</script>
+
+              </ul>
+              <span class="more02"><a href="sylm/gsdt/zsjy.htm" target=""><img alt="" src="images/more2.png"></a></span> </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="zhxw_li_title"> <a>人才招聘</a> </div>
+              
+
+
+ <a class="item-info2" href="http://rsc.jlbtc.edu.cn/zpxx.htm" target="_blank"> <span class="item-img02"> <img src="images/tzzp.jpg" alt=""> </span>
+            <h3>吉林工商学院公开招聘</h3>
+            </a>
+
+
+            <div class="item-txt02">
+              <ul class="zhxw_li_ul">
+                   <li><a href="info/1045/29170.htm" target="_blank" title="2024年吉林工商学院公开招聘博士高层次人才公告（2号）">2024年吉林工商学院公开招聘博...</a><span>09-14</span></li>
+
+
+   <li><a href="info/1045/27690.htm" target="_blank" title="2024年吉林工商学院公开招聘第二批拟聘用人员公示">2024年吉林工商学院公开招聘第...</a><span>08-06</span></li>
+
+
+   <li><a href="info/1045/23780.htm" target="_blank" title="2024年吉林工商学院公开招聘博士研究生及急需紧缺人才公告（1号）">2024年吉林工商学院公开招聘博...</a><span>04-19</span></li>
+
+
+<script>_showDynClickBatch(['dynclicks_u21_29170','dynclicks_u21_27690','dynclicks_u21_23780'],[29170,27690,23780],"wbnews", 1768628782)</script>
+
+              </ul>
+              <span class="more02"><a href="http://rsc.jlbtc.edu.cn/zpxx.htm" target=""><img alt="" src="images/more2.png"></a></span> </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="modeWrap03">
+    <div class="section wow fadeInUpSmall" data-wow-delay="0.3s">
+      <div class="listTitle01 listTitle03"> <a href="sylm/gsxs.htm" target="">
+        <h3><img alt="" src="images/t/title03.png"></h3>
+        </a> </div>
+      <ul class="list03 clear">
+      </ul>
+      <div class="xs_right fr">
+        <div class="xs_right_date fl"> 
+<div class="xs_right_1 fl">
+            <div class="xs_date_1"><a class="fl">
+           
+              <p><span> 08 </span><br>
+                <i>10月</i></p>
+              </a> </div>
+            <div class="xs_date_2 fr"> <a class="gray-1 fl" href="info/1036/29540.htm" target="_blank">关于举办吉林工商学院特聘...</a><br>
+              <a class="gray-3 fl">主讲人：吉林大学教授、博士生导师杜莉<br>
+              时间：2024年10月9日（周三）下午13:30<br>
+              地点：厚德楼429报告厅<br>
+              主办：人力资源处、教务处、科研处、就业工作处、校友工作办公室<br>
+              </a> </div>
+          </div>
+
+
+
+<div class="xs_right_1 fl">
+            <div class="xs_date_1"><a class="fl">
+           
+              <p><span> 24 </span><br>
+                <i>06月</i></p>
+              </a> </div>
+            <div class="xs_date_2 fr"> <a class="gray-1 fl" href="info/1036/26760.htm" target="_blank">关于举办第二届“青年学术...</a><br>
+              <a class="gray-3 fl">主讲人：蔺大勇<br>
+              时间：2024年6月26日下午13：00至14：00<br>
+              地点：二教A区401室<br>
+              主办：科研处<br>
+              </a> </div>
+          </div>
+
+
+
+<div class="xs_right_1 fl">
+            <div class="xs_date_1"><a class="fl">
+           
+              <p><span> 19 </span><br>
+                <i>06月</i></p>
+              </a> </div>
+            <div class="xs_date_2 fr"> <a class="gray-1 fl" href="info/1036/26670.htm" target="_blank">关于举办“硕士申请授权攻...</a><br>
+              <a class="gray-3 fl">主讲人：吉林大学 金晓彤教授<br>
+              时间：2024年6月20日 13：00-15：00<br>
+              地点：二教A区429报告厅<br>
+              主办：科研处<br>
+              </a> </div>
+          </div>
+
+
+
+<div class="xs_right_1 fl">
+            <div class="xs_date_1"><a class="fl">
+           
+              <p><span> 12 </span><br>
+                <i>06月</i></p>
+              </a> </div>
+            <div class="xs_date_2 fr"> <a class="gray-1 fl" href="info/1036/26480.htm" target="_blank">关于举办“人才培养质效提...</a><br>
+              <a class="gray-3 fl">主讲人：李辉来<br>
+              时间：2024年6月14日下午13:30—15:00<br>
+              地点：二教A区429<br>
+              主办：教务处（教师教学发展中心）<br>
+              </a> </div>
+          </div>
+
+
+<script>_showDynClickBatch(['dynclicks_u22_29540','dynclicks_u22_26760','dynclicks_u22_26670','dynclicks_u22_26480'],[29540,26760,26670,26480],"wbnews", 1768628782)</script>
+ </div>
+      </div>
+    </div>
+  </section>
+  <section class="modeWrap04">
+    <div class="section wow fadeInUpSmall" data-wow-delay="0.3s">
+      <div class="listTitle01 listTitle04"> <a href="sylm/gsfc.htm" target="">
+        <h3><img alt="" src="images/t/title04.png"></h3>
+        </a> </div>
+      <div class="list04 clear">
+      
+      
+
+
+
+
+   <div class="item-info04 item-1 ">
+          <div> <span class="item-img04"><a href="info/1037/28820.htm"><img src="/__local/2/B3/F1/CED2739F4A9EE89B9F4C33808F1_747147EA_28A6D.jpg" alt=""></a></span> <span class="item-txtBg04"></span>
+            <div class="item-txt04"> <a href="info/1037/28820.htm">“新”心念念  以心迎“新”——吉林工商学院热烈欢迎2024级新同学</a> </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="item-info04 item-1 ">
+          <div> <span class="item-img04"><a href="info/1037/27040.htm"><img src="/__local/B/38/5A/812160EF401216EF39F78DF9A2E_0DFE63F2_6FFAE.jpg" alt=""></a></span> <span class="item-txtBg04"></span>
+            <div class="item-txt04"> <a href="info/1037/27040.htm">吉林工商学院举行2024届学生毕业典礼暨学位授予仪式</a> </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="item-info04 item-1 ">
+          <div> <span class="item-img04"><a href="info/1037/27050.htm"><img src="/__local/C/32/A3/8B6D3A5E59073ED7AEEE6DC279F_2A240031_9117.jpg" alt=""></a></span> <span class="item-txtBg04"></span>
+            <div class="item-txt04"> <a href="info/1037/27050.htm">我校教职工在长春市第二届职工运动会羽毛球比赛中获佳绩</a> </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="item-info04 item-1 ">
+          <div> <span class="item-img04"><a href="info/1037/27060.htm"><img src="/__local/1/06/35/C94886BB0BDEC2A3BD109803C32_C7DCB0E8_49BE5.jpg" alt=""></a></span> <span class="item-txtBg04"></span>
+            <div class="item-txt04"> <a href="info/1037/27060.htm">我校代表队在第十届全国青年科普创新实验暨作品大赛吉林赛区中再创佳绩</a> </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>_showDynClickBatch(['dynclicks_u23_28820','dynclicks_u23_27040','dynclicks_u23_27050','dynclicks_u23_27060'],[28820,27040,27050,27060],"wbnews", 1768628782)</script>
+
+      
+   
+        
+        
+        
+        <div class="item-info04 item-1 phoneItem-inf004">
+          <div> <span class="item-img04"><a href="sylm/gsfc.htm">+查看更多+</a></span> </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-------专题---->
+  <section class="modeWrap05">
+    <div class="section clear">
+      <div class="rt wow fadeInRightSmall" data-wow-delay="0.4s">
+        <div class="listTitle01 listTitle05 "> <a href="#">
+          <h3><img alt="" src="images/t/title07.png"></h3>
+          </a> </div>
+        <ul class="topic-list">
+              
+
+
+ <li><a href="https://ddesd.jlbtc.edu.cn/"><span><img src="banner/xuexi.png" alt=""></span></a></li>
+
+
+
+ <li><a href="djxx.htm"><span><img src="banner/djxx.jpg" alt=""></span></a></li>
+
+
+
+ <li><a href="http://yywzw.jlbtc.edu.cn"><span><img src="images/hyywz.jpg" alt=""></span></a></li>
+
+
+
+ <li><a href="mtgs.htm"><span><img src="banner/6.jpg" alt=""></span></a></li>
+
+
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <!-------新媒体矩阵---->
+  
+  <section class="modewrap06 clear">
+    <div class="section clear">
+      <div class="col wd wow fadeInUpSmall" data-wow-delay="0.4s" style="visibility: visible; animation-name: fadeInRightSmall; animation-delay: 0.4s;">
+        <div class="listTitle01  listTitle06"> <a href="#">
+          <h3><img alt="" src="images/t/title05.png"></h3>
+          </a> </div>
+        <div class="section clear">
+          <div class="col md wow fadeInUpSmall" data-wow-delay="0.4s">
+            <div class="sina_inner"> <a class="p01" href="http://jlbtc.ihwrm.com/" target="_blank"> <strong>@ 校报网络版 </strong></a>
+              <ul class="xb_li_ul">
+                <li><a href="http://jlbtc.ihwrm.com/index/index/index/release_id/197060.html">吉林工商学院报第281期</a></li>
+<li><a href="http://jlbtc.ihwrm.com/index/index/index/release_id/196994.html">吉林工商学院报第280期</a></li>
+<li><a href="http://jlbtc.ihwrm.com/index/index/index/release_id/196961.html">吉林工商学院报第279期</a></li>
+<li><a href="http://jlbtc.ihwrm.com/index/index/index/release_id/196881.html">吉林工商学院报第278期</a></li>
+<li><a href="http://jlbtc.ihwrm.com/index/index/index/release_id/196695.html">吉林工商学院报第277期</a></li>
+<script>_showDynClickBatch(['dynclicks_u25_12890','dynclicks_u25_12880','dynclicks_u25_12870','dynclicks_u25_12860','dynclicks_u25_12850'],[12890,12880,12870,12860,12850],"wbnews", 1768628782)</script>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col rt wow fadeInRightSmall" data-wow-delay="0.4s">
+            <div class="sina_inner"> <a class="p01" href="sylm/xmlm/gsxygzh.htm" target="_blank"> <strong>@ 吉林工商学院 </strong></a>
+              <ul class="xb_li_ul">
+                <li><a href="https://mp.weixin.qq.com/s/PL0pW0DtOvzwSx_qDzCwYg">【迎新特辑】璀璨新篇，大学启航！</a></li>
+<li><a href="https://mp.weixin.qq.com/s/h66P6TKePLRGrfLNCDN7LQ">吉林省区域饮食文化助力地方经济高质量...</a></li>
+<li><a href="https://mp.weixin.qq.com/s/MYNQvTibK7ChbYEJb0UNwQ">【迎新季】一见倾“新”！吉林工商学院...</a></li>
+<li><a href="https://mp.weixin.qq.com/s/KhzCuzJU94O6hw3cQTJcFQ">【直播预告】“我在吉林上大学——城市...</a></li>
+<li><a href="https://mp.weixin.qq.com/s/Px-CRzAPYx2_1Q77EFktjw">吉林工商学院2025届毕业生秋季校园招聘...</a></li>
+<script>_showDynClickBatch(['dynclicks_u26_30410','dynclicks_u26_30400','dynclicks_u26_30390','dynclicks_u26_30380','dynclicks_u26_30370'],[30410,30400,30390,30380,30370],"wbnews", 1768628782)</script>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col lf wow fadeInLeftSmall" data-wow-delay="0.4s"> 
+          
+          
+           <span class="xb"><a href="#">&nbsp;</a></span> 
+           <span class="m03"><a href="#"><img alt="" src="images/xb.jpg"></a></span>
+           
+            <span class="weixin"><a href="#">&nbsp;</a></span> 
+           <span class="m02"><a href="#"><img alt="" src="images/wx.jpg"></a></span>
+          
+          <span class="sina"> <a href="#">&nbsp;</a></span>
+           <span class="ma01"> <a href="#"><img alt="" src="images/wb.jpg"></a></span> 
+          
+           </div>
+        </div>
+      </div>
+      <div class="kuang2"></div>
+      <div class="col wd wow fadeInUpSmall" data-wow-delay="0.4s" style="display: none;">
+        <ul class="xmttopic-list">
+              
+
+
+        </ul>
+        <div class="kuang2"></div>
+      </div>
+    </div>
+  </section>
+  <section class="modeWrap07">
+    <div class="section clear">
+      <div class="rt wow fadeInRightSmall" data-wow-delay="0.4s">
+        <div class="listTitle01 listTitle07 listTitle06"> <a href="#">
+          <h3><img alt="" src="images/t/title06.png"></h3>
+          </a> </div>
+        <ul class="yqlj-list">
+          
+
+
+
+<li><a href="http://www.people.com.cn/">人民网</a></li>
+
+
+
+
+
+
+
+
+<li><a href="http://www.xinhuanet.com/">新华网</a></li>
+
+
+
+
+
+
+
+
+<li><a href="http://www.cctv.com/">央视网</a></li>
+
+
+
+
+
+
+
+
+<li><a href="http://www.cri.cn/">国际在线</a></li>
+
+
+
+
+
+
+
+
+<li><a href="http://cn.chinadaily.com.cn/">中国日报</a></li>
+
+
+
+
+
+
+
+
+<li><a href="http://www.china.com.cn/">中国网</a></li>
+
+
+
+
+
+
+
+
+<li><a href="http://www.ce.cn/">中经网</a></li>
+
+
+
+
+
+
+
+
+<li><a href="http://www.gmw.cn/">光明网</a></li>
+
+
+
+
+
+
+
+
+<li><a href="http://www.cnr.cn/">央广网</a></li>
+
+
+
+
+
+
+
+
+<li><a href="http://www.jl.gov.cn/">吉林省人民政府</a></li>
+
+
+
+
+
+
+
+
+<li style="    margin-left: 60px;"><a href="http://jyt.jl.gov.cn/">吉林省教育厅</a></li>
+
+
+
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!--content结束--> 
+<!--footer开始--> 
+<a class="goTop" href="#">TOP</a>
+<footer class="footer"> <span> <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span>© 版权所有 吉林工商学院</span> <span>地址：长春九台经济开发区卡伦湖大街1666号 &nbsp;&nbsp;&nbsp; 邮编：130507&nbsp; &nbsp; &nbsp;扫黑除恶举报电话：82306318&nbsp; &nbsp;13596073533</span></p> </span> 
+
+<div style="margin: 0px auto; padding: 20px 0px; width: 400px;">
+     <img src="images/bgt.png" style="float: left;">
+     <p style="margin: 0px 0px 0px 5px; height: 20px; color: rgb(255, 255, 255); line-height: 20px; float: left;">吉公网安备&nbsp;&nbsp;22011302000064号&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" style="color: inherit; text-decoration: none;">吉ICP备14005253号-1</a></p>
+    </div>
+</footer>
+<!--<script src="js/modernizr.js"></script>    --> 
+<!--footer结束--> 
+<!-- 通用JS --> 
+
+<script src="js/swiper-bundle.min.js"></script> 
+<script type="text/javascript" src="dfiles/9810/js/jquery-1.9.0.min.js"></script> 
+<script type="text/javascript" src="dfiles/9810/js/jquery.flexslider-min.js"></script> 
+<script type="text/javascript" src="dfiles/9810/js/script.js"></script> 
+
+<!-- btt --> 
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+                autoplay: { //播放时间间隔
+        delay: 10000,
+        disableOnInteraction: false,
+      },
+       autoplay:true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    //  navigation: {
+     //   nextEl: '.swiper-button-next',
+    //    prevEl: '.swiper-button-prev',
+    //  },
+    });
+    mySwiper.el.onmouseover = function(){ //鼠标放上暂停轮播
+      mySwiper.autoplay.stop();
+    }
+    mySwiper.el.onmouseleave = function(){
+      mySwiper.autoplay.start();
+    }
+    
+  </script> 
+
+<!-- FlexSlider --> 
+<script type="text/javascript">
+$(function() {
+    Nav('#nav')//导航
+    SerMax()//搜索
+    ImgHeight()//banner图片高度
+    mobideMenu()// 移动端主导航
+     $(".banner .flexslider").flexslider({
+        animation:'fade',
+        slideshowSpeed: 6000, //展示时间间隔ms
+        animationSpeed: 1000, //滚动时间ms
+        touch: true //是否支持触屏滑动
+    });
+     indexLi()//学术动态1225px内小尺寸动态加类名
+     slides()
+     var currentWidth = 1240;
+        $(window).resize(function() {
+            slides()
+        });
+     function slides(){
+        var winWidth = $(window).width();
+        var conWidth;
+        if(winWidth < 768) {
+            //$('.mode02 .flexslider').width(winWidth);
+            //conWidth = 300;
+            x = 20;
+        } else if(winWidth < 992) {
+            //$('.mode02 .flexslider').width(winWidth)-60;
+            //conWidth = 660;
+            x = 50;
+         }else {
+            //$('.mode02 .flexslider').width(winWidth);
+            //conWidth = 1400;
+            x = 100;
+        }
+        
+            $(".notice-list.flexslider").flexslider({
+              animation: "slide",
+            animationLoop: true,
+            itemWidth: 325,
+            itemMargin: x,
+            minItems: 1,
+            maxItems: 2,
+        touch: true //是否支持触屏滑动
+           // pausePlay: true
+            });
+        
+     }
+
+}); 
+
+</script> 
+<script src="dfiles/9810/js/wow.min.js"></script> 
+<script type="text/javascript"> 
+if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8.") 
+{ 
+  // console.log(1);
+} 
+else{
+  new WOW().init();
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
